@@ -1027,12 +1027,12 @@ return [
 		'Portal_talk' => 101,
 	],
 	'mnwwiktionary' => [
-		'အဆက်လက္ကရဴ' => 100, // T314023
-		'အဆက်လက္ကရဴ_ဓရီုကျာ' => 101, // T314023
-		'ကာရန်' => 106, // T330689
-		'ကာရန်_ဓရီုကျ' => 107, // T330689
-		'ဗီုပြင်သိုင်တၟိ' => 110, // T330689
-		'ဗီုပြင်သိုင်တၟိ_ဓရီုကျ' => 111, // T330689
+		'Appendix' => 100, // T314023 , T341940
+		'Appendix_talk' => 101, // T314023 , T341940
+		'Rhymes' => 106, // T330689 , T341940
+		'Rhymes_talk' => 107, // T330689 , T341940
+		'Reconstruction' => 118, // T330689 , T341940
+		'Reconstruction_talk' => 119, // T330689 , T341940
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
@@ -3592,12 +3592,12 @@ return [
 		101 => "Dinika_amin'ny_rakibolana",
 	],
 	'mnwwiktionary' => [
-		100 => 'Appendix', // T314023
-		101 => 'Appendix_talk', // T314023
-		106 => 'Rhymes', // T330689 - Rhymes
-		107 => 'Rhymes_talk', // T330689 - Rhymes_talk
-		118 => 'Reconstruction', // T330689 - Reconstruction
-		119 => 'Reconstruction_talk', // T330689 - Reconstruction_talk
+		100 => 'အဆက်လက္ကရဴ', // T314023 , T341940 - Appendix
+		101 => 'အဆက်လက္ကရဴ_ဓရီုကျာ', // T314023 , T341940 - Appendix_talk
+		106 => 'ကာရန်', // T330689 , T341940 - Rhymes
+		107 => 'ကာရန်_ဓရီုကျာ', // T330689 , T341940 - Rhymes_talk
+		118 => 'ဗီုပြင်သိုင်တၟိ', // T330689 , T341940 - Reconstruction
+		119 => 'ဗီုပြင်သိုင်တၟိ_ဓရီုကျာ', // T330689 , T341940 - Reconstruction_talk
 	],
 	'mrwiktionary' => [
 		104 => 'सूची',
