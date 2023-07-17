@@ -444,9 +444,25 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosFileBackend = 'global-multiwrite';
 }
 
-if ( $wgDBname == 'dewiki' ) {
-	$wgAutoCreateTempUser['enabled'] = true;
+// IP Masking
+// NOTE: This is here to ensure temp accounts behave as temp accounts on all wikis. Autocreation of temp
+// accounts for wikis where IP Masking is not enabled is disabled in an if below.
+$wgAutoCreateTempUser['enabled'] = true;
+
+$wgAutoCreateTempUser['serialProvider'] = [
+	'type' => 'centralauth',
+	'numShards' => 8,
+];
+$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'scramble' ];
+
+if ( $wmgEnableIPMasking ) {
+	// editing is enabled only for temp accounts
+	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['temp']['edit'] = true;
+
+} else {
+	// do not actually autocreate temp accounts on non-pilot wikis
+	$wgAutoCreateTempUser['actions'] = [];
 }
 
 }

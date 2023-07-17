@@ -2519,5 +2519,10 @@ function wmfGetOverrideSettings() {
 		'-wmgHideGraphTags' => [
 			'default' => false,
 		],
+		'wmgEnableIPMasking' => [
+			'default' => false,
+			'cswiki' => true,
+			'dewiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
