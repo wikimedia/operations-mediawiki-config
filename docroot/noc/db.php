@@ -6,9 +6,9 @@
  *
  * Then view <http://localhost:9412/db.php>.
  */
+require_once __DIR__ . "/dbconfig.php";
 
 $format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
-
 if ( $format === 'json' ) {
 	error_reporting( 0 );
 } else {
@@ -18,28 +18,12 @@ if ( $format === 'json' ) {
 }
 
 // Default to eqiad but allow limited other DCs to be specified with ?dc=foo.
-$dbConfigEtcdPrefix = '/srv/dbconfig';
-$dbctlJsonByDC = [
-	'codfw' => 'codfw.json',
-	'eqiad' => 'eqiad.json',
-];
+$env = require '../../wmf-config/env.php';
 $dbSelectedDC = 'eqiad';
-
-if ( !is_dir( $dbConfigEtcdPrefix ) ) {
-	// Local testing and debugging fallback
-	$dbConfigEtcdPrefix = __DIR__ . '/../../tests/data/dbconfig';
-	$dbctlJsonByDC = [
-		'tmsx' => 'tmsx.json',
-		'tmsy' => 'tmsy.json',
-	];
-	$dbSelectedDC = 'tmsx';
-}
-
-if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
+if ( isset( $_GET['dc'] ) && in_array( $_GET['dc'], $env['dcs'] ) ) {
 	$dbSelectedDC = $_GET['dc'];
 }
-
-$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$dbSelectedDC];
+$dbLocalDomain = sprintf( '%s.wmnet', $env['dc'] );
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -58,7 +42,7 @@ require_once __DIR__ . '/../../wmf-config/db-production.php';
 //
 // On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
 // run via systemd timer, defined in puppet.
-$dbconfig = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
+$dbconfig = wmfGetDbConfig( $dbSelectedDC, $dbLocalDomain );
 global $wgLBFactoryConf;
 $wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
 $wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
