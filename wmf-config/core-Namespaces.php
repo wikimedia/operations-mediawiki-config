@@ -4515,6 +4515,10 @@ return [
 		118 => 'noindex,nofollow', // T280289
 		119 => 'noindex,nofollow', // T280289
 	],
+	'knwiki' => [
+		118 => 'noindex,nofollow', // Draft - T341958
+		119 => 'noindex,nofollow', // T341958
+	],
 	'kowiki' => [
 		NS_USER => 'noindex,follow', // T121301
 		118 => 'noindex,nofollow', // Draft - T92798
