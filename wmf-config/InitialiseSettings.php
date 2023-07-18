@@ -12065,7 +12065,7 @@ return [
 	'default' => false,
 ],
 
-'UseLegacyMediaStyles' => [
+'wgUseLegacyMediaStyles' => [
 	'default' => true,
 	'officewiki' => false,
 ],
