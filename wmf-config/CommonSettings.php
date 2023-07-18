@@ -4215,6 +4215,7 @@ if ( $wmgUseCampaignEvents ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCampaignEventsDatabaseName = 'wikishared';
 	}
+	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 }
 
 if ( $wmgUseStopForumSpam ) {
