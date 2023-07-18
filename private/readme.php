@@ -188,3 +188,10 @@ $wgShellboxSecretKey = null;
  * @see https://phabricator.wikimedia.org/T315491
  */
 $wgPhonosApiKeyGoogle = null;
+
+/**
+ * API key for the [[m:Programs & Events Dashboard]].
+ *
+ * @see mediawiki/extensions/CampaignEvents
+ */
+$wgCampaignEventsProgramsAndEventsDashboardAPISecret = null;
