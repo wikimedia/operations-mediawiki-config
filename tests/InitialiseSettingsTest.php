@@ -444,4 +444,20 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			"settings array must have 'wmgUseFlow' set to 'true' for labs enwiki."
 		);
 	}
+
+	public function testSettingNames(): void {
+		$invalidKeys = [];
+		foreach ( $this->settings as $key => $_ ) {
+			if (
+				!str_starts_with( $key, 'wg' ) &&
+				!str_starts_with( $key, 'wmg' ) &&
+				$key !== 'groupOverrides' && $key !== 'groupOverrides2' &&
+				$key !== '@replaceableSettings'
+			) {
+				$invalidKeys[] = $key;
+			}
+		}
+
+		$this->assertSame( [], $invalidKeys, 'Setting names must begin with wg or wmg!' );
+	}
 }
