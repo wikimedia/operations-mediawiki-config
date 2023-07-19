@@ -29,7 +29,7 @@ class Profiler {
 	 *   - xhgui-conf: [optional] The configuration array to pass to XhguiSaverPdo
 	 *     - pdo.connect: connection string for PDO (e.g. `mysql:host=mydbhost;dbname=xhgui`)
 	 *     - pdo.table: table name within the xhgui database where the profiles are stored.
-	 *   - statsd: [optional] The host address for StatsD messages
+	 *   - statsd-host: StatsD host address (ip:port or hostname:port).
 	 *   - excimer-ui-url (string|null): The url for Wikimedia\ExcimerUI\Client\ExcimerClient
 	 *   - excimer-ui-server (string|null): The ingestionUrl for Wikimedia\ExcimerUI\Client\ExcimerClient
 	 */
@@ -200,13 +200,12 @@ class Profiler {
 	}
 
 	/**
-	 * Set up Excimer for production
+	 * Start Excimer sampling profiler in production.
 	 *
 	 * @param array $options
 	 */
 	private static function excimerSetup( $options ) {
-		// Use static variables to keep the objects in scope until the end
-		// of the request
+		// Keep the object in scope until the end of the request
 		static $cpuProf;
 		static $realProf;
 
@@ -288,9 +287,7 @@ class Profiler {
 	}
 
 	/**
-	 * Production callback for sending Excimer samples to Arc Lamp
-	 *
-	 * This is called every time Excimer collects a stack trace
+	 * Flush callback, called any time Excimer samples a stack trace in production.
 	 *
 	 * @param string[] $logLines Result of ExcimerLog::formatCollapsed()
 	 * @param array $options
@@ -300,14 +297,18 @@ class Profiler {
 		$error = null;
 		try {
 			$redis = new Redis();
-			$ok = $redis->connect( $options['redis-host'], $options['redis-port'], $options['redis-timeout'] );
+			$ok = $redis->connect(
+				$options['redis-host'],
+				$options['redis-port'],
+				$options['redis-timeout']
+			);
 			if ( !$ok ) {
 				$error = 'connect_error';
 			} else {
 				$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
 				foreach ( $logLines as $line ) {
 					if ( $line === '' ) {
-						// $collapsed ends with a line break
+						// formatCollapsed() ends with a line break
 						continue;
 					}
 
@@ -340,7 +341,7 @@ class Profiler {
 		}
 
 		if ( $error ) {
-			$dest = $options['statsd'] ?? null;
+			$dest = $options['statsd-host'] ?? null;
 			if ( $dest ) {
 				$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
 				if ( $error ) {
@@ -360,7 +361,7 @@ class Profiler {
 	 * @param array $options
 	 */
 	public static function excimerFlushToStatsd( $logLines, $options ) {
-		$dest = $options['statsd'] ?? null;
+		$dest = $options['statsd-host'] ?? null;
 		$verb = $_SERVER['REQUEST_METHOD'] ?? '';
 		$handler = class_exists( \MediaWiki\Profiler\ProfilingContext::class )
 			? \MediaWiki\Profiler\ProfilingContext::singleton()->getHandlerMetricPrefix()

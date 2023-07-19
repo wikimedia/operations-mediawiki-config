@@ -43,7 +43,7 @@ Wikimedia\MWConfig\Profiler::setup( [
 			'pdo.table' => 'xhgui',
 		]
 		: null,
-	'statsd' => $wmgServiceConfig->getLocalService( 'statsd' ),
+	'statsd-host' => $wmgServiceConfig->getLocalService( 'statsd' ),
 	'excimer-ui-url' => $wmgServiceConfig->getLocalService( 'excimer-ui-url' ),
 	'excimer-ui-server' => $wmgServiceConfig->getLocalService( 'excimer-ui-server' ),
 ] );
