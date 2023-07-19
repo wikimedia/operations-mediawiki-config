@@ -298,35 +298,28 @@ class Profiler {
 	 */
 	public static function excimerFlushToArclamp( $logLines, $options, $redisChannel ) {
 		$error = null;
-		$toobig = 0;
 		try {
 			$redis = new Redis();
 			$ok = $redis->connect( $options['redis-host'], $options['redis-port'], $options['redis-timeout'] );
 			if ( !$ok ) {
 				$error = 'connect_error';
 			} else {
-				// Arc Lamp expects the first frame to be a PHP file.
-				// This is used to group related traces for the same web entry point.
-				// In most cases, this happens by default already. But at least for destructor
-				// callbacks, this isn't the case on PHP 7.2. E.g. a line may be:
-				// "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1".
 				$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
 				foreach ( $logLines as $line ) {
-					if ( ( substr_count( $line, ';' ) + 1 ) >= 249 ) {
-						// Stacks are separated by semi-colon, so +1 to get the frame count.
-						// Anything size 249 or more, may be cut off (per setMaxDepth).
-						// We discard those because depth limitation results in the early frames
-						// (starting with the entry point) being omitted, which are the ones we need
-						// for a flame graph (T176916)
-						$toobig++;
-						continue;
-					}
 					if ( $line === '' ) {
 						// $collapsed ends with a line break
 						continue;
 					}
 
-					// If the expected first frame isn't the entry point, prepend it.
+					// There are two ways a stack trace may be missing the first few frames:
+					//
+					// 1. Destructor callbacks, as of PHP 7.2, may be formatted as
+					//    "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1"
+					// 2. Stack traces that are longer than the configured maxDepth, will be
+					//    missing their top-most frames in favour of excimer_truncated (T176916)
+					//
+					// Arc Lamp requires the top frame to be the PHP entry point file.
+					// If the first frame isn't the expected entry point, prepend it.
 					// This check includes the semicolon to avoid false positives.
 					if ( substr( $line, 0, strlen( $firstFrame ) ) !== $firstFrame ) {
 						$line = $firstFrame . $line;
@@ -346,16 +339,12 @@ class Profiler {
 			$error = 'exception';
 		}
 
-		if ( $error || $toobig ) {
+		if ( $error ) {
 			$dest = $options['statsd'] ?? null;
 			if ( $dest ) {
 				$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
 				if ( $error ) {
 					$stat = "MediaWiki.arclamp_client_error.{$error}:1|c";
-					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
-				}
-				if ( $toobig ) {
-					$stat = "MediaWiki.arclamp_client_discarded.toobig:{$toobig}|c";
 					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
 				}
 			}
