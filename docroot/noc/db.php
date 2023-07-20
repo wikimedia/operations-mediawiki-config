@@ -133,16 +133,16 @@ foreach ( $sections as $name => $label ) {
 		<h1>Database configuration</h1>
 <?php
 print '<p>';
-foreach ( $dbctlJsonByDC as $dc => $file ) {
-	$active = ( $file === $dbConfigEtcdJsonFilename ) ? ' wm-btn-active' : '';
+foreach ( $env['dcs'] as $dc ) {
+	$active = ( $dc === $dbSelectedDC ) ? ' wm-btn-active' : '';
 	print '<a role="button" class="wm-btn' . $active . '" href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> ';
 }
 print '</p>';
 
 print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
 print 'wmf-config/db-production.php</a> ';
-print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
-print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.';
+print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbSelectedDC ) . '.json">';
+print htmlspecialchars( $dbSelectedDC ) . '.json</a>.';
 print '</p>';
 
 print '<div class="nocdb-sections">';
