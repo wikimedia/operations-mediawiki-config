@@ -425,10 +425,11 @@ $wgKartographerParsoidSupport = true;
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
 if ( $wmgUseCampaignEvents ) {
-	$wgCampaignEventsDatabaseCluster = false;
+	// Use wikishared for all wikis, unlike production
+	$wgCampaignEventsDatabaseCluster = 'extension1';
 	$wgCampaignEventsDatabaseName = 'wikishared';
 	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'staging';
-	// Re-add right removed in the production config
+	// Re-add rights removed in the production config
 	$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 	$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
 }
