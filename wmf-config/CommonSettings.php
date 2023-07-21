@@ -4140,6 +4140,15 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	};
 }
 
+if ( $wmgUseCampaignEvents ) {
+	wfLoadExtension( 'CampaignEvents' );
+	$wgCampaignEventsDatabaseCluster = 'extension1';
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCampaignEventsDatabaseName = 'wikishared';
+	}
+	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
+}
+
 if ( $wmgRealm === 'labs' ) {
 	require __DIR__ . '/CommonSettings-labs.php';
 }
@@ -4207,15 +4216,6 @@ if ( $wmgUseImageSuggestions ) {
 
 if ( $wmgUseSearchVue ) {
 	wfLoadExtension( 'SearchVue' );
-}
-
-if ( $wmgUseCampaignEvents ) {
-	wfLoadExtension( 'CampaignEvents' );
-	$wgCampaignEventsDatabaseCluster = 'extension1';
-	if ( $wgDBname === 'metawiki' ) {
-		$wgCampaignEventsDatabaseName = 'wikishared';
-	}
-	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 }
 
 if ( $wmgUseStopForumSpam ) {
