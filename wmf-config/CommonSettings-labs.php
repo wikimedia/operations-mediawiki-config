@@ -435,6 +435,8 @@ if ( $wmgUseCampaignEvents ) {
 	// Re-add rights removed in the production config
 	$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 	$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
+	// This group is not needed in beta.
+	unset( $wgGroupPermissions['campaignevents-beta-tester'] );
 }
 
 // Ignore parameter order when matching request URLs to CDN URLs (T314868)
