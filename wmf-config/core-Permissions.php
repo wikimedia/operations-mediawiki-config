@@ -807,7 +807,23 @@ return [
 			'templateeditor' => true,
 			'tboverride' => true,
 			'editcontentmodel' => true,
-			], // T330470
+		], // T330470
+		'botadmin' => [
+			'editsemiprotected' => true, // T342484
+			'abusefilter-bypass-blocked-external-domains' => true, // T342484
+			'sboverride' => true, // T342484
+			'writeapi' => true, // T342484
+			'autopatrol' => true, // T342484
+			'nominornewtalk' => true, // T342484
+			'noratelimit' => true, // T342484
+			'autoconfirmed' => true, // T342484
+			'skipcaptcha' => true, // T342484
+			'bot' => true, // T342484
+			'supressredirect' => true, // T342484
+			'apihighlimits' => true, // T342484
+			'block' => true, // T342484
+			'blockemail' => true, // T342484
+		], // T342484
 	],
 	'+eswikibooks' => [
 		'*' => [
@@ -3521,6 +3537,7 @@ return [
 			'abusefilter', // T262174
 			'rollbacker',
 			'templateeditor', // T330470
+			'botadmin', // T342484
 		],
 		'sysop' => [
 			'rollbacker',
@@ -4945,7 +4962,7 @@ return [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared', ],
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor' ], // T262174, T330470
+		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor', 'botadmin', ], // T262174, T330470, T342484
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [
