@@ -107,8 +107,7 @@ $common = [
 		],
 	],
 
-	// Wikifunctions back-end services; currently in Beta Cluster only.
-	'wikifunctions-evaluator' => 'NOT YET DEFINED',
+	// Wikifunctions back-end service; currently in Beta Cluster only.
 	'wikifunctions-orchestrator' => 'NOT YET DEFINED',
 ];
 

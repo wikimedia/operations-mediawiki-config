@@ -52,7 +52,6 @@ return [
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 
 		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
-		'wikifunctions-evaluator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6927',
 
 		'irc' => [
 			// deployment-ircd02
