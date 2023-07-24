@@ -1063,6 +1063,16 @@ return [
 	'+mywiktionary' => [
 		'Appendix' => 100, // T291146
 		'Appendix_talk' => 101, // T291146
+		'Rhymes' => 106, // T342516
+		'Rhymes_talk' => 107, // T342516
+		'Thesaurus' => 108, // T342516
+		'Thesaurus_talk' => 109, // T342516
+		'Reconstruction' => 110, // T342516
+		'Reconstruction_talk' => 111, // T342516
+		'Citations' => 112, // T342516
+		'Citations_talk' => 113, // T342516
+		'Concordance' => 116, // T342516
+		'Concordance_talk' => 117, // T342516
 	],
 	'+mznwiki' => [
 		'وپ' => NS_PROJECT,
@@ -3626,6 +3636,16 @@ return [
 	'mywiktionary' => [
 		100 => 'နောက်ဆက်တွဲ', // T178545, Appendix
 		101 => 'နောက်ဆက်တွဲ_ဆွေးနွေးချက်',
+		106 => 'ကာရန်များ', // T342516 ,Rhymes
+		107 => 'ကာရန်များ_ဆွေးနွေးချက်', // T342516 ,Rhymes_talk
+		108 => 'ဝေါဟာရပဒေသာ', // T342516 ,Thesaurus
+		109 => 'ဝေါဟာရပဒေသာ_ဆွေးနွေးချက်', // T342516 ,Thesaurus_talk
+		110 => 'ပြန်လည်တည်ဆောက်ခြင်း', // T342516 ,Reconstruction
+		111 => 'ပြန်လည်တည်ဆောက်ခြင်း_ဆွေးနွေးချက်', // T342516 ,Reconstruction_talk
+		112 => 'စာကိုးများ', // T342516 ,Citations
+		113 => 'စာကိုးများ_ဆွေးနွေးချက်', // T342516 ,Citations_talk
+		116 => 'ဝေါဟာရစာရင်း', // T342516 ,Concordance
+		117 => 'ဝေါဟာရစာရင်း_ဆွေးနွေးချက်', // T342516 ,Concordance_talk
 	],
 	'ndswiktionary' => [ // T85122
 		100 => 'Anhang',
