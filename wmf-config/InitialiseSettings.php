@@ -11449,7 +11449,7 @@ return [
 // T324907
 'wgCheckUserEventTablesMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
-	'testwiki' => SCHEMA_COMPAT_OLD | SCHEMA_COMPAT_WRITE_NEW,
+	'group0' => SCHEMA_COMPAT_OLD | SCHEMA_COMPAT_WRITE_NEW,
 ],
 
 // T299421
