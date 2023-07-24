@@ -331,7 +331,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
 		$settings = $this->settings;
 		unset( $settings['@replaceableSettings'] );
-		foreach ( $settings as $config ) {
+		foreach ( $settings as $setting => $config ) {
 			foreach ( $config as $db => $entry ) {
 				$dbNormalized = str_replace( "+", "", $db );
 				$this->assertTrue(
@@ -340,7 +340,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 					in_array( $dbNormalized,  $langs ) ||
 					// TODO: revert back to $db == "default"
 					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ),
-					"$dbNormalized is referenced, but it isn't either a wiki or a dblist" );
+					"$dbNormalized is referenced for $setting, but it isn't either a wiki or a dblist" );
 			}
 		}
 	}
