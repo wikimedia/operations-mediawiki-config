@@ -5097,6 +5097,7 @@ return [
 	'bswikiquote' => 'Wikicitati',
 	'bswikisource' => 'Wikizvor',
 	'bswiktionary' => 'Wikirječnik', // T159538
+	'btmwiktionary' => 'Wikikamus',
 	'bxrwiki' => 'Википеэди', // T43877
 	'cawiki' => "Viquipèdia",
 	'cawikibooks' => 'Viquillibres',
@@ -5569,6 +5570,7 @@ return [
 	'bewiktionary' => 'Размовы_пра_Вікіслоўнік', // T175950
 	'bswiki' => 'Razgovor_o_Wikipediji', // T115812 and T231654
 	'bswiktionary' => 'Razgovor_s_Wikirječnikom',
+	'btmwiktionary' => 'Pembicaraan_Wikikamus',
 	'cuwiki' => 'Википєдїѩ_бєсѣда', // T123654
 	'elwikinews' => 'Βικινέα_συζήτηση',
 	'elwikiversity' => 'Συζήτηση_Βικιεπιστημίου',

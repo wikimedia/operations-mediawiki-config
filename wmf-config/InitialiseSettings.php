@@ -324,6 +324,7 @@ return [
 	'blkwiki' => 'Asia/Rangoon',
 	'brwikisource' => 'Europe/Paris',
 	'bswiki' => 'Europe/Berlin',
+	'btmwiktionary' => 'Asia/Jakarta',
 	'cawiki' => 'Europe/Berlin',
 	'cawiktionary' => 'Europe/Berlin',
 	'cawikibooks' => 'Europe/Berlin',
@@ -1136,6 +1137,7 @@ return [
 	'bswikiquote' => 'Wikicitati',
 	'bswikisource' => 'Wikizvor',
 	'bswiktionary' => 'Wikirječnik', // T159538
+	'btmwiktionary' => 'Wikikamus',
 	'cawiki' => "Viquipèdia",
 	'cawikibooks' => 'Viquillibres',
 	'cawikimedia' => 'Wikimedia Canada',

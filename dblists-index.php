@@ -135,6 +135,7 @@ return [
 'bswikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'bswikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'bswiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'btmwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'bugwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
 'bxrwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'cawiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'wikidataclient', 'group1', 'cirrussearch-big-indices' ],
