@@ -88,7 +88,7 @@ if ( $selectedFilePath !== false ) {
 <p>
 <a href="https://gerrit.wikimedia.org/r/q/project:operations/mediawiki-config+branch:master+file:<?php echo urlencode( $selectedFileName ); ?>">code review</a> &bull;
 <a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo urlencode( $selectedFileRepoPath ); ?>">git-log</a> &bull;
-<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo urlencode( $selectedFileRepoPath ); ?>?blame=1">git-blame</a> &bull;
+<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo urlencode( $selectedFileRepoPath ); ?>">git-blame</a> &bull;
 <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
 </p>
 <?php
