@@ -2670,7 +2670,6 @@ return [
 		'filedesc',
 		'filestatus',
 		'filesource',
-		'movepage-summary', // T183848
 	],
 	'+testcommonswiki' => [
 		// Sidebar
@@ -2690,7 +2689,6 @@ return [
 		'filedesc',
 		'filestatus',
 		'filesource',
-		'movepage-summary', // T183848
 	],
 	'+enwiki' => [
 		'licenses', // for upload form variants hack, 2007-02-22
