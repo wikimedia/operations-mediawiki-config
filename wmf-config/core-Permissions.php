@@ -2767,15 +2767,13 @@ return [
 	],
 	'+wikifunctionswiki' => [
 		'*' => [
-			// Temporarily during initial, locked-down deployment, no function calling
-			// or wikitext editing for logged-out users
-			'wikilambda-execute' => false,
+			// Temporarily during early, limited deployment, logged-out users can't do this
 			'edit' => false,
 		],
 		'user' => [
-			// Temporarily during initial, locked-down deployment, no editing for basic logged-in
-			// users (this is for regular wikitext pages, including talk pages etc.)
-			'edit' => false,
+			// Temporarily during early, limited deployment, re-grant to logged-in users the standard
+			// wikitext editing rights that logged-out users can't do
+			'edit' => true,
 
 			// Temporarily during early, limited deployment, basic logged-in users can't do this
 			'wikilambda-create' => false,
@@ -2813,10 +2811,6 @@ return [
 			"wikilambda-create-type" => false,
 		],
 		'wikifunctions-staff' => [
-			// Temporarily during initial, locked-down deployment, no editing for any other users
-			// (this is for regular wikitext pages, including talk pages etc.)
-			'edit' => true,
-
 			'wikilambda-connect-implementation' => true,
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
