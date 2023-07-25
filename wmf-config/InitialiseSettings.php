@@ -3261,7 +3261,7 @@ return [
 	'elwiktionary' => [ 'w', 'en', 'fr' ],
 	'enwiki' => [ 'meta', 'nost', 'de', 'es', 'fr', 'it', 'pl', 'outreachwiki', 'test2wiki', 'commons', ], // T18551, T242884
 	'enwiktionary' => [
-		'w', 'b', 's', 'q', 'v', 'n', 'commons', 'aa', 'ab', 'af', 'ak', 'als', 'am', 'an', 'ang', 'ar', 'as', 'ast', 'av', 'ay', 'az', 'ba', 'be', 'bg', 'bh', 'bi', 'bm', 'bn', 'bo', 'br', 'bs',
+		'w', 'b', 's', 'q', 'v', 'n', 'commons', 'aa', 'ab', 'af', 'als', 'am', 'an', 'ang', 'ar', 'as', 'ast', 'av', 'ay', 'az', 'ba', 'be', 'bg', 'bh', 'bi', 'bm', 'bn', 'bo', 'br', 'bs',
 		'ca', 'ch', 'chr', 'co', 'cr', 'cs', 'csb', 'cy', 'da', 'de', 'dv', 'dz', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fj', 'fo', 'fr', 'fy', 'ga', 'gd', 'gl', 'gn', 'gu', 'gv', 'ha', 'he',
 		'hi', 'hr', 'hsb', 'hu', 'hy', 'ia', 'id', 'ie', 'ik', 'io', 'is', 'it', 'iu', 'ja', 'jbo', 'jv', 'ka', 'kk', 'kl', 'km', 'kn', 'ko', 'ks', 'ku', 'kw', 'ky', 'la', 'lb', 'li', 'ln', 'lo', 'lt', 'lv',
 		'mg', 'mh', 'mi', 'mk', 'ml', 'mn', 'mo', 'mr', 'ms', 'mt', 'my', 'na', 'nah', 'nds', 'ne', 'nl', 'nn', 'no', 'oc', 'om', 'or', 'pa', 'pi', 'pl', 'ps', 'pt', 'qu', 'rm', 'rn', 'ro',
@@ -3293,31 +3293,31 @@ return [
 	'foundationwiki' => [ 'meta' ],
 	'frrwiki' => [ 'en', 'de', 'nds', 's:de', 'oldwikisource' ], # s:de and oldwikisource per T40023
 	'frwiki' => [
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
+		'meta', 'commons', 'species', 'q', 'af', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
 		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
 		'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
 	], // T10983, T24663, T30024
 	'frwikisource' => [
-		'meta', 'commons', 'species', 'q', 'b', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
+		'meta', 'commons', 'species', 'q', 'b', 'af', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
 	], // T30024 and T24663 --pdhanda
 	'frwikibooks' => [
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu',
+		'meta', 'commons', 'species', 'q', 'af', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu',
 		'hy', 'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple',
 		'sk', 'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
 	], // T30024 and T24663 --pdhanda
 	'frwikinews' => [ 'w', 'en', 'de', 'es', 'it', 'b', 'wikt', 'v', 's', 'q', 'ca', 'pt', 'species', 'commons', 'meta', 'w:pl', 'pl' ], // T11135
 	'frwikiquote' => [ 'w', 'wikt', 's', 'b', 'n', 'v', 'meta', 'en' ],
 	'frwikiversity' => [
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
+		'meta', 'commons', 'species', 'q', 'af', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
 		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
 		'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'b',
 	], // T9824, T24663, T30024
 	'frwikivoyage' => [ 'w', 'meta', 'de', 'el', 'en', 'es', 'he', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ], // T44103, T57745
 	'frwiktionary' => [
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
+		'meta', 'commons', 'species', 'q', 'af', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'b', 'v',
 	], // T30024 and T24663 --pdhanda
@@ -3495,7 +3495,7 @@ return [
 	'thwikisource' => [ 'oldwikisouce', 'b', 'q', 'w', 'wikt' ], // T275281
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
-	'twwiki' => [ 'ak', 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ], // T298296
+	'twwiki' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ], // T298296
 	'urwiki' => [ 'ar', 'en', 'fa', 'fr', 'he' ], // T212612
 	'vecwiki' => [ 'it' ], // T21639
 	'vecwiktionary' => [ 'w', 'en', 'fr', 'it' ], // T51575
