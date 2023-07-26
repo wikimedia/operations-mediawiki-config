@@ -46,8 +46,10 @@ return [
 ],
 'wgOresUseLiftwing' => [
 	'default' => false,
+	'hewiki' => true, // T342115
 	'eswikibooks' => true, // T342115
 	'eswikiquote' => true, // T342115
+	'itwiki' => true, // T342115
 	'testwiki' => true, // T319170
 ],
 'wgOresModels' => [
