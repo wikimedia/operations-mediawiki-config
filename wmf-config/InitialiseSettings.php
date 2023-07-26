@@ -8614,6 +8614,7 @@ return [
 	'special' => 'personal',
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
+	'wikifunctionswiki' => 'interlanguage',
 ],
 
 // Whether ime is enabled *by default*
