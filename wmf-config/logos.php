@@ -877,6 +877,7 @@ return [
 	'votewiki' => '/static/images/project-logos/votewiki.png',
 	'wg_enwiki' => '/static/images/project-logos/wg_enwiki.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki.png',
+	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki.png',
 	'wikimania2005wiki' => '/static/images/project-logos/wikimania2005wiki.png', // T50382
 	'wikimania2006wiki' => '/static/images/project-logos/wikimania2006wiki.png', // T50382
 	'wikimania2007wiki' => '/static/images/project-logos/wikimania2007wiki.png', // T50382
@@ -1506,6 +1507,7 @@ return [
 	'thankyouwiki' => '/static/images/project-logos/donatewiki-1.5x.png',
 	'votewiki' => '/static/images/project-logos/votewiki-1.5x.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-1.5x.png', // T230120
+	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki-1.5x.png',
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', // T194340
 	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2023-1.5x.png', // T194340, T337044
 	'wikitech' => '/static/images/project-logos/wikitech-1.5x.png',
@@ -2121,6 +2123,7 @@ return [
 	'thankyouwiki' => '/static/images/project-logos/donatewiki-2x.png', // always same as donatewiki, see T259002
 	'votewiki' => '/static/images/project-logos/votewiki-2x.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-2x.png', // T230120
+	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki-2x.png',
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-2x.png', // T194340
 	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2023-2x.png', // T194340, T337044
 	'wikitech' => '/static/images/project-logos/wikitech-2x.png',
@@ -4292,6 +4295,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikidatawiki-wordmark.svg',
 		'width' => 130,
 		'height' => 17,
+	],
+	'wikifunctionswiki' => [
+		'src' => '/static/images/mobile/copyright/wikifunctionswiki-wordmark.svg',
+		'width' => 140,
+		'height' => 18,
 	],
 	'wikimania2005wiki' => [
 		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',

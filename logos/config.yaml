@@ -4006,6 +4006,9 @@ Wikivoyage:
         comment_wordmark: T315572
         comment_lang_variants: T323734
         local_icon: true
+    wikifunctionswiki:
+        commons: 'File:Wikifunctions-logo-en.svg'
+        commons_wordmark: 'File:Wikifunctions wordmark.svg'
     wikimania2005wiki:
         comment: T50382
         no_1_5x: true
