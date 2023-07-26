@@ -80,6 +80,7 @@ $common = [
 	'shellbox-media' => 'http://localhost:6026',
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
+	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
 
@@ -106,9 +107,6 @@ $common = [
 			'port' => 6107,
 		],
 	],
-
-	// Wikifunctions back-end service; currently in Beta Cluster only.
-	'wikifunctions-orchestrator' => 'NOT YET DEFINED',
 ];
 
 $services = [
