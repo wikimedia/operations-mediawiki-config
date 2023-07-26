@@ -2813,6 +2813,10 @@ return [
 			"wikilambda-create-type" => false,
 		],
 		'wikifunctions-staff' => [
+			// Temporarily during initial, locked-down deployment, no editing for any other users
+			// (this is for regular wikitext pages, including talk pages etc.)
+			'edit' => true,
+
 			'wikilambda-connect-implementation' => true,
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
