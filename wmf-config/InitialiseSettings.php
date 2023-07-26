@@ -2871,6 +2871,7 @@ return [
 		'wiktionary.org',
 		'wikivoyage.org',
 		'wikidata.org',
+		'wikifunctions.org',
 		'tools.wmflabs.org',
 		'toolforge.org',
 		'etherpad.wmflabs.org',
