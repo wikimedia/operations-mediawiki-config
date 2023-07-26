@@ -4416,7 +4416,7 @@ return [
 	],
 	'+wikifunctionswiki' => [
 		'bureaucrat' => [ 'wikifunctions-staff' ],
-		'wikifunctions-staff' => [ 'wikifunctions-staff' ],
+		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ], // T225505
@@ -5548,7 +5548,7 @@ return [
 	],
 	'+wikifunctionswiki' => [
 		'bureaucrat' => [ 'wikifunctions-staff' ],
-		'wikifunctions-staff' => [ 'wikifunctions-staff' ],
+		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ],  // T225505
