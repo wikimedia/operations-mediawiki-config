@@ -285,6 +285,7 @@ class MWMultiVersion {
 			'ee.wikimedia.org' => 'et',
 			'vrt-wiki.wikimedia.org' => 'otrs_wiki',
 			'ombuds.wikimedia.org' => 'ombudsmen',
+			'www.wikifunctions.org' => 'wikifunctions',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',

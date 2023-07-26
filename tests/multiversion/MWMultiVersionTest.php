@@ -85,6 +85,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'votewiki', 'vote.wikimedia.org' ],
 			[ 'wg_enwiki', 'wg-en.wikipedia.org' ],
 			[ 'wikidatawiki', 'www.wikidata.org' ],
+			[ 'wikifunctionswiki', 'www.wikifunctions.org' ],
 			[ 'wikimania2005wiki', 'wikimania2005.wikimedia.org' ],
 			[ 'wikimania2006wiki', 'wikimania2006.wikimedia.org' ],
 			[ 'wikimania2007wiki', 'wikimania2007.wikimedia.org' ],

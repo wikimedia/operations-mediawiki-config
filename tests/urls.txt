@@ -56,6 +56,7 @@ http://usability.wikimedia.org/wiki/Main_Page
 https://vote.wikimedia.org/wiki/Main_Page
 http://wg.en.wikipedia.org/wiki/Main_page
 http://www.wikidata.org/wiki/Main_page
+http://www.wikifunctions.org/wiki/Wikifunctions:Main_page
 http://wikimania2005.wikimedia.org/wiki/Main_Page
 http://wikimania2006.wikimedia.org/wiki/Main_Page
 http://wikimania2007.wikimedia.org/wiki/Main_Page
