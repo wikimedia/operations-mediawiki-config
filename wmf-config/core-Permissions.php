@@ -1873,6 +1873,17 @@ return [
 		'patroller' => [ 'patrol' => true ], // T120369
 		'autopatrolled' => [ 'autopatrol' => true ], // T120369
 	],
+	'+pawikisource' => [
+		'user' => [
+			'pagequality-validate' => false // T341428
+		],
+		'validator' => [
+			'pagequality-validate' => true // T341428
+		],
+		'sysop' => [
+			'pagequality-validate' => true // T341428#9045026
+		]
+	],
 	// T8303
 	'+plwiki' => [
 		'editor' => [
@@ -4029,6 +4040,9 @@ return [
 			'transwiki', // T120369
 		],
 	],
+	'+pawikisource' => [
+		'sysop' => [ 'validator' ], // T341428
+	],
 	'+plwiki' => [
 		'bureaucrat' => [
 			'abusefilter',
@@ -5275,6 +5289,9 @@ return [
 	],
 	'+pawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'transwiki' ], // T120369
+	],
+	'+pawikisource' => [
+		'sysop' => [ 'validator' ], // T341428
 	],
 	'+plwiki' => [
 		'bureaucrat' => [ 'abusefilter', 'flood', 'arbcom' ], // T256572
