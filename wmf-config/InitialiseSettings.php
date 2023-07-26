@@ -6673,11 +6673,13 @@ return [
 // T337944
 'wgCheckUserClientHintsEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 // T337943, T340959
 'wgCheckUserPurgeOldClientHintsData' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 // ----------- CheckUser end ----------
