@@ -6736,6 +6736,7 @@ return [
 	'votewiki' => '/static/images/icons/wikimedia.svg',
 	'wg_enwiki' => '/static/images/icons/metawiki.svg',
 	'wikidatawiki' => '/static/images/icons/wikidatawiki.svg',
+	'wikifunctionswiki' => '/static/images/icons/wikifunctionswiki.svg',
 	'wikimania2005wiki' => '/static/images/icons/wikimaniawiki.svg',
 	'wikimania2006wiki' => '/static/images/icons/wikimaniawiki.svg',
 	'wikimania2007wiki' => '/static/images/icons/wikimaniawiki.svg',

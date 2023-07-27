@@ -4008,6 +4008,7 @@ Wikivoyage:
         local_icon: true
     wikifunctionswiki:
         commons: 'File:Wikifunctions-logo-en.svg'
+        commons_icon: 'File:Wikifunctions-logo.svg'
         commons_wordmark: 'File:Wikifunctions wordmark.svg'
     wikimania2005wiki:
         comment: T50382
