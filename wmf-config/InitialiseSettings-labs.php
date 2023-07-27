@@ -2449,5 +2449,11 @@ function wmfGetOverrideSettings() {
 			'cswiki' => true,
 			'dewiki' => true,
 		],
+
+		// T342858
+		'-wgEnableEditRecovery' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
