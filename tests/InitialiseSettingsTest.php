@@ -183,6 +183,46 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testLogosAreSet() {
+		$config = yaml_parse_file( __DIR__ . '/../logos/config.yaml' );
+
+		// Test that every special wiki has a logo set
+		// We could do this for every wiki, but a lot fall back to their project, so it's not worth it
+		$configuredImages = $config['Special wikis'];
+		$dbLists = DBList::getLists();
+		$dblistValues = $dbLists['special'];
+		foreach ( $dblistValues as $index => $db ) {
+			// Exceptions; new special wikis should generally be created with logos, unless there's a good reason not to
+			if ( in_array( $db, [
+				// Special cases
+				'labswiki',
+				'labtestwiki',
+				// Defined in the 'Wikisource' list for sensible reasons
+				'sourceswiki',
+			] ) ) {
+				continue;
+			}
+
+			$this->assertArrayHasKey( $db, $configuredImages, "Special wiki $db is a known wiki but has not images set" );
+		}
+
+		// Test that every configured-entry is about a real wiki
+		foreach ( $config as $list => $values ) {
+			if ( $list === 'Projects' ) {
+				continue;
+			}
+
+			foreach ( $values as $db => $entry ) {
+				if ( $db === 'wikitech' ) {
+					// Special case
+					continue;
+				}
+
+				$this->assertTrue( DBList::isInDblist( $db, "all" ), "$db has images set but is not a known wiki" );
+			}
+		}
+	}
+
 	public function testwgExtraNamespaces() {
 		foreach ( $this->settings['wgExtraNamespaces'] as $db => $entry ) {
 			foreach ( $entry as $number => $namespace ) {
