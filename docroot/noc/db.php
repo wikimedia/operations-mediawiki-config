@@ -6,7 +6,7 @@
  *
  * Then view <http://localhost:9412/db.php>.
  */
-require_once __DIR__ . "/dbconfig.php";
+require_once __DIR__ . '/../../src/Noc/EtcdCachedConfig.php';
 
 $format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
 if ( $format === 'json' ) {
@@ -42,7 +42,7 @@ require_once __DIR__ . '/../../wmf-config/db-production.php';
 //
 // On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
 // run via systemd timer, defined in puppet.
-$dbconfig = wmfGetDbConfig( $dbSelectedDC, $dbLocalDomain );
+$dbconfig = \Wikimedia\MWConfig\Noc\EtcdCachedConfig::getInstance()->getValue( $dbSelectedDC . '/dbconfig' );
 global $wgLBFactoryConf;
 $wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
 $wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
