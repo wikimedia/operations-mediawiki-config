@@ -694,7 +694,6 @@ return [
 		'RSUR' => NS_USER_TALK,  // T287024
 		'RSS' => NS_USER_TALK,  // T287024
 		'DT' => NS_FILE,  // T287024
-		'F' => NS_FILE,  // T287024
 		'RDT' => NS_FILE_TALK,  // T287024
 		'RF' => NS_FILE_TALK,  // T287024
 		'ME' => NS_MEDIAWIKI,  // T287024
@@ -1707,8 +1706,6 @@ return [
 		'维基百科对话' => NS_PROJECT_TALK,
 		'維基百科討論' => NS_PROJECT_TALK,
 		'維基百科對話' => NS_PROJECT_TALK,
-		'F' => NS_FILE, // T183711
-		'FT' => NS_FILE_TALK, // T183711
 		'T' => NS_TEMPLATE,
 		'H' => NS_HELP,
 		'CAT' => NS_CATEGORY,
@@ -1763,8 +1760,6 @@ return [
 		'U' => NS_USER, // T240428
 		'UT' => NS_USER_TALK, // T240428
 		'WT' => NS_PROJECT_TALK, // T181374
-		'F' => NS_FILE, // T240428
-		'FT' => NS_FILE_TALK, // T240428
 		'T' => NS_TEMPLATE, // T181374
 		'H' => NS_HELP, // T181374
 		'CAT' => NS_CATEGORY, // T181374
@@ -1823,8 +1818,6 @@ return [
 		'维基导游' => NS_PROJECT, // T62122
 		'維基導遊' => NS_PROJECT, // T62122
 		'WT' => NS_PROJECT_TALK, // T198007
-		'F' => NS_FILE, // T198007
-		'FT' => NS_FILE_TALK, // T198007
 		'T' => NS_TEMPLATE, // T198007
 		'H' => NS_HELP, // T198007
 		'CAT' => NS_CATEGORY, // T198007
