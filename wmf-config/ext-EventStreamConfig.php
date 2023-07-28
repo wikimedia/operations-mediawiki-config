@@ -794,6 +794,14 @@ return [
 			'schema_title' => 'analytics/mobile_apps/android_find_in_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'android.android_image_recommendation_event' => [
+			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.reading_list_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_reading_list_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		// See https://phabricator.wikimedia.org/T330355
 		'android.metrics_platform.article_link_preview_interaction' => [
 			'schema_title' => 'analytics/mediawiki/client/metrics_event',
