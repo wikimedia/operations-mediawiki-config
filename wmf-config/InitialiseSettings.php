@@ -3668,6 +3668,7 @@ return [
 	'frwikiversity' => false, // T324277
 	'pflwiki' => false, // T205055
 	'rmwiki' => false,
+	'ruwikibooks' => false, // T342800
 	'thankyouwiki' => false,
 	'thwikibooks' => false, // T308375
 	'viwikibooks' => false, // T289837
