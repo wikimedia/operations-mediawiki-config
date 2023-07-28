@@ -1,8 +1,7 @@
 <?php
-
 namespace Wikimedia\MWConfig\Noc;
 
-// conftool
+require_once __DIR__ . '/utils.php';
 
 class EtcdCachedConfig {
 	/** Time to store data in APCU */
@@ -30,7 +29,7 @@ class EtcdCachedConfig {
 	private $localCache;
 
 	protected function __construct() {
-		$this->apcuAvailable = ( ini_get( 'apc.enabled' ) && ( ( PHP_SAPI !== 'cli' ) || ini_get( 'apc.enable_cli' ) ) );
+		$this->apcuAvailable = hasApcu();
 		$env = require __DIR__ . '/../../wmf-config/env.php';
 		$this->etcdServers = $this->getEtcdServers( sprintf( '%s.wmnet', $env['dc'] ) );
 	}

@@ -16,3 +16,20 @@ namespace Wikimedia\MWConfig\Noc;
 	}
 	return $inuse;
  }
+
+/**
+ * @param string $header
+ */
+function wmfNocHeader( $header ): void {
+	// Don't emit headers in unit tests
+	if ( PHP_SAPI !== 'cli' ) {
+		header( $header );
+	}
+}
+
+/**
+ * Check if apcu is enabled
+ */
+function hasApcu(): bool {
+	return ( ini_get( 'apc.enabled' ) && ( ( PHP_SAPI !== 'cli' ) || ini_get( 'apc.enable_cli' ) ) );
+}

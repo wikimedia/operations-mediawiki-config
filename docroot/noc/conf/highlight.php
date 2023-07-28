@@ -1,45 +1,24 @@
 <?php
-// Only allow viewing of files of which there is a copy (or link)
-// in noc/conf/* by the same name.
-$selectableFilepaths = array_merge( glob( __DIR__ . '/*' ),
-	glob( __DIR__ . '/dblists/*.dblist' ) );
+// Only allow viewing of files listed in filelist.php
+require_once __DIR__ . '/filelist.php';
+require_once __DIR__ . '/../../../src/Noc/utils.php';
+use function Wikimedia\MWConfig\Noc\wmfNocHeader;
+
+$confFiles = wmfLoadRoutes();
 
 // Name of file from user input
 $selectedFileName = $_GET['file'] ?? null;
 
 // Absolute path to file on disk
-$selectedFilePath = false;
+$selectedFilePath = $confFiles->getDiskPathByLabel( $selectedFileName );
 
 // Path to file in mediawiki-config repository
-$selectedFileRepoPath = false;
+$selectedFileRepoPath = $confFiles->getRepoPath( $selectedFilePath );
 
 // Relative path to the symlink in conf/*
-$selectedFileViewRawUrl = false;
+$selectedFileViewRawUrl = $confFiles->getRouteFromLabel( $selectedFileName );
 
 $hlHtml = "";
-
-foreach ( $selectableFilepaths as $selectableFilePath ) {
-	$relativePath = str_replace( __DIR__ . '/', '', $selectableFilePath );
-	$selectableName = preg_replace( '/\.txt$/', '', $relativePath );
-	if ( $selectableName === $selectedFileName ) {
-		$selectedFilePath = $selectableFilePath;
-		$selectedFileViewRawUrl = $relativePath;
-		break;
-	}
-}
-
-// Don't (re)run if executing unit tests
-if ( !function_exists( 'wmfNocHeader' ) ) {
-	/**
-	 * @param string $header
-	 */
-	function wmfNocHeader( $header ): void {
-		// Don't emit headers in unit tests
-		if ( PHP_SAPI !== 'cli' ) {
-			header( $header );
-		}
-	}
-}
 
 wmfNocHeader( 'Content-Type: text/html; charset=utf-8' );
 
@@ -56,24 +35,12 @@ if ( !$selectedFilePath ) {
 		$hlHtml = '<p>Invalid filename given.</p>';
 	}
 } else {
-	// Follow symlink
+	// Check the file exists
 	if ( !file_exists( $selectedFilePath ) ) {
 		wmfNocHeader( 'HTTP/1.1 404 Not Found' );
 		$hlHtml = "Invalid symlink :(";
 		$selectedFilePath = false;
 	} else {
-		// Resolve symlink
-		// Don't use readlink since that will return a path relative to where the symlink is.
-		// Which is a problem if our PWD is not the same dir (such as in unit tests).
-		$selectedFilePath = realpath( $selectedFilePath );
-		// Figure out path to selected file in the mediawiki-config repository
-		$baseDir = basename( dirname( $selectedFilePath ) );
-		if ( in_array( $baseDir, [ 'wmf-config' ] ) ) {
-			$selectedFileRepoPath = $baseDir . '/' . $selectedFileName;
-		} else {
-			$selectedFileRepoPath = $selectedFileName;
-		}
-
 		if ( substr( $selectedFileName, -4 ) === '.php' ) {
 			$hlHtml = highlight_file( $selectedFilePath, true );
 			// Avoid non-breaking spaces, T21253

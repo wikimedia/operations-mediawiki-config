@@ -4,29 +4,21 @@
  */
 	require_once __DIR__ . '/../../../src/Noc/utils.php';
 	require_once __DIR__ . '/../../../src/Noc/EtcdCachedConfig.php';
+	require_once __DIR__ . '/filelist.php';
+	$confFiles = wmfLoadRoutes();
 
 	/**
-	 * @param array $viewFilenames
-	 * @param bool $highlight
-	 * @param string $prefixFunc
+	 * @param array $routesByLabel
 	 */
-	function wmfOutputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
-		$viewFilenames = array_map( $prefixFunc, $viewFilenames );
-		natsort( $viewFilenames );
-		foreach ( $viewFilenames as $viewFilename ) {
-			$srcFilename = substr( $viewFilename, -4 ) === '.txt'
-				? substr( $viewFilename, 0, -4 )
-				: $viewFilename;
+	function wmfOutputFiles( $routesByLabel ) {
+		$labels = array_keys( $routesByLabel );
+		natsort( $labels );
+		foreach ( $labels as $label ) {
+			$route = $routesByLabel[$label];
 			echo "\n<li>";
-
-			if ( $highlight ) {
-				echo '<a href="./highlight.php?file=' . htmlspecialchars( $srcFilename ) . '">'
-					. htmlspecialchars( $srcFilename );
-				echo '</a> (<a href="./' . htmlspecialchars( $viewFilename ) . '">raw text</a>)';
-			} else {
-				echo '<a href="./' . htmlspecialchars( $viewFilename ) . '">'
-					. htmlspecialchars( $srcFilename ) . '</a>';
-			}
+			echo '<a href="./highlight.php?file=' . htmlspecialchars( $label ) . '">'
+				. htmlspecialchars( $label );
+			echo '</a> (<a href="' . htmlspecialchars( $route ) . '">raw text</a>)';
 			echo '</li>';
 		}
 	}
@@ -81,21 +73,14 @@
 <h2 id="wmf-config">MediaWiki configuration</h2>
 <ul>
 <?php
-	$viewFilenames = array_merge(
-		glob( __DIR__ . '/*.php.txt' ),
-		glob( __DIR__ . '/{fc-list,langlist*,wikiversions*.json,extension-list}', GLOB_BRACE ),
-		glob( __DIR__ . '/*.yaml' )
-	);
-	wmfOutputFiles( $viewFilenames );
+	wmfOutputFiles( $confFiles->getConfigRoutes() );
 ?>
 </ul>
 
 <h2 id="dblist">Database lists</h2>
 <ul>
 <?php
-	wmfOutputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
-		return str_replace( __DIR__ . '/', '', $name );
-	} );
+	wmfOutputFiles( $confFiles->getDblistRoutes() );
 ?>
 </ul>
 
