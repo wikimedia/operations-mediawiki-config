@@ -1611,6 +1611,8 @@ return [
 	'+wikifunctionswiki' => [
 		'ZObject' => NS_MAIN,
 		'ZObject_talk' => NS_TALK,
+		'WF' => NS_PROJECT, // T342964
+		'WT' => NS_PROJECT_TALK, // T342964
 	],
 	'+yiwiki' => [
 		'וויקיפעדיע' => NS_PROJECT,
