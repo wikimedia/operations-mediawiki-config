@@ -4571,6 +4571,7 @@ return [
 	'uzwikibooks' => false,
 	'uzwikiquote' => false,
 	'uzwiktionary' => false,
+	'wikifunctionswiki' => false,
 	'zh_classicalwiki' => false,
 	'zh_min_nanwiki' => false,
 	'zh_min_nanwikibooks' => false,
