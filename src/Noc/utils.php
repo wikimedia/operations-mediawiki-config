@@ -33,3 +33,18 @@ function wmfNocHeader( $header ): void {
 function hasApcu(): bool {
 	return ( ini_get( 'apc.enabled' ) && ( ( PHP_SAPI !== 'cli' ) || ini_get( 'apc.enable_cli' ) ) );
 }
+
+/**
+ * Extract the url parts from the request
+ */
+function getParsedRequestUrl(): array {
+	$https = $_SERVER['HTTPS'] ?? 'off';
+	if ( $https == 'on' ) {
+		$url = 'https://';
+	} else {
+		$url = 'http://';
+	}
+	$url .= $_SERVER['HTTP_HOST'];
+	$url .= $_SERVER['REQUEST_URI'];
+	return parse_url( $url );
+}
