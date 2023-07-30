@@ -1917,6 +1917,11 @@ Wiktionary:
         comment_2x: T159542
         local_tagline: true
         local_wordmark: true
+    btmwiktionary:
+        commons: File:Wiktionary-logo-btm.svg
+        comment: T343004
+        comment_1_5x: T343004
+        comment_2x: T343004
     cawiktionary:
         no_1_5x: true
         no_2x: true
