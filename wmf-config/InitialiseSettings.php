@@ -7732,6 +7732,10 @@ return [
 	'viwiki' => false, // (s7) Waiting for T315510
 ],
 
+'wgDiscussionToolsAutoTopicSubEditor' => [
+	'default' => 'discussiontoolsapi', // T284836
+],
+
 'wgDiscussionToolsShowFeedbackLinks' => [
 	'default' => true, // T322494
 ],
