@@ -4170,10 +4170,90 @@ return [
 	],
 
 	// Wikiversity
+	'arwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-ar.svg',
+		'width' => 147,
+		'height' => 25,
+	],
+	'betawikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-beta.svg',
+		'width' => 146,
+		'height' => 29,
+	],
+	'cswikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-cs.svg',
+		'width' => 146,
+		'height' => 15,
+	],
+	'dewikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-de.svg',
+		'width' => 146,
+		'height' => 17,
+	],
+	'elwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-el.svg',
+		'width' => 147,
+		'height' => 18,
+	],
+	'enwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-en.svg',
+		'width' => 146,
+		'height' => 16,
+	],
+	'eswikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-es.svg',
+		'width' => 146,
+		'height' => 14,
+	],
+	'frwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-fr.svg',
+		'width' => 146,
+		'height' => 19,
+	],
+	'hiwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-hi.svg',
+		'width' => 146,
+		'height' => 21,
+	],
+	'itwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-it.svg',
+		'width' => 146,
+		'height' => 19,
+	],
+	'jawikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-ja.svg',
+		'width' => 148,
+		'height' => 18,
+	],
+	'kowikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-ko.svg',
+		'width' => 146,
+		'height' => 25,
+	],
 	'ptwikiversity' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-pt.svg',
 		'width' => 140,
 		'height' => 12,
+	],
+	'ruwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-ru.svg',
+		'width' => 147,
+		'height' => 16,
+	],
+	'slwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-sl.svg',
+		'width' => 147,
+		'height' => 17,
+	],
+	'svwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-sv.svg',
+		'width' => 146,
+		'height' => 15,
+	],
+	'zhwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-zh.svg',
+		'width' => 146,
+		'height' => 24,
 	],
 
 	// Wikivoyage
@@ -6639,6 +6719,16 @@ return [
 	],
 
 	// Wikiversity
+	'betawikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-tagline-beta.svg',
+		'width' => 50,
+		'height' => 19,
+	],
+	'kowikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-tagline-ko.svg',
+		'width' => 147,
+		'height' => 21,
+	],
 
 	// Wikivoyage
 

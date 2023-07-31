@@ -3417,39 +3417,53 @@ Wikisource:
         commons_wordmark: 'File:Wikisource-wordmark-zh.svg'
         comment_wordmark: 'T261076, T308620'
 Wikiversity:
-    arwikiversity: null
+    arwikiversity:
+        local_wordmark: true
     betawikiversity:
         commons: 'File:Wikiversity-logo-beta-v2.svg'
         comment: T308604
         comment_1_5x: T308604
         comment_2x: T308604
+        local_wordmark: true
+        local_tagline: true
     cswikiversity:
         comment: T54019
         comment_1_5x: T150618
         comment_2x: T150618
-    dewikiversity: null
+        local_wordmark: true
+    dewikiversity:
+        local_wordmark: true
     elwikiversity:
         comment: T248391
         comment_1_5x: T248391
         comment_2x: T248391
+        local_wordmark: true
     enwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
-    eswikiversity: null
+        local_wordmark: true
+    eswikiversity:
+        local_wordmark: true
     fiwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
     frwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
-    hiwikiversity: null
+        local_wordmark: true
+    hiwikiversity:
+        local_wordmark: true
     itwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
-    jawikiversity: null
+        local_wordmark: true
+    jawikiversity:
+        local_wordmark: true
     kowikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
+        local_tagline: true
     ptwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3458,10 +3472,13 @@ Wikiversity:
     ruwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
     slwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
-    svwikiversity: null
+        local_wordmark: true
+    svwikiversity:
+        local_wordmark: true
     zhwikiversity:
         commons: 'File:Wikiversity_logo_2017_zh-hant.svg'
         variants:
@@ -3470,6 +3487,7 @@ Wikiversity:
         lang_variants:
             zh-hans:
                 selected_logo: zhwikiversity-hans
+                local_wordmark: true
             zh-cn:
                 selected_lang: zh-hans
             zh-my:
@@ -3480,6 +3498,7 @@ Wikiversity:
         comment_1_5x: 'T202127, T308620'
         comment_2x: 'T202127, T308620'
         comment_lang_variants: T308620
+        local_wordmark: true
 Wikivoyage:
     bnwikivoyage:
         commons_wordmark: 'File:Wikivoyage-wordmark-bn.svg'
