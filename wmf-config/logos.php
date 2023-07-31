@@ -4182,26 +4182,65 @@ return [
 		'width' => 96,
 		'height' => 25,
 	],
+	'elwikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-el.svg',
+		'width' => 144,
+		'height' => 26,
+	],
 	'enwikivoyage' => [ // T157476, T261033, T273477
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
 		'width' => 120,
 		'height' => 25,
 	],
-	'fawikivoyage' => null,
+	'eowikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-eo.svg',
+		'width' => 130,
+		'height' => 30,
+	],
+	'eswikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-es.svg',
+		'width' => 128,
+		'height' => 30,
+	],
+	'fawikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-fa.svg',
+		'width' => 126,
+		'height' => 30,
+	],
 	'hewikivoyage' => [ // T234278
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
 		'width' => 88,
 		'height' => 21,
+	],
+	'hiwikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-hi.svg',
+		'width' => 44,
+		'height' => 32,
+	],
+	'plwikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-pl.svg',
+		'width' => 62,
+		'height' => 32,
 	],
 	'pswikivoyage' => [ // T200152
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-ps.svg',
 		'width' => 88,
 		'height' => 21,
 	],
+	'shnwikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-shn.svg',
+		'width' => 146,
+		'height' => 28,
+	],
+	'ukwikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-uk.svg',
+		'width' => 148,
+		'height' => 28,
+	],
 	'trwikivoyage' => [ // T272776, T332439
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-tr.svg',
-		'width' => 111,
-		'height' => 25,
+		'width' => 90,
+		'height' => 18,
 	],
 	'zhwikivoyage' => [ // T322133
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh.svg',

@@ -3487,19 +3487,22 @@ Wikivoyage:
     elwikivoyage:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     enwikivoyage:
         commons_wordmark: 'File:Wikivoyage-wordmark-en.svg'
         comment_wordmark: 'T157476, T261033, T273477'
-    eowikivoyage: null
+    eowikivoyage:
+        local_wordmark: true
     eswikivoyage:
         comment: T170604
         comment_1_5x: T170604
         comment_2x: T170604
+        local_wordmark: true
     fawikivoyage:
         comment: T73382
         comment_1_5x: T73382
         comment_2x: T73382
-        no_wordmark: true
+        local_wordmark: true
     fiwikivoyage:
         comment: T151570
     hewikivoyage:
@@ -3511,7 +3514,9 @@ Wikivoyage:
         comment: T173013
         comment_1_5x: T173013
         comment_2x: T173013
-    plwikivoyage: null
+        local_wordmark: true
+    plwikivoyage:
+        local_wordmark: true
     pswikivoyage:
         commons_wordmark: 'File:Wikivoyage-wordmark-ps.svg'
         comment_wordmark: T200152
@@ -3523,8 +3528,10 @@ Wikivoyage:
         comment_1_5x: T302797
         comment_2x: T302797
         commons: 'File:Wikivoyage-Logo-shn.svg'
+        local_wordmark: true
     ukwikivoyage:
         commons: 'File:Wikivoyage-Logo-v3-ukrainian.svg'
+        local_wordmark: true
         comment: T110370
     trwikivoyage:
         commons_wordmark: 'File:Wikivoyage-wordmark-tr-2.svg'
