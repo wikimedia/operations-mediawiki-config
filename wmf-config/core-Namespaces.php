@@ -751,6 +751,8 @@ return [
 	'+idwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
+		'Wikisumber' => NS_PROJECT, // T341173
+		'Pembicaraan_Wikisumber' => NS_PROJECT_TALK, // T341173
 	],
 	'+ilowiki' => [
 		'WT' => NS_PROJECT_TALK, // T40247
@@ -5256,6 +5258,7 @@ return [
 	'idwikibooks' => 'Wikibuku',
 	'idwikimedia' => 'Wikimedia_Indonesia',
 	'idwikiquote' => 'Wikikutip', // T341177
+	'idwikisource' => 'Wikisumber', // T341173
 	'iegcomwiki' => 'Project',
 	'igwikiquote' => 'Wikikwotu',
 	'ilwikimedia' => 'ויקימדיה',

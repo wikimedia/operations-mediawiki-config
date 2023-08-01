@@ -1302,6 +1302,7 @@ return [
 	'idwikibooks' => 'Wikibuku',
 	'idwikimedia' => 'Wikimedia Indonesia', // T192726
 	'idwikiquote' => 'Wikikutip', // T341177
+	'idwikisource' => 'Wikisumber', // T341173
 	'id_internalwikimedia' => 'Wikimedia Indonesia (internal)',
 	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
 	'ilwikimedia' => 'ויקימדיה',
