@@ -6,8 +6,12 @@
  *
  * Then view <http://localhost:9412/db.php>.
  */
+
+use Wikimedia\MWConfig\Noc\EtcdCachedConfig;
+
 require_once __DIR__ . '/../../src/Noc/EtcdCachedConfig.php';
 
+$isLocalhost = str_starts_with( $_SERVER['HTTP_HOST'], 'localhost' );
 $format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
 if ( $format === 'json' ) {
 	error_reporting( 0 );
@@ -19,11 +23,23 @@ if ( $format === 'json' ) {
 
 // Default to eqiad but allow limited other DCs to be specified with ?dc=foo.
 $env = require '../../wmf-config/env.php';
-$dbSelectedDC = 'eqiad';
-if ( isset( $_GET['dc'] ) && in_array( $_GET['dc'], $env['dcs'] ) ) {
-	$dbSelectedDC = $_GET['dc'];
+$validDCs = $isLocalhost ? [ 'tmsx', 'tmsy' ] : $env['dcs'];
+$dbSelectedDC = in_array( $_GET['dc'] ?? null, $validDCs )
+	? $_GET['dc']
+	: $validDCs[0];
+
+// Now load the JSON written to Etcd by dbctl, and merge it in.
+// This is mimicking what wmfApplyEtcdDBConfig (wmf-config/etcd.php) does in prod.
+if ( $isLocalhost ) {
+	$dbconfig = json_decode(
+		file_get_contents(
+			__DIR__ . '/../../tests/data/dbconfig/' . $dbSelectedDC . '.json'
+		),
+		/* assoc = */ true
+	);
+} else {
+	$dbconfig = EtcdCachedConfig::getInstance()->getValue( $dbSelectedDC . '/dbconfig' );
 }
-$dbLocalDomain = sprintf( '%s.wmnet', $env['dc'] );
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -37,12 +53,6 @@ $wmgMasterDatacenter = null;
 // Load file to obtain $wgLBFactoryConf
 require_once __DIR__ . '/../../wmf-config/db-production.php';
 
-// Now load the JSON written to Etcd by dbctl, from the local disk and merge it in.
-// This is mimicking what wmfApplyEtcdDBConfig (wmf-config/etcd.php) does in prod.
-//
-// On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
-// run via systemd timer, defined in puppet.
-$dbconfig = \Wikimedia\MWConfig\Noc\EtcdCachedConfig::getInstance()->getValue( $dbSelectedDC . '/dbconfig' );
 global $wgLBFactoryConf;
 $wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
 $wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
@@ -133,7 +143,7 @@ foreach ( $sections as $name => $label ) {
 		<h1>Database configuration</h1>
 <?php
 print '<p>';
-foreach ( $env['dcs'] as $dc ) {
+foreach ( $validDCs as $dc ) {
 	$active = ( $dc === $dbSelectedDC ) ? ' wm-btn-active' : '';
 	print '<a role="button" class="wm-btn' . $active . '" href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> ';
 }
