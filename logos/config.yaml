@@ -720,6 +720,13 @@ Wikipedia:
         comment_2x: T150618
         commons_tagline: 'File:Wikipedia-tagline-id.svg'
         comment_tagline: T258552
+    idwikisource:
+        commons: 'File:Wikisource-logo-id.svg'
+        comment: T341171
+        comment_1_5x: T341171
+        comment_2x: T341171
+        commons_wordmark: 'File:Wikisource-wordmark-id.svg'
+        comment_wordmark: T341177
     iewiki:
         comment: T51125
         comment_1_5x: T150618
