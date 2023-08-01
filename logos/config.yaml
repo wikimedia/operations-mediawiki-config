@@ -3462,6 +3462,7 @@ Wikiversity:
     fiwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
     frwikiversity:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3539,6 +3540,7 @@ Wikivoyage:
         local_wordmark: true
     fiwikivoyage:
         comment: T151570
+        local_wordmark: true
     hewikivoyage:
         comment_1_5x: T208148
         comment_2x: T208148

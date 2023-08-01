@@ -4192,8 +4192,8 @@ return [
 	],
 	'betawikiversity' => [
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-beta.svg',
-		'width' => 146,
-		'height' => 29,
+		'width' => 120,
+		'height' => 24,
 	],
 	'cswikiversity' => [
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-cs.svg',
@@ -4220,6 +4220,11 @@ return [
 		'width' => 146,
 		'height' => 14,
 	],
+	'fiwikiversity' => [
+		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-fi.svg',
+		'width' => 146,
+		'height' => 17,
+	],
 	'frwikiversity' => [
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-fr.svg',
 		'width' => 146,
@@ -4242,8 +4247,8 @@ return [
 	],
 	'kowikiversity' => [
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-ko.svg',
-		'width' => 146,
-		'height' => 25,
+		'width' => 120,
+		'height' => 21,
 	],
 	'ptwikiversity' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-pt.svg',
@@ -4301,6 +4306,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-fa.svg',
 		'width' => 126,
 		'height' => 30,
+	],
+	'fiwikivoyage' => [
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-fi.svg',
+		'width' => 146,
+		'height' => 24,
 	],
 	'hewikivoyage' => [ // T234278
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
@@ -6746,8 +6756,8 @@ return [
 	],
 	'kowikiversity' => [
 		'src' => '/static/images/mobile/copyright/wikiversity-tagline-ko.svg',
-		'width' => 147,
-		'height' => 21,
+		'width' => 120,
+		'height' => 17,
 	],
 
 	// Wikivoyage
