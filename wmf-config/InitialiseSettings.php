@@ -2181,6 +2181,7 @@ return [
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 		'WikibaseQualityConstraints' => 'debug',
+		'WikiLambda' => 'warning',
 		'WikimediaEvents' => 'error', // For T205754 & T208233
 		'WikitechGerritBan' => 'debug',
 		'WikitechPhabBan' => 'debug',

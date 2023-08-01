@@ -375,6 +375,7 @@ function wmfGetOverrideSettings() {
 				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 				'WikibaseQualityConstraints' => 'debug',
 				'WikimediaEvents' => 'error', // For T205754 & T208233
+				'WikiLambda' => 'warning',
 				'WikitechGerritBan' => 'debug',
 				'WikitechPhabBan' => 'debug',
 				'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
@@ -392,7 +393,6 @@ function wmfGetOverrideSettings() {
 				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
-				'WikiLambda' => 'debug',
 				'Phonos' => 'debug',
 			],
 		],
