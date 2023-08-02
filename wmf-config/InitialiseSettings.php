@@ -1914,6 +1914,7 @@ return [
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'mrwikisource' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T269067
+	'newiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T343257
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
 	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471

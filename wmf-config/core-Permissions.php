@@ -1765,6 +1765,9 @@ return [
 			'tboverride' => true, // T327114
 		],
 		'filemover' => [ 'movefile' => true ], // T95103
+		'sysop' => [
+			'templateeditor' => true, // T343257
+		],
 		'templateeditor' => [
 			'templateeditor' => true,
 			'editprotected' => true,
