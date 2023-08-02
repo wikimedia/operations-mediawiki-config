@@ -4251,6 +4251,10 @@ wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
+if ( $wmgUseParserMigration ) {
+	wfLoadExtension( 'ParserMigration' );
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

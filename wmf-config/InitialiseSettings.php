@@ -5793,6 +5793,17 @@ return [
 	'wikidatawiki' => false,
 ],
 
+'wgParserMigrationEnableQueryString' => [
+	'default' => true,
+	'commonswiki' => false,
+	'wikidatawiki' => false,
+],
+
+// T333179
+'wmgUseParserMigration' => [
+	'default' => false,
+],
+
 // -------------- Shared Parsoid end --------------
 
 // -------------- VisualEditor start --------------

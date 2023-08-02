@@ -2549,5 +2549,10 @@ function wmfGetOverrideSettings() {
 
 		// T341000 (just disable the prod value)
 		'-wgExternalLinksDomainGaps' => [],
+
+		'wmgUseParserMigration' => [
+			'default' => true,
+		]
+
 	];
 } # wmfGetOverrideSettings()
