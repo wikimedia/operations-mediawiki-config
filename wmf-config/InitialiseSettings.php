@@ -3586,6 +3586,7 @@ return [
 
 'wmgEmergencyCaptcha' => [
 	'default' => false,
+	'enwiki'  => true, // T343294 temporary enabling due to abuse or request of enwiki admins.
 ],
 # @} end of Captcha
 
