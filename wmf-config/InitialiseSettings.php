@@ -6759,6 +6759,7 @@ return [
 	'trwikivoyage' => true, // T319537
 	'ukwiki' => true, // T91530
 	'urwiki' => true, // T42848
+	'uzwiki' => true, // T343270
 	'viwiki' => true, // T50878
 	'wikitech' => true,
 	'zhwiki' => true, // T32362
