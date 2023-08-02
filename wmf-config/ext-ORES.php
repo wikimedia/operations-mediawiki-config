@@ -47,6 +47,7 @@ return [
 'wgOresUseLiftwing' => [
 	'default' => true,
 	'enwiki' => false, // T342115
+	'fiwiki' => false, // T343308
 	'wikidatawiki' => false // T342115
 ],
 'wgOresModels' => [
