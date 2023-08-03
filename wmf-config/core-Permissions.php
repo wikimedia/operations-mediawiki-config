@@ -2784,8 +2784,9 @@ return [
 		],
 		'user' => [
 			// Temporarily during early, limited deployment, re-grant to logged-in users the standard
-			// wikitext editing rights that logged-out users can't do
+			// wikitext editing and function-calling rights that logged-out users can't do
 			'edit' => true,
+			'wikilambda-execute' => true,
 
 			// Temporarily during early, limited deployment, basic logged-in users can't do this
 			'wikilambda-create' => false,
@@ -2803,7 +2804,6 @@ return [
 			'wikilambda-edit-user-function' => false,
 		],
 		'functioneer' => [
-			'wikilambda-execute' => true,
 			// Temporarily during early, limited deployment, re-grant to functioneers the standard
 			// Wikifunctions-specific rights that logged-in users can't do
 			'wikilambda-create' => true,
