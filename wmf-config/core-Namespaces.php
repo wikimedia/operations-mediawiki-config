@@ -3274,6 +3274,8 @@ return [
 		109 => 'ਪ੍ਰਕਾਸ਼ਕ_ਗੱਲ-ਬਾਤ', // T226959 - Publisher talk
 		110 => 'ਲਿਖਤ', // T226959 - Work
 		111 => 'ਲਿਖਤ_ਗੱਲ-ਬਾਤ', // T226959 - Work talk
+		112 => 'ਆਡੀਓਬੁਕ', // T343410 - Audiobook
+		113 => 'ਆਡੀਓਬੁਕ_ਗੱਲ-ਬਾਤ', // T343410 - Audiobook_talk
 	],
 	'plwikisource' => [
 		NS_USER => 'Wikiskryba',
