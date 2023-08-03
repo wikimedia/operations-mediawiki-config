@@ -2798,8 +2798,6 @@ return [
 			'wikilambda-edit-function' => false,
 			'wikilambda-edit-implementation' => false,
 			'wikilambda-edit-key-label' => false,
-			'wikilambda-edit-object-alias' => false,
-			'wikilambda-edit-object-label' => false,
 			'wikilambda-edit-tester' => false,
 			'wikilambda-edit-user-function' => false,
 		],
@@ -2815,8 +2813,6 @@ return [
 			'wikilambda-edit-function' => true,
 			'wikilambda-edit-implementation' => true,
 			'wikilambda-edit-key-label' => true,
-			'wikilambda-edit-object-alias' => true,
-			'wikilambda-edit-object-label' => true,
 			'wikilambda-edit-tester' => true,
 			'wikilambda-edit-user-function' => true,
 
