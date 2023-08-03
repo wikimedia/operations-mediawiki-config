@@ -1160,6 +1160,10 @@ return [
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
+	'+pawikisource' => [
+		'Audiobook' => 112, // T343410
+		'Audiobook_talk' => 113, // T343410
+	],
 	'+plwiki' => [ // T12064
 		'Wikipedystka' => NS_USER,
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
