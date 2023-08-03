@@ -50,6 +50,12 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 	$wgObjectCaches['mcrouter'],
 	[ 'routingPrefix' => "/$wmgMasterDatacenter/mw/" ]
 );
+// Wikifunctions dedicated caching cluster. It's dc-local with no replication.
+// See T297815.
+$wgObjectCaches['mcrouter-wikifunctions'] = array_merge(
+	$wgObjectCaches['mcrouter'],
+	[ 'routingPrefix' => '/local/wf' ]
+);
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// nutcracker only; no mcrouter present
