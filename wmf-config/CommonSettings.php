@@ -4077,6 +4077,7 @@ if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
+	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
 }
 
 if ( $wmgUseWikistories ) {
