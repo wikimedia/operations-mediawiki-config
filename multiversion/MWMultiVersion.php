@@ -474,8 +474,8 @@ class MWMultiVersion {
 		global $IP;
 		if ( strpos( $script, "{$IP}/" ) === 0 ) {
 			$script = substr( $script, strlen( "{$IP}/" ) );
-			$options['wrapper'] = __DIR__ . '/MWScript.php';
 		}
+		$options['wrapper'] = __DIR__ . '/MWScript.php';
 		return true;
 	}
 
