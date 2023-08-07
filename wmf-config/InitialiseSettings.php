@@ -3144,7 +3144,7 @@ return [
 		// custom groups used on several wikis
 		'arbcom', 'botadmin', 'eliminator', 'import', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
-		'abusefilter' /* enwiki */, 'curator' /* enwikiversity */, 'engineer' /* cswiki, ruwiki */, 'facilitator' /* frwikinews */, 'founder' /* enwiki */, 'templateeditor' /* rowiki */, 'test-sysop' /* betawikiversity, incubatorwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
+		'abusefilter' /* enwiki */, 'curator' /* enwikiversity */, 'engineer' /* cswiki, ruwiki */, 'facilitator' /* frwikinews */, 'founder' /* enwiki */, 'templateeditor' /* rowiki */, 'test-sysop' /* betawikiversity, incubatorwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff', 'wikifunctions-staff',
 		// metawiki local groups with global powers (some also on testwiki)
 		'centralnoticeadmin', 'global-renamer', 'translationadmin', 'wmf-officeit', 'wmf-supportsafety',
 		// wikitech local groups with global powers
