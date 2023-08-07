@@ -2906,6 +2906,7 @@ return [
 		'autoreviewer' => [
 			'autopatrol' => true,
 			'movefile' => true,
+			'suppressredirect' => true, // T343711
 		], // T195247
 		'extendedconfirmed' => [
 			'extendedconfirmed' => true, // T287322
