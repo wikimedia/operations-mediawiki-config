@@ -4023,6 +4023,11 @@ return [
 	],
 
 	// Wikisource
+	'arwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ar.svg',
+		'width' => 146,
+		'height' => 24,
+	],
 	'aswikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-as.svg',
 		'width' => 120,
@@ -4083,6 +4088,11 @@ return [
 		'width' => 120,
 		'height' => 22,
 	],
+	'eowikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-eo.svg',
+		'width' => 146,
+		'height' => 18,
+	],
 	'etwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-et.svg',
 		'width' => 120,
@@ -4093,10 +4103,21 @@ return [
 		'width' => 120,
 		'height' => 21,
 	],
+	'fawikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-fa.svg',
+		'width' => 144,
+		'height' => 32,
+	],
 	'fiwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-fi.svg',
 		'width' => 120,
 		'height' => 15,
+	],
+	'guwikisource' => null,
+	'hewikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-he.svg',
+		'width' => 146,
+		'height' => 28,
 	],
 	'hiwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-hi.svg',
@@ -4138,6 +4159,7 @@ return [
 		'width' => 110,
 		'height' => 32,
 	],
+	'kowikisource' => null,
 	'lawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-la.svg',
 		'width' => 146,
@@ -4158,6 +4180,7 @@ return [
 		'width' => 146,
 		'height' => 21,
 	],
+	'mlwikisource' => null,
 	'mrwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-mr.svg',
 		'width' => 112,
@@ -4168,15 +4191,90 @@ return [
 		'width' => 146,
 		'height' => 20,
 	],
+	'orwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-or.svg',
+		'width' => 113,
+		'height' => 21,
+	],
+	'pawikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-pa.svg',
+		'width' => 557,
+		'height' => 146,
+	],
+	'plwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-pl.svg',
+		'width' => 146,
+		'height' => 23,
+	],
+	'ruwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ru.svg',
+		'width' => 146,
+		'height' => 25,
+	],
+	'sahwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sah.svg',
+		'width' => 146,
+		'height' => 22,
+	],
+	'skwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sk.svg',
+		'width' => 146,
+		'height' => 23,
+	],
+	'slwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sl.svg',
+		'width' => 146,
+		'height' => 28,
+	],
 	'sourceswiki' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark.svg',
 		'width' => 120,
 		'height' => 17,
 	],
+	'srwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sr.svg',
+		'width' => 146,
+		'height' => 22,
+	],
+	'tawikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ta.svg',
+		'width' => 146,
+		'height' => 30,
+	],
+	'tewikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-te.svg',
+		'width' => 87,
+		'height' => 32,
+	],
+	'thwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-th.svg',
+		'width' => 95,
+		'height' => 29,
+	],
 	'trwikisource' => [ // T260658
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-tr.svg',
 		'width' => 143,
 		'height' => 25,
+	],
+	'ukwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-uk.svg',
+		'width' => 122,
+		'height' => 18,
+	],
+	'wawikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-wa.svg',
+		'width' => 146,
+		'height' => 23,
+	],
+	'yiwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-yi.svg',
+		'width' => 146,
+		'height' => 22,
+	],
+	'zh_min_nanwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-zh_min_nan.svg',
+		'width' => 121,
+		'height' => 15,
 	],
 	'zhwikisource' => [ // T261076, T308620
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-zh.svg',
@@ -6746,6 +6844,21 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-tagline-fr.svg',
 		'width' => 120,
 		'height' => 17,
+	],
+	'tewikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-tagline-te.svg',
+		'width' => 146,
+		'height' => 26,
+	],
+	'vecwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-tagline-vec.svg',
+		'width' => 119,
+		'height' => 10,
+	],
+	'wawikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-tagline-wa.svg',
+		'width' => 146,
+		'height' => 18,
 	],
 
 	// Wikiversity

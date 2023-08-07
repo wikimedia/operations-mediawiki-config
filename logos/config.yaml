@@ -3188,6 +3188,7 @@ Wikisource:
         comment: T336193
         comment_1_5x: T336193
         comment_2x: T336193
+        local_wordmark: true
     aswikisource:
         comment: T45129
         no_1_5x: true
@@ -3251,6 +3252,7 @@ Wikisource:
     eowikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     etwikisource:
         no_1_5x: true
         no_2x: true
@@ -3264,6 +3266,7 @@ Wikisource:
     fawikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     fiwikisource:
         comment: T54019
         no_1_5x: true
@@ -3274,9 +3277,11 @@ Wikisource:
     guwikisource:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     hewikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     hiwikisource:
         local_wordmark: true
     htwikisource:
@@ -3319,6 +3324,7 @@ Wikisource:
         comment: T40543
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     lawikisource:
         comment: T54019
         no_1_5x: true
@@ -3342,6 +3348,7 @@ Wikisource:
     mlwikisource:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     mrwikisource:
         comment: T103655
         no_1_5x: true
@@ -3360,29 +3367,36 @@ Wikisource:
         comment: T73875
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     pawikisource:
         comment: T149522
         comment_1_5x: T149522
         comment_2x: T149522
+        commons_wordmark: 'File:Wikisource-wordmark-pa.svg'
     plwikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     ruwikisource:
         comment_1_5x: T203343
         comment_2x: T203343
+        local_wordmark: true
     sahwikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     sawikisource:
         no_1_5x: true
         no_2x: true
     skwikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     slwikisource:
         comment: T54019
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     sourceswiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3393,15 +3407,20 @@ Wikisource:
         comment: 'T54019, T310961'
         comment_1_5x: 'T172268, T310961'
         comment_2x: 'T172268, T310961'
+        local_wordmark: true
     tawikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     tewikisource:
         comment: T46796
+        local_wordmark: true
+        local_tagline: true
     thwikisource:
         comment: T54019
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     trwikisource:
         comment: T54019
         no_1_5x: true
@@ -3412,19 +3431,25 @@ Wikisource:
         comment: T56491
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     vecwikisource:
         comment: T132157
         no_1_5x: true
         no_2x: true
+        local_tagline: true
     viwikisource:
         selected: enwikisource
-    wawikisource: null
+    wawikisource:
+        local_wordmark: true
+        local_tagline: true
     yiwikisource:
         comment_1_5x: T193562
         comment_2x: T193562
+        local_wordmark: true
     zh_min_nanwikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     zhwikisource:
         commons: 'File:Wikisource-logo-zh-SKQS.svg'
         comment: 'T229715, T261076, T308620'
