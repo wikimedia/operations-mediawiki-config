@@ -3184,7 +3184,7 @@ return [
 	'wikiversity' => [ 'meta', 'b', 'incubator' ],
 	'wikivoyage' => [ 'w', 'w:en', 'en', 'fr', 'es', 'ru', 'id', 'commons', 'meta', 'incubator' ],
 	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
-	'wikifunctionswiki' => [ 'meta', 'commons', 'incubator', 'ar', 'en', 'es', 'fr', 'ru', 'zh' ], // cross-projects plus UN 6
+	'wikifunctionswiki' => [ 'meta', 'commons', 'incubator', 'd', 'ar', 'en', 'es', 'fr', 'ru', 'zh' ], // cross-projects plus UN 6, T343365
 
 	// Specific wikis
 
