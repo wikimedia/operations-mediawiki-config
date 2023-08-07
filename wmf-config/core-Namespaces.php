@@ -5265,6 +5265,7 @@ return [
 	'idwikimedia' => 'Wikimedia_Indonesia',
 	'idwikiquote' => 'Wikikutip', // T341177
 	'idwikisource' => 'Wikisumber', // T341173
+	'idwiktionary' => 'Wikikamus', // T341173
 	'iegcomwiki' => 'Project',
 	'igwikiquote' => 'Wikikwotu',
 	'ilwikimedia' => 'ויקימדיה',
