@@ -4191,15 +4191,11 @@ return [
 		'width' => 146,
 		'height' => 20,
 	],
-	'orwikisource' => [
-		'src' => '/static/images/mobile/copyright/wikisource-wordmark-or.svg',
-		'width' => 113,
-		'height' => 21,
-	],
+	'orwikisource' => null,
 	'pawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-pa.svg',
-		'width' => 557,
-		'height' => 146,
+		'width' => 116,
+		'height' => 30,
 	],
 	'plwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-pl.svg',

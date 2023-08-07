@@ -3367,7 +3367,7 @@ Wikisource:
         comment: T73875
         no_1_5x: true
         no_2x: true
-        local_wordmark: true
+        no_wordmark: true
     pawikisource:
         comment: T149522
         comment_1_5x: T149522
