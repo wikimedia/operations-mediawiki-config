@@ -2086,8 +2086,9 @@ Wiktionary:
         local_tagline: true
         local_wordmark: true
     idwiktionary:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: File:Wiktionary-logo-v2-id.svg
+        comment_1_5x: T341175
+        comment_2x: T341175
         commons_wordmark: File:Wiktionary-wordmark-id.svg
     iewiktionary:
         comment: T45240
