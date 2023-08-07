@@ -4319,13 +4319,13 @@ return [
 	],
 	'hiwikivoyage' => [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-hi.svg',
-		'width' => 44,
+		'width' => 136,
 		'height' => 32,
 	],
 	'plwikivoyage' => [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-pl.svg',
-		'width' => 62,
-		'height' => 32,
+		'width' => 147,
+		'height' => 28,
 	],
 	'pswikivoyage' => [ // T200152
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-ps.svg',
