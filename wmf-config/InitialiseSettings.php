@@ -12249,4 +12249,9 @@ return [
 	'default' => 30 * 24 * 3600, // T336250
 ],
 
+// T342858
+'wgEnableEditRecovery' => [
+	'default' => false,
+],
+
 ];
