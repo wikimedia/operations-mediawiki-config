@@ -5533,7 +5533,6 @@ return [
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesAllowList' => [
 	'default' => [
-		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
 		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
 		'visualeditor-newwikitext',          // [Editing] On-going (special permission) – New wikitext editor
 		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)

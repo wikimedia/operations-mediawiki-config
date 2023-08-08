@@ -2673,8 +2673,10 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
-	// User access configuration
+	// Show identical preferences on all wikis, but keep the old beta feature config
+	// for compatibility with preferences previously set by users (T335056)
 	$wgVisualEditorEnableBetaFeature = !$wmgVisualEditorDefault;
+	$wgVisualEditorUnifiedPreference = true;
 
 	// Feedback configuration
 	if ( $wmgVisualEditorConsolidateFeedback ) {
