@@ -429,7 +429,7 @@ return [
 	'huwiktionary' => '/static/images/project-logos/huwiktionary.png',
 	'hywiktionary' => '/static/images/project-logos/hywiktionary.png', // T45240
 	'iawiktionary' => '/static/images/project-logos/iawiktionary.png', // T45240
-	'idwiktionary' => '/static/images/project-logos/idwiktionary.png',
+	'idwiktionary' => '/static/images/project-logos/idwiktionary.png', // T341175
 	'iewiktionary' => '/static/images/project-logos/iewiktionary.png', // T45240
 	'ikwiktionary' => '/static/images/project-logos/ikwiktionary.png', // T45240
 	'iowiktionary' => '/static/images/project-logos/iowiktionary.png',
