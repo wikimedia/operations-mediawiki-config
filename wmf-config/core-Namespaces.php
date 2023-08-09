@@ -1670,10 +1670,6 @@ return [
 		'U' => NS_USER,
 		'CAT' => NS_CATEGORY,
 	],
-	'+wikifunctionswiki' => [
-		'ZObject' => NS_MAIN,
-		'ZObject_talk' => NS_TALK,
-	],
 	'+wuuwiki' => [
 		// English aliases - T124389
 		'T' => NS_TEMPLATE,
