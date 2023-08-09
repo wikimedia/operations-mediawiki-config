@@ -32,4 +32,24 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
+// Wikimania 2023, main event
+$wmgThrottlingExceptions[] = [
+	'from'  => '2023-08-14T00:00 +8:00',
+	'to'    => '2023-08-20T23:59 +8:00',
+	'IP'    => '101.127.250.66',
+	// this is just a guess, feel free to increase or clear throttles
+	// if it's not enough
+	'value' => 250,
+];
+
+// Wikimania 2023 'Knowledge Beyond Boundaries' side event
+// https://wikimania.wikimedia.org/wiki/2023:Related_events/Knowledge_Beyond_Boundaries
+$wmgThrottlingExceptions[] = [
+	'from'  => '2023-08-20T09:00 +8:00',
+	'to'    => '2023-08-20T16:59 +8:00',
+	'IP'    => '129.126.8.35',
+	// 60 is the stated max attendee count, plus a bit of extra
+	'value' => 75,
+];
+
 ## Add throttling definitions above.
