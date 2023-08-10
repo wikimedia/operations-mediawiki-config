@@ -2448,6 +2448,7 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'cswiki' => true,
 			'dewiki' => true,
+			'wikidatawiki' => true, // T343980
 		],
 
 		// T342858
