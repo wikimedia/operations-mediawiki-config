@@ -3817,9 +3817,7 @@ return [
 ],
 
 'wgProofreadPageEnableEditInSequence' => [
-	'napwikisource' => true, // T337472
-	'itwikisource' => true, // T340847
-	'pawikisource' => true, // T341786
+	'wikisource' => true, // T308098#9078429
 ],
 
 'wgProofreadPageBookNamespaces' => [
