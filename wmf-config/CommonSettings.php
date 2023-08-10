@@ -1417,7 +1417,6 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikifunctions.org',
 		'*.mediawiki.org',
 	];
-	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 	$wgGroupPermissions['sysop']['urlshortener-view-log'] = false;
 

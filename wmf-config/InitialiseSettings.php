@@ -5505,6 +5505,11 @@ return [
 	'default' => false,
 ],
 
+'wgUrlShortenerEnableSidebar' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgAllowMicrodataAttributes' => [
 	'default' => false,
 	'hewikisource' => true, // T89655
