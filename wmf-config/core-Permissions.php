@@ -2838,6 +2838,7 @@ return [
 			'wikilambda-edit-tester' => false,
 			'wikilambda-edit-user-function' => false,
 		],
+		'autopatrolled' => [ 'autopatrol' => true ], // T343946
 		'functioneer' => [
 			// Temporarily during early, limited deployment, re-grant to functioneers the standard
 			// Wikifunctions-specific rights that logged-in users can't do
@@ -4466,7 +4467,10 @@ return [
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
 	'+wikifunctionswiki' => [
-		'sysop' => [ 'confirmed' ], // T344261
+		'sysop' => [
+			'confirmed', // T344261
+			'autopatrolled', // T343946
+		],
 		'bureaucrat' => [ 'wikifunctions-staff' ],
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
@@ -5608,7 +5612,10 @@ return [
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
 	'+wikifunctionswiki' => [
-		'sysop' => [ 'confirmed' ], // T344261
+		'sysop' => [
+			'confirmed', // T344261
+			'autopatrolled', // T343946
+		],
 		'bureaucrat' => [ 'wikifunctions-staff' ],
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
