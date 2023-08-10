@@ -2856,6 +2856,8 @@ return [
 
 			// Temporarily during early, limited deployment, functioneers can't do this
 			"wikilambda-create-type" => false,
+
+			"autopatrol" => true, // T344085
 		],
 		'wikifunctions-staff' => [
 			'wikilambda-connect-implementation' => true,
