@@ -12259,4 +12259,11 @@ return [
 	'default' => false,
 ],
 
+'wgWikidiff2Options' => [
+	'group0' => [
+		'useMultiFormat' => true,
+		'maxSplitSize' => 10, // T341754
+	]
+],
+
 ];
