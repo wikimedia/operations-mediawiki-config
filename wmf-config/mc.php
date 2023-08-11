@@ -54,7 +54,7 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 // See T297815.
 $wgObjectCaches['mcrouter-wikifunctions'] = array_merge(
 	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => '/local/wf' ]
+	[ 'routingPrefix' => '/local/wf/' ]
 );
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
