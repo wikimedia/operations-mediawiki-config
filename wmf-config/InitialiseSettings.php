@@ -6684,7 +6684,7 @@ return [
 // T337944
 'wgCheckUserClientHintsEnabled' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true,
 ],
 
 // T337943, T340959
