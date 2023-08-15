@@ -6407,11 +6407,6 @@ return [
 		'width' => 108,
 		'height' => 19,
 	],
-	'knwiktionary' => [ // T343662
-		'src' => '/static/images/mobile/copyright/wiktionary-tagline-kn.svg',
-		'width' => 92,
-		'height' => 18,
-	],
 	'kowiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-ko.svg',
 		'width' => 110,
