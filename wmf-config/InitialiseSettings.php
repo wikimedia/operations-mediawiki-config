@@ -12122,6 +12122,12 @@ return [
 	'wikidataclient-test' => true,
 ],
 
+// Temporary, added in T339104, to be removed in T330217
+'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
+	'default' => null,
+	'testwikidatawiki' => true, // T343409
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
