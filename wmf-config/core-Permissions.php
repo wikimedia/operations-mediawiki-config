@@ -1420,6 +1420,8 @@ return [
 		'flood' => [ 'bot' => true, ], // T41306
 	],
 	'+jawiki' => [
+		'user' => [ 'changetags' => false ], // T344150
+		'abusefilter' => [ 'changetags' => true ], // T344150
 		'autoconfirmed' => [ 'patrol' => true ], // T15055
 		'rollbacker' => [ 'rollback' => true ], // T258339
 		'eliminator' => [
@@ -1445,9 +1447,16 @@ return [
 			'ipblock-exempt' => true,
 			'suppressredirect' => true,
 			'extendedconfirmed' => true, // T249820
+			'changetags' => true, // T344150
 		],
-		'sysop' => [ 'extendedconfirmed' => true ], // T249820
-		'bot' => [ 'extendedconfirmed' => true ], // T249820
+		'sysop' => [
+			'extendedconfirmed' => true, // T249820
+			'changetags' => true, // T344150
+		],
+		'bot' => [
+			'extendedconfirmed' => true, // T249820
+			'changetags' => true, // T344150
+		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T249820
 	],
 	'+jawiktionary' => [
