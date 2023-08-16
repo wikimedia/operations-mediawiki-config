@@ -5815,23 +5815,6 @@ return [
 	'lockeddown' => false,
 ],
 
-// Tell VisualEditor how to talk to Parsoid.
-// If set to 'vrs' and $wmgUseRESTbaseVRS is true,
-// VisualEditor will talk to Parsoid over HTTP,
-// probably to RESTbase but it just might be talking
-// to the Parsoid extension API.
-// 'direct' tells VE to use the Parsoid code in MediaWiki
-// by calling PHP functions.
-// See T320529
-'wgVisualEditorDefaultParsoidClient' => [
-	'default' => 'direct',
-],
-
-// Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
-'wmgVisualEditorAccessRestbaseDirectly' => [
-	'default' => false, // Needs to be false because wgVisualEditorDefaultParsoidClient is 'direct'
-],
-
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wgVisualEditorUseSingleEditTab' => [
 	'default' => false,         // Deploying slowly with community advanced notice

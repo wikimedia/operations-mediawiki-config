@@ -618,21 +618,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
-		// Tell VisualEditor how to talk to Parsoid.
-		// If set to 'vrs' and $wmgUseRESTbaseVRS is true,
-		// VisualEditor will talk to Parsoid over HTTP,
-		// probably to RESTbase but it just might be talking
-		// directly to the Parsoid API.
-		'wgVisualEditorDefaultParsoidClient' => [
-			'default' => 'direct', // T320529
-		],
-
-		// Needs to be false for wikis that have wgVisualEditorDefaultParsoidClient = 'direct'.
-		// Shouldn't be needed anymore once everything uses that mode.
-		'wmgVisualEditorAccessRestbaseDirectly' => [
-			'default' => false, // T320529
-		],
-
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],

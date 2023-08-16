@@ -2651,17 +2651,6 @@ if ( $wmgUseParsoid ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
-	// RESTBase connection configuration is done by $wmgUseRestbaseVRS above.
-	// Parsoid connection configuration is done by $wmgUseParsoid above.
-	// At least one of these should be set if you want to use Visual Editor.
-	$wgVisualEditorParsoidAutoConfig = false;
-
-	// RESTBase connection configuration
-	if ( $wmgVisualEditorAccessRestbaseDirectly ) {
-		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
-		$wgVisualEditorFullRestbaseURL = "/api/rest_";
-	}
-
 	// Tab configuration
 	if ( $wmgVisualEditorIsSecondaryEditor ) {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
