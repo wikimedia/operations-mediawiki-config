@@ -1391,6 +1391,14 @@ return [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
+	'+suwikisource' => [ // T344314
+		'Page' => 100,
+		'Page_talk' => 101,
+		'Author' => 102,
+		'Author_talk' => 103,
+		'Index' => 104,
+		'Index_talk' => 105,
+	],
 	'+svwiktionary' => [
 		'WT-diskussion' => NS_PROJECT_TALK,
 		'KAT' => NS_CATEGORY, // T214329
@@ -3327,6 +3335,14 @@ return [
 		101 => 'Разговор_о_аутору',
 		102 => 'Додатак', // T39742
 		103 => 'Разговор_о_додатку', // T39742
+	],
+	'suwikisource' => [ // T344314
+		100 => 'Kaca',
+		101 => 'Obrolan_kaca',
+		102 => 'Pangarang',
+		103 => 'Obrolan_Pangarang',
+		104 => 'Indéks',
+		105 => 'Obrolan_Indéks',
 	],
 	'svwikisource' => [
 		106 => 'Författare',
@@ -5494,6 +5510,7 @@ return [
 	'srwiktionary' => 'Викиречник',
 	'stewardwiki' => 'Project',
 	'strategywiki' => 'Strategic_Planning',
+	'suwikisource' => 'Wikipabukon', // T344314
 	'szlwiki' => 'Wikipedyjo',
 	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',

@@ -575,6 +575,7 @@ return [
 	'srwikiquote' => 'Europe/Berlin',
 	'srwiktionary' => 'Europe/Berlin',
 	'srwikisource' => 'Europe/Berlin',
+	'suwikisource' => 'Asia/Jakarta', // T344314
 	'svwiki' => 'Europe/Berlin',
 	'svwiktionary' => 'Europe/Berlin',
 	'svwikiquote' => 'Europe/Berlin',
@@ -1525,6 +1526,7 @@ return [
 	'srwiktionary' => 'Викиречник', // T121278
 	'strategywiki' => 'Strategic Planning',
 	'stewardwiki' => 'Steward Wiki',
+	'suwikisource' => 'Wikipabukon', // T344314
 	'sysop_itwiki' => 'Italian Wikipedia sysops wiki',
 	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
