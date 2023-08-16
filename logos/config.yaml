@@ -1910,6 +1910,11 @@ Wiktionary:
     bgwiktionary:
         no_1_5x: true
         no_2x: true
+    blkwiktionary:
+        commons: 'File:Wiktionary-logo-blk.svg'
+        comment_1_5x: T344310
+        comment_2x: T344310
+        comment: T344310
     bnwiktionary:
         comment: T45240
         comment_1_5x: T150618
