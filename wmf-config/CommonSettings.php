@@ -2661,16 +2661,6 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorAccessRestbaseDirectly ) {
 		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
 		$wgVisualEditorFullRestbaseURL = "/api/rest_";
-	} else {
-		if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-			// (T241961) Just for wikitech, load the Parsoid extension and
-			// use VisualEditor auto-config. (Yes, this is a bit of a hack,
-			// and it exposes Parsoid's REST API, but ensures that Parsoid
-			// 'extension' code is kept in sync with core.)
-			wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
-			// Note that wgVirtualRestConfig['modules']['parsoid'] isn't set as wmgUseParsoid is false
-			$wgVisualEditorParsoidAutoConfig = true;
-		}
 	}
 
 	// Tab configuration
