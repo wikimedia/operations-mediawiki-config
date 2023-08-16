@@ -109,6 +109,7 @@ $wgLBFactoryConf = [
 	'shiwiki'       => 's5',
 	'smnwiki'       => 's5',
 	'srwiki'        => 's5',
+	'suwikisource'  => 's5',
 	'taywiki'       => 's5',
 	'thankyouwiki'  => 's5',
 	'tlwikiquote'   => 's5',
