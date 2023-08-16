@@ -3414,6 +3414,11 @@ Wikisource:
         comment_1_5x: 'T172268, T310961'
         comment_2x: 'T172268, T310961'
         local_wordmark: true
+    suwikisource:
+        commons: 'File:Wikisource-logo-su-sund.svg'
+        comment_1_5x: T344314
+        comment_2x: T344314
+        comment: T344314
     tawikisource:
         no_1_5x: true
         no_2x: true
