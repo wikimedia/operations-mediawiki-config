@@ -5534,7 +5534,6 @@ return [
 'wgBetaFeaturesAllowList' => [
 	'default' => [
 		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
-		'visualeditor-newwikitext',          // [Editing] On-going (special permission) – New wikitext editor
 		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)
 		'popups',                            // [WebTeam] 2019-10-04 – Page Previews
 		'popupsreferencepreviews',           // [WMDE TW] 2019-10-04 – Reference Previews

@@ -2669,7 +2669,6 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	}
 	if ( $wmgVisualEditorEnableWikitext ) {
-		$wgVisualEditorEnableWikitext = true;
 		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
@@ -2688,9 +2687,6 @@ if ( $wmgUseVisualEditor ) {
 	// Citoid
 	wfLoadExtension( 'Citoid' );
 	$wgCitoidFullRestbaseURL = "/api/rest_";
-
-	// Enable the wikitext mode Beta Feature for opt-in
-	$wgVisualEditorEnableWikitextBetaFeature = true;
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
