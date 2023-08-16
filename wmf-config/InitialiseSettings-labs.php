@@ -1602,6 +1602,58 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
 		],
+		'wgWelcomeSurveyExperimentalGroups' => [
+			'default' => [
+				'control' => [
+					'percentage' => 100,
+				],
+			],
+			'arwiki' => [
+				'control' => [
+					'percentage' => 0,
+				],
+				'T342353_user_research' => [
+					'percentage' => 100,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'user-research-nonediting',
+					],
+				],
+			],
+			'enwiki' => [
+				'control' => [
+					'percentage' => 0,
+				],
+				'T342353_user_research' => [
+					'percentage' => 100,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'user-research-nonediting',
+					],
+				],
+			],
+			'eswiki' => [
+				'control' => [
+					'percentage' => 0,
+				],
+				'T342353_user_research' => [
+					'percentage' => 100,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'user-research-nonediting',
+					],
+				],
+			],
+		],
 		'wgEnableSpecialMute' => [
 			'default' => true,
 			'eswiki' => false,
