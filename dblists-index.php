@@ -108,6 +108,7 @@ return [
 'bjnwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
 'bjnwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'blkwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'blkwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'bmwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'bmwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'bmwikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
