@@ -1392,12 +1392,8 @@ return [
 		'Author_talk' => 107,
 	],
 	'+suwikisource' => [ // T344314
-		'Page' => 100,
-		'Page_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Index' => 104,
-		'Index_talk' => 105,
 	],
 	'+svwiktionary' => [
 		'WT-diskussion' => NS_PROJECT_TALK,
@@ -3337,12 +3333,8 @@ return [
 		103 => 'Разговор_о_додатку', // T39742
 	],
 	'suwikisource' => [ // T344314
-		100 => 'Kaca',
-		101 => 'Obrolan_kaca',
 		102 => 'Pangarang',
 		103 => 'Obrolan_Pangarang',
-		104 => 'Indéks',
-		105 => 'Obrolan_Indéks',
 	],
 	'svwikisource' => [
 		106 => 'Författare',
