@@ -231,6 +231,10 @@ return [
 	'+bjnwiki' => [
 		'Wikipidia_pamandiran' => NS_PROJECT_TALK,
 	],
+	'+blkwiktionary' => [
+		'Appendix' => 100,
+		'Appendix_talk' => 101,
+	],
 	'+bnwiki' => [ // T318003
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -3400,6 +3404,10 @@ return [
 		100 => 'Словоформи',
 		101 => 'Словоформи_беседа'
 	],
+	'blkwiktionary' => [
+		100 => 'သွုပ်ဆုဲင်ꩻ',
+		101 => 'သွုပ်ဆုဲင်ꩻ_အိုင်ကိုမ်ဒေါ့ꩻရီ',
+	],
 	'brwiktionary' => [
 		100 => 'Stagadenn', // Appendix
 		101 => 'Kaozeadenn_Stagadenn', // Appendix talk
@@ -5088,6 +5096,7 @@ return [
 	'bjnwiki' => 'Wikipidia',
 	'bjnwiktionary' => 'Wikikamus',
 	'blkwiki' => 'ဝီခီပီးဒီးယား',
+	'blkwiktionary' => 'ဝိစ်သိဉ်နရီ',
 	'bnwiki' => 'উইকিপিডিয়া',
 	'bnwikibooks' => 'উইকিবই',
 	'bnwikiquote' => 'উইকিউক্তি',
@@ -5578,6 +5587,7 @@ return [
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
 	'bewiktionary' => 'Размовы_пра_Вікіслоўнік', // T175950
+	'blkwiktionary' => 'ဝိစ်သိဉ်နရီ_အိုင်ကိုမ်ဒေါ့ꩻရီ',
 	'bswiki' => 'Razgovor_o_Wikipediji', // T115812 and T231654
 	'bswiktionary' => 'Razgovor_s_Wikirječnikom',
 	'btmwiktionary' => 'Pembicaraan_Wikikamus',

@@ -323,6 +323,7 @@ return [
 	'bjnwiki' => 'Asia/Makassar', // T328887
 	'bjnwiktionary' => 'Asia/Makassar',
 	'blkwiki' => 'Asia/Rangoon',
+	'blkwiktionary' => 'Asia/Yangon',
 	'brwikisource' => 'Europe/Paris',
 	'bswiki' => 'Europe/Berlin',
 	'btmwiktionary' => 'Asia/Jakarta',
@@ -1125,6 +1126,7 @@ return [
 	'bhwiki' => 'विकिपीडिया',
 	'bjnwiki' => 'Wikipidia',
 	'blkwiki' => 'ဝီခီပီးဒီးယား', // T334351
+	'blkwiktionary' => 'ဝိစ်သိဉ်နရီ',
 	'bnwiki' => 'উইকিপিডিয়া',
 	'bnwikibooks' => 'উইকিবই',
 	'bnwikiquote' => 'উইকিউক্তি',
