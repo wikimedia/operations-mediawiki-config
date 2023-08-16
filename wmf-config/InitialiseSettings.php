@@ -1924,6 +1924,7 @@ return [
 	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
 	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471
 	'ruwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T337430
+	'shwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'editpatrolprotected', 'sysop' ], // T344306
 	'srwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikinews' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653

@@ -2237,11 +2237,15 @@ return [
 		],
 	],
 	'shwiki' => [ // T52802
-		'patroller' => [ 'patrol' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'editpatrolprotected' => true,
+		], // T344306
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'patrolmarks' => true,
-		], // T62818
+			'editautopatrolprotected' => true,
+		], // T62818, T344306
 		'rollbacker' => [
 			'rollback' => true,
 			'markbotedits' => true,
