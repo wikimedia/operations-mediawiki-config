@@ -796,7 +796,7 @@ return [
 	'plwiki' => true,
 	'ptwiki' => true,
 	'rowiki' => true,
-	'ruwiki' => true,
+	'ruwiki' => false, // temporarily to facilitate T344034
 	'simplewiki' => true,
 	'svwiki' => true,
 	'tumwiki' => true,
