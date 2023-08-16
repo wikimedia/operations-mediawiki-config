@@ -515,6 +515,10 @@ function wmfGetOverrideSettings() {
 			'default' => 0
 		],
 
+		'wgMFShowEditNotices' => [
+			'default' => true
+		],
+
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
