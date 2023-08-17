@@ -687,7 +687,7 @@ return [
 	'anwiki' => true,
 	'angwiki' => true,
 	'arcwiki' => true,
-	'arwiki' => true,
+	'arwiki' => false, // temporarily to revalidate suggestions
 	'arywiki' => true,
 	'arzwiki' => true,
 	'aswiki' => true,
