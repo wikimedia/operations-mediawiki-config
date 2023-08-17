@@ -479,6 +479,8 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T210364
 		$wgAbuseFilterBlockDuration = '24 hours'; // T210364
 		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T210364
+		$wgGroupPermissions['abusefilter-helper']['abusefilter-log-private'] = true; // T344398
+		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T344398
 		break;
 	case 'zhwikibooks':
 		$wgAbuseFilterActions['block'] = true; // T330026

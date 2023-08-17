@@ -2897,6 +2897,7 @@ return [
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489
+		'abusefilter-helper' => [ 'oathauth-enable' => true ], // T344398
 		'autoconfirmed' => [
 			'flow-hide' => true, // T264489
 			'upload_by_url' => true, // T142991
@@ -4484,6 +4485,7 @@ return [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [
+			'abusefilter-helper', // T344398
 			'patroller',
 			'rollbacker',
 			'autoreviewer',
@@ -5624,6 +5626,7 @@ return [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [
+			'abusefilter-helper', // T344398
 			'patroller',
 			'rollbacker',
 			'autoreviewer',
