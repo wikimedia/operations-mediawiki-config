@@ -2919,8 +2919,6 @@ return [
 		'bot' => [ 'extendedconfirmed' => true ], // T287322
 		'rollbacker' => [
 			'rollback' => true, // T18988
-			'abusefilter-log-private' => true, // T39679
-			'abusefilter-view-private' => true, // T174978
 			'suppressredirect' => true, // T201160
 			'unwatchedpages' => true, // T219285
 		],
