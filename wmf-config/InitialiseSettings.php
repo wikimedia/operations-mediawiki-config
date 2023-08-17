@@ -12302,6 +12302,10 @@ return [
 	'group0' => [
 		'useMultiFormat' => true,
 		'maxSplitSize' => 10, // T341754
+	],
+	'group1' => [
+		'useMultiFormat' => true,
+		'maxSplitSize' => 10, // T341754
 	]
 ],
 
