@@ -10918,7 +10918,6 @@ return [
 	'default' => false,
 	'cawiki' => true,
 	'dewiki' => true,
-	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'fawiki' => true,
@@ -10956,27 +10955,6 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-	],
-	'enwiki' => [
-		// T336092
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'research-incentive',
-			'question' => 'research-incentive-message',
-			'description' => 'research-incentive-description',
-			'coverage' => 0.002,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'audience' => [
-				/* Anglophone world: USA, Canada, UK, Ireland, Australia, New Zealand. */
-				'countries' => [ 'US', 'CA', 'GB', 'IE', 'AU', 'NZ' ],
-			],
-			'link' => 'research-incentive-link',
-			'privacyPolicy' => 'research-incentive-privacy',
 		],
 	],
 	'enwikivoyage' => [
