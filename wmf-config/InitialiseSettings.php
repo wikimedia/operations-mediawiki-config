@@ -6083,6 +6083,10 @@ return [
 	'+ruwiki' => [
 		'Инкубатор' /* Draft / Incubator */ => true, // T86688
 	],
+	'+shwiki' => [
+		'Project' => true, // T344432
+		'Nacrt' /* Draft */ => true, // T344432
+	],
 	'+skwiki' => [
 		'Project' => true, // T229014
 	],
