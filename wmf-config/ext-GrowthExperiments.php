@@ -464,7 +464,7 @@ return [
 	'arwiki' => true,
 	'arywiki' => true,
 	'arzwiki' => true,
-	'aswiki' => true,
+	'aswiki' => false, // T344319
 	'astwiki' => true,
 	'atjwiki' => true,
 	'avwiki' => true,
@@ -532,7 +532,7 @@ return [
 	'furwiki' => true,
 	'gawiki' => true,
 	'gagwiki' => true,
-	'ganwiki' => false, // T308133
+	'ganwiki' => false, // T344319
 	'gcrwiki' => true,
 	'gdwiki' => true,
 	'glwiki' => true,
@@ -582,6 +582,7 @@ return [
 	'knwiki' => true,
 	'kowiki' => true,
 	'koiwiki' => true,
+	'krcwiki' => false, // T344319
 	'kswiki' => true,
 	'kshwiki' => true,
 	'kuwiki' => true,
@@ -685,7 +686,7 @@ return [
 	'arwiki' => true,
 	'arywiki' => true,
 	'arzwiki' => true,
-	'aswiki' => true,
+	'aswiki' => false, // T344319
 	'astwiki' => true,
 	'atjwiki' => true,
 	'avwiki' => true,
@@ -749,6 +750,7 @@ return [
 	'furwiki' => true,
 	'gawiki' => true,
 	'gagwiki' => true,
+	'ganwiki' => false, // T344319
 	'gcrwiki' => true,
 	'gdwiki' => true,
 	'glwiki' => true,
@@ -798,7 +800,7 @@ return [
 	'knwiki' => true,
 	'kowiki' => true,
 	'koiwiki' => true,
-	'krcwiki' => false, // T308135#9047447
+	'krcwiki' => false, // T344319
 	'kswiki' => true,
 	'kshwiki' => true,
 	'kuwiki' => true,
