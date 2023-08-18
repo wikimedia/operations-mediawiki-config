@@ -11,6 +11,9 @@ class ClusterConfig {
 	private static $instance;
 	/** @var string */
 	private $cluster;
+	/** @var string */
+	private $hostname;
+
 	// At the cost of being inelegant, I think it's simpler to have these lists here.
 	private const TRAITS = [
 		'async' => [ 'jobrunner', '-async' ],
@@ -41,6 +44,7 @@ class ClusterConfig {
 
 	private function __construct() {
 		$this->cluster = $_SERVER['SERVERGROUP'] ?? '';
+		$this->hostname = '';
 	}
 
 	/**
@@ -104,6 +108,22 @@ class ClusterConfig {
 	 */
 	public function isApi() {
 		return $this->hasTrait( 'api' );
+	}
+
+	/**
+	 * Lazily fetch and return the hostname.
+	 *
+	 * It will be cached once requested the first time.
+	 * We are re-implementing wfHostname here because this
+	 * class can be loaded before wfHostname is available.
+	 *
+	 * @return string
+	 */
+	public function getHostname() {
+		if ( $this->hostname === '' ) {
+			$this->hostname = php_uname( 'n' ) ?: 'unknown';
+		}
+		return $this->hostname;
 	}
 
 	/**
