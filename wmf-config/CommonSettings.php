@@ -44,6 +44,7 @@ use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
+use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
@@ -64,6 +65,7 @@ if ( PHP_SAPI !== 'cli' ) {
 
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
+require_once __DIR__ . '/../src/ClusterConfig.php';
 require_once __DIR__ . '/etcd.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
@@ -143,15 +145,6 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 # Also used by MediaWiki core for various caching purposes, and may
 # be shared between wikis (e.g. does not need to vary by wgDBname).
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
-
-$wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
-
-# Whether MediaWiki is running on Kubernetes, intended for config
-# that needs to differ during the migration. On dedicated servers,
-# SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
-# Kubernetes pods, it's set by configuring the php.servergroup
-# Helm value.
-$wmgUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
 $wmgAllServices = ServiceConfig::getInstance()->getAllServices();
@@ -1110,7 +1103,7 @@ if ( $wmgUseTimeline ) {
 $wgCopyUploadProxy = ( $wmgRealm !== 'labs' ) ? $wmgLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmgLocalServices['upload'];
-if ( $wmgUseLocalHTTPProxy || $wmgUsingKubernetes ) {
+if ( $wmgUseLocalHTTPProxy || ClusterConfig::getInstance()->isK8s() ) {
 	$wgLocalHTTPProxy = $wmgLocalServices['mwapi'] ?? false;
 }
 
@@ -3983,7 +3976,7 @@ if ( $wmgUseEventBus ) {
 		];
 	}
 
-	$wgEventBusEnableRunJobAPI = ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' );
+	$wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
 }
 
 if ( $wmgUseCapiunto ) {
@@ -4238,7 +4231,7 @@ $wgParsoidSettings = [
 ];
 
 // Parsoid testing special case
-if ( $wmgServerGroup === 'parsoid' && wfHostName() === 'scandium' ) {
+if ( ClusterConfig::getInstance()->isParsoid() && wfHostName() === 'scandium' ) {
 	// Scandium has its own special check out of parsoid for testing.
 	$parsoidDir = __DIR__ . "/../../parsoid-testing";
 	// Override settings specific to round-trip testing on scandium

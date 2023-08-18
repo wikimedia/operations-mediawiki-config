@@ -16,6 +16,7 @@ use ReflectionException;
 use Wikimedia\ExcimerUI\Client\ExcimerClient;
 
 require_once __DIR__ . '/XWikimediaDebug.php';
+require_once __DIR__ . '/ClusterConfig.php';
 require_once __DIR__ . '/../lib/excimer-ui-client/src/ExcimerClient.php';
 
 class Profiler {
@@ -228,7 +229,7 @@ class Profiler {
 		// before that one.
 		// grep: excimer-k8s, excimer-wall, excimer-k8s-wall
 		$redisChannel = 'excimer';
-		if ( strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0 ) {
+		if ( ClusterConfig::getInstance()->isK8s() ) {
 			$redisChannel .= '-k8s';
 		}
 
