@@ -3087,11 +3087,6 @@ if ( $wmgUseEcho ) {
 	$wgEchoPerUserBlacklist = true;
 	$wgEchoMaxMentionsInEditSummary = 5;
 
-	// Eventlogging for Schema:EchoMail
-	$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
-	// Eventlogging for Schema:EchoInteraction
-	$wgEchoEventLoggingSchemas['EchoInteraction']['enabled'] = true;
-
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
