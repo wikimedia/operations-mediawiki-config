@@ -66,6 +66,7 @@ function wmfLoadRoutes() {
 		'debug.json',
 		'fc-list',
 		'langlist',
+		'langlist-labs',
 		'wikiversions.json',
 		'wikiversions-labs.json',
 		'wmf-config/extension-list',
