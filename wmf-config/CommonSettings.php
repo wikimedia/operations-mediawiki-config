@@ -1531,7 +1531,7 @@ if ( $wmgUseSecurePoll ) {
 	// T209802 - gpg2 is untested and evidently broken
 	$wgSecurePollGPGCommand = 'gpg1';
 
-	if ( wfHostName() === 'mwmaint1002' ) {
+	if ( strpos( ClusterConfig::getInstance()->getHostname(), 'mwmaint' ) === 0 ) {
 		$wgSecurePollShowErrorDetail = true;
 	}
 }
@@ -4235,7 +4235,7 @@ $wgParsoidSettings = [
 ];
 
 // Parsoid testing special case
-if ( ClusterConfig::getInstance()->isParsoid() && wfHostName() === 'scandium' ) {
+if ( ClusterConfig::getInstance()->isParsoid() && ClusterConfig::getInstance()->getHostname() === 'scandium' ) {
 	// Scandium has its own special check out of parsoid for testing.
 	$parsoidDir = __DIR__ . "/../../parsoid-testing";
 	// Override settings specific to round-trip testing on scandium
