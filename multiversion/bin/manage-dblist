@@ -54,10 +54,10 @@ final class WmfManageDblistCli {
 			Normalize all dblist files,
 			including expansion of ".dbexpr" files.
 
-	init <dbname> <family> <privacy>
+	init <dbname> <language code> <family> <privacy>
 			Initializes the dblists of a new wiki
 			<privacy> must be one of 'public', 'fishbowl' or 'private'
-			Example: manage-dblist init fatwiki wikipedia public
+			Example: manage-dblist init fatwiki fat wikipedia public
 
 	close <dbname>
 			Update the dblists of a wiki to reflect it being closed
@@ -185,7 +185,7 @@ final class WmfManageDblistCli {
 		$this->writeDblistsIndex( $knownDBLists );
 	}
 
-	private function doInit( string $dbName, string $family, string $visibility ) {
+	private function doInit( string $dbName, string $lang, string $family, string $visibility ) {
 		if ( !in_array( $visibility, [ 'public', 'fishbowl', 'private' ] ) ) {
 			$this->error( 'Unknown visibility' );
 			exit( 1 );
@@ -239,6 +239,13 @@ final class WmfManageDblistCli {
 		$this->doAdd( $dbName, $family );
 		$this->doAdd( $dbName, 's5' ); // all wikis are currently created in s5
 		$this->doAdd( $dbName, 'small' );
+
+		$data = file( 'langlist' );
+		if ( !in_array( $lang . "\n", $data ) ) {
+			$data[] = $lang . "\n";
+			asort( $data );
+			file_put_contents( 'langlist', implode( '', $data ) );
+		}
 
 		switch ( $visibility ) {
 		case 'public':
