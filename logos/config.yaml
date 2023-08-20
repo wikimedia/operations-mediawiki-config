@@ -1588,11 +1588,14 @@ Wikipedia:
         local_wordmark: true
         local_tagline: true
     tcywiki:
-        comment: T140898
-        comment_1_5x: T140898
-        comment_2x: T140898
-        local_tagline: true
-        local_wordmark: true
+        commons: 'File:Wikipedia-logo-v2-tcy-new.svg'
+        comment: T344557
+        comment_1_5x: T344557
+        comment_2x: T344557
+        commons_wordmark: 'File:Wikipedia-wordmark-tcy.svg'
+        comment_wordmark: T344557
+        commons_tagline: 'File:Wikipedia-tagline-tcy.svg'
+        comment_tagline: T344557
     tetwiki:
         comment: T48589
         comment_1_5x: T150618

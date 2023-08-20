@@ -334,7 +334,7 @@ return [
 	'szywiki' => '/static/images/project-logos/szywiki.png',
 	'tawiki' => '/static/images/project-logos/tawiki.png', // T29826
 	'taywiki' => '/static/images/project-logos/taywiki.png',
-	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T140898
+	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T344557
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
@@ -1179,7 +1179,7 @@ return [
 	'szywiki' => '/static/images/project-logos/szywiki-1.5x.png',
 	'tawiki' => '/static/images/project-logos/tawiki-1.5x.png',
 	'taywiki' => '/static/images/project-logos/taywiki-1.5x.png',
-	'tcywiki' => '/static/images/project-logos/tcywiki-1.5x.png', // T140898
+	'tcywiki' => '/static/images/project-logos/tcywiki-1.5x.png', // T344557
 	'tetwiki' => '/static/images/project-logos/tetwiki-1.5x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-1.5x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-1.5x.png', // T150618
@@ -1800,7 +1800,7 @@ return [
 	'szywiki' => '/static/images/project-logos/szywiki-2x.png',
 	'tawiki' => '/static/images/project-logos/tawiki-2x.png',
 	'taywiki' => '/static/images/project-logos/taywiki-2x.png',
-	'tcywiki' => '/static/images/project-logos/tcywiki-2x.png', // T140898
+	'tcywiki' => '/static/images/project-logos/tcywiki-2x.png', // T344557
 	'tetwiki' => '/static/images/project-logos/tetwiki-2x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-2x.png', // T150618
@@ -3103,10 +3103,10 @@ return [
 		'width' => 120,
 		'height' => 19,
 	],
-	'tcywiki' => [
+	'tcywiki' => [ // T344557
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tcy.svg',
-		'width' => 120,
-		'height' => 21,
+		'width' => 89,
+		'height' => 18,
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -6051,10 +6051,10 @@ return [
 		'width' => 120,
 		'height' => 14,
 	],
-	'tcywiki' => [
+	'tcywiki' => [ // T344557
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tcy.svg',
-		'width' => 120,
-		'height' => 15,
+		'width' => 98,
+		'height' => 13,
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tet.svg',
