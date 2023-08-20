@@ -3387,7 +3387,7 @@ return [
 	'jawiktionary' => [ 'w' ], // T10670
 	'kaawiki' => [ 'incubator' ],
 	'kmwiki' => [ 'en', 'be', 'simple' ],
-	'knwiki' => [ 'en' ], // T37603
+	'knwiki' => [ 'en', 'meta', 'd', 'wikt', 's', 'q' ], // T37603, T344573
 	'knwikisource' => [ 'w', 'en', 'w:en' ], // T122955
 	'kowikiquote' => [ 'w' ],
 	'wikitech' => [ 'meta', 'mw' ],
