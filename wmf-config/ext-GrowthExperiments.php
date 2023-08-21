@@ -337,11 +337,6 @@ return [
 	'default' => 'production',
 ],
 
-'wgWelcomeSurveyEnableWithHomepage' => [
-	'default' => false,
-	'enwiki' => true, // T281896
-],
-
 'wgGEHelpPanelHelpDeskTitle' => [
 	'default' => '',
 ],
