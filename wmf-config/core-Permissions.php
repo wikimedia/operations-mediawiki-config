@@ -819,7 +819,7 @@ return [
 			'autoconfirmed' => true, // T342484
 			'skipcaptcha' => true, // T342484
 			'bot' => true, // T342484
-			'supressredirect' => true, // T342484
+			'suppressredirect' => true, // T342484
 			'apihighlimits' => true, // T342484
 			'block' => true, // T342484
 			'blockemail' => true, // T342484
