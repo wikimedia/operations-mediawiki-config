@@ -3770,13 +3770,8 @@ return [
 ],
 
 'wmgUsePhonos' => [
-	'default' => false,
-	'afwiktionary' => true, // T324561
-	'arwiki' => true, // T324561
-	'mediawikiwiki' => true,  // T336763
-	'medium' => true, // T336763
-	'small' => true, // T336763
-	'testwiki' => true, // T321084
+	'default' => true, // T336763
+	'lockeddown' => false
 ],
 
 # T336763
