@@ -5508,6 +5508,8 @@ return [
 'wgUrlShortenerEnableSidebar' => [
 	'default' => false,
 	'testwiki' => true,
+	'zhwiki' => true,
+	'jawiki' => true,
 ],
 
 'wgAllowMicrodataAttributes' => [
