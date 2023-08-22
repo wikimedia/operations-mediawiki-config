@@ -68,10 +68,10 @@ $wgCdnServersNoPurge = [
 	'2620:0:860:104::/64', # private1-d-codfw
 
 	## esams
-	'91.198.174.0/25',	# public1-esams
-	'2620:0:862:1::/64',	# public1-esams
-	'10.20.0.0/24',		# private1-esams
-	'2620:0:862:102::/64',	# private1-esams
+	'185.15.59.0/24',	# esams
+	'2a02:ec80:300::/56',	# public esams aggregate
+	'2a02:ec80:300:100::/56',	# private esams aggregate
+	'10.80.0.0/16',		# esams private/mgmt
 
 	## ulsfo
 	'10.128.0.0/24',	# private1-ulsfo
