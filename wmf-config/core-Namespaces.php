@@ -3474,8 +3474,8 @@ return [
 		101 => 'Appendix_talk',
 		102 => 'Concordance',
 		103 => 'Concordance_talk',
-		104 => 'Index',
-		105 => 'Index_talk',
+		# 104 => 'Index', // Removed per T344816
+		# 105 => 'Index_talk',
 		106 => 'Rhymes',
 		107 => 'Rhymes_talk',
 		108 => 'Transwiki',
