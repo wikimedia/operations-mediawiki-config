@@ -5332,6 +5332,7 @@ return [
 	'nlwikiquote' => true, // T124167
 	'nowiki' => true, // T210325
 	'orwiki' => true, // T124614
+	'pawiki' => true, // T344815
 	'papwiki' => true, // T223166
 	'plwiki' => true,
 	'plwikisource' => true,
