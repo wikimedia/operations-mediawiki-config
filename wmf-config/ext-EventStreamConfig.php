@@ -1410,23 +1410,6 @@ return [
 			],
 			'destination_event_service' => 'eventgate-main',
 		],
-		// Declare release candiate 1 of
-		// mediawiki.page_content_change stream.
-		// This stream uses the mediawiki/page/change schema
-		// but includes content bodies in content slots.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
-		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'rc1.mediawiki.page_content_change' => [
-			'schema_title' => 'mediawiki/page/change',
-			// Even though this stream will not be produced via EventGate,
-			// we need to set an event service, so that the ProduceCanaryEvents
-			// monitoring job can produce events through EventGate.
-			// page_content_change is produced directly to Kafka jumbo-eqiad,
-			// so we need to use an eventgate that also produces to jumbo-eqiad.
-			// We use eventgate-analytics-external.
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
 		// Declare version 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
