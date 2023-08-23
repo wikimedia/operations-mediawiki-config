@@ -6714,6 +6714,13 @@ return [
 	'testwiki' => true,
 ],
 
+// T344797
+'wgCheckUserClientHintsRestApiMaxTimeLag' => [
+	'default' => 1800,
+	'group0' => 300,
+	'group1' => 300,
+],
+
 // ----------- CheckUser end ----------
 
 // IPInfo extension
