@@ -3165,9 +3165,15 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
 
-	if ( $wgDBname === 'labtestwiki' ) {
-		# We don't want random strangers playing on this wiki
-		$wgGroupPermissions['*']['createaccount'] = false;
+	# We don't want random strangers playing on labtestwiki, aka codfw1dev
+	# For prod wikitech ('labswiki') user registration is now managed by
+	# Bitu, https://idm.wikimedia.org.
+	$wgGroupPermissions['*']['createaccount'] = false;
+
+	# Wikitech no longer allows signups, but accounts can be created by extentions
+	# in our case LdapAuthentication.
+	if ( $wgDBname === 'labswiki' ) {
+		$wgGroupPermissions['*']['autocreateaccount'] = true;
 	}
 
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
