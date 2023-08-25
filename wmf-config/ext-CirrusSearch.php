@@ -1214,4 +1214,12 @@ return [
 	'default' => false,
 ],
 
+'wgCirrusSearchDeduplicateInQuery' => [
+	'default' => false,
+],
+
+'wgCirrusSearchDeduplicateInMemory' => [
+	'default' => false,
+],
+
 ];
