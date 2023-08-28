@@ -176,7 +176,7 @@ return [
 	'lnwiki' => true,
 	'lowiki' => true,
 	'ltgwiki' => true,
-	'ltwiki' => false, // temporarily, configuration files deleted by on-wiki admin
+	'ltwiki' => true,
 	'lvwiki' => true,
 	'madwiki' => true,
 	'maiwiki' => true,
