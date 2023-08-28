@@ -2209,7 +2209,7 @@ return [
 
 	// Wikivoyage
 	'+dewikivoyage' => [ 0 => 1, 100 => 0, 104 => 0 ],
-	'+itwikivoyage' => [ 0 => 1, 100 => 0, 104 => 0 ],
+	'+itwikivoyage' => [ 0 => 1, 100 => 0 ],
 
 	// Wikimania
 	'+wikimaniawiki' => [
@@ -5038,7 +5038,7 @@ return [
 	'+iswikisource' => [ 100 => 1, 102 => 1 ], // T46164
 	'+itwikisource' => [ 102 => 1, 110 => 1 ],
 	'+itwikiversity' => [ 100 => 1, 102 => 1, 104 => 1 ], // T114932
-	'+itwikivoyage' => [ 100 => 1, 104 => 1, 106 => 1 ],
+	'+itwikivoyage' => [ 100 => 1, 106 => 1 ],
 	'+kowikisource' => [ 100 => 1, 114 => 1 ], // T183836 for 114
 	'+lawikisource' => [ 102 => 1, 106 => 1 ],
 	'+wikitech' => [ 12 => 1, 116 => 1, 498 => 1 ],
@@ -5125,7 +5125,7 @@ return [
 	'+idwikibooks' => [ 100, 102 ], // T4282
 	'+idwikisource' => [ 100 ],
 	'+itwikisource' => [ 102 ],
-	'+itwikivoyage' => [ 100, 104 ], // T57620
+	'+itwikivoyage' => [ 100 ],
 	'+kowikisource' => [ 100, 114 ], // T183836 for 114
 	'+lawikisource' => [ 102 ],
 	'+ltwiki' => [ 104 ], // T144118
