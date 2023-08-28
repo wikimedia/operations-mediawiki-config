@@ -5544,6 +5544,7 @@ return [
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
 		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
+		'proofreadpage-editinsequence',      // [ProofreadPage/@Soda] 2023-08-29 - Edit in sequence
 	],
 ],
 
