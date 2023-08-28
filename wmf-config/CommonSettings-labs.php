@@ -28,6 +28,9 @@ $wmgAddWikiNotify = false;
 # Use a different address from the production one - T192686
 $wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
 
+# Use a different site name (T181908)
+$wgSitename = "Beta $wgSitename";
+
 # Enable for all Beta wikis, depends on $wmgAllServices.
 $wgDebugLogFile = "udp://{$wmgUdp2logDest}/wfDebug";
 
