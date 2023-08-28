@@ -2131,7 +2131,7 @@ return [
 		'localhost' => [ 'logstash' => false ],
 		'LockManager' => 'warning',
 		'logging' => 'debug',
-		'LoginNotify' => 'debug',
+		'LoginNotify' => 'info',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'Math' => 'info',  // mobrovac for T121445
 		'mediamoderation' => 'debug', // for T303312 changed from warning
