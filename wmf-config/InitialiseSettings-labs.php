@@ -325,6 +325,7 @@ function wmfGetOverrideSettings() {
 				'OAuth' => 'info', // T244185
 				'objectcache' => 'warning',
 				'OutputBuffer' => 'debug',
+				'ORES' => 'info',
 				'PageTriage' => 'debug',
 				'PageViewInfo' => 'info',
 				'ParserCache' => 'warning',
