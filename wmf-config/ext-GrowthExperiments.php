@@ -423,20 +423,6 @@ return [
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'elwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'rowiki' => true,
-	'trwiki' => true,
-	'viwiki' => true,
-	'zhwiki' => true,
 ],
 
 'wgGENewcomerTasksSectionImageRecommendationsEnabled' => [
