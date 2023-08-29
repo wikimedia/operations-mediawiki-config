@@ -5511,6 +5511,11 @@ return [
 	'testwiki' => true,
 	'zhwiki' => true,
 	'jawiki' => true,
+	'rtl' => true,
+	'kowiki' => true,
+	'ruwiki' => true,
+	'ukwiki' => true,
+	'bgwiki' => true,
 ],
 
 'wgAllowMicrodataAttributes' => [
