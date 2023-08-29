@@ -181,29 +181,43 @@ return [
 	],
 	'eswikibooks' => [
 		'damaging' => [
-			// likelygood uses default
+			// https://ores.wikimedia.org/v3/scores/eswikibooks?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
+			'likelygood' => [ 'min' => 0, 'max' => 0.885 ], // 'maximum recall @ precision >= 0.995'
 			'maybebad' => false,
-			// likelybad, verylikelybad use defaults
+			// https://ores.wikimedia.org/v3/scores/eswikibooks?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.6''"
+			'likelybad' => [ 'min' => 0.669, 'max' => 1 ], // 'maximum recall @ precision >= 0.6'
+			// https://ores.wikimedia.org/v3/scores/eswikibooks?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.9''"
+			'verylikelybad' => [ 'min' => 0.94, 'max' => 1 ], // 'maximum recall @ precision >= 0.9'
 		],
 		'goodfaith' => [
-			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
+			// https://ores.wikimedia.org/v3/scores/eswikibooks?models=goodfaith&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.99''"
+			'likelygood' => [ 'min' => 0.999, 'max' => 1 ], // 'maximum recall @ precision >= 0.99'
 			'maybebad' => false,
-			// likelybad uses default
-			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+			// https://ores.wikimedia.org/v3/scores/eswikibooks?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.6''"
+			'likelybad' => [ 'min' => 0, 'max' => 0.002 ], // 'maximum recall @ precision >= 0.6'
+			// https://ores.wikimedia.org/v3/scores/eswikibooks?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
+			'verylikelybad' => [ 'min' => 0, 'max' => 1.0 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
 	'eswikiquote' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
-			// maybebad uses default
-			// likelybad uses default
-			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
+			'likelygood' => [ 'min' => 0, 'max' => 0.779 ], // 'maximum recall @ precision >= 0.99'
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=damaging&model_info=statistics.thresholds.true."''maximum filter_rate @ recall >= 0.9''"
+			'maybebad' => [ 'min' => 0.24, 'max' => 1 ], // 'maximum filter_rate @ recall >= 0.9'
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.6''"
+			'likelybad' => [ 'min' => 0.709, 'max' => 1 ], // 'maximum recall @ precision >= 0.6'
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.98''"
+			'verylikelybad' => [ 'min' => 0.961, 'max' => 1 ], // 'maximum recall @ precision >= 0.98'
 		],
 		'goodfaith' => [
-			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
-			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
-			// likelybad uses default
-			// verylikelybad uses default (disabled)
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=goodfaith&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.98''"
+			'likelygood' => [ 'min' => 0.986, 'max' => 1 ], // 'maximum recall @ precision >= 0.98'
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.15''"
+			'maybebad' => [ 'min' => 0, 'max' => 0.001 ], // 'maximum recall @ precision >= 0.15'
+			// https://ores.wikimedia.org/v3/scores/eswikiquote?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.6''"
+			'likelybad' => [ 'min' => 0, 'max' => 0.066 ], // 'maximum recall @ precision >= 0.6'
+			'verylikelybad' => false,
 		],
 	],
 	'etwiki' => [
@@ -249,16 +263,22 @@ return [
 	],
 	'hewiki' => [
 		'damaging' => [
-			// likelygood uses default
+			// https://ores.wikimedia.org/v3/scores/hewiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
+			'likelygood' => [ 'min' => 0, 'max' => 0.997 ], // 'maximum recall @ precision >= 0.995'
 			'maybebad' => false,
-			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
-			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
+			// https://ores.wikimedia.org/v3/scores/hewiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.45''"
+			'likelybad' => [ 'min' => 0.203, 'max' => 1 ], // 'maximum recall @ precision >= 0.45'
+			// https://ores.wikimedia.org/v3/scores/hewiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.98''"
+			'verylikelybad' => [ 'min' => 0.766, 'max' => 1 ], // 'maximum recall @ precision >= 0.98'
 		],
 		'goodfaith' => [
-			// likelygood uses default
+			// https://ores.wikimedia.org/v3/scores/hewiki?models=goodfaith&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.995''"
+			'likelygood' => [ 'min' => 1.0, 'max' => 1 ], // 'maximum recall @ precision >= 0.995'
 			'maybebad' => false,
-			'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
-			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
+			// https://ores.wikimedia.org/v3/scores/hewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.45''"
+			'likelybad' => [ 'min' => 0, 'max' => 0.053 ], // 'maximum recall @ precision >= 0.45'
+			// https://ores.wikimedia.org/v3/scores/hewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
+			'verylikelybad' => [ 'min' => 0, 'max' => 0.999 ], // 'maximum recall @ precision >= 0.99'
 		],
 	],
 	'huwiki' => [
@@ -276,15 +296,24 @@ return [
 	],
 	'itwiki' => [
 		'damaging' => [
-			// likelygood, maybebad use default
-			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
-			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
+			'likelygood' => [ 'min' => 0, 'max' => 0.854 ], // 'maximum recall @ precision >= 0.995'
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=damaging&model_info=statistics.thresholds.true."''maximum filter_rate @ recall >= 0.9''"
+			'maybebad' => [ 'min' => 0.147, 'max' => 1 ], // 'maximum filter_rate @ recall >= 0.9'
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.45''"
+			'likelybad' => [ 'min' => 0.67, 'max' => 1 ], // 'maximum recall @ precision >= 0.45'
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.75''"
+			'verylikelybad' => [ 'min' => 0.835, 'max' => 1 ], // 'maximum recall @ precision >= 0.75'
 		],
 		'goodfaith' => [
-			// likelygood uses default
-			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
-			// likelybad uses default
-			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=goodfaith&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.995''"
+			'likelygood' => [ 'min' => 0.846, 'max' => 1 ], // 'maximum recall @ precision >= 0.995'
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.15''"
+			'maybebad' => [ 'min' => 0, 'max' => 0.144 ], // 'maximum recall @ precision >= 0.15'
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.6''"
+			'likelybad' => [ 'min' => 0, 'max' => 0.653 ], // 'maximum recall @ precision >= 0.6'
+			// https://ores.wikimedia.org/v3/scores/itwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
+			'verylikelybad' => [ 'min' => 0, 'max' => 0.837 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
 	'kowiki' => [
@@ -376,16 +405,24 @@ return [
 	'simplewiki' => [
 		// Same as enwiki
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
-			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
-			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
-			// verylikelybad uses default
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
+			'likelygood' => [ 'min' => 0, 'max' => 0.699 ], // 'maximum recall @ precision >= 0.99'
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.15''"
+			'maybebad' => [ 'min' => 0.149, 'max' => 1 ], // 'maximum recall @ precision >= 0.15'
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.45''"
+			'likelybad' => [ 'min' => 0.629, 'max' => 1 ], // 'maximum recall @ precision >= 0.45'
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.9''"
+			'verylikelybad' => [ 'min' => 0.944, 'max' => 1 ], // 'maximum recall @ precision >= 0.9'
 		],
 		'goodfaith' => [
-			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
-			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
-			// likelybad uses default
-			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=goodfaith&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.99''"
+			'likelygood' => [ 'min' => 0.777, 'max' => 1 ], // 'maximum recall @ precision >= 0.99'
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.15''"
+			'maybebad' => [ 'min' => 0, 'max' => 0.075 ], // 'maximum recall @ precision >= 0.15'
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.6''"
+			'likelybad' => [ 'min' => 0, 'max' => 0.647 ], // 'maximum recall @ precision >= 0.6'
+			// https://ores.wikimedia.org/v3/scores/simplewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
+			'verylikelybad' => [ 'min' => 0, 'max' => 0.935 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
 	'sqwiki' => [
@@ -421,6 +458,21 @@ return [
 			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.999', 'max' => 1 ],
 			// maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+		],
+	],
+	'testwiki' => [
+		// Same as enwiki
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 0.699 ],
+			'maybebad' => [ 'min' => 0.149, 'max' => 1 ],
+			'likelybad' => [ 'min' => 0.629, 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 0.944, 'max' => 1 ]
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 0.777, 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 0.075 ],
+			'likelybad' => [ 'min' => 0, 'max' => 0.647 ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 0.935 ],
 		],
 	],
 	'trwiki' => [

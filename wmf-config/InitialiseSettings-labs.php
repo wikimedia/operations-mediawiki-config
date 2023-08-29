@@ -1456,6 +1456,9 @@ function wmfGetOverrideSettings() {
 		'-wgOresUseLiftwing' => [
 			'default' => true
 		],
+		'-wgOresLiftWingAddHostHeader' => [
+			'default' => false
+		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
