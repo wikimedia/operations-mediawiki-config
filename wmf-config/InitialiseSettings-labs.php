@@ -2490,6 +2490,7 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'cswiki' => true,
 			'dewiki' => true,
+			'commonswiki' => true, // T342067
 			'wikidatawiki' => true, // T343980
 		],
 
