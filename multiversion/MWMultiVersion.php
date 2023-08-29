@@ -63,6 +63,7 @@ class MWMultiVersion {
 		'modern-mainpage',
 		'nowikidatadescriptiontaglines',
 		'cirrussearch-big-indices',
+		'rtl',
 	];
 
 	/** @var string[] */
