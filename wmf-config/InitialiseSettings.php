@@ -11199,6 +11199,7 @@ return [
 // T246493
 'wmgUseNearbyPages' => [
 	'default' => true,
+	'lockeddown' => false,
 	// T341133
 	'wiktionary' => false,
 	'wikisource' => false,
