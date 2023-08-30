@@ -5557,6 +5557,7 @@ return [
 'wmgUseFileExporter' => [
 	'default' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
+	'lockeddown' => false,
 	'commonswiki' => false,
 	'testcommonswiki' => false,
 ],
