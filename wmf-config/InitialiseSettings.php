@@ -4559,6 +4559,7 @@ return [
 'wmgUseCollection' => [
 	// PDF generation / [[:mw:OCG]] stuff
 	'default' => true,
+	'lockeddown' => false,
 	'apiportalwiki' => false, // T260309
 	'ganwiki' => false,
 	'iuwiki' => false,
