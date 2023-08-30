@@ -2985,6 +2985,14 @@ if ( $wmgUseTranslate ) {
 		'host' => $wmgLocalServices['cxserver'],
 		'timeout' => 3,
 	];
+
+	if ( $wmgTranslateUseMinT ) {
+		$wgTranslateTranslationServices['MinT'] = [
+			'type' => 'mint',
+			'host' => $wmgLocalServices['cxserver'],
+			'timeout' => 3,
+		];
+	}
 }
 
 if ( $wmgUseTranslationNotifications ) {

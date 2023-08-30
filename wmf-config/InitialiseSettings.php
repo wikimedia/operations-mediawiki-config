@@ -7250,6 +7250,11 @@ return [
 	'metawiki' => true,
 ],
 
+'wmgTranslateUseMinT' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseVips' => [
 	'default' => true,
 	'wikitech' => false,
