@@ -1640,6 +1640,15 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    tlywiki:
+        commons: 'File:Wikipedia-logo-v2-tly.svg'
+        comment: T345316
+        comment_1_5x: T345316
+        comment_2x: T345316
+        commons_wordmark: 'File:Wikipedia-wordmark-tly.svg'
+        comment_wordmark: T345316
+        commons_tagline: 'File:Wikipedia-tagline-tly.svg'
+        comment_tagline: T345316
     tnwiki:
         comment: T42285
         comment_1_5x: T150618
