@@ -10918,6 +10918,7 @@ return [
 	'default' => false,
 	'cawiki' => true,
 	'dewiki' => true,
+	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'fawiki' => true,
@@ -10955,6 +10956,26 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+	],
+	'enwiki' => [
+		// T345158
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'campaigns-event-discovery-survey',
+			'question' => 'campaigns-event-discovery-survey-question',
+			'description' => 'campaigns-event-discovery-survey-description',
+			'coverage' => 0, // Deploy with 0.03
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'minEdits' => 1000,
+			],
+			'link' => 'campaigns-event-discovery-survey-link',
+			'privacyPolicy' => 'campaigns-event-discovery-survey-privacy-policy',
 		],
 	],
 	'enwikivoyage' => [
@@ -10996,6 +11017,25 @@ return [
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
 		],
+		// T345158
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'campaigns-event-discovery-survey',
+			'question' => 'campaigns-event-discovery-survey-question',
+			'description' => 'campaigns-event-discovery-survey-description',
+			'coverage' => 0, // Deploy with 0.2
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'minEdits' => 1000,
+			],
+			'link' => 'campaigns-event-discovery-survey-link',
+			'privacyPolicy' => 'campaigns-event-discovery-survey-privacy-policy',
+		],
+
 	],
 	'frwiki' => [
 		// T187299
@@ -11015,6 +11055,24 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+		// T345158
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'campaigns-event-discovery-survey',
+			'question' => 'campaigns-event-discovery-survey-question',
+			'description' => 'campaigns-event-discovery-survey-description',
+			'coverage' => 0, // Deploy with 0.35
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'minEdits' => 1000,
+			],
+			'link' => 'campaigns-event-discovery-survey-link',
+			'privacyPolicy' => 'campaigns-event-discovery-survey-privacy-policy',
 		],
 	],
 	'ruwiki' => [
