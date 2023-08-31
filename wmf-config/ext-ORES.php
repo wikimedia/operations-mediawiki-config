@@ -45,7 +45,10 @@ return [
 	'zhwiki' => true, // T225562
 ],
 'wgOresUseLiftwing' => [
-	'default' => false // T343308
+	'default' => false,
+	'fiwiki' => true, // T342115, T343308
+	'itwiki' => true, // T342115, T343308
+	'testwiki' => true, // T319170
 ],
 'wgOresModels' => [
 	'default' => [
