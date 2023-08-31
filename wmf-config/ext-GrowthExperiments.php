@@ -441,7 +441,6 @@ return [
 	'acewiki' => true,
 	'adywiki' => true,
 	'afwiki' => true,
-	'akwiki' => true,
 	'alswiki' => true,
 	'amwiki' => true,
 	'anwiki' => true,
@@ -607,7 +606,6 @@ return [
 	'mwlwiki' => true,
 	'myvwiki' => true,
 	'mznwiki' => true,
-	'nawiki' => true,
 	'nahwiki' => true,
 	'napwiki' => true,
 	'ndswiki' => true,
@@ -635,7 +633,7 @@ return [
 	'pcdwiki' => true,
 	'pdcwiki' => true,
 	'pflwiki' => true,
-	'piwiki' => true, // T308138#8708597
+	'piwiki' => false, // T308138#8708597
 	'pihwiki' => true,
 	'plwiki' => true,
 	'pmswiki' => true,
@@ -647,6 +645,7 @@ return [
 	'ruwiki' => true,
 	'simplewiki' => true,
 	'svwiki' => true,
+	'swwiki' => true,
 	'tumwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
