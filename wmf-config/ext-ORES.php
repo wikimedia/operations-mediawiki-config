@@ -122,8 +122,8 @@ return [
 			'likelygood' => [ 'min' => 0, 'max' => 0.167 ], // 'maximum recall @ precision >= 0.997'
 			// https://ores.wikimedia.org/v3/scores/arwiki?models=damaging&model_info=statistics.thresholds.true."''maximum filter_rate @ recall >= 0.9''"
 			'maybebad' => [ 'min' => 0.154, 'max' => 1 ], // 'maximum filter_rate @ recall >= 0.9'
-			// https://ores.wikimedia.org/v3/scores/arwiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.45''"
-			'likelybad' => false, // 'maximum recall @ precision >= 0.45'
+			// https://ores.wikimedia.org/v3/scores/arwiki?models=damaging&model_info=statistics.thresholds.true."''maximum recall @ precision >= 0.43''"
+			'likelybad' => [ 'min' => 0.496, 'max' => 1 ], // 'maximum recall @ precision >= 0.43'
 			'verylikelybad' => false,
 		],
 		// goodfaith is disabled for arwiki (T192498, T193905)
