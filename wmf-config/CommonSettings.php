@@ -3158,10 +3158,13 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	# Bitu, https://idm.wikimedia.org.
 	$wgGroupPermissions['*']['createaccount'] = false;
 
-	# Wikitech no longer allows signups, but accounts can be created by extentions
-	# in our case LdapAuthentication.
 	if ( $wgDBname === 'labswiki' ) {
+		// Allow autocreating accounts from IDM.
 		$wgGroupPermissions['*']['autocreateaccount'] = true;
+
+		// Password resets are handled by IDM too.
+		$wgPasswordResetRoutes['username'] = false;
+		$wgPasswordResetRoutes['email'] = false;
 	}
 
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
