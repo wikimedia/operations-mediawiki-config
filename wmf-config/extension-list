@@ -122,6 +122,7 @@ $IP/extensions/Quiz/extension.json
 $IP/extensions/ReadingLists/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RealMe/extension.json
+$IP/extensions/ReportIncident/extension.json
 $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RSS/extension.json
 $IP/extensions/SandboxLink/extension.json
