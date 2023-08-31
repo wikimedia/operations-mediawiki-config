@@ -8410,6 +8410,10 @@ return [
 	'zhwikinews' => true, // T266933
 ],
 
+'wmgUseReportIncident' => [
+	'default' => false
+],
+
 'wgRelatedArticlesCardLimit' => [
 	'default' => 3,
 	'wikivoyage' => 9,
