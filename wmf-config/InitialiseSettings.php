@@ -595,6 +595,7 @@ return [
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
 	'tlwikiquote' => 'Asia/Manila',
+	'tlywiki' => 'Asia/Baku', // T345316
 	'tnwiki' => 'Africa/Gaborone', // T318208
 	'trwikimedia' => 'Europe/Istanbul',
 	'trvwiki' => 'Asia/Taipei',
@@ -1553,6 +1554,7 @@ return [
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
+	'tlywiki' => 'Vikipediá', // T345316
 	'transitionteamwiki' => 'Transition Team Wiki',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',

@@ -5528,6 +5528,7 @@ return [
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
+	'tlywiki' => 'Vikipediá', // T345316
 	'transitionteamwiki' => 'Project',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',
