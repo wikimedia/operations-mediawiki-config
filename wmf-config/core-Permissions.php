@@ -4466,6 +4466,7 @@ return [
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
 	'+wikifunctionswiki' => [
+		'sysop' => [ 'confirmed' ], // T344261
 		'bureaucrat' => [ 'wikifunctions-staff' ],
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
@@ -5607,6 +5608,7 @@ return [
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
 	'+wikifunctionswiki' => [
+		'sysop' => [ 'confirmed' ], // T344261
 		'bureaucrat' => [ 'wikifunctions-staff' ],
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
