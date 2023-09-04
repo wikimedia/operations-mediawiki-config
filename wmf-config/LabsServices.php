@@ -69,10 +69,9 @@ return [
 		'mediaSwiftStore' => 'http://deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud/v1/AUTH_mw',
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
-		// POC API for betalabs while there is no public API (T306349).
-		// Not actually used, we proxy via production action API. That
-		// cannot be set here as the domain depends on the current one.
-		'image-suggestion' => 'https://image-suggestion-api.wmcloud.org',
+		// No public API (T306349). Not actually used, we proxy via production
+		// action API (cannot be configured here, as the domain depends on the current one).
+		'image-suggestion' => null,
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',
