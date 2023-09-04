@@ -3729,6 +3729,13 @@ if ( $wmgUseOAuthRateLimiter ) {
 				'unit'  => 'HOUR'
 			],
 		],
+		// More info: T345394
+		'wikieducation' => [
+			'ratelimit' => [
+				'requests_per_unit' => 150000,
+				'unit'  => 'HOUR'
+			],
+		],
 	];
 }
 
