@@ -10926,6 +10926,7 @@ return [
 	'default' => false,
 	'cawiki' => true,
 	'dewiki' => true,
+	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'fawiki' => true,
@@ -10963,6 +10964,25 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+	],
+	'enwiki' => [
+		// T344393
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'reader-demographics-2',
+			'question' => 'reader-demographics-2-survey-question',
+			'description' => 'reader-demographics-2-survey-description',
+			'yesMsg' => 'ext-quicksurveys-example-internal-survey-answer-positive',
+			'noMsg' => 'ext-quicksurveys-example-internal-survey-answer-negative',
+			'coverage' => 0, // Increase to deploy.
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'link' => 'reader-demographics-2-survey-link',
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
 	'enwikivoyage' => [
