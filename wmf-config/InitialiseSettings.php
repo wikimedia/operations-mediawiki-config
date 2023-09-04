@@ -10970,7 +10970,9 @@ return [
 			'name' => 'campaigns-event-discovery-survey',
 			'question' => 'campaigns-event-discovery-survey-question',
 			'description' => 'campaigns-event-discovery-survey-description',
-			'coverage' => 0, // Deploy with 0.03
+			'yesMsg' => 'ext-quicksurveys-example-internal-survey-answer-positive',
+			'noMsg' => 'ext-quicksurveys-example-internal-survey-answer-negative',
+			'coverage' => 0.03,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11028,7 +11030,9 @@ return [
 			'name' => 'campaigns-event-discovery-survey',
 			'question' => 'campaigns-event-discovery-survey-question',
 			'description' => 'campaigns-event-discovery-survey-description',
-			'coverage' => 0, // Deploy with 0.2
+			'yesMsg' => 'ext-quicksurveys-example-internal-survey-answer-positive',
+			'noMsg' => 'ext-quicksurveys-example-internal-survey-answer-negative',
+			'coverage' => 0.2,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11067,7 +11071,9 @@ return [
 			'name' => 'campaigns-event-discovery-survey',
 			'question' => 'campaigns-event-discovery-survey-question',
 			'description' => 'campaigns-event-discovery-survey-description',
-			'coverage' => 0, // Deploy with 0.35
+			'yesMsg' => 'ext-quicksurveys-example-internal-survey-answer-positive',
+			'noMsg' => 'ext-quicksurveys-example-internal-survey-answer-negative',
+			'coverage' => 0.35,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
