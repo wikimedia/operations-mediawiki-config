@@ -7256,7 +7256,11 @@ return [
 
 'wmgTranslateUseMinT' => [
 	'default' => false,
+	'foundationwiki' => true,
+	'incubatorwiki' => true,
 	'testwiki' => true,
+	'wikidatawiki' => true,
+	'wikimaniawiki' => true,
 ],
 
 'wmgUseVips' => [
