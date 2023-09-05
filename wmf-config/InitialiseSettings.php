@@ -2547,6 +2547,23 @@ return [
 	'arwiki' => true, // T331313
 	'cswiki' => true, // T331313
 	'huwiki' => true, // T331313
+	// Start T341491
+	'azwiki' => true,
+	'bnwiki' => true,
+	'dewiki' => true,
+	'fawiki' => true,
+	'hewiki' => true,
+	'hiwiki' => true,
+	'idwiki' => true,
+	'kowiki' => true,
+	'nlwiki' => true,
+	'ptwiki' => true,
+	'rowiki' => true,
+	'thwiki' => true,
+	'trwiki' => true,
+	'ukwiki' => true,
+	'viwiki' => true,
+	// End T341491
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -7907,22 +7924,6 @@ return [
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
-	// T302358
-	'ptwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'fawiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'trwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'idwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'hiwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'nlwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'ukwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'thwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'azwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'rowiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'bnwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'hewiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'kowiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'viwiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
-	'dewiki' => [ 'visualenhancements', 'visualenhancements_reply', 'visualenhancements_pageframe' ],
 ],
 
 'wgDiscussionToolsReplyIndentation' => [
@@ -7936,6 +7937,23 @@ return [
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
 	'wikitech' => 'available', // T355374
+	// Start T341491
+	'azwiki' => 'available',
+	'bnwiki' => 'available',
+	'dewiki' => 'available',
+	'fawiki' => 'available',
+	'hewiki' => 'available',
+	'hiwiki' => 'available',
+	'idwiki' => 'available',
+	'kowiki' => 'available',
+	'nlwiki' => 'available',
+	'ptwiki' => 'available',
+	'rowiki' => 'available',
+	'thwiki' => 'available',
+	'trwiki' => 'available',
+	'ukwiki' => 'available',
+	'viwiki' => 'available',
+	// End T341491
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
@@ -7944,6 +7962,23 @@ return [
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
 	'wikitech' => 'available', // T355374
+	// Start T341491
+	'azwiki' => 'available',
+	'bnwiki' => 'available',
+	'dewiki' => 'available',
+	'fawiki' => 'available',
+	'hewiki' => 'available',
+	'hiwiki' => 'available',
+	'idwiki' => 'available',
+	'kowiki' => 'available',
+	'nlwiki' => 'available',
+	'ptwiki' => 'available',
+	'rowiki' => 'available',
+	'thwiki' => 'available',
+	'trwiki' => 'available',
+	'ukwiki' => 'available',
+	'viwiki' => 'available',
+	// End T341491
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
@@ -7952,6 +7987,23 @@ return [
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
 	'wikitech' => 'available', // T355374
+	// Start T341491
+	'azwiki' => 'available',
+	'bnwiki' => 'available',
+	'dewiki' => 'available',
+	'fawiki' => 'available',
+	'hewiki' => 'available',
+	'hiwiki' => 'available',
+	'idwiki' => 'available',
+	'kowiki' => 'available',
+	'nlwiki' => 'available',
+	'ptwiki' => 'available',
+	'rowiki' => 'available',
+	'thwiki' => 'available',
+	'trwiki' => 'available',
+	'ukwiki' => 'available',
+	'viwiki' => 'available',
+	// End T341491
 ],
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
