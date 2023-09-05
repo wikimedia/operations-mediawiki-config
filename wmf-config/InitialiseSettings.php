@@ -4436,6 +4436,11 @@ return [
 	'default' => true,
 ],
 
+'wgResourceLoaderEnableSourceMapLinks' => [
+	'default' => false,
+	'group0' => true,
+],
+
 # CENTRAL AUTH @{
 'wmgUseCentralAuth' => [
 	'default' => true,
