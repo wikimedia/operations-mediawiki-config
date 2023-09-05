@@ -8598,6 +8598,7 @@ return [
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
 		'agq' => 'Aghem', // T288335
+		'ak' => 'Akan', // T333765
 		'bag' => 'Tuki', // T263946
 		'bas' => 'Basaa', // T263946
 		'bax' => 'Bamum', // T263946
@@ -8655,6 +8656,7 @@ return [
 	],
 	'commonswiki' => [
 		'agq' => 'Aghem', // T288335
+		'ak' => 'Akan', // T333765
 		'bag' => 'Tuki', // T263946
 		'bas' => 'Basaa', // T263946
 		'bax' => 'Bamum', // T263946
