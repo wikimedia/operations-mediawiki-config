@@ -459,8 +459,6 @@ if ( $wmgUseReportIncident ) {
 // IP Masking
 // NOTE: This is here to ensure temp accounts behave as temp accounts on all wikis. Autocreation of temp
 // accounts for wikis where IP Masking is not enabled is disabled in an if below.
-$wgAutoCreateTempUser['enabled'] = true;
-
 $wgAutoCreateTempUser['serialProvider'] = [
 	'type' => 'centralauth',
 	'numShards' => 8,
@@ -468,13 +466,13 @@ $wgAutoCreateTempUser['serialProvider'] = [
 $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'scramble' ];
 
 if ( $wmgEnableIPMasking ) {
+	$wgAutoCreateTempUser['enabled'] = true;
 	// editing is enabled only for temp accounts
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['temp']['edit'] = true;
-
 } else {
-	// do not actually autocreate temp accounts on non-pilot wikis
-	$wgAutoCreateTempUser['actions'] = [];
+	$wgAutoCreateTempUser['enabled'] = false;
+	$wgAutoCreateTempUser['reservedPattern'] = '*$1';
 }
 
 // Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874

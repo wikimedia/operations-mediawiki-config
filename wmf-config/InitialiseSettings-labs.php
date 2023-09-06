@@ -2530,6 +2530,7 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgEnableIPMasking' => [
 			'default' => false,
+			'loginwiki' => true,
 			'cswiki' => true,
 			'dewiki' => true,
 			'commonswiki' => true, // T342067
