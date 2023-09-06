@@ -614,6 +614,21 @@ function wmfGetOverrideSettings() {
 		/// ------------ BetaFeatures end -----------
 		///
 
+		// https://www.mediawiki.org/wiki/Edit_check
+		'wgVisualEditorEditCheck' => [
+			'default' => false,
+			// T345658
+			'enwiki' => true,
+			'frwiki' => true,
+		],
+
+		'wgVisualEditorEditCheckTagging' => [
+			'default' => false,
+			// T345658
+			'enwiki' => true,
+			'frwiki' => true,
+		],
+
 		// Whether to enable true section editing. false, true, 'mobile', or 'mobile-ab'
 		'wmgVisualEditorEnableVisualSectionEditing' => [
 			'default' => 'mobile',
