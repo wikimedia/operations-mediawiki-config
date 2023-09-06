@@ -4118,102 +4118,110 @@ Wikivoyage:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        selected_wordmark: wikimaniateamwiki
+        local_tagline: true
     wikimania2006wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        selected_wordmark: wikimaniateamwiki
+        local_tagline: true
     wikimania2007wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        selected_wordmark: wikimaniateamwiki
+        local_tagline: true
     wikimania2008wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2009wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2010wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2011wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2012wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2013wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2014wiki:
         comment: T58398
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
     wikimania2015wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        local_wordmark: true
+        local_tagline: true
     wikimania2016wiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        selected_wordmark: wikimaniateamwiki
+        local_tagline: true
     wikimania2017wiki:
         comment: T122062
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        selected_icon: wikimaniateamwiki
+        selected_wordmark: wikimaniateamwiki
+        local_tagline: true
     wikimania2018wiki:
         comment: T173042
         comment_1_5x: T194340
         comment_2x: T194340
-        selected_icon: wikimaniawiki
-        selected_wordmark: wikimaniawiki
+        no_icon: true
+        local_wordmark: true
+        local_tagline: true
     wikimaniateamwiki:
         comment: T50376
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimania
-        selected_wordmark: wikimaniawiki
+        local_icon: true
+        local_wordmark: true
+        local_tagline: true
     wikimaniawiki:
         comment_1_5x: T194340, T337044
         comment_2x: T194340, T337044
         selected: wikimaniawiki-2023
-        local_wordmark: true
+        no_icon: true
         variants:
             wikimaniawiki-2023:
                 commons: 'File:Wikimania 2023 Singapore Square logo.svg'
-        commons_wordmark: 'File:Wikimania mark.svg'
+        local_wordmark: true
+        local_tagline: true
         comment_wordmark: T286405
-        local_icon: true
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
         commons_icon: 'File:Wikitech-logo-vector2022.svg'
