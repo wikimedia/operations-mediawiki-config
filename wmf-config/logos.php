@@ -4515,6 +4515,11 @@ return [
 		'width' => 120,
 		'height' => 29,
 	],
+	'specieswiki' => [
+		'src' => '/static/images/mobile/copyright/specieswiki-wordmark.svg',
+		'width' => 122,
+		'height' => 18,
+	],
 	'sysop_itwiki' => [ // T330279
 		'src' => '/static/images/mobile/copyright/sysop_itwiki-wordmark.svg',
 		'width' => 79,
@@ -6892,6 +6897,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fi.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'specieswiki' => [
+		'src' => '/static/images/mobile/copyright/specieswiki-tagline.svg',
+		'width' => 112,
+		'height' => 12,
 	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-en.svg',

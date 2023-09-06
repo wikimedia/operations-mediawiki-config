@@ -3983,6 +3983,8 @@ Wikivoyage:
         comment_1_5x: 'T230113, T306037, T310961'
         comment_2x: 'T230113, T306037, T310961'
         local_icon: true
+        local_wordmark: true
+        local_tagline: true
     stewardwiki:
         comment: T39700
         no_1_5x: true
