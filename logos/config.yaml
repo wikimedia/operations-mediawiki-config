@@ -604,6 +604,7 @@ Wikipedia:
     gotwiki:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     gpewiki:
         commons: 'File:Wikipedia-logo-v2-gpe.svg'
     guwiki:

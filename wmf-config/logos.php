@@ -2551,6 +2551,7 @@ return [
 		'width' => 120,
 		'height' => 28,
 	],
+	'gotwiki' => null,
 	'guwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-gu.svg',
 		'width' => 120,
