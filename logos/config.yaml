@@ -3233,6 +3233,10 @@ Wikisource:
         no_2x: true
         local_wordmark: true
     bnwikisource:
+        commons: 'File:Wikisource-logo-bn.svg'
+        comment: T345666
+        comment_1_5x: T345666
+        comment_2x: T345666
         local_wordmark: true
     brwikisource:
         no_1_5x: true
