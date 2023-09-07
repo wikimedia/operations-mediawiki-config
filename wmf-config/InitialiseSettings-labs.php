@@ -634,6 +634,11 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
+		'wmgUseReportIncident' => [
+			'loginwiki' => false,
+			'kowiki' => true,
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
