@@ -450,6 +450,10 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosFileBackend = 'global-multiwrite';
 }
 
+if ( $wmgUseReportIncident ) {
+	wfLoadExtension( 'ReportIncident' );
+}
+
 // IP Masking
 // NOTE: This is here to ensure temp accounts behave as temp accounts on all wikis. Autocreation of temp
 // accounts for wikis where IP Masking is not enabled is disabled in an if below.
