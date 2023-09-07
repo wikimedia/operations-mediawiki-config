@@ -803,10 +803,17 @@ $wgDjvuRenderer = '/usr/bin/ddjvu';
 $wgDjvuTxt = '/usr/bin/djvutxt';
 
 # ######################################################################
+# StatsD/Metrics Settings
+# ######################################################################
+if ( ClusterConfig::getInstance()->isDebug() ) {
+	$wgStatsFormat = 'dogstatsd';
+	$wgStatsTarget = 'udp://localhost:8125';
+}
+$wgStatsdServer = $wmgLocalServices['statsd'];
+
+# ######################################################################
 # Reverse proxy Configuration
 # ######################################################################
-
-$wgStatsdServer = $wmgLocalServices['statsd'];
 
 $wgUseCdn = true;
 if ( $wmgRealm === 'production' ) {
