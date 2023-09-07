@@ -475,5 +475,9 @@ if ( $wmgEnableIPMasking ) {
 	$wgAutoCreateTempUser['actions'] = [];
 }
 
+// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
+$wgContentHandlers['JadeEntity'] = 'UnknownContentHandler';
+$wgContentHandlers['JadeJudgement'] = 'UnknownContentHandler';
+
 }
 // end safeguard
