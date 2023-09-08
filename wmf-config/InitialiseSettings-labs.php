@@ -564,11 +564,11 @@ function wmfGetOverrideSettings() {
 				'logged_out' => false,
 			],
 			'enwiki' => [
-				'logged_in' => true,
+				'logged_in' => false,
 				'logged_out' => false,
 			],
 			'eswiki' => [
-				'logged_in' => true,
+				'logged_in' => false,
 				'logged_out' => false,
 			]
 		],
