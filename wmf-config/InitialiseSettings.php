@@ -11696,7 +11696,7 @@ return [
 ],
 
 'wgMachineVisionRequestLabelsOnUploadComplete' => [
-	'default' => true,
+	'default' => false,
 ],
 
 'wgMachineVisionNewUploadLabelingJobDelay' => [
@@ -11916,7 +11916,7 @@ return [
 ],
 
 'wgMachineVisionShowUploadWizardCallToAction' => [
-	'default' => true,
+	'default' => false,
 ],
 
 'wgSpecialSearchFormOptions' => [
