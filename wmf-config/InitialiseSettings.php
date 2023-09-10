@@ -8363,7 +8363,6 @@ return [
 
 'wgSpecialContributeSkinsEnabled' => [
 	'default' => [],
-	'bnwiki' => [ "minerva", "vector-2022" ],
 	'mlwiki' => [ "minerva", "vector-2022" ],
 	'mnwiki' => [ "minerva", "vector-2022" ],
 	'sqwiki' => [ "minerva", "vector-2022" ],
