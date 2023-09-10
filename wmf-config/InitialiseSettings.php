@@ -7256,10 +7256,15 @@ return [
 
 'wmgTranslateUseMinT' => [
 	'default' => false,
+	'commonswiki' => true,
 	'foundationwiki' => true,
 	'incubatorwiki' => true,
+	'outreachwiki' => true,
+	'sourceswiki' => true,
+	'specieswiki' => true,
 	'testwiki' => true,
 	'wikidatawiki' => true,
+	'wikifunctionswiki' => true,
 	'wikimaniawiki' => true,
 ],
 
