@@ -3677,16 +3677,19 @@ Wikivoyage:
         comment: T176042
         comment_1_5x: T176042
         comment_2x: T176042
+        selected_wordmark: advisorswiki
     arwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: advisorswiki
     azwikimedia:
         commons: 'File:Azerbaijani Wikimedians Black logo-en SVG.svg'
     bdwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: advisorswiki
     bewikimedia:
         no_1_5x: true
         no_2x: true
@@ -3719,7 +3722,8 @@ Wikivoyage:
         comment: T135521
         comment_1_5x: T135521
         comment_2x: T135521
-        no_icon: true
+        local_icon: true
+        local_wordmark: true
     etwikimedia:
         no_1_5x: true
         no_2x: true
@@ -3735,7 +3739,9 @@ Wikivoyage:
     grwikimedia:
         comment: T245911
         selected_icon: outreachwiki
-    hiwikimedia: null
+    hiwikimedia:
+        local_icon: true
+        local_wordmark: true
     id_internalwikimedia:
         selected_icon: outreachwiki
     idwikimedia:
@@ -3795,7 +3801,7 @@ Wikivoyage:
         comment: T187184
         comment_1_5x: T187184
         comment_2x: T187184
-        no_icon: true
+        local_icon: true
     rswikimedia:
         no_1_5x: true
         no_2x: true
@@ -3829,10 +3835,14 @@ Wikivoyage:
         comment: T202844
         comment_1_5x: T202844
         comment_2x: T202844
+        local_icon: true
+        local_wordmark: true
+        local_tagline: true
     advisorywiki:
         no_1_5x: true
         no_2x: true
         selected_icon: wikimedia
+        selected_wordmark: advisorswiki
     apiportalwiki:
         no_1_5x: true
         no_2x: true
@@ -3842,18 +3852,18 @@ Wikivoyage:
         comment_1_5x: T151731
         comment_2x: T151731
         no_wordmark: true
-        no_icon: true
+        local_icon: true
     arbcom_dewiki:
         comment: T166947
         comment_1_5x: T166947
         comment_2x: T166947
         no_wordmark: true
-        no_icon: true
+        local_icon: true
     arbcom_enwiki:
         comment_1_5x: T150618
         comment_2x: T150618
         no_wordmark: true
-        no_icon: true
+        local_icon: true
     arbcom_fiwiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3862,13 +3872,14 @@ Wikivoyage:
         comment_1_5x: T150618
         comment_2x: T150618
         no_wordmark: true
-        no_icon: true
+        local_icon: true
     arbcom_ruwiki:
         comment: T262812
         comment_1_5x: T262812
         comment_2x: T262812
         no_wordmark: true
-        no_icon: true
+        no_svg_icon: true
+        local_icon: true
     auditcomwiki:
         no_1_5x: true
         no_2x: true
@@ -3893,6 +3904,8 @@ Wikivoyage:
         comment: T30785
         no_1_5x: true
         no_2x: true
+        local_icon: true
+        local_wordmark: true
     collabwiki:
         no_1_5x: true
         no_2x: true
@@ -3945,6 +3958,8 @@ Wikivoyage:
     legalteamwiki:
         no_1_5x: true
         no_2x: true
+        no_svg_icon: true
+        local_icon: true
     loginwiki:
         comment: T50236
         no_1_5x: true
@@ -4074,6 +4089,9 @@ Wikivoyage:
     usabilitywiki:
         no_1_5x: true
         no_2x: true
+        local_icon: true
+        local_wordmark: true
+        local_tagline: true
     votewiki:
         selected_icon: wikimedia
     wg_enwiki:

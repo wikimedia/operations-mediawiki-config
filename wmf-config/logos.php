@@ -4533,6 +4533,16 @@ return [
 		'width' => 120,
 		'height' => 29,
 	],
+	'ecwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ec.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'hiwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-hi.svg',
+		'width' => 146,
+		'height' => 32,
+	],
 	'nowikimedia' => [ // T318341
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-no.svg',
 		'width' => 141,
@@ -4540,11 +4550,21 @@ return [
 	],
 
 	// Special wikis
+	'advisorswiki' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'arbcom_cswiki' => null,
 	'arbcom_dewiki' => null,
 	'arbcom_enwiki' => null,
 	'arbcom_nlwiki' => null,
 	'arbcom_ruwiki' => null,
+	'checkuserwiki' => [
+		'src' => '/static/images/mobile/copyright/checkuserwiki-wordmark.svg',
+		'width' => 121,
+		'height' => 30,
+	],
 	'collabwiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/collabwiki-wordmark.svg',
 		'width' => 125,
@@ -4615,6 +4635,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikidatawiki-wordmark.svg',
 		'width' => 130,
 		'height' => 17,
+	],
+	'usabilitywiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
 	],
 	'wg_enwiki' => null,
 	'wikidatawiki' => [ // T315572
@@ -6999,6 +7024,11 @@ return [
 	// Chapter and local user group wikis
 
 	// Special wikis
+	'advisorswiki' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-tagline.svg',
+		'width' => 146,
+		'height' => 10,
+	],
 	'arbcom_fiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fi.svg',
 		'width' => 120,
@@ -7013,6 +7043,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-en.svg',
 		'width' => 117,
 		'height' => 13,
+	],
+	'usabilitywiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-tagline.svg',
+		'width' => 100,
+		'height' => 10,
 	],
 	'wikimania2005wiki' => [
 		'src' => '/static/images/mobile/copyright/wikimania2005wiki-tagline.svg',
@@ -7110,10 +7145,11 @@ return [
 	'cnwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'cowikimedia' => '/static/images/icons/outreachwiki.svg',
 	'dkwikimedia' => '/static/images/icons/outreachwiki.svg',
-	'ecwikimedia' => null,
+	'ecwikimedia' => '/static/images/icons/ecwikimedia.svg',
 	'etwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'fiwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'grwikimedia' => '/static/images/icons/outreachwiki.svg',
+	'hiwikimedia' => '/static/images/icons/hiwikimedia.svg',
 	'id_internalwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'idwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'maiwikimedia' => '/static/images/icons/outreachwiki.svg',
@@ -7125,7 +7161,7 @@ return [
 	'plwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'ptwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'punjabiwikimedia' => '/static/images/icons/outreachwiki.svg',
-	'romdwikimedia' => null,
+	'romdwikimedia' => '/static/images/icons/romdwikimedia.svg',
 	'rswikimedia' => '/static/images/icons/outreachwiki.svg',
 	'ruwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'trwikimedia' => '/static/images/icons/outreachwiki.svg',
@@ -7133,18 +7169,20 @@ return [
 	'wbwikimedia' => '/static/images/icons/outreachwiki.svg',
 
 	// Special wikis
+	'advisorswiki' => '/static/images/icons/advisorswiki.svg',
 	'advisorywiki' => '/static/images/icons/wikimedia.svg',
 	'apiportalwiki' => '/static/images/icons/outreachwiki.svg',
-	'arbcom_cswiki' => null,
-	'arbcom_dewiki' => null,
-	'arbcom_enwiki' => null,
-	'arbcom_nlwiki' => null,
-	'arbcom_ruwiki' => null,
+	'arbcom_cswiki' => '/static/images/icons/arbcom_cswiki.svg',
+	'arbcom_dewiki' => '/static/images/icons/arbcom_dewiki.svg',
+	'arbcom_enwiki' => '/static/images/icons/arbcom_enwiki.svg',
+	'arbcom_nlwiki' => '/static/images/icons/arbcom_nlwiki.svg',
+	'arbcom_ruwiki' => '/static/images/icons/arbcom_ruwiki.png',
 	'auditcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'boardwiki' => '/static/images/icons/outreachwiki.svg',
 	'boardgovcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'chairwiki' => '/static/images/icons/outreachwiki.svg',
 	'chapcomwiki' => '/static/images/icons/wikimedia.svg',
+	'checkuserwiki' => '/static/images/icons/checkuserwiki.svg',
 	'collabwiki' => '/static/images/icons/collabwiki.svg',
 	'commonswiki' => '/static/images/icons/commonswiki.svg',
 	'donatewiki' => '/static/images/icons/wikimedia.svg',
@@ -7155,6 +7193,7 @@ return [
 	'iegcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'incubatorwiki' => '/static/images/icons/incubatorwiki.svg',
 	'internalwiki' => '/static/images/icons/outreachwiki.svg',
+	'legalteamwiki' => '/static/images/icons/legalteamwiki.png',
 	'loginwiki' => '/static/images/icons/outreachwiki.svg',
 	'mediawikiwiki' => '/static/images/icons/mediawikiwiki.svg',
 	'metawiki' => '/static/images/icons/metawiki.svg',
@@ -7179,6 +7218,7 @@ return [
 	'techconductwiki' => '/static/images/icons/metawiki.svg',
 	'transitionteamwiki' => '/static/images/icons/outreachwiki.svg',
 	'thankyouwiki' => '/static/images/icons/wikimedia.svg',
+	'usabilitywiki' => '/static/images/icons/usabilitywiki.svg',
 	'votewiki' => '/static/images/icons/wikimedia.svg',
 	'wg_enwiki' => '/static/images/icons/metawiki.svg',
 	'wikidatawiki' => '/static/images/icons/wikidatawiki.svg',
