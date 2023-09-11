@@ -45,22 +45,6 @@ function wmfSetupEtcd( $etcdHost ) {
 	return $etcdConfig;
 }
 
-/**
- * @param array $array
- * @return mixed
- */
-function wmfArrayKeyFirst( array $array ) {
-	if ( function_exists( 'array_key_first' ) ) {
-		return array_key_first( $array );
-	} else {
-		// PHP 7.2
-		foreach ( $array as $key => $unused ) {
-			return $key;
-		}
-		return null;
-	}
-}
-
 /** In production, read the database loadbalancer config from etcd.
  * See https://wikitech.wikimedia.org/wiki/Dbctl
  *
@@ -81,7 +65,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		// We also need to merge in the cross-DC master entries if that is relevant.
 		$crossDCLoads = $wmgRemoteMasterDbConfig['sectionLoads'][$section][0] ?? null;
 		if ( $crossDCLoads ) {
-			$remoteMaster = wmfArrayKeyFirst( $crossDCLoads );
+			$remoteMaster = array_key_first( $crossDCLoads );
 			$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
 			$lbFactoryConf['hostsByName'][$remoteMaster] =
 				$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
@@ -112,14 +96,14 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
 		// Merge the same way as sectionLoads
 		if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
-			$localMaster = wmfArrayKeyFirst( $dbctlLoads[0] );
+			$localMaster = array_key_first( $dbctlLoads[0] );
 			// Override the 'ssl' flag set in masterTemplateOverrides via db-production.php
 			$lbFactoryConf['templateOverridesByServer'][$localMaster]['ssl'] = false;
 			$loadByHost = array_merge( ...$dbctlLoads );
 		} else {
 			$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
 			if ( $crossDCLoads ) {
-				$remoteMaster = wmfArrayKeyFirst( $crossDCLoads );
+				$remoteMaster = array_key_first( $crossDCLoads );
 				$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
 				$lbFactoryConf['hostsByName'][$remoteMaster] =
 					$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
