@@ -3136,6 +3136,7 @@ return [
 	'fawiki' => true, // T315525
 	'ptwiki' => true, // T317157
 	'itwiki' => true, // T330533
+	'mediawikiwiki' => true, // T332733
 ],
 
 'wgGroupInheritsPermissions' => [
