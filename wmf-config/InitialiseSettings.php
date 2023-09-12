@@ -10992,9 +10992,11 @@ return [
 			'name' => 'reader-demographics-2',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'yesMsg' => 'ext-quicksurveys-example-internal-survey-answer-positive',
-			'noMsg' => 'ext-quicksurveys-example-internal-survey-answer-negative',
-			'coverage' => 0, // Increase to deploy.
+			'coverage' => 0, // deploy with 0.0033333333333333
+			'audience' => [
+				'anons' => true,
+			],
+			'instanceTokenParameterName' => 'QS',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
