@@ -794,7 +794,7 @@ return [
 			'schema_title' => 'analytics/mobile_apps/android_find_in_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		'android.android_image_recommendation_event' => [
+		'android.image_recommendation_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
