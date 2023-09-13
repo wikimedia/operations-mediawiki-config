@@ -477,7 +477,7 @@ if ( $wmgEnableIPMasking ) {
 
 // Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 $wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
-$wgContentHandlers['JadeJudgement'] = 'FallbackContentHandler';
+$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
 
 }
 // end safeguard
