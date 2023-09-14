@@ -1221,5 +1221,8 @@ return [
 'wgCirrusSearchDeduplicateInMemory' => [
 	'default' => false,
 ],
-
+'wgCirrusSearchUseEventBusBridge' => [
+	'default' => false,
+	'testwiki' => true,
+],
 ];
