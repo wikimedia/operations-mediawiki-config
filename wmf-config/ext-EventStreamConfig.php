@@ -1224,6 +1224,14 @@ return [
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
+		'mediawiki.cirrussearch.page_rerender.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/page_rerender',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+		],
 		'mediawiki.page-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
