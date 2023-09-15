@@ -6733,6 +6733,7 @@ return [
 'wmgUseWikiLove' => [
 	'default' => false,
 	'arwiki' => true,
+	'arwikisource' => true, // T346391
 	'azwiki' => true, // T119727
 	'bnwiki' => true, // T129728
 	'bnwikibooks' => true, // T335705
