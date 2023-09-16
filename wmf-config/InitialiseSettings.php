@@ -6708,6 +6708,11 @@ return [
 	'testwiki' => true,
 ],
 
+// T337942
+'wgCheckUserDisplayClientHints' => [
+	'default' => false,
+],
+
 // T344797
 'wgCheckUserClientHintsRestApiMaxTimeLag' => [
 	'default' => 1800,
