@@ -6704,8 +6704,7 @@ return [
 
 // T337943, T340959
 'wgCheckUserPurgeOldClientHintsData' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 // T337942
