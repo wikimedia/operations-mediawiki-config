@@ -122,6 +122,7 @@ return [
 		'cawiki' => true,
 		'euwiki' => true,
 		'glwiki' => true,
+		'knwiki' => true, // T346582
 		'trwiki' => true,
 	],
 
