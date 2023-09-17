@@ -263,6 +263,7 @@ if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
 }
 
 if ( $wmgUseMath ) {
+	$wgMathValidModes = [ 'source', 'mathml', 'native' ];
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
 	$wgMathEnableFormulaLinks = true;
 	$wgMathWikibasePropertyIdHasPart = 'P253104';
