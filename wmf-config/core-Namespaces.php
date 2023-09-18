@@ -4582,6 +4582,12 @@ return [
 		106 => 'noindex,follow',
 		107 => 'noindex,follow',
 	],
+	'shwiki' => [
+		NS_USER => 'noindex,follow', // T346589
+		NS_USER_TALK => 'noindex,follow', // T346589
+		118 => 'noindex,nofollow', // draft, T346589
+		119 => 'noindex,nofollow', // draft talk, T346589
+	],
 	'srwiki' => [
 		NS_USER => 'noindex,follow', // T248860
 		NS_USER_TALK => 'noindex,follow', // T248860
