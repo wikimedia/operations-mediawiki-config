@@ -7269,6 +7269,7 @@ return [
 	'foundationwiki' => true,
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'outreachwiki' => true,
 	'sourceswiki' => true,
 	'specieswiki' => true,
