@@ -4086,10 +4086,105 @@ return [
 	],
 
 	// Wikinews
+	'arwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ar.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'bgwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-bg.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'bswikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-bs.svg',
+		'width' => 146,
+		'height' => 32,
+	],
 	'cawikinews' => [ // T331823
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ca.svg',
 		'width' => 108,
 		'height' => 26,
+	],
+	'cswikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-cs.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'dewikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-en.svg',
+		'width' => 146,
+		'height' => 21,
+	],
+	'elwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-el.svg',
+		'width' => 146,
+		'height' => 28,
+	],
+	'enwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-en.svg',
+		'width' => 146,
+		'height' => 21,
+	],
+	'eowikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-eo.svg',
+		'width' => 146,
+		'height' => 22,
+	],
+	'eswikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-es.svg',
+		'width' => 146,
+		'height' => 17,
+	],
+	'fawikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-fa.svg',
+		'width' => 99,
+		'height' => 32,
+	],
+	'fiwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-fi.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'frwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-en.svg',
+		'width' => 146,
+		'height' => 21,
+	],
+	'hewikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-he.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'huwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-hu.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'itwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-it.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'jawikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ja.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'kowikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ko.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'nlwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-nl.svg',
+		'width' => 146,
+		'height' => 20,
+	],
+	'nowikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-no.svg',
+		'width' => 146,
+		'height' => 32,
 	],
 	'plwikinews' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pl.svg',
@@ -4100,6 +4195,61 @@ return [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pt.svg',
 		'width' => 144,
 		'height' => 20,
+	],
+	'rowikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ro.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'ruwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ru.svg',
+		'width' => 146,
+		'height' => 13,
+	],
+	'sdwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sd.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'sqwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sq.svg',
+		'width' => 146,
+		'height' => 21,
+	],
+	'srwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sr.svg',
+		'width' => 146,
+		'height' => 18,
+	],
+	'svwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-en.svg',
+		'width' => 146,
+		'height' => 21,
+	],
+	'tawikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ta.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'thwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-th.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'trwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-tr.svg',
+		'width' => 146,
+		'height' => 26,
+	],
+	'ukwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-uk.svg',
+		'width' => 146,
+		'height' => 18,
+	],
+	'zhwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-zh.svg',
+		'width' => 146,
+		'height' => 32,
 	],
 
 	// Wikisource

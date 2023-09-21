@@ -3102,12 +3102,15 @@ Wikinews:
     arwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     bgwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     bswikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     cawikinews:
         commons_wordmark: 'File:Wikinews wordmark-ca.svg'
         comment_wordmark: T331823
@@ -3116,52 +3119,69 @@ Wikinews:
     cswikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     dewikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        selected_wordmark: enwikinews
     elwikinews:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
     enwikinews:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
     eowikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     eswikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     fawikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     fiwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     frwikinews:
         comment_1_5x: T150618
         comment_2x: T150618
+        selected_wordmark: enwikinews
     hewikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     huwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     itwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     jawikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     kowikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     liwikinews: null
     nlwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     nowikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     plwikinews:
         no_1_5x: true
         no_2x: true
@@ -3177,33 +3197,44 @@ Wikinews:
     rowikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     ruwikinews:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
     sdwikinews:
         no_1_5x: true
         no_2x: true
+        comment_wordmark: Closed wiki. Known inconsistency between wordmark and legacy.
+        local_wordmark: true
     sqwikinews:
         comment: T30114
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     srwikinews:
         comment_1_5x: T172255
         comment_2x: T172255
+        local_wordmark: true
     svwikinews:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: enwikinews
     tawikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     thwikinews:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     trwikinews:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_wordmark: true
     ukwikinews:
         comment: T124778
+        local_wordmark: true
     zhwikinews:
         commons: 'File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg'
         variants:
@@ -3212,16 +3243,21 @@ Wikinews:
         lang_variants:
             zh-hans:
                 selected_logo: zhwikinews-hans
+                local_wordmark: true
             zh-cn:
                 selected_lang: zh-hans
+                selected_wordmark: zh-hans
             zh-my:
                 selected_lang: zh-hans
+                selected_wordmark: zh-hans
             zh-sg:
                 selected_lang: zh-hans
+                selected_wordmark: zh-hans
         comment: T298550
         comment_1_5x: T298550
         comment_2x: T298550
         comment_lang_variants: T308620
+        local_wordmark: true
 Wikisource:
     arwikisource:
         commons: 'File:Wikisource-logo-ar.svg'
