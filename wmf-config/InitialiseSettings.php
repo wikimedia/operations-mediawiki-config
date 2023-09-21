@@ -10992,7 +10992,7 @@ return [
 			'name' => 'reader-demographics-2',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0, // deploy with 0.0033333333333333
+			'coverage' => 0.0033333333333333,
 			'audience' => [
 				'anons' => true,
 			],
