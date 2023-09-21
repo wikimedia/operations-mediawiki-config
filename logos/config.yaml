@@ -2553,13 +2553,16 @@ Wikiquote:
         no_1_5x: true
         no_2x: true
         local_icon: true
+        local_wordmark: true
     aswikiquote:
         commons: File:Wikiquote-logo-as.svg
     azwikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     bclwikiquote:
         commons: 'File:Wikisambit-logo-01.svg'
+        local_wordmark: true
     bewikiquote:
         comment: T196134
         comment_1_5x: T196134
@@ -2568,6 +2571,7 @@ Wikiquote:
     bgwikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     bnwikiquote:
         commons: 'File:Wikiquote-logo-bn.svg'
         comment: 'T319183, T323131'
@@ -2595,6 +2599,7 @@ Wikiquote:
     elwikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     enwikiquote:
         commons: 'File:Wikiquote-logo-en.svg'
         comment: T171810
@@ -2621,7 +2626,8 @@ Wikiquote:
         comment_1_5x: T302683
         comment_2x: T302683
         local_wordmark: true
-    fawikiquote: null
+    fawikiquote:
+        local_wordmark: true
     frwikiquote:
         commons: 'File:Wikiquote-logo-en.svg'
         comment: T317004
@@ -2640,6 +2646,7 @@ Wikiquote:
         comment: T126185
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     hrwikiquote:
         commons: 'File:Wikiquote-logo-hr.svg'
         comment_1_5x: T150618
@@ -2648,6 +2655,7 @@ Wikiquote:
     huwikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     hywikiquote:
         commons: 'File:Wikiquote-logo-hy.svg'
         comment_1_5x: T150618
@@ -2666,9 +2674,11 @@ Wikiquote:
     iswikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     kawikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     knwikiquote:
         commons: 'File:Wikiquote-logo-kn.svg'
         comment: T104260
@@ -2679,9 +2689,11 @@ Wikiquote:
         comment: T29548
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     kuwikiquote:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     mlwikiquote:
         comment: T44771
         comment_1_5x: T150618
@@ -2694,6 +2706,7 @@ Wikiquote:
         comment: T29555
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     plwikiquote:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -2715,6 +2728,7 @@ Wikiquote:
         comment: T45812
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     skwikiquote:
         no_1_5x: true
         no_2x: true
@@ -2741,6 +2755,7 @@ Wikiquote:
         comment: T57864
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     tewikiquote: null
     thwikiquote:
         no_1_5x: true
@@ -2764,6 +2779,7 @@ Wikiquote:
         comment: T97510
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
         selected_icon: arwikiquote
     viwikiquote: null
     zhwikiquote:
@@ -2784,6 +2800,7 @@ Wikiquote:
         comment_1_5x: 'T150618, T199863, T308620'
         comment_2x: 'T150618, T199863, T308620'
         comment_lang_variants: T308620
+        local_wordmark: true
 Wikibooks:
     afwikibooks:
         comment: T150618

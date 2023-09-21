@@ -3672,10 +3672,30 @@ return [
 	],
 
 	// Wikiquote
+	'arwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ar.svg',
+		'width' => 146,
+		'height' => 44,
+	],
+	'azwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-az.svg',
+		'width' => 146,
+		'height' => 44,
+	],
+	'bclwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bcl.svg',
+		'width' => 146,
+		'height' => 44,
+	],
 	'bewikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-be.svg',
 		'width' => 100,
 		'height' => 50,
+	],
+	'bgwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bg.svg',
+		'width' => 146,
+		'height' => 44,
 	],
 	'bnwikiquote' => [ // T341910
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bn.svg',
@@ -3697,6 +3717,11 @@ return [
 		'width' => 96,
 		'height' => 50,
 	],
+	'elwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-el.svg',
+		'width' => 146,
+		'height' => 44,
+	],
 	'eowikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-eo.svg',
 		'width' => 95,
@@ -3717,6 +3742,11 @@ return [
 		'width' => 140,
 		'height' => 44,
 	],
+	'fawikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-fa.svg',
+		'width' => 146,
+		'height' => 40,
+	],
 	'frwikiquote' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-fr.svg',
 		'width' => 77,
@@ -3732,10 +3762,20 @@ return [
 		'width' => 93,
 		'height' => 50,
 	],
+	'hiwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-hi.svg',
+		'width' => 136,
+		'height' => 44,
+	],
 	'hrwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-hr.svg',
 		'width' => 102,
 		'height' => 50,
+	],
+	'huwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-hu.svg',
+		'width' => 93,
+		'height' => 44,
 	],
 	'hywikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-hy.svg',
@@ -3752,15 +3792,40 @@ return [
 		'width' => 128,
 		'height' => 50,
 	],
+	'iswikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-is.svg',
+		'width' => 146,
+		'height' => 44,
+	],
+	'kawikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ka.svg',
+		'width' => 146,
+		'height' => 44,
+	],
 	'knwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-kn.svg',
 		'width' => 146,
 		'height' => 50,
 	],
+	'kowikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ko.svg',
+		'width' => 146,
+		'height' => 44,
+	],
+	'kuwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ku.svg',
+		'width' => 146,
+		'height' => 44,
+	],
 	'mlwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ml.svg',
 		'width' => 146,
 		'height' => 50,
+	],
+	'nnwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-nn.svg',
+		'width' => 146,
+		'height' => 44,
 	],
 	'plwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-pl.svg',
@@ -3781,6 +3846,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-sah.svg',
 		'width' => 125,
 		'height' => 50,
+	],
+	'sawikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-sa.svg',
+		'width' => 146,
+		'height' => 44,
 	],
 	'skwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-sk.svg',
@@ -3807,6 +3877,11 @@ return [
 		'width' => 146,
 		'height' => 50,
 	],
+	'tawikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ta.svg',
+		'width' => 146,
+		'height' => 21,
+	],
 	'thwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-th.svg',
 		'width' => 108,
@@ -3826,6 +3901,16 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-uk.svg',
 		'width' => 152,
 		'height' => 50,
+	],
+	'urwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ur.svg',
+		'width' => 146,
+		'height' => 44,
+	],
+	'zhwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-zh.svg',
+		'width' => 148,
+		'height' => 38,
 	],
 
 	// Wikibooks
@@ -4678,6 +4763,21 @@ return [
 	],
 
 	// Chapter and local user group wikis
+	'amwikimedia' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'arwikimedia' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'bdwikimedia' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'brwikimedia' => [ // T313194
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-br.svg',
 		'width' => 120,
@@ -4701,6 +4801,11 @@ return [
 
 	// Special wikis
 	'advisorswiki' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'advisorywiki' => [
 		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
 		'width' => 100,
 		'height' => 12,
