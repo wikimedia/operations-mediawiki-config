@@ -5513,15 +5513,8 @@ return [
 ],
 
 'wgUrlShortenerEnableSidebar' => [
-	'default' => false,
-	'testwiki' => true,
-	'zhwiki' => true,
-	'jawiki' => true,
+	'default' => true,
 	'rtl' => true,
-	'kowiki' => true,
-	'ruwiki' => true,
-	'ukwiki' => true,
-	'bgwiki' => true,
 ],
 
 'wgAllowMicrodataAttributes' => [
