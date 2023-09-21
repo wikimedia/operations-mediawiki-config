@@ -2825,6 +2825,8 @@ Wikibooks:
     bgwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
     bnwikibooks:
         commons_wordmark: 'File:Wikibooks-wordmark-bn.svg'
         comment_wordmark: T319320
@@ -2852,6 +2854,8 @@ Wikibooks:
     elwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
     enwikibooks:
         comment_1_5x: T177506
         comment_2x: T177506
@@ -2902,6 +2906,7 @@ Wikibooks:
         comment_1_5x: T201562
         comment_2x: T201562
         local_tagline: true
+        local_wordmark: true
     hiwikibooks:
         local_tagline: true
         local_wordmark: true
@@ -2915,6 +2920,7 @@ Wikibooks:
         comment_1_5x: T177506
         comment_2x: T177506
         local_wordmark: true
+        local_tagline: true
     iawikibooks:
         comment: T150618
         comment_1_5x: T150618
@@ -2983,6 +2989,7 @@ Wikibooks:
         comment: T104132
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     mswikibooks:
         local_tagline: true
         local_wordmark: true
@@ -2992,6 +2999,7 @@ Wikibooks:
         comment: T124881
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     nowikibooks:
         local_wordmark: true
     ocwikibooks:
@@ -3027,9 +3035,12 @@ Wikibooks:
     siwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
     skwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     slwikibooks:
         comment: T54019
         local_tagline: true
@@ -3039,6 +3050,7 @@ Wikibooks:
     sqwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     srwikibooks:
         comment_1_5x: T159534
         comment_2x: T159534
@@ -3048,9 +3060,12 @@ Wikibooks:
         comment: T33862
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     thwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
     trwikibooks:
         comment_1_5x: T177506
         comment_2x: T177506
@@ -3059,9 +3074,13 @@ Wikibooks:
     ttwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
     ukwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
     urwikibooks:
         comment: T185977
         comment_1_5x: T185977
@@ -3077,6 +3096,8 @@ Wikibooks:
     zhwikibooks:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
+        local_tagline: true
 Wikinews:
     arwikinews:
         no_1_5x: true

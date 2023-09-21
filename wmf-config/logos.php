@@ -3849,6 +3849,11 @@ return [
 		'width' => 120,
 		'height' => 25,
 	],
+	'bgwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-bg.svg',
+		'width' => 118,
+		'height' => 17,
+	],
 	'bnwikibooks' => [ // T319320
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-bn.svg',
 		'width' => 80,
@@ -3868,6 +3873,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-cy.svg',
 		'width' => 120,
 		'height' => 14,
+	],
+	'elwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-el.svg',
+		'width' => 120,
+		'height' => 15,
 	],
 	'eowikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-eo.svg',
@@ -3908,6 +3918,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-fy.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'hewikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-he.svg',
+		'width' => 120,
+		'height' => 18,
 	],
 	'hiwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-hi.svg',
@@ -3964,10 +3979,20 @@ return [
 		'width' => 106,
 		'height' => 19,
 	],
+	'mrwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-mr.svg',
+		'width' => 97,
+		'height' => 32,
+	],
 	'mswikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-ms.svg',
 		'width' => 98,
 		'height' => 14,
+	],
+	'newikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-ne.svg',
+		'width' => 122,
+		'height' => 36,
 	],
 	'nowikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-no.svg',
@@ -3994,20 +4019,55 @@ return [
 		'width' => 121,
 		'height' => 11,
 	],
+	'siwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-si.svg',
+		'width' => 79,
+		'height' => 19,
+	],
+	'skwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-sk.svg',
+		'width' => 120,
+		'height' => 15,
+	],
 	'slwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-sl.svg',
 		'width' => 114,
 		'height' => 19,
+	],
+	'sqwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-sq.svg',
+		'width' => 120,
+		'height' => 16,
 	],
 	'srwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-sr.svg',
 		'width' => 106,
 		'height' => 13,
 	],
+	'tawikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-ta.svg',
+		'width' => 120,
+		'height' => 23,
+	],
+	'thwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-th.svg',
+		'width' => 120,
+		'height' => 30,
+	],
 	'trwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-tr.svg',
 		'width' => 95,
 		'height' => 17,
+	],
+	'ttwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-tt.svg',
+		'width' => 120,
+		'height' => 13,
+	],
+	'ukwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-uk.svg',
+		'width' => 120,
+		'height' => 14,
 	],
 	'urwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-ur.svg',
@@ -4018,6 +4078,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-vi.svg',
 		'width' => 120,
 		'height' => 15,
+	],
+	'zhwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-zh.svg',
+		'width' => 120,
+		'height' => 22,
 	],
 
 	// Wikinews
@@ -6692,6 +6757,11 @@ return [
 		'width' => 120,
 		'height' => 8,
 	],
+	'bgwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-bg.svg',
+		'width' => 102,
+		'height' => 22,
+	],
 	'bnwikibooks' => [ // T319320
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-bn.svg',
 		'width' => 118,
@@ -6716,6 +6786,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-de.svg',
 		'width' => 120,
 		'height' => 14,
+	],
+	'elwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-el.svg',
+		'width' => 120,
+		'height' => 10,
 	],
 	'enwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-en.svg',
@@ -6756,6 +6831,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-hr.svg',
 		'width' => 120,
 		'height' => 8,
+	],
+	'huwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-hu.svg',
+		'width' => 120,
+		'height' => 10,
 	],
 	'idwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-id.svg',
@@ -6822,6 +6902,11 @@ return [
 		'width' => 100,
 		'height' => 18,
 	],
+	'siwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-si.svg',
+		'width' => 90,
+		'height' => 26,
+	],
 	'slwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-sl.svg',
 		'width' => 108,
@@ -6832,10 +6917,25 @@ return [
 		'width' => 121,
 		'height' => 9,
 	],
+	'thwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-th.svg',
+		'width' => 115,
+		'height' => 18,
+	],
 	'trwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-tr.svg',
 		'width' => 121,
 		'height' => 10,
+	],
+	'ttwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-tt.svg',
+		'width' => 120,
+		'height' => 7,
+	],
+	'ukwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-uk.svg',
+		'width' => 120,
+		'height' => 9,
 	],
 	'urwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-ur.svg',
@@ -6846,6 +6946,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-vi.svg',
 		'width' => 120,
 		'height' => 10,
+	],
+	'zhwikibooks' => [
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-zh.svg',
+		'width' => 120,
+		'height' => 12,
 	],
 
 	// Wikinews
