@@ -3731,22 +3731,24 @@ Wikivoyage:
         comment_1_5x: T176042
         comment_2x: T176042
         selected_wordmark: advisorswiki
+        local_tagline: true
     arwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
-        selected_wordmark: advisorswiki
+        local_wordmark: true
     azwikimedia:
         commons: 'File:Azerbaijani Wikimedians Black logo-en SVG.svg'
     bdwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
-        selected_wordmark: advisorswiki
+        local_wordmark: true
     bewikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     brwikimedia:
         comment: T257925
         comment_1_5x: T257925
@@ -3755,22 +3757,26 @@ Wikivoyage:
         comment_wordmark: T313194
         commons_icon: 'File:Wiki Movimento Brasil vector-2022 logo.svg'
         comment_icon: T313194
-    cawikimedia: null
+    cawikimedia:
+        local_wordmark: true
     cnwikimedia:
         comment: T98676
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     cowikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     dkwikimedia:
         commons: 'File:Wikimedia_Danmark_logo.svg'
         comment: T332784
         comment_1_5x: T332784
         comment_2x: T332784
         selected_icon: outreachwiki
+        local_wordmark: true
     ecwikimedia:
         comment: T135521
         comment_1_5x: T135521
@@ -3781,44 +3787,62 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     fiwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     gewikimedia:
         comment: T236389
         comment_1_5x: T236389
         comment_2x: T236389
+        local_wordmark: true
     grwikimedia:
         comment: T245911
         selected_icon: outreachwiki
+        local_wordmark: true
     hiwikimedia:
         local_icon: true
         local_wordmark: true
     id_internalwikimedia:
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        selected_wordmark: idwikimedia
+        local_tagline: true
     idwikimedia:
         comment: T192726
         comment_1_5x: T192726
         comment_2x: T192726
         selected_icon: outreachwiki
+        local_wordmark: true
     maiwikimedia:
         selected_icon: outreachwiki
+        local_wordmark: true
+        selected_tagline: punjabiwikimedia
     mkwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     mxwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: advisorswiki
+        local_wordmark: true
     ngwikimedia:
         comment: T242416
         comment_1_5x: T242416
         comment_2x: T242416
+        selected_wordmark: advisorswiki
+        local_tagline: true
     nlwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     nowikimedia:
         no_1_5x: true
         no_2x: true
@@ -3828,27 +3852,39 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     nzwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     pa_uswikimedia:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: usabilitywiki
         selected_icon: outreachwiki
+        local_tagline: true
     plwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     ptwikimedia:
         comment: T126832
         comment_1_5x: T126832
         comment_2x: T126832
+        selected_wordmark: usabilitywiki
         selected_icon: outreachwiki
+        local_tagline: true
     punjabiwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
+        local_tagline: true
     romdwikimedia:
         commons: 'File:Wikimedia Community Logo WMROMD.svg'
         comment: T187184
@@ -3859,23 +3895,30 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true 
     ruwikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     sewikimedia:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: advisorswiki
     trwikimedia:
         commons: 'File:Wikimedia CUG Turkey Logo in Turkish.svg'
         comment: T323850
         comment_1_5x: T323850
         comment_2x: T323850
         selected_icon: outreachwiki
+        local_wordmark: true
     uawikimedia:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     vewikimedia:
         commons: 'File:Wikimedia Venezuela logo negro.svg'
     wbwikimedia:
@@ -3883,6 +3926,7 @@ Wikivoyage:
         comment_1_5x: T162510
         comment_2x: T162510
         selected_icon: outreachwiki
+        local_wordmark: true
 'Special wikis':
     advisorswiki:
         comment: T202844
@@ -3895,7 +3939,8 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: wikimedia
-        selected_wordmark: advisorswiki
+        selected_wordmark: usabilitywiki
+        selected_tagline: boardwiki
     apiportalwiki:
         no_1_5x: true
         no_2x: true
@@ -3941,6 +3986,8 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     boardgovcomwiki:
         no_1_5x: true
         no_2x: true
@@ -3949,10 +3996,13 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        selected_tagline: boardwiki
     chapcomwiki:
         comment_1_5x: T193024
         comment_2x: T193024
         selected_icon: wikimedia
+        local_wordmark: true
     checkuserwiki:
         comment: T30785
         no_1_5x: true
@@ -3973,6 +4023,7 @@ Wikivoyage:
         local_icon: true
     donatewiki:
         selected_icon: wikimedia
+        selected_wordmark: votewiki
     electcomwiki:
         no_1_5x: true
         no_2x: true
@@ -3985,6 +4036,8 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     foundationwiki:
         commons_wordmark: 'File:Foundation-wordmark.svg'
         comment_wordmark: T295303
@@ -4000,14 +4053,20 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     incubatorwiki:
         comment_1_5x: T230122
         comment_2x: T230122
         local_icon: true
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     internalwiki:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: usabilitywiki
         selected_icon: outreachwiki
+        local_tagline: true
     legalteamwiki:
         no_1_5x: true
         no_2x: true
@@ -4042,9 +4101,13 @@ Wikivoyage:
         commons: 'File:Wikimedia Ombuds logo.svg'
         comment: T50379
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     otrs_wikiwiki:
         commons: 'File:Wikimedia_VRT_RGB_logo.svg'
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
+        local_tagline: true
     outreachwiki:
         no_1_5x: true
         no_2x: true
@@ -4058,15 +4121,19 @@ Wikivoyage:
     qualitywiki:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: usabilitywiki
         selected_icon: outreachwiki
+        local_tagline: true
     searchcomwiki:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
     spcomwiki:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        selected_wordmark: usabilitywiki
     specieswiki:
         commons: 'File:WikiSpecies_logo.svg'
         comment: 'T306037, T310961'
@@ -4080,6 +4147,7 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: metawiki
+        local_wordmark: true
     sysop_itwiki:
         commons: 'File:Wikipedia Administrator.svg'
         comment: 'T256545, T330279'
@@ -4134,11 +4202,13 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
+        local_wordmark: true
     thankyouwiki:
         selected_icon: wikimedia
         selected: donatewiki
         comment: 'always same as donatewiki, see T259002'
         comment_2x: 'always same as donatewiki, see T259002'
+        selected_wordmark: votewiki
     usabilitywiki:
         no_1_5x: true
         no_2x: true
@@ -4147,6 +4217,7 @@ Wikivoyage:
         local_tagline: true
     votewiki:
         selected_icon: wikimedia
+        local_wordmark: true
     wg_enwiki:
         no_1_5x: true
         no_2x: true

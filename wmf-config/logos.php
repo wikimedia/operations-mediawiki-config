@@ -4291,7 +4291,7 @@ return [
 		'width' => 146,
 		'height' => 13,
 	],
-	'sdwikinews' => [
+	'sdwikinews' => [ // Closed wiki. Known inconsistency between wordmark and legacy.
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sd.svg',
 		'width' => 146,
 		'height' => 32,
@@ -4769,22 +4769,67 @@ return [
 		'height' => 12,
 	],
 	'arwikimedia' => [
-		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
-		'width' => 100,
-		'height' => 12,
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ar.svg',
+		'width' => 120,
+		'height' => 27,
 	],
 	'bdwikimedia' => [
-		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
-		'width' => 100,
-		'height' => 12,
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-bd.svg',
+		'width' => 120,
+		'height' => 28,
+	],
+	'bewikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-be.svg',
+		'width' => 120,
+		'height' => 28,
 	],
 	'brwikimedia' => [ // T313194
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-br.svg',
 		'width' => 120,
 		'height' => 29,
 	],
+	'cawikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ca.svg',
+		'width' => 121,
+		'height' => 28,
+	],
+	'cnwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-cn.svg',
+		'width' => 121,
+		'height' => 28,
+	],
+	'cowikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-co.svg',
+		'width' => 121,
+		'height' => 28,
+	],
+	'dkwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-dk.svg',
+		'width' => 120,
+		'height' => 28,
+	],
 	'ecwikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ec.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'etwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-et.svg',
+		'width' => 120,
+		'height' => 28,
+	],
+	'fiwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-fi.svg',
+		'width' => 120,
+		'height' => 27,
+	],
+	'gewikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ge.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'grwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-gr.svg',
 		'width' => 146,
 		'height' => 32,
 	],
@@ -4793,10 +4838,105 @@ return [
 		'width' => 146,
 		'height' => 32,
 	],
+	'id_internalwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-id.svg',
+		'width' => 120,
+		'height' => 26,
+	],
+	'idwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-id.svg',
+		'width' => 120,
+		'height' => 26,
+	],
+	'maiwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-mai.svg',
+		'width' => 146,
+		'height' => 10,
+	],
+	'mkwikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'mxwikimedia' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'ngwikimedia' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'nlwikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'nowikimedia' => [ // T318341
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-no.svg',
 		'width' => 141,
 		'height' => 31,
+	],
+	'nycwikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'nzwikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'pa_uswikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'plwikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'ptwikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'punjabiwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-punjabi.svg',
+		'width' => 61,
+		'height' => 10,
+	],
+	'rswikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'ruwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ru.svg',
+		'width' => 146,
+		'height' => 32,
+	],
+	'sewikimedia' => [
+		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'trwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-tr.svg',
+		'width' => 118,
+		'height' => 32,
+	],
+	'uawikimedia' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'wbwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-wb.svg',
+		'width' => 138,
+		'height' => 32,
 	],
 
 	// Special wikis
@@ -4806,7 +4946,7 @@ return [
 		'height' => 12,
 	],
 	'advisorywiki' => [
-		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
 		'width' => 100,
 		'height' => 12,
 	],
@@ -4815,6 +4955,21 @@ return [
 	'arbcom_enwiki' => null,
 	'arbcom_nlwiki' => null,
 	'arbcom_ruwiki' => null,
+	'boardwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'chairwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'chapcomwiki' => [
+		'src' => '/static/images/mobile/copyright/chapcomwiki-wordmark.svg',
+		'width' => 146,
+		'height' => 32,
+	],
 	'checkuserwiki' => [
 		'src' => '/static/images/mobile/copyright/checkuserwiki-wordmark.svg',
 		'width' => 121,
@@ -4830,12 +4985,37 @@ return [
 		'width' => 115,
 		'height' => 32,
 	],
+	'donatewiki' => [
+		'src' => '/static/images/mobile/copyright/votewiki-wordmark.svg',
+		'width' => 142,
+		'height' => 35,
+	],
+	'fdcwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'foundationwiki' => [ // T295303
 		'src' => '/static/images/mobile/copyright/foundationwiki-wordmark.svg',
 		'width' => 141,
 		'height' => 31,
 	],
 	'grantswiki' => null,
+	'iegcomwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'incubatorwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'internalwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'mediawikiwiki' => [ // T268230
 		'src' => '/static/images/mobile/copyright/mediawikiwiki-wordmark.svg',
 		'width' => 120,
@@ -4851,15 +5031,45 @@ return [
 		'width' => 140,
 		'height' => 34,
 	],
+	'ombudsmenwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'otrs_wikiwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'outreachwiki' => [ // T290091, T297580
 		'src' => '/static/images/mobile/copyright/outreachwiki-wordmark.svg',
 		'width' => 120,
 		'height' => 29,
 	],
+	'qualitywiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'searchcomwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
+	'spcomwiki' => [
+		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
+		'width' => 100,
+		'height' => 12,
+	],
 	'specieswiki' => [
 		'src' => '/static/images/mobile/copyright/specieswiki-wordmark.svg',
 		'width' => 122,
 		'height' => 18,
+	],
+	'stewardwiki' => [
+		'src' => '/static/images/mobile/copyright/stewardwiki-wordmark.svg',
+		'width' => 146,
+		'height' => 33,
 	],
 	'sysop_itwiki' => [ // T330279
 		'src' => '/static/images/mobile/copyright/sysop_itwiki-wordmark.svg',
@@ -4891,10 +5101,25 @@ return [
 		'width' => 130,
 		'height' => 17,
 	],
+	'transitionteamwiki' => [
+		'src' => '/static/images/mobile/copyright/transitionteamwiki-wordmark.svg',
+		'width' => 94,
+		'height' => 30,
+	],
+	'thankyouwiki' => [
+		'src' => '/static/images/mobile/copyright/votewiki-wordmark.svg',
+		'width' => 142,
+		'height' => 35,
+	],
 	'usabilitywiki' => [
 		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
 		'width' => 100,
 		'height' => 12,
+	],
+	'votewiki' => [
+		'src' => '/static/images/mobile/copyright/votewiki-wordmark.svg',
+		'width' => 142,
+		'height' => 35,
 	],
 	'wg_enwiki' => null,
 	'wikidatawiki' => [ // T315572
@@ -7277,6 +7502,76 @@ return [
 	// Wikivoyage
 
 	// Chapter and local user group wikis
+	'amwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-am.svg',
+		'width' => 146,
+		'height' => 10,
+	],
+	'id_internalwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-id_internal.svg',
+		'width' => 78,
+		'height' => 7,
+	],
+	'maiwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-punjabi.svg',
+		'width' => 120,
+		'height' => 26,
+	],
+	'mkwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-mk.svg',
+		'width' => 146,
+		'height' => 10,
+	],
+	'ngwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-ng.svg',
+		'width' => 146,
+		'height' => 18,
+	],
+	'nlwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-nl.svg',
+		'width' => 146,
+		'height' => 18,
+	],
+	'nycwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-nyc.svg',
+		'width' => 146,
+		'height' => 18,
+	],
+	'nzwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-nz.svg',
+		'width' => 118,
+		'height' => 11,
+	],
+	'pa_uswikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-pa_us.svg',
+		'width' => 146,
+		'height' => 10,
+	],
+	'plwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-pl.svg',
+		'width' => 106,
+		'height' => 18,
+	],
+	'ptwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-pt.svg',
+		'width' => 106,
+		'height' => 14,
+	],
+	'punjabiwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-punjabi.svg',
+		'width' => 120,
+		'height' => 26,
+	],
+	'rswikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-rs.svg',
+		'width' => 45,
+		'height' => 9,
+	],
+	'uawikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-ua.svg',
+		'width' => 60,
+		'height' => 13,
+	],
 
 	// Special wikis
 	'advisorswiki' => [
@@ -7284,10 +7579,60 @@ return [
 		'width' => 146,
 		'height' => 10,
 	],
+	'advisorywiki' => [
+		'src' => '/static/images/mobile/copyright/boardwiki-tagline.svg',
+		'width' => 146,
+		'height' => 10,
+	],
 	'arbcom_fiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fi.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'boardwiki' => [
+		'src' => '/static/images/mobile/copyright/boardwiki-tagline.svg',
+		'width' => 146,
+		'height' => 10,
+	],
+	'chairwiki' => [
+		'src' => '/static/images/mobile/copyright/boardwiki-tagline.svg',
+		'width' => 146,
+		'height' => 10,
+	],
+	'fdcwiki' => [
+		'src' => '/static/images/mobile/copyright/fdcwiki-tagline.svg',
+		'width' => 120,
+		'height' => 19,
+	],
+	'iegcomwiki' => [
+		'src' => '/static/images/mobile/copyright/iegcomwiki-tagline.svg',
+		'width' => 94,
+		'height' => 8,
+	],
+	'incubatorwiki' => [
+		'src' => '/static/images/mobile/copyright/incubatorwiki-tagline.svg',
+		'width' => 70,
+		'height' => 9,
+	],
+	'internalwiki' => [
+		'src' => '/static/images/mobile/copyright/internalwiki-tagline.svg',
+		'width' => 78,
+		'height' => 7,
+	],
+	'ombudsmenwiki' => [
+		'src' => '/static/images/mobile/copyright/ombudsmenwiki-tagline.svg',
+		'width' => 118,
+		'height' => 18,
+	],
+	'otrs_wikiwiki' => [
+		'src' => '/static/images/mobile/copyright/otrs_wikiwiki-tagline.svg',
+		'width' => 56,
+		'height' => 18,
+	],
+	'qualitywiki' => [
+		'src' => '/static/images/mobile/copyright/qualitywiki-tagline.svg',
+		'width' => 76,
+		'height' => 16,
 	],
 	'specieswiki' => [
 		'src' => '/static/images/mobile/copyright/specieswiki-tagline.svg',

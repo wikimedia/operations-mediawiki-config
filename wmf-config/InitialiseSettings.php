@@ -2249,9 +2249,14 @@ return [
 
 'wgDefaultSkin' => [
 	'default' => 'vector',
-	'nostalgiawiki' => 'nostalgia',
-	'apiportalwiki' => 'wikimediaapiportal', // T259661
 	'desktop-improvements' => 'vector-2022',
+	// Closed wikis that should be preserved on Vector skin
+	'rswikimedia' => 'vector', // T341250
+	'spcomwiki' => 'vector', // T341250
+	// Special cases for wikis that use skins older than Vector.
+	'nostalgiawiki' => 'nostalgia',
+	// Special cases for wikis that use custom skins.
+	'apiportalwiki' => 'wikimediaapiportal', // T259661
 ],
 
 // T301212
