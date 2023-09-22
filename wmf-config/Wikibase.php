@@ -254,7 +254,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wbSiteGroup = $wmgWikibaseSiteGroup ?? null;
 	$wgWBClientSettings['languageLinkSiteGroup'] = $wbSiteGroup;
 
-	if ( in_array( $wgDBname, [ 'commonswiki', 'foundationwiki', 'mediawikiwiki', 'metawiki', 'outreachwiki', 'specieswiki', 'wikimaniawiki' ] ) ) {
+	if ( in_array( $wgDBname, [ 'commonswiki', 'foundationwiki', 'mediawikiwiki', 'metawiki', 'outreachwiki', 'specieswiki', 'wikifunctionswiki', 'wikimaniawiki' ] ) ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 

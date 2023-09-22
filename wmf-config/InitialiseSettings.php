@@ -9086,6 +9086,7 @@ return [
 		'wikimania',
 		'sources',
 		'outreach', // T171140
+		'wikifunctions', // T342857
 	],
 	'commonswiki' => [
 		'commons',
@@ -9097,6 +9098,7 @@ return [
 		'wikimania',
 		'sources',
 		'outreach', // T171140
+		'wikifunctions', // T342857
 	],
 	'testwikidatawiki' => [
 		'commons',
@@ -9122,6 +9124,7 @@ return [
 		'wikimania',
 		'sources',
 		'outreach', // T171140
+		'wikifunctions', // T342857
 	],
 	'wikidataclient-test' => [
 		'commons',
@@ -9282,6 +9285,7 @@ return [
 	'wikifunctionswiki' => 'wikifunctions',
 	'wikimaniawiki' => 'wikimania',
 	'outreachwiki' => 'outreach',
+	'wikifunctionswiki' => 'wikifunctions' // T342857
 ],
 
 'wmgWikibaseEntityDataFormats' => [
