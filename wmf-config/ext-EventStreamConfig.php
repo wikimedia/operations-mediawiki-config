@@ -686,6 +686,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/app_session',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'app_donor_experience' => [
+					'schema_title' => 'analytics/mobile_apps/app_interaction',
+					'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'ios.edit_history_compare' => [
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
