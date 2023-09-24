@@ -603,6 +603,10 @@ return [
 	'+guwiktionary' => [
 		'વિક્શનરી' => NS_PROJECT // T42776 (old namespace name)
 	],
+	'+guwikisource' => [
+		'Audiobook' => 110, // T347189
+		'Audiobook_talk' => 111, // T347189
+	],
 	'+hewiki' => [ // T164858
 		'מי' => NS_SPECIAL,
 		'ש' => NS_TALK,
@@ -3214,6 +3218,8 @@ return [
 	'guwikisource' => [
 		108 => 'સર્જક', // Author
 		109 => 'સર્જક_ચર્ચા',
+		110 => 'શ્રાવ્યપુસ્તક', // T347189 - Audiobook
+		111 => 'શ્રાવ્યપુસ્તક_ચર્ચા', // T347189 - Audiobook_talk
 	],
 	'hiwikisource' => [
 		100 => 'लेखक', // T218155 - Author
