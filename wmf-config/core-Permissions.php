@@ -1000,13 +1000,24 @@ return [
 		'editor' => [
 			'patrol' => true,
 			'autopatrol' => true,
+			'editautoreviewprotected' => true, // T347069
 		], // T144817
 		'reviewer' => [
 			'patrol' => true, // T144817
 			'autopatrol' => true, // T144817
 			'stablesettings' => true, // T149987
+			'editautoreviewprotected' => true, // T347069
 		],
-		'autoreview' => [ 'autopatrol' => true ], // T144817
+		'autoreview' => [
+			'autopatrol' => true, // T144817
+			'editautoreviewprotected' => true, // T347069
+		],
+		'bot' => [
+			'editautoreviewprotected' => true, // T347069
+		],
+		'sysop' => [
+			'editautoreviewprotected' => true, // T347069
+		],
 	],
 	'+fiwiktionary' => [
 		'rollbacker' => [ // T323063

@@ -1911,6 +1911,7 @@ return [
 	'eswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T330470
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
+	'fiwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T347069
 	'foundationwiki' => [ '', 'autoconfirmed', 'edit-legal', 'sysop' ], // T205352
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
@@ -1956,6 +1957,7 @@ return [
 	'+elwiki' => [ 'extendedconfirmed' ], // T306241
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
+	'+fiwiki' => [ 'editautoreviewprotected' ], // T347069
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
 	'+itwiki' => [ 'editautopatrolprotected' ], // T308917
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
