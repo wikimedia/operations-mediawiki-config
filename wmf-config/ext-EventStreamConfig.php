@@ -1459,6 +1459,19 @@ return [
 			'schema_title' => 'rdf_streaming_updater/reconcile',
 			'destination_event_service' => 'eventgate-main',
 		],
+		/*
+		 * == Search Update Pipeline (Flink) output streams ==
+		 * Note that Flink does not produce these through eventgate,
+		 * it produces them directly to Kafka.
+		 */
+		'cirrussearch.update_pipeline.update.rc0' => [
+			'schema_title' => 'development/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+		],
+		'cirrussearch.update_pipeline.fetch_error.rc0' => [
+			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		// Temporary analytics for Kartographer Nearby feature
 		// See T315972
