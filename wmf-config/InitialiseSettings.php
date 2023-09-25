@@ -11230,6 +11230,7 @@ return [
 'wgKartographerParsoidSupport' => [
 	'default' => false,
 	'enwiki' => true,
+	'enwikivoyage' => true,
 ],
 
 'wmgUseMediaModeration' => [
