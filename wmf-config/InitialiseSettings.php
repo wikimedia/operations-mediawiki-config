@@ -10593,6 +10593,12 @@ return [
 	'wikitech' => false,
 ],
 
+'wgCampaignEventsEnableEmail' => [
+	'default' => false,
+	'testwiki' => true, // T347065
+	'test2wiki' => true, // T347065
+],
+
 'wmgUseCite' => [
 	'default' => true,
 	'lockeddown' => false,
