@@ -12380,4 +12380,21 @@ return [
 	'default' => true,
 ],
 
+// T341000
+'wgExternalLinksDomainGaps' => [
+	'enwiki' => [
+		'https://org.archive.web.' => [
+			0 => 57876657,
+		],
+	],
+	'commonswiki' => [
+		'https://org.wikidata.www.' => [
+			0 => 72202971,
+			72202973 => 89906680,
+			89906682 => 91580472,
+			91580474 => 99908292,
+		],
+	],
+],
+
 ];

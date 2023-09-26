@@ -2533,5 +2533,8 @@ function wmfGetOverrideSettings() {
 		'wmgUsePageNotice' => [
 			'enwiktionary' => true,
 		],
+
+		// T341000 (just disable the prod value)
+		'-wgExternalLinksDomainGaps' => [],
 	];
 } # wmfGetOverrideSettings()
