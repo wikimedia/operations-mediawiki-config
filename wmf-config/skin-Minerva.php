@@ -124,6 +124,7 @@ return [
 		'glwiki' => true,
 		'knwiki' => true, // T346582
 		'trwiki' => true,
+		'wikifunctionswiki' => true, // T345463
 	],
 
 	// T183665
