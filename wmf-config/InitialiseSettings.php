@@ -1853,6 +1853,7 @@ return [
 'wgAutoConfirmCount' => [
 	'default' => 0,
 	'arwiki' => 50, // T14123
+	'arwikisource' => 10, // T347264
 	'ckbwiki' => 10, // T53537
 	'cswiki' => 10, // T163207
 	'enwiki' => 10, // T16191
