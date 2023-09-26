@@ -3161,6 +3161,8 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	if ( $wgDBname === 'labswiki' ) {
 		// Allow autocreating accounts from IDM.
 		$wgGroupPermissions['*']['autocreateaccount'] = true;
+		// Also block account creations by sysops just in case.
+		$wgGroupPermissions['sysop']['createaccount'] = false;
 
 		// Password resets are handled by IDM too.
 		$wgPasswordResetRoutes['username'] = false;
