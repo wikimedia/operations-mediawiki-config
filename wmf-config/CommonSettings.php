@@ -3165,7 +3165,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgGroupPermissions['sysop']['createaccount'] = false;
 
 		// Password resets are handled by IDM too.
-		$wgPasswordResetRoutes = false;
+		$wgPasswordResetRoutes = [];
 	}
 
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
