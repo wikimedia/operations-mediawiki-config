@@ -4261,6 +4261,11 @@ return [
 		'width' => 146,
 		'height' => 32,
 	],
+	'liwikinews' => [
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-li.svg',
+		'width' => 188,
+		'height' => 63,
+	],
 	'nlwikinews' => [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-nl.svg',
 		'width' => 146,
