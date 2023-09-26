@@ -10877,7 +10877,7 @@ return [
 		'ai',
 	],
 	'+incubatorwiki' => [
-		'xml'
+		// 'xml' // T32228, T341565
 	],
 ],
 
