@@ -23,6 +23,7 @@ function wmfCheckMissingLogosAndGenerateHTML() {
 <!DOCTYPE HTML>
 <html>
 <head>
+<base target="_blank">
 <title>All Wikimedia deployed logos</title>
 <style>
 body {
@@ -65,21 +66,9 @@ body {
 </head>
 <body>
 To filter paste in here:<br>
-<textarea id="filter">
+<textarea id="filter" disabled>
 $textareaVal
 </textarea>
-<script>
-document.getElementById('filter').addEventListener( 'input', function () {
-	const all = this.value.split('\\n');
-	document.querySelectorAll( '.mw-logo' ).forEach( ( node ) => {
-		node.style.display = 'none';
-	} );
-	all.filter((key) => key ).forEach((key) => {
-		const node = document.getElementById( 'db-' + key.trim() );
-		node.style.display = '';
-	})
-} );
-</script>
 HEREDOC;
 
 	$conf = new SiteConfiguration();
@@ -112,6 +101,25 @@ HEREDOC;
 			'</span></div>' .
 		'</a>';
 	}
+	$html .= <<<HEREDOC
+<script>
+var f = document.getElementById('filter');
+f.disabled = false;
+f.addEventListener( 'input', function () {
+	const all = this.value.split('\\n');
+	document.querySelectorAll( '.mw-logo-variants' ).forEach( ( node ) => {
+		node.style.display = 'none';
+	} );
+	all.filter((key) => key ).forEach((key) => {
+		const node = document.getElementById( 'db-' + key.trim() );
+		if ( node ) {
+			node.style.display = '';
+		}
+	})
+} );
+</script>
+HEREDOC;
+
 	$html .= '</body></html>';
 	file_put_contents( getcwd() . '/logos/index.html', $html );
 }

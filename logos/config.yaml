@@ -3834,6 +3834,7 @@ Wikivoyage:
         no_2x: true
         selected_wordmark: advisorswiki
         local_wordmark: true
+        local_tagline: true
     ngwikimedia:
         comment: T242416
         comment_1_5x: T242416
@@ -4132,6 +4133,7 @@ Wikivoyage:
         no_2x: true
         selected_icon: outreachwiki
         selected_wordmark: usabilitywiki
+        selected_tagline: internalwiki
     spcomwiki:
         no_1_5x: true
         no_2x: true

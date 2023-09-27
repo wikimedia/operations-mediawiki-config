@@ -7529,6 +7529,11 @@ return [
 		'width' => 146,
 		'height' => 10,
 	],
+	'mxwikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-mx.svg',
+		'width' => 146,
+		'height' => 18,
+	],
 	'ngwikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-ng.svg',
 		'width' => 146,
@@ -7640,6 +7645,11 @@ return [
 		'src' => '/static/images/mobile/copyright/qualitywiki-tagline.svg',
 		'width' => 76,
 		'height' => 16,
+	],
+	'searchcomwiki' => [
+		'src' => '/static/images/mobile/copyright/internalwiki-tagline.svg',
+		'width' => 78,
+		'height' => 7,
 	],
 	'specieswiki' => [
 		'src' => '/static/images/mobile/copyright/specieswiki-tagline.svg',
