@@ -2248,8 +2248,8 @@ return [
 ],
 
 'wgDefaultSkin' => [
-	'default' => 'vector',
-	'desktop-improvements' => 'vector-2022',
+	'default' => 'vector-2022',
+	'legacy-vector' => 'vector',
 	// Closed wikis that should be preserved on Vector skin
 	'rswikimedia' => 'vector', // T341250
 	'spcomwiki' => 'vector', // T341250
@@ -2318,14 +2318,14 @@ return [
 
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
-	'default' => '1', // Legacy Vector
-	// T254227
-	'desktop-improvements' => '2',
+	'default' => '2',
+	// T254227, T347444
+	'legacy-vector' => '1',
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
-	'default' => '1', // Legacy Vector
-	// T254227
-	'desktop-improvements' => '2',
+	'default' => '2',
+	// T254227, T347444
+	'legacy-vector' => '1',
 ],
 
 'wgVectorStickyHeader' => [
