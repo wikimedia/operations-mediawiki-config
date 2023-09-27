@@ -11356,8 +11356,8 @@ return [
 ],
 
 'wgWMEDesktopWebUIActionsTracking' => [
-	'default' => 0,
-	'desktop-improvements' => 0.2, // T258058
+	'default' => 0.2, // T258058
+	'legacy-vector' => 0,
 	'officewiki' => 0,
 	'testwiki' => 1, // T256992
 	'enwiki' => 0.01,
@@ -11432,9 +11432,9 @@ return [
 ],
 
 'wgWMEReadingDepthSamplingRate' => [
-	'default' => 0, // T294777
+	'default' => 0.01, // T306606#7881912
+	'legacy-vector' => 0, // T294777
 	'enwiki' => 0.001, // T294777
-	'desktop-improvements' => 0.01, // T306606#7881912
 ],
 
 'wgWMEWebUIScrollTrackingSamplingRate' => [

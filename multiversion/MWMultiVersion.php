@@ -41,7 +41,6 @@ class MWMultiVersion {
 		'private',
 		'fishbowl',
 		'closed',
-		'desktop-improvements',
 		'flow',
 		'flaggedrevs',
 		'small',
