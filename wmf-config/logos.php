@@ -561,7 +561,7 @@ return [
 	'rowikiquote' => '/static/images/project-logos/rowikiquote.png',
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote.png',
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote.png', // T222065
-	'sawikiquote' => '/static/images/project-logos/sawikiquote.png', // T45812
+	'sawikiquote' => '/static/images/project-logos/sawikiquote.png', // T341260
 	'skwikiquote' => '/static/images/project-logos/skwikiquote.png',
 	'slwikiquote' => '/static/images/project-logos/slwikiquote.png',
 	'sqwikiquote' => '/static/images/project-logos/sqwikiquote.png',
@@ -1351,6 +1351,7 @@ return [
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-1.5x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-1.5x.png', // T197508
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote-1.5x.png', // T222065
+	'sawikiquote' => '/static/images/project-logos/sawikiquote-1.5x.png', // T341260
 	'slwikiquote' => '/static/images/project-logos/slwikiquote-1.5x.png', // T150618
 	'sqwikiquote' => '/static/images/project-logos/sqwikiquote-1.5x.png', // T150618
 	'srwikiquote' => '/static/images/project-logos/srwikiquote-1.5x.png', // T150618 and T168444
@@ -1973,6 +1974,7 @@ return [
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-2x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-2x.png', // T197508
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote-2x.png', // T222065
+	'sawikiquote' => '/static/images/project-logos/sawikiquote-2x.png', // T341260
 	'slwikiquote' => '/static/images/project-logos/slwikiquote-2x.png', // T150618
 	'sqwikiquote' => '/static/images/project-logos/sqwikiquote-2x.png', // T150618
 	'srwikiquote' => '/static/images/project-logos/srwikiquote-2x.png', // T150618 and T168444
@@ -3847,10 +3849,10 @@ return [
 		'width' => 125,
 		'height' => 50,
 	],
-	'sawikiquote' => [
+	'sawikiquote' => [ // T341260
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-sa.svg',
-		'width' => 146,
-		'height' => 44,
+		'width' => 133,
+		'height' => 40,
 	],
 	'skwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-sk.svg',

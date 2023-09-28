@@ -2725,10 +2725,12 @@ Wikiquote:
         comment_2x: T222065
         local_wordmark: true
     sawikiquote:
-        comment: T45812
-        no_1_5x: true
-        no_2x: true
-        local_wordmark: true
+        commons: 'File:Wikiquote-logo-sa.svg'
+        comment: T341260
+        comment_1_5x: T341260
+        comment_2x: T341260
+        commons_wordmark: 'File:Wikiquote-wordmark-sa.svg'
+        comment_wordmark: T341260
     skwikiquote:
         no_1_5x: true
         no_2x: true
@@ -3897,7 +3899,7 @@ Wikivoyage:
         no_2x: true
         selected_icon: outreachwiki
         selected_wordmark: usabilitywiki
-        local_tagline: true 
+        local_tagline: true
     ruwikimedia:
         no_1_5x: true
         no_2x: true
