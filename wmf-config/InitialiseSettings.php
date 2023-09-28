@@ -11280,6 +11280,7 @@ return [
 	'wikiversity' => false,
 	'wikibooks' => false,
 	'wikinews' => false,
+	'wikifunctionswiki' => false, // T345459
 ],
 'wgNearbyPagesUrl' => [
 	'default' => '/w/api.php',
