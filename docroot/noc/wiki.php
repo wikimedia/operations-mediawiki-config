@@ -168,6 +168,17 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 $title = "Settings: " . ( $compare !== null ? "Compare $selected to $compare" : $selected );
 $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 
+$formatIsJson = ( $_GET['format'] ?? null ) === 'json';
+if ( $formatIsJson ) {
+	$data = [];
+	foreach ( $selectedGlobals as $name => $val ) {
+		$data[$name] = $isComparing ? $val['after'] : $val;
+	}
+	header( 'Content-Type: application/json; charset=utf-8' );
+	echo json_encode( $data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+	exit;
+}
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -276,6 +287,7 @@ $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 				}
 			}
 			</script>
+			<a class="noc-tab-action" href="./wiki.php?<?php echo htmlspecialchars( "wiki=$selected&format=json" ); ?>">View JSON</a>
 		</form>
 		<pre><?php
 			if ( $isComparing ) {

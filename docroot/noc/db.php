@@ -147,6 +147,7 @@ foreach ( $validDCs as $dc ) {
 	$active = ( $dc === $dbSelectedDC ) ? ' wm-btn-active' : '';
 	print '<a role="button" class="wm-btn' . $active . '" href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> ';
 }
+print '<a class="noc-tab-action" href="' . htmlspecialchars( "?dc=$dbSelectedDC&format=json" ) . '">View JSON</a> ';
 print '</p>';
 
 print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';

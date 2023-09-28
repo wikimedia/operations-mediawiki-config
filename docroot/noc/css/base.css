@@ -213,6 +213,10 @@ footer nav li a {
   pointer-events: none;
 }
 
+.noc-tab-action {
+	float: right;
+}
+
 @media (max-width: 720px) {
   /* Up until --width-breakpoint-tablet */
   main {
