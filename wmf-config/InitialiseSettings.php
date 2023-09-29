@@ -6191,6 +6191,10 @@ return [
 		'Minutes' => true, // T331079
 		'Policy' => true, // T331079
 		'Archive' => true, // T331079
+		'Endowment' => true, // T347762
+		'Agenda' => true, // T347822
+		'Memory' => true, // T348268
+		'Committee' => true, // T347822
 	],
 
 	// Private wikis

@@ -2263,8 +2263,16 @@ return [
 		105 => 'Minutes_talk', // T206173
 		106 => 'Policy', // T206173
 		107 => 'Policy_talk', // T206173
+		108 => 'Endowment', // T347762
+		109 => 'Endowment_talk', // T347762
+		110 => 'Agenda', // T347822
+		111 => 'Agenda_talk', // T347822
 		112 => 'Archive', // T206173
 		113 => 'Archive_talk', // T206173
+		114 => 'Memory', // T348268
+		115 => 'Memory_talk', // T348268
+		116 => 'Committee', // T347822
+		117 => 'Committee_talk', // T347822
 	],
 	'wikitech' => [
 		110 => 'Obsolete',
@@ -4839,7 +4847,11 @@ return [
 		102 => [ 'edit-legal' ], // Legal
 		104 => [ 'edit-legal' ], // Minutes
 		106 => [ 'edit-legal' ], // Policy
+		108 => [ 'edit-legal' ], // T347762 - Endowment
+		110 => [ 'edit-legal' ], // T347822 - Agenda
 		112 => [ 'edit-legal' ], // Archive
+		114 => [ 'edit-legal' ], // T348268 - Memory
+		116 => [ 'edit-legal' ], // T347822 - Committee
 		710 => [ 'edit-legal' ], // TimedText
 		828 => [ 'edit-legal' ], // Module
 	],
@@ -4894,7 +4906,7 @@ return [
 	'+etwikisource' => [ 104 => 1, 106 => 1 ],
 	'+fawikibooks' => [ 102 => 1, 110 => 1 ], // T176908
 	'+fawikisource' => [ 102 => 1 ],
-	'+foundationwiki' => [ 100 => 1, 102 => 1, 104 => 1, 106 => 1 ], // T206173
+	'+foundationwiki' => [ 100 => 1, 102 => 1, 104 => 1, 106 => 1, 108 => 1, 110 => 1, 114 => 1, 116 => 1 ], // T206173, T347762, T347822, T348268
 	'+frrwiki' => [ 102 => 1, 104 => 1, 106 => 1 ], // T40023
 	'+frwikisource' => [ 102 => 1, 112 => 1 ],
 	'+frwikiversity' => [ 104 => 1, 106 => 1, 108 => 1 ],
