@@ -639,6 +639,10 @@ function wmfGetOverrideSettings() {
 			'kowiki' => true,
 		],
 
+		'wgReportIncidentRecipientEmails' => [
+			'default' => [ 'incident-report-system-beta@wikimedia.org' ]
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
