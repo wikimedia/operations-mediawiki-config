@@ -3210,7 +3210,7 @@ return [
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
 	'arbcom_enwiki' => [ 'meta', 'w' ], // T19730
 	'arbcom_dewiki' => [ 'w', 'w:de', ],
-	'arwiki' => [ 'meta' ],
+	'arwiki' => [ 'en', 'meta' ], // T347563
 	'arwikibooks' => [ 'w' ],
 	'arwikinews' => [ 'w' ],
 	'arwikisource' => [ 'w' ],
