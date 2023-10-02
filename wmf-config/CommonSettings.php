@@ -1298,29 +1298,58 @@ if ( $wmgUseTimedMediaHandler ) {
 	// enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
 
-	$wgEnabledTranscodeSet = [
-		// Keep the old WebM VP8 flat-file transcodes enabled
-		// while we transition, or playback of un-upgraded files
-		// will revert to original high-res sources.
-		// Disable them again once T200747 batch process complete.
-		'160p.webm' => true,
-		'240p.webm' => true,
-		'360p.webm' => true,
-		'480p.webm' => true,
-		'720p.webm' => true,
-		'1080p.webm' => true,
+	// The default $wgEnabledTranscodeSet will include WebM VP9 flat file
+	// transcodes from 240p to 2160p. Leave them enabled site-wide.
+	//
+	// Also enable a single WebM VP8 flat file for backwards compatibility.
+	$wgEnabledTranscodeSet['360p.webm'] = true;
 
-		// Enable the WebM VP9 flat-file transcodes
-		'120p.vp9.webm' => true,
-		'180p.vp9.webm' => true,
-		'240p.vp9.webm' => true,
-		'360p.vp9.webm' => true,
-		'480p.vp9.webm' => true,
-		'720p.vp9.webm' => true,
-		'1080p.vp9.webm' => true,
-		'1440p.vp9.webm' => true,
-		'2160p.vp9.webm' => true,
-	];
+	if ( $wgDBname === 'testwiki' ) {
+		// Enable HLS adaptive streaming tracks for compatibility with iOS
+		// -- brion vibber, September 2023
+		//
+		// Still semi-experimental, deploying first to test.wikipedia.org while
+		// working out some details in web & mobile app client support.
+		//
+		// Eventually these will replace most of the WebM transcodes, as they
+		// can be played back in other browsers using Media Source Extensions.
+		//
+		// The setup hook callback is to let us introspect the array before
+		// modifying it, which avoids a failure mode with config validation
+		// if we accidentally deploy this config on the old version (or, say,
+		// the TimedMediaHandler branch gets reverted and the new config is
+		// still live).
+		//
+		// This whole section can be minimized or removed later once the new
+		// tracks are deafult.
+		$wgExtensionFunctions[] = static function () {
+			global $wgEnabledTranscodeSet;
+			$transcodeKeys = [
+				// MP3 stereo audio for iOS 16
+				'stereo.audio.mp3',
+
+				// Opus stereo audio for iOS 17
+				'stereo.audio.opus.mp4',
+
+				// MJPEG SDR video for older iOS devices without hardware VP9 codec
+				'144p.video.mjpeg.mov',
+
+				// VP9 SDR video for newer iOS devices (circa iPhone 12)
+				'240p.video.vp9.mp4',
+				'360p.video.vp9.mp4',
+				'480p.video.vp9.mp4',
+				'720p.video.vp9.mp4',
+				'1080p.video.vp9.mp4',
+				'1440p.video.vp9.mp4',
+				'2160p.video.vp9.mp4',
+			];
+			foreach ( $transcodeKeys as $key ) {
+				if ( array_key_exists( $key, $wgEnabledTranscodeSet ) ) {
+					$wgEnabledTranscodeSet[$key] = true;
+				}
+			}
+		};
+	}
 
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
