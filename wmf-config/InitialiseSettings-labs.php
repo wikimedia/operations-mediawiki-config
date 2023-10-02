@@ -643,6 +643,11 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'incident-report-system-beta@wikimedia.org' ]
 		],
 
+		'wgReportIncidentEmailFromAddress' => [
+			// Same as $wgPasswordSender in CommonSettings-labs.php
+			'default' => 'wiki@wikimedia.beta.wmflabs.org'
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
