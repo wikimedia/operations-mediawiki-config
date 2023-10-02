@@ -2479,6 +2479,9 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEmail' => [
 			'default' => true,
 		],
+		'wgCampaignEventsEnableParticipantQuestions' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
