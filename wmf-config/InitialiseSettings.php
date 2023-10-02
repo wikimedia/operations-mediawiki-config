@@ -7782,6 +7782,10 @@ return [
 	'viwiki' => false, // (s7) Waiting for T315510
 ],
 
+'wgDiscussionToolsEnableTimestampLinks' => [
+	'default' => false,
+],
+
 'wgDiscussionToolsAutoTopicSubEditor' => [
 	'default' => 'discussiontoolsapi', // T284836
 ],

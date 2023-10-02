@@ -2337,6 +2337,10 @@ function wmfGetOverrideSettings() {
 			'default' => true
 		],
 
+		'-wgDiscussionToolsEnableTimestampLinks' => [
+			'default' => true,
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
