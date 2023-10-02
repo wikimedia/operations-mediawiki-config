@@ -339,6 +339,7 @@ class Profiler {
 			//   As of writing, this is rare (a few times per day at most),
 			//   which is considered an acceptable loss in profile samples.
 			$error = 'exception';
+			trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_WARNING );
 		}
 
 		if ( $error ) {
