@@ -11,7 +11,7 @@ use Wikimedia\MWConfig\Noc\EtcdCachedConfig;
 
 require_once __DIR__ . '/../../src/Noc/EtcdCachedConfig.php';
 
-$isLocalhost = str_starts_with( $_SERVER['HTTP_HOST'], 'localhost' );
+$isLocalhost = strpos( $_SERVER['HTTP_HOST'], 'localhost' ) === 0;
 $format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
 if ( $format === 'json' ) {
 	error_reporting( 0 );
