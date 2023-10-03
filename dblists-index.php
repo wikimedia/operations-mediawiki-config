@@ -286,6 +286,7 @@ return [
 'fiwiktionary' => [ 'legacy-vector', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'fjwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'fjwiktionary' => [ 'legacy-vector', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'fonwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'foundationwiki' => [ 'special', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'fowiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'fowikisource' => [ 'small', 'legacy-vector', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
