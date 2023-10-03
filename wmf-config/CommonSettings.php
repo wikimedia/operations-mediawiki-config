@@ -507,12 +507,6 @@ $wgLocalStylePath = $wgStylePath;
 
 $wgResourceLoaderMaxQueryLength = 5000;
 
-// Cache version key for ResourceLoader client-side module store
-// - Bumped to fix breakage due to old /static/$branchName/ urls still
-// being cached after the switch to /w/static.php (T134368).
-// - Bumped to fix broken SVG embedding being cached (T176884)
-$wgResourceLoaderStorageVersion .= '-3';
-
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
 // @var string|bool: E-mail address to send notifications to, or false to disable notifications.
