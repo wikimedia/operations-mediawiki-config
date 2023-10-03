@@ -131,6 +131,7 @@ return [
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki.png', // T48589
 	'fiwiki' => '/static/images/project-logos/fiwiki.png',
 	'fowiki' => '/static/images/project-logos/fowiki.png', // T42285
+	'fonwiki' => '/static/images/project-logos/fonwiki.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki.png',
 	'frrwiki' => '/static/images/project-logos/frrwiki.png',
 	'frwiki' => '/static/images/project-logos/frwiki.png',
@@ -991,6 +992,7 @@ return [
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-1.5x.png', // T150618
 	'fiwiki' => '/static/images/project-logos/fiwiki-1.5x.png', // T150618
 	'fowiki' => '/static/images/project-logos/fowiki-1.5x.png', // T150618
+	'fonwiki' => '/static/images/project-logos/fonwiki-1.5x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-1.5x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-1.5x.png', // T150618
 	'frwiki' => '/static/images/project-logos/frwiki-1.5x.png',
@@ -1614,6 +1616,7 @@ return [
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-2x.png', // T150618
 	'fiwiki' => '/static/images/project-logos/fiwiki-2x.png', // T150618
 	'fowiki' => '/static/images/project-logos/fowiki-2x.png', // T150618
+	'fonwiki' => '/static/images/project-logos/fonwiki-2x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-2x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-2x.png', // T150618
 	'frwiki' => '/static/images/project-logos/frwiki-2x.png',
@@ -2495,6 +2498,11 @@ return [
 	],
 	'fowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fo.svg',
+		'width' => 120,
+		'height' => 18,
+	],
+	'fonwiki' => [ // T347939
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fon.svg',
 		'width' => 120,
 		'height' => 18,
 	],
@@ -5666,6 +5674,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fo.svg',
 		'width' => 120,
 		'height' => 11,
+	],
+	'fonwiki' => [ // T347939
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fon.svg',
+		'width' => 117,
+		'height' => 13,
 	],
 	'frpwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-frp.svg',

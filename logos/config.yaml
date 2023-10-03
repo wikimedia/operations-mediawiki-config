@@ -527,6 +527,15 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    fonwiki:
+        commons: 'File:Wikipedia-logo-v2-fon.svg'
+        comment: T347939
+        comment_1_5x: T347939
+        comment_2x: T347939
+        commons_wordmark: 'File:Wikipedia-wordmark-fon.svg'
+        comment_wordmark: T347939
+        commons_tagline: 'File:Wikipedia-tagline-fon.svg'
+        comment_tagline: T347939
     frpwiki:
         comment_1_5x: T150618
         comment_2x: T150618
