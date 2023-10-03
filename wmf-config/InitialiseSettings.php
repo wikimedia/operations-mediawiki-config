@@ -373,6 +373,7 @@ return [
 	'fiwiki' => 'Europe/Helsinki',
 	'fiwikimedia' => 'Europe/Helsinki',
 	'fiwikivoyage' => 'Europe/Helsinki', // T151570
+	'fonwiki' => 'Africa/Porto-Novo', // T347939
 	'frrwiki' => 'Europe/Berlin',
 	'frwiki' => 'Europe/Paris',
 	'frwikibooks' => 'Europe/Paris',
@@ -1235,6 +1236,7 @@ return [
 	'fiwikiversity' => 'Wikiopisto',
 	'fiwikivoyage' => 'Wikimatkat', // T151570
 	'fiwiktionary' => 'Wikisanakirja',
+	'fonwiki' => 'Wikipedya', // T347939
 	'foundationwiki' => 'Wikimedia Foundation Governance Wiki',
 	'fowikisource' => 'Wikiheimild',
 	'frpwiki' => 'Vouiquipèdia',

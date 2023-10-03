@@ -5283,6 +5283,7 @@ return [
 	'fiwiktionary' => 'Wikisanakirja',
 	'foundationwiki' => 'Wikimedia',
 	'fowikisource' => 'Wikiheimild',
+	'fonwiki' => 'Wikipedya', // T347939
 	'frpwiki' => 'Vouiquipèdia',
 	'frwiki' => 'Wikipédia',
 	'frwikibooks' => 'Wikilivres',
