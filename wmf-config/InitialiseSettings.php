@@ -6275,6 +6275,20 @@ return [
 	'wikipedia' => true,
 ],
 
+'wgVisualEditorEditCheck' => [
+	'default' => false,
+	// T347908: initial partner wikis
+	'dagwiki' => true,
+	'eewiki' => true,
+	'fatwiki' => true,
+	'gurwiki' => true,
+	'gpewiki' => true,
+	'hawiki' => true,
+	'kgwiki' => true,
+	'lnwiki' => true,
+	'twwiki' => true,
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
