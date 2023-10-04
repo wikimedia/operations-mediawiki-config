@@ -436,6 +436,7 @@ if ( $wmgUseCampaignEvents ) {
 	// Re-add rights removed in the production config
 	$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 	$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
+	$wgGroupPermissions['user']['campaignevents-email-participants'] = true;
 	// This group is not needed in beta.
 	unset( $wgGroupPermissions['campaignevents-beta-tester'] );
 }
