@@ -10595,6 +10595,8 @@ return [
 	'default' => false,
 	'testwiki' => true, // T347065
 	'test2wiki' => true, // T347065
+	'officewiki' => true,
+	'metawiki' => true,
 ],
 
 'wmgUseCite' => [
