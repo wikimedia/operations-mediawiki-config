@@ -463,21 +463,6 @@ return [
 			'abusefilter-view-private' => true, // T174357
 			'abusefilter-log-private' => true, // T174357
 		],
-		'engineer' => [ // T203000
-			'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true,
-			'editinterface' => true,
-			'editsemiprotected' => true,
-			'editprotected' => true,
-			'suppressredirect' => true,
-			'managechangetags' => true,
-			'deletechangetags' => true,
-			'editcontentmodel' => true,
-			'import' => true,
-			'move-subpages' => true,
-			'mergehistory' => true,
-			'apihighlimits' => true,
-		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T316283
 		'rollbacker' => [ 'rollback' => true, ], // T126931
 		'patroller' => [ // T126931
@@ -3423,7 +3408,6 @@ return [
 		'bureaucrat' => [
 			'arbcom', // T63418
 			'autopatrolled',
-			'engineer', // T203000
 		],
 		'sysop' => [
 			'rollbacker', // T126931
@@ -4890,7 +4874,6 @@ return [
 		'bureaucrat' => [
 			'arbcom', // T63418
 			'autopatrolled',
-			'engineer', // T203000
 		],
 		'sysop' => [
 			'rollbacker', // T126931
