@@ -197,19 +197,12 @@ if ( $wmgEnableLogstash ) {
 	}
 }
 
-// Post construction calls to make for new Logger instances
-$wmgMonologLoggerCalls = [
-	// T116550 - Requires Monolog > 1.17.2
-	'useMicrosecondTimestamps' => [ false ],
-];
-
 $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
 		'@default' => [
 			'handlers' => (array)$wmgDefaultMonologHandler,
 			'processors' => array_keys( $wmgMonologProcessors ),
-			'calls' => $wmgMonologLoggerCalls,
 		],
 	],
 
@@ -244,7 +237,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// Log channel disabled on this wiki
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ 'blackhole' ],
-			'calls' => $wmgMonologLoggerCalls,
 		];
 		continue;
 	}
@@ -385,14 +377,12 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ $failureGroupHandler ],
 			'processors' => array_keys( $wmgMonologProcessors ),
-			'calls' => $wmgMonologLoggerCalls,
 		];
 
 	} else {
 		// No handlers configured, so use the blackhole route
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ 'blackhole' ],
-			'calls' => $wmgMonologLoggerCalls,
 		];
 	}
 }
@@ -403,9 +393,7 @@ if (
 	&& $wmgUseWikimediaEvents
 ) {
 	$wmgMonologConfig['loggers']['authevents']['handlers'][] = 'authmanager-statsd';
-	$wmgMonologConfig['loggers']['authevents']['calls'] = $wmgMonologLoggerCalls;
 	$wmgMonologConfig['loggers']['captcha']['handlers'][] = 'authmanager-statsd';
-	$wmgMonologConfig['loggers']['captcha']['calls'] = $wmgMonologLoggerCalls;
 	$wmgMonologConfig['handlers']['authmanager-statsd'] = [
 		// defined in WikimediaEvents
 		'class' => WikimediaEvents\AuthManagerStatsdHandler::class,
