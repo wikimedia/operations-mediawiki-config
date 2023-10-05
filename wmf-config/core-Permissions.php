@@ -1040,6 +1040,9 @@ return [
 			'reupload-own' => false,
 			'reupload-shared' => false,
 		],
+		'translationadmin' => [
+			'edit-legal' => true, // T346187
+		],
 		'editor' => [
 			'edit-legal' => true,
 			'edit' => true,
