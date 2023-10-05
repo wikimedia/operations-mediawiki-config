@@ -199,8 +199,6 @@ if ( $wmgEnableLogstash ) {
 
 // Post construction calls to make for new Logger instances
 $wmgMonologLoggerCalls = [
-	// Bug: T99581 - force logger timezone to UTC
-	'setTimezone' => [ new DateTimeZone( 'UTC' ) ],
 	// T116550 - Requires Monolog > 1.17.2
 	'useMicrosecondTimestamps' => [ false ],
 ];
