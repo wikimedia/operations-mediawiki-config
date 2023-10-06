@@ -1271,6 +1271,29 @@ return [
 	],
 ],
 
+'wgWelcomeSurveyExperimentalGroups' => [
+	'default' => [
+		'control' => [
+			'percentage' => 100,
+		],
+	],
+	'enwiki' => [
+		'control' => [
+			'percentage' => 0,
+		],
+		'T342353_user_research' => [
+			'percentage' => 100,
+			'questions' => [
+				'reason',
+				'edited',
+				'email',
+				'languages',
+				'user-research',
+			],
+		],
+	],
+],
+
 'wgGECampaignTopics' => [
 	'default' => []
 ],
