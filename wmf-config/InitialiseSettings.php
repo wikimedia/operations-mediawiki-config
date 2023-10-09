@@ -8436,6 +8436,10 @@ return [
 	'default' => 'Wikipedia:Administrators'
 ],
 
+'wgReportIncidentDeveloperMode' => [
+	'default' => false,
+],
+
 'wgRelatedArticlesCardLimit' => [
 	'default' => 3,
 	'wikivoyage' => 9,
