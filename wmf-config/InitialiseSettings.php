@@ -6705,12 +6705,7 @@ return [
 
 // T337942
 'wgCheckUserDisplayClientHints' => [
-	'default' => false,
-	'testwikis' => true,
-	'hewiki' => true,
-	'itwiki' => true,
-	'simplewiki' => true,
-	'bnwiki' => true,
+	'default' => true,
 ],
 
 // T344797
