@@ -904,6 +904,18 @@ return [
 	'tumwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
+	'wawiki' => true,
+	'warwiki' => true,
+	'wowiki' => true,
+	'xalwiki' => true,
+	'xhwiki' => true,
+	'xmfwiki' => true,
+	'yiwiki' => true,
+	'yowiki' => true,
+	'zawiki' => true,
+	'zeawiki' => true,
+	'zh_min_nanwiki' => true,
+	'zuwiki' => true,
 ],
 
 'wgGEDeveloperSetup' => [
