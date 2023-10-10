@@ -2555,7 +2555,12 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseParserMigration' => [
 			'default' => true,
-		]
+		],
 
+		// T348487
+		'-wgUrlShortenerEnableQrCode' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
