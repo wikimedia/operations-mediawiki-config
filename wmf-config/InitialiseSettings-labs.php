@@ -2541,8 +2541,7 @@ function wmfGetOverrideSettings() {
 
 		// T342858
 		'-wgEnableEditRecovery' => [
-			'default' => false,
-			'enwiki' => true,
+			'default' => true,
 		],
 
 		// T61245
