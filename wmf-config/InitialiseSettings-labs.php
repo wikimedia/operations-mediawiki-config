@@ -506,6 +506,7 @@ function wmfGetOverrideSettings() {
 
 		'wgWMEMobileWebUIActionsTracking' => [
 			'default' => 1, // T294738
+			'enwiki' => 1, // T346106
 		],
 
 		'wgMFAmcOutreach' => [
