@@ -632,8 +632,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUseReportIncident' => [
+			'default' => true,
 			'loginwiki' => false,
-			'kowiki' => true,
 		],
 
 		'wgReportIncidentRecipientEmails' => [
