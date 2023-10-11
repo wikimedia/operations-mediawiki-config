@@ -7071,10 +7071,6 @@ return [
 	],
 ],
 
-'wgMFShowEditNotices' => [
-	'default' => false
-],
-
 'wgExtraGenderNamespaces' => [
 	'default' => [],
 	'cswiki' => [
