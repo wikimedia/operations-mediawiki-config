@@ -2554,8 +2554,7 @@ function wmfGetOverrideSettings() {
 
 		// T348487
 		'-wgUrlShortenerEnableQrCode' => [
-			'default' => false,
-			'enwiki' => true,
+			'default' => true,
 		],
 	];
 } # wmfGetOverrideSettings()
