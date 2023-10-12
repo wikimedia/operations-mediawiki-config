@@ -5788,13 +5788,6 @@ return [
 	'private' => true,
 ],
 
-// Experimental Parsoid Read Views support: T335157
-'wgParsoidEnableQueryString' => [
-	'default' => true,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
-],
-
 'wgParserMigrationEnableQueryString' => [
 	'default' => true,
 	'commonswiki' => false,
@@ -5803,7 +5796,9 @@ return [
 
 // T333179
 'wmgUseParserMigration' => [
-	'default' => false,
+	'default' => true,
+	'commonswiki' => false,
+	'wikidatawiki' => false,
 ],
 
 // -------------- Shared Parsoid end --------------
