@@ -7774,14 +7774,6 @@ return [
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => true, // T315353
 	'enwiki' => false, // (s1) Waiting for T315510
-	'arwiki' => false, // (s7) Waiting for T315510
-	'eswiki' => false, // (s7) Waiting for T315510
-	'fawiki' => false, // (s7) Waiting for T315510
-	'huwiki' => false, // (s7) Waiting for T315510
-	'kowiki' => false, // (s7) Waiting for T315510
-	'rowiki' => false, // (s7) Waiting for T315510
-	'ukwiki' => false, // (s7) Waiting for T315510
-	'viwiki' => false, // (s7) Waiting for T315510
 ],
 
 'wgDiscussionToolsEnableTimestampLinks' => [
