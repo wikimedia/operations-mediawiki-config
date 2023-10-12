@@ -1523,6 +1523,12 @@ function wmfGetOverrideSettings() {
 			'test2wiki' => true,
 			'enwiki' => true,
 		],
+		'wgPageTriageEnableExtendedFeatures' => [
+			'default' => false, // T321922
+			'testwiki' => true,
+			'test2wiki' => true,
+			'enwiki' => true,
+		],
 		'-wmgWikibaseCachePrefix' => [
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
