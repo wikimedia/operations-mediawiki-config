@@ -4255,15 +4255,18 @@ $wgParsoidSettings = [
 	'linting' => true,
 ];
 
-// Parsoid testing special case
-if ( ClusterConfig::getInstance()->isParsoid() && ClusterConfig::getInstance()->getHostname() === 'scandium' ) {
-	// Scandium has its own special check out of parsoid for testing.
-	$parsoidDir = __DIR__ . "/../../parsoid-testing";
-	// Override settings specific to round-trip testing on scandium
-	require_once "$parsoidDir/tests/RTTestSettings.php";
+if ( ClusterConfig::getInstance()->isParsoid() ) {
+	// Parsoid testing special case
+	if ( ClusterConfig::getInstance()->getHostname() === 'scandium' ) {
+		// Scandium has its own special check out of parsoid for testing.
+		$parsoidDir = __DIR__ . "/../../parsoid-testing";
+		// Override settings specific to round-trip testing on scandium
+		require_once "$parsoidDir/tests/RTTestSettings.php";
+	}
+	// Only load Parsoid extension (aka internal Parsoid REST API) on
+	// Parsoid cluster
+	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 }
-
-wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
