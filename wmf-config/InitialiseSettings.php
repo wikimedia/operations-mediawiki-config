@@ -6359,12 +6359,6 @@ return [
 
 'wmgUseDoubleWiki' => [
 	'default' => false,
-	'wikisource' => true,
-	'sourceswiki' => true,
-	'frwiktionary' => true,
-	'frwikiversity' => true,
-	'fawiki' => true,
-	'testwiki' => true,
 ],
 
 'wgCategoryCollation' => [
