@@ -4072,8 +4072,8 @@ Wikivoyage:
         comment_1_5x: T230122
         comment_2x: T230122
         local_icon: true
-        selected_wordmark: usabilitywiki
-        local_tagline: true
+        commons_wordmark: 'File:Incubatorwiki-wordmark.svg'
+        comment_wordmark: T348577
     internalwiki:
         no_1_5x: true
         no_2x: true

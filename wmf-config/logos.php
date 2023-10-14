@@ -5021,10 +5021,10 @@ return [
 		'width' => 100,
 		'height' => 12,
 	],
-	'incubatorwiki' => [
-		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
-		'width' => 100,
-		'height' => 12,
+	'incubatorwiki' => [ // T348577
+		'src' => '/static/images/mobile/copyright/incubatorwiki-wordmark.svg',
+		'width' => 120,
+		'height' => 29,
 	],
 	'internalwiki' => [
 		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
@@ -7633,11 +7633,6 @@ return [
 		'src' => '/static/images/mobile/copyright/iegcomwiki-tagline.svg',
 		'width' => 94,
 		'height' => 8,
-	],
-	'incubatorwiki' => [
-		'src' => '/static/images/mobile/copyright/incubatorwiki-tagline.svg',
-		'width' => 70,
-		'height' => 9,
 	],
 	'internalwiki' => [
 		'src' => '/static/images/mobile/copyright/internalwiki-tagline.svg',
