@@ -4333,8 +4333,8 @@ return [
 	],
 	'thwikinews' => [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-th.svg',
-		'width' => 146,
-		'height' => 32,
+		'width' => 111,
+		'height' => 40,
 	],
 	'trwikinews' => [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-tr.svg',
@@ -7591,6 +7591,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-rs.svg',
 		'width' => 45,
 		'height' => 9,
+	],
+	'sewikimedia' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-tagline-se.svg',
+		'width' => 169,
+		'height' => 17,
 	],
 	'uawikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-ua.svg',
