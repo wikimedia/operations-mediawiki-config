@@ -34,32 +34,14 @@ $wmgThrottlingExceptions = [];
 
 // T346043
 $wmgThrottlingExceptions[] = [
-	'from' => '2023-10-13T09:00 -6:00',
-	'to' => '2023-10-13T15:00 -6:00',
+	'from' => '2023-11-13T09:00 -6:00',
+	'to' => '2023-11-13T15:00 -6:00',
 	'range' => [
 		'130.126.255.0/24',
 		'72.36.119.0/24'
 	],
 	'dbname' => [ 'enwiki' ],
 	'value' => 90,
-];
-
-// T347874
-$wmgThrottlingExceptions[] = [
-	'from' => '2023-10-03T07:00 +0:00',
-	'to' => '2023-10-03T15:00 +0:00',
-	'IP' => '155.232.7.202',
-	'dbname' => [ 'enwiki' ],
-	'value' => 45,
-];
-
-// T347719
-$wmgThrottlingExceptions[] = [
-	'from' => '2023-10-10T13:30 UTC',
-	'to' => '2023-10-10T20:30 UTC',
-	'IP' => '150.209.25.134',
-	'dbname' => [ 'enwiki' ],
-	'value' => 30,
 ];
 
 ## Add throttling definitions above.
