@@ -3386,7 +3386,7 @@ Wikisource:
     guwikisource:
         no_1_5x: true
         no_2x: true
-        no_wordmark: true
+        local_wordmark: true
     hewikisource:
         no_1_5x: true
         no_2x: true
@@ -3433,7 +3433,7 @@ Wikisource:
         comment: T40543
         no_1_5x: true
         no_2x: true
-        no_wordmark: true
+        local_wordmark: true
     lawikisource:
         comment: T54019
         no_1_5x: true
@@ -3457,7 +3457,7 @@ Wikisource:
     mlwikisource:
         no_1_5x: true
         no_2x: true
-        no_wordmark: true
+        local_wordmark: true
     mrwikisource:
         comment: T103655
         no_1_5x: true
@@ -3476,7 +3476,7 @@ Wikisource:
         comment: T73875
         no_1_5x: true
         no_2x: true
-        no_wordmark: true
+        local_wordmark: true
     pawikisource:
         comment: T149522
         comment_1_5x: T149522
@@ -3497,6 +3497,7 @@ Wikisource:
     sawikisource:
         no_1_5x: true
         no_2x: true
+        local_wordmark: true
     skwikisource:
         no_1_5x: true
         no_2x: true
@@ -3522,6 +3523,7 @@ Wikisource:
         comment_1_5x: T344314
         comment_2x: T344314
         comment: T344314
+        local_wordmark: true
     tawikisource:
         no_1_5x: true
         no_2x: true

@@ -4443,7 +4443,11 @@ return [
 		'width' => 120,
 		'height' => 15,
 	],
-	'guwikisource' => null,
+	'guwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-gu.svg',
+		'width' => 91,
+		'height' => 33,
+	],
 	'hewikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-he.svg',
 		'width' => 146,
@@ -4489,7 +4493,11 @@ return [
 		'width' => 110,
 		'height' => 32,
 	],
-	'kowikisource' => null,
+	'kowikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ko.svg',
+		'width' => 122,
+		'height' => 32,
+	],
 	'lawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-la.svg',
 		'width' => 146,
@@ -4510,7 +4518,11 @@ return [
 		'width' => 146,
 		'height' => 21,
 	],
-	'mlwikisource' => null,
+	'mlwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ml.svg',
+		'width' => 146,
+		'height' => 20,
+	],
 	'mrwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-mr.svg',
 		'width' => 112,
@@ -4521,7 +4533,11 @@ return [
 		'width' => 146,
 		'height' => 20,
 	],
-	'orwikisource' => null,
+	'orwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-or.svg',
+		'width' => 145,
+		'height' => 28,
+	],
 	'pawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-pa.svg',
 		'width' => 116,
@@ -4542,6 +4558,11 @@ return [
 		'width' => 146,
 		'height' => 22,
 	],
+	'sawikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sa.svg',
+		'width' => 114,
+		'height' => 33,
+	],
 	'skwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sk.svg',
 		'width' => 146,
@@ -4561,6 +4582,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-sr.svg',
 		'width' => 146,
 		'height' => 22,
+	],
+	'suwikisource' => [
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-su.svg',
+		'width' => 125,
+		'height' => 33,
 	],
 	'tawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ta.svg',
