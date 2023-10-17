@@ -11269,15 +11269,6 @@ return [
 	'default' => true,
 ],
 
-// T333137
-'wgKartographerNearbyOnMobile' => [
-	'default' => true,
-],
-
-'wgKartographerWikivoyageNearby' => [
-	'default' => false, // T336834
-],
-
 // T342871
 'wgKartographerParsoidSupport' => [
 	'default' => false,
