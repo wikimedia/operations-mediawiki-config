@@ -2829,43 +2829,20 @@ return [
 
 			// In emergencies, you can set the line below to false to prevent logged-in users from running functions
 			'wikilambda-execute' => true,
-
-			// Temporarily during early, limited deployment, basic logged-in users can't do this
-			'wikilambda-create' => false,
-			'wikilambda-create-function' => false,
-			'wikilambda-create-implementation' => false,
-			'wikilambda-create-tester' => false,
-			'wikilambda-edit' => false,
-			'wikilambda-edit-argument-label' => false,
-			'wikilambda-edit-function' => false,
-			'wikilambda-edit-implementation' => false,
-			'wikilambda-edit-key-label' => false,
-			'wikilambda-edit-tester' => false,
-			'wikilambda-edit-user-function' => false,
+			// In emergencies, you can set the line below to false to prevent logged-in users from running unsaved code
+			'wikilambda-execute-unsaved-code' => true, // T349057
 		],
-		'autopatrolled' => [ 'autopatrol' => true ], // T343946
+		'autopatrolled' => [
+			'autopatrol' => true // T343946
+		],
 		'functioneer' => [
-			// Temporarily during early, limited deployment, re-grant to functioneers the standard
-			// Wikifunctions-specific rights that logged-in users can't do
-			'wikilambda-create' => true,
-			'wikilambda-create-function' => true,
-			'wikilambda-create-implementation' => true,
-			'wikilambda-create-tester' => true,
-			'wikilambda-edit' => true,
-			'wikilambda-edit-argument-label' => true,
-			'wikilambda-edit-function' => true,
-			'wikilambda-edit-implementation' => true,
-			'wikilambda-edit-key-label' => true,
-			'wikilambda-edit-tester' => true,
-			'wikilambda-edit-user-function' => true,
-
-			// Temporarily during early, limited deployment, functioneers can't do this
+			// Temporarily during early, limited deployment, Functioneers can't do this
 			"wikilambda-create-type" => false,
 
 			"autopatrol" => true, // T344085
 		],
 		'wikifunctions-staff' => [
-			'autopatrol' => true, // T350028
+			// Special staff-only user group for helping the community with Christmas-tree rights.
 			'wikilambda-connect-implementation' => true,
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
@@ -2886,22 +2863,26 @@ return [
 			'wikilambda-edit-attached-tester' => true,
 			'wikilambda-edit-builtin-function' => true,
 			'wikilambda-edit-boolean' => true,
-			'wikilambda-edit-function' => true,
-			'wikilambda-edit-function-definition' => true,
+			'wikilambda-edit-error-key-label' => true,
 			'wikilambda-edit-implementation' => true,
 			'wikilambda-edit-key-label' => true,
 			'wikilambda-edit-language' => true,
 			'wikilambda-edit-object-alias' => true,
+			'wikilambda-edit-object-description' => true,
 			'wikilambda-edit-object-label' => true,
 			'wikilambda-edit-object-type' => true,
 			'wikilambda-edit-predefined' => true,
 			'wikilambda-edit-programming' => true,
 			'wikilambda-edit-running-function' => true,
+			'wikilambda-edit-running-function-definition' => true,
 			'wikilambda-edit-tester' => true,
 			'wikilambda-edit-type' => true,
 			'wikilambda-edit-unit' => true,
 			'wikilambda-edit-user-function' => true,
 			'wikilambda-execute' => true,
+			'wikilambda-execute-unsaved-code' => true,
+
+			'autopatrol' => true, // T350028
 		],
 	],
 	'+wikimaniawiki' => [
