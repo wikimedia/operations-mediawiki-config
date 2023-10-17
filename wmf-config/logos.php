@@ -7160,6 +7160,11 @@ return [
 		'width' => 120,
 		'height' => 16,
 	],
+	'dewiktionary' => [ // T348978
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-de.svg',
+		'width' => 120,
+		'height' => 15,
+	],
 	'enwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-en.svg',
 		'width' => 110,
