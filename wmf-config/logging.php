@@ -83,15 +83,18 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 // Monolog logging configuration
 
 // T124985: The Processors listed in $wmgMonologProcessors are applied to
-// a message in reverse list order (bottom to top). The normalized_message
-// processor needs to be listed *after* the psr processor to work as expected.
+// a message list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
+//
+// The `wmfconfig` processor injects `normalized_message` which must be listed
+// *before* the psr processor since we want to retain the log placeholders for
+// log deduplication (T349086).
 $wmgMonologProcessors = [
+	// Injects wiki, MediaWiki version, request id etc
 	'wiki' => [
 		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
 	],
-	'psr' => [
-		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
-	],
+	// Additional fields injected before processing eg placeholders in log
+	// messages.
 	'wmfconfig' => [
 		'factory' => static function () {
 			return static function ( array $record ) {
@@ -133,6 +136,9 @@ $wmgMonologProcessors = [
 				 * placeholders in the message will be left unexpanded which can
 				 * reduce variance of messages that expand to include per-request
 				 * details such as session ids.
+				 *
+				 * We rely on the placeholders not being expanded to deduplicate
+				 * log messages (T349086).
 				 */
 				$nm = $record['message'];
 				if ( strpos( $nm, '<a href=' ) !== false ) {
@@ -153,6 +159,9 @@ $wmgMonologProcessors = [
 				return $record;
 			};
 		},
+	],
+	'psr' => [
+		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
 ];
 
