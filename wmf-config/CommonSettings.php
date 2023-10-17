@@ -3728,6 +3728,8 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';
+		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
+		// TODO: remove once relevant patches have been merged and shipped
 		$wgOATHAuthDatabase = 'centralauth';
 	}
 
