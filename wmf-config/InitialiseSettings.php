@@ -2451,6 +2451,10 @@ return [
 		'logged_in' => true,
 		'logged_out' => false
 	],
+	'frwiki' => [
+		'logged_in' => true,
+		'logged_out' => false
+	],
 	'plwiki' => [
 		'logged_in' => true,
 		'logged_out' => false
@@ -2459,7 +2463,15 @@ return [
 		'logged_in' => true,
 		'logged_out' => false
 	],
+	'ukwiki' => [
+		'logged_in' => true,
+		'logged_out' => false
+	],
 	'hewiki' => [
+		'logged_in' => true,
+		'logged_out' => false
+	],
+	'arwiki' => [
 		'logged_in' => true,
 		'logged_out' => false
 	],
