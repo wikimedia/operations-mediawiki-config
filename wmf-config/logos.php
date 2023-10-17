@@ -2560,7 +2560,11 @@ return [
 		'width' => 120,
 		'height' => 28,
 	],
-	'gotwiki' => null,
+	'gotwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-got.svg',
+		'width' => 116,
+		'height' => 22,
+	],
 	'guwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-gu.svg',
 		'width' => 120,
@@ -7597,8 +7601,8 @@ return [
 	],
 	'hewikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-he.svg',
-		'width' => 120,
-		'height' => 11,
+		'width' => 82,
+		'height' => 20,
 	],
 	'hiwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-hi.svg',
