@@ -617,7 +617,7 @@ Wikipedia:
     gotwiki:
         no_1_5x: true
         no_2x: true
-        no_wordmark: true
+        local_wordmark: true
     gpewiki:
         commons: 'File:Wikipedia-logo-v2-gpe.svg'
     guwiki:
@@ -1946,6 +1946,7 @@ Wiktionary:
         comment_1_5x: T344310
         comment_2x: T344310
         comment: T344310
+        local_wordmark: true
     bnwiktionary:
         comment: T45240
         comment_1_5x: T150618

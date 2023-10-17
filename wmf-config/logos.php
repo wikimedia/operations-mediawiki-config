@@ -3318,6 +3318,11 @@ return [
 		'width' => 117,
 		'height' => 22,
 	],
+	'blkwiktionary' => [
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-blk.svg',
+		'width' => 82,
+		'height' => 28,
+	],
 	'bnwiktionary' => [ // T316953
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-bn.svg',
 		'width' => 123,
