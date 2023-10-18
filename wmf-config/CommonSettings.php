@@ -505,9 +505,6 @@ $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
 
-// Deprecated
-$wgIncludeLegacyJavaScript = true;
-
 $wgResourceLoaderMaxQueryLength = 5000;
 
 // Cache version key for ResourceLoader client-side module store
@@ -2752,10 +2749,7 @@ $wgMFMobileHeader = 'X-Subdomain';
 $wgMFNearby = $wmgEnableGeoData;
 
 $wgHooks['EnterMobileMode'][] = static function () {
-	global $wgCentralAuthCookieDomain, $wgIncludeLegacyJavaScript;
-
-	// Disable loading of legacy wikibits in the mobile web experience
-	$wgIncludeLegacyJavaScript = false;
+	global $wgCentralAuthCookieDomain;
 
 	// Hack for T49647
 	if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
