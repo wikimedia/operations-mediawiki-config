@@ -1871,36 +1871,7 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-
-	switch ( $wmgRealm ) {
-	case 'production':
-		// Production cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		break;
-
-	case 'labs':
-		// wmflabs beta cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
-		break;
-	}
-
-	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
-		$wmgSecondLevelDomain = strrev( $m[0] );
-	} else {
-		$wmgSecondLevelDomain = false;
-	}
-	unset( $wmgSecondLevelDomainRegex );
-
-	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
-		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
-	} elseif ( $wgDBname === 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] ) ) {
-		$wgCentralAuthCookieDomain = "commons$wmgSecondLevelDomain";
-	} elseif ( $wgDBname === 'metawiki' ) {
-		$wgCentralAuthCookieDomain = "meta$wmgSecondLevelDomain";
-	} else {
-		# Don't set 2nd-level cookies for *.wikimedia.org, insecure
-		$wgCentralAuthCookieDomain = '';
-	}
+	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
 	/**
@@ -2709,22 +2680,6 @@ $wgMFMobileHeader = 'X-Subdomain';
 
 // Enable this everywhere except where GeoData isn't available
 $wgMFNearby = $wmgEnableGeoData;
-
-$wgHooks['EnterMobileMode'][] = static function () {
-	// Better hack for T49647
-	$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-	$hookContainer->register( 'WebResponseSetCookie', static function ( &$name, &$value, &$expire, &$options ) {
-		if ( isset( $options['domain'] ) ) {
-			if ( $options['domain'] == 'commons.wikimedia.org' ) {
-				$options['domain'] = 'commons.m.wikimedia.org';
-			} elseif ( $options['domain'] == 'meta.wikimedia.org' ) {
-				$options['domain'] = 'meta.m.wikimedia.org';
-			}
-		}
-	} );
-
-	return true;
-};
 
 $wgMFNearbyRange = $wgMaxGeoSearchRadius;
 

@@ -553,9 +553,20 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		//
-		// CentralAuth
-		//
+		'-wmgCentralAuthCookieDomain' => [
+			// wiki families
+			'wikipedia' => '.wikipedia.beta.wmflabs.org',
+			'wikibooks' => '.wikibooks.beta.wmflabs.org',
+			'wikinews' => '.wikinews.beta.wmflabs.org',
+			'wikiquote' => '.wikiquote.beta.wmflabs.org',
+			'wikisource' => '.wikisource.beta.wmflabs.org',
+			'wikiversity' => '.wikiversity.beta.wmflabs.org',
+			'wikivoyage' => '.wikivoyage.beta.wmflabs.org',
+			'wiktionary' => '.wiktionary.beta.wmflabs.org',
+			// wikis which are not Wikipedias but use *.wikipedia.beta.wmflabs.org
+			'testwiki' => '.wikipedia.beta.wmflabs.org',
+		],
+
 		'-wmgCentralAuthAutoLoginWikis' => [
 			'default' => [
 				'.wikipedia.beta.wmflabs.org' => 'enwiki',

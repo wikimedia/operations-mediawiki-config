@@ -4514,6 +4514,27 @@ return [
 	'wikimaniawiki' => '/srv/mediawiki/static/images/sul/wikimania.png',
 ],
 
+'wmgCentralAuthCookieDomain' => [
+	// set cookies on current domain for wikis with an unsafe parent domain
+	'default' => '',
+	// wiki families
+	'wikibooks' => '.wikibooks.org',
+	'wikinews' => '.wikinews.org',
+	'wikipedia' => '.wikipedia.org',
+	'wikiquote' => '.wikiquote.org',
+	'wikisource' => '.wikisource.org',
+	'wikiversity' => '.wikiversity.org',
+	'wikivoyage' => '.wikivoyage.org',
+	'wiktionary' => '.wiktionary.org',
+	// wikis which are not Wikipedias but use *.wikipedia.org
+	'nostalgiawiki' => '.wikipedia.org',
+	'testwiki' => '.wikipedia.org',
+	'thankyouwiki' => '.wikipedia.org',
+	// single wikis with a safe parent domain (to share cookies with their mobile domain)
+	'mediawikiwiki' => '.mediawiki.org',
+	'sourceswiki' => '.wikisource.org',
+],
+
 'wmgCentralAuthAutoLoginWikis' => [
 	'default' => [
 		'.wikipedia.org' => 'enwiki',
@@ -4524,13 +4545,14 @@ return [
 		'.wikiversity.org' => 'enwikiversity',
 		'.wikivoyage.org' => 'enwikivoyage',
 		'.wiktionary.org' => 'enwiktionary',
+		'.mediawiki.org' => 'mediawikiwiki',
+		// wikimedia.org wikis can't use the parent domain because it's shared with non-MediaWiki sites
 		'api.wikimedia.org' => 'apiportalwiki',
 		'commons.wikimedia.org' => 'commonswiki',
 		'incubator.wikimedia.org' => 'incubatorwiki',
 		'meta.wikimedia.org' => 'metawiki',
 		'species.wikimedia.org' => 'specieswiki',
 		'wikimania.wikimedia.org' => 'wikimaniawiki',
-		'.mediawiki.org' => 'mediawikiwiki',
 		'www.wikidata.org' => 'wikidatawiki', // shares parent domain with query.wikidata.org
 		'www.wikifunctions.org' => 'wikifunctionswiki', // will share parent domain with api.wikifunctions.org
 	],

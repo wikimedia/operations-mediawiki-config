@@ -18,8 +18,6 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-use MediaWiki\MediaWikiServices;
-
 // safe guard
 if ( $wmgRealm == 'labs' ) {
 
@@ -92,19 +90,6 @@ $wgLocalVirtualHosts = [
 	'api.wikimedia.beta.wmflabs.org',
 	'wikifunctions.beta.wmflabs.org',
 ];
-
-// T49647
-$wgHooks['EnterMobileMode'][] = static function () {
-	$domainRegexp = '/(?<!\.m)\.wikimedia\.beta\.wmflabs\.org$/';
-	$mobileDomain = '.m.wikimedia.beta.wmflabs.org';
-
-	$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-	$hookContainer->register( 'WebResponseSetCookie', static function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
-			if ( isset( $options['domain'] ) && preg_match( $domainRegexp, $options['domain'] ) ) {
-				$options['domain'] = preg_replace( $domainRegexp, $mobileDomain, $options['domain'] );
-			}
-	} );
-};
 
 # Attempt to auto block users using faulty servers
 # See also http://www.us.sorbs.net/general/using.shtml
