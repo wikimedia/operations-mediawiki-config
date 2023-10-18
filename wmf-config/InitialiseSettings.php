@@ -5420,12 +5420,6 @@ return [
 	'foundationwiki' => true,
 ],
 
-'wgApiFrameOptions' => [
-	'default' => 'DENY',
-	'enwiki' => 'SAMEORIGIN', // T41877
-	'zhwiki' => 'SAMEORIGIN', // T173631
-],
-
 'wmgAltUploadForm' => [ // T35513
 	'default' => 'Special:Upload',
 
