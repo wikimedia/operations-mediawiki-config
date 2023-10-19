@@ -569,6 +569,13 @@ function wmfGetOverrideSettings() {
 				'logged_out' => false,
 			]
 		],
+		'wgVectorClientPreferences' => [
+			'default' => [
+				'logged_in' => false,
+				'logged_out' => false,
+				'beta' => true,
+			],
+		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
 				'name' => 'skin-vector-zebra-experiment',
