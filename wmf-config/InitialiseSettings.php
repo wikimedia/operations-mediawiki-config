@@ -4466,8 +4466,7 @@ return [
 ],
 
 'wgResourceLoaderEnableSourceMapLinks' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ],
 
 # CENTRAL AUTH @{
