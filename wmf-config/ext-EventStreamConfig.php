@@ -1021,11 +1021,8 @@ return [
 					'events' => [ 'eas.' ],
 
 					// The following are the values common to all client-side EditAttemptStep
-					// instruments [0][1][2] that the Metrics Platform Clients can provide.
-					//
-					// [0] https://gerrit.wikimedia.org/g/mediawiki/extensions/MobileFrontend/+/2c907f81c54dffbc18be7eb903508af6ef7ac4d0/src/mobile.init/eventLogging/schemaEditAttemptStep.js#30
-					// [1] https://gerrit.wikimedia.org/g/mediawiki/extensions/DiscussionTools/+/8ce9c1467750e410404a860e734baf0185a62fe5/modules/logger.js#54
-					// [2] https://gerrit.wikimedia.org/g/mediawiki/extensions/VisualEditor/+/e9560b58b9599d0c008bcaacafcd21ce113a444f/modules/ve-mw/init/ve.init.mw.trackSubscriber.js#233
+					// instruments that the Metrics Platform Clients can provide.
+					// https://gerrit.wikimedia.org/g/mediawiki/extensions/WikimediaEvents/+/89e90362161d97ae55abc87db40236e7e3722fec/modules/ext.wikimediaEvents/editAttemptStep.js#260
 					'provide_values' => [
 						'agent_client_platform_family',
 						'page_id',
