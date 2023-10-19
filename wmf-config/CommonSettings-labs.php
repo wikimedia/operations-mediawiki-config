@@ -92,13 +92,8 @@ $wgLocalVirtualHosts = [
 
 // T49647
 $wgHooks['EnterMobileMode'][] = static function () {
-	global $wgCentralAuthCookieDomain;
 	$domainRegexp = '/(?<!\.m)\.wikimedia\.beta\.wmflabs\.org$/';
 	$mobileDomain = '.m.wikimedia.beta.wmflabs.org';
-
-	if ( preg_match( $domainRegexp, $wgCentralAuthCookieDomain ) ) {
-		$wgCentralAuthCookieDomain = preg_replace( $domainRegexp, $mobileDomain, $wgCentralAuthCookieDomain );
-	}
 
 	$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
 	$hookContainer->register( 'WebResponseSetCookie', static function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {

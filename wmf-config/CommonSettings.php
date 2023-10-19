@@ -2749,15 +2749,6 @@ $wgMFMobileHeader = 'X-Subdomain';
 $wgMFNearby = $wmgEnableGeoData;
 
 $wgHooks['EnterMobileMode'][] = static function () {
-	global $wgCentralAuthCookieDomain;
-
-	// Hack for T49647
-	if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
-		$wgCentralAuthCookieDomain = 'commons.m.wikimedia.org';
-	} elseif ( $wgCentralAuthCookieDomain == 'meta.wikimedia.org' ) {
-		$wgCentralAuthCookieDomain = 'meta.m.wikimedia.org';
-	}
-
 	// Better hack for T49647
 	$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
 	$hookContainer->register( 'WebResponseSetCookie', static function ( &$name, &$value, &$expire, &$options ) {
