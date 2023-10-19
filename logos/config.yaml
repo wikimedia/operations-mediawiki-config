@@ -3443,6 +3443,10 @@ Wikisource:
         local_wordmark: true
     hiwikisource:
         local_wordmark: true
+        commons: 'File:Wikisource-logo-hi.svg'
+        comment: T310961
+        comment_1_5x: T310961
+        comment_2x: T310961
     htwikisource:
         comment: T54019
         no_1_5x: true
