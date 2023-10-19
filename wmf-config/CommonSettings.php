@@ -1906,15 +1906,11 @@ if ( $wmgUseCentralAuth ) {
 	}
 	unset( $wmgSecondLevelDomainRegex );
 
-	# Don't autologin to self
 	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
-		unset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] );
 		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
 	} elseif ( $wgDBname === 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] ) ) {
-		unset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] );
 		$wgCentralAuthCookieDomain = "commons$wmgSecondLevelDomain";
 	} elseif ( $wgDBname === 'metawiki' ) {
-		unset( $wgCentralAuthAutoLoginWikis["meta$wmgSecondLevelDomain"] );
 		$wgCentralAuthCookieDomain = "meta$wmgSecondLevelDomain";
 	} else {
 		# Don't set 2nd-level cookies for *.wikimedia.org, insecure
