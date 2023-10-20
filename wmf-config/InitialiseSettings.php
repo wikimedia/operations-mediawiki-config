@@ -9901,7 +9901,7 @@ return [
 'wgLexemeLanguageCodePropertyId' => [
 	'default' => null,
 	'testwikidatawiki' => 'P220',
-	'wikidatawiki' => 'P218',
+	'wikidatawiki' => 'P305', // T348923 IETF language tag
 ],
 
 'wgLexemeLexicalCategoryItemIds' => [
