@@ -4513,8 +4513,8 @@ return [
 		'.wikinews.org' => 'enwikinews',
 		'.wikiversity.org' => 'enwikiversity',
 		'.mediawiki.org' => 'mediawikiwiki',
-		'www.wikidata.org' => 'wikidatawiki',
-		'www.wikifunctions.org' => 'wikifunctionswiki',
+		'www.wikidata.org' => 'wikidatawiki', // shares parent domain with query.wikidata.org
+		'www.wikifunctions.org' => 'wikifunctionswiki', // will share parent domain with api.wikifunctions.org
 		'species.wikimedia.org' => 'specieswiki',
 		'incubator.wikimedia.org' => 'incubatorwiki',
 		'.wikivoyage.org' => 'enwikivoyage',
