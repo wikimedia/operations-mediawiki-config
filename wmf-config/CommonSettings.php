@@ -1301,52 +1301,37 @@ if ( $wmgUseTimedMediaHandler ) {
 	// Also enable a single WebM VP8 flat file for backwards compatibility.
 	$wgEnabledTranscodeSet['360p.webm'] = true;
 
-	if ( $wgDBname === 'testwiki' ) {
-		// Enable HLS adaptive streaming tracks for compatibility with iOS
-		// -- brion vibber, September 2023
-		//
-		// Still semi-experimental, deploying first to test.wikipedia.org while
-		// working out some details in web & mobile app client support.
-		//
-		// Eventually these will replace most of the WebM transcodes, as they
-		// can be played back in other browsers using Media Source Extensions.
-		//
-		// The setup hook callback is to let us introspect the array before
-		// modifying it, which avoids a failure mode with config validation
-		// if we accidentally deploy this config on the old version (or, say,
-		// the TimedMediaHandler branch gets reverted and the new config is
-		// still live).
-		//
-		// This whole section can be minimized or removed later once the new
-		// tracks are deafult.
-		$wgExtensionFunctions[] = static function () {
-			global $wgEnabledTranscodeSet;
-			$transcodeKeys = [
-				// MP3 stereo audio for iOS 16
-				'stereo.audio.mp3',
+	// Enable HLS adaptive streaming tracks for compatibility with iOS
+	// -- brion vibber, October 2023
+	//
+	// This is a soft-launch, with playback of the HLS tracks used on
+	// iOS browsers and app web views but not yet on desktop.
+	//
+	// Eventually these will replace most of the WebM transcodes, as they
+	// can be played back in other browsers using Media Source Extensions
+	// giving us a single universal track set that can adapt to screen
+	// size/density and network conditions automatically.
+	//
+	// This whole section can be minimized or removed later once the new
+	// tracks are enabled by default:
 
-				// Opus stereo audio for iOS 17
-				'stereo.audio.opus.mp4',
+	// MP3 stereo audio for iOS 16
+	$wgEnabledTranscodeSet['stereo.audio.mp3'] = true;
 
-				// MJPEG SDR video for older iOS devices without hardware VP9 codec
-				'144p.video.mjpeg.mov',
+	// Opus stereo audio for iOS 17
+	$wgEnabledTranscodeSet['stereo.audio.opus.mp4'] = true;
 
-				// VP9 SDR video for newer iOS devices (circa iPhone 12)
-				'240p.video.vp9.mp4',
-				'360p.video.vp9.mp4',
-				'480p.video.vp9.mp4',
-				'720p.video.vp9.mp4',
-				'1080p.video.vp9.mp4',
-				'1440p.video.vp9.mp4',
-				'2160p.video.vp9.mp4',
-			];
-			foreach ( $transcodeKeys as $key ) {
-				if ( array_key_exists( $key, $wgEnabledTranscodeSet ) ) {
-					$wgEnabledTranscodeSet[$key] = true;
-				}
-			}
-		};
-	}
+	// MJPEG SDR video for older iOS devices without hardware VP9 codec
+	$wgEnabledTranscodeSet['144p.video.mjpeg.mov'] = true;
+
+	// VP9 SDR video for newer iOS devices (circa iPhone 12)
+	$wgEnabledTranscodeSet['240p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['360p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['480p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['720p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['1080p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['1440p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['2160p.video.vp9.mp4'] = true;
 
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
