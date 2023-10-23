@@ -7,8 +7,16 @@
 # This for BETA and MUST NOT be loaded for production.
 #
 # Usage:
-# - Prefix a setting key with '-' to override all values from
-#   production InitialiseSettings.php.
+# - By default, the array for each configuration variable is merged with the array
+#   from InitialiseSettings.php. The individual values are not merged.
+#   E.g. if InitialiseSettings has
+#     [ 'default' => [ 'x' ], 'enwiki' => [ 'y' ] ]
+#   and this file has
+#     [ 'default' => [ 'v' ], 'wikipedia' => [ 'w' ] ]
+#   then the effective value will be
+#     [ 'default' => [ 'v' ], 'enwiki' => [ 'y' ], 'wikipedia' => [ 'w' ] ]
+# - Prefix a setting key with '-' to disable merging (ignore InitialiseSettings.php
+#   values entirely).
 # - Please wrap your code in functions to avoid tainting the global scope.
 #
 # Effective load order:
