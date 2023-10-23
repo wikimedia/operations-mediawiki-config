@@ -1869,33 +1869,18 @@ if ( $wmgUseCentralAuth ) {
 		];
 	}
 
+	$wgCentralAuthLoginWiki = 'loginwiki';
+	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+
 	switch ( $wmgRealm ) {
 	case 'production':
 		// Production cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-		$wgCentralAuthLoginWiki = 'loginwiki';
 		break;
 
 	case 'labs':
 		// wmflabs beta cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = [
-			'.wikipedia.beta.wmflabs.org' => 'enwiki',
-			'.wikisource.beta.wmflabs.org' => 'enwikisource',
-			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
-			'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
-			'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
-			'.wikinews.beta.wmflabs.org' => 'enwikinews',
-			'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
-			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
-			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
-			$wmgHostnames['wikidata'] => 'wikidatawiki',
-			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
-			$wmgHostnames['wikifunctions'] => 'wikifunctionswiki',
-		];
-		$wgCentralAuthLoginWiki = 'loginwiki';
 		break;
 	}
 

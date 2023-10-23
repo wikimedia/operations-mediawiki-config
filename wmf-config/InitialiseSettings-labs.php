@@ -554,6 +554,27 @@ function wmfGetOverrideSettings() {
 		],
 
 		//
+		// CentralAuth
+		//
+		'-wmgCentralAuthAutoLoginWikis' => [
+			'default' => [
+				'.wikipedia.beta.wmflabs.org' => 'enwiki',
+				'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
+				'.wikinews.beta.wmflabs.org' => 'enwikinews',
+				'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
+				'.wikisource.beta.wmflabs.org' => 'enwikisource',
+				'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
+				'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
+				'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
+				'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
+				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
+				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
+				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
+				'wikifunctions.beta.wmflabs.org' => 'wikifunctionswiki',
+			],
+		],
+
+		//
 		// Vector
 		//
 		// Skin versions are strings not numbers. See skins/Vector/skin.json.
