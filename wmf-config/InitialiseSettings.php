@@ -6254,15 +6254,6 @@ return [
 	'zhwiki' => true, // T296269
 ],
 
-// Whether VisualEditor should pay attention to the -autodisable user preference
-// to augment the -betatempdisable one (for wikis transitioning from opt-in to
-// opt-out).
-'wgVisualEditorTransitionDefault' => [
-	'default' => false,
-	'dewiki' => true,
-	'enwiki' => true,
-],
-
 'wgVisualEditorAllowExternalLinkPaste' => [
 	'default' => false,
 	'mediawikiwiki' => true, // T129546#8109242
