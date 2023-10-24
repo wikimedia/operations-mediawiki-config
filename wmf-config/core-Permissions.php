@@ -2818,12 +2818,16 @@ return [
 		'*' => [
 			// Temporarily during early, limited deployment, logged-out users can't do this
 			'edit' => false,
-			'wikilambda-execute' => false,
+
+			// In emergencies, you can set the line below to false to prevent logged-out users from running functions
+			'wikilambda-execute' => true, // T349055
 		],
 		'user' => [
 			// Temporarily during early, limited deployment, re-grant to logged-in users the standard
-			// wikitext editing and function-calling rights that logged-out users can't do
+			// wikitext editing right that logged-out users can't do
 			'edit' => true,
+
+			// In emergencies, you can set the line below to false to prevent logged-in users from running functions
 			'wikilambda-execute' => true,
 
 			// Temporarily during early, limited deployment, basic logged-in users can't do this
