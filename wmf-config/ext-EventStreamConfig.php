@@ -738,6 +738,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/ios_watchlists',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'ios.suggested_edits_alt_text_prototype' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
