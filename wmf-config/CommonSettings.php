@@ -3313,6 +3313,7 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 	$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 200; // see T85461#3100878
+	$wgScribuntoEngineConf['luasandbox']['memoryLimit'] = $wmgScribuntoMemoryLimit;
 }
 
 if ( $wmgUseSubpageSortkey ) {

@@ -7826,6 +7826,11 @@ return [
 	'lockeddown' => false,
 ],
 
+'wmgScribuntoMemoryLimit' => [
+	'default' => 52428800,
+	'wiktionary' => 104857600, // T165935
+],
+
 'wmgUseSubpageSortkey' => [
 	'default' => false,
 	'enwikibooks' => true,
