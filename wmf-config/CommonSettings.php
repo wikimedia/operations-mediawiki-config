@@ -1467,6 +1467,8 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 // CentralAuth needed so that user CentralIds match
 if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	wfLoadExtension( 'GlobalBlocking' );
+	$wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => 'centralauth' ];
+	// leave this in place for now
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
@@ -1845,6 +1847,8 @@ $wgHTTPImportTimeout = 50; // T155209
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
+
+	$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => 'centralauth' ];
 
 	// Enable cross-origin session cookies (T252236).
 	if ( $wmgEnableCrossOriginSessions ) {
