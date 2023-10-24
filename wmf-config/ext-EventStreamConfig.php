@@ -1078,7 +1078,8 @@ return [
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
 		 * These streams disable canary event production.
-		 * See: https://phabricator.wikimedia.org/T287789
+		 * We'd like to enable canary events for these, but the logging cluster consumers
+		 * would need to know to filter out the canary events first.
 		 * eventgate-logging-external only requests its stream configs on service startup,
 		 * so if you modify something here, eventgate-logging-external will need a restart.
 		 */
@@ -1158,17 +1159,14 @@ return [
 		'mediawiki.centralnotice.campaign-change' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.centralnotice.campaign-create' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/create',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.centralnotice.campaign-delete' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/delete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.cirrussearch.page_rerender.v1' => [
 			'schema_title' => 'mediawiki/cirrussearch/page_rerender',
@@ -1181,59 +1179,46 @@ return [
 		'mediawiki.page-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-delete' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-links-change' => [
 			'schema_title' => 'mediawiki/page/links-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-move' => [
 			'schema_title' => 'mediawiki/page/move',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-properties-change' => [
 			'schema_title' => 'mediawiki/page/properties-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-restrictions-change' => [
 			'schema_title' => 'mediawiki/page/restrictions-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-suppress' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-undelete' => [
 			'schema_title' => 'mediawiki/page/undelete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.recentchange' => [
 			'schema_title' => 'mediawiki/recentchange',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.revision-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.revision-score' => [
 			'schema_title' => 'mediawiki/revision/score',
 			'destination_event_service' => 'eventgate-main',
-			// This stream is derived and created by change-propagation,
-			// and Hadoop is the main consumer.  Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision-score-test' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1241,8 +1226,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T301878.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_goodfaith' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1250,8 +1233,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_damaging' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1259,8 +1240,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_reverted' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1268,8 +1247,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_articlequality' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1277,8 +1254,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_draftquality' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1286,8 +1261,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_articletopic' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1295,8 +1268,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_drafttopic' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1304,28 +1275,22 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.page_outlink_topic_prediction_change.v1' => [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.revision-visibility-change' => [
 			'schema_title' => 'mediawiki/revision/visibility-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.user-blocks-change' => [
 			'schema_title' => 'mediawiki/user/blocks-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'resource_change' => [
 			'schema_title' => 'resource_change',
@@ -1345,7 +1310,6 @@ return [
 		'mediawiki.revision-recommendation-create' => [
 			'schema_title' => 'mediawiki/revision/recommendation-create',
 			'destination_event_service' => 'eventgate-main',
-			// This stream is new enough that consumers are aware of canary events.
 		],
 		'mediawiki.image_suggestions_feedback' => [
 			'schema_title' => 'mediawiki/page/image-suggestions-feedback',
