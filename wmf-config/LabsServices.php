@@ -88,6 +88,9 @@ return [
 		### Restbase
 		'restbase' => 'http://deployment-restbase04.deployment-prep.eqiad1.wikimedia.cloud:7231',
 
+		### Rest Gateway. Same as Restbase for now, may change when we get true beta rest gateway
+		'rest-gateway' => 'http://deployment-restbase04.deployment-prep.eqiad1.wikimedia.cloud:7231',
+
 		### Poolcounter
 		'poolcounter' => [
 			'deployment-poolcounter06.deployment-prep.eqiad.wmflabs',
