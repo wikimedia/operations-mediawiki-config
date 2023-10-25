@@ -662,6 +662,43 @@ return [
 		'קט' => NS_CATEGORY,
 		'שקט' => NS_CATEGORY_TALK,
 	],
+	'+hewikinews' => [ // T349581
+		'מי' => NS_SPECIAL,
+		'ש' => NS_TALK,
+		'U' => NS_USER,
+		'וק' => NS_PROJECT,
+		'שוק' => NS_PROJECT_TALK,
+		'וח' => NS_PROJECT,
+		'שוח' => NS_PROJECT_TALK,
+		'קו' => NS_FILE,
+		'שקו' => NS_FILE_TALK,
+		'מו' => NS_MEDIAWIKI,
+		'שמו' => NS_MEDIAWIKI_TALK,
+		'תב' => NS_TEMPLATE,
+		'שתב' => NS_TEMPLATE_TALK,
+		'עז' => NS_HELP,
+		'שעז' => NS_HELP_TALK,
+		'קט' => NS_CATEGORY,
+		'תג' => NS_CATEGORY,
+		'קטגוריה' => NS_CATEGORY,
+		'שיחת_קטגוריה' => NS_CATEGORY_TALK,
+		'שתג' => NS_CATEGORY_TALK,
+		'שקט' => NS_CATEGORY_TALK,
+		'פורטל' => /* Portal */ 100,
+		'שיחת_פורטל' => /* Portal talk */ 101,
+		'פ' => /* Portal */ 100,
+		'שפ' => /* Portal talk */ 101,
+		'מד' => /* Portal */ 100,
+		'שמד' => /* Portal talk */ 101,
+		'טי' => /* Draft */ 100,
+		'שטי' => /* Draft talk */ 101,
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Draft' => 118,
+		'Draft_talk' => 119,
+		'י' => /* Module */ 828,
+		'שי' => /* Module talk */ 829,
+	],
 	'+hiwiki' => [
 		'वि' => NS_PROJECT,
 		'विवा' => NS_PROJECT_TALK,
@@ -4217,8 +4254,12 @@ return [
 		107 => 'Discussion_Dossier',
 	],
 	'hewikinews' => [
-		100 => 'פורטל',
-		101 => 'שיחת_פורטל',
+		100 => 'מדור', // Portal - T349581
+		101 => 'שיחת_מדור',
+		118 => 'טיוטה', // Draft - T349581
+		119 => 'שיחת_טיוטה',
+		NS_CATEGORY => 'תגית', // overriding default from MessagesHe.php - T349581
+		NS_CATEGORY_TALK => 'שיחת_תגית',
 	],
 	'huwikinews' => [
 		102 => 'Portál',
@@ -4606,6 +4647,10 @@ return [
 	'hewiki' => [
 		NS_USER => 'noindex,follow', // T18247
 		118 => 'noindex,nofollow', // Draft - T86329
+		119 => 'noindex,nofollow',
+	],
+	'hewikinews' => [
+		118 => 'noindex,nofollow', // Draft - T349581
 		119 => 'noindex,nofollow',
 	],
 	'hewikisource' => [

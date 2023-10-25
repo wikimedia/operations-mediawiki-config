@@ -7127,6 +7127,10 @@ return [
 		NS_USER => [ 'male' => 'Wikipedista', 'female' => 'Wikipedistka' ],
 		NS_USER_TALK => [ 'male' => 'Diskuse_s_wikipedistou', 'female' => 'Diskuse_s_wikipedistkou' ],
 	],
+	'hewikinews' => [
+		NS_USER => [ 'male' => 'מש', 'female' => 'משת' ],
+		NS_USER_TALK => [ 'male' => 'שמש', 'female' => 'שמשת' ]
+	],
 	'plwiki' => [
 		NS_USER => [ 'male' => 'Wikipedysta', 'female' => 'Wikipedystka' ],
 		NS_USER_TALK => [ 'male' => 'Dyskusja_wikipedysty', 'female' => 'Dyskusja_wikipedystki' ]
