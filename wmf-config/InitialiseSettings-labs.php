@@ -1557,12 +1557,6 @@ function wmfGetOverrideSettings() {
 		'wgPageTriageEnableCopyvio' => [
 			'zhwiki' => true, // T323378
 		],
-		'wgPageTriageEnableEnglishWikipediaFeatures' => [
-			'default' => false, // T321922
-			'testwiki' => true,
-			'test2wiki' => true,
-			'enwiki' => true,
-		],
 		'wgPageTriageEnableExtendedFeatures' => [
 			'default' => false, // T321922
 			'testwiki' => true,
