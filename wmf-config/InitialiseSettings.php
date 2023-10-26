@@ -11100,6 +11100,23 @@ return [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
+	'metawiki' => [
+		// T349854
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'pilot-meta-survey',
+			'question' => 'ext-quicksurveys-example-external-survey-question',
+			'description' => 'ext-quicksurveys-example-external-survey-description',
+			'link' => 'ext-quicksurveys-example-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+			'coverage' => '0',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			]
+		]
+	],
 	'ruwiki' => [
 		// T187299
 		[
