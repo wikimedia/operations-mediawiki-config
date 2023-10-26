@@ -58,8 +58,7 @@ return [
 			'irc.beta.wmflabs.org',
 		],
 		'redis_lock' => [
-			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
-			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
+			'rdb1' => 'deployment-rdb01.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'etcd' => [
 			'host' => '_etcd._tcp.svc.deployment-prep.eqiad1.wikimedia.cloud',
