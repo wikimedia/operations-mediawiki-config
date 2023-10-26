@@ -1484,10 +1484,14 @@ return [
 		'cirrussearch.update_pipeline.update.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/update',
 			'destination_event_service' => 'eventgate-main',
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
 		],
 		'cirrussearch.update_pipeline.fetch_error.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
 			'destination_event_service' => 'eventgate-main',
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
 		],
 
 		// Temporary analytics for Kartographer Nearby feature
