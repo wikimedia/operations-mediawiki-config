@@ -23,6 +23,9 @@ use MediaWiki\MediaWikiServices;
 // safe guard
 if ( $wmgRealm == 'labs' ) {
 
+// temporary workaround for T349944
+$wgStatsdServer = false;
+
 $wmgAddWikiNotify = false;
 
 # Use a different address from the production one - T192686
