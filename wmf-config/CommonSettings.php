@@ -2704,6 +2704,9 @@ if ( $wmgUseMobileApp ) {
 wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
+require_once 'MobileUrlCallback.php';
+$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+
 $wgMFMobileHeader = 'X-Subdomain';
 
 // Enable this everywhere except where GeoData isn't available
