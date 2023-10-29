@@ -974,6 +974,12 @@ return [
 		'आ' => NS_TEMPLATE,              // T125801
 		'आ_वा' => NS_TEMPLATE_TALK,      // T125801
 	],
+	'+mediawikiwiki' => [ // T349970
+		'Extensions' => 102,
+		'Extensions_talk' => 103,
+		'Skins' => 106,
+		'Skins_talk' => 107,
+	],
 	'+metawiki' => [ // T31129
 		'R' => 202,
 	],
