@@ -363,22 +363,7 @@ return [
 ],
 
 'wgGEUseNewImpactModule' => [
-	'default' => false,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'elwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'frwiktionary' => true,
-	'idwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'rowiki' => true,
-	'trwiki' => true,
-	'viwiki' => true,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
