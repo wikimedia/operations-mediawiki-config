@@ -2579,5 +2579,11 @@ function wmfGetOverrideSettings() {
 		'-wgUrlShortenerEnableQrCode' => [
 			'default' => true,
 		],
+
+		// T347435
+		'-wgAbuseFilterBlockedExternalDomainsNotifications' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
