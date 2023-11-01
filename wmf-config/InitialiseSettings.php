@@ -6049,7 +6049,7 @@ return [
 		'Чернова' => true, // Draft - T299224
 	],
 	'+bnwiki' => [
-		'খসড়া' => true, // Draft - T350133
+		'খসড়া' => true, // Draft - T350133
 	],
 	'+cawiki' => [
 		'Project' => true, // T88896
