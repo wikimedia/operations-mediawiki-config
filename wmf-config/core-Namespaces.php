@@ -239,6 +239,7 @@ return [
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'WT' => NS_PROJECT_TALK,
+		'খসড়া' => 118, // T350133
 		'Draft' => 118, // T350133
 		'Draft_talk' => 119, // T350133
 	],
