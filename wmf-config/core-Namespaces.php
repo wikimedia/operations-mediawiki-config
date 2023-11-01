@@ -239,6 +239,8 @@ return [
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'WT' => NS_PROJECT_TALK,
+		'Draft' => 118, // T350133
+		'Draft_talk' => 119, // T350133
 	],
 	'+bnwikibooks' => [
 		'Wikijunior' => 100,
@@ -2467,6 +2469,8 @@ return [
 	'bnwiki' => [
 		100 => 'প্রবেশদ্বার',
 		101 => 'প্রবেশদ্বার_আলোচনা',
+		118 => 'খসড়া', // Draft - T350133
+		119 => 'খসড়া_আলোচনা', // Draft talk - T350133
 	],
 	'bpywiki' => [
 		100 => 'হমিলদুৱার', // Portal
@@ -4515,6 +4519,8 @@ return [
 	'bnwiki' => [
 		NS_USER => 'noindex,follow', // T286152
 		NS_USER_TALK => 'noindex,follow',
+		118 => 'noindex,nofollow', // Draft - T350133
+		119 => 'noindex,nofollow', // Draft_talk - T350133
 	],
 	'ckbwiki' => [
 		NS_TALK => 'noindex,follow',
@@ -5106,6 +5112,7 @@ return [
 	'default' => [],
 	'azwiki' => [ 118, 119 ], // draft and draft talk - T299332
 	'bgwiki' => [ 118, 119 ], // draft and draft talk - T299224
+	'bnwiki' => [ 118, 119 ], // draft and draft talk - T350133
 	'ckbwiki' => [ 118, 119 ], // draft and draft talk - T332470
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850

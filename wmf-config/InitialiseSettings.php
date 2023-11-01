@@ -6048,6 +6048,9 @@ return [
 	'+bgwiki' => [
 		'Чернова' => true, // Draft - T299224
 	],
+	'+bnwiki' => [
+		'খসড়া' => true, // Draft - T350133
+	],
 	'+cawiki' => [
 		'Project' => true, // T88896
 		'Portal' => true, // T58000
