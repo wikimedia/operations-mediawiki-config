@@ -2865,6 +2865,7 @@ return [
 			"autopatrol" => true, // T344085
 		],
 		'wikifunctions-staff' => [
+			'autopatrol' => true, // T350028
 			'wikilambda-connect-implementation' => true,
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
