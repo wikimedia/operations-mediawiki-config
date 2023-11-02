@@ -4600,6 +4600,11 @@ return [
 	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
 ],
 
+'wgMathValidModes' => [
+	'default' => [ 'source', 'mathml' ],
+	'testwiki' => [ 'source', 'mathml', 'native' ],
+],
+
 'wgMaxExecutionTimeForExpensiveQueries' => [
 	'default' => 30000,
 ],
