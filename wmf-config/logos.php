@@ -4585,10 +4585,10 @@ return [
 		'width' => 120,
 		'height' => 13,
 	],
-	'bnwikisource' => [
+	'bnwikisource' => [ // T350482
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-bn.svg',
-		'width' => 120,
-		'height' => 26,
+		'width' => 131,
+		'height' => 27,
 	],
 	'brwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-br.svg',
