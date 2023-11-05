@@ -1,18 +1,20 @@
 /*! noc.wikimedia.org | Based on <https://design.wikimedia.org/style-guide/> */
 
-@import "./wikimedia-ui-base.css";
+@import "../lib/codex-design-tokens/theme-wikimedia-ui.css";
 
 :root {
-  --noc-desktop-wide: 1200px;
+  --noc-max-width-desktop-wide: 1200px;
+	--noc-background-color-neutral: #eaecf0;
+	--noc-border-color-soft: #eaecf0;
 }
 
 html {
-  background-color: var( --wmui-color-base80 );
-  font-family: sans-serif; /* Basic support without css-variables */
-  font-family: var( --font-family-system-sans );
-  line-height: var( --line-height-base );
-  font-size: 10px;
-  color: #222;
+	background-color: var( --noc-background-color-neutral );
+	font-family: sans-serif; /* Basic support without CSS custom properties */
+	font-family: var( --font-family-system-sans );
+	line-height: var( --line-height-medium );
+	font-size: 62.5%;
+	color: var( --color-base );
 }
 
 body {
@@ -29,17 +31,17 @@ h1 {
 h2 {
   font-size: 2.4rem;
   padding-bottom: 2px;
-  border-bottom: 3px solid var( --wmui-color-base80 );
+  border-bottom: 3px solid var( --noc-border-color-soft );
 }
 
 blockquote {
   padding-left: 1rem;
-  border-left:  3px solid var( --wmui-color-base80 );
+  border-left: 3px solid var( --noc-border-color-soft );
 }
 
 hr {
   margin: 3.2rem 0;
-  border: 3px solid var( --wmui-color-base80 );
+  border: 3px solid var( --noc-border-color-soft );
 }
 
 p {
@@ -47,7 +49,7 @@ p {
 }
 
 a {
-  color: var( --wmui-color-accent50 );
+  color: var( --color-progressive );
   text-decoration: none;
 }
 a:hover {
@@ -57,7 +59,7 @@ a:hover {
 
 .wm-container {
   margin: 0 auto;
-  max-width: var( --noc-desktop-wide );
+  max-width: var( --noc-max-width-desktop-wide );
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -87,7 +89,7 @@ header .wm-container {
 }
 header a[role="banner"] {
   line-height: 4.9rem;
-  font-weight: bold;
+  font-weight: var( --font-weight-bold );
   color: inherit;
 }
 header a[role="banner"] em {
@@ -104,8 +106,8 @@ header a[role="banner"] em {
 }
 
 main {
-  background: var( --wmui-color-base100 );
-  box-shadow: 0 1px 4px 0 rgba( 0, 0 ,0, 0.25 );
+	background: var( --background-color-base );
+	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
   padding: 3.2rem 0 6rem 0;
 }
 
@@ -135,7 +137,7 @@ footer nav li a {
 @media ( min-width: 414px ) {
   footer nav li:after {
     content: "\2022";
-    color: var( --wmui-color-base30 );
+    color: var( --color-subtle );
     padding: 0 0 0 0.8rem;
   }
   footer nav li:last-child:after {
@@ -144,15 +146,15 @@ footer nav li a {
 }
 
 .wm-alert {
-  background-color: var( --background-color-framed );
+  background-color: var( --background-color-notice-subtle );
   border-radius: var( --border-radius-base );
   border: var( --border-base );
   color: var( --color-base );
   padding: 1rem;
 }
 .wm-alert-error {
-  background-color: var( --background-color-error--framed );
-  border: var( --border-error );
+  background-color: var( --background-color-error-subtle );
+  border: var( --border-width-base ) var( --border-style-base ) var( --border-color-error );
   color: var( --color-error );
 }
 
@@ -165,31 +167,30 @@ footer nav li a {
 .wm-nav li > a {
   display: block;
   padding: 1rem 2.4rem;
-  border-radius: 2px;
-  color: var( --wmui-color-base10 );
+  border-radius: var( --border-radius-base );
+  color: var( --color-base );
 }
 .wm-nav li ul {
   margin-left: 2.4rem;
-  border-left: 1px solid var( --wmui-color-base80 );
+  border-left: 1px solid var( --noc-border-color-soft );
   font-size: 1.4rem;
-  color: var( --wmui-color-base20 );
+  color: var( --color-subtle );
 }
 .wm-nav li > a:hover {
-  background: var( --wmui-color-base90 );
+  background: var( --background-color-interactive-subtle );
 }
 .wm-nav .wm-nav-item-active,
 .wm-nav .wm-nav-item-active:hover {
-  background-color: var( --wmui-color-accent90 );
-  color: var( --wmui-color-accent50 );
+  background-color: var( --background-color-progressive-subtle );
+  color: var( --color-progressive );
   border-radius: var( --border-radius-base );
   font-weight: var( --font-weight-semi-bold );
   cursor: default;
-}
 
 .wm-btn {
   display: inline-block;
   padding: 0.6rem 1rem;
-  background-color: var( --background-color-framed );
+  background-color: var( --background-color-interactive-subtle );
   border-radius: var( --border-radius-base );
   border: var( --border-base );
   color: var( --color-base );
@@ -197,18 +198,18 @@ footer nav li a {
   font-size: 1.2rem;
 }
 .wm-btn:hover {
-  background-color: var( --background-color-framed--hover );
-  border-color: var( --border-color-base--hover );
+  background-color: var( --background-color-base );
+  border-color: var( --border-color-base );
   color: var( --color-base--hover );
 }
 .wm-btn:active {
   background-color: var( --background-color-framed--active );
-  border-color: var( --border-color-base--active );
-  color: var( --color-base--active );
+  border-color: var( --border-color-progressive );
+  color: var( --color-emphasized );
 }
 .wm-btn-active {
-  background-color: var( --background-color-input-binary--active );
-  color: var( --wmui-color-base100 );
+  background-color: var( --background-color-progressive--active );
+  color: var( --color-inverted );
   cursor: default;
   pointer-events: none;
 }
@@ -217,14 +218,14 @@ footer nav li a {
 	float: right;
 }
 
-@media (max-width: 720px) {
+@media ( max-width: 720px ) {
   /* Up until --width-breakpoint-tablet */
   main {
     padding-top: 1rem;
   }
 
   .wm-site-nav {
-    box-shadow: var( --box-shadow-menu );
+    box-shadow: var( --box-shadow-drop-medium );
   }
   .wm-site-nav ul {
     margin: 0;
@@ -233,7 +234,7 @@ footer nav li a {
     margin-right: 0;
   }
 }
-@media (min-width: 720px) {
+@media ( min-width: 720px ) {
   /* Beyond --width-breakpoint-tablet */
   .wm-site-nav {
     float: left;
