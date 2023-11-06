@@ -59,6 +59,7 @@ $wgLBFactoryConf = [
 	'avkwiki'       => 's5',
 	'azwikimedia'   => 's5',
 	'banwikisource' => 's5',
+	'bbcwiki'       => 's5',
 	'bclwiktionary' => 's5',
 	'bclwikiquote'  => 's5',
 	'bjnwikiquote'  => 's5',

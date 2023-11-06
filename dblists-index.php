@@ -82,6 +82,7 @@ return [
 'bat_smgwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'bawiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'bawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
+'bbcwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'bclwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'bclwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'bclwiktionary' => [ 'small', 'legacy-vector', 'wikidataclient', 'commonsuploads', 'group1' ],
