@@ -122,6 +122,7 @@ $wgLBFactoryConf = [
 	'vewikimedia'   => 's5',
 	'wikifunctionswiki'  => 's5',
 	'wawikisource'  => 's5',
+	'zghwiki'       => 's5',
 
 	# s6: large wikis + wikitech
 	'frwiki'       => 's6',

@@ -998,6 +998,7 @@ return [
 'zawikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'zawiktionary' => [ 'closed', 'small', 'legacy-vector', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'zeawiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'zghwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'zh_classicalwiki' => [ 'wikipedia', 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads' ],
 'zh_min_nanwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'zh_min_nanwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
