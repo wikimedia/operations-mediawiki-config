@@ -206,6 +206,7 @@ return [
 'dewikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'dewikivoyage' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'cirrussearch-big-indices' ],
 'dewiktionary' => [ 'flaggedrevs', 'legacy-vector', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'dgawiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'dinwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'diqwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'diqwiktionary' => [ 'small', 'legacy-vector', 'wikidataclient', 'commonsuploads', 'group1' ],
