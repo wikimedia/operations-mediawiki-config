@@ -5749,29 +5749,9 @@ return [
 	'yiwiki' => 'NavigationPopups',
 ],
 
-// Enable Reference Previews as a beta feature.
-'wgPopupsReferencePreviews' => [
-	'default' => false,
-	'enwikivoyage' => true, // T235083
-	'sewikimedia' => true, // T235083
-	'wikipedia' => true, // T235083
-	'zhwikivoyage' => true, // T235083
-],
-
-// Enable Reference Previews as a full default feature.
+// Enable Reference Previews when the Popups extension is loaded.
 'wmgPopupsReferencePreviews' => [
-	'default' => false,
-	'group0' => true,
-	'arwiki' => true,
-	'dewiki' => true,
-	'etwiki' => true,
-	'euwiki' => true,
-	'fiwiki' => true,
-	'guwiki' => true,
-	'hewiki' => true,
-	'mrwiki' => true, // T282147
-	'rowiki' => true,
-	'dewikivoyage' => true, // T264305
+	'default' => true,
 ],
 
 'wgPopupsConflictingRefTooltipsGadgetName' => [
