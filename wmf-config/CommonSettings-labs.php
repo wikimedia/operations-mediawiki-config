@@ -58,10 +58,6 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 	'suggestChangeOnLogin' => false,
 ];
 
-// T344605: until someone sets up Thumbor on beta, prefer core thumbnailing to no thumbnailing
-unset( $wgLocalFileRepo['thumbProxyUrl'] );
-unset( $wgLocalFileRepo['thumbProxySecret'] );
-
 // Enforce password policy when users login on other wikis; also for sensitive global groups
 // FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
