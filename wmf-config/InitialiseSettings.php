@@ -6353,6 +6353,7 @@ return [
 	'kgwiki' => true,
 	'lnwiki' => true,
 	'twwiki' => true,
+	'fonwiki' => true, // T350634
 ],
 
 // --------------- VisualEditor end ---------------
