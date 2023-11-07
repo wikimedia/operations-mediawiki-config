@@ -2901,13 +2901,13 @@ return [
 	],
 	'rowiki' => [
 		100 => 'Portal',
-		101 => 'Discuţie_Portal',
+		101 => 'Discuție_Portal', // T350739
 		102 => 'Proiect', // T127607
-		103 => 'Discuţie_Proiect', // T127607
+		103 => 'Discuție_Proiect', // T127607, T350739
 		108 => 'Cod', // T44690 - Code, T127607
 		109 => 'Discuție_Cod', // T127607
 		110 => 'Carte', // T68530, T127607
-		111 => 'Discuţie_Carte', // T127607
+		111 => 'Discuție_Carte', // T127607, T350739
 	],
 	'ruwiki' => [
 		100 => 'Портал',
