@@ -78,7 +78,7 @@ a:hover {
     padding: 0 3.2rem;
   }
   .wm-site-nav {
-    margin: 0 - 3.2rem;
+    margin: 0 -3.2rem;
   }
 }
 
@@ -186,6 +186,7 @@ footer nav li a {
   border-radius: var( --border-radius-base );
   font-weight: var( --font-weight-semi-bold );
   cursor: default;
+}
 
 .wm-btn {
   display: inline-block;
