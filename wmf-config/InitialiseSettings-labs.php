@@ -2526,9 +2526,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
-		'wgCampaignEventsEnableEmail' => [
-			'default' => true,
-		],
 		'wgCampaignEventsEnableParticipantQuestions' => [
 			'default' => true,
 		],
