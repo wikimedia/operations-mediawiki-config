@@ -1874,6 +1874,34 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
+	// Temporary fix for T350695: when setting a CentralAuth cookie without a 'domain' cookie attribute,
+	// clear pre-existing cookies with a domain attribute.
+	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
+		global $wgDBname, $wmgCentralAuthWebResponseSetCookieRecurse, $wgServer;
+		$realName = ( $options['prefix'] ?? '' ) . $name;
+		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token', 'centralauth_LoggedOut' ];
+		$affectedWikis = [ 'commonswiki', 'metawiki' ];
+		if ( in_array( $realName, $centralAuthCookies )
+			&& in_array( $wgDBname, $affectedWikis )
+			&& !( $options['domain'] ?? '' )
+			&& !$wmgCentralAuthWebResponseSetCookieRecurse
+		) {
+			$webResponse = RequestContext::getMain()->getRequest()->response();
+
+			$clearOptions = $options;
+			$serverUrl = wfExpandUrl( $wgServer, PROTO_CANONICAL );
+			if ( MobileContext::singleton()->usingMobileDomain() ) {
+				$serverUrl = MobileContext::singleton()->getMobileUrl( $serverUrl );
+			}
+			$parsedUrl = wfParseUrl( $serverUrl );
+			$clearOptions['domain'] = $parsedUrl['host'];
+
+			$wmgCentralAuthWebResponseSetCookieRecurse = true;
+			$webResponse->clearCookie( $name, $clearOptions );
+			$wmgCentralAuthWebResponseSetCookieRecurse = false;
+		}
+	};
+
 	/**
 	 * This function is used for both the CentralAuthWikiList and
 	 * GlobalUserPageWikis hooks.
