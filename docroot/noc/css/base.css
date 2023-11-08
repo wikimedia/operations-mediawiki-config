@@ -3,7 +3,7 @@
 @import "../lib/codex-design-tokens/theme-wikimedia-ui.css";
 
 :root {
-  --noc-max-width-desktop-wide: 1200px;
+	--noc-max-width-desktop-wide: 1200px;
 	--noc-background-color-neutral: #eaecf0;
 	--noc-border-color-soft: #eaecf0;
 }
@@ -18,201 +18,201 @@ html {
 }
 
 body {
-  margin: 0;
-  font-size: 1.6rem;
+	margin: 0;
+	font-size: 1.6rem;
 }
 
 h1 {
-  font-size: 3.2rem;
-  font-family: var( --font-family-serif );
-  font-weight: var( --font-weight-normal );
+	font-size: 3.2rem;
+	font-family: var( --font-family-serif );
+	font-weight: var( --font-weight-normal );
 }
 
 h2 {
-  font-size: 2.4rem;
-  padding-bottom: 2px;
-  border-bottom: 3px solid var( --noc-border-color-soft );
+	font-size: 2.4rem;
+	padding-bottom: 2px;
+	border-bottom: 3px solid var( --noc-border-color-soft );
 }
 
 blockquote {
-  padding-left: 1rem;
-  border-left: 3px solid var( --noc-border-color-soft );
+	padding-left: 1rem;
+	border-left: 3px solid var( --noc-border-color-soft );
 }
 
 hr {
-  margin: 3.2rem 0;
-  border: 3px solid var( --noc-border-color-soft );
+	margin: 3.2rem 0;
+	border: 3px solid var( --noc-border-color-soft );
 }
 
 p {
-  line-height: 1.5;
+	line-height: 1.5;
 }
 
 a {
-  color: var( --color-progressive );
-  text-decoration: none;
+	color: var( --color-progressive );
+	text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-  text-underline-position: under;
+	text-decoration: underline;
+	text-underline-position: under;
 }
 
 .wm-container {
-  margin: 0 auto;
-  max-width: var( --noc-max-width-desktop-wide );
-  padding: 0 1rem;
-  box-sizing: border-box;
+	margin: 0 auto;
+	max-width: var( --noc-max-width-desktop-wide );
+	padding: 0 1rem;
+	box-sizing: border-box;
 }
 @media ( min-width: 320px ) {
-  /* Beyond --width-breakpoint-mobile */
-  .wm-container {
-    padding: 0 2rem;
-  }
-  .wm-site-nav {
-    margin: 0 -2rem;
-  }
+	/* Beyond --width-breakpoint-mobile */
+	.wm-container {
+		padding: 0 2rem;
+	}
+	.wm-site-nav {
+		margin: 0 -2rem;
+	}
 }
 @media ( min-width: 720px ) {
-  /* Beyond --width-breakpoint-tablet */
-  .wm-container {
-    padding: 0 3.2rem;
-  }
-  .wm-site-nav {
-    margin: 0 -3.2rem;
-  }
+	/* Beyond --width-breakpoint-tablet */
+	.wm-container {
+		padding: 0 3.2rem;
+	}
+	.wm-site-nav {
+		margin: 0 -3.2rem;
+	}
 }
 
 header .wm-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 header a[role="banner"] {
-  line-height: 4.9rem;
-  font-weight: var( --font-weight-bold );
-  color: inherit;
+	line-height: 4.9rem;
+	font-weight: var( --font-weight-bold );
+	color: inherit;
 }
 header a[role="banner"] em {
-  font-weight: normal;
-  font-style: normal;
+	font-weight: normal;
+	font-style: normal;
 }
 .wm-header-caption {
-  line-height: 4.9rem;
+	line-height: 4.9rem;
 }
 @media ( max-width: 768px ) {
-  .wm-header-caption {
-    display: none;
-  }
+	.wm-header-caption {
+		display: none;
+	}
 }
 
 main {
 	background: var( --background-color-base );
 	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
-  padding: 3.2rem 0 6rem 0;
+	padding: 3.2rem 0 6rem 0;
 }
 
 ul {
-  margin: 1rem;
-  padding: 0;
+	margin: 1rem;
+	padding: 0;
 }
 ul ul {
-  margin: 0 0 0 1em;
+	margin: 0 0 0 1em;
 }
 
 footer {
-  padding: 2.4rem 0;
-  font-size: 1.3rem;
+	padding: 2.4rem 0;
+	font-size: 1.3rem;
 }
 footer nav ul {
-  margin: 1em 0;
+	margin: 1em 0;
 }
 footer nav ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 0 0.8rem 0 0;
+	list-style: none;
+	display: inline-block;
+	padding: 0 0.8rem 0 0;
 }
 footer nav li a {
-  font-weight: bold;
+	font-weight: bold;
 }
 @media ( min-width: 414px ) {
-  footer nav li:after {
-    content: "\2022";
-    color: var( --color-subtle );
-    padding: 0 0 0 0.8rem;
-  }
-  footer nav li:last-child:after {
-    content: "";
-  }
+	footer nav li:after {
+		content: "\2022";
+		color: var( --color-subtle );
+		padding: 0 0 0 0.8rem;
+	}
+	footer nav li:last-child:after {
+		content: "";
+	}
 }
 
 .wm-alert {
-  background-color: var( --background-color-notice-subtle );
-  border-radius: var( --border-radius-base );
-  border: var( --border-base );
-  color: var( --color-base );
-  padding: 1rem;
+	background-color: var( --background-color-notice-subtle );
+	border-radius: var( --border-radius-base );
+	border: var( --border-base );
+	color: var( --color-base );
+	padding: 1rem;
 }
 .wm-alert-error {
-  background-color: var( --background-color-error-subtle );
-  border: var( --border-width-base ) var( --border-style-base ) var( --border-color-error );
-  color: var( --color-error );
+	background-color: var( --background-color-error-subtle );
+	border: var( --border-width-base ) var( --border-style-base ) var( --border-color-error );
+	color: var( --color-error );
 }
 
 .wm-nav li {
-  display: block;
-  flex: 0 1 345px;
-  margin: 0 1rem 0.1rem 0;
-  box-sizing: border-box;
+	display: block;
+	flex: 0 1 345px;
+	margin: 0 1rem 0.1rem 0;
+	box-sizing: border-box;
 }
 .wm-nav li > a {
-  display: block;
-  padding: 1rem 2.4rem;
-  border-radius: var( --border-radius-base );
-  color: var( --color-base );
+	display: block;
+	padding: 1rem 2.4rem;
+	border-radius: var( --border-radius-base );
+	color: var( --color-base );
 }
 .wm-nav li ul {
-  margin-left: 2.4rem;
-  border-left: 1px solid var( --noc-border-color-soft );
-  font-size: 1.4rem;
-  color: var( --color-subtle );
+	margin-left: 2.4rem;
+	border-left: 1px solid var( --noc-border-color-soft );
+	font-size: 1.4rem;
+	color: var( --color-subtle );
 }
 .wm-nav li > a:hover {
-  background: var( --background-color-interactive-subtle );
+	background: var( --background-color-interactive-subtle );
 }
 .wm-nav .wm-nav-item-active,
 .wm-nav .wm-nav-item-active:hover {
-  background-color: var( --background-color-progressive-subtle );
-  color: var( --color-progressive );
-  border-radius: var( --border-radius-base );
-  font-weight: var( --font-weight-semi-bold );
-  cursor: default;
+	background-color: var( --background-color-progressive-subtle );
+	color: var( --color-progressive );
+	border-radius: var( --border-radius-base );
+	font-weight: var( --font-weight-semi-bold );
+	cursor: default;
 }
 
 .wm-btn {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  background-color: var( --background-color-interactive-subtle );
-  border-radius: var( --border-radius-base );
-  border: var( --border-base );
-  color: var( --color-base );
-  font-weight: var( --font-weight-semi-bold );
-  font-size: 1.2rem;
+	display: inline-block;
+	padding: 0.6rem 1rem;
+	background-color: var( --background-color-interactive-subtle );
+	border-radius: var( --border-radius-base );
+	border: var( --border-base );
+	color: var( --color-base );
+	font-weight: var( --font-weight-semi-bold );
+	font-size: 1.2rem;
 }
 .wm-btn:hover {
-  background-color: var( --background-color-base );
-  border-color: var( --border-color-base );
-  color: var( --color-base--hover );
+	background-color: var( --background-color-base );
+	border-color: var( --border-color-base );
+	color: var( --color-base--hover );
 }
 .wm-btn:active {
-  background-color: var( --background-color-framed--active );
-  border-color: var( --border-color-progressive );
-  color: var( --color-emphasized );
+	background-color: var( --background-color-framed--active );
+	border-color: var( --border-color-progressive );
+	color: var( --color-emphasized );
 }
 .wm-btn-active {
-  background-color: var( --background-color-progressive--active );
-  color: var( --color-inverted );
-  cursor: default;
-  pointer-events: none;
+	background-color: var( --background-color-progressive--active );
+	color: var( --color-inverted );
+	cursor: default;
+	pointer-events: none;
 }
 
 .noc-tab-action {
@@ -220,44 +220,44 @@ footer nav li a {
 }
 
 @media ( max-width: 720px ) {
-  /* Up until --width-breakpoint-tablet */
-  main {
-    padding-top: 1rem;
-  }
+	/* Up until --width-breakpoint-tablet */
+	main {
+		padding-top: 1rem;
+	}
 
-  .wm-site-nav {
-    box-shadow: var( --box-shadow-drop-medium );
-  }
-  .wm-site-nav ul {
-    margin: 0;
-  }
-  .wm-site-nav li {
-    margin-right: 0;
-  }
+	.wm-site-nav {
+		box-shadow: var( --box-shadow-drop-medium );
+	}
+	.wm-site-nav ul {
+		margin: 0;
+	}
+	.wm-site-nav li {
+		margin-right: 0;
+	}
 }
 @media ( min-width: 720px ) {
-  /* Beyond --width-breakpoint-tablet */
-  .wm-site-nav {
-    float: left;
-    width: 25.6rem;
-    position: relative;
-    z-index: 1;
-  }
-  article {
-    float: left;
-    box-sizing: border-box;
-    width:  100%;
-    margin-left: -25.6rem;
-    padding-left: 27.6rem;
-  }
+	/* Beyond --width-breakpoint-tablet */
+	.wm-site-nav {
+		float: left;
+		width: 25.6rem;
+		position: relative;
+		z-index: 1;
+	}
+	article {
+		float: left;
+		box-sizing: border-box;
+		width:  100%;
+		margin-left: -25.6rem;
+		padding-left: 27.6rem;
+	}
 
-  main h1:first-child {
-    margin-top: 0;
-  }
+	main h1:first-child {
+		margin-top: 0;
+	}
 
-  main:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
+	main:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 }
