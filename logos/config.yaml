@@ -4455,7 +4455,6 @@ Wikivoyage:
             wikimaniawiki-2023:
                 commons: 'File:Wikimania 2023 Singapore Square logo.svg'
         local_wordmark: true
-        local_tagline: true
         comment_wordmark: T286405
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
