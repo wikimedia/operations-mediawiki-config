@@ -3728,6 +3728,7 @@ if ( $wmgUseMediaModeration ) {
 	if ( $wmgRealm === 'production' ) {
 		$wgMediaModerationHttpProxy = $wmgLocalServices['urldownloader'];
 	}
+	$wgVirtualDomainsMapping['virtual-mediamoderation'] = [ 'cluster' => 'extension1', 'db' => false ];
 
 	wfLoadExtension( 'MediaModeration' );
 	// This relies on configuration in PrivateSettings.php:
