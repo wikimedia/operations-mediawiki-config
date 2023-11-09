@@ -899,7 +899,7 @@ return [
 	'wikimania2017wiki' => '/static/images/project-logos/wikimania2017wiki.png', // T122062
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki.png', // T173042
 	'wikimaniateamwiki' => '/static/images/project-logos/wikimaniateamwiki.png', // T50376
-	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2023.png',
+	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki.png',
 	'wikitech' => '/static/images/project-logos/wikitech.png',
 
 ],
@@ -1522,7 +1522,7 @@ return [
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-1.5x.png', // T230120
 	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki-1.5x.png',
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', // T194340
-	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2023-1.5x.png', // T194340, T337044
+	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-1.5x.png', // T194340, T337044
 	'wikitech' => '/static/images/project-logos/wikitech-1.5x.png',
 
 ],
@@ -2145,7 +2145,7 @@ return [
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-2x.png', // T230120
 	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki-2x.png',
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-2x.png', // T194340
-	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2023-2x.png', // T194340, T337044
+	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2x.png', // T194340, T337044
 	'wikitech' => '/static/images/project-logos/wikitech-2x.png',
 
 ],
