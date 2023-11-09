@@ -8444,6 +8444,11 @@ return [
 	'wikipedia' => false,
 ],
 
+'wgContentTranslationEnableUnifiedDashboard' => [
+	'default' => false,
+	'testwiki' => true, // T337915
+],
+
 'wgSpecialContributeSkinsEnabled' => [
 	'default' => [],
 	'mlwiki' => [ "minerva", "vector-2022" ],
