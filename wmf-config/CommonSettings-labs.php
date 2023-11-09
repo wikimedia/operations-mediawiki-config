@@ -458,6 +458,9 @@ $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'scramble' ];
 
 if ( $wmgEnableIPMasking ) {
 	$wgAutoCreateTempUser['enabled'] = true;
+	// NOTE: expireAfterDays is supposed to be set to 365 days (a year), this is
+	// to facilitate QAing the feature (T344695).
+	$wgAutoCreateempUser['expireAfterDays'] = 1;
 	// editing is enabled only for temp accounts
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['temp']['edit'] = true;
