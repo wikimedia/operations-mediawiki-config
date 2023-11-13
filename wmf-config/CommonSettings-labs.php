@@ -320,6 +320,10 @@ if ( $wmgUseGraph ) {
 	];
 }
 
+if ( $wmgUseMediaModeration ) {
+	$wgVirtualDomainsMapping['virtual-mediamoderation'] = [ 'db' => false ];
+}
+
 if ( $wmgUseORES ) {
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
