@@ -11063,7 +11063,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2-ar',
-			'question' => 'reader-demographics--survey-question',
+			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
 			'coverage' => 0,
 			'audience' => [
