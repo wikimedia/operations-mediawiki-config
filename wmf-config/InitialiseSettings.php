@@ -11041,7 +11041,6 @@ return [
 	'itwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
-	'metawiki' => true,
 	'nlwiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
@@ -11426,23 +11425,6 @@ return [
 			'link' => 'reader-demographics-2-survey-link',
 			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
-	],
-	'metawiki' => [
-		// T349854
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'pilot-meta-survey',
-			'question' => 'ext-quicksurveys-example-external-survey-question',
-			'description' => 'ext-quicksurveys-example-external-survey-description',
-			'link' => 'ext-quicksurveys-example-external-survey-link',
-			'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
-			'coverage' => '0',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			]
-		]
 	],
 	'nlwiki' => [
 		// T344393
