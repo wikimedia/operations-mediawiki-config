@@ -11168,7 +11168,7 @@ return [
 			'name' => 'reader-demographics-2-en',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0,
+			'coverage' => 0.02,
 			'audience' => [
 				'anons' => true
 			],
