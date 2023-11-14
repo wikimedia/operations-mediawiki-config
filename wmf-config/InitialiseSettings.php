@@ -12861,6 +12861,10 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCampaignEventsEnableParticipantQuestions' => [
+	'default' => true,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
