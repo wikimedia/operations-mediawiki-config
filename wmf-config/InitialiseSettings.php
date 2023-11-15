@@ -10943,10 +10943,6 @@ return [
 	'default' => 'mcrouter-primary-dc', // declared in mc.php
 	'wikitech' => 'memcached-pecl',
 ],
-'wgStatsCacheType' => [
-	'default' => 'mcrouter-primary-dc',
-	'wikitech' => 'memcached-pecl',
-],
 'wgMicroStashType' => [
 	'default' => 'mcrouter-primary-dc',
 	'wikitech' => 'memcached-pecl',
