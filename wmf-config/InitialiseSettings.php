@@ -10957,6 +10957,10 @@ return [
 	'default' => 'mcrouter-primary-dc',
 	'wikitech' => 'memcached-pecl',
 ],
+'wgMicroStashType' => [
+	'default' => 'mcrouter-primary-dc',
+	'wikitech' => 'memcached-pecl',
+],
 
 'wmgFileExtensions' => [
 	// Note that 'wmgPrivateWikiUploads' allows additional file extensions on some wikis
