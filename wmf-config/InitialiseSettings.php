@@ -11068,6 +11068,7 @@ return [
 	'viwiki' => true,
 	'zhwiki' => true,
 	'commonswiki' => true,
+	'metawiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
@@ -11649,7 +11650,29 @@ return [
 			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
-
+	'metawiki' => [
+		// T351353
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'annual-plan-core-metrics-feedback-2023',
+			'question' => 'annual-plan-core-metrics-feedback-2023-survey-question',
+			'description' => 'annual-plan-core-metrics-feedback-2023-survey-description',
+			'coverage' => 0, // NOTE: increase later to 1
+			'audience' => [
+				// NOTE: restrict to viewers of report page (TBD)
+				'anons' => false
+			],
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'link' => 'annual-plan-core-metrics-feedback-2023-survey-link',
+			'privacyPolicy' => 'annual-plan-core-metrics-feedback-2023-survey-privacy-policy',
+			'yesMsg' => 'annual-plan-core-metrics-feedback-2023-survey-yes',
+			'noMsg' => 'annual-plan-core-metrics-feedback-2023-survey-no',
+		],
+	],
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
 
