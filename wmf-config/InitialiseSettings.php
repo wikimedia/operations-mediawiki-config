@@ -7058,7 +7058,8 @@ return [
 ],
 
 'wgMFAmcOutreach' => [
-	'default' => true, // T234026
+	// Temporarily disabled until T351362 is addressed.
+	'default' => false,
 ],
 
 'wgMFCollapseSectionsByDefault' => [
