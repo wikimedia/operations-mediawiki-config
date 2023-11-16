@@ -5651,6 +5651,10 @@ return [
 	'default' => false,
 ],
 
+// Note: If you're adding new wikis to this list, also make sure that the Popups
+// extension knows the local names of the NavPopups or Reference Tooltips gadgets
+// by setting wgPopupsConflictingNavPopupsGadgetName and
+// wgPopupsConflictingRefTooltipsGadgetName accordingly.
 'wmgUsePopups' => [
 	'default' => false,
 	'sewikimedia' => true, // T68374
@@ -5761,27 +5765,22 @@ return [
 
 'wgPopupsConflictingRefTooltipsGadgetName' => [
 	'default' => 'ReferenceTooltips',
-	'arwiki' => 'CiteTooltip',
+	'altwiki' => 'referenceTooltips',
+	'avwiki' => 'referenceTooltips',
 	'azwiki' => 'referenceTooltips',
 	'bawiki' => 'referenceTooltips',
 	'cewiki' => 'referenceTooltips',
-	'cswikisource' => 'ReferencePopups',
-	'cswiktionary' => 'ReferencePopups',
+	'euwiki' => 'ErrefAurrebista',
 	'frwiki' => 'tooltipRef',
-// 'hewiki' => 'CiteTooltip', // check disabled T276330
-	'hewikibooks' => 'RefTooltip',
-	'hewikinews' => 'RefTooltip',
-	'hewikisource' => 'CiteTooltip',
-	'itwikivoyage' => 'ReferenceTooltip',
+	'hrwiki' => 'izvori',
+	'inhwiki' => 'referenceTooltips',
+	'lbewiki' => 'referenceTooltips',
 	'lezwiki' => 'referenceTooltips',
 	'myvwiki' => 'referenceTooltips',
 	'ruwiki' => 'referenceTooltips',
-	'ruwikibooks' => 'referenceTooltips',
-	'ruwikinews' => 'referenceTooltips',
-	'ruwikisource' => 'referenceTooltips',
 	'tgwiki' => 'referenceTooltips',
+	'ttwiki' => 'referenceTooltips',
 	'udmwiki' => 'referenceTooltips',
-	'dewikivoyage' => 'ReferenceTooltips',
 ],
 
 // Whether Compact Links is a Beta feature
