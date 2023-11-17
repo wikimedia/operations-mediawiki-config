@@ -1066,6 +1066,16 @@ function wmfGetOverrideSettings() {
 			'default' => "//upload.wikimedia.beta.wmflabs.org/phonos",
 		],
 
+		'wgRateLimits' => [
+			'default' => [
+				// T351299: Relax rate limiting on beta labs for community feedback period.
+				'reportincident' => [
+					'user' => [ 20, 86400 ],
+					'newbie' => [ 10, 86400 ],
+				],
+			],
+		],
+
 		'wgRateLimitsExcludedIPs' => [
 			'default' => [
 				'198.73.209.0/24', // T87841 Office IP
