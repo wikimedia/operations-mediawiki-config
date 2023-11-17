@@ -1490,7 +1490,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wgPageTriageEnableExtendedFeatures' => [
 			'default' => false, // T321922
-			'testwiki' => true,
 			'test2wiki' => true,
 			'enwiki' => true,
 		],
