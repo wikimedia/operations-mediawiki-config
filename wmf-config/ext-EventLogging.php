@@ -21,8 +21,6 @@ return [
 		'eventlogging_CodeMirrorUsage',
 		'eventlogging_CpuBenchmark',
 		'eventlogging_DesktopWebUIActionsTracking',
-		'eventlogging_EchoInteraction',
-		'eventlogging_EchoMail',
 		'eventlogging_EditAttemptStep',
 		'eventlogging_FeaturePolicyViolation',
 		'eventlogging_HelpPanel',
