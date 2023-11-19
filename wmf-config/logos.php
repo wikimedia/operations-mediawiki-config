@@ -379,6 +379,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki.png',
 	'zawiki' => '/static/images/project-logos/zawiki.png', // T50397
 	'zeawiki' => '/static/images/project-logos/zeawiki.png', // T51125
+	'zghwiki' => '/static/images/project-logos/zghwiki.png', // T350241
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
@@ -1224,6 +1225,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki-1.5x.png', // T150618
 	'zawiki' => '/static/images/project-logos/zawiki-1.5x.png', // T150618
 	'zeawiki' => '/static/images/project-logos/zeawiki-1.5x.png', // T150618
+	'zghwiki' => '/static/images/project-logos/zghwiki-1.5x.png', // T350241
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-1.5x.png', // T150618
@@ -1848,6 +1850,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki-2x.png', // T150618
 	'zawiki' => '/static/images/project-logos/zawiki-2x.png', // T150618
 	'zeawiki' => '/static/images/project-logos/zeawiki-2x.png', // T150618
+	'zghwiki' => '/static/images/project-logos/zghwiki-2x.png', // T350241
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-2x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-2x.png', // T150618
@@ -3277,6 +3280,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-za.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'zghwiki' => [ // T350241
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zgh.svg',
+		'width' => 119,
+		'height' => 23,
 	],
 	'zh_classicalwiki' => [ // T174192, T261110
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh_classical.svg',
@@ -7105,6 +7113,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zea.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'zghwiki' => [ // T350241
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zgh.svg',
+		'width' => 99,
+		'height' => 10,
 	],
 	'zh_classicalwiki' => [ // T258552, T261110
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh_classical.svg',

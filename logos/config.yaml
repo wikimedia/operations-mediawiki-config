@@ -1858,6 +1858,15 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    zghwiki:
+        commons: 'File:Wikipedia-logo-v2-zgh.svg'
+        comment: T350241
+        comment_1_5x: T350241
+        comment_2x: T350241
+        commons_wordmark: 'File:Wikipedia_wordmark-zgh.svg'
+        comment_wordmark: T350241
+        commons_tagline: 'File:Wikipedia-tagline-zgh.svg'
+        comment_tagline: T350241
     zh_classicalwiki:
         commons: 'File:Wikipedia-logo-v4-zh-classical.svg'
         comment: 'T177165, T259006'
