@@ -322,6 +322,7 @@ return [
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
 	'bjnwiki' => 'Asia/Makassar', // T328887
+	'bjnwikiquote' => 'Asia/Makassar', // T350235
 	'bjnwiktionary' => 'Asia/Makassar',
 	'blkwiki' => 'Asia/Rangoon',
 	'blkwiktionary' => 'Asia/Yangon',
@@ -1131,6 +1132,7 @@ return [
 	'bgwiktionary' => 'Уикиречник',
 	'bhwiki' => 'विकिपीडिया',
 	'bjnwiki' => 'Wikipidia',
+	'bjnwikiquote' => 'Wikipapadah',
 	'blkwiki' => 'ဝီခီပီးဒီးယား', // T334351
 	'blkwiktionary' => 'ဝိစ်သိဉ်နရီ',
 	'bnwiki' => 'উইকিপিডিয়া',
