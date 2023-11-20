@@ -1209,10 +1209,6 @@ if ( $wmgUseSyntaxHighlight ) {
 	}
 }
 
-if ( $wmgUseDoubleWiki ) {
-	wfLoadExtension( 'DoubleWiki' );
-}
-
 if ( $wmgUsePoem ) {
 	wfLoadExtension( 'Poem' );
 }
