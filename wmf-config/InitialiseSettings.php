@@ -353,6 +353,7 @@ return [
 	'dewikisource' => 'Europe/Berlin',
 	'dewikivoyage' => 'Europe/Berlin', // T43992
 	'dewikiversity' => 'Europe/Berlin',
+	'dgawiki' => 'Africa/Accra', // T350229
 	'dinwiki' => 'Africa/Juba',
 	'diqwiktionary' => 'Europe/Istanbul',
 	'dsbwiki' => 'Europe/Berlin',
@@ -1188,6 +1189,7 @@ return [
 	'cywikisource' => 'Wicidestun',
 	'cywiktionary' => 'Wiciadur',
 	'dagwiki' => 'Dagbani Wikipedia',
+	'dgawiki' => 'Wikipiideɛ', // T350229
 	'dkwikimedia' => 'Wikimedia Danmark',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',

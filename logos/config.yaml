@@ -406,6 +406,15 @@ Wikipedia:
         comment_2x: T132792
         commons_tagline: 'File:Wikipedia-tagline-de.svg'
         comment_tagline: T258552
+    dgawiki:
+        commons: 'File:Wikipedia-logo-v2-dga.svg'
+        comment: T350229
+        comment_1_5x: T350229
+        comment_2x: T350229
+        commons_wordmark: 'File:Wikipedia-wordmark-dga.svg'
+        comment_wordmark: T350229
+        commons_tagline: 'File:Wikipedia-tagline-dga.svg'
+        comment_tagline: T350229
     dinwiki:
         local_tagline: true
     diqwiki:

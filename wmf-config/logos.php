@@ -109,6 +109,7 @@ return [
 	'dawiki' => '/static/images/project-logos/dawiki.png',
 	'dagwiki' => '/static/images/project-logos/dagwiki.png',
 	'dewiki' => '/static/images/project-logos/dewiki.png',
+	'dgawiki' => '/static/images/project-logos/dgawiki.png', // T350229
 	'dinwiki' => '/static/images/project-logos/dinwiki.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki.png',
 	'dsbwiki' => '/static/images/project-logos/dsbwiki.png',
@@ -971,6 +972,7 @@ return [
 	'dawiki' => '/static/images/project-logos/dawiki-1.5x.png', // T131033
 	'dagwiki' => '/static/images/project-logos/dagwiki-1.5x.png',
 	'dewiki' => '/static/images/project-logos/dewiki-1.5x.png', // T132792
+	'dgawiki' => '/static/images/project-logos/dgawiki-1.5x.png', // T350229
 	'dinwiki' => '/static/images/project-logos/dinwiki-1.5x.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki-1.5x.png', // T150618
 	'dsbwiki' => '/static/images/project-logos/dsbwiki-1.5x.png', // T150618
@@ -1594,6 +1596,7 @@ return [
 	'dawiki' => '/static/images/project-logos/dawiki-2x.png', // T131033
 	'dagwiki' => '/static/images/project-logos/dagwiki-2x.png',
 	'dewiki' => '/static/images/project-logos/dewiki-2x.png', // T132792
+	'dgawiki' => '/static/images/project-logos/dgawiki-2x.png', // T350229
 	'dinwiki' => '/static/images/project-logos/dinwiki-2x.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki-2x.png', // T150618
 	'dsbwiki' => '/static/images/project-logos/dsbwiki-2x.png', // T150618
@@ -2427,6 +2430,11 @@ return [
 	'cywiki' => [ // T254788
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cy.svg',
 		'width' => 120,
+		'height' => 18,
+	],
+	'dgawiki' => [ // T350229
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-dga.svg',
+		'width' => 118,
 		'height' => 18,
 	],
 	'diqwiki' => [
@@ -5796,6 +5804,11 @@ return [
 	'dewiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-de.svg',
 		'width' => 120,
+		'height' => 13,
+	],
+	'dgawiki' => [ // T350229
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-dga.svg',
+		'width' => 113,
 		'height' => 13,
 	],
 	'dinwiki' => [
