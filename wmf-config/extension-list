@@ -38,7 +38,6 @@ $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DiscussionTools/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
 $IP/extensions/DonationInterface/extension.json
-$IP/extensions/DoubleWiki/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
