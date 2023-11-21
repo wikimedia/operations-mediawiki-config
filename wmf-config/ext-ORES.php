@@ -47,6 +47,9 @@ return [
 'wgOresUseLiftwing' => [
 	'default' => true,
 ],
+'wgOresLiftWingAddHostHeader' => [
+	'default' => true,
+],
 'wgOresModels' => [
 	'default' => [
 		'damaging' => [ 'enabled' => true ],
