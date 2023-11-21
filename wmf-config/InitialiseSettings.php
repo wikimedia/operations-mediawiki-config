@@ -6435,10 +6435,6 @@ return [
 	],
 ],
 
-'wmgUseDoubleWiki' => [
-	'default' => false,
-],
-
 'wgCategoryCollation' => [
 	'default' => 'uppercase',
 	// Multilingual wikis
