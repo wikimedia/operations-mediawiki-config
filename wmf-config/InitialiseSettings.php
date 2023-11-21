@@ -11184,7 +11184,7 @@ return [
 	'enwiki' => [
 		// T344393
 		[
-			'enabled' => true,
+			'enabled' => false,
 			'type' => 'external',
 			'name' => 'reader-demographics-2-en',
 			'question' => 'reader-demographics-2-survey-question',
