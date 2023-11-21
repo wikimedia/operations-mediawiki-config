@@ -20,7 +20,7 @@ class ClusterConfig {
 		'canary' => [ '-canary' ],
 		'k8s'   => [ 'kube-' ],
 		'parsoid' => [ 'parsoid' ],
-		'test' => [ '-test', 'debug' ],
+		'debug' => [ 'debug' ],
 		'api'  => [ 'api_', 'api-' ],
 	];
 
@@ -84,12 +84,21 @@ class ClusterConfig {
 	}
 
 	/**
-	 * Is this cluster group a test environment?
+	 * Is this cluster group a debug environment?
 	 *
 	 * @return bool
 	 */
-	public function isTest() {
-		return $this->hasTrait( 'test' );
+	public function isDebug() {
+		return $this->hasTrait( 'debug' ) || $this->isDebugHost();
+	}
+
+	/**
+	 * Checks to see if the current host is a debug host.
+	 *
+	 * @return bool
+	 */
+	private function isDebugHost() {
+		return strpos( $this->getHostname(), 'debug' ) !== false;
 	}
 
 	/**
