@@ -1056,6 +1056,28 @@ function wmfGetOverrideSettings() {
 					'shuffleAnswersDisplay' => true,
 				],
 			],
+			'metawiki' => [
+				// T351353
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'annual-plan-core-metrics-feedback-2023',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'coverage' => 1,
+					'audience' => [
+						'anons' => false,
+						// User:DDesouza/sandbox
+						'pageIds' => [ 9475 ],
+					],
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+				],
+			],
 		],
 
 		'-wgScorePath' => [
@@ -2468,6 +2490,7 @@ function wmfGetOverrideSettings() {
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
 			'enwiki' => true,
+			'metawiki' => true,
 		],
 
 		'-wgMultiShardSiteStats' => [
