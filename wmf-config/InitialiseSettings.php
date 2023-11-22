@@ -11662,10 +11662,10 @@ return [
 			'name' => 'annual-plan-core-metrics-feedback-2023',
 			'question' => 'annual-plan-core-metrics-feedback-2023-survey-question',
 			'description' => 'annual-plan-core-metrics-feedback-2023-survey-description',
-			'coverage' => 0, // NOTE: increase later to 1
+			'coverage' => 0, // TODO: increase to 1
 			'audience' => [
-				// NOTE: restrict to viewers of report page (TBD)
-				'anons' => false
+				'anons' => false,
+				'pageIds' => [ 12482190 ],
 			],
 			'platforms' => [
 				'desktop' => [ 'stable' ],
@@ -11675,6 +11675,7 @@ return [
 			'privacyPolicy' => 'annual-plan-core-metrics-feedback-2023-survey-privacy-policy',
 			'yesMsg' => 'annual-plan-core-metrics-feedback-2023-survey-yes',
 			'noMsg' => 'annual-plan-core-metrics-feedback-2023-survey-no',
+			'confirmMsg' => 'annual-plan-core-metrics-feedback-2023-survey-confirm-msg',
 		],
 	],
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
