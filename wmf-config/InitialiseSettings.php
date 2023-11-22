@@ -5624,7 +5624,6 @@ return [
 'wgBetaFeaturesAllowList' => [
 	'default' => [
 		'beta-feature-flow-user-talk-page',  // [Growth_] On-going (special permission) – Flow opt-in
-		'popupsreferencepreviews',           // [WMDE TW] 2019-10-04 – Reference Previews
 		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool

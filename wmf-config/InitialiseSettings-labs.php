@@ -1304,10 +1304,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgPopupsReferencePreviewsBetaFeature' => [
-			'default' => false,
-		],
-
 		'wmgEnableDashikiData' => [
 			'default' => true,
 		],

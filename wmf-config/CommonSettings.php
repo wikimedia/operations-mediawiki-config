@@ -2540,7 +2540,6 @@ if ( $wmgUsePopups ) {
 
 	if ( $wmgPopupsReferencePreviews ) {
 		$wgPopupsReferencePreviews = true;
-		$wgPopupsReferencePreviewsBetaFeature = false;
 	}
 }
 
