@@ -11675,7 +11675,7 @@ return [
 			'name' => 'annual-plan-core-metrics-feedback-2023',
 			'question' => 'annual-plan-core-metrics-feedback-2023-survey-question',
 			'description' => 'annual-plan-core-metrics-feedback-2023-survey-description',
-			'coverage' => 0, // TODO: increase to 1
+			'coverage' => 1,
 			'audience' => [
 				'anons' => false,
 				'pageIds' => [ 12482190 ],
