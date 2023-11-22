@@ -976,65 +976,6 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
-				// T316464
-				[
-					'enabled' => true,
-					'type' => 'external',
-					'name' => 'research-incentive',
-					'question' => 'research-incentive-message',
-					'description' => 'research-incentive-description',
-					'answers' => [
-						'ext-quicksurveys-example-internal-survey-answer-positive',
-						'ext-quicksurveys-example-internal-survey-answer-negative',
-					],
-					'confirmMsg' => 'research-incentive-confirm-msg',
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-					'link' => 'research-incentive-link',
-					'privacyPolicy' => 'research-incentive-privacy',
-				],
-				// T318333
-				[
-					'enabled' => true,
-					'type' => 'external',
-					'name' => 'research-incentive-georestricted',
-					'question' => 'research-incentive-message',
-					'description' => 'research-incentive-description',
-					'confirmMsg' => 'research-incentive-confirm-msg',
-					'coverage' => 1,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-					'audience' => [
-						/*  Latin America
-						Argentina, Bolivia, Brazil, Chile, Colombia, Costa
-						Rica, Cuba, Dominican Republic, Ecuador, El Savador,
-						Guatemala, Haiti, Honduras, Mexico, Nicaragua,
-						Panama, Paraguay, Peru, Suriname, Uruguay, Venezuela */
-
-						/*  Sub-Saharan Africa
-						Angola, Benin, Botswana, Burkina Faso, Burundi,
-						Cameroon, Cape Verde, Central African Republic,
-						Chad, Comoros, Democratic Republic of the Congo,
-						Equatorial Guinea, Eritrea, Eswatini (Swaziland), Ethiopia,
-						Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Ivory
-						Coast, Kenya, Lesotho, Liberia, Madagascar, Malawi,
-						Mali, Mauritania, Mauiritius, Mozambique, Namibia,
-						Niger, Nigeria, Republic of the Congo, Rwanda, São
-						Tomé and Príncipe, Senegal, Seychelles, Sierra
-						Leone, Somalia, South Africa, South Sudan, Sudan,
-						Tanzania, Togo, Uganda, Zambia, Zimbabwe */
-						'countries' => [ 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'CU', 'DR', 'EC', 'SV', 'GT', 'HT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'SR', 'UY', 'VE', 'AO', 'BJ', 'BW', 'BF', 'BI', 'CM', 'CV', 'CF', 'TD',  'KM', 'CD', 'GQ', 'ER', 'SZ', 'ET', 'GA', 'GM', 'GH', 'GN', 'GW', 'CI', 'KE', 'LS', 'LR', 'MG', 'MW', 'ML', 'MR', 'MU', 'MZ', 'NA', 'NE', 'NG', 'CG', 'RW', 'ST', 'SN', 'SC', 'SL', 'SO', 'ZA', 'SS', 'SD', 'TZ', 'TG', 'UG', 'ZM', 'ZW' ],
-						// User:DDesouza/sandbox
-						'pageIds' => [ 282634 ]
-					],
-					'link' => 'research-incentive-link',
-					'privacyPolicy' => 'research-incentive-privacy',
-				],
 			],
 			'cawiki' => [
 				// T187299
