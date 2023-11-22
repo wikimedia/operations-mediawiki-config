@@ -1961,6 +1961,7 @@ if ( $wmgUseCentralAuth ) {
 
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
+	$wgVirtualDomainsMapping['virtual-botpassword'] = [ 'db' => 'metawiki' ];
 }
 
 // Config for GlobalCssJs
