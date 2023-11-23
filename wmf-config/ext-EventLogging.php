@@ -90,9 +90,6 @@ return [
 		'mediawiki.special_diff_interactions',
 		'wikifunctions.ui',
 	],
-	'+group0' => [
-		'mediawiki.web_ui.interactions',
-	],
 	'+testwiki' => [
 		'mediawiki.visual_editor_feature_use',
 	],

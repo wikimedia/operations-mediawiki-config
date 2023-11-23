@@ -159,11 +159,6 @@ function wmfGetOverrideSettings() {
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
 			'+wikipedia' => [
-				'mediawiki.web_ui.interactions' => [
-					'sample' => [
-						'rate' => 1,
-					],
-				],
 				'mediawiki.visual_editor_feature_use' => [
 					'sample' => [
 						'rate' => 1,
@@ -236,7 +231,6 @@ function wmfGetOverrideSettings() {
 
 		'wgEventLoggingStreamNames' => [
 			'+wikipedia' => [
-				'mediawiki.web_ui.interactions',
 				'mediawiki.visual_editor_feature_use'
 			],
 			'+enwiki' => [
