@@ -160,17 +160,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_FeaturePolicyViolation' => [
-			'schema_title' => 'analytics/legacy/featurepolicyviolation',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_HelpPanel' => [
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
@@ -404,17 +393,6 @@ return [
 		],
 		'eventlogging_SpecialInvestigate' => [
 			'schema_title' => 'analytics/legacy/specialinvestigate',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_SpecialMuteSubmit' => [
-			'schema_title' => 'analytics/legacy/specialmutesubmit',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
