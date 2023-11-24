@@ -4649,6 +4649,7 @@ return [
 
 'wgMathValidModes' => [
 	'default' => [ 'source', 'mathml' ],
+	'dewiki' => [ 'source', 'mathml', 'native' ],
 	'testwiki' => [ 'source', 'mathml', 'native' ],
 ],
 
