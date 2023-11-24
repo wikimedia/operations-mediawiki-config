@@ -7358,6 +7358,7 @@ return [
 
 'wmgUseVips' => [
 	'default' => true,
+	'group0' => false,
 	'wikitech' => false,
 	'lockeddown' => false,
 ],
