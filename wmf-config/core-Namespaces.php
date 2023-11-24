@@ -181,6 +181,10 @@ return [
 		'workshop_talk' => 101, // T195700
 		'Meetup' => 102, // T195700
 		'Meetup_talk' => 103, // T195700
+		'Photowalk' => 104, // T205747, T351903
+		'Photowalk_talk' => 105, // T205747, T351903
+		'Program' => 106, // T351903
+		'Program_talk' => 107, // T351903
 	],
 	'+betawikiversity' => [
 		'Aptarimas' => NS_TALK,
@@ -2231,6 +2235,8 @@ return [
 		103 => 'আড্ডা_আলোচনা', // Meetup talk - T195700
 		104 => 'ফটোওয়াক', // Photowalk - T205747
 		105 => 'ফটোওয়াক_আলোচনা', // Photowalk Talk - T205747
+		106 => 'কার্যক্রম', // Program - T351903
+		107 => 'কার্যক্রম_আলোচনা', // Program Talk - T351903
 	],
 	'boardwiki' => [
 		100 => 'Resolution',
