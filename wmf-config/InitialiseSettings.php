@@ -7007,30 +7007,6 @@ return [
 	'testcommonswiki' => true,
 ],
 
-// These mobile URL rules are manually mirrored by the following codebases.
-// If you change these rules, please notify the appropriate code stewards.
-//
-// 1. Varnish mobile URL redirection
-//    steward: WMF SRE Traffic
-//    Phabricator tag: #Traffic
-//    repo: operations/puppet
-//    file: modules/varnish/templates/text-frontend.inc.vcl.erb
-// 2. Canonical wiki dataset
-//    steward: WMF Movement Insights
-//    Phabricator tag: #Movement-Insights
-//    repo: wikimedia-research/canonical-data on GitHub
-//    file: wiki/generate.ipynb
-//
-// Updated Aug 2023
-'wgMobileUrlTemplate' => [
-	'default' => '%h0.m.%h1.%h2',
-	'mediawikiwiki' => 'm.%h1.%h2',
-	'sourceswiki' => 'm.%h0.%h1', // T38002
-	'wikidatawiki' => 'm.%h1.%h2',
-	'wikifunctionswiki' => 'm.%h1.%h2',
-	'wikitech' => '', // Wikitech uses the same URL for mobile and desktop
-],
-
 'wgMFAutodetectMobileView' => [
 	'default' => false,
 	'wikitech' => true, // Not behind Varnish

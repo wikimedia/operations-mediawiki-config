@@ -15,6 +15,23 @@
  * - beta Wikidata and Wikifunctions as the two www-prefixed wikis which have a beta version
  *   (beta does not use www prefixes so they just get m. added to the front);
  * - wikitech, which does not use mobile domains.
+ *
+ * These mobile URL rules are manually mirrored by the following codebases.
+ * If you change these rules, please notify the appropriate code stewards.
+ *
+ * 1. Varnish mobile URL redirection
+ *    steward: WMF SRE Traffic
+ *    Phabricator tag: #Traffic
+ *    repo: operations/puppet
+ *    file: modules/varnish/templates/text-frontend.inc.vcl.erb
+ * 2. Canonical wiki dataset
+ *    steward: WMF Movement Insights
+ *    Phabricator tag: #Movement-Insights
+ *    repo: wikimedia-research/canonical-data on GitHub
+ *    file: wiki/generate.ipynb
+ *
+ * If you need a history of changes, previously these rules lived under
+ * $wgMobileUrlTemplate in InitialiseSettings.php.
  */
 function wmfMobileUrlCallback( string $domain ): string {
 	// special cases
