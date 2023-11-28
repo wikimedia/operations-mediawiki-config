@@ -540,6 +540,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wmgCentralAuthCookieDomain' => [
+			'default' => '',
 			// wiki families
 			'wikipedia' => '.wikipedia.beta.wmflabs.org',
 			'wikibooks' => '.wikibooks.beta.wmflabs.org',
