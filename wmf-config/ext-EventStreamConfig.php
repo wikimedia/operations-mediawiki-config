@@ -1473,6 +1473,11 @@ return [
 			'canary_events_enabled' => false,
 		],
 
+		'inuka.wiki_highlights_experiment' => [
+			'schema_title' => 'analytics/external/wiki_highlights_experiment',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		// (T336722) Wikifunctions-specific stream
 		'wikifunctions.ui' => [
 			'schema_title' => 'analytics/mediawiki/client/metrics_event',
