@@ -90,9 +90,6 @@ return [
 		'mediawiki.special_diff_interactions',
 		'wikifunctions.ui',
 	],
-	'+testwiki' => [
-		'mediawiki.visual_editor_feature_use',
-	],
 ],
 
 // EventLogging JavaScript client code will POST events to this URI.

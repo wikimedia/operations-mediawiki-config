@@ -159,11 +159,6 @@ function wmfGetOverrideSettings() {
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
 			'+wikipedia' => [
-				'mediawiki.visual_editor_feature_use' => [
-					'sample' => [
-						'rate' => 1,
-					],
-				],
 				// Override default settings to enable
 				// rc0.mediawiki.page_change on selective wikis as we roll it out and test it.
 				// https://phabricator.wikimedia.org/T311129
@@ -230,9 +225,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgEventLoggingStreamNames' => [
-			'+wikipedia' => [
-				'mediawiki.visual_editor_feature_use'
-			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
 				'desktop_mobile_link_clicks',
