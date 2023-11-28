@@ -5762,11 +5762,6 @@ return [
 	'yiwiki' => 'NavigationPopups',
 ],
 
-// Enable Reference Previews when the Popups extension is loaded.
-'wmgPopupsReferencePreviews' => [
-	'default' => true,
-],
-
 'wgPopupsConflictingRefTooltipsGadgetName' => [
 	'default' => 'ReferenceTooltips',
 	'altwiki' => 'referenceTooltips',

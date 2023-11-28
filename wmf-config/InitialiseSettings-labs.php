@@ -1300,10 +1300,6 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
-		'wgPopupsReferencePreviews' => [
-			'default' => true,
-		],
-
 		'wmgEnableDashikiData' => [
 			'default' => true,
 		],
