@@ -6199,6 +6199,9 @@ return [
 	],
 
 	// Wiktionaries
+	'+enwiktionary' => [
+		'Appendix' => true, // T350926
+	],
 	'+frwiktionary' => [
 		'Annexe' => true, // T127819
 		'Thésaurus' => true, // T127819
