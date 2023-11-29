@@ -4980,9 +4980,9 @@ return [
 		'width' => 146,
 		'height' => 24,
 	],
-	'hewikivoyage' => [ // T234278
+	'hewikivoyage' => [ // T351981
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
-		'width' => 88,
+		'width' => 69,
 		'height' => 21,
 	],
 	'hiwikivoyage' => [
