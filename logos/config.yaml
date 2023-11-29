@@ -3001,8 +3001,10 @@ Wikibooks:
     hewikibooks:
         comment_1_5x: T201562
         comment_2x: T201562
-        local_tagline: true
-        local_wordmark: true
+        commons_wordmark: 'File:WikiBooks-wordmark-he.svg'
+        comment_wordmark: T351913
+        commons_tagline: 'File:WikiBooks-tagline-he.svg'
+        comment_tagline: T351913
     hiwikibooks:
         local_tagline: true
         local_wordmark: true
