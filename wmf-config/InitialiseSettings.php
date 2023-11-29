@@ -11181,7 +11181,7 @@ return [
 			'name' => 'reader-demographics-2-el',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.06667,
+			'coverage' => 0.2,
 			'audience' => [
 				'anons' => true
 			],
@@ -11363,7 +11363,7 @@ return [
 			'name' => 'reader-demographics-2-hi',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.075,
+			'coverage' => 0.2,
 			'audience' => [
 				'anons' => true
 			],
@@ -11384,7 +11384,7 @@ return [
 			'name' => 'reader-demographics-2-id',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.075,
+			'coverage' => 0.15,
 			'audience' => [
 				'anons' => true
 			],
@@ -11447,7 +11447,7 @@ return [
 			'name' => 'reader-demographics-2-ko',
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.075,
+			'coverage' => 0.2,
 			'audience' => [
 				'anons' => true
 			],
