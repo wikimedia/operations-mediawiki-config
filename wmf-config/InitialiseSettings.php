@@ -7855,9 +7855,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
-	'default' => false,
-	'dewiki' => true, // T318596
-	'huwiki' => true, // T333570
+	'default' => true, // T352232 - TODO: Remove this config after a few weeks as it is equal to the upstream value
 ],
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
