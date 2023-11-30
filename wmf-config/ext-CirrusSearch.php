@@ -1223,6 +1223,11 @@ return [
 ],
 'wgCirrusSearchUseEventBusBridge' => [
 	'default' => false,
+	// T352335: Initial cirrus updater deployment
+	'commonswiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
 	'testwiki' => true,
+	'wikidatawiki' => true,
 ],
 ];
