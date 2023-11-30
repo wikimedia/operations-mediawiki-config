@@ -471,9 +471,5 @@ if ( $wmgEnableIPMasking ) {
 $wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
 $wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
 
-if ( $wmgUseUploadWizard ) {
-	unset( $wgUploadWizardConfig['licensing'] );
-}
-
 }
 // end safeguard
