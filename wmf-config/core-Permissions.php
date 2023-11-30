@@ -4458,6 +4458,7 @@ return [
 		'sysop' => [
 			'confirmed', // T344261
 			'autopatrolled', // T343946
+			'functioneer', // T352495
 		],
 		'bureaucrat' => [ 'wikifunctions-staff' ],
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
@@ -5602,6 +5603,7 @@ return [
 		'sysop' => [
 			'confirmed', // T344261
 			'autopatrolled', // T343946
+			'functioneer', // T352495
 		],
 		'bureaucrat' => [ 'wikifunctions-staff' ],
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
