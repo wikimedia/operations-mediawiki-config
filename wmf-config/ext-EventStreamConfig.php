@@ -901,6 +901,33 @@ return [
 			'schema_title' => 'analytics/mediawiki/web_ab_test_enrollment',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.web_ui_actions' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/web_ui_actions',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'webuiactions_log.',
+						'click',
+						'init',
+					],
+					'provide_values' => [
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 		'mediawiki.web_ui_scroll' => [
 			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
 			'destination_event_service' => 'eventgate-analytics-external',
