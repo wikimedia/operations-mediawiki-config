@@ -2452,6 +2452,10 @@ return [
 		'showThumbnail' => false,
 		'showDescription' => false,
 	],
+	'wikifunctionswiki' => [
+		'showThumbnail' => false,
+		'showDescription' => true,
+	],
 	'wikidatawiki' => [
 		'showThumbnail' => false,
 		'showDescription' => true,
