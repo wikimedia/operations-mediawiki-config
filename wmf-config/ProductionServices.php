@@ -147,8 +147,8 @@ $services = [
 		// This was hosted on redis_sessions which was phased out (T267581)
 		// while now it is hosted on redis_misc (rdb* servers)
 		'redis_lock' => [
-			'rdb1' => '10.64.16.76:6381', # rdb1013 B6
-			'rdb2' => '10.64.16.76:6382', # rdb1013 B6
+			'rdb1' => '10.64.16.18:6381', # rdb1013 B6
+			'rdb2' => '10.64.16.18:6382', # rdb1013 B6
 			'rdb3' => '10.64.0.36:6381',  # rdb1011 A1
 		],
 		'search-chi' => [
