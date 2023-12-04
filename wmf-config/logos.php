@@ -7808,6 +7808,11 @@ return [
 	],
 
 	// Wikivoyage
+	'hewikivoyage' => [ // T351981
+		'src' => '/static/images/mobile/copyright/wikivoyage-tagline-he.svg',
+		'width' => 120,
+		'height' => 12,
+	],
 
 	// Chapter and local user group wikis
 	'amwikimedia' => [
