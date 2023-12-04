@@ -2526,61 +2526,6 @@ return [
 	],
 ],
 
-'wgVectorTypographySurvey' => [
-	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'viwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'eswiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'frwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'plwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'ruwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'ukwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'hewiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'arwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'fawiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'kawiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'zhwiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-	'jawiki' => [
-		'logged_in' => true,
-		'logged_out' => false
-	],
-],
-
 // T328045
 'wgVectorTableOfContentsCollapseAtCount' => [
 	'default' => 28,
