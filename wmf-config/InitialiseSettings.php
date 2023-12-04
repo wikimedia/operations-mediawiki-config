@@ -8471,6 +8471,7 @@ return [
 	'dewikivoyage' => false, // T206102
 	'enwikivoyage' => false, // T254820
 	'itwikivoyage' => false, // T253096
+	'nlwikivoyage' => false, // T352696
 ],
 
 'wmgUseTocTree' => [
