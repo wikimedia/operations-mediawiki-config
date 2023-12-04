@@ -11844,6 +11844,10 @@ return [
 	'default' => true,
 ],
 
+'wgMediaModerationDeveloperMode' => [
+	'default' => false,
+],
+
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
