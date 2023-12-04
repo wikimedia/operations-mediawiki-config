@@ -107,6 +107,7 @@ return [
 		'default' => false,
 		'closed' => true, // T261357
 		'arwiki' => true,
+		'azwiki' => true, // T352621
 		'bnwiki' => true, // T299529
 		'bnwikibooks' => true, // T319317
 		'bnwikiquote' => true, // T337683
