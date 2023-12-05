@@ -3861,7 +3861,6 @@ return [
 # T336763
 'wgPhonosInlineAudioPlayerMode' => [
 	'default' => true, // T336763
-	'testwiki' => false,
 ],
 
 'wgPhonosPath' => [
