@@ -2382,33 +2382,8 @@ return [
 	'default' => [
 		'logged_in' => false,
 		'logged_out' => false,
-		'beta' => false,
+		'beta' => true,
 	],
-	'plwiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true
-	],
-	'frwiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true
-	],
-	'cawiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true
-	],
-	'fawiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true
-	],
-	'trwiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true
-	]
 ],
 
 'wgVectorWebABTestEnrollment' => [
