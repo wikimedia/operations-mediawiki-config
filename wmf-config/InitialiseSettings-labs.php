@@ -2307,6 +2307,11 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionToolsEnablePermalinksFrontend' => [
+			'default' => true,
+		],
+
+		// Remove after I5c9229a258
 		'-wgDiscussionToolsEnableTimestampLinks' => [
 			'default' => true,
 		],

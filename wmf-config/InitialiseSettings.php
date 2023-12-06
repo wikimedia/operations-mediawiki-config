@@ -7863,7 +7863,12 @@ return [
 	'enwiki' => false, // (s1) Waiting for T315510
 ],
 
+// Remove after I5c9229a258
 'wgDiscussionToolsEnableTimestampLinks' => [
+	'default' => false,
+],
+
+'wgDiscussionToolsEnablePermalinksFrontend' => [
 	'default' => false,
 ],
 
