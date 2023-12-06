@@ -5652,24 +5652,29 @@ return [
 	'lockeddown' => false,
 ],
 
-// Whitelist enablement of individual Beta Features for production; per-wiki
+// Allow list enablement of individual Beta Features for production; per-wiki
 // configuration should happen below this. Next to each entry, please note the
-// date **6 months after the last major change**, which is the nominal cut-off,
-// at which point the feature should be un-deployed.
+// date of the last major change, **6 months after which** is the nominal
+// cut-off, when the feature should be un-deployed.
 //
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesAllowList' => [
 	'default' => [
-		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
-		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)
+		'beta-feature-flow-user-talk-page',  // [Growth_] On-going (special permission) – Flow opt-in
 		'popups',                            // [WebTeam] 2019-10-04 – Page Previews
 		'popupsreferencepreviews',           // [WMDE TW] 2019-10-04 – Reference Previews
 		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
-		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
-		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
-		'proofreadpage-editinsequence',      // [ProofreadPage/@Soda] 2023-08-29 - Edit in sequence
+		'ipinfo-beta-feature-enable',        // [TSTools] 2022-10-01 – IP Info
+		'wikistories-storiesonarticles',     // [Inuka__] 2022-12-30 - Wikistories on articles
+		'proofreadpage-editinsequence',      // [ProofRP] 2023-08-29 - Edit in sequence
+	],
+	'+wikisource' => [
+		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links
+	],
+	'+ruwikivoyage' => [
+		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links
 	],
 ],
 
