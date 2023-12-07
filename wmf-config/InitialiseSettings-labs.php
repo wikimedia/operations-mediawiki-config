@@ -1435,6 +1435,7 @@ function wmfGetOverrideSettings() {
 				'reverted' => [ 'enabled' => false ],
 				'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
+				'revertrisk-language-agnostic' => [ 'enabled' => true ],
 			],
 			'wikidatawiki' => [
 				'damaging' => [ 'enabled' => true ],
