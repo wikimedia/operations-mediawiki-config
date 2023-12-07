@@ -843,6 +843,118 @@ return [
 				'rate' => 1,
 			],
 		],
+		'android.product_metrics.article_link_preview_interaction' => [
+			'schema_title' => 'analytics/product_metrics/app/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.article_link_preview_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
+		'android.product_metrics.article_toc_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/product_metrics/android_article_toc_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.article_toc_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
+		'android.product_metrics.article_toolbar_interaction' => [
+			'schema_title' => 'analytics/product_metrics/app/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.article_toolbar_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
+		'android.product_metrics.find_in_page_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/product_metrics/android_find_in_page_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.find_in_page_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
