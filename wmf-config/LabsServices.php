@@ -9,8 +9,8 @@
 
 return [
 	'eqiad' => [
-		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
-		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
+		'udp2log' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud:8420',
+		'xenon' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui-pdo' => 'mysql:host=deployment-db11.deployment-prep.eqiad1.wikimedia.cloud;dbname=xhgui',
 		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmflabs.org/excimer/',
 		'excimer-ui-server' => 'https://deployment-webperf21.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
