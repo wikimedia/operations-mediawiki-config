@@ -4251,6 +4251,8 @@ return [
 'wgSkinMetaTags' => [
 	// T157145
 	'default' => [ 'og:title', 'og:type' ],
+	'+wiktionary' => [ 'og:site_name' ], // T348203
+	'+mediawikiwiki' => [ 'og:site_name' ], // T348203
 	// wikidata provides its own handling for sharing tags (T157145)
 	'wikidata' => [],
 ],
