@@ -4982,8 +4982,8 @@ return [
 	],
 	'hewikivoyage' => [ // T351981
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
-		'width' => 69,
-		'height' => 21,
+		'width' => 120,
+		'height' => 40,
 	],
 	'hiwikivoyage' => [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-hi.svg',
@@ -7808,11 +7808,6 @@ return [
 	],
 
 	// Wikivoyage
-	'hewikivoyage' => [ // T351981
-		'src' => '/static/images/mobile/copyright/wikivoyage-tagline-he.svg',
-		'width' => 120,
-		'height' => 12,
-	],
 
 	// Chapter and local user group wikis
 	'amwikimedia' => [
