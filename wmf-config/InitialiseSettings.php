@@ -2357,24 +2357,8 @@ return [
 
 'wgVectorZebraDesign' => [
 	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'frwiki' => [
 		'logged_in' => true,
-		'logged_out' => true
-	],
-	'cawiki' => [
-		'logged_in' => true,
-		'logged_out' => true
-	],
-	'hewiki' => [
-		'logged_in' => true,
-		'logged_out' => true
-	],
-	'plwiki' => [
-		'logged_in' => true,
-		'logged_out' => true
+		'logged_out' => true,
 	]
 ],
 
