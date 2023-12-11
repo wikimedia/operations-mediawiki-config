@@ -3198,6 +3198,7 @@ return [
 	'itwiki' => true, // T330533
 	'ruwiki' => true, // T351048
 	'srwiki' => true, // T351873
+	'zhwiki' => true, // T353120
 ],
 
 'wgGroupInheritsPermissions' => [
