@@ -83,9 +83,6 @@ try {
 	}
 	$mediawiki->restInPeace();
 } catch ( Exception $e ) {
-	# Since output is logged to file, get MediaWiki to generate a raw error
-	$wgCommandLineMode = true;
-
 	http_response_code( 500 );
-	MWExceptionHandler::handleException( $e );
+	MWExceptionHandler::rollbackPrimaryChangesAndLog( $e );
 }
