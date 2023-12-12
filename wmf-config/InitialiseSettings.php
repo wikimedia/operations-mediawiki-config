@@ -11047,30 +11047,22 @@ return [
 	'default' => false,
 	'arwiki' => true,
 	'cawiki' => true,
-	'cswiki' => true,
-	'dewiki' => true,
 	'elwiki' => true,
 	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
-	'fawiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'hewiki' => true,
 	'hiwiki' => true,
 	'huwiki' => true,
 	'idwiki' => true,
-	'itwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
 	'nlwiki' => true,
 	'nowiki' => true,
-	'plwiki' => true,
 	'ptwiki' => true,
-	'rowiki' => true,
 	'ruwiki' => true,
-	'trwiki' => true,
-	'ukwiki' => true,
 	'viwiki' => true,
 	'zhwiki' => true,
 	'commonswiki' => true,
@@ -11118,48 +11110,6 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-	],
-	'cswiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-cs',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.1,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
-	'dewiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-de',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.05211,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
 	'elwiki' => [
@@ -11263,27 +11213,6 @@ return [
 			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
-	'fawiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-fa',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.02083,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
 	'frwiki' => [
 		// T187299
 		[
@@ -11302,25 +11231,6 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-fr',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.09722,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
 	'hewiki' => [
@@ -11374,27 +11284,6 @@ return [
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
 			'coverage' => 0.15,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
-	'itwiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-it',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.025,
 			'audience' => [
 				'anons' => true
 			],
@@ -11470,27 +11359,6 @@ return [
 			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
-	'plwiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-pl',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.075,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
 	'ptwiki' => [
 		// T344393
 		[
@@ -11500,27 +11368,6 @@ return [
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
 			'coverage' => 0.15,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
-	'rowiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-ro',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.2111,
 			'audience' => [
 				'anons' => true
 			],
@@ -11560,48 +11407,6 @@ return [
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
 			'coverage' => 0.01546,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
-	'trwiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-tr',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.075,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
-	'ukwiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-uk',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.06445,
 			'audience' => [
 				'anons' => true
 			],
