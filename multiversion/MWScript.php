@@ -87,7 +87,6 @@ EOT
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php',
 		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
 		'extensions/WikimediaMaintenance/purgeUrls.php',
-		'extensions/WikimediaMaintenance/refreshMessageBlobs.php',
 		'maintenance/mctest.php',
 		'maintenance/mcc.php',
 	];
