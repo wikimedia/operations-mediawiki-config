@@ -1112,52 +1112,6 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
-		// See https://phabricator.wikimedia.org/T309013
-		'mediawiki.edit_attempt' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'events' => [ 'eas.' ],
-
-					// The following are the values common to all client-side EditAttemptStep
-					// instruments that the Metrics Platform Clients can provide.
-					// https://gerrit.wikimedia.org/g/mediawiki/extensions/WikimediaEvents/+/89e90362161d97ae55abc87db40236e7e3722fec/modules/ext.wikimediaEvents/editAttemptStep.js#260
-					'provide_values' => [
-						'agent_client_platform_family',
-						'page_id',
-						'page_title',
-						'page_namespace',
-						'page_revision_id',
-						'mediawiki_version',
-						'mediawiki_is_debug_mode',
-						'mediawiki_database',
-						'performer_is_logged_in',
-						'performer_id',
-						'performer_session_id',
-						'performer_pageview_id',
-						'performer_edit_count',
-					],
-
-					'curation' => [
-
-						// Ignore events from the PHP Metrics Platform
-						// Client until it has been tested on the Beta
-						// Cluster.
-						//
-						// See https://phabricator.wikimedia.org/T309985
-						'agent_client_platform' => [
-							'not_equals' => 'mediawiki_php',
-						],
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
-			],
-		],
-
 		// See https://phabricator.wikimedia.org/T326212
 		'mediawiki.special_diff_interactions' => [
 			'schema_title' => 'analytics/mediawiki/client/metrics_event',
