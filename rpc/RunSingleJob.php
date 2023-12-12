@@ -25,25 +25,18 @@ if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
 	die( "Request must use POST.\n" );
 }
 
-// get the info contained in the body
-$event = null;
-try {
-	// we do not need to use FormatJson::decode because it only wraps
-	// json_decode() and we haven't loaded any MW components at this
-	// point yet
-	$event = json_decode( file_get_contents( "php://input" ), true );
-} catch ( Exception $e ) {
-	http_response_code( 500 );
-	die( $e );
+// get the info contained in the POST body
+$input = file_get_contents( "php://input" );
+if ( $input === '' ) {
+	// Allow for ease of testing: T352265
+	http_response_code( 422 );
+	die( 'No event received.' );
 }
 
+$event = json_decode( $input, true );
 // check that we have the needed components of the event
 if ( !isset( $event['database'] ) ) {
-	MWExceptionHandler::handleException(
-		new Exception( 'Invalid job received. No database set. ' . json_encode( $event ) )
-	);
-	http_response_code( 400 );
-	die( 'Invalid event received!' );
+	throw new Exception( 'Invalid event received! ' . json_encode( $event ) );
 }
 
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
