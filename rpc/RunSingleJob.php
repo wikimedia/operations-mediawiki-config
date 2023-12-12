@@ -60,16 +60,6 @@ $wgShowExceptionDetails = true;
 $lbFactory = MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
 $lbFactory->disableChronologyProtection();
 
-// check that JobExecutor has been loaded
-if ( !class_exists( '\\MediaWiki\\Extension\\EventBus\\JobExecutor' ) ) {
-	$wgCommandLineMode = true;
-	http_response_code( 500 );
-	MWExceptionHandler::handleException(
-		new Exception( 'JobExecutor not loaded for job: ' . json_encode( $event ) )
-	);
-	die();
-}
-
 try {
 	$mediawiki = new MediaWiki();
 	$executor = new MediaWiki\Extension\EventBus\JobExecutor();
