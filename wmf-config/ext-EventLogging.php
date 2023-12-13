@@ -86,6 +86,8 @@ return [
 		'development.network.probe',
 		'mediawiki.special_diff_interactions',
 		'wikifunctions.ui',
+		'mediawiki.web_ui_actions',
+		'mediawiki.web_ui_scroll_migrated',
 	],
 ],
 
