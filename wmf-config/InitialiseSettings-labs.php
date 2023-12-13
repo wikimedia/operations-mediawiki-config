@@ -504,6 +504,21 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 1, // T346106
 		],
 
+		// T353388
+		'MFUseDesktopSpecialHistoryPage' => [
+			'default' => [
+				'base' => true,
+				'amc' => true,
+			],
+		],
+		// T350181
+		'MFUseDesktopDiffPage' => [
+			'default' => [
+				'base' => true,
+				'amc' => true,
+			],
+		],
+
 		'wgMFAmcOutreach' => [
 			'default' => true
 		],
