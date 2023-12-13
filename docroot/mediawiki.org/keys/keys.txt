@@ -531,7 +531,7 @@ g+D18CIpfqRnTA==
 =Q8bO
 -----END PGP PUBLIC KEY BLOCK-----
 
-Amir Sarabadani (MediaWiki release) <Ladsgroup@gmail.com>
+Amir Sarabadani <asarabadani@wikimedia.org>
 72D286F6F8F03C78F2C59C7326752EBB0D9E6218
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
