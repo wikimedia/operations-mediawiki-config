@@ -11047,16 +11047,13 @@ return [
 	'default' => false,
 	'arwiki' => true,
 	'cawiki' => true,
-	'elwiki' => true,
 	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
-	'hewiki' => true,
 	'hiwiki' => true,
 	'huwiki' => true,
-	'idwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
 	'nlwiki' => true,
@@ -11110,27 +11107,6 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-	],
-	'elwiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-el',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.2,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
 		],
 	],
 	'enwiki' => [
@@ -11233,27 +11209,6 @@ return [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'hewiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-he',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.08624,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
 	'hiwiki' => [
 		// T344393
 		[
@@ -11263,27 +11218,6 @@ return [
 			'question' => 'reader-demographics-2-survey-question',
 			'description' => 'reader-demographics-2-survey-description',
 			'coverage' => 0.2,
-			'audience' => [
-				'anons' => true
-			],
-			'instanceTokenParameterName' => 'QS',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'reader-demographics-2-survey-link',
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-		],
-	],
-	'idwiki' => [
-		// T344393
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'reader-demographics-2-id',
-			'question' => 'reader-demographics-2-survey-question',
-			'description' => 'reader-demographics-2-survey-description',
-			'coverage' => 0.15,
 			'audience' => [
 				'anons' => true
 			],
