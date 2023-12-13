@@ -505,14 +505,14 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T353388
-		'MFUseDesktopSpecialHistoryPage' => [
+		'wgMFUseDesktopSpecialHistoryPage' => [
 			'default' => [
 				'base' => true,
 				'amc' => true,
 			],
 		],
 		// T350181
-		'MFUseDesktopDiffPage' => [
+		'wgMFUseDesktopDiffPage' => [
 			'default' => [
 				'base' => true,
 				'amc' => true,
