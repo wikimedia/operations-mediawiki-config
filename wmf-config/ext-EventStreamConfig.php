@@ -1388,6 +1388,19 @@ return [
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
 		],
+		'mediawiki.page_prediction_change.rc0' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
+			// This stream is a testing stream for page-prediction-change events,
+			// and the events will be emitted by the Lift Wing platform.
+			// More info in T349919.
+		],
 		'mediawiki.page_outlink_topic_prediction_change.v1' => [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
