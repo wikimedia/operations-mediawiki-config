@@ -805,10 +805,8 @@ $wgDjvuTxt = '/usr/bin/djvutxt';
 # ######################################################################
 # StatsD/Metrics Settings
 # ######################################################################
-if ( ClusterConfig::getInstance()->isDebug() ) {
-	$wgStatsFormat = 'dogstatsd';
-	$wgStatsTarget = 'udp://localhost:9125';
-}
+$wgStatsFormat = 'dogstatsd';
+$wgStatsTarget = 'udp://localhost:9125';
 $wgStatsdServer = $wmgLocalServices['statsd'];
 
 # ######################################################################
