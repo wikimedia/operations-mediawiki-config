@@ -2313,6 +2313,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionToolsEnablePermalinksBackend' => [
+			'default' => true,
+		],
+
 		'-wgDiscussionToolsEnablePermalinksFrontend' => [
 			'default' => true,
 		],
