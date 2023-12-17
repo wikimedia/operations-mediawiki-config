@@ -7609,6 +7609,10 @@ return [
 	'lockeddown' => false,
 ],
 
+'wgThanksSendToBots' => [
+	'default' => true, // T341388
+],
+
 'wmgUseEntitySchema' => [
 	'default' => false,
 	'testwikidatawiki' => true,
