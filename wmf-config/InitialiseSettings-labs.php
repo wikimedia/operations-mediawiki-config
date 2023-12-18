@@ -1474,9 +1474,6 @@ function wmfGetOverrideSettings() {
 				],
 			],
 		],
-		'-wgOresLiftWingBaseUrl' => [
-			'default' => 'https://api.wikimedia.org/service/lw/inference/'
-		],
 		'-wgOresUseLiftwing' => [
 			'default' => true
 		],

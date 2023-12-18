@@ -322,6 +322,7 @@ if ( $wmgUseMediaModeration ) {
 
 if ( $wmgUseORES ) {
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
+	$wgOresLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/';
 }
 
 if ( $wmgUseUniversalLanguageSelector ) {
