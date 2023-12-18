@@ -52,6 +52,7 @@ return [
 ],
 'wgOresModels' => [
 	'default' => [
+		'revertrisk-language-agnostic' => [ 'enabled' => false ],
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
@@ -89,6 +90,7 @@ return [
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'testwiki' => [
+		'revertrisk-language-agnostic' => [ 'enabled' => true ],
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
