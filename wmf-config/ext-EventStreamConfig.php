@@ -1443,6 +1443,40 @@ return [
 		],
 
 		/*
+		 * webrequest.frontend describes the schema and topics that make up the
+		 * webrequest logs from our frontend webservers (haproxy).
+		 * It is an Event Platform stream, but is produced directly to Kafka by Benthos producer,
+		 * not eventgate.
+		 * `webrequest.frontent.rc0` is a development stream that will be deprecated (removed
+		 * from config) after GA release.
+		 */
+		'webrequest.frontend.rc0' => [
+			// Point to a wip/developemnt version of the events schema.
+			// TODO: switch to GA once the schema is finalized and released.
+			'schema_title' => 'development/webrequest',
+			// webrequest.frontend stream explicitly declares its composite topics.
+			// These topics are produced to explicitly by haproxy logtailer.
+			// https://phabricator.wikimedia.org/T351117#9419578
+			'topics' => [
+				# TODO: set these composite topics in the GA release of the stream.
+				# 'webrequest.frontend.text',
+				# 'webrequest.frontend.upload',
+				'webrequest_text_test',
+				'webrequest_upload_test',
+			],
+			// Use eventgate-analytics for canary events.
+			// Note that the real webrequest events don't get produced via evengate.
+			'destination_event_service' => 'eventgate-analytics',
+			// Gobblin job webrequest_frontend ingests these topics.
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'webrequest_frontend',
+					'enabled' => true,
+				],
+			],
+		],
+
+		/*
 		 * == Streams needed for eventgate functionality ==
 		 * EventGate instances some streams defined for error logging and monitoring:
 		 *
