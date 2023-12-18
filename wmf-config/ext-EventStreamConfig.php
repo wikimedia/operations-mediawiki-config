@@ -1470,6 +1470,11 @@ return [
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
 		'mediawiki.page_content_change.v1' => [
 			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
