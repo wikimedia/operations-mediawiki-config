@@ -4018,14 +4018,14 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	$wgCSPFalsePositiveUrls['https://intuition.toolforge.org/'] = true;
 
 	$wgExtensionFunctions[] = static function () {
-		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode,
+		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly,
 			$wmgApprovedContentSecurityPolicyDomains, $wmgUseCSP, $wgCSPHeader;
 		if ( !$wmgUseCSPReportOnly && !$wmgUseCSP ) {
 			// This means that $wmgUseCSPReportOnlyHasSession
 			// is set, so only logged in users should trigger this.
 			if (
 				defined( 'MW_NO_SESSION' ) ||
-				$wgCommandLineMode ||
+				MW_ENTRY_POINT === 'cli' ||
 				!MediaWiki\Session\SessionManager::getGlobalSession()->isPersistent()
 			) {
 				// There is no session, so don't set CSP, as we care more
