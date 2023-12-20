@@ -237,6 +237,17 @@ return [
 				],
 			]
 		],
+		'eventlogging_MediaWikiPingback' => [
+			'schema_title' => 'analytics/legacy/mediawikipingback',
+			'topic_prefixes' => null,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
 		'eventlogging_MobileWebUIActionsTracking' => [
 			'schema_title' => 'analytics/legacy/mobilewebuiactionstracking',
 			'topic_prefixes' => null,
