@@ -1766,9 +1766,14 @@ Wikipedia:
         commons_wordmark: 'File:Wikipedia-wordmark-ur.svg'
         comment_wordmark: 'T171769, T254788'
     uzwiki:
-        comment: T39699
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: uzwiki-birthday
+        commons: 'File:Wikipedia-logo-v2-uz.svg'
+        variants:
+            uzwiki-birthday:
+                commons: 'File:Uzwiki_logo_20_2.svg'
+        comment: 'T39699, T353723'
+        comment_1_5x: 'T150618, T353723'
+        comment_2x: 'T150618, T353723'
         commons_wordmark: 'File:Wikipedia-wordmark-uz.svg'
         comment_wordmark: 'T205226, T254788'
         local_tagline: true
