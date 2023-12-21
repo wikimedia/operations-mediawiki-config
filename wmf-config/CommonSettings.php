@@ -1444,10 +1444,10 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_40';
+	$wgExtDistDefaultSnapshot = 'REL1_41';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_41';
+	// $wgExtDistCandidateSnapshot = 'REL1_42';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
@@ -1455,7 +1455,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'REL1_41',
 		'REL1_40',
 		'REL1_39',
-		'REL1_35',
 	];
 
 	// Use Graphite for popular list
