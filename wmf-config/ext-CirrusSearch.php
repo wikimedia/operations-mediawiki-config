@@ -1229,5 +1229,9 @@ return [
 	'itwiki' => true,
 	'testwiki' => true,
 	'wikidatawiki' => true,
+	// T351503: 2nd batch, expected additional topic size per broker: ~11GB, see spreadsheet
+	'dewiki' => true,
+	'frwiktionary' => true,
+	'kuwiktionary' => true,
 ],
 ];
