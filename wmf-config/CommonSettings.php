@@ -3969,6 +3969,7 @@ if ( $wmgUse3d ) {
 
 if ( $wmgUseReadingLists ) {
 	wfLoadExtension( 'ReadingLists' );
+	$wgVirtualDomainsMapping['virtual-readinglists'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgReadingListsMaxEntriesPerList = 5000;
 	$wgReadingListAndroidAppDownloadLink = 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists';
 	$wgReadingListiOSAppDownloadLink = 'https://apps.apple.com/app/apple-store/id324715238?pt=208305&ct=shared-reading-list-landing&mt=8';
