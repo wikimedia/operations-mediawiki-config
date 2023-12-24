@@ -2638,6 +2638,10 @@ Wikiquote:
         local_wordmark: true
     aswikiquote:
         commons: File:Wikiquote-logo-as.svg
+        commons_wordmark: File:Wikiquote-wordmark-as.svg
+        comment_wordmark: T353934
+        comment_2x: T353934
+        comment_1_5px: T353934
     azwikiquote:
         no_1_5x: true
         no_2x: true

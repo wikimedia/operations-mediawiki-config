@@ -1957,7 +1957,7 @@ return [
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-2x.png', // T150618, T308620
 
 	// Wikiquote
-	'aswikiquote' => '/static/images/project-logos/aswikiquote-2x.png',
+	'aswikiquote' => '/static/images/project-logos/aswikiquote-2x.png', // T353934
 	'bclwikiquote' => '/static/images/project-logos/bclwikiquote-2x.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote-2x.png', // T196134
 	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-2x.png', // T319183, T323131
@@ -3904,6 +3904,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ar.svg',
 		'width' => 146,
 		'height' => 44,
+	],
+	'aswikiquote' => [ // T353934
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-as.svg',
+		'width' => 117,
+		'height' => 40,
 	],
 	'azwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-az.svg',
