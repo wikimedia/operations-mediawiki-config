@@ -449,7 +449,10 @@ return [
 			'tboverride-account' => true,
 			'override-antispoof' => true,
 		],
-		'autopatrolled' => [ 'autopatrol' => true, ],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'patrolmarks' => true, // T354004
+		],
 		'bot' => [
 			'ipblock-exempt' => true, // T44720
 			'extendedconfirmed' => true, // T316283
