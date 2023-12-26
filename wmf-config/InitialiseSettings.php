@@ -3783,6 +3783,11 @@ return [
 	'default' => 'new', // T248632
 ],
 
+'wgSignatureAllowedLintErrors' => [
+	'default' => [ 'obsolete-tag', ],
+	'enwiki' => [], // T354013
+],
+
 # below seems to be for extensions
 
 # EXTENSIONS @{
