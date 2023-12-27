@@ -2492,6 +2492,7 @@ return [
 			'centralnotice-admin' => true,
 			'editinterface' => true, // adding to allow CN access without local sysop JRA 2013-02-21
 		],
+		'patroller' => [ 'patrol' => true, ], // T354063
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
@@ -3164,6 +3165,7 @@ return [
 			'confirmed',
 			'templateeditor',
 			'extendedconfirmed', // T302860
+			'patroller', // T354063
 		],
 	],
 	'+test2wiki' => [
@@ -4620,6 +4622,7 @@ return [
 			'confirmed',
 			'templateeditor',
 			'extendedconfirmed', // T302860
+			'patroller', // T354063
 		],
 	],
 	'+test2wiki' => [
