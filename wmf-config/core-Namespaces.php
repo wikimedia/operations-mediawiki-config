@@ -5252,6 +5252,7 @@ return [
 	'testcommonswiki' => 'Commons',
 	'crhwiki' => 'Vikipediya',
 	'csbwiki' => 'Wiki',
+	'csbwiktionary' => 'Wikisłowôrz', // T354114
 	'cswiki' => 'Wikipedie',
 	'cswikibooks' => 'Wikiknihy',
 	'cswikinews' => 'Wikizprávy',
