@@ -20,12 +20,12 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 ];
 $wgLDAPDomainNames = [ 'labs' ];
 switch ( $wgDBname ) {
-case 'labswiki':
-	$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmgDatacenter}.wikimedia.org" ];
-	break;
-case 'labtestwiki':
-	$wgLDAPServerNames = [ 'labs' => 'cloudservices2004-dev.codfw.wmnet' ];
-	break;
+	case 'labswiki':
+		$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmgDatacenter}.wikimedia.org" ];
+		break;
+	case 'labtestwiki':
+		$wgLDAPServerNames = [ 'labs' => 'cloudservices2004-dev.codfw.wmnet' ];
+		break;
 }
 // T165795: require exact case matching of username via :caseExactMatch:
 $wgLDAPSearchAttributes = [ 'labs' => 'cn:caseExactMatch:' ];

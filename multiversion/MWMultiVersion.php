@@ -322,7 +322,7 @@ class MWMultiVersion {
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					$lang,
 					$this->wikimediaSubdomains
-			) ) ) {
+				) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
 				$site = $matches[2];
 			}

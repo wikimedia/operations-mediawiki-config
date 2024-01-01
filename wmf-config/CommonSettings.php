@@ -115,21 +115,21 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 # reuse.
 $wmgHostnames = [];
 switch ( $wmgRealm ) {
-case 'labs':
-	$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
-	$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
-	$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
-	$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
-	$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
-	break;
-case 'production':
-default:
-	$wmgHostnames['meta']          = 'meta.wikimedia.org';
-	$wmgHostnames['test']          = 'test.wikipedia.org';
-	$wmgHostnames['upload']        = 'upload.wikimedia.org';
-	$wmgHostnames['wikidata']      = 'www.wikidata.org';
-	$wmgHostnames['wikifunctions'] = 'www.wikifunctions.org';
-	break;
+	case 'labs':
+		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
+		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
+		$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
+		break;
+	case 'production':
+	default:
+		$wmgHostnames['meta']          = 'meta.wikimedia.org';
+		$wmgHostnames['test']          = 'test.wikipedia.org';
+		$wmgHostnames['upload']        = 'upload.wikimedia.org';
+		$wmgHostnames['wikidata']      = 'www.wikidata.org';
+		$wmgHostnames['wikifunctions'] = 'www.wikifunctions.org';
+		break;
 }
 
 $wgDBname = $multiVersion->getDatabase();
@@ -302,7 +302,7 @@ $globals = MWConfigCacheGenerator::getConfigGlobals(
 extract( $globals );
 
 # Determine legacy site/lang pair for the current wiki
-list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+[ $site, $lang ] = $wgConf->siteFromDB( $wgDBname );
 
 # -------------------------------------------------------------------------
 # Settings common to all wikis
@@ -1587,7 +1587,9 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
 	// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
+	// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.Found
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.Found
 		|| ( isset( $_SERVER['PATH_INFO'] ) && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
 		if ( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {
 			$title = 'Talk:' . $matches[1];
@@ -2135,12 +2137,12 @@ $wgMaxShellTime = 50;  // seconds
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 switch ( $wmgRealm ) {
-case 'production':
-	$wgImageMagickTempDir = '/tmp/magick-tmp';
-	break;
-case 'labs':
-	$wgImageMagickTempDir = '/tmp/a/magick-tmp';
-	break;
+	case 'production':
+		$wgImageMagickTempDir = '/tmp/magick-tmp';
+		break;
+	case 'labs':
+		$wgImageMagickTempDir = '/tmp/a/magick-tmp';
+		break;
 }
 
 // Banner notice system
@@ -3954,7 +3956,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 if ( $wmgUse3d ) {
 	wfLoadExtension( '3D' );
 	$wgTrustedMediaFormats[] = 'application/sla';
-	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
+	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' , '/srv/deployment/3d2png/deploy/src/3d2png.js' ];
 
 	if ( $wmgUseMultimediaViewer ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';

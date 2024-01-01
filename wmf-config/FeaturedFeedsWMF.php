@@ -11,7 +11,7 @@
 
 $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 	global $wgConf, $wgDBname, $wmgFeaturedFeedsOverrides;
-	list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+	[ $site, $lang ] = $wgConf->siteFromDB( $wgDBname );
 	$media = [
 		// Picture Of The Day
 		'potd' => [

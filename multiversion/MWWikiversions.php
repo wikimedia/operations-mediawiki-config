@@ -70,6 +70,7 @@ class MWWikiversions {
 		$tokens = preg_split( '/ +([-+&]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
 		$result = self::readDbListFile( basename( $tokens[0], '.dblist' ) );
 		// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
 			$dbs = self::readDbListFile( basename( $term, '.dblist' ) );
 			if ( $op === '+' ) {

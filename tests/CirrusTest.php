@@ -126,7 +126,7 @@ class CirrusTest extends WgConfTestCase {
 
 		$configuration = $this->loadWgConf( $wmgRealm );
 
-		list( $site, $lang ) = $configuration->siteFromDB( $dbName );
+		[ $site, $lang ] = $configuration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang'    => $lang,
@@ -213,7 +213,7 @@ class CirrusTest extends WgConfTestCase {
 			$this->assertIsString( $bucketConf['trigger'] );
 			$triggers[] = $bucketConf['trigger'];
 		}
-		$this->assertEquals( count( $triggers ), count( array_unique( $triggers ) ) );
+		$this->assertSameSize( $triggers, array_unique( $triggers ) );
 	}
 
 	public function providePerClusterShardsAndReplicas() {
@@ -239,7 +239,7 @@ class CirrusTest extends WgConfTestCase {
 		];
 		$tests = [];
 		foreach ( $wikis as $wiki ) {
-			list( $site, $lang ) = $allConfig->siteFromDB( $wiki );
+			[ $site, $lang ] = $allConfig->siteFromDB( $wiki );
 			foreach ( $allConfig->suffixes as $altSite => $suffix ) {
 				if ( substr( $wiki, -strlen( $suffix ) ) === $suffix ) {
 					break;

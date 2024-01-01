@@ -21,7 +21,7 @@ class MWConfigCacheGenerator {
 	 * @return array The wiki's config
 	 */
 	public static function getMWConfigForCacheing( $dbName, $siteConfiguration, $realm = 'production' ) {
-		list( $site, $lang ) = $siteConfiguration->siteFromDB( $dbName );
+		[ $site, $lang ] = $siteConfiguration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,

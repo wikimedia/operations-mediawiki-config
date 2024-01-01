@@ -172,7 +172,7 @@ class ConfigFile {
 		foreach ( $dirs as $dir ) {
 			$realDir = realpath( self::ROOT . $dir );
 			// we want all the files in the format $dir/file, so strip the root dir from the glob
-			$paths = array_map( fn( $path ) => str_replace( $realRoot . '/', '', $path ), glob( $realDir . '/*' ) );
+			$paths = array_map( fn ( $path ) => str_replace( $realRoot . '/', '', $path ), glob( $realDir . '/*' ) );
 			$this->loadPaths( $paths );
 		}
 	}

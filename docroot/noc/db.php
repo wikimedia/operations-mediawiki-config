@@ -7,6 +7,9 @@
  * Then view <http://localhost:9412/db.php>.
  */
 
+// phpcs:disable Generic.WhiteSpace.ScopeIndent.Incorrect
+// phpcs:disable Generic.WhiteSpace.ScopeIndent.IncorrectExact
+
 use Wikimedia\MWConfig\Noc\EtcdCachedConfig;
 
 require_once __DIR__ . '/../../src/Noc/EtcdCachedConfig.php';

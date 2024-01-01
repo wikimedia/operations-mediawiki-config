@@ -46,7 +46,7 @@ function wmfHandleMissingWiki() {
 		'wiktionary'  => 't',
 	];
 
-	list( $protocol, $host ) = wmfGetProtocolAndHost();
+	[ $protocol, $host ] = wmfGetProtocolAndHost();
 
 	if ( strpos( $host, '.m.' ) !== false ) {
 		// Invalid request to mobile site, not rewritten by Varnish
@@ -58,7 +58,7 @@ function wmfHandleMissingWiki() {
 	$tmp = explode( '.', $host );
 	$project = $incubatorCode = false;
 	if ( count( $tmp ) == 3 ) {
-		list( $language, $project, $tld ) = $tmp;
+		[ $language, $project, $tld ] = $tmp;
 		if ( isset( $_SERVER['PATH_INFO'] )
 			&& preg_match( '!^/(.*)$!', $_SERVER['PATH_INFO'], $m ) ) {
 			$page = $m[1];
@@ -96,7 +96,7 @@ function wmfHandleMissingWiki() {
 			}
 
 			if ( $row ) {
-				list( $iw_local, $iw_url ) = explode( ' ', $row );
+				[ $iw_local, $iw_url ] = explode( ' ', $row );
 				if ( $iw_local ) {
 					# Redirect to the appropriate WMF wiki
 					# strtok gives us the remainder of the page title after the interwiki prefix

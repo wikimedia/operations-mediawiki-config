@@ -4990,7 +4990,7 @@ return [
 	],
 	'wikifunctionswiki' => [
 		// Special over-privileged group for initial deployment, to reduce over time
-		'wikifunctions-staff' => [ 'interface-admin','functioneer','functionmaintainer','sysop','bureaucrat' ]
+		'wikifunctions-staff' => [ 'interface-admin', 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat' ]
 	],
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],

@@ -2,26 +2,26 @@
 /**
  * To preview NOC locally, check docroot/noc/README.md
  */
-	require_once __DIR__ . '/../../../src/Noc/utils.php';
-	require_once __DIR__ . '/../../../src/Noc/EtcdCachedConfig.php';
-	require_once __DIR__ . '/filelist.php';
-	$confFiles = wmfLoadRoutes();
+require_once __DIR__ . '/../../../src/Noc/utils.php';
+require_once __DIR__ . '/../../../src/Noc/EtcdCachedConfig.php';
+require_once __DIR__ . '/filelist.php';
+$confFiles = wmfLoadRoutes();
 
-	/**
-	 * @param array $routesByLabel
-	 */
-	function wmfOutputFiles( $routesByLabel ) {
-		$labels = array_keys( $routesByLabel );
-		natsort( $labels );
-		foreach ( $labels as $label ) {
-			$route = $routesByLabel[$label];
-			echo "\n<li>";
-			echo '<a href="./highlight.php?file=' . htmlspecialchars( $label ) . '">'
-				. htmlspecialchars( $label );
-			echo '</a> (<a href="' . htmlspecialchars( $route ) . '">raw text</a>)';
-			echo '</li>';
-		}
+/**
+ * @param array $routesByLabel
+ */
+function wmfOutputFiles( $routesByLabel ) {
+	$labels = array_keys( $routesByLabel );
+	natsort( $labels );
+	foreach ( $labels as $label ) {
+		$route = $routesByLabel[$label];
+		echo "\n<li>";
+		echo '<a href="./highlight.php?file=' . htmlspecialchars( $label ) . '">'
+			. htmlspecialchars( $label );
+		echo '</a> (<a href="' . htmlspecialchars( $route ) . '">raw text</a>)';
+		echo '</li>';
 	}
+}
 
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">

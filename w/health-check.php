@@ -20,7 +20,7 @@ foreach ( $processors as $i => $processor ) {
 	$lines = explode( "\n", $processor );
 	$props = [];
 	foreach ( $lines as $line ) {
-		list( $name, $value ) = array_map( 'trim', explode( ':', $line, 2 ) );
+		[ $name, $value ] = array_map( 'trim', explode( ':', $line, 2 ) );
 		$props[$name] = $value;
 	}
 

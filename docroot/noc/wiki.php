@@ -250,22 +250,22 @@ if ( $formatIsJson ) {
 		<form action="./wiki.php" autocomplete="off">
 			<label>Wiki:
 				<select name="wiki"><?php
-					foreach ( $wikis as $wiki ) {
-						$selectedAttr = ( $wiki === $selected ? ' selected' : '' );
-						print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
-					}
+				foreach ( $wikis as $wiki ) {
+					$selectedAttr = ( $wiki === $selected ? ' selected' : '' );
+					print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
+				}
 				?>
 				</select>
 			</label>
 			<button type="submit" id="noc-submit-view">View</button>
 			<label>Base:
 				<select name="compare"><?php
-					$selectedAttr = ( !$compare ? ' selected' : '' );
-					print "<option{$selectedAttr}></option>";
-					foreach ( $wikis as $wiki ) {
-						$selectedAttr = ( $wiki === $compare ? ' selected' : '' );
-						print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
-					}
+				$selectedAttr = ( !$compare ? ' selected' : '' );
+				print "<option{$selectedAttr}></option>";
+				foreach ( $wikis as $wiki ) {
+					$selectedAttr = ( $wiki === $compare ? ' selected' : '' );
+					print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
+				}
 				?>
 				</select>
 			</label>
@@ -290,12 +290,12 @@ if ( $formatIsJson ) {
 			<a class="noc-tab-action" href="./wiki.php?<?php echo htmlspecialchars( "wiki=$selected&format=json" ); ?>">View JSON</a>
 		</form>
 		<pre><?php
-			if ( $isComparing ) {
-				print '<del>' . htmlspecialchars( "--- before/$compare" ) . '</del>' . "\n";
-				print '<ins>' . htmlspecialchars( "+++ after/$selected" ) . '</ins>' . "\n";
-				print "\n";
-			}
-			print $data['pre'];
+		if ( $isComparing ) {
+			print '<del>' . htmlspecialchars( "--- before/$compare" ) . '</del>' . "\n";
+			print '<ins>' . htmlspecialchars( "+++ after/$selected" ) . '</ins>' . "\n";
+			print "\n";
+		}
+		print $data['pre'];
 		?></pre>
 	</article>
 
