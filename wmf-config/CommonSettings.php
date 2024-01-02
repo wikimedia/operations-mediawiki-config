@@ -693,11 +693,13 @@ if ( $wmgDisableAccountCreation ) {
 // Most shellouts, and any shellout depending on untrusted input in particular,
 // should use shellbox.
 $wgShellRestrictionMethod = ClusterConfig::getInstance()->isK8s() ? false : 'firejail';
+$wgShellboxShell = '/bin/bash';
 
 $wgUseImageMagick = true;
 // Please note: neither command exists in the container, and this should
 // never be called in production - still better to set it to something that could work on k8s.
-$wgImageMagickConvertCommand    = ClusterConfig::getInstance()->isK8s() ? '/usr/bin/convert' : '/usr/local/bin/mediawiki-firejail-convert';
+$wgImageMagickConvertCommand = ClusterConfig::getInstance()->isK8s() ? '/usr/bin/convert' : '/usr/local/bin/mediawiki-firejail-convert';
+
 $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
 if ( $wmgUsePagedTiffHandler ) {
@@ -709,6 +711,12 @@ if ( $wmgUsePagedTiffHandler ) {
 		$wgShellboxUrls['pagedtiffhandler'] = $wmgLocalServices['shellbox-media'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 	}
+}
+
+// Use shellbox on k8s for handling djvu images.
+if ( ClusterConfig::getInstance()->isK8s() && $wmgLocalServices['shellbox-media'] ) {
+	$wgDjvuUseBoxedCommand = true;
+	$wgShellboxUrls['djvu'] = $wmgLocalServices['shellbox-media'];
 }
 
 // Disable $wgMaxImageArea checks, Thumbor uses a timeout instead
