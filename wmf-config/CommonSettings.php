@@ -1385,11 +1385,8 @@ if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
 	$wgUrlShortenerServer = 'https://w.wiki';
-	// TODO: Remove this after 20.10.2023
-	$wgUrlShortenerDBCluster = 'extension1';
-	$wgUrlShortenerDBName = 'wikishared';
-	// end of TODO
 	$wgVirtualDomainsMapping['urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+	$wgVirtualDomainsMapping['virtual-urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.org',
 		'(.*\.)?wiktionary\.org',
