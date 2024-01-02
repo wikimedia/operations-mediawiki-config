@@ -706,6 +706,12 @@ if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 	$wgTiffUseTiffinfo = true;
 	$wgTiffMaxMetaSize = 1048576;
+	// Force use of shellbox on mw on k8s.
+	// We're not sending commons user traffic here so this can live for as long as needed
+	// before we make upload-by-url asynchronous
+	if ( !$wmgUsePagedTiffHandlerShellbox && ClusterConfig::getInstance()->isK8s() ) {
+		$wmgUsePagedTiffHandlerShellbox = true;
+	}
 	if ( $wmgUsePagedTiffHandlerShellbox && $wmgLocalServices['shellbox-media'] ) {
 		// Route pagedtiffhandler to the Shellbox named "shellbox-media".
 		$wgShellboxUrls['pagedtiffhandler'] = $wmgLocalServices['shellbox-media'];
@@ -2361,6 +2367,12 @@ if ( $wmgUseGlobalAbuseFilters ) {
 # PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
+	// Force use of shellbox on mw on k8s.
+	// We're not sending commons user traffic here so this can live for as long as needed
+	// before we make upload-by-url asynchronous
+	if ( !$wmgUsePdfHandlerShellbox && ClusterConfig::getInstance()->isK8s() ) {
+		$wmgUsePdfHandlerShellbox = true;
+	}
 	if ( $wmgUsePdfHandlerShellbox && $wmgLocalServices['shellbox-media'] ) {
 		// Route pdfhandler to the Shellbox named "shellbox-media".
 		$wgShellboxUrls['pdfhandler'] = $wmgLocalServices['shellbox-media'];
