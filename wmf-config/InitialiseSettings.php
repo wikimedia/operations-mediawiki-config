@@ -3399,7 +3399,11 @@ return [
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'b', 'v',
 	], // T30024 and T24663 --pdhanda
-	'ganwiki' => [ 'incubator' ],
+	'ganwiki' => [
+		'zh', 'q:zh', 'wikt:zh', 'voy:zh', 'v:zh', 's:zh', 'n:zh', 'b:zh',
+		'lzh', 'wuu', 'zh-yue', 'hak', 'cdo', 'zh-min-nan',
+		'en', 'ja', 'm', 'mw', 'c', 'incubator'
+	], // T354000
 	'gdwiki' => [ 'en', 'de', 'ga', 'gv' ], // T14675, T15817
 	'glwiktionary' => [ 'w', 's', 'q', 'b' ],
 	'glwikibooks' => [ 'w', 'wikt', 's', 'q' ],
