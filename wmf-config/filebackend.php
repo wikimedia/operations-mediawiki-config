@@ -23,6 +23,8 @@
 // would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use Wikimedia\MWConfig\ClusterConfig;
+
 global $wmgSwiftConfig;
 // Common OpenStack Swift backend convenience variables
 $wmgSwiftBigWikis = [ // DO NOT change without proper migration first
@@ -265,6 +267,7 @@ $wgLocalFileRepo = [
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
 	'scriptDirUrl' => $wgScriptPath,
 	'hashLevels' => 2,
+	'disableLocalTransform' => ClusterConfig::getInstance()->isK8s(),
 	'thumbScriptUrl' => $wgThumbnailScriptPath,
 	'transformVia404' => true,
 	'useJsonMetadata' => true,
