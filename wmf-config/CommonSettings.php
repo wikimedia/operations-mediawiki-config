@@ -417,25 +417,21 @@ if ( PHP_SAPI === 'cli' ) {
 	// To probe for excimer-related memory corruption e.g. T293568
 	$wgRequestTimeLimit = 2;
 } else {
-	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
-		case 'videoscaler.svc.eqiad.wmnet':
-		case 'videoscaler.svc.codfw.wmnet':
-		case 'videoscaler.discovery.wmnet':
+	// Videoscalers have a 1 day timeout.
+	// Jobrunners have 20 minutes.
+	// Everything else has 60 seconds for GETs and 200s for POSTs
+	if ( ClusterConfig::getInstance()->isAsync() ) {
+		if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
 			$wgRequestTimeLimit = 86400;
-			break;
-
-		case 'jobrunner.svc.eqiad.wmnet':
-		case 'jobrunner.svc.codfw.wmnet':
-		case 'jobrunner.discovery.wmnet':
+		} else {
 			$wgRequestTimeLimit = 1200;
-			break;
-
-		default:
-			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-				$wgRequestTimeLimit = 200;
-			} else {
-				$wgRequestTimeLimit = 60;
-			}
+		}
+	} else {
+		if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+			$wgRequestTimeLimit = 200;
+		} else {
+			$wgRequestTimeLimit = 60;
+		}
 	}
 }
 
