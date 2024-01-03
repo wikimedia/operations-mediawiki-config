@@ -4569,10 +4569,10 @@ return [
 		'width' => 146,
 		'height' => 18,
 	],
-	'zhwikinews' => [
+	'zhwikinews' => [ // T353792
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-zh.svg',
-		'width' => 146,
-		'height' => 32,
+		'width' => 141,
+		'height' => 29,
 	],
 
 	// Wikisource
