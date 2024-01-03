@@ -5732,6 +5732,7 @@ return [
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
 	'yuewiktionary' => '維基辭典',
+	'zghwiki' => 'ⵡⵉⴽⵉⴱⵉⴷⵢⴰ', // T350241
 	'zh_min_nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 ],
