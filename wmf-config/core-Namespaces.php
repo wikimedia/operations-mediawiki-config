@@ -5258,6 +5258,7 @@ return [
 	'bgwiktionary' => 'Уикиречник',
 	'bhwiki' => 'विकिपीडिया',
 	'bjnwiki' => 'Wikipidia',
+	'bjnwikiquote' => 'Wikipapadah', // T350235
 	'bjnwiktionary' => 'Wikikamus',
 	'blkwiki' => 'ဝီခီပီးဒီးယား',
 	'blkwiktionary' => 'ဝိစ်သိဉ်နရီ',
