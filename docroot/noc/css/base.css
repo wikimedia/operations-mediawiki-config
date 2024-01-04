@@ -204,7 +204,7 @@ footer nav li a {
 	color: var( --color-base--hover );
 }
 .wm-btn:active {
-	background-color: var( --background-color-framed--active );
+	background-color: var( --background-color-interactive );
 	border-color: var( --border-color-progressive );
 	color: var( --color-emphasized );
 }
