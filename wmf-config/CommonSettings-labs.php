@@ -277,6 +277,16 @@ if ( $wmgRealm == 'labs' ) {
 		$wgDefaultNotifyTypeAvailability['push'] = true;
 		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
 		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
+
+		// Temporary overrides to save space in user_properties (T353225)
+		// Those are boolean options, and setting the defaults this way ensures MediaWiki inserts
+		// user_properties rows for both true and false without changing any behavior for users
+		// that currently do not have any matching user_properties row.
+		// Below, 2 and '' are arbitrary values that evaluate to true and false respectively.
+		$wgDefaultUserOptions['echo-subscriptions-web-reverted'] = 2;
+		$wgDefaultUserOptions['echo-subscriptions-web-article-linked'] = '';
+		$wgDefaultUserOptions['echo-subscriptions-email-mention'] = '';
+		$wgDefaultUserOptions['echo-subscriptions-email-article-linked'] = '';
 	}
 
 	if ( $wmgUseEcho && $wmgUseCentralAuth ) {
