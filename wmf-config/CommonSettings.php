@@ -3195,16 +3195,6 @@ if ( $wmgUseDiscussionTools ) {
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 	wfLoadExtension( 'CodeEditor' );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
-	if ( $wgDBname === 'metawiki' ) {
-		$wgHooks['CodeEditorGetPageLanguage'][] = static function ( Title $title, &$lang ) {
-			if ( preg_match(
-				'/^(API listing|Www\.wik(imedia|ipedia|inews|tionary|iquote|iversity|ibooks|ivoyage)\.org) template(\/temp)?$/',
-				$title->getPrefixedText()
-			) ) {
-				$lang = 'html';
-			}
-		};
-	}
 }
 
 if ( $wmgUseScribunto ) {
@@ -3239,10 +3229,6 @@ if ( $wmgUseMapSources ) {
 
 if ( $wmgUseCreditsSource ) {
 	wfLoadExtension( 'CreditsSource' );
-}
-
-if ( $wmgUseListings ) {
-	wfLoadExtension( 'Listings' );
 }
 
 if ( $wmgUseTocTree ) {
