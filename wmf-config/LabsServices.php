@@ -71,6 +71,8 @@ return [
 		// No public API (T306349). Not actually used, we proxy via production
 		// action API (cannot be configured here, as the domain depends on the current one).
 		'image-suggestion' => null,
+		// No public API.
+		'ipoid' => null,
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',

@@ -75,6 +75,7 @@ $common = [
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
 	'image-suggestion' => 'http://localhost:6030',
+	'ipoid' => 'http://localhost:6035',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',

@@ -3849,6 +3849,8 @@ if ( $wmgUseIPInfo ) {
 
 	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
 	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
+
+	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
 }
 
 // T39211
