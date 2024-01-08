@@ -8469,9 +8469,6 @@ return [
 
 'wmgUseListings' => [
 	'default' => false,
-	'plwikivoyage' => true, // T206102
-	'ukwikivoyage' => true, // T254820
-	'zhwikivoyage' => true, // T253096
 	'rowikivoyage' => true, // T352696
 ],
 
