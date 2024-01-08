@@ -10959,10 +10959,6 @@ return [
 	'default' => 'db-mainstash',
 	'wikitech' => 'memcached-pecl',
 ],
-'wgCentralAuthTokenCacheType' => [
-	'default' => 'mcrouter-primary-dc', // declared in mc.php
-	'wikitech' => 'memcached-pecl',
-],
 'wgMicroStashType' => [
 	'default' => 'mcrouter-primary-dc',
 	'wikitech' => 'memcached-pecl',
