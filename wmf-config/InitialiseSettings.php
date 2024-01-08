@@ -8469,7 +8469,6 @@ return [
 
 'wmgUseListings' => [
 	'default' => false,
-	'rowikivoyage' => true, // T352696
 ],
 
 'wmgUseTocTree' => [
