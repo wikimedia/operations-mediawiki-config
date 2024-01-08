@@ -83,7 +83,6 @@ $IP/extensions/LandingCheck/extension.json
 $IP/extensions/LdapAuthentication/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
-$IP/extensions/Listings/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/MachineVision/extension.json
 $IP/extensions/MapSources/extension.json
