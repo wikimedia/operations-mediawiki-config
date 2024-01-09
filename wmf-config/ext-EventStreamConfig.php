@@ -1019,8 +1019,16 @@ return [
 			'schema_title' => 'analytics/mediawiki/editgrowthconfig',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.accountcreation.account_conversion' => [
+			'schema_title' => '/analytics/mediawiki/accountcreation/account_conversion',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.accountcreation_block' => [
 			'schema_title' => 'analytics/mediawiki/accountcreation/block',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.accountcreation.login' => [
+			'schema_title' => '/analytics/mediawiki/accountcreation/account_conversion',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'mediawiki.editattempt_block' => [

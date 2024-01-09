@@ -88,6 +88,8 @@ return [
 		'mediawiki.web_ui_scroll_migrated',
 		'mediawiki.reference_previews',
 		'mediawiki.product_metrics.wikifunctions_ui',
+		'mediawiki.accountcreation.account_conversion',
+		'mediawiki.accountcreation.login',
 	],
 ],
 
