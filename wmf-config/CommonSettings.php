@@ -1245,9 +1245,11 @@ if ( $wmgUseProofreadPage ) {
 		$wgDefaultUserOptions['proofreadpage-showheaders'] = 1;
 	}
 
-	// Wikisource requires special handling.
+	// Wikisource requires special handling (disable fixed width on page and index namespaces)
 	// See T300563#7665461 and T74525
 	$wgVectorMaxWidthOptions['exclude']['namespaces'][] = $wgProofreadPageNamespaceIds['page'];
+	// as well as T352162
+	$wgVectorMaxWidthOptions['exclude']['namespaces'][] = $wgProofreadPageNamespaceIds['index'];
 
 }
 
