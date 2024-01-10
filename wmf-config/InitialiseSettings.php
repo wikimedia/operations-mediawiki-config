@@ -4645,12 +4645,6 @@ return [
 	'default' => false,
 ],
 
-// This is also guarded by $wmgUseCentralAuth
-// See T252236
-'wmgEnableCrossOriginSessions' => [
-	'default' => true,
-],
-
 // Enabling will disable use of insecure 'forceHttps' cookies.
 // See T256095
 'wgForceHTTPS' => [

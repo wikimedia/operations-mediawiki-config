@@ -2246,10 +2246,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'-wmgEnableCrossOriginSessions' => [
-			'default' => true,
-		],
-
 		'-wgForceHTTPS' => [
 			'default' => true,
 		],

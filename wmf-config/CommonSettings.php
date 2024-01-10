@@ -1872,10 +1872,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => 'centralauth' ];
 
 	// Enable cross-origin session cookies (T252236).
-	if ( $wmgEnableCrossOriginSessions ) {
-		$wgCookieSameSite = 'None';
-		$wgUseSameSiteLegacyCookies = true;
-	}
+	$wgCookieSameSite = 'None';
 
 	$wgCentralAuthDryRun = false;
 	$wgCentralAuthCookies = true;
