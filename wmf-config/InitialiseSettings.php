@@ -3033,6 +3033,7 @@ return [
 
 # wgRateLimits @{
 'wgRateLimits' => [
+	// Temporary users are subjected to newbie, ip and subnet limits
 	'default' => [
 		'move' => [
 			'newbie' => [ 2, 120 ],
