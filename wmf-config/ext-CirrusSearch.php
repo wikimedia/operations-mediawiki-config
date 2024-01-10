@@ -1253,5 +1253,7 @@ return [
 	'fawiki' => true,
 	'jawiki' => true,
 	'cebwiki' => true,
+	// T351503: 4th batch, expected additional topic size per broker: ~8GB, see spreadsheet
+	'enwiktionary' => true,
 ],
 ];
