@@ -1845,6 +1845,7 @@ return [
 	'default' => 4 * 3600 * 24, // 4 days to pass isNewbie()
 	'fishbowl' => 0, // No need
 
+	'cawiki' => 5 * 86400, // T354425
 	# http://de.wikibooks.org/wiki/Wikibooks:Meinungsbilder/_Verschiebefunktion_f%C3%BCr_neue_Nutzer
 	# TS 2007-02-06
 	'dewikibooks' => 7 * 86400,
@@ -1864,6 +1865,7 @@ return [
 	'default' => 0,
 	'arwiki' => 50, // T14123
 	'arwikisource' => 10, // T347264
+	'cawiki' => 30, // T354425
 	'ckbwiki' => 10, // T53537
 	'cswiki' => 10, // T163207
 	'enwiki' => 10, // T16191
