@@ -3156,10 +3156,10 @@ return [
 		'width' => 120,
 		'height' => 19,
 	],
-	'thwiki' => [ // T258552
+	'thwiki' => [ // T341407
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-th.svg',
-		'width' => 120,
-		'height' => 31,
+		'width' => 103,
+		'height' => 27,
 	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ti.svg',
@@ -6929,9 +6929,9 @@ return [
 		'width' => 120,
 		'height' => 12,
 	],
-	'thwiki' => [ // T258552
+	'thwiki' => [ // T341407
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-th.svg',
-		'width' => 97,
+		'width' => 100,
 		'height' => 18,
 	],
 	'tiwiki' => [
