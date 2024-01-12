@@ -1255,5 +1255,7 @@ return [
 	'cebwiki' => true,
 	// T351503: 4th batch, expected additional topic size per broker: ~8GB, see spreadsheet
 	'enwiktionary' => true,
+	// T351503: 5th batch, expected additional topic size per broker: ~11GB, see spreadsheet
+	'enwiki' => true,
 ],
 ];
