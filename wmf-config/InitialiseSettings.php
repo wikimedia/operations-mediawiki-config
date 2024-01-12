@@ -7064,6 +7064,11 @@ return [
 		'beta' => false,
 		'amc' => true,
 	],
+	'enwiki' => [
+		'base' => false,
+		'loggedin' => true,
+		'amc' => true,
+	],
 	// T290812
 	'ptwikinews' => [
 		'base' => true,
