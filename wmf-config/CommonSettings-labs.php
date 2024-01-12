@@ -457,11 +457,10 @@ if ( $wmgRealm == 'labs' ) {
 
 	if ( $wmgEnableIPMasking ) {
 		$wgAutoCreateTempUser['enabled'] = true;
-		// NOTE: expireAfterDays is supposed to be set to 365 days (a year), this is
-		// to facilitate QAing the feature (T344695).
-		$wgAutoCreateTempUser['expireAfterDays'] = 1;
+		$wgAutoCreateTempUser['expireAfterDays'] = 365;
 		// notify ten days before account is expired
 		$wgAutoCreateTempUser['notifyBeforeExpirationDays'] = 10;
+
 		// editing is enabled only for temp accounts
 		$wgGroupPermissions['*']['edit'] = false;
 		$wgGroupPermissions['temp']['edit'] = true;
