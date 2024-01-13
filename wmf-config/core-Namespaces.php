@@ -1153,6 +1153,12 @@ return [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
 		'BP' => NS_PROJECT, // T180052
 	],
+	'+mywiki' => [ // T352424
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Draft' => 118,
+		'Draft_talk' => 119,
+	],
 	'+mywiktionary' => [
 		'Appendix' => 100, // T291146
 		'Appendix_talk' => 101, // T291146
@@ -2890,6 +2896,12 @@ return [
 	'mwlwiki' => [
 		100 => 'Portal', // T180052
 		101 => 'Cumbersa_portal', // T180052
+	],
+	'mywiki' => [ // T352424
+		100 => 'မုခ်ဝ', // Portal
+		101 => 'မုခ်ဝ_ဆွေးနွေးချက်', // Portal_talk
+		118 => 'စာမူကြမ်း', // Draft
+		119 => 'စာမူကြမ်း_ဆွေးနွေးချက်', // Draft_talk
 	],
 	'mznwiki' => [
 		100 => 'پورتال', # Portal
@@ -4763,6 +4775,10 @@ return [
 		NS_USER => 'noindex,follow', // T121301
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
+	],
+	'mywiki' => [ // T352424
+		118 => 'noindex,nofollow', // Draft
+		119 => 'noindex,nofollow', // Draft_talk
 	],
 	'nlwiki' => [
 		NS_USER => 'noindex,follow', // T245787
