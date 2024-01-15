@@ -18,6 +18,8 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+use MediaWiki\Extension\Notifications\Push\PushNotifier;
+
 // safe guard
 if ( $wmgRealm == 'labs' ) {
 
@@ -273,7 +275,7 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseEcho ) {
-		$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
+		$wgEchoNotifiers['push'] = [ PushNotifier::class, 'notifyWithPush' ];
 		$wgDefaultNotifyTypeAvailability['push'] = true;
 		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
 		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;

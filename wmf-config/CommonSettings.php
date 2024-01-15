@@ -39,10 +39,15 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
+use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
 use MediaWiki\Extension\ConfirmEdit\FancyCaptcha\FancyCaptcha;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
+use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
+use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
+use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
+use MediaWiki\Extension\Notifications\Push\PushNotifier;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
@@ -1880,7 +1885,7 @@ if ( $wmgUseCentralAuth ) {
 
 	foreach ( $wmgLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
-			'formatter' => 'MediaWiki\\Extension\\CentralAuth\\RCFeed\\IRCColourfulCARCFeedFormatter',
+			'formatter' => IRCColourfulCARCFeedFormatter::class,
 			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
 		];
 	}
@@ -3068,7 +3073,7 @@ if ( $wmgUseEcho ) {
 	// If/when this is promoted to all wikis, this config can be moved directly into extension.json
 	// along with the original notifier types ('web' and 'email').
 	if ( $wgEchoEnablePush ) {
-		$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
+		$wgEchoNotifiers['push'] = [ PushNotifier::class, 'notifyWithPush' ];
 		$wgDefaultNotifyTypeAvailability['push'] = true;
 		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
 		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
@@ -3915,13 +3920,13 @@ if ( $wmgUseEventBus ) {
 	];
 
 	$wgRCFeeds['eventbus'] = [
-		'formatter' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\RCFeed\\EventBusRCFeedFormatter',
-		'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\RCFeed\\EventBusRCFeedEngine',
+		'formatter' => EventBusRCFeedFormatter::class,
+		'class' => EventBusRCFeedEngine::class,
 	];
 
 	if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'] = [
-			'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\JobQueue\\JobQueueEventBus',
+			'class' => JobQueueEventBus::class,
 			'readOnlyReason' => false
 		];
 	}

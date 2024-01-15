@@ -4,6 +4,8 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use CirrusSearch\LanguageDetector\TextCat;
+
 return [
 
 // NOTE: don't forget to update TTM default cluster via
@@ -714,15 +716,15 @@ return [
 
 'wgCirrusSearchLanguageDetectors' => [
 	'default' => [],
-	'dewiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'eswiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'jawiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'nlwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'ptwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'ruwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'dewiki' => [ 'textcat' => TextCat::class ],
+	'enwiki' => [ 'textcat' => TextCat::class ],
+	'eswiki' => [ 'textcat' => TextCat::class ],
+	'frwiki' => [ 'textcat' => TextCat::class ],
+	'itwiki' => [ 'textcat' => TextCat::class ],
+	'jawiki' => [ 'textcat' => TextCat::class ],
+	'nlwiki' => [ 'textcat' => TextCat::class ],
+	'ptwiki' => [ 'textcat' => TextCat::class ],
+	'ruwiki' => [ 'textcat' => TextCat::class ],
 ],
 
 // Enable interwiki search by language detection. The list of language

@@ -35,6 +35,10 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppCaptionEditCounter;
+use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
+use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
+
 /**
  * Get overrides for Beta Cluster settings. This is applied in MWConfigCacheGenerator.
  *
@@ -2179,15 +2183,15 @@ function wmfGetOverrideSettings() {
 		'wgWikimediaEditorTasksEnabledCounters' => [
 			'default' => [
 				[
-					'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
+					'class' => WikipediaAppDescriptionEditCounter::class,
 					'counter_key' => 'app_description_edits',
 				],
 				[
-					'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppCaptionEditCounter',
+					'class' => WikipediaAppCaptionEditCounter::class,
 					'counter_key' => 'app_caption_edits',
 				],
 				[
-					'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppImageDepictsEditCounter',
+					'class' => WikipediaAppImageDepictsEditCounter::class,
 					'counter_key' => 'app_depicts_edits',
 				],
 			],

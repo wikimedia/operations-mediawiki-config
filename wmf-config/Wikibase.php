@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikibase\Lib\Units\JsonUnitStorage;
 
 // Load the Repo
 if ( !empty( $wmgUseWikibaseRepo ) ) {
@@ -167,7 +168,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
 	$wgWBRepoSettings['unitStorage'] = [
-		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
+		'class' => JsonUnitStorage::class,
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 	];
 

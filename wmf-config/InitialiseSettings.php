@@ -37,6 +37,11 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use MediaWiki\Extension\MachineVision\Handler\GoogleCloudVisionHandler;
+use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppCaptionEditCounter;
+use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
+use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
+
 # ############### Basic settings ###############
 return [
 // All settings with $lang, $site, etc. for replacement during initialisation must be listed here
@@ -11760,15 +11765,15 @@ return [
 'wgWikimediaEditorTasksEnabledCounters' => [
 	'default' => [
 		[
-			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
+			'class' => WikipediaAppDescriptionEditCounter::class,
 			'counter_key' => 'app_description_edits',
 		],
 		[
-			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppCaptionEditCounter',
+			'class' => WikipediaAppCaptionEditCounter::class,
 			'counter_key' => 'app_caption_edits',
 		],
 		[
-			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppImageDepictsEditCounter',
+			'class' => WikipediaAppImageDepictsEditCounter::class,
 			'counter_key' => 'app_depicts_edits',
 		],
 	],
@@ -11813,7 +11818,7 @@ return [
 'wgMachineVisionHandlers' => [
 	'default' => [
 		'google' => [
-			'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\GoogleCloudVisionHandler',
+			'class' => GoogleCloudVisionHandler::class,
 			'services' => [
 				'MachineVisionFetchGoogleCloudVisionAnnotationsJobFactory',
 				'MachineVisionRepository',
