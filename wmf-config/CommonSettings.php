@@ -40,6 +40,8 @@
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
+use MediaWiki\Extension\ConfirmEdit\FancyCaptcha\FancyCaptcha;
+use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
@@ -1812,8 +1814,8 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaFileBackend = 'global-multiwrite';
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectoryLevels = 3;
-	$wgCaptchaStorageClass = 'CaptchaCacheStore';
-	$wgCaptchaClass = 'FancyCaptcha';
+	$wgCaptchaStorageClass = CaptchaCacheStore::class;
+	$wgCaptchaClass = FancyCaptcha::class;
 	$wgCaptchaWhitelist =
 		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
