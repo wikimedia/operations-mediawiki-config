@@ -168,6 +168,17 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 $title = "Settings: " . ( $compare !== null ? "Compare $selected to $compare" : $selected );
 $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 
+$formatIsJson = ( $_GET['format'] ?? null ) === 'json';
+if ( $formatIsJson ) {
+	$data = [];
+	foreach ( $selectedGlobals as $name => $val ) {
+		$data[$name] = $isComparing ? $val['after'] : $val;
+	}
+	header( 'Content-Type: application/json; charset=utf-8' );
+	echo json_encode( $data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+	exit;
+}
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -239,22 +250,22 @@ $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 		<form action="./wiki.php" autocomplete="off">
 			<label>Wiki:
 				<select name="wiki"><?php
-					foreach ( $wikis as $wiki ) {
-						$selectedAttr = ( $wiki === $selected ? ' selected' : '' );
-						print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
-					}
+				foreach ( $wikis as $wiki ) {
+					$selectedAttr = ( $wiki === $selected ? ' selected' : '' );
+					print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
+				}
 				?>
 				</select>
 			</label>
 			<button type="submit" id="noc-submit-view">View</button>
 			<label>Base:
 				<select name="compare"><?php
-					$selectedAttr = ( !$compare ? ' selected' : '' );
-					print "<option{$selectedAttr}></option>";
-					foreach ( $wikis as $wiki ) {
-						$selectedAttr = ( $wiki === $compare ? ' selected' : '' );
-						print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
-					}
+				$selectedAttr = ( !$compare ? ' selected' : '' );
+				print "<option{$selectedAttr}></option>";
+				foreach ( $wikis as $wiki ) {
+					$selectedAttr = ( $wiki === $compare ? ' selected' : '' );
+					print "<option{$selectedAttr}>" . htmlspecialchars( $wiki ) . '</option>';
+				}
 				?>
 				</select>
 			</label>
@@ -276,14 +287,15 @@ $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 				}
 			}
 			</script>
+			<a class="noc-tab-action" href="./wiki.php?<?php echo htmlspecialchars( "wiki=$selected&format=json" ); ?>">View JSON</a>
 		</form>
 		<pre><?php
-			if ( $isComparing ) {
-				print '<del>' . htmlspecialchars( "--- before/$compare" ) . '</del>' . "\n";
-				print '<ins>' . htmlspecialchars( "+++ after/$selected" ) . '</ins>' . "\n";
-				print "\n";
-			}
-			print $data['pre'];
+		if ( $isComparing ) {
+			print '<del>' . htmlspecialchars( "--- before/$compare" ) . '</del>' . "\n";
+			print '<ins>' . htmlspecialchars( "+++ after/$selected" ) . '</ins>' . "\n";
+			print "\n";
+		}
+		print $data['pre'];
 		?></pre>
 	</article>
 

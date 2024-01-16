@@ -158,7 +158,6 @@ Disallow: /wiki/Spesial:
 Disallow: /wiki/Special%3A
 Disallow: /wiki/Spezial%3A
 Disallow: /wiki/Spesial%3A
-
 #
 # ar:
 Disallow: /wiki/%D8%AE%D8%A7%D8%B5:Search

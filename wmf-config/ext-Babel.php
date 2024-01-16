@@ -529,6 +529,15 @@ return [
 		'5' => 'User %code%-5',
 		'N' => 'User %code%-N',
 	],
+	'ruwiktionary' => [ // T335136
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	],
 	'simplewiktionary' => [
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
@@ -1039,6 +1048,7 @@ return [
 	'ruwikinews' => 'User %code%', // T54679
 	'ruwikiquote' => 'User %code%',
 	'ruwikisource' => 'User %code%',
+	'ruwiktionary' => 'User %code%', // T335136
 	'rwwiki' => 'User %code%',
 	'sahwiki' => 'User %code%',
 	'scnwiki' => 'User %code%',

@@ -1,4 +1,4 @@
 <?php
-
-// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.exec
-echo str_replace( ' ', ', ', exec( '/usr/bin/scap wikiversions-inuse' ) );
+require_once __DIR__ . '/../../../src/Noc/utils.php';
+header( "Content-type: text/plain" );
+echo implode( ', ', Wikimedia\MWConfig\Noc\getWikiVersions( true ) );

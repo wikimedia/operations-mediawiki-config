@@ -23,6 +23,7 @@ function wmfCheckMissingLogosAndGenerateHTML() {
 <!DOCTYPE HTML>
 <html>
 <head>
+<base target="_blank">
 <title>All Wikimedia deployed logos</title>
 <style>
 body {
@@ -34,7 +35,7 @@ body {
 .mw-logo {
     display: flex;
     align-items: center;
-	width: 300px;
+	width: 500px;
 	position: relative;
 }
 .mw-logo sup {
@@ -48,27 +49,26 @@ body {
 .mw-logo-tagline {
 	margin: 5px auto 0;
 }
+.mw-skin-vector .mw-logo-1x {
+	border: solid 1px #333;
+}
+
+.mw-skin-vector-2022 .mw-logo-modern {
+	border: solid 1px #333;
+}
+.mw-logo-variants {
+	display: flex;
+}
+
 </style>
 <script>
 </script>
 </head>
 <body>
 To filter paste in here:<br>
-<textarea id="filter">
+<textarea id="filter" disabled>
 $textareaVal
 </textarea>
-<script>
-document.getElementById('filter').addEventListener( 'input', function () {
-	const all = this.value.split('\\n');
-	document.querySelectorAll( '.mw-logo' ).forEach( ( node ) => {
-		node.style.display = 'none';
-	} );
-	all.filter((key) => key ).forEach((key) => {
-		const node = document.getElementById( 'db-' + key.trim() );
-		node.style.display = '';
-	})
-} );
-</script>
 HEREDOC;
 
 	$conf = new SiteConfiguration();
@@ -77,6 +77,7 @@ HEREDOC;
 	$conf->settings = MWConfigCacheGenerator::getStaticConfig( 'production' );
 	foreach ( $prodWikis as $dbname ) {
 		$fullConfig = MWConfigCacheGenerator::getConfigGlobals( $dbname, $conf );
+		$skin = $fullConfig['wgDefaultSkin'] ?? null;
 		$wordmark = $fullConfig['wmgSiteLogoWordmark'] ?? null;
 		$icon = $fullConfig['wmgSiteLogoIcon'] ?? null;
 		$tagline = $fullConfig['wmgSiteLogoTagline'] ?? null;
@@ -91,15 +92,34 @@ HEREDOC;
 		$h = $wordmark['height'] ?? 0;
 		$wordmarkHTML = '<img class="mw-logo-wordmark" alt="' . $dbname . '" src="' . $wordmarkUrl . '" width="' . $w . '"' . 'height="' . $h . '">';
 
-		$html .= '<a href="#" class="mw-logo" title="' . $dbname . '" id="db-' . $dbname . '">' .
+		$html .= '<a href="https:' . $fullConfig['wgServer'] . '" class="mw-logo-variants mw-skin-' . $skin . '" title="' . $dbname . '" id="db-' . $dbname . '">' .
 			'<sup>' . $dbname . '</sup>' .
 			'<img class="mw-logo-1x" src="' . $wmgLogosPath . $fullConfig['wmgSiteLogo1x'] . '" height="160">' .
-			'<img class="mw-logo-icon" src="' . $wmgLogosPath . $icon . '" aria-hidden="true" height="50" width="50">' .
+			'<div class="mw-logo"><img class="mw-logo-icon" src="' . $wmgLogosPath . $icon . '" aria-hidden="true" height="50" width="50">' .
 			'<span class="mw-logo-container">' .
 				$wordmarkHTML . $taglineHTML .
-			'</span>' .
+			'</span></div>' .
 		'</a>';
 	}
+	$html .= <<<HEREDOC
+<script>
+var f = document.getElementById('filter');
+f.disabled = false;
+f.addEventListener( 'input', function () {
+	const all = this.value.split('\\n');
+	document.querySelectorAll( '.mw-logo-variants' ).forEach( ( node ) => {
+		node.style.display = 'none';
+	} );
+	all.filter((key) => key ).forEach((key) => {
+		const node = document.getElementById( 'db-' + key.trim() );
+		if ( node ) {
+			node.style.display = '';
+		}
+	})
+} );
+</script>
+HEREDOC;
+
 	$html .= '</body></html>';
 	file_put_contents( getcwd() . '/logos/index.html', $html );
 }

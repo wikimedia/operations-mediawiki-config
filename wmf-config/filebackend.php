@@ -34,7 +34,7 @@ $wmgSwiftShardLocal = in_array( $wgDBname, $wmgSwiftBigWikis ) ? 2 : 0; // shard
 $wmgSwiftShardCommon = in_array( 'commonswiki', $wmgSwiftBigWikis ) ? 2 : 0; // shard levels
 
 if ( $wmgRealm === 'labs' ) {
-	$redisLockServers = [ 'rdb1', 'rdb2' ];
+	$redisLockServers = [ 'rdb1' ];
 	$commonsUrl = "https://commons.wikimedia.beta.wmflabs.org";
 	$uploadUrl = "//upload.wikimedia.beta.wmflabs.org";
 } else {

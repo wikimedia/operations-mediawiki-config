@@ -1,9 +1,20 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "org.wikipedia",
-    "sha256_cert_fingerprints":
-    ["F5:40:E9:37:41:9A:1F:E3:08:E3:35:31:35:9C:23:CE:19:DF:D8:4A:66:01:E2:EF:85:C2:17:C8:23:A7:08:7F"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.wikipedia",
+      "sha256_cert_fingerprints":
+      ["F5:40:E9:37:41:9A:1F:E3:08:E3:35:31:35:9C:23:CE:19:DF:D8:4A:66:01:E2:EF:85:C2:17:C8:23:A7:08:7F"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.wikipedia",
+      "sha256_cert_fingerprints":
+      ["1C:3D:DB:0E:8F:32:58:B0:FF:3B:7B:6A:60:8D:19:E7:CD:EE:D3:8A:58:97:BB:DA:23:BA:C1:55:92:3B:12:67"]
+    }
   }
-}]
+]

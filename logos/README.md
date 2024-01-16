@@ -53,10 +53,12 @@ yywiki:
   selected_tagline: xxwiki
 ```
 
-If you are in a hurry and want to add wordmarks/taglines without uploading files
+If you need to add wordmarks/taglines without uploading files
 to Wikimedia Commons, you can add a `local_wordmark`/`local_tagline` field to
-the config.yaml. Please don't forget to upload the files to Wikimedia Commons
-once you have enough time.
+the config.yaml. In future when the logos are stable you should upload the files
+to Wikimedia Commons so they can be managed by their respective communities. A
+script is proposed for managing this in future, more details at
+https://phabricator.wikimedia.org/T345775.
 
 When adding or modifying wordmarks/taglines, it is highly recommended to add
 a `comment_wordmark` (or `comment_tagline`) setting (normally Phabricator

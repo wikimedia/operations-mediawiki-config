@@ -4,6 +4,8 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use CirrusSearch\LanguageDetector\TextCat;
+
 return [
 
 // NOTE: don't forget to update TTM default cluster via
@@ -366,8 +368,8 @@ return [
 		'cloudelastic' => []
 	],
 	'enwiki' => [
-		'eqiad' => [ 'content' => 2, 'general' => 3 ],
-		'codfw' => [ 'content' => 2, 'general' => 3 ],
+		'eqiad' => [ 'content' => 1, 'general' => 3 ],
+		'codfw' => [ 'content' => 1, 'general' => 3 ],
 		'cloudelastic' => []
 	],
 	'eswiki' => [
@@ -436,6 +438,7 @@ return [
 'wgCirrusSearchUseCompletionSuggester' => [
 	'default' => 'yes',
 	'wikidatawiki' => 'no',
+	'labtestwiki' => 'no', // disable while T328289 gets fixed
 ],
 
 // wgCirrusSearchCompletionSuggesterSubphrases @{
@@ -713,15 +716,15 @@ return [
 
 'wgCirrusSearchLanguageDetectors' => [
 	'default' => [],
-	'dewiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'eswiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'jawiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'nlwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'ptwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'ruwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'dewiki' => [ 'textcat' => TextCat::class ],
+	'enwiki' => [ 'textcat' => TextCat::class ],
+	'eswiki' => [ 'textcat' => TextCat::class ],
+	'frwiki' => [ 'textcat' => TextCat::class ],
+	'itwiki' => [ 'textcat' => TextCat::class ],
+	'jawiki' => [ 'textcat' => TextCat::class ],
+	'nlwiki' => [ 'textcat' => TextCat::class ],
+	'ptwiki' => [ 'textcat' => TextCat::class ],
+	'ruwiki' => [ 'textcat' => TextCat::class ],
 ],
 
 // Enable interwiki search by language detection. The list of language
@@ -1213,4 +1216,48 @@ return [
 	'default' => false,
 ],
 
+'wgCirrusSearchDeduplicateInQuery' => [
+	'default' => false,
+],
+
+'wgCirrusSearchDeduplicateInMemory' => [
+	'default' => false,
+],
+'wgCirrusSearchUseEventBusBridge' => [
+	'default' => false,
+	// T352335: Initial cirrus updater deployment
+	'commonswiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'testwiki' => true,
+	'wikidatawiki' => true,
+	// T351503: 2nd batch, expected additional topic size per broker: ~11GB, see spreadsheet
+	'dewiki' => true,
+	'frwiktionary' => true,
+	'kuwiktionary' => true,
+	// T351503: 3rd batch, expected additional topic size per broker: ~10GB, see spreadsheet
+	'arwiki' => true,
+	'eswiki' => true,
+	'trwiki' => true,
+	'ruwiktionary' => true,
+	'bewiki' => true,
+	'plwiki' => true,
+	'zhwiki' => true,
+	'ruwiki' => true,
+	'cawiki' => true,
+	'metawiki' => true,
+	'viwiki' => true,
+	'nlwiki' => true,
+	'huwiki' => true,
+	'thwiktionary' => true,
+	'ruwikinews' => true,
+	'shwiki' => true,
+	'fawiki' => true,
+	'jawiki' => true,
+	'cebwiki' => true,
+	// T351503: 4th batch, expected additional topic size per broker: ~8GB, see spreadsheet
+	'enwiktionary' => true,
+	// T351503: 5th batch, expected additional topic size per broker: ~11GB, see spreadsheet
+	'enwiki' => true,
+],
 ];

@@ -114,7 +114,7 @@ call_user_func( static function () {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'plwiki' ) {
-		// T45617, T50043
+		// T45617, T50043, T340397
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 90;
 		$wgFlaggedRevsAutopromote['edits'] = 500;
@@ -122,8 +122,7 @@ call_user_func( static function () {
 		$wgFlaggedRevsAutopromote['benchmarks'] = 15;
 		$wgFlaggedRevsAutopromote['totalContentEdits'] = 500;
 		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10;
-		$wgFlaggedRevsAutopromote['editComments'] = 30;
-		$wgFlaggedRevsAutopromote['userpageBytes'] = 100;
+		$wgFlaggedRevsAutopromote['editComments'] = 500;
 
 	} elseif ( $wgDBname == 'ptwikibooks' ) {
 		$wgFlaggedRevsAutopromote = [
@@ -141,9 +140,6 @@ call_user_func( static function () {
 	} elseif ( $wgDBname == 'ptwikinews' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 30;
-
-	} elseif ( $wgDBname == 'ptwikisource' ) {
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'ruwikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
@@ -229,9 +225,9 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'bewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-		$wgGroupPermissions['autoeditor']['autoreview'] = true;
-		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
+		# Remove reviewer group, T326012
+		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'bnwiki' ) { // T30717
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 
@@ -242,7 +238,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'review' ];
 
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -281,7 +277,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for autoconfirmed, autopatrol and review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autopatrol', 'review' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autopatrol', 'review' ];
 
 		# User groups permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -337,7 +333,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed' ];
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -392,7 +388,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autoreview' ];
 
 		# User groups permissions
 		$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
@@ -462,7 +458,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review', 'sysop' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'review', 'sysop' ];
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -509,7 +505,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'idwiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview', 'sysop' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autoreview', 'sysop' ];
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -530,7 +526,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for autoconfirmed rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed' ];
 
 		# Group permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -557,13 +553,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['validate'] = true;
 	} elseif ( $wgDBname == 'ptwikinews' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-	} elseif ( $wgDBname == 'ptwikisource' ) {
-		$wgFlaggedRevsNamespaces[] = 102;
-		$wgFlaggedRevsNamespaces[] = 104;
-		$wgFlaggedRevsNamespaces[] = 106;
-		$wgFlaggedRevsNamespaces[] = 108;
-		$wgFlaggedRevsNamespaces[] = 110;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'ruwiki' ) {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];

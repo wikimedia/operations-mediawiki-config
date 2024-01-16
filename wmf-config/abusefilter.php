@@ -58,6 +58,9 @@ if ( $wmgUseCheckUser ) {
 	$wgCheckUserLogAdditionalRights[] = 'abusefilter-view';
 }
 
+// T309609 — Set default AbuseFilter condition limit to 2000
+$wgAbuseFilterConditionLimit = 2000;
+
 // Custom permissions
 switch ( $wgDBname ) {
 	case 'arwiki':
@@ -103,9 +106,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['interface-editor']['abusefilter-modify'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
-		break;
-	case 'commonswiki':
-		$wgAbuseFilterConditionLimit = 2000; // T132048
 		break;
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -394,7 +394,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
-		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T224308
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
@@ -428,6 +427,14 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
+		break;
+	case 'shwiki':
+		$wgAbuseFilterActions['block'] = true; // T345513
+		$wgAbuseFilterBlockDuration = '1 day'; // T345513
+		$wgAbuseFilterAnonBlockDuration = '1 day'; // T345513
+		break;
+	case 'srwiki':
+		$wgAbuseFilterActions['block'] = true; // T349727
 		break;
 	case 'testwiki':
 		$wgAbuseFilterActions['block'] = true;
@@ -479,6 +486,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T210364
 		$wgAbuseFilterBlockDuration = '24 hours'; // T210364
 		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T210364
+		$wgGroupPermissions['abusefilter-helper']['abusefilter-log-private'] = true; // T344398
+		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T344398
+		$wgGroupPermissions['rollbacker']['abusefilter-log-private'] = true; // T39676
 		break;
 	case 'zhwikibooks':
 		$wgAbuseFilterActions['block'] = true; // T330026
@@ -494,6 +504,11 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T307007
 		$wgAbuseFilterBlockDuration = '24 hours'; // T307007
 		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T307007
+		break;
+	case 'zhwikivoyage':
+		$wgAbuseFilterActions['block'] = true; // T353604
+		$wgAbuseFilterBlockDuration = '24 hours'; // T353604
+		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T353604
 		break;
 	case 'zh_yuewiki':
 		$wgAbuseFilterActions['block'] = true; // T270567

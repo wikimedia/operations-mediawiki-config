@@ -34,19 +34,18 @@ class MWMultiVersion {
 	 * @var string[]
 	 */
 	public const DB_LISTS = [
-		// When updating list run ./docroot/noc/createTxtFileSymlinks.sh
+		// When updating list run ./docroot/noc/createTxtFileSymlinks.sh and `composer manage-dblist update`
 		// Expand computed dblists with ./multiversion/bin/expanddblist
 		'wikipedia',
 		'special',
 		'private',
 		'fishbowl',
 		'closed',
-		'desktop-improvements',
 		'flow',
 		'flaggedrevs',
 		'small',
+		'legacy-vector',
 		'medium',
-		'large',
 		'wikimania',
 		'wikidata',
 		'wikibaserepo',
@@ -61,8 +60,10 @@ class MWMultiVersion {
 		'wikitech',
 		'nonecho',
 		'mobile-anon-talk',
+		'modern-mainpage',
 		'nowikidatadescriptiontaglines',
 		'cirrussearch-big-indices',
+		'rtl',
 	];
 
 	/** @var string[] */
@@ -214,6 +215,18 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * @todo remove once all scripts have been migrated
+	 * not to use CommandLineInc
+	 *
+	 * @return MWMultiVersion
+	 */
+	public static function initializeForMaintenanceOld() {
+		$instance = self::createInstance();
+		$instance->setSiteInfoForMaintenanceOld();
+		return $instance;
+	}
+
+	/**
 	 * Create an instance by explicit wiki ID.
 	 *
 	 * @param string $dbName
@@ -273,6 +286,7 @@ class MWMultiVersion {
 			'ee.wikimedia.org' => 'et',
 			'vrt-wiki.wikimedia.org' => 'otrs_wiki',
 			'ombuds.wikimedia.org' => 'ombudsmen',
+			'www.wikifunctions.org' => 'wikifunctions',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
@@ -308,7 +322,7 @@ class MWMultiVersion {
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					$lang,
 					$this->wikimediaSubdomains
-			) ) ) {
+				) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
 				$site = $matches[2];
 			}
@@ -348,6 +362,50 @@ class MWMultiVersion {
 
 		# The --wiki param must the second argument to to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
+		if ( isset( $argv[2] ) && $argv[2] === '--wiki' ) {
+			// "script.php --wiki dbname"
+			$dbname = isset( $argv[3] ) ? $argv[3] : '';
+		} elseif ( isset( $argv[2] ) && substr( $argv[2], 0, 7 ) === '--wiki=' ) {
+			// "script.php --wiki=dbname"
+			$dbname = substr( $argv[2], 7 );
+		} elseif ( isset( $argv[2] ) && substr( $argv[2], 0, 2 ) !== '--' ) {
+			// "script.php dbname"
+			$dbname = $argv[2];
+			$argv[2] = '--wiki=' . $dbname;
+		}
+
+		if ( $dbname === '' ) {
+			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
+		}
+
+		if ( isset( $argv[3] ) && $argv[3] === '--force-version' ) {
+			if ( !isset( $argv[4] ) ) {
+				self::error( "--force-version must be followed by a version number" );
+			}
+			$this->version = "php-" . $argv[4];
+
+			# Delete the flag and its parameter so it won't be passed on to the
+			# maintenance script.
+			unset( $argv[4] );
+			unset( $argv[3] );
+
+			# Reindex
+			$argv = array_values( $argv );
+		}
+
+		$this->db = $dbname;
+	}
+
+	/**
+	 * This is like setSiteInfoForMaintenanceOld but for old maint scripts using
+	 *  CommandLineInc
+	 * TODO: Remove once all of them have been migrated.
+	 */
+	private function setSiteInfoForMaintenanceOld() {
+		global $argv;
+		$dbname = getenv( 'MW_WIKI' ) ?: '';
+		# The --wiki param must the second argument to to avoid
+		# any "options with args" ambiguity (see Maintenance.php).
 		if ( isset( $argv[1] ) && $argv[1] === '--wiki' ) {
 			// "script.php --wiki dbname"
 			$dbname = isset( $argv[2] ) ? $argv[2] : '';
@@ -359,26 +417,21 @@ class MWMultiVersion {
 			$dbname = $argv[1];
 			$argv[1] = '--wiki=' . $dbname;
 		}
-
 		if ( $dbname === '' ) {
 			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
 		}
-
 		if ( isset( $argv[2] ) && $argv[2] === '--force-version' ) {
 			if ( !isset( $argv[3] ) ) {
 				self::error( "--force-version must be followed by a version number" );
 			}
 			$this->version = "php-" . $argv[3];
-
 			# Delete the flag and its parameter so it won't be passed on to the
 			# maintenance script.
 			unset( $argv[3] );
 			unset( $argv[2] );
-
 			# Reindex
 			$argv = array_values( $argv );
 		}
-
 		$this->db = $dbname;
 	}
 
@@ -422,8 +475,8 @@ class MWMultiVersion {
 		global $IP;
 		if ( strpos( $script, "{$IP}/" ) === 0 ) {
 			$script = substr( $script, strlen( "{$IP}/" ) );
-			$options['wrapper'] = __DIR__ . '/MWScript.php';
 		}
+		$options['wrapper'] = __DIR__ . '/MWScript.php';
 		return true;
 	}
 
@@ -605,14 +658,19 @@ class MWMultiVersion {
 	 * (c) Changes PHP's current directory to the directory of this file.
 	 *
 	 * @param string $file File path (relative to MediaWiki dir or absolute)
+	 * @param bool $useOld Whether the cli file is using CommandLineInc
 	 * @return string Absolute file path with proper MW location
 	 */
-	public static function getMediaWikiCli( $file ) {
-		global $IP;
+	public static function getMediaWikiCli( $file, $useOld = false ) {
+		global $argv, $IP;
 
 		$multiVersion = self::getInstance();
 		if ( !$multiVersion ) {
-			$multiVersion = self::initializeForMaintenance();
+			if ( $useOld ) {
+				$multiVersion = self::initializeForMaintenanceOld();
+			} else {
+				$multiVersion = self::initializeForMaintenance();
+			}
 		}
 		if ( $multiVersion->getDatabase() === 'testwiki' ) {
 			define( 'TESTWIKI', 1 );
@@ -623,6 +681,13 @@ class MWMultiVersion {
 
 		# Get the correct MediaWiki path based on this version...
 		$IP = dirname( __DIR__ ) . "/$version";
+		// Make the script file path absolute.
+		// Can't be done sooner as the version thus the actual $IP was not determined.
+		$scriptIndex = $useOld ? 0 : 1;
+		$scriptPath = $argv[$scriptIndex];
+		if ( $scriptPath !== '' && $scriptPath[0] !== '/' && strpos( $scriptPath, '/' ) !== false ) {
+			$argv[$scriptIndex] = "$IP/$scriptPath";
+		}
 
 		putenv( "MW_INSTALL_PATH=$IP" );
 

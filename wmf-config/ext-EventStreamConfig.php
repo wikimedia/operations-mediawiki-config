@@ -105,17 +105,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_CentralNoticeTiming' => [
-			'schema_title' => 'analytics/legacy/centralnoticetiming',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_CodeMirrorUsage' => [
 			'schema_title' => 'analytics/legacy/codemirrorusage',
 			'topic_prefixes' => null,
@@ -160,41 +149,8 @@ return [
 				],
 			]
 		],
-		'eventlogging_EchoInteraction' => [
-			'schema_title' => 'analytics/legacy/echointeraction',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_EchoMail' => [
-			'schema_title' => 'analytics/legacy/echomail',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_EditAttemptStep' => [
 			'schema_title' => 'analytics/legacy/editattemptstep',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_FeaturePolicyViolation' => [
-			'schema_title' => 'analytics/legacy/featurepolicyviolation',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -272,6 +228,17 @@ return [
 		],
 		'eventlogging_LandingPageImpression' => [
 			'schema_title' => 'analytics/legacy/landingpageimpression',
+			'topic_prefixes' => null,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		'eventlogging_MediaWikiPingback' => [
+			'schema_title' => 'analytics/legacy/mediawikipingback',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -437,17 +404,6 @@ return [
 		],
 		'eventlogging_SpecialInvestigate' => [
 			'schema_title' => 'analytics/legacy/specialinvestigate',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_SpecialMuteSubmit' => [
-			'schema_title' => 'analytics/legacy/specialmutesubmit',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -693,6 +649,18 @@ return [
 				'rate' => 0.1,
 			],
 		],
+		'app_session' => [
+			'schema_title' => 'analytics/mobile_apps/app_session',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'app_donor_experience' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'app_patroller_experience' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'ios.edit_history_compare' => [
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -727,6 +695,18 @@ return [
 		],
 		'ios.reading_lists' => [
 			'schema_title' => 'analytics/mobile_apps/ios_reading_lists',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.navigation_events' => [
+			'schema_title' => 'analytics/mobile_apps/ios_navigation_events',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.watchlists' => [
+			'schema_title' => 'analytics/mobile_apps/ios_watchlists',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.suggested_edits_alt_text_prototype' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'android.user_contribution_screen' => [
@@ -793,6 +773,130 @@ return [
 			'schema_title' => 'analytics/mobile_apps/android_find_in_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'android.image_recommendation_event' => [
+			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.reading_list_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_reading_list_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.product_metrics.article_link_preview_interaction' => [
+			'schema_title' => 'analytics/product_metrics/app/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.article_link_preview_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+						'agent_app_install_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
+		'android.product_metrics.article_toc_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/product_metrics/android_article_toc_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.article_toc_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+						'agent_app_install_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
+		'android.product_metrics.article_toolbar_interaction' => [
+			'schema_title' => 'analytics/product_metrics/app/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.article_toolbar_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+						'agent_app_install_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
+		'android.product_metrics.find_in_page_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/product_metrics/android_find_in_page_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'android.metrics_platform.find_in_page_interaction',
+					],
+					'provide_values' => [
+						'mediawiki_database',
+						'page_title',
+						'page_content_language',
+						'page_id',
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language_groups',
+						'performer_language_primary',
+						'performer_groups',
+						'agent_app_install_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 1,
+			],
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -829,9 +933,61 @@ return [
 			'schema_title' => 'analytics/mediawiki/web_ab_test_enrollment',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.web_ui_actions' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/web_ui_actions',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'webuiactions_log.',
+						'click',
+						'init',
+					],
+					'provide_values' => [
+						'page_namespace_id',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 		'mediawiki.web_ui_scroll' => [
 			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
 			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.web_ui_scroll_migrated' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					// The following is derived from:
+					//
+					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webUIScroll.js#L29-L31
+					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webUIScroll.js#L33
+					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webCommon.js#L33-L38
+					'provide_values' => [
+						'performer_is_bot',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'performer_session_id',
+						'page_id',
+						'performer_is_logged_in',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
 		],
 		'mediawiki.ipinfo_interaction' => [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
@@ -847,6 +1003,14 @@ return [
 		],
 		'mediawiki.mentor_dashboard.visit' => [
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.mentor_dashboard.personalized_praise' => [
+			'schema_title' => 'analytics/mediawiki/mentor_dashboard/personalized_praise',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.mentor_dashboard.interaction' => [
+			'schema_title' => 'analytics/mediawiki/mentor_dashboard/interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'mediawiki.welcomesurvey.interaction' => [
@@ -875,103 +1039,30 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
-		// See https://phabricator.wikimedia.org/T311268
-		'mediawiki.web_ui.interactions' => [
+		// See https://phabricator.wikimedia.org/T326212
+		'mediawiki.special_diff_interactions' => [
 			'schema_title' => 'analytics/mediawiki/client/metrics_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
 					'events' => [
-						'web.ui.',
-
-						// TODO: Change event name prefix to "web_ui" in the
-						// instrument
-						'web_ui.',
+						'specialDiff.click.', // T326214, T326216
 					],
 					'provide_values' => [
-						'page_namespace',
-						'performer_is_logged_in',
-						'performer_session_id',
-						'performer_pageview_id',
-						'performer_edit_count_bucket',
 						'mediawiki_skin',
-						'mediawiki_database'
-					],
-					'curation' => [
-						'mediawiki_skin' => [
-							'in' => [ 'minerva', 'vector', 'vector-2022' ],
-						],
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 0,
-			],
-		],
-
-		// See https://phabricator.wikimedia.org/T309013
-		'mediawiki.edit_attempt' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'events' => [ 'eas.' ],
-
-					// The following are the values common to all client-side EditAttemptStep
-					// instruments [0][1][2] that the Metrics Platform Clients can provide.
-					//
-					// [0] https://gerrit.wikimedia.org/g/mediawiki/extensions/MobileFrontend/+/2c907f81c54dffbc18be7eb903508af6ef7ac4d0/src/mobile.init/eventLogging/schemaEditAttemptStep.js#30
-					// [1] https://gerrit.wikimedia.org/g/mediawiki/extensions/DiscussionTools/+/8ce9c1467750e410404a860e734baf0185a62fe5/modules/logger.js#54
-					// [2] https://gerrit.wikimedia.org/g/mediawiki/extensions/VisualEditor/+/e9560b58b9599d0c008bcaacafcd21ce113a444f/modules/ve-mw/init/ve.init.mw.trackSubscriber.js#233
-					'provide_values' => [
-						'agent_client_platform_family',
-						'page_id',
-						'page_title',
-						'page_namespace',
-						'page_revision_id',
 						'mediawiki_version',
-						'mediawiki_is_debug_mode',
+						'mediawiki_is_production',
 						'mediawiki_database',
 						'performer_is_logged_in',
-						'performer_id',
-						'performer_session_id',
-						'performer_pageview_id',
-						'performer_edit_count',
+						'performer_groups',
+						'performer_edit_count_bucket',
+						'performer_registration_dt',
 					],
 				],
 			],
 			'sample' => [
 				'unit' => 'pageview',
 				'rate' => 1,
-			],
-		],
-
-		// See https://phabricator.wikimedia.org/T309602
-		'mediawiki.visual_editor_feature_use' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'events' => [ 'vefu.' ],
-
-					// The following are the values common to all client-side VisualEditorFeatureUse
-					// instruments [0][1][2] that the Metrics Platform Clients can provide.
-					//
-					// [0] https://gerrit.wikimedia.org/g/mediawiki/extensions/MobileFrontend/+/878ac506cd4911bc6e2fab9a9fbf6246a331fd0a/src/mobile.init/eventLogging/schemaVisualEditorFeatureUse.js#22
-					// [1] https://gerrit.wikimedia.org/g/mediawiki/extensions/DiscussionTools/+/c728f35e3a43807b3e014a80d8e57504d7e45259/modules/logger.js#71
-					// [2] https://gerrit.wikimedia.org/g/mediawiki/extensions/VisualEditor/+/e115c055044146d4eb4fb52afb0192b5acbae7c2/modules/ve-mw/init/ve.init.mw.trackSubscriber.js#305
-					'provide_values' => [
-						'agent_client_platform_family',
-						'mediawiki_database',
-						'performer_id',
-						'performer_edit_count',
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 0,
 			],
 		],
 
@@ -985,11 +1076,18 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
+		// GeoIP mapping experiments (T332024)
+		'development.network.probe' => [
+			'schema_title' => 'development/network/probe',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
 		 * These streams disable canary event production.
-		 * See: https://phabricator.wikimedia.org/T287789
+		 * We'd like to enable canary events for these, but the logging cluster consumers
+		 * would need to know to filter out the canary events first.
 		 * eventgate-logging-external only requests its stream configs on service startup,
 		 * so if you modify something here, eventgate-logging-external will need a restart.
 		 */
@@ -1046,46 +1144,6 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare release candiate 1 of
-		// mediawiki.page_change stream.
-		// https://phabricator.wikimedia.org/T311129
-		'rc1.mediawiki.page_change' => [
-			'schema_title' => 'mediawiki/page/change',
-			# When producing this stream to kafka, use a message key
-			# like { wiki_id: X, page_id: Y }.  X and Y will be
-			# obtained from the message value at wiki_id and page.page_id.
-			# See also: https://phabricator.wikimedia.org/T318846
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-main',
-		],
-		// Declare release candiate 1 of
-		// mediawiki.page_content_change stream.
-		// This stream uses the mediawiki/page/change schema
-		// but includes content bodies in content slots.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
-		// https://phabricator.wikimedia.org/T307959
-		'rc1.mediawiki.page_content_change' => [
-			'schema_title' => 'mediawiki/page/change',
-			// Even though this stream will not be produced via EventGate,
-			// we need to set an event service, so that the ProduceCanaryEvents
-			// monitoring job can produce events through EventGate.
-			// TODO: When we move the enrichment job to producing to kafka main,
-			// we should set this to eventgate-main too.
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
-		// This stream will be used by the streaming enrichment pipeline
-		// to emit error events encountered during enrichment.
-		// These events can be used if backfilling of the failed enrichment
-		// is desired later.
-		'rc1.enrichment.mediawiki_page_content_change.error' => [
-			'schema_title' => 'error',
-			'canary_events_enabled' => false,
-		],
-
 		/*
 		 * == eventgate-main streams ==
 		 * These streams are produced to Kafka main-eqiad and main-codfw.
@@ -1109,74 +1167,66 @@ return [
 		'mediawiki.centralnotice.campaign-change' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.centralnotice.campaign-create' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/create',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.centralnotice.campaign-delete' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/delete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
+		],
+		'mediawiki.cirrussearch.page_rerender.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/page_rerender',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
 		],
 		'mediawiki.page-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-delete' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-links-change' => [
 			'schema_title' => 'mediawiki/page/links-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-move' => [
 			'schema_title' => 'mediawiki/page/move',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-properties-change' => [
 			'schema_title' => 'mediawiki/page/properties-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-restrictions-change' => [
 			'schema_title' => 'mediawiki/page/restrictions-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-suppress' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.page-undelete' => [
 			'schema_title' => 'mediawiki/page/undelete',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.recentchange' => [
 			'schema_title' => 'mediawiki/recentchange',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.revision-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.revision-score' => [
 			'schema_title' => 'mediawiki/revision/score',
 			'destination_event_service' => 'eventgate-main',
-			// This stream is derived and created by change-propagation,
-			// and Hadoop is the main consumer.  Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision-score-test' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1184,8 +1234,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T301878.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_goodfaith' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1193,8 +1241,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_damaging' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1202,8 +1248,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_reverted' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1211,8 +1255,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_articlequality' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1220,8 +1262,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_draftquality' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1229,8 +1269,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_articletopic' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1238,8 +1276,6 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
 		],
 		'mediawiki.revision_score_drafttopic' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1247,23 +1283,35 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T317768.
-			// Emit canary events.
-			'canary_events_enabled' => true,
+		],
+		'mediawiki.page_prediction_change.rc0' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
+			// This stream is a testing stream for page-prediction-change events,
+			// and the events will be emitted by the Lift Wing platform.
+			// More info in T349919.
+		],
+		'mediawiki.page_outlink_topic_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
 		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.revision-visibility-change' => [
 			'schema_title' => 'mediawiki/revision/visibility-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'mediawiki.user-blocks-change' => [
 			'schema_title' => 'mediawiki/user/blocks-change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
 		],
 		'resource_change' => [
 			'schema_title' => 'resource_change',
@@ -1283,7 +1331,6 @@ return [
 		'mediawiki.revision-recommendation-create' => [
 			'schema_title' => 'mediawiki/revision/recommendation-create',
 			'destination_event_service' => 'eventgate-main',
-			// This stream is new enough that consumers are aware of canary events.
 		],
 		'mediawiki.image_suggestions_feedback' => [
 			'schema_title' => 'mediawiki/page/image-suggestions-feedback',
@@ -1292,6 +1339,54 @@ return [
 		'maps.tiles_change' => [
 			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
+		],
+
+		// mediawiki.page_change stream.
+		// This stream is using major API versioning.
+		// https://wikitech.wikimedia.org/wiki/Event_Platform/Stream_Configuration#Stream_versioning
+		// https://phabricator.wikimedia.org/T311129
+		'mediawiki.page_change.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			# When producing this stream to kafka, use a message key
+			# like { wiki_id: X, page_id: Y }.  X and Y will be
+			# obtained from the message value at wiki_id and page.page_id.
+			# See also: https://phabricator.wikimedia.org/T318846
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+		],
+		// Declare version 1 of
+		// mediawiki.page_content_change stream.
+		// This stream uses the mediawiki/page/change schema
+		// but includes content bodies in content slots.
+		// It is produced by a streaming enrichment pipeline,
+		// (not via MediaWiki EventBus).
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		'mediawiki.page_content_change.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// page_content_change is produced directly to Kafka jumbo-eqiad,
+			// so we need to use an eventgate that also produces to jumbo-eqiad.
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		// This stream will be used by the streaming enrichment pipeline
+		// to emit error events encountered during enrichment.
+		// These events can be used if backfilling of the failed enrichment
+		// is desired later.
+		// This follows the naming convention of <job_name>.error
+		'mw_page_content_change_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
 		],
 
 		/*
@@ -1315,6 +1410,27 @@ return [
 		'rdf-streaming-updater.reconcile' => [
 			'schema_title' => 'rdf_streaming_updater/reconcile',
 			'destination_event_service' => 'eventgate-main',
+		],
+		/*
+		 * == Search Update Pipeline (Flink) output streams ==
+		 * Note that Flink does not produce these through eventgate,
+		 * it produces them directly to Kafka.
+		 */
+		'cirrussearch.update_pipeline.update.rc0' => [
+			'schema_title' => 'development/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
+		],
+		'cirrussearch.update_pipeline.fetch_error.rc0' => [
+			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
+			'destination_event_service' => 'eventgate-main',
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
 		],
 
 		// Temporary analytics for Kartographer Nearby feature
@@ -1380,21 +1496,46 @@ return [
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-	],
-	'+group0' => [
-		'mediawiki.web_ui.interactions' => [
+
+		'inuka.wiki_highlights_experiment' => [
+			'schema_title' => 'analytics/external/wiki_highlights_experiment',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
+		// (T336722) Wikifunctions-specific stream
+		'wikifunctions.ui' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'wf.ui.',
+					],
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_id',
+						'page_title',
+						'page_revision_id',
+						'performer_is_logged_in',
+						'performer_id',
+						'performer_name',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language',
+						'performer_language_variant',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_is_bot',
+					],
+				],
+			],
 			'sample' => [
+				'unit' => 'pageview',
 				'rate' => 1,
 			],
 		],
-	],
-	// Enable mediawiki.visual_editor_feature_use for testwiki: T309602
-	'+testwiki' => [
-		'mediawiki.visual_editor_feature_use' => [
-			'sample' => [
-				'rate' => 1
-			],
-		],
+
 	],
 ],
 

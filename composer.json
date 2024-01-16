@@ -8,14 +8,16 @@
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "1.3.2",
-		"mediawiki/mediawiki-codesniffer": "40.0.1",
+		"mediawiki/mediawiki-codesniffer": "42.0.0",
 		"phpunit/phpunit": "9.5.28",
+		"phpunit/php-code-coverage": "9.2.26",
 		"mediawiki/minus-x": "1.1.1",
-		"symfony/yaml": "5.4.17"
+		"symfony/yaml": "5.4.23"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
 		"phpcs": "phpcs -p -s",
+		"typos": "sh -c \"! git grep -E -I -f typos -- . ':(exclude)typos'\"",
 		"fix": [
 			"phpcbf",
 			"minus-x fix ."
@@ -24,6 +26,7 @@
 			"phpunit"
 		],
 		"test": [
+			"@typos",
 			"@lint",
 			"@phpunit",
 			"@phpcs",

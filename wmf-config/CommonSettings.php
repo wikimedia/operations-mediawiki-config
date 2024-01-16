@@ -39,11 +39,19 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
+use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
+use MediaWiki\Extension\ConfirmEdit\FancyCaptcha\FancyCaptcha;
+use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
+use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
+use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
+use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
+use MediaWiki\Extension\Notifications\Push\PushNotifier;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
+use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
@@ -64,6 +72,7 @@ if ( PHP_SAPI !== 'cli' ) {
 
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
+require_once __DIR__ . '/../src/ClusterConfig.php';
 require_once __DIR__ . '/etcd.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
@@ -113,21 +122,21 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 # reuse.
 $wmgHostnames = [];
 switch ( $wmgRealm ) {
-case 'labs':
-	$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
-	$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
-	$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
-	$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
-	$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
-	break;
-case 'production':
-default:
-	$wmgHostnames['meta']          = 'meta.wikimedia.org';
-	$wmgHostnames['test']          = 'test.wikipedia.org';
-	$wmgHostnames['upload']        = 'upload.wikimedia.org';
-	$wmgHostnames['wikidata']      = 'www.wikidata.org';
-	$wmgHostnames['wikifunctions'] = 'www.wikifunctions.org';
-	break;
+	case 'labs':
+		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
+		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
+		$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
+		break;
+	case 'production':
+	default:
+		$wmgHostnames['meta']          = 'meta.wikimedia.org';
+		$wmgHostnames['test']          = 'test.wikipedia.org';
+		$wmgHostnames['upload']        = 'upload.wikimedia.org';
+		$wmgHostnames['wikidata']      = 'www.wikidata.org';
+		$wmgHostnames['wikifunctions'] = 'www.wikifunctions.org';
+		break;
 }
 
 $wgDBname = $multiVersion->getDatabase();
@@ -143,15 +152,6 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 # Also used by MediaWiki core for various caching purposes, and may
 # be shared between wikis (e.g. does not need to vary by wgDBname).
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
-
-$wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
-
-# Whether MediaWiki is running on Kubernetes, intended for config
-# that needs to differ during the migration. On dedicated servers,
-# SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
-# Kubernetes pods, it's set by configuring the php.servergroup
-# Helm value.
-$wmgUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
 $wmgAllServices = ServiceConfig::getInstance()->getAllServices();
@@ -295,6 +295,8 @@ $wgLocalVirtualHosts = [
 	'ua.wikimedia.org',
 	've.wikimedia.org',
 	'wikimania.wikimedia.org',
+	'www.wikifunctions.org',
+	'm.wikifunctions.org',
 ];
 
 $globals = MWConfigCacheGenerator::getConfigGlobals(
@@ -307,7 +309,7 @@ $globals = MWConfigCacheGenerator::getConfigGlobals(
 extract( $globals );
 
 # Determine legacy site/lang pair for the current wiki
-list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+[ $site, $lang ] = $wgConf->siteFromDB( $wgDBname );
 
 # -------------------------------------------------------------------------
 # Settings common to all wikis
@@ -373,14 +375,8 @@ $wgMaxUserDBWriteDuration = 3;
 # This should be lower than 'max lag' in the LBFactory conf.
 $wgAPIMaxLagThreshold = 3;
 
-# Allow different memory_limit settings for Parsoid/PHP servers (T236833)
-# keep in sync with php7-fatal-error.php in operations/puppet
-# and with wmf-config/logging.php
-if ( $wmgServerGroup === 'parsoid' ) {
-	ini_set( 'memory_limit', $wmgMemoryLimitParsoid );
-} else {
-	ini_set( 'memory_limit', $wmgMemoryLimit );
-}
+# Set the max memory used.
+ini_set( 'memory_limit', $wmgMemoryLimit );
 
 # Change calls to wfShellWikiCmd() to use MWScript.php wrapper
 $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
@@ -404,8 +400,7 @@ $wgMiserMode = true;
 
 $wgQueryCacheLimit = 5000;
 
-// ParserCache expire time temporarily reduced to 21 days (T280605)
-$wgParserCacheExpireTime = 86400 * 21;
+$wgParserCacheExpireTime = 86400 * 30;
 // Override talk pages to have 10 days only (T280605)
 $wgDiscussionToolsTalkPageParserCacheExpiry = 86400 * 10;
 
@@ -429,25 +424,21 @@ if ( PHP_SAPI === 'cli' ) {
 	// To probe for excimer-related memory corruption e.g. T293568
 	$wgRequestTimeLimit = 2;
 } else {
-	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
-		case 'videoscaler.svc.eqiad.wmnet':
-		case 'videoscaler.svc.codfw.wmnet':
-		case 'videoscaler.discovery.wmnet':
+	// Videoscalers have a 1 day timeout.
+	// Jobrunners have 20 minutes.
+	// Everything else has 60 seconds for GETs and 200s for POSTs
+	if ( ClusterConfig::getInstance()->isAsync() ) {
+		if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
 			$wgRequestTimeLimit = 86400;
-			break;
-
-		case 'jobrunner.svc.eqiad.wmnet':
-		case 'jobrunner.svc.codfw.wmnet':
-		case 'jobrunner.discovery.wmnet':
+		} else {
 			$wgRequestTimeLimit = 1200;
-			break;
-
-		default:
-			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-				$wgRequestTimeLimit = 200;
-			} else {
-				$wgRequestTimeLimit = 60;
-			}
+		}
+	} else {
+		if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+			$wgRequestTimeLimit = 200;
+		} else {
+			$wgRequestTimeLimit = 60;
+		}
 	}
 }
 
@@ -488,13 +479,6 @@ if ( $wmgUseGlobalPreferences ) {
 	];
 }
 
-// QuickSurveys is a hard dependency for SimilarEditors, do not call
-// wfLoadExtension if QuickSurveys is not enabled to avoid fatal errors.
-if ( $wmgUseSimilarEditors && $wmgUseQuickSurveys ) {
-	wfLoadExtension( 'SimilarEditors' );
-	$wgGroupPermissions['checkuser']['similareditors'] = true;
-}
-
 # ######################################################################
 # Legal matters
 # ######################################################################
@@ -523,16 +507,7 @@ $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
 
-// Deprecated
-$wgIncludeLegacyJavaScript = true;
-
 $wgResourceLoaderMaxQueryLength = 5000;
-
-// Cache version key for ResourceLoader client-side module store
-// - Bumped to fix breakage due to old /static/$branchName/ urls still
-// being cached after the switch to /w/static.php (T134368).
-// - Bumped to fix broken SVG embedding being cached (T176884)
-$wgResourceLoaderStorageVersion .= '-3';
 
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
@@ -590,7 +565,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter-with-onhost-tier' ]
+			'args' => [ 'mcrouter' ]
 		],
 		1 => [
 			'class' => 'SqlBagOStuff',
@@ -721,22 +696,40 @@ if ( $wmgDisableAccountCreation ) {
 # ######################################################################
 # Server security settings
 # ######################################################################
+// Disable firejail in kubernetes, where it would not work.
+// Most shellouts, and any shellout depending on untrusted input in particular,
+// should use shellbox.
+$wgShellRestrictionMethod = ClusterConfig::getInstance()->isK8s() ? false : 'firejail';
+$wgShellboxShell = '/bin/bash';
 
-$wgShellRestrictionMethod = 'firejail';
+$wgUseImageMagick = true;
+// Please note: neither command exists in the container, and this should
+// never be called in production - still better to set it to something that could work on k8s.
+$wgImageMagickConvertCommand = ClusterConfig::getInstance()->isK8s() ? '/usr/bin/convert' : '/usr/local/bin/mediawiki-firejail-convert';
 
-$wgUseImageMagick               = true;
-$wgImageMagickConvertCommand    = '/usr/local/bin/mediawiki-firejail-convert';
 $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 	$wgTiffUseTiffinfo = true;
 	$wgTiffMaxMetaSize = 1048576;
+	// Force use of shellbox on mw on k8s.
+	// We're not sending commons user traffic here so this can live for as long as needed
+	// before we make upload-by-url asynchronous
+	if ( !$wmgUsePagedTiffHandlerShellbox && ClusterConfig::getInstance()->isK8s() ) {
+		$wmgUsePagedTiffHandlerShellbox = true;
+	}
 	if ( $wmgUsePagedTiffHandlerShellbox && $wmgLocalServices['shellbox-media'] ) {
 		// Route pagedtiffhandler to the Shellbox named "shellbox-media".
 		$wgShellboxUrls['pagedtiffhandler'] = $wmgLocalServices['shellbox-media'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 	}
+}
+
+// Use shellbox on k8s for handling djvu images.
+if ( ClusterConfig::getInstance()->isK8s() && $wmgLocalServices['shellbox-media'] ) {
+	$wgDjvuUseBoxedCommand = true;
+	$wgShellboxUrls['djvu'] = $wmgLocalServices['shellbox-media'];
 }
 
 // Disable $wgMaxImageArea checks, Thumbor uses a timeout instead
@@ -831,10 +824,15 @@ $wgDjvuRenderer = '/usr/bin/ddjvu';
 $wgDjvuTxt = '/usr/bin/djvutxt';
 
 # ######################################################################
+# StatsD/Metrics Settings
+# ######################################################################
+$wgStatsFormat = 'dogstatsd';
+$wgStatsTarget = 'udp://localhost:9125';
+$wgStatsdServer = $wmgLocalServices['statsd'];
+
+# ######################################################################
 # Reverse proxy Configuration
 # ######################################################################
-
-$wgStatsdServer = $wmgLocalServices['statsd'];
 
 $wgUseCdn = true;
 if ( $wmgRealm === 'production' ) {
@@ -864,6 +862,8 @@ if ( $wmgUseCORS ) {
 		'*.wikivoyage.org',
 		'www.mediawiki.org',
 		'm.mediawiki.org',
+		'www.wikifunctions.org',
+		'm.wikifunctions.org',
 		'advisory.wikimedia.org',
 		'advisory.m.wikimedia.org',
 		'affcom.wikimedia.org',
@@ -1005,9 +1005,6 @@ $wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'validate';
 $wgGrantPermissions['editprotected']['movestable'] = true;
 
-// Enable GWToolset's right
-$wgAvailableRights[] = 'gwtoolset';
-
 // So that protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
 $wgAvailableRights[] = 'editeditorprotected';
@@ -1069,6 +1066,9 @@ if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['bot']['editautopatrolprotected'] = true;
 }
 
+// Extension:StopForumSpam rights, so they can be assigned to global groups (T334856)
+$wgAvailableRights[] = 'sfsblock-bypass';
+
 # ######################################################################
 # Logo settings
 # ######################################################################
@@ -1097,7 +1097,6 @@ $wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNam
 
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
-	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
 	$wgTimelineFileBackend = 'local-multiwrite';
 	// Filenames in Shellbox container with no .ttf suffix
 	$wgTimelineFonts = [
@@ -1120,7 +1119,7 @@ if ( $wmgUseTimeline ) {
 $wgCopyUploadProxy = ( $wmgRealm !== 'labs' ) ? $wmgLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmgLocalServices['upload'];
-if ( $wmgUseLocalHTTPProxy || $wmgUsingKubernetes ) {
+if ( $wmgUseLocalHTTPProxy || ClusterConfig::getInstance()->isK8s() ) {
 	$wgLocalHTTPProxy = $wmgLocalServices['mwapi'] ?? false;
 }
 
@@ -1181,6 +1180,19 @@ $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
 $wgSiteMatrixNonGlobalSites = MWWikiversions::readDbListFile( 'nonglobal' );
 
+// list of codex icons to use for interwiki (based on SiteMatrix) search results widget
+// https://phabricator.wikimedia.org/T315269
+$wgInterwikiLogoOverride = [
+	'w' => 'logoWikipedia',
+	'wikt' => 'logoWiktionary',
+	'b' => 'logoWikibooks',
+	'n' => 'logoWikinews',
+	'q' => 'logoWikiquote',
+	's' => 'logoWikisource',
+	'v' => 'logoWikiversity',
+	'voy' => 'logoWikivoyage',
+];
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
@@ -1212,12 +1224,8 @@ if ( $wmgUseSyntaxHighlight ) {
 		// Route syntaxhighlight to the Shellbox named "shellbox-syntaxhighlight".
 		$wgShellboxUrls['syntaxhighlight'] = $wmgLocalServices['shellbox-syntaxhighlight'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
-		$wgPygmentizePath = '/usr/bin/pygmentize';
+		$wgPygmentizePath = '/srv/app/pygmentize';
 	}
-}
-
-if ( $wmgUseDoubleWiki ) {
-	wfLoadExtension( 'DoubleWiki' );
 }
 
 if ( $wmgUsePoem ) {
@@ -1244,9 +1252,11 @@ if ( $wmgUseProofreadPage ) {
 		$wgDefaultUserOptions['proofreadpage-showheaders'] = 1;
 	}
 
-	// Wikisource requires special handling.
+	// Wikisource requires special handling (disable fixed width on page and index namespaces)
 	// See T300563#7665461 and T74525
 	$wgVectorMaxWidthOptions['exclude']['namespaces'][] = $wgProofreadPageNamespaceIds['page'];
+	// as well as T352162
+	$wgVectorMaxWidthOptions['exclude']['namespaces'][] = $wgProofreadPageNamespaceIds['index'];
 
 }
 
@@ -1298,35 +1308,47 @@ if ( $wmgUseTimedMediaHandler ) {
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTimedTextNS = 102;
 	}
-	// overwrite enabling of local TimedText namespace
-	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
 
 	// enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
 
-	$wgEnabledTranscodeSet = [
-		// Keep the old WebM VP8 flat-file transcodes enabled
-		// while we transition, or playback of un-upgraded files
-		// will revert to original high-res sources.
-		// Disable them again once T200747 batch process complete.
-		'160p.webm' => true,
-		'240p.webm' => true,
-		'360p.webm' => true,
-		'480p.webm' => true,
-		'720p.webm' => true,
-		'1080p.webm' => true,
+	// The default $wgEnabledTranscodeSet will include WebM VP9 flat file
+	// transcodes from 240p to 2160p. Leave them enabled site-wide.
+	//
+	// Also enable a single WebM VP8 flat file for backwards compatibility.
+	$wgEnabledTranscodeSet['360p.webm'] = true;
 
-		// Enable the WebM VP9 flat-file transcodes
-		'120p.vp9.webm' => true,
-		'180p.vp9.webm' => true,
-		'240p.vp9.webm' => true,
-		'360p.vp9.webm' => true,
-		'480p.vp9.webm' => true,
-		'720p.vp9.webm' => true,
-		'1080p.vp9.webm' => true,
-		'1440p.vp9.webm' => true,
-		'2160p.vp9.webm' => true,
-	];
+	// Enable HLS adaptive streaming tracks for compatibility with iOS
+	// -- brion vibber, October 2023
+	//
+	// This is a soft-launch, with playback of the HLS tracks used on
+	// iOS browsers and app web views but not yet on desktop.
+	//
+	// Eventually these will replace most of the WebM transcodes, as they
+	// can be played back in other browsers using Media Source Extensions
+	// giving us a single universal track set that can adapt to screen
+	// size/density and network conditions automatically.
+	//
+	// This whole section can be minimized or removed later once the new
+	// tracks are enabled by default:
+
+	// MP3 stereo audio for iOS 16
+	$wgEnabledTranscodeSet['stereo.audio.mp3'] = true;
+
+	// Opus stereo audio for iOS 17
+	$wgEnabledTranscodeSet['stereo.audio.opus.mp4'] = true;
+
+	// MJPEG SDR video for older iOS devices without hardware VP9 codec
+	$wgEnabledTranscodeSet['144p.video.mjpeg.mov'] = true;
+
+	// VP9 SDR video for newer iOS devices (circa iPhone 12)
+	$wgEnabledTranscodeSet['240p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['360p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['480p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['720p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['1080p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['1440p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['2160p.video.vp9.mp4'] = true;
 
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
@@ -1386,8 +1408,8 @@ if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
 	$wgUrlShortenerServer = 'https://w.wiki';
-	$wgUrlShortenerDBCluster = 'extension1';
-	$wgUrlShortenerDBName = 'wikishared';
+	$wgVirtualDomainsMapping['urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+	$wgVirtualDomainsMapping['virtual-urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.org',
 		'(.*\.)?wiktionary\.org',
@@ -1416,7 +1438,6 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikifunctions.org',
 		'*.mediawiki.org',
 	];
-	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 	$wgGroupPermissions['sysop']['urlshortener-view-log'] = false;
 
@@ -1438,21 +1459,22 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
 		'repoListUrl' => 'https://gerrit.wikimedia.org/r/projects/?b=master&p=mediawiki/$TYPE/',
 		'sourceUrl' => 'https://gerrit.wikimedia.org/r/mediawiki/$TYPE/$EXT.git',
+		// Use the url-downloader proxy to reach out to gerrit. T340483
+		'proxy' => $wgCopyUploadProxy,
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_39';
+	$wgExtDistDefaultSnapshot = 'REL1_41';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_40';
+	// $wgExtDistCandidateSnapshot = 'REL1_42';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_41',
 		'REL1_40',
 		'REL1_39',
-		'REL1_38',
-		'REL1_35',
 	];
 
 	// Use Graphite for popular list
@@ -1462,6 +1484,8 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 // CentralAuth needed so that user CentralIds match
 if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	wfLoadExtension( 'GlobalBlocking' );
+	$wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => 'centralauth' ];
+	// leave this in place for now
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
@@ -1519,11 +1543,12 @@ if ( $wmgUseContactPage ) {
 	}
 }
 
+// At the moment securepoll doesn't work on k8s, or on newer linux distributions,
+// see T209892. TODO: properly disable it on votewiki when gnupg1 isn't available.
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 
 	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
-	$wgSecurePollScript = 'auth-api.php';
 	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) use ( $site, $lang ) {
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
 	};
@@ -1538,7 +1563,7 @@ if ( $wmgUseSecurePoll ) {
 	// T209802 - gpg2 is untested and evidently broken
 	$wgSecurePollGPGCommand = 'gpg1';
 
-	if ( wfHostName() === 'mwmaint1002' ) {
+	if ( strpos( ClusterConfig::getInstance()->getHostname(), 'mwmaint' ) === 0 ) {
 		$wgSecurePollShowErrorDetail = true;
 	}
 }
@@ -1582,7 +1607,9 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
 	// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
+	// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.Found
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.Found
 		|| ( isset( $_SERVER['PATH_INFO'] ) && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
 		if ( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {
 			$title = 'Talk:' . $matches[1];
@@ -1666,13 +1693,8 @@ $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 	}
 
 	if ( $wmgUseFooterCodeOfConductLink ) {
-		// T280886 wm-codeofconduct-url currently points to
-		// https://meta.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct
-		// but may need updating to point to
-		// https://foundation.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct
-		return;
-		// $urlKey = 'wm-codeofconduct-url';
-		// $msgKey = 'wm-codeofconduct';
+		$urlKey = 'wm-codeofconduct-url';
+		$msgKey = 'wm-codeofconduct';
 	} elseif ( $wmgUseFooterTechCodeOfConductLink ) {
 		$urlKey = 'wm-techcodeofconduct-url';
 		$msgKey = 'wm-techcodeofconduct';
@@ -1788,10 +1810,6 @@ if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
 }
 
-// TODO: This is a no-op with $wgForceHTTPS enabled
-// Remove once enabled everywhere. – T256095
-$wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
-
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
 	$wmgEnableCaptcha = false;
 }
@@ -1803,8 +1821,8 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaFileBackend = 'global-multiwrite';
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectoryLevels = 3;
-	$wgCaptchaStorageClass = 'CaptchaCacheStore';
-	$wgCaptchaClass = 'FancyCaptcha';
+	$wgCaptchaStorageClass = CaptchaCacheStore::class;
+	$wgCaptchaClass = FancyCaptcha::class;
 	$wgCaptchaWhitelist =
 		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
@@ -1853,6 +1871,8 @@ $wgHTTPImportTimeout = 50; // T155209
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 
+	$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => 'centralauth' ];
+
 	// Enable cross-origin session cookies (T252236).
 	if ( $wmgEnableCrossOriginSessions ) {
 		$wgCookieSameSite = 'None';
@@ -1867,64 +1887,50 @@ if ( $wmgUseCentralAuth ) {
 
 	foreach ( $wmgLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
-			'formatter' => 'MediaWiki\\Extension\\CentralAuth\\RCFeed\\IRCColourfulCARCFeedFormatter',
+			'formatter' => IRCColourfulCARCFeedFormatter::class,
 			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
 		];
 	}
 
-	switch ( $wmgRealm ) {
-	case 'dev':
-	case 'production':
-		// Production cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-		$wgCentralAuthLoginWiki = 'loginwiki';
-		break;
-
-	case 'labs':
-		// wmflabs beta cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = [
-			'.wikipedia.beta.wmflabs.org' => 'enwiki',
-			'.wikisource.beta.wmflabs.org' => 'enwikisource',
-			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
-			'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
-			'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
-			'.wikinews.beta.wmflabs.org' => 'enwikinews',
-			'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
-			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
-			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
-			$wmgHostnames['wikidata'] => 'wikidatawiki',
-			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
-			$wmgHostnames['wikifunctions'] => 'wikifunctionswiki',
-		];
-		$wgCentralAuthLoginWiki = 'loginwiki';
-		break;
-	}
-
-	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
-		$wmgSecondLevelDomain = strrev( $m[0] );
-	} else {
-		$wmgSecondLevelDomain = false;
-	}
-	unset( $wmgSecondLevelDomainRegex );
-
-	# Don't autologin to self
-	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
-		unset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] );
-		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
-	} elseif ( $wgDBname === 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] ) ) {
-		unset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] );
-		$wgCentralAuthCookieDomain = "commons$wmgSecondLevelDomain";
-	} elseif ( $wgDBname === 'metawiki' ) {
-		unset( $wgCentralAuthAutoLoginWikis["meta$wmgSecondLevelDomain"] );
-		$wgCentralAuthCookieDomain = "meta$wmgSecondLevelDomain";
-	} else {
-		# Don't set 2nd-level cookies for *.wikimedia.org, insecure
-		$wgCentralAuthCookieDomain = '';
-	}
+	$wgCentralAuthLoginWiki = 'loginwiki';
+	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
+
+	// Temporary fix for T350695: when setting a CentralAuth cookie without a 'domain' cookie attribute,
+	// clear pre-existing cookies with a domain attribute.
+	// Temporary fix for T351685: when setting a CentralAuth cookie with domain=wikisource.org,
+	// clear pre-existing cookies without a domain attribute
+	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
+		global $wgDBname, $wmgCentralAuthWebResponseSetCookieRecurse, $wgServer;
+		$realName = ( $options['prefix'] ?? '' ) . $name;
+		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token', 'centralauth_LoggedOut' ];
+		$shouldNotHaveCookieWithDomain = in_array( $wgDBname, [ 'commonswiki', 'metawiki' ] );
+		$shouldNotHaveCookieWithoutDomain = $wgDBname === 'sourceswiki';
+		$isSettingDomain = (bool)( $options['domain'] ?? '' );
+		if ( in_array( $realName, $centralAuthCookies )
+			&& ( $isSettingDomain ? $shouldNotHaveCookieWithoutDomain : $shouldNotHaveCookieWithDomain )
+			&& !$wmgCentralAuthWebResponseSetCookieRecurse
+		) {
+			$webResponse = RequestContext::getMain()->getRequest()->response();
+
+			$clearOptions = $options;
+			if ( $isSettingDomain ) {
+				$clearOptions['domain'] = '';
+			} else {
+				$serverUrl = wfExpandUrl( $wgServer, PROTO_CANONICAL );
+				if ( MobileContext::singleton()->usingMobileDomain() ) {
+					$serverUrl = MobileContext::singleton()->getMobileUrl( $serverUrl );
+				}
+				$parsedUrl = wfParseUrl( $serverUrl );
+				$clearOptions['domain'] = $parsedUrl['host'];
+			}
+
+			$wmgCentralAuthWebResponseSetCookieRecurse = true;
+			$webResponse->clearCookie( $name, $clearOptions );
+			$wmgCentralAuthWebResponseSetCookieRecurse = false;
+		}
+	};
 
 	/**
 	 * This function is used for both the CentralAuthWikiList and
@@ -1982,6 +1988,7 @@ if ( $wmgUseCentralAuth ) {
 
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
+	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => 'metawiki' ];
 }
 
 // Config for GlobalCssJs
@@ -2152,12 +2159,12 @@ $wgMaxShellTime = 50;  // seconds
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 switch ( $wmgRealm ) {
-case 'production':
-	$wgImageMagickTempDir = '/tmp/magick-tmp';
-	break;
-case 'labs':
-	$wgImageMagickTempDir = '/tmp/a/magick-tmp';
-	break;
+	case 'production':
+		$wgImageMagickTempDir = '/tmp/magick-tmp';
+		break;
+	case 'labs':
+		$wgImageMagickTempDir = '/tmp/a/magick-tmp';
+		break;
 }
 
 // Banner notice system
@@ -2265,7 +2272,7 @@ if ( $wmgUseCentralNotice ) {
 	// Emit CSP headers on banner previews. This can go away when full CSP
 	// support (T135963) is deployed.
 	// www.pages04.net is used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses to our email campaign vendor
-	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
+	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
 }
 
 // Load our site-specific l10n extension
@@ -2371,6 +2378,12 @@ if ( $wmgUseGlobalAbuseFilters ) {
 # PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
+	// Force use of shellbox on mw on k8s.
+	// We're not sending commons user traffic here so this can live for as long as needed
+	// before we make upload-by-url asynchronous
+	if ( !$wmgUsePdfHandlerShellbox && ClusterConfig::getInstance()->isK8s() ) {
+		$wmgUsePdfHandlerShellbox = true;
+	}
 	if ( $wmgUsePdfHandlerShellbox && $wmgLocalServices['shellbox-media'] ) {
 		// Route pdfhandler to the Shellbox named "shellbox-media".
 		$wgShellboxUrls['pdfhandler'] = $wmgLocalServices['shellbox-media'];
@@ -2476,63 +2489,6 @@ if ( $wmgUseUploadWizard ) {
 		'flickrApiKey' => 'e9d8174a79c782745289969a45d350e8',
 		// Slowwwwwwww
 		'campaignExpensiveStatsEnabled' => false,
-		'licensing' => [
-			'thirdParty' => [
-				'licenseGroups' => [
-					[
-						// This should be a list of all CC licenses we can reasonably expect to find around the web
-						'head' => 'mwe-upwiz-license-cc-head',
-						'subhead' => 'mwe-upwiz-license-cc-subhead',
-						'licenses' => [
-							'cc-by-sa-4.0',
-							'cc-by-sa-3.0',
-							'cc-by-sa-2.5',
-							'cc-by-4.0',
-							'cc-by-3.0',
-							'cc-by-2.5',
-							'cc-zero'
-						]
-					],
-					[
-						// n.b. as of April 2011, Flickr still uses CC 2.0 licenses.
-						// The White House also has an account there, hence the Public Domain US Government license
-						'head' => 'mwe-upwiz-license-flickr-head',
-						'subhead' => 'mwe-upwiz-license-flickr-subhead',
-						'prependTemplates' => [ 'flickrreview' ],
-						'licenses' => [
-							'cc-by-sa-2.0',
-							'cc-by-2.0',
-							'pd-usgov',
-						]
-					],
-					[
-						'head' => 'mwe-upwiz-license-public-domain-usa-head',
-						'subhead' => 'mwe-upwiz-license-public-domain-usa-subhead',
-						'licenses' => [
-							'pd-us',
-							'pd-old-70-expired',
-							'pd-art',
-						]
-					],
-					[
-						'head' => 'mwe-upwiz-license-usgov-head',
-						'licenses' => [
-							'pd-usgov',
-							'pd-usgov-nasa'
-						]
-					],
-					[
-						'head' => 'mwe-upwiz-license-custom-head',
-						'special' => 'custom',
-						'licenses' => [ 'custom' ],
-					],
-					[
-						'head' => 'mwe-upwiz-license-none-head',
-						'licenses' => [ 'none' ]
-					],
-				],
-			],
-		],
 	];
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
@@ -2606,26 +2562,12 @@ if ( $wmgUseCommonsMetadata ) {
 	$wgCommonsMetadataForceRecalculate = $wmgCommonsMetadataForceRecalculate;
 }
 
-if ( $wmgUseGWToolset ) {
-	wfLoadExtension( 'GWToolset' );
-	$wgGWTFileBackend = 'local-multiwrite';
-
-	// extra throttling until the image scalers are more robust
-	$wgGWToolsetConfigOverrides['mediafile_job_throttle_default'] = 5; // 5 files per batch
-	$wgJobBackoffThrottling['gwtoolsetUploadMetadataJob'] = 5 / 3600; // 5 batches per hour
-}
-
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
 }
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
-
-	if ( $wmgPopupsReferencePreviews ) {
-		$wgPopupsReferencePreviews = true;
-		$wgPopupsReferencePreviewsBetaFeature = false;
-	}
 }
 
 if ( $wmgUseLinter ) {
@@ -2668,76 +2610,19 @@ if ( $wmgUseParsoid ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
-	// RESTBase connection configuration is done by $wmgUseRestbaseVRS above.
-	// Parsoid connection configuration is done by $wmgUseParsoid above.
-	// At least one of these should be set if you want to use Visual Editor.
-	$wgVisualEditorParsoidAutoConfig = false;
-
-	// RESTBase connection configuration
-	if ( $wmgVisualEditorAccessRestbaseDirectly ) {
-		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
-		$wgVisualEditorFullRestbaseURL = "/api/rest_";
-		// There should be no lossy switching in RESTBase mode, but just in case
-		$wgVisualEditorAllowLossySwitching = false;
-	} else {
-		if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-			// (T241961) Just for wikitech, load the Parsoid extension and
-			// use VisualEditor auto-config. (Yes, this is a bit of a hack,
-			// and it exposes Parsoid's REST API, but ensures that Parsoid
-			// 'extension' code is kept in sync with core.)
-			wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
-			// Note that wgVirtualRestConfig['modules']['parsoid'] isn't set as wmgUseParsoid is false
-			$wgVisualEditorParsoidAutoConfig = true;
-		}
-		// Prefer lossy switching (dirty diffs) to not being able to switch editors
-		$wgVisualEditorAllowLossySwitching = true;
-	}
-
 	// Tab configuration
-	if ( $wmgVisualEditorUseSingleEditTab ) {
-		$wgVisualEditorUseSingleEditTab = true;
-		$wgVisualEditorSingleEditTabSwitchTime = $wmgVisualEditorSingleEditTabSwitchTime;
-	}
 	if ( $wmgVisualEditorIsSecondaryEditor ) {
-		if ( !$wmgVisualEditorUseSingleEditTab ) {
-			$wgVisualEditorTabPosition = 'after';
-		}
 		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	} else {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	}
 	if ( $wmgVisualEditorEnableWikitext ) {
-		$wgVisualEditorEnableWikitext = true;
 		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
-	if ( $wmgVisualEditorEnableVisualSectionEditing ) {
-		$wgVisualEditorEnableVisualSectionEditing = $wmgVisualEditorEnableVisualSectionEditing;
-	}
-
-	// Namespace configuration
-	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
-	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
-		$wgVisualEditorAvailableNamespaces = []; // Set null to be an empty array to avoid fatals
-	}
-
-	// User access configuration
-	if ( $wmgVisualEditorDefault ) {
-		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-	} else {
-		$wgDefaultUserOptions['visualeditor-enable'] = 0;
-		$wgVisualEditorEnableBetaFeature = true;
-	}
-	if ( $wmgVisualEditorTransitionDefault ) {
-		$wgVisualEditorTransitionDefault = true;
-	}
-	if ( $wmgVisualEditorAllowExternalLinkPaste ) {
-		$wgVisualEditorAllowExternalLinkPaste = true;
-	}
-	// T52000 - to remove once roll-out is complete.
-	if ( $wmgVisualEditorDisableForAnons ) {
-		$wgVisualEditorDisableForAnons = true;
-	}
+	// Show identical preferences on all wikis, but keep the old beta feature config
+	// for compatibility with preferences previously set by users (T335056)
+	$wgVisualEditorEnableBetaFeature = !$wmgVisualEditorDefault;
 
 	// Feedback configuration
 	if ( $wmgVisualEditorConsolidateFeedback ) {
@@ -2749,17 +2634,6 @@ if ( $wmgUseVisualEditor ) {
 	// Citoid
 	wfLoadExtension( 'Citoid' );
 	$wgCitoidFullRestbaseURL = "/api/rest_";
-
-	// Move the citation button from the primary toolbar into the "other" group
-	if ( $wmgCiteVisualEditorOtherGroup ) {
-		$wgCiteVisualEditorOtherGroup = true;
-	}
-
-	// Enable the wikitext mode Beta Feature for opt-in
-	$wgVisualEditorEnableWikitextBetaFeature = true;
-
-	// Enable the diff page visual diff Beta Feature for opt-in
-	$wgVisualEditorEnableDiffPageBetaFeature = true;
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
@@ -2805,37 +2679,13 @@ if ( $wmgUseMobileApp ) {
 wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
+require_once 'MobileUrlCallback.php';
+$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+
 $wgMFMobileHeader = 'X-Subdomain';
 
 // Enable this everywhere except where GeoData isn't available
 $wgMFNearby = $wmgEnableGeoData;
-
-$wgHooks['EnterMobileMode'][] = static function () {
-	global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
-
-	// Disable loading of legacy wikibits in the mobile web experience
-	$wgIncludeLegacyJavaScript = false;
-
-	// Hack for T49647
-	if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
-		$wgCentralAuthCookieDomain = 'commons.m.wikimedia.org';
-	} elseif ( $wgCentralAuthCookieDomain == 'meta.wikimedia.org' ) {
-		$wgCentralAuthCookieDomain = 'meta.m.wikimedia.org';
-	}
-
-	// Better hack for T49647
-	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
-		if ( isset( $options['domain'] ) ) {
-			if ( $options['domain'] == 'commons.wikimedia.org' ) {
-				$options['domain'] = 'commons.m.wikimedia.org';
-			} elseif ( $options['domain'] == 'meta.wikimedia.org' ) {
-				$options['domain'] = 'meta.m.wikimedia.org';
-			}
-		}
-	};
-
-	return true;
-};
 
 $wgMFNearbyRange = $wgMaxGeoSearchRadius;
 
@@ -2844,10 +2694,6 @@ $wgMFEnableJSConsoleRecruitment = true;
 
 // Brute-force bandwidth optimization by stripping srcset (T119797)
 $wgMFStripResponsiveImages = true;
-
-if ( $wmgMFDefaultEditor ) {
-	$wgMFDefaultEditor = $wmgMFDefaultEditor;
-}
 
 $wgMFUseWikibase = true;
 
@@ -2886,9 +2732,8 @@ if ( $wmgUseMath ) {
 
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
-	$wgMathLaTeXMLUrl = null;
 	// Create LateXML database table before enabling LaTeXML T309686
-	$wgMathValidModes = [ 'png', 'source', 'mathml' ];
+	$wgMathLaTeXMLUrl = null;
 	$wgMathMathMLUrl = $wmgLocalServices['mathoid'];
 	// Increase the number of concurrent connections made to RESTBase
 	$wgMathConcurrentReqs = 150;
@@ -2958,9 +2803,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
-		// Switch to 'eqiad' or 'codfw' if you plan to bring down
-		// the elastic cluster equals to $wmgDatacenter
-		$wgTranslateTranslationDefaultService = $wmgDatacenter;
+		$wgTranslateTranslationDefaultService = 'default';
 
 		// If the downtime is long (> 10mins) consider disabling
 		// mirroring in this var to avoid logspam about ttm updates
@@ -2968,21 +2811,26 @@ if ( $wmgUseTranslate ) {
 		// it's back up.
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
-		$wgTranslateClustersAndMirrors = [
-			'eqiad' => isset( $wmgAllServices['codfw']['search-chi'] ) ? [ 'codfw' ] : [],
-			'codfw' => isset( $wmgAllServices['eqiad']['search-chi'] ) ? [ 'eqiad' ] : [],
+		$wgTranslateServices = [
+			// Switch to 'eqiad' or 'codfw' if you plan to bring down
+			// the elastic cluster equals to $wmgDatacenter
+			'default' => [ 'service' => $wmgDatacenter, 'writable' => false ],
+			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
+			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
 		];
-		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
-			if ( !isset( $wmgAllServices[$cluster]['search-chi'] ) ) {
+		foreach ( $wgTranslateServices as $service => $conf ) {
+			if ( !isset( $wmgAllServices[$conf['service']]['search-chi'] ) ) {
 				continue;
 			}
-			$wgTranslateTranslationServices[$cluster] = [
+			// see https://www.mediawiki.org/wiki/Help:Extension:Translate/Translation_memories#Configuration
+			$wgTranslateTranslationServices[$service] = [
 				'type' => 'ttmserver',
 				'class' => 'ElasticSearchTTMServer',
 				'shards' => 1,
 				'replicas' => 1,
 				'index' => $wmgTranslateESIndex,
 				'cutoff' => 0.65,
+				'writable' => $conf['writable'],
 				'use_wikimedia_extra' => true,
 				'config' => [
 					'servers' => array_map( static function ( $hostConfig ) {
@@ -2994,12 +2842,11 @@ if ( $wmgUseTranslate ) {
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmgAllServices[$cluster]['search-chi'] ),
+					}, $wmgAllServices[$conf['service']]['search-chi'] ),
 				],
-				'mirrors' => $mirrors,
 			];
 		}
-		unset( $wgTranslateClustersAndMirrors );
+		unset( $wgTranslateServices );
 	} else {
 		$wgTranslateTranslationDefaultService = false;
 	}
@@ -3070,6 +2917,14 @@ if ( $wmgUseTranslate ) {
 		'host' => $wmgLocalServices['cxserver'],
 		'timeout' => 3,
 	];
+
+	if ( $wmgTranslateUseMinT ) {
+		$wgTranslateTranslationServices['MinT'] = [
+			'type' => 'mint',
+			'host' => $wmgLocalServices['cxserver'],
+			'timeout' => 3,
+		];
+	}
 }
 
 if ( $wmgUseTranslationNotifications ) {
@@ -3137,11 +2992,6 @@ $wgJobBackoffThrottling['htmlCacheUpdate'] = 50; // pages/sec per runner
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscodePrioritized';
 
-# GWToolset
-$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
-$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
-$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
-
 if ( $wmgUseEducationProgram ) {
 	$wgExtraNamespaces[446] = 'Education_Program';
 	$wgExtraNamespaces[447] = 'Education_Program_talk';
@@ -3161,6 +3011,19 @@ if ( $wmgUseEcho ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 	$wgLoginNotifyAttemptsNewIP = 3;
+	// Use both storage systems until 90 days after deployment (T346989)
+	$wgLoginNotifyUseSeenTable = true;
+	$wgLoginNotifyUseCheckUser = true;
+	// Less than 90 days per data retention guidelines, minus one bucket for rounding.
+	$wgLoginNotifySeenExpiry = 80 * 86400;
+	$wgLoginNotifySeenBucketSize = 8 * 86400;
+	if ( $wmgUseCentralAuth ) {
+		$wgLoginNotifyUseCentralId = true;
+		$wgVirtualDomainsMapping['virtual-LoginNotify'] = [
+			'cluster' => 'extension1',
+			'db' => 'wikishared'
+		];
+	}
 
 	// This is intentionally loaded *before* the GlobalPreferences extension (below).
 	wfLoadExtension( 'Echo' );
@@ -3168,11 +3031,6 @@ if ( $wmgUseEcho ) {
 	// Common settings, never varied
 	$wgEchoPerUserBlacklist = true;
 	$wgEchoMaxMentionsInEditSummary = 5;
-
-	// Eventlogging for Schema:EchoMail
-	$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
-	// Eventlogging for Schema:EchoInteraction
-	$wgEchoEventLoggingSchemas['EchoInteraction']['enabled'] = true;
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
@@ -3217,7 +3075,7 @@ if ( $wmgUseEcho ) {
 	// If/when this is promoted to all wikis, this config can be moved directly into extension.json
 	// along with the original notifier types ('web' and 'email').
 	if ( $wgEchoEnablePush ) {
-		$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
+		$wgEchoNotifiers['push'] = [ PushNotifier::class, 'notifyWithPush' ];
 		$wgDefaultNotifyTypeAvailability['push'] = true;
 		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
 		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
@@ -3247,9 +3105,19 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
 
-	if ( $wgDBname === 'labtestwiki' ) {
-		# We don't want random strangers playing on this wiki
-		$wgGroupPermissions['*']['createaccount'] = false;
+	# We don't want random strangers playing on labtestwiki, aka codfw1dev
+	# For prod wikitech ('labswiki') user registration is now managed by
+	# Bitu, https://idm.wikimedia.org.
+	$wgGroupPermissions['*']['createaccount'] = false;
+
+	if ( $wgDBname === 'labswiki' ) {
+		// Allow autocreating accounts from IDM.
+		$wgGroupPermissions['*']['autocreateaccount'] = true;
+		// Also block account creations by sysops just in case.
+		$wgGroupPermissions['sysop']['createaccount'] = false;
+
+		// Password resets are handled by IDM too.
+		$wgPasswordResetRoutes = [];
 	}
 
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
@@ -3358,16 +3226,6 @@ if ( $wmgUseDiscussionTools ) {
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 	wfLoadExtension( 'CodeEditor' );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
-	if ( $wgDBname === 'metawiki' ) {
-		$wgHooks['CodeEditorGetPageLanguage'][] = static function ( Title $title, &$lang ) {
-			if ( preg_match(
-				'/^(API listing|Www\.wik(imedia|ipedia|inews|tionary|iquote|iversity|ibooks|ivoyage)\.org) template(\/temp)?$/',
-				$title->getPrefixedText()
-			) ) {
-				$lang = 'html';
-			}
-		};
-	}
 }
 
 if ( $wmgUseScribunto ) {
@@ -3380,6 +3238,7 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 	$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 200; // see T85461#3100878
+	$wgScribuntoEngineConf['luasandbox']['memoryLimit'] = $wmgScribuntoMemoryLimit;
 }
 
 if ( $wmgUseSubpageSortkey ) {
@@ -3401,10 +3260,6 @@ if ( $wmgUseMapSources ) {
 
 if ( $wmgUseCreditsSource ) {
 	wfLoadExtension( 'CreditsSource' );
-}
-
-if ( $wmgUseListings ) {
-	wfLoadExtension( 'Listings' );
 }
 
 if ( $wmgUseTocTree ) {
@@ -3621,8 +3476,18 @@ if ( $wmgUseSearchExtraNS ) {
 	wfLoadExtension( 'SearchExtraNS' );
 }
 
-if ( $wmgUseGraph ) {
+if ( $wmgUseJsonConfig ) {
 	wfLoadExtension( 'JsonConfig' );
+
+	if ( $wmgUseGraphWithJsonNamespace ) {
+		$wgJsonConfigModels['Json.JsonConfig'] = null;
+		$wgJsonConfigs['Json.JsonConfig'] = [
+			'namespace' => 486,
+			'nsName' => 'Data',
+			'isLocal' => true,
+			'pattern' => '/^Json:./',
+		];
+	}
 }
 
 if ( $wmgEnableJsonConfigDataMode ) {
@@ -3677,7 +3542,7 @@ if ( $wmgEnableJsonConfigDataMode ) {
 }
 
 // Enable Config:Dashiki: sub-namespace on meta.wikimedia.org - T156971
-if ( $wmgEnableDashikiData ) {
+if ( $wmgEnableDashikiData && $wmgUseJsonConfig ) {
 	// Dashiki sub-namespace Config:Dashiki: is configured in extension.json
 	wfLoadExtension( 'Dashiki' );
 }
@@ -3712,15 +3577,27 @@ if ( $wmgUseGraph ) {
 			'maps.wikimedia.org',
 		],
 	];
+} elseif ( $wmgHideGraphTags ) {
+	// Hide raw tags that are displayed due to T334895
+	// Note this still uses messages from E:Graph, which are available
+	// as long as it is in wmf-config/extension-list.
+	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';
+	$wgTrackingCategories[] = 'graph-tracking-category';
+	$wgTrackingCategories[] = 'graph-disabled-category';
 
-	if ( $wmgUseGraphWithJsonNamespace ) {
-		$wgJsonConfigModels['Json.JsonConfig'] = null;
-		$wgJsonConfigs['Json.JsonConfig'] = [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			'isLocal' => true,
-			'pattern' => '/^Json:./',
-		];
+	function wmfAddGraphTagToHideRawUsage( Parser $parser ) {
+		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
+	}
+
+	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
+		$parser->addTrackingCategory( 'graph-tracking-category' );
+		$parser->addTrackingCategory( 'graph-disabled-category' );
+		$msg = $parser->msg( 'graph-disabled' );
+		if ( $msg->isDisabled() ) {
+			return '';
+		} else {
+			return $msg->parseAsBlock();
+		}
 	}
 }
 
@@ -3777,6 +3654,19 @@ if ( $wmgUseOAuthRateLimiter ) {
 				'unit'  => 'HOUR'
 			],
 		],
+		'wme' => [
+			'ratelimit' => [
+				'requests_per_unit' => 250000,
+				'unit'  => 'HOUR'
+			],
+		],
+		// More info: T345394
+		'wikieducation' => [
+			'ratelimit' => [
+				'requests_per_unit' => 150000,
+				'unit'  => 'HOUR'
+			],
+		],
 	];
 }
 
@@ -3801,10 +3691,10 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 
-	$wgOATHAuthMultipleDevicesMigrationStage = MIGRATION_OLD;
-
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';
+		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
+		// TODO: remove once relevant patches have been merged and shipped
 		$wgOATHAuthDatabase = 'centralauth';
 	}
 
@@ -3817,6 +3707,7 @@ if ( $wmgUseMediaModeration ) {
 	if ( $wmgRealm === 'production' ) {
 		$wgMediaModerationHttpProxy = $wmgLocalServices['urldownloader'];
 	}
+	$wgVirtualDomainsMapping['virtual-mediamoderation'] = [ 'cluster' => 'extension1', 'db' => false ];
 
 	wfLoadExtension( 'MediaModeration' );
 	// This relies on configuration in PrivateSettings.php:
@@ -3829,6 +3720,7 @@ if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://localhost:6010/';
 	$wgOresFrontendBaseUrl = 'https://ores.wikimedia.org/';
+	$wgOresLiftWingBaseUrl = 'http://localhost:6031/';
 	$wgDefaultUserOptions['oresDamagingPref'] =
 		$wgDefaultUserOptions['rcOresDamagingPref'] =
 		$wmgOresDefaultSensitivityLevel;
@@ -3844,6 +3736,10 @@ if ( $wmgUseORES ) {
 
 if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
+}
+
+if ( $wmgUseRealMe ) {
+	wfLoadExtension( 'RealMe' );
 }
 
 ### End (roughly) of general extensions ########################
@@ -3946,6 +3842,10 @@ if ( $wmgUseCheckUser ) {
 
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
+	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
+	// It is only present on application servers. See
+	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
+	// for list of relevant sections of operations/puppet config.
 	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIPInfo/';
 
 	// Consult the Legal team before updating these, since they
@@ -3958,6 +3858,8 @@ if ( $wmgUseIPInfo ) {
 
 	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
 	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
+
+	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
 }
 
 // T39211
@@ -3981,8 +3883,6 @@ if ( $wmgUseRC2UDP ) {
 	}
 }
 
-$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
-
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
 if ( $wmgUseWikidataPageBanner ) {
@@ -3999,6 +3899,11 @@ if ( $wmgUseEventBus ) {
 	// For analytics purposes, we forward the X-Client-IP header to eventgate.
 	// eventgate will use this to set a default http.client_ip in event data when relevant.
 	// https://phabricator.wikimedia.org/T288853
+	//
+	// NOTE: if you change request timeout values here, you should
+	// also change eventgate timeout and prestop_sleep settings.
+	// - https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/fd8492c76352ac48d07ebb8d950d3281b91181fa/charts/eventgate/values.yaml#59
+	// - https://phabricator.wikimedia.org/T349823
 	$wgEventServices = [
 		'eventgate-analytics' => [
 			'url' => "{$wmgLocalServices['eventgate-analytics']}/v1/events?hasty=true",
@@ -4017,31 +3922,36 @@ if ( $wmgUseEventBus ) {
 	];
 
 	$wgRCFeeds['eventbus'] = [
-		'formatter' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\RCFeed\\EventBusRCFeedFormatter',
-		'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\RCFeed\\EventBusRCFeedEngine',
+		'formatter' => EventBusRCFeedFormatter::class,
+		'class' => EventBusRCFeedEngine::class,
 	];
 
 	if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'] = [
-			'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\JobQueue\\JobQueueEventBus',
+			'class' => JobQueueEventBus::class,
 			'readOnlyReason' => false
 		];
 	}
 
-	$wgEventBusEnableRunJobAPI = ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' );
+	$wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
 }
 
 if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
-if ( $wmgUseKartographer ) {
+if ( $wmgUseKartographer && $wmgUseJsonConfig ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
+
+	if ( $wmgEnableGeoData && $wmgKartographerNearby ) {
+		$wgKartographerNearby = true;
+	}
 }
 
 if ( $wmgUsePageViewInfo ) {
 	wfLoadExtension( 'PageViewInfo' );
+	$wgPageViewInfoWikimediaEndpoint = $wmgLocalServices['rest-gateway'] . '/wikimedia.org/v1';
 }
 
 if ( $wgDBname === 'foundationwiki' ) {
@@ -4052,7 +3962,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 	// pages.
 	$wgHooks['BeforePageDisplay'][] = static function ( $out, $skin ) {
 		$resp = $out->getRequest()->response();
-		$cspHeader = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src  *.wikimedia.org data: 'unsafe-inline' 'self'; report-uri /w/api.php?action=cspreport&format=none&reportonly=1&source=wmfwiki&";
+		$cspHeader = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikifunctions.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src  *.wikimedia.org data: 'unsafe-inline' 'self'; report-uri /w/api.php?action=cspreport&format=none&reportonly=1&source=wmfwiki&";
 		$resp->header( "X-Webkit-CSP-Report-Only: $cspHeader" );
 		$resp->header( "X-Content-Security-Policy-Report-Only: $cspHeader" );
 		$resp->header( "Content-Security-Policy-Report-Only: $cspHeader" );
@@ -4062,7 +3972,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 if ( $wmgUse3d ) {
 	wfLoadExtension( '3D' );
 	$wgTrustedMediaFormats[] = 'application/sla';
-	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
+	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' , '/srv/deployment/3d2png/deploy/src/3d2png.js' ];
 
 	if ( $wmgUseMultimediaViewer ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
@@ -4075,6 +3985,7 @@ if ( $wmgUse3d ) {
 
 if ( $wmgUseReadingLists ) {
 	wfLoadExtension( 'ReadingLists' );
+	$wgVirtualDomainsMapping['virtual-readinglists'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgReadingListsMaxEntriesPerList = 5000;
 	$wgReadingListAndroidAppDownloadLink = 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists';
 	$wgReadingListiOSAppDownloadLink = 'https://apps.apple.com/app/apple-store/id324715238?pt=208305&ct=shared-reading-list-landing&mt=8';
@@ -4100,10 +4011,11 @@ if ( $wmgUseGrowthExperiments ) {
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
 
-if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
+if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
+	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
 }
 
 if ( $wmgUseWikistories ) {
@@ -4126,14 +4038,14 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	$wgCSPFalsePositiveUrls['https://intuition.toolforge.org/'] = true;
 
 	$wgExtensionFunctions[] = static function () {
-		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode,
+		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly,
 			$wmgApprovedContentSecurityPolicyDomains, $wmgUseCSP, $wgCSPHeader;
 		if ( !$wmgUseCSPReportOnly && !$wmgUseCSP ) {
 			// This means that $wmgUseCSPReportOnlyHasSession
 			// is set, so only logged in users should trigger this.
 			if (
 				defined( 'MW_NO_SESSION' ) ||
-				$wgCommandLineMode ||
+				MW_ENTRY_POINT === 'cli' ||
 				!MediaWiki\Session\SessionManager::getGlobalSession()->isPersistent()
 			) {
 				// There is no session, so don't set CSP, as we care more
@@ -4169,6 +4081,15 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 			$wgCSPHeader['script-src'] = $wmgApprovedContentSecurityPolicyDomains;
 		}
 	};
+}
+
+if ( $wmgUseCampaignEvents ) {
+	wfLoadExtension( 'CampaignEvents' );
+	$wgCampaignEventsDatabaseCluster = 'extension1';
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCampaignEventsDatabaseName = 'wikishared';
+	}
+	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 }
 
 if ( $wmgRealm === 'labs' ) {
@@ -4240,14 +4161,6 @@ if ( $wmgUseSearchVue ) {
 	wfLoadExtension( 'SearchVue' );
 }
 
-if ( $wmgUseCampaignEvents ) {
-	wfLoadExtension( 'CampaignEvents' );
-	$wgCampaignEventsDatabaseCluster = 'extension1';
-	if ( $wgDBname === 'metawiki' ) {
-		$wgCampaignEventsDatabaseName = 'wikishared';
-	}
-}
-
 if ( $wmgUseStopForumSpam ) {
 	wfLoadExtension( 'StopForumSpam' );
 	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
@@ -4267,32 +4180,37 @@ if ( $wmgUseVueTest ) {
 	wfLoadExtension( 'VueTest' );
 }
 
+if ( $wmgUsePageNotice ) {
+	wfLoadExtension( 'PageNotice' );
+}
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
 $wgParsoidSettings = [
 	'useSelser' => true,
 	'linting' => true,
-	'nativeGalleryEnabled' => false,  // T214649
 ];
-if ( $wmgServerGroup === 'parsoid' ) {
-	if ( wfHostName() === 'scandium' ) {
+
+if ( ClusterConfig::getInstance()->isParsoid() ) {
+	// Parsoid testing special case
+	if ( ClusterConfig::getInstance()->getHostname() === 'scandium' ) {
 		// Scandium has its own special check out of parsoid for testing.
 		$parsoidDir = __DIR__ . "/../../parsoid-testing";
 		// Override settings specific to round-trip testing on scandium
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
-
-	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
-} elseif ( $wmgServerGroup === 'api_appserver' ) {
-	// Parsoid extension needed by core REST /html handler
-	// until T265518 is resolved, but we do not want to expose
-	// Parsoid REST API.
-	$wgParsoidEnableREST = false;
+	// Only load Parsoid extension (aka internal Parsoid REST API) on
+	// Parsoid cluster
 	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 }
+
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
+
+if ( $wmgUseParserMigration ) {
+	wfLoadExtension( 'ParserMigration' );
+}
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {

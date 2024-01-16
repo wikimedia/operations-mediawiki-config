@@ -49,10 +49,19 @@ final class WmfManageDblistCli {
 	del <dbname> <dblist>
 			Remove a wiki from a dblist, and normalize all dblist files.
 			Example: manage-dblist del aawiki open
-
+			Alias: remove
 	update
 			Normalize all dblist files,
 			including expansion of ".dbexpr" files.
+
+	init <dbname> <language code> <family> <privacy>
+			Initializes the dblists of a new wiki
+			<privacy> must be one of 'public', 'fishbowl' or 'private'
+			Example: manage-dblist init fatwiki fat wikipedia public
+
+	close <dbname>
+			Update the dblists of a wiki to reflect it being closed
+			Example: manage-dblist close enwiki
 
 	TEXT;
 	}
@@ -67,10 +76,17 @@ final class WmfManageDblistCli {
 				$this->doList( ...$this->params );
 				return;
 			case 'del':
+			case 'remove':
 				$this->doDel( ...$this->params );
 				return;
 			case 'update':
 				$this->doUpdate( ...$this->params );
+				return;
+			case 'init':
+				$this->doInit( ...$this->params );
+				return;
+			case 'close':
+				$this->doClose( ...$this->params );
 				return;
 			case '':
 			case 'help':
@@ -167,6 +183,93 @@ final class WmfManageDblistCli {
 		}
 
 		$this->writeDblistsIndex( $knownDBLists );
+	}
+
+	private function doInit( string $dbName, string $lang, string $family, string $visibility ) {
+		if ( !in_array( $visibility, [ 'public', 'fishbowl', 'private' ] ) ) {
+			$this->error( 'Unknown visibility' );
+			exit( 1 );
+		}
+
+		// add wiki to wikiversion.json
+		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions.json' );
+		switch ( $family ) {
+		case 'wikipedia':
+			$key = 'enwiki';
+			break;
+		case 'wikimania':
+			$key = 'wikimaniawiki';
+			break;
+		case 'wikimedia':
+			$key = 'vewikimedia';
+			break;
+		case 'wikibooks':
+			$key = 'enwikibooks';
+			break;
+		case 'wikinews':
+			$key = 'enwikinews';
+			break;
+		case 'wikiquote':
+			$key = 'enwikiquote';
+			break;
+		case 'wikisource':
+			$key = 'enwikisource';
+			break;
+		case 'wikiversity':
+			$key = 'enwikiversity';
+			break;
+		case 'wikivoyage':
+			$key = 'enwikivoyage';
+			break;
+		case 'wiktionary':
+			$key = 'enwiktionary';
+			break;
+		case 'special':
+			$key = 'apiportalwiki';
+			break;
+		default:
+			$this->error( 'Unknown family' );
+			exit( 1 );
+		}
+		$versions[$dbName] = $versions[$key];
+		ksort( $versions );
+		MWWikiVersions::writeWikiVersionsFile( 'wikiversions.json', $versions );
+
+		$this->doAdd( $dbName, 'all' );
+		$this->doAdd( $dbName, $family );
+		$this->doAdd( $dbName, 's5' ); // all wikis are currently created in s5
+		$this->doAdd( $dbName, 'small' );
+
+		$data = file( 'langlist' );
+		if ( !in_array( $lang . "\n", $data ) ) {
+			$data[] = $lang . "\n";
+			asort( $data );
+			file_put_contents( 'langlist', implode( '', $data ) );
+		}
+
+		switch ( $visibility ) {
+		case 'public':
+			if ( $family != 'wikimedia' ) {
+				$this->doAdd( $dbName, 'wikidataclient' );
+			}
+			$this->doAdd( $dbName, 'commonsuploads' );
+			$this->doAdd( $dbName, 'securepollglobal' );
+			break;
+		case 'fishbowl':
+			$this->doAdd( $dbName, 'fishbowl' );
+			break;
+		case 'private':
+			$this->doAdd( $dbName, 'private' );
+			break;
+		default:
+		}
+	}
+
+	private function doClose( $dbName ) {
+		$this->doAdd( $dbName, 'closed' );
+		$this->doAdd( $dbName, 'group0' );
+		$this->doDel( $dbName, 'securepollglobal' );
+		$this->doDel( $dbName, 'commonsuploads' );
 	}
 
 	/**

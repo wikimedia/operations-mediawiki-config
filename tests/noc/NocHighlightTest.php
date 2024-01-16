@@ -22,9 +22,6 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 			file_put_contents( "$common/private/PrivateSettings.php", '<?php $forbiddenFruit = "p";' );
 		}
 
-		$this->created[] = "$configDir/ExampleValid.php";
-		file_put_contents( "$configDir/ExampleValid.php", '<?php $smoigel = "v";' );
-
 		$this->created[] = "$configDir/ExampleInvalid.php";
 		file_put_contents( "$configDir/ExampleInvalid.php", '<?php $forbiddenFruit = "x";' );
 
@@ -36,9 +33,6 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 
 		$this->created[] = "{$this->nocConfDir}/ExampleContent";
 		file_put_contents( "{$this->nocConfDir}/ExampleContent", 'forbiddenFruit=content' );
-
-		$this->created[] = "{$this->nocConfDir}/ExampleValid.php.txt";
-		symlink( "$configDir/ExampleValid.php", "{$this->nocConfDir}/ExampleValid.php.txt" );
 	}
 
 	protected function tearDown(): void {
@@ -52,7 +46,7 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 		return [
 			[ 'langlist', 'zh-classical', 'From root, without extension' ],
 			[ 'dblists/all.dblist', 'enwiki', 'From root, dblist file' ],
-			[ 'ExampleValid.php', 'smoigel', 'From wmf-config, dblist file' ],
+			[ 'CommonSettings.php', 'Do not put private data here.', 'From wmf-config, php file' ],
 		];
 	}
 
@@ -100,6 +94,7 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 		$_GET = [
 			'file' => $q
 		];
+		$_SERVER['REQUEST_URI'] = '/conf/highlight.php?file=' . $q;
 		try {
 			ob_start();
 			require $this->nocConfDir . '/highlight.php';
@@ -107,6 +102,7 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 		} finally {
 			// make sure we never pollute the global namespace
 			unset( $_GET );
+			unset( $_SERVER['REQUEST_URI'] );
 		}
 		return $out;
 	}

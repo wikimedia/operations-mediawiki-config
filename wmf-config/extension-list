@@ -38,7 +38,6 @@ $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DiscussionTools/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
 $IP/extensions/DonationInterface/extension.json
-$IP/extensions/DoubleWiki/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
@@ -68,7 +67,6 @@ $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
 $IP/extensions/GrowthExperiments/extension.json
 $IP/extensions/GuidedTour/extension.json
-$IP/extensions/GWToolset/extension.json
 $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageSuggestions/extension.json
 $IP/extensions/InputBox/extension.json
@@ -85,7 +83,6 @@ $IP/extensions/LandingCheck/extension.json
 $IP/extensions/LdapAuthentication/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
-$IP/extensions/Listings/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/MachineVision/extension.json
 $IP/extensions/MapSources/extension.json
@@ -109,9 +106,11 @@ $IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/PageImages/extension.json
+$IP/extensions/PageNotice/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/ParserFunctions/extension.json
+$IP/extensions/ParserMigration/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/Phonos/extension.json
 $IP/extensions/Poem/extension.json
@@ -122,6 +121,8 @@ $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/ReadingLists/extension.json
 $IP/extensions/RelatedArticles/extension.json
+$IP/extensions/RealMe/extension.json
+$IP/extensions/ReportIncident/extension.json
 $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RSS/extension.json
 $IP/extensions/SandboxLink/extension.json
@@ -132,7 +133,6 @@ $IP/extensions/SearchVue/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SecurePoll/extension.json
 $IP/extensions/ShortUrl/extension.json
-$IP/extensions/SimilarEditors/extension.json
 $IP/extensions/SiteMatrix/extension.json
 $IP/extensions/SpamBlacklist/extension.json
 $IP/extensions/StopForumSpam/extension.json

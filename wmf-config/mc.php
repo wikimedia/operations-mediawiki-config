@@ -38,7 +38,7 @@ $wgObjectCaches['mcrouter'] = [
 	'class'                 => 'MemcachedPeclBagOStuff',
 	'serializer'            => 'php',
 	'persistent'            => false,
-	'servers'               => [ '127.0.0.1:11213' ],
+	'servers'               => [ $_SERVER['MCROUTER_SERVER'] ?? '127.0.0.1:11213' ],
 	'server_failure_limit'  => 1e9,
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
@@ -50,31 +50,23 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 	$wgObjectCaches['mcrouter'],
 	[ 'routingPrefix' => "/$wmgMasterDatacenter/mw/" ]
 );
-$wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
+// Wikifunctions dedicated caching cluster. It's dc-local with no replication.
+// See T297815.
+$wgObjectCaches['mcrouter-wikifunctions'] = array_merge(
 	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => "/$wmgDatacenter/mw-with-onhost-tier/" ]
+	[ 'routingPrefix' => '/local/wf/' ]
 );
-
-$wgWANObjectCaches['wancache-main-mcrouter'] = [
-	'class'   => 'WANObjectCache',
-	'cacheId' => 'mcrouter',
-	// Specify the route prefix that mcrouter listens for and broadcasts.
-	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
-	'broadcastRoutingPrefix' => '/*/mw-wan/',
-];
-$wgWANObjectCache = [
-	// Specify the route prefix that mcrouter listens for and broadcasts.
-	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
-	'broadcastRoutingPrefix' => '/*/mw-wan/',
-];
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// nutcracker only; no mcrouter present
 	$wgMainCacheType = 'memcached-pecl';
-	// Wikitech uses the default $wgMainWANCache from MediaWiki's Setup.php.
 } else {
+	$wgWANObjectCache = [
+		// Specify the route prefix that mcrouter listens for and broadcasts.
+		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+		'broadcastRoutingPrefix' => '/*/mw-wan/',
+	];
 	$wgMainCacheType = 'mcrouter';
-	$wgMainWANCache = 'wancache-main-mcrouter';
 }
 
 # vim: set sts=4 sw=4 et :

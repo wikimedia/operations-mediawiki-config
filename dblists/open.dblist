@@ -7,7 +7,6 @@ afwiki
 afwikibooks
 afwikiquote
 afwiktionary
-akwiki
 alswiki
 altwiki
 amiwiki
@@ -16,6 +15,7 @@ amwikimedia
 amwiktionary
 angwiki
 angwiktionary
+anpwiki
 anwiki
 anwiktionary
 apiportalwiki
@@ -61,6 +61,7 @@ barwiki
 bat_smgwiki
 bawiki
 bawikibooks
+bbcwiki
 bclwiki
 bclwikiquote
 bclwiktionary
@@ -81,8 +82,10 @@ bgwiktionary
 bhwiki
 biwiki
 bjnwiki
+bjnwikiquote
 bjnwiktionary
 blkwiki
+blkwiktionary
 bmwiki
 bnwiki
 bnwikibooks
@@ -105,6 +108,7 @@ bswikinews
 bswikiquote
 bswikisource
 bswiktionary
+btmwiktionary
 bugwiki
 bxrwiki
 cawiki
@@ -126,7 +130,7 @@ chrwiktionary
 chwiki
 chywiki
 ckbwiki
-cnwikimedia
+ckbwiktionary
 collabwiki
 commonswiki
 cowiki
@@ -165,6 +169,7 @@ dewikisource
 dewikiversity
 dewikivoyage
 dewiktionary
+dgawiki
 dinwiki
 diqwiki
 diqwiktionary
@@ -223,6 +228,7 @@ euwikisource
 euwiktionary
 execwiki
 extwiki
+fatwiki
 fawiki
 fawikibooks
 fawikinews
@@ -244,6 +250,7 @@ fiwikivoyage
 fiwiktionary
 fjwiki
 fjwiktionary
+fonwiki
 foundationwiki
 fowiki
 fowikisource
@@ -283,6 +290,7 @@ gomwiktionary
 gorwiki
 gorwiktionary
 gotwiki
+gpewiki
 grantswiki
 grwikimedia
 gucwiki
@@ -292,6 +300,7 @@ guwikiquote
 guwikisource
 guwiktionary
 guwwiki
+guwwikinews
 guwwikiquote
 guwwiktionary
 gvwiki
@@ -395,8 +404,10 @@ kawikibooks
 kawikiquote
 kawiktionary
 kbdwiki
+kbdwiktionary
 kbpwiki
 kcgwiki
+kcgwiktionary
 kgwiki
 kiwiki
 kkwiki
@@ -526,7 +537,6 @@ nahwiki
 nahwiktionary
 napwiki
 napwikisource
-nawiki
 nawiktionary
 nds_nlwiki
 ndswiki
@@ -722,6 +732,7 @@ stwiki
 stwiktionary
 suwiki
 suwikiquote
+suwikisource
 suwiktionary
 svwiki
 svwikibooks
@@ -771,6 +782,7 @@ tlwiki
 tlwikibooks
 tlwikiquote
 tlwiktionary
+tlywiki
 tnwiki
 tnwiktionary
 towiki
@@ -834,10 +846,10 @@ wawiktionary
 wbwikimedia
 wg_enwiki
 wikidatawiki
+wikifunctionswiki
 wikimaniateamwiki
 wikimaniawiki
 wowiki
-wowikiquote
 wowiktionary
 wuuwiki
 xalwiki
@@ -850,6 +862,7 @@ yowiki
 yuewiktionary
 zawiki
 zeawiki
+zghwiki
 zh_classicalwiki
 zh_min_nanwiki
 zh_min_nanwikisource

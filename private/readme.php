@@ -1,12 +1,10 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This is the Documentation for PrivateSettings.php. It is also used to
-# satisfy static analysis and for unit tests to ensure these variables
-# exist.
+# Stub of production PrivateSettings.php, used as documentation and to
+# aid with Codesearch discovery, static analysis, and unit tests.
 #
-# The real file is stored in a private Git repository on the
-# deployment host that overlaps this directory.
+# The real file is stored in a private Git repository on the deployment host.
 
 /************************************************************************
  * @name Settings for MediaWiki core and extension (wg-)
@@ -190,3 +188,10 @@ $wgShellboxSecretKey = null;
  * @see https://phabricator.wikimedia.org/T315491
  */
 $wgPhonosApiKeyGoogle = null;
+
+/**
+ * API key for the [[m:Programs & Events Dashboard]].
+ *
+ * @see mediawiki/extensions/CampaignEvents
+ */
+$wgCampaignEventsProgramsAndEventsDashboardAPISecret = null;

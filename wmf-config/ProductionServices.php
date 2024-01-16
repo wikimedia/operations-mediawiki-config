@@ -33,13 +33,17 @@ $common = [
 	// Set to null to disable XHGui.
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
 
+	// https://wikitech.wikimedia.org/wiki/WikimediaDebug#Request_profiling
+	'excimer-ui-url' => 'https://performance.wikimedia.org/excimer/',
+	'excimer-ui-server' => 'https://performance.discovery.wmnet/excimer/',
+
 	// ArcLamp (formerly known as Xenon) is the sampling profiler
 	// pipeline.  Frames from the Excimer extension will be sent to
 	// Redis on this host.
 	//
 	// Profile collection is not active-active (but is consumed by
 	// pipelines in both data centers).
-	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
+	'xenon' => '10.64.16.88', # arclamp1001.eqiad.wmnet
 
 	// Statsd is not active-active.
 	'statsd' => '10.64.16.81', # statsd.eqiad.wmnet, now resolving to graphite1005.eqiad.wmnet
@@ -53,7 +57,9 @@ $common = [
 	// Not active-active.
 	'irc' => [
 		'208.80.155.105', # irc1001.wikimedia.org
+		'208.80.155.120', # irc1002.wikimedia.org
 		'208.80.153.62',  # irc2001.wikimedia.org
+		'208.80.153.73',  # irc2002.wikimedia.org
 	],
 
 	// Automatic dc-local discovery
@@ -64,16 +70,19 @@ $common = [
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
 	'restbase' => 'http://localhost:6011',
+	'rest-gateway' => 'http://localhost:6033',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
 	'image-suggestion' => 'http://localhost:6030',
+	'ipoid' => 'http://localhost:6035',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',
 	'shellbox-media' => 'http://localhost:6026',
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
+	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
 
@@ -100,10 +109,6 @@ $common = [
 			'port' => 6107,
 		],
 	],
-
-	// Wikifunctions back-end services; currently in Beta Cluster only.
-	'wikifunctions-evaluator' => 'NOT YET DEFINED',
-	'wikifunctions-orchestrator' => 'NOT YET DEFINED',
 ];
 
 $services = [
@@ -133,7 +138,9 @@ $services = [
 			'pc1' => '10.64.0.57',   # pc1011, A1 8.8TB 512GB # pc1
 			'pc2' => '10.64.16.65',  # pc1012, B1 8.8TB 512GB # pc2
 			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
+			'pc4' => '10.64.32.53',  # pc1016, C6 8.6TB 512GB # pc4
 			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
+			# spare: '10.64.0.17',   # pc1015, A6 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 		],
 
@@ -141,8 +148,8 @@ $services = [
 		// This was hosted on redis_sessions which was phased out (T267581)
 		// while now it is hosted on redis_misc (rdb* servers)
 		'redis_lock' => [
-			'rdb1' => '10.64.16.76:6381', # rdb1009 B8
-			'rdb2' => '10.64.16.76:6382', # rdb1009 B8
+			'rdb1' => '10.64.16.18:6381', # rdb1013 B6
+			'rdb2' => '10.64.16.18:6382', # rdb1013 B6
 			'rdb3' => '10.64.0.36:6381',  # rdb1011 A1
 		],
 		'search-chi' => [
@@ -192,7 +199,9 @@ $services = [
 			'pc1' => '10.192.0.72',   # pc2011, A5 8.8TB 512GB # pc1
 			'pc2' => '10.192.16.55',  # pc2012, B5 8.8TB 512GB # pc2
 			'pc3' => '10.192.32.57',  # pc2013, C1 8.8TB 512GB # pc3
+			'pc4' => '10.192.48.92',  # pc2016, D3 8.8TB 512GB # pc4
 			# spare: '10.192.48.52',  # pc2014, D1 8.8TB 512GB
+			# spare: '10.192.32.132', # pc2015, C5 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 		],
 		// LockManager Redis codfw

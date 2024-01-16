@@ -12,8 +12,12 @@ namespace Wikimedia\MWConfig;
 use ExcimerProfiler;
 use PDO;
 use Redis;
+use ReflectionException;
+use Wikimedia\ExcimerUI\Client\ExcimerClient;
 
 require_once __DIR__ . '/XWikimediaDebug.php';
+require_once __DIR__ . '/ClusterConfig.php';
+require_once __DIR__ . '/../lib/excimer-ui-client/src/ExcimerClient.php';
 
 class Profiler {
 	/**
@@ -26,7 +30,9 @@ class Profiler {
 	 *   - xhgui-conf: [optional] The configuration array to pass to XhguiSaverPdo
 	 *     - pdo.connect: connection string for PDO (e.g. `mysql:host=mydbhost;dbname=xhgui`)
 	 *     - pdo.table: table name within the xhgui database where the profiles are stored.
-	 *   - statsd: [optional] The host address for StatsD messages
+	 *   - statsd-host: StatsD host address (ip:port or hostname:port).
+	 *   - excimer-ui-url (string|null): The url for Wikimedia\ExcimerUI\Client\ExcimerClient
+	 *   - excimer-ui-server (string|null): The ingestionUrl for Wikimedia\ExcimerUI\Client\ExcimerClient
 	 */
 	public static function setup( array $options ): void {
 		global $wmgProfiler;
@@ -42,6 +48,9 @@ class Profiler {
 		if ( PHP_SAPI !== 'cli' && extension_loaded( 'excimer' ) ) {
 			// Used for unconditional sampling of production web requests.
 			self::excimerSetup( $options );
+
+			// Used for WikimediaDebug flamegraphs
+			self::excimerDebugSetup( $options );
 		}
 	}
 
@@ -192,13 +201,12 @@ class Profiler {
 	}
 
 	/**
-	 * Set up Excimer for production
+	 * Start Excimer sampling profiler in production.
 	 *
 	 * @param array $options
 	 */
 	private static function excimerSetup( $options ) {
-		// Use static variables to keep the objects in scope until the end
-		// of the request
+		// Keep the object in scope until the end of the request
 		static $cpuProf;
 		static $realProf;
 
@@ -221,18 +229,27 @@ class Profiler {
 		// before that one.
 		// grep: excimer-k8s, excimer-wall, excimer-k8s-wall
 		$redisChannel = 'excimer';
-		if ( strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0 ) {
+		if ( ClusterConfig::getInstance()->isK8s() ) {
 			$redisChannel .= '-k8s';
 		}
 
+		// The period is 60s, so there's no point waiting for more samples to arrive
+		// before the end of the request, they probably won't.
 		$cpuProf->setFlushCallback(
 			static function ( $log ) use ( $options, $redisChannel ) {
-				self::excimerFlushCallback( $log, $options, $redisChannel );
+				$logLines = explode( "\n", $log->formatCollapsed() );
+				self::excimerFlushToArclamp( $logLines, $options, $redisChannel );
 			},
 			/* $maxSamples = */ 1 );
 		$realProf->setFlushCallback(
 			static function ( $log ) use ( $options, $redisChannel ) {
-				self::excimerFlushCallback( $log, $options, $redisChannel . '-wall' );
+				$logLines = explode( "\n", $log->formatCollapsed() );
+				self::excimerFlushToArclamp( $logLines, $options, $redisChannel . '-wall' );
+				register_shutdown_function(
+					[ self::class, 'excimerFlushToStatsd' ],
+					$logLines,
+					$options
+				);
 			},
 			/* $maxSamples = */ 1 );
 
@@ -241,46 +258,70 @@ class Profiler {
 	}
 
 	/**
-	 * The callback for production profiling. This is called every time Excimer
-	 * collects a stack trace. The period is 60s, so there's no point waiting for
-	 * more samples to arrive before the end of the request, they probably won't.
+	 * Set up Excimer for debug profiles
 	 *
-	 * @param string $log
+	 * @param array $options
+	 * - excimer-ui-client (array|null) See Wikimedia\ExcimerUI\Client\ExcimerClient::setup
+	 */
+	private static function excimerDebugSetup( $options ) {
+		$xwd = XWikimediaDebug::getInstance();
+		if ( $xwd->hasOption( 'excimer' ) && $options['excimer-ui-server'] ) {
+			$client = ExcimerClient::setup( [
+				'url' => $options['excimer-ui-url'],
+				'ingestionUrl' => $options['excimer-ui-server'],
+				'activate' => 'always',
+				'errorCallback' => static function ( $msg ) {
+					trigger_error( $msg, E_USER_WARNING );
+				}
+			] );
+
+			// Emitting a header this early is not universally safe, but should be fine
+			// for debugging requests. Ideally we'd use the PHP built-in
+			// header_register_callback(), except MediaWiki uses that already (discards ours),
+			// or leverage MediaWiki' DeferredUpdate to schedule a PRESEND callback, except
+			// Profiler.php runs before that is available.
+			// We could use $wgHooks['SetupAfterCache'] in CommonSettings.php and call DeferredUpdate
+			// from there, if this causes a problem.
+			$publicLink = $client->getUrl();
+			header( 'excimer-ui-link: ' . $publicLink );
+		}
+	}
+
+	/**
+	 * Flush callback, called any time Excimer samples a stack trace in production.
+	 *
+	 * @param string[] $logLines Result of ExcimerLog::formatCollapsed()
 	 * @param array $options
 	 * @param string $redisChannel
 	 */
-	public static function excimerFlushCallback( $log, $options, $redisChannel ) {
+	public static function excimerFlushToArclamp( $logLines, $options, $redisChannel ) {
 		$error = null;
-		$toobig = 0;
 		try {
 			$redis = new Redis();
-			$ok = $redis->connect( $options['redis-host'], $options['redis-port'], $options['redis-timeout'] );
+			$ok = $redis->connect(
+				$options['redis-host'],
+				$options['redis-port'],
+				$options['redis-timeout']
+			);
 			if ( !$ok ) {
 				$error = 'connect_error';
 			} else {
-				// Arc Lamp expects the first frame to be a PHP file.
-				// This is used to group related traces for the same web entry point.
-				// In most cases, this happens by default already. But at least for destructor
-				// callbacks, this isn't the case on PHP 7.2. E.g. a line may be:
-				// "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1".
 				$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
-				$collapsed = $log->formatCollapsed();
-				foreach ( explode( "\n", $collapsed ) as $line ) {
-					if ( ( substr_count( $line, ';' ) + 1 ) >= 249 ) {
-						// Stacks are separated by semi-colon, so +1 to get the frame count.
-						// Anything size 249 or more, may be cut off (per setMaxDepth).
-						// We discard those because depth limitation results in the early frames
-						// (starting with the entry point) being omitted, which are the ones we need
-						// for a flame graph (T176916)
-						$toobig++;
-						continue;
-					}
+				foreach ( $logLines as $line ) {
 					if ( $line === '' ) {
-						// $collapsed ends with a line break
+						// formatCollapsed() ends with a line break
 						continue;
 					}
 
-					// If the expected first frame isn't the entry point, prepend it.
+					// There are two ways a stack trace may be missing the first few frames:
+					//
+					// 1. Destructor callbacks, as of PHP 7.2, may be formatted as
+					//    "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1"
+					// 2. Stack traces that are longer than the configured maxDepth, will be
+					//    missing their top-most frames in favour of excimer_truncated (T176916)
+					//
+					// Arc Lamp requires the top frame to be the PHP entry point file.
+					// If the first frame isn't the expected entry point, prepend it.
 					// This check includes the semicolon to avoid false positives.
 					if ( substr( $line, 0, strlen( $firstFrame ) ) !== $firstFrame ) {
 						$line = $firstFrame . $line;
@@ -298,21 +339,125 @@ class Profiler {
 			//   As of writing, this is rare (a few times per day at most),
 			//   which is considered an acceptable loss in profile samples.
 			$error = 'exception';
+			trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_WARNING );
 		}
 
-		if ( $error || $toobig ) {
-			$dest = $options['statsd'] ?? null;
+		if ( $error ) {
+			$dest = $options['statsd-host'] ?? null;
 			if ( $dest ) {
 				$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
 				if ( $error ) {
 					$stat = "MediaWiki.arclamp_client_error.{$error}:1|c";
 					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
 				}
-				if ( $toobig ) {
-					$stat = "MediaWiki.arclamp_client_discarded.toobig:{$toobig}|c";
+			}
+		}
+	}
+
+	/**
+	 * Production callback for recording profiling data in statsd
+	 *
+	 * This is called every time Excimer collects a stack trace
+	 *
+	 * @param string[] $logLines Result of ExcimerLog::formatCollapsed()
+	 * @param array $options
+	 */
+	public static function excimerFlushToStatsd( $logLines, $options ) {
+		$dest = $options['statsd-host'] ?? null;
+		$verb = $_SERVER['REQUEST_METHOD'] ?? '';
+		$handler = class_exists( \MediaWiki\Profiler\ProfilingContext::class )
+			? \MediaWiki\Profiler\ProfilingContext::singleton()->getHandlerMetricPrefix()
+			: 'unknown';
+
+		if ( $dest && $verb !== '' && $handler !== 'unknown' ) {
+			$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+			foreach ( $logLines as $line ) {
+				if ( $line === '' ) {
+					// $collapsed ends with a line break
+					continue;
+				}
+				$componentsInStack = [];
+				foreach ( explode( ';', $line ) as $fname ) {
+					$cname = self::excimerComponentFromMethod( $fname );
+					if ( $cname !== null ) {
+						$componentsInStack[$cname] = 1;
+					}
+				}
+				$stat = "MediaWiki.arclamp_samples.$handler.$verb:1|c\n";
+				@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+				foreach ( $componentsInStack as $cname => $hit ) {
+					$stat = "MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c\n";
 					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
 				}
 			}
 		}
+	}
+
+	/**
+	 * Get the component name from a class suitable for metrics
+	 *
+	 * @param string $fname Fully qualified caller name (e.g. from __METHOD__)
+	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
+	 */
+	private static function excimerComponentFromMethod( $fname ) {
+		$m = [];
+		if ( !preg_match( '/^([a-zA-Z0-9_\\\\]+)::[a-zA-Z0-9_]+$/', $fname, $m ) ) {
+			return null;
+		}
+
+		// Determine the class file path
+		try {
+			$path = ( new \ReflectionClass( $m[1] ) )->getFileName();
+			$component = self::excimerComponentFromPath( $path );
+		} catch ( ReflectionException $e ) {
+			$component = 'unknown';
+		}
+
+		return $component;
+	}
+
+	/**
+	 * Get the component name from a class suitable for metrics
+	 *
+	 * @param string|false $path Fully qualified path name
+	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
+	 */
+	private static function excimerComponentFromPath( $path ) {
+		global $IP, $wgStyleDirectory, $wgExtensionDirectory;
+
+		if ( $path === false ) {
+			// Part of PHP core or PECL extension
+			return 'other';
+		}
+
+		// Try to determine the component from the class file path.
+		// Note that skins/extensions might use directories nested within $IP.
+		foreach ( [
+			  "$wgExtensionDirectory/" => 'ext_',
+			  "$wgStyleDirectory/" => 'skin_',
+			  "$IP/includes/libs/" => 'lib_',
+			  "$IP/includes/" => 'core_',
+			  "$IP/vendor/wikimedia/" => 'lib_',
+		  ] as $baseDirectoryWithSlash => $basePrefix ) {
+			$offset = strlen( $baseDirectoryWithSlash );
+			// @todo: use str_starts_with() with PHP 8.0
+			if ( substr( $path, 0, $offset ) === $baseDirectoryWithSlash ) {
+				$pos = strpos( $path, '/', $offset );
+				$name = ( $pos !== false )
+					// Treat the relative subdirectory as the component. This ideally matches
+					// the relative sub-namespace of Wikimedia\ and MediaWiki\ namespaced files.
+					? substr( $path, $offset, $pos - $offset )
+					// Placeholder to use for files that should be moved to a subdirectory
+					: 'other';
+
+				return $basePrefix . str_replace( '.', '_', $name );
+			}
+		}
+
+		if ( substr( $path, 0, strlen( "$IP/vendor/" ) ) === "$IP/vendor/" ) {
+			return 'lib_other';
+		}
+
+		return 'other';
 	}
 }

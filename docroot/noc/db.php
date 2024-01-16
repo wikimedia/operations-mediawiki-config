@@ -7,8 +7,15 @@
  * Then view <http://localhost:9412/db.php>.
  */
 
-$format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
+// phpcs:disable Generic.WhiteSpace.ScopeIndent.Incorrect
+// phpcs:disable Generic.WhiteSpace.ScopeIndent.IncorrectExact
 
+use Wikimedia\MWConfig\Noc\EtcdCachedConfig;
+
+require_once __DIR__ . '/../../src/Noc/EtcdCachedConfig.php';
+
+$isLocalhost = strpos( $_SERVER['HTTP_HOST'], 'localhost' ) === 0;
+$format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
 if ( $format === 'json' ) {
 	error_reporting( 0 );
 } else {
@@ -18,28 +25,24 @@ if ( $format === 'json' ) {
 }
 
 // Default to eqiad but allow limited other DCs to be specified with ?dc=foo.
-$dbConfigEtcdPrefix = '/srv/dbconfig';
-$dbctlJsonByDC = [
-	'codfw' => 'codfw.json',
-	'eqiad' => 'eqiad.json',
-];
-$dbSelectedDC = 'codfw';
+$env = require '../../wmf-config/env.php';
+$validDCs = $isLocalhost ? [ 'tmsx', 'tmsy' ] : $env['dcs'];
+$dbSelectedDC = in_array( $_GET['dc'] ?? null, $validDCs )
+	? $_GET['dc']
+	: $validDCs[0];
 
-if ( !is_dir( $dbConfigEtcdPrefix ) ) {
-	// Local testing and debugging fallback
-	$dbConfigEtcdPrefix = __DIR__ . '/../../tests/data/dbconfig';
-	$dbctlJsonByDC = [
-		'tmsx' => 'tmsx.json',
-		'tmsy' => 'tmsy.json',
-	];
-	$dbSelectedDC = 'tmsx';
+// Now load the JSON written to Etcd by dbctl, and merge it in.
+// This is mimicking what wmfApplyEtcdDBConfig (wmf-config/etcd.php) does in prod.
+if ( $isLocalhost ) {
+	$dbconfig = json_decode(
+		file_get_contents(
+			__DIR__ . '/../../tests/data/dbconfig/' . $dbSelectedDC . '.json'
+		),
+		/* assoc = */ true
+	);
+} else {
+	$dbconfig = EtcdCachedConfig::getInstance()->getValue( $dbSelectedDC . '/dbconfig' );
 }
-
-if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
-	$dbSelectedDC = $_GET['dc'];
-}
-
-$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$dbSelectedDC];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -53,12 +56,6 @@ $wmgMasterDatacenter = null;
 // Load file to obtain $wgLBFactoryConf
 require_once __DIR__ . '/../../wmf-config/db-production.php';
 
-// Now load the JSON written to Etcd by dbctl, from the local disk and merge it in.
-// This is mimicking what wmfApplyEtcdDBConfig (wmf-config/etcd.php) does in prod.
-//
-// On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
-// run via systemd timer, defined in puppet.
-$dbconfig = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
 global $wgLBFactoryConf;
 $wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
 $wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
@@ -149,16 +146,17 @@ foreach ( $sections as $name => $label ) {
 		<h1>Database configuration</h1>
 <?php
 print '<p>';
-foreach ( $dbctlJsonByDC as $dc => $file ) {
-	$active = ( $file === $dbConfigEtcdJsonFilename ) ? ' wm-btn-active' : '';
+foreach ( $validDCs as $dc ) {
+	$active = ( $dc === $dbSelectedDC ) ? ' wm-btn-active' : '';
 	print '<a role="button" class="wm-btn' . $active . '" href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> ';
 }
+print '<a class="noc-tab-action" href="' . htmlspecialchars( "?dc=$dbSelectedDC&format=json" ) . '">View JSON</a> ';
 print '</p>';
 
 print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
 print 'wmf-config/db-production.php</a> ';
-print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
-print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.';
+print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbSelectedDC ) . '.json">';
+print htmlspecialchars( $dbSelectedDC ) . '.json</a>.';
 print '</p>';
 
 print '<div class="nocdb-sections">';

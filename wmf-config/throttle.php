@@ -10,7 +10,7 @@ $wmgThrottlingExceptions = [];
 #
 # Optional arguments can be added to set the value or restrict by client IP
 # or project dbname. Options are:
-#  'value'  => new value for $wgAccountCreationThrottle (default: 50)
+#  'value'  => new value for $wgAccountCreationThrottle (default: 50 per day)
 #  'IP'     => client IP as given by $wgRequest->getIP() or array (default: any IP)
 #  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
@@ -31,14 +31,5 @@ $wmgThrottlingExceptions = [];
 ## 72 hours in advance, you will also need to manually clear a cache after
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
-
-// T331973
-$wmgThrottlingExceptions[] = [
-	'from' => '2023-03-15T0:00 +3:00',
-	'to' => '2023-03-18T23:59 +3:00',
-	'IP' => '213.6.16.190',
-	'dbname' => [ 'arwiki' ],
-	'value' => 60,
-];
 
 ## Add throttling definitions above.

@@ -21,7 +21,7 @@ class MWConfigCacheGenerator {
 	 * @return array The wiki's config
 	 */
 	public static function getMWConfigForCacheing( $dbName, $siteConfiguration, $realm = 'production' ) {
-		list( $site, $lang ) = $siteConfiguration->siteFromDB( $dbName );
+		[ $site, $lang ] = $siteConfiguration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,
@@ -101,7 +101,9 @@ class MWConfigCacheGenerator {
 			( require $configDir . '/ext-CirrusSearch.php' ) +
 			( require $configDir . '/ext-Babel.php' ) +
 			( require $configDir . '/ext-EventLogging.php' ) +
-			( require $configDir . '/ext-EventStreamConfig.php' );
+			( require $configDir . '/ext-EventStreamConfig.php' ) +
+			( require $configDir . '/ext-GrowthExperiments.php' ) +
+			( require $configDir . '/skin-Minerva.php' );
 
 		if ( $realm !== 'production' ) {
 			// Override for Beta Cluster and other realms.

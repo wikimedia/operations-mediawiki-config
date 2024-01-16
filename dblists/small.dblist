@@ -20,6 +20,7 @@ angwikibooks
 angwikiquote
 angwikisource
 angwiktionary
+anpwiki
 anwiktionary
 apiportalwiki
 arbcom_cswiki
@@ -52,6 +53,7 @@ azwikiquote
 banwiki
 banwikisource
 bawikibooks
+bbcwiki
 bclwikiquote
 bclwiktionary
 bdwikimedia
@@ -66,8 +68,10 @@ bhwiktionary
 biwiki
 biwikibooks
 biwiktionary
+bjnwikiquote
 bjnwiktionary
 blkwiki
+blkwiktionary
 bmwiki
 bmwikibooks
 bmwikiquote
@@ -85,6 +89,7 @@ bswikibooks
 bswikinews
 bswikiquote
 bswikisource
+btmwiktionary
 bxrwiki
 cawikibooks
 cawikimedia
@@ -98,6 +103,7 @@ chwiki
 chwikibooks
 chwiktionary
 chywiki
+ckbwiktionary
 cnwikimedia
 cowikibooks
 cowikimedia
@@ -116,6 +122,7 @@ cywikisource
 dagwiki
 dawikibooks
 dawikiquote
+dgawiki
 dinwiki
 diqwiktionary
 dkwikimedia
@@ -144,6 +151,7 @@ euwikiquote
 euwikisource
 execwiki
 extwiki
+fatwiki
 fdcwiki
 ffwiki
 fiwikimedia
@@ -152,6 +160,7 @@ fiwikiquote
 fiwikiversity
 fiwikivoyage
 fjwiki
+fonwiki
 foundationwiki
 fowikisource
 fowiktionary
@@ -177,6 +186,7 @@ gorwiki
 gorwiktionary
 gotwiki
 gotwikibooks
+gpewiki
 grantswiki
 grwikimedia
 gucwiki
@@ -185,6 +195,7 @@ guwikibooks
 guwikiquote
 guwiktionary
 guwwiki
+guwwikinews
 guwwikiquote
 guwwiktionary
 gvwiktionary
@@ -243,8 +254,10 @@ kaawiki
 kawikibooks
 kawikiquote
 kbdwiki
+kbdwiktionary
 kbpwiki
 kcgwiki
+kcgwiktionary
 kgwiki
 kiwiki
 kjwiki
@@ -456,6 +469,7 @@ stwiki
 stwiktionary
 suwikibooks
 suwikiquote
+suwikisource
 suwiktionary
 svwikibooks
 svwikinews
@@ -485,6 +499,7 @@ tkwikiquote
 tkwiktionary
 tlwikibooks
 tlwikiquote
+tlywiki
 tnwiki
 tnwiktionary
 towiki
@@ -531,6 +546,7 @@ wawikibooks
 wawikisource
 wbwikimedia
 wg_enwiki
+wikifunctionswiki
 wikimania2005wiki
 wikimania2006wiki
 wikimania2007wiki
@@ -559,6 +575,7 @@ zawikibooks
 zawikiquote
 zawiktionary
 zeawiki
+zghwiki
 zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource

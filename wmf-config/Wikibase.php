@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikibase\Lib\Units\JsonUnitStorage;
 
 // Load the Repo
 if ( !empty( $wmgUseWikibaseRepo ) ) {
@@ -129,6 +130,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['sandboxEntityIds'] = $wmgWikibaseRepoSandboxEntityIds;
 	}
 
+	// configure entity sources and namespaces explicitly
+	$wgWBRepoSettings['defaultEntityNamespaces'] = false;
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
 	if ( isset( $wmgWikibaseRepoLocalEntitySourceName ) ) {
 		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
@@ -165,7 +168,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
 	$wgWBRepoSettings['unitStorage'] = [
-		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
+		'class' => JsonUnitStorage::class,
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 	];
 
@@ -241,13 +244,18 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
 		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
 	}
+
+	// Temporary, added in T339104, to be removed in T330217
+	if ( isset( $wmgWikibaseTmpAlwaysShowMulLanguageCode ) ) {
+		$wgWBRepoSettings['tmpAlwaysShowMulLanguageCode'] = $wmgWikibaseTmpAlwaysShowMulLanguageCode;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
 	$wbSiteGroup = $wmgWikibaseSiteGroup ?? null;
 	$wgWBClientSettings['languageLinkSiteGroup'] = $wbSiteGroup;
 
-	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki', 'wikimaniawiki' ] ) ) {
+	if ( in_array( $wgDBname, [ 'commonswiki', 'foundationwiki', 'mediawikiwiki', 'metawiki', 'outreachwiki', 'specieswiki', 'wikifunctionswiki', 'wikimaniawiki' ] ) ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 

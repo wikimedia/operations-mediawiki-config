@@ -3,7 +3,7 @@
 // Configure CirrusSearch settings for wikidata
 
 // Prefix search query
-$wWBCSPrefixSearchProfile = 'wikibase_config_prefix_query';
+$wgWBCSPrefixSearchProfile = 'wikibase_config_prefix_query';
 // Prefix search rescore
 $wgWBCSDefaultPrefixRescoreProfile = 'wikibase_config_entity_weight';
 

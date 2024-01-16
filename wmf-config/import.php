@@ -52,7 +52,7 @@ function wmfImportSources( &$sources ) {
 			continue;
 		}
 
-		list( $project, $subdomain ) = $wgConf->siteFromDB( $dbname );
+		[ $project, $subdomain ] = $wgConf->siteFromDB( $dbname );
 		if ( $project === 'wikimedia' ) {
 			$sources['chapter'][] = $subdomain;
 		} elseif ( $subdomain === 'en' || $subdomain === $lang ) {

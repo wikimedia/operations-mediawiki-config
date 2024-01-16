@@ -11,13 +11,16 @@ class ClusterConfig {
 	private static $instance;
 	/** @var string */
 	private $cluster;
+	/** @var string */
+	private $hostname;
+
 	// At the cost of being inelegant, I think it's simpler to have these lists here.
 	private const TRAITS = [
 		'async' => [ 'jobrunner', '-async' ],
 		'canary' => [ '-canary' ],
 		'k8s'   => [ 'kube-' ],
 		'parsoid' => [ 'parsoid' ],
-		'test' => [ '-test', 'debug' ],
+		'debug' => [ 'debug' ],
 		'api'  => [ 'api_', 'api-' ],
 	];
 
@@ -41,6 +44,7 @@ class ClusterConfig {
 
 	private function __construct() {
 		$this->cluster = $_SERVER['SERVERGROUP'] ?? '';
+		$this->hostname = '';
 	}
 
 	/**
@@ -80,12 +84,21 @@ class ClusterConfig {
 	}
 
 	/**
-	 * Is this cluster group a test environment?
+	 * Is this cluster group a debug environment?
 	 *
 	 * @return bool
 	 */
-	public function isTest() {
-		return $this->hasTrait( 'test' );
+	public function isDebug() {
+		return $this->hasTrait( 'debug' ) || $this->isDebugHost();
+	}
+
+	/**
+	 * Checks to see if the current host is a debug host.
+	 *
+	 * @return bool
+	 */
+	private function isDebugHost() {
+		return strpos( $this->getHostname(), 'debug' ) !== false;
 	}
 
 	/**
@@ -104,6 +117,22 @@ class ClusterConfig {
 	 */
 	public function isApi() {
 		return $this->hasTrait( 'api' );
+	}
+
+	/**
+	 * Lazily fetch and return the hostname.
+	 *
+	 * It will be cached once requested the first time.
+	 * We are re-implementing wfHostname here because this
+	 * class can be loaded before wfHostname is available.
+	 *
+	 * @return string
+	 */
+	public function getHostname() {
+		if ( $this->hostname === '' ) {
+			$this->hostname = php_uname( 'n' ) ?: 'unknown';
+		}
+		return $this->hostname;
 	}
 
 	/**

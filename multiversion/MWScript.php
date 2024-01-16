@@ -4,6 +4,8 @@ if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
 	exit( 1 );
 }
 
+require_once __DIR__ . '/MWMultiVersion.php';
+
 function wmfUsage() {
 	global $argv;
 	fwrite( STDERR, <<<EOT
@@ -39,7 +41,7 @@ function wmfGetMWScriptWithArgs() {
 		wmfUsage();
 	}
 
-	# Security check -- don't allow scripts to run as privileged users
+	// Security check -- don't allow scripts to run as privileged users
 	$gids = posix_getgroups();
 	foreach ( $gids as $gid ) {
 		$info = posix_getgrgid( $gid );
@@ -61,26 +63,22 @@ EOT
 		}
 	}
 
-	// the script file to run
-	$relFile = $argv[1];
-	# If no MW directory is given then assume this is a /maintenance script
-	if ( strpos( $relFile, '/' ) === false ) {
+	// The script file to run
+	$relPath = $argv[1];
+	// If no MW directory is given then assume this is a /maintenance script
+	// run.php allows running maint scripts like Myextension:Foo
+	if (
+		strpos( $relPath, '/' ) === false &&
+		strpos( $relPath, ':' ) === false &&
+		substr_count( $relPath, "." ) < 2
+	) {
 		// convenience
-		$relFile = "maintenance/$relFile";
+		$relPath = "maintenance/$relPath";
 	}
 
-	# Remove effects of this wrapper from $argv...
-	// remove this file's name from args
-	array_shift( $argv );
-	# Code stolen from wfBasename() in GlobalFunctions.php :)
-	if ( preg_match( "#([^/\\\\]*?)[/\\\\]*$#", $argv[0], $matches ) ) {
-		// make first arg the script file name
-		$argv[0] = $matches[1];
-	}
-
-	# For addwiki.php, the wiki DB doesn't yet exist, and for some
-	# other maintenance scripts we don't care what wiki DB is used...
-	$wikiless = [
+	// For addwiki.php, the wiki DB doesn't yet exist, and for some
+	// other maintenance scripts we don't care what wiki DB is used...
+	$wikilessScripts = [
 		'maintenance/purgeList.php',
 		'maintenance/purgeMessageBlobStore.php',
 		'extensions/WikimediaMaintenance/addWiki.php',
@@ -89,30 +87,72 @@ EOT
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php',
 		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
 		'extensions/WikimediaMaintenance/purgeUrls.php',
-		'extensions/WikimediaMaintenance/refreshMessageBlobs.php',
 		'maintenance/mctest.php',
 		'maintenance/mcc.php',
 	];
 
-	# Check if a --wiki param was given...
-	# Maintenance.php will treat $argv[1] as the wiki if it doesn't start '-'
-	if ( !isset( $argv[1] ) || !preg_match( '/^([^-]|--wiki(=|$))/', $argv[1] ) ) {
-		if ( in_array( $relFile, $wikiless ) ) {
-			# Assume aawiki as Maintenance.php does.
-			$argv = array_merge( [ $argv[0], "--wiki=aawiki" ], array_slice( $argv, 1 ) );
-		}
+	// maint scripts using CommandLineInc and thus can't use run.php
+	// mergeMessageFileList uses the new way but it's quite unusual as
+	// it does a lot after class so it has to use the old way.
+	$oldScripts = [
+		'maintenance/mergeMessageFileList.php',
+		'maintenance/storage/checkStorage.php',
+		'maintenance/storage/recompressTracked.php',
+		'maintenance/storage/testCompression.php',
+		'maintenance/storage/trackBlobs.php',
+		'extensions/WikimediaMaintenance/listDatabases.php',
+		'extensions/WikimediaMaintenance/sanityCheck.php',
+		'extensions/WikimediaMaintenance/storage/testRctComplete.php',
+	];
+
+	$scriptArgs = array_slice( $argv, 2 );
+
+	// Dump argv if requested
+	if ( ( $scriptArgs[0] ?? '' ) === '--mwscript-debug-dump-argv' ) {
+		array_shift( $scriptArgs );
+		$debugDump = true;
+	} else {
+		$debugDump = false;
 	}
 
-	# MWScript.php should be in common/
-	require_once __DIR__ . '/MWMultiVersion.php';
-	$file = MWMultiVersion::getMediaWikiCli( $relFile );
-	if ( !file_exists( $file ) ) {
-		fwrite( STDERR, "The MediaWiki script file \"{$file}\" does not exist.\n" );
+	// Add a --wiki param if none was given, if the script is wikiless
+	// Maintenance.php will treat $argv[2] as the wiki if it doesn't start '-'
+	if ( !count( $scriptArgs ) || !preg_match( '/^([^-]|--wiki(=|$))/', $scriptArgs[0] ) ) {
+		if ( in_array( $relPath, $wikilessScripts ) ) {
+			// Assume aawiki as Maintenance.php does.
+			array_unshift( $scriptArgs, "--wiki=aawiki" );
+		}
+	}
+	$useOld = in_array( $relPath, $oldScripts );
+	$runPath = $useOld ? $relPath : 'maintenance/run.php';
+
+	if ( $useOld ) {
+		// Remove MWScript.php from $argv[0] and update $relPath
+		$argv = array_merge( [ $relPath ], $scriptArgs );
+	} else {
+		// Replace MWScript.php in $argv[0] with run.php
+		$argv = array_merge( [ $runPath, $relPath ], $scriptArgs );
+	}
+
+	$absPath = MWMultiVersion::getMediaWikiCli( $runPath, $useOld );
+	if ( !file_exists( $absPath ) ) {
+		fwrite( STDERR, "The MediaWiki script file \"{$absPath}\" does not exist.\n" );
 		exit( 1 );
 	}
 
-	return $file;
+	if ( !$useOld ) {
+		// Use absolute path for run.php. argv[1] was updated by getMediaWikiCli.
+		$argv[0] = $absPath;
+	}
+
+	if ( $debugDump ) {
+		print "require $absPath\n";
+		print_r( $argv );
+		exit( 1 );
+	}
+
+	return $absPath;
 }
 
-# Run the script!
+// Run the script!
 require_once wmfGetMWScriptWithArgs();

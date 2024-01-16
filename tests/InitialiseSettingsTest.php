@@ -183,6 +183,46 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testLogosAreSet() {
+		$config = yaml_parse_file( __DIR__ . '/../logos/config.yaml' );
+
+		// Test that every special wiki has a logo set
+		// We could do this for every wiki, but a lot fall back to their project, so it's not worth it
+		$configuredImages = $config['Special wikis'];
+		$dbLists = DBList::getLists();
+		$dblistValues = $dbLists['special'];
+		foreach ( $dblistValues as $index => $db ) {
+			// Exceptions; new special wikis should generally be created with logos, unless there's a good reason not to
+			if ( in_array( $db, [
+				// Special cases
+				'labswiki',
+				'labtestwiki',
+				// Defined in the 'Wikisource' list for sensible reasons
+				'sourceswiki',
+			] ) ) {
+				continue;
+			}
+
+			$this->assertArrayHasKey( $db, $configuredImages, "Special wiki $db is a known wiki but has not images set" );
+		}
+
+		// Test that every configured-entry is about a real wiki
+		foreach ( $config as $list => $values ) {
+			if ( $list === 'Projects' ) {
+				continue;
+			}
+
+			foreach ( $values as $db => $entry ) {
+				if ( $db === 'wikitech' ) {
+					// Special case
+					continue;
+				}
+
+				$this->assertTrue( DBList::isInDblist( $db, "all" ), "$db has images set but is not a known wiki" );
+			}
+		}
+	}
+
 	public function testwgExtraNamespaces() {
 		foreach ( $this->settings['wgExtraNamespaces'] as $db => $entry ) {
 			foreach ( $entry as $number => $namespace ) {
@@ -331,7 +371,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
 		$settings = $this->settings;
 		unset( $settings['@replaceableSettings'] );
-		foreach ( $settings as $config ) {
+		foreach ( $settings as $setting => $config ) {
 			foreach ( $config as $db => $entry ) {
 				$dbNormalized = str_replace( "+", "", $db );
 				$this->assertTrue(
@@ -340,7 +380,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 					in_array( $dbNormalized,  $langs ) ||
 					// TODO: revert back to $db == "default"
 					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ),
-					"$dbNormalized is referenced, but it isn't either a wiki or a dblist" );
+					"$dbNormalized is referenced for $setting, but it isn't either a wiki or a dblist" );
 			}
 		}
 	}
@@ -409,15 +449,6 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			'officewiki', $this->config, 'production'
 		);
 
-		$this->assertEquals(
-			'windows-1252',
-			$enwikiSettings['wgLegacyEncoding'],
-			'Enable by dbname, wgLegacyEncoding for enwiki'
-		);
-		$this->assertFalse(
-			$dewikiSettings['wgLegacyEncoding'],
-			'Disable by dbname, wgLegacyEncoding for most other wikis'
-		);
 		$this->assertFalse(
 			$officewikiSettings['groupOverrides2']['*']['read'],
 			'Set by "private" tag, restrict reading on officewiki'
@@ -452,5 +483,21 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			$settings['wmgUseFlow'],
 			"settings array must have 'wmgUseFlow' set to 'true' for labs enwiki."
 		);
+	}
+
+	public function testSettingNames(): void {
+		$invalidKeys = [];
+		foreach ( $this->settings as $key => $_ ) {
+			if (
+				!str_starts_with( $key, 'wg' ) &&
+				!str_starts_with( $key, 'wmg' ) &&
+				$key !== 'groupOverrides' && $key !== 'groupOverrides2' &&
+				$key !== '@replaceableSettings'
+			) {
+				$invalidKeys[] = $key;
+			}
+		}
+
+		$this->assertSame( [], $invalidKeys, 'Setting names must begin with wg or wmg!' );
 	}
 }
