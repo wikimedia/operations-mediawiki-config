@@ -7812,6 +7812,7 @@ return [
 	'arwiki' => 'available', // T329407
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
+	'wikitech' => 'available', // T355374
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
@@ -7819,6 +7820,7 @@ return [
 	'arwiki' => 'available', // T329407
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
+	'wikitech' => 'available', // T355374
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
@@ -7826,6 +7828,7 @@ return [
 	'arwiki' => 'available', // T329407
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
+	'wikitech' => 'available', // T355374
 ],
 
 'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
