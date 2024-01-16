@@ -280,15 +280,21 @@ if ( $wmgRealm == 'labs' ) {
 		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
 		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
 
-		// Temporary overrides to save space in user_properties (T353225)
-		// Those are boolean options, and setting the defaults this way ensures MediaWiki inserts
-		// user_properties rows for both true and false without changing any behavior for users
-		// that currently do not have any matching user_properties row.
-		// Below, 2 and 0 are arbitrary values that evaluate to true and false respectively.
-		$wgDefaultUserOptions['echo-subscriptions-web-reverted'] = 2;
-		$wgDefaultUserOptions['echo-subscriptions-web-article-linked'] = 0;
-		$wgDefaultUserOptions['echo-subscriptions-email-mention'] = 0;
-		$wgDefaultUserOptions['echo-subscriptions-email-article-linked'] = 0;
+		// Temporarily enable conditional defaults for Echo properties (T353225)
+		$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
+			[
+				false,
+				[ CUDCOND_AFTER, '20130501000000' ]
+			]
+		];
+		$wgConditionalUserOptions['echo-subscriptions-web-article-linked'] =
+			$wgConditionalUserOptions['echo-subscriptions-email-mention'] =
+			$wgConditionalUserOptions['echo-subscriptions-email-article-linked'] = [
+				[
+					true,
+					[ CUDCOND_AFTER, '20130501000000' ]
+				]
+			];
 	}
 
 	if ( $wmgUseEcho && $wmgUseCentralAuth ) {
