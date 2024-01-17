@@ -203,9 +203,15 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T189732
 	],
 	'+arwikisource' => [
+		'user' => [ 'pagequality-validate' => false ], // T354503
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true ],
+		'patroller' => [
+			'autopatrol' => true,
+			'pagequality-validate' => true, // T354503
+			'patrol' => true
+		],
 		'rollbacker' => [ 'rollback' => true ],
+		'sysop' => [ 'pagequality-validate' => true ] // T354503
 	],
 	'+arwikiversity' => [
 		'rollbacker' => [ 'rollback' => true ], // T188633
