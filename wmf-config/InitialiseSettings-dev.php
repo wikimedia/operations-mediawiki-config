@@ -14,6 +14,21 @@
  */
 function wmfGetOverrideSettings() {
 	return [
+		'-wmgUseUrlShortener' => [
+			'default' => false,
+		],
+		'-wmgUseCampaignEvents' => [
+			'default' => false,
+		],
+		'-wmgUseReadingLists' => [
+			'default' => false,
+		],
+		'-wmgUseCognate' => [
+			'default' => false,
+		],
+		'-wmgUseBounceHandler' => [
+			'default' => false,
+		],
 		'-wmgUseCentralAuth' => [
 			'default' => false,
 		],
