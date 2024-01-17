@@ -7062,18 +7062,15 @@ return [
 ],
 'wgMFUseDesktopSpecialHistoryPage' => [ // T219895
 	'default' => [
-		'base' => false,
-		'beta' => false,
+		// T290812, T353388
+		'base' => true,
+		'loggedin' => true,
 		'amc' => true,
 	],
 	'enwiki' => [
 		'base' => false,
 		'loggedin' => true,
 		'amc' => true,
-	],
-	// T290812
-	'ptwikinews' => [
-		'base' => true,
 	],
 ],
 
