@@ -6436,8 +6436,8 @@ return [
 	'uawikimedia' => [ 'https://wikimediaukraine.wordpress.com/feed/' ],
 	'foundationwiki' => [
 		'https://wikimediafoundation.org/news/feed/',
-		'https://wikimediafoundation.org/category/wikimediacommons/feed/',
 		'https://wikimediafoundation.org/category/communications/picture-of-the-day/feed/',
+		'https://diff.wikimedia.org/feed/', // Diff - T354790
 	],
 	'mediawikiwiki' => [
 		'https://wikimediafoundation.org/news/feed/',
