@@ -84,7 +84,6 @@ return [
 		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
 		'development.network.probe',
-		'mediawiki.special_diff_interactions',
 		'wikifunctions.ui',
 		'mediawiki.web_ui_actions',
 		'mediawiki.web_ui_scroll_migrated',
