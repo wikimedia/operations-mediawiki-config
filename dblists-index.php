@@ -978,7 +978,7 @@ return [
 'wikimania2017wiki' => [ 'special', 'closed', 'legacy-vector', 'medium', 'wikimania', 'group1', 'nowikidatadescriptiontaglines' ],
 'wikimania2018wiki' => [ 'special', 'closed', 'small', 'legacy-vector', 'wikimania', 'group1', 'nowikidatadescriptiontaglines' ],
 'wikimaniateamwiki' => [ 'special', 'private', 'small', 'legacy-vector', 'group1', 'nowikidatadescriptiontaglines' ],
-'wikimaniawiki' => [ 'special', 'small', 'legacy-vector', 'wikimania', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'wikimaniawiki' => [ 'special', 'small', 'wikimania', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'wowiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'wowikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'wowiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
