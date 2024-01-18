@@ -14,6 +14,12 @@
  */
 function wmfGetOverrideSettings() {
 	return [
+		'-wmgUsePageViewInfo' => [
+			'default' => false,
+		],
+		'-wmgUseIPInfo' => [
+			'default' => false,
+		],
 		'-wmgUseUrlShortener' => [
 			'default' => false,
 		],
