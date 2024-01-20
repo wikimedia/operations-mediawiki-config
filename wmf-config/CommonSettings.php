@@ -537,7 +537,6 @@ $wgEmergencyContact = 'noc@wikipedia.org';
 # and random contact forms.
 $wgPasswordSender = 'wiki@wikimedia.org';
 
-$wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
