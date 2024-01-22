@@ -1407,7 +1407,6 @@ if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
 	$wgUrlShortenerServer = 'https://w.wiki';
-	$wgVirtualDomainsMapping['urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgVirtualDomainsMapping['virtual-urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.org',
