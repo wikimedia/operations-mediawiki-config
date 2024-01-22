@@ -1565,7 +1565,37 @@ return [
 				'rate' => 1,
 			],
 		],
-
+		// (T350497) Update the WikiLambda instrumentation (Wikifunctions) to use core interaction events
+		'mediawiki.product_metrics.wikifunctions_ui' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_id',
+						'page_title',
+						'page_revision_id',
+						'performer_is_logged_in',
+						'performer_id',
+						'performer_name',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_pageview_id',
+						'performer_language',
+						'performer_language_variant',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_is_bot'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 	],
 ],
 
