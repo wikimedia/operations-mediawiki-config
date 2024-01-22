@@ -2123,12 +2123,13 @@ return [
 			'move-categorypages' => true, // T341707
 			'suppressredirect' => true, // T341707
 		],
-		'engineer' => [ // T144599, T190619
+		'engineer' => [ // T144599, T190619, T355499
 			'apihighlimits' => true,
 			'editcontentmodel' => true,
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsitejson' => true,
+			'edituserjson' => true,
 			'jsonconfig-flush' => true,
 			'move-categorypages' => true,
 			'move-subpages' => true,
@@ -2136,6 +2137,7 @@ return [
 			'noratelimit' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
+
 		],
 		'filemover' => [ // T32984
 			'move-categorypages' => true, // T68871
