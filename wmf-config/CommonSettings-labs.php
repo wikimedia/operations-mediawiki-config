@@ -474,14 +474,11 @@ if ( $wmgRealm == 'labs' ) {
 	$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'scramble' ];
 
 	if ( $wmgEnableIPMasking ) {
+		$wgGroupPermissions['temp']['edit'] = true;
 		$wgAutoCreateTempUser['enabled'] = true;
 		$wgAutoCreateTempUser['expireAfterDays'] = 365;
 		// notify ten days before account is expired
 		$wgAutoCreateTempUser['notifyBeforeExpirationDays'] = 10;
-
-		// editing is enabled only for temp accounts
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['temp']['edit'] = true;
 	} else {
 		$wgAutoCreateTempUser['enabled'] = false;
 		$wgAutoCreateTempUser['reservedPattern'] = '*$1';
