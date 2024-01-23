@@ -198,25 +198,6 @@ function wmfGetOverrideSettings() {
 						],
 					],
 				],
-				// See https://phabricator.wikimedia.org/T353798
-				'mediawiki.reference_previews' => [
-					'schema_title' => 'analytics/mediawiki/client/metrics_event',
-					'destination_event_service' => 'eventgate-analytics-external',
-					'producers' => [
-						'metrics_platform_client' => [
-							'events' => [
-								'ext.cite.baseline'
-							],
-							'provide_values' => [
-								'mediawiki_database',
-								'mediawiki_skin',
-								'page_namespace',
-								'performer_edit_count_bucket',
-								'performer_is_logged_in',
-							],
-						],
-					],
-				],
 			]
 		],
 
