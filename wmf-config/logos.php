@@ -361,7 +361,7 @@ return [
 	'ugwiki' => '/static/images/project-logos/ugwiki.png', // T50397
 	'ukwiki' => '/static/images/project-logos/ukwiki.png',
 	'urwiki' => '/static/images/project-logos/urwiki.png', // T48589
-	'uzwiki' => '/static/images/project-logos/uzwiki-birthday.png', // T39699, T353723
+	'uzwiki' => '/static/images/project-logos/uzwiki.png', // T39699
 	'vewiki' => '/static/images/project-logos/vewiki.png',
 	'vecwiki' => '/static/images/project-logos/vecwiki.png',
 	'vepwiki' => '/static/images/project-logos/vepwiki.png',
@@ -1209,7 +1209,7 @@ return [
 	'ugwiki' => '/static/images/project-logos/ugwiki-1.5x.png', // T150618
 	'ukwiki' => '/static/images/project-logos/ukwiki-1.5x.png', // T150618
 	'urwiki' => '/static/images/project-logos/urwiki-1.5x.png', // T150618
-	'uzwiki' => '/static/images/project-logos/uzwiki-birthday-1.5x.png', // T150618, T353723
+	'uzwiki' => '/static/images/project-logos/uzwiki-1.5x.png', // T150618
 	'vecwiki' => '/static/images/project-logos/vecwiki-1.5x.png', // T150618
 	'vepwiki' => '/static/images/project-logos/vepwiki-1.5x.png', // T150618
 	'viwiki' => '/static/images/project-logos/viwiki-1.5x.png',
@@ -1834,7 +1834,7 @@ return [
 	'ugwiki' => '/static/images/project-logos/ugwiki-2x.png', // T150618
 	'ukwiki' => '/static/images/project-logos/ukwiki-2x.png', // T150618
 	'urwiki' => '/static/images/project-logos/urwiki-2x.png', // T150618
-	'uzwiki' => '/static/images/project-logos/uzwiki-birthday-2x.png', // T150618, T353723
+	'uzwiki' => '/static/images/project-logos/uzwiki-2x.png', // T150618
 	'vecwiki' => '/static/images/project-logos/vecwiki-2x.png', // T150618
 	'vepwiki' => '/static/images/project-logos/vepwiki-2x.png', // T150618
 	'viwiki' => '/static/images/project-logos/viwiki-2x.png',
