@@ -1375,6 +1375,7 @@ return [
 			'writeapi' => true,
 			'editautopatrolprotected' => true, // T308917
 			'changetags' => true, // T331051
+			'abusefilter-bypass-blocked-external-domains' => true, // T355694
 		],
 		'sysop' => [
 			'editautopatrolprotected' => true, // T308917
