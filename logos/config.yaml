@@ -1762,9 +1762,6 @@ Wikipedia:
         comment_wordmark: 'T171769, T254788'
     uzwiki:
         commons: 'File:Wikipedia-logo-v2-uz.svg'
-        variants:
-            uzwiki-birthday:
-                commons: 'File:Uzwiki_logo_20_2.svg'
         comment: 'T39699'
         comment_1_5x: 'T150618'
         comment_2x: 'T150618'
