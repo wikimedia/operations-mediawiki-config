@@ -471,7 +471,20 @@ if ( $wmgRealm == 'labs' ) {
 		'type' => 'centralauth',
 		'numShards' => 8,
 	];
-	$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'scramble' ];
+
+	// Update the serial mapping config for generating temporary user names (T349503)
+	// 'plain-numeric' is the default value but enforcing it here in case the default is changed
+	$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric' ];
+
+	// Change temporary user pattern configuration to match the updated prefix, '~' (T349486)
+	// and enable `useYear` so that new temporary accounts will be created with the pattern
+	// `~<year>-<incrementing_id>`.
+	// `~2$1` is used here to match with production values, as there
+	// are already some accounts that would match `~$1`.
+	$wgAutoCreateTempUser['genPattern'] = '~$1';
+	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
+	$wgAutoCreateTempUser['reservedPattern'] = '~$1';
+	$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
 
 	if ( $wmgEnableIPMasking ) {
 		$wgGroupPermissions['temp']['edit'] = true;
