@@ -12470,6 +12470,11 @@ return [
 	'testwiki' => true, // T353041
 ],
 
+'wmgEditRecoveryDefaultUserOptions' => [
+	'default' => false, // T350653
+	'testwiki' => true, // T350653
+],
+
 'wgWikidiff2Options' => [
 	'default' => [
 		'useMultiFormat' => true,

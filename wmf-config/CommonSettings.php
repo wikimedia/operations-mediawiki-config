@@ -4259,6 +4259,11 @@ if ( $wmgUseParserMigration ) {
 	wfLoadExtension( 'ParserMigration' );
 }
 
+// T350653
+if ( $wmgEditRecoveryDefaultUserOptions ) {
+	$wgDefaultUserOptions['editrecovery'] = 1;
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

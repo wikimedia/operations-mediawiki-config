@@ -2525,6 +2525,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wmgEditRecoveryDefaultUserOptions' => [
+			'default' => true, // T350653
+		],
+
 		// T61245
 		'wmgUsePageNotice' => [
 			'enwiktionary' => true,
