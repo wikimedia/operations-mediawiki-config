@@ -1854,6 +1854,7 @@ return [
 	# http://de.wikibooks.org/wiki/Wikibooks:Meinungsbilder/_Verschiebefunktion_f%C3%BCr_neue_Nutzer
 	# TS 2007-02-06
 	'dewikibooks' => 7 * 86400,
+	'ganwiki' => 7 * 86400, // T355126
 	'itwiki' => 7 * 86400, // T262738
 	'nowiki' => 7 * 86400, // T71302
 	'tenwiki' => 0, // T28554
@@ -1879,6 +1880,7 @@ return [
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
 	'fawikivoyage' => 10, // T73709
+	'ganwiki' => 15, // T355126
 	'iswiki' => 10, // T306305
 	'itwiki' => 50, // T72128, T262738
 	'itwiktionary' => 10, // T24274
