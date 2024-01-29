@@ -7067,11 +7067,6 @@ return [
 		'loggedin' => true,
 		'amc' => true,
 	],
-	'enwiki' => [
-		'base' => false,
-		'loggedin' => true,
-		'amc' => true,
-	],
 ],
 
 'wgMFUseDesktopSpecialWatchlistPage' => [
