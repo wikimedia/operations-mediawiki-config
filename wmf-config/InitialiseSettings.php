@@ -8607,7 +8607,7 @@ return [
 	'default' => true,
 ],
 
-// Enable Mediawiki client side (browser) Javascript error logging.
+// Enable MediaWiki client side (browser) Javascript error logging.
 // This is the publicly accessible endpoint for eventgate-logging-external.
 'wgWMEClientErrorIntakeURL' => [
 	'default' => false,
