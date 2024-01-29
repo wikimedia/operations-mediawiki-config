@@ -3644,8 +3644,8 @@ return [
 	'enwiktionary' => [
 		100 => 'Appendix', // T8476
 		101 => 'Appendix_talk',
-		102 => 'Concordance',
-		103 => 'Concordance_talk',
+		# 102 => 'Concordance', // Removed per T354813
+		# 103 => 'Concordance_talk', // Removed per T354813
 		# 104 => 'Index', // Removed per T344816
 		# 105 => 'Index_talk',
 		106 => 'Rhymes',
