@@ -6224,6 +6224,9 @@ return [
 	],
 
 	// Wikiquotes
+	'+enwikiquote' => [
+		'Draft' => true, // T355195
+	],
 
 	// Wikibookses
 	'+bnwikibooks' => [

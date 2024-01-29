@@ -4385,6 +4385,10 @@ return [
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
 	],
+	'enwikiquote' => [
+		118 => 'Draft', // T355195
+		119 => 'Draft_talk', // T355195
+	],
 	'frwikiquote' => [
 		100 => 'Portail',
 		101 => 'Discussion_Portail',
@@ -4651,6 +4655,9 @@ return [
 		NS_USER_TALK => 'noindex,follow',
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
+	],
+	'enwikiquote' => [
+		118 => 'noindex,nofollow', // draft, T355195
 	],
 	'eswiki' => [ // T233562
 		NS_TALK => 'noindex,follow',
@@ -5205,6 +5212,7 @@ return [
 	'bnwiki' => [ 118, 119 ], // draft and draft talk - T350133
 	'ckbwiki' => [ 118, 119 ], // draft and draft talk - T332470
 	'enwiki' => [ 118, 119 ], // draft and draft talk
+	'enwikiquote' => [ 118 ], // draft - T355195
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
