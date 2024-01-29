@@ -1539,6 +1539,33 @@ if ( $wmgUseContactPage ) {
 	if ( $wgDBname === 'enwiki' ) {
 		include __DIR__ . '/EnWikiContactPages.php';
 	}
+
+	if ( $wgDBname === 'testwiki' ) {
+		// T343536 Contact page for account vanishing requests from mobile apps.
+		// To be placed into MetaContactPages.php when ready for production.
+		// At the moment this does not have the associated WikimediaMessages strings,
+		// so it will show up as a generic contact form for now.
+		$wgContactConfig['accountvanishapps'] = [
+			'RecipientUser' => 'AccountVanishRequests',
+			'SenderName' => 'Account vanishing request form on ' . $wgSitename,
+			'SenderEmail' => $wgPasswordSender,
+			'RequireDetails' => true,
+			'IncludeIP' => false,
+			'MustBeLoggedIn' => true,
+			'AdditionalFields' => [
+				'Text' => [
+					'label-message' => 'emailmessage',
+					'type' => 'textarea',
+					'rows' => 2,
+					'required' => false,
+				],
+			],
+			'NameReadonly' => true,
+			'EmailReadonly' => true,
+			'SubjectReadonly' => true,
+			'MustHaveEmail' => true,
+		];
+	}
 }
 
 // At the moment securepoll doesn't work on k8s, or on newer linux distributions,
