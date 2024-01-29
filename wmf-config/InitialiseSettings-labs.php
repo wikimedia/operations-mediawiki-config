@@ -2321,11 +2321,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Remove after I5c9229a258
-		'-wgDiscussionToolsEnableTimestampLinks' => [
-			'default' => true,
-		],
-
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
