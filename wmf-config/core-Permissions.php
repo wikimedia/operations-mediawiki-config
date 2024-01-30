@@ -1156,6 +1156,9 @@ return [
 	'+gawiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'ganwiki' => [
+		'transwiki' => [ 'suppressredirect' => true ], // T354850
+	],
 	'+guwiki' => [ // T119787
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -3711,6 +3714,9 @@ return [
 	'+gawiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
+	'+ganwiki' => [
+		'sysop' => [ 'transwiki' ], // T354850
+	],
 	'+glwiki' => [
 		'sysop' => [ 'confirmed' ], // T128948
 	],
@@ -5093,6 +5099,10 @@ return [
 	],
 	'+gawiki' => [
 		'sysop' => [ 'rollbacker' ],
+	],
+	'+ganwiki' => [
+		'sysop' => [ 'transwiki' ], // T354850
+		'transwiki' => [ 'transwiki' ], // T354850
 	],
 	'+glwiki' => [ // T128948
 		'sysop' => [ 'confirmed' ],
