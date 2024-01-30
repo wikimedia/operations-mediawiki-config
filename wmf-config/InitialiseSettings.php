@@ -6737,21 +6737,52 @@ return [
 	],
 ],
 
-// Control the probability with which Parsoid's /{domain}/v3/page/html endpoint
-// writes to the parser cache. This endpoint is hit by RESTbase when pre-populating
-// its cache after a page is edited. This mechanism for populating the cache is
-// redundant to ParsoidCachePrewarmJob as controleld by the WarmParsoidParserCache
-// flag in wgParsoidCacheConfig.
-// Setting this to 1 cause all content served from parsoid endpoints to be stored
-// in the parser cache. Setting it to 0 will prevent cache writes in the parsoid,
-// endpoints, leaving it to ParsoidCachePrewarmJob to populate the cache.
-// TODO: replace this with a mechanism to disable parsoid parser cache per namespace,
-// so we can disabel it entirely for the main namespace on Wikidata and in the File
-// namespace on commons.
-'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
-	'default' => 1.0, // Parsoid endpoints should write to the parser cache
-	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
-	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
+// The parser cache can be configured to only cache pages that take a certain amount
+// of resources to parse.
+// For the minCpuTime filter, 0 means no threshold (cache all), and PHP_INT_MAX can
+// be used to disable the cache.
+'wgParserCacheFilterConfig' => [
+	'default' => [ // most wikis
+		'pcache' => [ // old parser cache
+			'default' => [ // all namespaces
+				'minCpuTime' => 0 // cache all
+			],
+		],
+		'parsoid-pcache' => [ // parsoid output cache
+			'default' => [ // all namespaces
+				'minCpuTime' => 0 // cache all
+			],
+		],
+	],
+	'+commonswiki' => [ // Commons
+		'parsoid-pcache' => [ // parsoid output cache
+			'default' => [ // most namespaces
+				'minCpuTime' => 0 // cache all
+			],
+			// disable parsoid-pcache for file description pages on commons
+			NS_FILE => [
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+	],
+	'+wikidatawiki' => [ // Wikidata
+		'parsoid-pcache' => [ // parsoid output cache
+			'default' => [ // most namespaces
+				'minCpuTime' => 0 // cache all
+			],
+			// Disable parsoid-pcache for wikidata entities.
+			// We shouldn't render them with Parsoid in the first place.
+			NS_MAIN => [ // Item namespace
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+			120 => [ // Property namespace
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+			146 => [ // Lexeme namespace
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+	],
 ],
 
 'wgLanguageConverterCacheType' => [
