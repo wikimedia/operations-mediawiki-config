@@ -5221,6 +5221,7 @@ return [
 	'ckbwiki' => [ 118, 119 ], // draft and draft talk - T332470
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'enwikiquote' => [ 118 ], // draft - T355195
+	'eswiki' => [ 1, 2, 3, 5, 7, 9, 11, 13, 15, 101, 103, 105, 829 ], // all the default index namespaces - T355033
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
