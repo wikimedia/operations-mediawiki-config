@@ -614,6 +614,14 @@ return [
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
+	'+ganwiki' => [
+		'CAT' => NS_CATEGORY, // T355854
+		'H' => NS_HELP, // T355854
+		'T' => NS_TEMPLATE, // T355854
+		'U' => NS_USER, // T355854
+		'UT' => NS_USER_TALK, // T355854
+		'WT' => NS_PROJECT_TALK, // T355854
+	],
 	'+glwiki' => [
 		'Portal_talk' => 101, // T43213 (old namespace name)
 	],
