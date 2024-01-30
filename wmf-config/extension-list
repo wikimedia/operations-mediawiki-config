@@ -178,6 +178,7 @@ $IP/extensions/WikiLambda/extension.json
 $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaApiPortalOAuth/extension.json
 $IP/extensions/WikimediaBadges/extension.json
+$IP/extensions/WikimediaCampaignEvents/extension.json
 $IP/extensions/WikimediaEditorTasks/extension.json
 $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
