@@ -7059,6 +7059,15 @@ return [
 		'base' => true, 'beta' => true,
 	],
 ],
+'wgMFUseDesktopDiffPage' => [
+	'default' => [
+		'base' => false,
+		// T350181
+		'loggedin' => true,
+		'amc' => true,
+	],
+],
+
 'wgMFUseDesktopSpecialHistoryPage' => [ // T219895
 	'default' => [
 		// T290812, T353388
