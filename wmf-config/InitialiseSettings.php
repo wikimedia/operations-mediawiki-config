@@ -12441,6 +12441,7 @@ return [
 // T61245
 'wmgUsePageNotice' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 'wgPageNoticeDisablePerPageNotices' => [
 	'default' => true,
