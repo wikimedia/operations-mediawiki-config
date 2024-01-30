@@ -1892,6 +1892,7 @@ return [
 	'ptwiki' => 10, // T29954
 	'ruwiki' => 15, // T43831
 	'simplewiki' => 10,
+	'ukwiki' => 10, // T355972
 	'viwiki' => 10, // T322105
 	'wikidata' => 50, // T48461
 	'wuuwiki' => 10, // T122476
