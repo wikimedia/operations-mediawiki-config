@@ -1609,7 +1609,7 @@ return [
 	'+metawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'bot' => [ 'changetags' => true ], // T283625
-		'campaignevents-beta-tester' => [ // Temporary, T316227
+		'event-organizer' => [ // T356070
 			'campaignevents-enable-registration' => true,
 			'campaignevents-organize-events' => true,
 			'campaignevents-email-participants' => true,
