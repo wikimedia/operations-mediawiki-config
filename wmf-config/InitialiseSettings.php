@@ -3794,6 +3794,7 @@ return [
 
 'wgSignatureValidation' => [
 	'default' => 'new', // T248632
+	'enwiki' => 'disallow', // T355462
 ],
 
 'wgSignatureAllowedLintErrors' => [
