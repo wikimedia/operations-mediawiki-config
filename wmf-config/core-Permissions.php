@@ -3953,6 +3953,7 @@ return [
 		],
 		'sysop' => [
 			'autopatrolled',
+			'event-organizer', // T356070
 			'massmessage-sender', // T59611
 			'patroller', // T176079
 		],
@@ -5250,7 +5251,7 @@ return [
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'flood', 'centralnoticeadmin', 'uploader' ], // T39198, T52287, T110674
-		'sysop' => [ 'autopatrolled', 'massmessage-sender', 'patroller' ], // T59611, T176079
+		'sysop' => [ 'autopatrolled', 'event-organizer', 'massmessage-sender', 'patroller' ], // T356070, T59611, T176079
 	],
 	'+mkwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'autoreviewed' ],
