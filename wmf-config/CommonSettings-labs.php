@@ -495,7 +495,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgAutoCreateTempUser['notifyBeforeExpirationDays'] = 10;
 	} else {
 		$wgAutoCreateTempUser['enabled'] = false;
-		$wgAutoCreateTempUser['reservedPattern'] = '*$1';
 	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
