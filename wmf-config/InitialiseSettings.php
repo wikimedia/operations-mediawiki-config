@@ -3200,18 +3200,13 @@ return [
 ],
 
 'wgEnablePartialActionBlocks' => [
-	'default' => false,
-	'testwiki' => true,
-	'commonswiki' => true, // T339878
-	'mediawikiwiki' => true, // T332733
-	'bnwiki' => true, // T340904
-	'cswiki' => true, // T315525
-	'fawiki' => true, // T315525
-	'ptwiki' => true, // T317157
-	'itwiki' => true, // T330533
-	'ruwiki' => true, // T351048
-	'srwiki' => true, // T351873
-	'zhwiki' => true, // T353120
+	'default' => true, // T353495
+	'enwiki' => false,
+	'wikidatawiki' => false,
+	'jawiki' => false,
+	'dewiki' => false,
+	'frwiki' => false,
+	'eswiki' => false,
 ],
 
 'wgGroupInheritsPermissions' => [
