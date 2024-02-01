@@ -3058,17 +3058,23 @@ if ( $wmgUseEcho ) {
 		}
 	}
 
-	// Conditional defaults preparation (temporarily override defaults; T353225)
-	// Those are boolean options, and setting the defaults this way ensures MediaWiki inserts
-	// user_properties rows for both true and false without changing any behavior for users
-	// that currently do not have any matching user_properties row.
-	// Below, 2 and 0 are arbitrary values that evaluate to true and false respectively.
+	// Conditional defaults (T353225)
 	// NOTE: Enable only for testwiki for testing purposes
 	if ( $wgDBname === 'testwiki' ) {
-		$wgDefaultUserOptions['echo-subscriptions-web-reverted'] = 2;
-		$wgDefaultUserOptions['echo-subscriptions-web-article-linked'] = 0;
-		$wgDefaultUserOptions['echo-subscriptions-email-mention'] = 0;
-		$wgDefaultUserOptions['echo-subscriptions-email-article-linked'] = 0;
+		$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
+			[
+				false,
+				[ CUDCOND_AFTER, '20130501000000' ]
+			]
+		];
+		$wgConditionalUserOptions['echo-subscriptions-web-article-linked'] =
+			$wgConditionalUserOptions['echo-subscriptions-email-mention'] =
+			$wgConditionalUserOptions['echo-subscriptions-email-article-linked'] = [
+				[
+					true,
+					[ CUDCOND_AFTER, '20130501000000' ]
+				]
+			];
 	}
 
 	// Push notifications
