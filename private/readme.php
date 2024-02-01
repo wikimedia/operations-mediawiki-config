@@ -195,3 +195,11 @@ $wgPhonosApiKeyGoogle = null;
  * @see mediawiki/extensions/CampaignEvents
  */
 $wgCampaignEventsProgramsAndEventsDashboardAPISecret = null;
+
+/**
+ * Fluxx client ID and secret
+ *
+ * @see mediawiki/extensions/WikimediaCampaignEvents
+ */
+$wgWikimediaCampaignEventsFluxxClientID = null;
+$wgWikimediaCampaignEventsFluxxClientSecret = null;
