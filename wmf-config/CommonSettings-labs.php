@@ -441,6 +441,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCampaignEventsDatabaseCluster = 'extension1';
 		$wgCampaignEventsDatabaseName = 'wikishared';
 		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'staging';
+		$wgWikimediaCampaignEventsFluxxBaseUrl = 'https://wmf.preprod.fluxxlabs.com/api/rest/v2/';
+		$wgWikimediaCampaignEventsFluxxOauthUrl = 'https://wmf.preprod.fluxxlabs.com/oauth/token';
 		// Re-add rights removed in the production config
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
