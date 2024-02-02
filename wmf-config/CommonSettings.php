@@ -1442,6 +1442,8 @@ if ( $wmgUseUrlShortener ) {
 	// Never ever change this config
 	// Changing it would change target of all short urls
 	$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$';
+
+	$wgUrlShortenerEnableQrCode = true; // T348487
 }
 
 if ( $wmgPFEnableStringFunctions ) {
