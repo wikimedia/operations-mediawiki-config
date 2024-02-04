@@ -4,11 +4,14 @@
 	"config": {
 		"platform": {
 			"php": "7.4.3"
+		},
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "1.3.2",
-		"mediawiki/mediawiki-codesniffer": "42.0.0",
+		"mediawiki/mediawiki-codesniffer": "43.0.0",
 		"phpunit/phpunit": "9.6.16",
 		"phpunit/php-code-coverage": "9.2.30",
 		"mediawiki/minus-x": "1.1.1",

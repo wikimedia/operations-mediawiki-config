@@ -2795,9 +2795,9 @@ if ( $wmgUseBounceHandler ) {
 	$wgBounceHandlerCluster = 'extension1';
 	$wgBounceHandlerSharedDB = 'wikishared';
 	$wgBounceHandlerInternalIPs = [
-		'208.80.154.76',              # mx1001
+		'208.80.154.76', # mx1001
 		'2620:0:861:3:208:80:154:76', # mx1001
-		'208.80.153.45',              # mx2001
+		'208.80.153.45', # mx2001
 		'2620:0:860:2:208:80:153:45', # mx2001
 	];
 }
@@ -4014,7 +4014,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 if ( $wmgUse3d ) {
 	wfLoadExtension( '3D' );
 	$wgTrustedMediaFormats[] = 'application/sla';
-	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' , '/srv/deployment/3d2png/deploy/src/3d2png.js' ];
+	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24', '/srv/deployment/3d2png/deploy/src/3d2png.js' ];
 
 	if ( $wmgUseMultimediaViewer ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';

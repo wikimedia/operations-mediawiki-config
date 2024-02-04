@@ -27,7 +27,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers ConfigFile::getDiskPathByUrl
+	 * @covers \Wikimedia\MWConfig\Noc\ConfigFile::getDiskPathByUrl
 	 *
 	 * @dataProvider provideDiskPathByUrl
 	 */
@@ -49,7 +49,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers ConfigFile::getDiskPathByLabel
+	 * @covers \Wikimedia\MWConfig\Noc\ConfigFile::getDiskPathByLabel
 	 *
 	 * @dataProvider provideDiskPathByLabel
 	 */
@@ -71,7 +71,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers ConfigFile::getRouteFromLabel
+	 * @covers \Wikimedia\MWConfig\Noc\ConfigFile::getRouteFromLabel
 	 *
 	 * @dataProvider provideRouteFromLabel
 	 */
@@ -83,14 +83,14 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers ConfigFile::getConfigRoutes
+	 * @covers \Wikimedia\MWConfig\Noc\ConfigFile::getConfigRoutes
 	 */
 	public function testGetConfigRoutes() {
 		$this->assertCount( 4, array_keys( $this->conf->getConfigRoutes() ) );
 	}
 
 	/**
-	 * @covers ConfigFile::getDblistRoutes
+	 * @covers \Wikimedia\MWConfig\Noc\ConfigFile::getDblistRoutes
 	 */
 	public function testGetDblistRoutes() {
 		foreach ( $this->conf->getDblistRoutes() as $label => $url ) {
@@ -100,7 +100,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers ConfigFile::getRepoPath
+	 * @covers \Wikimedia\MWConfig\Noc\ConfigFile::getRepoPath
 	 */
 	public function testGetRepoPath() {
 		// This is pretty silly to test, in abstract. Let's just make sure

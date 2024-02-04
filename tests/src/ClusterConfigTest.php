@@ -2,7 +2,7 @@
 use Wikimedia\MWConfig\ClusterConfig;
 
 /**
- * @covers ClusterConfig
+ * @covers \Wikimedia\MWConfig\ClusterConfig
  */
 class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 	public static function provider() {

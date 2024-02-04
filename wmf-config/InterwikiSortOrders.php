@@ -54,7 +54,7 @@ return [
 		'kj', 'lld', 'lad', 'lbe', 'lo', 'la', 'lrc', 'ltg', 'lv', 'to', 'lb', 'lez', 'lt', 'nia', 'lij',
 		'li', 'ln', 'lfn', 'olo', 'jbo', 'lg', 'lmo', 'hu', 'mai', 'mk', 'mg', 'ml', 'mt',
 		'mi', 'mr', 'xmf', 'arz', 'mzn', 'mni', 'fat', 'min', 'cdo', 'mwl', 'mdf', 'mo', 'mn', 'mus', 'my',
-		'nah', 'pcm', 'fj', 'nl',  'nds-nl', 'cr', 'ne', 'new', 'ja', 'nap', 'nqo', 'ce', 'frr', 'pih', 'no',
+		'nah', 'pcm', 'fj', 'nl', 'nds-nl', 'cr', 'ne', 'new', 'ja', 'nap', 'nqo', 'ce', 'frr', 'pih', 'no',
 		'nb', 'nn', 'nrm', 'nov', 'ii', 'oc', 'mhr', 'or', 'om', 'ng', 'hz', 'uz', 'pa', 'pi',
 		'pfl', 'pag', 'ami', 'pnb', 'blk', 'pap', 'ps', 'jam', 'koi', 'km', 'shn', 'mnw', 'pcd', 'pms', 'pwn', 'nds',
 		'pl', 'pnt', 'pt', 'aa', 'kaa', 'crh', 'ty', 'ksh', 'ro', 'rmy', 'rm', 'qu', 'rue', 'ru', 'sah', 'szy',

@@ -420,7 +420,7 @@ $wgWBCSRescoreFunctionChains = [
 				// Incoming links: k = 100, since it is normal to have a bunch of incoming links
 				'type' => 'satu',
 				'weight' => '0.6',
-				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 1 , 'k' => 100 ]
+				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 1, 'k' => 100 ]
 			],
 			[
 				// Site links: k = 20, tens of sites is a lot

@@ -378,7 +378,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 				$this->assertTrue(
 					in_array( $dbNormalized, $dblistNames ) ||
 					DBList::isInDblist( $dbNormalized, "all" ) ||
-					in_array( $dbNormalized,  $langs ) ||
+					in_array( $dbNormalized, $langs ) ||
 					// TODO: revert back to $db == "default"
 					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ),
 					"$dbNormalized is referenced for $setting, but it isn't either a wiki or a dblist" );

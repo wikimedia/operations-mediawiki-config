@@ -880,7 +880,7 @@ return [
 		'*' => [ 'createpage' => false ], // T29195
 		'user' => [
 			'move-categorypages' => false, // T67728
-			'move-rootuserpages' => false,  // T299847
+			'move-rootuserpages' => false, // T299847
 		],
 		'bot' => [
 			'move-categorypages' => true, // T67728
@@ -1795,7 +1795,7 @@ return [
 			'suppressredirect' => true, // T214012
 		],
 		'patroller' => [
-			'patrol' => true,  // T95101
+			'patrol' => true, // T95101
 			'move' => true, // T327114
 			'move-subpages' => true, // T327114
 			'move-categorypages' => true, // T327114
@@ -3984,8 +3984,8 @@ return [
 	],
 	'+mrwikisource' => [
 		'sysop' => [
-			'templateeditor',  // T269067
-			'patroller',  // T269067
+			'templateeditor', // T269067
+			'patroller', // T269067
 		],
 	],
 	'+mywiki' => [
@@ -3999,15 +3999,15 @@ return [
 	],
 	'+newiki' => [
 		'sysop' => [
-			'autopatrolled',  // T89816
-			'rollbacker',     // T90888
-			'patroller',       // T95101, T327114
-			'abusefilter',    // T95102
-			'filemover',      // T95103
-			'import',         // T100925
+			'autopatrolled', // T89816
+			'rollbacker', // T90888
+			'patroller', // T95101, T327114
+			'abusefilter', // T95102
+			'filemover', // T95103
+			'import', // T100925
 			'templateeditor', // T195557
-			'flood',          // T211181
-			'transwiki',      // T214036
+			'flood', // T211181
+			'transwiki', // T214036
 		],
 	],
 	'+nlwiki' => [
@@ -5264,12 +5264,12 @@ return [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
 	'+mrwiki' => [
-		'sysop' => [ 'rollbacker' ],      // T270864
+		'sysop' => [ 'rollbacker' ], // T270864
 	],
 	'+mrwikisource' => [
 		'sysop' => [
-			'templateeditor',  // T269067
-			'patroller',  // T269067
+			'templateeditor', // T269067
+			'patroller', // T269067
 		],
 	],
 	'+mywiki' => [
@@ -5283,17 +5283,17 @@ return [
 	],
 	'+newiki' => [
 		'sysop' => [
-			'autopatrolled',        // T89816, T148171
-			'import',               // T100925, T148171
-			'patroller',             // T95101, T148171, T327114
-			'rollbacker',           // T90888, T148171
-			'templateeditor',       // T195557
-			'flood',                // T211181
-			'transwiki',            // T214036
+			'autopatrolled', // T89816, T148171
+			'import', // T100925, T148171
+			'patroller', // T95101, T148171, T327114
+			'rollbacker', // T90888, T148171
+			'templateeditor', // T195557
+			'flood', // T211181
+			'transwiki', // T214036
 		],
 		'bureaucrat' => [
-			'abusefilter',          // T95102
-			'filemover',            // T95103
+			'abusefilter', // T95102
+			'filemover', // T95103
 		],
 	],
 	'+nlwiki' => [
@@ -5631,7 +5631,7 @@ return [
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
-		'sysop' => [ 'uploader' ],  // T225505
+		'sysop' => [ 'uploader' ], // T225505
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'autopatrolled', ],

@@ -1470,10 +1470,10 @@ return [
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki' => 'Βικιπαίδεια',
 	'projectcomwiki' => 'Project Grants Committee',
-	'pswiki' => 'ويکيپېډيا' ,
-	'pswikibooks' => 'ويکيتابونه' ,
+	'pswiki' => 'ويکيپېډيا',
+	'pswikibooks' => 'ويکيتابونه',
 	'pswikivoyage' => 'ويکيسفر',
-	'pswiktionary' => 'ويکيسيند' ,
+	'pswiktionary' => 'ويکيسيند',
 	'ptwiki' => 'Wikipédia',
 	'ptwikibooks' => 'Wikilivros',
 	'ptwikimedia' => 'Wikimedia Portugal',
@@ -1885,7 +1885,7 @@ return [
 	'itwiki' => 50, // T72128, T262738
 	'itwiktionary' => 10, // T24274
 	'jawiki' => 10, // T42270
-	'kowiki' => 10,// T46894
+	'kowiki' => 10, // T46894
 	'metawiki' => 5, // T211188
 	'nowiki' => 20, // T71302
 	'plwiki' => 10,
@@ -1934,7 +1934,7 @@ return [
 	'fiwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T347069
 	'foundationwiki' => [ '', 'autoconfirmed', 'edit-legal', 'sysop' ], // T205352
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
-	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
+	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'hewikisource' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T275076
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
 	'itwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T308917
@@ -2160,7 +2160,7 @@ return [
 		'logging' => 'debug',
 		'LoginNotify' => 'info',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
-		'Math' => 'info',  // mobrovac for T121445
+		'Math' => 'info', // mobrovac for T121445
 		'mediamoderation' => 'debug', // for T303312 changed from warning
 		'memcached' => 'error', // -aaron 2012/10/24
 		'message-format' => [ 'logstash' => 'warning' ],
@@ -2229,8 +2229,8 @@ return [
 	],
 
 	'+private' => [
-		'slow-parse' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
-		'slow-parsoid' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
+		'slow-parse' => false, // Don't log slow parse on private wikis, so we can make the slow parse log public.
+		'slow-parsoid' => false, // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
 	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
@@ -3173,7 +3173,7 @@ return [
 		// Browser tests run by Jenkins on WMCS instances - T167432
 		// Network ranges come from:
 		//   https://wikitech.wikimedia.org/wiki/Portal:Cloud_VPS/Admin/Neutron
-		'172.16.0.0/21',  # LAN for instances (eqiad1 Neutron)
+		'172.16.0.0/21', # LAN for instances (eqiad1 Neutron)
 	],
 ],
 
@@ -3221,7 +3221,7 @@ return [
 	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
 	'default' => [
 		// core or extension groups
-		'bureaucrat', 'checkuser', 'interface-admin', 'oauthadmin', 'suppress',  'sysop',
+		'bureaucrat', 'checkuser', 'interface-admin', 'oauthadmin', 'suppress', 'sysop',
 		// custom groups used on several wikis
 		'arbcom', 'botadmin', 'eliminator', 'import', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
@@ -3438,7 +3438,7 @@ return [
 	'hiwiktionary' => [ 'commons', 'meta', 'w', 'q', 'b', 'species', 'w:en', 'b:en', 'q:en', 's:en', 'v:en', 'voy:en', 'w:es', 'w:fa', 'w:fr', 'w:ml', 'w:ne', 'w:nl', 'w:ro', 'w:ru', 'w:pl', 'w:pt', 'w:simple', 'w:ta', 'w:ur', 'w:mr', 'w:gu', 'w:bh', 'en', 'mg', 'fr', 'es', 'zh', 'ru', 'it', 'pl', 'sv', 'ku', 'el', 'nl', 'de', 'ko', 'it', 'tr', 'ta', 'hu', 'fi', 'kn', 'ja', 'ml', 'my', 'or', 'te', 'fa', 'gu', 'ar', 'th', 'ps', 'simple', 'sw' ], // T132417
 	'hifwiki' => [ 'incubator', 'commons', 'meta', 'species', 'bh', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'el', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pa', 'pl', 'pt', 'simple', 'te', 'ta', 'ur' ], // T99826
 	'hrwikibooks' => [ 'w' ], // T176320
-	'hsbwiki' => [ 'w' , 'de', 'dsb', 'en', 'cs', 'pl', 'ru', 'hr', 'sr', 'sh' ], // T152382
+	'hsbwiki' => [ 'w', 'de', 'dsb', 'en', 'cs', 'pl', 'ru', 'hr', 'sr', 'sh' ], // T152382
 	'hsbwiktionary' => [ 'incubator', 'w' ],
 	'idwiki' => [ 'ms' ], // T18033
 	'idwikibooks' => [ 'w' ],
@@ -3594,7 +3594,7 @@ return [
 	'viwikibooks' => [ 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ], // T9854, T39457
 	'viwikisource' => [ 'w', 'wikt', 'b', 'q' ], // T9854
 	'viwikiquote' => [ 'w', 'wikt', 'b', 's' ], // T9854
-	'wikimaniawiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
+	'wikimaniawiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
 	'yuewiktionary' => [ 'wikipedia:zh-yue', 'en', 'incubator' ], // T258913
@@ -4752,7 +4752,7 @@ return [
 ],
 
 'wmgUseElectronPdfService' => [
-	'default' => true,  // T165954
+	'default' => true, // T165954
 	'apiportalwiki' => false, // T264043
 ],
 
@@ -5184,7 +5184,7 @@ return [
 	// This is set to a high value because there is no working mechanism for
 	// uploading by URL asyncronously (via the job queue, for example).
 	// See T119336 for details.
-	'default' => 180,  // T118887
+	'default' => 180, // T118887
 ],
 'wgCopyUploadAllowOnWikiDomainConfig' => [
 	'default' => false,
@@ -5197,13 +5197,13 @@ return [
 	'+commonswiki' => [], // migrated to [[c:MediaWiki:Copyupload-allowed-domains]], T300407
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
-		'*.*.archive.org',                  // Internet Archive - T106293, T207581
-		'ia-upload.wmcloud.org',            // T287241 - IA-Upload tool
-		'wikisource-bot.toolforge.org',     // Wikisource-bot tool - T292213
-		'upload.wikimedia.org',             // Commons -> WS transfers - T294824
+		'*.*.archive.org', // Internet Archive - T106293, T207581
+		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
+		'wikisource-bot.toolforge.org', // Wikisource-bot tool - T292213
+		'upload.wikimedia.org', // Commons -> WS transfers - T294824
 	],
 	'+viwiki' => [
-		'upload.wikimedia.org',             // Commons -> WS transfers - T303577
+		'upload.wikimedia.org', // Commons -> WS transfers - T303577
 	],
 	'+zhwiki' => [
 		'upload.wikimedia.org', // Commons -> WP transfers - T142991
@@ -5635,20 +5635,20 @@ return [
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesAllowList' => [
 	'default' => [
-		'beta-feature-flow-user-talk-page',  // [Growth_] On-going (special permission) – Flow opt-in
-		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
-		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
-		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
-		'ipinfo-beta-feature-enable',        // [TSTools] 2022-10-01 – IP Info
-		'wikistories-storiesonarticles',     // [Inuka__] 2022-12-30 - Wikistories on articles
-		'proofreadpage-editinsequence',      // [ProofRP] 2023-08-29 - Edit in sequence
+		'beta-feature-flow-user-talk-page', // [Growth_] On-going (special permission) – Flow opt-in
+		'cx', // [LangEng] 2019-11-07 - ContentTranslation
+		'twocolconflict', // [WMDE TW] 2019-10-30 – New edit conflict view
+		'discussiontools-betaenable', // [Editing] 2020-09-12 – Reply tool
+		'ipinfo-beta-feature-enable', // [TSTools] 2022-10-01 – IP Info
+		'wikistories-storiesonarticles', // [Inuka__] 2022-12-30 - Wikistories on articles
+		'proofreadpage-editinsequence', // [ProofRP] 2023-08-29 - Edit in sequence
 		'vector-2022-beta-feature'           // [WebTeam] 2023-12-06 - Accessibility for Reading (Vector 2022)
 	],
 	'+wikisource' => [
-		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links
+		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links
 	],
 	'+ruwikivoyage' => [
-		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links
+		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links
 	],
 ],
 
@@ -5864,8 +5864,8 @@ return [
 // in MW Core
 'wmgUseRestbaseVRS' => [
 	'default' => true,
-	'wikitech' => false,		// T102178
-	'closed' => false,			// T315383
+	'wikitech' => false, // T102178
+	'closed' => false, // T315383
 	'private' => false,
 	// For reasons lost to history RESTBase was never set up for these wikis: (T318325)
 	'hiwikimedia' => false,
@@ -5880,8 +5880,8 @@ return [
 
 'wmgUseParsoid' => [
 	'default' => true,
-	'wikitech' => false,		# T241961
-	'lockeddown' => false,		# T61702
+	'wikitech' => false, # T241961
+	'lockeddown' => false, # T61702
 ],
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
@@ -5914,74 +5914,74 @@ return [
 
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wgVisualEditorUseSingleEditTab' => [
-	'default' => false,         // Deploying slowly with community advanced notice
+	'default' => false, // Deploying slowly with community advanced notice
 
-	'wikisource' => true,       // Starting from SET
-	'wiktionary' => true,       // Starting from SET
-	'wikivoyage' => true,       // Starting from SET
+	'wikisource' => true, // Starting from SET
+	'wiktionary' => true, // Starting from SET
+	'wikivoyage' => true, // Starting from SET
 
 	'mediawikiwiki' => true,
 	'testwiki' => true,
-	'test2wiki' => true,        // T121421
+	'test2wiki' => true, // T121421
 
-	'arcwiki' => true,			// Starting from SET
-	'arwiki' => true,			// Starting from SET
-	'arzwiki' => true,			// Starting from SET
-	'aswiki' => true,			// Starting from SET
-	'azbwiki' => true,			// Starting from SET
-	'bhwiki' => true,			// Starting from SET
-	'bnwiki' => true,			// Starting from SET
-	'bowiki' => true,			// Starting from SET
-	'bpywiki' => true,			// Starting from SET
-	'cawiki' => true,           // T180660
-	'chrwiki' => true,			// Starting from SET
-	'ckbwiki' => true,			// Starting from SET
-	'dvwiki' => true,			// Starting from SET
-	'dzwiki' => true,			// Starting from SET
-	'enwiki' => true,           // T128478
-	'fawiki' => true,			// Starting from SET
-	'glkwiki' => true,			// Starting from SET
-	'gomwiki' => true,			// Starting from SET
-	'gotwiki' => true,			// Starting from SET
-	'guwiki' => true,			// Starting from SET
-	'hiwiki' => true,			// Starting from SET
-	'huwiki' => true,           // T126801
-	'jawiki' => true,           // Starting from SET
-	'kmwiki' => true,			// Starting from SET
-	'knwiki' => true,			// Starting from SET
-	'kowiki' => true,           // Starting from SET
-	'kswiki' => true,			// Starting from SET
-	'lowiki' => true,			// Starting from SET
-	'lrcwiki' => true,			// Starting from SET
-	'maiwiki' => true,			// Starting from SET
-	'mlwiki' => true,			// Starting from SET
-	'mrwiki' => true,			// Starting from SET
-	'mywiki' => true,			// Starting from SET
-	'mznwiki' => true,			// Starting from SET
-	'newiki' => true,			// Starting from SET
-	'newwiki' => true,			// Starting from SET
-	'orwiki' => true,			// Starting from SET
-	'pawiki' => true,			// Starting from SET
-	'piwiki' => true,			// Starting from SET
-	'pnbwiki' => true,			// Starting from SET
-	'pswiki' => true,			// Starting from SET
-	'sawiki' => true,			// Starting from SET
-	'sdwiki' => true,			// Starting from SET
-	'siwiki' => true,			// Starting from SET
-	'tawiki' => true,			// Starting from SET
-	'tcywiki' => true,			// Starting from SET
-	'tetwiki' => true,			// Starting from SET
-	'tewiki' => true,			// Starting from SET
-	'thwiki' => true,			// Starting from SET
-	'twwiki' => true,			// Starting from SET
-	'ugwiki' => true,			// Starting from SET
-	'urwiki' => true,			// Starting from SET
-	'wuuwiki' => true,          // Starting from SET
-	'zhwiki' => true,           // Starting from SET (T296269)
+	'arcwiki' => true, // Starting from SET
+	'arwiki' => true, // Starting from SET
+	'arzwiki' => true, // Starting from SET
+	'aswiki' => true, // Starting from SET
+	'azbwiki' => true, // Starting from SET
+	'bhwiki' => true, // Starting from SET
+	'bnwiki' => true, // Starting from SET
+	'bowiki' => true, // Starting from SET
+	'bpywiki' => true, // Starting from SET
+	'cawiki' => true, // T180660
+	'chrwiki' => true, // Starting from SET
+	'ckbwiki' => true, // Starting from SET
+	'dvwiki' => true, // Starting from SET
+	'dzwiki' => true, // Starting from SET
+	'enwiki' => true, // T128478
+	'fawiki' => true, // Starting from SET
+	'glkwiki' => true, // Starting from SET
+	'gomwiki' => true, // Starting from SET
+	'gotwiki' => true, // Starting from SET
+	'guwiki' => true, // Starting from SET
+	'hiwiki' => true, // Starting from SET
+	'huwiki' => true, // T126801
+	'jawiki' => true, // Starting from SET
+	'kmwiki' => true, // Starting from SET
+	'knwiki' => true, // Starting from SET
+	'kowiki' => true, // Starting from SET
+	'kswiki' => true, // Starting from SET
+	'lowiki' => true, // Starting from SET
+	'lrcwiki' => true, // Starting from SET
+	'maiwiki' => true, // Starting from SET
+	'mlwiki' => true, // Starting from SET
+	'mrwiki' => true, // Starting from SET
+	'mywiki' => true, // Starting from SET
+	'mznwiki' => true, // Starting from SET
+	'newiki' => true, // Starting from SET
+	'newwiki' => true, // Starting from SET
+	'orwiki' => true, // Starting from SET
+	'pawiki' => true, // Starting from SET
+	'piwiki' => true, // Starting from SET
+	'pnbwiki' => true, // Starting from SET
+	'pswiki' => true, // Starting from SET
+	'sawiki' => true, // Starting from SET
+	'sdwiki' => true, // Starting from SET
+	'siwiki' => true, // Starting from SET
+	'tawiki' => true, // Starting from SET
+	'tcywiki' => true, // Starting from SET
+	'tetwiki' => true, // Starting from SET
+	'tewiki' => true, // Starting from SET
+	'thwiki' => true, // Starting from SET
+	'twwiki' => true, // Starting from SET
+	'ugwiki' => true, // Starting from SET
+	'urwiki' => true, // Starting from SET
+	'wuuwiki' => true, // Starting from SET
+	'zhwiki' => true, // Starting from SET (T296269)
 	'zh_classicalwiki' => true, // Starting from SET
-	'zh_yuewiki' => true,       // Starting from SET
+	'zh_yuewiki' => true, // Starting from SET
 
-	'wikifunctionswiki' => true,       // Starting from SET
+	'wikifunctionswiki' => true, // Starting from SET
 	'officewiki' => true,
 ],
 
@@ -6339,16 +6339,16 @@ return [
 // single Flow board on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => [
 	'default' => true,
-	'mediawikiwiki' => false,   // This is the consolidation point
-	'dewiki' => false,          // Retaining for local conversations
-	'enwiki' => false,          // No local Flow install, so won't work
-	'zh_yuewiki' => false,      // Retaining for local conversations
+	'mediawikiwiki' => false, // This is the consolidation point
+	'dewiki' => false, // Retaining for local conversations
+	'enwiki' => false, // No local Flow install, so won't work
+	'zh_yuewiki' => false, // Retaining for local conversations
 	'betawikiversity' => false, // No local Flow install, so won't work
-	'dewikivoyage' => false,    // No local Flow install, so won't work
-	'enwikiversity' => false,   // No local Flow install, so won't work
-	'jawikiversity' => false,   // No local Flow install, so won't work
-	'private' => false,         // No local Flow install, so won't work; also risk of private data release
-	'lockeddown' => false,      // No local Flow install, so won't work; also no editing on these wikis
+	'dewikivoyage' => false, // No local Flow install, so won't work
+	'enwikiversity' => false, // No local Flow install, so won't work
+	'jawikiversity' => false, // No local Flow install, so won't work
+	'private' => false, // No local Flow install, so won't work; also risk of private data release
+	'lockeddown' => false, // No local Flow install, so won't work; also no editing on these wikis
 ],
 
 // Should the citation button be moved from the primary toolbar into the "other" group
@@ -6433,7 +6433,7 @@ return [
 	'uawikimedia' => true,
 ],
 'wmgRSSUrlWhitelist' => [
-	'default' => [],  // as of Ext:RSS v2, this means no URLs are allowed.
+	'default' => [], // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => [ 'https://wikimediaukraine.wordpress.com/feed/' ],
 	'foundationwiki' => [
 		'https://wikimediafoundation.org/news/feed/',
@@ -6757,12 +6757,12 @@ return [
 // This should be set to true for all public WMF wikis, and any changes should be discussed
 // with Contributors and Legal before they are done, due to the legal implications.
 'wgEditSubmitButtonLabelPublish' => [
-	'default' => true,      // T131132 from 2017-03-15
-	'private' => false,     // Private wikis are not public
-	'enwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
-	'eswikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
-	'frwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
-	'ptwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
+	'default' => true, // T131132 from 2017-03-15
+	'private' => false, // Private wikis are not public
+	'enwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
+	'eswikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
+	'frwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
+	'ptwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
 // ----------- CheckUser start ----------
@@ -8818,13 +8818,13 @@ return [
 	'default' => false,
 	'bewikisource' => true, // T220752
 	'bnwikisource' => true, // T193367
-	'dvwiki' => true,       // T71860
+	'dvwiki' => true, // T71860
 	'dvwiktionary' => true, // T71860
 	'enwikisource' => true, // T71655
 	'hewikisource' => true, // T62939
-	'mywiki' => true,       // T196219
+	'mywiki' => true, // T196219
 	'ruwikisource' => true, // T220752
-	'sourceswiki' => true,  // T220752
+	'sourceswiki' => true, // T220752
 	'trwikisource' => true, // T283626
 	'ukwikisource' => true, // T220752
 ],
@@ -9456,26 +9456,26 @@ return [
 		 * Deprecated properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427?namespace=120
 		 */
-		598,  // commander of (DEPRECATED)
+		598, // commander of (DEPRECATED)
 		2315, // comment (DEPRECATED)
 		3231, // Media Art Database author ID (former scheme)
 		7478, // iFixit repairability score (DEPRECATED)
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
-		646,  // Freebase ID
+		646, // Freebase ID
 		2671, // Google Knowledge Graph ID (T280779)
 		4839, // Wolfram Language Entity Code (T280779)
 		/**
 		 * Sandbox properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640?namespace=120
 		 */
-		368,  // commonsMedia
-		369,  // wikibase-item
-		370,  // string
-		578,  // time
-		626,  // globe-coordinate
-		855,  // url
+		368, // commonsMedia
+		369, // wikibase-item
+		370, // string
+		578, // time
+		626, // globe-coordinate
+		855, // url
 		1106, // quantity
 		1450, // monolingualtext
 		2368, // wikibase-property
@@ -11942,7 +11942,7 @@ return [
 		'Q1172903', // loch
 		'Q165848', // wind wave
 		'Q211778', // Lake District
-		'Q43238',  // Poaceae
+		'Q43238', // Poaceae
 		'Q5135744', // religious institute
 		'Q486972', // human settlement
 		'Q826939', // canard
@@ -12426,7 +12426,7 @@ return [
 ],
 
 'wgCdnMatchParameterOrder' => [
-	'default' => false,  // T314868
+	'default' => false, // T314868
 ],
 
 'wmgLogRestrictions' => [

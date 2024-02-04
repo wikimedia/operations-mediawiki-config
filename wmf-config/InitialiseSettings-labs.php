@@ -313,7 +313,7 @@ function wmfGetOverrideSettings() {
 				'logging' => 'debug',
 				'LoginNotify' => 'debug',
 				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
-				'Math' => 'info',  // mobrovac for T121445
+				'Math' => 'info', // mobrovac for T121445
 				'mediamoderation' => 'debug', // for T303312 changed from warning
 				'memcached' => 'error', // -aaron 2012/10/24
 				'message-format' => [ 'logstash' => 'warning' ],
@@ -710,8 +710,8 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 			'wikidata' => [],
 			'commonswiki' => [
-				'smn' => 'anarâškielâ',	  // T222309
-				'sms' => 'sääʹmǩiõll',	  // T222309
+				'smn' => 'anarâškielâ', // T222309
+				'sms' => 'sääʹmǩiõll', // T222309
 			],
 		],
 
@@ -1199,7 +1199,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUseNewsletter' => [
-			'default' => true,  // T127297
+			'default' => true, // T127297
 		],
 
 		// Ensure ?action=credits isn't break and allow to work

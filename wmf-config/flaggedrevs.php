@@ -301,15 +301,15 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
 
 		$wgGroupPermissions['reviewer'] = array_merge( $wgGroupPermissions['reviewer'], [
-			'autopatrol' => true,         // T95085
-			'patrol' => true,             // T95085
+			'autopatrol' => true, // T95085
+			'patrol' => true, // T95085
 		] );
 
 		$wgGroupPermissions['sysop'] = array_merge( $wgGroupPermissions['sysop'], [
-			'stablesettings' => true,     // T36135
-			'review' => true,             // T95085
-			'validate' => true,           // T95085
-			'unreviewedpages' => true,    // T95085
+			'stablesettings' => true, // T36135
+			'review' => true, // T95085
+			'validate' => true, // T95085
+			'unreviewedpages' => true, // T95085
 		] );
 	} elseif ( $wgDBname == 'dewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
