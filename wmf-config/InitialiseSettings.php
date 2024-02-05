@@ -7099,7 +7099,8 @@ return [
 ],
 'wgMFUseDesktopDiffPage' => [
 	'default' => [
-		'base' => false,
+		// T350181
+		'base' => true,
 		// T350181
 		'loggedin' => true,
 		'amc' => true,
