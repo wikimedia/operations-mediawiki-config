@@ -32,7 +32,6 @@ return [
 	'itwiki' => [ 'eqiad', 'codfw' ],
 	'mediawikiwiki' => [ 'eqiad', 'codfw' ],
 	'testwiki' => [ 'eqiad', 'codfw' ],
-	'wikidatawiki' => [ 'eqiad', 'codfw' ],
 ],
 
 'wgCirrusSearchReplicaGroup' => [
