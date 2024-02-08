@@ -3088,23 +3088,23 @@ if ( $wmgUseEcho ) {
 	}
 
 	// Conditional defaults (T353225)
-	// NOTE: Enable only for testwiki for testing purposes
-	if ( $wgDBname === 'testwiki' ) {
-		$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
+	// NOTE: testwiki has different conditional defaults start
+	$startTimestamp = $wgDBname === 'testwiki' ? '20130501000000' : '20240802200000';
+	$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
+		[
+			false,
+			[ CUDCOND_AFTER, $startTimestamp ]
+		]
+	];
+	$wgConditionalUserOptions['echo-subscriptions-web-article-linked'] =
+		$wgConditionalUserOptions['echo-subscriptions-email-mention'] =
+		$wgConditionalUserOptions['echo-subscriptions-email-article-linked'] = [
 			[
-				false,
-				[ CUDCOND_AFTER, '20130501000000' ]
+				true,
+				[ CUDCOND_AFTER, $startTimestamp ]
 			]
 		];
-		$wgConditionalUserOptions['echo-subscriptions-web-article-linked'] =
-			$wgConditionalUserOptions['echo-subscriptions-email-mention'] =
-			$wgConditionalUserOptions['echo-subscriptions-email-article-linked'] = [
-				[
-					true,
-					[ CUDCOND_AFTER, '20130501000000' ]
-				]
-			];
-	}
+	unset( $startTimestamp );
 
 	// Push notifications
 	$wgEchoEnablePush = $wmgEchoEnablePush ?? false;
