@@ -5912,17 +5912,19 @@ return [
 'wgParserMigrationEnableParsoidDiscussionTools' => [
 	'default' => false,
 	'wikitech' => true, // T355374
+	'officewiki' => true, // T355566
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
+	'officewiki' => true, // T355566
 ],
 
-'wgParserMigrationNoticeVersion' => [
+'wgParserMigrationUserNoticeVersion' => [
 	'default' => 1,
 ],
 
-'wgParserMigrationNoticeDays' => [
+'wgParserMigrationUserNoticeDays' => [
 	'default' => 7,
 ],
 
