@@ -5902,6 +5902,23 @@ return [
 	'wikidatawiki' => false,
 ],
 
+'wmgParserMigrationEnableParsoidDiscussionTools' => [
+	'default' => false,
+	'wikitech' => true, // T355374
+],
+
+'wmgParserMigrationEnableParsoidArticlePages' => [
+	'default' => false,
+],
+
+'wmgParserMigrationNoticeVersion' => [
+	'default' => 1,
+],
+
+'wmgParserMigrationNoticeDays' => [
+	'default' => 7,
+],
+
 // -------------- Shared Parsoid end --------------
 
 // -------------- VisualEditor start --------------
