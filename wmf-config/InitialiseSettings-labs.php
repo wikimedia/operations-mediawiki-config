@@ -2280,6 +2280,14 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'wmgParserMigrationEnableParsoidDiscussionTools' => [
+			'default' => true, // T357054
+		],
+
+		'wmgParserMigrationEnableParsoidArticlePages' => [
+			'default' => true, // T357054
+		],
+
 		// T348487
 		'-wgUrlShortenerEnableQrCode' => [
 			'default' => true,
