@@ -531,6 +531,10 @@ function wmfGetOverrideSettings() {
 			'default' => 0
 		],
 
+		'wgMFFallbackEditor' => [
+			'default' => 'visual',
+		],
+
 		# Do not run any A/B tests on beta cluster (T206179)
 		'-wgMinervaABSamplingRate' => [
 			'default' => 0,

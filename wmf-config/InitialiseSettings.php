@@ -7138,6 +7138,10 @@ return [
 	],
 ],
 
+'wgMFFallbackEditor' => [
+	'default' => 'source',
+],
+
 'wgExtraGenderNamespaces' => [
 	'default' => [],
 	'cswiki' => [
