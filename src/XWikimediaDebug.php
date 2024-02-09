@@ -7,42 +7,55 @@ namespace Wikimedia\MWConfig;
  *
  * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
  *
- * The header options are:
+ * The options are:
+ * - 'backend': Select which debug server to use.
  * - 'forceprofile': One-off profile to stdout.
  * - 'profile': One-off profile to XHGui.
  * - 'readonly': (See wmf-config/CommonSettings.php).
  * - 'log': (See wmf-config/logging.php).
  * - 'shorttimeout': Set a short request timeout.
+ * - 'expire': Ignore X-Wikimedia-Debug if the request is made after the given Unix timestamp.
  */
 class XWikimediaDebug {
+	/**
+	 * How far expiry is allowed to be in the future.
+	 * @see \WikimediaEvents\Special\SpecialWikimediaDebug::MAX_EXPIRY
+	 */
+	private const MAX_EXPIRY = 60 * 60 * 24;
+
 	/** @var XWikimediaDebug|null */
 	private static $instance;
 	/** @var array */
 	private $options;
-	/** @var bool */
-	private $headerPresent;
 
 	/**
 	 * @return XWikimediaDebug
 	 */
 	public static function getInstance() {
 		if ( !self::$instance ) {
-			self::$instance = new self( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ?? null );
+			$header = $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ?? null;
+			$cookie = $_COOKIE['X-Wikimedia-Debug'] ?? null;
+			self::$instance = new self( $header, $cookie );
 		}
 		return self::$instance;
 	}
 
 	/**
-	 * @param string|null $header
+	 * @param string|null $headerString Value of X-Wikimedia-Debug header
+	 * @param string|null $cookieString Value of X-Wikimedia-Debug cookie
 	 */
-	public function __construct( $header ) {
-		$this->options = [];
-		if ( $header === null ) {
-			$this->headerPresent = false;
+	public function __construct( $headerString, $cookieString ) {
+		$optionString = $headerString ?: rawurldecode( $cookieString );
+		// It's easy to set the cookie and forget about it, so we require an explicit expiry date for it
+		// and reject it if it's in the past or too far into the future.
+		$requireExpiry = $headerString === null;
+
+		$this->options = $options = [];
+		if ( $optionString === null ) {
 			return;
 		}
-		$this->headerPresent = true;
-		$tokens = preg_split( '/;\s*/', $header );
+
+		$tokens = preg_split( '/;\s*/', $optionString );
 		foreach ( $tokens as $token ) {
 			$eqParts = explode( '=', $token, 2 );
 			if ( count( $eqParts ) === 2 ) {
@@ -52,8 +65,17 @@ class XWikimediaDebug {
 				$optName = $token;
 				$optValue = true;
 			}
-			$this->options[$optName] = $optValue;
+			$options[$optName] = $optValue;
 		}
+
+		if ( $requireExpiry ) {
+			$expire = $options['expire'] ?? 0;
+			if ( $expire < $this->time() || $expire > $this->time() + self::MAX_EXPIRY ) {
+				return;
+			}
+		}
+
+		$this->options = $options;
 	}
 
 	/**
@@ -78,12 +100,7 @@ class XWikimediaDebug {
 		return $this->options[$optName] ?? null;
 	}
 
-	/**
-	 * Test if the X-Wikimedia-Debug request header was present
-	 *
-	 * @return bool
-	 */
-	public function isHeaderPresent() {
-		return $this->headerPresent;
+	protected function time() {
+		return time();
 	}
 }
