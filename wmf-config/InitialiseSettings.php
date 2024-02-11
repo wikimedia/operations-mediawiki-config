@@ -3146,6 +3146,11 @@ return [
 			'extendedmover' => [ 16, 60 ], // T138703
 		],
 	],
+	'+arwiki' => [
+		'move' => [
+			'extendedmover' => [ 16, 60 ], // T357229
+		],
+	],
 	'+enwikibooks' => [
 		'move' => [
 			'editor' => [ 100, 60 ], // T268849
