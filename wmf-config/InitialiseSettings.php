@@ -3114,6 +3114,11 @@ return [
 			'user' => [ 10, 30 ],
 		],
 	],
+	'+arwiki' => [
+		'move' => [
+			'extendedmover' => [ 16, 60 ], // T357229
+		],
+	],
 	'+commonswiki' => [ // T132930
 		'move' => [ // T232657
 			'autopatrolled' => [ 32, 60 ],
