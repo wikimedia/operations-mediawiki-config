@@ -1890,6 +1890,7 @@ return [
 	'nowiki' => 20, // T71302
 	'plwiki' => 10,
 	'ptwiki' => 10, // T29954
+	'rowiki' => 10, // T355990
 	'ruwiki' => 15, // T43831
 	'simplewiki' => 10,
 	'ukwiki' => 10, // T355972
