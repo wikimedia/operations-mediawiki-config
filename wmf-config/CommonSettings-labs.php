@@ -437,7 +437,6 @@ if ( $wmgRealm == 'labs' ) {
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
 	if ( $wmgUseCampaignEvents ) {
-		wfLoadExtension( 'WikimediaCampaignEvents' );
 		// Use wikishared for all wikis, unlike production
 		$wgCampaignEventsDatabaseCluster = 'extension1';
 		$wgCampaignEventsDatabaseName = 'wikishared';
