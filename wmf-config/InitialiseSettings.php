@@ -5213,7 +5213,7 @@ return [
 'wgMaxUploadSize' => [
 	// Affects URL uploads and chunked uploads (experimental).
 	// Limit on other web uploads is enforced by PHP.
-	'default' => 1024 * 1024 * 4096, // 4 GB (i.e. equals 2^32)
+	'default' => 1024 * 1024 * 1024 * 5, // 5 GiB (i.e. Swift max object size)
 ],
 
 'wmgUsePdfHandler' => [
