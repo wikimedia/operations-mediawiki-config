@@ -332,14 +332,17 @@ class Profiler {
 		} catch ( \Exception $e ) {
 			// Known failure scenarios:
 			//
-			// - "RedisException: read error on connection"
+			// - "RedisException: Connection timed out" (T206092, T348756)
 			//   Each publish() in the above loop writes data to Redis and
 			//   subsequently reads from the socket for Redis' response.
-			//   If any socket read takes longer than $timeout, it throws (T206092).
-			//   As of writing, this is rare (a few times per day at most),
-			//   which is considered an acceptable loss in profile samples.
+			//   When a socket read takes longer than $timeout, php-redis throws.
+			//   We catch these to avoid impacting the web response.
+			//   As of Feb 2024, these is rare (a few per day) which is an acceptable
+			//   loss for the milions of daily samples for flame graphs.
 			$error = 'exception';
-			trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_WARNING );
+			if ( $e->getMessage() !== 'Connection timed out' ) {
+				trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_WARNING );
+			}
 		}
 
 		if ( $error ) {
