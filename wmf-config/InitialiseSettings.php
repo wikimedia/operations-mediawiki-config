@@ -2285,9 +2285,8 @@ return [
 
 // T301212
 'wgVectorShareUserScripts' => [
-	'default' => true,
-	// T332809
-	'plwiki' => false,
+	'default' => false,
+	'shareuserscripts' => true,
 ],
 
 // Note:
