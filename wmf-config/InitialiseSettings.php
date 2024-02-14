@@ -5908,20 +5908,20 @@ return [
 	'wikidatawiki' => false,
 ],
 
-'wmgParserMigrationEnableParsoidDiscussionTools' => [
+'wgParserMigrationEnableParsoidDiscussionTools' => [
 	'default' => false,
 	'wikitech' => true, // T355374
 ],
 
-'wmgParserMigrationEnableParsoidArticlePages' => [
+'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
 ],
 
-'wmgParserMigrationNoticeVersion' => [
+'wgParserMigrationNoticeVersion' => [
 	'default' => 1,
 ],
 
-'wmgParserMigrationNoticeDays' => [
+'wgParserMigrationNoticeDays' => [
 	'default' => 7,
 ],
 
