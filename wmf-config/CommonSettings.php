@@ -3089,7 +3089,11 @@ if ( $wmgUseEcho ) {
 
 	// Conditional defaults (T353225)
 	// NOTE: testwiki has different conditional defaults start
-	$startTimestamp = $wgDBname === 'testwiki' ? '20130501000000' : '20240208200000';
+	if ( in_array( $wgDBname, [ 'testwiki', 'loginwiki' ] ) ) {
+		$startTimestamp = '20130501000000';
+	} else {
+		$startTimestamp = '20240208200000';
+	}
 	$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
 		[
 			false,
