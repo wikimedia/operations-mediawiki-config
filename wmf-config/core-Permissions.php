@@ -510,11 +510,13 @@ return [
 			'abusefilter-log-detail' => true,
 			'mass-upload' => true, // T226217
 			'move-rootuserpages' => true, // T236359
+			'editautopatrolprotected' => true, // T357298
 		],
 		'autopatrolled' => [ // T214003
 			'autopatrol' => true,
 			'mass-upload' => true, // T226217
 			'move-rootuserpages' => true, // T236359
+			'editautopatrolprotected' => true, // T357298
 		],
 		'filemover' => [
 			'movefile' => true,
@@ -525,10 +527,12 @@ return [
 			'patrol' => true, // T183835
 			'mass-upload' => true, // T226217
 			'move-rootuserpages' => true, // T236359
+			'editautopatrolprotected' => true, // T357298
 		],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'templateeditor' => true, // T227420
+			'editautopatrolprotected' => true, // T357298
 		],
 		'bot' => [
 			'changetags' => true,

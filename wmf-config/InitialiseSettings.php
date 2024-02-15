@@ -1921,7 +1921,7 @@ return [
 	'azwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T281860
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
-	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
+	'commonswiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T227420, T357298
 	'cswiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T316283
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
