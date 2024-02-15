@@ -2701,6 +2701,10 @@ if ( $wmgUseMobileApp ) {
 wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
+$wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExcludeNamespaces;
+$wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
+$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
+
 require_once 'MobileUrlCallback.php';
 $wgMobileUrlCallback = 'wmfMobileUrlCallback';
 

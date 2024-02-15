@@ -22,6 +22,23 @@ return [
 		],
 	],
 
+	'wgMinervaNightMode' => [
+		'default' => [
+			'base' => false,
+			'loggedin' => false
+		],
+		'testwiki' => [
+			'base' => true,
+			'loggedin' => true,
+		],
+	],
+	'wmgMinervaNightModeExcludeNamespaces' => [
+		'default' => [],
+	],
+	'wmgMinervaNightModeExcludeTitles' => [
+		'default' => [],
+		'testwiki' => [ 'Banana' ],
+	],
 	'wgMinervaHistoryInPageActions' => [
 		'default' => [
 			'base' => false,

@@ -540,6 +540,10 @@ function wmfGetOverrideSettings() {
 			'default' => 0,
 		],
 
+		'wmgMinervaNightModeExcludeTitles' => [
+			'default' => [ 'Banana' ],
+		],
+
 		//
 		//
 		// Skins
