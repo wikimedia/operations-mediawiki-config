@@ -2184,6 +2184,9 @@ return [
 			'autoconfirmed' => true,
 			'editsemiprotected' => true,
 		],
+		'editor' => [
+			'suppressredirect' => true, // T357241
+		],
 		'rollbacker' => [ 'rollback' => true ], // T200201
 	],
 	'+ruwikisource' => [
