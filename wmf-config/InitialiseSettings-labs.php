@@ -2545,5 +2545,13 @@ function wmfGetOverrideSettings() {
 		'-wgUrlShortenerEnableQrCode' => [
 			'default' => true,
 		],
+
+		// T357795
+		'wgCodeMirrorV6' => [
+				'default' => false,
+				'en-rtl' => true,
+				'simplewiki' => true,
+				'hewiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
