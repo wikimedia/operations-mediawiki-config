@@ -7985,10 +7985,6 @@ return [
 	'wikitech' => 'available', // T355374
 ],
 
-'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
-	'default' => true, // T352232 - TODO: Remove this config after a few weeks as it is equal to the upstream value
-],
-
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => true, // T315353
 	'enwiki' => false, // (s1) Waiting for T315510
