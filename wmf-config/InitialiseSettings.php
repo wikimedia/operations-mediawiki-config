@@ -6410,6 +6410,22 @@ return [
 	'swwiki' => true, // T350921
 ],
 
+'wgVisualEditorEditCheckABTest' => [
+	'default' => false,
+	// T342930
+	'arwiki' => true,
+	'afwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'ptwiki' => true,
+	'swwiki' => true,
+	'yowiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
@@ -7162,6 +7178,18 @@ return [
 
 'wgMFFallbackEditor' => [
 	'default' => 'source',
+	// T342930
+	'arwiki' => 'visual',
+	'afwiki' => 'visual',
+	'eswiki' => 'visual',
+	'frwiki' => 'visual',
+	'itwiki' => 'visual',
+	'jawiki' => 'visual',
+	'ptwiki' => 'visual',
+	'swwiki' => 'visual',
+	'yowiki' => 'visual',
+	'viwiki' => 'visual',
+	'zhwiki' => 'visual',
 ],
 
 'wgExtraGenderNamespaces' => [
