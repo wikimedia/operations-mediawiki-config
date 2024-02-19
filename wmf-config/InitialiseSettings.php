@@ -7190,6 +7190,38 @@ return [
 	'yowiki' => 'visual',
 	'viwiki' => 'visual',
 	'zhwiki' => 'visual',
+	// edit check partners (T352127)
+	'dagwiki' => 'visual',
+	'eewiki' => 'visual',
+	'fatwiki' => 'visual',
+	'fonwiki' => 'visual',
+	'gpewiki' => 'visual',
+	'gurwiki' => 'visual',
+	'hawiki' => 'visual',
+	'kgwiki' => 'visual',
+	'lnwiki' => 'visual',
+	'swwiki' => 'visual',
+	'twwiki' => 'visual',
+	// Former mobile VE a/b test wikis
+	'azwiki' => 'visual', // Azerbaijani
+	'bgwiki' => 'visual', // Bulgarian
+	'zh_yuewiki' => 'visual', // Cantonese
+	'cawiki' => 'visual', // Catalan
+	'hrwiki' => 'visual', // Croatian
+	'dawiki' => 'visual', // Danish
+	'etwiki' => 'visual', // Estonian
+	'fiwiki' => 'visual', // Finnish
+	'elwiki' => 'visual', // Greek
+	'huwiki' => 'visual', // Hungarian
+	'mswiki' => 'visual', // Malay
+	'mlwiki' => 'visual', // Malayalam
+	'nowiki' => 'visual', // Norwegian (Bokmål)
+	'rowiki' => 'visual', // Romanian
+	'srwiki' => 'visual', // Serbian
+	'svwiki' => 'visual', // Swedish
+	'tawiki' => 'visual', // Tamil
+	'thwiki' => 'visual', // Thai
+	'urwiki' => 'visual' // Urdu
 ],
 
 'wgExtraGenderNamespaces' => [
