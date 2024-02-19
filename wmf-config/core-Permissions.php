@@ -2499,7 +2499,6 @@ return [
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
 		],
-		'reviewer' => [ 'stablesettings' => true, ],
 		'researcher' => [
 			'browsearchive' => true,
 			'deletedhistory' => true,
