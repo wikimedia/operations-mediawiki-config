@@ -5065,6 +5065,7 @@ return [
 		'accountcreator' => [ 'accountcreator' ], // T194871
 		'filemover' => [ 'filemover' ], // T195247
 		'transwiki' => [ 'transwiki' ], // T250972
+		'ipblock-exempt-grantor' => [ 'ipblock-exempt-grantor' ], // T357991
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546

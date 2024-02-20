@@ -2967,6 +2967,9 @@ return [
 		],
 		'transwiki' => [ 'suppressredirect' => true, ], // T250972
 		'templateeditor' => [ 'templateeditor' => true, ], // T260012
+		'ipblock-exempt-grantor' => [
+			'noratelimit' => true, // T357991
+		],
 		'sysop' => [
 			'templateeditor' => true, // T260012
 			'extendedconfirmed' => true, // T287322
@@ -4524,6 +4527,7 @@ return [
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
+		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T357991
 		'sysop' => [
 			'abusefilter-helper', // T344398
 			'patroller',
@@ -4535,6 +4539,7 @@ return [
 			'eventparticipant', // T198167
 			'transwiki', // T250972
 			'templateeditor', // T260012
+			'ipblock-exempt-grantor', // T357991
 		],
 	],
 	'+zhwikibooks' => [
@@ -5686,6 +5691,7 @@ return [
 			'eventparticipant', // T198167
 			'transwiki', // T250972
 			'templateeditor', // T260012
+			'ipblock-exempt-grantor', // T357991
 		],
 	],
 	'+zhwikibooks' => [
