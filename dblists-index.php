@@ -436,7 +436,7 @@ return [
 'iuwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'shareuserscripts' ],
 'iuwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'shareuserscripts', 'nowikidatadescriptiontaglines' ],
 'jamwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'shareuserscripts' ],
-'jawiki' => [ 'wikipedia', 'wikidataclient', 'shareuserscripts', 'cirrussearch-big-indices' ],
+'jawiki' => [ 'wikipedia', 'wikidataclient', 'cirrussearch-big-indices' ],
 'jawikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'jawikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'shareuserscripts', 'nowikidatadescriptiontaglines' ],
 'jawikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'shareuserscripts' ],
