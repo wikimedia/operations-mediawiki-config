@@ -4046,6 +4046,7 @@ if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 if ( $wmgUseWikisource ) {
 	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
+	$wgWikisourceHttpProxy = $wgCopyUploadProxy;
 }
 
 if ( $wmgUseGrowthExperiments ) {
