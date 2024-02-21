@@ -540,6 +540,12 @@ function wmfGetOverrideSettings() {
 			'default' => 0,
 		],
 
+		'wgMinervaNightMode' => [
+			'default' => [
+				'base' => true,
+				'loggedin' => true,
+			],
+		],
 		'wmgMinervaNightModeExcludeTitles' => [
 			'default' => [ 'Banana' ],
 		],
