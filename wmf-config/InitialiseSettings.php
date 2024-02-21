@@ -2222,6 +2222,7 @@ return [
 		'WikibaseQualityConstraints' => 'debug',
 		'WikiLambda' => 'warning',
 		'WikimediaEvents' => 'error', // For T205754 & T208233
+		'Wikisource' => 'info',
 		'WikitechGerritBan' => 'debug',
 		'WikitechPhabBan' => 'debug',
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
