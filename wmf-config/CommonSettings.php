@@ -1563,9 +1563,7 @@ if ( $wmgUseContactPage ) {
 				],
 			],
 			'NameReadonly' => true,
-			'EmailReadonly' => true,
-			'SubjectReadonly' => true,
-			'MustHaveEmail' => true,
+			'SubjectReadonly' => true
 		];
 	}
 }
