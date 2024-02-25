@@ -4678,6 +4678,7 @@ return [
 'wmgUseCollection' => [
 	// PDF generation / [[:mw:OCG]] stuff
 	'default' => true,
+	'wikisource' => false, // T358437
 	'lockeddown' => false,
 	'apiportalwiki' => false, // T260309
 	'ganwiki' => false,
@@ -4695,7 +4696,6 @@ return [
 	'srwikibooks' => false,
 	'srwikinews' => false,
 	'srwikiquote' => false,
-	'srwikisource' => false,
 	'srwiktionary' => false,
 	'tgwiki' => false,
 	'tgwikibooks' => false,
@@ -4709,14 +4709,12 @@ return [
 	'zh_min_nanwiki' => false,
 	'zh_min_nanwikibooks' => false,
 	'zh_min_nanwikiquote' => false,
-	'zh_min_nanwikisource' => false,
 	'zh_min_nanwiktionary' => false,
 	'zh_yuewiki' => false,
 	'zhwiki' => false,
 	'zhwikibooks' => false,
 	'zhwikinews' => false,
 	'zhwikiquote' => false,
-	'zhwikisource' => false,
 	'zhwikivoyage' => false,
 	'zhwiktionary' => false,
 ],
@@ -4728,7 +4726,6 @@ return [
 'wgCollectionDisableSidebarLink' => [
 	'default' => false,
 	'enwiki' => true, // T241683
-	'enwikisource' => true, // T288021
 	'fawiki' => true, // T303173
 	'fiwiki' => true, // T257073
 	'nowiki' => true, // T340981
