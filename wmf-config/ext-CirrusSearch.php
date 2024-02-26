@@ -24,14 +24,8 @@ return [
 ],
 
 'wgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+	'default' => [ 'eqiad', 'codfw' ],
 	'private' => [ 'eqiad', 'codfw' ],
-	// Wikis transitioning to cirrus streaming updater, T352335
-	'commonswiki' => [ 'eqiad', 'codfw' ],
-	'frwiki' => [ 'eqiad', 'codfw' ],
-	'itwiki' => [ 'eqiad', 'codfw' ],
-	'mediawikiwiki' => [ 'eqiad', 'codfw' ],
-	'testwiki' => [ 'eqiad', 'codfw' ],
 ],
 
 'wgCirrusSearchReplicaGroup' => [
