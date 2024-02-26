@@ -12512,6 +12512,7 @@ return [
 	'mediawikiwiki' => true, // T355548
 	'frwiki' => true, // T355548
 	'enwiki' => true, // T355548
+	'arwiki' => true, // T355548
 ],
 
 'wmgEditRecoveryDefaultUserOptions' => [
