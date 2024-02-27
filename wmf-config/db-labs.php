@@ -53,21 +53,21 @@ if ( $wmgRealm == 'labs' ) {
 				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.5.150:3306' => 1,
 				// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.4.172:3306' => 3,
+				'172.16.5.170:3306' => 3,
 			],
 
 			'extension1' => [
 				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.5.150:3306' => 1,
 				// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.4.172:3306' => 3,
+				'172.16.5.170:3306' => 3,
 			],
 
 			'extension2' => [
 				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.5.150:3306' => 1,
 				// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.4.172:3306' => 3,
+				'172.16.5.170:3306' => 3,
 			]
 		],
 
