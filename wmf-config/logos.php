@@ -5471,10 +5471,10 @@ return [
 		'width' => 145,
 		'height' => 17,
 	],
-	'wikimaniawiki' => [ // T286405
+	'wikimaniawiki' => [
 		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
-		'width' => 144,
-		'height' => 17,
+		'width' => 140,
+		'height' => 38,
 	],
 	'wikitech' => [ // T334666
 		'src' => '/static/images/mobile/copyright/wikitech-wordmark.svg',
@@ -8157,7 +8157,7 @@ return [
 	'wikimania2017wiki' => '/static/images/icons/wikimaniateamwiki.svg',
 	'wikimania2018wiki' => null,
 	'wikimaniateamwiki' => '/static/images/icons/wikimaniateamwiki.svg',
-	'wikimaniawiki' => null,
+	'wikimaniawiki' => '/static/images/icons/wikimaniawiki.svg',
 	'wikitech' => '/static/images/icons/wikitech.svg', // T334666
 
 ],

@@ -4471,12 +4471,9 @@ Wikivoyage:
     wikimaniawiki:
         comment_1_5x: T194340, T337044
         comment_2x: T194340, T337044
-        no_icon: true
-        variants:
-            wikimaniawiki-2023:
-                commons: 'File:Wikimania 2023 Singapore Square logo.svg'
-        local_wordmark: true
-        comment_wordmark: T286405
+        commons: 'File:Wikimania 2024 wiki logo (old style).svg'
+        commons_wordmark: 'File:Wikimania 2024 logo black.svg'
+        commons_icon: 'File:Wikimania 2024 icon.svg'
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
         commons_icon: 'File:Wikitech-logo-vector2022.svg'
