@@ -2566,10 +2566,7 @@ function wmfGetOverrideSettings() {
 
 		// T357795
 		'wgCodeMirrorV6' => [
-				'default' => false,
-				'en-rtl' => true,
-				'simplewiki' => true,
-				'hewiki' => true,
+				'default' => true,
 		],
 
 		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
