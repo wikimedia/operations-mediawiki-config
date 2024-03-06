@@ -4956,6 +4956,7 @@ return [
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
+	'ruwiki' => 0, // taavi 2024-03-06
 	'ruwikisource' => 0,
 ],
 
