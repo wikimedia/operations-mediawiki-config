@@ -5054,7 +5054,7 @@ return [
 	'+iswikisource' => [ 100 => 1, 102 => 1 ], // T46164
 	'+itwikisource' => [ 102 => 1, 110 => 1 ],
 	'+itwikiversity' => [ 100 => 1, 102 => 1, 104 => 1 ], // T114932
-	'+itwikivoyage' => [ 100 => 1, 106 => 1 ],
+	'+itwikivoyage' => [ 10 => 1, 828 => 1 ], // T358456
 	'+kowikisource' => [ 100 => 1, 114 => 1 ], // T183836 for 114
 	'+lawikisource' => [ 102 => 1, 106 => 1 ],
 	'+wikitech' => [ 12 => 1, 116 => 1, 498 => 1 ],
