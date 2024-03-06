@@ -983,6 +983,8 @@ return [
 	'+kowikisource' => [
 		'문' => NS_PROJECT, // T182487
 		'문토' => NS_PROJECT_TALK, // T182487
+		'사' => NS_USER, // T358508
+		'사토' => NS_USER_TALK, // T358508
 		'글쓴이' => 100,
 		'글쓴이토론' => 101,
 		'Author' => 100,
