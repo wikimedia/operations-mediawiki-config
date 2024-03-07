@@ -1504,6 +1504,7 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T130215
 	],
 	'+knwiki' => [
+		'sysop' => [ 'importupload' => true, ], // T359545
 		'flood' => [ 'bot' => true ], // T322472
 	],
 	'+kowiki' => [
