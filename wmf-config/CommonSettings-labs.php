@@ -504,5 +504,10 @@ if ( $wmgRealm == 'labs' ) {
 	$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
 
 	$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
+
+	// No restrictions in test environment to facilitate testing.
+	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
+	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
+	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 }
 // end safeguard

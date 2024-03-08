@@ -2677,6 +2677,7 @@ if ( $wmgUseMobileApp ) {
 wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
+$wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQueryString;
 $wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExcludeNamespaces;
 $wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
 $wgVectorNightModeOptions = $wgMinervaNightModeOptions;

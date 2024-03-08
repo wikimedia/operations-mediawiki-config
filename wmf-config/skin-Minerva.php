@@ -32,8 +32,41 @@ return [
 			'loggedin' => true,
 		],
 	],
+	'wmgMinervaNightModeQueryString' => [
+		// T359183
+		'default' => [
+			'action' => 'diff|info|protect|delete|undelete|action',
+			'diff' => '*'
+		],
+		// Allow us to reliably test all pages here.
+		'testwiki' => [],
+	],
 	'wmgMinervaNightModeExcludeNamespaces' => [
-		'default' => [],
+		// Initially night mode is disabled on everything except article page (T359183)
+		'default' => [
+			-1, -2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+			// The following is not intended to be complete, but should cover most untested namespaces
+			// that are needed for the first launch. The namespaces are documented at:
+			// https://www.mediawiki.org/wiki/Extension_default_namespaces
+			// LQT
+			90, 91, 92, 93,
+			// Portal
+			100, 101,
+			// Wikidata
+			120, 121, 122, 123, 124, 125, 146, 147,
+			// Meta wiki
+			200, 201, 202, 203, 206, 207,
+			// ProofReadPage
+			250, 251, 252, 253,
+			// UploadWizard
+			460, 461,
+			// EventLogging
+			470, 471,
+			// Scribunto
+			828, 829
+		],
+		// Allow us to reliably test all pages here.
+		'testwiki' => [],
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [],
