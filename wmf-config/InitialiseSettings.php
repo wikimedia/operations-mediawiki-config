@@ -3189,11 +3189,6 @@ return [
 	'fishbowl' => false,
 ],
 
-'wgBlockAllowsUTEdit' => [
-	'default' => true, // T30288
-	'itwiki' => false, // requested by Brownout on #wikimedia-tech and T11073
-],
-
 'wgBlockDisablesLogin' => [
 	'default' => false,
 	'private' => true, // T55871
