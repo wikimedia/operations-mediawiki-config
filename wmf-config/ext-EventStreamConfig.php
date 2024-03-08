@@ -1001,10 +1001,6 @@ return [
 					],
 				],
 			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
-			],
 		],
 		'mediawiki.ipinfo_interaction' => [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
