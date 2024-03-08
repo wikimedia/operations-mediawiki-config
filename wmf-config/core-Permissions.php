@@ -245,9 +245,13 @@ return [
 		'sysop' => [ 'extendedconfirmed' => true ], // T281860
 		'pagemover' => [
 			'move' => true,
-			'move-categorypages' => true
+			'move-categorypages' => true,
+			'suppressredirect' => true, // T359614
 		], // T303752
-		'filemover' => [ 'movefile' => true ], // T304968
+		'filemover' => [
+			'movefile' => true, // T304968
+			'suppressredirect' => true, // T359614
+		],
 	],
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
