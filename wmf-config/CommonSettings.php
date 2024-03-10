@@ -1036,13 +1036,6 @@ $wgAvailableRights[] = 'setmentor';
 $wgAvailableRights[] = 'managementors';
 $wgAvailableRights[] = 'enrollasmentor';
 
-// Checkuser
-$wgGrantPermissions['checkuser']['checkuser'] = true;
-$wgGrantPermissions['checkuser']['checkuser-log'] = true;
-// Categorize additional groups defined above.
-// Corresponding messages are mwoauth-grant-* in WikimediaMessages.
-$wgGrantPermissionGroups['checkuser'] = 'administration';
-
 // Rights needed to interact with wikibase
 $wgGrantPermissions['createeditmovepage']['property-create'] = true;
 $wgGrantPermissions['editpage']['item-term'] = true;
