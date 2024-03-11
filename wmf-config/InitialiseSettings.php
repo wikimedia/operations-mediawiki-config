@@ -5440,6 +5440,7 @@ return [
 	'nlwiki' => true,
 	'nlwikinews' => true, // T177170
 	'nlwikiquote' => true, // T124167
+	'nnwiki' => true, // T359788
 	'nowiki' => true, // T210325
 	'orwiki' => true, // T124614
 	'pawiki' => true, // T344815
