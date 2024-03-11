@@ -504,6 +504,11 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
 		],
 
+		'wmgUseMobileFrontend' => [
+			'default' => true,
+			'wikifunctionswiki' => false, // T349408
+		],
+
 		'wgWMEMobileWebUIActionsTracking' => [
 			'default' => 1, // T294738
 			'enwiki' => 1, // T346106
