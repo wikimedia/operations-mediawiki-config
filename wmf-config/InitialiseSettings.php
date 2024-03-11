@@ -6959,6 +6959,7 @@ return [
 
 'wmgUseMobileFrontend' => [
 	'default' => true,
+	'wikifunctionswiki' => false, // T349408
 ],
 
 'wgMFQueryPropModules' => [

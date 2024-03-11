@@ -513,7 +513,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseMobileFrontend' => [
 			'default' => true,
-			'wikifunctionswiki' => false, // T349408
 		],
 
 		'wgWMEMobileWebUIActionsTracking' => [
