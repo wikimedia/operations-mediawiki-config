@@ -6977,6 +6977,12 @@ return [
 	'wikitech' => false,
 ],
 
+// ----------- MobileFrontend start ----------
+
+'wmgUseMobileFrontend' => [
+	'default' => true,
+],
+
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
@@ -7018,6 +7024,8 @@ return [
 	'default' => [ NS_MAIN ],
 	'nlwiki' => [ NS_MAIN, NS_USER, ] // T242030
 ],
+
+// ----------- MobileFrontend end ----------
 
 'wmgEnableTextExtracts' => [
 	'default' => true,

@@ -2675,8 +2675,6 @@ if ( $wmgUseMobileApp ) {
 	wfLoadExtension( 'MobileApp' );
 }
 
-# Mobile related configuration
-wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
 $wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQueryString;
@@ -2684,10 +2682,18 @@ $wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExclud
 $wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
 $wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 
-require_once 'MobileUrlCallback.php';
-$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+# Mobile-related configuration
+if ( $wmgUseMobileFrontend ) {
+	wfLoadExtension( 'MobileFrontend' );
 
-$wgMFMobileHeader = 'X-Subdomain';
+	require_once 'MobileUrlCallback.php';
+	$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+
+	$wgMFMobileHeader = 'X-Subdomain';
+} else {
+	// For sites without MobileFrontend, instead enable Vector's "responsive" state.
+	$wgVectorResponsive = true;
+}
 
 // Enable this everywhere except where GeoData isn't available
 $wgMFNearby = $wmgEnableGeoData;
