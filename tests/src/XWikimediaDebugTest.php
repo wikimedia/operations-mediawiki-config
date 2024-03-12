@@ -2,9 +2,12 @@
 
 use Wikimedia\MWConfig\XWikimediaDebug;
 
+/**
+ * @covers \Wikimedia\MWConfig\XWikimediaDebug
+ */
 class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 
-	public static function provider() {
+	public static function provideHeader() {
 		yield 'no attributes' => [
 			'backend=debug1.example.net',
 			[ 'backend' => 'debug1.example.net' ],
@@ -32,8 +35,7 @@ class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers \Wikimedia\MWConfig\XWikimediaDebug::getOption
-	 * @dataProvider provider
+	 * @dataProvider provideHeader
 	 */
 	public function testGetOption( $header, $expected ) {
 		$expected += [
@@ -49,8 +51,7 @@ class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers \Wikimedia\MWConfig\XWikimediaDebug::hasOption
-	 * @dataProvider provider
+	 * @dataProvider provideHeader
 	 */
 	public function testHasOption( $header, $expected ) {
 		$expected += [
@@ -65,52 +66,58 @@ class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	/**
-	 * @covers \Wikimedia\MWConfig\XWikimediaDebug
-	 */
-	public function testCookie() {
-		$present = 1700000000;
+	public function provideCookie() {
+		$now = 1700000000;
 
-		// expire field must be present and in the acceptable range
-		$xwd = $this->getXwdWithMockClock( null, 'backend=debug1.example.net', $present );
-		$this->assertNull( $xwd->getOption( 'backend' ) );
+		// expiry must be in the future and within the acceptable range
+		yield 'missing expiry' => [ null, 'backend=debug1.example.net', $now,
+			[ 'backend' => null ]
+		];
 
-		$expire = $present - 100;
-		$xwd = $this->getXwdWithMockClock( null, "backend=debug1.example.net; expire=$expire", $present );
-		$this->assertNull( $xwd->getOption( 'backend' ) );
+		$expire = $now - 100;
+		yield 'past expiry' => [ null, "backend=debug1.example.net; expire=$expire", $now,
+			[ 'backend' => null ]
+		];
 
-		$expire = $present + 60 * 60 * 26;
-		$xwd = $this->getXwdWithMockClock( null, "backend=debug1.example.net; expire=$expire", $present );
-		$this->assertNull( $xwd->getOption( 'backend' ) );
+		$expire = $now + 60 * 60 * 26;
+		yield '26H future expiry' => [ null, "backend=debug1.example.net; expire=$expire", $now,
+			[ 'backend' => null ]
+		];
 
-		$expire = $present + 60 * 60 * 22;
-		$xwd = $this->getXwdWithMockClock( null, "backend=debug1.example.net; expire=$expire", $present );
-		$this->assertNotNull( $xwd->getOption( 'backend' ) );
+		$expire = $now + 60 * 60 * 22;
+		yield '22H future expiry' => [ null, "backend=debug1.example.net; expire=$expire", $now,
+			[ 'backend' => 'debug1.example.net' ]
+		];
 
-		// cookie fields are parsed properly
-		$xwd = $this->getXwdWithMockClock( null, "backend=debug1.example.net; expire=$expire; log", $present );
-		$this->assertSame( 'debug1.example.net', $xwd->getOption( 'backend' ) );
-		$this->assertTrue( $xwd->hasOption( 'log' ) );
-		$this->assertFalse( $xwd->hasOption( 'readonly' ) );
-		$xwd = $this->getXwdWithMockClock( null, "backend=debug1.example.net;expire=$expire;log", $present );
-		$this->assertSame( 'debug1.example.net', $xwd->getOption( 'backend' ) );
-		$this->assertTrue( $xwd->hasOption( 'log' ) );
-		$this->assertFalse( $xwd->hasOption( 'readonly' ) );
+		yield 'spaced fields' => [ null, "backend=debug1.example.net; expire=$expire; log", $now,
+			[ 'backend' => 'debug1.example.net', 'log' => true, 'readonly' => null ]
+		];
 
-		// header takes priority
-		$xwd = $this->getXwdWithMockClock(
+		yield 'compact fields' => [ null, "backend=debug1.example.net;expire=$expire;log", $now,
+			[ 'backend' => 'debug1.example.net', 'log' => true, 'readonly' => null ]
+		];
+
+		yield 'header takes priority' => [
 			'backend=debug2.example.net; readonly',
 			"backend=debug1.example.net, expire=$expire, log",
-			$present
-		);
-		$this->assertSame( 'debug2.example.net', $xwd->getOption( 'backend' ) );
-		$this->assertTrue( $xwd->hasOption( 'readonly' ) );
-		$this->assertFalse( $xwd->hasOption( 'log' ) );
+			$now,
+			[ 'backend' => 'debug2.example.net', 'log' => null, 'readonly' => true ]
+		];
 
-		// Test URL encoding. This is how real cookie strings will look but urlencoding is ignored above for readability.
-		$xwd = $this->getXwdWithMockClock( null, "backend%3Ddebug1.example.net%3B%20expire%3D$expire%3B%20log", $present );
-		$this->assertSame( 'debug1.example.net', $xwd->getOption( 'backend' ) );
-		$this->assertTrue( $xwd->hasOption( 'log' ) );
+		// This is how real cookie strings will look but urlencoding is ignored above for readability.
+		yield 'URL encoding' => [ null, "backend%3Ddebug1.example.net%3B%20expire%3D$expire%3B%20log", $now,
+			[ 'backend' => 'debug1.example.net', 'log' => true, 'readonly' => null ]
+		];
+	}
+
+	/**
+	 * @dataProvider provideCookie
+	 */
+	public function testCookie( $header, $cookie, $now, $expected ) {
+		$xwd = $this->getXwdWithMockClock( $header, $cookie, $now );
+		foreach ( $expected as $key => $value ) {
+			$this->assertSame( $value, $xwd->getOption( $key ), $key );
+		}
 	}
 
 	protected function getXwdWithMockClock( $header, $cookie, $time ): XWikimediaDebug {

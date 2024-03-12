@@ -21,7 +21,7 @@ class XWikimediaDebug {
 	 * How far expiry is allowed to be in the future.
 	 * @see \WikimediaEvents\Special\SpecialWikimediaDebug::MAX_EXPIRY
 	 */
-	private const MAX_EXPIRY = 60 * 60 * 24;
+	private const MAX_EXPIRY = 24 * 3600;
 
 	/** @var XWikimediaDebug|null */
 	private static $instance;
@@ -45,13 +45,13 @@ class XWikimediaDebug {
 	 * @param string|null $cookieString Value of X-Wikimedia-Debug cookie
 	 */
 	public function __construct( $headerString, $cookieString ) {
-		$optionString = $headerString ?: rawurldecode( $cookieString );
+		$optionString = $headerString ?? rawurldecode( $cookieString ?? '' );
 		// It's easy to set the cookie and forget about it, so we require an explicit expiry date for it
 		// and reject it if it's in the past or too far into the future.
 		$requireExpiry = $headerString === null;
 
 		$this->options = $options = [];
-		if ( $optionString === null ) {
+		if ( $optionString === '' ) {
 			return;
 		}
 
