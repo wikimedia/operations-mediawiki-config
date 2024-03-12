@@ -11788,7 +11788,6 @@ return [
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true,
-	'arwiki' => true, // T355213
 ],
 
 'wmgUseWikimediaEditorTasks' => [
