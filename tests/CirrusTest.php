@@ -221,7 +221,11 @@ class CirrusTest extends WgConfTestCase {
 		$shards = $allConfig->settings['wmgCirrusSearchShardCount'];
 		$replicas = $allConfig->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $allConfig->settings['wgCirrusSearchMaxShardsPerNode'];
-		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
+		$wikis = array_diff( array_merge(
+			array_keys( $shards ),
+			array_keys( $replicas ),
+			array_keys( $maxShardPerNode )
+		), [ 'default' ] );
 		foreach ( $wikis as $idx => $wiki ) {
 			if ( $wiki[0] === '+' ) {
 					$wikis[$idx] = substr( $wiki, 1 );

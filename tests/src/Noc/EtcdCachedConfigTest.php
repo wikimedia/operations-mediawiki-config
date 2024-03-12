@@ -2,6 +2,8 @@
 require_once __DIR__ . '/TestableCachedConfig.php';
 
 class EtcdCachedConfigTest extends PHPUnit\Framework\TestCase {
+	private $etcdConfig;
+
 	protected function setUp(): void {
 		parent::setUp();
 		putenv( 'WMF_DATACENTER=testdc' );

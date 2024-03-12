@@ -12,6 +12,7 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
 class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	private $settings;
 	private $conf;
+	private $config;
 
 	/**
 	 * @var string original value of $wmgDatacenter
