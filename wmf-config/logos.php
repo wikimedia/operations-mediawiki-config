@@ -716,7 +716,7 @@ return [
 	'iswikisource' => '/static/images/project-logos/iswikisource.png', // T54019
 	'jawikisource' => '/static/images/project-logos/jawikisource.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource.png',
-	'knwikisource' => '/static/images/project-logos/knwikisource.png', // T110806
+	'knwikisource' => '/static/images/project-logos/knwikisource.png', // T360022
 	'kowikisource' => '/static/images/project-logos/kowikisource.png', // T40543
 	'lawikisource' => '/static/images/project-logos/lawikisource.png', // T54019
 	'liwikisource' => '/static/images/project-logos/liwikisource.png', // T54019
@@ -1427,6 +1427,7 @@ return [
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-1.5x.png', // T310961
 	'jawikisource' => '/static/images/project-logos/jawikisource-1.5x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-1.5x.png',
+	'knwikisource' => '/static/images/project-logos/knwikisource-1.5x.png', // T360022
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-1.5x.png', // T167192
 	'pawikisource' => '/static/images/project-logos/pawikisource-1.5x.png', // T149522
@@ -2052,6 +2053,7 @@ return [
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-2x.png', // T310961
 	'jawikisource' => '/static/images/project-logos/jawikisource-2x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-2x.png',
+	'knwikisource' => '/static/images/project-logos/knwikisource-2x.png', // T360022
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-2x.png', // T167192
 	'pawikisource' => '/static/images/project-logos/pawikisource-2x.png', // T149522
@@ -3563,10 +3565,10 @@ return [
 		'width' => 121,
 		'height' => 28,
 	],
-	'knwiktionary' => [ // T349036
+	'knwiktionary' => [ // T360022
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-kn.svg',
-		'width' => 85,
-		'height' => 29,
+		'width' => 96,
+		'height' => 40,
 	],
 	'kowiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ko.svg',
@@ -4711,10 +4713,10 @@ return [
 		'width' => 137,
 		'height' => 18,
 	],
-	'knwikisource' => [
+	'knwikisource' => [ // T360022
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-kn.svg',
-		'width' => 110,
-		'height' => 32,
+		'width' => 96,
+		'height' => 40,
 	],
 	'kowikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ko.svg',
