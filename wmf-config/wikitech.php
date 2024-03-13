@@ -211,7 +211,11 @@ function wmfGerritFindAccountId(
 ) {
 	$gerritUrl = 'https://gerrit.wikimedia.org';
 	$ch = curl_init(
-		"{$gerritUrl}/r/a/accounts/?n=1&q=username:" . urlencode( $uid )
+		// By default Gerrit only matches active accounts (by automatically
+		// adding `is:active`. Adding both ensure we get the account regardless
+		// of its state.
+		// https://phabricator.wikimedia.org/T307558#9625736
+		"{$gerritUrl}/r/a/accounts/?n=1&q=(is:inactive+OR+is:active)+username:" . urlencode( $uid )
 	);
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 	curl_setopt( $ch, CURLOPT_USERPWD, "{$gerritUsername}:{$gerritPassword}" );
