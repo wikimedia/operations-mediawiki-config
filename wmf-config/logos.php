@@ -135,7 +135,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki.png',
 	'frrwiki' => '/static/images/project-logos/frrwiki.png',
-	'frwiki' => '/static/images/project-logos/frwiki.png',
+	'frwiki' => '/static/images/project-logos/frwiki.png', // T359741
 	'furwiki' => '/static/images/project-logos/furwiki.png', // T48589
 	'fywiki' => '/static/images/project-logos/fywiki.png', // T42285
 	'gagwiki' => '/static/images/project-logos/gagwiki.png',
@@ -998,7 +998,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki-1.5x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-1.5x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-1.5x.png', // T150618
-	'frwiki' => '/static/images/project-logos/frwiki-1.5x.png',
+	'frwiki' => '/static/images/project-logos/frwiki-1.5x.png', // T359741
 	'furwiki' => '/static/images/project-logos/furwiki-1.5x.png', // T150618
 	'fywiki' => '/static/images/project-logos/fywiki-1.5x.png', // T150618
 	'gagwiki' => '/static/images/project-logos/gagwiki-1.5x.png', // T150618
@@ -1624,7 +1624,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki-2x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-2x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-2x.png', // T150618
-	'frwiki' => '/static/images/project-logos/frwiki-2x.png',
+	'frwiki' => '/static/images/project-logos/frwiki-2x.png', // T359741
 	'furwiki' => '/static/images/project-logos/furwiki-2x.png', // T150618
 	'fywiki' => '/static/images/project-logos/fywiki-2x.png', // T150618
 	'gagwiki' => '/static/images/project-logos/gagwiki-2x.png', // T150618
@@ -2519,7 +2519,7 @@ return [
 	],
 	'frwiki' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'furwiki' => [
@@ -2615,7 +2615,7 @@ return [
 	],
 	'huwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'hywiki' => [ // T259985
@@ -2665,7 +2665,7 @@ return [
 	],
 	'jvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'kawiki' => [ // T267776
@@ -2955,7 +2955,7 @@ return [
 	],
 	'papwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'pawiki' => [
@@ -2965,7 +2965,7 @@ return [
 	],
 	'pcdwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'pihwiki' => [
@@ -2995,7 +2995,7 @@ return [
 	],
 	'ptwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'pwnwiki' => [
@@ -3090,7 +3090,7 @@ return [
 	],
 	'skwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'skrwiki' => [
@@ -3115,7 +3115,7 @@ return [
 	],
 	'suwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'szlwiki' => [ // T233104
@@ -3145,7 +3145,7 @@ return [
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'tewiki' => [

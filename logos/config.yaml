@@ -555,10 +555,13 @@ Wikipedia:
         local_tagline: true
     frwiki:
         commons: 'File:Wikipedia-logo-v2-fr.svg'
-        commons_wordmark: 'File:Wikipedia-wordmark-fr.svg'
+        local_wordmark: true
         comment_wordmark: T249047
-        commons_tagline: 'File:Wikipedia-tagline-fr.svg'
+        local_tagline: true
         comment_tagline: T249047
+        comment: T359741
+        comment_1_5x: T359741
+        comment_2x: T359741
     furwiki:
         comment: T48589
         comment_1_5x: T150618
