@@ -318,12 +318,21 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 			'DELETE'
 		);
 
-		if ( $status && $status !== 204 ) {
-			wfDebugLog(
-				'WikitechGerritBan',
-				"Gerrit block of {$username} failed with status {$status}"
-			);
+		// https://gerrit.wikimedia.org/r/Documentation/rest-api-accounts.html#delete-active
+
+		$userMsg = "{$username} (id: {$gerritId}";
+
+		switch ( $status ) {
+			case 204:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} is now blocked in Gerrit" );
+				break;
+			case 409:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} is already blocked in Gerrit" );
+				break;
+			default:
+				wfDebugLog( 'WikitechGerritBan', "Gerrit block of {$userMsg} failed with status {$status}" );
 		}
+
 	} catch ( Throwable $t ) {
 		wfDebugLog(
 			'WikitechGerritBan',
@@ -366,12 +375,21 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 			'PUT'
 		);
 
-		if ( $status && $status !== 204 ) {
-			wfDebugLog(
-				'WikitechGerritBan',
-				"Gerrit unblock of {$username} failed with status {$status}"
-			);
+		// https://gerrit.wikimedia.org/r/Documentation/rest-api-accounts.html#set-active
+
+		$userMsg = "{$username} (id: {$gerritId}";
+
+		switch ( $status ) {
+			case 201:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} is now unblocked in Gerrit" );
+				break;
+			case 200:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} was not blocked in Gerrit" );
+				break;
+			default:
+				wfDebugLog( 'WikitechGerritBan', "Gerrit unblock of {$userMsg} failed with status {$status}" );
 		}
+
 	} catch ( Throwable $t ) {
 		wfDebugLog(
 			'WikitechGerritBan',
