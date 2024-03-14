@@ -222,7 +222,7 @@ function wmfGerritFindAccountId(
 
 	$gerritId = null;
 	$ret = curl_exec( $ch );
-	if ( !$ret ) {
+	if ( $ret === false ) {
 		wfDebugLog(
 			'WikitechGerritBan',
 			"Gerrit user lookup of username:{$uid} failed: " . curl_error( $ch )
@@ -268,7 +268,7 @@ function wmfGerritSetActive(
 		"{$gerritUsername}:{$gerritPassword}"
 	);
 
-	if ( !curl_exec( $ch ) ) {
+	if ( curl_exec( $ch ) === false ) {
 		wfDebugLog(
 			'WikitechGerritBan',
 			"Gerrit user active status change ({$httpMethod}) of {$username} failed: " . curl_error( $ch )
