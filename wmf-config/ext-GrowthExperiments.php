@@ -1053,6 +1053,9 @@ return [
 	'+eswiki' => [
 		'personalized-praise' => true,
 	],
+	'+frwiki' => [
+		'personalized-praise' => true,
+	],
 ],
 
 'wgGEPersonalizedPraiseNotificationsEnabled' => [
