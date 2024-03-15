@@ -1065,6 +1065,7 @@ return [
 	'bnwiki' => true,
 	'cswiki' => true,
 	'eswiki' => true,
+	'frwiki' => true,
 	'testwiki' => true,
 ],
 
