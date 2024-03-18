@@ -2293,6 +2293,8 @@ return [
 	],
 	'+skwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'patroller' => [ 'patrol' => true ],
 	],
 	'+specieswiki' => [ // T89147
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -4286,7 +4288,11 @@ return [
 		],
 	],
 	'+skwiki' => [
-		'sysop' => [ 'rollbacker' ],
+		'sysop' => [
+			'rollbacker',
+			'patroller',
+			'autopatrolled',
+		],
 	],
 	'+specieswiki' => [
 		'sysop' => [
@@ -5484,7 +5490,11 @@ return [
 		'sysop' => [ 'rollbacker', 'autopatrolled' ],
 	],
 	'+skwiki' => [
-		'sysop' => [ 'rollbacker' ],
+		'sysop' => [
+			'rollbacker',
+			'patroller',
+			'autopatrolled',
+		],
 	],
 	'+specieswiki' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T89147
