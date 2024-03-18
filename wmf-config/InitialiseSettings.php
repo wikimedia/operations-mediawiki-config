@@ -2926,6 +2926,7 @@ return [
 	'sawikisource' => true, // T36769
 	'shwiki' => true, // T62818
 	'siwiki' => true,
+	'skwiki' => true, // T353980
 	'specieswiki' => true, // T89147
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikibooks' => true, // T209250
