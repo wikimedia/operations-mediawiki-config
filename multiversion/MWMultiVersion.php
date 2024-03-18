@@ -44,6 +44,7 @@ class MWMultiVersion {
 		'flow',
 		'flaggedrevs',
 		'small',
+		'skin-themes',
 		'legacy-vector',
 		'medium',
 		'wikimania',

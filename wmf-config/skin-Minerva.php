@@ -27,6 +27,11 @@ return [
 			'base' => false,
 			'loggedin' => false
 		],
+		'skin-themes' => [
+			'base' => false,
+			'loggedin' => false,
+			'amc' => true,
+		],
 		'testwiki' => [
 			'base' => true,
 			'loggedin' => true,
