@@ -4,6 +4,7 @@
  * @covers wmf-config/docroot/noc/conf/highlight.php
  */
 class NocHighlightTest extends PHPUnit\Framework\TestCase {
+	private $nocConfDir;
 	/**
 	 * @var string[] names of files created, so that they can be removed on tearDown
 	 */

@@ -2,7 +2,7 @@
 use Wikimedia\MWConfig\ClusterConfig;
 
 /**
- * @covers ClusterConfig
+ * @covers \Wikimedia\MWConfig\ClusterConfig
  */
 class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 	public static function provider() {
@@ -23,6 +23,9 @@ class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 		];
 		yield 'appserver canary on k8s' => [
 			'kube-wiki-canary', [ 'k8s', 'canary' ]
+		];
+		yield 'parsoid on k8s' => [
+			'kube-mw-parsoid', [ 'k8s', 'parsoid' ]
 		];
 		yield 'Empty variable' => [
 			null, []

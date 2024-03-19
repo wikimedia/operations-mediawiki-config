@@ -1,6 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
+use MediaWiki\Extension\OpenStackManager\OpenStackNovaUser;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
@@ -196,6 +197,50 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 };
 
 /**
+ * Lookup a Gerrit account ID.
+ *
+ * @param string $gerritUsername
+ * @param string $gerritPassword
+ * @param string $uid Developer account shellname (LDAP `uid` attribute)
+ * @return int|null null on failure, or numeric account ID on success
+ */
+function wmfGerritFindAccountId(
+	string $gerritUsername,
+	string $gerritPassword,
+	string $uid
+) {
+	$gerritUrl = 'https://gerrit.wikimedia.org';
+	$ch = curl_init(
+		// By default Gerrit only matches active accounts (by automatically
+		// adding `is:active`. Adding both ensure we get the account regardless
+		// of its state.
+		// https://phabricator.wikimedia.org/T307558#9625736
+		"{$gerritUrl}/r/a/accounts/?n=1&q=(is:inactive+OR+is:active)+username:" . urlencode( $uid )
+	);
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	curl_setopt( $ch, CURLOPT_USERPWD, "{$gerritUsername}:{$gerritPassword}" );
+
+	$gerritId = null;
+	$ret = curl_exec( $ch );
+	if ( $ret === false ) {
+		wfDebugLog(
+			'WikitechGerritBan',
+			"Gerrit user lookup of username:{$uid} failed: " . curl_error( $ch )
+		);
+	} else {
+		// Gerrit responds with JSON, sort of...
+		$jsonBody = ltrim( $ret, ")]}'" );
+		$json = json_decode( $jsonBody, true );
+		if ( $json ) {
+			$gerritId = $json[0]['_account_id'];
+		}
+	}
+	curl_close( $ch );
+
+	return $gerritId;
+}
+
+/**
  * Changes the Gerrit active status of the specified user using
  * the specified HTTP method (PUT to enable and DELETE to disable)
  *
@@ -223,7 +268,7 @@ function wmfGerritSetActive(
 		"{$gerritUsername}:{$gerritPassword}"
 	);
 
-	if ( !curl_exec( $ch ) ) {
+	if ( curl_exec( $ch ) === false ) {
 		wfDebugLog(
 			'WikitechGerritBan',
 			"Gerrit user active status change ({$httpMethod}) of {$username} failed: " . curl_error( $ch )
@@ -251,20 +296,43 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 		return;
 	}
 	try {
-		$username = strtolower( $block->getTargetName() );
+		$userIdent = $block->getTargetUserIdentity();
+		if ( !$userIdent ) {
+			return;
+		}
+		$username = $userIdent->getName();
+		$developer = new OpenStackNovaUser( $username );
+		$gerritId = wmfGerritFindAccountId(
+			$wmgGerritApiUser,
+			$wmgGerritApiPassword,
+			$developer->getUid()
+		);
+		if ( $gerritId === null ) {
+			return;
+		}
+
 		$status = wmfGerritSetActive(
 			$wmgGerritApiUser,
 			$wmgGerritApiPassword,
-			$username,
+			$gerritId,
 			'DELETE'
 		);
 
-		if ( $status && $status !== 204 ) {
-			wfDebugLog(
-				'WikitechGerritBan',
-				"Gerrit block of {$username} failed with status {$status}"
-			);
+		// https://gerrit.wikimedia.org/r/Documentation/rest-api-accounts.html#delete-active
+
+		$userMsg = "{$username} (id: {$gerritId})";
+
+		switch ( $status ) {
+			case 204:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} is now blocked in Gerrit" );
+				break;
+			case 409:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} is already blocked in Gerrit" );
+				break;
+			default:
+				wfDebugLog( 'WikitechGerritBan', "Gerrit block of {$userMsg} failed with status {$status}" );
 		}
+
 	} catch ( Throwable $t ) {
 		wfDebugLog(
 			'WikitechGerritBan',
@@ -285,20 +353,43 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 		return;
 	}
 	try {
-		$username = strtolower( $block->getTargetName() );
+		$userIdent = $block->getTargetUserIdentity();
+		if ( !$userIdent ) {
+			return;
+		}
+		$username = $userIdent->getName();
+		$developer = new OpenStackNovaUser( $username );
+		$gerritId = wmfGerritFindAccountId(
+			$wmgGerritApiUser,
+			$wmgGerritApiPassword,
+			$developer->getUid()
+		);
+		if ( $gerritId === null ) {
+			return;
+		}
+
 		$status = wmfGerritSetActive(
 			$wmgGerritApiUser,
 			$wmgGerritApiPassword,
-			$username,
+			$gerritId,
 			'PUT'
 		);
 
-		if ( $status && $status !== 204 ) {
-			wfDebugLog(
-				'WikitechGerritBan',
-				"Gerrit unblock of {$username} failed with status {$status}"
-			);
+		// https://gerrit.wikimedia.org/r/Documentation/rest-api-accounts.html#set-active
+
+		$userMsg = "{$username} (id: {$gerritId})";
+
+		switch ( $status ) {
+			case 201:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} is now unblocked in Gerrit" );
+				break;
+			case 200:
+				wfDebugLog( 'WikitechGerritBan', "{$userMsg} was not blocked in Gerrit" );
+				break;
+			default:
+				wfDebugLog( 'WikitechGerritBan', "Gerrit unblock of {$userMsg} failed with status {$status}" );
 		}
+
 	} catch ( Throwable $t ) {
 		wfDebugLog(
 			'WikitechGerritBan',

@@ -661,6 +661,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'app_places_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'ios.edit_history_compare' => [
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -706,6 +710,10 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'ios.suggested_edits_alt_text_prototype' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.edit_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
@@ -786,22 +794,25 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'android.metrics_platform.article_link_preview_interaction',
-					],
 					'provide_values' => [
+						'agent_app_install_id',
+						'agent_app_flavor',
+						'agent_app_theme',
+						'agent_app_version',
+						'agent_device_language',
+						'agent_release_status',
 						'mediawiki_database',
-						'page_title',
-						'page_content_language',
 						'page_id',
+						'page_title',
 						'page_namespace_id',
+						'page_wikidata_qid',
+						'page_content_language',
 						'performer_is_logged_in',
 						'performer_session_id',
 						'performer_pageview_id',
 						'performer_language_groups',
 						'performer_language_primary',
 						'performer_groups',
-						'agent_app_install_id',
 					],
 				],
 			],
@@ -815,22 +826,24 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'android.metrics_platform.article_toc_interaction',
-					],
 					'provide_values' => [
+						'agent_app_install_id',
+						'agent_app_flavor',
+						'agent_app_theme',
+						'agent_app_version',
+						'agent_device_language',
+						'agent_release_status',
 						'mediawiki_database',
-						'page_title',
-						'page_content_language',
 						'page_id',
+						'page_title',
 						'page_namespace_id',
+						'page_content_language',
 						'performer_is_logged_in',
 						'performer_session_id',
 						'performer_pageview_id',
 						'performer_language_groups',
 						'performer_language_primary',
 						'performer_groups',
-						'agent_app_install_id',
 					],
 				],
 			],
@@ -844,22 +857,24 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'android.metrics_platform.article_toolbar_interaction',
-					],
 					'provide_values' => [
+						'agent_app_install_id',
+						'agent_app_flavor',
+						'agent_app_theme',
+						'agent_app_version',
+						'agent_device_language',
+						'agent_release_status',
 						'mediawiki_database',
-						'page_title',
-						'page_content_language',
 						'page_id',
+						'page_title',
 						'page_namespace_id',
+						'page_content_language',
 						'performer_is_logged_in',
 						'performer_session_id',
 						'performer_pageview_id',
 						'performer_language_groups',
 						'performer_language_primary',
 						'performer_groups',
-						'agent_app_install_id',
 					],
 				],
 			],
@@ -873,22 +888,24 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'android.metrics_platform.find_in_page_interaction',
-					],
 					'provide_values' => [
+						'agent_app_install_id',
+						'agent_app_flavor',
+						'agent_app_theme',
+						'agent_app_version',
+						'agent_device_language',
+						'agent_release_status',
 						'mediawiki_database',
-						'page_title',
-						'page_content_language',
 						'page_id',
+						'page_title',
 						'page_namespace_id',
+						'page_content_language',
 						'performer_is_logged_in',
 						'performer_session_id',
 						'performer_pageview_id',
 						'performer_language_groups',
 						'performer_language_primary',
 						'performer_groups',
-						'agent_app_install_id',
 					],
 				],
 			],
@@ -1039,30 +1056,23 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
-		// See https://phabricator.wikimedia.org/T326212
-		'mediawiki.special_diff_interactions' => [
+		// See https://phabricator.wikimedia.org/T353798
+		'mediawiki.reference_previews' => [
 			'schema_title' => 'analytics/mediawiki/client/metrics_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
 					'events' => [
-						'specialDiff.click.', // T326214, T326216
+						'ext.cite.baseline'
 					],
 					'provide_values' => [
-						'mediawiki_skin',
-						'mediawiki_version',
-						'mediawiki_is_production',
 						'mediawiki_database',
-						'performer_is_logged_in',
-						'performer_groups',
+						'mediawiki_skin',
+						'page_namespace',
 						'performer_edit_count_bucket',
-						'performer_registration_dt',
+						'performer_is_logged_in',
 					],
 				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
 			],
 		],
 

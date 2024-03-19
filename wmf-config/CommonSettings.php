@@ -479,6 +479,9 @@ if ( $wmgUseGlobalPreferences ) {
 	];
 }
 
+// T355034 new block_target schema
+$wgBlockTargetMigrationStage = SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH;
+
 # ######################################################################
 # Legal matters
 # ######################################################################
@@ -537,7 +540,6 @@ $wgEmergencyContact = 'noc@wikipedia.org';
 # and random contact forms.
 $wgPasswordSender = 'wiki@wikimedia.org';
 
-$wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
@@ -1408,7 +1410,6 @@ if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
 	$wgUrlShortenerServer = 'https://w.wiki';
-	$wgVirtualDomainsMapping['urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgVirtualDomainsMapping['virtual-urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.org',
@@ -1444,6 +1445,8 @@ if ( $wmgUseUrlShortener ) {
 	// Never ever change this config
 	// Changing it would change target of all short urls
 	$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$';
+
+	$wgUrlShortenerEnableQrCode = true; // T348487
 }
 
 if ( $wmgPFEnableStringFunctions ) {
@@ -1555,6 +1558,8 @@ if ( $wmgUseSecurePoll ) {
 	$wgSecurePollCreateWikiGroups = [
 		'securepollglobal' => 'securepoll-dblist-securepollglobal'
 	];
+	// T303135 / T287780
+	$wgSecurePollExcludedWikis = [ 'labswiki', 'labtestwiki', 'loginwiki' ];
 	// T173393 - This is number of days after the election ends, not
 	// number of days after the vote was cast. Lower to 60 days so that
 	// overall time retained is not > 90 days.
@@ -1874,10 +1879,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => 'centralauth' ];
 
 	// Enable cross-origin session cookies (T252236).
-	if ( $wmgEnableCrossOriginSessions ) {
-		$wgCookieSameSite = 'None';
-		$wgUseSameSiteLegacyCookies = true;
-	}
+	$wgCookieSameSite = 'None';
 
 	$wgCentralAuthDryRun = false;
 	$wgCentralAuthCookies = true;
@@ -2679,6 +2681,11 @@ if ( $wmgUseMobileApp ) {
 wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
+$wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQueryString;
+$wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExcludeNamespaces;
+$wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
+$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
+
 require_once 'MobileUrlCallback.php';
 $wgMobileUrlCallback = 'wmfMobileUrlCallback';
 
@@ -2773,9 +2780,9 @@ if ( $wmgUseBounceHandler ) {
 	$wgBounceHandlerCluster = 'extension1';
 	$wgBounceHandlerSharedDB = 'wikishared';
 	$wgBounceHandlerInternalIPs = [
-		'208.80.154.76',              # mx1001
+		'208.80.154.76', # mx1001
 		'2620:0:861:3:208:80:154:76', # mx1001
-		'208.80.153.45',              # mx2001
+		'208.80.153.45', # mx2001
 		'2620:0:860:2:208:80:153:45', # mx2001
 	];
 }
@@ -2797,7 +2804,6 @@ if ( $wmgUseTranslate ) {
 	$wgGroupsRemoveFromSelf['sysop'][] = 'translationadmin'; // T178793
 
 	$wgTranslateDocumentationLanguageCode = 'qqq';
-	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
 
 	$wgPageLanguageUseDB = true; // T153209
 
@@ -3011,9 +3017,8 @@ if ( $wmgUseEcho ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 	$wgLoginNotifyAttemptsNewIP = 3;
-	// Use both storage systems until 90 days after deployment (T346989)
 	$wgLoginNotifyUseSeenTable = true;
-	$wgLoginNotifyUseCheckUser = true;
+	$wgLoginNotifyUseCheckUser = false;
 	// Less than 90 days per data retention guidelines, minus one bucket for rounding.
 	$wgLoginNotifySeenExpiry = 80 * 86400;
 	$wgLoginNotifySeenBucketSize = 8 * 86400;
@@ -3065,6 +3070,29 @@ if ( $wmgUseEcho ) {
 			$wgDefaultUserOptions[$option] = $value;
 		}
 	}
+
+	// Conditional defaults (T353225)
+	// NOTE: testwiki has different conditional defaults start
+	if ( in_array( $wgDBname, [ 'testwiki', 'loginwiki' ] ) ) {
+		$startTimestamp = '20130501000000';
+	} else {
+		$startTimestamp = '20240208200000';
+	}
+	$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
+		[
+			false,
+			[ CUDCOND_AFTER, $startTimestamp ]
+		]
+	];
+	$wgConditionalUserOptions['echo-subscriptions-web-article-linked'] =
+		$wgConditionalUserOptions['echo-subscriptions-email-mention'] =
+		$wgConditionalUserOptions['echo-subscriptions-email-article-linked'] = [
+			[
+				true,
+				[ CUDCOND_AFTER, $startTimestamp ]
+			]
+		];
+	unset( $startTimestamp );
 
 	// Push notifications
 	$wgEchoEnablePush = $wmgEchoEnablePush ?? false;
@@ -3437,9 +3465,11 @@ if ( $wmgUseExternalGuidance ) {
 
 if ( $wmgUseCognate ) {
 	wfLoadExtension( 'Cognate' );
+	$wgVirtualDomainsMapping['virtual-cognate'] = [ 'cluster' => 'extension1', 'db' => 'cognate_wiktionary' ];
+	$wgCognateNamespaces = [ 0 ];
+	// Temp b/c for T348526
 	$wgCognateDb = 'cognate_' . $wmgUseCognate;
 	$wgCognateCluster = 'extension1';
-	$wgCognateNamespaces = [ 0 ];
 }
 
 if ( $wmgUseInterwikiSorting ) {
@@ -3972,7 +4002,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 if ( $wmgUse3d ) {
 	wfLoadExtension( '3D' );
 	$wgTrustedMediaFormats[] = 'application/sla';
-	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' , '/srv/deployment/3d2png/deploy/src/3d2png.js' ];
+	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24', '/srv/deployment/3d2png/deploy/src/3d2png.js' ];
 
 	if ( $wmgUseMultimediaViewer ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
@@ -3999,6 +4029,7 @@ if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 if ( $wmgUseWikisource ) {
 	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
+	$wgWikisourceHttpProxy = $wgCopyUploadProxy;
 }
 
 if ( $wmgUseGrowthExperiments ) {
@@ -4085,6 +4116,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
+	wfLoadExtension( 'WikimediaCampaignEvents' );
 	$wgCampaignEventsDatabaseCluster = 'extension1';
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCampaignEventsDatabaseName = 'wikishared';
@@ -4210,6 +4242,11 @@ unset( $parsoidDir );
 
 if ( $wmgUseParserMigration ) {
 	wfLoadExtension( 'ParserMigration' );
+}
+
+// T350653
+if ( $wmgEditRecoveryDefaultUserOptions ) {
+	$wgDefaultUserOptions['editrecovery'] = 1;
 }
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch

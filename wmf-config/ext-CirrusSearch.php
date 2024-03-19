@@ -26,6 +26,12 @@ return [
 'wgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	'private' => [ 'eqiad', 'codfw' ],
+	// Wikis transitioning to cirrus streaming updater, T352335
+	'commonswiki' => [ 'eqiad', 'codfw' ],
+	'frwiki' => [ 'eqiad', 'codfw' ],
+	'itwiki' => [ 'eqiad', 'codfw' ],
+	'mediawikiwiki' => [ 'eqiad', 'codfw' ],
+	'testwiki' => [ 'eqiad', 'codfw' ],
 ],
 
 'wgCirrusSearchReplicaGroup' => [
@@ -1224,40 +1230,6 @@ return [
 	'default' => false,
 ],
 'wgCirrusSearchUseEventBusBridge' => [
-	'default' => false,
-	// T352335: Initial cirrus updater deployment
-	'commonswiki' => true,
-	'frwiki' => true,
-	'itwiki' => true,
-	'testwiki' => true,
-	'wikidatawiki' => true,
-	// T351503: 2nd batch, expected additional topic size per broker: ~11GB, see spreadsheet
-	'dewiki' => true,
-	'frwiktionary' => true,
-	'kuwiktionary' => true,
-	// T351503: 3rd batch, expected additional topic size per broker: ~10GB, see spreadsheet
-	'arwiki' => true,
-	'eswiki' => true,
-	'trwiki' => true,
-	'ruwiktionary' => true,
-	'bewiki' => true,
-	'plwiki' => true,
-	'zhwiki' => true,
-	'ruwiki' => true,
-	'cawiki' => true,
-	'metawiki' => true,
-	'viwiki' => true,
-	'nlwiki' => true,
-	'huwiki' => true,
-	'thwiktionary' => true,
-	'ruwikinews' => true,
-	'shwiki' => true,
-	'fawiki' => true,
-	'jawiki' => true,
-	'cebwiki' => true,
-	// T351503: 4th batch, expected additional topic size per broker: ~8GB, see spreadsheet
-	'enwiktionary' => true,
-	// T351503: 5th batch, expected additional topic size per broker: ~11GB, see spreadsheet
-	'enwiki' => true,
+	'default' => true,
 ],
 ];

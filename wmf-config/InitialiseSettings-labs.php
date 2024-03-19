@@ -313,7 +313,7 @@ function wmfGetOverrideSettings() {
 				'logging' => 'debug',
 				'LoginNotify' => 'debug',
 				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
-				'Math' => 'info',  // mobrovac for T121445
+				'Math' => 'info', // mobrovac for T121445
 				'mediamoderation' => 'debug', // for T303312 changed from warning
 				'memcached' => 'error', // -aaron 2012/10/24
 				'message-format' => [ 'logstash' => 'warning' ],
@@ -373,8 +373,9 @@ function wmfGetOverrideSettings() {
 				'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 				'WikibaseQualityConstraints' => 'debug',
-				'WikimediaEvents' => 'error', // For T205754 & T208233
 				'WikiLambda' => 'warning',
+				'WikimediaEvents' => 'error', // For T205754 & T208233
+				'Wikisource' => 'info',
 				'WikitechGerritBan' => 'debug',
 				'WikitechPhabBan' => 'debug',
 				'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
@@ -497,7 +498,7 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Enable Mediawiki client side (browser) Javascript error logging.
+		// Enable MediaWiki client side (browser) Javascript error logging.
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
 			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
@@ -531,9 +532,23 @@ function wmfGetOverrideSettings() {
 			'default' => 0
 		],
 
+		'wgMFFallbackEditor' => [
+			'default' => 'visual',
+		],
+
 		# Do not run any A/B tests on beta cluster (T206179)
 		'-wgMinervaABSamplingRate' => [
 			'default' => 0,
+		],
+
+		'wgMinervaNightMode' => [
+			'default' => [
+				'base' => true,
+				'loggedin' => true,
+			],
+		],
+		'wmgMinervaNightModeExcludeTitles' => [
+			'default' => [ 'Banana' ],
 		],
 
 		//
@@ -710,8 +725,8 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 			'wikidata' => [],
 			'commonswiki' => [
-				'smn' => 'anarâškielâ',	  // T222309
-				'sms' => 'sääʹmǩiõll',	  // T222309
+				'smn' => 'anarâškielâ', // T222309
+				'sms' => 'sääʹmǩiõll', // T222309
 			],
 		],
 
@@ -1199,7 +1214,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUseNewsletter' => [
-			'default' => true,  // T127297
+			'default' => true, // T127297
 		],
 
 		// Ensure ?action=credits isn't break and allow to work
@@ -1422,7 +1437,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgAbuseFilterActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
@@ -1447,7 +1462,7 @@ function wmfGetOverrideSettings() {
 				'reverted' => [ 'enabled' => false ],
 				'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
-				'revertrisk-language-agnostic' => [ 'enabled' => true ],
+				'revertrisklanguageagnostic' => [ 'enabled' => true ],
 			],
 			'wikidatawiki' => [
 				'damaging' => [ 'enabled' => true ],
@@ -1666,7 +1681,14 @@ function wmfGetOverrideSettings() {
 		],
 		'wgEnablePartialActionBlocks' => [
 			'default' => true,
+			// Override top 6 wikis disabled in production (T353495)
+			// Except dewiki which can be used to test the old behaviour.
+			'enwiki' => true,
+			'wikidatawiki' => true,
+			'jawiki' => true,
 			'dewiki' => false,
+			'frwiki' => true,
+			'eswiki' => true,
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
@@ -2246,10 +2268,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'-wmgEnableCrossOriginSessions' => [
-			'default' => true,
-		],
-
 		'-wgForceHTTPS' => [
 			'default' => true,
 		],
@@ -2322,11 +2340,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionToolsEnablePermalinksFrontend' => [
-			'default' => true,
-		],
-
-		// Remove after I5c9229a258
-		'-wgDiscussionToolsEnableTimestampLinks' => [
 			'default' => true,
 		],
 
@@ -2466,9 +2479,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
-		'wgCampaignEventsEnableParticipantQuestions' => [
-			'default' => true,
-		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
@@ -2533,6 +2543,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wmgEditRecoveryDefaultUserOptions' => [
+			'default' => true, // T350653
+		],
+
 		// T61245
 		'wmgUsePageNotice' => [
 			'enwiktionary' => true,
@@ -2548,6 +2562,18 @@ function wmfGetOverrideSettings() {
 		// T348487
 		'-wgUrlShortenerEnableQrCode' => [
 			'default' => true,
+		],
+
+		// T357795
+		'wgCodeMirrorV6' => [
+				'default' => true,
+		],
+
+		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
+			'default' => true, // T356924, T356923
+			'wikitech' => false,
+			'fishbowl' => false,
+			'private' => false,
 		],
 	];
 } # wmfGetOverrideSettings()

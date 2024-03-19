@@ -1053,6 +1053,9 @@ return [
 	'+eswiki' => [
 		'personalized-praise' => true,
 	],
+	'+frwiki' => [
+		'personalized-praise' => true,
+	],
 ],
 
 'wgGEPersonalizedPraiseNotificationsEnabled' => [
@@ -1065,6 +1068,7 @@ return [
 	'bnwiki' => true,
 	'cswiki' => true,
 	'eswiki' => true,
+	'frwiki' => true,
 	'testwiki' => true,
 ],
 

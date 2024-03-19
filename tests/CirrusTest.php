@@ -15,8 +15,8 @@ class CirrusTest extends WgConfTestCase {
 		// (2 DCs + 1 cloudelastic) * 3 ES clusters per
 		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
 
-		// testwiki writes to eqiad, codfw and cloudelastic
-		$this->assertCount( 3, $config['wgCirrusSearchWriteClusters'] );
+		// testwiki writes to eqiad and codfw, cloudelastic disabled
+		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
 			$groups = $config['wgCirrusSearchReplicaGroup'];
@@ -221,7 +221,11 @@ class CirrusTest extends WgConfTestCase {
 		$shards = $allConfig->settings['wmgCirrusSearchShardCount'];
 		$replicas = $allConfig->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $allConfig->settings['wgCirrusSearchMaxShardsPerNode'];
-		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
+		$wikis = array_diff( array_merge(
+			array_keys( $shards ),
+			array_keys( $replicas ),
+			array_keys( $maxShardPerNode )
+		), [ 'default' ] );
 		foreach ( $wikis as $idx => $wiki ) {
 			if ( $wiki[0] === '+' ) {
 					$wikis[$idx] = substr( $wiki, 1 );

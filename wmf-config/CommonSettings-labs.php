@@ -280,15 +280,21 @@ if ( $wmgRealm == 'labs' ) {
 		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
 		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
 
-		// Temporary overrides to save space in user_properties (T353225)
-		// Those are boolean options, and setting the defaults this way ensures MediaWiki inserts
-		// user_properties rows for both true and false without changing any behavior for users
-		// that currently do not have any matching user_properties row.
-		// Below, 2 and 0 are arbitrary values that evaluate to true and false respectively.
-		$wgDefaultUserOptions['echo-subscriptions-web-reverted'] = 2;
-		$wgDefaultUserOptions['echo-subscriptions-web-article-linked'] = 0;
-		$wgDefaultUserOptions['echo-subscriptions-email-mention'] = 0;
-		$wgDefaultUserOptions['echo-subscriptions-email-article-linked'] = 0;
+		// Temporarily enable conditional defaults for Echo properties (T353225)
+		$wgConditionalUserOptions['echo-subscriptions-web-reverted'] = [
+			[
+				false,
+				[ CUDCOND_AFTER, '20130501000000' ]
+			]
+		];
+		$wgConditionalUserOptions['echo-subscriptions-web-article-linked'] =
+			$wgConditionalUserOptions['echo-subscriptions-email-mention'] =
+			$wgConditionalUserOptions['echo-subscriptions-email-article-linked'] = [
+				[
+					true,
+					[ CUDCOND_AFTER, '20130501000000' ]
+				]
+			];
 	}
 
 	if ( $wmgUseEcho && $wmgUseCentralAuth ) {
@@ -435,12 +441,15 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCampaignEventsDatabaseCluster = 'extension1';
 		$wgCampaignEventsDatabaseName = 'wikishared';
 		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'staging';
+		$wgWikimediaCampaignEventsFluxxBaseUrl = 'https://wmf.preprod.fluxxlabs.com/api/rest/v2/';
+		$wgWikimediaCampaignEventsFluxxOauthUrl = 'https://wmf.preprod.fluxxlabs.com/oauth/token';
 		// Re-add rights removed in the production config
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
 		$wgGroupPermissions['user']['campaignevents-email-participants'] = true;
-		// This group is not needed in beta.
-		unset( $wgGroupPermissions['campaignevents-beta-tester'] );
+		// This group is not needed in beta. Redundant entries in wgAddGroups and
+		// wgRemoveGroups are harmless.
+		unset( $wgGroupPermissions['event-organizer'] );
 	}
 
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
@@ -465,25 +474,40 @@ if ( $wmgRealm == 'labs' ) {
 		'type' => 'centralauth',
 		'numShards' => 8,
 	];
-	$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'scramble' ];
+
+	// Update the serial mapping config for generating temporary user names (T349503)
+	// 'plain-numeric' is the default value but enforcing it here in case the default is changed
+	$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric' ];
+
+	// Change temporary user pattern configuration to match the updated prefix, '~' (T349486)
+	// and enable `useYear` so that new temporary accounts will be created with the pattern
+	// `~<year>-<incrementing_id>`.
+	// `~2$1` is used here to match with production values, as there
+	// are already some accounts that would match `~$1`.
+	$wgAutoCreateTempUser['genPattern'] = '~$1';
+	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
+	$wgAutoCreateTempUser['reservedPattern'] = '~$1';
+	$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
 
 	if ( $wmgEnableIPMasking ) {
+		$wgGroupPermissions['temp']['edit'] = true;
 		$wgAutoCreateTempUser['enabled'] = true;
 		$wgAutoCreateTempUser['expireAfterDays'] = 365;
 		// notify ten days before account is expired
 		$wgAutoCreateTempUser['notifyBeforeExpirationDays'] = 10;
-
-		// editing is enabled only for temp accounts
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['temp']['edit'] = true;
 	} else {
 		$wgAutoCreateTempUser['enabled'] = false;
-		$wgAutoCreateTempUser['reservedPattern'] = '*$1';
 	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
 	$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
 
+	$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
+
+	// No restrictions in test environment to facilitate testing.
+	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
+	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
+	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 }
 // end safeguard

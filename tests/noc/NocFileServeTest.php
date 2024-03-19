@@ -4,6 +4,7 @@
  * @covers wmf-config/docroot/noc/conf/fileserve.php
  */
 class NocFileServeTest extends PHPUnit\Framework\TestCase {
+	private $nocConfDir;
 	/**
 	 * @var string[] names of files created, so that they can be removed on tearDown
 	 */

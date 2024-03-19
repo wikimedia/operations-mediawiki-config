@@ -16,8 +16,8 @@
  *   all domains. Files in /w are generic and proxy to a real MediaWiki entry point
  *   in the current wiki's MediaWiki version, as determined by the request host name.
  * - MediaWiki configuration sets $wgResourceBasePath to "/w".
- * - Apache configuration rewrites "/w/skins/*", "/w/resources/*", and "/w/extension/*"
- *   to /w/static.php (this file).
+ * - Apache configuration rewrites "/w/skins/*", "/w/resources/*", "/w/extension/*",
+ *   "/w/COPYING", and "/w/CREDITS" to /w/static.php (this file).
  *   Here we stream the file from the appropiate MediaWiki branch directory.
  * - For performance and to address race conditions around deployment,
  *   Varnish routes static.php requests in a hostname-agnostic way.
@@ -94,8 +94,12 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$ctype = StreamFile::contentTypeFromPath( $filePath, false );
 	if ( !$ctype || $ctype === 'unknown/unknown' ) {
 		// Directory, extension-less file or unknown extension
-		wmfStaticShowError( 'Unknown file path', 404 );
-		return;
+		if ( in_array( basename( $filePath ), [ 'COPYING', 'CREDITS' ] ) ) {
+			$ctype = 'text/plain';
+		} else {
+			wmfStaticShowError( 'Unknown file path', 404 );
+			return;
+		}
 	}
 
 	$stat = stat( $filePath );
