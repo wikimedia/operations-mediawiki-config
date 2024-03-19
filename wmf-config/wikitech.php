@@ -320,7 +320,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 		// https://gerrit.wikimedia.org/r/Documentation/rest-api-accounts.html#delete-active
 
-		$userMsg = "{$username} (id: {$gerritId}";
+		$userMsg = "{$username} (id: {$gerritId})";
 
 		switch ( $status ) {
 			case 204:
@@ -377,7 +377,7 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 
 		// https://gerrit.wikimedia.org/r/Documentation/rest-api-accounts.html#set-active
 
-		$userMsg = "{$username} (id: {$gerritId}";
+		$userMsg = "{$username} (id: {$gerritId})";
 
 		switch ( $status ) {
 			case 201:
