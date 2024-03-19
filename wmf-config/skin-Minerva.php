@@ -40,7 +40,7 @@ return [
 	'wmgMinervaNightModeQueryString' => [
 		// T359183
 		'default' => [
-			'action' => 'diff|info|protect|delete|undelete|action|history',
+			'action' => 'edit|submit|diff|info|protect|delete|undelete|action|history',
 			'diff' => '*'
 		],
 		// Allow us to reliably test all pages here.
