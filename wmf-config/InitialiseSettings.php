@@ -8137,7 +8137,6 @@ return [
 	"lfnwiki" => true,
 	"map_bmswiki" => true,
 	"mwlwiki" => true,
-	"myvwiki" => true,
 	"napwiki" => true,
 	"nawiki" => true,
 	"nds_nlwiki" => true,
