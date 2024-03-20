@@ -40,7 +40,6 @@ return [
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
 		'eventlogging_SearchSatisfaction',
-		'eventlogging_SuggestedTagsAction',
 		'eventlogging_TemplateDataApi',
 		'eventlogging_TemplateDataEditor',
 		'eventlogging_TemplateWizard',
