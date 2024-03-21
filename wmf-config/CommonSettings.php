@@ -4157,15 +4157,6 @@ if ( $wmgUseWikimediaEditorTasks ) {
 	wfLoadExtension( 'WikimediaEditorTasks' );
 }
 
-if ( $wmgUseMachineVision ) {
-	if ( $wmgRealm === 'production' ) {
-		$wgMachineVisionHttpProxy = $wmgLocalServices['urldownloader'];
-	}
-
-	wfLoadExtension( 'MachineVision' );
-	$wgNotifyTypeAvailabilityByCategory['machinevision']['email'] = false;
-}
-
 // T283003: TheWikipediaLibrary requires GlobalPreferences and CentralAuth to be installed
 if ( $wmgUseTheWikipediaLibrary && $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );

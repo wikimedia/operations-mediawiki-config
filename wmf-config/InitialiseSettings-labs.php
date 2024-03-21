@@ -2223,22 +2223,6 @@ function wmfGetOverrideSettings() {
 				],
 			],
 		],
-		'wmgUseMachineVision' => [
-			'default' => false,
-			'commonswiki' => true,
-		],
-		'wgMachineVisionTestersOnly' => [
-			'default' => false,
-		],
-		'wgMachineVisionShowUploadWizardCallToAction' => [
-			'default' => true,
-		],
-		'wgMachineVisionNewUploadLabelingJobDelay' => [
-			'default' => 0,
-		],
-		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
-			'default' => true,
-		],
 		// T319240
 		'wgSpecialContributeSkinsEnabled' => [
 			'default' => [ "minerva", "vector-2022" ],
