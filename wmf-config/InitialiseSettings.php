@@ -788,6 +788,7 @@ return [
 	'huwikibooks' => false, // T74231
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiki' => '/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
+	'iswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=is', // T360431
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // T13187
 	'itwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
