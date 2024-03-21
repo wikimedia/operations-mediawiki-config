@@ -955,11 +955,6 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'webuiactions_log.',
-						'click',
-						'init',
-					],
 					'provide_values' => [
 						'page_namespace_id',
 						'performer_is_logged_in',
@@ -967,6 +962,7 @@ return [
 						'performer_pageview_id',
 						'performer_edit_count_bucket',
 						'performer_groups',
+						'performer_is_bot',
 						'mediawiki_skin',
 						'mediawiki_database',
 					],
