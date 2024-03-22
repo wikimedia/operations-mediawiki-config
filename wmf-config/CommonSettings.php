@@ -4251,6 +4251,12 @@ if ( $wmgEditRecoveryDefaultUserOptions ) {
 	$wgDefaultUserOptions['editrecovery'] = 1;
 }
 
+// Community configuration
+if ( $wmgUseCommunityConfiguration ) {
+	wfLoadExtension( 'CommunityConfiguration' );
+	$wgCommunityConfigurationBugReportingToolURL = 'https://phabricator.wikimedia.org/maniphest/task/edit/form/43';
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

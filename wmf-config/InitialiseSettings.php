@@ -12462,6 +12462,12 @@ return [
 	'default' => true,
 ],
 
+// Community configuration (T357766)
+'wmgUseCommunityConfiguration' => [
+	// NOTE: Do not enable without OK from the Growth team.
+	'default' => false,
+],
+
 // T341000
 'wgExternalLinksDomainGaps' => [
 	'enwiki' => [
