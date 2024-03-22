@@ -28,6 +28,7 @@ $IP/extensions/CodeMirror/extension.json
 $IP/extensions/Cognate/extension.json
 $IP/extensions/Collection/extension.json
 $IP/extensions/CommonsMetadata/extension.json
+$IP/extensions/CommunityConfiguration/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
 $IP/extensions/ContactPage/extension.json
