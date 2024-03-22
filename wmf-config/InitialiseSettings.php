@@ -3793,9 +3793,9 @@ return [
 	'enwiki' => 'disallow', // T355462
 ],
 
-'wgSignatureAllowedLintErrors' => [
-	'default' => [ 'obsolete-tag', ],
-	'enwiki' => [], // T354013
+'wgSignatureAllowedLintErrors' => [ // T360796
+	'default' => [ 'obsolete-tag', 'night-mode-unaware-background-color' ],
+	'enwiki' => [ 'night-mode-unaware-background-color' ], // T354013
 ],
 
 # below seems to be for extensions
