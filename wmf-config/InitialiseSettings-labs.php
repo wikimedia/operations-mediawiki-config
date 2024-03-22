@@ -2580,5 +2580,12 @@ function wmfGetOverrideSettings() {
 			'fishbowl' => false,
 			'private' => false,
 		],
+
+		// T357766
+		'wmgUseCommunityConfiguration' => [
+			// NOTE: Do not enable without Growth team OK
+			'default' => false,
+			'eswiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
