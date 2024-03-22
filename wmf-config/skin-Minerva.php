@@ -20,6 +20,10 @@ return [
 		'default' => [
 			'base' => true,
 		],
+		// T360783
+		'nowikimedia' => [
+			'base' => false,
+		],
 	],
 
 	'wgMinervaNightMode' => [

@@ -11329,6 +11329,7 @@ return [
 	'wikibooks' => false,
 	'wikinews' => false,
 	'wikifunctionswiki' => false, // T345459
+	'nowikimedia' => false, // T360782
 ],
 'wgNearbyPagesUrl' => [
 	'default' => '/w/api.php',
