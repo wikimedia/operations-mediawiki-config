@@ -4836,6 +4836,7 @@ return [
 	'urwiki' => true, // T64398
 	'zh_classicalwiki' => true, // T163043
 	'zhwiki' => true, // T32362
+	'zhwikivoyage' => true, // T360175
 ],
 
 'wmgNewUserMessageOnAutoCreate' => [
@@ -4877,6 +4878,7 @@ return [
 	'thwikiquote' => true, // T33600
 	'ukwiki' => true, // T67125
 	'zh_classicalwiki' => true, // T243509
+	'zhwikivoyage' => true, // T360175
 ],
 
 'wmgNewUserMinorEdit' => [
