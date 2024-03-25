@@ -419,3 +419,36 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
 		->newFromUserIdentity( $block->getTargetUserIdentity() );
 	SessionManager::singleton()->invalidateSessionsForUser( $userObj );
 };
+
+// T360883 - This is provided by Bitu now.
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
+class DisallowEmailChangesSecondaryAuthenticationProvider extends MediaWiki\Auth\AbstractSecondaryAuthenticationProvider {
+	public function getAuthenticationRequests( $action, array $options ) {
+		return [];
+	}
+
+	public function beginSecondaryAuthentication( $user, array $reqs ) {
+		return MediaWiki\Auth\AuthenticationResponse::newAbstain();
+	}
+
+	public function beginSecondaryAccountCreation( $user, $creator, array $reqs ) {
+		return MediaWiki\Auth\AuthenticationResponse::newAbstain();
+	}
+
+	public function providerAllowsPropertyChange( $property ) {
+		if ( $property === 'emailaddress' ) {
+			return false;
+		}
+
+		return parent::providerAllowsPropertyChange( $property );
+	}
+}
+$wgAuthManagerAutoConfig['secondaryauth'][DisallowEmailChangesSecondaryAuthenticationProvider::class] = [
+	'class' => DisallowEmailChangesSecondaryAuthenticationProvider::class,
+];
+
+// Also, hide the email confirmation timestamp from Special:Preferences. LDAPAuthentication
+// trusts the emails it reads from LDAP and the timestamp in the MW database is not accurate.
+$wgHooks['GetPreferences'][] = static function ( $user, &$preferences ) {
+	unset( $preferences['emailauthentication'] );
+};
