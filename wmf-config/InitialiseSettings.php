@@ -12288,6 +12288,12 @@ return [
 	'default' => true,
 ],
 
+'wgCodeMirrorV6' => [
+	'default' => false,
+	'officewiki' => true, // T357795
+	'testwiki' => true, // T357795
+],
+
 'wgCodeMirrorLineNumberingNamespaces' => [
 	'default' => [ NS_TEMPLATE ],
 	// T280027: Enable line numbering on all namespaces, for pilot wikis.
