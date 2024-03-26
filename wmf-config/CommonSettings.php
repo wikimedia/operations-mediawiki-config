@@ -4174,10 +4174,6 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	wfLoadExtension( 'WikimediaCampaignEvents' );
-	$wgCampaignEventsDatabaseCluster = 'extension1';
-	if ( $wgDBname === 'metawiki' ) {
-		$wgCampaignEventsDatabaseName = 'wikishared';
-	}
 	$wgVirtualDomainsMapping['virtual-campaignevents'] = [
 		'cluster' => 'extension1',
 		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
