@@ -445,8 +445,6 @@ if ( $wmgRealm == 'labs' ) {
 
 	if ( $wmgUseCampaignEvents ) {
 		// Use wikishared for all wikis, unlike production
-		$wgCampaignEventsDatabaseCluster = 'extension1';
-		$wgCampaignEventsDatabaseName = 'wikishared';
 		$wgVirtualDomainsMapping['virtual-campaignevents'] = [
 			'cluster' => 'extension1',
 			'db' => 'wikishared',
