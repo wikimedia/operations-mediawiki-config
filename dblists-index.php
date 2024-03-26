@@ -199,7 +199,7 @@ return [
 'dawikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'dawikisource' => [ 'legacy-vector', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'dawiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'dewiki' => [ 'wikipedia', 'flaggedrevs', 'legacy-vector', 'wikidataclient', 'cirrussearch-big-indices' ],
+'dewiki' => [ 'wikipedia', 'flaggedrevs', 'legacy-vector', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices' ],
 'dewikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'dewikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'dewikiquote' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
