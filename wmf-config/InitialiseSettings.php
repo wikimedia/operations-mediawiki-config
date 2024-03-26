@@ -12159,6 +12159,17 @@ return [
 	'metawiki' => true,
 ],
 
+// This setting determines whether the CampaignEvents extension shall store
+// its data in a shared database (wikishared). This can only be set to true
+// for SUL wikis.
+'wmgCampaignEventsUseCentralDB' => [
+	'default' => true,
+	'private' => false,
+	'nonglobal' => false,
+	'testwiki' => false,
+	'test2wiki' => false,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
