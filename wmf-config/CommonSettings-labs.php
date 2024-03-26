@@ -486,7 +486,6 @@ if ( $wmgRealm == 'labs' ) {
 	// are already some accounts that would match `~$1`.
 	$wgAutoCreateTempUser['genPattern'] = '~$1';
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
-	$wgAutoCreateTempUser['reservedPattern'] = '~$1';
 	$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
 
 	if ( $wmgEnableIPMasking ) {
