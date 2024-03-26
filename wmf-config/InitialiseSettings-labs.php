@@ -2587,7 +2587,7 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'eswiki' => true,
 		],
-		'wmgGEUseCommunityConfigurationExtension' => [
+		'wgGEUseCommunityConfigurationExtension' => [
 			// NOTE: Do not enable without Growth team OK
 			'default' => false,
 			'eswiki' => true,
