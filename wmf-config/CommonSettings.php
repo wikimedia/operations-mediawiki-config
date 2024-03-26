@@ -3900,6 +3900,35 @@ if ( $wmgUseIPInfo ) {
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
 
+if ( $wmgUseCentralAuth ) {
+	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
+	// uses a unique serial number across all wikis. This will have no effect if
+	// `$wgAutoCreateTempUser['enabled']` is false.
+	$wgAutoCreateTempUser['serialProvider'] = [
+		'type' => 'centralauth',
+		'numShards' => 8,
+	];
+} else {
+	// If CentralAuth is not installed, then use the local provider.
+	// This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
+	$wgAutoCreateTempUser['serialProvider'] = [
+		'type' => 'local',
+		'numShards' => 8,
+	];
+}
+
+// We only need to match ~2$1 because the year will start with 2 for the foreseeable future
+// and it prevents the need to rename users on production which start with ~ but not ~2 (T349507).
+// This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
+$wgAutoCreateTempUser['matchPattern'] = '~2$1';
+
+// Start numbers at 1500 to avoid using any numbers defined in T337090 which are considered defamatory.
+// This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
+$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric', 'offset' => 1500 ];
+
+// This is by default false, but enforcing it here in case the default is changed (T355880, T359043)
+$wgAutoCreateTempUser['enabled'] = false;
+
 // T39211
 $wgUseCombinedLoginLink = false;
 
