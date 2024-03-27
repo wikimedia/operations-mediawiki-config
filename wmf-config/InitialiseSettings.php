@@ -2542,16 +2542,18 @@ return [
 
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
-	'default' => [],
-	'arwiki' => [
+	'default' => [
+		'mainpage-title-loggedin', // T361171
+	],
+	'+arwiki' => [
 		'licenses',
 		'uploadtext',
 	],
-	'bewikimedia' => [
+	'+bewikimedia' => [
 		'sitenotice',
 		'anonnotice',
 	],
-	'commonswiki' => [
+	'+commonswiki' => [
 		// Sidebar
 		'mainpage',
 		'portal-url',
@@ -2572,7 +2574,7 @@ return [
 		'filesource',
 		'movepage-summary', // T183848
 	],
-	'testcommonswiki' => [
+	'+testcommonswiki' => [
 		// Sidebar
 		'mainpage',
 		'portal-url',
@@ -2592,19 +2594,19 @@ return [
 		'filesource',
 		'movepage-summary', // T183848
 	],
-	'enwiki' => [
+	'+enwiki' => [
 		'licenses', // for upload form variants hack, 2007-02-22
 	],
-	'enwikiversity' => [
+	'+enwikiversity' => [
 		'licenses',
 		'uploadtext',
 	],
-	'incubatorwiki' => [
+	'+incubatorwiki' => [
 		'sidebar-mainpage-url',
 		'sidebar-help-url',
 		'sidebar-sitesupport-url',
 	],
-	'mediawikiwiki' => [ // Requested by ialex on IRC
+	'+mediawikiwiki' => [ // Requested by ialex on IRC
 		'mw-mainpage-url',
 		'mw-cat-browser-url',
 		'mw-portal-url',
@@ -2618,16 +2620,16 @@ return [
 		'mw-irc-url',
 		'mw-mailing lists-url',
 	],
-	'mlwiki' => [
+	'+mlwiki' => [
 		'licenses', // T13538
 	],
-	'nowikimedia' => [
+	'+nowikimedia' => [
 		'mainpage', // T18729
 	],
-	'specieswiki' => [
+	'+specieswiki' => [
 		'mainpage',
 	],
-	'tenwiki' => [
+	'+tenwiki' => [
 		'mainpage',
 		'organize-url',
 		'share-url',
@@ -2635,21 +2637,21 @@ return [
 		'ideas-url',
 		'faq-url',
 	],
-	'viwiki' => [
+	'+viwiki' => [
 		'licenses',
 	],
-	'wikidata' => [
+	'+wikidata' => [
 		'mainpage',
 		'portal-url',
 		'villagepump-url',
 		'helppage',
 		'sitesupport-url', // T47696
 	],
-	'wikimania2005wiki' => [ 'currentevents-url', 'portal-url' ],
-	'wikimania2006wiki' => [ 'currentevents-url', 'portal-url' ],
-	'wikimania2007wiki' => [ 'currentevents-url', 'portal-url' ],
-	'wikimania2008wiki' => [ 'currentevents-url', 'portal-url' ],
-	'wikimania2009wiki' => [
+	'+wikimania2005wiki' => [ 'currentevents-url', 'portal-url' ],
+	'+wikimania2006wiki' => [ 'currentevents-url', 'portal-url' ],
+	'+wikimania2007wiki' => [ 'currentevents-url', 'portal-url' ],
+	'+wikimania2008wiki' => [ 'currentevents-url', 'portal-url' ],
+	'+wikimania2009wiki' => [
 		'registration-url',
 		'schedule-url',
 		'volunteers-url',
@@ -2663,7 +2665,7 @@ return [
 		'cfp-url',
 		'local-url',
 	],
-	'wikimania2010wiki' => [
+	'+wikimania2010wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2678,7 +2680,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2011wiki' => [
+	'+wikimania2011wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2698,7 +2700,7 @@ return [
 		'Mainpage-url',
 		'Program-url',
 	],
-	'wikimania2012wiki' => [
+	'+wikimania2012wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2713,7 +2715,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2013wiki' => [
+	'+wikimania2013wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2728,7 +2730,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2014wiki' => [
+	'+wikimania2014wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2743,7 +2745,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2015wiki' => [
+	'+wikimania2015wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2758,7 +2760,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2016wiki' => [
+	'+wikimania2016wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2773,7 +2775,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2017wiki' => [
+	'+wikimania2017wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2788,7 +2790,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimania2018wiki' => [
+	'+wikimania2018wiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2803,7 +2805,7 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'wikimaniawiki' => [
+	'+wikimaniawiki' => [
 		'pagetitle',
 		'pagetitle-view-mainpage',
 		'Volunteers-url',
@@ -2818,28 +2820,28 @@ return [
 		'IRC-url',
 		'Contact-url',
 	],
-	'zhwiki' => [
+	'+zhwiki' => [
 		'pagetitle-view-mainpage',
 	],
-	'zhwikibooks' => [ // T256521
+	'+zhwikibooks' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
-	'zhwikinews' => [ // T256521
+	'+zhwikinews' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
-	'zhwikiquote' => [ // T256521
+	'+zhwikiquote' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
-	'zhwikisource' => [ // T256521
+	'+zhwikisource' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
-	'zhwikiversity' => [ // T256521
+	'+zhwikiversity' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
-	'zhwikivoyage' => [ // T66816
+	'+zhwikivoyage' => [ // T66816
 		'pagetitle-view-mainpage',
 	],
-	'zhwiktionary' => [ // T256521
+	'+zhwiktionary' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
 ],
