@@ -232,8 +232,20 @@ return [
 		], // T262218
 	],
 	'+azwiki' => [
-		'user' => [ 'move-categorypages' => false ], // T303752
-		'autoconfirmed' => [ 'move' => false ], // T303752
+		'user' => [
+			'move-categorypages' => false,
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false
+		], // T303752, T360847
+		'autoconfirmed' => [
+			'move' => false,
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false
+		], // T303752
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
 		'patroller' => [
 			'patrol' => true,
@@ -242,6 +254,12 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T215200
 		'bot' => [ 'extendedconfirmed' => true ], // T281860
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
+		'uploader' => [
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true
+		], // T360847
 		'sysop' => [ 'extendedconfirmed' => true ], // T281860
 		'pagemover' => [
 			'move' => true,
@@ -3280,6 +3298,7 @@ return [
 			'extendedconfirmed', // T281860
 			'pagemover', // T303752
 			'filemover', // T304968
+			'uploader', // T360847
 		],
 	],
 	'+azwikibooks' => [
@@ -4758,6 +4777,7 @@ return [
 			'extendedconfirmed', // T281860
 			'pagemover', // T303752
 			'filemover', // T304968
+			'uploader', // T360847
 		],
 	],
 	'+azwikibooks' => [
