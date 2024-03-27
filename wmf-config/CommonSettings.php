@@ -4129,10 +4129,6 @@ if ( $wmgUseCampaignEvents ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCampaignEventsDatabaseName = 'wikishared';
 	}
-	$wgVirtualDomainsMapping['virtual-campaignevents'] = [
-		'cluster' => 'extension1',
-		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
-	];
 	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 }
 
