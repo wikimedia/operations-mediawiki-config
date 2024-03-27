@@ -3900,7 +3900,7 @@ if ( $wmgUseIPInfo ) {
 
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
-$wgAutoCreateTempUser['reservedPattern'] = '~$1';
+$wgAutoCreateTempUser['reservedPattern'] = '~2$1';
 
 // T39211
 $wgUseCombinedLoginLink = false;
