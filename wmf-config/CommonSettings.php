@@ -1894,6 +1894,7 @@ if ( $wmgUseCentralAuth ) {
 	// clear pre-existing cookies with a domain attribute.
 	// Temporary fix for T351685: when setting a CentralAuth cookie with domain=wikisource.org,
 	// clear pre-existing cookies without a domain attribute
+	// Can be removed after 2024-11-08.
 	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
 		global $wgDBname, $wmgCentralAuthWebResponseSetCookieRecurse, $wgServer;
 		$realName = ( $options['prefix'] ?? '' ) . $name;
@@ -1924,6 +1925,9 @@ if ( $wmgUseCentralAuth ) {
 			$wmgCentralAuthWebResponseSetCookieRecurse = false;
 		}
 	};
+
+	// T359957 Add per-domain origin trial tokens for opting out of third-party cookie blocking. Trial will expire at end of 2024.
+	$wgOriginTrials[] = $wmgCentralAuthThirdPartyCookieDeprecationTrialToken;
 
 	/**
 	 * This function is used for both the CentralAuthWikiList and
