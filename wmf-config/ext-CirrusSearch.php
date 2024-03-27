@@ -16,7 +16,8 @@ return [
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
+	'default' => 'eqiad',
+	'cirrussearch-big-indices' => 'local',
 ],
 
 'wgCirrusSearchClusterOverrides' => [
