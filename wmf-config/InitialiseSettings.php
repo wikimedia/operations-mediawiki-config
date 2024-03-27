@@ -6374,6 +6374,7 @@ return [
 	'mediawikiwiki' => true, // T129546#8109242
 	'metawiki' => true, // T129546#8109242
 	'officewiki' => true,
+	'collabwiki' => true,
 ],
 
 // Whether VisualEditor's feedback page should be consolidated down to just the
