@@ -1175,6 +1175,10 @@ return [
 				'page_id' => 'page_id',
 			],
 		],
+		'mediawiki.ip_reputation.score' => [
+			'schema_title' => 'mediawiki/ip_reputation/score',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'mediawiki.page-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
