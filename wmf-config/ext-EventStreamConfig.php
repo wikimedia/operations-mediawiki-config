@@ -1440,6 +1440,11 @@ return [
 		 * from config) after GA release.
 		 */
 		'webrequest.frontend.rc0' => [
+			// Disable canary event production while the stream is under
+			// development.
+			'canary_events_enabled' => false,
+			// Development webrequest_frontend kafka topics have no prefix.
+			'topic_prefixes' => null,
 			// Point to a wip/developemnt version of the events schema.
 			// TODO: switch to GA once the schema is finalized and released.
 			'schema_title' => 'development/webrequest',
