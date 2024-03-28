@@ -12,13 +12,11 @@ return [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => 'eqiad',
-	'cirrussearch-big-indices' => $GLOBALS['wmgDatacenter'],
+	'default' => $GLOBALS['wmgDatacenter'],
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'eqiad',
-	'cirrussearch-big-indices' => 'local',
+	'default' => 'local',
 ],
 
 'wgCirrusSearchClusterOverrides' => [
