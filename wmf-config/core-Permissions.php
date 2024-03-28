@@ -2981,6 +2981,7 @@ return [
 		'templateeditor' => [ 'templateeditor' => true, ], // T260012
 		'ipblock-exempt-grantor' => [
 			'noratelimit' => true, // T357991
+			'centralauth-createlocal' => true, // T361184
 		],
 		'sysop' => [
 			'templateeditor' => true, // T260012
