@@ -1686,15 +1686,7 @@ function wmfGetOverrideSettings() {
 			'eswiki' => false,
 		],
 		'wgEnablePartialActionBlocks' => [
-			'default' => true,
-			// Override top 6 wikis disabled in production (T353495)
-			// Except dewiki which can be used to test the old behaviour.
-			'enwiki' => true,
-			'wikidatawiki' => true,
-			'jawiki' => true,
-			'dewiki' => false,
-			'frwiki' => true,
-			'eswiki' => true,
+			'default' => true, // T353496
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],

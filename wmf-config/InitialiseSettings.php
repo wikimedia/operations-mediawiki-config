@@ -3203,13 +3203,7 @@ return [
 ],
 
 'wgEnablePartialActionBlocks' => [
-	'default' => true, // T353495
-	'enwiki' => false,
-	'wikidatawiki' => false,
-	'jawiki' => false,
-	'dewiki' => false,
-	'frwiki' => false,
-	'eswiki' => false,
+	'default' => true, // T353496
 ],
 
 'wgGroupInheritsPermissions' => [
