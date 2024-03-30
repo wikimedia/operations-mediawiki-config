@@ -8493,6 +8493,7 @@ return [
 	'enwikivoyage' => true, // T297054
 	'itwikivoyage' => true, // T297054
 	'bnwikivoyage' => true, // T307904
+	'zhwikivoyage' => true, // T361427
 ],
 
 // T223824
