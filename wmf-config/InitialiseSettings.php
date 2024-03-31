@@ -5471,6 +5471,7 @@ return [
 	'pswiki' => true,
 	'ptwiki' => true,
 	'ptwikinews' => true, // T278634
+	'ptwikiquote' => true, // T361447
 	'rowiki' => true, // T219855
 	'ruwiki' => true, // T153855
 	'sawiki' => true,
