@@ -515,15 +515,8 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 1, // T346106
 		],
 
-		// T353388
-		'wgMFUseDesktopSpecialHistoryPage' => [
-			'default' => [
-				'base' => true,
-				'amc' => true,
-			],
-		],
-		// T350181
-		'wgMFUseDesktopDiffPage' => [
+		// T266065
+		'wgMFUseDesktopSpecialWatchlistPage' => [
 			'default' => [
 				'base' => true,
 				'amc' => true,
