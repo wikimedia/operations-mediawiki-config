@@ -12237,12 +12237,7 @@ return [
 ],
 
 'wgEnableEditRecovery' => [
-	'default' => false, // T342858
-	'testwiki' => true, // T353041
-	'mediawikiwiki' => true, // T355548
-	'frwiki' => true, // T355548
-	'enwiki' => true, // T355548
-	'arwiki' => true, // T355548
+	'default' => true, // T355548
 ],
 
 'wmgEditRecoveryDefaultUserOptions' => [
