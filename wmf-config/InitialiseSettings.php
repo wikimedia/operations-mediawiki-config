@@ -6427,11 +6427,7 @@ return [
 	'twwiki' => true,
 	'fonwiki' => true, // T350634
 	'swwiki' => true, // T350921
-],
-
-'wgVisualEditorEditCheckABTest' => [
-	'default' => false,
-	// T342930
+	// T361727: A/B test wikis
 	'arwiki' => true,
 	'afwiki' => true,
 	'eswiki' => true,
@@ -6443,6 +6439,10 @@ return [
 	'yowiki' => true,
 	'viwiki' => true,
 	'zhwiki' => true,
+],
+
+'wgVisualEditorEditCheckABTest' => [
+	'default' => false,
 ],
 
 // --------------- VisualEditor end ---------------
