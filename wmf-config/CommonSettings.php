@@ -3892,11 +3892,8 @@ if ( $wmgUseCheckUser ) {
 
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
-	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
-	// It is only present on application servers. See
-	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
-	// for list of relevant sections of operations/puppet config.
-	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIPInfo/';
+
+	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIP/GeoLite2-';
 
 	// Consult the Legal team before updating these, since they
 	// must remain compatible with our contract with MaxMind
