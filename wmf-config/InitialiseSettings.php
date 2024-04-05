@@ -11316,6 +11316,7 @@ return [
 	'enwikiversity' => true,
 	'enwikivoyage' => true,
 	'enwiktionary' => true,
+	'hewikivoyage' => true,
 ],
 
 'wmgUseMediaModeration' => [
