@@ -436,6 +436,13 @@ if ( $wmgRealm == 'labs' ) {
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
+	// T360098 - change Vector font-size for anons, existing named users or newly created users.
+	$wgDefaultUserOptions['vector-font-size'] = 1;
+	$wgConditionalUserOptions['vector-font-size'] = [
+		[ 1, [ CUDCOND_AFTER, '20240409000000' ] ],
+		[ 0, [ CUDCOND_NAMED ] ],
+	];
+
 	if ( $wmgUseCampaignEvents ) {
 		// Use wikishared for all wikis, unlike production
 		$wgCampaignEventsDatabaseCluster = 'extension1';
