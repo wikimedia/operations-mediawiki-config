@@ -2111,7 +2111,7 @@ return [
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchDeprecation' => 'debug',
-		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
+		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug' ],
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchSlowRequests' => 'debug',
 		'cite' => 'debug',
