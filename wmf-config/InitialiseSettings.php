@@ -8216,6 +8216,9 @@ return [
 	'viwiki' => [ // T299636
 		'userGroups' => [ 'extendedconfirmed', 'eliminator', 'sysop' ]
 	],
+	'zhwiki' => [ // T349959
+		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
+	],
 ],
 
 // CX Campaigns
