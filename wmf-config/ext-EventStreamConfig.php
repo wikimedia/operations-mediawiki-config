@@ -1604,6 +1604,37 @@ return [
 				'rate' => 1,
 			],
 		],
+		// (T356228, T360369) Stream to track the API of WikiLambda (the Wikifunctions extension)
+		'mediawiki.product_metrics.wikilambda_api' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/api',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_id',
+						'page_revision_id',
+						'page_title',
+						'performer_active_browsing_session_token',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_id',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_language',
+						'performer_language_variant',
+						'performer_name',
+						'performer_pageview_id',
+						'performer_session_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [
