@@ -87,6 +87,7 @@ return [
 		'mediawiki.web_ui_actions',
 		'mediawiki.web_ui_scroll_migrated',
 		'mediawiki.reference_previews',
+		'mediawiki.product_metrics.wikifunctions_ui',
 	],
 ],
 
