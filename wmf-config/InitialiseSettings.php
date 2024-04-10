@@ -2136,6 +2136,8 @@ return [
 	// When changing the default, please also update the -labs settings to ensure that the
 	// logging on the beta cluster includes at least the same data that production includes
 	'default' => [
+		// Enable logging errors from all channels not configured otherwise (T228838)
+		'@default' => 'error',
 		'404' => 'debug',
 		'AbuseFilter' => 'debug',
 		'AdHocDebug' => 'debug', // for temp live debugging
@@ -2285,13 +2287,9 @@ return [
 		'slow-parsoid' => false, // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
 	'+group1' => [
-		// Enable logging errors from all channels not configured otherwise (T228838)
-		'@default' => 'error',
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
 	'+group0' => [
-		// Enable logging errors from all channels not configured otherwise (T228838)
-		'@default' => 'error',
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
 	'+arwiki' => [
