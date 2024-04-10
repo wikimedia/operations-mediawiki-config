@@ -2151,6 +2151,7 @@ return [
 		'GrowthExperiments' => 'info',
 		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
+		'HtmlOutputRendererHelper' => 'debug', // T356157
 		'IpReputation' => 'debug',
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'Kartographer' => 'debug', // Temporary monitoring for T304813.
