@@ -129,7 +129,7 @@ function wmfHandleMissingWiki() {
 
 /**
  * Obtaining the full self URL
- * @return string Actual URL except for fragment part
+ * @return string[] Actual URL except for fragment part
  */
 function wmfGetProtocolAndHost() {
 	if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {

@@ -135,7 +135,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki.png',
 	'frrwiki' => '/static/images/project-logos/frrwiki.png',
-	'frwiki' => '/static/images/project-logos/frwiki.png',
+	'frwiki' => '/static/images/project-logos/frwiki.png', // T359741
 	'furwiki' => '/static/images/project-logos/furwiki.png', // T48589
 	'fywiki' => '/static/images/project-logos/fywiki.png', // T42285
 	'gagwiki' => '/static/images/project-logos/gagwiki.png',
@@ -716,7 +716,7 @@ return [
 	'iswikisource' => '/static/images/project-logos/iswikisource.png', // T54019
 	'jawikisource' => '/static/images/project-logos/jawikisource.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource.png',
-	'knwikisource' => '/static/images/project-logos/knwikisource.png', // T110806
+	'knwikisource' => '/static/images/project-logos/knwikisource.png', // T360022
 	'kowikisource' => '/static/images/project-logos/kowikisource.png', // T40543
 	'lawikisource' => '/static/images/project-logos/lawikisource.png', // T54019
 	'liwikisource' => '/static/images/project-logos/liwikisource.png', // T54019
@@ -998,7 +998,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki-1.5x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-1.5x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-1.5x.png', // T150618
-	'frwiki' => '/static/images/project-logos/frwiki-1.5x.png',
+	'frwiki' => '/static/images/project-logos/frwiki-1.5x.png', // T359741
 	'furwiki' => '/static/images/project-logos/furwiki-1.5x.png', // T150618
 	'fywiki' => '/static/images/project-logos/fywiki-1.5x.png', // T150618
 	'gagwiki' => '/static/images/project-logos/gagwiki-1.5x.png', // T150618
@@ -1427,6 +1427,7 @@ return [
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-1.5x.png', // T310961
 	'jawikisource' => '/static/images/project-logos/jawikisource-1.5x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-1.5x.png',
+	'knwikisource' => '/static/images/project-logos/knwikisource-1.5x.png', // T360022
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-1.5x.png', // T167192
 	'pawikisource' => '/static/images/project-logos/pawikisource-1.5x.png', // T149522
@@ -1623,7 +1624,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki-2x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-2x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-2x.png', // T150618
-	'frwiki' => '/static/images/project-logos/frwiki-2x.png',
+	'frwiki' => '/static/images/project-logos/frwiki-2x.png', // T359741
 	'furwiki' => '/static/images/project-logos/furwiki-2x.png', // T150618
 	'fywiki' => '/static/images/project-logos/fywiki-2x.png', // T150618
 	'gagwiki' => '/static/images/project-logos/gagwiki-2x.png', // T150618
@@ -2052,6 +2053,7 @@ return [
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-2x.png', // T310961
 	'jawikisource' => '/static/images/project-logos/jawikisource-2x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-2x.png',
+	'knwikisource' => '/static/images/project-logos/knwikisource-2x.png', // T360022
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-2x.png', // T167192
 	'pawikisource' => '/static/images/project-logos/pawikisource-2x.png', // T149522
@@ -2517,7 +2519,7 @@ return [
 	],
 	'frwiki' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'furwiki' => [
@@ -2613,7 +2615,7 @@ return [
 	],
 	'huwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'hywiki' => [ // T259985
@@ -2663,7 +2665,7 @@ return [
 	],
 	'jvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'kawiki' => [ // T267776
@@ -2953,7 +2955,7 @@ return [
 	],
 	'papwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'pawiki' => [
@@ -2963,7 +2965,7 @@ return [
 	],
 	'pcdwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'pihwiki' => [
@@ -2993,7 +2995,7 @@ return [
 	],
 	'ptwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'pwnwiki' => [
@@ -3088,7 +3090,7 @@ return [
 	],
 	'skwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'skrwiki' => [
@@ -3113,7 +3115,7 @@ return [
 	],
 	'suwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'szlwiki' => [ // T233104
@@ -3143,7 +3145,7 @@ return [
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 18,
 	],
 	'tewiki' => [
@@ -3563,10 +3565,10 @@ return [
 		'width' => 121,
 		'height' => 28,
 	],
-	'knwiktionary' => [ // T349036
+	'knwiktionary' => [ // T360022
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-kn.svg',
-		'width' => 85,
-		'height' => 29,
+		'width' => 96,
+		'height' => 40,
 	],
 	'kowiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ko.svg',
@@ -4711,10 +4713,10 @@ return [
 		'width' => 137,
 		'height' => 18,
 	],
-	'knwikisource' => [
+	'knwikisource' => [ // T360022
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-kn.svg',
-		'width' => 110,
-		'height' => 32,
+		'width' => 96,
+		'height' => 40,
 	],
 	'kowikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ko.svg',

@@ -30,10 +30,7 @@ $wgExtensionFunctions[] = static function () {
 
 		# 3) skip when throttle does not apply to the client IP
 		$ip = $wgRequest->getIP();
-		if ( isset( $options['IP'] ) ) {
-			$throttleIP = $options['IP'];
-		}
-		if ( isset( $throttleIP ) && !in_array( $ip, (array)$throttleIP ) ) {
+		if ( isset( $options['IP'] ) && !in_array( $ip, (array)$options['IP'] ) ) {
 			continue;
 		}
 		if ( isset( $options['range'] ) && !IPUtils::isInRanges( $ip, (array)$options['range'] ) ) {

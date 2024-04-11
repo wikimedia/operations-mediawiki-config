@@ -20,12 +20,21 @@ return [
 		'default' => [
 			'base' => true,
 		],
+		// T360783
+		'nowikimedia' => [
+			'base' => false,
+		],
 	],
 
 	'wgMinervaNightMode' => [
 		'default' => [
 			'base' => false,
 			'loggedin' => false
+		],
+		'skin-themes' => [
+			'base' => false,
+			'loggedin' => false,
+			'amc' => true,
 		],
 		'testwiki' => [
 			'base' => true,
@@ -35,7 +44,7 @@ return [
 	'wmgMinervaNightModeQueryString' => [
 		// T359183
 		'default' => [
-			'action' => 'diff|info|protect|delete|undelete|action|history',
+			'action' => 'edit|submit|diff|info|protect|delete|undelete|action|history',
 			'diff' => '*'
 		],
 		// Allow us to reliably test all pages here.

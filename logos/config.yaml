@@ -555,10 +555,13 @@ Wikipedia:
         local_tagline: true
     frwiki:
         commons: 'File:Wikipedia-logo-v2-fr.svg'
-        commons_wordmark: 'File:Wikipedia-wordmark-fr.svg'
+        local_wordmark: true
         comment_wordmark: T249047
-        commons_tagline: 'File:Wikipedia-tagline-fr.svg'
+        local_tagline: true
         comment_tagline: T249047
+        comment: T359741
+        comment_1_5x: T359741
+        comment_2x: T359741
     furwiki:
         comment: T48589
         comment_1_5x: T150618
@@ -2216,13 +2219,13 @@ Wiktionary:
         local_wordmark: true
     knwiktionary:
         commons: 'File:Wiktionary-logo-kn.svg'
-        commons_wordmark: 'File:Wiktionary-wordmark-kn-v2.svg'
+        commons_wordmark: 'File:Wiktionary-wordmark-tagline-kn.svg'
         commons_icon: 'File:Wiktionary-icon-kn.svg'
         comment_1_5x: T349036
         comment_2x: T349036
         comment: T349036
         comment_icon: T349036
-        comment_wordmark: T349036
+        comment_wordmark: T360022
     kowiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3502,10 +3505,12 @@ Wikisource:
         commons_wordmark: 'File:Wikisource-wordmark-jv.svg'
         comment_wordmark: T311104
     knwikisource:
-        comment: T110806
-        no_1_5x: true
-        no_2x: true
-        commons_wordmark: 'File:Wikisource-wordmark-kn.svg'
+        commons: 'File:Wikisource-logo-kn-v2.svg'
+        comment: T360022
+        comment_1_5x: T360022
+        comment_2x: T360022
+        commons_wordmark: 'File:Wikisource-wordmark-tagline-kn.svg'
+        comment_wordmark: T360022
     kowikisource:
         comment: T40543
         no_1_5x: true

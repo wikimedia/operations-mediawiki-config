@@ -440,6 +440,10 @@ if ( $wmgRealm == 'labs' ) {
 		// Use wikishared for all wikis, unlike production
 		$wgCampaignEventsDatabaseCluster = 'extension1';
 		$wgCampaignEventsDatabaseName = 'wikishared';
+		$wgVirtualDomainsMapping['virtual-campaignevents'] = [
+			'cluster' => 'extension1',
+			'db' => 'wikishared',
+		];
 		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'staging';
 		$wgWikimediaCampaignEventsFluxxBaseUrl = 'https://wmf.preprod.fluxxlabs.com/api/rest/v2/';
 		$wgWikimediaCampaignEventsFluxxOauthUrl = 'https://wmf.preprod.fluxxlabs.com/oauth/token';
@@ -486,7 +490,6 @@ if ( $wmgRealm == 'labs' ) {
 	// are already some accounts that would match `~$1`.
 	$wgAutoCreateTempUser['genPattern'] = '~$1';
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
-	$wgAutoCreateTempUser['reservedPattern'] = '~$1';
 	$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
 
 	if ( $wmgEnableIPMasking ) {

@@ -24,14 +24,8 @@ return [
 ],
 
 'wgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+	'default' => [ 'eqiad', 'codfw' ],
 	'private' => [ 'eqiad', 'codfw' ],
-	// Wikis transitioning to cirrus streaming updater, T352335
-	'commonswiki' => [ 'eqiad', 'codfw' ],
-	'frwiki' => [ 'eqiad', 'codfw' ],
-	'itwiki' => [ 'eqiad', 'codfw' ],
-	'mediawikiwiki' => [ 'eqiad', 'codfw' ],
-	'testwiki' => [ 'eqiad', 'codfw' ],
 ],
 
 'wgCirrusSearchReplicaGroup' => [
@@ -268,7 +262,7 @@ return [
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common.
 	'commonswiki' => [ 'content' => 2, 'general' => 8, 'file' => 32, 'titlesuggest' => 1, 'archive' => 1 ],
-	'testcommonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
+	'testcommonswiki' => [ 'content' => 1, 'general' => 1, 'file' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'dewiki' => [ 'content' => 9, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],

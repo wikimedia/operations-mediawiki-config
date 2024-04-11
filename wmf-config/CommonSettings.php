@@ -480,7 +480,7 @@ if ( $wmgUseGlobalPreferences ) {
 }
 
 // T355034 new block_target schema
-$wgBlockTargetMigrationStage = SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH;
+$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
 
 # ######################################################################
 # Legal matters
@@ -1036,13 +1036,6 @@ $wgAvailableRights[] = 'setmentor';
 $wgAvailableRights[] = 'managementors';
 $wgAvailableRights[] = 'enrollasmentor';
 
-// Checkuser
-$wgGrantPermissions['checkuser']['checkuser'] = true;
-$wgGrantPermissions['checkuser']['checkuser-log'] = true;
-// Categorize additional groups defined above.
-// Corresponding messages are mwoauth-grant-* in WikimediaMessages.
-$wgGrantPermissionGroups['checkuser'] = 'administration';
-
 // Rights needed to interact with wikibase
 $wgGrantPermissions['createeditmovepage']['property-create'] = true;
 $wgGrantPermissions['editpage']['item-term'] = true;
@@ -1470,11 +1463,12 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_41';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_42';
+	$wgExtDistCandidateSnapshot = 'REL1_42';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_42',
 		'REL1_41',
 		'REL1_40',
 		'REL1_39',
@@ -1903,6 +1897,7 @@ if ( $wmgUseCentralAuth ) {
 	// clear pre-existing cookies with a domain attribute.
 	// Temporary fix for T351685: when setting a CentralAuth cookie with domain=wikisource.org,
 	// clear pre-existing cookies without a domain attribute
+	// Can be removed after 2024-11-08.
 	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
 		global $wgDBname, $wmgCentralAuthWebResponseSetCookieRecurse, $wgServer;
 		$realName = ( $options['prefix'] ?? '' ) . $name;
@@ -1933,6 +1928,9 @@ if ( $wmgUseCentralAuth ) {
 			$wmgCentralAuthWebResponseSetCookieRecurse = false;
 		}
 	};
+
+	// T359957 Add per-domain origin trial tokens for opting out of third-party cookie blocking. Trial will expire at end of 2024.
+	$wgOriginTrials[] = $wmgCentralAuthThirdPartyCookieDeprecationTrialToken;
 
 	/**
 	 * This function is used for both the CentralAuthWikiList and
@@ -2677,8 +2675,6 @@ if ( $wmgUseMobileApp ) {
 	wfLoadExtension( 'MobileApp' );
 }
 
-# Mobile related configuration
-wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
 $wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQueryString;
@@ -2686,10 +2682,18 @@ $wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExclud
 $wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
 $wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 
-require_once 'MobileUrlCallback.php';
-$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+# Mobile-related configuration
+if ( $wmgUseMobileFrontend ) {
+	wfLoadExtension( 'MobileFrontend' );
 
-$wgMFMobileHeader = 'X-Subdomain';
+	require_once 'MobileUrlCallback.php';
+	$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+
+	$wgMFMobileHeader = 'X-Subdomain';
+} else {
+	// For sites without MobileFrontend, instead enable Vector's "responsive" state.
+	$wgVectorResponsive = true;
+}
 
 // Enable this everywhere except where GeoData isn't available
 $wgMFNearby = $wmgEnableGeoData;
@@ -3892,6 +3896,12 @@ if ( $wmgUseIPInfo ) {
 	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
 }
 
+// Temporary accounts
+
+// Ensure no users can be crated that match temporary account names (T361021).
+// This is used even if `$wgAutoCreateTempUser['enabled']` is false.
+$wgAutoCreateTempUser['reservedPattern'] = '~2$1';
+
 // T39211
 $wgUseCombinedLoginLink = false;
 
@@ -3993,8 +4003,6 @@ if ( $wgDBname === 'foundationwiki' ) {
 	$wgHooks['BeforePageDisplay'][] = static function ( $out, $skin ) {
 		$resp = $out->getRequest()->response();
 		$cspHeader = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikifunctions.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src  *.wikimedia.org data: 'unsafe-inline' 'self'; report-uri /w/api.php?action=cspreport&format=none&reportonly=1&source=wmfwiki&";
-		$resp->header( "X-Webkit-CSP-Report-Only: $cspHeader" );
-		$resp->header( "X-Content-Security-Policy-Report-Only: $cspHeader" );
 		$resp->header( "Content-Security-Policy-Report-Only: $cspHeader" );
 	};
 }
@@ -4121,6 +4129,10 @@ if ( $wmgUseCampaignEvents ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCampaignEventsDatabaseName = 'wikishared';
 	}
+	$wgVirtualDomainsMapping['virtual-campaignevents'] = [
+		'cluster' => 'extension1',
+		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
+	];
 	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 }
 
@@ -4153,15 +4165,6 @@ if ( $wmgShowRollbackConfirmationDefaultUserOptions ) {
 
 if ( $wmgUseWikimediaEditorTasks ) {
 	wfLoadExtension( 'WikimediaEditorTasks' );
-}
-
-if ( $wmgUseMachineVision ) {
-	if ( $wmgRealm === 'production' ) {
-		$wgMachineVisionHttpProxy = $wmgLocalServices['urldownloader'];
-	}
-
-	wfLoadExtension( 'MachineVision' );
-	$wgNotifyTypeAvailabilityByCategory['machinevision']['email'] = false;
 }
 
 // T283003: TheWikipediaLibrary requires GlobalPreferences and CentralAuth to be installed
@@ -4247,6 +4250,12 @@ if ( $wmgUseParserMigration ) {
 // T350653
 if ( $wmgEditRecoveryDefaultUserOptions ) {
 	$wgDefaultUserOptions['editrecovery'] = 1;
+}
+
+// Community configuration
+if ( $wmgUseCommunityConfiguration ) {
+	wfLoadExtension( 'CommunityConfiguration' );
+	$wgCommunityConfigurationBugReportingToolURL = 'https://phabricator.wikimedia.org/maniphest/task/edit/form/43';
 }
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch

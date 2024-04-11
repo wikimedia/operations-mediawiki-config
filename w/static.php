@@ -17,7 +17,8 @@
  *   in the current wiki's MediaWiki version, as determined by the request host name.
  * - MediaWiki configuration sets $wgResourceBasePath to "/w".
  * - Apache configuration rewrites "/w/skins/*", "/w/resources/*", "/w/extension/*",
- *   "/w/COPYING", and "/w/CREDITS" to /w/static.php (this file).
+ *   "/w/COPYING", "/w/CREDITS", and "/ontology/ontology.owl" (mediawiki.org only)
+ *   to /w/static.php (this file).
  *   Here we stream the file from the appropiate MediaWiki branch directory.
  * - For performance and to address race conditions around deployment,
  *   Varnish routes static.php requests in a hostname-agnostic way.
@@ -163,6 +164,12 @@ function wmfStaticParsePath( $uri ) {
 	// Strip query parameters
 	$uriPath = parse_url( $uri, PHP_URL_PATH );
 
+	// T359643
+	if ( in_array( $_SERVER['SERVER_NAME'], [ "www.mediawiki.org", "mediawiki.org" ] )
+		&& $uriPath == '/ontology/ontology.owl' ) {
+		return '/docs/ontology.owl';
+	}
+
 	$urlPrefix = $wgScriptPath;
 
 	if ( strpos( $uriPath, $urlPrefix ) !== 0 ) {
@@ -175,7 +182,7 @@ function wmfStaticParsePath( $uri ) {
 }
 
 function wmfStaticRespond() {
-	if ( !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+	if ( !isset( $_SERVER['SERVER_NAME'] ) || !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
 		wmfStaticShowError( 'Bad request', 400 );
 		return;
 	}

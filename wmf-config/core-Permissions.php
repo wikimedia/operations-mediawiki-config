@@ -454,6 +454,11 @@ return [
 		'suppressredirect' => [ 'suppressredirect' => true ], // T69278
 		'patroller' => [ 'patrol' => true ], // T285221
 	],
+	'+ckbwiktionary' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T360228
+		'suppressredirect' => [ 'suppressredirect' => true ], // T360228
+		'rollbacker' => [ 'rollback' => true ], // T360228
+	],
 	'+cswiki' => [
 		'accountcreator' => [ // T254927
 			'tboverride-account' => true,
@@ -2976,6 +2981,7 @@ return [
 		'templateeditor' => [ 'templateeditor' => true, ], // T260012
 		'ipblock-exempt-grantor' => [
 			'noratelimit' => true, // T357991
+			'centralauth-createlocal' => true, // T361184
 		],
 		'sysop' => [
 			'templateeditor' => true, // T260012
@@ -3396,6 +3402,13 @@ return [
 			'import', // T54633
 			'transwiki', // T54633
 			'interface-editor', // T54866
+		],
+	],
+	'+ckbwiktionary' => [
+		'sysop' => [
+			'autopatrolled', // T360228
+			'rollbacker', // T360228
+			'suppressredirect', // T360228
 		],
 	],
 	'+commonswiki' => [
@@ -4874,6 +4887,13 @@ return [
 			'import', // T54633
 			'transwiki', // T54633
 			'interface-editor', // T54866
+		],
+	],
+	'+ckbwiktionary' => [
+		'sysop' => [
+			'autopatrolled', // T360228
+			'rollbacker', // T360228
+			'suppressredirect', // T360228
 		],
 	],
 	'+commonswiki' => [

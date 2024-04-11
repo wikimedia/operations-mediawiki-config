@@ -87,6 +87,11 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		break;
+	case 'bnwiki':
+		$wgAbuseFilterActions['block'] = true; // T361852
+		$wgAbuseFilterBlockDuration = '3 days'; // T361852
+		$wgAbuseFilterAnonBlockDuration = '12 hours'; // T361852
+		break;
 	case 'cawiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;

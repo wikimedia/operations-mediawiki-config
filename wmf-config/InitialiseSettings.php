@@ -37,7 +37,6 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
-use MediaWiki\Extension\MachineVision\Handler\GoogleCloudVisionHandler;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppCaptionEditCounter;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
@@ -788,6 +787,7 @@ return [
 	'huwikibooks' => false, // T74231
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiki' => '/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
+	'iswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=is', // T360431
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // T13187
 	'itwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
@@ -2111,12 +2111,13 @@ return [
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchDeprecation' => 'debug',
-		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
+		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug' ],
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchSlowRequests' => 'debug',
 		'cite' => 'debug',
 		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
+		'CommunityConfiguration' => 'debug',
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'rdbms' => 'warning',
@@ -2150,6 +2151,7 @@ return [
 		'GrowthExperiments' => 'info',
 		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
+		'HtmlOutputRendererHelper' => 'debug', // T356157
 		'IpReputation' => 'debug',
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'Kartographer' => 'debug', // Temporary monitoring for T304813.
@@ -3202,13 +3204,7 @@ return [
 ],
 
 'wgEnablePartialActionBlocks' => [
-	'default' => true, // T353495
-	'enwiki' => false,
-	'wikidatawiki' => false,
-	'jawiki' => false,
-	'dewiki' => false,
-	'frwiki' => false,
-	'eswiki' => false,
+	'default' => true, // T353496
 ],
 
 'wgGroupInheritsPermissions' => [
@@ -3793,9 +3789,9 @@ return [
 	'enwiki' => 'disallow', // T355462
 ],
 
-'wgSignatureAllowedLintErrors' => [
-	'default' => [ 'obsolete-tag', ],
-	'enwiki' => [], // T354013
+'wgSignatureAllowedLintErrors' => [ // T360796
+	'default' => [ 'obsolete-tag', 'night-mode-unaware-background-color' ],
+	'enwiki' => [ 'night-mode-unaware-background-color' ], // T354013
 ],
 
 # below seems to be for extensions
@@ -4579,6 +4575,29 @@ return [
 	'sourceswiki' => '.wikisource.org',
 ],
 
+'wmgCentralAuthThirdPartyCookieDeprecationTrialToken' => [
+	// Set wikimedia.org token for default as that is the only domain that's hard to define via dblists.
+	// The token will only be set when $wmgUseCentralAuth is true so it won't affect non-SUL wikis.
+	'default' => 'AiZRcS3GUbfJUjpICyYcwkb5pJoHTOtWo3hg2uyUFvK/uSnlRfsYPkleyeOIqplh8Eg4lCJ9xYS47Krr7crBUAIAAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2ltZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'mediawikiwiki' => 'AhAc1cqhS+dyrTSImCdW/5IS/mSUzFrtzOJ7jij5ndsclqfsRKhvOuknkTG5zYlDVLKI5dp9Uwmt0zhXssp4GQ0AAABmeyJvcmlnaW4iOiJodHRwczovL21lZGlhd2lraS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'wikibooks' => 'ArXXx4JsFxE2hmbbvmrfyRP3qfTbpRMFB7cq9ZpNl9km7hMBY4Rhn+uBjWXK5LLinqjKFcrO1pjGhmX+7ENxDAQAAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2lib29rcy5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'wikidata' => 'ApLpR6MUn4Lh8nkGvhnbTM6J/UEl9FzwnyUzj1+L4M7fLjGHhlQ0nwdQV4mTytVIm23utWp3MRt1coHkDydcHAwAAABleyJvcmlnaW4iOiJodHRwczovL3dpa2lkYXRhLm9yZzo0NDMiLCJmZWF0dXJlIjoiVG9wTGV2ZWxUcGNkIiwiZXhwaXJ5IjoxNzM1MzQzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
+	'wikifunctionswiki' => 'Asfs+eIRf7kk+2WOiojFX8oXadG+/ugTyTR02MCdrsAx4VNVkjYFZcQUe6Q69gn9DTEjlXk1K8nnIClHkt8ZnAMAAABqeyJvcmlnaW4iOiJodHRwczovL3dpa2lmdW5jdGlvbnMub3JnOjQ0MyIsImZlYXR1cmUiOiJUb3BMZXZlbFRwY2QiLCJleHBpcnkiOjE3MzUzNDM5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+	'wikinews' => 'Ati+OeQqAqepel42E1HTWhvx4Ozp2n7eRG6dc/cWB6VAHI7zhKxZslPDwl4hZkqAfsQqtInHRNMci3Wac3ntBgkAAABleyJvcmlnaW4iOiJodHRwczovL3dpa2luZXdzLm9yZzo0NDMiLCJmZWF0dXJlIjoiVG9wTGV2ZWxUcGNkIiwiZXhwaXJ5IjoxNzM1MzQzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
+	'wikipedia' => 'AonOP4SwCrqpb0nhZbg554z9iJimP3DxUDB8V4yu9fyyepauGKD0NXqTknWi4gnuDfMG6hNb7TDUDTsl0mDw9gIAAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'wikiquote' => 'AquIyYY7KNxGxsucNhRRLc4aJf+WljhPqmnTGI5fjDjRZuvNfu/NgsFsI45j3RKTCV7iKTTOF1mX/79L7ujbjA4AAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2lxdW90ZS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'wikisource' => 'AlUyQkIgtM+aB+aSIonr89+Xu1UcWRqff+0pKpw5r3DEmZwbLr+bD6q9JKCo7w4Pjhijsb7rFmkofcOXXOkWCQgAAABneyJvcmlnaW4iOiJodHRwczovL3dpa2lzb3VyY2Uub3JnOjQ0MyIsImZlYXR1cmUiOiJUb3BMZXZlbFRwY2QiLCJleHBpcnkiOjE3MzUzNDM5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+	'wikiversity' => 'AtAODtPmG0K62EsAin14BNeXRxDMJMKNrebBRSCGZtAYRms69uZwBIZ710n+7gSBL/4h58GODn1ahhD6lWIQwwUAAABoeyJvcmlnaW4iOiJodHRwczovL3dpa2l2ZXJzaXR5Lm9yZzo0NDMiLCJmZWF0dXJlIjoiVG9wTGV2ZWxUcGNkIiwiZXhwaXJ5IjoxNzM1MzQzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
+	'wikivoyage' => 'AmJSuvVp8f7y3aWAHZT/LlOnA/F7JGc0XG6xFJ9pion9KRliBA1H7Dw5WBgvXuw0nCIj9d7xWgRv0IzMmJtTwwkAAABneyJvcmlnaW4iOiJodHRwczovL3dpa2l2b3lhZ2Uub3JnOjQ0MyIsImZlYXR1cmUiOiJUb3BMZXZlbFRwY2QiLCJleHBpcnkiOjE3MzUzNDM5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+	'wiktionary' => 'Ap8wkXJPt/P9jgLjuB/D8qa7vLOMZh8iChq1plti6gr0IiKViEHVeI3PWeWmjFZ54qr/EhyKZUyKbblcq/ujzwQAAABneyJvcmlnaW4iOiJodHRwczovL3dpa3Rpb25hcnkub3JnOjQ0MyIsImZlYXR1cmUiOiJUb3BMZXZlbFRwY2QiLCJleHBpcnkiOjE3MzUzNDM5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+	// wikis which are not Wikipedias but use *.wikipedia.org
+	'nostalgiawiki' => 'AonOP4SwCrqpb0nhZbg554z9iJimP3DxUDB8V4yu9fyyepauGKD0NXqTknWi4gnuDfMG6hNb7TDUDTsl0mDw9gIAAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'testwiki' => 'AonOP4SwCrqpb0nhZbg554z9iJimP3DxUDB8V4yu9fyyepauGKD0NXqTknWi4gnuDfMG6hNb7TDUDTsl0mDw9gIAAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	'thankyouwiki' => 'AonOP4SwCrqpb0nhZbg554z9iJimP3DxUDB8V4yu9fyyepauGKD0NXqTknWi4gnuDfMG6hNb7TDUDTsl0mDw9gIAAABmeyJvcmlnaW4iOiJodHRwczovL3dpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlRvcExldmVsVHBjZCIsImV4cGlyeSI6MTczNTM0Mzk5OSwiaXNTdWJkb21haW4iOnRydWV9',
+	// confusingly, wikisource.org is not included in wikisource.dblist
+	'sourceswiki' => 'AlUyQkIgtM+aB+aSIonr89+Xu1UcWRqff+0pKpw5r3DEmZwbLr+bD6q9JKCo7w4Pjhijsb7rFmkofcOXXOkWCQgAAABneyJvcmlnaW4iOiJodHRwczovL3dpa2lzb3VyY2Uub3JnOjQ0MyIsImZlYXR1cmUiOiJUb3BMZXZlbFRwY2QiLCJleHBpcnkiOjE3MzUzNDM5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+],
+
 'wmgCentralAuthAutoLoginWikis' => [
 	'default' => [
 		'.wikipedia.org' => 'enwiki',
@@ -4835,6 +4854,7 @@ return [
 	'urwiki' => true, // T64398
 	'zh_classicalwiki' => true, // T163043
 	'zhwiki' => true, // T32362
+	'zhwikivoyage' => true, // T360175
 ],
 
 'wmgNewUserMessageOnAutoCreate' => [
@@ -4876,6 +4896,7 @@ return [
 	'thwikiquote' => true, // T33600
 	'ukwiki' => true, // T67125
 	'zh_classicalwiki' => true, // T243509
+	'zhwikivoyage' => true, // T360175
 ],
 
 'wmgNewUserMinorEdit' => [
@@ -5451,6 +5472,7 @@ return [
 	'pswiki' => true,
 	'ptwiki' => true,
 	'ptwikinews' => true, // T278634
+	'ptwikiquote' => true, // T361447
 	'rowiki' => true, // T219855
 	'ruwiki' => true, // T153855
 	'sawiki' => true,
@@ -6353,6 +6375,7 @@ return [
 	'mediawikiwiki' => true, // T129546#8109242
 	'metawiki' => true, // T129546#8109242
 	'officewiki' => true,
+	'collabwiki' => true,
 ],
 
 // Whether VisualEditor's feedback page should be consolidated down to just the
@@ -6406,11 +6429,7 @@ return [
 	'twwiki' => true,
 	'fonwiki' => true, // T350634
 	'swwiki' => true, // T350921
-],
-
-'wgVisualEditorEditCheckABTest' => [
-	'default' => false,
-	// T342930
+	// T361727: A/B test wikis
 	'arwiki' => true,
 	'afwiki' => true,
 	'eswiki' => true,
@@ -6422,6 +6441,10 @@ return [
 	'yowiki' => true,
 	'viwiki' => true,
 	'zhwiki' => true,
+],
+
+'wgVisualEditorEditCheckABTest' => [
+	'default' => false,
 ],
 
 // --------------- VisualEditor end ---------------
@@ -6976,6 +6999,12 @@ return [
 	'wikitech' => false,
 ],
 
+// ----------- MobileFrontend start ----------
+
+'wmgUseMobileFrontend' => [
+	'default' => true,
+],
+
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
@@ -7017,6 +7046,8 @@ return [
 	'default' => [ NS_MAIN ],
 	'nlwiki' => [ NS_MAIN, NS_USER, ] // T242030
 ],
+
+// ----------- MobileFrontend end ----------
 
 'wmgEnableTextExtracts' => [
 	'default' => true,
@@ -7207,51 +7238,10 @@ return [
 ],
 
 'wgMFFallbackEditor' => [
-	'default' => 'source',
-	// T342930
-	'arwiki' => 'visual',
-	'afwiki' => 'visual',
-	'eswiki' => 'visual',
-	'frwiki' => 'visual',
-	'itwiki' => 'visual',
-	'jawiki' => 'visual',
-	'ptwiki' => 'visual',
-	'swwiki' => 'visual',
-	'yowiki' => 'visual',
-	'viwiki' => 'visual',
-	'zhwiki' => 'visual',
-	// edit check partners (T352127)
-	'dagwiki' => 'visual',
-	'eewiki' => 'visual',
-	'fatwiki' => 'visual',
-	'fonwiki' => 'visual',
-	'gpewiki' => 'visual',
-	'gurwiki' => 'visual',
-	'hawiki' => 'visual',
-	'kgwiki' => 'visual',
-	'lnwiki' => 'visual',
-	'swwiki' => 'visual',
-	'twwiki' => 'visual',
-	// Former mobile VE a/b test wikis
-	'azwiki' => 'visual', // Azerbaijani
-	'bgwiki' => 'visual', // Bulgarian
-	'zh_yuewiki' => 'visual', // Cantonese
-	'cawiki' => 'visual', // Catalan
-	'hrwiki' => 'visual', // Croatian
-	'dawiki' => 'visual', // Danish
-	'etwiki' => 'visual', // Estonian
-	'fiwiki' => 'visual', // Finnish
-	'elwiki' => 'visual', // Greek
-	'huwiki' => 'visual', // Hungarian
-	'mswiki' => 'visual', // Malay
-	'mlwiki' => 'visual', // Malayalam
-	'nowiki' => 'visual', // Norwegian (Bokmål)
-	'rowiki' => 'visual', // Romanian
-	'srwiki' => 'visual', // Serbian
-	'svwiki' => 'visual', // Swedish
-	'tawiki' => 'visual', // Tamil
-	'thwiki' => 'visual', // Thai
-	'urwiki' => 'visual' // Urdu
+	'default' => 'visual',
+	// T361134
+	'visualeditor-nondefault' => 'source',
+	'enwiki' => 'source',
 ],
 
 'wgExtraGenderNamespaces' => [
@@ -7956,10 +7946,6 @@ return [
 	'wikitech' => 'available', // T355374
 ],
 
-'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
-	'default' => true, // T352232 - TODO: Remove this config after a few weeks as it is equal to the upstream value
-],
-
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => true, // T315353
 	'enwiki' => false, // (s1) Waiting for T315510
@@ -8081,13 +8067,10 @@ return [
 'wgContentTranslationAsBetaFeature' => [
 	'default' => false,
 	"abwiki" => true,
-	"adywiki" => true,
 	"alswiki" => true,
-	"angwiki" => true,
 	"arcwiki" => true,
 	"arwiki" => true,
 	"atjwiki" => true,
-	"avwiki" => true,
 	"bat_smgwiki" => true,
 	"be_x_oldwiki" => true,
 	"bpywiki" => true,
@@ -8095,8 +8078,6 @@ return [
 	"cawiki" => true,
 	"cbk_zamwiki" => true,
 	"cdowiki" => true,
-	"cewiki" => true,
-	"chwiki" => true,
 	"chywiki" => true,
 	"csbwiki" => true,
 	"dewiki" => true,
@@ -8108,16 +8089,12 @@ return [
 	"eswiki" => true,
 	"extwiki" => true,
 	"fiwiki" => true,
-	"frpwiki" => true,
 	"frrwiki" => true,
 	"frwiki" => true,
-	"gagwiki" => true,
 	"gdwiki" => true,
 	"glkwiki" => true,
-	"gorwiki" => true,
 	"gotwiki" => true,
 	"hakwiki" => true,
-	"hifwiki" => true,
 	"hiwiki" => true,
 	"hsbwiki" => true,
 	"iawiki" => true,
@@ -8127,37 +8104,26 @@ return [
 	"inhwiki" => true,
 	"iowiki" => true,
 	"itwiki" => true,
-	"jamwiki" => true,
 	"jawiki" => true,
 	"jbowiki" => true,
-	"kbdwiki" => true,
-	"klwiki" => true,
-	"koiwiki" => true,
-	"krcwiki" => true,
 	"kshwiki" => true,
-	"kvwiki" => true,
 	"ladwiki" => true,
 	"lawiki" => true,
 	"lbewiki" => true,
 	"lezwiki" => true,
 	"lfnwiki" => true,
 	"map_bmswiki" => true,
-	"mdfwiki" => true,
-	"mnwwiki" => true,
 	"mwlwiki" => true,
-	"myvwiki" => true,
 	"napwiki" => true,
 	"nawiki" => true,
 	"nds_nlwiki" => true,
 	"ndswiki" => true,
-	"newwiki" => true,
 	"nlwiki" => true,
 	"novwiki" => true,
 	"nowiki" => true,
 	"nrmwiki" => true,
 	"nvwiki" => true,
 	"olowiki" => true,
-	"pamwiki" => true,
 	"pcdwiki" => true,
 	"pdcwiki" => true,
 	"pflwiki" => true,
@@ -8168,27 +8134,20 @@ return [
 	"pnbwiki" => true,
 	"pntwiki" => true,
 	"ptwiki" => true,
-	"rmwiki" => true,
 	"rmywiki" => true,
 	"roa_tarawiki" => true,
 	"ruewiki" => true,
 	"ruwiki" => true,
-	"sewiki" => true,
 	"simplewiki" => true,
-	"stqwiki" => true,
 	"svwiki" => true,
 	"szywiki" => true,
-	"tcywiki" => true,
-	"tetwiki" => true,
 	"ugwiki" => true,
 	"ukwiki" => true,
 	"vepwiki" => true,
 	"viwiki" => true,
 	"vlswiki" => true,
 	"vowiki" => true,
-	"xalwiki" => true,
 	"xmfwiki" => true,
-	"zawiki" => true,
 	"zeawiki" => true,
 	"zh_classicalwiki" => true,
 	"zhwiki" => true,
@@ -8216,6 +8175,9 @@ return [
 	],
 	'viwiki' => [ // T299636
 		'userGroups' => [ 'extendedconfirmed', 'eliminator', 'sysop' ]
+	],
+	'zhwiki' => [ // T349959
+		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
 ],
 
@@ -8372,14 +8334,10 @@ return [
 	'sysop_itwiki' => false,
 	'wg_enwiki' => false,
 	"abwiki" => false,
-	"adywiki" => false,
 	"afwiki" => false,
 	"alswiki" => false,
-	"altwiki" => false,
-	"angwiki" => false,
 	"arcwiki" => false,
 	"atjwiki" => false,
-	"avwiki" => false,
 	"azbwiki" => false,
 	"bat_smgwiki" => false,
 	"be_x_oldwiki" => false,
@@ -8387,8 +8345,6 @@ return [
 	"bxrwiki" => false,
 	"cbk_zamwiki" => false,
 	"cdowiki" => false,
-	"cewiki" => false,
-	"chwiki" => false,
 	"chywiki" => false,
 	"csbwiki" => false,
 	"cvwiki" => false,
@@ -8401,16 +8357,12 @@ return [
 	"eswiki" => false,
 	"extwiki" => false,
 	"fiwiki" => false,
-	"frpwiki" => false,
 	"frrwiki" => false,
 	"gawiki" => false,
-	"gagwiki" => false,
 	"gdwiki" => false,
 	"glkwiki" => false,
-	"gorwiki" => false,
 	"gotwiki" => false,
 	"hakwiki" => false,
-	"hifwiki" => false,
 	"hsbwiki" => false,
 	"iawiki" => false,
 	"idwiki" => false,
@@ -8418,34 +8370,23 @@ return [
 	"ikwiki" => false,
 	"inhwiki" => false,
 	"iowiki" => false,
-	"jamwiki" => false,
 	"jawiki" => false,
 	"jbowiki" => false,
-	"kbdwiki" => false,
-	"klwiki" => false,
-	"koiwiki" => false,
-	"krcwiki" => false,
 	"kshwiki" => false,
-	"kvwiki" => false,
 	"ladwiki" => false,
 	"lawiki" => false,
 	"lbewiki" => false,
 	"lezwiki" => false,
 	"lfnwiki" => false,
 	"map_bmswiki" => false,
-	"mdfwiki" => false,
-	"mnwwiki" => false,
 	"mwlwiki" => false,
-	"myvwiki" => false,
 	"napwiki" => false,
 	"nds_nlwiki" => false,
 	"ndswiki" => false,
-	"newwiki" => false,
 	"novwiki" => false,
 	"nrmwiki" => false,
 	"nvwiki" => false,
 	"olowiki" => false,
-	"pamwiki" => false,
 	"pcdwiki" => false,
 	"pdcwiki" => false,
 	"pflwiki" => false,
@@ -8454,34 +8395,27 @@ return [
 	"pmswiki" => false,
 	"pnbwiki" => false,
 	"pntwiki" => false,
-	"rmwiki" => false,
 	"rmywiki" => false,
 	"roa_tarawiki" => false,
 	"ruewiki" => false,
 	"ruwiki" => false,
-	"sewiki" => false,
 	"simplewiki" => false,
-	"stqwiki" => false,
 	"szywiki" => false,
-	"tcywiki" => false,
-	"tetwiki" => false,
 	"ugwiki" => false,
 	"ukwiki" => false,
 	"vepwiki" => false,
 	"viwiki" => false,
 	"vlswiki" => false,
 	"vowiki" => false,
-	"xalwiki" => false,
 	"xmfwiki" => false,
-	"zawiki" => false,
 	"zeawiki" => false,
 	"zh_classicalwiki" => false,
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'ace', 'am', 'ami', 'an', 'anp', 'ar', 'ary', 'arz', 'as', 'ast', 'avk', 'ay', 'awa', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'be', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'br', 'bs', 'bug', 'ca', 'ceb', 'chr', 'ckb', 'co', 'cr', 'crh', 'cs', 'cu', 'cy', 'da', 'dag', 'dga', 'din', 'dv', 'dz', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'fat', 'ff', 'fj', 'fo', 'fon', 'fr', 'fur', 'fy', 'gan', 'gcr', 'gl', 'gn', 'gom', 'gpe', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hu', 'hy', 'hyw', 'ig', 'ilo', 'is', 'it', 'iu', 'jv', 'ka', 'kaa', 'kab', 'kbp', 'kcg', 'kg', 'ki', 'kk', 'km', 'kn', 'ko', 'ks', 'ku', 'kw', 'ky', 'lb', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'mad', 'mai', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mr', 'mrj', 'ms', 'mt', 'my', 'mzn', 'nah', 'nan', 'nb', 'ne', 'nia', 'nl', 'nn', 'nqo', 'nso', 'ny', 'oc', 'om', 'or', 'os', 'pa', 'pag', 'pap', 'pcm', 'pl', 'ps', 'pt', 'pwn', 'qu', 'rn', 'ro', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'sco', 'scn', 'sd', 'sg', 'sh', 'shi', 'shn', 'si', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'su', 'sv', 'sw', 'szl', 'ta', 'tay', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'ty', 'tyv', 'tw', 'udm', 'ur', 'uz', 've', 'vec', 'vro', 'wa', 'war', 'wo', 'wuu', 'xh', 'yue', 'yi', 'yo', 'zgh', 'zh', 'zu' ],
-	'testwiki' => [ 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'anp', 'ang', 'ar', 'ary', 'arz', 'as', 'ast', 'av', 'avk', 'ay', 'awa', 'az', 'azb', 'ba', 'bi', 'ban', 'bar', 'bbc', 'bcl', 'be', 'bg', 'bho', 'bjn', 'blk', 'bm', 'bn', 'bo', 'br', 'bs', 'bug', 'ca', 'ce', 'ceb', 'ch', 'chr', 'ckb', 'co', 'cr', 'crh', 'cs', 'cu', 'cy', 'da', 'dag', 'dga', 'din', 'dv', 'dz', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fat', 'ff', 'fi', 'fiu_vro', 'fj', 'fo', 'fon', 'fr', 'frp', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'gn', 'gom', 'gor', 'gpe', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'haw', 'he', 'hi', 'hif', 'hr', 'ht', 'hu', 'hy', 'hyw', 'id', 'ig', 'ilo', 'is', 'it', 'iu', 'jam', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'ki', 'kk', 'kl', 'km', 'kn', 'ko', 'koi', 'krc', 'ks', 'ku', 'kv', 'kw', 'ky', 'la', 'lb', 'li', 'lij', 'lg', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'mad', 'mai', 'mdf', 'mhr', 'mg', 'mi', 'min', 'mk', 'ml', 'mn', 'mnw', 'mni', 'mr', 'mrj', 'ms', 'mt', 'my', 'myv', 'mzn', 'nah', 'nan', 'nb', 'ne', 'nl', 'new', 'nia', 'nn', 'nqo', 'nso', 'nv', 'ny', 'oc', 'om', 'or', 'os', 'pa', 'pam', 'pap', 'pag', 'pcm', 'pl', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rn', 'ro', 'ru', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sh', 'shi', 'shn', 'si', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'szl', 'ta', 'tay', 'tcy', 'te', 'tet', 'tg', 'th', 'ti', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vi', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'yi', 'yo', 'yue', 'za', 'zgh', 'zh', 'zu' ],
+	'wikipedia' => [ 'ace', 'ady', 'alt', 'am', 'ami', 'an', 'ang', 'anp', 'ar', 'ary', 'arz', 'as', 'ast', 'av', 'avk', 'ay', 'awa', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'be', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'br', 'bs', 'bug', 'ca', 'ce', 'ceb', 'ch', 'chr', 'ckb', 'co', 'cr', 'crh', 'cs', 'cu', 'cy', 'da', 'dag', 'dga', 'din', 'dv', 'dz', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'fat', 'ff', 'fj', 'fo', 'fon', 'fr', 'frp', 'fur', 'fy', 'gag', 'gan', 'gcr', 'gl', 'gn', 'gom', 'gor', 'gpe', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'haw', 'he', 'hi', 'hif', 'hr', 'ht', 'hu', 'hy', 'hyw', 'ig', 'ilo', 'is', 'it', 'iu', 'jam', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'ki', 'kk', 'kl', 'km', 'kn', 'ko', 'koi', 'krc', 'ks', 'ku', 'kv', 'kw', 'ky', 'lb', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'mad', 'mai', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mr', 'mrj', 'ms', 'mt', 'my', 'myv', 'mzn', 'nah', 'nan', 'nb', 'ne', 'new', 'nia', 'nl', 'nn', 'nqo', 'nso', 'ny', 'oc', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcm', 'pl', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rn', 'ro', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'sco', 'scn', 'sd', 'se', 'sg', 'sh', 'shi', 'shn', 'si', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'szl', 'ta', 'tay', 'tcy', 'te', 'tet', 'tg', 'th', 'ti', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'ty', 'tyv', 'tw', 'udm', 'ur', 'uz', 've', 'vec', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'yue', 'yi', 'yo', 'za', 'zgh', 'zh', 'zu' ],
+	'testwiki' => [ 'ab', 'ace', 'ady', 'af', 'als', 'alt', 'ami', 'am', 'ang', 'anp', 'an', 'arc', 'ar', 'ary', 'arz', 'ast', 'as', 'atj', 'avk', 'av', 'awa', 'ay', 'azb', 'az', 'ban', 'bar', 'bat_smg', 'ba', 'bbc', 'bcl', 'be_x_old', 'be', 'bg', 'bh', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'bug', 'bxr', 'ca', 'cbk_zam', 'cdo', 'ceb', 'ce', 'chr', 'ch', 'chy', 'ckb', 'co', 'crh', 'cr', 'csb', 'cs', 'cu', 'cv', 'cy', 'dag', 'da', 'de', 'dga', 'din', 'diq', 'dsb', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fat', 'fa', 'ff', 'fiu_vro', 'fi', 'fj', 'fon', 'fo', 'frp', 'frr', 'fr', 'fur', 'fy', 'gag', 'gan', 'ga', 'gcr', 'gd', 'glk', 'gl', 'gn', 'gom', 'gor', 'got', 'gpe', 'guc', 'gur', 'gu', 'guw', 'gv', 'hak', 'ha', 'haw', 'he', 'hif', 'hi', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'id', 'ie', 'ig', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'jam', 'ja', 'jbo', 'jv', 'kaa', 'kab', 'ka', 'kbd', 'kbp', 'kcg', 'kg', 'ki', 'kk', 'kl', 'km', 'kn', 'koi', 'ko', 'krc', 'ksh', 'ks', 'ku', 'kv', 'kw', 'ky', 'lad', 'la', 'lbe', 'lb', 'lez', 'lfn', 'lg', 'lij', 'li', 'lld', 'lmo', 'ln', 'lo', 'ltg', 'lt', 'lv', 'mad', 'mai', 'map_bms', 'mdf', 'mg', 'mhr', 'min', 'mi', 'mk', 'ml', 'mni', 'mn', 'mnw', 'mrj', 'mr', 'ms', 'mt', 'mwl', 'myv', 'my', 'mzn', 'nah', 'nap', 'nds_nl', 'nds', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'no', 'nqo', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pag', 'pam', 'pap', 'pa', 'pcd', 'pcm', 'pdc', 'pfl', 'pih', 'pi', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'roa_rup', 'roa_tara', 'ro', 'rue', 'ru', 'rw', 'sah', 'sat', 'sa', 'scn', 'sco', 'sc', 'sd', 'se', 'sg', 'shi', 'shn', 'sh', 'simple', 'si', 'skr', 'sk', 'sl', 'smn', 'sm', 'sn', 'so', 'sq', 'srn', 'sr', 'ss', 'stq', 'st', 'su', 'sv', 'sw', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tet', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'trv', 'tr', 'ts', 'tt', 'tum', 'tw', 'tyv', 'ty', 'udm', 'ug', 'uk', 'ur', 'uz', 'vec', 'vep', 've', 'vi', 'vls', 'vo', 'war', 'wa', 'wg_en', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'za', 'zea', 'zgh', 'zh_classical', 'zh_min_nan', 'zh_yue', 'zh', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
@@ -11345,6 +11279,7 @@ return [
 	'enwikiversity' => true,
 	'enwikivoyage' => true,
 	'enwiktionary' => true,
+	'hewikivoyage' => true,
 ],
 
 'wmgUseMediaModeration' => [
@@ -11383,6 +11318,7 @@ return [
 	'wikibooks' => false,
 	'wikinews' => false,
 	'wikifunctionswiki' => false, // T345459
+	'nowikimedia' => false, // T360782
 ],
 'wgNearbyPagesUrl' => [
 	'default' => '/w/api.php',
@@ -11677,14 +11613,10 @@ return [
 	'commonswiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	'testcommonswiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	'enwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'fiwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'idwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'ptwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'svwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'thwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'trwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'ukwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'viwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'wikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'zhwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
@@ -11827,236 +11759,6 @@ return [
 
 'wgWikimediaEditorTasksEnableRevertCounts' => [
 	'default' => true,
-],
-
-'wmgUseMachineVision' => [
-	'default' => false,
-	'testcommonswiki' => true,
-	'commonswiki' => true,
-],
-
-'wgMachineVisionRequestLabelsOnUploadComplete' => [
-	'default' => false,
-],
-
-'wgMachineVisionNewUploadLabelingJobDelay' => [
-	'default' => 172800,
-],
-
-'wgMachineVisionGCVSendFileContents' => [
-	'default' => false,
-	'testcommonswiki' => true,
-],
-
-'wgMachineVisionGoogleSafeSearchLimits' => [
-	'default' => [
-		'adult' => 3,
-		'medical' => 3,
-		'violent' => 4,
-		'racy' => 4,
-	],
-],
-
-'wgMachineVisionHandlers' => [
-	'default' => [
-		'google' => [
-			'class' => GoogleCloudVisionHandler::class,
-			'services' => [
-				'MachineVisionFetchGoogleCloudVisionAnnotationsJobFactory',
-				'MachineVisionRepository',
-				'MachineVisionRepoGroup',
-				'MachineVisionLabelResolver',
-				'JobQueueGroup',
-			],
-		],
-	],
-],
-
-'wgMachineVisionTemplateBlacklist' => [
-	'default' => [
-		'Template:Art_Photo',
-		'Template:Artwork',
-		'Template:Book',
-		'Template:Map',
-	],
-],
-
-'wgMachineVisionWikidataIdBlacklist' => [
-	'default' => [
-		// colors
-		'Q1088', // blue
-		'Q23445', // black
-		'Q3142', // red
-		'Q3133', // green
-		'Q943', // yellow
-		'Q39338', // orange
-		'Q428124', // violet
-		'Q3257809', // purple
-		'Q23444', // white
-		'Q42519', // gray
-		'Q47071', // brown
-		'Q843607', // beige
-		'Q10296772', // carmine
-		'Q373058', // Azure
-		'Q317802', // silver
-		'Q1670336', // tan
-		'Q2778382', // bronze
-		'Q208045', // gold
-		'Q1078214', // teal
-		'Q906936', // lime
-		'Q543923', // rust
-		'Q2015138', // salmon
-		'Q2268159', // scarlet
-		'Q767608', // sepia
-		'Q3518540', // terra cotta
-		'Q5960345', // turquoise
-		'Q3014419', // wine
-		'Q454847', // amaranth
-		'Q679355', // amber
-		'Q1324818', // apricot
-		'Q372973', // aquamarine
-		'Q797446', // burgundy
-		'Q5043987', // carnelian
-		'Q2541418', // celadon
-		'Q313120', // cerulean
-		'Q3309916', // chocolate
-		'Q2936397', // cinnamon
-		'Q2411228', // coral
-		'Q2730433', // cream
-		'Q303826', // crimson
-		'Q180778', // cyan
-		'Q5005364', // fuchsia
-		'Q5967009', // indigo
-		'Q650770', // khaki
-		'Q2720565', // lemon
-		'Q2294993', // lilac
-		'Q3276756', // magenta
-		'Q25203611', // Mango
-		'Q25393814', // maroon
-		'Q864152', // olive
-		'Q533047', // rose
-
-		// adjectives
-		'Q48997611', // vintage
-		'Q10770146', // monochrome
-		'Q6453656', // monochrome
-		'Q838368', // black-and-white
-		'Q296001', // close-up
-
-		// odd nouns
-		'Q1301433', // land vehicle
-		'Q1802779', // land vehicle
-		'Q6478447', // properties of water
-		'Q2083958', // pattern
-		'Q738168', // pattern
-		'Q696160', // psychedelic art
-		'Q7239', // organism
-		'Q638', // music
-		'Q11634', // art of sculpture
-		'Q11629', // art of painting
-		'Q16502', // world
-		'Q1792644', // art style
-		'Q1190554', // occurrence
-		'Q295469', // ecoregion
-		'Q1049799', // water resource
-		'Q334166', // mode of transport
-		'Q42889', // vehicle
-		'Q82821', // tradition
-		'Q3248864', // Terrestrial animal
-		'Q53875', // parallelism
-		'Q37073', // pop music
-		'Q101998', // biome
-		'Q2262382', // masai lion
-		'Q721221', // serpent
-		'Q1634416', // stock photography
-		'Q1395149', // demonstration
-		'Q12554', // Middle Ages
-		'Q83180', // roof
-		'Q167510', // bitumen
-		'Q43619', // natural environment
-		'Q309', // history
-		'Q11016', // technology
-		'Q1172903', // loch
-		'Q165848', // wind wave
-		'Q211778', // Lake District
-		'Q43238', // Poaceae
-		'Q5135744', // religious institute
-		'Q486972', // human settlement
-		'Q826939', // canard
-		'Q1286', // Alps
-
-		// time oriented terms
-		'Q1187312', // yesterday
-		'Q988377', // day before yesterday
-		'Q1036448', // day after tomorrow
-		'Q1209716', // tomorrow
-		'Q3151690', // today
-	],
-],
-
-'wgMachineVisionWithholdImageList' => [
-	'default' => [
-		'Q467', // woman
-		'Q3010', // boy
-		'Q3031', // girl
-		'Q8441', // man
-		'Q1378024', // lady
-		'Q255274', // white collar worker
-		'Q368758', // white collar worker redirect
-		'Q327968', // facial expression
-		'Q41055', // forehead
-		'Q2472587', // people
-		'Q1155908', // elder
-		'Q15173', // lip
-		'Q82714', // chin
-		'Q1886338', // makeover
-		'Q3080415', // Jheri curl
-		'Q170579', // laughter
-		'Q28472', // hair
-		'Q327496', // hairstyle
-		'Q371174', // gesture
-		'Q82714', // chin
-		'Q9633', // neck
-		'Q1886338', // Makeover
-		'Q1922956', // black hair
-		'Q1255864', // fun
-		'Q14130', // long hair
-		'Q202466', // blond hair
-		'Q327496', // hairstyle
-		'Q37017', // face
-		'Q43748', // eyebrow
-		'Q1190554', // occurrence
-		'Q82821', // tradition
-		'Q182832', // concert
-		'Q132241', // festival
-		'Q349', // sport
-		'Q2755547', // individual sport
-		'Q874405', // social group
-		'Q327245', // team
-		'Q12068677', // selfie
-		'Q23640', // head
-		'Q83360', // thumb
-		'Q36864', // nail
-		'Q33767', // hand
-		'Q319604', // passenger
-		'Q205398', // social work
-		'Q7242', // beauty
-		'Q12684', // fashion
-		'Q749212', // gentleman
-		'Q639669', // musician
-		'Q184485', // performing arts
-		'Q855091', // guitarist
-		'Q159992', // surfing
-		'Q2021379', // wakesurfing
-		'Q911069', // boardsport
-		'Q8037570', // wrangler
-		'Q273283', // beggar
-		'Q134307', // portrait
-	],
-],
-
-'wgMachineVisionShowUploadWizardCallToAction' => [
-	'default' => false,
 ],
 
 'wgSpecialSearchFormOptions' => [
@@ -12335,6 +12037,12 @@ return [
 	'default' => true,
 ],
 
+'wgCodeMirrorV6' => [
+	'default' => false,
+	'officewiki' => true, // T357795
+	'testwiki' => true, // T357795
+],
+
 'wgCodeMirrorLineNumberingNamespaces' => [
 	'default' => [ NS_TEMPLATE ],
 	// T280027: Enable line numbering on all namespaces, for pilot wikis.
@@ -12431,6 +12139,17 @@ return [
 	'metawiki' => true,
 ],
 
+// This setting determines whether the CampaignEvents extension shall store
+// its data in a shared database (wikishared). This can only be set to true
+// for SUL wikis.
+'wmgCampaignEventsUseCentralDB' => [
+	'default' => true,
+	'private' => false,
+	'nonglobal' => false,
+	'testwiki' => false,
+	'test2wiki' => false,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
@@ -12480,12 +12199,7 @@ return [
 ],
 
 'wgEnableEditRecovery' => [
-	'default' => false, // T342858
-	'testwiki' => true, // T353041
-	'mediawikiwiki' => true, // T355548
-	'frwiki' => true, // T355548
-	'enwiki' => true, // T355548
-	'arwiki' => true, // T355548
+	'default' => true, // T355548
 ],
 
 'wmgEditRecoveryDefaultUserOptions' => [
@@ -12507,6 +12221,12 @@ return [
 ],
 'wgPageNoticeDisablePerPageNotices' => [
 	'default' => true,
+],
+
+// Community configuration (T357766)
+'wmgUseCommunityConfiguration' => [
+	// NOTE: Do not enable without OK from the Growth team.
+	'default' => false,
 ],
 
 // T341000

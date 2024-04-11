@@ -413,17 +413,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_SuggestedTagsAction' => [
-			'schema_title' => 'analytics/legacy/suggestedtagsaction',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_TemplateDataApi' => [
 			'schema_title' => 'analytics/legacy/templatedataapi',
 			'topic_prefixes' => null,
@@ -955,11 +944,6 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'webuiactions_log.',
-						'click',
-						'init',
-					],
 					'provide_values' => [
 						'page_namespace_id',
 						'performer_is_logged_in',
@@ -967,6 +951,7 @@ return [
 						'performer_pageview_id',
 						'performer_edit_count_bucket',
 						'performer_groups',
+						'performer_is_bot',
 						'mediawiki_skin',
 						'mediawiki_database',
 					],
@@ -1000,10 +985,6 @@ return [
 						'performer_is_logged_in',
 					],
 				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
 			],
 		],
 		'mediawiki.ipinfo_interaction' => [
@@ -1451,6 +1432,45 @@ return [
 		],
 
 		/*
+		 * webrequest.frontend describes the schema and topics that make up the
+		 * webrequest logs from our frontend webservers (haproxy).
+		 * It is an Event Platform stream, but is produced directly to Kafka by Benthos producer,
+		 * not eventgate.
+		 * `webrequest.frontent.rc0` is a development stream that will be deprecated (removed
+		 * from config) after GA release.
+		 */
+		'webrequest.frontend.rc0' => [
+			// Disable canary event production while the stream is under
+			// development.
+			'canary_events_enabled' => false,
+			// Development webrequest_frontend kafka topics have no prefix.
+			'topic_prefixes' => null,
+			// Point to a wip/developemnt version of the events schema.
+			// TODO: switch to GA once the schema is finalized and released.
+			'schema_title' => 'development/webrequest',
+			// webrequest.frontend stream explicitly declares its composite topics.
+			// These topics are produced to explicitly by haproxy logtailer.
+			// https://phabricator.wikimedia.org/T351117#9419578
+			'topics' => [
+				# TODO: set these composite topics in the GA release of the stream.
+				# 'webrequest.frontend.text',
+				# 'webrequest.frontend.upload',
+				'webrequest_text_test',
+				'webrequest_upload_test',
+			],
+			// Use eventgate-analytics for canary events.
+			// Note that the real webrequest events don't get produced via evengate.
+			'destination_event_service' => 'eventgate-analytics',
+			// Gobblin job webrequest_frontend ingests these topics.
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'webrequest_frontend',
+					'enabled' => true,
+				],
+			],
+		],
+
+		/*
 		 * == Streams needed for eventgate functionality ==
 		 * EventGate instances some streams defined for error logging and monitoring:
 		 *
@@ -1545,7 +1565,37 @@ return [
 				'rate' => 1,
 			],
 		],
-
+		// (T350497) Update the WikiLambda instrumentation (Wikifunctions) to use core interaction events
+		'mediawiki.product_metrics.wikifunctions_ui' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_id',
+						'page_title',
+						'page_revision_id',
+						'performer_is_logged_in',
+						'performer_id',
+						'performer_name',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_pageview_id',
+						'performer_language',
+						'performer_language_variant',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_is_bot'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 	],
 ],
 

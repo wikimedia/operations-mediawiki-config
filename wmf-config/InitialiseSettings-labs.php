@@ -272,6 +272,7 @@ function wmfGetOverrideSettings() {
 				'cite' => 'debug',
 				'Cognate' => 'debug', // WMDE & Addshore
 				'collection' => 'debug', // -cscott for T73675
+				'CommunityConfiguration' => 'debug',
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
@@ -502,6 +503,11 @@ function wmfGetOverrideSettings() {
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
 			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
+		],
+
+		'wmgUseMobileFrontend' => [
+			'default' => true,
+			'wikifunctionswiki' => false, // T349408
 		],
 
 		'wgWMEMobileWebUIActionsTracking' => [
@@ -1680,15 +1686,7 @@ function wmfGetOverrideSettings() {
 			'eswiki' => false,
 		],
 		'wgEnablePartialActionBlocks' => [
-			'default' => true,
-			// Override top 6 wikis disabled in production (T353495)
-			// Except dewiki which can be used to test the old behaviour.
-			'enwiki' => true,
-			'wikidatawiki' => true,
-			'jawiki' => true,
-			'dewiki' => false,
-			'frwiki' => true,
-			'eswiki' => true,
+			'default' => true, // T353496
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
@@ -2218,22 +2216,6 @@ function wmfGetOverrideSettings() {
 				],
 			],
 		],
-		'wmgUseMachineVision' => [
-			'default' => false,
-			'commonswiki' => true,
-		],
-		'wgMachineVisionTestersOnly' => [
-			'default' => false,
-		],
-		'wgMachineVisionShowUploadWizardCallToAction' => [
-			'default' => true,
-		],
-		'wgMachineVisionNewUploadLabelingJobDelay' => [
-			'default' => 0,
-		],
-		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
-			'default' => true,
-		],
 		// T319240
 		'wgSpecialContributeSkinsEnabled' => [
 			'default' => [ "minerva", "vector-2022" ],
@@ -2574,6 +2556,18 @@ function wmfGetOverrideSettings() {
 			'wikitech' => false,
 			'fishbowl' => false,
 			'private' => false,
+		],
+
+		// T357766
+		'wmgUseCommunityConfiguration' => [
+			// NOTE: Do not enable without Growth team OK
+			'default' => false,
+			'eswiki' => true,
+		],
+		'wgGEUseCommunityConfigurationExtension' => [
+			// NOTE: Do not enable without Growth team OK
+			'default' => false,
+			'eswiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()

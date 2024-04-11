@@ -44,6 +44,7 @@ class MWMultiVersion {
 		'flow',
 		'flaggedrevs',
 		'small',
+		'skin-themes',
 		'legacy-vector',
 		'medium',
 		'wikimania',
@@ -346,8 +347,7 @@ class MWMultiVersion {
 		if ( count( $pathBits ) < 3 ) {
 			self::error( "Invalid file path info (pathinfo=" . $pathInfo . "), can't determine language.\n" );
 		}
-		$site = $pathBits[1];
-		$lang = $pathBits[2];
+		[ , $site, $lang ] = $pathBits;
 		$this->loadDBFromSite( $site, $lang );
 	}
 
@@ -361,18 +361,20 @@ class MWMultiVersion {
 
 		$dbname = getenv( 'MW_WIKI' ) ?: '';
 
-		# The --wiki param must the second argument to to avoid
+		# The --wiki param must the second argument to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
-		if ( isset( $argv[2] ) && $argv[2] === '--wiki' ) {
-			// "script.php --wiki dbname"
-			$dbname = isset( $argv[3] ) ? $argv[3] : '';
-		} elseif ( isset( $argv[2] ) && substr( $argv[2], 0, 7 ) === '--wiki=' ) {
-			// "script.php --wiki=dbname"
-			$dbname = substr( $argv[2], 7 );
-		} elseif ( isset( $argv[2] ) && substr( $argv[2], 0, 2 ) !== '--' ) {
-			// "script.php dbname"
-			$dbname = $argv[2];
-			$argv[2] = '--wiki=' . $dbname;
+		if ( isset( $argv[2] ) ) {
+			if ( $argv[2] === '--wiki' ) {
+				// "script.php --wiki dbname"
+				$dbname = $argv[3] ?? '';
+			} elseif ( substr( $argv[2], 0, 7 ) === '--wiki=' ) {
+				// "script.php --wiki=dbname"
+				$dbname = substr( $argv[2], 7 );
+			} elseif ( substr( $argv[2], 0, 2 ) !== '--' ) {
+				// "script.php dbname"
+				$dbname = $argv[2];
+				$argv[2] = '--wiki=' . $dbname;
+			}
 		}
 
 		if ( $dbname === '' ) {
@@ -405,18 +407,20 @@ class MWMultiVersion {
 	private function setSiteInfoForMaintenanceOld() {
 		global $argv;
 		$dbname = getenv( 'MW_WIKI' ) ?: '';
-		# The --wiki param must the second argument to to avoid
+		# The --wiki param must the second argument to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
-		if ( isset( $argv[1] ) && $argv[1] === '--wiki' ) {
-			// "script.php --wiki dbname"
-			$dbname = isset( $argv[2] ) ? $argv[2] : '';
-		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 7 ) === '--wiki=' ) {
-			// "script.php --wiki=dbname"
-			$dbname = substr( $argv[1], 7 );
-		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 2 ) !== '--' ) {
-			// "script.php dbname"
-			$dbname = $argv[1];
-			$argv[1] = '--wiki=' . $dbname;
+		if ( isset( $argv[1] ) ) {
+			if ( $argv[1] === '--wiki' ) {
+				// "script.php --wiki dbname"
+				$dbname = $argv[2] ?? '';
+			} elseif ( substr( $argv[1], 0, 7 ) === '--wiki=' ) {
+				// "script.php --wiki=dbname"
+				$dbname = substr( $argv[1], 7 );
+			} elseif ( substr( $argv[1], 0, 2 ) !== '--' ) {
+				// "script.php dbname"
+				$dbname = $argv[1];
+				$argv[1] = '--wiki=' . $dbname;
+			}
 		}
 		if ( $dbname === '' ) {
 			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
@@ -443,11 +447,7 @@ class MWMultiVersion {
 	 * @param string $lang
 	 */
 	private function loadDBFromSite( $site, $lang ) {
-		if ( $site === "wikipedia" ) {
-			$dbSuffix = "wiki";
-		} else {
-			$dbSuffix = $site;
-		}
+		$dbSuffix = $site === 'wikipedia' ? 'wiki' : $site;
 		$this->db = str_replace( "-", "_", $lang . $dbSuffix );
 	}
 
@@ -491,15 +491,10 @@ class MWMultiVersion {
 			return;
 		}
 
-		$dir = dirname( __DIR__ );
-
-		if ( $wmgRealm === 'production' ) {
-			$phpFilename = $dir . '/wikiversions.php';
-		} else {
-			// Load the realm-specific wikiversions file,
-			// such as wikiversions-labs.php or wikiversions-dev.php
-			$phpFilename = $dir . "/wikiversions-$wmgRealm.php";
-		}
+		// Load the realm-specific wikiversions file,
+		// such as wikiversions-labs.php or wikiversions-dev.php
+		$phpFilename = $wmgRealm === 'production' ? 'wikiversions.php' : "wikiversions-$wmgRealm.php";
+		$phpFilename = dirname( __DIR__ ) . '/' . $phpFilename;
 
 		// This intentionally tolerates absence by using `include` instead of `require`
 		$wikiversions = include $phpFilename;
