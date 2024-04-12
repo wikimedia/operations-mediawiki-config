@@ -3792,6 +3792,7 @@ return [
 'wgSignatureAllowedLintErrors' => [ // T360796
 	'default' => [ 'obsolete-tag', 'night-mode-unaware-background-color' ],
 	'enwiki' => [ 'night-mode-unaware-background-color' ], // T354013
+	'plwiki' => [ 'night-mode-unaware-background-color' ], // T362414
 ],
 
 # below seems to be for extensions
