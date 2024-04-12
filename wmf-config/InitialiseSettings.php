@@ -2065,10 +2065,10 @@ return [
 ],
 # @} end of wgTranslateNumerals
 
-// Statically configured Monolog handler to clone for log channels that are
+// Statically configured Monolog handlers to clone for log channels that are
 // not specifically configured in $wmgMonologChannels.
 // See $wmgMonologConfig['handlers'] in logging.php for valid values.
-'wmgDefaultMonologHandler' => [
+'wmgDefaultMonologHandlers' => [
 	'default' => 'blackhole',
 	'testwiki' => 'wgDebugLogFile',
 ],

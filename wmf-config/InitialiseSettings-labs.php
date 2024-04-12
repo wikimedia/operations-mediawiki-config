@@ -139,7 +139,7 @@ function wmfGetOverrideSettings() {
 			'default' => 32,
 		],
 
-		'-wmgDefaultMonologHandler' => [
+		'-wmgDefaultMonologHandlers' => [
 			'default' => 'wgDebugLogFile',
 		],
 

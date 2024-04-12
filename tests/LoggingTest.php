@@ -66,7 +66,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	public function testHandlerSetup( $channelConfig, $expectHandlers ) {
 		// logging.php does not explicitly declare anything global, so it will
 		// only read from the local scope defined here.
-		$wmgDefaultMonologHandler = 'blackhole';
+		$wmgDefaultMonologHandlers = 'blackhole';
 		// wmf-config/logging.php expects $wgDebugLogFile to be in the same scope that
 		// the file is loaded in (normally the global scope but not in this case)
 		// phpcs:ignore MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile

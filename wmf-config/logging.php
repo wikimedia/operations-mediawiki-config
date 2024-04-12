@@ -20,7 +20,7 @@
 # The following globals from InitialiseSettings are used:
 #
 # - $wgDebugLogFile: udp2log destination for 'wgDebugLogFile' handler.
-# - $wmgDefaultMonologHandler: default handler for log channels not
+# - $wmgDefaultMonologHandlers: default handlers for log channels not
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
@@ -67,7 +67,7 @@ $wmgEnableLogstash = true;
 if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Route all log messages to a local file
 	$wgDebugLogFile = '/tmp/wiki.log';
-	$wmgDefaultMonologHandler = 'wgDebugLogFile';
+	$wmgDefaultMonologHandlers = 'wgDebugLogFile';
 	$wmgEnableLogstash = false;
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
@@ -75,7 +75,7 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
-	$wmgDefaultMonologHandler = [ 'wgDebugLogFile', 'logstash-debug' ];
+	$wmgDefaultMonologHandlers = [ 'wgDebugLogFile', 'logstash-debug' ];
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
 }
@@ -201,7 +201,7 @@ $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
 		'@default' => [
-			'handlers' => (array)$wmgDefaultMonologHandler,
+			'handlers' => (array)$wmgDefaultMonologHandlers,
 			'processors' => array_keys( $wmgMonologProcessors ),
 		],
 	],
@@ -278,12 +278,12 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			];
 		}
 		$handlers[] = $udp2logHandler;
-		if ( $wmgDefaultMonologHandler === 'wgDebugLogFile' ) {
+		if ( $wmgDefaultMonologHandlers === 'wgDebugLogFile' ) {
 			// T117019: Send messages to default handler location as well
 			// This is for messages from regular traffic to testwikis (WikimediaDebug is off).
 			// When WikimediaDebug is used, $wmgMonologChannels is cleared and this code
 			// is never reached.
-			$handlers[] = $wmgDefaultMonologHandler;
+			$handlers[] = $wmgDefaultMonologHandlers;
 		}
 	}
 
