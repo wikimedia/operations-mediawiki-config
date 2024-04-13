@@ -8285,6 +8285,9 @@ return [
 	'plwiki' => [ // T362756
 		'userGroups' => [ 'editor', 'sysop' ]
 	],
+	'ruwiki' => [ // T362440
+		'userGroups' => [ 'autoreview', 'editor', 'sysop' ]
+	],
 	'trwiki' => [ // T330363
 		'userGroups' => [ 'autoreview', 'patroller', 'sysop' ]
 	],
