@@ -765,6 +765,7 @@ return [
 	],
 	'+enwikiquote' => [
 		'rollbacker' => [ 'rollback' => true ], // T310950
+		'flood' => [ 'bot' => true ], // T351250
 	],
 	'+enwikisource' => [
 		'autoconfirmed' => [
@@ -3573,7 +3574,10 @@ return [
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikiquote' => [
-		'sysop' => [ 'rollbacker' ], // T310950
+		'sysop' => [
+			'rollbacker', // T310950
+			'flood', // T351250
+		],
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [
@@ -5045,7 +5049,10 @@ return [
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikiquote' => [
-		'sysop' => [ 'rollbacker' ], // T310950
+		'sysop' => [
+			'rollbacker', // T310950
+			'flood', // T351250
+		],
 	],
 	'+enwikivoyage' => [
 		'sysop' => [

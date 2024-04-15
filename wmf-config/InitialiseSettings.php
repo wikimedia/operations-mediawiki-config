@@ -5110,6 +5110,7 @@ return [
 	],
 	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
+	'enwikiquote' => [ 'flood' => [ 'flood' ] ], // T351250
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
 	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
