@@ -72,8 +72,8 @@ $wgCdnServersNoPurge = [
 	'2620:0:860:104::/64', # private1-d-codfw
 
 	## esams
+	'10.80.0.0/16', # private esams aggregate
 	'2a02:ec80:300:100::/56', # private esams aggregate
-	'10.80.0.0/16', # esams private/mgmt
 
 	## ulsfo
 	'10.128.0.0/24', # private1-ulsfo
@@ -84,10 +84,13 @@ $wgCdnServersNoPurge = [
 	'2001:df2:e500:101::/64',
 
 	## drmrs
-	'10.136.0.0/24', # private1-b12-drmrs
-	'2a02:ec80:600:101::/64', # private1-b12-drmrs
-	'10.136.1.0/24', # private1-b13-drmrs
-	'2a02:ec80:600:102::/64', # private1-b13-drmrs
+	'10.136.0.0/16', # private drmrs aggregate
+	'2a02:ec80:600:100::/56', # private drmrs aggregate
+
+	## magru
+	'10.140.0.0/16', # private magru aggregate
+	'2a02:ec80:700:100::/56', # private magru aggregate
+
 ];
 
 # IP addresses that aren't proxies, regardless of what the other sources might say
