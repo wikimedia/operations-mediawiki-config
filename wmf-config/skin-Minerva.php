@@ -9,6 +9,10 @@
  */
 
 return [
+	'wgMinervaApplyKnownTemplateHacks' => [
+		// [[phab:T361589]]
+		'default' => false,
+	],
 	// T210553, T210554
 	'wgMinervaPageIssuesNewTreatment' => [
 		'default' => [

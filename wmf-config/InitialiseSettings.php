@@ -10849,6 +10849,11 @@ return [
 	'lockeddown' => false,
 ],
 
+'wgWikimediaStylesSkins'  => [
+	// [[phab:T361589]]
+	'default' => [ 'minerva' ],
+],
+
 // Which licensing/copyright message overrides to use in the WikimediaMessages extension
 'wgWikimediaMessagesLicensing' => [
 	'default' => 'standard',
