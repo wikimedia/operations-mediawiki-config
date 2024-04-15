@@ -2399,10 +2399,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Temporary, added in T339104, to be removed in T330217
+		// Flag temporary - added in T339104, to be removed in T330217
+		// Set to false in T356169 to test limited version on beta
 		'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
 			'default' => null,
-			'wikidatawiki' => true,
+			'wikidatawiki' => false,
 		],
 
 		'wmgUseChessBrowser' => [
