@@ -53,7 +53,7 @@ return [
 	'wmgMinervaNightModeExcludeNamespaces' => [
 		// Initially night mode is disabled on everything except article page (T359183)
 		'default' => [
-			-2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+			-2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15,
 			// The following is not intended to be complete, but should cover most untested namespaces
 			// that are needed for the first launch. The namespaces are documented at:
 			// https://www.mediawiki.org/wiki/Extension_default_namespaces
