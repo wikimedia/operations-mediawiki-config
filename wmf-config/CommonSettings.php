@@ -3917,6 +3917,10 @@ if ( $wmgUseCentralAuth ) {
 	];
 }
 
+// Add the year to the username to make it easier to identify the year the tmeporary account was created
+// and identify based on the username if the temporary account has expired.
+$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
+
 // We only need to match ~2$1 because the year will start with 2 for the foreseeable future
 // and it prevents the need to rename users on production which start with ~ but not ~2 (T349507).
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
