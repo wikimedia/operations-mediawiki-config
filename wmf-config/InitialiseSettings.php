@@ -12024,6 +12024,7 @@ return [
 	'default' => false,
 	'officewiki' => true, // T357795
 	'testwiki' => true, // T357795
+	'mediawikiwiki' => true, // T357795#9715433
 ],
 
 'wgCodeMirrorLineNumberingNamespaces' => [
