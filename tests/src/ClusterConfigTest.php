@@ -15,8 +15,11 @@ class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 		yield 'api appserver' => [
 			'api_appserver', [ 'api' ]
 		];
-		yield 'jobrunner' => [
-			'jobrunner', [ 'async' ]
+		yield 'jobrunner on k8s' => [
+			'kube-mw-jobrunner', [ 'async', 'k8s' ]
+		];
+		yield 'api-int on k8s' => [
+			'kube-mw-api-int', [ 'api', 'k8s' ]
 		];
 		yield 'parsoid' => [
 			'parsoid', [ 'parsoid' ]
