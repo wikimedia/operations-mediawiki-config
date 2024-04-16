@@ -579,6 +579,14 @@ return [
 			'rollback' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T361461
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+			'editcontentmodel' => true
+		], // T361461
+		'sysop' => [ 'extendedconfirmed' => true ], // T361461
+		'interface-admin' => [ 'templateeditor' => true ] // T361461
 	],
 	'+dawiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T86062
@@ -3482,7 +3490,9 @@ return [
 		'sysop' => [
 			'patroller',
 			'autopatrolled',
+			'extendedconfirmed' // T361461
 		],
+		'bureucrat' => [ 'templateeditor' ] // T361461
 	],
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
@@ -4968,7 +4978,9 @@ return [
 		'sysop' => [
 			'patroller',
 			'autopatrolled',
+			'extendedconfirmed' // T361461
 		],
+		'bureucrat' => [ 'templateeditor' ] // T361461
 	],
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
