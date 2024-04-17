@@ -8155,6 +8155,9 @@ return [
 	'fiwiki' => [ // T337412
 		'userGroups' => [ 'autoreview', 'bot', 'editor', 'reviewer', 'sysop' ]
 	],
+	'plwiki' => [ // T362756
+		'userGroups' => [ 'editor', 'sysop' ]
+	],
 	'trwiki' => [ // T330363
 		'userGroups' => [ 'autoreview', 'patroller', 'sysop' ]
 	],
