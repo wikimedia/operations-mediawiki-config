@@ -1070,6 +1070,8 @@ return [
 		'Portal_talk' => 101,
 		'ഘ' => 828, // T56951
 		'ഘസം' => 829, // T56951
+		'Draft' => 118, // Draft - T362653
+		'Draft_talk' => 119, // Draft - T362653
 	],
 	'+mlwikibooks' => [
 		'വിക്കി‌‌_പുസ്തകശാല' => NS_PROJECT,
@@ -2873,7 +2875,9 @@ return [
 	],
 	'mlwiki' => [
 		100 => 'കവാടം',
-		101 => 'കവാടത്തിന്റെ_സംവാദം'
+		101 => 'കവാടത്തിന്റെ_സംവാദം',
+		118 => 'കരട്', // Draft - T362653
+		119 => 'കരട്_സംവാദം', // Draft - T362653
 	],
 	'minwiki' => [
 		100 => 'Portal', // Portal
@@ -4778,6 +4782,10 @@ return [
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
 	],
+	'mlwiki' => [ // Draft - T362653
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
+	],
 	'mywiki' => [ // T352424
 		118 => 'noindex,nofollow', // Draft
 		119 => 'noindex,nofollow', // Draft_talk
@@ -5245,6 +5253,7 @@ return [
 	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
+	'mlwiki' => [ 118, 119 ], // draft and draft talk - T362653
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223

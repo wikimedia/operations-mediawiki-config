@@ -6203,6 +6203,9 @@ return [
 		'포털' /* Portal */ => true, // T224813
 		'초안' /* Draft */ => true, // T92798
 	],
+	'+mlwiki' => [
+		'കരട്' /* Draft */ => true, // T362653
+	],
 	'+nlwiki' => [
 		'Project' => true, // T164435
 	],
