@@ -585,7 +585,10 @@ return [
 			'tboverride' => true,
 			'editcontentmodel' => true
 		], // T361461
-		'sysop' => [ 'extendedconfirmed' => true ], // T361461
+		'sysop' => [
+			'extendedconfirmed' => true,
+			'templateeditor' => true
+		], // T361461
 		'interface-admin' => [ 'templateeditor' => true ] // T361461
 	],
 	'+dawiktionary' => [
@@ -3492,7 +3495,7 @@ return [
 			'autopatrolled',
 			'extendedconfirmed' // T361461
 		],
-		'bureucrat' => [ 'templateeditor' ] // T361461
+		'bureaucrat' => [ 'templateeditor' ] // T361461
 	],
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
@@ -4980,7 +4983,7 @@ return [
 			'autopatrolled',
 			'extendedconfirmed' // T361461
 		],
-		'bureucrat' => [ 'templateeditor' ] // T361461
+		'bureaucrat' => [ 'templateeditor' ] // T361461
 	],
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
