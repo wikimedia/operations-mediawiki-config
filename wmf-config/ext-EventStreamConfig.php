@@ -991,10 +991,6 @@ return [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		'mediawiki.ip_reputation.score' => [
-			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
