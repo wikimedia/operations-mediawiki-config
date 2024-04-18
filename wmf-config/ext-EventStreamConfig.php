@@ -992,7 +992,7 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'mediawiki.ip_reputation.score' => [
-			'schema_title' => 'mediawiki/ip_reputation/score',
+			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'wd_propertysuggester.client_side_property_request' => [
