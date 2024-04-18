@@ -10,8 +10,10 @@
 
 return [
 	'wgMinervaApplyKnownTemplateHacks' => [
+		// Temporarily enabled for cached HTML
+		'default' => true,
 		// [[phab:T361589]]
-		'default' => false,
+		'frwiki' => false,
 	],
 	// T210553, T210554
 	'wgMinervaPageIssuesNewTreatment' => [
