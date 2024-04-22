@@ -301,6 +301,12 @@ Wikipedia:
         commons_wordmark: 'File:Wikipedia-wordmark-ca.svg'
         commons_tagline: 'File:Wikipedia-tagline-ca.svg'
         comment_tagline: T258552
+        selected: cawiki-750k
+        variants:
+            cawiki-750k:
+                commons: 'File:Viquibola 750000.svg'
+                commons_icon: File:Viquibola 750000 no text.svg
+                commons_tagline: File:Text logo Viquipèdia 750000.svg
     cbk_zamwiki:
         comment: T46974
         comment_1_5x: T150618

@@ -88,7 +88,7 @@ return [
 	'bswiki' => '/static/images/project-logos/bswiki.png',
 	'bugwiki' => '/static/images/project-logos/bugwiki.png',
 	'bxrwiki' => '/static/images/project-logos/bxrwiki.png',
-	'cawiki' => '/static/images/project-logos/cawiki.png',
+	'cawiki' => '/static/images/project-logos/cawiki-750k.png',
 	'cbk_zamwiki' => '/static/images/project-logos/cbk_zamwiki.png', // T46974
 	'cdowiki' => '/static/images/project-logos/cdowiki.png', // T42285
 	'cebwiki' => '/static/images/project-logos/cebwiki.png', // T42285
@@ -953,7 +953,7 @@ return [
 	'bswiki' => '/static/images/project-logos/bswiki-1.5x.png', // T158815
 	'bugwiki' => '/static/images/project-logos/bugwiki-1.5x.png', // T150618
 	'bxrwiki' => '/static/images/project-logos/bxrwiki-1.5x.png', // T150618
-	'cawiki' => '/static/images/project-logos/cawiki-1.5x.png', // T150618
+	'cawiki' => '/static/images/project-logos/cawiki-750k-1.5x.png', // T150618
 	'cbk_zamwiki' => '/static/images/project-logos/cbk_zamwiki-1.5x.png', // T150618
 	'cdowiki' => '/static/images/project-logos/cdowiki-1.5x.png', // T150618
 	'cebwiki' => '/static/images/project-logos/cebwiki-1.5x.png', // T150616
@@ -1579,7 +1579,7 @@ return [
 	'bswiki' => '/static/images/project-logos/bswiki-2x.png', // T158815
 	'bugwiki' => '/static/images/project-logos/bugwiki-2x.png', // T150618
 	'bxrwiki' => '/static/images/project-logos/bxrwiki-2x.png', // T150618
-	'cawiki' => '/static/images/project-logos/cawiki-2x.png', // T150618
+	'cawiki' => '/static/images/project-logos/cawiki-750k-2x.png', // T150618
 	'cbk_zamwiki' => '/static/images/project-logos/cbk_zamwiki-2x.png', // T150618
 	'cdowiki' => '/static/images/project-logos/cdowiki-2x.png', // T150618
 	'cebwiki' => '/static/images/project-logos/cebwiki-2x.png', // T150616
@@ -5717,8 +5717,8 @@ return [
 		'height' => 13,
 	],
 	'cawiki' => [ // T258552
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ca.svg',
-		'width' => 120,
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ca-750k.svg',
+		'width' => 140,
 		'height' => 14,
 	],
 	'cbk_zamwiki' => [
@@ -8031,6 +8031,7 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
+	'cawiki' => '/static/images/icons/cawiki-750k.svg',
 
 	// Wiktionary
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
