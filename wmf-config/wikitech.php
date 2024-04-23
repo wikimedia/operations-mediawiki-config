@@ -422,7 +422,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
 
 // T360883 - This is provided by Bitu now.
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
-class DisallowEmailChangesSecondaryAuthenticationProvider extends MediaWiki\Auth\AbstractSecondaryAuthenticationProvider {
+class DisallowLdapChangesSecondaryAuthenticationProvider extends MediaWiki\Auth\AbstractSecondaryAuthenticationProvider {
 	public function getAuthenticationRequests( $action, array $options ) {
 		return [];
 	}
@@ -435,6 +435,14 @@ class DisallowEmailChangesSecondaryAuthenticationProvider extends MediaWiki\Auth
 		return MediaWiki\Auth\AuthenticationResponse::newAbstain();
 	}
 
+	public function providerAllowsAuthenticationDataChange( \MediaWiki\Auth\AuthenticationRequest $req, $checkData = true ) {
+		if ( $req instanceof MediaWiki\Auth\PasswordAuthenticationRequest ) {
+			return StatusValue::newFatal( 'hookaborted' );
+		}
+
+		return parent::providerAllowsAuthenticationDataChange( $req, $checkData );
+	}
+
 	public function providerAllowsPropertyChange( $property ) {
 		if ( $property === 'emailaddress' ) {
 			return false;
@@ -443,8 +451,8 @@ class DisallowEmailChangesSecondaryAuthenticationProvider extends MediaWiki\Auth
 		return parent::providerAllowsPropertyChange( $property );
 	}
 }
-$wgAuthManagerAutoConfig['secondaryauth'][DisallowEmailChangesSecondaryAuthenticationProvider::class] = [
-	'class' => DisallowEmailChangesSecondaryAuthenticationProvider::class,
+$wgAuthManagerAutoConfig['secondaryauth'][DisallowLdapChangesSecondaryAuthenticationProvider::class] = [
+	'class' => DisallowLdapChangesSecondaryAuthenticationProvider::class,
 ];
 
 // Also, hide the email confirmation timestamp from Special:Preferences. LDAPAuthentication
