@@ -95,6 +95,7 @@ return [
 'bewikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'bewikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'bewiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'bewwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'bgwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'bgwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'bgwikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
