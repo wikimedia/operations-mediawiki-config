@@ -494,6 +494,7 @@ return [
 'kswikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl' ],
 'kswikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'rtl' ],
 'kswiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl' ],
+'kuswiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'kuwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'kuwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'kuwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
