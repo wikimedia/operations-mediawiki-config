@@ -5902,7 +5902,7 @@ return [
 		'height' => 13,
 	],
 	'fawiki' => [ // T249047
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa-1m.svg',
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',
 		'width' => 72,
 		'height' => 18,
 	],
