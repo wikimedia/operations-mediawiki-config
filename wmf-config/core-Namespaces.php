@@ -181,6 +181,9 @@ return [
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
 	],
+	'+azwikiquote' => [
+		'VS' => NS_PROJECT, // T362645
+	],
 	'+azwikisource' => [
 		'VikiMənbə' => NS_PROJECT, // T114002
 		'VikiMənbə_müzakirəsi' => NS_PROJECT_TALK, // T114002
