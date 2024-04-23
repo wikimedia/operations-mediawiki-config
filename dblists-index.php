@@ -408,6 +408,7 @@ return [
 'iewiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'iewikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'iewiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'iglwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'igwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'igwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'igwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
