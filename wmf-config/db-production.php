@@ -90,6 +90,7 @@ $wgLBFactoryConf = [
 	'iglwiki'       => 's5',
 	'igwikiquote'   => 's5',
 	'igwiktionary'  => 's5',
+	'kawikisource'  => 's5',
 	'kaawiktionary' => 's5',
 	'kbdwiktionary' => 's5',
 	'kcgwiki'       => 's5',
