@@ -8032,6 +8032,7 @@ return [
 
 	// Wikipedia
 	'cawiki' => '/static/images/icons/cawiki-750k.svg',
+	'fawiki' => '/static/images/icons/fawiki-1m.svg',
 
 	// Wiktionary
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
