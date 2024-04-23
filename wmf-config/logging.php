@@ -377,12 +377,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			'handlers' => [ $failureGroupHandler ],
 			'processors' => array_keys( $wmgMonologProcessors ),
 		];
-
-	} else {
-		// No handlers configured, so use the blackhole route
-		$wmgMonologConfig['loggers'][$channel] = [
-			'handlers' => [ 'blackhole' ],
-		];
 	}
 }
 

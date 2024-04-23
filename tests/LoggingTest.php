@@ -30,7 +30,8 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 			'Disabling udp2log also disables logstash' => [
 				[ 'udp2log' => false ],
-				[ 'blackhole' ],
+				// Nothing get configured
+				null,
 			],
 
 			'Logstash can be enabled when udp2log is disabled' => [
@@ -80,13 +81,19 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
-		foreach ( $expectHandlers as $handlerName ) {
-			$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+		if ( $expectHandlers ) {
+			foreach ( $expectHandlers as $handlerName ) {
+				$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+			}
+
+			$this->assertEquals(
+				$expectHandlers,
+				$wmgMonologConfig['loggers']['test']['handlers']
+			);
+		} else {
+			$this->assertArrayHasKey( 'loggers', $wmgMonologConfig );
+			$this->assertArrayNotHasKey( 'test', $wmgMonologConfig['loggers'] );
 		}
-		$this->assertEquals(
-			$expectHandlers,
-			$wmgMonologConfig['loggers']['test']['handlers']
-		);
 	}
 
 	public function provideConfiguredProductionChannels() {
