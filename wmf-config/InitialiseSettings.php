@@ -325,6 +325,7 @@ return [
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
+	'bewwiki' => 'Asia/Jakarta',
 	'bjnwiki' => 'Asia/Makassar', // T328887
 	'bjnwikiquote' => 'Asia/Makassar', // T350235
 	'bjnwiktionary' => 'Asia/Makassar',
@@ -436,6 +437,7 @@ return [
 	'huwiktionary' => 'Europe/Berlin',
 	'idwikimedia' => 'Asia/Jakarta', // T192726
 	'id_internalwikimedia' => 'Asia/Jakarta',
+	'iglwiki' => 'Africa/Lagos',
 	'itwiki' => 'Europe/Berlin',
 	'itwikinews' => 'Europe/Berlin',
 	'itwikiversity' => 'Europe/Berlin',
@@ -444,6 +446,8 @@ return [
 	'itwikisource' => 'Europe/Berlin',
 	'itwiktionary' => 'Europe/Berlin',
 	'jamwiki' => 'America/Jamaica',
+	'kawikisource' => 'Asia/Tbilisi',
+	'kaawiktionary' => 'Asia/Tashkent',
 	'kbdwiki' => 'Europe/Moscow',
 	'kbdwiktionary' => 'Europe/Moscow',
 	'kbpwiki' => 'Africa/Lome', // T160868
@@ -466,6 +470,7 @@ return [
 	'kowikiversity' => 'Asia/Seoul',
 	'kowiktionary' => 'Asia/Seoul',
 	'kshwiki' => 'Europe/Berlin',
+	'kuswiki' => 'Africa/Accra',
 	'lezwiki' => 'Europe/Moscow',
 	'lijwiki' => 'Europe/Rome', // T263123
 	'lijwikisource' => 'Europe/Rome',
@@ -495,6 +500,8 @@ return [
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
+	'mswikisource' => 'Asia/Kuala_Lumpur',
+	'mywikisource' => 'Asia/Yangon',
 	'napwiki' => 'Europe/Rome', // T192568
 	'napwikisource' => 'Europe/Rome', // T210752
 	'ndswiki' => 'Europe/Berlin',
