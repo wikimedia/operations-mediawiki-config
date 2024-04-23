@@ -604,6 +604,7 @@ return [
 'myvwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'mywiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'mywikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
+'mywikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'mywiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'mznwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'rtl' ],
 'nahwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],

@@ -100,6 +100,7 @@ $wgLBFactoryConf = [
 	'mniwiki'       => 's5',
 	'mniwiktionary' => 's5',
 	'mnwwiktionary' => 's5',
+	'mywikisource'  => 's5',
 	'niawiki'       => 's5',
 	'niawiktionary' => 's5',
 	'madwiki'       => 's5',
