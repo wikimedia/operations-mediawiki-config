@@ -12050,6 +12050,7 @@ return [
 	'officewiki' => true, // T357795
 	'testwiki' => true, // T357795
 	'mediawikiwiki' => true, // T357795#9715433
+	'hewiki' => true, // T357795, T347211#9737653
 ],
 
 'wgCodeMirrorLineNumberingNamespaces' => [
@@ -12057,10 +12058,17 @@ return [
 	// T280027: Enable line numbering on all namespaces, for pilot wikis.
 	'cawiki' => null, // T280027
 	'dewiki' => null, // T280027
+	'hewiki' => null, // T347211#9737653
 	'group0' => null, // T280027
 	'wikitech' => null, // T280027
 	// T302852: Enable on all namespaces, by request.
 	'twwiki' => null, // T302852
+],
+
+// Temporary, controls CM6 rollout to RTL wikis; see T170001
+'wgCodeMirrorRTL' => [
+	'default' => false,
+	'hewiki' => true, // T170001
 ],
 
 'wgParserEnableLegacyMediaDOM' => [
