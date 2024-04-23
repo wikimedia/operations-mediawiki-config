@@ -452,6 +452,7 @@ return [
 'jvwikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'jvwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'kaawiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'kaawiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'kabwiki' => [ 'wikipedia', 'flow', 'medium', 'wikidataclient', 'commonsuploads' ],
 'kawiki' => [ 'wikipedia', 'flaggedrevs', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'kawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
