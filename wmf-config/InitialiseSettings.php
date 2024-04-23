@@ -10869,8 +10869,7 @@ return [
 
 'wgWikimediaStylesSkins'  => [
 	// [[phab:T361589]]
-	'default' => [ 'minerva' ],
-	'enwiki' => [ 'minerva', 'vector-2022' ],
+	'default' => [ 'minerva', 'vector-2022' ],
 ],
 
 // Which licensing/copyright message overrides to use in the WikimediaMessages extension
