@@ -1604,7 +1604,7 @@ return [
 	'uzwiki' => 'Vikipediya',
 	'uzwikibooks' => 'Vikikitob',
 	'uzwikiquote' => 'Vikiiqtibos',
-	'uzwiktionary' => 'Vikilug‘at',
+	'uzwiktionary' => 'Vikilugʻat', // T362620
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki' => 'Vikipedii',
 	'votewiki' => 'Wikimedia Vote Wiki', // T53264
