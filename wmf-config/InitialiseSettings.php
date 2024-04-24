@@ -2421,6 +2421,14 @@ return [
 	],
 ],
 
+'wgVectorAppearance' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+		'beta' => true,
+	],
+],
+
 'wgVectorWebABTestEnrollment' => [
 	'default' => [
 		'name' => 'skin-vector-zebra-experiment',
