@@ -1772,10 +1772,6 @@ return [
 		'VP' => NS_PROJECT, // T48534
 		'VM' => NS_PROJECT_TALK, // T48534
 	],
-	'+uzwiktionary' => [
-		'Vikilug‘at' => NS_PROJECT,
-		'Vikilug‘at_munozarasi' => NS_PROJECT_TALK,
-	], // T362620
 	'+vecwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -5806,7 +5802,7 @@ return [
 	'uzwiki' => 'Vikipediya',
 	'uzwikibooks' => 'Vikikitob',
 	'uzwikiquote' => 'Vikiiqtibos',
-	'uzwiktionary' => 'Vikilugʻat', // T362620
+	'uzwiktionary' => 'Vikilug‘at',
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki' => 'Vikipedii',
 	'vewikimedia' => 'Asociación',
