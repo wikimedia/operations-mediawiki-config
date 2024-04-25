@@ -5768,6 +5768,10 @@ return [
 // T160081 (and others): Make sure that Page Previews can detect the many, many
 // variants of the NavPopups gadget.
 //
+// Due to similar conflicts, the Reference Previews feature in the Cite extension
+// also needs to know that gadget's name and copies the value to its own setting.
+// See wgCiteReferencePreviewsConflictingNavPopupsGadgetName
+//
 // Generated using go_go_gadget_export.php from
 // https://gist.github.com/phuedx/8dd383e9b444270df6d068564aad9412.
 'wgPopupsConflictingNavPopupsGadgetName' => [

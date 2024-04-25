@@ -1199,6 +1199,15 @@ $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
+	// T362771: Mentioned gadget conflicts with parts in both extensions so the value is needed in both
+	if ( $wgPopupsConflictingNavPopupsGadgetName ) {
+		$wgCiteReferencePreviewsConflictingNavPopupsGadgetName = $wgPopupsConflictingNavPopupsGadgetName;
+	}
+
+	// TODO: Temporary mapping. The "Popups" variant can be removed later. See T362771
+	if ( $wgPopupsConflictingRefTooltipsGadgetName ) {
+		$wgCiteReferencePreviewsConflictingRefTooltipsGadgetName = $wgPopupsConflictingRefTooltipsGadgetName;
+	}
 }
 
 if ( $wmgUseCiteThisPage ) {
