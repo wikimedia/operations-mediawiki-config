@@ -15,8 +15,8 @@ class CirrusTest extends WgConfTestCase {
 		// (2 DCs + 1 cloudelastic) * 3 ES clusters per
 		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
 
-		// testwiki writes to eqiad and codfw, cloudelastic disabled
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// testwiki writes to only eqiad. other two are handled by SUP.
+		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
 			$groups = $config['wgCirrusSearchReplicaGroup'];

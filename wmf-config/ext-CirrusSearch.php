@@ -26,6 +26,11 @@ return [
 'wgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw' ],
 	'private' => [ 'eqiad', 'codfw' ],
+	'testwiki' => [ 'eqiad' ],
+	'frwiki' => [ 'eqiad' ],
+	'itwiki' => [ 'eqiad' ],
+	'commonswiki' => [ 'eqiad' ],
+	'wikidatawiki' => [ 'eqiad' ]
 ],
 
 'wgCirrusSearchReplicaGroup' => [
