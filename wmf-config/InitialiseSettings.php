@@ -5978,7 +5978,7 @@ return [
 ],
 
 'wgParserMigrationUserNoticeDays' => [
-	'default' => 7,
+	'default' => 30,
 ],
 
 // -------------- Shared Parsoid end --------------
