@@ -20,7 +20,9 @@ return [
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	'default' => [
+		'completion' => 'codfw',
+	],
 ],
 
 'wgCirrusSearchWriteClusters' => [
