@@ -5955,15 +5955,11 @@ return [
 
 'wgParserMigrationEnableQueryString' => [
 	'default' => true,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
 ],
 
 // T333179
 'wmgUseParserMigration' => [
 	'default' => true,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
 ],
 
 'wgParserMigrationEnableParsoidDiscussionTools' => [
