@@ -1205,6 +1205,11 @@ function wmfGetOverrideSettings() {
 			'zhwiki' => true, // T128425
 		],
 
+		// Wikis which fetch URL uploads asynchronously via the jobqueue using UploadFromUrlJob
+		'wgEnableAsyncUploadsByURL' => [
+			'default' => true,
+		],
+
 		// Affects URL uploads and chunked uploads (experimental).
 		// Limit on other web uploads is enforced by PHP.
 		'wgMaxUploadSize' => [
