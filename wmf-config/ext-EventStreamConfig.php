@@ -958,8 +958,8 @@ return [
 				],
 			],
 			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
+				'unit' => 'session',
+				'rate' => 0.2,
 			],
 		],
 		'mediawiki.web_ui_scroll' => [
@@ -1594,6 +1594,34 @@ return [
 			'sample' => [
 				'unit' => 'pageview',
 				'rate' => 1,
+			],
+		],
+	],
+	'+legacy-vector' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 0,
+			],
+		],
+	],
+	'+officewiki' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 0,
+			],
+		],
+	],
+	'+testwiki' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 1,
+			],
+		],
+	],
+	'+enwiki' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 0.01,
 			],
 		],
 	],
