@@ -8061,7 +8061,6 @@ return [
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
 	'default' => 95,
 	'aswiki' => 70,
-	'cswiki' => 79, // T324721
 	'fywiki' => 90, // T323415
 	'hywiki' => 80, // T313208
 	'idwiki' => 70,
@@ -8183,6 +8182,9 @@ return [
 	],
 	'fiwiki' => [ // T337412
 		'userGroups' => [ 'autoreview', 'bot', 'editor', 'reviewer', 'sysop' ]
+	],
+	'cswiki' => [ // T353049
+		'userGroups' => [ 'autopatrolled', 'sysop' ]
 	],
 	'plwiki' => [ // T362756
 		'userGroups' => [ 'editor', 'sysop' ]
