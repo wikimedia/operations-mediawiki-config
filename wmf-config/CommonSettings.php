@@ -1658,7 +1658,7 @@ $wgExtensionFunctions[] = static function () {
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
 		// T129982
-		&& $_SERVER['HTTP_HOST'] !== 'mw-jobrunner.discovery.wmnet'
+		&& $_SERVER['HTTP_HOST'] !== 'mw-jobrunner.discovery.wmnet:4448'
 	) {
 		$uri = ( ( $_SERVER['HTTPS'] ?? null ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
