@@ -1212,7 +1212,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		// Wikis which fetch URL uploads asynchronously via the jobqueue using UploadFromUrlJob
-		'wgEnableAsyncUploadsByURL' => [
+		'-wgEnableAsyncUploadsByURL' => [
 			'default' => true,
 		],
 

@@ -734,6 +734,12 @@ return [
 	'test2wiki' => true,
 ],
 
+// Wikis which fetch URL uploads asynchronously via the jobqueue using UploadFromUrlJob
+'wgEnableAsyncUploadsByURL' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 // Raise stash time limit on Commons for UploadWizard
 'wmgUploadStashMaxAge' => [
 	'default' => 6 * 60 * 60, // 6 hours
