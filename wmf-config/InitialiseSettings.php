@@ -2392,6 +2392,11 @@ return [
 		'logged_out' => false,
 		'beta' => true,
 	],
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+		'beta' => true,
+	],
 ],
 
 'wgVectorWebABTestEnrollment' => [
