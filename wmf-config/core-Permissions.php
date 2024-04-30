@@ -1427,6 +1427,13 @@ return [
 			'changetags' => true, // T331051
 		],
 		'user' => [ 'changetags' => false ], // T331051
+		'arbcom' => [ // T363805
+			'abusefilter-log-detail' => true,
+			'abusefilter-log-private' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			],
 	],
 	'+itwikisource' => [
 		'flood' => [ 'bot' => true ], // T38600
@@ -3881,6 +3888,7 @@ return [
 			'rollbacker',
 			'botadmin', // T220915
 			'mover', // T243503
+			'arbcom', // T363805
 		],
 		'sysop' => [
 			'accountcreator', // T63109
@@ -5240,7 +5248,7 @@ return [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover', 'botadmin' ], // T55913, T102770, T220915
+		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover', 'botadmin', 'arbcom', ], // T55913, T102770, T220915, T363805
 		'sysop' => [ 'accountcreator', 'flood', ], // T63109
 	],
 	'+itwikibooks' => [
