@@ -87,6 +87,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'es4' => [ 'cluster26', 'cluster28' ],
 		'es5' => [ 'cluster27', 'cluster29' ],
 		'es6' => [ 'cluster30' ],
+		'es7' => [ 'cluster31' ],
 		'x1' => [ 'extension1' ],
 		'x2' => [ 'extension2' ],
 	];
