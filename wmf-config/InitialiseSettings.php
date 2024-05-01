@@ -2386,6 +2386,28 @@ return [
 	]
 ],
 
+// Increase font size on Vector 2022 from 14px to 16px
+// for users registered after May 2nd 2024
+// as well as anonymoues users.
+'wmgIncreaseDefaultVectorFontSize' => [
+	'default' => false,
+	'testwiki' => true
+],
+
+'wgVectorAppearance' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+		'beta' => true,
+	],
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+		'beta' => true,
+	],
+],
+
+// FIXME: Can be removed once wmf.3 deployed everywhere.
 'wgVectorClientPreferences' => [
 	'default' => [
 		'logged_in' => false,
