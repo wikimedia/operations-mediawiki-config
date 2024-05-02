@@ -2391,7 +2391,8 @@ return [
 // as well as anonymoues users.
 'wmgIncreaseDefaultVectorFontSize' => [
 	'default' => false,
-	'testwiki' => true
+	'testwiki' => true,
+	'plwiki' => true,
 ],
 
 'wgVectorAppearance' => [
@@ -2401,6 +2402,11 @@ return [
 		'beta' => true,
 	],
 	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+		'beta' => true,
+	],
+	'plwiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
 		'beta' => true,
