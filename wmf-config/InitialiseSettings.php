@@ -7866,6 +7866,10 @@ return [
 	// End T341491
 ],
 
+'wgDiscussionToolsEnableThanks' => [
+	'default' => false,
+],
+
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => true, // T315353
 ],

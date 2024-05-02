@@ -2332,6 +2332,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionToolsEnableThanks' => [
+			'default' => true,
+		],
+
 		'-wgDiscussionToolsEnablePermalinksBackend' => [
 			'default' => true,
 		],
