@@ -465,8 +465,9 @@ return [
 		'Portal' => 110, // T157187
 		'Portal_talk' => 111, // T157187
 	],
-	'+enwiki' => [ // T8313
-		'WT' => NS_PROJECT_TALK,
+	'+enwiki' => [
+		'WT' => NS_PROJECT_TALK, // T8313
+		'TM' => NS_TEMPLATE, // T363757
 	],
 	'+enwikibooks' => [
 		'WJ' => 110,
