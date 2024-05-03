@@ -96,6 +96,7 @@ class MWMultiVersion {
 	 * @var array
 	 */
 	private $wikimediaSubdomains = [
+		'ae',
 		'am',
 		'ar',
 		'az',

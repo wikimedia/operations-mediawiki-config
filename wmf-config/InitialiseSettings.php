@@ -988,6 +988,7 @@ return [
 	// Individual wikis
 	'advisorswiki' => 'https://advisors.wikimedia.org',
 	'advisorywiki' => 'https://advisory.wikimedia.org',
+	'aewikimedia' => 'https://ae.wikimedia.org',
 	'amwikimedia' => 'https://am.wikimedia.org',
 	'apiportalwiki' => 'https://api.wikimedia.org',
 	'arbcom_itwiki' => 'https://wikipedia-it-arbcom.wikimedia.org',
