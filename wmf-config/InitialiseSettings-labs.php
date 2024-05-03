@@ -2563,5 +2563,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'eswiki' => true,
 		],
+
+		'wmgUseAutoModerator' => [ // T364034
+			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
