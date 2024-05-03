@@ -540,6 +540,12 @@ function wmfGetOverrideSettings() {
 			'default' => 0,
 		],
 
+		'wgVectorNightMode' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true,
+			],
+		],
 		'wgMinervaNightMode' => [
 			'default' => [
 				'base' => true,
@@ -616,10 +622,10 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			]
 		],
-		'wgVectorClientPreferences' => [
+		'wgVectorAppearance' => [
 			'default' => [
-				'logged_in' => false,
-				'logged_out' => false,
+				'logged_in' => true,
+				'logged_out' => true,
 				'beta' => true,
 			],
 		],
