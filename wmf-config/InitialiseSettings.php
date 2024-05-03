@@ -12288,6 +12288,10 @@ return [
 	'default' => false,
 ],
 
+'wmgUseAutoModerator' => [ // T364034
+	'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+],
+
 // T341000
 'wgExternalLinksDomainGaps' => [
 	'enwiki' => [
