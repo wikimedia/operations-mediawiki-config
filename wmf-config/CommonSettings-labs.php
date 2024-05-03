@@ -472,6 +472,13 @@ if ( $wmgRealm == 'labs' ) {
 		$wgPhonosFileBackend = 'global-multiwrite';
 	}
 
+	// T364034
+	if ( $wmgUseAutoModerator ) {
+		wfLoadExtension( 'AutoModerator' );
+		$wgAutoModeratorLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/';
+		$wgAutoModeratorLiftWingAddHostHeader = true;
+	}
+
 	if ( $wmgUseReportIncident ) {
 		wfLoadExtension( 'ReportIncident' );
 	}
