@@ -131,6 +131,7 @@ return [
 	'idwiki' => true,
 	'iewiki' => true,
 	'igwiki' => true,
+	'iglwiki' => true,
 	'ikwiki' => true,
 	'ilowiki' => true,
 	'inhwiki' => true,
