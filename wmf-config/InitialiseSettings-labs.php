@@ -2574,5 +2574,9 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'eswiki' => true,
 		],
+
+		'-wgPasswordDefault' => [
+			'default' => 'B',
+		],
 	];
 } # wmfGetOverrideSettings()
