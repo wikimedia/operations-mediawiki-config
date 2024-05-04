@@ -502,8 +502,5 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
-
-	// Test password wrapping
-	$wgPasswordDefault = 'B';
 }
 // end safeguard
