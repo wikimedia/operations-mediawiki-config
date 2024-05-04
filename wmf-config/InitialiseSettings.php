@@ -5900,6 +5900,7 @@ return [
 // T333179
 'wmgUseParserMigration' => [
 	'default' => true,
+	'commonswiki' => false, // T364228; should hopefully be resolved by T351113
 ],
 
 'wgParserMigrationEnableParsoidDiscussionTools' => [
