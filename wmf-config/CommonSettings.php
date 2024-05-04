@@ -621,8 +621,6 @@ $wgObjectCaches['db-mainstash'] = [
 
 session_name( $lang . 'wikiSession' );
 
-// Use PBKDF2 for password hashing (T70766)
-$wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
 $wgPasswordConfig['pbkdf2'] = [
 	'class' => 'Pbkdf2Password',
