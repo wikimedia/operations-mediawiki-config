@@ -2570,17 +2570,10 @@ return [
 ],
 
 'wgVectorPromoteAddTopic' => [
-	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except wikipedias, commons and wikidata (T352087)
-	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
-	'arwiki' => 'available', // T331313
-	'cswiki' => 'available', // T331313
-	'huwiki' => 'available', // T331313
-	'wikitech' => 'available', // T355374
+	'default' => false,
+	'arwiki' => true, // T331313
+	'cswiki' => true, // T331313
+	'huwiki' => true, // T331313
 	// Start T341491
 	'azwiki' => true,
 	'bnwiki' => true,
@@ -7962,12 +7955,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements' => [
-	// Everywhere except wikipedias, commons and wikidata (T352087)
-	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
+	'default' => 'default',
 	'arwiki' => 'available', // T329407
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
@@ -7992,13 +7980,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
-	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except wikipedias, commons and wikidata (T352087)
-	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
+	'default' => 'default', // T320683, T323537, T321955
 	'arwiki' => 'available', // T329407
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
@@ -8023,13 +8005,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
-	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except wikipedias, commons and wikidata (T352087)
-	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
+	'default' => 'default', // T323727, T327456
 	'arwiki' => 'available', // T329407
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
