@@ -2391,9 +2391,13 @@ return [
 // as well as anonymoues users.
 'wmgIncreaseDefaultVectorFontSize' => [
 	'default' => false,
-	'testwiki' => true
+	'testwiki' => true,
+	'plwiki' => true,
+	'nlwiki' => true,
+	'eswiki' => true,
 ],
 
+// Reveal Vector 2022 appearance menu.
 'wgVectorAppearance' => [
 	'default' => [
 		'logged_in' => false,
@@ -2405,16 +2409,17 @@ return [
 		'logged_out' => true,
 		'beta' => true,
 	],
-],
-
-// FIXME: Can be removed once wmf.3 deployed everywhere.
-'wgVectorClientPreferences' => [
-	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
+	'plwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
 		'beta' => true,
 	],
-	'testwiki' => [
+	'nlwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+		'beta' => true,
+	],
+	'eswiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
 		'beta' => true,

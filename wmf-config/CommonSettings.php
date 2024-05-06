@@ -2703,12 +2703,12 @@ if ( $wmgUseMobileFrontend ) {
 }
 
 // Increase font size on Vector 2022 from 14px to 16px
-// for users registered after May 2nd 2024
+// for users registered after May 6nd 2024
 // as well as anonymoues users.
 if ( $wmgIncreaseDefaultVectorFontSize ) {
 	$wgDefaultUserOptions['vector-font-size'] = 1;
 	$wgConditionalUserOptions['vector-font-size'] = [
-		[ 1, [ CUDCOND_AFTER, '20240501000000' ] ],
+		[ 1, [ CUDCOND_AFTER, '20240506000000' ] ],
 		[ 0, [ CUDCOND_NAMED ] ]
 	];
 }
