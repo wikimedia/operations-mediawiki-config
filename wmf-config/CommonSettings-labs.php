@@ -502,13 +502,5 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
-
-	// T320929 and T234987
-	$wgPasswordConfig['pbkdf2'] = [
-		'class' => Pbkdf2PasswordUsingOpenSSL::class,
-		'algo' => 'sha512',
-		'cost' => '128000',
-		'length' => '64',
-	];
 }
 // end safeguard
