@@ -514,11 +514,6 @@ Wikipedia:
         comment_wordmarktagline: T249047
         commons_tagline: 'File:Wikipedia-tagline-fa.svg'
         comment_tagline: T249047
-        variants:
-            fawiki-1m:
-                commons: 'File:The_logo_of_one_million_Persian_Wikipedia_articles_-_V3.svg'
-                commons_icon: File:The_logo_of_one_million_Persian_Wikipedia_articles_-_V2.svg
-                commons_tagline: File:Wikipedia-wordmark-fa.svg
     fatwiki:
         commons: 'File:Wikipedia-logo-v2-fat.svg'
     ffwiki:
