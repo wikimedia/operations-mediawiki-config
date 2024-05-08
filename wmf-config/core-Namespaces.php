@@ -5686,6 +5686,7 @@ return [
 	'ptwikiversity' => 'Wikiversidade',
 	'ptwiktionary' => 'Wikcionário',
 	'qualitywiki' => 'Project',
+	'quwiki' => 'Wikipidiya', // T355129
 	'rmywiki' => 'Vikipidiya',
 	'rowikibooks' => 'Wikimanuale',
 	'rowikinews' => 'Wikiștiri',
