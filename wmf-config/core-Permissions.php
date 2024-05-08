@@ -5833,4 +5833,104 @@ return [
 ],
 # @} end of wgRemoveGroups
 
+'wgGroupsAddToSelf' => [
+	'metawiki' => [ 'sysop' => [ 'flood' ] ], // T39198
+	'officewiki' => [ 'sysop' => [ 'flood' ] ], // T86237
+	'sourceswiki' => [ 'sysop' => [ 'flood' ] ], // T193350
+	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
+	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
+	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
+	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
+	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
+	'itwikibooks' => [ 'sysop' => [ 'flood' ] ], // T41569
+	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
+	'itwiktionary' => [ 'sysop' => [ 'flood' ] ], // T41306
+	'knwiki' => [ 'sysop' => [ 'flood' ] ], // T322472
+	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
+	'srwiki' => [ 'sysop' => [ 'flood' ] ],
+	'plwiki' => [ 'sysop' => [ 'flood' ] ], // T22155
+	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
+	'wikidata' => [
+		'sysop' => [ 'flood' ], // T50013, T48856
+		'wikidata-staff' => [ 'interface-admin' ], // T202065
+	],
+	'wikifunctionswiki' => [
+		// Special over-privileged group for initial deployment, to reduce over time
+		'wikifunctions-staff' => [ 'interface-admin', 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat' ]
+	],
+	'wikitech' => [
+		'contentadmin' => [ 'flood' ],
+		'sysop' => [ 'flood' ],
+	],
+	'zhwiki' => [ 'sysop' => [ 'flood' ] ],
+],
+
+'wgGroupsRemoveFromSelf' => [
+	'metawiki' => [ 'sysop' => [ 'flood' ] ], // T39198
+	'officewiki' => [ 'sysop' => [ 'flood' ] ], // T86237
+	'ckbwiki' => [
+		'flood' => [ 'flood' ], // T53803
+		'botadmin' => [ 'botadmin' ], // T53803
+	],
+	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
+	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
+	'enwikiquote' => [ 'flood' => [ 'flood' ] ], // T351250
+	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
+	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
+	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
+	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
+	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
+	'frwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
+	'hrwiki' => [ 'flood' => [ 'flood' ] ], // T276560
+	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
+	'jawiki' => [ 'rollbacker' => [ 'rollbacker' ] ], // T258339
+	'knwiki' => [ 'flood' => [ 'flood' ] ], // T322472
+	'ladwiki' => [ 'flood' => [ 'flood' ] ], // T131527
+	'lvwiki' => [ 'flood' => [ 'flood' ] ], // T121238
+	'mlwiki' => [ 'botadmin' => [ 'botadmin' ] ],
+	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
+	'plwiki' => [ 'flood' => [ 'flood' ] ], // T22155 , T23238
+	'ptwiki' => [ 'flood' => [ 'flood' ] ], // T228521
+	'sourceswiki' => [ 'flood' => [ 'flood' ] ], // T193350
+	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
+	'srwiki' => [ 'sysop' => [ 'flood' ] ],
+	'trwiki' => [ 'massmessage-sender' => [ 'massmessage-sender' ] ], // T147740
+	'wikidata' => [
+		'sysop' => [ 'flood' ], // T50013, T48856
+		'flood' => [ 'flood' ], // T50013
+		'wikidata-staff' => [ 'interface-admin' ], // T202065
+	],
+	'wikifunctionswiki' => [
+		// Special over-privileged group for initial deployment, to reduce over time
+		'wikifunctions-staff' => [ 'interface-admin', 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat' ]
+	],
+	'wikitech' => [
+		'contentadmin' => [ 'flood' ],
+		'sysop' => [ 'flood' ],
+	],
+	'viwiki' => [ 'flood' => [ 'flood' ] ], // T303578
+	'zhwiki' => [
+		'sysop' => [ 'flood' ],
+		'massmessage-sender' => [ 'massmessage-sender' ], // T130814
+		'ipblock-exempt' => [ 'ipblock-exempt' ], // T137532
+		'patroller' => [ 'patroller' ], // T137532
+		'rollbacker' => [ 'rollbacker' ], // T137532
+		'autoreviewer' => [ 'autoreviewer' ], // T137532
+		'flood' => [ 'flood' ], // T171379
+		'accountcreator' => [ 'accountcreator' ], // T194871
+		'filemover' => [ 'filemover' ], // T195247
+		'transwiki' => [ 'transwiki' ], // T250972
+		'ipblock-exempt-grantor' => [ 'ipblock-exempt-grantor' ], // T357991
+	],
+	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
+	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
+	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289
+	'zhwikiversity' => [
+		'flood' => [ 'flood' ],
+		'patroller' => [ 'patroller' ],
+		'autopatrolled' => [ 'autopatrolled' ],
+	], // T202599
+	'zhwiktionary' => [ 'flood' => [ 'flood' ] ], // T187018
+],
+
 ];
