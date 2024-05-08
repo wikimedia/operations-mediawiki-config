@@ -504,6 +504,6 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 
 	// Test password wrapping
-	$wgPasswordDefault = 'B';
+	$wgPasswordDefault = 'argon2';
 }
 // end safeguard
