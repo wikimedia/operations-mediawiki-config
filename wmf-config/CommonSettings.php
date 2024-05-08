@@ -629,7 +629,21 @@ $wgObjectCaches['db-mainstash'] = [
 
 session_name( $lang . 'wikiSession' );
 
-// This needs to be increased as allowable by server performance
+$wgPasswordDefault = 'E';
+
+$wgPasswordConfig['E'] = [
+	'class' => EncryptedPassword::class,
+	'underlying' => 'argon2',
+	'secrets' => [ $wmgPasswordSecretKey ],
+	'cipher' => 'aes-256-cbc',
+];
+$wgPasswordConfig['argon2'] = [
+	'class' => Argon2Password::class,
+	'algo' => 'argon2id',
+	'memory_cost' => 131072,
+	'time_cost' => 4,
+	'threads' => 4,
+];
 $wgPasswordConfig['pbkdf2'] = [
 	'class' => Pbkdf2PasswordUsingOpenSSL::class,
 	'algo' => 'sha512',
