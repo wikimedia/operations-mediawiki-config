@@ -67,9 +67,9 @@ class CirrusTest extends WgConfTestCase {
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
 		}
-		// Test that we scanned 2 DCs (and not cloudelastic, which is on SUP) for the group chi
+		// Test that we scanned 1 DC (and not codfw or cloudelastic, both on SUP) for the group chi
 		$this->assertEquals( 3, $dc_config_tested );
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $replica ) {
 			$groups = $config['wgCirrusSearchReplicaGroup'];
 			if ( is_array( $groups ) ) {
