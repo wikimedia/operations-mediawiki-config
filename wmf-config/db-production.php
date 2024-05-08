@@ -298,6 +298,8 @@ $wgLBFactoryConf = [
 	'cluster27'	=> [ 'blobs table' => 'blobs_cluster27', 'is static' => true ],
 	'cluster28'	=> [ 'blobs table' => 'blobs_cluster28' ],
 	'cluster29'	=> [ 'blobs table' => 'blobs_cluster29' ],
+	'cluster30'	=> [ 'blobs table' => 'blobs_cluster30' ],
+	'cluster31'	=> [ 'blobs table' => 'blobs_cluster31' ],
 ],
 
 # This key must exist for the master switch script to work, which means comment and uncomment
@@ -322,4 +324,6 @@ $wgLBFactoryConf = [
 $wgDefaultExternalStore = [
 	'DB://cluster28',
 	'DB://cluster29',
+	'DB://cluster30',
+	'DB://cluster31',
 ];
