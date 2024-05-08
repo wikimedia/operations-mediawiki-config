@@ -503,7 +503,19 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 
-	// Test password wrapping
-	$wgPasswordDefault = 'argon2';
+	$wgPasswordDefault = 'E';
+	$wgPasswordConfig['E'] = [
+		'class' => EncryptedPassword::class,
+		'underlying' => 'argon2',
+		'secrets' => [ $wmgPasswordSecretKey ],
+		'cipher' => 'aes-256-cbc',
+	];
+	$wgPasswordConfig['argon2'] = [
+		'class' => Argon2Password::class,
+		'algo' => 'argon2id',
+		'memory_cost' => 131072,
+		'time_cost' => 4,
+		'threads' => 4,
+	];
 }
 // end safeguard
