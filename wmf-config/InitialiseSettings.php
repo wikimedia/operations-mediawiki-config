@@ -8383,10 +8383,6 @@ return [
 	'wikivoyage' => 10,
 ],
 
-'wmgUseListings' => [
-	'default' => false,
-],
-
 'wmgUseTocTree' => [
 	'default' => false,
 	'wikivoyage' => true,
