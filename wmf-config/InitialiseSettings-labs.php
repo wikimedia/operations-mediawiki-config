@@ -2508,13 +2508,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
 		],
 
-		// T334895 - testing
-		'-wmgUseGraph' => [
-			'default' => true,
-		],
-		'-wmgHideGraphTags' => [
-			'default' => false,
-		],
 		'wmgEnableIPMasking' => [
 			'default' => false,
 			'loginwiki' => true,
