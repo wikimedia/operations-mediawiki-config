@@ -225,7 +225,10 @@ function wmfStaticRespond() {
 	$queryStr = $_SERVER['QUERY_STRING'] ?? '';
 	$validHash = ( preg_match( '/^[a-fA-F0-9]{5}$/', $queryStr ) ? $queryStr : false );
 
-	$stats = MediaWiki\MediaWikiServices::getInstance()->getStatsdDataFactory();
+	$responseMetric = MediaWiki\MediaWikiServices::getInstance()->getStatsFactory()
+		->getCounter( 'wmfstatic_response_total' )
+		->setLabel( 'status', 'unknown' )
+		->setLabel( 'responseType', 'na' );
 
 	// Try each version in descending order
 	//
@@ -270,20 +273,29 @@ function wmfStaticRespond() {
 		}
 
 		wmfStaticStreamFile( $filePath, $responseType );
-		$stats->increment( "wmfstatic.success.$responseType" );
+
+		$responseMetric->setLabel( 'status', 'success' )
+			->setLabel( 'responseType', $responseType )
+			->copyToStatsdAt( "wmfstatic.success.$responseType" )
+			->increment();
 		return;
 	}
 
 	if ( !$newestFoundDir ) {
 		wmfStaticShowError( 'Unknown file path', 404 );
-		$stats->increment( 'wmfstatic.notfound' );
+
+		$responseMetric->setLabel( 'status', 'notfound' )
+			->copyToStatsdAt( 'wmfstatic.notfound' )
+			->increment();
 		return;
 	}
 
 	// Serve fallback with short TTL if version looks like a valid hash
 	// but we don't (yet) have a matching file.
 	wmfStaticStreamFile( "$newestFoundDir/$uriPath", 'mismatch' );
-	$stats->increment( 'wmfstatic.mismatch' );
+	$responseMetric->setLabel( 'status', 'mismatch' )
+		->copyToStatsdAt( 'wmfstatic.mismatch' )
+		->increment();
 }
 
 wfResetOutputBuffers();
