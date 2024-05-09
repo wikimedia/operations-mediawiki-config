@@ -503,7 +503,7 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 
-	$wgPasswordDefault = 'pbkdf2';
+	$wgPasswordDefault = 'E';
 	$wgPasswordConfig['E'] = [
 		'class' => EncryptedPassword::class,
 		'underlying' => 'argon2',
