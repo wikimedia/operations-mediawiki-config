@@ -49,12 +49,13 @@ function wmfSetupEtcd( $etcdHost ) {
  * See https://wikitech.wikimedia.org/wiki/Dbctl
  *
  * This function must be called after db-{eqiad,codfw}.php has been loaded!
- * It overwrites a few sections of $wgLBFactoryConf with data from etcd.
+ * It overwrites a few sections of $wgLBFactoryConf (passed by reference) and
+ * populates the $wmgPCServers global with data from etcd.
  * @param array $localDbConfig Local config loaded from etcd, to be applied to
  * @param array &$lbFactoryConf LBFactoryConf array to be updated using $localDbConfig
  */
 function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
-	global $wmgRemoteMasterDbConfig;
+	global $wmgRemoteMasterDbConfig, $wmgPCServers;
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
 	$lbFactoryConf['groupLoadsBySection'] = $localDbConfig['groupLoadsBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
@@ -95,8 +96,19 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 	$circularReplicationClusters = [
 		'x2' => true,
 	];
+	$wmgPCServers = [];
 	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
+		// While parsercache sections are included in externalLoads, they are not
+		// accessed through LBFactoryMulti. Instead, populate to wmgPCServers for
+		// consumption by SqlBagOStuff.
 		if ( substr( $dbctlCluster, 0, 2 ) === 'pc' ) {
+			// Expected parsercache $dbctlLoads structure: [ [ 'pcNNNN' => 0 ], [] ]
+			if ( is_array( $dbctlLoads ) && isset( $dbctlLoads[0] ) && is_array( $dbctlLoads[0] ) ) {
+				$host = array_key_first( $dbctlLoads[0] );
+				if ( is_string( $host ) ) {
+					$wmgPCServers[$dbctlCluster] = $localDbConfig['hostsByName'][$host] ?? $host;
+				}
+			}
 			continue;
 		}
 		// Merge the same way as sectionLoads

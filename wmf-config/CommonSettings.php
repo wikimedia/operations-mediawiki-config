@@ -340,7 +340,12 @@ if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 }
 $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 
-// In production, read the database loadbalancer config from etcd.
+// The parsercache section-to-server mapping. Must be defined before calls to
+// wmfApplyEtcdDBConfig.
+$wmgPCServers = $wmgLocalServices['parsercache-dbs'];
+
+// In production, read the database loadbalancer config and parsercache
+// section-to-server mapping from etcd.
 // See https://wikitech.wikimedia.org/wiki/Dbctl
 // This must be called after db-{eqiad,codfw}.php has been loaded!
 // It overwrites a few sections of $wgLBFactoryConf with data from etcd.
@@ -554,7 +559,7 @@ $wgOverrideUcfirstCharacters = include __DIR__ . '/UcfirstOverrides.php';
 $wgSessionName = $wgDBname . 'Session';
 
 $pcServers = [];
-foreach ( $wmgLocalServices['parsercache-dbs'] as $tag => $host ) {
+foreach ( $wmgPCServers as $tag => $host ) {
 	$pcServers[$tag] = [
 		'type' => 'mysql',
 		'host' => $host,
