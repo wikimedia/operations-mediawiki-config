@@ -2342,7 +2342,7 @@ return [
 'wgVectorMaxWidthOptions' => [
 	'default' => [
 		"exclude" => [
-			"mainpage" => false,
+			"mainpage" => true,
 			"querystring" => [
 				"action" => "(history|edit)",
 				"diff" => ".+",
