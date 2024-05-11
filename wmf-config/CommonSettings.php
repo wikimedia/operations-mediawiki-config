@@ -3270,8 +3270,16 @@ if ( $wmgUseDisambiguator ) {
 
 if ( $wmgUseDiscussionTools ) {
 	wfLoadExtension( 'DiscussionTools' );
-	// Auto topic subscriptions are initially disabled while in beta (T290500)
+
+	// The auto topic subscription feature is disabled by default for existing users, but
+	// we enable it for new users (T294398).
 	$wgDefaultUserOptions['discussiontools-autotopicsub'] = 0;
+	$wgConditionalUserOptions['discussiontools-autotopicsub'] = [
+		[
+			1,
+			[ CUDCOND_AFTER, '20230818000000' ]
+		]
+	];
 
 	$wgConditionalUserOptions['echo-subscriptions-email-dt-subscription'] = [
 		[
