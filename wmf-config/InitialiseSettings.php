@@ -11428,6 +11428,10 @@ return [
 	],
 ],
 
+'wgWMEWikimediaDebugBackend' => [
+	'default' => 'k8s-mwdebug',
+],
+
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
