@@ -778,9 +778,7 @@ return [
 			'reupload-shared' => true,
 		],
 	],
-	'+enwikiversity' => [
-		'sysop' => [ 'nuke' => false ], // T113109
-		'bureaucrat' => [ 'nuke' => true ], // T113109
+	'+enwikiversity' => [ // T360977
 		'curator' => [ // T113109
 			'createaccount' => true,
 			'delete' => true,
