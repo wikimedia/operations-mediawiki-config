@@ -737,6 +737,7 @@ return [
 // Wikis which fetch URL uploads asynchronously via the jobqueue using UploadFromUrlJob
 'wgEnableAsyncUploadsByURL' => [
 	'default' => false,
+	'commonswiki' => true,
 	'testwiki' => true,
 ],
 
