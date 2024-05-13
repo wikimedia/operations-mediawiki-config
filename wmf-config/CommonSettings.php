@@ -357,10 +357,13 @@ if ( $wmgRealm === 'production' ) {
 	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
+	$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitor';
 	// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
 	if ( PHP_SAPI === 'cli' ) {
-		$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+		$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 	}
+	// T360930
+	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 400;
 }
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
