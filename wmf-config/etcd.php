@@ -96,6 +96,9 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'x2' => true,
 	];
 	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
+		if ( substr( $dbctlCluster, 0, 2 ) === 'pc' ) {
+			continue;
+		}
 		// Merge the same way as sectionLoads
 		if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
 			$localMaster = array_key_first( $dbctlLoads[0] );
