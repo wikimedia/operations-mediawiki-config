@@ -3860,6 +3860,7 @@ return [
 'wgSignatureValidation' => [
 	'default' => 'new', // T248632
 	'enwiki' => 'disallow', // T355462
+	'plwiki' => 'disallow', // T364769
 ],
 
 'wgSignatureAllowedLintErrors' => [ // T360796
