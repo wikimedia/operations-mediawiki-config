@@ -2389,7 +2389,7 @@ return [
 	'default' => [
 		'logged_in' => false,
 		'logged_out' => false,
-		'beta' => false,
+		'beta' => true,
 	],
 	'testwiki' => [
 		'logged_in' => false,
