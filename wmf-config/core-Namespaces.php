@@ -1053,7 +1053,6 @@ return [
 	'+maiwiki' => [
 		'वि' => NS_PROJECT, // T125801
 		'वि_वा' => NS_PROJECT_TALK, // T125801
-		'CA' => NS_CATEGORY, // T125801
 		'CT' => NS_CATEGORY_TALK, // T125801
 		'WT' => NS_PROJECT_TALK, // T125801
 		'u' => NS_USER, // T125801
