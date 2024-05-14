@@ -2030,6 +2030,7 @@ return [
 		], // T72459, T212655
 	],
 	'+plwiktionary' => [
+		'*' => [ 'applychangetags' => true ],
 		'editor' => [ 'patrolmarks' => true ],
 	],
 	// T11024, T12362
