@@ -62,7 +62,6 @@ class MWMultiVersion {
 		'nonecho',
 		'mobile-anon-talk',
 		'modern-mainpage',
-		'shareuserscripts',
 		'nowikidatadescriptiontaglines',
 		'cirrussearch-big-indices',
 		'rtl',

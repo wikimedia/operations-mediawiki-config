@@ -2305,8 +2305,7 @@ return [
 
 // T301212
 'wgVectorShareUserScripts' => [
-	'default' => false,
-	'shareuserscripts' => true,
+	'default' => true,
 ],
 
 // Note:
