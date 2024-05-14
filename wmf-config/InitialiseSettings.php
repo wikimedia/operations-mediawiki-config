@@ -2385,10 +2385,16 @@ return [
 	],
 ],
 
-'wgVectorZebraDesign' => [
+'wgVectorNightMode' => [
 	'default' => [
-		'logged_in' => true,
-		'logged_out' => true,
+		'logged_in' => false,
+		'logged_out' => false,
+		'beta' => false,
+	],
+	'testwiki' => [
+		'logged_in' => false,
+		'logged_out' => false,
+		'beta' => true,
 	]
 ],
 

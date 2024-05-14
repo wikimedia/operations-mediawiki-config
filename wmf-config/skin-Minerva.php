@@ -86,6 +86,8 @@ return [
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [
+			// T357699
+			"Special:Homepage",
 			"Special:BrokenRedirects",
 			"Special:DeadendPages",
 			"Special:AncientPages",
