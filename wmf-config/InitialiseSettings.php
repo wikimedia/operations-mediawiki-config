@@ -2303,13 +2303,10 @@ return [
 	'apiportalwiki' => 'wikimediaapiportal', // T259661
 ],
 
-// T301212
-'wgVectorShareUserScripts' => [
-	'default' => false,
-],
-
 'wgVectorWrapTablesTemporary' => [
 	'default' => false,
+	// T366314
+	'group0' => true,
 	// T366314
 	'legacy-vector' => true,
 ],
