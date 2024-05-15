@@ -12109,6 +12109,10 @@ return [
 	'hewiki' => true, // T170001
 ],
 
+'wgParserEnableLegacyHeadingDOM' => [
+	'default' => false,
+],
+
 'wgParserEnableLegacyMediaDOM' => [
 	'default' => false,
 ],
