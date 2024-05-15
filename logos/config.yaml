@@ -1425,12 +1425,14 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     pswiki:
-        comment: T50397
-        comment_1_5x: T150618
-        comment_2x: T150618
-        local_tagline: true
-        commons_wordmark: 'File:Wikipedia-wordmark-ps.svg'
-        comment_wordmark: T184442
+        commons: 'File:Wikipedia-logo-v2-ps3.svg'
+        comment: 'T50397, T360851'
+        comment_1_5x: 'T150618, T360851'
+        comment_2x: 'T150618, T360851'
+        commons_wordmark: 'File:Wikipedia-wordmark3-ps.svg'
+        comment_wordmark: 'T184442, T360851'
+        commons_tagline: 'File:Wikipedia-tagline-ps.svg'
+        comment_tagline: T360851
     ptwiki:
         commons: 'File:Wikipedia-logo-v2-pt.svg'
         comment_1_5x: T150618

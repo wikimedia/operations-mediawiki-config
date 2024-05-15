@@ -294,7 +294,7 @@ return [
 	'pmswiki' => '/static/images/project-logos/pmswiki.png',
 	'pnbwiki' => '/static/images/project-logos/pnbwiki.png', // T50397
 	'pntwiki' => '/static/images/project-logos/pntwiki.png', // T51125
-	'pswiki' => '/static/images/project-logos/pswiki.png', // T50397
+	'pswiki' => '/static/images/project-logos/pswiki.png', // T50397, T360851
 	'ptwiki' => '/static/images/project-logos/ptwiki.png',
 	'pwnwiki' => '/static/images/project-logos/pwnwiki.png',
 	'quwiki' => '/static/images/project-logos/quwiki.png',
@@ -1176,7 +1176,7 @@ return [
 	'pmswiki' => '/static/images/project-logos/pmswiki-1.5x.png', // T150618
 	'pnbwiki' => '/static/images/project-logos/pnbwiki-1.5x.png', // T150618
 	'pntwiki' => '/static/images/project-logos/pntwiki-1.5x.png', // T150618
-	'pswiki' => '/static/images/project-logos/pswiki-1.5x.png', // T150618
+	'pswiki' => '/static/images/project-logos/pswiki-1.5x.png', // T150618, T360851
 	'ptwiki' => '/static/images/project-logos/ptwiki-1.5x.png', // T150618
 	'pwnwiki' => '/static/images/project-logos/pwnwiki-1.5x.png',
 	'quwiki' => '/static/images/project-logos/quwiki-1.5x.png', // T150618
@@ -1836,7 +1836,7 @@ return [
 	'pmswiki' => '/static/images/project-logos/pmswiki-2x.png', // T150618
 	'pnbwiki' => '/static/images/project-logos/pnbwiki-2x.png', // T150618
 	'pntwiki' => '/static/images/project-logos/pntwiki-2x.png', // T150618
-	'pswiki' => '/static/images/project-logos/pswiki-2x.png', // T150618
+	'pswiki' => '/static/images/project-logos/pswiki-2x.png', // T150618, T360851
 	'ptwiki' => '/static/images/project-logos/ptwiki-2x.png', // T150618
 	'pwnwiki' => '/static/images/project-logos/pwnwiki-2x.png',
 	'quwiki' => '/static/images/project-logos/quwiki-2x.png', // T150618
@@ -3111,10 +3111,10 @@ return [
 		'width' => 120,
 		'height' => 18,
 	],
-	'pswiki' => [ // T184442
+	'pswiki' => [ // T184442, T360851
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ps.svg',
-		'width' => 85,
-		'height' => 32,
+		'width' => 105,
+		'height' => 29,
 	],
 	'ptwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -6935,10 +6935,10 @@ return [
 		'width' => 120,
 		'height' => 10,
 	],
-	'pswiki' => [
+	'pswiki' => [ // T360851
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ps.svg',
-		'width' => 84,
-		'height' => 16,
+		'width' => 101,
+		'height' => 17,
 	],
 	'ptwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-pt.svg',
