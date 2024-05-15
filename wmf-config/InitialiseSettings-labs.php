@@ -558,7 +558,7 @@ function wmfGetOverrideSettings() {
 				"exclude" => [
 					"mainpage" => false,
 					"pagetitles" => [],
-					"namespaces" => [ -1, 2, 6, 8, 10, 14, 100, 710, 828 ],
+					"namespaces" => [ -1, 1, 2, 6, 8, 10, 14, 100, 710, 828 ],
 					"querystring" => [
 						"action" => "edit|submit|diff|info|protect|delete|undelete|action|history",
 						"diff" => ".+"
