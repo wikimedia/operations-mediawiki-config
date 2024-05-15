@@ -475,7 +475,7 @@ if ( $wmgRealm == 'labs' ) {
 	// T364034
 	if ( $wmgUseAutoModerator ) {
 		wfLoadExtension( 'AutoModerator' );
-		$wgAutoModeratorLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/';
+		$wgAutoModeratorLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/v1/';
 		$wgAutoModeratorLiftWingAddHostHeader = true;
 	}
 
