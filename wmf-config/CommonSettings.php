@@ -644,6 +644,10 @@ $wgPasswordConfig['argon2'] = [
 	'time_cost' => 4,
 	'threads' => 4,
 ];
+$wgPasswordConfig['BE'] = [
+	'class' => LayeredParameterizedPassword::class,
+	'types' => [ 'B', 'E' ],
+];
 $wgPasswordConfig['pbkdf2'] = [
 	'class' => Pbkdf2PasswordUsingOpenSSL::class,
 	'algo' => 'sha512',
