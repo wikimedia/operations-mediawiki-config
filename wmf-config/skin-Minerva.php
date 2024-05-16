@@ -52,7 +52,7 @@ return [
 		// T359183
 		'default' => [
 			'action' => 'edit|submit|diff|info|protect|delete|undelete|action|history',
-			'diff' => '*'
+			'diff' => '.*'
 		],
 		// Allow us to reliably test all pages here.
 		'testwiki' => [],
@@ -86,6 +86,7 @@ return [
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [
+			"Special:AllMessages",
 			// T357699
 			"Special:Homepage",
 			"Special:BrokenRedirects",
@@ -159,10 +160,12 @@ return [
 			"Special:EditRecovery",
 			"Special:AbuseLog",
 			"Special:NewFiles",
-			"Special:NewPages",
+			"Special:Newpages",
 			"Special:NewPagesFeed",
-			"Special:RecentChanges",
-			"Special:RecentChangesLinked",
+			"Special:ProtectedPages",
+			"Special:ProtectedTitles",
+			"Special:Recentchanges",
+			"Special:Recentchangeslinked",
 			"Special:Log",
 			"Special:Tags",
 			"Special:ListFiles",
@@ -239,7 +242,9 @@ return [
 			"Special:MathStatus",
 			"Special:ORESModels",
 			"Special:SecurePoll",
-			"Special:ContentTranslation"
+			"Special:ContentTranslation",
+			"Special:EditWatchlist",
+			"Special:Watchlist",
 		],
 		'testwiki' => [ 'Banana' ],
 	],
