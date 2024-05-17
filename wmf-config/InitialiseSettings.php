@@ -7098,6 +7098,12 @@ return [
 		'beta' => false,
 		'amc' => true,
 	],
+	// T109277
+	'enwiki' => [
+		'base' => true,
+		'beta' => true,
+		'amc' => true,
+	],
 	// T290812
 	'ptwikinews' => [
 		'base' => true,
