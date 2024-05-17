@@ -88,4 +88,13 @@ $wmgThrottlingExceptions[] = [
 	'value' => 175,
 ];
 
+// T365221
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-05-24T08:00:00 +5:30',
+	'to' => '2024-05-24T18:00:00 +5:30',
+	'range' => [ '192.168.103.0/24' ],
+	'dbname' => [ 'knwiki', 'knwikisource' ],
+	'value' => 100,
+];
+
 ## Add throttling definitions above.
