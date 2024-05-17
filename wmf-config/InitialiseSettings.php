@@ -727,11 +727,7 @@ return [
 
 // Wikis which allow async uploads via the job queue if uploads are enabled
 'wgEnableAsyncUploads' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ],
 
 // Wikis which fetch URL uploads asynchronously via the jobqueue using UploadFromUrlJob
