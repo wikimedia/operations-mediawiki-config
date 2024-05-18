@@ -613,6 +613,7 @@ return [
 	],
 	'+frwiktionary' => [
 		'conj' => 116, // T262298
+		'CVT' => 120, // T360989
 	],
 	'+fywiki' => [ // T334807
 		'Portal' => 100,
@@ -3733,6 +3734,8 @@ return [
 		117 => 'Discussion_Conjugaison', // T262298
 		118 => 'Racine', // T263525
 		119 => 'Discussion_Racine', // T263525
+		120 => 'Convention', // T360989
+		121 => 'Discussion_Convention', // T360989
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín',
