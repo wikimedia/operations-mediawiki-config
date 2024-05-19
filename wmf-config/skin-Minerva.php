@@ -305,6 +305,10 @@ return [
 			'loggedin' => false,
 			'amc' => true,
 		],
+		// T365323
+		'enwiktionary' => [
+			'base' => true,
+		],
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
