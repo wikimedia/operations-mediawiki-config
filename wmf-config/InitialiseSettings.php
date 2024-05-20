@@ -12186,8 +12186,14 @@ return [
 	'default' => false,
 ],
 
-'wmgUseAutoModerator' => [ // T364034
-	'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+// T361643
+'wmgUseAutoModerator' => [
+	// NOTE: Do not enable without OK from Moderator Tools team.
+	'default' => false,
+	'testwiki' => true,
+],
+'wgAutoModeratorUsername' => [
+	'testwiki' => 'AutoModeratorTest',
 ],
 
 // T341000
