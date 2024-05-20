@@ -470,6 +470,7 @@ return [
 	'dvwiki' => false, // T304551
 	'eewiki' => true,
 	'emlwiki' => true,
+	'enwiki' => true, // T308144
 	'elwiki' => true,
 	'eowiki' => true,
 	'eswiki' => true,
