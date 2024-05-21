@@ -7093,20 +7093,11 @@ return [
 ],
 
 'wgMFUseDesktopSpecialWatchlistPage' => [
-	'default' => [
-		'base' => false,
-		'beta' => false,
-		'amc' => true,
-	],
 	// T109277
-	'enwiki' => [
+	'default' => [
 		'base' => true,
 		'beta' => true,
 		'amc' => true,
-	],
-	// T290812
-	'ptwikinews' => [
-		'base' => true,
 	],
 ],
 
