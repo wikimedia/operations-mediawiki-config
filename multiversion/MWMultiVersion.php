@@ -65,6 +65,7 @@ class MWMultiVersion {
 		'nowikidatadescriptiontaglines',
 		'cirrussearch-big-indices',
 		'rtl',
+		'translate',
 	];
 
 	/** @var string[] */
