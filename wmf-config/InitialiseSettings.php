@@ -11564,6 +11564,9 @@ return [
 // T334295
 'wgAbuseFilterActorTableSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'testwiki' => SCHEMA_COMPAT_NEW,
+	'test2wiki' => SCHEMA_COMPAT_NEW,
+	'testwikidatawiki' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
