@@ -1082,6 +1082,7 @@ return [
 			'edit-legal' => true,
 			'edit' => true,
 			'autoconfirmed' => true,
+			'autopatrol' => true, // T365584
 			'editsemiprotected' => true,
 			'skipcaptcha' => true,
 			'editinterface' => true,
