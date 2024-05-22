@@ -8079,9 +8079,6 @@ return [
 	'default' => [
 		'userGroups' => [ '*' ]
 	],
-	'arwiki' => [ // T255022
-		'userGroups' => [ 'autoreview', 'bot', 'editor', 'reviewer', 'sysop' ]
-	],
 	'enwiki' => [
 		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
