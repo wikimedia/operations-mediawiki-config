@@ -24,13 +24,32 @@ return [
 ],
 
 'wgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad' ],
+	'default' => [
+		'default' => [ 'eqiad' ],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
 	'private' => [ 'eqiad', 'codfw' ],
-	'testwiki' => [],
-	'frwiki' => [],
-	'itwiki' => [],
-	'commonswiki' => [],
-	'wikidatawiki' => []
+	// T363475: Writes shifted to SUP, archive writes remain.
+	'testwiki' => [
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
+	'frwiki' => [
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
+	'itwiki' => [
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
+	'commonswiki' => [
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
+	'wikidatawiki' => [
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
 ],
 
 'wgCirrusSearchReplicaGroup' => [
