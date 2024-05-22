@@ -76,6 +76,7 @@ return [
 		'mediawiki.mentor_dashboard.personalized_praise',
 		'mediawiki.mentor_dashboard.interaction',
 		'mediawiki.ipinfo_interaction',
+		'mediawiki.ip_reputation.score',
 		'mediawiki.editgrowthconfig',
 		'mediawiki.wikistories_consumption_event',
 		'mediawiki.wikistories_contribution_event',

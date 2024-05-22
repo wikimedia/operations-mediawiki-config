@@ -3428,6 +3428,9 @@ if ( $wmgUseEventLogging ) {
 		if ( $wgDBname === 'testwiki' ) {
 			$wgGroupPermissions['data-qa']['perform-data-qa'] = true; // T276515
 		}
+		// On Beta cluster, this is null (see LabsServices.php), as IPoid doesn't
+		// have a public facing API.
+		$wgWikimediaEventsIPoidUrl = $wmgLocalServices['ipoid'];
 	}
 
 	// Depends on EventLogging
