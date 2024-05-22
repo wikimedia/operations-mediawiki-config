@@ -11559,6 +11559,7 @@ return [
 	'testwiki' => SCHEMA_COMPAT_NEW,
 	'test2wiki' => SCHEMA_COMPAT_NEW,
 	'testwikidatawiki' => SCHEMA_COMPAT_NEW,
+	'group0' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
