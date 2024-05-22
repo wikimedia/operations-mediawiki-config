@@ -769,7 +769,7 @@ return [
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
 	'arwiki' => '/wiki/ويكيبيديا:رفع', // T142450
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
-	'azwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=az', // T236307
+	'azwiki' => '/wiki/Vikipediya:Yükləmə_sehrbazı', // T364674
 	'azbwiki' => '/wiki/ویکی‌پدیا:یوکله‌مه', // T248971
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
