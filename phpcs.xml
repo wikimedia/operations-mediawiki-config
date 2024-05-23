@@ -34,4 +34,5 @@
 	<!-- Auto generated files -->
 	<exclude-pattern>dblists-index\.php</exclude-pattern>
 	<exclude-pattern>wmf-config/interwiki\.php</exclude-pattern>
+	<exclude-pattern>wmf-config/interwiki-labs\.php</exclude-pattern>
 </ruleset>
