@@ -1634,9 +1634,11 @@ function wmfGetOverrideSettings() {
 		],
 		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
 			'default' => true,
+			'enwiki' => false,
 		],
 		'-wgGEPersonalizedPraiseBackendEnabled' => [
 			'default' => true,
+			'enwiki' => false,
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
@@ -2577,20 +2579,13 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 		],
 
-		// T357766
 		'wmgUseCommunityConfiguration' => [
-			// NOTE: Do not enable without Growth team OK
-			'default' => false,
-			'arwiki' => true,
-			'cswiki' => true,
-			'eswiki' => true,
+			'default' => false, // NOTE: Do not enable without Growth team OK
+			'growthexperiments' => true, // T364892
 		],
 		'wgGEUseCommunityConfigurationExtension' => [
-			// NOTE: Do not enable without Growth team OK
 			'default' => false,
-			'arwiki' => true,
-			'eswiki' => true,
-			'cswiki' => true,
+			'growthexperiments' => true, // T364892
 		],
 
 		'wmgUseAutoModerator' => [ // T364034
