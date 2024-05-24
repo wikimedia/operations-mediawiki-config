@@ -2580,11 +2580,13 @@ function wmfGetOverrideSettings() {
 			// NOTE: Do not enable without Growth team OK
 			'default' => false,
 			'eswiki' => true,
+			'cswiki' => true,
 		],
 		'wgGEUseCommunityConfigurationExtension' => [
 			// NOTE: Do not enable without Growth team OK
 			'default' => false,
 			'eswiki' => true,
+			'cswiki' => true,
 		],
 
 		'wmgUseAutoModerator' => [ // T364034
