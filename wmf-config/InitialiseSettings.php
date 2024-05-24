@@ -6471,6 +6471,7 @@ return [
 	'bnwikisource' => 'numeric', // T146675
 	'bswiki' => 'uca-bs-u-kn', // T116527, T148682
 	'bswiktionary' => 'uca-bs-u-kn', // T258346
+	'bswikiquote' => 'uca-bs-u-kn', // T365133
 	'ckbwiki' => 'xx-uca-ckb', // T57630
 	'cswiki' => 'uca-cs-u-kn', // T66885, T146675
 	'cswiktionary' => 'uca-default', // T106337
