@@ -100,6 +100,8 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
+
+			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org'
 		],
 
 		'-wgCanonicalServer' => [
@@ -121,6 +123,8 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
+
+			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org'
 		],
 
 		'-wgUploadPath' => [
@@ -606,6 +610,9 @@ function wmfGetOverrideSettings() {
 			'wiktionary' => '.wiktionary.beta.wmflabs.org',
 			// wikis which are not Wikipedias but use *.wikipedia.beta.wmflabs.org
 			'testwiki' => '.wikipedia.beta.wmflabs.org',
+
+			// Wikis for SUL project hosted on wmcloud.org
+			'test2wiki' => '.wikipedia.beta.wmcloud.org',
 		],
 
 		'-wmgCentralAuthAutoLoginWikis' => [
@@ -623,6 +630,9 @@ function wmfGetOverrideSettings() {
 				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
 				'wikifunctions.beta.wmflabs.org' => 'wikifunctionswiki',
+
+				// Wikis for SUL project hosted on wmcloud.org
+				'.wikipedia.beta.wmcloud.org' => 'test2wiki'
 			],
 		],
 
@@ -2323,6 +2333,8 @@ function wmfGetOverrideSettings() {
 				'cxserver-beta.wmcloud.org',
 				'recommend.wmflabs.org',
 
+				// the new wmcloud instances to test the SUL project
+				'*.wikipedia.beta.wmcloud.org',
 			],
 		],
 

@@ -304,9 +304,13 @@ class MWMultiVersion {
 			if ( $serverName === 'ee.wikimedia.org' ) {
 				$site = "wikimedia";
 			}
-		} elseif ( strpos( $serverName, 'wmflabs' ) !== false ) {
-			if ( preg_match( '/^([^.]+)\.([^.]+)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
-				// http://en.wikipedia.beta.wmflabs.org/
+		} elseif ( strpos( $serverName, 'wmflabs' ) !== false
+			|| strpos( $serverName, 'wmcloud' ) !== false
+		) {
+			if (
+				preg_match( '/^([^.]+)\.([^.]+)\.beta\.(wmflabs|wmcloud)\.org$/', $serverName, $matches )
+			) {
+				// http://en.wikipedia.beta.wmflabs.org/ or http://en.wikipedia.beta.wmcloud.org/
 				$lang = $matches[1];
 				if ( $matches[2] === 'wikimedia' ) {
 					# Beta uses 'wiki' as a DB suffix for WikiMedia databases

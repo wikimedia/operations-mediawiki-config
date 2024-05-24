@@ -92,6 +92,9 @@ if ( $wmgRealm == 'labs' ) {
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
 		'wikifunctions.beta.wmflabs.org',
+
+		// new wmcloud instances
+		'wikipedia.beta.wmcloud.org',
 	];
 
 	# Attempt to auto block users using faulty servers
@@ -204,6 +207,8 @@ if ( $wmgRealm == 'labs' ) {
 			'*.wikivoyage.beta.wmflabs.org',
 			'*.wikimedia.beta.wmflabs.org',
 			'*.wikidata.beta.wmflabs.org',
+
+			'*.wikipedia.beta.wmcloud.org',
 		];
 	}
 
@@ -262,6 +267,7 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseCORS ) {
 		$wgCrossSiteAJAXdomains = [
 			'*.beta.wmflabs.org',
+			'*.beta.wmcloud.org',
 		];
 	}
 
