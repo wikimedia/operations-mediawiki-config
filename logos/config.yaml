@@ -2981,10 +2981,11 @@ Wikibooks:
         no_1_5x: true
         no_2x: true
     fawikibooks:
+        comment: T365913
+        commons_tagline: File:Wikibooks-tagline-fa.svg
+        commons_wordmark: File:Wikibooks-wordmark-fa.svg
         no_1_5x: true
         no_2x: true
-        local_tagline: true
-        local_wordmark: true
     fiwikibooks:
         comment_1_5x: T177506
         comment_2x: T177506
