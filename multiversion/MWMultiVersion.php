@@ -206,6 +206,21 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Create an instance for sso.wikimedia.org requests.
+	 *
+	 * For example:
+	 * <https://sso.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin>
+	 *
+	 * @param ?string $requestUri CGI path info, from `$_SERVER['REQUEST_URI']`.
+	 * @return MWMultiVersion
+	 */
+	public static function initializeForSsoDomain( $requestUri ) {
+		$instance = self::createInstance();
+		$instance->setSiteInfoForSsoDomain( $requestUri );
+		return $instance;
+	}
+
+	/**
 	 * Create an instance by `--wiki` CLI parameter.
 	 *
 	 * This is used by MWScript.php and the `mwscript` command for
@@ -272,15 +287,19 @@ class MWMultiVersion {
 	 * Create an instance for a web request, based on $_SERVER properties.
 	 * @param ?string $serverName HTTP host name from `$_SERVER['SERVER_NAME']`.
 	 * @param ?string $scriptName HTTP script name from `$_SERVER['SCRIPT_NAME']`.
-	 * @param string $pathInfo CGI path info, from `$_SERVER['PATH_INFO']`.
+	 * @param ?string $pathInfo CGI path info, from `$_SERVER['PATH_INFO']`.
+	 * @param ?string $requestUri CGI request URI, from `$_SERVER['REQUEST_URI']`.
 	 * @return MWMultiVersion
 	 */
-	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo ) {
+	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri ) {
 		if ( $scriptName === '/w/thumb.php'
 			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' )
 		) {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
+		} elseif ( $serverName === 'sso.wikimedia.org' || $serverName === 'sso.wikimedia.beta.wmflabs.org' ) {
+			// SSO URL hit. The condition here must match the one in CommonSettings.php where $wmgPathPrefix is set.
+			return self::initializeForSsoDomain( $requestUri );
 		} else {
 			// Regular URL hit (wiki of origin)...
 			return self::initializeForWiki( $serverName );
@@ -366,7 +385,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize object state from a upload.wikimedia.org request path.
+	 * Initialize object state from an upload.wikimedia.org request path.
 	 *
 	 * @param string $pathInfo
 	 */
@@ -377,6 +396,21 @@ class MWMultiVersion {
 		}
 		[ , $site, $lang ] = $pathBits;
 		$this->loadDBFromSite( $site, $lang );
+	}
+
+	/**
+	 * Initialize object state from an sso.wikimedia.org request path.
+	 *
+	 * @param ?string $requestUri
+	 * @return void
+	 */
+	private function setSiteInfoForSsoDomain( $requestUri ) {
+		$pathBits = explode( '/', $requestUri, 3 );
+		if ( count( $pathBits ) < 3 ) {
+			self::error( "Invalid request URI (requestUri=" . $requestUri . "), can't determine language.\n" );
+		}
+		[ , $serverName, ] = $pathBits;
+		$this->setSiteInfoForWiki( $serverName );
 	}
 
 	/**
@@ -646,7 +680,8 @@ class MWMultiVersion {
 			$scriptName = @$_SERVER['SCRIPT_NAME'];
 			$serverName = @$_SERVER['SERVER_NAME'];
 			$pathInfo = @$_SERVER['PATH_INFO'];
-			$multiVersion = self::initializeFromServerData( $serverName, $scriptName, $pathInfo );
+			$requestUri = @$_SERVER['REQUEST_URI'];
+			$multiVersion = self::initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri );
 		} else {
 			$multiVersion = self::initializeFromDBName( $wiki );
 		}

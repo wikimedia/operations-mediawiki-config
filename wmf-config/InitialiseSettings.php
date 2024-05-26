@@ -868,6 +868,7 @@ return [
 	'default' => '/wiki/$1',
 ],
 
+// when using the SSO domain, this will be overridden in CommonSettings.php
 # wgServer @{
 'wgServer' => [
 	// Projects
@@ -974,6 +975,7 @@ return [
 # @} end of wgServer
 
 // This is the same as wgServer but with a protocol, so if wgServer is //foo.com this must be https://foo.com
+// when using the SSO domain, this will be overridden in CommonSettings.php
 # wgCanonicalServer @{
 'wgCanonicalServer' => [
 	// Projects

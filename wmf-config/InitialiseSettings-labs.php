@@ -80,6 +80,7 @@ function wmfGetOverrideSettings() {
 			'wikivoyage'     => 'Wikivoyage',
 		],
 
+		// when using the SSO domain, this will be overridden in CommonSettings.php
 		'-wgServer' => [
 			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
@@ -105,6 +106,7 @@ function wmfGetOverrideSettings() {
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
+		// when using the SSO domain, this will be overridden in CommonSettings.php
 		'-wgCanonicalServer' => [
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
 			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
