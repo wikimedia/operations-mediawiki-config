@@ -7868,12 +7868,11 @@ return [
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => true, // T315353
-	'enwiki' => false, // (s1) Waiting for T315510
 ],
 
 'wgDiscussionToolsEnablePermalinksFrontend' => [
 	'default' => true, // T356063
-	'enwiki' => false, // (s1) Waiting for T315510
+	'enwiki' => false, // To be scheduled (T302011)
 ],
 
 'wgDiscussionToolsAutoTopicSubEditor' => [
