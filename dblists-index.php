@@ -215,6 +215,7 @@ return [
 'dkwikimedia' => [ 'small', 'legacy-vector', 'visualeditor-nondefault', 'group1' ],
 'donatewiki' => [ 'special', 'fishbowl', 'small', 'legacy-vector', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'dsbwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
+'dtpwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'dtywiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'dvwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'rtl' ],
 'dvwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl' ],
