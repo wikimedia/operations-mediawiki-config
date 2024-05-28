@@ -71,8 +71,8 @@ class CirrusTest extends WgConfTestCase {
 		}
 		// Test that we scanned the 2 dc's + cloudelastic for the group chi
 		$this->assertEquals( 3, $dc_config_tested );
-		// Writes to eqiad. cloudelastic and codfw are in sup
-		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters']['default'] );
+		// No writes performed by Cirrus, everything to SUP.
+		$this->assertCount( 0, $config['wgCirrusSearchWriteClusters']['default'] );
 		// archives still write to eqiad and codfw
 		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters']['archive'] );
 		// Verify all the clusters we want to write to exist in configuration
