@@ -2559,6 +2559,10 @@ return [
 			'editinterface' => true, // adding to allow CN access without local sysop JRA 2013-02-21
 		],
 		'patroller' => [ 'patrol' => true, ], // T354063
+		'electionadmin' => [
+			'securepoll-create-poll' => true,
+			'editinterface' => true,
+		],
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
