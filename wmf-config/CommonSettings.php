@@ -4368,7 +4368,7 @@ if ( $wmgEditRecoveryDefaultUserOptions ) {
 // Community configuration
 if ( $wmgUseCommunityConfiguration ) {
 	wfLoadExtension( 'CommunityConfiguration' );
-	$wgCommunityConfigurationBugReportingToolURL = 'https://phabricator.wikimedia.org/maniphest/task/edit/form/43';
+	$wgCommunityConfigurationFeedbackURL = 'https://www.mediawiki.org/wiki/Extension_talk:CommunityConfiguration';
 }
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
