@@ -30,7 +30,8 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 			'Disabling udp2log also disables logstash' => [
 				[ 'udp2log' => false ],
-				[ 'blackhole' ],
+				// Nothing get configured
+				null,
 			],
 
 			'Logstash can be enabled when udp2log is disabled' => [
@@ -66,7 +67,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	public function testHandlerSetup( $channelConfig, $expectHandlers ) {
 		// logging.php does not explicitly declare anything global, so it will
 		// only read from the local scope defined here.
-		$wmgDefaultMonologHandler = 'blackhole';
+		$wmgDefaultMonologHandlers = 'blackhole';
 		// wmf-config/logging.php expects $wgDebugLogFile to be in the same scope that
 		// the file is loaded in (normally the global scope but not in this case)
 		// phpcs:ignore MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile
@@ -80,13 +81,19 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
-		foreach ( $expectHandlers as $handlerName ) {
-			$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+		if ( $expectHandlers ) {
+			foreach ( $expectHandlers as $handlerName ) {
+				$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+			}
+
+			$this->assertEquals(
+				$expectHandlers,
+				$wmgMonologConfig['loggers']['test']['handlers']
+			);
+		} else {
+			$this->assertArrayHasKey( 'loggers', $wmgMonologConfig );
+			$this->assertArrayNotHasKey( 'test', $wmgMonologConfig['loggers'] );
 		}
-		$this->assertEquals(
-			$expectHandlers,
-			$wmgMonologConfig['loggers']['test']['handlers']
-		);
 	}
 
 	public function provideConfiguredProductionChannels() {

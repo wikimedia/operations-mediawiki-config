@@ -84,6 +84,11 @@ $wmgPhabricatorApiToken = false;
 $wmgGerritApiUser = false;
 $wmgGerritApiPassword = false;
 
+// Dummy setting for GitLab api access to be used by the BlockIpComplete
+// hook that tries to disable GitLab accounts. Real value should be provided
+// by /etc/mediawiki/WikitechPrivateSettings.php
+$wmgGitLabApiToken = false;
+
 # This must be loaded AFTER OSM, to overwrite it's defaults
 # Except when we're not an OSM host and we're running like a maintenance script.
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
@@ -418,4 +423,193 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
 		->getUserFactory()
 		->newFromUserIdentity( $block->getTargetUserIdentity() );
 	SessionManager::singleton()->invalidateSessionsForUser( $userObj );
+};
+
+// T360883 - This is provided by Bitu now.
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
+class DisallowLdapChangesSecondaryAuthenticationProvider extends MediaWiki\Auth\AbstractSecondaryAuthenticationProvider {
+	public function getAuthenticationRequests( $action, array $options ) {
+		return [];
+	}
+
+	public function beginSecondaryAuthentication( $user, array $reqs ) {
+		return MediaWiki\Auth\AuthenticationResponse::newAbstain();
+	}
+
+	public function beginSecondaryAccountCreation( $user, $creator, array $reqs ) {
+		return MediaWiki\Auth\AuthenticationResponse::newAbstain();
+	}
+
+	public function providerAllowsAuthenticationDataChange( \MediaWiki\Auth\AuthenticationRequest $req, $checkData = true ) {
+		if ( $req instanceof MediaWiki\Auth\PasswordAuthenticationRequest ) {
+			return StatusValue::newFatal( 'hookaborted' );
+		}
+
+		return parent::providerAllowsAuthenticationDataChange( $req, $checkData );
+	}
+
+	public function providerAllowsPropertyChange( $property ) {
+		if ( $property === 'emailaddress' ) {
+			return false;
+		}
+
+		return parent::providerAllowsPropertyChange( $property );
+	}
+}
+$wgAuthManagerAutoConfig['secondaryauth'][DisallowLdapChangesSecondaryAuthenticationProvider::class] = [
+	'class' => DisallowLdapChangesSecondaryAuthenticationProvider::class,
+];
+
+// Also, hide the email confirmation timestamp from Special:Preferences. LDAPAuthentication
+// trusts the emails it reads from LDAP and the timestamp in the MW database is not accurate.
+$wgHooks['GetPreferences'][] = static function ( $user, &$preferences ) {
+	unset( $preferences['emailauthentication'] );
+};
+
+/**
+ * Make arbitrary API requests to the Wikimedia GitLab instance
+ *
+ * @param string $apiToken
+ * @param string $path
+ * @param array|null $query
+ * @param bool $postVerb
+ * @return mixed|false Result of the API request or false on error
+ */
+function wmfGitLabClient(
+	string $apiToken,
+	string $path,
+	$query = null,
+	$postVerb = false
+) {
+	$headers = [
+		"PRIVATE-TOKEN: {$apiToken}",
+		'Content-Type: application/json',
+	];
+	$gitlabUrl = 'https://gitlab.wikimedia.org';
+	$url = "{$gitlabUrl}/api/v4/{$path}";
+
+	if ( $query !== null ) {
+		$url = $url . '?' . http_build_query( $query );
+	}
+
+	$ch = curl_init( $url );
+	curl_setopt( $ch, CURLOPT_HTTPHEADER, $headers );
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	curl_setopt( $ch, CURLOPT_POST, $postVerb );
+	$ret = curl_exec( $ch );
+	$status = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+	curl_close( $ch );
+	if ( $ret ) {
+		$resp = json_decode( $ret, true );
+		if ( $status >= 200 && $status <= 300 ) {
+			return $resp;
+		}
+	}
+	wfDebugLog(
+		'WikitechGitLabBan',
+		"GitLab {$path} error " . var_export( $ret, true )
+	);
+	return false;
+}
+
+/**
+ * Lookup a GitLab account ID.
+ *
+ * @param string $apiToken
+ * @param string $cn Developer account username (LDAP `cn` attribute)
+ * @return int|null null on failure, or numeric account ID on success
+ */
+function wmfGitLabFindAccountId( string $apiToken, string $cn ) {
+	$resp = wmfGitLabClient(
+		$apiToken,
+		'users',
+		[ 'provider' => 'openid_connect', 'extern_uid' => $cn ]
+	);
+	if ( $resp ) {
+		return $resp[ 0 ][ 'id' ];
+	}
+	return null;
+}
+
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgGitLabApiToken ) {
+	if ( !$wmgGitLabApiToken
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
+		|| $block->getExpiry() !== 'infinity'
+		|| !$block->isSitewide()
+	) {
+		// Nothing to do if we don't have config or if the block is not
+		// a site-wide indefinite block of a named user.
+		return;
+	}
+	try {
+		$userIdent = $block->getTargetUserIdentity();
+		if ( !$userIdent ) {
+			return;
+		}
+		$username = $userIdent->getName();
+		$gitlabId = wmfGitLabFindAccountId( $wmgGitLabApiToken, $username );
+		if ( $gitlabId === null ) {
+			return;
+		}
+
+		$resp = wmfGitLabClient(
+			$wmgGitLabApiToken,
+			"users/{$gitlabId}/block",
+			null,
+			true
+		);
+		if ( $resp !== false ) {
+			wfDebugLog(
+				'WikitechGitLabBan',
+				"GitLab block of {$username} failed"
+			);
+		}
+	} catch ( Throwable $t ) {
+		wfDebugLog(
+			'WikitechGitLabBan',
+			"Unhandled error blocking GitLab user: {$t}"
+		);
+	}
+};
+$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgGitLabApiToken ) {
+	if ( !$wmgGitLabApiToken
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
+		|| $block->getExpiry() !== 'infinity'
+		|| !$block->isSitewide()
+	) {
+		// Nothing to do if we don't have config or if the block is not
+		// a site-wide indefinite block of a named user.
+		return;
+	}
+	try {
+		$userIdent = $block->getTargetUserIdentity();
+		if ( !$userIdent ) {
+			return;
+		}
+		$username = $userIdent->getName();
+		$gitlabId = wmfGitLabFindAccountId( $wmgGitLabApiToken, $username );
+		if ( $gitlabId === null ) {
+			return;
+		}
+
+		$resp = wmfGitLabClient(
+			$wmgGitLabApiToken,
+			"users/{$gitlabId}/unblock",
+			null,
+			true
+		);
+		if ( $resp !== false ) {
+			wfDebugLog(
+				'WikitechGitLabBan',
+				"GitLab block of {$username} failed"
+			);
+		}
+	} catch ( Throwable $t ) {
+		wfDebugLog(
+			'WikitechGitLabBan',
+			"Unhandled error unblocking GitLab user: {$t}"
+		);
+	}
 };

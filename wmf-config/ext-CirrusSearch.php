@@ -24,7 +24,11 @@ return [
 ],
 
 'wgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw' ],
+	'default' => [
+		// T363475: Writes shifted to SUP, archive writes remain.
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+	],
 	'private' => [ 'eqiad', 'codfw' ],
 ],
 

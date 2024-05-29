@@ -4219,10 +4219,10 @@ return [
 		'width' => 120,
 		'height' => 11,
 	],
-	'fawikibooks' => [
+	'fawikibooks' => [ // T365913
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-fa.svg',
 		'width' => 120,
-		'height' => 31,
+		'height' => 28,
 	],
 	'fiwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-fi.svg',
@@ -5718,8 +5718,8 @@ return [
 	],
 	'cawiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ca.svg',
-		'width' => 120,
-		'height' => 14,
+		'width' => 112,
+		'height' => 13,
 	],
 	'cbk_zamwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-cbk_zam.svg',
@@ -7627,10 +7627,10 @@ return [
 		'width' => 120,
 		'height' => 9,
 	],
-	'fawikibooks' => [
+	'fawikibooks' => [ // T365913
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-fa.svg',
 		'width' => 120,
-		'height' => 12,
+		'height' => 14,
 	],
 	'fiwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-fi.svg',

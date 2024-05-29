@@ -62,6 +62,7 @@ $wgLBFactoryConf = [
 	'bbcwiki'       => 's5',
 	'bclwiktionary' => 's5',
 	'bclwikiquote'  => 's5',
+	'bewwiki'       => 's5',
 	'bjnwikiquote'  => 's5',
 	'bjnwiktionary' => 's5',
 	'blkwiki'       => 's5',
@@ -74,6 +75,7 @@ $wgLBFactoryConf = [
 	'dewiki'        => 's5',
 	'dgawiki'       => 's5',
 	'diqwiktionary' => 's5',
+	'dtpwiki'       => 's5',
 	'enwikivoyage'  => 's5',
 	'eowikivoyage'  => 's5',
 	'fatwiki'       => 's5',
@@ -86,11 +88,15 @@ $wgLBFactoryConf = [
 	'guwwiktionary' => 's5',
 	'guwwikiquote'  => 's5',
 	'guwwikinews'   => 's5',
+	'iglwiki'       => 's5',
 	'igwikiquote'   => 's5',
 	'igwiktionary'  => 's5',
+	'kawikisource'  => 's5',
+	'kaawiktionary' => 's5',
 	'kbdwiktionary' => 's5',
 	'kcgwiki'       => 's5',
 	'kcgwiktionary' => 's5',
+	'kuswiki'       => 's5',
 	'jawikivoyage'  => 's5',
 	'jvwikisource'  => 's5',
 	'lldwiki'       => 's5',
@@ -98,6 +104,8 @@ $wgLBFactoryConf = [
 	'mniwiki'       => 's5',
 	'mniwiktionary' => 's5',
 	'mnwwiktionary' => 's5',
+	'mswikisource'  => 's5',
+	'mywikisource'  => 's5',
 	'niawiki'       => 's5',
 	'niawiktionary' => 's5',
 	'madwiki'       => 's5',
@@ -289,8 +297,10 @@ $wgLBFactoryConf = [
 	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25', 'is static' => true ],
 	'cluster26'	=> [ 'blobs table' => 'blobs_cluster26', 'is static' => true ],
 	'cluster27'	=> [ 'blobs table' => 'blobs_cluster27', 'is static' => true ],
-	'cluster28'	=> [ 'blobs table' => 'blobs_cluster28' ],
-	'cluster29'	=> [ 'blobs table' => 'blobs_cluster29' ],
+	'cluster28'	=> [ 'blobs table' => 'blobs_cluster28', 'is static' => true ],
+	'cluster29'	=> [ 'blobs table' => 'blobs_cluster29', 'is static' => true ],
+	'cluster30'	=> [ 'blobs table' => 'blobs_cluster30' ],
+	'cluster31'	=> [ 'blobs table' => 'blobs_cluster31' ],
 ],
 
 # This key must exist for the master switch script to work, which means comment and uncomment
@@ -313,6 +323,6 @@ $wgLBFactoryConf = [
 ];
 
 $wgDefaultExternalStore = [
-	'DB://cluster28',
-	'DB://cluster29',
+	'DB://cluster30',
+	'DB://cluster31',
 ];

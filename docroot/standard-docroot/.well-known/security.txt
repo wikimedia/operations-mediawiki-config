@@ -1,0 +1,5 @@
+Contact: mailto:security@wikimedia.org
+Expires: 2029-03-31T09:00:00.000Z
+Acknowledgments: https://security.wikimedia.org/hall-of-fame/
+Preferred-Languages: en
+Policy: https://www.mediawiki.org/wiki/Reporting_security_bugs

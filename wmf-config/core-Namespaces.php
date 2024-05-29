@@ -181,6 +181,9 @@ return [
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
 	],
+	'+azwikiquote' => [
+		'VS' => NS_PROJECT, // T362645
+	],
 	'+azwikisource' => [
 		'VikiMənbə' => NS_PROJECT, // T114002
 		'VikiMənbə_müzakirəsi' => NS_PROJECT_TALK, // T114002
@@ -462,8 +465,9 @@ return [
 		'Portal' => 110, // T157187
 		'Portal_talk' => 111, // T157187
 	],
-	'+enwiki' => [ // T8313
-		'WT' => NS_PROJECT_TALK,
+	'+enwiki' => [
+		'WT' => NS_PROJECT_TALK, // T8313
+		'TM' => NS_TEMPLATE, // T363757
 	],
 	'+enwikibooks' => [
 		'WJ' => 110,
@@ -609,6 +613,7 @@ return [
 	],
 	'+frwiktionary' => [
 		'conj' => 116, // T262298
+		'CVT' => 120, // T360989
 	],
 	'+fywiki' => [ // T334807
 		'Portal' => 100,
@@ -1070,6 +1075,8 @@ return [
 		'Portal_talk' => 101,
 		'ഘ' => 828, // T56951
 		'ഘസം' => 829, // T56951
+		'Draft' => 118, // Draft - T362653
+		'Draft_talk' => 119, // Draft - T362653
 	],
 	'+mlwikibooks' => [
 		'വിക്കി‌‌_പുസ്തകശാല' => NS_PROJECT,
@@ -2148,6 +2155,7 @@ return [
 	'+otrs_wikiwiki' => [ 0 => 1 ],
 	'+outreachwiki' => [ 0 => 1 ],
 	'+plwikimedia' => [ 0 => 1, 8 => 0, 14 => 1 ],
+	'+ptwikimedia' => [ 0 => 1 ], // T362300
 	'+romdwikimedia' => [ 0 => 1 ], // T318491
 	'+rswikimedia' => [ 0 => 1, 8 => 0 ],
 	'+ruwikimedia' => [ 0 => 1, 6 => 1, 7 => 0, 9 => 0, 14 => 1, 15 => 0 ],
@@ -2873,7 +2881,9 @@ return [
 	],
 	'mlwiki' => [
 		100 => 'കവാടം',
-		101 => 'കവാടത്തിന്റെ_സംവാദം'
+		101 => 'കവാടത്തിന്റെ_സംവാദം',
+		118 => 'കരട്', // Draft - T362653
+		119 => 'കരട്_സംവാദം', // Draft - T362653
 	],
 	'minwiki' => [
 		100 => 'Portal', // Portal
@@ -3724,6 +3734,8 @@ return [
 		117 => 'Discussion_Conjugaison', // T262298
 		118 => 'Racine', // T263525
 		119 => 'Discussion_Racine', // T263525
+		120 => 'Convention', // T360989
+		121 => 'Discussion_Convention', // T360989
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín',
@@ -4778,6 +4790,10 @@ return [
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
 	],
+	'mlwiki' => [ // Draft - T362653
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
+	],
 	'mywiki' => [ // T352424
 		118 => 'noindex,nofollow', // Draft
 		119 => 'noindex,nofollow', // Draft_talk
@@ -5245,6 +5261,7 @@ return [
 	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
+	'mlwiki' => [ 118, 119 ], // draft and draft talk - T362653
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
@@ -5672,6 +5689,7 @@ return [
 	'ptwikiversity' => 'Wikiversidade',
 	'ptwiktionary' => 'Wikcionário',
 	'qualitywiki' => 'Project',
+	'quwiki' => 'Wikipidiya', // T355129
 	'rmywiki' => 'Vikipidiya',
 	'rowikibooks' => 'Wikimanuale',
 	'rowikinews' => 'Wikiștiri',

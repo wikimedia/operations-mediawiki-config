@@ -436,10 +436,15 @@ if ( $wmgRealm == 'labs' ) {
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
+	// T360098 - change Vector font-size for anons, existing named users or newly created users.
+	$wgDefaultUserOptions['vector-font-size'] = 1;
+	$wgConditionalUserOptions['vector-font-size'] = [
+		[ 1, [ CUDCOND_AFTER, '20240409000000' ] ],
+		[ 0, [ CUDCOND_NAMED ] ],
+	];
+
 	if ( $wmgUseCampaignEvents ) {
 		// Use wikishared for all wikis, unlike production
-		$wgCampaignEventsDatabaseCluster = 'extension1';
-		$wgCampaignEventsDatabaseName = 'wikishared';
 		$wgVirtualDomainsMapping['virtual-campaignevents'] = [
 			'cluster' => 'extension1',
 			'db' => 'wikishared',
@@ -467,6 +472,13 @@ if ( $wmgRealm == 'labs' ) {
 		$wgPhonosFileBackend = 'global-multiwrite';
 	}
 
+	// T364034
+	if ( $wmgUseAutoModerator ) {
+		wfLoadExtension( 'AutoModerator' );
+		$wgAutoModeratorLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/v1/models/';
+		$wgAutoModeratorLiftWingAddHostHeader = false;
+	}
+
 	if ( $wmgUseReportIncident ) {
 		wfLoadExtension( 'ReportIncident' );
 	}
@@ -474,30 +486,13 @@ if ( $wmgRealm == 'labs' ) {
 	// IP Masking
 	// NOTE: This is here to ensure temp accounts behave as temp accounts on all wikis. Autocreation of temp
 	// accounts for wikis where IP Masking is not enabled is disabled in an if below.
-	$wgAutoCreateTempUser['serialProvider'] = [
-		'type' => 'centralauth',
-		'numShards' => 8,
-	];
 
-	// Update the serial mapping config for generating temporary user names (T349503)
-	// 'plain-numeric' is the default value but enforcing it here in case the default is changed
-	$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric' ];
-
-	// Change temporary user pattern configuration to match the updated prefix, '~' (T349486)
-	// and enable `useYear` so that new temporary accounts will be created with the pattern
-	// `~<year>-<incrementing_id>`.
-	// `~2$1` is used here to match with production values, as there
-	// are already some accounts that would match `~$1`.
-	$wgAutoCreateTempUser['genPattern'] = '~$1';
+	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
-	$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
 
 	if ( $wmgEnableIPMasking ) {
 		$wgGroupPermissions['temp']['edit'] = true;
 		$wgAutoCreateTempUser['enabled'] = true;
-		$wgAutoCreateTempUser['expireAfterDays'] = 365;
-		// notify ten days before account is expired
-		$wgAutoCreateTempUser['notifyBeforeExpirationDays'] = 10;
 	} else {
 		$wgAutoCreateTempUser['enabled'] = false;
 	}
@@ -512,5 +507,6 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
+	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 }
 // end safeguard

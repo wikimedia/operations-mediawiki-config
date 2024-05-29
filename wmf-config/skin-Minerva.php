@@ -9,6 +9,12 @@
  */
 
 return [
+	'wgMinervaApplyKnownTemplateHacks' => [
+		// Temporarily enabled for cached HTML
+		'default' => true,
+		// [[phab:T361589]]
+		'frwiki' => false,
+	],
 	// T210553, T210554
 	'wgMinervaPageIssuesNewTreatment' => [
 		'default' => [
@@ -29,7 +35,8 @@ return [
 	'wgMinervaNightMode' => [
 		'default' => [
 			'base' => false,
-			'loggedin' => false
+			'loggedin' => false,
+			'amc' => true,
 		],
 		'skin-themes' => [
 			'base' => false,
@@ -45,7 +52,7 @@ return [
 		// T359183
 		'default' => [
 			'action' => 'edit|submit|diff|info|protect|delete|undelete|action|history',
-			'diff' => '*'
+			'diff' => '.*'
 		],
 		// Allow us to reliably test all pages here.
 		'testwiki' => [],
@@ -53,7 +60,7 @@ return [
 	'wmgMinervaNightModeExcludeNamespaces' => [
 		// Initially night mode is disabled on everything except article page (T359183)
 		'default' => [
-			-2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+			-2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15,
 			// The following is not intended to be complete, but should cover most untested namespaces
 			// that are needed for the first launch. The namespaces are documented at:
 			// https://www.mediawiki.org/wiki/Extension_default_namespaces
@@ -79,41 +86,20 @@ return [
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [
+			"Special:Allmessages",
+			// T357699
+			"Special:Homepage",
 			"Special:BrokenRedirects",
-			"Special:DeadendPages",
-			"Special:AncientPages",
-			"Special:DoubleRedirects",
 			"Special:LintErrors",
-			"Special:LongPages",
-			"Special:LonelyPages",
-			"Special:UnconnectedPages",
-			"Special:FewestRevisions",
-			"Special:WithoutInterwiki",
-			"Special:ProtectedPages",
-			"Special:ProtectedTitles",
-			"Special:ShortPages",
-			"Special:UncategorizedCategories",
-			"Special:UncategorizedFiles",
-			"Special:UncategorizedPages",
-			"Special:UncategorizedTemplates",
-			"Special:UnusedCategories",
-			"Special:UnusedFiles",
-			"Special:UnusedTemplates",
-			"Special:WantedCategories",
-			"Special:WantedFiles",
-			"Special:WantedPages",
-			"Special:WantedTemplates",
-			"Special:AllPages",
-			"Special:PrefixIndex",
+			"Special:Protectedpages",
+			"Special:Allpages",
+			"Special:Prefixindex",
 			"Special:Categories",
 			"Special:CategoryTree",
-			"Special:DisambiguationPages",
 			"Special:EntityUsage",
 			"Special:LinkSearch",
-			"Special:DisambiguationPageLinks",
 			"Special:PagesWithProp",
 			"Special:PagesWithBadges",
-			"Special:ListRedirects",
 			"Special:Search",
 			"Special:TrackingCategories",
 			"Special:BotPasswords",
@@ -121,8 +107,6 @@ return [
 			"Special:ChangeEmail",
 			"Special:GlobalPreferences",
 			"Special:GlobalRenameRequest",
-			"Special:MergeAccount",
-			"Special:Manage Two-factor authentication",
 			"Special:OAuthManageMyGrants",
 			"Special:Notifications",
 			"Special:Preferences",
@@ -130,51 +114,45 @@ return [
 			"Special:PasswordReset",
 			"Special:ResetTokens",
 			"Special:TopicSubscriptions",
-			"Special:ActiveUsers",
+			"Special:Activeusers",
 			"Special:AutoblockList",
 			"Special:BlockList",
 			"Special:CreateAccount",
-			"Special:EmailUser",
+			"Special:Emailuser",
 			"Special:CentralAuth",
 			"Special:GlobalUsers",
 			"Special:GlobalGroupPermissions",
-			"Special:ListGrants",
+			"Special:Listgrants",
 			"Special:OAuthListConsumers",
 			"Special:GlobalBlockList",
 			"Special:GlobalUserRights",
 			"Special:PasswordPolicies",
 			"Special:Contributions",
-			"Special:ListGroupRights",
-			"Special:UserRights",
-			"Special:ListUsers",
+			"Special:Listusers",
 			"Special:EditRecovery",
 			"Special:AbuseLog",
-			"Special:NewFiles",
-			"Special:NewPages",
+			"Special:Newimages",
+			"Special:Newpages",
 			"Special:NewPagesFeed",
-			"Special:RecentChanges",
-			"Special:RecentChangesLinked",
+			"Special:Recentchanges",
+			"Special:Recentchangeslinked",
 			"Special:Log",
 			"Special:Tags",
-			"Special:ListFiles",
+			"Special:Listfiles",
 			"Special:GlobalUsage",
 			"Special:ListDuplicatedFiles",
-			"Special:MIMESearch",
 			"Special:MediaStatistics",
 			"Special:OrphanedTimedText",
 			"Special:FileDuplicateSearch",
-			"Special:Transcode statistics",
 			"Special:Upload",
 			"Special:VipsTest",
 			"Special:ApiFeatureUsage",
 			"Special:ApiSandbox",
-			"Special:BookSources",
+			"Special:Booksources",
 			"Special:AbuseFilter",
 			"Special:ExpandTemplates",
 			"Special:GadgetUsage",
 			"Special:Gadgets",
-			"Special:Statistics",
-			"Special:AllMessages",
 			"Special:TemplateSandbox",
 			"Special:Hieroglyphs",
 			"Special:Version",
@@ -190,18 +168,7 @@ return [
 			"Special:PermanentLink",
 			"Special:ProtectPage",
 			"Special:Purge",
-			"Special:Random",
-			"Special:RandomInCategory",
-			"Special:RandomRedirect",
-			"Special:RandomRootpage",
 			"Special:Redirect",
-			"Special:MostLinkedCategories",
-			"Special:MostLinkedFiles",
-			"Special:MostLinkedPages",
-			"Special:MostTranscludedPages",
-			"Special:MostCategories",
-			"Special:MostInterwikis",
-			"Special:MostRevisions",
 			"Special:Book",
 			"Special:ChangeContentModel",
 			"Special:CiteThisPage",
@@ -210,7 +177,7 @@ return [
 			"Special:PageAssessments",
 			"Special:QrCode",
 			"Special:UrlShortener",
-			"Special:WhatLinksHere",
+			"Special:EnrollAsMentor",
 			"Special:BlockedExternalDomains",
 			"Special:EditGrowthConfig",
 			"Special:Impact",
@@ -220,7 +187,6 @@ return [
 			"Special:ValidationStatistics",
 			"Special:StablePages",
 			"Special:PendingChanges",
-			"Special:ContentTranslationStats",
 			"Special:Contribute",
 			"Special:CreateMassMessageList",
 			"Special:DiscussionToolsDebug",
@@ -230,7 +196,8 @@ return [
 			"Special:MathStatus",
 			"Special:ORESModels",
 			"Special:SecurePoll",
-			"Special:ContentTranslation"
+			"Special:EditWatchlist",
+			"Special:Watchlist",
 		],
 		'testwiki' => [ 'Banana' ],
 	],
@@ -290,6 +257,10 @@ return [
 			'beta' => false,
 			'loggedin' => false,
 			'amc' => true,
+		],
+		// T365323
+		'enwiktionary' => [
+			'base' => true,
 		],
 		// T290812
 		'ptwikinews' => [

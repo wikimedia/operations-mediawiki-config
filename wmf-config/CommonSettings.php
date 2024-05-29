@@ -340,7 +340,12 @@ if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 }
 $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 
-// In production, read the database loadbalancer config from etcd.
+// The parsercache section-to-server mapping. Must be defined before calls to
+// wmfApplyEtcdDBConfig.
+$wmgPCServers = $wmgLocalServices['parsercache-dbs'];
+
+// In production, read the database loadbalancer config and parsercache
+// section-to-server mapping from etcd.
 // See https://wikitech.wikimedia.org/wiki/Dbctl
 // This must be called after db-{eqiad,codfw}.php has been loaded!
 // It overwrites a few sections of $wgLBFactoryConf with data from etcd.
@@ -357,10 +362,13 @@ if ( $wmgRealm === 'production' ) {
 	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
+	$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitor';
 	// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
 	if ( PHP_SAPI === 'cli' ) {
-		$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+		$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 	}
+	// T360930
+	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 400;
 }
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
@@ -551,7 +559,7 @@ $wgOverrideUcfirstCharacters = include __DIR__ . '/UcfirstOverrides.php';
 $wgSessionName = $wgDBname . 'Session';
 
 $pcServers = [];
-foreach ( $wmgLocalServices['parsercache-dbs'] as $tag => $host ) {
+foreach ( $wmgPCServers as $tag => $host ) {
 	$pcServers[$tag] = [
 		'type' => 'mysql',
 		'host' => $host,
@@ -621,11 +629,27 @@ $wgObjectCaches['db-mainstash'] = [
 
 session_name( $lang . 'wikiSession' );
 
-// Use PBKDF2 for password hashing (T70766)
-$wgPasswordDefault = 'pbkdf2';
-// This needs to be increased as allowable by server performance
+$wgPasswordDefault = 'E';
+
+$wgPasswordConfig['E'] = [
+	'class' => EncryptedPassword::class,
+	'underlying' => 'argon2',
+	'secrets' => [ $wmgPasswordSecretKey ],
+	'cipher' => 'aes-256-cbc',
+];
+$wgPasswordConfig['argon2'] = [
+	'class' => Argon2Password::class,
+	'algo' => 'argon2id',
+	'memory_cost' => 131072,
+	'time_cost' => 4,
+	'threads' => 4,
+];
+$wgPasswordConfig['BE'] = [
+	'class' => LayeredParameterizedPassword::class,
+	'types' => [ 'B', 'E' ],
+];
 $wgPasswordConfig['pbkdf2'] = [
-	'class' => 'Pbkdf2Password',
+	'class' => Pbkdf2PasswordUsingOpenSSL::class,
 	'algo' => 'sha512',
 	'cost' => '128000',
 	'length' => '64',
@@ -1199,6 +1223,15 @@ $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
+	// T362771: Mentioned gadget conflicts with parts in both extensions so the value is needed in both
+	if ( $wgPopupsConflictingNavPopupsGadgetName ) {
+		$wgCiteReferencePreviewsConflictingNavPopupsGadgetName = $wgPopupsConflictingNavPopupsGadgetName;
+	}
+
+	// TODO: Temporary mapping. The "Popups" variant can be removed later. See T362771
+	if ( $wgPopupsConflictingRefTooltipsGadgetName ) {
+		$wgCiteReferencePreviewsConflictingRefTooltipsGadgetName = $wgPopupsConflictingRefTooltipsGadgetName;
+	}
 }
 
 if ( $wmgUseCiteThisPage ) {
@@ -1653,7 +1686,7 @@ $wgExtensionFunctions[] = static function () {
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
 		// T129982
-		&& $_SERVER['HTTP_HOST'] !== 'jobrunner.discovery.wmnet'
+		&& $_SERVER['HTTP_HOST'] !== 'mw-jobrunner.discovery.wmnet:4448'
 	) {
 		$uri = ( ( $_SERVER['HTTPS'] ?? null ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -2568,6 +2601,14 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
+	$wgConditionalUserOptions[ 'popups' ] = [
+		[ 1, [ CUDCOND_AFTER, '20170816000000' ] ],
+		[ $wgPopupsOptInDefaultState, [ CUDCOND_NAMED ] ],
+	];
+	$wgConditionalUserOptions[ 'popups-reference-previews' ] = [
+		[ 1, [ CUDCOND_AFTER, '20170816000000' ] ],
+		[ $wgPopupsOptInDefaultState, [ CUDCOND_NAMED ] ],
+	];
 }
 
 if ( $wmgUseLinter ) {
@@ -2693,6 +2734,17 @@ if ( $wmgUseMobileFrontend ) {
 } else {
 	// For sites without MobileFrontend, instead enable Vector's "responsive" state.
 	$wgVectorResponsive = true;
+}
+
+// Increase font size on Vector 2022 from 14px to 16px
+// for users registered after May 6nd 2024
+// as well as anonymoues users.
+if ( $wmgIncreaseDefaultVectorFontSize ) {
+	$wgDefaultUserOptions['vector-font-size'] = 1;
+	$wgConditionalUserOptions['vector-font-size'] = [
+		[ 1, [ CUDCOND_AFTER, '20240506000000' ] ],
+		[ 0, [ CUDCOND_NAMED ] ]
+	];
 }
 
 // Enable this everywhere except where GeoData isn't available
@@ -3251,8 +3303,23 @@ if ( $wmgUseDisambiguator ) {
 
 if ( $wmgUseDiscussionTools ) {
 	wfLoadExtension( 'DiscussionTools' );
-	// Auto topic subscriptions are initially disabled while in beta (T290500)
+
+	// The auto topic subscription feature is disabled by default for existing users, but
+	// we enable it for new users (T294398).
 	$wgDefaultUserOptions['discussiontools-autotopicsub'] = 0;
+	$wgConditionalUserOptions['discussiontools-autotopicsub'] = [
+		[
+			1,
+			[ CUDCOND_AFTER, '20230818000000' ]
+		]
+	];
+
+	$wgConditionalUserOptions['echo-subscriptions-email-dt-subscription'] = [
+		[
+			true,
+			[ CUDCOND_AFTER, '20230818000000' ]
+		]
+	];
 }
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
@@ -3876,11 +3943,8 @@ if ( $wmgUseCheckUser ) {
 
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
-	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
-	// It is only present on application servers. See
-	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
-	// for list of relevant sections of operations/puppet config.
-	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIPInfo/';
+
+	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIP/GeoLite2-';
 
 	// Consult the Legal team before updating these, since they
 	// must remain compatible with our contract with MaxMind
@@ -3901,6 +3965,39 @@ if ( $wmgUseIPInfo ) {
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
+
+if ( $wmgUseCentralAuth ) {
+	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
+	// uses a unique serial number across all wikis. This will have no effect if
+	// `$wgAutoCreateTempUser['enabled']` is false.
+	$wgAutoCreateTempUser['serialProvider'] = [
+		'type' => 'centralauth',
+		'numShards' => 8,
+	];
+} else {
+	// If CentralAuth is not installed, then use the local provider.
+	// This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
+	$wgAutoCreateTempUser['serialProvider'] = [
+		'type' => 'local',
+		'numShards' => 8,
+	];
+}
+
+// Add the year to the username to make it easier to identify the year the tmeporary account was created
+// and identify based on the username if the temporary account has expired.
+$wgAutoCreateTempUser['serialProvider']['useYear'] = true;
+
+// We only need to match ~2$1 because the year will start with 2 for the foreseeable future
+// and it prevents the need to rename users on production which start with ~ but not ~2 (T349507).
+// This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
+$wgAutoCreateTempUser['matchPattern'] = '~2$1';
+
+// Start numbers at 1500 to avoid using any numbers defined in T337090 which are considered defamatory.
+// This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
+$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric', 'offset' => 1500 ];
+
+// This is by default false, but enforcing it here in case the default is changed (T355880, T359043)
+$wgAutoCreateTempUser['enabled'] = false;
 
 // T39211
 $wgUseCombinedLoginLink = false;
@@ -4125,10 +4222,6 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	wfLoadExtension( 'WikimediaCampaignEvents' );
-	$wgCampaignEventsDatabaseCluster = 'extension1';
-	if ( $wgDBname === 'metawiki' ) {
-		$wgCampaignEventsDatabaseName = 'wikishared';
-	}
 	$wgVirtualDomainsMapping['virtual-campaignevents'] = [
 		'cluster' => 'extension1',
 		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
@@ -4217,6 +4310,13 @@ if ( $wmgUseVueTest ) {
 
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
+}
+
+// T361643
+if ( $wmgUseAutoModerator ) {
+	wfLoadExtension( 'AutoModerator' );
+	$wgAutoModeratorLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/v1/models/';
+	$wgAutoModeratorLiftWingAddHostHeader = true;
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki

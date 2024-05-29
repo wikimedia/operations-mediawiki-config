@@ -139,7 +139,7 @@ function wmfGetOverrideSettings() {
 			'default' => 32,
 		],
 
-		'-wmgDefaultMonologHandler' => [
+		'-wmgDefaultMonologHandlers' => [
 			'default' => 'wgDebugLogFile',
 		],
 
@@ -515,15 +515,8 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 1, // T346106
 		],
 
-		// T353388
-		'wgMFUseDesktopSpecialHistoryPage' => [
-			'default' => [
-				'base' => true,
-				'amc' => true,
-			],
-		],
-		// T350181
-		'wgMFUseDesktopDiffPage' => [
+		// T266065
+		'wgMFUseDesktopSpecialWatchlistPage' => [
 			'default' => [
 				'base' => true,
 				'amc' => true,
@@ -547,11 +540,32 @@ function wmfGetOverrideSettings() {
 			'default' => 0,
 		],
 
+		'wgVectorNightMode' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true,
+			],
+		],
 		'wgMinervaNightMode' => [
 			'default' => [
 				'base' => true,
 				'loggedin' => true,
 			],
+		],
+		// T364887
+		'wgVectorFontSizeConfigurableOptions' => [
+			'default' => [
+				"exclude" => [
+					"mainpage" => false,
+					"pagetitles" => [],
+					"namespaces" => [ -1, 1, 2, 6, 8, 10, 14, 100, 710, 828 ],
+					"querystring" => [
+						"action" => "edit|submit|diff|info|protect|delete|undelete|action|history",
+						"diff" => ".+"
+					],
+				],
+				"include" => []
+			]
 		],
 		'wmgMinervaNightModeExcludeTitles' => [
 			'default' => [ 'Banana' ],
@@ -623,10 +637,10 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			]
 		],
-		'wgVectorClientPreferences' => [
+		'wgVectorAppearance' => [
 			'default' => [
-				'logged_in' => false,
-				'logged_out' => false,
+				'logged_in' => true,
+				'logged_out' => true,
 				'beta' => true,
 			],
 		],
@@ -1092,10 +1106,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => false,
 		],
 
-		'wgIPInfoGeoLite2Prefix' => [
-			'default' => '/usr/share/GeoIP/GeoLite2-',
-		],
-
 		'wgMediaViewerUseThumbnailGuessing' => [
 			'default' => false, // T69651
 		],
@@ -1210,6 +1220,11 @@ function wmfGetOverrideSettings() {
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
 			'zhwiki' => true, // T128425
+		],
+
+		// Wikis which fetch URL uploads asynchronously via the jobqueue using UploadFromUrlJob
+		'-wgEnableAsyncUploadsByURL' => [
+			'default' => true,
 		],
 
 		// Affects URL uploads and chunked uploads (experimental).
@@ -1443,7 +1458,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgAbuseFilterActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+			'default' => SCHEMA_COMPAT_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
@@ -2317,6 +2332,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionToolsEnableThanks' => [
+			'default' => true,
+		],
+
 		'-wgDiscussionToolsEnablePermalinksBackend' => [
 			'default' => true,
 		],
@@ -2399,10 +2418,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Temporary, added in T339104, to be removed in T330217
+		// Flag temporary - added in T339104, to be removed in T330217
+		// Set to false in T356169 to test limited version on beta
 		'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
 			'default' => null,
-			'wikidatawiki' => true,
+			'wikidatawiki' => false,
 		],
 
 		'wmgUseChessBrowser' => [
@@ -2503,13 +2523,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
 		],
 
-		// T334895 - testing
-		'-wmgUseGraph' => [
-			'default' => true,
-		],
-		'-wmgHideGraphTags' => [
-			'default' => false,
-		],
 		'wmgEnableIPMasking' => [
 			'default' => false,
 			'loginwiki' => true,
@@ -2568,6 +2581,11 @@ function wmfGetOverrideSettings() {
 			// NOTE: Do not enable without Growth team OK
 			'default' => false,
 			'eswiki' => true,
+		],
+
+		'wmgUseAutoModerator' => [ // T364034
+			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+			'enwiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()

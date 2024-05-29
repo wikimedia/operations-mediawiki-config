@@ -15,10 +15,12 @@ class CirrusTest extends WgConfTestCase {
 		// (2 DCs + 1 cloudelastic) * 3 ES clusters per
 		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
 
-		// testwiki writes to eqiad and codfw, cloudelastic disabled
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// testwiki writes only via SUP, cirrus must not send writes.
+		$this->assertCount( 0, $config['wgCirrusSearchWriteClusters']['default'] );
+		// archives still write via cirrus
+		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters']['archive'] );
 
-		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
+		foreach ( $config['wgCirrusSearchWriteClusters']['default'] as $writeCluster ) {
 			$groups = $config['wgCirrusSearchReplicaGroup'];
 			if ( is_array( $groups ) ) {
 				$groups = $groups['groups'];
@@ -67,24 +69,30 @@ class CirrusTest extends WgConfTestCase {
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
 		}
-		// Test that we scanned 2 DCs (and not cloudelastic, which is on SUP) for the group chi
+		// Test that we scanned the 2 dc's + cloudelastic for the group chi
 		$this->assertEquals( 3, $dc_config_tested );
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
-		foreach ( $config['wgCirrusSearchWriteClusters'] as $replica ) {
-			$groups = $config['wgCirrusSearchReplicaGroup'];
-			if ( is_array( $groups ) ) {
-				$groups = $groups['groups'];
-			} else {
-				$groups = [ $groups ];
-			}
-			foreach ( $groups as $group ) {
-				$group = $config['wgCirrusSearchReplicaGroup'];
-				$replicaGroup = $group === 'default' ? '' : "-$group";
-				$replicaGroup = $replica . $replicaGroup;
-				$this->assertArrayHasKey(
-					$replicaGroup,
-					$config['wgCirrusSearchClusters']
-				);
+		// No writes performed by Cirrus, everything to SUP.
+		$this->assertCount( 0, $config['wgCirrusSearchWriteClusters']['default'] );
+		// archives still write to eqiad and codfw
+		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters']['archive'] );
+		// Verify all the clusters we want to write to exist in configuration
+		foreach ( $config['wgCirrusSearchWriteClusters'] as $updateGroup => $writeClusters ) {
+			foreach ( $writeClusters as $replica ) {
+				$groups = $config['wgCirrusSearchReplicaGroup'];
+				if ( is_array( $groups ) ) {
+					$groups = $groups['groups'];
+				} else {
+					$groups = [ $groups ];
+				}
+				foreach ( $groups as $group ) {
+					$group = $config['wgCirrusSearchReplicaGroup'];
+					$replicaGroup = $group === 'default' ? '' : "-$group";
+					$replicaGroup = $replica . $replicaGroup;
+					$this->assertArrayHasKey(
+						$replicaGroup,
+						$config['wgCirrusSearchClusters']
+					);
+				}
 			}
 		}
 	}

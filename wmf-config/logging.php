@@ -20,7 +20,7 @@
 # The following globals from InitialiseSettings are used:
 #
 # - $wgDebugLogFile: udp2log destination for 'wgDebugLogFile' handler.
-# - $wmgDefaultMonologHandler: default handler for log channels not
+# - $wmgDefaultMonologHandlers: default handlers for log channels not
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
@@ -67,7 +67,7 @@ $wmgEnableLogstash = true;
 if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Route all log messages to a local file
 	$wgDebugLogFile = '/tmp/wiki.log';
-	$wmgDefaultMonologHandler = 'wgDebugLogFile';
+	$wmgDefaultMonologHandlers = 'wgDebugLogFile';
 	$wmgEnableLogstash = false;
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
@@ -75,7 +75,7 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
-	$wmgDefaultMonologHandler = [ 'wgDebugLogFile', 'logstash-debug' ];
+	$wmgDefaultMonologHandlers = [ 'wgDebugLogFile', 'logstash-debug' ];
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
 }
@@ -176,8 +176,22 @@ $wmgMonologHandlers = [
 	],
 ];
 
+$wmgSupportedLogLevels = [ 'debug', 'info', 'warning', 'error' ];
+
+foreach ( $wmgSupportedLogLevels as $logLevel ) {
+	$wmgMonologHandlers[ "udp2log-$logLevel" ] = [
+		'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
+		'args' => [
+			"udp://{$wmgUdp2logDest}/{channel}",
+			false,
+			$logLevel
+		],
+		'formatter' => 'line',
+	];
+}
+
 if ( $wmgEnableLogstash ) {
-	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
+	foreach ( $wmgSupportedLogLevels as $logLevel ) {
 		$wmgMonologHandlers[ "logstash-$logLevel" ] = [
 			'class'     => \MediaWiki\Logger\Monolog\SyslogHandler::class,
 			'formatter' => 'cee',
@@ -201,7 +215,7 @@ $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
 		'@default' => [
-			'handlers' => (array)$wmgDefaultMonologHandler,
+			'handlers' => (array)$wmgDefaultMonologHandlers,
 			'processors' => array_keys( $wmgMonologProcessors ),
 		],
 	],
@@ -262,28 +276,13 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$handlers = [];
 
 	if ( $opts['udp2log'] ) {
-		// Configure udp2log handler
-		$udp2logHandler = "udp2log-{$opts['udp2log']}";
-		if ( !isset( $wmgMonologConfig['handlers'][$udp2logHandler] ) ) {
-			// Register handler that will only pass events of the given
-			// log level
-			$wmgMonologConfig['handlers'][$udp2logHandler] = [
-				'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
-				'args' => [
-					"udp://{$wmgUdp2logDest}/{channel}",
-					false,
-					$opts['udp2log']
-				],
-				'formatter' => 'line',
-			];
-		}
-		$handlers[] = $udp2logHandler;
-		if ( $wmgDefaultMonologHandler === 'wgDebugLogFile' ) {
+		$handlers[] = "udp2log-{$opts['udp2log']}";
+		if ( $wmgDefaultMonologHandlers === 'wgDebugLogFile' ) {
 			// T117019: Send messages to default handler location as well
 			// This is for messages from regular traffic to testwikis (WikimediaDebug is off).
 			// When WikimediaDebug is used, $wmgMonologChannels is cleared and this code
 			// is never reached.
-			$handlers[] = $wmgDefaultMonologHandler;
+			$handlers[] = $wmgDefaultMonologHandlers;
 		}
 	}
 
@@ -377,12 +376,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ $failureGroupHandler ],
 			'processors' => array_keys( $wmgMonologProcessors ),
-		];
-
-	} else {
-		// No handlers configured, so use the blackhole route
-		$wmgMonologConfig['loggers'][$channel] = [
-			'handlers' => [ 'blackhole' ],
 		];
 	}
 }

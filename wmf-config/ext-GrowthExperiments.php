@@ -131,6 +131,7 @@ return [
 	'idwiki' => true,
 	'iewiki' => true,
 	'igwiki' => true,
+	'iglwiki' => true,
 	'ikwiki' => true,
 	'ilowiki' => true,
 	'inhwiki' => true,
@@ -350,12 +351,7 @@ return [
 ],
 
 'wgGELevelingUpFeaturesEnabled' => [
-	'default' => false,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'eswiki' => true,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
@@ -474,6 +470,7 @@ return [
 	'dvwiki' => false, // T304551
 	'eewiki' => true,
 	'emlwiki' => true,
+	'enwiki' => true, // T308144
 	'elwiki' => true,
 	'eowiki' => true,
 	'eswiki' => true,

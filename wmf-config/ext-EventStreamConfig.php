@@ -958,8 +958,8 @@ return [
 				],
 			],
 			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
+				'unit' => 'session',
+				'rate' => 0.2,
 			],
 		],
 		'mediawiki.web_ui_scroll' => [
@@ -1019,8 +1019,16 @@ return [
 			'schema_title' => 'analytics/mediawiki/editgrowthconfig',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.accountcreation.account_conversion' => [
+			'schema_title' => 'analytics/mediawiki/accountcreation/account_conversion',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.accountcreation_block' => [
 			'schema_title' => 'analytics/mediawiki/accountcreation/block',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.accountcreation.login' => [
+			'schema_title' => 'analytics/mediawiki/accountcreation/account_conversion',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'mediawiki.editattempt_block' => [
@@ -1594,6 +1602,34 @@ return [
 			'sample' => [
 				'unit' => 'pageview',
 				'rate' => 1,
+			],
+		],
+	],
+	'+legacy-vector' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 0,
+			],
+		],
+	],
+	'+officewiki' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 0,
+			],
+		],
+	],
+	'+testwiki' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 1,
+			],
+		],
+	],
+	'+enwiki' => [
+		'mediawiki.web_ui_actions' => [
+			'sample' => [
+				'rate' => 0.01,
 			],
 		],
 	],

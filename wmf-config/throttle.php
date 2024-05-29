@@ -35,36 +35,65 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T358494
+// T364039
 $wmgThrottlingExceptions[] = [
-	'from' => '2024-03-27T13:00 -5:00',
-	'to' => '2024-03-27T19:00 -5:00',
-	'range' => [
-		'64.131.96.0 - 64.131.127.255',
-		'104.194.96.0 - 104.194.127.255',
-		'216.47.128.0 - 216.47.159.255',
-		'198.37.16.0 - 198.37.23.255',
-		'198.37.24.0 - 198.37.27.255',
-	],
-	'dbname' => 'enwiki',
-	'value' => 30,
+	'from' => '2024-05-14T08:00 -3:00',
+	'to' => '2024-05-14T20:00 -3:00',
+	'IP' => [ '163.10.23.200' ],
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 150,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-05-28T08:00 -3:00',
+	'to' => '2024-05-28T20:00 -3:00',
+	'IP' => [ '163.10.23.200' ],
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 150,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-06-04T08:00 -3:00',
+	'to' => '2024-06-04T20:00 -3:00',
+	'IP' => [ '163.10.23.200' ],
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 150,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-06-11T08:00 -3:00',
+	'to' => '2024-06-11T20:00 -3:00',
+	'IP' => [ '163.10.23.200' ],
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 150,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-06-18T08:00 -3:00',
+	'to' => '2024-06-18T20:00 -3:00',
+	'IP' => [ '163.10.23.200' ],
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 150,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-06-25T08:00 -3:00',
+	'to' => '2024-06-25T20:00 -3:00',
+	'IP' => [ '163.10.23.200' ],
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 150,
 ];
 
-// T360357
+// T364708
 $wmgThrottlingExceptions[] = [
-	'from' => '2024-04-05T00:00 -3:00',
-	'to' => '2024-04-05T23:00 -3:00',
-	'IP' => [ '163.10.36.3', '163.10.36.4' ],
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 40,
+	'from' => '2024-05-18T14:00 -4:00',
+	'to' => '2024-05-18T19:00 -4:00',
+	'IP' => [ '173.228.226.134' ],
+	'dbname' => [ 'enwiki' ],
+	'value' => 175,
 ];
 
-// T360533
+// T365221
 $wmgThrottlingExceptions[] = [
-	'from' => '2024-04-06T10:00 -3:00',
-	'to' => '2024-04-06T14:00 -3:00',
-	'IP' => [ '45.236.27.130' ],
-	'dbname' => [ 'eswiki', 'commonswiki' ],
+	'from' => '2024-05-24T08:00:00 +5:30',
+	'to' => '2024-05-24T18:00:00 +5:30',
+	'range' => [ '192.168.103.0/24' ],
+	'dbname' => [ 'knwiki', 'knwikisource' ],
 	'value' => 100,
 ];
 
