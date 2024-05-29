@@ -5417,6 +5417,7 @@ return [
 	'sqwikiquote' => true, // T230390
 	'srwiki' => true, // T129485
 	'svwiki' => true,
+	'swwiki' => true, // T365970
 	'tawiki' => true,
 	'tawikiquote' => true, // T166901
 	'tawiktionary' => true,
