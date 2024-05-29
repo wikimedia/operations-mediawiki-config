@@ -4227,6 +4227,13 @@ if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 }
 
+// T361643
+if ( $wmgUseAutoModerator ) {
+	wfLoadExtension( 'AutoModerator' );
+	$wgAutoModeratorLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/v1/models/';
+	$wgAutoModeratorLiftWingAddHostHeader = true;
+}
+
 if ( $wmgRealm === 'labs' ) {
 	require __DIR__ . '/CommonSettings-labs.php';
 }
@@ -4308,13 +4315,6 @@ if ( $wmgUseVueTest ) {
 
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
-}
-
-// T361643
-if ( $wmgUseAutoModerator ) {
-	wfLoadExtension( 'AutoModerator' );
-	$wgAutoModeratorLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/v1/models/';
-	$wgAutoModeratorLiftWingAddHostHeader = true;
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki

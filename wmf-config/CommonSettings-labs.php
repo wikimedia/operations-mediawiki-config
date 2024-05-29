@@ -474,7 +474,6 @@ if ( $wmgRealm == 'labs' ) {
 
 	// T364034
 	if ( $wmgUseAutoModerator ) {
-		wfLoadExtension( 'AutoModerator' );
 		$wgAutoModeratorLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/v1/models/';
 		$wgAutoModeratorLiftWingAddHostHeader = false;
 	}
