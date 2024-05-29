@@ -2599,12 +2599,18 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
+	/**
+	 * Users registered after Popups launch on 16th August 2017
+	 * will get page previews and references previews enabled by default.
+	 * Any user registered before this date will get the value
+	 * defined in $wgPopupsOptInDefaultState (defaults to "0").
+	 */
 	$wgConditionalUserOptions[ 'popups' ] = [
-		[ 1, [ CUDCOND_AFTER, '20170816000000' ] ],
+		[ '1', [ CUDCOND_AFTER, '20170816000000' ] ],
 		[ $wgPopupsOptInDefaultState, [ CUDCOND_NAMED ] ],
 	];
 	$wgConditionalUserOptions[ 'popups-reference-previews' ] = [
-		[ 1, [ CUDCOND_AFTER, '20170816000000' ] ],
+		[ '1', [ CUDCOND_AFTER, '20170816000000' ] ],
 		[ $wgPopupsOptInDefaultState, [ CUDCOND_NAMED ] ],
 	];
 }
