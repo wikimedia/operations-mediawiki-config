@@ -6520,6 +6520,7 @@ return [
 'wgCategoryCollation' => [
 	'default' => 'uppercase',
 	// Multilingual wikis
+	'commonswiki' => 'uca-default-u-kn', // T362494
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
 	'abwiki' => 'uppercase-ab', // T183430
