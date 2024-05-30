@@ -2304,6 +2304,12 @@ return [
 	'default' => false,
 ],
 
+'wgVectorWrapTablesTemporary' => [
+	'default' => false,
+	// T366314
+	'legacy-vector' => true,
+],
+
 // Note:
 // This is the list of namespaces the max-width should be EXCLUDED from.
 // It is not a list of namespaces where it should be included.

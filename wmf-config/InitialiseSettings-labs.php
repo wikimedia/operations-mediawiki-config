@@ -540,6 +540,11 @@ function wmfGetOverrideSettings() {
 			'default' => 0,
 		],
 
+		// T366314
+		'wgVectorWrapTablesTemporary' => [
+			'default' => true,
+		],
+
 		'wgVectorNightMode' => [
 			'default' => [
 				'logged_in' => true,
