@@ -24,8 +24,14 @@ $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
 $wgConf->settings = MWConfigCacheGenerator::getStaticConfig();
 
-$selected = $_GET['wiki'] ?? '';
-$selected = in_array( $selected, $wikis ) ? $selected : 'enwiki';
+$selected = $_GET['wiki'] ?? 'enwiki';
+if ( !in_array( $selected, $wikis ) ) {
+	header( 'Content-Type: text/plain; charset=utf-8' );
+	http_response_code( 404 );
+	print "Unknown wiki $selected.\n";
+	exit;
+}
+
 $compare = $_GET['compare'] ?? '';
 $compare = in_array( $compare, $wikis ) ? $compare : null;
 
@@ -87,6 +93,7 @@ function wmfAssertNoPrivateSettings( array $globals ) {
 		'wmgCaptchaSecret' => false,
 	] as $key => $expected ) {
 		if ( array_key_exists( $key, $globals ) !== $expected ) {
+			header( 'Content-Type: text/plain; charset=utf-8' );
 			http_response_code( 500 );
 			print 'Unexpected settings data.';
 			exit;
