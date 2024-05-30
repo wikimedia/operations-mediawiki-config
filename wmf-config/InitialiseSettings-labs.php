@@ -1106,6 +1106,10 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => false,
 		],
 
+		'wgIPInfoGeoLite2Prefix' => [
+			'default' => '/usr/share/GeoIP/GeoLite2-',
+		],
+
 		'wgMediaViewerUseThumbnailGuessing' => [
 			'default' => false, // T69651
 		],
