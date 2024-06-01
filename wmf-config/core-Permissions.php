@@ -2641,6 +2641,9 @@ return [
 			'editsitejson' => true,
 			'noratelimit' => true, // T40690
 		],
+		'translator' => [
+			'autoconfirmed' => true,
+		], // T356440
 	],
 	'+trwikiquote' => [
 		'editor' => [ // T122710
@@ -4446,6 +4449,7 @@ return [
 		'sysop' => [
 			'patroller', // T40690
 			'massmessage-sender', // T147740
+			'translator', // T356440
 		],
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
@@ -5625,7 +5629,7 @@ return [
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
 	'+trwiki' => [
-		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
+		'sysop' => [ 'patroller', 'massmessage-sender', 'translator' ], // bureaucrat -> sysop, T40690, T147740, T356440
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
 	'+trwikivoyage' => [
