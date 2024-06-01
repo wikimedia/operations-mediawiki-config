@@ -183,6 +183,7 @@ return [
 		'bot' => [
 			'editautoreviewprotected' => true,
 			'editeditorprotected' => true, // T321111
+			'ipblock-exempt' => true, // T366404
 		],
 		'sysop' => [
 			'editautoreviewprotected' => true,
