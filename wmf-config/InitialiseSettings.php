@@ -8106,8 +8106,8 @@ return [
 	'ruwiki' => [ // T362440
 		'userGroups' => [ 'autoreview', 'editor', 'sysop' ]
 	],
-	'trwiki' => [ // T330363
-		'userGroups' => [ 'autoreview', 'patroller', 'sysop' ]
+	'trwiki' => [ // T356879
+		'userGroups' => [ 'translator' ]
 	],
 	'viwiki' => [ // T299636
 		'userGroups' => [ 'extendedconfirmed', 'eliminator', 'sysop' ]
