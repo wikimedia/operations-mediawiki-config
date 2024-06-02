@@ -1277,7 +1277,7 @@ function wmfGetOverrideSettings() {
 			'default' => 'uppercase',
 			'dewiki' => 'uca-de-u-kn', // T128806
 			'enwiki' => 'uca-default-u-kn',
-			'fawiki' => 'uca-fa',
+			'fawiki' => 'uca-fa-u-kn', // T329440
 		],
 
 		// Test Quiz. See T142692
