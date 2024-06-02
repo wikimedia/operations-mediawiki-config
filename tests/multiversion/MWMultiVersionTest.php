@@ -154,4 +154,33 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'test2wiki', 'test2.wikipedia.beta.wmcloud.org' ],
 		];
 	}
+
+	/**
+	 * @dataProvider provideInitializeFromServerData
+	 */
+	public function testInitializeFromServerData( $serverName, $scriptName, $pathInfo, $expectedDb ) {
+		try {
+			$multiversion = MWMultiversion::initializeFromServerData( $serverName, $scriptName, $pathInfo );
+			$this->assertSame( $expectedDb, $multiversion->getDatabase() );
+		} catch ( MWMultiVersionException $e ) {
+			$this->assertFalse( $expectedDb );
+		}
+	}
+
+	public function provideInitializeFromServerData() {
+		return [
+			[ 'en.wikipedia.org', '/w/index.php', '/wiki/Main_Page', 'enwiki' ],
+			[ 'en.wikipedia.org', '/w/api.php', '/w/api.php', 'enwiki' ],
+			[ 'en.wiktionary.org', '/w/index.php', '/wiki/Main_Page', 'enwiktionary' ],
+			[ 'boardgovcom.wikimedia.org', '/w/index.php', '/wiki/Main_Page', 'boardgovcomwiki' ],
+			[ 'en.wikipedia.beta.wmflabs.org', '/w/index.php', '/wiki/Main_Page', 'enwiki' ],
+			[ 'example.org', '/w/index.php', '/wiki/Main_Page', false ],
+
+			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png', 'commonswiki' ],
+			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
+			[ 'upload.wikimedia.beta.wmflabs.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
+			[ 'upload.wikimedia.org', '/w/thumb.php', '/', false ],
+		];
+	}
+
 }

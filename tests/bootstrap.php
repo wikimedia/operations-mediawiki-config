@@ -1,5 +1,7 @@
 <?php
 
+define( 'MW_PHPUNIT_TEST', true );
+
 // Load the shared utilities classes from here!
 require_once __DIR__ . '/../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';

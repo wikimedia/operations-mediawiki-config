@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/defines.php';
+require_once __DIR__ . '/MWMultiVersionException.php';
 require_once __DIR__ . '/MWRealm.php';
 require_once __DIR__ . '/MWWikiversions.php';
 
@@ -263,6 +264,25 @@ class MWMultiVersion {
 				'with non-CLI interface' );
 		}
 		self::$instance = null;
+	}
+
+	/**
+	 * Create an instance for a web request, based on $_SERVER properties.
+	 * @param ?string $serverName HTTP host name from `$_SERVER['SERVER_NAME']`.
+	 * @param ?string $scriptName HTTP script name from `$_SERVER['SCRIPT_NAME']`.
+	 * @param string $pathInfo CGI path info, from `$_SERVER['PATH_INFO']`.
+	 * @return MWMultiVersion
+	 */
+	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo ) {
+		if ( $scriptName === '/w/thumb.php'
+			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' )
+		) {
+			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
+			return self::initializeForUploadWiki( $pathInfo );
+		} else {
+			// Regular URL hit (wiki of origin)...
+			return self::initializeForWiki( $serverName );
+		}
 	}
 
 	/**
@@ -569,6 +589,10 @@ class MWMultiVersion {
 	 * @return void
 	 */
 	private static function error( $msg, $httpError = 500 ) {
+		if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+			throw new MWMultiVersionException( $msg );
+		}
+
 		$msg = (string)$msg;
 		if ( PHP_SAPI !== 'cli' ) {
 			$msg = htmlspecialchars( $msg );
@@ -617,15 +641,8 @@ class MWMultiVersion {
 		if ( $wiki === null ) {
 			$scriptName = @$_SERVER['SCRIPT_NAME'];
 			$serverName = @$_SERVER['SERVER_NAME'];
-			if ( $scriptName === '/w/thumb.php'
-				&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' )
-			) {
-				// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
-				$multiVersion = self::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
-			} else {
-				// Regular URL hit (wiki of origin)...
-				$multiVersion = self::initializeForWiki( $serverName );
-			}
+			$pathInfo = $_SERVER['PATH_INFO'];
+			$multiVersion = self::initializeFromServerData( $serverName, $scriptName, $pathInfo );
 		} else {
 			$multiVersion = self::initializeFromDBName( $wiki );
 		}
