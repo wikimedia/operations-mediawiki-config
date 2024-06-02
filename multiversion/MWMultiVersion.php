@@ -617,7 +617,9 @@ class MWMultiVersion {
 		if ( $wiki === null ) {
 			$scriptName = @$_SERVER['SCRIPT_NAME'];
 			$serverName = @$_SERVER['SERVER_NAME'];
-			if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
+			if ( $scriptName === '/w/thumb.php'
+				&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' )
+			) {
 				// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 				$multiVersion = self::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
 			} else {
