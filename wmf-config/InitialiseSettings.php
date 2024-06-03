@@ -3186,6 +3186,13 @@ return [
 			'newbie' => [ 3, 86400 ],
 		],
 	],
+	'+trwiki' => [
+		'edit' => [
+			'ip' => [ 2, 60 ], // T330811
+			'newbie' => [ 2, 60 ], // T330811
+			'user' => [ 90, 60 ],
+		],
+	],
 ],
 # @} end of wgRateLimits
 
