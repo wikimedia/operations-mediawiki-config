@@ -51,7 +51,9 @@ return [
 	'wmgMinervaNightModeQueryString' => [
 		// T359183
 		'default' => [
-			'action' => 'edit|submit|diff|info|protect|delete|undelete|action|history',
+			// Removal tickets: T366372, T366520, T366371
+			'action' => 'edit|submit|diff|protect|delete|undelete|history',
+			// Removal ticket: T366371
 			'diff' => '.*'
 		],
 		// Allow us to reliably test all pages here.
@@ -60,7 +62,16 @@ return [
 	'wmgMinervaNightModeExcludeNamespaces' => [
 		// Initially night mode is disabled on everything except article page (T359183)
 		'default' => [
-			-2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15,
+			// File pages (T357575)
+			-2, 6,
+			// Talk pages (T365509)
+			1, 3, 5, 7, 9, 11, 13, 15,
+			// User pages (T366364)
+			2,
+			// Project namespace (T366366)
+			4,
+			// MediaWiki namespace (T366368)
+			8,
 			// The following is not intended to be complete, but should cover most untested namespaces
 			// that are needed for the first launch. The namespaces are documented at:
 			// https://www.mediawiki.org/wiki/Extension_default_namespaces
@@ -86,118 +97,56 @@ return [
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [
-			"Special:Allmessages",
-			// T357699
+			// Homepage (T357699)
 			"Special:Homepage",
-			"Special:BrokenRedirects",
-			"Special:LintErrors",
-			"Special:Protectedpages",
-			"Special:Allpages",
-			"Special:Prefixindex",
-			"Special:Categories",
-			"Special:CategoryTree",
-			"Special:EntityUsage",
-			"Special:LinkSearch",
-			"Special:PagesWithProp",
-			"Special:PagesWithBadges",
-			"Special:Search",
-			"Special:TrackingCategories",
-			"Special:BotPasswords",
-			"Special:ChangeCredentials",
-			"Special:ChangeEmail",
-			"Special:GlobalPreferences",
-			"Special:GlobalRenameRequest",
-			"Special:OAuthManageMyGrants",
+			// Notifications (T358405)
 			"Special:Notifications",
+			// Preference pages (T366378)
+			"Special:GlobalPreferences",
 			"Special:Preferences",
-			"Special:RemoveCredentials",
-			"Special:PasswordReset",
-			"Special:ResetTokens",
-			"Special:TopicSubscriptions",
-			"Special:Activeusers",
-			"Special:AutoblockList",
-			"Special:BlockList",
-			"Special:CreateAccount",
-			"Special:Emailuser",
-			"Special:CentralAuth",
-			"Special:GlobalUsers",
-			"Special:GlobalGroupPermissions",
-			"Special:Listgrants",
-			"Special:OAuthListConsumers",
-			"Special:GlobalBlockList",
-			"Special:GlobalUserRights",
-			"Special:PasswordPolicies",
-			"Special:Contributions",
-			"Special:Listusers",
-			"Special:EditRecovery",
-			"Special:AbuseLog",
-			"Special:Newimages",
-			"Special:Newpages",
-			"Special:NewPagesFeed",
-			"Special:Recentchanges",
-			"Special:Recentchangeslinked",
-			"Special:Log",
-			"Special:Tags",
-			"Special:Listfiles",
-			"Special:GlobalUsage",
-			"Special:ListDuplicatedFiles",
-			"Special:MediaStatistics",
-			"Special:OrphanedTimedText",
-			"Special:FileDuplicateSearch",
-			"Special:Upload",
-			"Special:VipsTest",
-			"Special:ApiFeatureUsage",
-			"Special:ApiSandbox",
-			"Special:Booksources",
-			"Special:AbuseFilter",
-			"Special:ExpandTemplates",
-			"Special:GadgetUsage",
-			"Special:Gadgets",
-			"Special:TemplateSandbox",
+			// Hieroglyphs (T366384)
 			"Special:Hieroglyphs",
-			"Special:Version",
-			"Special:Interwiki",
-			"Special:WikiSets",
-			"Special:SiteMatrix",
-			"Special:DeletePage",
-			"Special:Diff",
-			"Special:EditPage",
-			"Special:NewSection",
-			"Special:PageHistory",
-			"Special:PageInfo",
-			"Special:PermanentLink",
-			"Special:ProtectPage",
-			"Special:Purge",
-			"Special:Redirect",
-			"Special:Book",
-			"Special:ChangeContentModel",
-			"Special:CiteThisPage",
-			"Special:ComparePages",
-			"Special:Export",
-			"Special:PageAssessments",
+			// URL sharing (T366375)
 			"Special:QrCode",
 			"Special:UrlShortener",
+			// Growth home pages (T366376)
 			"Special:EnrollAsMentor",
-			"Special:BlockedExternalDomains",
 			"Special:EditGrowthConfig",
-			"Special:Impact",
-			"Special:ManageMentors",
 			"Special:MentorDashboard",
-			"Special:NewcomerTasksInfo",
-			"Special:ValidationStatistics",
-			"Special:StablePages",
-			"Special:PendingChanges",
-			"Special:Contribute",
-			"Special:CreateMassMessageList",
+			// Discussions tool special pages (T366524)
 			"Special:DiscussionToolsDebug",
 			"Special:FindComment",
-			"Special:GlobalRenameProgress",
-			"Special:MathWikibase",
+			// OOUI passed special pages (T366520)
+			"Special:ApiSandbox",
+			"Special:Block",
+			"Special:GlobalRenameRequest",
 			"Special:MathStatus",
+			"Special:Search",
+			// ORES (T366379)
 			"Special:ORESModels",
+			// Data-table special pages (T366373)
+			"Special:AbuseFilter",
+			"Special:AbuseLog",
+			"Special:Allmessages",
+			"Special:AutoblockList",
+			"Special:BlockedExternalDomains",
+			"Special:BlockList",
+			"Special:Listfiles",
+			"Special:PageAssessments",
+			"Special:Protectedpages",
 			"Special:SecurePoll",
-			"Special:EditWatchlist",
+			"Special:Tags",
+			"Special:TopicSubscriptions",
+			"Special:TrackingCategories",
+			// Changelist / diff pages (T366371)
+			"Special:Contributions",
+			"Special:ComparePages",
+			"Special:Recentchanges",
+			"Special:Recentchangeslinked",
+			"Special:PendingChanges",
 			"Special:Watchlist",
+			// New pages feed (T365071)
+			"Special:NewPagesFeed",
 		],
 		'testwiki' => [ 'Banana' ],
 	],
