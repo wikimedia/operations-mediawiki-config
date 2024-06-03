@@ -187,6 +187,7 @@ return [
 	'+azwikisource' => [
 		'VikiMənbə' => NS_PROJECT, // T114002
 		'VikiMənbə_müzakirəsi' => NS_PROJECT_TALK, // T114002
+		'VM' => NS_PROJECT, // T365966
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
