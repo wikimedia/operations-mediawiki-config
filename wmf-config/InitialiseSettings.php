@@ -2440,6 +2440,49 @@ return [
 	],
 ],
 
+// T366334
+'wgVectorFontSizeConfigurableOptions' => [
+	'default' => [
+		"exclude" => [
+			"mainpage" => false,
+			"pagetitles" => [],
+			"namespaces" => [ -1, 1, 2, 6, 8, 10, 14, 100, 710, 828 ],
+			"querystring" => [
+				"action" => "edit|submit|diff|info|protect|delete|undelete|action|history",
+				"diff" => ".+"
+			],
+		],
+		"include" => []
+	],
+	'plwiki' => [
+		"exclude" => [
+			"mainpage" => false,
+			"pagetitles" => [],
+			"namespaces" => [],
+			"querystring" => [],
+		],
+		"include" => []
+	],
+	'nlwiki' => [
+		"exclude" => [
+			"mainpage" => false,
+			"pagetitles" => [],
+			"namespaces" => [],
+			"querystring" => [],
+		],
+		"include" => []
+	],
+	'eswiki' => [
+		"exclude" => [
+			"mainpage" => false,
+			"pagetitles" => [],
+			"namespaces" => [],
+			"querystring" => [],
+		],
+		"include" => []
+	],
+],
+
 'wgVectorWebABTestEnrollment' => [
 	'default' => [
 		'name' => 'skin-vector-zebra-experiment',
