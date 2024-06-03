@@ -11621,7 +11621,7 @@ return [
 ],
 
 'wgXmlDumpSchemaVersion' => [
-	'default' => XML_DUMP_SCHEMA_VERSION_10,
+	'default' => XML_DUMP_SCHEMA_VERSION_11,
 ],
 'wmgUseReadingLists' => [
 	'default' => true,
