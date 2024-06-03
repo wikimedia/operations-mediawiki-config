@@ -1032,6 +1032,44 @@ function wmfGetOverrideSettings() {
 					'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 					'shuffleAnswersDisplay' => true,
 				],
+				[
+					'name' => 'AutoModerator Patroller Workstream Survey',
+					// Internal or external link survey
+					'type' => 'external',
+					// Survey question message key
+					'questions' => [
+						[
+							// Required field used for referencing question in other questions.
+							'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
+							// Survey question message key
+							'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
+							// External link to the survey
+							'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
+							// Parameter to add to external link
+							'instanceTokenParameterName' => 'parameterName',
+							'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
+							// No answer message key
+							'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
+						]
+					],
+					'pageIds' => [ 23921 ],
+					'audience' => [
+						'minEdits' => 5,
+						'anons' => false,
+						'registrationEnd' => '2080-01-31',
+					],
+					// The i18n key of the privacy policy text
+					'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
+					// Whether the survey is enabled
+					'enabled' => true,
+					// Percentage of users that will see the survey
+					'coverage' => 1,
+					// For each platform (desktop, mobile), which version of it is targeted
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				]
 			],
 			'metawiki' => [
 				// T351353
