@@ -2598,5 +2598,17 @@ function wmfGetOverrideSettings() {
 			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
 			'enwiki' => true,
 		],
+
+		// T366486
+		// Do not enable this in production
+		'wgExperimentalLoginPopup' => [
+			'default' => true,
+		],
+		// T366486 (needed for wgExperimentalLoginPopup iframe mode)
+		// Do not enable this in production
+		'wgEditPageFrameOptions' => [
+			'default' => 'SAMEORIGIN',
+		],
+
 	];
 } # wmfGetOverrideSettings()
