@@ -67,6 +67,7 @@ class MWMultiVersion {
 		'cirrussearch-big-indices',
 		'rtl',
 		'translate',
+		'growthexperiments',
 	];
 
 	/** @var string[] */
