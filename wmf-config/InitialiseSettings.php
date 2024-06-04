@@ -12241,9 +12241,11 @@ return [
 	// NOTE: Do not enable without OK from Moderator Tools team.
 	'default' => false,
 	'testwiki' => true,
+	'trwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	'testwiki' => 'AutoModeratorTest',
+	'trwiki' => 'Otomoderatör',
 ],
 
 // T341000
