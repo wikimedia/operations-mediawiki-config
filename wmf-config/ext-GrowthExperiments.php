@@ -899,6 +899,7 @@ return [
 'wgGEUseCommunityConfigurationExtension' => [
 	// NOTE: Do not enable without Growth team OK.
 	'default' => false,
+	'testwiki' => true,
 ],
 
 ];

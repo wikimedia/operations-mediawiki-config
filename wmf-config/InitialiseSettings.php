@@ -12234,6 +12234,7 @@ return [
 'wmgUseCommunityConfiguration' => [
 	// NOTE: Do not enable without OK from the Growth team.
 	'default' => false,
+	'testwiki' => true,
 ],
 
 // T361643
