@@ -2447,38 +2447,10 @@ return [
 		"exclude" => [
 			"mainpage" => false,
 			"pagetitles" => [],
-			"namespaces" => [ -1, 1, 2, 6, 8, 10, 14, 100, 710, 828 ],
+			"namespaces" => [ -1, 6, 14, 100, 710 ],
 			"querystring" => [
-				"action" => "edit|submit|diff|info|protect|delete|undelete|action|history",
-				"diff" => ".+"
+				"action" => "submit|info|protect|delete|undelete|action|history",
 			],
-		],
-		"include" => []
-	],
-	'plwiki' => [
-		"exclude" => [
-			"mainpage" => false,
-			"pagetitles" => [],
-			"namespaces" => [],
-			"querystring" => [],
-		],
-		"include" => []
-	],
-	'nlwiki' => [
-		"exclude" => [
-			"mainpage" => false,
-			"pagetitles" => [],
-			"namespaces" => [],
-			"querystring" => [],
-		],
-		"include" => []
-	],
-	'eswiki' => [
-		"exclude" => [
-			"mainpage" => false,
-			"pagetitles" => [],
-			"namespaces" => [],
-			"querystring" => [],
 		],
 		"include" => []
 	],
