@@ -1356,6 +1356,18 @@ return [
 		'*' => [ 'createpage' => false ],
 		'rollbacker' => [ 'rollback' => true ], // T35508
 	],
+	'+igwiki' => [
+		'event-organizer' => [ // T362675
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T362675
+			'campaignevents-organize-events' => false, // T362675
+			'campaignevents-email-participants' => false, // T362675
+		],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'upload' => true ],
 		'sysop' => [ 'upload' => false ],
@@ -3887,6 +3899,11 @@ return [
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
 	],
+	'+igwiki' => [
+		'sysop' => [
+			'event-organizer', // T362675
+		],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [
 			'import',
@@ -5258,6 +5275,11 @@ return [
 	],
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
+	],
+	'+igwiki' => [
+		'sysop' => [
+			'event-organizer', // T362675
+		],
 	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],

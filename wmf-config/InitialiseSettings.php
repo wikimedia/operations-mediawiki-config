@@ -12142,6 +12142,7 @@ return [
 	'test2wiki' => true,
 	'officewiki' => true,
 	'metawiki' => true,
+	'igwiki' => true
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
