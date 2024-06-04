@@ -2274,6 +2274,9 @@ return [
 			. '%D9%85%D9%86%D8%AA%D8%B4%D8%B1%D8%B4%D8%AF%D9%87&notcategories=%D9%85%D8%B1%D9%88%D8%B1|%D9%85%D8%B1%D9%88%D8%B1_%D9%81%D9%88%D8%B1%DB%8C|%D8%B5%D9%81%D8%AD%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%86%D8%A7%D9%85%D8%B2%D8%AF_%D8%AD%D8%B0%D9%81_%D8%B3%D8%B1%DB%8C%D8%B9'
 			. '&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only'
 	],
+	'ptwikinews' => [
+		'atom' => 'https://pt.wikinews.org/w/index.php?categories=Publicado&feed=atom&hideredirs=1&limit=75&namespace=0&title=Special:NewsFeed'
+	]
 ],
 
 'wgAccountCreationThrottle' => [
