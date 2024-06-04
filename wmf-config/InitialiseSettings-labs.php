@@ -2584,12 +2584,14 @@ function wmfGetOverrideSettings() {
 		'wmgUseCommunityConfiguration' => [
 			// NOTE: Do not enable without Growth team OK
 			'default' => false,
-			'eswiki' => true,
+			'arwiki' => true,
 			'cswiki' => true,
+			'eswiki' => true,
 		],
 		'wgGEUseCommunityConfigurationExtension' => [
 			// NOTE: Do not enable without Growth team OK
 			'default' => false,
+			'arwiki' => true,
 			'eswiki' => true,
 			'cswiki' => true,
 		],
