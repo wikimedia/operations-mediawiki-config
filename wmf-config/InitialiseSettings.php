@@ -5304,6 +5304,7 @@ return [
 	'fiwikinews' => 'any', // T216333
 	'frwikiquote' => 'any', // T236212
 	'guwikisource' => 'any', // T42173
+	'jawikinews' => 'any', // T364189
 	'minwiktionary' => 'any', // T241694
 	'napwikisource' => 'any', // T233673
 	'plwikisource' => 'any', // T131771
