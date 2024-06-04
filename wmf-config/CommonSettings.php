@@ -3954,7 +3954,7 @@ if ( $wmgUseIPInfo ) {
 	// It is only present on application servers. See
 	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
 	// for list of relevant sections of operations/puppet config.
-	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIPInfo/';
+	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIPInfo/GeoLite2-';
 
 	// Consult the Legal team before updating these, since they
 	// must remain compatible with our contract with MaxMind
