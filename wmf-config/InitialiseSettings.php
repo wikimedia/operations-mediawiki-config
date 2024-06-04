@@ -5865,6 +5865,11 @@ return [
 	'default' => true,
 ],
 
+// T361013
+'wgLinterParseOnDerivedDataUpdate' => [
+	'default' => false,
+],
+
 'wgLinterStatsdSampleFactor' => [
 	'default' => 1000,
 	'commonswiki' => 5000, // T184280
