@@ -2392,6 +2392,11 @@ return [
 		// NS 114/115 reserved for 'Translation'
 		116 => 'Tool', // T122865
 		117 => 'Tool_talk', // T122865
+		// TODO: rename this namespace (T275796)
+		498 => 'Nova_Resource',
+		499 => 'Nova_Resource_Talk',
+		666 => 'Heira',
+		667 => 'Heira_Talk',
 	],
 	'mediawikiwiki' => [
 		100 => 'Manual',
@@ -5019,6 +5024,9 @@ return [
 	'+wikidatawiki' => [
 		120 => [ 'autoconfirmed' ], // Property namespace per T254280
 		122 => [ 'query-update' ], // Query namespace per T51001
+	],
+	'+wikitech' => [
+		666 => [ 'editprotected' ], // Block editing of former Hiera: namespace.
 	],
 ],
 # @} end of wgNamespaceProtection

@@ -70,8 +70,6 @@ if ( false ) {
 	] );
 }
 
-wfLoadExtension( 'OpenStackManager' );
-
 // Dummy setting for conduit api token to be used by the BlockIpComplete hook
 // that tries to disable Phabricator accounts. Real value should be provided
 // by /etc/mediawiki/WikitechPrivateSettings.php
