@@ -3008,6 +3008,15 @@ return [
 		'accountcreator' => [ 'noratelimit' => true, ], // T249487
 		'rollbacker' => [ 'rollback' => true, ], // T249487
 	],
+	'+zghwiki' => [
+		'autopatrolled' => [
+			'autopatrol' => true
+		],
+		'patroller' => [
+			'autopatrol' => true,
+			'patrol' => true
+		]
+	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489
@@ -4635,6 +4644,12 @@ return [
 			'accountcreator', // T249487
 			'rollbacker', // T249487
 		],
+	],
+	'+zghwiki' => [
+		'sysop' => [
+			'patroller',
+			'autopatrolled'
+		]
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
