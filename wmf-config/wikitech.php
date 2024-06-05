@@ -156,8 +156,14 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( $wmgPhabricatorApiToken, 'user.disable', [
-				'phids' => [ $phid ],
+			wmfPhabClient( $wmgPhabricatorApiToken, 'user.edit', [
+				'transactions' => [
+					[
+						'type' => 'disabled',
+						'value' => true,
+					],
+				],
+				'objectIdentifier' => $phid,
 			] );
 		}
 	} catch ( Throwable $t ) {
@@ -189,8 +195,14 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( $wmgPhabricatorApiToken, 'user.enable', [
-				'phids' => [ $phid ],
+			wmfPhabClient( $wmgPhabricatorApiToken, 'user.edit', [
+				'transactions' => [
+					[
+						'type' => 'disabled',
+						'value' => false,
+					],
+				],
+				'objectIdentifier' => $phid,
 			] );
 		}
 	} catch ( Throwable $t ) {
