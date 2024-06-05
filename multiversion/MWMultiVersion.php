@@ -641,7 +641,7 @@ class MWMultiVersion {
 		if ( $wiki === null ) {
 			$scriptName = @$_SERVER['SCRIPT_NAME'];
 			$serverName = @$_SERVER['SERVER_NAME'];
-			$pathInfo = $_SERVER['PATH_INFO'];
+			$pathInfo = @$_SERVER['PATH_INFO'];
 			$multiVersion = self::initializeFromServerData( $serverName, $scriptName, $pathInfo );
 		} else {
 			$multiVersion = self::initializeFromDBName( $wiki );
