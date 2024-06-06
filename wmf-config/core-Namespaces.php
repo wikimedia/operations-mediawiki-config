@@ -5636,6 +5636,7 @@ return [
 	'mrwikibooks' => 'विकिबुक्स', // T73774
 	'mrwikisource' => 'विकिस्रोत',
 	'mrwiktionary' => 'विक्शनरी',
+	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',
