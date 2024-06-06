@@ -1434,6 +1434,7 @@ return [
 	'mrwiki' => 'विकिपीडिया',
 	'mrwikibooks' => 'विकिबुक्स', // T104132
 	'mrwikisource' => 'विकिस्रोत',
+	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',
