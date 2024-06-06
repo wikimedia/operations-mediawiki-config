@@ -6480,6 +6480,8 @@ return [
 	],
 ],
 
+// Any changes to this for large wikis MUST first go through the DBAs
+// For very large wikis, like Commons, changing this is impossible.
 'wgCategoryCollation' => [
 	'default' => 'uppercase',
 	// Multilingual wikis
