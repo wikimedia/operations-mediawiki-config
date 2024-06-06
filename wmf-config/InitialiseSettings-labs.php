@@ -101,7 +101,8 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
-			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org'
+			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
+			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wgCanonicalServer' => [
@@ -124,7 +125,8 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
-			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org'
+			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
+			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wgUploadPath' => [
@@ -598,6 +600,7 @@ function wmfGetOverrideSettings() {
 
 			// Wikis for SUL project hosted on wmcloud.org
 			'test2wiki' => '.wikipedia.beta.wmcloud.org',
+			'plwikivoyage' => '.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wmgCentralAuthAutoLoginWikis' => [
@@ -617,7 +620,8 @@ function wmfGetOverrideSettings() {
 				'wikifunctions.beta.wmflabs.org' => 'wikifunctionswiki',
 
 				// Wikis for SUL project hosted on wmcloud.org
-				'.wikipedia.beta.wmcloud.org' => 'test2wiki'
+				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
+				'.wikivoyage.beta.wmcloud.org' => 'plwikivoyage',
 			],
 		],
 

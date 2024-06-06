@@ -95,6 +95,7 @@ if ( $wmgRealm == 'labs' ) {
 
 		// new wmcloud instances
 		'wikipedia.beta.wmcloud.org',
+		'wikivoyage.beta.wmcloud.org',
 	];
 
 	# Attempt to auto block users using faulty servers
@@ -195,6 +196,9 @@ if ( $wmgRealm == 'labs' ) {
 			'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 			'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 			'(.*\.)?wikidata\.beta\.wmflabs\.org',
+			// wmcloud.org domains
+			'(.*\.)?wikipedia\.beta\.wmcloud\.org',
+			'(.*\.)?wikivoyage\.beta\.wmcloud\.org',
 		];
 		$wgUrlShortenerApprovedDomains = [
 			'*.wikipedia.beta.wmflabs.org',
@@ -207,8 +211,9 @@ if ( $wmgRealm == 'labs' ) {
 			'*.wikivoyage.beta.wmflabs.org',
 			'*.wikimedia.beta.wmflabs.org',
 			'*.wikidata.beta.wmflabs.org',
-
+			// wmcloud.org domains
 			'*.wikipedia.beta.wmcloud.org',
+			'*.wikivoyage.beta.wmcloud.org',
 		];
 	}
 
