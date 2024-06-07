@@ -2616,10 +2616,6 @@ if ( $wmgUsePopups ) {
 		[ '1', [ CUDCOND_AFTER, '20170816000000' ] ],
 		[ $wgPopupsOptInDefaultState, [ CUDCOND_NAMED ] ],
 	];
-	$wgConditionalUserOptions[ 'popups-reference-previews' ] = [
-		[ '1', [ CUDCOND_AFTER, '20170816000000' ] ],
-		[ $wgPopupsOptInDefaultState, [ CUDCOND_NAMED ] ],
-	];
 }
 
 if ( $wmgUseLinter ) {
