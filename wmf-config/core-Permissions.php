@@ -1655,10 +1655,12 @@ return [
 		'*' => [
 			'flow-hide' => false, // T245780
 			'flow-edit-title' => false, // T328097
+			'unfuzzy' => false, // T366994
 		],
 		'autoconfirmed' => [
 			'flow-hide' => true, // T245780
 			'flow-edit-title' => true, // T328097
+			'unfuzzy' => true, // T366994
 		],
 		'user' => [ 'flow-create-board' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
