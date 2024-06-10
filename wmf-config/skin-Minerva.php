@@ -52,7 +52,7 @@ return [
 		// T359183
 		'default' => [
 			// Removal tickets: T366372, T366520, T366371
-			'action' => 'edit|submit|diff|protect|delete|undelete|history',
+			'action' => 'edit|submit|diff|history',
 			// Removal ticket: T366371
 			'diff' => '.*'
 		],
@@ -101,9 +101,6 @@ return [
 			"Special:Homepage",
 			// Notifications (T358405)
 			"Special:Notifications",
-			// Preference pages (T366378)
-			"Special:GlobalPreferences",
-			"Special:Preferences",
 			// Hieroglyphs (T366384)
 			"Special:Hieroglyphs",
 			// URL sharing (T366375)
@@ -116,28 +113,20 @@ return [
 			// Discussions tool special pages (T366524)
 			"Special:DiscussionToolsDebug",
 			"Special:FindComment",
-			// OOUI passed special pages (T366520)
-			"Special:ApiSandbox",
+			// T367583
 			"Special:Block",
+			// T367582
 			"Special:GlobalRenameRequest",
+			// T367581
 			"Special:MathStatus",
+			// T367375
 			"Special:Search",
 			// ORES (T366379)
 			"Special:ORESModels",
-			// Data-table special pages (T366373)
-			"Special:AbuseFilter",
-			"Special:AbuseLog",
+			// T367827
 			"Special:Allmessages",
-			"Special:AutoblockList",
-			"Special:BlockedExternalDomains",
-			"Special:BlockList",
-			"Special:Listfiles",
-			"Special:PageAssessments",
+			// T367826
 			"Special:Protectedpages",
-			"Special:SecurePoll",
-			"Special:Tags",
-			"Special:TopicSubscriptions",
-			"Special:TrackingCategories",
 			// Changelist / diff pages (T366371)
 			"Special:Contributions",
 			"Special:ComparePages",
