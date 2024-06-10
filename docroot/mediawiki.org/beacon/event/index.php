@@ -1,9 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../../../../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/../../../../src/ServiceConfig.php';
-require_once __DIR__ . '/../../../../src/Legacy/EventLoggingLegacyConverter.php';
+require MWMultiVersion::getMediaWiki( 'extensions/EventLogging/includes/Libs/Legacy/EventLoggingLegacyConverter.php' );
 
-use Wikimedia\MWConfig\Legacy\EventLoggingLegacyConverter;
+use MediaWiki\Extension\EventLogging\Libs\Legacy\EventLoggingLegacyConverter;
 use Wikimedia\MWConfig\ServiceConfig;
 
 /**
@@ -25,7 +26,7 @@ use Wikimedia\MWConfig\ServiceConfig;
 //
 // Once we are confident that there are sufficiently few remaining 3rd party MediaWiki installs
 // out there that send events using this legacy endpoint, we can remove this endpoint and related
-// code (EventLoggingLegacyConverter) entirely.
+// code (EventLogging extension's EventLoggingLegacyConverter) entirely.
 
 $wmgServiceConfig = ServiceConfig::getInstance();
 
