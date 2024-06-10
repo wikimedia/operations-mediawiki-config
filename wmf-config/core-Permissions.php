@@ -1340,8 +1340,9 @@ return [
 		'trusted' => [ 'edittrustedprotected' => true ], // T194568
 		'editor' => [
 			'noratelimit' => true,
-			'edittrustedprotected' => true,
-		], // T194568
+			'edittrustedprotected' => true, // T194568
+			'suppressredirect' => true, // T366438
+		],
 		'sysop' => [
 			'templateeditor' => true,
 			'edittrustedprotected' => true,
