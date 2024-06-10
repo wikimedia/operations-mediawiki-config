@@ -2528,6 +2528,16 @@ return [
 	],
 	'+swwiki' => [
 		'*' => [ 'createpage' => false ], // T44894
+		'event-organizer' => [ // T366502
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T366502
+			'campaignevents-organize-events' => false, // T366502
+			'campaignevents-email-participants' => false, // T366502
+		],
 	],
 	'+tawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T95180
@@ -4456,6 +4466,11 @@ return [
 	'+svwiktionary' => [
 		'sysop' => [ 'autopatrolled', ], // T161919
 	],
+	'+swwiki' => [
+		'sysop' => [
+			'event-organizer', // T366502
+		],
+	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [
@@ -5647,6 +5662,11 @@ return [
 	],
 	'+svwiktionary' => [
 		'sysop' => [ 'autopatrolled', ], // T161919
+	],
+	'+swwiki' => [
+		'sysop' => [
+			'event-organizer', // T366502
+		],
 	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
