@@ -853,7 +853,11 @@ $wgDjvuTxt = '/usr/bin/djvutxt';
 # StatsD/Metrics Settings
 # ######################################################################
 $wgStatsFormat = 'dogstatsd';
-$wgStatsTarget = 'udp://localhost:9125';
+# On kubernetes, use the exporter service where available, not the pod sidecar.
+# When it is the case, the kubernetes api will populate the environment variable
+# STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST with the service IP.
+$wgStatsHost = $_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost';
+$wgStatsTarget = "udp://$wgStatsHost:9125";
 $wgStatsdServer = $wmgLocalServices['statsd'];
 
 # ######################################################################
