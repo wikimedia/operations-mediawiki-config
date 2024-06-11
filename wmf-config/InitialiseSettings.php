@@ -2406,10 +2406,7 @@ return [
 // as well as anonymoues users.
 'wmgIncreaseDefaultVectorFontSize' => [
 	'default' => false,
-	'testwiki' => true,
-	'plwiki' => true,
-	'nlwiki' => true,
-	'eswiki' => true,
+	'wikipedia' => true,
 ],
 
 // Reveal Vector 2022 appearance menu.
@@ -2419,22 +2416,7 @@ return [
 		'logged_out' => false,
 		'beta' => true,
 	],
-	'testwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-		'beta' => true,
-	],
-	'plwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-		'beta' => true,
-	],
-	'nlwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-		'beta' => true,
-	],
-	'eswiki' => [
+	'wikipedia' => [
 		'logged_in' => true,
 		'logged_out' => true,
 		'beta' => true,
