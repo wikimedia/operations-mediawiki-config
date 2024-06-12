@@ -7614,13 +7614,19 @@ return [
 
 'wmgUseEntitySchema' => [
 	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
+	'wikidata' => true,
+	'wikidataclient-test' => true,
 ],
 
 'wgEntitySchemaEnableDatatype' => [
 	'default' => false,
 	'testwikidatawiki' => true, // T332724
+	'wikidataclient-test' => true,
+],
+
+'wgEntitySchemaIsRepo' => [
+	'default' => false,
+	'wikidata' => true,
 ],
 
 'wgEntitySchemaShExSimpleUrl' => [
