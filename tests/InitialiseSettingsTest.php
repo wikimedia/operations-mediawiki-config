@@ -2,6 +2,7 @@
 // Ensure that we're not casting any types
 declare( strict_types = 1 );
 
+use Symfony\Component\Yaml\Yaml;
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 /**
@@ -184,7 +185,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testLogosAreSet() {
-		$config = yaml_parse_file( __DIR__ . '/../logos/config.yaml' );
+		$config = Yaml::parseFile( __DIR__ . '/../logos/config.yaml' );
 
 		// Test that every special wiki has a logo set
 		// We could do this for every wiki, but a lot fall back to their project, so it's not worth it

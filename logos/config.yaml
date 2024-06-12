@@ -3904,7 +3904,6 @@ Wikivoyage:
         local_wordmark: true
     id_internalwikimedia:
         selected_icon: outreachwiki
-        selected_wordmark: usabilitywiki
         selected_wordmark: idwikimedia
         local_tagline: true
     idwikimedia:
