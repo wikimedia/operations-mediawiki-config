@@ -123,6 +123,7 @@ $wgLBFactoryConf = [
 	'smnwiki'       => 's5',
 	'srwiki'        => 's5',
 	'suwikisource'  => 's5',
+	'sysop_plwiki'  => 's5',
 	'taywiki'       => 's5',
 	'thankyouwiki'  => 's5',
 	'tlwikiquote'   => 's5',

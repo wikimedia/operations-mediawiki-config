@@ -218,6 +218,7 @@ return [
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
 	'sysop_itwiki' => 'it', // T256545
+	'sysop_plwiki' => 'pl',
 	'tenwiki' => 'en',
 	'thankyouwiki' => 'en',
 	'transitionteamwiki' => 'en',
@@ -600,6 +601,7 @@ return [
 	'svwikiversity' => 'Europe/Berlin',
 	'svwikivoyage' => 'Europe/Stockholm', // T43992
 	'sysop_itwiki' => 'Europe/Rome', // T256545
+	'sysop_plwiki' => 'Europe/Warsaw',
 	'szlwiki' => 'Europe/Warsaw',
 	'szywiki' => 'Asia/Taipei',
 	'taywiki' => 'Asia/Taipei',
@@ -933,6 +935,7 @@ return [
 	'specieswiki' => '//species.wikimedia.org',
 	'stewardwiki' => '//steward.wikimedia.org',
 	'strategywiki' => '//strategy.wikimedia.org',
+	'sysop_plwiki' => '//wikipedia-pl-sysop.wikimedia.org',
 	'techconductwiki' => '//techconduct.wikimedia.org', // T165977
 	'testwiki' => '//test.wikipedia.org',
 	'testwikidatawiki' => '//test.wikidata.org',
@@ -1036,6 +1039,7 @@ return [
 	'specieswiki' => 'https://species.wikimedia.org',
 	'stewardwiki' => 'https://steward.wikimedia.org',
 	'strategywiki' => 'https://strategy.wikimedia.org',
+	'sysop_plwiki' => 'https://wikipedia-pl-sysop.wikimedia.org',
 	'techconductwiki' => 'https://techconduct.wikimedia.org', // T165977
 	'testwiki' => 'https://test.wikipedia.org',
 	'testwikidatawiki' => 'https://test.wikidata.org',
@@ -1554,6 +1558,7 @@ return [
 	'stewardwiki' => 'Steward Wiki',
 	'suwikisource' => 'Wikipabukon', // T344314
 	'sysop_itwiki' => 'Italian Wikipedia sysops wiki',
+	'sysop_plwiki' => 'Wiki administratorów polskojęzycznej Wikipedii',
 	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
 	'tawikibooks' => 'விக்கிநூல்கள்',

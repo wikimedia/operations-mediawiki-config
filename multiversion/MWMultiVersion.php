@@ -310,6 +310,7 @@ class MWMultiVersion {
 			'vrt-wiki.wikimedia.org' => 'otrs_wiki',
 			'ombuds.wikimedia.org' => 'ombudsmen',
 			'www.wikifunctions.org' => 'wikifunctions',
+			'wikipedia-pl-sysop.wikimedia.org' => 'sysop_plwiki',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
