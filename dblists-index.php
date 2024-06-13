@@ -322,7 +322,7 @@ return [
 'gdwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'gdwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'gewikimedia' => [ 'fishbowl', 'small', 'legacy-vector', 'group1', 'nowikidatadescriptiontaglines', 'translate' ],
-'glkwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments' ],
+'glkwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'rtl', 'growthexperiments' ],
 'glwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'glwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'glwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
