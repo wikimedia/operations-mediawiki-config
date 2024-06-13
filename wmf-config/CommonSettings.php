@@ -367,7 +367,7 @@ if ( $wmgRealm === 'production' ) {
 		$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 	}
 	// T360930
-	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 300;
+	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;
 }
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
