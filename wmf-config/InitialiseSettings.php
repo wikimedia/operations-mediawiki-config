@@ -724,6 +724,9 @@ return [
 	'zhwikisource' => false, // T295265
 	'zhwikiversity' => false, // T312012
 	'zhwiktionary' => false, // T312012
+
+	// private wikis in creation process
+	'sysop_plwiki' => false,
 ],
 # @} end of wgEnableUploads
 

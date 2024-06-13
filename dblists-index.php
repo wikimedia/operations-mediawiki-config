@@ -852,7 +852,7 @@ return [
 'swwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'swwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'sysop_itwiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'nowikidatadescriptiontaglines' ],
-'sysop_plwiki' => [ 'special', 'private', 'small', 'commonsuploads', 'group1' ],
+'sysop_plwiki' => [ 'special', 'private', 'small', 'group1' ],
 'szlwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'szywiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'tawiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
