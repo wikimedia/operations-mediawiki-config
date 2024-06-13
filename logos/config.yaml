@@ -2509,9 +2509,17 @@ Wiktionary:
         local_wordmark: true
         local_tagline: true
     svwiktionary:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: svwiktionary-temp
+        commons: 'File:WiktionarySv.svg'
+        variants:
+            svwiktionary-temp:
+                commons: 'File:WiktionarySv 100000.svg'
+                commons_icon: 'File:WiktionarySv 100000 new vector.svg'
+        comment: T364247
+        comment_1_5x: 'T150618, T364247'
+        comment_2x: 'T150618, T364247'
         local_tagline: true
+        comment_icon: T364247
     swwiktionary:
         comment: T45240
         comment_1_5x: T150618
