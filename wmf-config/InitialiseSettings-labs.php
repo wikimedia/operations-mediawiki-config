@@ -939,6 +939,10 @@ function wmfGetOverrideSettings() {
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
 		],
 
+		'wmgUseTimedMediaHandlerShellbox' => [
+			'default' => true,
+		],
+
 		'wmgUseNewsletter' => [
 			'default' => true, // T127297
 		],

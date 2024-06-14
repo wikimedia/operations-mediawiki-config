@@ -5570,6 +5570,10 @@ return [
 	'lockeddown' => false,
 ],
 
+'wmgUseTimedMediaHandlerShellbox' => [
+	'default' => false,
+],
+
 'wmgMinimumVideoPlayerSize' => [
 	'default' => 800,
 ],

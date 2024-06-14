@@ -757,6 +757,10 @@ if ( ClusterConfig::getInstance()->isK8s() && $wmgLocalServices['shellbox-media'
 	$wgShellboxUrls['djvu'] = $wmgLocalServices['shellbox-media'];
 }
 
+if ( $wmgUseTimedMediaHandlerShellbox && $wmgLocalServices['shellbox-video'] ) {
+	$wgShellboxUrls['timedmediahandler'] = $wmgLocalServices['shellbox-video'];
+}
+
 // Disable $wgMaxImageArea checks, Thumbor uses a timeout instead
 // of a size limit (T291014#7367570)
 $wgMaxImageArea = false;
