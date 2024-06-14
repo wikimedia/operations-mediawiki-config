@@ -8562,15 +8562,6 @@ return [
 	'cawiki' => 1000,
 ],
 
-'wgNavigationTimingSurveyName' => [
-	'default' => false,
-	'cawiki' => 'internal-survey-perceived-performance-survey',
-	'enwikivoyage' => 'internal-survey-perceived-performance-survey',
-	'frwiki' => 'internal-survey-perceived-performance-survey',
-	'ruwiki' => 'internal-survey-perceived-performance-survey',
-	'eswiki' => 'internal-survey-perceived-performance-survey',
-],
-
 'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
 	'default' => 2,
 	'eswiki' => 1,
