@@ -900,6 +900,8 @@ return [
 	// NOTE: Do not enable without Growth team OK.
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'eswiki' => true,
 ],
 
 ];

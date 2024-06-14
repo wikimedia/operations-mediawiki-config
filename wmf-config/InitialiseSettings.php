@@ -12202,6 +12202,8 @@ return [
 	// NOTE: Do not enable without OK from the Growth team.
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'eswiki' => true,
 ],
 
 // T361643
