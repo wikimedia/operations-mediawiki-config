@@ -2780,14 +2780,6 @@ if ( $wmgUseSubPageList3 ) {
 	wfLoadExtension( 'SubPageList3' );
 }
 
-// Serve 'Powered by MediaWiki' badge from /static/images instead of
-// $wgResourceBasePath so we can set far-future expires.
-$wgFooterIcons['poweredby']['mediawiki']['src'] =
-	   $wmgPoweredByMediaWikiIcon['1x'];
-$wgFooterIcons['poweredby']['mediawiki']['srcset'] =
-	   $wmgPoweredByMediaWikiIcon['1.5x'] . ' 1.5x, ' .
-	   $wmgPoweredByMediaWikiIcon['2x'] . ' 2x';
-
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	$wgCookieSecure = true;
 	$_SERVER['HTTPS'] = 'on'; // Fake this so MW goes into HTTPS mode
