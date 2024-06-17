@@ -836,6 +836,7 @@ return [
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
+	'arbcom_itwiki' => '/static/images/project-logos/arbcom_itwiki.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
 	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki.png', // T262812
 	'auditcomwiki' => '/static/images/project-logos/auditcomwiki.png',
@@ -1506,6 +1507,7 @@ return [
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki-1.5x.png', // T166947
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki-1.5x.png', // T150618
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki-1.5x.png', // T150618
+	'arbcom_itwiki' => '/static/images/project-logos/arbcom_itwiki-1.5x.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki-1.5x.png', // T150618
 	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki-1.5x.png', // T262812
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki-1.5x.png', // T193024
@@ -2133,6 +2135,7 @@ return [
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki-2x.png', // T166947
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki-2x.png', // T150618
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki-2x.png', // T150618
+	'arbcom_itwiki' => '/static/images/project-logos/arbcom_itwiki-2x.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki-2x.png', // T150618
 	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki-2x.png', // T262812
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki-2x.png', // T193024

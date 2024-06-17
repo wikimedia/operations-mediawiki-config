@@ -38,6 +38,7 @@ return [
 'arbcom_dewiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
 'arbcom_enwiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
 'arbcom_fiwiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
+'arbcom_itwiki' => [ 'special', 'private', 'small', 'group1' ],
 'arbcom_nlwiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
 'arbcom_ruwiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'nowikidatadescriptiontaglines' ],
 'arcwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments' ],

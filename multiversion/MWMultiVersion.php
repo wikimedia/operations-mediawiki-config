@@ -311,6 +311,7 @@ class MWMultiVersion {
 			'ombuds.wikimedia.org' => 'ombudsmen',
 			'www.wikifunctions.org' => 'wikifunctions',
 			'wikipedia-pl-sysop.wikimedia.org' => 'sysop_pl',
+			'wikipedia-it-arbcom.wikimedia.org' => 'arbcom_it',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',

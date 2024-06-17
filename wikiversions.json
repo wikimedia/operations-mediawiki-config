@@ -35,6 +35,7 @@
     "arbcom_dewiki": "php-1.43.0-wmf.9",
     "arbcom_enwiki": "php-1.43.0-wmf.9",
     "arbcom_fiwiki": "php-1.43.0-wmf.9",
+    "arbcom_itwiki": "php-1.43.0-wmf.9",
     "arbcom_nlwiki": "php-1.43.0-wmf.9",
     "arbcom_ruwiki": "php-1.43.0-wmf.9",
     "arcwiki": "php-1.43.0-wmf.9",

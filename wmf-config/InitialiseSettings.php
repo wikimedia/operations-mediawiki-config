@@ -194,6 +194,7 @@ return [
 	'arbcom_dewiki' => 'de',
 	'arbcom_enwiki' => 'en',
 	'arbcom_fiwiki' => 'fi',
+	'arbcom_itwiki' => 'it',
 	'arbcom_nlwiki' => 'nl',
 	'arbcom_ruwiki' => 'ru', // T262812
 	'auditcomwiki' => 'en',
@@ -307,6 +308,7 @@ return [
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
+	'arbcom_itwiki' => 'Europe/Rome',
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'arywiki' => 'Africa/Casablanca',
 	'aswikiquote' => 'Asia/Kolkata',
@@ -727,6 +729,7 @@ return [
 
 	// private wikis in creation process
 	'sysop_plwiki' => false,
+	'arbcom_itwiki' => false,
 ],
 # @} end of wgEnableUploads
 
@@ -883,6 +886,7 @@ return [
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'amwikimedia' => '//am.wikimedia.org',
 	'apiportalwiki' => '//api.wikimedia.org',
+	'arbcom_itwiki' => '//wikipedia-it-arbcom.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
 	'azwikimedia' => '//az.wikimedia.org',
@@ -987,6 +991,7 @@ return [
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'amwikimedia' => 'https://am.wikimedia.org',
 	'apiportalwiki' => 'https://api.wikimedia.org',
+	'arbcom_itwiki' => 'https://wikipedia-it-arbcom.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
 	'azwikimedia' => 'https://az.wikimedia.org',
