@@ -46,7 +46,7 @@ $wmgThrottlingExceptions[] = [
 $wmgThrottlingExceptions[] = [
 	'from' => '2024-06-17T00:00 +2:00',
 	'to' => '2024-06-17T23:59 +2:00',
-	'IP' => [ '34.19.71.121' ],
+	'IP' => [ '84.19.71.121' ],
 	'dbname' => [ 'cswiki', 'skwiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
 	'value' => 50,
 ];
