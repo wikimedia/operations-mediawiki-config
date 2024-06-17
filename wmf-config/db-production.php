@@ -131,6 +131,7 @@ $wgLBFactoryConf = [
 	'tlywiki'       => 's5',
 	'trwikivoyage'  => 's5',
 	'trvwiki'       => 's5',
+	'u4cwiki'       => 's5',
 	'vewikimedia'   => 's5',
 	'wikifunctionswiki'  => 's5',
 	'wawikisource'  => 's5',

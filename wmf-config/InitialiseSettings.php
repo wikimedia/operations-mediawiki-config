@@ -223,6 +223,7 @@ return [
 	'tenwiki' => 'en',
 	'thankyouwiki' => 'en',
 	'transitionteamwiki' => 'en',
+	'u4cwiki' => 'en',
 	'usabilitywiki' => 'en',
 	'votewiki' => 'en',
 	'wg_enwiki' => 'en',
@@ -730,6 +731,7 @@ return [
 	// private wikis in creation process
 	'sysop_plwiki' => false,
 	'arbcom_itwiki' => false,
+	'u4cwiki' => false,
 ],
 # @} end of wgEnableUploads
 
@@ -948,6 +950,7 @@ return [
 	'testwikidatawiki' => '//test.wikidata.org',
 	'thankyouwiki' => '//thankyou.wikipedia.org',
 	'transitionteamwiki' => '//transitionteam.wikimedia.org',
+	'u4cwiki' => '//u4c.wikimedia.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
 	'vewikimedia' => '//ve.wikimedia.org',
 	'votewiki' => '//vote.wikimedia.org',
@@ -1053,6 +1056,7 @@ return [
 	'testwikidatawiki' => 'https://test.wikidata.org',
 	'thankyouwiki' => 'https://thankyou.wikipedia.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
+	'u4cwiki' => 'https://u4c.wikimedia.org',
 	'usabilitywiki' => 'https://usability.wikimedia.org',
 	'vewikimedia' => 'https://ve.wikimedia.org',
 	'votewiki' => 'https://vote.wikimedia.org',

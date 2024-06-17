@@ -4320,6 +4320,8 @@ Wikivoyage:
         comment: 'always same as donatewiki, see T259002'
         comment_2x: 'always same as donatewiki, see T259002'
         selected_wordmark: votewiki
+    u4cwiki:
+        commons: 'File:Wikimedia-logo-update-2016.svg'
     usabilitywiki:
         no_1_5x: true
         no_2x: true

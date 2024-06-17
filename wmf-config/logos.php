@@ -883,6 +883,7 @@ return [
 	'techconductwiki' => '/static/images/project-logos/techconductwiki.png',
 	'transitionteamwiki' => '/static/images/project-logos/transitionteamwiki.png', // T50379
 	'thankyouwiki' => '/static/images/project-logos/donatewiki.png', // always same as donatewiki, see T259002
+	'u4cwiki' => '/static/images/project-logos/u4cwiki.png',
 	'usabilitywiki' => '/static/images/project-logos/usabilitywiki.png',
 	'votewiki' => '/static/images/project-logos/votewiki.png',
 	'wg_enwiki' => '/static/images/project-logos/wg_enwiki.png',
@@ -1527,6 +1528,7 @@ return [
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-1.5x.png', // T150618
 	'thankyouwiki' => '/static/images/project-logos/donatewiki-1.5x.png',
+	'u4cwiki' => '/static/images/project-logos/u4cwiki-1.5x.png',
 	'votewiki' => '/static/images/project-logos/votewiki-1.5x.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-1.5x.png', // T230120
 	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki-1.5x.png',
@@ -2155,6 +2157,7 @@ return [
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-2x.png', // T150618
 	'thankyouwiki' => '/static/images/project-logos/donatewiki-2x.png', // always same as donatewiki, see T259002
+	'u4cwiki' => '/static/images/project-logos/u4cwiki-2x.png',
 	'votewiki' => '/static/images/project-logos/votewiki-2x.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-2x.png', // T230120
 	'wikifunctionswiki' => '/static/images/project-logos/wikifunctionswiki-2x.png',
