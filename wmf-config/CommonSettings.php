@@ -4517,6 +4517,11 @@ if ( $wmgUseCommunityConfiguration ) {
 	$wgCommunityConfigurationFeedbackURL = 'https://www.mediawiki.org/wiki/Extension_talk:CommunityConfiguration';
 }
 
+if ( $wgMetricsPlatformEnable && $wgMetricsPlatformEnableStreamConfigsMerging ) {
+	wfLoadExtension( 'MetricsPlatform' );
+	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['mpic'];
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

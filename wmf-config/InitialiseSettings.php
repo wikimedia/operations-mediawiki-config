@@ -10302,6 +10302,14 @@ return [
 	'ptwikinews' => [ 'page', 'image', 'video', 'audio', 'other' ], // T299872, show cat first
 ],
 
+'wgMetricsPlatformEnable' => [
+	'default' => false
+],
+
+'wgMetricsPlatformEnableStreamConfigsMerging' => [
+	'default' => false
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,

@@ -87,6 +87,7 @@ $common = [
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
+	'mpic' => 'http://localhost:6037',
 
 	// cloudelastic only exists in eqiad.
 

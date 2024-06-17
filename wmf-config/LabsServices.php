@@ -79,6 +79,7 @@ return [
 		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
 		// No envoy in beta cluster?
 		'mwapi' => null,
+		'mpic' => 'https://mpic-next.wikimedia.org',
 
 		### Logstash
 		'logstash' => [

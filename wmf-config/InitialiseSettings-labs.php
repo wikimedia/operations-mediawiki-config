@@ -243,6 +243,14 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		'wgMetricsPlatformEnable' => [
+			'+testwiki' => true
+		],
+
+		'wgMetricsPlatformEnableStreamConfigsMerging' => [
+			'+testwiki' => true
+		],
+
 		// Log channels for beta cluster
 		// See detailed comments on 'wmgMonologChannels' in InitializeSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
