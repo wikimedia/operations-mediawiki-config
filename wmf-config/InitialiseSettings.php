@@ -8021,7 +8021,7 @@ return [
 	'mnwiki' => 89, // T319156
 	'pawiki' => 97, // T347789
 	'ptwiki' => 85, // T356356
-	'tewiki' => 70,
+	'tewiki' => 75, // T367838
 	'viwiki' => 90, // T275121
 	'zhwiki' => 95, // T252786
 ],
