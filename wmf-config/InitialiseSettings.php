@@ -6402,6 +6402,11 @@ return [
 	'default' => false,
 ],
 
+'wgVisualEditorEnableCollabBeta' => [
+	'default' => false,
+	'officewiki' => true,
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
