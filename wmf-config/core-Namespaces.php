@@ -191,6 +191,9 @@ return [
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
+	'+azwiktionary' => [
+		'VL' => NS_PROJECT, // T367264
+	],
 	'+bawiki' => [
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
 	],
