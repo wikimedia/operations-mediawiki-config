@@ -6386,30 +6386,16 @@ return [
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
-	// T347908: initial partner wikis
-	'dagwiki' => true,
-	'eewiki' => true,
-	'fatwiki' => true,
-	'gurwiki' => true,
-	'gpewiki' => true,
-	'hawiki' => true,
-	'kgwiki' => true,
-	'lnwiki' => true,
-	'twwiki' => true,
-	'fonwiki' => true, // T350634
-	'swwiki' => true, // T350921
-	// T361727: A/B test wikis
-	'arwiki' => true,
-	'afwiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-	'itwiki' => true,
-	'jawiki' => true,
-	'ptwiki' => true,
-	'swwiki' => true,
-	'yowiki' => true,
-	'viwiki' => true,
-	'zhwiki' => true,
+	// T361843 phase 1: all wikis but the following 8
+	'wikipedia' => true,
+	'bnwiki' => false,
+	'dewiki' => false,
+	'enwiki' => false,
+	'hiwiki' => false,
+	'idwiki' => false,
+	'nlwiki' => false,
+	'plwiki' => false,
+	'ruwiki' => false,
 ],
 
 'wgVisualEditorEditCheckABTest' => [
