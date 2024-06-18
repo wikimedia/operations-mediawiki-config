@@ -5625,7 +5625,8 @@ return [
 		'ipinfo-beta-feature-enable', // [TSTools] 2022-10-01 – IP Info
 		'wikistories-storiesonarticles', // [Inuka__] 2022-12-30 - Wikistories on articles
 		'proofreadpage-editinsequence', // [ProofRP] 2023-08-29 - Edit in sequence
-		'vector-2022-beta-feature'           // [WebTeam] 2023-12-06 - Accessibility for Reading (Vector 2022)
+		'vector-2022-beta-feature', // [WebTeam] 2023-12-06 - Accessibility for Reading (Vector 2022)
+		'visualeditor-collab', // [Editing] 2024-06-18 - Collaborative editing
 	],
 	'+wikisource' => [
 		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links
