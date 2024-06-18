@@ -8384,6 +8384,11 @@ return [
 	'testwiki' => true, // T337915
 ],
 
+'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
+	'default' => null,
+	'testwiki' => [ 'ig' ],
+],
+
 'wgSpecialContributeSkinsEnabled' => [
 	'default' => [],
 	'mlwiki' => [ "minerva", "vector-2022" ],
