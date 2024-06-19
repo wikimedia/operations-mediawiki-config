@@ -345,7 +345,7 @@ return [
 	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
 	'tlwiki' => '/static/images/project-logos/tlwiki.png',
-	'tlywiki' => '/static/images/project-logos/tlywiki.png', // T345316
+	'tlywiki' => '/static/images/project-logos/tlywiki.png', // T345316, T366431
 	'tnwiki' => '/static/images/project-logos/tnwiki.png', // T42285
 	'towiki' => '/static/images/project-logos/towiki.png', // T51125
 	'tpiwiki' => '/static/images/project-logos/tpiwiki.png', // T29240
@@ -1196,7 +1196,7 @@ return [
 	'tiwiki' => '/static/images/project-logos/tiwiki-1.5x.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki-1.5x.png', // T150618
 	'tlwiki' => '/static/images/project-logos/tlwiki-1.5x.png', // T150618
-	'tlywiki' => '/static/images/project-logos/tlywiki-1.5x.png', // T345316
+	'tlywiki' => '/static/images/project-logos/tlywiki-1.5x.png', // T345316, T366431
 	'tnwiki' => '/static/images/project-logos/tnwiki-1.5x.png', // T150618
 	'towiki' => '/static/images/project-logos/towiki-1.5x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
@@ -1825,7 +1825,7 @@ return [
 	'tiwiki' => '/static/images/project-logos/tiwiki-2x.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki-2x.png', // T150618
 	'tlwiki' => '/static/images/project-logos/tlwiki-2x.png', // T150618
-	'tlywiki' => '/static/images/project-logos/tlywiki-2x.png', // T345316
+	'tlywiki' => '/static/images/project-logos/tlywiki-2x.png', // T345316, T366431
 	'tnwiki' => '/static/images/project-logos/tnwiki-2x.png', // T150618
 	'towiki' => '/static/images/project-logos/towiki-2x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
@@ -3182,10 +3182,10 @@ return [
 		'width' => 140,
 		'height' => 19,
 	],
-	'tlywiki' => [ // T345316
+	'tlywiki' => [ // T345316, T366431
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tly.svg',
-		'width' => 114,
-		'height' => 22,
+		'width' => 119,
+		'height' => 21,
 	],
 	'trvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-trv.svg',
@@ -6960,10 +6960,10 @@ return [
 		'width' => 119,
 		'height' => 13,
 	],
-	'tlywiki' => [ // T345316
+	'tlywiki' => [ // T345316, T366431
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tly.svg',
-		'width' => 113,
-		'height' => 14,
+		'width' => 119,
+		'height' => 12,
 	],
 	'tnwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tn.svg',
