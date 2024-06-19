@@ -8386,7 +8386,7 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
-	'testwiki' => [ 'ig' ],
+	'wikipedia' => [ 'ig' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
