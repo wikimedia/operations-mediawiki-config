@@ -2096,6 +2096,9 @@ return [
 			'autopatrol' => true,
 			'unwatchedpages' => true,
 		],
+		'user' => [
+			'edituserprotected' => true, // T367943
+		],
 	],
 	'+nowikibooks' => [
 		'user' => [ 'patrol' => false ],
