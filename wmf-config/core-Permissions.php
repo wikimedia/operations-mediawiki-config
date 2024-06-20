@@ -2573,6 +2573,7 @@ return [
 			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
+			'checkuser-temporary-account' => true, // T367170
 		],
 		'researcher' => [
 			'browsearchive' => true,
@@ -3277,7 +3278,6 @@ return [
 			'templateeditor',
 			'extendedconfirmed', // T302860
 			'patroller', // T354063
-			'checkuser-temporary-account', // T367170
 		],
 	],
 	'+test2wiki' => [
