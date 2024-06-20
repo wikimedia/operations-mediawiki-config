@@ -337,6 +337,7 @@ return [
 	'blkwiktionary' => 'Asia/Yangon',
 	'brwikisource' => 'Europe/Paris',
 	'bswiki' => 'Europe/Berlin',
+	'btmwiki' => 'Asia/Jakarta',
 	'btmwiktionary' => 'Asia/Jakarta',
 	'cawiki' => 'Europe/Berlin',
 	'cawiktionary' => 'Europe/Berlin',

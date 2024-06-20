@@ -140,6 +140,7 @@ return [
 'bswikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'bswikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'bswiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'btmwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'btmwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'bugwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'bxrwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
