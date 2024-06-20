@@ -43,6 +43,10 @@ return [
 	'default' => true,
 ],
 
+'wgGECommunityUpdatesEnabled' => [
+	'default' => false,
+],
+
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
