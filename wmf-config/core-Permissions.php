@@ -3277,6 +3277,7 @@ return [
 			'templateeditor',
 			'extendedconfirmed', // T302860
 			'patroller', // T354063
+			'checkuser-temporary-account', // T367170
 		],
 	],
 	'+test2wiki' => [
