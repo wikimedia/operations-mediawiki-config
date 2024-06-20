@@ -502,6 +502,8 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgEnableIPMasking ) {
 		$wgGroupPermissions['temp']['edit'] = true;
 		$wgAutoCreateTempUser['enabled'] = true;
+		// T357586
+		$wgImplicitGroups[] = 'temp';
 	} else {
 		$wgAutoCreateTempUser['enabled'] = false;
 	}
