@@ -1447,7 +1447,7 @@ return [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			],
+		],
 	],
 	'+itwikisource' => [
 		'flood' => [ 'bot' => true ], // T38600
@@ -1634,6 +1634,9 @@ return [
 			'delete-redirect' => true,
 			'tboverride' => true,
 		]
+	],
+	'+ltwiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T367993
 	],
 	'+lvwiki' => [
 		'autopatrolled' => [
@@ -4040,7 +4043,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter' ],
+		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
@@ -5390,7 +5393,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter' ],
+		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
