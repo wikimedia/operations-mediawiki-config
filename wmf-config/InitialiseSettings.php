@@ -5888,6 +5888,11 @@ return [
 	'officewiki' => true, // T355566
 ],
 
+'wgParserMigrationEnableParsoidMobileFrontend' => [
+	'default' => false,
+	'officewiki' => true,
+],
+
 'wgParserMigrationUserNoticeVersion' => [
 	'default' => 1,
 ],
