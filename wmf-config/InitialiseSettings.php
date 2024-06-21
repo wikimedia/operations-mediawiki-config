@@ -2144,7 +2144,7 @@ return [
 		'cite' => 'debug',
 		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
-		'CommunityConfiguration' => 'debug',
+		'CommunityConfiguration' => 'info',
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'rdbms' => 'warning',
