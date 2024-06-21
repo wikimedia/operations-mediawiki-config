@@ -90,6 +90,7 @@ return [
 		'mediawiki.reference_previews',
 		'mediawiki.product_metrics.wikifunctions_ui',
 		'mediawiki.product_metrics.wikilambda_api',
+		'mediawiki.product_metrics.mint_for_readers',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
 	],
