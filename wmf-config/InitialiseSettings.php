@@ -5823,26 +5823,6 @@ return [
 	'lockeddown' => false,
 ],
 
-// T299612
-'wgLinterWriteNamespaceColumnStage' => [
-	'default' => true,
-],
-
-// T299612
-'wgLinterUseNamespaceColumnStage' => [
-	'default' => true,
-],
-
-// T175177
-'wgLinterWriteTagAndTemplateColumnsStage' => [
-	'default' => true,
-],
-
-// T175177
-'wgLinterUserInterfaceTagAndTemplateStage' => [
-	'default' => true,
-],
-
 // T361013
 'wgLinterParseOnDerivedDataUpdate' => [
 	'default' => false,

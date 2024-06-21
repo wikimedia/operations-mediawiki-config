@@ -2205,26 +2205,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T299612
-		'wgLinterWriteNamespaceColumnStage' => [
-			'default' => true,
-		],
-
-		// T299612
-		'wgLinterUseNamespaceColumnStage' => [
-			'default' => true,
-		],
-
-		// T175177
-		'wgLinterWriteTagAndTemplateColumnsStage' => [
-			'default' => true,
-		],
-
-		// T175177
-		'wgLinterUserInterfaceTagAndTemplateStage' => [
-			'default' => true,
-		],
-
 		'wmgUseContentTranslation' => [
 			'wikivoyage' => true, // T322325
 		],
