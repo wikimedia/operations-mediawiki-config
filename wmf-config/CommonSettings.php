@@ -504,7 +504,6 @@ $wgArticlePath = '/wiki/$1';
 
 $wgScriptPath  = '/w';
 $wgScript = "{$wgScriptPath}/index.php";
-$wgRedirectScript = "{$wgScriptPath}/redirect.php";
 $wgLoadScript = "{$wgScriptPath}/load.php";
 
 // Don't include a hostname in $wgResourceBasePath and friends
