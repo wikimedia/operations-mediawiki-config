@@ -12148,7 +12148,6 @@ return [
 	'frwiki' => true,
 	'idwiki' => true,
 	'plwiki' => true,
-	'ptwiki' => true,
 	'rowiki' => true,
 	'trwiki' => true,
 	'swwiki' => true,
