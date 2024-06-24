@@ -12141,6 +12141,7 @@ return [
 	'testwiki' => true,
 	'arwiki' => true,
 	'eswiki' => true,
+	'idwiki' => true,
 ],
 
 // T361643

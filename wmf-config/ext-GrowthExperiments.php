@@ -902,6 +902,7 @@ return [
 	'testwiki' => true,
 	'arwiki' => true,
 	'eswiki' => true,
+	'idwiki' => true,
 ],
 
 ];
