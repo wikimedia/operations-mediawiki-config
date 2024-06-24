@@ -3820,7 +3820,7 @@ if ( $wmgUseMediaModeration ) {
 	// This relies on configuration in PrivateSettings.php:
 	// - $wgMediaModerationPhotoDNASubscriptionKey
 	// - $wgMediaModerationRecipientList
-	$wgMediaModerationFrom = 'no-reply@wikimedia.org';
+	$wgMediaModerationFrom = 'wiki@wikimedia.org';
 }
 
 if ( $wmgUseORES ) {
