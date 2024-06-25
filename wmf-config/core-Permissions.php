@@ -694,7 +694,6 @@ return [
 		// The group exists as a courtesy, see T334692
 		'founder' => [ 'read' => true ],
 		'rollbacker' => [ 'rollback' => true ],
-		'abusefilter-helper' => [ 'spamblacklistlog' => true ], // T175684
 		'accountcreator' => [
 			'override-antispoof' => true,
 			'tboverride-account' => true,
@@ -2922,7 +2921,6 @@ return [
 			'protect' => true,
 			'rollback' => true,
 			'skipcaptcha' => true,
-			'spamblacklistlog' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
 			'titleblacklistlog' => true,
