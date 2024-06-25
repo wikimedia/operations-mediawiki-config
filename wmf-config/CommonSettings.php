@@ -1378,8 +1378,13 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnabledTranscodeSet['480p.video.vp9.mp4'] = true;
 	$wgEnabledTranscodeSet['720p.video.vp9.mp4'] = true;
 	$wgEnabledTranscodeSet['1080p.video.vp9.mp4'] = true;
-	$wgEnabledTranscodeSet['1440p.video.vp9.mp4'] = true;
-	$wgEnabledTranscodeSet['2160p.video.vp9.mp4'] = true;
+
+	// Temporarilly disable 1440p and 2160p transcodes:
+	// they're very slow to generate and we need to tune
+	$wgEnabledTranscodeSet['1440p.video.vp9.mp4'] = false;
+	$wgEnabledTranscodeSet['2160p.video.vp9.mp4'] = false;
+	$wgEnabledTranscodeSet['1440p.vp9.webm'] = false;
+	$wgEnabledTranscodeSet['2160p.vp9.webm'] = false;
 
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
