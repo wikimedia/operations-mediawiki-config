@@ -180,6 +180,7 @@ return [
 	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
+		'VK' => NS_PROJECT, // T368237
 	],
 	'+azwikiquote' => [
 		'VS' => NS_PROJECT, // T362645
