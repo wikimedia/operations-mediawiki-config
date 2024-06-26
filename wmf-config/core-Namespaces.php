@@ -5205,10 +5205,12 @@ return [
 	'+testwikidatawiki' => [
 		120, // Property (T321282)
 		146, // So that Lexeme is indexed in the content index (Cirrus)
+		640, // EntitySchema (T368010), should also be in the content index (Cirrus)
 	],
 	'+wikidatawiki' => [
 		120, // Property (T321282)
 		146, // So that Lexeme is indexed in the content index (Cirrus)
+		640, // EntitySchema (T368010), should also be in the content index (Cirrus)
 	],
 ],
 
