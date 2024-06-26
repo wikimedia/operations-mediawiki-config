@@ -2412,17 +2412,12 @@ return [
 		'logged_out' => false,
 		'beta' => true,
 	],
-	'skin-themes' => [
-		'logged_in' => true,
+	'wikipedia' => [
 		'logged_out' => false,
+		'logged_in' => true,
 		// Important to disable this to disable the beta feature
 		'beta' => false,
 	],
-	'testwiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true,
-	]
 ],
 
 // Increase font size on Vector 2022 from 14px to 16px
@@ -2443,7 +2438,8 @@ return [
 	'wikipedia' => [
 		'logged_in' => true,
 		'logged_out' => true,
-		'beta' => true,
+		// Important to disable this to disable the beta feature
+		'beta' => false,
 	],
 ],
 
