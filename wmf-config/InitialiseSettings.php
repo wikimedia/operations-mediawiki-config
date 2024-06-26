@@ -3340,8 +3340,6 @@ return [
 
 	// content wikis
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
-	'arbcom_enwiki' => [ 'meta', 'w' ], // T19730
-	'arbcom_dewiki' => [ 'w', 'w:de', ],
 	'arwiki' => [ 'en', 'meta' ], // T347563
 	'arwikibooks' => [ 'w' ],
 	'arwikinews' => [ 'w' ],
@@ -3373,7 +3371,6 @@ return [
 	'cswikisource' => [ 'b', 'n', 'q', 'v', 'w', 'wikt', 'oldwikisource' ], // T18688
 	'cswikiversity' => [ 'b', 'n', 'q', 's', 'w', 'wikt', 'betawikiversity' ], // T18688
 	'cswiktionary' => [ 'b', 'n', 'q', 's', 'v', 'w' ], // T18688
-	'donatewiki' => [ 'meta', 'foundation' ],
 	'dewiki' => [ 'w', 'wikt', 'v', 'ar', 'ca', 'cs', 'da', 'el', 'en', 'es', 'fa', 'fr', 'he', 'hi', 'hr', 'hu', 'it', 'ja', 'ko', 'lb', 'nl', 'no', 'pl', 'pt', 'ru', 'sl', 'sr', 'sv', 'tr', 'uk', 'zh' ], // T16303 , T340264
 	'dewikibooks' => [ 'w', 'wikipedia', 'en', 'v' ], // T10248
 	'dewikiquote' => [ 'w', 'wikt', 's', 'b', 'v', 'en', 'la', ],
@@ -3517,7 +3514,6 @@ return [
 	'lawikibooks' => [ 'w' ],
 	'lawikisource' => [ 'ca', 'de', 'el', 'en', 'es', 'fr', 'it', 'pt', 'ro', 'w', 'b', 'oldwikisource' ],
 	'lbwiktionary' => [ 'w:fr', 'fr', 'w:en', 'en', 'w', 'meta' ], // T26460
-	'legalteamwiki' => [ 'meta' ], // T66070
 	'lijwikisource' => [ 'w', 'en', 'fr', 'vec', 'it', 'oldwikisource' ], // T259633
 	'lmowiki' => [ 'ca', 'en', 'fr' ], // T10319
 	'ltwiki' => [ 'de', 'en', 'ru', 'b', 'q', 's', 'wikt', 'meta', 'commons', 'betawikiversity', 'incubator' ],
@@ -3554,10 +3550,8 @@ return [
 	'nowikisource' => [ 'w' ],
 	'nowiktionary' => [ 'w' ],
 	'nywiki' => [ 'en' ],
-	'officewiki' => [ 'en', 'meta', 'commons' ],
 	'orwiki' => [ 'en', 'commons' ], // T33185
 	'orwikisource' => [ 'en', 'mul' ],
-	'otrs_wikiwiki' => [ 'meta' ],
 	'outreachwiki' => [ 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:it', 'w:ja', 'w:es', 'w:nl', 'w:pt', 'w:ru', 'w:sv', 'commons', 'foundation', 'm', ], // T27345
 	'pawikisource' => [ 'en', 'bn', 'ml', 'gu', 'sa', 'te', 'ta', 'kn', 'mr', 'as', 'or' ], // T185982
 	'pflwiki' => [ 'de', 'fr', 'als', 'pdc', 'en' ], // T27996
@@ -3637,7 +3631,6 @@ return [
 	'viwikibooks' => [ 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ], // T9854, T39457
 	'viwikisource' => [ 'w', 'wikt', 'b', 'q' ], // T9854
 	'viwikiquote' => [ 'w', 'wikt', 'b', 's' ], // T9854
-	'wikimaniawiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
 	'yuewiktionary' => [ 'wikipedia:zh-yue', 'en', 'incubator' ], // T258913
@@ -3658,8 +3651,16 @@ return [
 
 	// Special wikis
 	'arbcom_cswiki' => [ 'w:cs' ], // T154799
+	'arbcom_dewiki' => [ 'w', 'w:de', ],
+	'arbcom_enwiki' => [ 'meta', 'w' ], // T19730
+	'donatewiki' => [ 'meta', 'foundation' ],
+	'legalteamwiki' => [ 'meta' ], // T66070
+	'officewiki' => [ 'en', 'meta', 'commons' ],
+	'otrs_wikiwiki' => [ 'meta' ],
 	'projectcomwiki' => [ 'wikipedia:en', 'meta' ], // T143138
 	'sysop_itwiki' => [ 'b', 'q', 's', 'wikt', 'n', 'v', 'de', 'es', 'en', 'fr', 'meta', 'it' ], // T259243
+	'u4cwiki' => [ 'de', 'en', 'meta' ], // T368522
+	'wikimaniawiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 ],
 # @} end of wgImportSources
 
