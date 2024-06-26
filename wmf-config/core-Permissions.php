@@ -1673,6 +1673,10 @@ return [
 		'translationadmin' => [ 'autopatrol' => true, ],
 	],
 	'+metawiki' => [
+		'*' => [
+			'unfuzzy' => false, // T368416
+		],
+		'autoconfirmed' => [ 'unfuzzy' => true, ], // T368416
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'bot' => [ 'changetags' => true ], // T283625
 		'event-organizer' => [ // T356070
