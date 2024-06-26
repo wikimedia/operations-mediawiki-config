@@ -49,27 +49,11 @@ return [
 		],
 	],
 	'wmgMinervaNightModeQueryString' => [
-		// T359183
-		'default' => [
-			// Removal tickets: T366372, T366520, T366371
-			'action' => 'edit|submit|diff|history',
-			// Removal ticket: T366371
-			'diff' => '.*'
-		],
-		// Allow us to reliably test all pages here.
-		'testwiki' => [],
+		'default' => [],
 	],
 	'wmgMinervaNightModeExcludeNamespaces' => [
 		// Initially night mode is disabled on everything except article page (T359183)
 		'default' => [
-			// File pages (T357575)
-			-2, 6,
-			// Talk pages (T365509)
-			1, 3, 5, 7, 9, 11, 13, 15,
-			// Project namespace (T366366)
-			4,
-			// MediaWiki namespace (T366368)
-			8,
 			// The following is not intended to be complete, but should cover most untested namespaces
 			// that are needed for the first launch. The namespaces are documented at:
 			// https://www.mediawiki.org/wiki/Extension_default_namespaces
@@ -83,47 +67,12 @@ return [
 			200, 201, 202, 203, 206, 207,
 			// ProofReadPage
 			250, 251, 252, 253,
-			// UploadWizard
-			460, 461,
-			// EventLogging
-			470, 471,
-			// Scribunto
-			828, 829
 		],
 		// Allow us to reliably test all pages here.
 		'testwiki' => [],
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
-		'default' => [
-			// Homepage (T357699)
-			"Special:Homepage",
-			// Notifications (T358405)
-			"Special:Notifications",
-			// Hieroglyphs (T366384)
-			"Special:Hieroglyphs",
-			// Growth home pages (T366376)
-			"Special:EnrollAsMentor",
-			"Special:EditGrowthConfig",
-			"Special:MentorDashboard",
-			// Discussions tool special pages (T366524)
-			"Special:DiscussionToolsDebug",
-			"Special:FindComment",
-			// ORES (T366379)
-			"Special:ORESModels",
-			// T367827
-			"Special:Allmessages",
-			// T367826
-			"Special:Protectedpages",
-			// Changelist / diff pages (T366371)
-			"Special:Contributions",
-			"Special:ComparePages",
-			"Special:Recentchanges",
-			"Special:Recentchangeslinked",
-			"Special:PendingChanges",
-			"Special:Watchlist",
-			// New pages feed (T365071)
-			"Special:NewPagesFeed",
-		],
+		'default' => [],
 		'testwiki' => [ 'Banana' ],
 	],
 	'wgMinervaHistoryInPageActions' => [
