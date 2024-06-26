@@ -10715,7 +10715,7 @@ return [
 ],
 
 'wgGlobalBlockingAllowGlobalAccountBlocks' => [
-	'default' => false, // T356924, T356923
+	'default' => true, // T356924, T356923
 	'wikitech' => false,
 	'fishbowl' => false,
 	'private' => false,
