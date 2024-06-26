@@ -11017,7 +11017,7 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
 			'enabled' => true,
-			'coverage' => 0.000909,
+			'coverage' => 0.00182,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11045,7 +11045,7 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
 			'enabled' => true,
-			'coverage' => 0.006667,
+			'coverage' => 0.013334,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11073,7 +11073,7 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
 			'enabled' => true,
-			'coverage' => 0.214148,
+			'coverage' => 0.428296,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11101,7 +11101,7 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
 			'enabled' => true,
-			'coverage' => 0.050878,
+			'coverage' => 0.101756,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
