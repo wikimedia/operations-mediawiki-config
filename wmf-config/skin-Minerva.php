@@ -66,8 +66,6 @@ return [
 			-2, 6,
 			// Talk pages (T365509)
 			1, 3, 5, 7, 9, 11, 13, 15,
-			// User pages (T366364)
-			2,
 			// Project namespace (T366366)
 			4,
 			// MediaWiki namespace (T366368)
@@ -103,9 +101,6 @@ return [
 			"Special:Notifications",
 			// Hieroglyphs (T366384)
 			"Special:Hieroglyphs",
-			// URL sharing (T366375)
-			"Special:QrCode",
-			"Special:UrlShortener",
 			// Growth home pages (T366376)
 			"Special:EnrollAsMentor",
 			"Special:EditGrowthConfig",
@@ -113,14 +108,6 @@ return [
 			// Discussions tool special pages (T366524)
 			"Special:DiscussionToolsDebug",
 			"Special:FindComment",
-			// T367583
-			"Special:Block",
-			// T367582
-			"Special:GlobalRenameRequest",
-			// T367581
-			"Special:MathStatus",
-			// T367375
-			"Special:Search",
 			// ORES (T366379)
 			"Special:ORESModels",
 			// T367827
