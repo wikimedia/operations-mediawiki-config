@@ -5572,6 +5572,7 @@ return [
 
 'wmgUseTimedMediaHandlerShellbox' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
