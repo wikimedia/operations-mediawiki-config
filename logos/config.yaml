@@ -4073,7 +4073,14 @@ Wikivoyage:
         comment_2x: T150618
         selected_tagline: fiwiki
     arbcom_itwiki:
-        commons: 'File:Wikimedia_logo_blue.svg'
+        commons: 'File:Wikipedia Arbitration Committee Logo it.svg'
+        comment: T368532
+        comment_1_5x: T368532
+        comment_2x: T368532
+        commons_wordmark: 'File:Wiktionary-wordmark-arbcom itwiki.svg'
+        comment_wordmark: T368532
+        commons_icon: 'File:Wikipedia Arbitration Committee Logo it.svg'
+        comment_icon: T368532
     arbcom_nlwiki:
         comment_1_5x: T150618
         comment_2x: T150618
