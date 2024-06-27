@@ -39,7 +39,7 @@ return [
 			'amc' => true,
 		],
 		'skin-themes' => [
-			'base' => false,
+			'base' => true,
 			'loggedin' => true,
 			'amc' => true,
 		],
