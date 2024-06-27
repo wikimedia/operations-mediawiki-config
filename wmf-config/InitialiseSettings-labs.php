@@ -2230,6 +2230,14 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
 		],
 
+		// Testing while new Chart extension is being developed
+		'-wmgUseGraph' => [
+			'default' => true,
+		],
+		'-wmgHideGraphTags' => [
+			'default' => false,
+		],
+
 		'wmgEnableIPMasking' => [
 			'default' => false,
 			'loginwiki' => true,
