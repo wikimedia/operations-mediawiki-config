@@ -3947,8 +3947,6 @@ if ( $wmgUseCheckUser ) {
 			'groups' => [ 'steward' ]
 		];
 	}
-	// T239288 - CheckUser logs pertaining to spam blacklist logged actions appear redacted
-	$wgCheckUserLogAdditionalRights[] = 'spamblacklistlog';
 }
 
 if ( $wmgUseIPInfo ) {
