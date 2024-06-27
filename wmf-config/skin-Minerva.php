@@ -40,7 +40,7 @@ return [
 		],
 		'skin-themes' => [
 			'base' => false,
-			'loggedin' => false,
+			'loggedin' => true,
 			'amc' => true,
 		],
 		'testwiki' => [
