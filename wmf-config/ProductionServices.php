@@ -57,9 +57,8 @@ $common = [
 	// IRC (broadcast RCFeed for irc.wikimedia.org)
 	// Not active-active.
 	'irc' => [
-		'208.80.155.105', # irc1001.wikimedia.org
 		'208.80.155.120', # irc1002.wikimedia.org
-		'208.80.153.62',  # irc2001.wikimedia.org
+		'208.80.154.72',  # irc1003.wikimedia.org
 		'208.80.153.73',  # irc2002.wikimedia.org
 	],
 
