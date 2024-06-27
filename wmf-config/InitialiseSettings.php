@@ -7910,15 +7910,6 @@ return [
 	'default' => false,
 ],
 
-'wgDiscussionToolsEnablePermalinksBackend' => [
-	'default' => true, // T315353
-],
-
-'wgDiscussionToolsEnablePermalinksFrontend' => [
-	'default' => true, // T356063
-	'enwiki' => false, // To be scheduled (T302011)
-],
-
 'wgDiscussionToolsAutoTopicSubEditor' => [
 	'default' => 'discussiontoolsapi', // T284836
 ],
