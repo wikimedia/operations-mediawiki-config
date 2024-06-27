@@ -5602,7 +5602,9 @@ return [
 
 'wmgUseTimedMediaHandlerShellbox' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true,
+	'frwiki' => true,
+	'itwiki' => true,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
