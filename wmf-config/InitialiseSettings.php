@@ -10984,6 +10984,7 @@ return [
 	'nowiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
+	'testwiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
