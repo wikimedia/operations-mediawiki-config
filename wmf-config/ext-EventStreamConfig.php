@@ -41,6 +41,9 @@ return [
 				'job_name' => 'event_default',
 				'enabled' => true,
 			],
+			'analytics_hive_ingestion' => [
+				'enabled' => false,
+			],
 		],
 	],
 ],
@@ -257,6 +260,9 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
 			]
 		],
 		'eventlogging_NavigationTiming' => [
@@ -266,6 +272,9 @@ return [
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
 					'enabled' => true,
 				],
 			]
@@ -532,6 +541,9 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
 			]
 		],
 		'eventlogging_VisualEditorFeatureUse' => [
@@ -681,6 +693,15 @@ return [
 		'ios.search' => [
 			'schema_title' => 'analytics/mobile_apps/ios_search',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'event_default',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
 		],
 		'ios.user_history' => [
 			'schema_title' => 'analytics/mobile_apps/ios_user_history',
@@ -1194,6 +1215,15 @@ return [
 		'mediawiki.page-delete' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'event_default',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.page-links-change' => [
 			'schema_title' => 'mediawiki/page/links-change',
@@ -1226,6 +1256,15 @@ return [
 		'mediawiki.revision-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'event_default',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
 		],
 		'mediawiki.revision-score' => [
 			'schema_title' => 'mediawiki/revision/score',
@@ -1315,6 +1354,15 @@ return [
 		'mediawiki.user-blocks-change' => [
 			'schema_title' => 'mediawiki/user/blocks-change',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'event_default',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
 		],
 		'resource_change' => [
 			'schema_title' => 'resource_change',
