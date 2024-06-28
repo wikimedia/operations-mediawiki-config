@@ -806,6 +806,13 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => false,
 		],
 
+		'wmgUseIPReputation' => [
+			// This should always stay false, as the extension
+			// communicates with a production API (IPoid) that is available
+			// only via the internal network
+			'default' => false,
+		],
+
 		'wgIPInfoGeoLite2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],

@@ -6870,6 +6870,11 @@ return [
 	'default' => true, // T260597
 ],
 
+'wmgUseIPReputation' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseIncubator' => [
 	'default' => false,
 	'incubatorwiki' => true,

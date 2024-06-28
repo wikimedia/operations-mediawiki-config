@@ -4020,6 +4020,10 @@ if ( $wmgUseIPInfo ) {
 	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
 }
 
+if ( $wmgUseIPReputation ) {
+	wfLoadExtension( 'IPReputation' );
+}
+
 // Temporary accounts
 
 // Ensure no users can be crated that match temporary account names (T361021).
