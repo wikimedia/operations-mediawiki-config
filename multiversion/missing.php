@@ -115,6 +115,10 @@ function wmfHandleMissingWiki() {
 		# Wikiversity gives an error page
 		wmfShowMissingSubdomainError( $project, $language );
 	} else {
+		if ( $language === 'zh-min-nan' ) {
+			// T86915
+			$language = 'nan';
+		}
 		# Redirect to incubator
 		$incubatorBase = 'incubator.wikimedia.org/wiki/';
 		$location = $protocol . '://' . $incubatorBase . 'W' . $incubatorCode . '/' . urlencode( $language );
