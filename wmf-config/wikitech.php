@@ -1,7 +1,6 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-use MediaWiki\Extension\OpenStackManager\OpenStackNovaUser;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
@@ -70,8 +69,6 @@ if ( false ) {
 		],
 	] );
 }
-
-wfLoadExtension( 'OpenStackManager' );
 
 // Dummy setting for conduit api token to be used by the BlockIpComplete hook
 // that tries to disable Phabricator accounts. Real value should be provided
@@ -156,8 +153,14 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( $wmgPhabricatorApiToken, 'user.disable', [
-				'phids' => [ $phid ],
+			wmfPhabClient( $wmgPhabricatorApiToken, 'user.edit', [
+				'transactions' => [
+					[
+						'type' => 'disabled',
+						'value' => true,
+					],
+				],
+				'objectIdentifier' => $phid,
 			] );
 		}
 	} catch ( Throwable $t ) {
@@ -189,8 +192,14 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( $wmgPhabricatorApiToken, 'user.enable', [
-				'phids' => [ $phid ],
+			wmfPhabClient( $wmgPhabricatorApiToken, 'user.edit', [
+				'transactions' => [
+					[
+						'type' => 'disabled',
+						'value' => false,
+					],
+				],
+				'objectIdentifier' => $phid,
 			] );
 		}
 	} catch ( Throwable $t ) {
@@ -288,6 +297,21 @@ function wmfGerritSetActive(
 	return $status;
 }
 
+/**
+ * @param string $username Developer account username (LDAP `cn` attribute)
+ * @return string Developer account shellname (LDAP `uid` attribute)
+ */
+function wmfGetDeveloperAccountUid( string $username ): string {
+	$ldap = LdapAuthenticationPlugin::getInstance();
+	$ldap->connect();
+	$ldap->getUserDN( $username );
+	$uid = $ldap->userInfo[0]['uid'][0];
+	if ( !$uid ) {
+		throw new RuntimeException( "Did not find UID for user '$username'" );
+	}
+	return $uid;
+}
+
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
 	if ( !$wmgGerritApiUser
 		|| !$wmgGerritApiPassword
@@ -306,11 +330,10 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 			return;
 		}
 		$username = $userIdent->getName();
-		$developer = new OpenStackNovaUser( $username );
 		$gerritId = wmfGerritFindAccountId(
 			$wmgGerritApiUser,
 			$wmgGerritApiPassword,
-			$developer->getUid()
+			wmfGetDeveloperAccountUid( $username )
 		);
 		if ( $gerritId === null ) {
 			return;
@@ -363,11 +386,10 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 			return;
 		}
 		$username = $userIdent->getName();
-		$developer = new OpenStackNovaUser( $username );
 		$gerritId = wmfGerritFindAccountId(
 			$wmgGerritApiUser,
 			$wmgGerritApiPassword,
-			$developer->getUid()
+			wmfGetDeveloperAccountUid( $username )
 		);
 		if ( $gerritId === null ) {
 			return;

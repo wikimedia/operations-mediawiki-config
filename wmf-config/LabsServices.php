@@ -79,6 +79,7 @@ return [
 		'shellbox-media' => null,
 		'shellbox-syntaxhighlight' => null,
 		'shellbox-timeline' => null,
+		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
 		// No envoy in beta cluster?
 		'mwapi' => null,
 

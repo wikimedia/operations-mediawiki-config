@@ -1664,13 +1664,13 @@ Wikipedia:
         local_tagline: true
     tlywiki:
         commons: 'File:Wikipedia-logo-v2-tly.svg'
-        comment: T345316
-        comment_1_5x: T345316
-        comment_2x: T345316
-        commons_wordmark: 'File:Wikipedia-wordmark-tly.svg'
-        comment_wordmark: T345316
-        commons_tagline: 'File:Wikipedia-tagline-tly.svg'
-        comment_tagline: T345316
+        comment: 'T345316, T366431'
+        comment_1_5x: 'T345316, T366431'
+        comment_2x: 'T345316, T366431'
+        commons_wordmark: 'File:Wikipedia-wordmark-v2-tly.svg'
+        comment_wordmark: 'T345316, T366431'
+        commons_tagline: 'File:Wikipedia-tagline-v2-tly.svg'
+        comment_tagline: 'T345316, T366431'
     tnwiki:
         comment: T42285
         comment_1_5x: T150618
@@ -2509,9 +2509,17 @@ Wiktionary:
         local_wordmark: true
         local_tagline: true
     svwiktionary:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: svwiktionary-temp
+        commons: 'File:WiktionarySv.svg'
+        variants:
+            svwiktionary-temp:
+                commons: 'File:WiktionarySv 100000.svg'
+                commons_icon: 'File:WiktionarySv 100000 new vector.svg'
+        comment: T364247
+        comment_1_5x: 'T150618, T364247'
+        comment_2x: 'T150618, T364247'
         local_tagline: true
+        comment_icon: T364247
     swwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -3904,7 +3912,6 @@ Wikivoyage:
         local_wordmark: true
     id_internalwikimedia:
         selected_icon: outreachwiki
-        selected_wordmark: usabilitywiki
         selected_wordmark: idwikimedia
         local_tagline: true
     idwikimedia:
@@ -4065,6 +4072,15 @@ Wikivoyage:
         comment_1_5x: T150618
         comment_2x: T150618
         selected_tagline: fiwiki
+    arbcom_itwiki:
+        commons: 'File:Wikipedia Arbitration Committee Logo it.svg'
+        comment: T368532
+        comment_1_5x: T368532
+        comment_2x: T368532
+        commons_wordmark: 'File:Wiktionary-wordmark-arbcom itwiki.svg'
+        comment_wordmark: T368532
+        commons_icon: 'File:Wikipedia Arbitration Committee Logo it.svg'
+        comment_icon: T368532
     arbcom_nlwiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -4257,6 +4273,8 @@ Wikivoyage:
         comment_wordmark: T330279
         commons_icon: 'File:Wikipedia Administrator.svg'
         comment_icon: T330279
+    sysop_plwiki:
+        commons: 'File:Wikipedia Administrator.svg'
     strategywiki:
         no_1_5x: true
         no_2x: true
@@ -4309,6 +4327,8 @@ Wikivoyage:
         comment: 'always same as donatewiki, see T259002'
         comment_2x: 'always same as donatewiki, see T259002'
         selected_wordmark: votewiki
+    u4cwiki:
+        commons: 'File:Wikimedia-logo-update-2016.svg'
     usabilitywiki:
         no_1_5x: true
         no_2x: true

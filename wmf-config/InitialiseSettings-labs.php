@@ -100,6 +100,9 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
+
+			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
+			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wgCanonicalServer' => [
@@ -121,6 +124,9 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
+
+			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
+			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wgUploadPath' => [
@@ -272,7 +278,7 @@ function wmfGetOverrideSettings() {
 				'cite' => 'debug',
 				'Cognate' => 'debug', // WMDE & Addshore
 				'collection' => 'debug', // -cscott for T73675
-				'CommunityConfiguration' => 'debug',
+				'CommunityConfiguration' => 'info',
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
@@ -540,6 +546,11 @@ function wmfGetOverrideSettings() {
 			'default' => 0,
 		],
 
+		// T366314
+		'wgVectorWrapTablesTemporary' => [
+			'default' => true,
+		],
+
 		'wgVectorNightMode' => [
 			'default' => [
 				'logged_in' => true,
@@ -551,21 +562,6 @@ function wmfGetOverrideSettings() {
 				'base' => true,
 				'loggedin' => true,
 			],
-		],
-		// T364887
-		'wgVectorFontSizeConfigurableOptions' => [
-			'default' => [
-				"exclude" => [
-					"mainpage" => false,
-					"pagetitles" => [],
-					"namespaces" => [ -1, 1, 2, 6, 8, 10, 14, 100, 710, 828 ],
-					"querystring" => [
-						"action" => "edit|submit|diff|info|protect|delete|undelete|action|history",
-						"diff" => ".+"
-					],
-				],
-				"include" => []
-			]
 		],
 		'wmgMinervaNightModeExcludeTitles' => [
 			'default' => [ 'Banana' ],
@@ -601,6 +597,10 @@ function wmfGetOverrideSettings() {
 			'wiktionary' => '.wiktionary.beta.wmflabs.org',
 			// wikis which are not Wikipedias but use *.wikipedia.beta.wmflabs.org
 			'testwiki' => '.wikipedia.beta.wmflabs.org',
+
+			// Wikis for SUL project hosted on wmcloud.org
+			'test2wiki' => '.wikipedia.beta.wmcloud.org',
+			'plwikivoyage' => '.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wmgCentralAuthAutoLoginWikis' => [
@@ -618,6 +618,10 @@ function wmfGetOverrideSettings() {
 				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
 				'wikifunctions.beta.wmflabs.org' => 'wikifunctionswiki',
+
+				// Wikis for SUL project hosted on wmcloud.org
+				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
+				'.wikivoyage.beta.wmcloud.org' => 'plwikivoyage',
 			],
 		],
 
@@ -751,310 +755,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgQuickSurveysConfig' => [
-			'default' => [
-				'internal example' => [
-					'name' => 'internal example survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-example-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-example-internal-survey-answer-positive',
-						'ext-quicksurveys-example-internal-survey-answer-neutral',
-						'ext-quicksurveys-example-internal-survey-answer-negative',
-					],
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-				'internal example with freeform text' => [
-					'name' => 'internal example survey with description and freeform text',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-example-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-example-internal-survey-answer-positive',
-						'ext-quicksurveys-example-internal-survey-answer-neutral',
-						'ext-quicksurveys-example-internal-survey-answer-negative',
-					],
-					'description' => 'ext-quicksurveys-example-internal-survey-description',
-					'freeformTextLabel' => 'ext-quicksurveys-example-internal-survey-freeform-text-label',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-				'internal example with multiple ansers' => [
-					'name' => 'internal multiple answer example survey',
-					'type' => 'internal',
-					'layout' => 'multiple-answer',
-					'question' => 'ext-quicksurveys-example-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-example-internal-survey-answer-positive',
-						'ext-quicksurveys-example-internal-survey-answer-neutral',
-						'ext-quicksurveys-example-internal-survey-answer-negative',
-					],
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-					'shuffleAnswersDisplay' => true,
-				],
-				'internal example with multiple answers and freeform text' => [
-					'name' => 'internal multiple answer example survey with description and freeform text',
-					'type' => 'internal',
-					'layout' => 'multiple-answer',
-					'question' => 'ext-quicksurveys-example-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-example-internal-survey-answer-positive',
-						'ext-quicksurveys-example-internal-survey-answer-neutral',
-						'ext-quicksurveys-example-internal-survey-answer-negative',
-					],
-					'description' => 'ext-quicksurveys-example-internal-survey-description',
-					'freeformTextLabel' => 'ext-quicksurveys-example-internal-survey-freeform-text-label',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-					'shuffleAnswersDisplay' => true,
-				],
-				'external example' => [
-					'name' => 'external example survey',
-					'type' => 'external',
-					'question' => 'ext-quicksurveys-example-external-survey-question',
-					'description' => 'ext-quicksurveys-example-external-survey-description',
-					'link' => 'ext-quicksurveys-example-external-survey-link',
-					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
-					'coverage' => 0,
-					'enabled' => true,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-			],
-			'+enwiki' => [
-				'tst-safety-survey' => [
-					// T293798
-					'name' => 'tst-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-tst-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-tst-internal-survey-answer-positive',
-						'ext-quicksurveys-tst-internal-survey-answer-negative'
-					],
-					'audience' => [
-						// User:EssexIgyan/sandbox & User:Erayfield/sandbox
-						'pageIds' => [ 265894, 265895 ]
-					],
-					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
-					'enabled' => true,
-					'coverage' => 1,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA internal survey custom confirmation and additional info
-				[
-					'name' => 'T294363-1',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-tst-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-tst-internal-survey-answer-positive',
-						'ext-quicksurveys-tst-internal-survey-answer-negative',
-					],
-					'shuffleAnswersDisplay' => true,
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
-					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA internal survey custom confirmation
-				[
-					'name' => 'T294363-2',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-tst-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-tst-internal-survey-answer-positive',
-						'ext-quicksurveys-tst-internal-survey-answer-negative',
-					],
-					'shuffleAnswersDisplay' => true,
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA internal survey additional info
-				[
-					'name' => 'T294363-3',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-tst-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-tst-internal-survey-answer-positive',
-						'ext-quicksurveys-tst-internal-survey-answer-negative',
-					],
-					'shuffleAnswersDisplay' => true,
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA internal survey
-				[
-					'name' => 'T294363-4',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-tst-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-tst-internal-survey-answer-positive',
-						'ext-quicksurveys-tst-internal-survey-answer-negative',
-					],
-					'shuffleAnswersDisplay' => true,
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA external survey custom confirmation and additional info
-				[
-					'name' => 'T294363-5',
-					'type' => 'external',
-					'question' => 'ext-quicksurveys-example-external-survey-question',
-					'description' => 'ext-quicksurveys-example-external-survey-description',
-					'link' => 'ext-quicksurveys-example-external-survey-link',
-					'instanceTokenParameterName' => 'parameterName',
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
-					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA external survey custom confirmation
-				[
-					'name' => 'T294363-6',
-					'type' => 'external',
-					'question' => 'ext-quicksurveys-example-external-survey-question',
-					'description' => 'ext-quicksurveys-example-external-survey-description',
-					'link' => 'ext-quicksurveys-example-external-survey-link',
-					'instanceTokenParameterName' => 'parameterName',
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA external survey additional info
-				[
-					'name' => 'T294363-7',
-					'type' => 'external',
-					'question' => 'ext-quicksurveys-example-external-survey-question',
-					'description' => 'ext-quicksurveys-example-external-survey-description',
-					'link' => 'ext-quicksurveys-example-external-survey-link',
-					'instanceTokenParameterName' => 'parameterName',
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T294363: QA external survey
-				[
-					'name' => 'T294363-8',
-					'type' => 'external',
-					'question' => 'ext-quicksurveys-example-external-survey-question',
-					'description' => 'ext-quicksurveys-example-external-survey-description',
-					'link' => 'ext-quicksurveys-example-external-survey-link',
-					'instanceTokenParameterName' => 'parameterName',
-					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
-					'enabled' => true,
-					'coverage' => 0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-			],
-			'cawiki' => [
-				// T187299
-				[
-					'enabled' => true,
-					'type' => 'internal',
-					'name' => 'perceived-performance-survey',
-					'question' => 'ext-quicksurveys-performance-internal-survey-question',
-					'answers' => [
-						'ext-quicksurveys-example-internal-survey-answer-positive',
-						'ext-quicksurveys-example-internal-survey-answer-neutral',
-						'ext-quicksurveys-example-internal-survey-answer-negative',
-					],
-					'coverage' => 0.0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-					],
-					'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
-					'shuffleAnswersDisplay' => true,
-				],
-			],
-			'metawiki' => [
-				// T351353
-				[
-					'enabled' => true,
-					'type' => 'external',
-					'name' => 'annual-plan-core-metrics-feedback-2023',
-					'question' => 'ext-quicksurveys-example-external-survey-question',
-					'description' => 'ext-quicksurveys-example-external-survey-description',
-					'coverage' => 1,
-					'audience' => [
-						'anons' => false,
-						// User:DDesouza/sandbox
-						'pageIds' => [ 9475 ],
-					],
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-					'link' => 'ext-quicksurveys-example-external-survey-link',
-					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
-				],
-			],
+			'default' => []
 		],
 
 		'-wgScorePath' => [
@@ -1104,6 +805,10 @@ function wmfGetOverrideSettings() {
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
+		],
+
+		'wgIPInfoGeoLite2Prefix' => [
+			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
 
 		'wgMediaViewerUseThumbnailGuessing' => [
@@ -1234,6 +939,10 @@ function wmfGetOverrideSettings() {
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
 		],
 
+		'wmgUseTimedMediaHandlerShellbox' => [
+			'default' => true,
+		],
+
 		'wmgUseNewsletter' => [
 			'default' => true, // T127297
 		],
@@ -1273,7 +982,7 @@ function wmfGetOverrideSettings() {
 			'default' => 'uppercase',
 			'dewiki' => 'uca-de-u-kn', // T128806
 			'enwiki' => 'uca-default-u-kn',
-			'fawiki' => 'uca-fa',
+			'fawiki' => 'uca-fa-u-kn', // T329440
 		],
 
 		// Test Quiz. See T142692
@@ -1451,12 +1160,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'-wgPageLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-			'fawiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-			'simplewiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-		],
-
 		'-wgAbuseFilterActorTableSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_NEW,
 		],
@@ -1549,6 +1252,9 @@ function wmfGetOverrideSettings() {
 		'wgGEUseNewImpactModule' => [
 			'default' => true,
 		],
+		'wgGECommunityUpdatesEnabled' => [
+			'default' => true,
+		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
@@ -1630,9 +1336,11 @@ function wmfGetOverrideSettings() {
 		],
 		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
 			'default' => true,
+			'enwiki' => false,
 		],
 		'-wgGEPersonalizedPraiseBackendEnabled' => [
 			'default' => true,
+			'enwiki' => false,
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
@@ -2314,6 +2022,8 @@ function wmfGetOverrideSettings() {
 				'cxserver-beta.wmcloud.org',
 				'recommend.wmflabs.org',
 
+				// the new wmcloud instances to test the SUL project
+				'*.wikipedia.beta.wmcloud.org',
 			],
 		],
 
@@ -2495,32 +2205,20 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T299612
-		'wgLinterWriteNamespaceColumnStage' => [
-			'default' => true,
-		],
-
-		// T299612
-		'wgLinterUseNamespaceColumnStage' => [
-			'default' => true,
-		],
-
-		// T175177
-		'wgLinterWriteTagAndTemplateColumnsStage' => [
-			'default' => true,
-		],
-
-		// T175177
-		'wgLinterUserInterfaceTagAndTemplateStage' => [
-			'default' => true,
-		],
-
 		'wmgUseContentTranslation' => [
 			'wikivoyage' => true, // T322325
 		],
 
 		'wgOATHAuthMultipleDevicesMigrationStage' => [
 			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
+		],
+
+		// Testing while new Chart extension is being developed
+		'-wmgUseGraph' => [
+			'default' => true,
+		],
+		'-wmgHideGraphTags' => [
+			'default' => false,
 		],
 
 		'wmgEnableIPMasking' => [
@@ -2571,16 +2269,13 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 		],
 
-		// T357766
 		'wmgUseCommunityConfiguration' => [
-			// NOTE: Do not enable without Growth team OK
-			'default' => false,
-			'eswiki' => true,
+			'default' => false, // NOTE: Do not enable without Growth team OK
+			'growthexperiments' => true, // T364892
 		],
 		'wgGEUseCommunityConfigurationExtension' => [
-			// NOTE: Do not enable without Growth team OK
 			'default' => false,
-			'eswiki' => true,
+			'growthexperiments' => true, // T364892
 		],
 
 		'wmgUseAutoModerator' => [ // T364034

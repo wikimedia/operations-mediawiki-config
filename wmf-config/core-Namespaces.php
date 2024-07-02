@@ -180,6 +180,7 @@ return [
 	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
+		'VK' => NS_PROJECT, // T368237
 	],
 	'+azwikiquote' => [
 		'VS' => NS_PROJECT, // T362645
@@ -187,8 +188,12 @@ return [
 	'+azwikisource' => [
 		'VikiMənbə' => NS_PROJECT, // T114002
 		'VikiMənbə_müzakirəsi' => NS_PROJECT_TALK, // T114002
+		'VM' => NS_PROJECT, // T365966
 		'Portal' => 100,
 		'Portal_talk' => 101,
+	],
+	'+azwiktionary' => [
+		'VL' => NS_PROJECT, // T367264
 	],
 	'+bawiki' => [
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
@@ -1049,7 +1054,6 @@ return [
 	'+maiwiki' => [
 		'वि' => NS_PROJECT, // T125801
 		'वि_वा' => NS_PROJECT_TALK, // T125801
-		'CA' => NS_CATEGORY, // T125801
 		'CT' => NS_CATEGORY_TALK, // T125801
 		'WT' => NS_PROJECT_TALK, // T125801
 		'u' => NS_USER, // T125801
@@ -2186,6 +2190,7 @@ return [
 	'+cswikisource' => [ 14 => 1 ],
 	'+napwikisource' => [ 250 => 1, 251 => 1 ], // T252755
 	'+plwikisource' => [ 124 => 1, 125 => 1 ], // T154711
+	'+sourceswiki' => [ 0 => 1 ], // T367674
 	'+ukwikisource' => [ 250 => 1, 251 => 1 ], // T255930
 	// @}
 
@@ -2391,6 +2396,11 @@ return [
 		// NS 114/115 reserved for 'Translation'
 		116 => 'Tool', // T122865
 		117 => 'Tool_talk', // T122865
+		// TODO: rename this namespace (T275796)
+		498 => 'Nova_Resource',
+		499 => 'Nova_Resource_Talk',
+		666 => 'Heira',
+		667 => 'Heira_Talk',
 	],
 	'mediawikiwiki' => [
 		100 => 'Manual',
@@ -5019,6 +5029,9 @@ return [
 		120 => [ 'autoconfirmed' ], // Property namespace per T254280
 		122 => [ 'query-update' ], // Query namespace per T51001
 	],
+	'+wikitech' => [
+		666 => [ 'editprotected' ], // Block editing of former Hiera: namespace.
+	],
 ],
 # @} end of wgNamespaceProtection
 
@@ -5193,10 +5206,12 @@ return [
 	'+testwikidatawiki' => [
 		120, // Property (T321282)
 		146, // So that Lexeme is indexed in the content index (Cirrus)
+		640, // EntitySchema (T368010), should also be in the content index (Cirrus)
 	],
 	'+wikidatawiki' => [
 		120, // Property (T321282)
 		146, // So that Lexeme is indexed in the content index (Cirrus)
+		640, // EntitySchema (T368010), should also be in the content index (Cirrus)
 	],
 ],
 
@@ -5635,6 +5650,8 @@ return [
 	'mrwikibooks' => 'विकिबुक्स', // T73774
 	'mrwikisource' => 'विकिस्रोत',
 	'mrwiktionary' => 'विक्शनरी',
+	'mswikibooks' => 'Wikibuku', // T368003
+	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',

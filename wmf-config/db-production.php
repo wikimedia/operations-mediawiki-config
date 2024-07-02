@@ -54,6 +54,7 @@ $wgLBFactoryConf = [
 	'amiwiki'       => 's5',
 	'anpwiki'       => 's5',
 	'apiportalwiki' => 's5',
+	'arbcom_itwiki' => 's5',
 	'arbcom_ruwiki' => 's5',
 	'aswikiquote'   => 's5',
 	'avkwiki'       => 's5',
@@ -68,6 +69,7 @@ $wgLBFactoryConf = [
 	'blkwiki'       => 's5',
 	'blkwiktionary' => 's5',
 	'bnwikiquote'   => 's5',
+	'btmwiki'       => 's5',
 	'btmwiktionary' => 's5',
 	'cebwiki'       => 's5',
 	'ckbwiktionary' => 's5',
@@ -123,12 +125,14 @@ $wgLBFactoryConf = [
 	'smnwiki'       => 's5',
 	'srwiki'        => 's5',
 	'suwikisource'  => 's5',
+	'sysop_plwiki'  => 's5',
 	'taywiki'       => 's5',
 	'thankyouwiki'  => 's5',
 	'tlwikiquote'   => 's5',
 	'tlywiki'       => 's5',
 	'trwikivoyage'  => 's5',
 	'trvwiki'       => 's5',
+	'u4cwiki'       => 's5',
 	'vewikimedia'   => 's5',
 	'wikifunctionswiki'  => 's5',
 	'wawikisource'  => 's5',
@@ -275,6 +279,8 @@ $wgLBFactoryConf = [
 	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0,
 	// no pt-heartbeat
 	'lagDetectionMethod' => 'Seconds_Behind_Master',
+	// bump threshold for circuit breaking
+	'loadMonitor' => [ 'class' => '\Wikimedia\Rdbms\LoadMonitor', 'maxConnCount' => 500 ],
 ],
 
 'templateOverridesByCluster' => [

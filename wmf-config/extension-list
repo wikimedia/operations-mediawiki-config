@@ -77,6 +77,7 @@ $IP/extensions/intersection/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/InterwikiSorting/extension.json
 $IP/extensions/IPInfo/extension.json
+$IP/extensions/IPReputation/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
@@ -91,6 +92,7 @@ $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaModeration/extension.json
 $IP/extensions/MediaSearch/extension.json
+$IP/extensions/MetricsPlatform/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MultimediaViewer/extension.json
@@ -102,7 +104,6 @@ $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/OAuthRateLimiter/extension.json
-$IP/extensions/OpenStackManager/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/extension.json

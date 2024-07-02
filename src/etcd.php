@@ -13,7 +13,7 @@
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
-# - wmf-config/etcd.php [THIS FILE]
+# - src/etcd.php [THIS FILE]
 #
 # Included from: wmf-config/CommonSettings.php.
 #

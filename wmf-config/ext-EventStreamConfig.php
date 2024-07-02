@@ -991,6 +991,10 @@ return [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.ip_reputation.score' => [
+			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -1596,6 +1600,70 @@ return [
 						'performer_edit_count_bucket',
 						'performer_groups',
 						'performer_is_bot'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
+		// (T356228, T360369) Stream to track the API of WikiLambda (the Wikifunctions extension)
+		'mediawiki.product_metrics.wikilambda_api' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/api',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_id',
+						'page_revision_id',
+						'page_title',
+						'performer_active_browsing_session_token',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_id',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_language',
+						'performer_language_variant',
+						'performer_name',
+						'performer_pageview_id',
+						'performer_session_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
+		// (T363685, T368028) MinT for Wikipedia Readers stream (Language & Product Localization)
+		'mediawiki.product_metrics.mint_for_readers' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_site_content_language',
+						'mediawiki_site_content_language_variant',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_name',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_registration_dt',
+						'performer_is_temp',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
 					],
 				],
 			],

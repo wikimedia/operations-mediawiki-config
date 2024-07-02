@@ -59,6 +59,14 @@ final class WmfManageDblistCli {
 			<privacy> must be one of 'public', 'fishbowl' or 'private'
 			Example: manage-dblist init fatwiki fat wikipedia public
 
+	init-labs <dbname> <language code>
+			Initializes the dblists of a new wiki in the Beta Cluster.
+
+			The wiki must be present in the production config
+			(wikiversions.json) already.
+
+			Example: manage-dblist init-labs fatwiki fat
+
 	close <dbname>
 			Update the dblists of a wiki to reflect it being closed
 			Example: manage-dblist close enwiki
@@ -84,6 +92,9 @@ final class WmfManageDblistCli {
 				return;
 			case 'init':
 				$this->doInit( ...$this->params );
+				return;
+			case 'init-labs':
+				$this->doInitLabs( ...$this->params );
 				return;
 			case 'close':
 				$this->doClose( ...$this->params );
@@ -262,6 +273,37 @@ final class WmfManageDblistCli {
 			$this->doAdd( $dbName, 'private' );
 			break;
 		default:
+		}
+	}
+
+	private function doInitLabs( string $dbName, string $lang ) {
+		// Bail if the wiki doesn't exist in production. Standard configuration structure
+		// assumes the wiki receives settings from production dblists such as the wiki family.
+		// Adding a wiki that doesn't exist in production to the Beta Cluster is possible but
+		// more complicated and not supported by this tool.
+		$validDbNames = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+		if ( !in_array( $dbName, $validDbNames ) ) {
+			$this->error( "Wiki not in production config: $dbName" );
+			return;
+		}
+
+		// add wiki to wikiversion-labs.json
+		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions-labs.json' );
+		if ( isset( $versions[$dbName] ) ) {
+			$this->error( "Wiki already in Beta Cluster: $dbName" );
+			return;
+		}
+		$versions[$dbName] = 'php-master';
+		ksort( $versions );
+		MWWikiVersions::writeWikiVersionsFile( 'wikiversions-labs.json', $versions );
+
+		$this->doAdd( $dbName, 'all-labs' );
+
+		$data = file( 'langlist-labs' );
+		if ( !in_array( $lang . "\n", $data ) ) {
+			$data[] = $lang . "\n";
+			asort( $data );
+			file_put_contents( 'langlist-labs', implode( '', $data ) );
 		}
 	}
 

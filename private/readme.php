@@ -93,6 +93,14 @@ $wmgCaptchaSecret = null;
 $wmgCaptchaPassword = null;
 
 /**
+ * Used to encrypt/decrypt MediaWiki password hashes created after May 2024.
+ *
+ * @see https://phabricator.wikimedia.org/T150647
+ * @see wmf-config/CommonSettings.php, $wgPasswordConfig
+ */
+$wmgPasswordSecretKey = null;
+
+/**
  * @see wmf-config/filebackend.php
  */
 $wmgSwiftConfig = [];

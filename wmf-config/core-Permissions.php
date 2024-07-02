@@ -183,6 +183,7 @@ return [
 		'bot' => [
 			'editautoreviewprotected' => true,
 			'editeditorprotected' => true, // T321111
+			'ipblock-exempt' => true, // T366404
 		],
 		'sysop' => [
 			'editautoreviewprotected' => true,
@@ -1339,8 +1340,9 @@ return [
 		'trusted' => [ 'edittrustedprotected' => true ], // T194568
 		'editor' => [
 			'noratelimit' => true,
-			'edittrustedprotected' => true,
-		], // T194568
+			'edittrustedprotected' => true, // T194568
+			'suppressredirect' => true, // T366438
+		],
 		'sysop' => [
 			'templateeditor' => true,
 			'edittrustedprotected' => true,
@@ -1354,6 +1356,18 @@ return [
 	'idwiki' => [
 		'*' => [ 'createpage' => false ],
 		'rollbacker' => [ 'rollback' => true ], // T35508
+	],
+	'+igwiki' => [
+		'event-organizer' => [ // T362675
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T362675
+			'campaignevents-organize-events' => false, // T362675
+			'campaignevents-email-participants' => false, // T362675
+		],
 	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'upload' => true ],
@@ -1433,7 +1447,7 @@ return [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			],
+		],
 	],
 	'+itwikisource' => [
 		'flood' => [ 'bot' => true ], // T38600
@@ -1621,6 +1635,9 @@ return [
 			'tboverride' => true,
 		]
 	],
+	'+ltwiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T367993
+	],
 	'+lvwiki' => [
 		'autopatrolled' => [
 			'autopatrol' => true,
@@ -1641,10 +1658,12 @@ return [
 		'*' => [
 			'flow-hide' => false, // T245780
 			'flow-edit-title' => false, // T328097
+			'unfuzzy' => false, // T366994
 		],
 		'autoconfirmed' => [
 			'flow-hide' => true, // T245780
 			'flow-edit-title' => true, // T328097
+			'unfuzzy' => true, // T366994
 		],
 		'user' => [ 'flow-create-board' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -1657,6 +1676,10 @@ return [
 		'translationadmin' => [ 'autopatrol' => true, ],
 	],
 	'+metawiki' => [
+		'*' => [
+			'unfuzzy' => false, // T368416
+		],
+		'autoconfirmed' => [ 'unfuzzy' => true, ], // T368416
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'bot' => [ 'changetags' => true ], // T283625
 		'event-organizer' => [ // T356070
@@ -2017,6 +2040,7 @@ return [
 		], // T72459, T212655
 	],
 	'+plwiktionary' => [
+		'*' => [ 'applychangetags' => true ],
 		'editor' => [ 'patrolmarks' => true ],
 	],
 	// T11024, T12362
@@ -2513,6 +2537,16 @@ return [
 	],
 	'+swwiki' => [
 		'*' => [ 'createpage' => false ], // T44894
+		'event-organizer' => [ // T366502
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T366502
+			'campaignevents-organize-events' => false, // T366502
+			'campaignevents-email-participants' => false, // T366502
+		],
 	],
 	'+tawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T95180
@@ -2546,6 +2580,7 @@ return [
 			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
+			'checkuser-temporary-account' => true, // T367170
 		],
 		'researcher' => [
 			'browsearchive' => true,
@@ -2640,6 +2675,9 @@ return [
 			'editsitejson' => true,
 			'noratelimit' => true, // T40690
 		],
+		'translator' => [
+			'autoconfirmed' => true,
+		], // T356440
 	],
 	'+trwikiquote' => [
 		'editor' => [ // T122710
@@ -2921,6 +2959,8 @@ return [
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
 			'wikilambda-create-boolean' => true,
+			'wikilambda-create-converter' => true,
+			'wikilambda-create-enum-value' => true,
 			'wikilambda-create-function' => true,
 			'wikilambda-create-implementation' => true,
 			'wikilambda-create-language' => true,
@@ -2936,7 +2976,10 @@ return [
 			'wikilambda-edit-attached-implementation' => true,
 			'wikilambda-edit-attached-tester' => true,
 			'wikilambda-edit-builtin-function' => true,
+			'wikilambda-edit-connected-converter' => true,
+			'wikilambda-edit-converter' => true,
 			'wikilambda-edit-boolean' => true,
+			'wikilambda-edit-enum-value' => true,
 			'wikilambda-edit-error-key-label' => true,
 			'wikilambda-edit-implementation' => true,
 			'wikilambda-edit-key-label' => true,
@@ -2977,6 +3020,15 @@ return [
 	'+yowiki' => [
 		'accountcreator' => [ 'noratelimit' => true, ], // T249487
 		'rollbacker' => [ 'rollback' => true, ], // T249487
+	],
+	'+zghwiki' => [
+		'autopatrolled' => [
+			'autopatrol' => true
+		],
+		'patroller' => [
+			'autopatrol' => true,
+			'patrol' => true
+		]
 	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
@@ -3883,6 +3935,11 @@ return [
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
 	],
+	'+igwiki' => [
+		'sysop' => [
+			'event-organizer', // T362675
+		],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [
 			'import',
@@ -3991,7 +4048,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter' ],
+		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
@@ -4433,6 +4490,11 @@ return [
 	'+svwiktionary' => [
 		'sysop' => [ 'autopatrolled', ], // T161919
 	],
+	'+swwiki' => [
+		'sysop' => [
+			'event-organizer', // T366502
+		],
+	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [
@@ -4445,6 +4507,7 @@ return [
 		'sysop' => [
 			'patroller', // T40690
 			'massmessage-sender', // T147740
+			'translator', // T356440
 		],
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
@@ -4560,7 +4623,7 @@ return [
 			'functioneer', // T352495
 		],
 		'bureaucrat' => [ 'wikifunctions-staff' ],
-		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
+		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ], // T225505
@@ -4594,6 +4657,12 @@ return [
 			'accountcreator', // T249487
 			'rollbacker', // T249487
 		],
+	],
+	'+zghwiki' => [
+		'sysop' => [
+			'patroller',
+			'autopatrolled'
+		]
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
@@ -5254,6 +5323,11 @@ return [
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
 	],
+	'+igwiki' => [
+		'sysop' => [
+			'event-organizer', // T362675
+		],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
@@ -5324,7 +5398,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter' ],
+		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
@@ -5619,12 +5693,17 @@ return [
 	'+svwiktionary' => [
 		'sysop' => [ 'autopatrolled', ], // T161919
 	],
+	'+swwiki' => [
+		'sysop' => [
+			'event-organizer', // T366502
+		],
+	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
 	'+trwiki' => [
-		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
+		'sysop' => [ 'patroller', 'massmessage-sender', 'translator' ], // bureaucrat -> sysop, T40690, T147740, T356440
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
 	'+trwikivoyage' => [
@@ -5729,7 +5808,7 @@ return [
 			'functioneer', // T352495
 		],
 		'bureaucrat' => [ 'wikifunctions-staff' ],
-		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat', 'wikifunctions-staff' ],
+		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ], // T225505

@@ -43,9 +43,16 @@ p { margin: 0.7em 0 1em 0; }
 a { color: #36c; text-decoration: none; }
 a:hover { text-decoration: underline; }
 em { color: #72777d; font-style: normal; }
+@media (prefers-color-scheme: dark) {
+  body { background: transparent; color: #dfdedd; }
+  a { color: #9e9eff; }
+  em { color: #8d8882; }
+  #logo { filter: invert(1) hue-rotate(180deg); }
+}
 </style>
+<meta name="color-scheme" content="light dark">
 <div class="content" role="main">
-<a href="https://www.wikimedia.org"><img src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
+<a href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
 <h1>Page not found</h1>
 <p><em>$encUrl</em></p>
 <p>We could not find the above page on our servers.</p>
