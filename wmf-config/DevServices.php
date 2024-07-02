@@ -45,5 +45,7 @@ return [
 		'xenon' => null,
 		'xhgui' => null,
 		'xhgui-pdo' => null,
+		'excimer-ui-url' => '',
+		'excimer-ui-server' => '',
 	]
 ];
