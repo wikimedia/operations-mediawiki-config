@@ -10962,133 +10962,17 @@ return [
 'wmgUseQuickSurveys' => [
 	'default' => false,
 	'cawiki' => true,
-	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
-	'frwiki' => true,
 	'frwiktionary' => true,
-	'hiwiki' => true,
 	'huwiki' => true,
-	'idwiki' => true,
 	'nowiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
-	'default' => [],
-	'enwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.00182,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
-	'frwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.013334,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
-	'hiwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.428296,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
-	'idwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.101756,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
+	'default' => []
 ],
 
 // WikidataPageBanner extension (T98029)
