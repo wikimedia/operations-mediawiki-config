@@ -10984,7 +10984,6 @@ return [
 	'nowiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
-	'testwiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
@@ -11101,58 +11100,6 @@ return [
 			],
 		]
 	],
-	'testwiki' => [
-		// T368459
-		[
-			'name' => 'T368459',
-			'type' => 'internal',
-			"confirmMsg" => "ext-quicksurveys-survey-confirm-msg",
-			"privacyPolicy" =>
-				"ext-quicksurveys-survey-privacy-policy-default-text",
-			"enabled" => true,
-			"coverage" => 0.8,
-			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
-			"audience" => [
-				"anons" => false
-			],
-			"questions" => [
-				[
-					"name" => "Safety-survey-testQ1",
-					"layout" => "single-answer",
-					"question" => "Safety-survey-testQ1",
-					"answers" => [
-						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
-						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
-						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
-					],
-				],
-				[
-					"name" => "Safety-survey-testQ2",
-					"dependsOn" => [
-						[
-							"question" => "Safety-survey-testQ1",
-							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
-						],
-					],
-					"layout" => "multiple-answer",
-					"question" => "Safety-survey-testQ2",
-					"answers" => [
-						[ "label" => "Safety-survey-testQ2A1" ],
-						[ "label" => "Safety-survey-testQ2A2" ],
-						[ "label" => "Safety-survey-testQ2A3" ],
-						[ "label" => "Safety-survey-testQ2A4" ],
-						[ "label" => "Safety-survey-testQ2A5" ],
-						[ "label" => "Safety-survey-testQ2A6" ],
-						[ "label" => "Safety-survey-testQ2A7" ],
-						[ "label" => "Safety-survey-testQ2A8" ],
-						[ "label" => "Safety-survey-testQ2A9",
-							"freeformTextLabel" => "Safety-survey-testQ2Aother-open" ],
-						[ "label" => "Safety-survey-testQ2Apnts" ],
-					],
-				],
-			]
-		]
-	]
 ],
 
 // WikidataPageBanner extension (T98029)
