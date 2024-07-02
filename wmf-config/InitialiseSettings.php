@@ -2187,7 +2187,7 @@ return [
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'Kartographer' => 'debug', // Temporary monitoring for T304813.
 		'ldap' => 'warning',
-		'Linter' => 'debug',
+		'Linter' => 'info',
 		'LocalFile' => 'debug',
 		'localhost' => [ 'logstash' => false ],
 		'LockManager' => 'warning',
