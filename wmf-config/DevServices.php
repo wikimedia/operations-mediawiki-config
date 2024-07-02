@@ -38,6 +38,7 @@ return [
 		'linkrecommendation' => '',
 		'push-notifications' => '',
 		'image-suggestion' => '',
+		'ipoid' => null,
 		'shellbox' => null,
 		'shellbox-media' => null,
 		'shellbox-syntaxhighlight' => null,
