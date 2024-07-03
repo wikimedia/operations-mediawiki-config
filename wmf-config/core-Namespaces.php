@@ -939,6 +939,10 @@ return [
 	'+kawikiquote' => [
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
 	],
+	'+kawikisource' => [ // T363243
+		'Author' => 102,
+		'Author_talk' => 103,
+	],
 	'+kbdwiktionary' => [
 		'Appendix' => 100,
 		'Appendix_talk' => 101,
@@ -3431,6 +3435,10 @@ return [
 		102 => 'Panganggit', // T286241 - Author
 		103 => 'Parembugan_Panganggit', // T286241 - Author talk
 	],
+	'kawikisource' => [ // T363243
+		102 => 'ავტორი',
+		103 => 'ავტორის_განხილვა',
+	],
 	'knwikisource' => [ // T39676
 		100 => 'ಸಂಪುಟ', // Portal
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
@@ -5579,6 +5587,7 @@ return [
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
+	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
