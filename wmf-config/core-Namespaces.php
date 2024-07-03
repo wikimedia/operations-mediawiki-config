@@ -1162,6 +1162,12 @@ return [
 	'+mswikibooks' => [
 		'Perbualan_Resipi' => 101,
 	],
+	'+mswikisource' => [ // T369047
+		'Translation' => 114,
+		'Translation_talk' => 115,
+		'Author' => 102,
+		'Author_talk' => 103,
+	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
 		'BP' => NS_PROJECT, // T180052
@@ -3467,6 +3473,12 @@ return [
 		102 => 'साहित्यिक', // Author
 		103 => 'साहित्यिक_चर्चा', // Author talk
 	],
+	'mswikisource' => [ // T369047
+		102 => 'Pengarang', // Author
+		103 => 'Perbincangan_pengarang', // Author talk
+		114 => 'Terjemahan', // Translation
+		115 => 'Perbincangan_terjemahan', // Translation talk
+	],
 	'napwikisource' => [
 		102 => 'Autore', // Author
 		103 => 'Autore_chiàcchiera', // Author talk
@@ -5651,6 +5663,7 @@ return [
 	'mrwikisource' => 'विकिस्रोत',
 	'mrwiktionary' => 'विक्शनरी',
 	'mswikibooks' => 'Wikibuku', // T368003
+	'mswikisource' => 'Wikisumber', // T369047
 	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',
