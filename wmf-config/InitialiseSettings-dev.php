@@ -92,5 +92,11 @@ function wmfGetOverrideSettings() {
 		'-wmgUseDynamicSidebar' => [
 			'default' => false,
 		],
+		'-wgShowExceptionDetails' => [
+			'default' => true,
+		],
+		'-wmgUseEntitySchema' => [
+			'default' => false,
+		],
 	];
 }
