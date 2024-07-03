@@ -3693,6 +3693,7 @@ if ( $wmgUseGraph ) {
 	// Note this still uses messages from E:Graph, which are available
 	// as long as it is in wmf-config/extension-list.
 	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';
+	$wgHooks['ParserAfterParse'][] = 'wmfInstrumentGraphDataSources';
 	$wgTrackingCategories[] = 'graph-tracking-category';
 	$wgTrackingCategories[] = 'graph-disabled-category';
 
@@ -3701,14 +3702,48 @@ if ( $wmgUseGraph ) {
 	}
 
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
+		// Add tracking categories
 		$parser->addTrackingCategory( 'graph-tracking-category' );
 		$parser->addTrackingCategory( 'graph-disabled-category' );
+
+		// Track data sources used by this graph
+		$parseResult = \MediaWiki\Json\FormatJson::parse( $input );
+		if ( $parseResult->isGood() ) {
+			$parsed = $parseResult->getValue();
+			$sources = [];
+			foreach ( (array)( $parsed->data ?? [] ) as $dataEntry ) {
+				$source = '';
+				if ( isset( $dataEntry->url ) ) {
+					$source = $dataEntry->url;
+				} elseif ( isset( $dataEntry->values ) ) {
+					$source = 'inline:' . count( $dataEntry->values );
+				}
+				if ( isset( $dataEntry->transform ) ) {
+					$source = "transformed:$source";
+				}
+				$sources[] = $source;
+			}
+			if ( $sources ) {
+				$parser->getOutput()->appendExtensionData( 'graph-data-sources', implode( "\n", $sources ) );
+			}
+		}
+
+		// Return the placeholder message, if there is one
 		$msg = $parser->msg( 'graph-disabled' );
 		if ( $msg->isDisabled() ) {
 			return '';
 		} else {
 			return $msg->parseAsBlock();
 		}
+	}
+
+	function wmfInstrumentGraphDataSources( Parser $parser ) {
+		$graphData = $parser->getOutput()->getExtensionData( 'graph-data-sources' );
+		if ( !$graphData ) {
+			return;
+		}
+		$sources = array_keys( $graphData );
+		$parser->getOutput()->setPageProperty( 'graph-data-sources', implode( "\n\n", $sources ) );
 	}
 }
 
