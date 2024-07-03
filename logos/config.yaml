@@ -4296,6 +4296,11 @@ Wikivoyage:
         comment_icon: T330279
     sysop_plwiki:
         commons: 'File:Wikipedia Administrator.svg'
+        comment: T368712
+        comment_1_5x: T368712
+        comment_2x: T368712
+        commons_icon: 'File:Wikipedia Administrator.svg'
+        comment_icon: T368712
     strategywiki:
         no_1_5x: true
         no_2x: true
