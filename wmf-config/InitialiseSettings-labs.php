@@ -2281,5 +2281,10 @@ function wmfGetOverrideSettings() {
 			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
 			'enwiki' => true,
 		],
+
+		// T363587
+		'wgEnableEventBusInstrumentation' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
