@@ -4797,6 +4797,7 @@ return [
 
 'wgCollectionDisableSidebarLink' => [
 	'default' => false,
+	'dewiki' => true, // T368900
 	'enwiki' => true, // T241683
 	'fawiki' => true, // T303173
 	'fiwiki' => true, // T257073
