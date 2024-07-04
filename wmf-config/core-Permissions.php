@@ -1119,6 +1119,7 @@ return [
 			'deletedtext' => true,
 		], // T23044
 		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
+		'interface-admin' => [ 'editcontentmodel' => true ], // T369113
 	],
 	'+frwikibooks' => [
 		'patroller' => [
