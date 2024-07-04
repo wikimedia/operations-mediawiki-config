@@ -4211,6 +4211,10 @@ return [
 		'Unwatchedpages',
 		'Withoutinterwiki',
 	],
+	'+commonswiki' => [
+		'Uncategorizedcategories' => 'monthly',
+		'Mostlinkedtemplates' => 'monthly',
+	],
 ],
 # @} end of wgDisableQueryPageUpdate
 
