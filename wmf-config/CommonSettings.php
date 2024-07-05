@@ -2204,6 +2204,15 @@ $wgMaxShellTime = 50;  // seconds
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
+// Passed to Shellbox
+// Videoscalers get 1d, others get 1min.
+// This must be the same as the timeouts in shellbox deployment charts.
+if ( ClusterConfig::getInstance()->isAsync() && strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+	$wgMaxShellWallClockTime = 24 * 60 * 60;  // seconds
+} else {
+	$wgMaxShellWallClockTime = 60;  // seconds
+}
+
 switch ( $wmgRealm ) {
 	case 'production':
 		$wgImageMagickTempDir = '/tmp/magick-tmp';
