@@ -6155,6 +6155,8 @@ return [
 	],
 	'+euwiki' => [
 		'Zerrenda' /* List */ => true, // T224801
+		'Project' => true, // T368632
+		'Wikiproiektu' => true, // T368632
 	],
 	'+fawiki' => [
 		'پیش‌نویس' /* Draft */ => true, // T118060
