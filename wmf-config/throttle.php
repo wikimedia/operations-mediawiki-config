@@ -35,35 +35,13 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T366748
+// T369522
 $wmgThrottlingExceptions[] = [
-	'from' => '2024-06-17T00:00 +2:00',
-	'to' => '2024-06-17T23:59 +2:00',
-	'IP' => [ '84.19.71.121' ],
-	'dbname' => [ 'cswiki', 'skwiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
+	'from' => '2024-07-11T00:00 +9:00',
+	'to' => '2024-07-18T23:59 +9:00',
+	'range' => [ '202.25.144.0/20' ],
+	'dbname' => [ 'jawiki' ],
 	'value' => 50,
-];
-$wmgThrottlingExceptions[] = [
-	'from' => '2024-06-18T08:00 -3:00',
-	'to' => '2024-06-18T20:00 -3:00',
-	'IP' => [ '163.10.23.200' ],
-	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 150,
-];
-// T367858
-$wmgThrottlingExceptions[] = [
-	'from' => '2024-06-26T13:00 +2:00',
-	'to' => '2024-06-26T20:30 +2:00',
-	'IP' => [ '78.44.178.194' ],
-	'dbname' => [ 'cswiki' ],
-	'value' => 25
-];
-$wmgThrottlingExceptions[] = [
-	'from' => '2024-06-25T08:00 -3:00',
-	'to' => '2024-06-25T20:00 -3:00',
-	'IP' => [ '163.10.23.200' ],
-	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 150,
 ];
 
 ## Add throttling definitions above.
