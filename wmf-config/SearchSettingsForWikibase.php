@@ -61,7 +61,7 @@ $wgWBRepoSettings['searchIndexProperties'] = $wmgWikibaseSearchIndexProperties;
 // T163642, T99899
 $wgWBRepoSettings['searchIndexTypes'] = [
 	'string', 'external-id', 'url', 'wikibase-item', 'wikibase-property',
-	'wikibase-lexeme', 'wikibase-form', 'wikibase-sense'
+	'wikibase-lexeme', 'wikibase-form', 'wikibase-sense', 'entity-schema',
 ];
 $wgWBRepoSettings['searchIndexPropertiesExclude'] = $wmgWikibaseSearchIndexPropertiesExclude;
 
