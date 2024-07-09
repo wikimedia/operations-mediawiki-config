@@ -3725,7 +3725,12 @@ if ( $wmgUseGraph ) {
 				if ( isset( $dataEntry->url ) ) {
 					$source = $dataEntry->url;
 				} elseif ( isset( $dataEntry->values ) ) {
-					$source = 'inline:' . count( $dataEntry->values );
+					$source = 'inline:';
+					if ( is_array( $dataEntry->values ) ) {
+						$source .= count( $dataEntry->values );
+					} else {
+						$source .= 'unknown'; // T369600
+					}
 				}
 				if ( isset( $dataEntry->transform ) ) {
 					$source = "transformed:$source";
