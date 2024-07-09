@@ -2410,6 +2410,12 @@ return [
 		'logged_out' => false,
 		'beta' => true,
 	],
+	'skin-themes' => [
+		'logged_in' => true,
+		'logged_out' => false,
+		// Important to disable this to disable the beta feature
+		'beta' => false,
+	],
 	'testwiki' => [
 		'logged_in' => false,
 		'logged_out' => false,
