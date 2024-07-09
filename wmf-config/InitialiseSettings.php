@@ -5840,7 +5840,7 @@ return [
 
 // T361013
 'wgLinterParseOnDerivedDataUpdate' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgLinterStatsdSampleFactor' => [
