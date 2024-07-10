@@ -11444,11 +11444,6 @@ return [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
-// T324907
-'wgCheckUserEventTablesMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 // T299421
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
