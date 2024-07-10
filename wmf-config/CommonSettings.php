@@ -2089,6 +2089,16 @@ if ( $wmgUseCentralAuth ) {
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => 'metawiki' ];
+
+	// Allows automatic account vanishing (for qualifying users)
+	$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
+	$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
+
+	// Configuration for guidance given to blocked users when requesting vanishing
+	$wgCentralAuthBlockAppealWikidataIds = [ "Q13360396", "Q175291" ];
+	$wgCentralAuthWikidataApiUrl = "https://www.wikidata.org/w/api.php";
+	$wgCentralAuthFallbackAppealUrl = "https://en.wikipedia.org/wiki/Wikipedia:Appealing_a_block";
+	$wgCentralAuthFallbackAppealTitle = "Wikipedia:Appealing a block";
 }
 
 // Config for GlobalCssJs
