@@ -2293,5 +2293,10 @@ function wmfGetOverrideSettings() {
 		'wgEnableEventBusInstrumentation' => [
 			'default' => true,
 		],
+
+		// T20110
+		'wgConfirmEditEnabledAbuseFilterCustomActions' => [
+			'default' => [ 'showcaptcha' ]
+		],
 	];
 } # wmfGetOverrideSettings()

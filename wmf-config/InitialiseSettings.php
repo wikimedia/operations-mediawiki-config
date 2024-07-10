@@ -12061,4 +12061,10 @@ return [
 	],
 ],
 
+// T20110
+'wgConfirmEditEnabledAbuseFilterCustomActions' => [
+	'default' => [],
+	'testwiki' => [ 'showcaptcha' ]
+],
+
 ];
