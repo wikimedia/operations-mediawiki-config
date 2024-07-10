@@ -6980,8 +6980,7 @@ return [
 ],
 
 'wmgUseIPReputation' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true, // T360067
 ],
 
 'wmgUseIncubator' => [
