@@ -152,6 +152,7 @@ return [
 	'zh_yuewiki' => 'yue',
 
 	# Chapter wikis (xxwikimedia)
+	'aewikimedia' => 'en',
 	'amwikimedia' => 'hy',
 	'arwikimedia' => 'es',
 	'bdwikimedia' => 'bn',
