@@ -8389,7 +8389,7 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'azb', 'bcl', 'bn', 'bh', 'fa', 'ff', 'hi', 'ig', 'is', 'ko', 'ks', 'min', 'sat' ],
+	'wikipedia' => [ 'ace', 'ast', 'azb', 'bcl', 'bn', 'bjn', 'bh', 'crh', 'fa', 'ff', 'fon', 'hi', 'ig', 'is', 'ki', 'ko', 'ks', 'lmo', 'min', 'sat', 'ss', 'tn', 'vec' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
