@@ -3717,7 +3717,10 @@ if ( $wmgUseGraph ) {
 		$parser->addTrackingCategory( 'graph-disabled-category' );
 
 		// Track data sources used by this graph
-		$parseResult = \MediaWiki\Json\FormatJson::parse( $input );
+		$parseResult = \MediaWiki\Json\FormatJson::parse(
+			$input,
+			\MediaWiki\Json\FormatJson::TRY_FIXING | \MediaWiki\Json\FormatJson::STRIP_COMMENTS
+		);
 		if ( $parseResult->isGood() ) {
 			$parsed = $parseResult->getValue();
 			$sources = [];
@@ -3729,6 +3732,8 @@ if ( $wmgUseGraph ) {
 					$source = 'inline:';
 					if ( is_array( $dataEntry->values ) ) {
 						$source .= count( $dataEntry->values );
+					} elseif ( is_string( $dataEntry->values ) ) {
+						$source .= count( explode( "\n", $dataEntry->values ) );
 					} else {
 						$source .= 'unknown'; // T369600
 					}
