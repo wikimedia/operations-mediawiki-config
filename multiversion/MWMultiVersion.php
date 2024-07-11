@@ -415,6 +415,20 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Returns true if the supplied version string has an acceptable format.
+	 *
+	 * @param string $version
+	 * @return bool
+	 */
+	private function validVersion( $version ) {
+		// Examples of expected inputs: 1.43.0-wmf.3, master, next, branch_cut_pretest
+		// Rules:
+		// * Must begin with alphanum.
+		// * Remaining chars can be alphanum, dash or dot
+		return preg_match( "/^[0-9a-z][0-9a-z.-]*$/i", $version );
+	}
+
+	/**
 	 * Initialize object state from CLI `--wiki` parameter.
 	 *
 	 * This code is based on how MediaWiki's Maintenance.php script reads arguments.
@@ -446,9 +460,13 @@ class MWMultiVersion {
 
 		if ( isset( $argv[3] ) && $argv[3] === '--force-version' ) {
 			if ( !isset( $argv[4] ) ) {
-				self::error( "--force-version must be followed by a version number" );
+				self::error( "--force-version must be followed by a version number\n" );
 			}
-			$this->version = "php-" . $argv[4];
+			$version = $argv[4];
+			if ( !self::validVersion( $version ) ) {
+				self::error( "Invalid version format passed to --force-version: '$version'\n" );
+			}
+			$this->version = "php-" . $version;
 
 			# Delete the flag and its parameter so it won't be passed on to the
 			# maintenance script.
@@ -572,6 +590,20 @@ class MWMultiVersion {
 
 		if ( $version && strpos( $version, 'php-' ) !== 0 ) {
 			self::error( "$phpFilename entry must start with `php-` (got `$version`).\n" );
+		}
+
+		if ( $version !== false ) {
+			// At this point we know there is an entry in wikiversions for the
+			// wiki.  If MW_FORCE_VERSION is set in the environment, we want to
+			// use that version instead of the one from wikiversions.
+			$force_version = getenv( 'MW_FORCE_VERSION' ) ?: '';
+			if ( $force_version ) {
+				if ( !self::validVersion( $force_version ) ) {
+					self::error( "Invalid version format in MW_FORCE_VERSION: '$force_version'\n" );
+				}
+				$this->version = "php-$force_version";
+				return;
+			}
 		}
 
 		$this->version = $version;
