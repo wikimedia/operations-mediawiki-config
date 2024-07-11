@@ -11665,6 +11665,21 @@ return [
 	'default' => false,
 ],
 
+'wgRestSandboxSpecs' => [
+	'default' => [],
+	// Enable for testing (T362006)
+	'testwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/coredev/v0/specs/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+],
+
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
 	'default' => 60,
 ],
