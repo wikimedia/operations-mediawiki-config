@@ -61,9 +61,9 @@ if ( $wmgRealm == 'labs' ) {
 		'suggestChangeOnLogin' => false,
 	];
 
-	// Enforce password policy when users login on other wikis; also for sensitive global groups
-	// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 	if ( $wmgUseCentralAuth ) {
+		// Enforce password policy when users login on other wikis; also for sensitive global groups
+		// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 		$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
 			$privilegedGroups = wmfGetPrivilegedGroups( $user );
 			if ( $privilegedGroups ) {
@@ -77,6 +77,16 @@ if ( $wmgRealm == 'labs' ) {
 			}
 			return true;
 		};
+
+		// Allows automatic account vanishing (for qualifying users)
+		$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
+		$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
+
+		// Configuration for guidance given to blocked users when requesting vanishing
+		$wgCentralAuthBlockAppealWikidataIds = [ "Q13360396", "Q175291" ];
+		$wgCentralAuthWikidataApiUrl = "https://www.wikidata.org/w/api.php";
+		$wgCentralAuthFallbackAppealUrl = "https://en.wikipedia.org/wiki/Wikipedia:Appealing_a_block";
+		$wgCentralAuthFallbackAppealTitle = "Wikipedia:Appealing a block";
 	}
 
 	$wgLocalVirtualHosts = [
