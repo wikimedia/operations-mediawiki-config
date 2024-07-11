@@ -2772,6 +2772,8 @@ if ( $wmgIncreaseDefaultVectorFontSize ) {
 	];
 }
 
+$wgDefaultUserOptions['vector-theme'] = 'day';
+
 // Enable this everywhere except where GeoData isn't available
 $wgMFNearby = $wmgEnableGeoData;
 
