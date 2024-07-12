@@ -12035,21 +12035,8 @@ return [
 'wmgUseCommunityConfiguration' => [
 	// NOTE: Do not enable without OK from the Growth team.
 	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'elwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'rowiki' => true,
-	'trwiki' => true,
-	'swwiki' => true,
-	'zhwiki' => true,
+	'growthexperiments' => true,
+	'frwiktionary' => false, // waiting on T369711
 ],
 
 // T361643

@@ -901,23 +901,9 @@ return [
 ],
 
 'wgGEUseCommunityConfigurationExtension' => [
-	// NOTE: Do not enable without Growth team OK.
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'elwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'rowiki' => true,
-	'trwiki' => true,
-	'swwiki' => true,
-	'zhwiki' => true,
+	'default' => true,
+	// NOTE: Do not enable without Growth team OK
+	'frwiktionary' => false, // waiting on T369711
 ],
 
 ];
