@@ -1063,6 +1063,7 @@ return [
 	'+foundationwiki' => [
 		'*' => [
 			'edit' => false,
+			'unfuzzy' => false, // T369979
 		],
 		'user' => [
 			'upload' => false,
@@ -1075,6 +1076,7 @@ return [
 			'reupload' => false,
 			'reupload-own' => false,
 			'reupload-shared' => false,
+			'unfuzzy' => true, // T369979
 		],
 		'translationadmin' => [
 			'edit-legal' => true, // T346187
