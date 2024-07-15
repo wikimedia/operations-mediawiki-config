@@ -850,6 +850,10 @@ return [
 	'+incubatorwiki' => [
 		'I' => NS_PROJECT,
 	],
+	'+inhwiki' => [
+		'Моартал' => 100, // T326089
+		'Моарталах_къамаьл' => 101 // T326089
+	],
 	'+iswikisource' => [
 		'Portal' => 100, // T46164
 		'Portal_talk' => 101, // T46164
@@ -2783,6 +2787,10 @@ return [
 		100 => 'Portal',
 		101 => 'Pembicaraan_Portal'
 	],
+	'inhwiki' => [
+		100 => 'Моартал',
+		101 => 'Моарталах_къамаьл'
+	], // T326089
 	'iswiki' => [
 		100 => 'Gátt',
 		101 => 'Gáttaspjall'
