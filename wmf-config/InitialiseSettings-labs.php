@@ -313,7 +313,7 @@ function wmfGetOverrideSettings() {
 				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
 				'ldap' => 'warning',
-				'Linter' => 'info',
+				'Linter' => 'debug',
 				'LocalFile' => 'debug',
 				'localhost' => [ 'logstash' => false ],
 				'LockManager' => 'warning',
