@@ -5322,6 +5322,7 @@ return [
 	'abwiki' => 'Авикипедиа',
 	'advisorywiki' => 'Project',
 	'adywiki' => 'Википедие', // T125501
+	'aewikimedia' => 'Wikimedia_UAE',
 	'amwiki' => 'ውክፔዲያ',
 	'altwiki' => 'Википедия',
 	'anwiktionary' => 'Biquizionario', // T130599

@@ -302,6 +302,7 @@ return [
 	'default' => 'UTC',
 
 	'acewiki' => 'Asia/Jakarta', // T205693
+	'aewikimedia' => 'Asia/Dubai',
 	'amiwiki' => 'Asia/Taipei',
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
@@ -1104,6 +1105,7 @@ return [
 	'advisorswiki' => 'Advisors',
 	'advisorywiki' => 'Advisory Board',
 	'adywiki' => 'Википедие', // T125501
+	'aewikimedia' => 'Wikimedia United Arab Emirates',
 	'amwikimedia' => 'Վիքիմեդիա Հայաստան', // T176042
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
@@ -3319,6 +3321,7 @@ return [
 	// Specific wikis
 
 	// chapter wikis
+	'aewikimedia' => [ 'w', 'meta' ],
 	'azwikimedia' => [ 'w', 'meta' ],
 	'bdwikimedia' => [ 'w:bn', 'w:en', 'c' ], // T154990
 	'bewikimedia' => [ 'meta' ],

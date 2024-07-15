@@ -789,6 +789,7 @@ return [
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077, T308620
 
 	// Chapter and local user group wikis
+	'aewikimedia' => '/static/images/project-logos/aewikimedia.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
 	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
 	'azwikimedia' => '/static/images/project-logos/azwikimedia.png',
@@ -1483,6 +1484,7 @@ return [
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-1.5x.png', // T150618, T308620
 
 	// Chapter and local user group wikis
+	'aewikimedia' => '/static/images/project-logos/aewikimedia-1.5x.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-1.5x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png', // T257925
@@ -2112,6 +2114,7 @@ return [
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-2x.png', // T150618, T308620
 
 	// Chapter and local user group wikis
+	'aewikimedia' => '/static/images/project-logos/aewikimedia-2x.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-2x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png', // T257925

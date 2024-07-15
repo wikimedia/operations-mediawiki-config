@@ -11,7 +11,7 @@ return [
 'advisorswiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines', 'translate' ],
 'advisorywiki' => [ 'special', 'closed', 'small', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'adywiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
-'aewikimedia' => [ 'fishbowl', 'small', 'group1' ],
+'aewikimedia' => [ 'fishbowl', 'small', 'group1', 'translate' ],
 'afwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'afwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'afwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
