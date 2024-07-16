@@ -6884,6 +6884,24 @@ return [
 
 // ----------- CheckUser end ----------
 
+// n.b. If setting this to `false` for a wiki, please also update the
+// relevant wiki entry to `true` in `wmgDisableIPMasking`
+'wmgEnableIPMasking' => [
+	'default' => false,
+	'testwiki' => true, // T348895
+	'loginwiki' => true, // T348895
+],
+
+// Use this if temporary accounts were enabled on a wiki but need quick disabling.
+// It allows existing temporary accounts to be recognized as temporary accounts,
+// but will prevent new temporary account creations and re-allow anonymous IP editing
+// until temporary accounts are enabled again (T356524).
+// n.b. If setting this to `true` for a wiki, please also update the
+// relevant wiki entry to `false` in `wmgEnableIPMasking`
+'wmgDisableIPMasking' => [
+	'default' => false,
+],
+
 // IPInfo extension
 'wmgUseIPInfo' => [
 	'default' => true, // T260597

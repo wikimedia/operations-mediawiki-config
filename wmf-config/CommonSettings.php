@@ -4070,6 +4070,27 @@ if ( $wmgUseCheckUser ) {
 	}
 }
 
+// IP Masking / Temporary accounts
+
+// Unless otherwise specified, temporary accounts are disabled and not known about.
+$wgAutoCreateTempUser['enabled'] = false;
+$wgAutoCreateTempUser['known'] = false;
+
+if ( $wmgDisableIPMasking ) {
+	// Temporary accounts were previously enabled, then disabled as an emergency measure.
+	$wgAutoCreateTempUser['enabled'] = false;
+	$wgAutoCreateTempUser['known'] = true;
+} elseif ( $wmgEnableIPMasking ) {
+	// Ensure temporary accounts behave the same on all wikis where they are enabled.
+	$wgAutoCreateTempUser['enabled'] = true;
+	$wgAutoCreateTempUser['known'] = true;
+
+	$wgGroupPermissions['temp']['edit'] = true;
+
+	// T357586
+	$wgImplicitGroups[] = 'temp';
+}
+
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
 	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.

@@ -503,21 +503,9 @@ if ( $wmgRealm == 'labs' ) {
 		wfLoadExtension( 'ReportIncident' );
 	}
 
-	// IP Masking
-	// NOTE: This is here to ensure temp accounts behave as temp accounts on all wikis. Autocreation of temp
-	// accounts for wikis where IP Masking is not enabled is disabled in an if below.
-
+	// IP Masking / Temporary accounts
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
-
-	if ( $wmgEnableIPMasking ) {
-		$wgGroupPermissions['temp']['edit'] = true;
-		$wgAutoCreateTempUser['enabled'] = true;
-		// T357586
-		$wgImplicitGroups[] = 'temp';
-	} else {
-		$wgAutoCreateTempUser['enabled'] = false;
-	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';

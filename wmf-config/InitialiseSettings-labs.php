@@ -2244,6 +2244,14 @@ function wmfGetOverrideSettings() {
 			'fawiki' => true,
 		],
 
+		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
+		// It allows existing temporary accounts to be recognized as temporary accounts,
+		// but will prevent new temporary account creations and re-allow anonymous IP editing
+		// until temporary accounts are enabled again.
+		'wmgDisableIPMasking' => [
+			'default' => false,
+		],
+
 		// T342858
 		'-wgEnableEditRecovery' => [
 			'default' => true,
