@@ -6565,6 +6565,10 @@ return [
 	'iswiki' => 'uca-is', // T58859
 	'iswiktionary' => 'identity', // T32722
 	'itwiki' => 'uca-it-u-kn', // T136647, T146675
+	'kuwiki' => 'uca-ku-u-kn', // T48235
+	'kuwiktionary' => 'uca-ku-u-kn', // T48235
+	'kuwikibooks' => 'uca-ku-u-kn', // T48235
+	'kuwikiquote' => 'uca-ku-u-kn', // T48235
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
 	'mkwiki' => 'uca-mk-u-kn', // T26953
