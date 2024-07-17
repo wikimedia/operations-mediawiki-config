@@ -1980,7 +1980,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSsoUrlPrefix = "https://{$wmgHostnames['sso']}/"
-		. preg_replace( '!^(http:)?//!', '', $wgServer )
+		. preg_replace( '!^(https?:)?//!', '', $wgServer )
 		. '/';
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
