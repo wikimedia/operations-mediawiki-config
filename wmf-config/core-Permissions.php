@@ -5243,6 +5243,7 @@ return [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'confirmed', 'flood', 'editor' ],
+		'bureaucrat' => [ 'sysop' ], // T370097
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
