@@ -12036,6 +12036,7 @@ return [
 	// NOTE: Do not enable without OK from the Growth team.
 	'default' => false,
 	'growthexperiments' => true,
+	'dewiki' => false,
 	'frwiktionary' => false, // waiting on T369711
 ],
 
