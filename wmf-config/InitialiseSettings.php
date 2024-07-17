@@ -7686,6 +7686,7 @@ return [
 'wgFlowReadOnly' => [
 	'default' => false,
 	'commonswiki' => true,
+	'testwiki' => true, // T370322
 ],
 
 'wmgFlowNamespaces' => [
