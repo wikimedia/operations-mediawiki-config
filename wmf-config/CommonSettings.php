@@ -1989,6 +1989,7 @@ if ( $wmgUseCentralAuth ) {
 	if ( $wmgSsoPathPrefix ) {
 		$wgCentralAuthCookieDomain = '';
 		$wgCookiePrefix = 'sso';
+		$wgSessionName = 'ssoSession';
 		$wgCentralAuthLoginWiki = null;
 		$wgCentralAuthAutoLoginWikis = [];
 	}
