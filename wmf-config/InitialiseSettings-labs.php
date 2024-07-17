@@ -626,6 +626,11 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		// T370254
+		'wgCentralAuthEnableSul3' => [
+			'default' => 'query-flag'
+		],
+
 		//
 		// Vector
 		//
