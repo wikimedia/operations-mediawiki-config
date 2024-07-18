@@ -1090,6 +1090,21 @@ return [
 			],
 		],
 
+		// See https://phabricator.wikimedia.org/T370045
+		'wikibase.client.interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_skin',
+						'performer_is_logged_in',
+					],
+				],
+			],
+		],
+
 		// Wikistories streams
 		'mediawiki.wikistories_consumption_event' => [
 			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
