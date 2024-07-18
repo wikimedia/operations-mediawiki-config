@@ -10090,8 +10090,9 @@ return [
 					'P180' => 1 * 0.07513802266010573,
 					// digital representation of
 					'P6243' => 1.1 * 0.07513802266010573,
-					// main subject of
-					'P921' => 1.1 * 0.07513802266010573,
+					// main subject of - arbitrary small value in case we *only* have a match in this field
+					// see T367774
+					'P921' => 0.0001,
 				],
 				'weighted_tags' => [
 					'image.linked.from.wikidata.p18/' => 2.342153943085914,
@@ -10140,8 +10141,9 @@ return [
 					'P180' => 1 * 0.11098311564161133,
 					// digital representation of
 					'P6243' => 1.1 * 0.11098311564161133,
-					// main subject of
-					'P921' => 1.1 * 0.11098311564161133,
+					// main subject of - arbitrary small value in case we *only* have a match in this field
+					// see T367774
+					'P921' => 0.0001,
 				],
 				'descriptions.$language' => 0.019320230186222098,
 				'descriptions.$language.plain' => 0,
@@ -10182,8 +10184,9 @@ return [
 					'P180' => 1 * 0.11098311564161133,
 					// digital representation of
 					'P6243' => 1.1 * 0.11098311564161133,
-					// main subject
-					'P921' => 1.1 * 0.11098311564161133,
+					// main subject of - arbitrary small value in case we *only* have a match in this field
+					// see T367774
+					'P921' => 0.0001,
 				],
 				'descriptions.$language' => 0.019320230186222098,
 				'descriptions.$language.plain' => 0,
