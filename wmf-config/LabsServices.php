@@ -53,10 +53,7 @@ return [
 
 		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
 
-		'irc' => [
-			// deployment-ircd02
-			'irc.beta.wmflabs.org',
-		],
+		'irc' => [ 'irc.svc.deployment-prep.eqiad1.wikimedia.cloud' ],
 		'redis_lock' => [
 			'rdb1' => 'deployment-rdb01.deployment-prep.eqiad1.wikimedia.cloud',
 		],
