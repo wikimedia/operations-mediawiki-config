@@ -154,6 +154,9 @@ return [
 			'reupload' => false,
 			'reupload-own' => false,
 			'reupload-shared' => false,
+			'campaignevents-enable-registration' => false, // T370066
+			'campaignevents-organize-events' => false, // T370066
+			'campaignevents-email-participants' => false, // T370066
 		],
 		'autoconfirmed' => [
 			'upload' => false,
@@ -195,6 +198,11 @@ return [
 			'delete-redirect' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
+		],
+		'event-organizer' => [ // T370066
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 	],
 	'+arwikibooks' => [
@@ -3323,6 +3331,7 @@ return [
 			'rollbacker',
 			'abusefilter',
 			'extendedmover', // T326434
+			'event-organizer', // T370066
 		],
 	],
 	'+arwikibooks' => [
@@ -4823,6 +4832,7 @@ return [
 			'patroller',
 			'autopatrolled',
 			'extendedmover', // T326434
+			'event-organizer', // T370066
 		],
 	],
 	'+arwikibooks' => [

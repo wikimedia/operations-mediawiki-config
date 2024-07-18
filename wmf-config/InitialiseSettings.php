@@ -11969,15 +11969,15 @@ return [
 	'nowiki' => '/wiki/Hjelp:Bilder',
 ],
 
-// Test wikis and officewiki (T318592), and meta (T322745)
 'wmgUseCampaignEvents' => [
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'officewiki' => true,
-	'metawiki' => true,
-	'igwiki' => true,
+	'testwiki' => true, // T318592
+	'test2wiki' => true, // T318592
+	'officewiki' => true, // T318592
+	'metawiki' => true, // T322745
+	'igwiki' => true, // T363199
 	'swwiki' => true, // T366502
+	'arwiki' => true, // T370066
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
