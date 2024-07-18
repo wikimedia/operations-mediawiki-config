@@ -46,6 +46,13 @@ return [
 			],
 		],
 	],
+	'+private' => [
+		'producers' => [
+			'mediawiki_eventbus' => [
+				'enabled' => false,
+			],
+		],
+	],
 ],
 
 /*
@@ -1223,6 +1230,21 @@ return [
 				'page_id' => 'page_id',
 			],
 		],
+		// mediawiki.cirrussearch.page_rerender stream for private wikis
+		// https://phabricator.wikimedia.org/T346046
+		'mediawiki.cirrussearch.page_rerender.private.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/page_rerender',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'mediawiki.page-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
@@ -1422,6 +1444,21 @@ return [
 				'page_id' => 'page.page_id',
 			],
 			'destination_event_service' => 'eventgate-main',
+		],
+		// mediawiki.page_change stream for private wikis
+		// https://phabricator.wikimedia.org/T346046
+		'mediawiki.page_change.private.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => false,
+				],
+			],
 		],
 		// Declare version 1 of
 		// mediawiki.page_content_change stream.
@@ -1747,6 +1784,22 @@ return [
 		'mediawiki.web_ui_actions' => [
 			'sample' => [
 				'rate' => 0,
+			],
+		],
+	],
+	'+private' => [
+		'mediawiki.page_change.private.v1' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'mediawiki.cirrussearch.page_rerender.private.v1' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true,
+				],
 			],
 		],
 	],
