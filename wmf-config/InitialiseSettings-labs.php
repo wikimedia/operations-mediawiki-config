@@ -2133,10 +2133,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgWikibaseTmpEnableMulLanguageCode' => [
-			'default' => true,
-		],
-
 		// Flag temporary - added in T339104, to be removed in T330217
 		// Set to false in T356169 to test limited version on beta
 		'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [

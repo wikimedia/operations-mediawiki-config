@@ -11854,8 +11854,7 @@ return [
 ],
 
 'wmgWikibaseTmpEnableMulLanguageCode' => [
-	'default' => null,
-	'wikidataclient-test' => true,
+	'default' => true,
 ],
 
 // Temporary, added in T339104, to be removed in T330217
