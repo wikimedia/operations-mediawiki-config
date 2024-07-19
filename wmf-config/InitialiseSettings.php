@@ -4765,7 +4765,7 @@ return [
 ],
 
 'wgMathValidModes' => [
-	'default' => [ 'source', 'mathml', 'native' ],
+	'default' => [ 'source', 'mathml', 'native', 'mathjax' ],
 ],
 
 'wgMaxExecutionTimeForExpensiveQueries' => [
