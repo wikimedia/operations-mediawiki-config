@@ -269,7 +269,7 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseMath ) {
-		$wgMathValidModes = [ 'source', 'mathml', 'native' ];
+		$wgMathValidModes = [ 'source', 'mathml', 'native', 'mathjax' ];
 		$wgDefaultUserOptions[ 'math' ] = 'mathml';
 		$wgMathEnableFormulaLinks = true;
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
