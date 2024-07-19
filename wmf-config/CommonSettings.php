@@ -4521,6 +4521,13 @@ if ( $wgMetricsPlatformEnable && $wgMetricsPlatformEnableStreamConfigsMerging ) 
 	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['mpic'];
 }
 
+if ( $wmgUseNetworkSession ) {
+	// Note: users are defined in private repos
+	wfLoadExtension( 'NetworkSession' );
+	$wgNetworkSessionProviderAllowedUserRights = [ 'read' ];
+	$wgNetworkSessionProviderCanAlwaysAutocreate = true;
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

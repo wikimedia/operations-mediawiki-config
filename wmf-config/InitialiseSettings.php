@@ -12149,4 +12149,8 @@ return [
 	'group0' => true,
 ],
 
+'wmgUseNetworkSession' => [
+	'default' => false,
+],
+
 ];

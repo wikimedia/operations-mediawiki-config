@@ -518,5 +518,39 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
+
+	if ( $wmgUseNetworkSession ) {
+		$wgNetworkSessionProviderUsers = [
+			[
+				'username' => 'networksession_testuser',
+				'ip_ranges' => [
+					// Derived from modules/network/data/data.yaml in
+					// operations/puppet for cloud networks. This is not protecting
+					// anything, all anon's have read access anyways, this is to
+					// demonstrate it working in one place but not another.
+					'172.16.0.0/12',
+					'127.0.0.0/8',
+					'::1/128',
+					'10.64.20.0/24',
+					'2620:0:861:118::/64',
+					'10.64.148.0/24',
+					'2620:0:861:11c::/64',
+					'10.64.149.0/24',
+					'2620:0:861:11d::/64',
+					'10.64.150.0/24',
+					'2620:0:861:11e::/64',
+					'10.64.151.0/24',
+					'2620:0:861:11f::/64',
+					'10.192.20.0/24',
+					'2620:0:860:118::/64',
+				],
+				// In normal operation token would be secret, but for labs
+				// it only allows reading via api, which is already possible
+				// with anon, meaning this protects nothing. It does still
+				// demonstrate the functionality.
+				'token' => 'networksession-testuser-token',
+			],
+		];
+	}
 }
 // end safeguard

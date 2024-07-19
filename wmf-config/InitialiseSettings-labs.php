@@ -2319,5 +2319,10 @@ function wmfGetOverrideSettings() {
 		'wgConfirmEditEnabledAbuseFilterCustomActions' => [
 			'default' => [ 'showcaptcha' ]
 		],
+
+		'wmgUseNetworkSession' => [
+			'default' => true,
+			'loginwiki' => false,
+		],
 	];
 } # wmfGetOverrideSettings()
