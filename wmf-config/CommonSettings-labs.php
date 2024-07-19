@@ -530,5 +530,10 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
+
+	// HACK for T370517: map this Codex message until this Codex i18n bug is fixed
+	$wgHooks['MessageCacheFetchOverrides'][] = static function ( &$keys ) {
+		$keys['cdx-search-input-search-button-label'] = 'searchbutton';
+	};
 }
 // end safeguard
