@@ -4564,6 +4564,11 @@ if (
 
 $wgLogRestrictions = array_merge( $wgLogRestrictions, $wmgLogRestrictions );
 
+// HACK for T370517: map this Codex message until this Codex i18n bug is fixed
+$wgHooks['MessageCacheFetchOverrides'][] = static function ( &$keys ) {
+	$keys['cdx-search-input-search-button-label'] = 'searchbutton';
+};
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
