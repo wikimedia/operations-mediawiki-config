@@ -457,10 +457,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgEchoPushServiceBaseUrl' => [
-			'default' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900/v1/message',
-		],
-
 		'wgEchoPushMaxSubscriptionsPerUser' => [
 			'default' => 10,
 		],
