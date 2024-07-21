@@ -1158,6 +1158,7 @@ return [
 	'bewikimedia' => 'Wikimedia Belgium',
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік',
+	'bewwiki' => 'Wikipédi',
 	'bgwiki' => 'Уикипедия',
 	'bgwikibooks' => 'Уикикниги',
 	'bgwikinews' => 'Уикиновини',
@@ -1352,6 +1353,7 @@ return [
 	'idwiktionary' => 'Wikikamus', // T341175
 	'id_internalwikimedia' => 'Wikimedia Indonesia (internal)',
 	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
+	'iglwiki' => 'Wikipídiya',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Wikimedia Incubator',
 	'inhwiki' => 'Википеди',
@@ -1402,6 +1404,7 @@ return [
 	'krcwiki' => 'Википедия',
 	'kswiki' => 'وِکیٖپیٖڈیا', // T289752
 	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
+	'kuswiki' => 'Wikipiidia',
 	'kuwiki' => 'Wîkîpediya',
 	'kuwiktionary' => 'Wîkîferheng', // T29878
 	'kywiki' => 'Википедия', // T309866
@@ -1461,6 +1464,7 @@ return [
 	'mwlwiki' => 'Biquipédia',
 	'mxwikimedia' => 'Wikimedia México',
 	'mywiki' => 'ဝီကီပီးဒီးယား', // T123191
+	'mywikisource' => 'ဝီကီရင်းမြစ်',
 	'mywiktionary' => 'ဝစ်ရှင်နရီ', // T187882
 	'myvwiki' => 'Википедиясь',
 	'mznwiki' => 'ویکی‌پدیا',
