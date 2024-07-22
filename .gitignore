@@ -1,5 +1,7 @@
+# MediaWiki checkouts created by "scap prep"
+/php-*/
+
 # Production files that are temporary or private
-/php-1.*/
 /private
 /scap/
 /wikiversions-*.php
@@ -8,7 +10,6 @@
 
 # Beta Cluster
 /docroot/wwwportal/portal-master
-/php-master/
 /portal-master/
 
 # CI and local development

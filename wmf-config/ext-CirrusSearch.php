@@ -30,6 +30,8 @@ return [
 		'archive' => [ 'eqiad', 'codfw' ],
 		'weighted_tags' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	],
+	// wikitech is not using kafka (T192361) should be re-evaluated when T237773 is adressed
+	'labswiki' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	'private' => [ 'eqiad', 'codfw' ],
 ],
 
@@ -1230,5 +1232,14 @@ return [
 ],
 'wgCirrusSearchUseEventBusBridge' => [
 	'default' => true,
+],
+'wgCirrusSearchIndexFieldsToCleanup' => [
+	// https://phabricator.wikimedia.org/P63465#254682
+	'default' => [
+		'ores_articletopic',
+		'ores_drafttopics',
+		'version_type',
+		'ores_articletopics'
+	]
 ],
 ];

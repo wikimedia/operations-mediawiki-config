@@ -61,9 +61,9 @@ if ( $wmgRealm == 'labs' ) {
 		'suggestChangeOnLogin' => false,
 	];
 
-	// Enforce password policy when users login on other wikis; also for sensitive global groups
-	// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 	if ( $wmgUseCentralAuth ) {
+		// Enforce password policy when users login on other wikis; also for sensitive global groups
+		// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 		$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
 			$privilegedGroups = wmfGetPrivilegedGroups( $user );
 			if ( $privilegedGroups ) {
@@ -77,6 +77,16 @@ if ( $wmgRealm == 'labs' ) {
 			}
 			return true;
 		};
+
+		// Allows automatic account vanishing (for qualifying users)
+		$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
+		$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
+
+		// Configuration for guidance given to blocked users when requesting vanishing
+		$wgCentralAuthBlockAppealWikidataIds = [ "Q13360396", "Q175291" ];
+		$wgCentralAuthWikidataApiUrl = "https://www.wikidata.org/w/api.php";
+		$wgCentralAuthFallbackAppealUrl = "https://en.wikipedia.org/wiki/Wikipedia:Appealing_a_block";
+		$wgCentralAuthFallbackAppealTitle = "Wikipedia:Appealing a block";
 	}
 
 	$wgLocalVirtualHosts = [
@@ -91,6 +101,7 @@ if ( $wmgRealm == 'labs' ) {
 		'meta.wikimedia.beta.wmflabs.org',
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
+		'sso.wikimedia.beta.wmflabs.org',
 		'wikifunctions.beta.wmflabs.org',
 
 		// new wmcloud instances
@@ -258,7 +269,7 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseMath ) {
-		$wgMathValidModes = [ 'source', 'mathml', 'native' ];
+		$wgMathValidModes = [ 'source', 'mathml', 'native', 'mathjax' ];
 		$wgDefaultUserOptions[ 'math' ] = 'mathml';
 		$wgMathEnableFormulaLinks = true;
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
@@ -492,21 +503,9 @@ if ( $wmgRealm == 'labs' ) {
 		wfLoadExtension( 'ReportIncident' );
 	}
 
-	// IP Masking
-	// NOTE: This is here to ensure temp accounts behave as temp accounts on all wikis. Autocreation of temp
-	// accounts for wikis where IP Masking is not enabled is disabled in an if below.
-
+	// IP Masking / Temporary accounts
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
-
-	if ( $wmgEnableIPMasking ) {
-		$wgGroupPermissions['temp']['edit'] = true;
-		$wgAutoCreateTempUser['enabled'] = true;
-		// T357586
-		$wgImplicitGroups[] = 'temp';
-	} else {
-		$wgAutoCreateTempUser['enabled'] = false;
-	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
@@ -519,5 +518,10 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
+
+	// HACK for T370517: map this Codex message until this Codex i18n bug is fixed
+	$wgHooks['MessageCacheFetchOverrides'][] = static function ( &$keys ) {
+		$keys['cdx-search-input-search-button-label'] = 'searchbutton';
+	};
 }
 // end safeguard

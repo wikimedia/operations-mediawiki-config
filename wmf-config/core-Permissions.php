@@ -1063,6 +1063,7 @@ return [
 	'+foundationwiki' => [
 		'*' => [
 			'edit' => false,
+			'unfuzzy' => false, // T369979
 		],
 		'user' => [
 			'upload' => false,
@@ -1075,6 +1076,7 @@ return [
 			'reupload' => false,
 			'reupload-own' => false,
 			'reupload-shared' => false,
+			'unfuzzy' => true, // T369979
 		],
 		'translationadmin' => [
 			'edit-legal' => true, // T346187
@@ -1119,6 +1121,7 @@ return [
 			'deletedtext' => true,
 		], // T23044
 		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
+		'interface-admin' => [ 'editcontentmodel' => true ], // T369113
 	],
 	'+frwikibooks' => [
 		'patroller' => [
@@ -5240,6 +5243,7 @@ return [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'confirmed', 'flood', 'editor' ],
+		'bureaucrat' => [ 'sysop' ], // T370097
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780

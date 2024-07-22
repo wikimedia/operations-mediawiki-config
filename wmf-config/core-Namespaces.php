@@ -850,6 +850,10 @@ return [
 	'+incubatorwiki' => [
 		'I' => NS_PROJECT,
 	],
+	'+inhwiki' => [
+		'Моартал' => 100, // T326089
+		'Моарталах_къамаьл' => 101 // T326089
+	],
 	'+iswikisource' => [
 		'Portal' => 100, // T46164
 		'Portal_talk' => 101, // T46164
@@ -938,6 +942,10 @@ return [
 	],
 	'+kawikiquote' => [
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
+	],
+	'+kawikisource' => [ // T363243
+		'Author' => 102,
+		'Author_talk' => 103,
 	],
 	'+kbdwiktionary' => [
 		'Appendix' => 100,
@@ -1161,6 +1169,12 @@ return [
 	],
 	'+mswikibooks' => [
 		'Perbualan_Resipi' => 101,
+	],
+	'+mswikisource' => [ // T369047
+		'Translation' => 114,
+		'Translation_talk' => 115,
+		'Author' => 102,
+		'Author_talk' => 103,
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
@@ -2773,6 +2787,10 @@ return [
 		100 => 'Portal',
 		101 => 'Pembicaraan_Portal'
 	],
+	'inhwiki' => [
+		100 => 'Моартал',
+		101 => 'Моарталах_къамаьл'
+	], // T326089
 	'iswiki' => [
 		100 => 'Gátt',
 		101 => 'Gáttaspjall'
@@ -3425,6 +3443,10 @@ return [
 		102 => 'Panganggit', // T286241 - Author
 		103 => 'Parembugan_Panganggit', // T286241 - Author talk
 	],
+	'kawikisource' => [ // T363243
+		102 => 'ავტორი',
+		103 => 'ავტორის_განხილვა',
+	],
 	'knwikisource' => [ // T39676
 		100 => 'ಸಂಪುಟ', // Portal
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
@@ -3466,6 +3488,12 @@ return [
 		101 => 'दालन_चर्चा', // Portal talk
 		102 => 'साहित्यिक', // Author
 		103 => 'साहित्यिक_चर्चा', // Author talk
+	],
+	'mswikisource' => [ // T369047
+		102 => 'Pengarang', // Author
+		103 => 'Perbincangan_pengarang', // Author talk
+		114 => 'Terjemahan', // Translation
+		115 => 'Perbincangan_terjemahan', // Translation talk
 	],
 	'napwikisource' => [
 		102 => 'Autore', // Author
@@ -5302,6 +5330,7 @@ return [
 	'abwiki' => 'Авикипедиа',
 	'advisorywiki' => 'Project',
 	'adywiki' => 'Википедие', // T125501
+	'aewikimedia' => 'Wikimedia_UAE',
 	'amwiki' => 'ውክፔዲያ',
 	'altwiki' => 'Википедия',
 	'anwiktionary' => 'Biquizionario', // T130599
@@ -5567,6 +5596,7 @@ return [
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
+	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
@@ -5651,6 +5681,7 @@ return [
 	'mrwikisource' => 'विकिस्रोत',
 	'mrwiktionary' => 'विक्शनरी',
 	'mswikibooks' => 'Wikibuku', // T368003
+	'mswikisource' => 'Wikisumber', // T369047
 	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',

@@ -152,6 +152,7 @@ return [
 	'zh_yuewiki' => 'yue',
 
 	# Chapter wikis (xxwikimedia)
+	'aewikimedia' => 'en',
 	'amwikimedia' => 'hy',
 	'arwikimedia' => 'es',
 	'bdwikimedia' => 'bn',
@@ -301,6 +302,7 @@ return [
 	'default' => 'UTC',
 
 	'acewiki' => 'Asia/Jakarta', // T205693
+	'aewikimedia' => 'Asia/Dubai',
 	'amiwiki' => 'Asia/Taipei',
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
@@ -866,6 +868,7 @@ return [
 	'default' => '/wiki/$1',
 ],
 
+// when using the SSO domain, this will be overridden in CommonSettings.php
 # wgServer @{
 'wgServer' => [
 	// Projects
@@ -972,6 +975,7 @@ return [
 # @} end of wgServer
 
 // This is the same as wgServer but with a protocol, so if wgServer is //foo.com this must be https://foo.com
+// when using the SSO domain, this will be overridden in CommonSettings.php
 # wgCanonicalServer @{
 'wgCanonicalServer' => [
 	// Projects
@@ -988,6 +992,7 @@ return [
 	// Individual wikis
 	'advisorswiki' => 'https://advisors.wikimedia.org',
 	'advisorywiki' => 'https://advisory.wikimedia.org',
+	'aewikimedia' => 'https://ae.wikimedia.org',
 	'amwikimedia' => 'https://am.wikimedia.org',
 	'apiportalwiki' => 'https://api.wikimedia.org',
 	'arbcom_itwiki' => 'https://wikipedia-it-arbcom.wikimedia.org',
@@ -1102,6 +1107,7 @@ return [
 	'advisorswiki' => 'Advisors',
 	'advisorywiki' => 'Advisory Board',
 	'adywiki' => 'Википедие', // T125501
+	'aewikimedia' => 'Wikimedia United Arab Emirates',
 	'amwikimedia' => 'Վիքիմեդիա Հայաստան', // T176042
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
@@ -1152,6 +1158,7 @@ return [
 	'bewikimedia' => 'Wikimedia Belgium',
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік',
+	'bewwiki' => 'Wikipédi',
 	'bgwiki' => 'Уикипедия',
 	'bgwikibooks' => 'Уикикниги',
 	'bgwikinews' => 'Уикиновини',
@@ -1346,6 +1353,7 @@ return [
 	'idwiktionary' => 'Wikikamus', // T341175
 	'id_internalwikimedia' => 'Wikimedia Indonesia (internal)',
 	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
+	'iglwiki' => 'Wikipídiya',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Wikimedia Incubator',
 	'inhwiki' => 'Википеди',
@@ -1370,6 +1378,7 @@ return [
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
+	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
@@ -1395,6 +1404,7 @@ return [
 	'krcwiki' => 'Википедия',
 	'kswiki' => 'وِکیٖپیٖڈیا', // T289752
 	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
+	'kuswiki' => 'Wikipiidia',
 	'kuwiki' => 'Wîkîpediya',
 	'kuwiktionary' => 'Wîkîferheng', // T29878
 	'kywiki' => 'Википедия', // T309866
@@ -1447,12 +1457,14 @@ return [
 	'mrwikibooks' => 'विकिबुक्स', // T104132
 	'mrwikisource' => 'विकिस्रोत',
 	'mswikibooks' => 'Wikibuku', // T368003
+	'mswikisource' => 'Wikisumber', // T369047
 	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',
 	'mxwikimedia' => 'Wikimedia México',
 	'mywiki' => 'ဝီကီပီးဒီးယား', // T123191
+	'mywikisource' => 'ဝီကီရင်းမြစ်',
 	'mywiktionary' => 'ဝစ်ရှင်နရီ', // T187882
 	'myvwiki' => 'Википедиясь',
 	'mznwiki' => 'ویکی‌پدیا',
@@ -2408,11 +2420,18 @@ return [
 		'logged_out' => false,
 		'beta' => true,
 	],
-	'testwiki' => [
-		'logged_in' => false,
+	'skin-themes-wikipedias-disabled' => [
 		'logged_out' => false,
-		'beta' => true,
-	]
+		'logged_in' => true,
+		// Important to disable this to disable the beta feature
+		'beta' => false,
+	],
+	'skin-themes' => [
+		'logged_out' => true,
+		'logged_in' => true,
+		// Important to disable this to disable the beta feature
+		'beta' => false,
+	],
 ],
 
 // Increase font size on Vector 2022 from 14px to 16px
@@ -2433,7 +2452,8 @@ return [
 	'wikipedia' => [
 		'logged_in' => true,
 		'logged_out' => true,
-		'beta' => true,
+		// Important to disable this to disable the beta feature
+		'beta' => false,
 	],
 ],
 
@@ -3313,6 +3333,7 @@ return [
 	// Specific wikis
 
 	// chapter wikis
+	'aewikimedia' => [ 'w', 'meta' ],
 	'azwikimedia' => [ 'w', 'meta' ],
 	'bdwikimedia' => [ 'w:bn', 'w:en', 'c' ], // T154990
 	'bewikimedia' => [ 'meta' ],
@@ -4209,6 +4230,10 @@ return [
 		'Unwatchedpages',
 		'Withoutinterwiki',
 	],
+	'+commonswiki' => [
+		'Uncategorizedcategories' => 'monthly',
+		'Mostlinkedtemplates' => 'monthly',
+	],
 ],
 # @} end of wgDisableQueryPageUpdate
 
@@ -4795,6 +4820,7 @@ return [
 
 'wgCollectionDisableSidebarLink' => [
 	'default' => false,
+	'dewiki' => true, // T368900
 	'enwiki' => true, // T241683
 	'fawiki' => true, // T303173
 	'fiwiki' => true, // T257073
@@ -5825,7 +5851,7 @@ return [
 
 // T361013
 'wgLinterParseOnDerivedDataUpdate' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgLinterStatsdSampleFactor' => [
@@ -6543,6 +6569,10 @@ return [
 	'iswiki' => 'uca-is', // T58859
 	'iswiktionary' => 'identity', // T32722
 	'itwiki' => 'uca-it-u-kn', // T136647, T146675
+	'kuwiki' => 'uca-ku-u-kn', // T48235
+	'kuwiktionary' => 'uca-ku-u-kn', // T48235
+	'kuwikibooks' => 'uca-ku-u-kn', // T48235
+	'kuwikiquote' => 'uca-ku-u-kn', // T48235
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
 	'mkwiki' => 'uca-mk-u-kn', // T26953
@@ -6858,9 +6888,32 @@ return [
 
 // ----------- CheckUser end ----------
 
+// n.b. If setting this to `false` for a wiki, please also update the
+// relevant wiki entry to `true` in `wmgDisableIPMasking`
+'wmgEnableIPMasking' => [
+	'default' => false,
+	'testwiki' => true, // T348895
+	'loginwiki' => true, // T348895
+],
+
+// Use this if temporary accounts were enabled on a wiki but need quick disabling.
+// It allows existing temporary accounts to be recognized as temporary accounts,
+// but will prevent new temporary account creations and re-allow anonymous IP editing
+// until temporary accounts are enabled again (T356524).
+// n.b. If setting this to `true` for a wiki, please also update the
+// relevant wiki entry to `false` in `wmgEnableIPMasking`
+'wmgDisableIPMasking' => [
+	'default' => false,
+],
+
 // IPInfo extension
 'wmgUseIPInfo' => [
 	'default' => true, // T260597
+],
+
+'wmgUseIPReputation' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wmgUseIncubator' => [
@@ -6956,6 +7009,7 @@ return [
 
 'wmgUseMobileFrontend' => [
 	'default' => true,
+	'wikifunctionswiki' => false, // T349408
 ],
 
 'wgMFQueryPropModules' => [
@@ -7654,6 +7708,7 @@ return [
 'wgFlowReadOnly' => [
 	'default' => false,
 	'commonswiki' => true,
+	'testwiki' => true, // T370322
 ],
 
 'wmgFlowNamespaces' => [
@@ -8368,7 +8423,7 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'azb', 'bcl', 'bn', 'bh', 'fa', 'ff', 'hi', 'ig', 'is', 'ko', 'ks', 'min', 'sat' ],
+	'wikipedia' => [ 'ace', 'ast', 'azb', 'bcl', 'bn', 'bjn', 'bh', 'crh', 'fa', 'ff', 'fon', 'hi', 'ig', 'is', 'ki', 'ko', 'ks', 'lmo', 'min', 'sat', 'ss', 'tn', 'vec' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
@@ -10062,8 +10117,9 @@ return [
 					'P180' => 1 * 0.07513802266010573,
 					// digital representation of
 					'P6243' => 1.1 * 0.07513802266010573,
-					// main subject of
-					'P921' => 1.1 * 0.07513802266010573,
+					// main subject of - arbitrary small value in case we *only* have a match in this field
+					// see T367774
+					'P921' => 0.0001,
 				],
 				'weighted_tags' => [
 					'image.linked.from.wikidata.p18/' => 2.342153943085914,
@@ -10112,8 +10168,9 @@ return [
 					'P180' => 1 * 0.11098311564161133,
 					// digital representation of
 					'P6243' => 1.1 * 0.11098311564161133,
-					// main subject of
-					'P921' => 1.1 * 0.11098311564161133,
+					// main subject of - arbitrary small value in case we *only* have a match in this field
+					// see T367774
+					'P921' => 0.0001,
 				],
 				'descriptions.$language' => 0.019320230186222098,
 				'descriptions.$language.plain' => 0,
@@ -10154,8 +10211,9 @@ return [
 					'P180' => 1 * 0.11098311564161133,
 					// digital representation of
 					'P6243' => 1.1 * 0.11098311564161133,
-					// main subject
-					'P921' => 1.1 * 0.11098311564161133,
+					// main subject of - arbitrary small value in case we *only* have a match in this field
+					// see T367774
+					'P921' => 0.0001,
 				],
 				'descriptions.$language' => 0.019320230186222098,
 				'descriptions.$language.plain' => 0,
@@ -10687,7 +10745,7 @@ return [
 ],
 
 'wgGlobalBlockingAllowGlobalAccountBlocks' => [
-	'default' => false, // T356924, T356923
+	'default' => true, // T356924, T356923
 	'wikitech' => false,
 	'fishbowl' => false,
 	'private' => false,
@@ -10960,133 +11018,17 @@ return [
 'wmgUseQuickSurveys' => [
 	'default' => false,
 	'cawiki' => true,
-	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
-	'frwiki' => true,
 	'frwiktionary' => true,
-	'hiwiki' => true,
 	'huwiki' => true,
-	'idwiki' => true,
 	'nowiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
-	'default' => [],
-	'enwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.00182,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
-	'frwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.013334,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
-	'hiwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.428296,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
-	'idwiki' => [
-		// T362969 Remove on 2024-07-03
-		[
-			'name' => 'AutoModerator Patroller Workstream Survey',
-			'type' => 'external',
-			'questions' => [
-				[
-					'name' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'question' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-question',
-					'link' => 'ext-quicksurveys-automoderator-patroller-workstream-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive',
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative',
-				]
-			],
-			'audience' => [
-				'minEdits' => 500,
-				'anons' => false,
-				'registrationEnd' => '2024-01-01',
-			],
-			'privacyPolicy' => 'ext-quicksurveys-automoderator-patroller-workstream-external-privacy-policy',
-			'enabled' => true,
-			'coverage' => 0.101756,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
+	'default' => []
 ],
 
 // WikidataPageBanner extension (T98029)
@@ -11540,11 +11482,6 @@ return [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
-// T324907
-'wgCheckUserEventTablesMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 // T299421
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
@@ -11758,6 +11695,21 @@ return [
 	// WikimediaApiPortalOAuth makes cross-origin cookie-authenticated requests to meta
 	'metawiki' => true,
 	'default' => false,
+],
+
+'wgRestSandboxSpecs' => [
+	'default' => [],
+	// Enable for testing (T362006)
+	'testwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/coredev/v0/specs/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
@@ -12113,21 +12065,9 @@ return [
 'wmgUseCommunityConfiguration' => [
 	// NOTE: Do not enable without OK from the Growth team.
 	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'elwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'rowiki' => true,
-	'trwiki' => true,
-	'swwiki' => true,
-	'zhwiki' => true,
+	'growthexperiments' => true,
+	'dewiki' => false,
+	'frwiktionary' => false, // waiting on T369711
 ],
 
 // T361643
@@ -12162,6 +12102,18 @@ return [
 			20707693 => 35818644,
 		],
 	],
+],
+
+// T20110
+'wgConfirmEditEnabledAbuseFilterCustomActions' => [
+	'default' => [],
+	'testwiki' => [ 'showcaptcha' ]
+],
+
+// T363587
+'wgEnableEventBusInstrumentation' => [
+	'default' => false,
+	'group0' => true,
 ],
 
 ];

@@ -46,6 +46,7 @@ class MWMultiVersion {
 		'flaggedrevs',
 		'small',
 		'skin-themes',
+		'skin-themes-wikipedias-disabled',
 		'legacy-vector',
 		'medium',
 		'wikimania',
@@ -96,6 +97,7 @@ class MWMultiVersion {
 	 * @var array
 	 */
 	private $wikimediaSubdomains = [
+		'ae',
 		'am',
 		'ar',
 		'az',
@@ -205,6 +207,21 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Create an instance for sso.wikimedia.org requests.
+	 *
+	 * For example:
+	 * <https://sso.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin>
+	 *
+	 * @param ?string $requestUri CGI path info, from `$_SERVER['REQUEST_URI']`.
+	 * @return MWMultiVersion
+	 */
+	public static function initializeForSsoDomain( $requestUri ) {
+		$instance = self::createInstance();
+		$instance->setSiteInfoForSsoDomain( $requestUri );
+		return $instance;
+	}
+
+	/**
 	 * Create an instance by `--wiki` CLI parameter.
 	 *
 	 * This is used by MWScript.php and the `mwscript` command for
@@ -271,15 +288,19 @@ class MWMultiVersion {
 	 * Create an instance for a web request, based on $_SERVER properties.
 	 * @param ?string $serverName HTTP host name from `$_SERVER['SERVER_NAME']`.
 	 * @param ?string $scriptName HTTP script name from `$_SERVER['SCRIPT_NAME']`.
-	 * @param string $pathInfo CGI path info, from `$_SERVER['PATH_INFO']`.
+	 * @param ?string $pathInfo CGI path info, from `$_SERVER['PATH_INFO']`.
+	 * @param ?string $requestUri CGI request URI, from `$_SERVER['REQUEST_URI']`.
 	 * @return MWMultiVersion
 	 */
-	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo ) {
+	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri ) {
 		if ( $scriptName === '/w/thumb.php'
 			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' )
 		) {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
+		} elseif ( $serverName === 'sso.wikimedia.org' || $serverName === 'sso.wikimedia.beta.wmflabs.org' ) {
+			// SSO URL hit. The condition here must match the one in CommonSettings.php where $wmgPathPrefix is set.
+			return self::initializeForSsoDomain( $requestUri );
 		} else {
 			// Regular URL hit (wiki of origin)...
 			return self::initializeForWiki( $serverName );
@@ -365,7 +386,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize object state from a upload.wikimedia.org request path.
+	 * Initialize object state from an upload.wikimedia.org request path.
 	 *
 	 * @param string $pathInfo
 	 */
@@ -376,6 +397,35 @@ class MWMultiVersion {
 		}
 		[ , $site, $lang ] = $pathBits;
 		$this->loadDBFromSite( $site, $lang );
+	}
+
+	/**
+	 * Initialize object state from an sso.wikimedia.org request path.
+	 *
+	 * @param ?string $requestUri
+	 * @return void
+	 */
+	private function setSiteInfoForSsoDomain( $requestUri ) {
+		$pathBits = explode( '/', $requestUri, 3 );
+		if ( count( $pathBits ) < 3 ) {
+			self::error( "Invalid request URI (requestUri=" . $requestUri . "), can't determine language.\n" );
+		}
+		[ , $serverName, ] = $pathBits;
+		$this->setSiteInfoForWiki( $serverName );
+	}
+
+	/**
+	 * Returns true if the supplied version string has an acceptable format.
+	 *
+	 * @param string $version
+	 * @return bool
+	 */
+	private function validVersion( $version ) {
+		// Examples of expected inputs: 1.43.0-wmf.3, master, next, branch_cut_pretest
+		// Rules:
+		// * Must begin with alphanum.
+		// * Remaining chars can be alphanum, dash or dot
+		return preg_match( "/^[0-9a-z][0-9a-z.-]*$/i", $version );
 	}
 
 	/**
@@ -410,9 +460,13 @@ class MWMultiVersion {
 
 		if ( isset( $argv[3] ) && $argv[3] === '--force-version' ) {
 			if ( !isset( $argv[4] ) ) {
-				self::error( "--force-version must be followed by a version number" );
+				self::error( "--force-version must be followed by a version number\n" );
 			}
-			$this->version = "php-" . $argv[4];
+			$version = $argv[4];
+			if ( !self::validVersion( $version ) ) {
+				self::error( "Invalid version format passed to --force-version: '$version'\n" );
+			}
+			$this->version = "php-" . $version;
 
 			# Delete the flag and its parameter so it won't be passed on to the
 			# maintenance script.
@@ -538,6 +592,20 @@ class MWMultiVersion {
 			self::error( "$phpFilename entry must start with `php-` (got `$version`).\n" );
 		}
 
+		if ( $version !== false ) {
+			// At this point we know there is an entry in wikiversions for the
+			// wiki.  If FORCE_MW_VERSION is set in the environment, we want to
+			// use that version instead of the one from wikiversions.
+			$force_version = getenv( 'FORCE_MW_VERSION' ) ?: '';
+			if ( $force_version ) {
+				if ( !self::validVersion( $force_version ) ) {
+					self::error( "Invalid version format in FORCE_MW_VERSION: '$force_version'\n" );
+				}
+				$this->version = "php-$force_version";
+				return;
+			}
+		}
+
 		$this->version = $version;
 	}
 
@@ -645,7 +713,8 @@ class MWMultiVersion {
 			$scriptName = @$_SERVER['SCRIPT_NAME'];
 			$serverName = @$_SERVER['SERVER_NAME'];
 			$pathInfo = @$_SERVER['PATH_INFO'];
-			$multiVersion = self::initializeFromServerData( $serverName, $scriptName, $pathInfo );
+			$requestUri = @$_SERVER['REQUEST_URI'];
+			$multiVersion = self::initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri );
 		} else {
 			$multiVersion = self::initializeFromDBName( $wiki );
 		}

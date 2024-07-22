@@ -80,6 +80,7 @@ function wmfGetOverrideSettings() {
 			'wikivoyage'     => 'Wikivoyage',
 		],
 
+		// when using the SSO domain, this will be overridden in CommonSettings.php
 		'-wgServer' => [
 			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
@@ -105,6 +106,7 @@ function wmfGetOverrideSettings() {
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
+		// when using the SSO domain, this will be overridden in CommonSettings.php
 		'-wgCanonicalServer' => [
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
 			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
@@ -455,10 +457,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgEchoPushServiceBaseUrl' => [
-			'default' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900/v1/message',
-		],
-
 		'wgEchoPushMaxSubscriptionsPerUser' => [
 			'default' => 10,
 		],
@@ -513,7 +511,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseMobileFrontend' => [
 			'default' => true,
-			'wikifunctionswiki' => false, // T349408
 		],
 
 		'wgWMEMobileWebUIActionsTracking' => [
@@ -623,6 +620,11 @@ function wmfGetOverrideSettings() {
 				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
 				'.wikivoyage.beta.wmcloud.org' => 'plwikivoyage',
 			],
+		],
+
+		// T370254
+		'wgCentralAuthEnableSul3' => [
+			'default' => 'query-flag'
 		],
 
 		//
@@ -805,6 +807,13 @@ function wmfGetOverrideSettings() {
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
+		],
+
+		'wmgUseIPReputation' => [
+			// This should always stay false, as the extension
+			// communicates with a production API (IPoid) that is available
+			// only via the internal network
+			'default' => false,
 		],
 
 		'wgIPInfoGeoLite2Prefix' => [
@@ -2231,6 +2240,14 @@ function wmfGetOverrideSettings() {
 			'fawiki' => true,
 		],
 
+		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
+		// It allows existing temporary accounts to be recognized as temporary accounts,
+		// but will prevent new temporary account creations and re-allow anonymous IP editing
+		// until temporary accounts are enabled again.
+		'wmgDisableIPMasking' => [
+			'default' => false,
+		],
+
 		// T342858
 		'-wgEnableEditRecovery' => [
 			'default' => true,
@@ -2281,6 +2298,16 @@ function wmfGetOverrideSettings() {
 		'wmgUseAutoModerator' => [ // T364034
 			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
 			'enwiki' => true,
+		],
+
+		// T363587
+		'wgEnableEventBusInstrumentation' => [
+			'default' => true,
+		],
+
+		// T20110
+		'wgConfirmEditEnabledAbuseFilterCustomActions' => [
+			'default' => [ 'showcaptcha' ]
 		],
 	];
 } # wmfGetOverrideSettings()

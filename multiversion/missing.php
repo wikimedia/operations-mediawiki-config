@@ -62,8 +62,11 @@ function wmfHandleMissingWiki() {
 		if ( isset( $_SERVER['PATH_INFO'] )
 			&& preg_match( '!^/(.*)$!', $_SERVER['PATH_INFO'], $m ) ) {
 			$page = $m[1];
+		} elseif ( isset( $_SERVER['REQUEST_URI'] ) && preg_match( '!^/wiki/(.*)$!', $_SERVER['REQUEST_URI'], $m ) ) {
+			// /wiki rewrite rule seems not to set PATH_INFO so check REQUEST_URI
+			$page = $m[1];
 		} else {
-			// Fall back to the Main page
+			// Fall back to title given as a query parameter, or the empty string (Main Page) otherwise
 			$page = $_GET['title'] ?? '';
 		}
 		$incubatorCode = $projects[$project] ?? null;

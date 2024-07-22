@@ -50,6 +50,7 @@ $wgLBFactoryConf = [
 	'testcommonswiki' => 's4',
 
 	# s5: dewiki and some other wikis
+	'aewikimedia'   => 's5',
 	'altwiki'       => 's5',
 	'amiwiki'       => 's5',
 	'anpwiki'       => 's5',

@@ -160,9 +160,9 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider provideInitializeFromServerData
 	 */
-	public function testInitializeFromServerData( $serverName, $scriptName, $pathInfo, $expectedDb ) {
+	public function testInitializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri, $expectedDb ) {
 		try {
-			$multiversion = MWMultiversion::initializeFromServerData( $serverName, $scriptName, $pathInfo );
+			$multiversion = MWMultiversion::initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri );
 			$this->assertSame( $expectedDb, $multiversion->getDatabase() );
 		} catch ( MWMultiVersionException $e ) {
 			$this->assertFalse( $expectedDb );
@@ -171,17 +171,26 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
 	public function provideInitializeFromServerData() {
 		return [
-			[ 'en.wikipedia.org', '/w/index.php', '/wiki/Main_Page', 'enwiki' ],
-			[ 'en.wikipedia.org', '/w/api.php', '/w/api.php', 'enwiki' ],
-			[ 'en.wiktionary.org', '/w/index.php', '/wiki/Main_Page', 'enwiktionary' ],
-			[ 'boardgovcom.wikimedia.org', '/w/index.php', '/wiki/Main_Page', 'boardgovcomwiki' ],
-			[ 'en.wikipedia.beta.wmflabs.org', '/w/index.php', '/wiki/Main_Page', 'enwiki' ],
-			[ 'example.org', '/w/index.php', '/wiki/Main_Page', false ],
+			[ 'en.wikipedia.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
+			[ 'en.wikipedia.org', '/w/api.php', '', '/w/api.php', 'enwiki' ],
+			[ 'en.wiktionary.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiktionary' ],
+			[ 'boardgovcom.wikimedia.org', '/w/index.php', '', '/wiki/Main_Page', 'boardgovcomwiki' ],
+			[ 'en.wikipedia.beta.wmflabs.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
+			[ 'example.org', '/w/index.php', '', '/wiki/Main_Page', false ],
 
-			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png', 'commonswiki' ],
-			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
-			[ 'upload.wikimedia.beta.wmflabs.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
-			[ 'upload.wikimedia.org', '/w/thumb.php', '/', false ],
+			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png',
+				'/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png', 'commonswiki' ],
+			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
+				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
+			[ 'upload.wikimedia.beta.wmflabs.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
+				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
+			[ 'upload.wikimedia.org', '/w/thumb.php', '/', '/', false ],
+
+			[ 'sso.wikimedia.org', '/w/index.php', '', '/en.wikipedia.org/wiki/Special:Userlogin', 'enwiki' ],
+			[ 'sso.wikimedia.org', '/w/index.php', '', '/de.wiktionary.org/wiki/Special:Userlogin', 'dewiktionary' ],
+			[ 'sso.wikimedia.beta.wmflabs.org', '/w/index.php', '',
+				'/en.wikipedia.beta.wmflabs.org/wiki/Special:Userlogin', 'enwiki' ],
+			[ 'sso.wikimedia.org', '/w/index.php', '', '/', false ],
 		];
 	}
 

@@ -123,6 +123,7 @@ $wmgHostnames = [];
 switch ( $wmgRealm ) {
 	case 'labs':
 		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['sso']           = 'sso.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
@@ -131,6 +132,7 @@ switch ( $wmgRealm ) {
 	case 'production':
 	default:
 		$wmgHostnames['meta']          = 'meta.wikimedia.org';
+		$wmgHostnames['sso']           = 'sso.wikimedia.org';
 		$wmgHostnames['test']          = 'test.wikipedia.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.org';
 		$wmgHostnames['wikidata']      = 'www.wikidata.org';
@@ -263,6 +265,7 @@ $wgLocalVirtualHosts = [
 	'www.wikidata.org',
 	'test.wikidata.org',
 	'api.wikimedia.org',
+	'ae.wikimedia.org',
 	'ar.wikimedia.org',
 	'az.wikimedia.org',
 	'bd.wikimedia.org',
@@ -289,6 +292,7 @@ $wgLocalVirtualHosts = [
 	'ru.wikimedia.org',
 	'se.wikimedia.org',
 	'species.wikimedia.org',
+	'sso.wikimedia.org',
 	'test-commons.wikimedia.org',
 	'tr.wikimedia.org',
 	'ua.wikimedia.org',
@@ -499,19 +503,56 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 # ResourceLoader settings
 # ######################################################################
 
-$wgInternalServer = $wgCanonicalServer;
-$wgArticlePath = '/wiki/$1';
+// The extra path segment used on sso.wikimedia.org, which is a shared domain
+// used by all SUL wikis. (T363695) E.g. when the current request is for
+// https://sso.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin,
+// this will be '/en.wikipedia.org'. Empty when the current request is not
+// for sso.wikimedia.org (which also allows it to be used later in this file
+// as a feature flag).
+$wmgSsoPathPrefix = '';
 
-$wgScriptPath  = '/w';
+// This must match the condition at MWMultiVersion::initializeFromServerData()
+if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['sso'] ) {
+	// Fail hard if the current wiki is not a SUL wiki - it's not a security
+	// risk since their normal authentication is applied, but extra defense in
+	// depth never hurts.
+	// Further defense in depth will happen in the CentralAuth extension.
+	if ( !$wmgUseCentralAuth ) {
+		print "sso.wikimedia.org can only be used for SUL wikis\n";
+		exit( 1 );
+	}
+
+	// Do this before updating $wgScriptPath and $wgCanonicalServer when we are
+	// on sso.wikimedia.org. We want ResourceLoader to use the standard URL
+	// regardless to avoid an unnecessary cache split.
+	$wgLoadScript = "{$wgCanonicalServer}{$wgScriptPath}/load.php";
+	$wmgSsoPathPrefix = '/' . parse_url( $wgCanonicalServer, PHP_URL_HOST );
+
+	// Override $wgServer, $wgCanonicalServer, and (below) $wgArticlePath,
+	// $wgScriptPath and $wgResourceBasePath for sso.wikimedia.org which might
+	// be using the configuration of any SUL wiki.
+	//
+	// Note that we don't override $wgConf->settings[...][$wgDBname].
+	// If anything uses that, chances are it's for some sort of external link for
+	// which it's better to use the canonical domain name of the current wiki.
+	$wgServer = '//' . $wmgHostnames['sso'];
+	$wgCanonicalServer = 'https://' . $wmgHostnames['sso'];
+} else {
+	$wgLoadScript = "{$wgScriptPath}/load.php";
+}
+
+$wgInternalServer = $wgCanonicalServer;
+$wgArticlePath = "{$wmgSsoPathPrefix}/wiki/\$1";
+
+$wgScriptPath  = "{$wmgSsoPathPrefix}/w";
 $wgScript = "{$wgScriptPath}/index.php";
-$wgLoadScript = "{$wgScriptPath}/load.php";
 
 // Don't include a hostname in $wgResourceBasePath and friends
 // - Goes wrong otherwise on mobile web (T106966, T112646)
 // - Improves performance by leveraging HTTP/2
 // - $wgLocalStylePath MUST be relative
 // Apache rewrites /w/resources, /w/extensions, and /w/skins to /w/static.php (T99096)
-$wgResourceBasePath = '/w';
+$wgResourceBasePath = "{$wmgSsoPathPrefix}/w";
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
@@ -933,6 +974,7 @@ if ( $wmgUseCORS ) {
 		'spcom.wikimedia.org',
 		'species.wikimedia.org',
 		'species.m.wikimedia.org',
+		// sso.wikimedia.org omitted to keep its functionality minimal
 		'steward.wikimedia.org',
 		'steward.m.wikimedia.org',
 		'strategy.wikimedia.org',
@@ -1939,7 +1981,20 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
+	$wgCentralAuthSsoUrlPrefix = "https://{$wmgHostnames['sso']}/"
+		. preg_replace( '!^(https?:)?//!', '', $wgServer )
+		. '/';
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
+
+	// T363695: When using the shared sso.wikimedia.org domain, ignore normal cookie domain settings,
+	// use cookie names that are the same for every wiki, and don't try to do central login or autologin.
+	if ( $wmgSsoPathPrefix ) {
+		$wgCentralAuthCookieDomain = '';
+		$wgCookiePrefix = 'sso';
+		$wgSessionName = 'ssoSession';
+		$wgCentralAuthLoginWiki = null;
+		$wgCentralAuthAutoLoginWikis = [];
+	}
 
 	// Temporary fix for T350695: when setting a CentralAuth cookie without a 'domain' cookie attribute,
 	// clear pre-existing cookies with a domain attribute.
@@ -2037,6 +2092,16 @@ if ( $wmgUseCentralAuth ) {
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => 'metawiki' ];
+
+	// Allows automatic account vanishing (for qualifying users)
+	$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
+	$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
+
+	// Configuration for guidance given to blocked users when requesting vanishing
+	$wgCentralAuthBlockAppealWikidataIds = [ "Q13360396", "Q175291" ];
+	$wgCentralAuthWikidataApiUrl = "https://www.wikidata.org/w/api.php";
+	$wgCentralAuthFallbackAppealUrl = "https://en.wikipedia.org/wiki/Wikipedia:Appealing_a_block";
+	$wgCentralAuthFallbackAppealTitle = "Wikipedia:Appealing a block";
 }
 
 // Config for GlobalCssJs
@@ -2205,6 +2270,15 @@ $wgMaxShellTime = 50;  // seconds
 // If some misc server doesn't have the cgroup installed, you can create it
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
+
+// Passed to Shellbox
+// Videoscalers get 1d, others get 1min.
+// This must be the same as the timeouts in shellbox deployment charts.
+if ( ClusterConfig::getInstance()->isAsync() && strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+	$wgMaxShellWallClockTime = 24 * 60 * 60;  // seconds
+} else {
+	$wgMaxShellWallClockTime = 60;  // seconds
+}
 
 switch ( $wmgRealm ) {
 	case 'production':
@@ -2763,6 +2837,8 @@ if ( $wmgIncreaseDefaultVectorFontSize ) {
 		[ 0, [ CUDCOND_NAMED ] ]
 	];
 }
+
+$wgDefaultUserOptions['vector-theme'] = 'day';
 
 // Enable this everywhere except where GeoData isn't available
 $wgMFNearby = $wmgEnableGeoData;
@@ -3695,6 +3771,7 @@ if ( $wmgUseGraph ) {
 	// Note this still uses messages from E:Graph, which are available
 	// as long as it is in wmf-config/extension-list.
 	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';
+	$wgHooks['ParserAfterParse'][] = 'wmfInstrumentGraphDataSources';
 	$wgTrackingCategories[] = 'graph-tracking-category';
 	$wgTrackingCategories[] = 'graph-disabled-category';
 
@@ -3703,14 +3780,58 @@ if ( $wmgUseGraph ) {
 	}
 
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
+		// Add tracking categories
 		$parser->addTrackingCategory( 'graph-tracking-category' );
 		$parser->addTrackingCategory( 'graph-disabled-category' );
+
+		// Track data sources used by this graph
+		$parseResult = \MediaWiki\Json\FormatJson::parse(
+			$input,
+			\MediaWiki\Json\FormatJson::TRY_FIXING | \MediaWiki\Json\FormatJson::STRIP_COMMENTS
+		);
+		if ( $parseResult->isGood() ) {
+			$parsed = $parseResult->getValue();
+			$sources = [];
+			foreach ( (array)( $parsed->data ?? [] ) as $dataEntry ) {
+				$source = '';
+				if ( isset( $dataEntry->url ) ) {
+					$source = $dataEntry->url;
+				} elseif ( isset( $dataEntry->values ) ) {
+					$source = 'inline:';
+					if ( is_array( $dataEntry->values ) ) {
+						$source .= count( $dataEntry->values );
+					} elseif ( is_string( $dataEntry->values ) ) {
+						$source .= count( explode( "\n", $dataEntry->values ) );
+					} else {
+						$source .= 'unknown'; // T369600
+					}
+				}
+				if ( isset( $dataEntry->transform ) ) {
+					$source = "transformed:$source";
+				}
+				$sources[] = $source;
+			}
+			if ( $sources ) {
+				$parser->getOutput()->appendExtensionData( 'graph-data-sources', implode( "\n", $sources ) );
+			}
+		}
+
+		// Return the placeholder message, if there is one
 		$msg = $parser->msg( 'graph-disabled' );
 		if ( $msg->isDisabled() ) {
 			return '';
 		} else {
 			return $msg->parseAsBlock();
 		}
+	}
+
+	function wmfInstrumentGraphDataSources( Parser $parser ) {
+		$graphData = $parser->getOutput()->getExtensionData( 'graph-data-sources' );
+		if ( !$graphData ) {
+			return;
+		}
+		$sources = array_keys( $graphData );
+		$parser->getOutput()->setPageProperty( 'graph-data-sources', implode( "\n\n", $sources ) );
 	}
 }
 
@@ -3949,8 +4070,6 @@ if ( $wmgUseCheckUser ) {
 			'groups' => [ 'steward' ]
 		];
 	}
-	// T239288 - CheckUser logs pertaining to spam blacklist logged actions appear redacted
-	$wgCheckUserLogAdditionalRights[] = 'spamblacklistlog';
 }
 
 if ( $wmgUseIPInfo ) {
@@ -3975,7 +4094,30 @@ if ( $wmgUseIPInfo ) {
 	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
 }
 
-// Temporary accounts
+if ( $wmgUseIPReputation ) {
+	wfLoadExtension( 'IPReputation' );
+}
+
+// IP Masking / Temporary accounts
+
+// Unless otherwise specified, temporary accounts are disabled and not known about.
+$wgAutoCreateTempUser['enabled'] = false;
+$wgAutoCreateTempUser['known'] = false;
+
+if ( $wmgDisableIPMasking ) {
+	// Temporary accounts were previously enabled, then disabled as an emergency measure.
+	$wgAutoCreateTempUser['enabled'] = false;
+	$wgAutoCreateTempUser['known'] = true;
+} elseif ( $wmgEnableIPMasking ) {
+	// Ensure temporary accounts behave the same on all wikis where they are enabled.
+	$wgAutoCreateTempUser['enabled'] = true;
+	$wgAutoCreateTempUser['known'] = true;
+
+	$wgGroupPermissions['temp']['edit'] = true;
+
+	// T357586
+	$wgImplicitGroups[] = 'temp';
+}
 
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
@@ -4010,9 +4152,6 @@ $wgAutoCreateTempUser['matchPattern'] = '~2$1';
 // Start numbers at 1500 to avoid using any numbers defined in T337090 which are considered defamatory.
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric', 'offset' => 1500 ];
-
-// This is by default false, but enforcing it here in case the default is changed (T355880, T359043)
-$wgAutoCreateTempUser['enabled'] = false;
 
 // T39211
 $wgUseCombinedLoginLink = false;
