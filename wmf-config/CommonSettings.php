@@ -4070,27 +4070,6 @@ if ( $wmgUseCheckUser ) {
 	}
 }
 
-// IP Masking / Temporary accounts
-
-// Unless otherwise specified, temporary accounts are disabled and not known about.
-$wgAutoCreateTempUser['enabled'] = false;
-$wgAutoCreateTempUser['known'] = false;
-
-if ( $wmgDisableIPMasking ) {
-	// Temporary accounts were previously enabled, then disabled as an emergency measure.
-	$wgAutoCreateTempUser['enabled'] = false;
-	$wgAutoCreateTempUser['known'] = true;
-} elseif ( $wmgEnableIPMasking ) {
-	// Ensure temporary accounts behave the same on all wikis where they are enabled.
-	$wgAutoCreateTempUser['enabled'] = true;
-	$wgAutoCreateTempUser['known'] = true;
-
-	$wgGroupPermissions['temp']['edit'] = true;
-
-	// T357586
-	$wgImplicitGroups[] = 'temp';
-}
-
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
 	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
@@ -4117,7 +4096,26 @@ if ( $wmgUseIPReputation ) {
 	wfLoadExtension( 'IPReputation' );
 }
 
-// Temporary accounts
+// IP Masking / Temporary accounts
+
+// Unless otherwise specified, temporary accounts are disabled and not known about.
+$wgAutoCreateTempUser['enabled'] = false;
+$wgAutoCreateTempUser['known'] = false;
+
+if ( $wmgDisableIPMasking ) {
+	// Temporary accounts were previously enabled, then disabled as an emergency measure.
+	$wgAutoCreateTempUser['enabled'] = false;
+	$wgAutoCreateTempUser['known'] = true;
+} elseif ( $wmgEnableIPMasking ) {
+	// Ensure temporary accounts behave the same on all wikis where they are enabled.
+	$wgAutoCreateTempUser['enabled'] = true;
+	$wgAutoCreateTempUser['known'] = true;
+
+	$wgGroupPermissions['temp']['edit'] = true;
+
+	// T357586
+	$wgImplicitGroups[] = 'temp';
+}
 
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
@@ -4152,9 +4150,6 @@ $wgAutoCreateTempUser['matchPattern'] = '~2$1';
 // Start numbers at 1500 to avoid using any numbers defined in T337090 which are considered defamatory.
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric', 'offset' => 1500 ];
-
-// This is by default false, but enforcing it here in case the default is changed (T355880, T359043)
-$wgAutoCreateTempUser['enabled'] = false;
 
 // T39211
 $wgUseCombinedLoginLink = false;
