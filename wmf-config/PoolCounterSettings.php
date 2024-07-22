@@ -81,6 +81,13 @@ $wgPoolCounterConf = [
 		'slots' => 8,
 		'maxqueue' => 100
 	],
+	// Can be expensive (T370621)
+	'GeoData_spatial_search' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 15,
+		'maxqueue' => 50
+	],
 	'SpecialContributions' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
