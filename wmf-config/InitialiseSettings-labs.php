@@ -2333,5 +2333,13 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+
+		// T369945
+		'wmgUseChart' => [
+			'default' => true,
+			'loginwiki' => false,
+			'private' => false,
+			'fishbowl' => false,
+		],
 	];
 } # wmfGetOverrideSettings()

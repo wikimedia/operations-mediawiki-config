@@ -12106,6 +12106,11 @@ return [
 'wgEnableProtectionIndicators' => [
 	'default' => false,
 	'azwiki' => true, // T371440
-]
+],
+
+// Not ready for production yet, see T369944
+'wmgUseChart' => [
+	'default' => false
+],
 
 ];
