@@ -1572,6 +1572,7 @@ if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
+	$wgGlobalBlockingCentralWiki = 'metawiki';
 }
 
 wfLoadExtension( 'TrustedXFF' );
