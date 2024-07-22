@@ -374,13 +374,12 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
-		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
-		$wgAbuseFilterNotifications = false;
+		$wgGroupPermissions['checkuser']['abusefilter-log-private'] = true; // T370605
 		break;
 	case 'nowiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
