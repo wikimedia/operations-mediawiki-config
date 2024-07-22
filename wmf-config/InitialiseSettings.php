@@ -8174,6 +8174,9 @@ return [
 	'trwiki' => [ // T356879
 		'userGroups' => [ 'translator' ]
 	],
+	'uzwiki' => [ // T370387
+		'userGroups' => [ 'patroller', 'sysop' ]
+	],
 	'viwiki' => [ // T299636
 		'userGroups' => [ 'extendedconfirmed', 'eliminator', 'sysop' ]
 	],
