@@ -594,12 +594,12 @@ class MWMultiVersion {
 
 		if ( $version !== false ) {
 			// At this point we know there is an entry in wikiversions for the
-			// wiki.  If MW_FORCE_VERSION is set in the environment, we want to
+			// wiki.  If FORCE_MW_VERSION is set in the environment, we want to
 			// use that version instead of the one from wikiversions.
-			$force_version = getenv( 'MW_FORCE_VERSION' ) ?: '';
+			$force_version = getenv( 'FORCE_MW_VERSION' ) ?: '';
 			if ( $force_version ) {
 				if ( !self::validVersion( $force_version ) ) {
-					self::error( "Invalid version format in MW_FORCE_VERSION: '$force_version'\n" );
+					self::error( "Invalid version format in FORCE_MW_VERSION: '$force_version'\n" );
 				}
 				$this->version = "php-$force_version";
 				return;
