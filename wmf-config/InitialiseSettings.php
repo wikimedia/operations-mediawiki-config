@@ -12143,8 +12143,7 @@ return [
 
 // T20110
 'wgConfirmEditEnabledAbuseFilterCustomActions' => [
-	'default' => [],
-	'testwiki' => [ 'showcaptcha' ]
+	'default' => [ 'showcaptcha' ],
 ],
 
 // T363587
