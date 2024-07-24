@@ -1979,8 +1979,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSsoUrlPrefix = "https://{$wmgHostnames['sso']}/"
-		. preg_replace( '!^(https?:)?//!', '', $wgServer )
-		. '/';
+		. preg_replace( '!^(https?:)?//!', '', $wgServer );
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
 	// T363695: When using the shared sso.wikimedia.org domain, ignore normal cookie domain settings,
