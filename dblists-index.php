@@ -188,6 +188,7 @@ return [
 'cswikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'cswikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'cswikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'cswikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'cswiktionary' => [ 'legacy-vector', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'cuwiki' => [ 'wikipedia', 'small', 'skin-themes-wikipedias-disabled', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'cvwiki' => [ 'wikipedia', 'skin-themes-wikipedias-disabled', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments' ],
