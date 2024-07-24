@@ -902,9 +902,6 @@ return [
 
 'wgGEUseCommunityConfigurationExtension' => [
 	'default' => true,
-	// NOTE: Do not enable without Growth team OK
-	'dewiki' => false,
-	'frwiktionary' => false, // waiting on T369711
 ],
 
 ];
