@@ -97,7 +97,7 @@ return [
 		],
 
 		### Kask
-		'sessionstore' => 'http://deployment-sessionstore04.deployment-prep.eqiad1.wikimedia.cloud:8080',
-		'echostore' => 'http://deployment-echostore02.deployment-prep.eqiad1.wikimedia.cloud:8080',
+		'sessionstore' => 'http://sessionstore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
+		'echostore' => 'http://echostore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 	],
 ];
