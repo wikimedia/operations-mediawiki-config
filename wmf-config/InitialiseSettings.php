@@ -11090,9 +11090,18 @@ return [
 'wgEnableEventBus' => [
 	'default' => 'TYPE_ALL',
 	'wikitech' => 'TYPE_PURGE', // T192361
-	'private' => 'TYPE_JOB',
+	'private' => 'TYPE_JOB|TYPE_EVENT',
 	'loginwiki' => 'TYPE_JOB|TYPE_PURGE',
 	'votewiki' => 'TYPE_JOB|TYPE_PURGE',
+],
+
+'wgEventBusStreamNamesMap' => [
+	'default' => [],
+	'private' => [
+		'mediawiki.page_change.v1' => 'mediawiki.page_change.private.v1',
+		'mediawiki.cirrussearch.page_rerender.v1' =>
+			'mediawiki.cirrussearch.page_rerender.private.v1',
+	],
 ],
 
 // Used to look up the event service URL in ProductionServices to which
