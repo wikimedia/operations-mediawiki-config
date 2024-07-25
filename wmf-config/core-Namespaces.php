@@ -5438,6 +5438,7 @@ return [
 	'cswikiquote' => 'Wikicitáty',
 	'cswikiversity' => 'Wikiverzita',
 	'cswikisource' => 'Wikizdroje',
+	'cswikivoyage' => 'Wikicesty',
 	'cswiktionary' => 'Wikislovník',
 	'cuwiki' => 'Википєдїꙗ',
 	'cvwiki' => 'Википеди',
@@ -5900,6 +5901,7 @@ return [
 	'bswiktionary' => 'Razgovor_s_Wikirječnikom',
 	'btmwiktionary' => 'Pembicaraan_Wikikamus',
 	'cuwiki' => 'Википєдїѩ_бєсѣда', // T123654
+	'cswikivoyage' => 'Diskuse_k_Wikicestám',
 	'elwikinews' => 'Βικινέα_συζήτηση',
 	'elwikiversity' => 'Συζήτηση_Βικιεπιστημίου',
 	'elwiktionary' => 'Συζήτηση_βικιλεξικού',

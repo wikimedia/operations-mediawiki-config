@@ -771,6 +771,7 @@ return [
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage.png',
+	'cswikivoyage' => '/static/images/project-logos/cswikivoyage.png',
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
 	'enwikivoyage' => '/static/images/project-logos/enwikivoyage.png',
 	'eowikivoyage' => '/static/images/project-logos/eowikivoyage.png',
@@ -1467,6 +1468,7 @@ return [
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage-1.5x.png',
+	'cswikivoyage' => '/static/images/project-logos/cswikivoyage-1.5x.png',
 	'enwikivoyage' => '/static/images/project-logos/enwikivoyage-1.5x.png',
 	'eowikivoyage' => '/static/images/project-logos/eowikivoyage-1.5x.png',
 	'eswikivoyage' => '/static/images/project-logos/eswikivoyage-1.5x.png', // T170604
@@ -2097,6 +2099,7 @@ return [
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage-2x.png',
+	'cswikivoyage' => '/static/images/project-logos/cswikivoyage-2x.png',
 	'enwikivoyage' => '/static/images/project-logos/enwikivoyage-2x.png',
 	'eowikivoyage' => '/static/images/project-logos/eowikivoyage-2x.png',
 	'eswikivoyage' => '/static/images/project-logos/eswikivoyage-2x.png', // T170604

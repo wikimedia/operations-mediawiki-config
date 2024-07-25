@@ -351,6 +351,7 @@ return [
 	'cnwikimedia' => 'Asia/Shanghai', // T98676
 	'cswiki' => 'Europe/Prague', // T73902
 	'cswikinews' => 'Europe/Prague', // T73902
+	'cswikivoyage' => 'Europe/Prague',
 	'cswiktionary' => 'Europe/Prague', // T115048
 	'csbwiki' => 'Europe/Warsaw',
 	'csbwiktionary' => 'Europe/Warsaw',
@@ -1206,6 +1207,7 @@ return [
 	'cnwikimedia' => '中国维基媒体用户组', // T98676
 	'collabwiki' => 'Collab',
 	'commonswiki' => 'Wikimedia Commons',
+	'cswikivoyage' => 'Wikicesty',
 	'testcommonswiki' => 'Test Wikimedia Commons',
 	'cowikimedia' => 'Wikimedia Colombia',
 	'crhwiki' => 'Vikipediya',

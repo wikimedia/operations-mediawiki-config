@@ -3752,6 +3752,8 @@ Wikivoyage:
     bnwikivoyage:
         commons_wordmark: 'File:Wikivoyage-wordmark-bn.svg'
         comment_wordmark: 'T196680, T298033'
+    cswikivoyage:
+        commons: 'File:Wikivoyage-Logo-v3-cs.svg'
     elwikivoyage:
         no_1_5x: true
         no_2x: true
