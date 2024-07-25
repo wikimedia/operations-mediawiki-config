@@ -526,14 +526,6 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 1, // T346106
 		],
 
-		// T266065
-		'wgMFUseDesktopSpecialWatchlistPage' => [
-			'default' => [
-				'base' => true,
-				'amc' => true,
-			],
-		],
-
 		'wgMFAmcOutreach' => [
 			'default' => true
 		],

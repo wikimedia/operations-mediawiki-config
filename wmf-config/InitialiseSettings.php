@@ -7188,13 +7188,16 @@ return [
 	],
 ],
 
-'wgMFUseDesktopSpecialWatchlistPage' => [
-	// T109277
+'wgMFUseDesktopSpecialEditWatchlistPage' => [
 	'default' => [
-		'base' => true,
-		'beta' => true,
+		'base' => false,
 		'amc' => true,
 	],
+	// T263633
+	'wikidatawiki' => [
+		'base' => true,
+		'amc' => true,
+	]
 ],
 
 'wgMFDisplayWikibaseDescriptions' => [
