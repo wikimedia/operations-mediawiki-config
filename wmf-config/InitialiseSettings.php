@@ -6147,6 +6147,9 @@ return [
 		'Book' => true, // T58001
 		'Draft' => true,
 	],
+	'+eswiki' => [
+		'Project' => true, // T370158
+	],
 	'+etwiki' => [
 		'Mustand' /* Draft */ => true, // T192254
 	],
