@@ -255,7 +255,7 @@ return [
 'eswiki' => [ 'wikipedia', 'skin-themes-wikipedias-disabled', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'eswikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'eswikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
-'eswikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1' ],
+'eswikiquote' => [ 'medium', 'wikidataclient', 'group1' ],
 'eswikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'eswikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'eswikivoyage' => [ 'small', 'wikidataclient', 'group1' ],
