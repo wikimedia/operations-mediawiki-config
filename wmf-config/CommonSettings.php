@@ -350,14 +350,19 @@ $wmgPCServers = $wmgLocalServices['parsercache-dbs'];
 // In production, read the database loadbalancer config and parsercache
 // section-to-server mapping from etcd.
 // See https://wikitech.wikimedia.org/wiki/Dbctl
-// This must be called after db-{eqiad,codfw}.php has been loaded!
+// This must be called after db-production.php has been loaded!
 // It overwrites a few sections of $wgLBFactoryConf with data from etcd.
 // In labs, the relevant key exists in etcd, but does not contain real data.
 // Only do this in production.
 if ( $wmgRealm === 'production' ) {
+	require __DIR__ . "/db-sections.php";
+
 	wmfApplyEtcdDBConfig( $wmgLocalDbConfig, $wgLBFactoryConf );
 	// Add the config callback
 	$wgLBFactoryConf['configCallback'] = $wmgLBFactoryConfigCallback;
+
+	// CentralAuth DB lives on s7 since it was created prior to x1
+	$wgLBFactoryConf['sectionsByDB']['centralauth'] = 's7';
 
 	// labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
 	// etcd out of the loop entirely for this one.
