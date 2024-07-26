@@ -370,6 +370,7 @@ return [
 	'dinwiki' => 'Africa/Juba',
 	'diqwiktionary' => 'Europe/Istanbul',
 	'dsbwiki' => 'Europe/Berlin',
+	'dtpwiki' => 'Asia/Kuching', // T371076
 	'dtywiki' => 'Asia/Kathmandu', // T161529
 	'dvwiki' => 'Indian/Maldives', // T48351
 	'dvwiktionary' => 'Indian/Maldives', // T48351
