@@ -4066,6 +4066,14 @@ if ( $wmgUseCheckUser ) {
 			'centralDB' => 'metawiki',
 			'groups' => [ 'steward' ]
 		];
+		if ( $wmgUseGlobalBlocking ) {
+			// Display the GlobalBlocking link to stewards when the GlobalBlocking extension is
+			// loaded on the wiki. GlobalBlocking will only load if CentralAuth is also loaded.
+			$wgCheckUserGBtoollink = [
+				'centralDB' => 'metawiki',
+				'groups' => [ 'steward' ],
+			];
+		}
 	}
 }
 
