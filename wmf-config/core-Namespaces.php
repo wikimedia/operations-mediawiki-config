@@ -1186,6 +1186,14 @@ return [
 		'Draft' => 118,
 		'Draft_talk' => 119,
 	],
+	'+mywikisource' => [ // T371060
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Author' => 102,
+		'Author_talk' => 103,
+		'Translation' => 114,
+		'Translation_talk' => 115,
+	],
 	'+mywiktionary' => [
 		'Appendix' => 100, // T291146
 		'Appendix_talk' => 101, // T291146
@@ -3495,6 +3503,14 @@ return [
 		103 => 'Perbincangan_pengarang', // Author talk
 		114 => 'Terjemahan', // Translation
 		115 => 'Perbincangan_terjemahan', // Translation talk
+	],
+	'mswikisource' => [ // T371060
+		100 => 'မုခ်ဝ', // Portal
+		101 => 'မုခ်ဝ_ဆွေးနွေးချက်', // Portal talk
+		102 => 'စာရေးသူ', // Author
+		103 => 'စာရေးသူ_ဆွေးနွေးချက်', // Author talk
+		114 => 'ဘာသာပြန်', // Translation
+		115 => 'ဘာသာပြန်_ဆွေးနွေးချက်', // Translation talk
 	],
 	'napwikisource' => [
 		102 => 'Autore', // Author
