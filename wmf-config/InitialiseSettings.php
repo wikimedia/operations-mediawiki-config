@@ -8428,7 +8428,7 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'ace', 'ast', 'azb', 'bcl', 'bn', 'bjn', 'bh', 'crh', 'fa', 'ff', 'fon', 'hi', 'ig', 'is', 'ki', 'ko', 'ks', 'lmo', 'min', 'sat', 'ss', 'tn', 'vec' ],
+	'wikipedia' => [ 'ace', 'ast', 'azb', 'bcl', 'bjn', 'bh', 'crh', 'ff', 'fon', 'ig', 'is', 'ki', 'ks', 'lmo', 'min', 'sat', 'ss', 'tn', 'vec' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
