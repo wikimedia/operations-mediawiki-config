@@ -2468,7 +2468,7 @@ return [
 			"pagetitles" => [],
 			"namespaces" => [ -1, 6, 14, 100, 710 ],
 			"querystring" => [
-				"action" => "submit|info|protect|delete|undelete|action|history",
+				"action" => "info|protect|delete|undelete|action|history",
 			],
 		],
 		"include" => []

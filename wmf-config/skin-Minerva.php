@@ -52,21 +52,43 @@ return [
 		'default' => [],
 	],
 	'wmgMinervaNightModeExcludeNamespaces' => [
-		// Initially night mode is disabled on everything except article page (T359183)
 		'default' => [
-			// The following is not intended to be complete, but should cover most untested namespaces
-			// that are needed for the first launch. The namespaces are documented at:
-			// https://www.mediawiki.org/wiki/Extension_default_namespaces
-			// LQT
-			90, 91, 92, 93,
+			// LQT: Thread
+			90,
+			// LQT: Summary
+			92,
 			// Portal
-			100, 101,
-			// Wikidata
-			120, 121, 122, 123, 124, 125, 146, 147,
-			// Meta wiki
-			200, 201, 202, 203, 206, 207,
-			// ProofReadPage
-			250, 251, 252, 253,
+			100,
+		],
+		'mediawikiwiki' => [
+			// LQT: Thread
+			90,
+			// LQT: Summary
+			92,
+		],
+		'metawiki' => [
+			// Grants
+			200,
+			// Research
+			202,
+			// Iberocoop
+			206,
+		],
+		'wikidatawiki' => [
+			// Item
+			120,
+			// Property
+			122,
+			// Query
+			124,
+			// Lexeme
+			146,
+		],
+	'wikisource' => [
+			// Page
+			250,
+			// Index
+			252,
 		],
 		// Allow us to reliably test all pages here.
 		'testwiki' => [],
