@@ -5910,11 +5910,15 @@ return [
 	'default' => false,
 	'wikitech' => true, // T355374
 	'officewiki' => true, // T355566
+	'enwikivoyage' => true, // T365367
+	'hewikivoyage' => true, // T365367
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
 	'officewiki' => true, // T355566
+	'enwikivoyage' => true, // T365367
+	'hewikivoyage' => true, // T365367
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
@@ -5927,7 +5931,7 @@ return [
 ],
 
 'wgParserMigrationUserNoticeDays' => [
-	'default' => 30,
+	'default' => 60,
 ],
 
 // -------------- Shared Parsoid end --------------
