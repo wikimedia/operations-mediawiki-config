@@ -196,7 +196,6 @@ return [
 	'htwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
-	'hywwiki' => true,
 	'iawiki' => true,
 	'idwiki' => true,
 	'iewiki' => true,
@@ -480,7 +479,6 @@ return [
 	'hrwiki' => true,
 	'hsbwiki' => true,
 	'htwiki' => true,
-	'hywwiki' => false, // T308134#8548734
 	'huwiki' => true,
 	'hywiki' => true,
 	'iawiki' => true,
