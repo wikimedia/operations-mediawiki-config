@@ -3209,6 +3209,7 @@ return [
 			'suppressionlog' => true,
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
+			'checkuser-temporary-account-no-preference' => true, // T371364
 		],
 	],
 
