@@ -2204,6 +2204,12 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+		'wgCampaignEventsEnableEventInvitation' => [
+			'default' => true,
+		],
+		'wgCampaignEventsShowEventInvitationSpecialPages' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
