@@ -46,6 +46,13 @@ return [
 			],
 		],
 	],
+	'+private' => [
+		'producers' => [
+			'mediawiki_eventbus' => [
+				'enabled' => false,
+			],
+		],
+	],
 ],
 
 /*
@@ -1781,6 +1788,23 @@ return [
 		],
 	],
 	'+private' => [
+		// private wikis have wgEnableEventBus set to TYPE_JOB|TYPE_EVENT.  But,
+		// wgEventStreamsDefaultSettings, we explicitly set mediawiki_eventbus.enabled => false
+		// to prevent most TYPE_EVENT streams from being produced.  We don't want the regular
+		// TYPE_EVENT streams from private wikis to be produced to the usual streams, as many
+		// of those streams are public.
+		// This is confusing, and would be simplified by https://phabricator.wikimedia.org/T370524.
+		// See also:
+		// - https://phabricator.wikimedia.org/T346046
+		// - https://phabricator.wikimedia.org/T371433
+		//
+		'/^mediawiki\\.job\\..+/' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true,
+				],
+			],
+		],
 		'mediawiki.page_change.private.v1' => [
 			'producers' => [
 				'mediawiki_eventbus' => [
