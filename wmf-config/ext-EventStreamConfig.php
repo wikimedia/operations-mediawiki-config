@@ -46,13 +46,6 @@ return [
 			],
 		],
 	],
-	'+private' => [
-		'producers' => [
-			'mediawiki_eventbus' => [
-				'enabled' => false,
-			],
-		],
-	],
 ],
 
 /*
