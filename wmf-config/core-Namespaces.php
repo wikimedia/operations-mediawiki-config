@@ -4670,6 +4670,9 @@ return [
 # @} end of wgExtraNamespaces
 
 'wgNamespaceRobotPolicies' => [
+	'arwiki' => [
+		NS_USER => 'noindex,nofollow', // T371470
+	],
 	'azwiki' => [
 		118 => 'noindex,nofollow', // Draft - T299332
 		119 => 'noindex,nofollow',
