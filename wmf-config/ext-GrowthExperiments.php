@@ -441,6 +441,7 @@ return [
 	'dsbwiki' => true,
 	'eewiki' => true,
 	'elwiki' => true,
+	'enwiki' => true,
 	'emlwiki' => true,
 	'eowiki' => true,
 	'eswiki' => true,
