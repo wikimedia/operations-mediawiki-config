@@ -2182,6 +2182,7 @@ return [
 	'+strategywiki' => [ 0 => 1 ],
 	'+sysop_itwiki' => [ 0 => 1 ],
 	'+techconductwiki' => [ 0 => 1 ], // T260350
+	'+u4cwiki' => [ 0 => 1 ],
 	'+uawikimedia' => [ 0 => 1 ], // T91185
 	'+usabilitywiki' => [ 0 => 1 ],
 	'+wikidata' => [ 121 => 1 ], // T146271

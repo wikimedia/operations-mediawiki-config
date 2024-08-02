@@ -1619,6 +1619,7 @@ return [
 	'trwiktionary' => 'Vikisözlük',
 	'trvwiki' => 'Wikipidiya',
 	'tyvwiki' => 'Википедия', // T51328
+	'u4cwiki' => 'U4C Wiki',
 	'uawikimedia' => 'Вікімедіа Україна',
 	'udmwiki' => 'Википедия', // T49820
 	'ukwiki' => 'Вікіпедія',

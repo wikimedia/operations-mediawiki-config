@@ -927,7 +927,7 @@ return [
 'twwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'tyvwiki' => [ 'wikipedia', 'small', 'skin-themes-wikipedias-disabled', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'tywiki' => [ 'wikipedia', 'small', 'skin-themes-wikipedias-disabled', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
-'u4cwiki' => [ 'special', 'private', 'small', 'group1' ],
+'u4cwiki' => [ 'special', 'private', 'small', 'group1', 'translate' ],
 'uawikimedia' => [ 'small', 'legacy-vector', 'visualeditor-nondefault', 'group1', 'translate' ],
 'udmwiki' => [ 'wikipedia', 'skin-themes-wikipedias-disabled', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'ugwiki' => [ 'wikipedia', 'skin-themes-wikipedias-disabled', 'medium', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments' ],
