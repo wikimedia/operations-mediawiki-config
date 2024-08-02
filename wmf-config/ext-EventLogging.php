@@ -93,6 +93,7 @@ return [
 		'mediawiki.product_metrics.mint_for_readers',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
+		'wikibase.client.interaction',
 	],
 ],
 
