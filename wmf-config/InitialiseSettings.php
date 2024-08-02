@@ -5559,8 +5559,7 @@ return [
 ],
 
 'wmgUseTimedMediaHandler' => [
-	'default' => true,
-	'wikitech' => false,
+	'default' => true, // false for wikitech T371537
 	'lockeddown' => false,
 ],
 
@@ -5834,8 +5833,7 @@ return [
 // whether to configure RESTBase as a Virtual REST Service
 // in MW Core
 'wmgUseRestbaseVRS' => [
-	'default' => true,
-	'wikitech' => false, // T102178
+	'default' => true, // false for wikitech T371537
 	'closed' => false, // T315383
 	'private' => false,
 	// For reasons lost to history RESTBase was never set up for these wikis: (T318325)
@@ -5850,8 +5848,7 @@ return [
 // -------------- Shared Parsoid start --------------
 
 'wmgUseParsoid' => [
-	'default' => true,
-	'wikitech' => false, # T241961
+	'default' => true, // false for wikitech T371537 T241961
 	'lockeddown' => false, # T61702
 ],
 
@@ -6736,8 +6733,7 @@ return [
 ],
 
 'wgParserCacheType' => [
-	'default' => 'mysql-multiwrite',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'mysql-multiwrite', // memcached-pecl for wikitech T371537
 ],
 
 'wgParsoidCacheConfig' => [
@@ -6815,8 +6811,7 @@ return [
 ],
 
 'wgChronologyProtectorStash' => [
-	'default' => 'mcrouter',
-	'wikitech' => 'memcached-pecl'
+	'default' => 'mcrouter', // memcached-pecl for wikitech T371537
 ],
 
 // General cache epochs
@@ -7017,8 +7012,7 @@ return [
 ],
 
 'wmgUseMobileApp' => [
-	'default' => true,
-	'wikitech' => false,
+	'default' => true, // false for wikitech T371537
 ],
 
 // ----------- MobileFrontend start ----------
@@ -7146,8 +7140,7 @@ return [
 ],
 
 'wgMFAutodetectMobileView' => [
-	'default' => false,
-	'wikitech' => true, // Not behind Varnish
+	'default' => false, // true for wikitech T371537
 ],
 
 'wgMFCustomSiteModules' => [
@@ -7289,8 +7282,7 @@ return [
 	'default' => true,
 ],
 'wmgUseBounceHandler' => [
-	'default' => true,
-	'wikitech' => false, // T225097
+	'default' => true, // false for wikitech T371537
 ],
 
 'wmgUseTranslate' => [
@@ -10905,35 +10897,28 @@ return [
 ],
 
 'wgMessageCacheType' => [
-	'default' => 'mcrouter',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'mcrouter', // memcached-pecl for wikitech T371537
 ],
 'wgSessionCacheType' => [
 	'default' => 'kask-session',
 ],
 'wgEchoSeenTimeCacheType' => [
-	'default' => 'kask-echoseen',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'kask-echoseen', // memcached-pecl for wikitech T371537
 ],
 'wgCentralAuthSessionCacheType' => [
-	'default' => 'kask-session',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'kask-session', // memcached-pecl for wikitech T371537
 ],
 'wgMWOAuthSessionCacheType' => [
-	'default' => 'db-mainstash',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'db-mainstash', // memcached-pecl for wikitech T371537
 ],
 'wgMWOAuthNonceCacheType' => [
-	'default' => 'mcrouter',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'mcrouter', // memcached-pecl for wikitech T371537
 ],
 'wgMainStash' => [
-	'default' => 'db-mainstash',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'db-mainstash', // memcached-pecl for wikitech T371537
 ],
 'wgMicroStashType' => [
-	'default' => 'mcrouter-primary-dc',
-	'wikitech' => 'memcached-pecl',
+	'default' => 'mcrouter-primary-dc', // memcached-pecl for wikitech T371537
 ],
 
 'wmgFileExtensions' => [
@@ -10975,7 +10960,7 @@ return [
 
 'wmgUseClusterJobqueue' => [
 	'default'  => true,
-	'wikitech' => false,
+	'labtestwiki' => false,
 ],
 
 // Thumbnail chaining
@@ -11210,7 +11195,7 @@ return [
 
 'wgEnableEventBus' => [
 	'default' => 'TYPE_ALL',
-	'wikitech' => 'TYPE_PURGE', // T192361
+	'wikitech' => 'TYPE_ALL', // T192361 T371537
 	'private' => 'TYPE_JOB|TYPE_EVENT',
 	'loginwiki' => 'TYPE_JOB|TYPE_PURGE',
 	'votewiki' => 'TYPE_JOB|TYPE_PURGE',
@@ -11227,7 +11212,7 @@ return [
 
 // Used to look up the event service URL in ProductionServices to which
 // the EventBus (and possibly other) extension will produce an event
-// stream to by default.  (If the event stream has an stream config in
+// stream to by default. (If the event stream has an stream config in
 // wgEventStreams with the 'destination_event_service' setting, EventBus
 // will used that as the destination event service for the event stream instead.)
 'wgEventServiceDefault' => [

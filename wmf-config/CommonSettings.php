@@ -3301,7 +3301,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgGroupPermissions['sysop']['createaccount'] = false;
 
 		// Password resets are handled by IDM too.
-		$wgPasswordResetRoutes = [];
+		$wgPasswordResetRoutes['email'] = true;
 	}
 
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
@@ -3322,8 +3322,8 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
 	}
 
-	// Some settings specific to wikitech's extensions
-	include __DIR__ . '/wikitech.php';
+	// Remove wikitech's uniqueness T371537
+	// include __DIR__ . '/wikitech.php';
 
 	if ( $wgDBname === 'labtestwiki' ) {
 		// wgReadOnly is set by etcdConfig using datacenter-global configs.
