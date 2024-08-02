@@ -27,6 +27,7 @@ function wmfLoadRoutes() {
 		'wmf-config/core-Namespaces.php',
 		'wmf-config/core-Permissions.php',
 		'wmf-config/db-production.php',
+		'wmf-config/db-sections.php',
 		'wmf-config/db-labs.php',
 		'wmf-config/EnWikiContactPages.php',
 		'wmf-config/ext-Babel.php',
