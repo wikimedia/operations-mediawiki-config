@@ -4085,6 +4085,8 @@ if ( $wmgUseCheckUser ) {
 			];
 		}
 	}
+	// Virtual domains config for CheckUser central index tables (T371724)
+	$wgVirtualDomainsMapping['virtual-checkuser-global'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 }
 
 if ( $wmgUseIPInfo ) {
