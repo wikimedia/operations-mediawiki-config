@@ -2447,19 +2447,13 @@ return [
 // for users registered after May 2nd 2024
 // as well as anonymoues users.
 'wmgIncreaseDefaultVectorFontSize' => [
-	'default' => false,
-	'wikipedia' => true,
+	'default' => true,
 ],
 
 // Reveal Vector 2022 appearance menu.
+// FIXME: Remove entire block after 12th September
 'wgVectorAppearance' => [
 	'default' => [
-		'logged_in' => true,
-		'logged_out' => false,
-		// Important to disable this to disable the beta feature
-		'beta' => false,
-	],
-	'wikipedia' => [
 		'logged_in' => true,
 		'logged_out' => true,
 		// Important to disable this to disable the beta feature
