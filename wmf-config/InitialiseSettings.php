@@ -12146,8 +12146,7 @@ return [
 
 // T363587
 'wgEnableEventBusInstrumentation' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ],
 
 'wmgUseNetworkSession' => [
