@@ -3504,7 +3504,7 @@ return [
 		114 => 'Terjemahan', // Translation
 		115 => 'Perbincangan_terjemahan', // Translation talk
 	],
-	'mswikisource' => [ // T371060
+	'mywikisource' => [ // T371060
 		100 => 'မုခ်ဝ', // Portal
 		101 => 'မုခ်ဝ_ဆွေးနွေးချက်', // Portal talk
 		102 => 'စာရေးသူ', // Author
