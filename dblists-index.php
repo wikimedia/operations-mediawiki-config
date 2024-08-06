@@ -88,6 +88,7 @@ return [
 'bclwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'bclwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'bclwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
+'bdrwiki' => [ 'wikipedia', 'small', 'skin-themes-wikipedias-disabled', 'wikidataclient', 'commonsuploads' ],
 'bdwikimedia' => [ 'small', 'legacy-vector', 'visualeditor-nondefault', 'group1', 'translate' ],
 'be_x_oldwiki' => [ 'wikipedia', 'skin-themes-wikipedias-disabled', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'betawikiversity' => [ 'medium', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'translate' ],
