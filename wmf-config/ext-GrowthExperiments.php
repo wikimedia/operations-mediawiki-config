@@ -436,7 +436,7 @@ return [
 	'cvwiki' => true,
 	'cywiki' => true,
 	'dawiki' => true,
-	'dewiki' => false, // T294712
+	'dewiki' => true,
 	'dinwiki' => true,
 	'dsbwiki' => true,
 	'eewiki' => true,
