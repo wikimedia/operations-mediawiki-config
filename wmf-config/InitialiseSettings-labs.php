@@ -244,11 +244,11 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgMetricsPlatformEnable' => [
-			'+testwiki' => true
+			'testwiki' => true
 		],
 
 		'wgMetricsPlatformEnableStreamConfigsMerging' => [
-			'+testwiki' => true
+			'testwiki' => true
 		],
 
 		// Log channels for beta cluster
