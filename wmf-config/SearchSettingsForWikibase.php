@@ -40,6 +40,7 @@ $wgWBCSUseStemming = [
 	'ko' => [ 'index' => true, 'query' => true ],
 	'lt' => [ 'index' => true, 'query' => true ],
 	'lv' => [ 'index' => true, 'query' => true ],
+	'mul' => [ 'index' => 'true', 'query' => false ],
 	'nb' => [ 'index' => true, 'query' => true ],
 	'nl' => [ 'index' => true, 'query' => true ],
 	'nn' => [ 'index' => true, 'query' => true ],
