@@ -11204,9 +11204,8 @@ return [
 	'enwikiquote' => true,
 	'enwikisource' => true,
 	'enwikiversity' => true,
-	'enwikivoyage' => true,
 	'enwiktionary' => true,
-	'hewikivoyage' => true,
+	'wikivoyage' => true, // T371823
 ],
 
 'wmgUseMediaModeration' => [
