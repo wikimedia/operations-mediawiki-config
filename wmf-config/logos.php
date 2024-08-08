@@ -73,6 +73,7 @@ return [
 	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki.png', // T48589
 	'bawiki' => '/static/images/project-logos/bawiki.png',
 	'bclwiki' => '/static/images/project-logos/bclwiki.png',
+	'bdrwiki' => '/static/images/project-logos/bdrwiki.png', // T372031
 	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki.png',
 	'bewiki' => '/static/images/project-logos/bewiki.png',
 	'bgwiki' => '/static/images/project-logos/bgwiki.png',
@@ -944,6 +945,7 @@ return [
 	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki-1.5x.png', // T150618
 	'bawiki' => '/static/images/project-logos/bawiki-1.5x.png', // T150618
 	'bclwiki' => '/static/images/project-logos/bclwiki-1.5x.png', // T150618
+	'bdrwiki' => '/static/images/project-logos/bdrwiki-1.5x.png',
 	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki-1.5x.png', // T150618
 	'bewiki' => '/static/images/project-logos/bewiki-1.5x.png', // T150618
 	'bgwiki' => '/static/images/project-logos/bgwiki-1.5x.png', // T150618
@@ -1576,6 +1578,7 @@ return [
 	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki-2x.png', // T150618
 	'bawiki' => '/static/images/project-logos/bawiki-2x.png', // T150618
 	'bclwiki' => '/static/images/project-logos/bclwiki-2x.png', // T150618
+	'bdrwiki' => '/static/images/project-logos/bdrwiki-2x.png',
 	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki-2x.png', // T150618
 	'bewiki' => '/static/images/project-logos/bewiki-2x.png', // T150618
 	'bgwiki' => '/static/images/project-logos/bgwiki-2x.png', // T150618
@@ -2329,6 +2332,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
 		'width' => 120,
 		'height' => 20,
+	],
+	'bdrwiki' => [ // T372031
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bdr.svg',
+		'width' => 114,
+		'height' => 18,
 	],
 	'be_x_oldwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-be_x_old.svg',
@@ -5663,6 +5671,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bcl.svg',
 		'width' => 120,
 		'height' => 10,
+	],
+	'bdrwiki' => [ // T372031
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bdr.svg',
+		'width' => 109,
+		'height' => 13,
 	],
 	'be_x_oldwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-be_x_old.svg',

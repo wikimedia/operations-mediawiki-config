@@ -213,6 +213,13 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    bdrwiki:
+        commons: 'File:Wikipedia-logo-v2-bdr.svg'
+        comment: T372031
+        commons_tagline: 'File:Wikipedia-tagline-bdr.svg'
+        comment_tagline: T372031
+        commons_wordmark: 'File:Wikipedia-wordmark-bdr.svg'
+        comment_wordmark: T372031
     be_x_oldwiki:
         comment_1_5x: T150618
         comment_2x: T150618
