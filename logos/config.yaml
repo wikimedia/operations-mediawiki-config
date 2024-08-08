@@ -427,6 +427,11 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    dtpwiki:
+        commons: 'File:Wikipedia-logo-v2-dtp.svg'
+        comment: T372031
+        commons_tagline: 'File:Wikipedia-tagline-dtp.svg'
+        comment_tagline: T372031
     dtywiki:
         comment: T161529
         comment_1_5x: T150618

@@ -113,6 +113,7 @@ return [
 	'dinwiki' => '/static/images/project-logos/dinwiki.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki.png',
 	'dsbwiki' => '/static/images/project-logos/dsbwiki.png',
+	'dtpwiki' => '/static/images/project-logos/dtpwiki.png', // T372031
 	'dtywiki' => '/static/images/project-logos/dtywiki.png', // T161529
 	'dvwiki' => '/static/images/project-logos/dvwiki.png', // T42285
 	'dzwiki' => '/static/images/project-logos/dzwiki.png', // T50397
@@ -982,6 +983,7 @@ return [
 	'dinwiki' => '/static/images/project-logos/dinwiki-1.5x.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki-1.5x.png', // T150618
 	'dsbwiki' => '/static/images/project-logos/dsbwiki-1.5x.png', // T150618
+	'dtpwiki' => '/static/images/project-logos/dtpwiki-1.5x.png',
 	'dtywiki' => '/static/images/project-logos/dtywiki-1.5x.png', // T150618
 	'dvwiki' => '/static/images/project-logos/dvwiki-1.5x.png', // T150618
 	'dzwiki' => '/static/images/project-logos/dzwiki-1.5x.png', // T150618
@@ -1613,6 +1615,7 @@ return [
 	'dinwiki' => '/static/images/project-logos/dinwiki-2x.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki-2x.png', // T150618
 	'dsbwiki' => '/static/images/project-logos/dsbwiki-2x.png', // T150618
+	'dtpwiki' => '/static/images/project-logos/dtpwiki-2x.png',
 	'dtywiki' => '/static/images/project-logos/dtywiki-2x.png', // T150618
 	'dvwiki' => '/static/images/project-logos/dvwiki-2x.png', // T150618
 	'dzwiki' => '/static/images/project-logos/dzwiki-2x.png', // T150618
@@ -5859,6 +5862,11 @@ return [
 	'dsbwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-dsb.svg',
 		'width' => 120,
+		'height' => 13,
+	],
+	'dtpwiki' => [ // T372031
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-dtp.svg',
+		'width' => 117,
 		'height' => 13,
 	],
 	'dtywiki' => [
