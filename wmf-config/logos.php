@@ -726,6 +726,7 @@ return [
 	'mkwikisource' => '/static/images/project-logos/mkwikisource.png', // T54019
 	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
 	'mrwikisource' => '/static/images/project-logos/mrwikisource.png', // T103655
+	'mswikisource' => '/static/images/project-logos/mswikisource.png', // T372031
 	'napwikisource' => '/static/images/project-logos/napwikisource.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource.png', // T167192
 	'orwikisource' => '/static/images/project-logos/orwikisource.png', // T73875
@@ -1437,6 +1438,7 @@ return [
 	'jawikisource' => '/static/images/project-logos/jawikisource-1.5x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-1.5x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-1.5x.png', // T360022
+	'mswikisource' => '/static/images/project-logos/mswikisource-1.5x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-1.5x.png', // T167192
 	'pawikisource' => '/static/images/project-logos/pawikisource-1.5x.png', // T149522
@@ -2070,6 +2072,7 @@ return [
 	'jawikisource' => '/static/images/project-logos/jawikisource-2x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-2x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-2x.png', // T360022
+	'mswikisource' => '/static/images/project-logos/mswikisource-2x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-2x.png', // T167192
 	'pawikisource' => '/static/images/project-logos/pawikisource-2x.png', // T149522
@@ -4778,6 +4781,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-mr.svg',
 		'width' => 112,
 		'height' => 32,
+	],
+	'mswikisource' => [ // T372031
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ms.svg',
+		'width' => 140,
+		'height' => 23,
 	],
 	'nowikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-no.svg',

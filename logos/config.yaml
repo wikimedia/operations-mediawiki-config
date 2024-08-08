@@ -3566,6 +3566,11 @@ Wikisource:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    mswikisource:
+        commons: 'File:Wikisource-logo-ms.svg'
+        comment: T372031
+        commons_wordmark: 'File:Wikisource-wordmark-ms.svg'
+        comment_wordmark: T372031
     napwikisource:
         comment: T210752
         comment_1_5x: T210752
