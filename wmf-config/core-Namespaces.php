@@ -1138,6 +1138,12 @@ return [
 		'ഘ' => 828, // T56951
 		'ഘസം' => 829, // T56951
 	],
+	'+mnwiki' => [
+		'Wikipedia-н хэлэлцүүлэг' => NS_PROJECT_TALK, // T366271
+	],
+	'+mnwiktionary' => [
+		'Wiktionary-н хэлэлцүүлэг' => NS_PROJECT_TALK // T366271
+	],
 	'+mnwwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -5694,6 +5700,8 @@ return [
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
+	'mnwiki' => 'Википедиа',
+	'mnwiktionary' => 'Викитоль',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
 	'movementroleswiki' => 'Wikipedia', // This was set up incorrectly.

@@ -1444,8 +1444,8 @@ return [
 	'mhrwiki' => 'Википедий',
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
-	'mkwiktionary' => 'Викиречник', // T140566
 	'mkwikimedia' => 'Викимедија Македонија',
+	'mkwiktionary' => 'Викиречник', // T140566
 	'mlwiki' => 'വിക്കിപീഡിയ',
 	'mlwikibooks' => 'വിക്കിപാഠശാല',
 	'mlwikiquote' => 'വിക്കിചൊല്ലുകൾ',
@@ -1453,10 +1453,11 @@ return [
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
+	'mnwiki' => 'Википедиа',
+	'mnwiktionary' => 'Викитоль',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
 	'movementroleswiki' => 'Movement Roles',
-	'mnwiki' => 'Википедиа',
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
 	'mrwikibooks' => 'विकिबुक्स', // T104132
@@ -1468,10 +1469,10 @@ return [
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',
 	'mxwikimedia' => 'Wikimedia México',
+	'myvwiki' => 'Википедиясь',
 	'mywiki' => 'ဝီကီပီးဒီးယား', // T123191
 	'mywikisource' => 'ဝီကီရင်းမြစ်',
 	'mywiktionary' => 'ဝစ်ရှင်နရီ', // T187882
-	'myvwiki' => 'Википедиясь',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
 	'napwikisource' => 'Wikisource', // T210752
