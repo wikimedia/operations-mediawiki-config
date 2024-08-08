@@ -12155,4 +12155,9 @@ return [
 	'loginwiki' => false,
 ],
 
+'wgEnableProtectionIndicators' => [
+	'default' => false,
+	'azwiki' => true, // T371440
+]
+
 ];
