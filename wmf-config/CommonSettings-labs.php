@@ -552,5 +552,16 @@ if ( $wmgRealm == 'labs' ) {
 			],
 		];
 	}
+
+	$wgPasswordConfig['EP'] = [
+		'class' => EncryptedPassword::class,
+		'underlying' => 'pbkdf2',
+		'secrets' => [ $wmgPasswordSecretKey ],
+		'cipher' => 'aes-256-cbc',
+	];
+	$wgPasswordConfig['BEP'] = [
+		'class' => LayeredParameterizedPassword::class,
+		'types' => [ 'B', 'EP' ],
+	];
 }
 // end safeguard
