@@ -1914,6 +1914,7 @@ return [
 	'default' => 0,
 	'arwiki' => 50, // T14123
 	'arwikisource' => 10, // T347264
+	'azwiki' => 10, // T372172
 	'cawiki' => 30, // T354425
 	'ckbwiki' => 10, // T53537
 	'cswiki' => 10, // T163207
