@@ -5396,6 +5396,7 @@ return [
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bclwiktionary' => 'Wiksyunaryo',
 	'bclwikiquote' => 'Wikisambit',
+	'bdrwiki' => 'Wikipidia',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
@@ -5913,6 +5914,7 @@ return [
 	'azwikimedia' => 'Müzakirə',
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
 	'bawikibooks' => 'Викидәреслек_буйынса_фекерләшеү', // T173471
+	'bdrwiki' => 'Wikipidia_Betutur',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
 	'bewiktionary' => 'Размовы_пра_Вікіслоўнік', // T175950

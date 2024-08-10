@@ -327,6 +327,7 @@ return [
 	'bbcwiki' => 'Asia/Jakarta', // T350373
 	'bclwiktionary' => 'Asia/Manila',
 	'bclwikiquote' => 'Asia/Manila',
+	'bdrwiki' => 'Asia/Kuching',
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
@@ -1153,6 +1154,7 @@ return [
 	'banwiki' => 'Wikipédia',
 	'bbcwiki' => 'Wikipedia', // T350373
 	'bclwiktionary' => 'Wiksyunaryo',
+	'bdrwiki' => 'Wikipidia',
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
