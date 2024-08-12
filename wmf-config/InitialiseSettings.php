@@ -5941,6 +5941,11 @@ return [
 	'default' => 60,
 ],
 
+'wgParserMigrationCompactIndicator' => [
+	'default' => false,
+	'wikivoyage' => true,
+],
+
 // -------------- Shared Parsoid end --------------
 
 // -------------- VisualEditor start --------------
