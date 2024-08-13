@@ -2323,11 +2323,6 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
-		// T363587
-		'wgEnableEventBusInstrumentation' => [
-			'default' => true,
-		],
-
 		// T20110
 		'wgConfirmEditEnabledAbuseFilterCustomActions' => [
 			'default' => [ 'showcaptcha' ]
