@@ -91,6 +91,7 @@ return [
 		'mediawiki.product_metrics.wikifunctions_ui',
 		'mediawiki.product_metrics.wikilambda_api',
 		'mediawiki.product_metrics.mint_for_readers',
+		'mediawiki.product_metrics.homepage_module_interaction',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
 		'wikibase.client.interaction',
