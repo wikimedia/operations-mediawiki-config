@@ -99,8 +99,9 @@ class CirrusTest extends WgConfTestCase {
 
 	public function testPrivateWikisNotWritingToCloudElastic() {
 		$config = $this->loadCirrusConfig( 'production', 'officewiki', 'wiki' );
-		$this->assertEquals( [ 'eqiad', 'codfw' ],
-			$config['wgCirrusSearchWriteClusters'] );
+		foreach ( $config['wgCirrusSearchWriteClusters'] as $name => $clusters ) {
+			$this->assertNotContains( 'cloudelastic', $clusters );
+		}
 	}
 
 	public function testSubphraseCompletion() {
