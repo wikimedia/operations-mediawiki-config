@@ -5609,6 +5609,11 @@ return [
 	'group0' => true,
 	'frwiki' => true,
 	'itwiki' => true,
+	'dewiki' => true,
+	'ukwiki' => true,
+	'jawiki' => true,
+	'hewiki' => true,
+	'fiwiki' => true,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
