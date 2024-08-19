@@ -2290,6 +2290,10 @@ function wmfGetOverrideSettings() {
 				'default' => true,
 		],
 
+		'wgCodeMirrorLineNumberingNamespaces' => [
+				'default' => null,
+		],
+
 		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
 			'default' => true, // T356924, T356923
 			'wikitech' => false,
