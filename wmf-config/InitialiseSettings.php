@@ -3200,9 +3200,9 @@ return [
 			'newbie' => [ 8 * 15, 60 * 5 ], // T231463
 			'user' => [ 900, 60 * 3 ], // T194864
 			// Higher rate limit for trusted users
-			'image-reviewer' => [ 10500, 60 * 3 ],
-			'patroller' => [ 10500, 60 * 3 ],
-			'autopatrolled' => [ 10500, 60 * 3 ],
+			'image-reviewer' => [ 1500, 60 * 3 ],
+			'patroller' => [ 1500, 60 * 3 ],
+			'autopatrolled' => [ 1500, 60 * 3 ],
 		],
 		'upload' => [
 			// 380 uploads per 72 minutes
