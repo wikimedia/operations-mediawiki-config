@@ -2248,6 +2248,7 @@ function wmfGetOverrideSettings() {
 			'commonswiki' => true, // T342067
 			'wikidatawiki' => true, // T343980
 			'fawiki' => true,
+			'enwiki' => true, // T372784
 		],
 
 		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
