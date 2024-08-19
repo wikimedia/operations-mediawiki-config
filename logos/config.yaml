@@ -3517,6 +3517,11 @@ Wikisource:
         commons: 'File:Wikisource-logo-jv.svg'
         commons_wordmark: 'File:Wikisource-wordmark-jv.svg'
         comment_wordmark: T311104
+    kawikisource:
+        commons: 'File:Wikisource-logo-ka.svg'
+        comment: T368868
+        commons_wordmark: 'File:Wikisource-wordmark-ka.svg'
+        comment_wordmark: T368868
     knwikisource:
         commons: 'File:Wikisource-logo-kn-v2.svg'
         comment: T360022
