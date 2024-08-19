@@ -2217,6 +2217,13 @@ Wiktionary:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    kaawiktionary:
+        commons: 'File:Wiktionary-logo-kaa.svg'
+        comment: T368868
+        commons_wordmark: 'File:Wiktionary-wordmark-kaa.svg'
+        comment_wordmark: T368868
+        commons_tagline: 'File:Wiktionary-tagline-kaa.svg'
+        comment_tagline: T368868
     kbdwiktionary:
         commons: 'File:Wiktionary-logo-kbd.svg'
         local_wordmark: true
