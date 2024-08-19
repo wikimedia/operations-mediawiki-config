@@ -57,11 +57,7 @@ return [
 			90,
 			// LQT: Summary
 			92,
-			// Portal
-			100,
 		],
-		// Commons uses 100 for Creator:
-		'commonswiki' => [],
 		'mediawikiwiki' => [
 			// LQT: Thread
 			90,
