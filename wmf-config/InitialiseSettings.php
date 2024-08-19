@@ -10916,6 +10916,7 @@ return [
 	// Link to the translation of the license in the relevant language where available
 	// For unrecognized language codes, creativecommons.org falls back to English
 	'default' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.$lang',
+	'arwikinews' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ar',
 	// Don't try to link to weird things like /deed.meta or /deed.commons
 	'special' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
@@ -10923,6 +10924,7 @@ return [
 ],
 'wgRightsText' => [
 	'default' => 'Creative Commons Attribution-Share Alike 4.0',
+	'arwikinews' => 'Creative Commons Attribution-Share Alike 4.0',
 	'huwikinews' => 'Creative Commons Attribution 3.0',
 	'wikinews' => 'Creative Commons Attribution 2.5',
 	// Wikidata footer, T112606
