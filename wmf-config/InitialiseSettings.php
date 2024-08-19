@@ -6913,6 +6913,7 @@ return [
 	'default' => false,
 	'testwiki' => true, // T348895
 	'loginwiki' => true, // T348895
+	'test2wiki' => true, // T371116
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
