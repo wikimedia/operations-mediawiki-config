@@ -212,6 +212,7 @@ return [
 	'kshwiki' => '/static/images/project-logos/kshwiki.png',
 	'kswiki' => '/static/images/project-logos/kswiki.png', // T293342
 	'kuwiki' => '/static/images/project-logos/kuwiki.png',
+	'kuswiki' => '/static/images/project-logos/kuswiki.png', // T368868
 	'kvwiki' => '/static/images/project-logos/kvwiki.png', // T42285
 	'kwwiki' => '/static/images/project-logos/kwwiki.png',
 	'kywiki' => '/static/images/project-logos/kywiki.png', // T300241
@@ -1078,6 +1079,7 @@ return [
 	'kshwiki' => '/static/images/project-logos/kshwiki-1.5x.png', // T150618
 	'kswiki' => '/static/images/project-logos/kswiki-1.5x.png', // T150618, T293342
 	'kuwiki' => '/static/images/project-logos/kuwiki-1.5x.png', // T150618
+	'kuswiki' => '/static/images/project-logos/kuswiki-1.5x.png',
 	'kvwiki' => '/static/images/project-logos/kvwiki-1.5x.png', // T150618
 	'kwwiki' => '/static/images/project-logos/kwwiki-1.5x.png', // T150618
 	'kywiki' => '/static/images/project-logos/kywiki-1.5x.png', // T150618
@@ -1716,6 +1718,7 @@ return [
 	'kshwiki' => '/static/images/project-logos/kshwiki-2x.png', // T150618
 	'kswiki' => '/static/images/project-logos/kswiki-2x.png', // T150618, T293342
 	'kuwiki' => '/static/images/project-logos/kuwiki-2x.png', // T150618
+	'kuswiki' => '/static/images/project-logos/kuswiki-2x.png',
 	'kvwiki' => '/static/images/project-logos/kvwiki-2x.png', // T150618
 	'kwwiki' => '/static/images/project-logos/kwwiki-2x.png', // T150618
 	'kywiki' => '/static/images/project-logos/kywiki-2x.png', // T150618
@@ -2777,6 +2780,11 @@ return [
 	'kuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ku.svg',
 		'width' => 120,
+		'height' => 18,
+	],
+	'kuswiki' => [ // T368868
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kus.svg',
+		'width' => 119,
 		'height' => 18,
 	],
 	'kvwiki' => [
@@ -6356,6 +6364,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ku.svg',
 		'width' => 112,
 		'height' => 14,
+	],
+	'kuswiki' => [ // T368868
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kus.svg',
+		'width' => 106,
+		'height' => 12,
 	],
 	'kvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kv.svg',

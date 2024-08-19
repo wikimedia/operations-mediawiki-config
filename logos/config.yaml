@@ -966,6 +966,13 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    kuswiki:
+        commons: 'File:Wikipedia-logo-v2-kus.svg'
+        comment: T368868
+        commons_wordmark: 'File:Wikipedia-wordmark-kus.svg'
+        comment_wordmark: T368868
+        commons_tagline: 'File:Wikipedia-tagline-kus.svg'
+        comment_tagline: T368868
     kvwiki:
         comment: T42285
         comment_1_5x: T150618
