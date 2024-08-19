@@ -178,6 +178,7 @@ return [
 	'idwikisource' => '/static/images/project-logos/idwikisource.png', // T341171
 	'iewiki' => '/static/images/project-logos/iewiki.png', // T51125
 	'igwiki' => '/static/images/project-logos/igwiki.png', // T48589
+	'iglwiki' => '/static/images/project-logos/iglwiki.png', // T368868
 	'iiwiki' => '/static/images/project-logos/iiwiki.png',
 	'ikwiki' => '/static/images/project-logos/ikwiki.png', // T48589
 	'ilowiki' => '/static/images/project-logos/ilowiki.png', // T42285
@@ -1046,6 +1047,7 @@ return [
 	'idwikisource' => '/static/images/project-logos/idwikisource-1.5x.png', // T341171
 	'iewiki' => '/static/images/project-logos/iewiki-1.5x.png', // T150618
 	'igwiki' => '/static/images/project-logos/igwiki-1.5x.png', // T150618
+	'iglwiki' => '/static/images/project-logos/iglwiki-1.5x.png',
 	'ikwiki' => '/static/images/project-logos/ikwiki-1.5x.png', // T150618
 	'ilowiki' => '/static/images/project-logos/ilowiki-1.5x.png',
 	'iowiki' => '/static/images/project-logos/iowiki-1.5x.png', // T150618
@@ -1682,6 +1684,7 @@ return [
 	'idwikisource' => '/static/images/project-logos/idwikisource-2x.png', // T341171
 	'iewiki' => '/static/images/project-logos/iewiki-2x.png', // T150618
 	'igwiki' => '/static/images/project-logos/igwiki-2x.png', // T150618
+	'iglwiki' => '/static/images/project-logos/iglwiki-2x.png',
 	'ikwiki' => '/static/images/project-logos/ikwiki-2x.png', // T150618
 	'ilowiki' => '/static/images/project-logos/ilowiki-2x.png',
 	'iowiki' => '/static/images/project-logos/iowiki-2x.png', // T150618
@@ -2667,6 +2670,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-id.svg',
 		'width' => 136,
 		'height' => 26,
+	],
+	'iglwiki' => [ // T368868
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-igl.svg',
+		'width' => 120,
+		'height' => 17,
 	],
 	'ikwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ik.svg',
@@ -6175,6 +6183,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ig.svg',
 		'width' => 119,
 		'height' => 13,
+	],
+	'iglwiki' => [ // T368868
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-igl.svg',
+		'width' => 53,
+		'height' => 11,
 	],
 	'iiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-en.svg',
