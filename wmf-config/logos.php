@@ -76,6 +76,7 @@ return [
 	'bdrwiki' => '/static/images/project-logos/bdrwiki.png', // T372031
 	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki.png',
 	'bewiki' => '/static/images/project-logos/bewiki.png',
+	'bewwiki' => '/static/images/project-logos/bewwiki.png', // T368868
 	'bgwiki' => '/static/images/project-logos/bgwiki.png',
 	'bhwiki' => '/static/images/project-logos/bhwiki.png', // T50397
 	'biwiki' => '/static/images/project-logos/biwiki.png', // T51125
@@ -954,6 +955,7 @@ return [
 	'bdrwiki' => '/static/images/project-logos/bdrwiki-1.5x.png',
 	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki-1.5x.png', // T150618
 	'bewiki' => '/static/images/project-logos/bewiki-1.5x.png', // T150618
+	'bewwiki' => '/static/images/project-logos/bewwiki-1.5x.png',
 	'bgwiki' => '/static/images/project-logos/bgwiki-1.5x.png', // T150618
 	'bhwiki' => '/static/images/project-logos/bhwiki-1.5x.png', // T150618
 	'biwiki' => '/static/images/project-logos/biwiki-1.5x.png', // T150618
@@ -1593,6 +1595,7 @@ return [
 	'bdrwiki' => '/static/images/project-logos/bdrwiki-2x.png',
 	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki-2x.png', // T150618
 	'bewiki' => '/static/images/project-logos/bewiki-2x.png', // T150618
+	'bewwiki' => '/static/images/project-logos/bewwiki-2x.png',
 	'bgwiki' => '/static/images/project-logos/bgwiki-2x.png', // T150618
 	'bhwiki' => '/static/images/project-logos/bhwiki-2x.png', // T150618
 	'biwiki' => '/static/images/project-logos/biwiki-2x.png', // T150618
@@ -2365,6 +2368,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-be.svg',
 		'width' => 122,
 		'height' => 21,
+	],
+	'bewwiki' => [ // T368868
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bew.svg',
+		'width' => 104,
+		'height' => 18,
 	],
 	'bgwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bg.svg',
@@ -5734,6 +5742,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-be.svg',
 		'width' => 117,
 		'height' => 12,
+	],
+	'bewwiki' => [ // T368868
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bew.svg',
+		'width' => 104,
+		'height' => 14,
 	],
 	'bgwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bg.svg',
