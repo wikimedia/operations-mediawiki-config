@@ -12155,4 +12155,9 @@ return [
 	'default' => false
 ],
 
+// T372527
+'wmgUseCommunityRequests' => [
+	'default' => false,
+],
+
 ];
