@@ -718,7 +718,6 @@ return [
 	'iswikisource' => '/static/images/project-logos/iswikisource.png', // T54019
 	'jawikisource' => '/static/images/project-logos/jawikisource.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource.png',
-	'kawikisource' => '/static/images/project-logos/kawikisource.png', // T368868
 	'knwikisource' => '/static/images/project-logos/knwikisource.png', // T360022
 	'kowikisource' => '/static/images/project-logos/kowikisource.png', // T40543
 	'lawikisource' => '/static/images/project-logos/lawikisource.png', // T54019
@@ -1438,7 +1437,6 @@ return [
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-1.5x.png', // T310961
 	'jawikisource' => '/static/images/project-logos/jawikisource-1.5x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-1.5x.png',
-	'kawikisource' => '/static/images/project-logos/kawikisource-1.5x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-1.5x.png', // T360022
 	'mswikisource' => '/static/images/project-logos/mswikisource-1.5x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
@@ -2073,7 +2071,6 @@ return [
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-2x.png', // T310961
 	'jawikisource' => '/static/images/project-logos/jawikisource-2x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-2x.png',
-	'kawikisource' => '/static/images/project-logos/kawikisource-2x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-2x.png', // T360022
 	'mswikisource' => '/static/images/project-logos/mswikisource-2x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
@@ -4744,11 +4741,6 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-jv.svg',
 		'width' => 137,
 		'height' => 18,
-	],
-	'kawikisource' => [ // T368868
-		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ka.svg',
-		'width' => 207,
-		'height' => 34,
 	],
 	'knwikisource' => [ // T360022
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-kn.svg',
