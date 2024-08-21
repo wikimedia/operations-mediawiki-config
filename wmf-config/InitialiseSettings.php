@@ -4239,7 +4239,7 @@ return [
 		'Withoutinterwiki',
 	],
 	'+commonswiki' => [
-		'Uncategorizedcategories' => 'monthly',
+		'Uncategorizedpages' => 'monthly',
 		'Mostlinkedtemplates' => 'monthly',
 	],
 ],
