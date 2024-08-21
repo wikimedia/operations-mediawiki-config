@@ -6906,11 +6906,6 @@ return [
 	'default' => true,
 ],
 
-// T337943, T340959
-'wgCheckUserPurgeOldClientHintsData' => [
-	'default' => true,
-],
-
 // T337942
 'wgCheckUserDisplayClientHints' => [
 	'default' => true,
