@@ -5614,6 +5614,7 @@ return [
 	'jawiki' => true,
 	'hewiki' => true,
 	'fiwiki' => true,
+	'enwiki' => true,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
