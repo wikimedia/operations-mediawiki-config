@@ -5605,9 +5605,7 @@ return [
 ],
 
 'wmgUseTimedMediaHandlerShellbox' => [
-	'default' => false,
-	'group0' => true,
-	'group2' => true,
+	'default' => true,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
