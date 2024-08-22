@@ -11155,15 +11155,7 @@ return [
 
 // T342871
 'wgKartographerParsoidSupport' => [
-	'default' => false,
-	'enwiki' => true,
-	'enwikibooks' => true,
-	'enwikinews' => true,
-	'enwikiquote' => true,
-	'enwikisource' => true,
-	'enwikiversity' => true,
-	'enwiktionary' => true,
-	'wikivoyage' => true, // T371823
+	'default' => true,
 ],
 
 'wmgUseMediaModeration' => [
