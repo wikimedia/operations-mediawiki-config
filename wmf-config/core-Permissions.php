@@ -1577,6 +1577,10 @@ return [
 		'sysop' => [ 'importupload' => true, ], // T359545
 		'flood' => [ 'bot' => true ], // T322472
 	],
+	'+knwikisource' => [ // T373073
+		'sysop' => [ 'importupload' => true, ],
+		'flood' => [ 'bot' => true ],
+	],
 	'+kowiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'uploader' => [ // T85621
@@ -4032,6 +4036,9 @@ return [
 	'+knwiki' => [
 		'sysop' => [ 'flood' ], // T322472
 	],
+	'+knwikisource' => [
+		'sysop' => [ 'flood' ], // T373073
+	],
 	'+kowiki' => [
 		'sysop' => [
 			'rollbacker',
@@ -5393,6 +5400,9 @@ return [
 	'+knwiki' => [ // T322472
 		'sysop' => [ 'flood' ],
 	],
+	'+knwikisource' => [ // T373073
+		'sysop' => [ 'flood' ],
+	],
 	'+kowiki' => [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
 	],
@@ -5943,6 +5953,7 @@ return [
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
 	'itwiktionary' => [ 'sysop' => [ 'flood' ] ], // T41306
 	'knwiki' => [ 'sysop' => [ 'flood' ] ], // T322472
+	'knwikisource' => [ 'sysop' => [ 'flood' ] ], // T373073
 	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
 	'plwiki' => [ 'sysop' => [ 'flood' ] ], // T22155
@@ -5982,6 +5993,7 @@ return [
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
 	'jawiki' => [ 'rollbacker' => [ 'rollbacker' ] ], // T258339
 	'knwiki' => [ 'flood' => [ 'flood' ] ], // T322472
+	'knwikisource' => [ 'flood' => [ 'flood' ] ], // T373073
 	'ladwiki' => [ 'flood' => [ 'flood' ] ], // T131527
 	'lvwiki' => [ 'flood' => [ 'flood' ] ], // T121238
 	'mlwiki' => [ 'botadmin' => [ 'botadmin' ] ],
