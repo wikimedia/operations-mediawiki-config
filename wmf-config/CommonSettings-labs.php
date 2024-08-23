@@ -552,5 +552,12 @@ if ( $wmgRealm == 'labs' ) {
 			],
 		];
 	}
+
+	// T372828 - Redirect old account vanishing contact form to new Special page.
+	if ( $wgDBname == 'metawiki' ) {
+		$wgContactConfig['accountvanishapps'] = [
+			'Redirect' => 'https://meta.wikimedia.org/wiki/Special:GlobalVanishRequest'
+		];
+	}
 }
 // end safeguard
