@@ -354,24 +354,9 @@ $wgContactConfig['ombudscommission'] = [
 /**
  * Configuration for contact form for account vanishing requests from mobile apps.
  *
- * @see T343536
+ * @see T372828
  */
 
 $wgContactConfig['accountvanishapps'] = [
-	'RecipientUser' => 'AccountVanishRequests',
-	'SenderName' => 'Account vanishing request form on ' . $wgSitename,
-	'SenderEmail' => $wgPasswordSender,
-	'RequireDetails' => true,
-	'IncludeIP' => false,
-	'MustBeLoggedIn' => true,
-	'AdditionalFields' => [
-		'Text' => [
-			'label-message' => 'emailmessage',
-			'type' => 'textarea',
-			'rows' => 2,
-			'required' => false,
-		],
-	],
-	'NameReadonly' => true,
-	'SubjectReadonly' => true
+	'Redirect' => 'https://meta.wikimedia.org/wiki/Special:GlobalVanishRequest'
 ];
