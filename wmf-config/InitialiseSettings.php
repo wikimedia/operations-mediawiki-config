@@ -12088,16 +12088,23 @@ return [
 	'growthexperiments' => true,
 ],
 
-// T361643
 'wmgUseAutoModerator' => [
 	// NOTE: Do not enable without OK from Moderator Tools team.
 	'default' => false,
+	// T361643
 	'testwiki' => true,
+	// T362622
 	'trwiki' => true,
+	// T365792
+	'idwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
+	// T361643
 	'testwiki' => 'AutoModeratorTest',
+	// T362622
 	'trwiki' => 'Otomoderatör',
+	// T365792
+	'idwiki' => "Automoderator",
 ],
 
 // T341000
