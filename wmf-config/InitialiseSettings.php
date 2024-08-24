@@ -11828,11 +11828,6 @@ return [
 	'default' => 60,
 ],
 
-// Temporary feature flag. T242406.
-'wgAllowRequiringEmailForResets' => [
-	'default' => true,
-],
-
 'wgGlobalRenameDenylist' => [
 	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
 ],

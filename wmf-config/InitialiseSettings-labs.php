@@ -1999,10 +1999,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgAllowRequiringEmailForResets' => [
-			'default' => true,
-		],
-
 		'wmgUseCSP' => [
 			'default' => true,
 		],
