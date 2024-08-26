@@ -502,7 +502,7 @@ return [
 	'sqwiktionary' => '/static/images/project-logos/sqwiktionary.png',
 	'srwiktionary' => '/static/images/project-logos/srwiktionary.png',
 	'suwiktionary' => '/static/images/project-logos/suwiktionary.png', // T45240
-	'svwiktionary' => '/static/images/project-logos/svwiktionary-temp.png', // T364247
+	'svwiktionary' => '/static/images/project-logos/svwiktionary.png',
 	'swwiktionary' => '/static/images/project-logos/swwiktionary.png', // T45240
 	'tawiktionary' => '/static/images/project-logos/tawiktionary.png',
 	'tewiktionary' => '/static/images/project-logos/tewiktionary.png', // T45240
@@ -1323,7 +1323,7 @@ return [
 	'slwiktionary' => '/static/images/project-logos/slwiktionary-1.5x.png', // T150618
 	'srwiktionary' => '/static/images/project-logos/srwiktionary-1.5x.png', // T172245
 	'suwiktionary' => '/static/images/project-logos/suwiktionary-1.5x.png', // T150618
-	'svwiktionary' => '/static/images/project-logos/svwiktionary-temp-1.5x.png', // T150618, T364247
+	'svwiktionary' => '/static/images/project-logos/svwiktionary-1.5x.png', // T150618
 	'swwiktionary' => '/static/images/project-logos/swwiktionary-1.5x.png', // T150618
 	'tewiktionary' => '/static/images/project-logos/tewiktionary-1.5x.png', // T150618
 	'tiwiktionary' => '/static/images/project-logos/tiwiktionary-1.5x.png', // T249451
@@ -1957,7 +1957,7 @@ return [
 	'slwiktionary' => '/static/images/project-logos/slwiktionary-2x.png', // T150618
 	'srwiktionary' => '/static/images/project-logos/srwiktionary-2x.png', // T172245
 	'suwiktionary' => '/static/images/project-logos/suwiktionary-2x.png', // T150618
-	'svwiktionary' => '/static/images/project-logos/svwiktionary-temp-2x.png', // T150618, T364247
+	'svwiktionary' => '/static/images/project-logos/svwiktionary-2x.png', // T150618
 	'swwiktionary' => '/static/images/project-logos/swwiktionary-2x.png', // T150618
 	'tewiktionary' => '/static/images/project-logos/tewiktionary-2x.png', // T150618
 	'tiwiktionary' => '/static/images/project-logos/tiwiktionary-2x.png', // T249451
@@ -8089,7 +8089,6 @@ return [
 	'minwiktionary' => '/static/images/icons/enwiktionary.svg',
 	'shywiktionary' => '/static/images/icons/shywiktionary.svg',
 	'srwiktionary' => '/static/images/icons/srwiktionary.svg',
-	'svwiktionary' => '/static/images/icons/svwiktionary-temp.svg', // T364247
 	'trwiktionary' => '/static/images/icons/trwiktionary.svg',
 	'ukwiktionary' => '/static/images/icons/ukwiktionary.svg',
 
