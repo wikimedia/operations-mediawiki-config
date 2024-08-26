@@ -11981,6 +11981,18 @@ return [
 	'test2wiki' => false,
 ],
 
+'wgCampaignEventsEnableEventInvitation' => [
+	'default' => false,
+	// T373041
+	'officewiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
+'wgCampaignEventsShowEventInvitationSpecialPages' => [
+	'default' => true,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
