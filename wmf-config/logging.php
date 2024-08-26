@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# logging.php holds the shared logging configuration.
+# logging.php holds the shared logging configuration. Beware of falling trees.
 #
 # This for PRODUCTION.
 #
@@ -287,16 +287,14 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 
 	if ( $opts['eventbus'] && $wmgUseEventBus ) {
 		$eventBusHandler = "eventbus-{$opts['eventbus']}";
-		if ( !isset( $wmgMonologConfig['handlers'][$eventBusHandler] ) ) {
-			// Register handler that will only pass events of the given log level
-			$wmgMonologConfig['handlers'][$eventBusHandler] = [
-				'class' => \MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler::class,
-				'args' => [
-					// EventServiceName
-					'eventgate-analytics'
-				]
-			];
-		}
+		// Register handler that will only pass events of the given log level
+		$wmgMonologConfig['handlers'][$eventBusHandler] ??= [
+			'class' => \MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler::class,
+			'args' => [
+				// EventServiceName
+				'eventgate-analytics'
+			]
+		];
 		$handlers[] = $eventBusHandler;
 	}
 
@@ -313,21 +311,19 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$sample = $opts['sample'];
 		foreach ( $handlers as $idx => $handlerName ) {
 			$sampledHandler = "{$handlerName}-sampled-{$sample}";
-			if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
-				// Register a handler that will sample the event stream and
-				// pass events on to $handlerName for storage
-				$wmgMonologConfig['handlers'][$sampledHandler] = [
-					'class' => \Monolog\Handler\SamplingHandler::class,
-					'args' => [
-						static function () use ( $handlerName ) {
-							return LoggerFactory::getProvider()->getHandler(
-								$handlerName
-							);
-						},
-						$sample,
-					],
-				];
-			}
+			// Register a handler that will sample the event stream and
+			// pass events on to $handlerName for storage
+			$wmgMonologConfig['handlers'][$sampledHandler] ??= [
+				'class' => \Monolog\Handler\SamplingHandler::class,
+				'args' => [
+					static function () use ( $handlerName ) {
+						return LoggerFactory::getProvider()->getHandler(
+							$handlerName
+						);
+					},
+					$sample,
+				],
+			];
 			$handlers[$idx] = $sampledHandler;
 		}
 	}
@@ -335,20 +331,18 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts['buffer'] ) {
 		foreach ( $handlers as $idx => $handlerName ) {
 			$bufferedHandler = "{$handlerName}-buffered";
-			if ( !isset( $wmgMonologConfig['handlers'][$bufferedHandler] ) ) {
-				// Register a handler that will buffer the event stream and
-				// pass events to the nested handler after closing the request
-				$wmgMonologConfig['handlers'][$bufferedHandler] = [
-					'class' => \MediaWiki\Logger\Monolog\BufferHandler::class,
-					'args' => [
-						static function () use ( $handlerName ) {
-							return LoggerFactory::getProvider()->getHandler(
-								$handlerName
-							);
-						},
-					],
-				];
-			}
+			// Register a handler that will buffer the event stream and
+			// pass events to the nested handler after closing the request
+			$wmgMonologConfig['handlers'][$bufferedHandler] ??= [
+				'class' => \MediaWiki\Logger\Monolog\BufferHandler::class,
+				'args' => [
+					static function () use ( $handlerName ) {
+						return LoggerFactory::getProvider()->getHandler(
+							$handlerName
+						);
+					},
+				],
+			];
 			$handlers[$idx] = $bufferedHandler;
 		}
 	}
@@ -357,20 +351,18 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// T118057: wrap the collection of handlers in a WhatFailureGroupHandler
 		// to swallow any exceptions that might leak out otherwise
 		$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
-		if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
-			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
-				'class' => \Monolog\Handler\WhatFailureGroupHandler::class,
-				'args' => [
-					static function () use ( $handlers ) {
-						$provider = LoggerFactory::getProvider();
-						return array_map(
-							[ $provider, 'getHandler' ],
-							$handlers
-						);
-					}
-				],
-			];
-		}
+		$wmgMonologConfig['handlers'][$failureGroupHandler] = [
+			'class' => \Monolog\Handler\WhatFailureGroupHandler::class,
+			'args' => [
+				static function () use ( $handlers ) {
+					$provider = LoggerFactory::getProvider();
+					return array_map(
+						[ $provider, 'getHandler' ],
+						$handlers
+					);
+				}
+			],
+		];
 
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ $failureGroupHandler ],
