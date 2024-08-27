@@ -11169,6 +11169,8 @@ return [
 // T342871
 'wgKartographerParsoidSupport' => [
 	'default' => true,
+	'hewiki' => false, // T373460
+	'commonswiki' => false, // T373454
 ],
 
 'wmgUseMediaModeration' => [
