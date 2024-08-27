@@ -4332,7 +4332,7 @@ return [
 	'stewardwiki' => '/static/favicon/community.ico',
 	'strategywiki' => '/static/favicon/community.ico',
 	'sysop_itwiki' => '/static/favicon/sysop_itwiki.ico', // T330279
-	'sysop_plwiki' => '/static/favicon/sysop_plwiki.ico', // T368712
+	'sysop_plwiki' => '/static/favicon/sysop_itwiki.ico', // T368712
 	'techconductwiki' => '/static/favicon/community.ico',
 	'testwiki' => '/static/favicon/black-globe.ico',
 	'test2wiki' => '/static/favicon/black-globe.ico',
