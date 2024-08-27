@@ -8906,6 +8906,11 @@ return [
 	'wikidatawiki' => 9,
 ],
 
+// T66315 - temporary rollout
+'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
+	'default' => false,
+],
+
 'wmgWikibaseStringLimits' => [
 	'default' => null,
 	'wikibaserepo' => [

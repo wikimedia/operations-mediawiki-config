@@ -2341,5 +2341,10 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 			'fishbowl' => false,
 		],
+
+		// T66315 - temporary rollout
+		'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
