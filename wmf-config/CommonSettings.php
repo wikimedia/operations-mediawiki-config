@@ -2042,9 +2042,6 @@ if ( $wmgUseCentralAuth ) {
 		}
 	};
 
-	// T359957 Add per-domain origin trial tokens for opting out of third-party cookie blocking. Trial will expire at end of 2024.
-	$wgOriginTrials[] = $wmgCentralAuthThirdPartyCookieDeprecationTrialToken;
-
 	/**
 	 * This function is used for both the CentralAuthWikiList and
 	 * GlobalUserPageWikis hooks.
