@@ -1729,12 +1729,6 @@ $wgFooterIcons['copyright']['copyright'] =
 	'href="https://wikimediafoundation.org/" target="https://wikimediafoundation.org/"><img src="' .
 	$wmgWikimediaIcon['svg'] . '" width="84" height="29" alt="Wikimedia Foundation"></a>';
 
-$wgFooterIcons['poweredby'] = [ 'mediawiki' =>
-	'<a class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled" ' .
-	'style="padding-left: 8px; padding-right: 8px;" ' .
-	'href="https://www.mediawiki.org" target="https://www.mediawiki.org"><img src="' .
-	$wmgPoweredByMediaWikiIcon['svg'] . '" width="84" height="29" alt="Powered by MediaWiki"></a>' ];
-
 # :SEARCH:
 
 # All wikis are special and get Cirrus :)
