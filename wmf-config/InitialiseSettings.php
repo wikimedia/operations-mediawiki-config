@@ -5051,6 +5051,7 @@ return [
 	'enwikibooks' => false,
 	'fiwiki' => false,
 	'ptwikibooks' => false,
+	'ruwiki' => false,
 ],
 
 'wgFlaggedRevsHandleIncludes' => [
