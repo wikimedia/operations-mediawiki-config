@@ -38,13 +38,13 @@ class MWConfigCacheGenerator {
 
 	/**
 	 * @param string $dbname Database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
-	 * @param \SiteConfiguration $siteConfiguration The wgConf object
+	 * @param SiteConfiguration $siteConfiguration The wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array
 	 */
 	public static function getConfigGlobals(
 		string $dbname,
-		\SiteConfiguration $siteConfiguration,
+		SiteConfiguration $siteConfiguration,
 		string $realm = 'production'
 	): array {
 		return self::getMWConfigForCacheing(

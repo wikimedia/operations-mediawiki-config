@@ -37,6 +37,7 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppCaptionEditCounter;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
@@ -11227,7 +11228,7 @@ return [
 'wgEventRelayerConfig' => [
 	'default' => [
 		'cdn-url-purges' => [
-			'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
+			'class' => CdnPurgeEventRelayer::class,
 			'stream' => 'resource-purge',
 		],
 		'default' => [

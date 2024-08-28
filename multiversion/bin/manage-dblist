@@ -107,7 +107,7 @@ final class WmfManageDblistCli {
 				$this->error( 'Unknown command' );
 				return;
 			}
-		} catch ( \Throwable $e ) {
+		} catch ( Throwable $e ) {
 			$this->error( (string)$e );
 		}
 

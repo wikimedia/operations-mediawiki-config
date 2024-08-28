@@ -2,6 +2,8 @@
 /**
  * To preview NOC locally, check docroot/noc/README.md
  */
+use Wikimedia\MWConfig\Noc\EtcdCachedConfig;
+
 require_once __DIR__ . '/../../../src/Noc/utils.php';
 require_once __DIR__ . '/../../../src/Noc/EtcdCachedConfig.php';
 require_once __DIR__ . '/filelist.php';
@@ -65,7 +67,7 @@ function wmfOutputFiles( $routesByLabel ) {
 	echo implode( ', ', Wikimedia\MWConfig\Noc\getWikiVersions() );
 ?></p>
 <p>Current primary datacenter: <?php
-	$masterDC = \Wikimedia\MWConfig\Noc\EtcdCachedConfig::getInstance()->getValue( 'common/WMFMasterDatacenter' );
+	$masterDC = EtcdCachedConfig::getInstance()->getValue( 'common/WMFMasterDatacenter' );
 	echo $masterDC ?? 'unknown';
 ?></p>
 <hr>

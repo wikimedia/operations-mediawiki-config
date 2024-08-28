@@ -36,7 +36,10 @@
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use MediaWiki\Auth\AbstractPreAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationResponse;
+use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Auth\PasswordAuthenticationRequest;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
@@ -47,6 +50,7 @@ use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
@@ -2080,8 +2084,8 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 
 if ( $wmgLocalAuthLoginOnly && $wmgUseCentralAuth ) {
 	// T57420: prevent creation of local password records for SUL users
-	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
-		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
 }
 
@@ -2185,7 +2189,7 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = static function ( $req, $status ) 
 		->getUserIdentityLookup()
 		->getUserIdentityByName( $req->username );
 	$status = Status::wrap( $status );
-	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
+	if ( $req instanceof PasswordAuthenticationRequest ) {
 		$privGroups = wmfGetPrivilegedGroups( $user );
 		$priv = ( $privGroups ? 'elevated' : 'normal' );
 		if ( $priv === 'elevated' ) {
@@ -3719,9 +3723,9 @@ if ( $wmgUseGraph ) {
 		$parser->addTrackingCategory( 'graph-disabled-category' );
 
 		// Track data sources used by this graph
-		$parseResult = \MediaWiki\Json\FormatJson::parse(
+		$parseResult = FormatJson::parse(
 			$input,
-			\MediaWiki\Json\FormatJson::TRY_FIXING | \MediaWiki\Json\FormatJson::STRIP_COMMENTS
+			FormatJson::TRY_FIXING | FormatJson::STRIP_COMMENTS
 		);
 		if ( $parseResult->isGood() ) {
 			$parsed = $parseResult->getValue();
@@ -4514,15 +4518,15 @@ if ( $wmgUseNetworkSession ) {
 }
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
-class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
+class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 	/**
 	 * @param User $user
 	 * @param bool $autocreate
 	 * @param array $options
-	 * @return \StatusValue
+	 * @return StatusValue
 	 */
 	public function testUserForCreation( $user, $autocreate, array $options = [] ) {
-		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
+		$logger = LoggerFactory::getInstance( 'authentication' );
 		$logger->info( 'Running ClosedWikiProvider for {name}', [
 			'name' => $user->getName()
 		] );
@@ -4530,7 +4534,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 			$logger->info( 'User {name} passed ClosedWikiProvider check, account already exists', [
 				'name' => $user->getName()
 			] );
-			return \StatusValue::newGood();
+			return StatusValue::newGood();
 		}
 		if ( $options['canAlwaysAutocreate'] ?? false ) {
 			$logger->info(
@@ -4553,14 +4557,14 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 				]
 			);
 			// User can autocreate account per global permissions
-			return \StatusValue::newGood();
+			return StatusValue::newGood();
 		}
 		$logger->info(
 			'Account autocreation denied for {name} by ClosedWikiProvider', [
 				'name' => $user->getName()
 			]
 		);
-		return \StatusValue::newFatal( 'authmanager-autocreate-noperm' );
+		return StatusValue::newFatal( 'authmanager-autocreate-noperm' );
 	}
 }
 
@@ -4568,8 +4572,8 @@ if (
 	in_array( $wgDBname, MWWikiversions::readDbListFile( 'closed' ) ) &&
 	$wmgUseCentralAuth
 ) {
-	$wgAuthManagerAutoConfig['preauth'][\ClosedWikiProvider::class] = [
-		'class' => \ClosedWikiProvider::class,
+	$wgAuthManagerAutoConfig['preauth'][ClosedWikiProvider::class] = [
+		'class' => ClosedWikiProvider::class,
 		'sort' => 0,
 	];
 }
