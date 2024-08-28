@@ -1428,12 +1428,15 @@ if ( $wmgUseTimedMediaHandler ) {
 	// MJPEG SDR video for older iOS devices without hardware VP9 codec
 	$wgEnabledTranscodeSet['144p.video.mjpeg.mov'] = true;
 
+	// [T373546] HLS VP9 experiment is being disabled circa August 2024
+	// as iOS 17.4 prefers the WebM tracks and mid-level iOS is kinda
+	// flaky with support.
 	// VP9 SDR video for newer iOS devices (circa iPhone 12)
-	$wgEnabledTranscodeSet['240p.video.vp9.mp4'] = true;
-	$wgEnabledTranscodeSet['360p.video.vp9.mp4'] = true;
-	$wgEnabledTranscodeSet['480p.video.vp9.mp4'] = true;
-	$wgEnabledTranscodeSet['720p.video.vp9.mp4'] = true;
-	$wgEnabledTranscodeSet['1080p.video.vp9.mp4'] = true;
+	$wgEnabledTranscodeSet['240p.video.vp9.mp4'] = false;
+	$wgEnabledTranscodeSet['360p.video.vp9.mp4'] = false;
+	$wgEnabledTranscodeSet['480p.video.vp9.mp4'] = false;
+	$wgEnabledTranscodeSet['720p.video.vp9.mp4'] = false;
+	$wgEnabledTranscodeSet['1080p.video.vp9.mp4'] = false;
 
 	// Temporarilly disable 1440p and 2160p transcodes:
 	// they're very slow to generate and we need to tune
