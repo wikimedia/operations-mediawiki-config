@@ -60,6 +60,8 @@ return [
 			// Portal
 			100,
 		],
+		// Commons uses 100 for Creator:
+		'commonswiki' => [],
 		'mediawikiwiki' => [
 			// LQT: Thread
 			90,
@@ -84,7 +86,7 @@ return [
 			// Lexeme
 			146,
 		],
-	'wikisource' => [
+		'wikisource' => [
 			// Page
 			250,
 			// Index
