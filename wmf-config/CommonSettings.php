@@ -4577,7 +4577,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 			// User can autocreate account per global permissions
 			return \StatusValue::newGood();
 		}
-		$logger->error(
+		$logger->info(
 			'Account autocreation denied for {name} by ClosedWikiProvider', [
 				'name' => $user->getName()
 			]
