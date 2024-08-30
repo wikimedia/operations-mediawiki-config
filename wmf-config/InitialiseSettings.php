@@ -7027,12 +7027,6 @@ return [
 	'lockeddown' => false, // T61702
 ],
 
-// whether MathML rendering is enabled by default - T131177
-'wmgUseMathML' => [
-	'private' => false,
-	'default' => true,
-],
-
 'wmgUseMobileApp' => [
 	'default' => true,
 	'wikitech' => false,

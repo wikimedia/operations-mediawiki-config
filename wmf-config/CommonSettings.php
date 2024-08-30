@@ -2878,10 +2878,6 @@ $wgExtendedLoginCookieExpiration = 365 * 86400;
 if ( $wmgUseMath ) {
 	wfLoadExtension( 'Math' );
 
-	if ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
-		$wgDefaultUserOptions['math'] = 'mathml';
-	}
-
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
 	// Create LateXML database table before enabling LaTeXML T309686
