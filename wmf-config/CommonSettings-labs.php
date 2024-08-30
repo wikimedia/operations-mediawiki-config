@@ -552,6 +552,9 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 
+	// show new donate link in beta for QA and testing
+	$wgWikimediaMessagesAnonDonateLink = true;
+
 	if ( $wmgUseNetworkSession ) {
 		$wgNetworkSessionProviderUsers = [
 			[
