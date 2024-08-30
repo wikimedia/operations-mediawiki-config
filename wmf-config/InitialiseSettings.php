@@ -6438,7 +6438,7 @@ return [
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
-	// T361843 phase 1: all wikis but the following 8
+	// T361843 phase 1: all wikis but the following 7 (plwiki got deployment in T373079)
 	'wikipedia' => true,
 	'bnwiki' => false,
 	'dewiki' => false,
@@ -6446,7 +6446,6 @@ return [
 	'hiwiki' => false,
 	'idwiki' => false,
 	'nlwiki' => false,
-	'plwiki' => false,
 	'ruwiki' => false,
 ],
 
