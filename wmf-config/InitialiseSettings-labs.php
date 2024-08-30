@@ -148,7 +148,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wmgDefaultMonologHandlers' => [
-			'default' => 'wgDebugLogFile',
+			'default' => 'extraLogFile',
 		],
 
 		// Stream config default settings.

@@ -35,7 +35,7 @@ if ( $wmgRealm == 'labs' ) {
 	$wgSitename = "Beta $wgSitename";
 
 	# Enable for all Beta wikis, depends on $wmgAllServices.
-	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/wfDebug";
+	$wmgExtraLogFile = "udp://{$wmgUdp2logDest}/wfDebug";
 
 	// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 	$wmgPrivilegedPolicy = [

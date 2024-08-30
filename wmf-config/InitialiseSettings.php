@@ -2118,7 +2118,7 @@ return [
 // See $wmgMonologConfig['handlers'] in logging.php for valid values.
 'wmgDefaultMonologHandlers' => [
 	'default' => 'blackhole',
-	'testwiki' => 'wgDebugLogFile',
+	'testwiki' => 'extraLogFile',
 ],
 
 # wmgMonologChannels @{

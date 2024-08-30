@@ -18,7 +18,7 @@
 #
 # The following globals from InitialiseSettings are used:
 #
-# - $wgDebugLogFile: udp2log destination for 'wgDebugLogFile' handler.
+# - $wmgExtraLogFile: udp2log destination for 'extraLogFile' handler.
 # - $wmgDefaultMonologHandlers: default handlers for log channels not
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgMonologChannels: per-channel logging config
@@ -65,16 +65,16 @@ $wmgEnableLogstash = true;
 
 if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Route all log messages to a local file
-	$wgDebugLogFile = '/tmp/wiki.log';
-	$wmgDefaultMonologHandlers = 'wgDebugLogFile';
+	$wmgExtraLogFile = '/tmp/wiki.log';
+	$wmgDefaultMonologHandlers = 'extraLogFile';
 	$wmgEnableLogstash = false;
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
 } elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
-	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
-	$wmgDefaultMonologHandlers = [ 'wgDebugLogFile', 'logstash-debug' ];
+	$wmgExtraLogFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
+	$wmgDefaultMonologHandlers = [ 'extraLogFile', 'logstash-debug' ];
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
 }
@@ -168,9 +168,9 @@ $wmgMonologHandlers = [
 	'blackhole' => [
 		'class' => \Monolog\Handler\NullHandler::class,
 	],
-	'wgDebugLogFile' => [
+	'extraLogFile' => [
 		'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
-		'args'      => [ $wgDebugLogFile ],
+		'args'      => [ $wmgExtraLogFile ],
 		'formatter' => 'line',
 	],
 ];
@@ -276,7 +276,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 
 	if ( $opts['udp2log'] ) {
 		$handlers[] = "udp2log-{$opts['udp2log']}";
-		if ( $wmgDefaultMonologHandlers === 'wgDebugLogFile' ) {
+		if ( $wmgDefaultMonologHandlers === 'extraLogFile' ) {
 			// T117019: Send messages to default handler location as well
 			// This is for messages from regular traffic to testwikis (WikimediaDebug is off).
 			// When WikimediaDebug is used, $wmgMonologChannels is cleared and this code

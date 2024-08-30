@@ -232,9 +232,9 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 
 $wmgUdp2logDest = $wmgLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' ) {
-	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/testwiki";
+	$wmgExtraLogFile = "udp://{$wmgUdp2logDest}/testwiki";
 } else {
-	$wgDebugLogFile = '/dev/null';
+	$wmgExtraLogFile = '/dev/null';
 }
 
 $wgConf = new SiteConfiguration;
