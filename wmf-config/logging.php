@@ -175,9 +175,6 @@ function wmfGetLoggingConfig() {
 	];
 
 	$monologHandlers = [
-		'blackhole' => [
-			'class' => \Monolog\Handler\NullHandler::class,
-		],
 		'extraLogFile' => [
 			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 			'args'      => [ $wmgExtraLogFile ],
@@ -253,7 +250,7 @@ function wmfGetLoggingConfig() {
 		if ( $opts === false ) {
 			// Log channel disabled on this wiki
 			$monologLoggers[$channel] = [
-				'handlers' => [ 'blackhole' ],
+				'handlers' => [],
 			];
 			continue;
 		}

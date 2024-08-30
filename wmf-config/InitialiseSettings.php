@@ -2118,7 +2118,7 @@ return [
 // not specifically configured in $wmgMonologChannels.
 // See $wmgMonologConfig['handlers'] in logging.php for valid values.
 'wmgDefaultMonologHandlers' => [
-	'default' => 'blackhole',
+	'default' => [],
 	'testwiki' => 'extraLogFile',
 ],
 

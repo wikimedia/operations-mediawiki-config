@@ -16,7 +16,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 	public static function setUpBeforeClass(): void {
 		parent::setUpBeforeClass();
-		$GLOBALS['wmgDefaultMonologHandlers'] = 'blackhole';
+		$GLOBALS['wmgDefaultMonologHandlers'] = [];
 		$GLOBALS['wmgExtraLogFile'] = false;
 		$GLOBALS['wmgLogAuthmanagerMetrics'] = false;
 		$GLOBALS['wmgUseWikimediaEvents'] = false;
@@ -67,9 +67,9 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 				[ 'failuregroup|udp2log-debug-sampled-1000' ],
 			],
 
-			'false yields blackhole' => [
+			'false yields no handlers' => [
 				false,
-				[ 'blackhole' ],
+				[],
 			],
 		];
 	}
@@ -82,7 +82,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$config = wmfGetLoggingConfig();
 		$GLOBALS['wmgMonologChannels'] = [];
 
-		if ( $expectHandlers ) {
+		if ( $expectHandlers !== null ) {
 			foreach ( $expectHandlers as $handlerName ) {
 				$this->assertArrayHasKey( $handlerName, $config['handlers'] );
 			}
