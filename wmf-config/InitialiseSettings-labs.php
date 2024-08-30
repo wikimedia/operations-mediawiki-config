@@ -2297,10 +2297,6 @@ function wmfGetOverrideSettings() {
 				'default' => null,
 		],
 
-		'wgCodeMirrorRTL' => [
-				'default' => true,
-		],
-
 		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
 			'default' => true, // T356924, T356923
 			'wikitech' => false,

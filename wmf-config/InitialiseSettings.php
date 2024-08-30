@@ -12095,12 +12095,6 @@ return [
 	'twwiki' => null, // T302852
 ],
 
-// Temporary, controls CM6 rollout to RTL wikis; see T170001
-'wgCodeMirrorRTL' => [
-	'default' => false,
-	'hewiki' => true, // T170001
-],
-
 'wgParserEnableLegacyHeadingDOM' => [
 	'default' => false,
 ],
