@@ -147,10 +147,6 @@ function wmfGetOverrideSettings() {
 			'default' => 32,
 		],
 
-		'-wmgDefaultMonologHandlers' => [
-			'default' => 'extraLogFile',
-		],
-
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if

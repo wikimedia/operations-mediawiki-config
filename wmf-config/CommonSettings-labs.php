@@ -34,9 +34,6 @@ if ( $wmgRealm == 'labs' ) {
 	# Use a different site name (T181908)
 	$wgSitename = "Beta $wgSitename";
 
-	# Enable for all Beta wikis, depends on $wmgAllServices.
-	$wmgExtraLogFile = "udp://{$wmgUdp2logDest}/wfDebug";
-
 	// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 	$wmgPrivilegedPolicy = [
 		'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
