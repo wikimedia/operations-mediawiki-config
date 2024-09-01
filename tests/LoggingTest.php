@@ -14,6 +14,19 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
  */
 class LoggingTest extends PHPUnit\Framework\TestCase {
 
+	public static function setUpBeforeClass(): void {
+		parent::setUpBeforeClass();
+		$GLOBALS['wmgDefaultMonologHandlers'] = 'blackhole';
+		$GLOBALS['wmgExtraLogFile'] = false;
+		$GLOBALS['wmgLogAuthmanagerMetrics'] = false;
+		$GLOBALS['wmgUseWikimediaEvents'] = false;
+		$GLOBALS['wmgUdp2logDest'] = 'localhost';
+		$GLOBALS['wmgEnableLogstash'] = true;
+		$GLOBALS['wmgUseEventBus'] = true;
+		$GLOBALS['wmgMonologChannels'] = [];
+		require_once __DIR__ . '/../wmf-config/logging.php';
+	}
+
 	public function provideHandlerSetup() {
 		return [
 			'Setting only a level sends to udp2log and logstash' => [
@@ -65,33 +78,22 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider provideHandlerSetup
 	 */
 	public function testHandlerSetup( $channelConfig, $expectHandlers ) {
-		// logging.php does not explicitly declare anything global, so it will
-		// only read from the local scope defined here.
-		$wmgDefaultMonologHandlers = 'blackhole';
-		// wmf-config/logging.php expects $wmgExtraLogFile to be in the same scope that
-		// the file is loaded in (normally the global scope but not in this case)
-		$wmgExtraLogFile = false;
-		$wmgLogAuthmanagerMetrics = false;
-		$wmgUdp2logDest = 'localhost';
-		$wmgEnableLogstash = true;
-		$wmgUseEventBus = true;
-		$wmgMonologChannels = [ 'test' => $channelConfig ];
-		$wmgRealm = 'production';
-
-		include __DIR__ . '/../wmf-config/logging.php';
+		$GLOBALS['wmgMonologChannels'] = [ 'test' => $channelConfig ];
+		$config = wmfGetLoggingConfig();
+		$GLOBALS['wmgMonologChannels'] = [];
 
 		if ( $expectHandlers ) {
 			foreach ( $expectHandlers as $handlerName ) {
-				$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+				$this->assertArrayHasKey( $handlerName, $config['handlers'] );
 			}
 
 			$this->assertEquals(
 				$expectHandlers,
-				$wmgMonologConfig['loggers']['test']['handlers']
+				$config['loggers']['test']['handlers']
 			);
 		} else {
-			$this->assertArrayHasKey( 'loggers', $wmgMonologConfig );
-			$this->assertArrayNotHasKey( 'test', $wmgMonologConfig['loggers'] );
+			$this->assertArrayHasKey( 'loggers', $config );
+			$this->assertArrayNotHasKey( 'test', $config['loggers'] );
 		}
 	}
 

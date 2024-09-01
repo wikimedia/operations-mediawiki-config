@@ -322,6 +322,12 @@ extract( $globals );
 require __DIR__ . '/../private/PrivateSettings.php';
 
 require __DIR__ . '/logging.php';
+wmfApplyDebugLoggingHacks();
+$wgMWLoggerDefaultSpi = [
+	'class' => \MediaWiki\Logger\MonologSpi::class,
+	'args' => [ wmfGetLoggingConfig() ],
+];
+
 require __DIR__ . '/filebackend.php';
 require __DIR__ . '/mc.php';
 if ( $wmgRealm === 'labs' ) {
