@@ -2338,5 +2338,11 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
 			'default' => true,
 		],
+
+		// T372527
+		'-wmgUseCommunityRequests' => [
+			'default' => false,
+			'metawiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
