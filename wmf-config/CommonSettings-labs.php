@@ -531,6 +531,11 @@ if ( $wmgRealm == 'labs' ) {
 		// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
 	}
 
+	// T372527
+	if ( $wmgUseCommunityRequests ) {
+		wfLoadExtension( 'CommunityRequests' );
+	}
+
 	// IP Masking / Temporary accounts
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
