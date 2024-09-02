@@ -12005,6 +12005,9 @@ return [
 	'officewiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
+	// T372582
+	'igwiki' => true,
+	'swwiki' => true,
 ],
 
 'wgCampaignEventsShowEventInvitationSpecialPages' => [
