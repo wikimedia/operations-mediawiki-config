@@ -2455,9 +2455,10 @@ return [
 // Reveal Vector 2022 appearance menu.
 'wgVectorAppearance' => [
 	'default' => [
-		'logged_in' => false,
+		'logged_in' => true,
 		'logged_out' => false,
-		'beta' => true,
+		// Important to disable this to disable the beta feature
+		'beta' => false,
 	],
 	'wikipedia' => [
 		'logged_in' => true,
