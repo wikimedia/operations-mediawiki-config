@@ -82,7 +82,6 @@ return [
 		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
 		'development.network.probe',
-		'wikifunctions.ui',
 		'mediawiki.web_ui_actions',
 		'mediawiki.web_ui_scroll_migrated',
 		'mediawiki.reference_previews',
