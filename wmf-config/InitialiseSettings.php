@@ -12148,7 +12148,8 @@ return [
 ],
 
 'wmgUseNetworkSession' => [
-	'default' => true,
+	'default' => false,
+	'private' => true,
 	'loginwiki' => false,
 ],
 
