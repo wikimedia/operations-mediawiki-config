@@ -1612,7 +1612,7 @@ return [
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
-	'tlywiki' => 'Vikipediá', // T345316
+	'tlywiki' => 'Vikipedija', // T367009
 	'transitionteamwiki' => 'Transition Team Wiki',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',
