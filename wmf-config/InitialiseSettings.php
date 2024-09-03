@@ -7081,6 +7081,9 @@ return [
 // Namespaces where lead paragraph should be moved above infobox on mobile devices.
 'wgMFNamespacesWithLeadParagraphs' => [
 	'default' => [ NS_MAIN ],
+	// In WikiVoyage there are no infoboxes, so typically this results in images
+	// being hoisted into unexpected places. It is preferable to get these fixed on wiki.
+	'wikivoyage' => [],
 	'nlwiki' => [ NS_MAIN, NS_USER, ] // T242030
 ],
 
