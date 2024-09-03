@@ -43,8 +43,17 @@ $wgPoolCounterConf = [
 		'maxqueue' => 450,
 	],
 	// Regex searches are much heavier then regular searches so we limit the
-	// concurrent number.
+	// concurrent number. Will be removed once regex's transition to the
+	// ExpensiveFullText pool defined below.
 	'CirrusSearch-Regex' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 60,
+		'workers' => 10,
+		'maxqueue' => 15,
+	],
+	// Pool counter for expensive full text searches such as regex
+	// and deepcat.
+	'CirrusSearch-ExpensiveFullText' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 60,
 		'workers' => 10,
