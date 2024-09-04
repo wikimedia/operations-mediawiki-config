@@ -5925,6 +5925,7 @@ return [
 	'eowikivoyage' => true, // T372810
 	'svwikivoyage' => true, // T372810
 	'fiwikivoyage' => true, // T372810
+	'eswikivoyage' => true, // T374029
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -5937,6 +5938,7 @@ return [
 	'eowikivoyage' => true, // T372810
 	'svwikivoyage' => true, // T372810
 	'fiwikivoyage' => true, // T372810
+	'eswikivoyage' => true, // T374029
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
