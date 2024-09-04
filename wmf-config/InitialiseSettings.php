@@ -12166,6 +12166,7 @@ return [
 // T372527
 'wmgUseCommunityRequests' => [
 	'default' => false,
+	'metawiki' => true,
 ],
 
 ];
