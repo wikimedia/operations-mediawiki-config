@@ -8080,7 +8080,7 @@ return [
 
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
 	'default' => 95,
-	'aswiki' => 70,
+	'aswiki' => 80, // T369417
 	'fywiki' => 90, // T323415
 	'hywiki' => 80, // T313208
 	'idwiki' => 70,
