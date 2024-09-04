@@ -585,5 +585,10 @@ if ( $wmgRealm == 'labs' ) {
 			],
 		];
 	}
+
+	// Community configuration
+	if ( $wmgUseCommunityConfiguration ) {
+		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
+	}
 }
 // end safeguard

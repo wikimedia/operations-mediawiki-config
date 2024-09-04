@@ -4557,6 +4557,7 @@ if ( $wmgEditRecoveryDefaultUserOptions ) {
 if ( $wmgUseCommunityConfiguration ) {
 	wfLoadExtension( 'CommunityConfiguration' );
 	$wgCommunityConfigurationFeedbackURL = 'https://www.mediawiki.org/wiki/Extension_talk:CommunityConfiguration';
+	$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.org/w/api.php';
 }
 
 if ( $wgMetricsPlatformEnable && $wgMetricsPlatformEnableStreamConfigsMerging ) {
