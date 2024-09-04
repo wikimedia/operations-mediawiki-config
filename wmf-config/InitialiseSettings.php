@@ -5190,6 +5190,7 @@ return [
 'wgCopyUploadsFromSpecialUpload' => [
 	'default' => false,
 	'testwiki' => true, // T73897
+	'test2wiki' => true, // T356241
 	'commonswiki' => true, // T73897
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
