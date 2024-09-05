@@ -4779,6 +4779,11 @@ return [
 	'default' => [ 'source', 'mathml', 'native', 'mathjax' ],
 ],
 
+'wmgMathDefaultUserOptions' => [
+	'default' => 'mathml',
+	'group0' => 'native',
+],
+
 'wgMaxExecutionTimeForExpensiveQueries' => [
 	'default' => 30000,
 ],
