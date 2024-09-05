@@ -2557,6 +2557,8 @@ return [
 	'aswiki' => [
 		100 => "ৱিকিচ'ৰা", // Portal
 		101 => "ৱিকিচ'ৰা_আলোচনা", // Portal talk
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'azwiki' => [
 		100 => 'Portal',
@@ -2611,6 +2613,8 @@ return [
 		101 => 'প্রবেশদ্বার_আলোচনা',
 		118 => 'খসড়া', // Draft - T350133
 		119 => 'খসড়া_আলোচনা', // Draft talk - T350133
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'bpywiki' => [
 		100 => 'হমিলদুৱার', // Portal
@@ -2661,6 +2665,8 @@ return [
 	'+dagwiki' => [
 		104 => 'Salima', // T289911
 		105 => 'Salima_yɛltɔɣa',
+		126 => 'MOS', // T363538
+		127 => 'MOS_yɛltɔɣa', // T363538
 	],
 	'dewiki' => [
 		100 => 'Portal',
@@ -2687,6 +2693,9 @@ return [
 		// 108, 109 were used for Book namespace, deleted as part of T285766
 		118 => 'Draft', // T59569
 		119 => 'Draft_talk',
+		// Addition of MOS on enwiki is going to be done as a separate deploy
+		#126 => 'MOS', // T363538
+		#127 => 'MOS_talk', // T363538
 	],
 	'eowiki' => [
 		100 => 'Portalo',
@@ -2800,7 +2809,9 @@ return [
 	],
 	'idwiki' => [
 		100 => 'Portal',
-		101 => 'Pembicaraan_Portal'
+		101 => 'Pembicaraan_Portal',
+		126 => 'MOS', // T363538
+		127 => 'Pembicaraan_MOS', // T363538
 	],
 	'inhwiki' => [
 		100 => 'Моартал',
@@ -2834,6 +2845,8 @@ return [
 		101 => 'Portal‐ノート',
 		102 => 'プロジェクト',
 		103 => 'プロジェクト‐ノート',
+		126 => 'MOS', // T363538
+		127 => 'MOS‐ノート', // T363538
 		829 => 'モジュール‐ノート', // T49933
 	],
 	'jamwiki' => [
@@ -2947,6 +2960,8 @@ return [
 	'mswiki' => [
 		100 => 'Portal',
 		101 => 'Perbincangan_portal',
+		126 => 'MOS', // T363538
+		127 => 'Perbincangan_MOS', // T363538
 	],
 	'mwlwiki' => [
 		100 => 'Portal', // T180052
@@ -3103,6 +3118,10 @@ return [
 		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
 	],
 	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
+	'simplewiki' => [
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
+	],
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
 		NS_USER => 'Redaktor', // T143472
@@ -3115,6 +3134,8 @@ return [
 		101 => 'Pogovor_o_portalu',
 		118 => 'Osnutek', // Draft, T332351
 		119 => 'Pogovor_o_osnutku', // Draft_talk, T332351
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'sowiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ], // T51600
 	'sqwiki' => [ 100 => 'Portal', 101 => 'Portal_diskutim' ],
@@ -3152,6 +3173,8 @@ return [
 		109 => 'คุยเรื่องหนังสือ', // Book talk
 		118 => 'ฉบับร่าง', // T216322, Draft
 		119 => 'คุยเรื่องฉบับร่าง', // Draft talk
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'tiwiki' => [
 		100 => 'ማዕጾ', // T259295 Portal
@@ -3239,6 +3262,8 @@ return [
 		103 => 'WikiProject_talk', // T271612
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
