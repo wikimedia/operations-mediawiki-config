@@ -16,7 +16,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 	public static function setUpBeforeClass(): void {
 		parent::setUpBeforeClass();
-		$GLOBALS['wmgDefaultMonologHandlers'] = [];
+		$GLOBALS['wmgEnableExtraLogFile'] = false;
 		$GLOBALS['wmgExtraLogFile'] = false;
 		$GLOBALS['wmgLogAuthmanagerMetrics'] = false;
 		$GLOBALS['wmgUseWikimediaEvents'] = false;

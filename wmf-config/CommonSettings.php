@@ -322,11 +322,11 @@ extract( $globals );
 require __DIR__ . '/../private/PrivateSettings.php';
 
 require __DIR__ . '/logging.php';
-wmfApplyDebugLoggingHacks();
 $wgMWLoggerDefaultSpi = [
 	'class' => \MediaWiki\Logger\MonologSpi::class,
 	'args' => [ wmfGetLoggingConfig() ],
 ];
+wmfApplyDebugLoggingHacks();
 
 require __DIR__ . '/filebackend.php';
 require __DIR__ . '/mc.php';

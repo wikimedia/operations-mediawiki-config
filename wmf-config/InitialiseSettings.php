@@ -2114,12 +2114,11 @@ return [
 ],
 # @} end of wgTranslateNumerals
 
-// Statically configured Monolog handlers to clone for log channels that are
-// not specifically configured in $wmgMonologChannels.
-// See $wmgMonologConfig['handlers'] in logging.php for valid values.
-'wmgDefaultMonologHandlers' => [
-	'default' => [],
-	'testwiki' => 'extraLogFile',
+// Send a copy of ALL the logs to $wmgExtraLogFile
+// (except channels set to `false` or `[ 'udp2log' => false ]` in $wmgMonologChannels below).
+'wmgEnableExtraLogFile' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 # wmgMonologChannels @{
