@@ -5205,6 +5205,7 @@ return [
 'wgCopyUploadAllowOnWikiDomainConfig' => [
 	'default' => false,
 	'commonswiki' => true, // T300407
+	'test2wiki' => true, // T356241
 ],
 
 'wgCopyUploadsDomains' => [
