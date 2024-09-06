@@ -6918,6 +6918,11 @@ return [
 	'default' => 1800,
 ],
 
+// Should match the definition in wgGlobalBlockingAllowedRanges
+'wgCheckUserCentralIndexRangesToExclude' => [
+	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
+],
+
 // ----------- CheckUser end ----------
 
 // n.b. If setting this to `false` for a wiki, please also update the
@@ -10739,6 +10744,7 @@ return [
 ],
 
 'wgGlobalBlockingAllowedRanges' => [
+	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
 	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
 	'wikitech' => [],
 	'fishbowl' => [],
