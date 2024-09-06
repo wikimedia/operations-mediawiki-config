@@ -2693,9 +2693,8 @@ return [
 		// 108, 109 were used for Book namespace, deleted as part of T285766
 		118 => 'Draft', // T59569
 		119 => 'Draft_talk',
-		// Addition of MOS on enwiki is going to be done as a separate deploy
-		#126 => 'MOS', // T363538
-		#127 => 'MOS_talk', // T363538
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'eowiki' => [
 		100 => 'Portalo',
