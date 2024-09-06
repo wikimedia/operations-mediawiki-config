@@ -753,7 +753,34 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgQuickSurveysConfig' => [
-			'default' => []
+			'default' => [
+				[
+					"name" => "Empty search experiment survey",
+					"type" => "external",
+					'enabled' => true,
+					'coverage' => 1,
+					"privacyPolicy" => "ext-quicksurveys-empty-search-experiment-privacy-policy",
+					'platforms' => [
+						'desktop' => [ 'stable' ]
+					],
+					'audience' => [
+						"userAgent" => [
+							"Chrome",
+						]
+					],
+					"questions" => [
+						[
+							"name" => "Empty search experiment question",
+							"layout" => "single-answer",
+							"link" => 'ext-quicksurveys-empty-search-experiment-link',
+							"question" => "ext-quicksurveys-empty-search-experiment-question",
+							"description" => null,
+							"yesMsg" => "ext-quicksurveys-empty-search-experiment-yes",
+							"noMsg" => "ext-quicksurveys-empty-search-experiment-no",
+						],
+					],
+				]
+			]
 		],
 
 		'-wgScorePath' => [
