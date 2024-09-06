@@ -12169,4 +12169,10 @@ return [
 	'metawiki' => true,
 ],
 
+'wgWikimediaMessagesAnonDonateLink' => [
+	'default' => false,
+	'frwiki' => true,
+	'wikifunctionswiki' => true,
+],
+
 ];
