@@ -12203,6 +12203,8 @@ return [
 	'trwiki' => true,
 	// T365792
 	'idwiki' => true,
+	// T373823
+	'ukwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -12211,6 +12213,8 @@ return [
 	'trwiki' => 'Otomoderatör',
 	// T365792
 	'idwiki' => "Automoderator",
+	// T373823
+	'ukwiki' => "Автомодератор",
 ],
 
 // T341000
