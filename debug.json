@@ -6,6 +6,9 @@
     "mwdebug1001.eqiad.wmnet",
     "mwdebug1002.eqiad.wmnet",
     "k8s-mwdebug-codfw",
-    "k8s-mwdebug-eqiad"
+    "k8s-mwdebug-eqiad",
+    "k8s-mwdebug-next",
+    "k8s-mwdebug-next-codfw",
+    "k8s-mwdebug-next-eqiad"
   ]
 }
