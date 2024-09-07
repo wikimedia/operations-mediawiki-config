@@ -2367,10 +2367,6 @@ return [
 		NS_CATEGORY,
 	],
 ],
-'wgResourceLoaderClientPreferences' => [
-	// T327979
-	'default' => true
-],
 // Note that Wikisource modifies this default in wmf-config/CommonSettings.php
 'wgVectorMaxWidthOptions' => [
 	'default' => [
@@ -4580,10 +4576,6 @@ return [
 
 'wgUserEmailUseReplyTo' => [
 	'default' => true, // T66795
-],
-
-'wgStatsMethod' => [
-	'default' => 'udp',
 ],
 
 'wgUseLocalMessageCache' => [
