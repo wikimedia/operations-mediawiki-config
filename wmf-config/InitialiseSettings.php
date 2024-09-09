@@ -11848,15 +11848,6 @@ return [
 	'default' => true,
 ],
 
-'wmgPoweredByMediaWikiIcon' => [
-	'default' => [
-		'svg' => '/static/images/footer/poweredby_mediawiki.svg',
-		'1x' => '/static/images/footer/poweredby_mediawiki_88x31.png',
-		'1.5x' => '/static/images/footer/poweredby_mediawiki_132x47.png',
-		'2x' => '/static/images/footer/poweredby_mediawiki_176x62.png'
-	],
-],
-
 'wmgWikimediaIcon' => [
 	'default' => [
 		'svg' => '/static/images/footer/wikimedia-button.svg',
