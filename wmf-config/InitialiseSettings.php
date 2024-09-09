@@ -746,6 +746,7 @@ return [
 	'default' => false,
 	'commonswiki' => true,
 	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 // Raise stash time limit on Commons for UploadWizard
