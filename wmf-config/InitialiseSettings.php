@@ -8924,9 +8924,6 @@ return [
 // T66315 - temporary rollout
 'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
 	'default' => false,
-	'fawiki' => true,
-	'hewiki' => true,
-	'ukwiki' => true,
 ],
 
 'wmgWikibaseStringLimits' => [
