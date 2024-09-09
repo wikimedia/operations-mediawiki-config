@@ -1732,11 +1732,13 @@ if ( $wgDBname === 'nostalgiawiki' ) {
 	wfLoadSkin( 'Nostalgia' );
 }
 
-$wgFooterIcons['copyright']['copyright'] =
-	'<a class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled" ' .
-	'style="padding-left: 8px; padding-right: 8px;" ' .
-	'href="https://wikimediafoundation.org/" target="https://wikimediafoundation.org/"><img src="' .
-	$wmgWikimediaIcon['svg'] . '" width="84" height="29" alt="Wikimedia Foundation"></a>';
+$wgFooterIcons['copyright']['copyright'] = [
+	'url' => 'https://wikimediafoundation.org/',
+	'src' => $wmgWikimediaIcon,
+	'width' => 84,
+	'height' => 29,
+	'alt' => 'Wikimedia Foundation',
+];
 
 # :SEARCH:
 

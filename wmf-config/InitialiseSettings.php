@@ -11823,12 +11823,7 @@ return [
 ],
 
 'wmgWikimediaIcon' => [
-	'default' => [
-		'svg' => '/static/images/footer/wikimedia-button.svg',
-		'1x' => '/static/images/footer/wikimedia-button.png',
-		'1.5x' => '/static/images/footer/wikimedia-button-1.5x.png',
-		'2x' => '/static/images/footer/wikimedia-button-2x.png'
-	],
+	'default' => '/static/images/footer/wikimedia-button.svg',
 ],
 
 'wmgUseWikimediaApiPortal' => [
