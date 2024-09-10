@@ -6,6 +6,10 @@
 
 return [
 
+'wgBabelUseCommunityConfiguration' => [
+	'default' => false,
+],
+
 'wmgBabelCategoryNames' => [
 	'default' => [
 		'0' => false,
