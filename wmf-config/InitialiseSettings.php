@@ -11032,6 +11032,7 @@ return [
 'wmgUseQuickSurveys' => [
 	'default' => false,
 	'cawiki' => true,
+	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'frwiktionary' => true,
@@ -11042,7 +11043,101 @@ return [
 ],
 
 'wgQuickSurveysConfig' => [
-	'default' => []
+	'default' => [],
+	'enwiki' => [
+		[
+			'name' => 'Empty search experiment survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.05,
+			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
+			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'audience' => [
+				'anons' => true,
+				'userAgent' => [ 'Chrome' ],
+			],
+			'questions' => [
+				[
+					'name' => 'Empty search experiment question',
+					'layout' => 'single-answer',
+					'link' => 'ext-quicksurveys-empty-search-experiment-link',
+					'question' => 'ext-quicksurveys-empty-search-experiment-question',
+					'description' => null,
+					'yesMsg' => 'ext-quicksurveys-empty-search-experiment-yes',
+					'noMsg' => 'ext-quicksurveys-empty-search-experiment-no',
+				],
+			],
+		],
+		[
+			'name' => 'Web non-UI experiment survey',
+			'type' => 'external',
+			'enabled' => false,
+			'coverage' => 0.05,
+			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
+			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'Empty search experiment question',
+					'layout' => 'single-answer',
+					'link' => 'ext-quicksurveys-non-ui-experiment-link',
+					'question' => 'ext-quicksurveys-non-ui-experiment-question',
+					'description' => null,
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		]
+	],
+	'eswiki' => [
+		[
+			'name' => 'Empty search experiment survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.1,
+			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
+			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'audience' => [
+				'anons' => true,
+				'userAgent' => [ 'Chrome' ],
+			],
+			'questions' => [
+				[
+					'name' => 'Empty search experiment question',
+					'layout' => 'single-answer',
+					'link' => 'ext-quicksurveys-empty-search-experiment-link',
+					'question' => 'ext-quicksurveys-empty-search-experiment-question',
+					'description' => null,
+					'yesMsg' => 'ext-quicksurveys-empty-search-experiment-yes',
+					'noMsg' => 'ext-quicksurveys-empty-search-experiment-no',
+				],
+			],
+		],
+		[
+			'name' => 'Web non-UI experiment survey',
+			'type' => 'external',
+			'enabled' => false,
+			'coverage' => 0.05,
+			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
+			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'Empty search experiment question',
+					'layout' => 'single-answer',
+					'link' => 'ext-quicksurveys-non-ui-experiment-link',
+					'question' => 'ext-quicksurveys-non-ui-experiment-question',
+					'description' => null,
+					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
+					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
+				],
+			],
+		]
+	]
 ],
 
 // WikidataPageBanner extension (T98029)
