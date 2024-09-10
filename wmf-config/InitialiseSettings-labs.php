@@ -2369,5 +2369,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'metawiki' => true,
 		],
+		// T374348
+		'wgBabelUseCommunityConfiguration' => [
+			'default' => false,
+			'cswiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
