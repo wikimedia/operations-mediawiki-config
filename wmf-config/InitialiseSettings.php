@@ -4606,11 +4606,6 @@ return [
 	'default' => true,
 ],
 
-// Store RL deps info in MainStash instead of core module_deps table (T113916)
-'wgResourceLoaderUseObjectCacheForDeps' => [
-	'default' => true,
-],
-
 'wgResourceLoaderEnableSourceMapLinks' => [
 	'default' => true,
 ],
