@@ -2284,10 +2284,10 @@ return [
 		'width' => 119,
 		'height' => 19,
 	],
-	'arwiki' => [
+	'arwiki' => [ // T374430
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
-		'width' => 114,
-		'height' => 32,
+		'width' => 112,
+		'height' => 39,
 	],
 	'arywiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ary.svg',
@@ -5643,10 +5643,10 @@ return [
 		'width' => 110,
 		'height' => 11,
 	],
-	'arwiki' => [ // T258552
+	'arwiki' => [ // T374430
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
-		'width' => 112,
-		'height' => 18,
+		'width' => 105,
+		'height' => 22,
 	],
 	'arywiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ary.svg',

@@ -123,9 +123,9 @@ Wikipedia:
         commons: 'File:Wikipedia-logo-v2-ar.svg'
         comment_1_5x: T150618
         comment_2x: T150618
-        commons_wordmark: 'File:Wikipedia-wordmark-ar.svg'
-        commons_tagline: 'File:Wikipedia-tagline-ar.svg'
-        comment_tagline: T258552
+        commons_wordmark: 'File:Wikipedia wordmark-ar-alt2.svg'
+        commons_tagline: 'File:Wikipedia-tagline-ar-alt.svg'
+        comment_tagline: T374430
     arywiki:
         commons_wordmark: 'File:Wikipedia-wordmark-ary.svg'
         comment_wordmark: T290091
