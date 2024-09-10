@@ -4081,6 +4081,10 @@ if ( $wmgUseCheckUser ) {
 				'groups' => [ 'steward' ],
 			];
 		}
+	} else {
+		// Disable central index for wikis which do not use CentralAuth, as it relies on central IDs
+		// (which need CentralAuth)
+		$wgCheckUserWriteToCentralIndex = false;
 	}
 	// Virtual domains config for CheckUser central index tables (T371724)
 	$wgVirtualDomainsMapping['virtual-checkuser-global'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
