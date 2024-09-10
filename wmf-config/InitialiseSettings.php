@@ -12261,8 +12261,8 @@ return [
 
 'wgWikimediaMessagesAnonDonateLink' => [
 	'default' => false,
-	'frwiki' => true,
-	'wikifunctionswiki' => true,
+	'frwiki' => false,
+	'wikifunctionswiki' => false,
 ],
 
 ];
