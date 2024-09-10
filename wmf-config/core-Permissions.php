@@ -3092,6 +3092,14 @@ return [
 			'templateeditor' => true, // T260012
 			'extendedconfirmed' => true, // T287322
 		],
+		'arbcom' => [ // T374455
+			'abusefilter-log-detail' => true,
+			'abusefilter-log-private' => true,
+			'abusefilter-view-private' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+		],
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -4684,7 +4692,10 @@ return [
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
-		'bureaucrat' => [ 'flood' ],
+		'bureaucrat' => [
+			'flood',
+			'arbcom', // T374455
+		],
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T357991
 		'sysop' => [
 			'abusefilter-helper', // T344398
@@ -5868,7 +5879,10 @@ return [
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
-		'bureaucrat' => [ 'flood' ],
+		'bureaucrat' => [
+			'flood',
+			'arbcom', // T374455
+		],
 		'sysop' => [
 			'abusefilter-helper', // T344398
 			'patroller',
