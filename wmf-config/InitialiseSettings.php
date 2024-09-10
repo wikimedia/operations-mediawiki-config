@@ -11832,10 +11832,6 @@ return [
 	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
 ],
 
-'wgGlobalRenameDenylistRegex' => [
-	'default' => true
-],
-
 // Disables use of Special:CreateAcount, but allows CentralAuth accounts to still be autocreated
 'wmgDisableAccountCreation' => [
 	'default' => false,

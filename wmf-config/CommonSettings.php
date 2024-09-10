@@ -1979,9 +1979,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthDryRun = false;
 	$wgCentralAuthCookies = true;
 
-	$wgCentralAuthUseEventLogging = true;
-	$wgCentralAuthPreventUnattached = true;
-
 	foreach ( $wmgLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
 			'formatter' => IRCColourfulCARCFeedFormatter::class,
@@ -2068,9 +2065,6 @@ if ( $wmgUseCentralAuth ) {
 	}
 
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
-
-	// Let's give it another try
-	$wgCentralAuthCreateOnView = true;
 
 	// Attempt to attach unattached accounts by password on login
 	$wgCentralAuthAutoMigrate = true;
