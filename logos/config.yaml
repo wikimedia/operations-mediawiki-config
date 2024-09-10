@@ -120,9 +120,9 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     arwiki:
-        commons: 'File:Wikipedia-logo-v2-ar.svg'
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: 'File:Wikipedia-logo-v3-ar.svg'
+        comment_1_5x: T374430
+        comment_2x: T374430
         commons_wordmark: 'File:Wikipedia wordmark-ar-alt2.svg'
         commons_tagline: 'File:Wikipedia-tagline-ar-alt.svg'
         comment_tagline: T374430
