@@ -5897,6 +5897,7 @@ return [
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
 		],
+		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T374504
 	],
 	'+zhwikibooks' => [
 		'sysop' => [
