@@ -2501,6 +2501,10 @@ return [
 		106 => 'Index',
 		107 => 'Index_talk',
 	],
+	'u4cwiki' => [ // T374439
+		100 => 'Case',
+		101 => 'Case_talk',
+	],
 	'usabilitywiki' => [
 		100 => 'Multimedia',
 		101 => 'Multimedia_talk',
