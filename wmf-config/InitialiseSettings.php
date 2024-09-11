@@ -2288,6 +2288,8 @@ return [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
 	'+group0' => [
+		// Enable logging errors from all channels not configured otherwise (T228838)
+		'@default' => 'error',
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
 	'+arwiki' => [
