@@ -11066,7 +11066,7 @@ return [
 		[
 			'name' => 'Web non-UI experiment survey',
 			'type' => 'external',
-			'enabled' => false,
+			'enabled' => true,
 			'coverage' => 0.05,
 			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
@@ -11113,8 +11113,8 @@ return [
 		[
 			'name' => 'Web non-UI experiment survey',
 			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0.05,
+			'enabled' => true,
+			'coverage' => 0.1,
 			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
 			'audience' => [
