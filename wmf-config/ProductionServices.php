@@ -190,7 +190,7 @@ $services = [
 		],
 
 		'poolcounter' => [
-			'10.192.0.132', # poolcounter2003.codfw.wmnet
+			'10.192.0.9',    # poolcounter2005.codfw.wmnet
 			'10.192.16.129', # poolcounter2004.codfw.wmnet
 		],
 
