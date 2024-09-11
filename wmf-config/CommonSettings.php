@@ -3229,6 +3229,10 @@ if ( $wgDBname === 'labswiki' ) {
 
 if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
+
+	if ( $wmgUseTranslate ) {
+		$wgThanksAllowedLogTypes[] = 'pagetranslation';
+	}
 }
 
 if ( $wmgUseEntitySchema ) {
