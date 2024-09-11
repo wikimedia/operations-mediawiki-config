@@ -252,6 +252,8 @@ function wmfGetOverrideSettings() {
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
 		'wmgMonologChannels' => [
 			'default' => [
+				// Enable logging errors from all channels not configured otherwise (T228838)
+				'@default' => 'error',
 				// Copied from default production
 				// For channels where there is production configuration that labs
 				// overrides, the relevant line from the production config is commented out
