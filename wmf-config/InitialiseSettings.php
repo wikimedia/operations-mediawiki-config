@@ -8488,6 +8488,7 @@ return [
 'wgRelatedArticlesCardLimit' => [
 	'default' => 3,
 	'wikivoyage' => 9,
+	'zhwikinews' => 9, // T374323
 ],
 
 'wgRelatedArticlesUseCirrusSearch' => [
