@@ -1435,7 +1435,6 @@ return [
 			'massmessage' => true,
 			'nominornewtalk' => true,
 			'noratelimit' => true,
-			'oathauth-enable' => true,
 			'override-antispoof' => true,
 			'protect' => true,
 			'skipcaptcha' => true,
@@ -1899,7 +1898,6 @@ return [
 			'editprotected' => true,
 		], // T195557
 		'flood' => [ 'bot' => true ], // T211181
-		'transwiki' => [ 'oathauth-enable' => true ], // T214036
 	],
 	'+nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
