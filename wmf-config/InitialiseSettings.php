@@ -5900,6 +5900,11 @@ return [
 	'hiwikivoyage' => true, // T373229
 	'pswikivoyage' => true, // T373229
 	'trwikivoyage' => true, // T373229
+	'fawikivoyage' => true, // T374372
+	'nlwikivoyage' => true, // T374372
+	'plwikivoyage' => true, // T374372
+	'ptwikivoyage' => true, // T374372
+	'ukwikivoyage' => true, // T374372
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -5917,6 +5922,11 @@ return [
 	'hiwikivoyage' => true, // T373229
 	'pswikivoyage' => true, // T373229
 	'trwikivoyage' => true, // T373229
+	'fawikivoyage' => true, // T374372
+	'nlwikivoyage' => true, // T374372
+	'plwikivoyage' => true, // T374372
+	'ptwikivoyage' => true, // T374372
+	'ukwikivoyage' => true, // T374372
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
