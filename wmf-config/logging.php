@@ -68,6 +68,7 @@ function wmfApplyDebugLoggingHacks() {
 		$logFile = '/tmp/wiki.log';
 		$handlers = [ 'debugLogging' ];
 	} elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
+		global $wmgUdp2logDest;
 		// Forward all log messages to logstash for debugging.
 		// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 		$logFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
