@@ -2371,8 +2371,7 @@ function wmfGetOverrideSettings() {
 		],
 		// T374348
 		'wgBabelUseCommunityConfiguration' => [
-			'default' => false,
-			'cswiki' => true,
+			'default' => true,
 		],
 	];
 } # wmfGetOverrideSettings()
