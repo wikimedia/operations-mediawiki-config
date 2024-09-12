@@ -40,14 +40,14 @@ $wmgThrottlingExceptions[] = [
 	'from' => '2024-09-17T13:00 +3:00',
 	'to' => '2024-09-17T20:00 +3:00',
 	'IP' => '172.16.29.137',
-	'dbname' => [ 'eswiki', 'wikidatawiki', 'commonswiki' ],
+	'dbname' => [ 'eswiki', 'wikidatawiki', 'wikidatawiki' ],
 	'value' => 100,
 ];
 $wmgThrottlingExceptions[] = [
 	'from' => '2024-09-24T13:00 +3:00',
 	'to' => '2024-09-24T20:00 +3:00',
 	'IP' => '172.16.29.137',
-	'dbname' => [ 'eswiki', 'wikidatawiki', 'commonswiki' ],
+	'dbname' => [ 'eswiki', 'wikidatawiki', 'wikidatawiki' ],
 	'value' => 100,
 ];
 
@@ -56,7 +56,7 @@ $wmgThrottlingExceptions[] = [
 	'from' => '2024-10-19T15:45 -3:00',
 	'to' => '2024-10-19T21:30 -3:00',
 	'IP' => [ '190.12.102.194', '200.5.117.98' ],
-	'dbname' => [ 'eswiki', 'wikidatawiki', 'commonswiki' ],
+	'dbname' => [ 'eswiki', 'wikidatawiki', 'wikidatawiki' ],
 	'value' => 50,
 ];
 
