@@ -74,11 +74,11 @@ return [
 		],
 		'wikidatawiki' => [
 			// Item
-			120,
+			0,
 			// Property
-			122,
+			120,
 			// Query
-			124,
+			122,
 			// Lexeme
 			146,
 		],
