@@ -52,18 +52,7 @@ return [
 		'default' => [],
 	],
 	'wmgMinervaNightModeExcludeNamespaces' => [
-		'default' => [
-			// LQT: Thread
-			90,
-			// LQT: Summary
-			92,
-		],
-		'mediawikiwiki' => [
-			// LQT: Thread
-			90,
-			// LQT: Summary
-			92,
-		],
+		'default' => [],
 		'wikidatawiki' => [
 			// Item
 			0,
@@ -74,8 +63,6 @@ return [
 			// Lexeme
 			146,
 		],
-		// Allow us to reliably test all pages here.
-		'testwiki' => [],
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [],

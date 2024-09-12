@@ -2555,6 +2555,7 @@ if ( $wmgEnableFundraiserLandingPage ) {
 
 if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 	require_once __DIR__ . '/liquidthreads.php';
+
 }
 
 if ( $wmgUseGlobalUsage ) {
@@ -2824,6 +2825,10 @@ if ( $wmgUseMobileApp ) {
 
 wfLoadSkin( 'MinervaNeue' );
 
+if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
+	$wmgMinervaNightModeExcludeNamespaces[] = 90;
+	$wmgMinervaNightModeExcludeNamespaces[] = 92;
+}
 $wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQueryString;
 $wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExcludeNamespaces;
 $wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
