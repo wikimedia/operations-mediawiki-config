@@ -64,14 +64,6 @@ return [
 			// LQT: Summary
 			92,
 		],
-		'metawiki' => [
-			// Grants
-			200,
-			// Research
-			202,
-			// Iberocoop
-			206,
-		],
 		'wikidatawiki' => [
 			// Item
 			0,
