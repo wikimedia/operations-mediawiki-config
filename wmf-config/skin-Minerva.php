@@ -82,12 +82,6 @@ return [
 			// Lexeme
 			146,
 		],
-		'wikisource' => [
-			// Page
-			250,
-			// Index
-			252,
-		],
 		// Allow us to reliably test all pages here.
 		'testwiki' => [],
 	],
