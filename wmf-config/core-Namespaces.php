@@ -5329,7 +5329,7 @@ return [
 	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
 	'+ruwiki' => [ 104, 106 ], // T125509 and T213049
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
-	'+sewikimedia' => [ 100 ], // T175363 - Projekt
+	'+sewikimedia' => [ 100, NS_USER ], // T175363 - Projekt
 	'+trwiki' => [ 102 ], // T166522 - Vikiproje
 	'+wikimaniawiki' => [ 128 ], // T221062
 ],
