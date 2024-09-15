@@ -55,6 +55,7 @@ function wmfLoadRoutes() {
 		'wmf-config/reverse-proxy-labs.php',
 		'wmf-config/Wikibase.php',
 		'wmf-config/wikitech.php',
+		'wmf-config/ZhWikiContactPages.php',
 	];
 
 	// Create non-txt symlink from mediawiki-config

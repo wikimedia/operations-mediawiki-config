@@ -1643,6 +1643,9 @@ if ( $wmgUseContactPage ) {
 	if ( $wgDBname === 'enwiki' ) {
 		include __DIR__ . '/EnWikiContactPages.php';
 	}
+	if ( $wgDBname === 'zhwiki' ) {
+		include __DIR__ . '/ZhWikiContactPages.php';
+	}
 }
 
 // At the moment securepoll doesn't work on k8s, or on newer linux distributions,
