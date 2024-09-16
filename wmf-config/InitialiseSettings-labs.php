@@ -2223,6 +2223,9 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsShowEventInvitationSpecialPages' => [
 			'default' => true,
 		],
+		'wgWikimediaCampaignEventsEnableCommunityList' => [
+			'default' => true, // T374617
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
