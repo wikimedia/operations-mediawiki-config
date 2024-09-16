@@ -6421,7 +6421,9 @@ return [
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
-	// T361843 phase 1: all wikis but the following 7 (plwiki got deployment in T373079)
+	// T361843 phase 1: all wikis but the following 6
+	// T373079 added plwiki
+	// T373022 added ruwiki
 	'wikipedia' => true,
 	'bnwiki' => false,
 	'dewiki' => false,
@@ -6429,7 +6431,6 @@ return [
 	'hiwiki' => false,
 	'idwiki' => false,
 	'nlwiki' => false,
-	'ruwiki' => false,
 ],
 
 'wgVisualEditorEditCheckABTest' => [
