@@ -2285,6 +2285,8 @@ return [
 		'slow-parsoid' => false, // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
 	'+group1' => [
+		// Enable logging errors from all channels not configured otherwise (T228838)
+		'@default' => 'error',
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
 	'+group0' => [
