@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\IPUtils;
+
 /**
  * @covers wmf-config/throttle.php
  */
@@ -80,6 +82,37 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 					"Invalid valid in a throttle rule detected: range should be a string or an array"
 				);
 			}
+		}
+	}
+
+	/**
+	 * @dataProvider provideRules
+	 */
+	public function testThrottlingExceptionsIPsValidAndPublic( $rule ) {
+		$toCheck = [];
+		if ( array_key_exists( 'IP', $rule ) ) {
+			$ip = $rule['IP'];
+			$this->assertTrue( IPUtils::isValid( $ip ),
+				"$ip must be a valid IP address" );
+			$toCheck[] = [ $ip, "IP address $ip" ];
+		}
+		if ( array_key_exists( 'range', $rule ) ) {
+			foreach ( (array)$rule['range'] as $range ) {
+				$this->assertTrue( IPUtils::isValidRange( $range ),
+					"$range must be a valid IP range" );
+				[ $start, $end ] = IPUtils::parseRange( $range );
+				$this->assertNotFalse( $start );
+				$this->assertNotFalse( $end );
+				$start = IPUtils::formatHex( $start );
+				$end = IPUtils::formatHex( $end );
+				$toCheck[] = [ $start, "start of range $range" ];
+				$toCheck[] = [ $end, "end of range $range" ];
+			}
+		}
+
+		foreach ( $toCheck as [ $ip, $description ] ) {
+			$this->assertTrue( IPUtils::isPublic( $ip ),
+				"$description must be a public IP address" );
 		}
 	}
 

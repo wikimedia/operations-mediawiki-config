@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b5e36ffc23636bea638e22ac9c1ba24",
+    "content-hash": "035804d67f05f7b6e6fa50a045fa8c9d",
     "packages": [],
     "packages-dev": [
         {
@@ -3312,6 +3312,109 @@
                 }
             ],
             "time": "2024-03-03T12:36:25+00:00"
+        },
+        {
+            "name": "wikimedia/base-convert",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/base-convert.git",
+                "reference": "aa997185e0b42c1f61a11f3e1980cad144175111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/base-convert/zipball/aa997185e0b42c1f61a11f3e1980cad144175111",
+                "reference": "aa997185e0b42c1f61a11f3e1980cad144175111",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.9"
+            },
+            "require-dev": {
+                "mediawiki/mediawiki-codesniffer": "39.0.0",
+                "mediawiki/mediawiki-phan-config": "0.11.1",
+                "mediawiki/minus-x": "1.1.1",
+                "ockcyp/covers-validator": "1.4.0",
+                "php-parallel-lint/php-console-highlighter": "1.0.0",
+                "php-parallel-lint/php-parallel-lint": "1.3.2",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Brion Vibber",
+                    "email": "bvibber@wikimedia.org"
+                },
+                {
+                    "name": "Tyler Romeo",
+                    "email": "tylerromeo@gmail.com"
+                }
+            ],
+            "description": "Convert an arbitrarily-long string from one numeric base to another, optionally zero-padding to a minimum column width.",
+            "homepage": "https://www.mediawiki.org/wiki/base_convert",
+            "support": {
+                "source": "https://github.com/wikimedia/base-convert/tree/v2.0.2"
+            },
+            "time": "2022-05-20T20:43:12+00:00"
+        },
+        {
+            "name": "wikimedia/ip-utils",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/mediawiki-libs-IPUtils.git",
+                "reference": "119e0ed321e967b4f5748a404fa8a3eb5dad4aa3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/mediawiki-libs-IPUtils/zipball/119e0ed321e967b4f5748a404fa8a3eb5dad4aa3",
+                "reference": "119e0ed321e967b4f5748a404fa8a3eb5dad4aa3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.3",
+                "wikimedia/base-convert": "^2.0.0"
+            },
+            "require-dev": {
+                "mediawiki/mediawiki-codesniffer": "41.0.0",
+                "mediawiki/mediawiki-phan-config": "0.13.0",
+                "mediawiki/minus-x": "1.1.1",
+                "ockcyp/covers-validator": "1.6.0",
+                "php-parallel-lint/php-console-highlighter": "1.0.0",
+                "php-parallel-lint/php-parallel-lint": "1.3.2",
+                "phpunit/phpunit": "9.5.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "MediaWiki developers",
+                    "email": "wikitech-l@lists.wikimedia.org"
+                }
+            ],
+            "description": "Parse, match, and analyze IP addresses and CIDR ranges",
+            "homepage": "https://www.mediawiki.org/wiki/IPUtils",
+            "support": {
+                "source": "https://github.com/wikimedia/mediawiki-libs-IPUtils/tree/5.0.0"
+            },
+            "time": "2023-09-28T00:40:02+00:00"
         }
     ],
     "aliases": [],
