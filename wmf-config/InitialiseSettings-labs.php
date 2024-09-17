@@ -290,7 +290,6 @@ function wmfGetOverrideSettings() {
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
-				'DeferredUpdates' => 'error',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
 				'editpage' => 'warning', // T251023
@@ -303,7 +302,6 @@ function wmfGetOverrideSettings() {
 				'exception-json' => [ 'logstash' => false ],
 				'exec' => 'debug',
 				'export' => 'debug',
-				'ExtensionDistributor' => 'error', // T225243
 				'ExternalStore' => 'debug',
 				'fatal' => 'debug',
 				'FileImporter' => 'debug',
@@ -318,7 +316,6 @@ function wmfGetOverrideSettings() {
 				'goodpass-priv' => 'debug',
 				'GrowthExperiments' => 'info',
 				'headers-sent' => 'debug',
-				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
 				'ldap' => 'warning',
 				'Linter' => 'debug',
@@ -330,7 +327,6 @@ function wmfGetOverrideSettings() {
 				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 				'Math' => 'info', // mobrovac for T121445
 				'mediamoderation' => 'debug', // for T303312 changed from warning
-				'memcached' => 'error', // -aaron 2012/10/24
 				'message-format' => [ 'logstash' => 'warning' ],
 				'MessageCacheError' => 'debug',
 				'mobile' => 'debug',
@@ -389,7 +385,6 @@ function wmfGetOverrideSettings() {
 				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 				'WikibaseQualityConstraints' => 'debug',
 				'WikiLambda' => 'warning',
-				'WikimediaEvents' => 'error', // For T205754 & T208233
 				'Wikisource' => 'info',
 				'WikitechGerritBan' => 'debug',
 				'WikitechPhabBan' => 'debug',
