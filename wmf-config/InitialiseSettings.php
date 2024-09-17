@@ -5161,6 +5161,7 @@ return [
 	'metawiki' => true,
 	'nlwiki' => true,
 	'testwiki' => true,
+	'zhwiki' => true,
 ],
 'wmgContactPageConf' => [
 	'default' => [],
