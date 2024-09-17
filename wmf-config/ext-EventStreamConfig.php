@@ -1539,6 +1539,16 @@ return [
 			// TODO: re-enable canary events once the schema is stabilized
 			'canary_events_enabled' => false,
 		],
+		'cirrussearch.update_pipeline.update.private.rc0' => [
+			'schema_title' => 'development/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
+		],
 		'cirrussearch.update_pipeline.fetch_error.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
 			'destination_event_service' => 'eventgate-main',
