@@ -136,7 +136,7 @@ $services = [
 
 		'poolcounter' => [
 			'10.64.0.150',  # poolcounter1006.eqiad.wmnet
-			'10.64.32.236', # poolcounter1005.eqiad.wmnet
+			'10.64.32.137', # poolcounter1007.eqiad.wmnet
 		],
 
 		// LOOKING FOR parsercache-dbs? It no longer lives in the production
