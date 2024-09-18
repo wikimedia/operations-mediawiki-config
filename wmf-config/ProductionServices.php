@@ -83,7 +83,7 @@ $common = [
 	'shellbox-media' => 'http://localhost:6026',
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
-	'shellbox-video' => 'http://localhost:6036',
+	'shellbox-video' => 'https://shellbox-video.discovery.wmnet:4080',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	// chart-renderer is not deployed in production yet; this has to be set here
 	// because it's also set for labs in LabsServices.php, where it is deployed
