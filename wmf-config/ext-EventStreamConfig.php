@@ -1482,12 +1482,49 @@ return [
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
 		// This stream will be used by the streaming enrichment pipeline
-		// to emit error events encountered during enrichment.
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
 		// This follows the naming convention of <job_name>.error
 		'mw_page_content_change_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+		// This stream uses the mediawiki/page/change schema.
+		// It is produced by a PySpark job (T368755) that checks for
+		// inconsistencies on a datalake table that consumes stream
+		// 'mediawiki.page_content_change.v1'.
+		// It is meant to be enriched by a dowstrean Flink app.
+		'mediawiki.dump.revision_content_history.reconcile.rc0' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// we don't need these non-enriched events in Hadoop
+					'enabled' => false,
+				],
+			],
+		],
+		// Enriched stream of the above produced by a Flink app (T368787)
+		'mediawiki.dump.revision_content_history.reconcile.enriched.rc0' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		// This stream will be used by the above streaming enrichment pipeline
+		// This follows the naming convention of <job_name>.error
+		'mw_dump_rev_content_reconcile_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 		],
