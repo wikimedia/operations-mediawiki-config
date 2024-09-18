@@ -45,6 +45,7 @@ return [
 
 'wgGECommunityUpdatesEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
