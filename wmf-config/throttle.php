@@ -79,4 +79,14 @@ $wmgThrottlingExceptions[] = [
 	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
 	'value' => 80,
 ];
+
+// T374964
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-10-07T14:00 -3:00',
+	'to' => '2024-10-08T23:00 -3:00',
+	'IP' => '190.244.121.251',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 80,
+];
+
 ## Add throttling definitions above.
