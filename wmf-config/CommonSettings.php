@@ -450,7 +450,7 @@ if ( PHP_SAPI === 'cli' ) {
 	// Jobrunners have 20 minutes.
 	// Everything else has 60 seconds for GETs and 200s for POSTs
 	if ( ClusterConfig::getInstance()->isAsync() ) {
-		if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+		if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 || strpos( $_SERVER['HTTP_HOST'] ?? '', 'shellbox-video.' ) === 0 ) {
 			$wgRequestTimeLimit = 86400;
 		} else {
 			$wgRequestTimeLimit = 1200;
@@ -2280,7 +2280,7 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 // Passed to Shellbox
 // Videoscalers get 1d, others get 1min.
 // This must be the same as the timeouts in shellbox deployment charts.
-if ( ClusterConfig::getInstance()->isAsync() && strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+if ( ClusterConfig::getInstance()->isAsync() && ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 || strpos( $_SERVER['HTTP_HOST'] ?? '', 'shellbox-video.' ) === 0 ) ) {
 	$wgMaxShellWallClockTime = 24 * 60 * 60;  // seconds
 } else {
 	$wgMaxShellWallClockTime = 60;  // seconds
