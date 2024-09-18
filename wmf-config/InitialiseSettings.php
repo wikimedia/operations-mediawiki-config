@@ -2421,11 +2421,6 @@ return [
 'wgVectorNightMode' => [
 	'default' => [
 		'logged_in' => false,
-		'logged_out' => false,
-		'beta' => true,
-	],
-	'skin-themes-wikipedias-disabled' => [
-		'logged_out' => false,
 		'logged_in' => true,
 		// Important to disable this to disable the beta feature
 		'beta' => false,

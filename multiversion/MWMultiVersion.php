@@ -46,7 +46,6 @@ class MWMultiVersion {
 		'flaggedrevs',
 		'small',
 		'skin-themes',
-		'skin-themes-wikipedias-disabled',
 		'legacy-vector',
 		'medium',
 		'wikimania',
