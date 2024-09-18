@@ -2592,7 +2592,6 @@ return [
 			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
-			'checkuser-temporary-account' => true, // T367170
 		],
 		'researcher' => [
 			'browsearchive' => true,
@@ -3164,6 +3163,7 @@ return [
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
 			'unblockself' => false, # T150826
+			'checkuser-temporary-account' => true, // T327913
 		],
 		'bot' => [
 			'noratelimit' => true,
@@ -3173,6 +3173,7 @@ return [
 		],
 		'bureaucrat' => [
 			'noratelimit' => true,
+			'checkuser-temporary-account' => true, // T327913
 		],
 		'steward' => [
 			'noratelimit' => true,

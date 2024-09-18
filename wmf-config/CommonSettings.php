@@ -4146,6 +4146,22 @@ if ( $wmgDisableIPMasking ) {
 	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
 }
 
+if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
+	// Allow users to be auto-promoted to the checkuser-temporary-account-viewer group based on criteria
+	// listed at https://w.wiki/BESb#Patrollers_and_other_users (T369187).
+	$wgAutopromoteOnce['onEdit']['checkuser-temporary-account-viewer'] = [ '&',
+		[ APCOND_EDITCOUNT, 300 ],
+		[ APCOND_AGE, 6 * 30 * 86400 ], // 6 * 30 * seconds in a day, which makes 6 months
+		// Exclude auto-promoting when the user already has the right through another group that has access
+		[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+		[ '!', [ APCOND_INGROUPS, 'checkuser' ] ],
+		[ '!', [ APCOND_INGROUPS, 'suppress' ] ],
+		[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
+		// Exclude bots from the autopromotion, as the group should be granted manually to these users.
+		[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+	];
+}
+
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
