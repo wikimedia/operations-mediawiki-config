@@ -750,7 +750,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgQuickSurveysConfig' => [
-			'default' => [
+			'default' => [],
+			'enwiki' => [
 				[
 					"name" => "Empty search experiment survey",
 					"type" => "external",
