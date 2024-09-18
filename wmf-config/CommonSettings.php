@@ -4140,6 +4140,10 @@ if ( $wmgDisableIPMasking ) {
 
 	// T357586
 	$wgImplicitGroups[] = 'temp';
+} else {
+	// Hide the checkuser-temporary-account-viewer group if the wiki does not know about temporary accounts to reduce
+	// confusion about a unused user group.
+	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
 }
 
 // Ensure no users can be crated that match temporary account names (T361021).
