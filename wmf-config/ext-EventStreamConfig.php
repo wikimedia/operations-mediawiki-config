@@ -1188,6 +1188,12 @@ return [
 			'destination_event_service' => 'eventgate-analytics',
 			// canary events will not work for regex streams.
 			'canary_events_enabled' => false,
+			'consumers' => [
+				// Don't ingest regex streams into Hadoop.
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
