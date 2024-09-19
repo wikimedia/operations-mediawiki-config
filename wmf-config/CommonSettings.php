@@ -4597,6 +4597,15 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 			] );
 			return \StatusValue::newGood();
 		}
+		if ( $options['canAlwaysAutocreate'] ?? false ) {
+			$logger->info(
+				'User {name} passed ClosedWikiProvider check, provider can always create accounts',
+				[
+					'name' => $user->getName()
+				]
+			);
+			return \StatusValue::newGood();
+		}
 		$central = CentralAuthUser::getInstance( $user );
 		if (
 			$central->hasGlobalPermission( 'createaccount' ) ||
