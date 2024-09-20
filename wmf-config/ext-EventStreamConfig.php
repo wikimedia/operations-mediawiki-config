@@ -1829,6 +1829,28 @@ return [
 				'rate' => 1,
 			],
 		],
+		// (T373967) App base stream configuration to support Metrics Platform's monotable
+		'product_metrics.app_base' => [
+			'schema_title' => 'analytics/product_metrics/app/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [],
+				],
+			],
+		],
+		// (T373967) Web base stream configuration to support Metrics Platform's monotable
+		'product_metrics.web_base' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+					],
+				],
+			],
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [

@@ -94,6 +94,8 @@ return [
 		'mediawiki.product_metrics.homepage_module_interaction',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
+		'product_metrics.app_base',
+		'product_metrics.web_base',
 		'wikibase.client.interaction',
 	],
 ],
