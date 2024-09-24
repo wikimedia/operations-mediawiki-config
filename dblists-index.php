@@ -337,6 +337,7 @@ return [
 'gomwiki' => [ 'wikipedia', 'flow', 'small', 'wikidataclient', 'modern-mainpage', 'growthexperiments' ],
 'gomwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'modern-mainpage' ],
 'gorwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
+'gorwikiquote' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'gorwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'gotwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'gotwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
