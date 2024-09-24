@@ -597,6 +597,7 @@ return [
 'mnwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'mnwwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'mnwwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
+'moswiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'movementroleswiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'mrjwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'mrwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments' ],
