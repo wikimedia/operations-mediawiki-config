@@ -561,6 +561,7 @@ return [
 'lvwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'lvwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'madwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
+'madwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'maiwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'maiwikimedia' => [ 'fishbowl', 'small', 'legacy-vector', 'group1', 'translate' ],
 'map_bmswiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],

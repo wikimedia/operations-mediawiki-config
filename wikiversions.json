@@ -558,6 +558,7 @@
     "lvwikibooks": "php-1.43.0-wmf.24",
     "lvwiktionary": "php-1.43.0-wmf.23",
     "madwiki": "php-1.43.0-wmf.23",
+    "madwiktionary": "php-1.43.0-wmf.23",
     "maiwiki": "php-1.43.0-wmf.23",
     "maiwikimedia": "php-1.43.0-wmf.23",
     "map_bmswiki": "php-1.43.0-wmf.23",
