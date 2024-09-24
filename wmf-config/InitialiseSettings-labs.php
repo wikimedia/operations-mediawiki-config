@@ -1315,12 +1315,8 @@ function wmfGetOverrideSettings() {
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
 				'control' => [
-					'mobile' => 50,
-					'desktop' => 50,
-				],
-				'oldimpact' => [
-					'mobile' => 50,
-					'desktop' => 50
+					'mobile' => 100,
+					'desktop' => 100,
 				]
 			]
 		],
