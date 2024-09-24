@@ -11830,7 +11830,7 @@ return [
 	// Enable for testing (T362006)
 	'testwiki' => [
 		'mw-extra' => [
-			'url' => '/w/rest.php/coredev/v0/specs/module/-',
+			'url' => '/w/rest.php/specs/v0/module/-',
 			'name' => 'MediaWiki REST API (routes not in modules)',
 		],
 		'wmf-restbase' => [
