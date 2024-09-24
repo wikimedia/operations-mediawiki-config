@@ -7150,6 +7150,7 @@ return [
 
 'wgMFCustomSiteModules' => [
 	'default' => true,
+	'mediawikiwiki' => false,
 ],
 
 // T169001
