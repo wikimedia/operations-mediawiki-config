@@ -190,6 +190,25 @@ function wmfStaticRespond() {
 		return;
 	}
 
+	// Support serving favicon.php and touch.php requests (T374997)
+	global $wgFavicon, $wgAppleTouchIcon;
+	switch ( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ) ) {
+		case '/favicon.ico':
+			if ( $wgFavicon !== false ) {
+				wmfStaticStreamFile( MEDIAWIKI_DEPLOYMENT_DIR . $wgFavicon );
+			} else {
+				wmfStaticShowError( 'Unknown file path', 404 );
+			}
+			return;
+		case '/apple-touch-icon.png':
+			if ( $wgAppleTouchIcon !== false ) {
+				wmfStaticStreamFile( MEDIAWIKI_DEPLOYMENT_DIR . $wgAppleTouchIcon );
+			} else {
+				wmfStaticShowError( 'Unknown file path', 404 );
+			}
+			return;
+	}
+
 	// Reject direct requests (eg. "/w/static.php" or "/w/static.php/test")
 	// Use strpos() to tolerate trailing pathinfo or query string
 	if ( strpos( $_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME'] ) === 0 ) {
