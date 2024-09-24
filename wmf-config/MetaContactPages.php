@@ -1,23 +1,21 @@
 <?php
-/**
- * Configuration for [[:meta:Special:Contact/affcomusergroup]]
- *
- * @see T95789
- */
 
 $wgHooks['ContactForm'][] = static function (
 	&$to, $reply, &$subject, &$text, $par, $data
 ) {
 	if ( $par === 'affcomusergroup' ) {
 		$subject = "User group request: {$data['GroupName']}";
-	}
-
-	if ( $par === 'affcomchapthorg' ) {
+	} elseif ( $par === 'affcomchapthorg' ) {
 		$subject = "Chapter/Thematic organization request: {$data['GroupName']}";
 	}
 	return true;
 };
 
+/**
+ * Configuration for [[:meta:Special:Contact/affcomusergroup]]
+ *
+ * @see T95789
+ */
 $wgContactConfig['affcomusergroup'] = [
 	'RecipientUser' => 'Usergroups',
 	'SenderName' => 'User group contact form on ' . $wgSitename,
@@ -206,7 +204,6 @@ $wgContactConfig['affcomchapthorg'] = [
  * Configuration for legal contact forms (license stuff)
  * Modifications: T303359
  */
-
 $wgContactConfig['requestlicense'] = [
 	'RecipientUser' => 'Trademarks (WMF)',
 	// TODO: Replace with details submitted on form
@@ -237,7 +234,6 @@ $wgContactConfig['requestlicense'] = [
  *
  * @see T218363
  */
-
 $wgContactConfig['movecomsignup'] = [
 	'RecipientUser' => 'MoveCom-WMF',
 	'SenderName' => 'Movement communications group signup form on ' . $wgSitename,
@@ -295,7 +291,6 @@ $wgContactConfig['movecomsignup'] = [
  *
  * @see T271828
  */
-
 $wgContactConfig['ombudscommission'] = [
 	'RecipientUser' => 'Ombuds commission',
 	'SenderEmail' => $wgPasswordSender,
@@ -356,7 +351,6 @@ $wgContactConfig['ombudscommission'] = [
  *
  * @see T372828
  */
-
 $wgContactConfig['accountvanishapps'] = [
 	'Redirect' => 'https://meta.wikimedia.org/wiki/Special:GlobalVanishRequest'
 ];
