@@ -39,10 +39,6 @@ return [
 	'default' => true,
 ],
 
-'wgGEUseNewImpactModule' => [
-	'default' => true,
-],
-
 'wgGECommunityUpdatesEnabled' => [
 	'default' => false,
 	'testwiki' => true,

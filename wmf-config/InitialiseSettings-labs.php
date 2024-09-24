@@ -1261,9 +1261,6 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
-		'wgGEUseNewImpactModule' => [
-			'default' => true,
-		],
 		'wgGECommunityUpdatesEnabled' => [
 			'default' => true,
 		],
