@@ -470,6 +470,7 @@ return [
 'kbpwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'kcgwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'kcgwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
+'kgewiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'kgwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'kiwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'kjwiki' => [ 'wikipedia', 'closed', 'small', 'wikidataclient', 'group0' ],
