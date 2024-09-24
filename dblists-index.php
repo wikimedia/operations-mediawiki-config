@@ -790,6 +790,7 @@ return [
 'shiwiki' => [ 'wikipedia', 'small', 'legacy-vector', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'shnwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'shnwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'shnwikinews' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'shnwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'shnwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'shwiki' => [ 'wikipedia', 'legacy-vector', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
