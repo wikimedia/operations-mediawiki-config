@@ -7430,6 +7430,11 @@ return [
 	'wikimaniawiki' => true,
 ],
 
+'wgTranslatePageTranslationBannerNamespaces' => [
+	'default' => [],
+	'testwiki' => [ NS_MAIN, NS_HELP, NS_USER ]
+],
+
 'wmgUseVips' => [
 	'default' => true,
 	'group0' => false,
