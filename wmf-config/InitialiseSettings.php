@@ -11035,7 +11035,7 @@ return [
 			"name" => "add-a-fact",
 			"type" => "external",
 			'enabled' => true,
-			'coverage' => 0,
+			'coverage' => 0.2,
 			"privacyPolicy" => "ext-quicksurveys-addafact-privacy-policy",
 			'platforms' => [
 				'desktop' => [ 'stable' ]
