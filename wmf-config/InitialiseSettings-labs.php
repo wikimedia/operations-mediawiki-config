@@ -2359,5 +2359,10 @@ function wmfGetOverrideSettings() {
 		'wgBabelUseCommunityConfiguration' => [
 			'default' => true,
 		],
+		// T375610
+		'-wgUseCodexSpecialBlock' => [
+			'default' => false,
+			'testwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
