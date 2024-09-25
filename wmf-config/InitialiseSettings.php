@@ -7399,11 +7399,6 @@ return [
 	'metawiki' => true,
 ],
 
-'wgTranslateEnableMessageGroupSubscription' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 'wmgTranslateUseMinT' => [
 	'default' => false,
 	'commonswiki' => true,
