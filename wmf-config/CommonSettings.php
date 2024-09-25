@@ -2940,6 +2940,11 @@ if ( $wmgUseBounceHandler ) {
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'Translate' );
 
+	$wgVirtualDomainsMapping['virtual-translate'] = [
+		'cluster' => 'extension1',
+		'db' => false,
+	];
+
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
 	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
