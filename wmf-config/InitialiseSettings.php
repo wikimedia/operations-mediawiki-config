@@ -5928,6 +5928,13 @@ return [
 'wgParserMigrationEnableParsoidMobileFrontend' => [
 	'default' => false,
 	'officewiki' => true,
+	# kept in sync with wikis where wgMFNamespacesWithLeadParagraphs is
+	# set to empty, due to T359002
+	'wikivoyage' => true,
+],
+
+'wgParserMigrationEnableParsoidMobileFrontendTalkPages' => [
+	'default' => false,
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
