@@ -5892,6 +5892,11 @@ return [
 	'plwikivoyage' => true, // T374372
 	'ptwikivoyage' => true, // T374372
 	'ukwikivoyage' => true, // T374372
+	'shnwikivoyage' => true, // T374861
+	'frwikivoyage' => true, // T374861
+	'elwikivoyage' => true, // T374861
+	'viwikivoyage' => true, // T374861
+	'itwikivoyage' => true, // T374861
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -5914,6 +5919,11 @@ return [
 	'plwikivoyage' => true, // T374372
 	'ptwikivoyage' => true, // T374372
 	'ukwikivoyage' => true, // T374372
+	'elwikivoyage' => true, // T374861
+	'frwikivoyage' => true, // T374861
+	'itwikivoyage' => true, // T374861
+	'shnwikivoyage' => true, // T374861
+	'viwikivoyage' => true, // T374861
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
