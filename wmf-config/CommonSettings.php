@@ -186,6 +186,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'externalLoads' => [],
 	];
 	$wmgRemoteMasterDbConfig = null;
+	$wmgLBFactoryConfigCallback = null;
 } else {
 	$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
 
