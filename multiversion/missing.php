@@ -92,17 +92,29 @@ function wmfHandleMissingWiki() {
 		} catch ( Exception $e ) {
 		}
 
+		$prefix = strtok( $page, ':' );
 		if ( $db ) {
-			$prefix = strtok( $page, ':' );
+			$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );
 
-			# Try looking for lateral links (w: q: voy: ...)
+			# Try looking for lateral links (q: voy: ...)
+			# TODO: Make this work if the language doesn't have a Wikipedia
+			# (occasionally langcom approves some other project first)
 			$row = $db[ "{$language}wiki:$prefix" ] ?? null;
-			if ( !$row ) {
-				# Also try interlanguage links
-				$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );
-				if ( isset( $db[ "_$projectKey:$prefix" ] ) ) {
-					$row = $db[ "_$projectKey:$prefix" ];
-				}
+
+			# Also try interlanguage links
+			if ( !$row && isset( $db[ "_$projectKey:$prefix" ] ) ) {
+				$row = $db[ "_$projectKey:$prefix" ];
+			}
+			# And global links (most of which aren't local but this makes aa.wikinews.org/wiki/f: redirect to
+			# Wikifunctions properly for example)
+			if ( !$row && isset( $db[ "__global:$prefix" ] ) ) {
+				$row = $db[ "__global:$prefix" ];
+			}
+			# Special-case "w:" since the above won't find it as "_wikinews:w" doesn't exist
+			# in the interwiki map (instead there's "aawikinews:w" for every language) which
+			# the code above can't find since it looks for Wikipedias only.
+			if ( !$row && $prefix === "w" ) {
+				$row = "1 https://$language.wikipedia.org/wiki/$1";
 			}
 
 			if ( $row ) {
