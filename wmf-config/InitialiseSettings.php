@@ -226,7 +226,7 @@ return [
 	'transitionteamwiki' => 'en',
 	'u4cwiki' => 'en',
 	'usabilitywiki' => 'en',
-	'votewiki' => 'en',
+	'votewiki' => 'uk', // T302443
 	'wg_enwiki' => 'en',
 	'wikifunctionswiki' => 'en',
 	'wikimania' => 'en',
