@@ -610,9 +610,9 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// T370254
+		// T370254, T375787
 		'wgCentralAuthEnableSul3' => [
-			'default' => 'query-flag'
+			'default' => [ 'query-flag', 'cookie' ]
 		],
 
 		//
