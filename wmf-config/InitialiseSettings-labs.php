@@ -1979,7 +1979,26 @@ function wmfGetOverrideSettings() {
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
 				'includes/Rest/coreDevelopmentRoutes.json',
+				'includes/Rest/specs.v0.json',
+				'includes/Rest/content.v1.json'
 			],
+		],
+
+		'wgRestSandboxSpecs' => [
+			'default' => [
+				'mw-extra' => [
+					'url' => '/w/rest.php/specs/v0/module/-',
+					'name' => 'MediaWiki REST API (routes not in modules)',
+				],
+			],
+			'specs.v0' => [
+				'url' => '/w/rest.php/specs/v0/module/specs/v0',
+				'name' => 'Content API',
+			],
+			'content.v1' => [
+				'url' => '/w/rest.php/specs/v0/module/content/v1',
+				'name' => 'Content API',
+			]
 		],
 
 		'wmgUseCSP' => [
