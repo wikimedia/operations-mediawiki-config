@@ -11630,6 +11630,14 @@ return [
 	'default' => SCHEMA_COMPAT_NEW,
 ],
 
+// T183490 - MCR Stage 4
+'wgRevisionSlotsCacheExpiry' => [
+	'default' => [
+		'local' => 3600, // TTL_HOUR
+		'WAN' => 86400, // TTL_DAY
+	],
+],
+
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_11,
 ],
