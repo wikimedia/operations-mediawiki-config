@@ -3043,6 +3043,11 @@ return [
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489
+		'user' => [
+			'campaignevents-enable-registration' => false, // T373821
+			'campaignevents-organize-events' => false, // T373821
+			'campaignevents-email-participants' => false, // T373821
+		],
 		'abusefilter-helper' => [ 'oathauth-enable' => true ], // T344398
 		'autoconfirmed' => [
 			'flow-hide' => true, // T264489
@@ -3096,6 +3101,11 @@ return [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
+		],
+		'event-organizer' => [ // T373821
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 	],
 	'+zh_classicalwiki' => [
@@ -4708,6 +4718,7 @@ return [
 			'transwiki', // T250972
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
+			'event-organizer', // T373821
 		],
 	],
 	'+zhwikibooks' => [
@@ -5895,6 +5906,7 @@ return [
 			'transwiki', // T250972
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
+			'event-organizer', // T373821
 		],
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T374504
 	],
