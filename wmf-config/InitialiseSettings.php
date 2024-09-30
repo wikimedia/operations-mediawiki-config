@@ -11023,33 +11023,6 @@ return [
 	'default' => [],
 	'enwiki' => [
 		[
-			"name" => "add-a-fact",
-			"type" => "external",
-			'enabled' => true,
-			'coverage' => 0.2,
-			"privacyPolicy" => "ext-quicksurveys-addafact-privacy-policy",
-			'platforms' => [
-				'desktop' => [ 'stable' ]
-			],
-			'audience' => [
-				'minEdits' => 10,
-				'registrationStart' => '2000-01-01',
-				'registrationEnd' => '2024-09-25',
-			],
-			"confirmMsg" => "ext-quicksurveys-addafact-confirm",
-			"questions" => [
-				[
-					"name" => "Install extension question",
-					"layout" => "single-answer",
-					"link" => 'ext-quicksurveys-addafact-link',
-					"question" => "ext-quicksurveys-addafact-question",
-					"description" => null,
-					"yesMsg" => "ext-quicksurveys-addafact-yes",
-					"noMsg" => "ext-quicksurveys-addafact-no",
-				],
-			],
-		],
-		[
 			'name' => 'Empty search experiment survey',
 			'type' => 'external',
 			'enabled' => false,
