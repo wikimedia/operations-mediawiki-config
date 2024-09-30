@@ -1458,6 +1458,14 @@ return [
 	'+sawikiquote' => [
 		'विकिसूक्तिःसम्भाषणम्' => NS_PROJECT_TALK, // T101634
 	],
+	'+scnwiki' => [
+		'CAT' => NS_CATEGORY, // T375979
+		'DP' => 103, // T375979
+		'DW' => NS_PROJECT_TALK, // T375979
+		'T' => NS_TEMPLATE, // T375979
+		'U' => NS_USER, // T375979
+		'DU' => NS_USER_TALK, // T375979
+	],
 	'+sewiki' => [
 		'Temasiidu' => 100, // T41206
 		'Temasiidoságastallan' => 101, // T41206
