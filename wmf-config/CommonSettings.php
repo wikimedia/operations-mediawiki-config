@@ -3273,9 +3273,6 @@ if ( $wmgUseEcho ) {
 if ( $wgDBname === 'labswiki' ) {
 	$wgEmailConfirmToEdit = true;
 	$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
-
-	# User registration is now managed by Bitu (https://idm.wikimedia.org).
-	$wgGroupPermissions['*']['createaccount'] = false;
 }
 
 if ( $wmgUseThanks ) {
