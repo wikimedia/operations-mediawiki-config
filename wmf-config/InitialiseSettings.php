@@ -10752,6 +10752,7 @@ return [
 	'private' => true,
 	'fishbowl' => true,
 	'nonglobal' => true,
+	'labswiki' => true, // Until SUL migration is complete T161859
 ],
 
 // T15712
