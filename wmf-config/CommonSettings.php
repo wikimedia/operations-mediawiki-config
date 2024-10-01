@@ -3286,9 +3286,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgEmailConfirmToEdit = true;
 	$wgEnableCreativeCommonsRdf = true;
 
-	// Don't depend on other DB servers
-	$wgDefaultExternalStore = false;
-
 	$wgGroupPermissions['contentadmin'] = $wgGroupPermissions['sysop'];
 	$wgGroupPermissions['contentadmin']['editinterface'] = false;
 	$wgGroupPermissions['contentadmin']['tboverride'] = false;
@@ -3337,6 +3334,8 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		// since labtestwikitech uses its own database, $wgReadOnly shouldn't
 		// be determined from etcd.
 		$wgReadOnly = null;
+		// Don't depend on other DB servers
+		$wgDefaultExternalStore = false;
 	}
 }
 
