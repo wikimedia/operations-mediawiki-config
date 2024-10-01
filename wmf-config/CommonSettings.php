@@ -726,7 +726,7 @@ $wmgPrivilegedPolicy = [
 	'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 	'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
-if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+if ( $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 		'value' => 10,
 		'suggestChangeOnLogin' => true,
@@ -1708,7 +1708,7 @@ $wgHiddenPrefs[] = 'realname';
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
 
-if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+if ( $wgDBname === 'labtestwiki' ) {
 	$wgUseInstantCommons = true;
 }
 
@@ -1946,7 +1946,7 @@ if ( $wmgEnableCaptcha ) {
 		$wgCaptchaTriggers['create'] = true;
 	}
 
-	if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+	if ( $wgDBname === 'labtestwiki' ) {
 		$wgCaptchaTriggers['addurl'] = false;
 	}
 
@@ -3858,7 +3858,7 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
-	if ( in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
+	if ( $wgDBname == 'labtestwiki' ) {
 		// Wikitech and its testing variant use local OAuth tables
 		$wgMWOAuthCentralWiki = false;
 	} else {

@@ -306,7 +306,7 @@ if ( $wgDBname === 'test2wiki' ) {
 		'abbrvThreshold' => 160,
 	];
 }
-if ( $wgDBname != 'commonswiki' && $wgDBname != 'labswiki' && $wgDBname != 'labtestwiki' ) {
+if ( $wgDBname != 'commonswiki' && $wgDBname != 'labtestwiki' ) {
 	// Commons is local to commonswiki :)
 	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [

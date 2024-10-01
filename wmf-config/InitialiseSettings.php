@@ -3251,7 +3251,6 @@ return [
 	'default' => false,
 	'private' => true, // T55871
 	'votewiki' => true, // T74589
-	'labswiki' => true, // T218589
 ],
 
 'wgEnableSpecialMute' => [
@@ -3726,7 +3725,7 @@ return [
 	'closed' => false,
 
 	// 'global-multiwrite' backend isn't available, so disable for now
-	'wikitech' => false,
+	'labtestwiki' => false,
 ],
 
 'wmgEmergencyCaptcha' => [
@@ -4833,7 +4832,7 @@ return [
 
 'wgTitleBlacklistUsernameSources' => [
 	'default' => [ 'meta' ],
-	'wikitech' => '*',
+	'labtestwiki' => '*',
 ],
 
 'wmgUseNewUserMessage' => [
@@ -5268,7 +5267,7 @@ return [
 	'default' => true, # Enabled on all PUBLIC wikis
 	'closed' => false,
 	'private' => false,
-	'wikitech' => false,
+	'labtestwiki' => false,
 ],
 
 // This is also guarded by $wmgUseCentralAuth.
@@ -5547,7 +5546,7 @@ return [
 	'testcommonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
-	'wikitech' => [ 'local' ], // T162374
+	'labtestwiki' => [ 'local' ], // T162374
 	'zhwiki' => [], // T208397
 ],
 
@@ -5582,7 +5581,7 @@ return [
 	'default' => true,
 	'private' => false,
 	'lockeddown' => false,
-	'wikitech' => false, // T341470
+	'labtestwiki' => false,
 ],
 
 'wgUrlShortenerReadOnly' => [
@@ -5651,7 +5650,7 @@ return [
 'wmgUseCommonsMetadata' => [
 	'default' => true,
 	'lockeddown' => false,
-	'wikitech' => false,
+	'labtestwiki' => false,
 ],
 
 'wmgCommonsMetadataForceRecalculate' => [
@@ -10726,7 +10725,7 @@ return [
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalBlocking' => [
 	'default' => true,
-	'wikitech' => false,
+	'labtestwiki' => false,
 	'fishbowl' => false,
 	'private' => false,
 ],
@@ -10734,14 +10733,14 @@ return [
 'wgGlobalBlockingAllowedRanges' => [
 	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
 	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
-	'wikitech' => [],
+	'labtestwiki' => [],
 	'fishbowl' => [],
 	'private' => [],
 ],
 
 'wgGlobalBlockingAllowGlobalAccountBlocks' => [
 	'default' => true, // T356924, T356923
-	'wikitech' => false,
+	'labtestwiki' => false,
 	'fishbowl' => false,
 	'private' => false,
 ],
@@ -12291,7 +12290,7 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	'fishbowl' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	'private' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-	'wikitech' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+	'labtestwiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
 'wgWatchersMaxAge' => [
