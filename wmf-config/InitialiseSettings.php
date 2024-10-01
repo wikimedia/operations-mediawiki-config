@@ -4684,6 +4684,7 @@ return [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'labswiki' => false,
 ],
 
 'wmgUseOAuth' => [
