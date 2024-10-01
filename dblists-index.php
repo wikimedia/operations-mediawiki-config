@@ -518,7 +518,7 @@ return [
 'kywikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'kywikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'kywiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'labswiki' => [ 'special', 'medium', 'group1', 'nonglobal', 'wikitech', 'nowikidatadescriptiontaglines' ],
+'labswiki' => [ 'special', 'medium', 'group1', 'wikitech', 'nowikidatadescriptiontaglines' ],
 'labtestwiki' => [ 'special', 'medium', 'group0', 'nonglobal', 'wikitech', 'nowikidatadescriptiontaglines' ],
 'ladwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'lawiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'modern-mainpage', 'cirrussearch-big-indices', 'growthexperiments' ],

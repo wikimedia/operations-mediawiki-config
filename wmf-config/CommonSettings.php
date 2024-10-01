@@ -2109,6 +2109,13 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthWikidataApiUrl = "https://www.wikidata.org/w/api.php";
 	$wgCentralAuthFallbackAppealUrl = "https://en.wikipedia.org/wiki/Wikipedia:Appealing_a_block";
 	$wgCentralAuthFallbackAppealTitle = "Wikipedia:Appealing a block";
+
+	if ( $wgDBname === 'labswiki' ) {
+		$wgCentralAuthStrict = false;
+		$wgCentralAuthAutoMigrate = false;
+		$wgCentralAuthCookies = false;
+		$wgCentralAuthAutoMigrateNonGlobalAccounts = false;
+	}
 }
 
 // Config for GlobalCssJs
