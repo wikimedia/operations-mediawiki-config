@@ -11623,7 +11623,8 @@ return [
 'wmgApprovedContentSecurityPolicyDomains' => [
 	'default' => [
 		// A future refinement might be to not allow wildcard on *.wikimedia.org,
-		// but to explicitly list instead. See $wgCrossSiteAJAXdomains above.
+		// but to explicitly list instead.
+		// See $wgCrossSiteAJAXdomains in CommonSettings.php.
 		'*.wikimedia.org',
 		'*.wikipedia.org',
 		'*.wikinews.org',
