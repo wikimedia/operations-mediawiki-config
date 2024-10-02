@@ -4559,9 +4559,9 @@ Wikivoyage:
     wikimaniawiki:
         comment_1_5x: T194340, T337044
         comment_2x: T194340, T337044
-        commons: 'File:Wikimania 2024 wiki logo (old style).svg'
-        commons_wordmark: 'File:Wikimania 2024 logo black.svg'
-        commons_icon: 'File:Wikimania 2024 icon.svg'
+        no_icon: true
+        local_wordmark: true
+        comment_wordmark: T286405
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
         commons_icon: 'File:Wikitech-logo-vector2022.svg'
