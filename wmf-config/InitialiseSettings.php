@@ -2197,7 +2197,7 @@ return [
 		'GlobalWatchlist' => 'info', // T260862
 		'goodpass' => 'debug',
 		'goodpass-priv' => 'debug',
-		'GrowthExperiments' => 'debug', // Temporary for T376124
+		'GrowthExperiments' => 'info',
 		'headers-sent' => 'debug',
 		'HtmlOutputRendererHelper' => 'debug', // T356157
 		'IpReputation' => 'debug',
