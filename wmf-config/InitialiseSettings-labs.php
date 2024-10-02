@@ -2213,9 +2213,6 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],
-		'wgCampaignEventsShowEventInvitationSpecialPages' => [
-			'default' => true,
-		],
 		'wgWikimediaCampaignEventsEnableCommunityList' => [
 			'default' => true, // T374617
 		],
