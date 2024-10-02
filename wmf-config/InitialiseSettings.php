@@ -5860,6 +5860,10 @@ return [
 	'private' => true,
 ],
 
+'wgParsoidSelectiveUpdateSampleRate' => [
+	'default' => 1000, // T371713: sample 1 in 1000 parses
+],
+
 'wgParserMigrationEnableQueryString' => [
 	'default' => true,
 ],
