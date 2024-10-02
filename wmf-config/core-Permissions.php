@@ -1603,6 +1603,11 @@ return [
 			'reupload-shared' => true,
 		],
 	],
+	'+labswiki' => [
+		'*' => [
+			'autocreateaccount' => false,
+		],
+	],
 	'+ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
 	],
