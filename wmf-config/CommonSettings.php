@@ -1007,6 +1007,7 @@ if ( $wmgUseCORS ) {
 		'wikimania????.m.wikimedia.org',
 		'wikimaniateam.wikimedia.org',
 		'wikimaniateam.m.wikimedia.org',
+		'wikitech.wikimedia.org',
 		'am.wikimedia.org',
 		'am.m.wikimedia.org',
 		'ar.wikimedia.org',
