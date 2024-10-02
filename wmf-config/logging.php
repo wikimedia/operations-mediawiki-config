@@ -102,16 +102,13 @@ function wmfGetLoggingConfig() {
 	global $wmgExtraLogFile, $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUseEventBus,
 		$wmgUdp2logDest, $wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
-	// TODO: Should not be global, referenced in wikitech.php (see discussion on I4189c209b)
-	global $wmgMonologProcessors;
-
 	// T124985: The Processors listed in $monologProcessors are applied to
 	// a message list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
 	//
 	// The `wmfconfig` processor injects `normalized_message` which must be listed
 	// *before* the psr processor since we want to retain the log placeholders for
 	// log deduplication (T349086).
-	$monologProcessors = $wmgMonologProcessors = [
+	$monologProcessors = [
 		// Injects wiki, MediaWiki version, request id etc
 		'wiki' => [
 			'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
