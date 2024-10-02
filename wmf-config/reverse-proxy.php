@@ -12,20 +12,9 @@ $wgCdnServersNoPurge = [
 	// TODO: generate this from Puppet's network module or Netbox
 	// directly.
 	//
-	// Only add private ranges here, public are not required *except* for
-	// eqiad/codfw becaues of the cloudweb* hosts.
+	// Only add private ranges here.
 
 	## eqiad
-	# public
-	'208.80.154.0/26', # public1-a-eqiad
-	'2620:0:861:1::/64', # public1-a-eqiad
-	'208.80.154.128/26', # public1-b-eqiad
-	'2620:0:861:2::/64', # public1-b-eqiad
-	'208.80.154.64/26',	# public1-c-eqiad
-	'2620:0:861:3::/64', # public1-c-eqiad
-	'208.80.155.96/27',	# public1-d-eqiad
-	'2620:0:861:4::/64', # public1-d-eqiad
-	# private
 	'10.64.0.0/22', # private1-a-eqiad
 	'2620:0:861:101::/64', # private1-a-eqiad
 	'10.64.16.0/22', # private1-b-eqiad
@@ -53,14 +42,8 @@ $wgCdnServersNoPurge = [
 
 	## codfw
 	# public
-	'208.80.153.0/27', # public1-a-codfw
-	'2620:0:860:1::/64', # public1-a-codfw
-	'208.80.153.32/27', # public1-b-codfw
-	'2620:0:860:2::/64', # public1-b-codfw
-	'208.80.153.64/27', # public1-c-codfw
-	'2620:0:860:3::/64', # public1-c-codfw
-	'208.80.153.96/27', # public1-d-codfw
-	'2620:0:860:4::/64', # public1-d-codfw
+	'208.80.153.41', # cloudweb2002-dev.codfw.wmnet
+	'2620:0:860:2:208:80:153:41', # cloudweb2002-dev.codfw.wmnet
 	# private
 	'10.192.0.0/22', # private1-a-codfw
 	'2620:0:860:101::/64', # private1-a-codfw
