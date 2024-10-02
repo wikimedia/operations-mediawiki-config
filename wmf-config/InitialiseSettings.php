@@ -11623,7 +11623,7 @@ return [
 
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
-	// s3
+	// s3 + s6
 	'default' => [ 'local' => 60, 'WAN' => 60, ],
 
 	// s1
@@ -11748,12 +11748,6 @@ return [
 	'wawikisource' => [ 'local' => 3600, 'WAN' => 86400, ],
 	'wikifunctionswiki' => [ 'local' => 3600, 'WAN' => 86400, ],
 	'zghwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-
-	// s6
-	'frwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'jawiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'labswiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'ruwiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
 
 	// s7
 	'arwiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
