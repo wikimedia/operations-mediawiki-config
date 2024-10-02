@@ -48,7 +48,7 @@ class CauseFatalError {
 		// deployment to the private file that sets it
 		// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 		global $fatalErrorPassword;
-		$password = $request->getRawVal( 'password', '' );
+		$password = $request->getRawVal( 'password' ) ?? '';
 		if ( !isset( $fatalErrorPassword ) ) {
 			echo "Error: password not found in file FatalErrorSettings.php.";
 			return;
@@ -58,8 +58,8 @@ class CauseFatalError {
 			return;
 		}
 
-		$action = $request->getRawVal( 'action', 'noerror' );
-		$from = $request->getRawVal( 'from', 'main' );
+		$action = $request->getRawVal( 'action' ) ?? 'noerror';
+		$from = $request->getRawVal( 'from' ) ?? 'main';
 
 		$paramsOkay = true;
 		$checkActionResult = static::checkParam( $action, 'action', self::$allowedActions );
