@@ -12377,10 +12377,6 @@ return [
 	'wikidatawiki' => true, // T375411
 ],
 
-'wgCampaignEventsShowEventInvitationSpecialPages' => [
-	'default' => true,
-],
-
 'wgWikimediaCampaignEventsEnableCommunityList' => [
 	'default' => true,
 ],
