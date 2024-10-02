@@ -255,9 +255,10 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
     bjnwiki:
-        comment: T48564
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: 'File:Wikipedia-logo-v2-bjn.svg'
+        comment: T48564, T375055
+        comment_1_5x: T150618, T375055
+        comment_2x: T150618, T375055
         local_tagline: true
         local_wordmark: true
     blkwiki:
