@@ -3327,9 +3327,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
 	}
 
-	// Remove wikitech's uniqueness T371537
-	// include __DIR__ . '/wikitech.php';
-
 	if ( $wgDBname === 'labtestwiki' ) {
 		// wgReadOnly is set by etcdConfig using datacenter-global configs.
 		// since labtestwikitech uses its own database, $wgReadOnly shouldn't

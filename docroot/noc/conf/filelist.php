@@ -54,7 +54,6 @@ function wmfLoadRoutes() {
 		'wmf-config/reverse-proxy.php',
 		'wmf-config/reverse-proxy-labs.php',
 		'wmf-config/Wikibase.php',
-		'wmf-config/wikitech.php',
 		'wmf-config/ZhWikiContactPages.php',
 	];
 
