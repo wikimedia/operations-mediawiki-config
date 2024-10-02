@@ -261,6 +261,11 @@ Wikipedia:
         comment_2x: T150618, T375055
         local_tagline: true
         local_wordmark: true
+    bjnwiktionary:
+        commons: 'File:Wiktionary-logo-v2-bjn.svg'
+        comment: T374898
+        comment_1_5x: T374898
+        comment_2x: T374898
     blkwiki:
         commons: 'File:Wikipedia-logo-v2-blk.svg'
         local_tagline: true
