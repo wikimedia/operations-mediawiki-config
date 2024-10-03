@@ -4540,10 +4540,13 @@ $wgParsoidSettings = [
 
 if ( ClusterConfig::getInstance()->isParsoid() ) {
 	// Parsoid testing special case
-	if ( ClusterConfig::getInstance()->getHostname() === 'scandium' ) {
-		// Scandium has its own special check out of parsoid for testing.
+	if ( in_array(
+		ClusterConfig::getInstance()->getHostname(),
+		[ 'parsoidtest1001', 'scandium' ]
+	) ) {
+		// parsoidtest1001 has its own special check out of parsoid for testing.
 		$parsoidDir = __DIR__ . "/../../parsoid-testing";
-		// Override settings specific to round-trip testing on scandium
+		// Override settings specific to round-trip testing on parsoidtest1001
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
 	// Only load Parsoid extension (aka internal Parsoid REST API) on
