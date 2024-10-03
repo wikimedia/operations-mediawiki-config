@@ -492,10 +492,6 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => true,
 		],
 
-		'wgWMEDesktopWebUIActionsTracking' => [
-			'default' => 1,
-		],
-
 		'wgWMEPageSchemaSplitTestSamplingRatio' => [
 			'default' => 1,
 		],
@@ -512,11 +508,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseMobileFrontend' => [
 			'default' => true,
-		],
-
-		'wgWMEMobileWebUIActionsTracking' => [
-			'default' => 1, // T294738
-			'enwiki' => 1, // T346106
 		],
 
 		'wgMFAmcOutreach' => [

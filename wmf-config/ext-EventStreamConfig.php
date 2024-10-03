@@ -148,17 +148,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_DesktopWebUIActionsTracking' => [
-			'schema_title' => 'analytics/legacy/desktopwebuiactionstracking',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_EditAttemptStep' => [
 			'schema_title' => 'analytics/legacy/editattemptstep',
 			'topic_prefixes' => null,
@@ -254,20 +243,6 @@ return [
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_MobileWebUIActionsTracking' => [
-			'schema_title' => 'analytics/legacy/mobilewebuiactionstracking',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-				'analytics_hive_ingestion' => [
 					'enabled' => true,
 				],
 			]
