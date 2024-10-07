@@ -1547,10 +1547,18 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+        lang_variants:
+            sh-latn:
+                local_wordmark: true
+                local_tagline: true
     shiwiki:
         commons: 'File:Wikipedia-logo-v2-shi.svg'
         local_tagline: true
         local_wordmark: true
+        lang_variants:
+            shi-latn:
+                local_wordmark: true
+                local_tagline: true
     simplewiki:
         comment: T181448
         comment_1_5x: T181448

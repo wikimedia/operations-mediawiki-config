@@ -8290,6 +8290,34 @@ return [
 	// Projects
 
 	// Wikipedia
+	'shwiki' => [
+		'sh-latn' => [
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sh-latn.svg',
+				'width' => 120,
+				'height' => 32,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-sh-latn.svg',
+				'width' => 120,
+				'height' => 18,
+			],
+		],
+	],
+	'shiwiki' => [
+		'shi-latn' => [
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-shi-latn.svg',
+				'width' => 120,
+				'height' => 32,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-shi-latn.svg',
+				'width' => 120,
+				'height' => 18,
+			],
+		],
+	],
 	'zhwiki' => [
 		'zh-hans' => [ // T261153, T273578, T308620
 			'1x' => '/static/images/project-logos/zhwiki-hans.png',
@@ -8413,21 +8441,41 @@ return [
 			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
 			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikiversity-wordmark-zh-hans.svg',
+				'width' => 146,
+				'height' => 24,
+			],
 		],
 		'zh-cn' => [ // T308620
 			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
 			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikiversity-wordmark-zh-hans.svg',
+				'width' => 146,
+				'height' => 24,
+			],
 		],
 		'zh-my' => [ // T308620
 			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
 			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikiversity-wordmark-zh-hans.svg',
+				'width' => 146,
+				'height' => 24,
+			],
 		],
 		'zh-sg' => [ // T308620
 			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
 			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikiversity-wordmark-zh-hans.svg',
+				'width' => 146,
+				'height' => 24,
+			],
 		],
 	],
 
