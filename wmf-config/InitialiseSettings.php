@@ -5759,7 +5759,9 @@ return [
 	'yiwiki' => 'NavigationPopups',
 ],
 
-'wgPopupsConflictingRefTooltipsGadgetName' => [
+// Make sure that Reference Previews can detect the variants of the ReferenceTooltips gadget
+// that offers a similar functionality.
+'wgCiteReferencePreviewsConflictingRefTooltipsGadgetName' => [
 	'default' => 'ReferenceTooltips',
 	'altwiki' => 'referenceTooltips',
 	'avwiki' => 'referenceTooltips',

@@ -1294,11 +1294,6 @@ if ( $wmgUseCite ) {
 	if ( $wgPopupsConflictingNavPopupsGadgetName ) {
 		$wgCiteReferencePreviewsConflictingNavPopupsGadgetName = $wgPopupsConflictingNavPopupsGadgetName;
 	}
-
-	// TODO: Temporary mapping. The "Popups" variant can be removed later. See T362771
-	if ( $wgPopupsConflictingRefTooltipsGadgetName ) {
-		$wgCiteReferencePreviewsConflictingRefTooltipsGadgetName = $wgPopupsConflictingRefTooltipsGadgetName;
-	}
 }
 
 if ( $wmgUseCiteThisPage ) {
