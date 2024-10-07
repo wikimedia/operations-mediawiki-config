@@ -11590,11 +11590,6 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
-// T334295
-'wgAbuseFilterActorTableSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
 	// s3 + s5 + s6
