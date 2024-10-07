@@ -39,11 +39,18 @@ function wmfHandleMissingWiki() {
 		'wikinews'    => 'n',
 		'wikipedia'   => 'p',
 		'wikiquote'   => 'q',
-		// forward compatibility, unused ATM (both 's' and 'v')
 		'wikisource'  => 's',
 		'wikiversity' => 'v',
 		'wikivoyage'  => 'y',
 		'wiktionary'  => 't',
+	];
+
+	// List of projects that are handled as another namespace in the language's Wikipedia
+	// Format: [project name => [language => [namespace, mainpage] ] ]
+	$wikisAsNamespaces = [
+		'wiktionary' => [
+			'sco' => [ 'Define', 'Define:Main Page' ],
+		]
 	];
 
 	[ $protocol, $host ] = wmfGetProtocolAndHost();
@@ -110,8 +117,17 @@ function wmfHandleMissingWiki() {
 			# We don't have an interwiki link, keep going and see what else we could have
 		}
 	}
-
-	if ( $project === 'wikisource' ) {
+	if ( isset( $wikisAsNamespaces[ $project ][ $language ] ) ) {
+		// Some languages include the other projects in the Wikipedia as namespaces,
+		// like Scots Wiktionary. Redirect there instead of Incubator
+		[ $namespace, $root ] = $wikisAsNamespaces[ $project ][ $language ];
+		if ( $page === '' ) {
+			$page = $root;
+		} else {
+			$page = "$namespace:$page";
+		}
+		wmfShowRedirect( "$protocol://$language.wikipedia.org/wiki/$page" );
+	} elseif ( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
 		wmfShowRedirect( $protocol . '://wikisource.org/wiki/' . $page );
 	} elseif ( $project === 'wikiversity' ) {
