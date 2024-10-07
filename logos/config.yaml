@@ -699,10 +699,11 @@ Wikipedia:
         variants:
             hawiki-temp:
                 commons: 'File:Wikipedia-logo-v2-ha-50K-articles.svg'
+                commons_tagline: 'File:Wikipedia-tagline-ha-50K-articles.svg'
         comment: T376049
         comment_1_5x: T376049
         comment_2x: T376049
-        local_tagline: true
+        comment_tagline: T376049
     hawwiki:
         comment: T42285
         comment_1_5x: T150618

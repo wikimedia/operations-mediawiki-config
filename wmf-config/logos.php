@@ -6131,10 +6131,10 @@ return [
 		'width' => 120,
 		'height' => 12,
 	],
-	'hawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ha.svg',
-		'width' => 119,
-		'height' => 12,
+	'hawiki' => [ // T376049
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ha-temp.svg',
+		'width' => 140,
+		'height' => 23,
 	],
 	'hawwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-haw.svg',
