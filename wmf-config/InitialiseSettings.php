@@ -10740,6 +10740,10 @@ return [
 	'private' => [],
 ],
 
+'wgGlobalBlockingEnableAutoblocks' => [
+	'default' => false, // T374853
+],
+
 // Only allow local 'crats to rename on non-CentralAuth wikis
 'wmgAllowLocalRenameuser' => [
 	'default' => false,
