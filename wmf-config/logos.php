@@ -315,7 +315,7 @@ return [
 	'scnwiki' => '/static/images/project-logos/scnwiki.png', // T42285
 	'scowiki' => '/static/images/project-logos/scowiki.png', // T51125
 	'scwiki' => '/static/images/project-logos/scwiki.png',
-	'sdwiki' => '/static/images/project-logos/sdwiki.png', // T50397
+	'sdwiki' => '/static/images/project-logos/sdwiki.png', // T376536
 	'sewiki' => '/static/images/project-logos/sewiki.png',
 	'sgwiki' => '/static/images/project-logos/sgwiki.png', // T51125
 	'shnwiki' => '/static/images/project-logos/shnwiki.png',
@@ -1178,7 +1178,7 @@ return [
 	'scnwiki' => '/static/images/project-logos/scnwiki-1.5x.png', // T150618
 	'scowiki' => '/static/images/project-logos/scowiki-1.5x.png', // T150618
 	'scwiki' => '/static/images/project-logos/scwiki-1.5x.png', // T150618
-	'sdwiki' => '/static/images/project-logos/sdwiki-1.5x.png', // T150618
+	'sdwiki' => '/static/images/project-logos/sdwiki-1.5x.png', // T376536
 	'sewiki' => '/static/images/project-logos/sewiki-1.5x.png', // T150618
 	'sgwiki' => '/static/images/project-logos/sgwiki-1.5x.png', // T150618
 	'shnwiki' => '/static/images/project-logos/shnwiki-1.5x.png',
@@ -1819,7 +1819,7 @@ return [
 	'scnwiki' => '/static/images/project-logos/scnwiki-2x.png', // T150618
 	'scowiki' => '/static/images/project-logos/scowiki-2x.png', // T150618
 	'scwiki' => '/static/images/project-logos/scwiki-2x.png', // T150618
-	'sdwiki' => '/static/images/project-logos/sdwiki-2x.png', // T150618
+	'sdwiki' => '/static/images/project-logos/sdwiki-2x.png', // T376536
 	'sewiki' => '/static/images/project-logos/sewiki-2x.png', // T150618
 	'sgwiki' => '/static/images/project-logos/sgwiki-2x.png', // T150618
 	'shnwiki' => '/static/images/project-logos/shnwiki-2x.png',
@@ -3125,8 +3125,8 @@ return [
 	],
 	'sdwiki' => [ // T200870
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sd.svg',
-		'width' => 120,
-		'height' => 31,
+		'width' => 109,
+		'height' => 28,
 	],
 	'sgwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sg.svg',
@@ -6886,10 +6886,10 @@ return [
 		'width' => 120,
 		'height' => 13,
 	],
-	'sdwiki' => [
+	'sdwiki' => [ // T376536
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-sd.svg',
-		'width' => 112,
-		'height' => 18,
+		'width' => 135,
+		'height' => 23,
 	],
 	'sewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-se.svg',

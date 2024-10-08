@@ -1522,12 +1522,14 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     sdwiki:
-        comment: T50397
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: 'File:Wikipedia-logo-v2-sd.svg'
+        commons_tagline: 'File:Wikipedia-tagline-sd-v2.svg'
         commons_wordmark: 'File:Wikipedia-wordmark-sd.svg'
+        comment: T376536
+        comment_1_5x: T376536
+        comment_2x: T376536
         comment_wordmark: T200870
-        local_tagline: true
+        comment_tagline: T376536
     sewiki:
         comment_1_5x: T150618
         comment_2x: T150618
