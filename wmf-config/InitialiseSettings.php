@@ -10740,13 +10740,6 @@ return [
 	'private' => [],
 ],
 
-'wgGlobalBlockingAllowGlobalAccountBlocks' => [
-	'default' => true, // T356924, T356923
-	'labtestwiki' => false,
-	'fishbowl' => false,
-	'private' => false,
-],
-
 // Only allow local 'crats to rename on non-CentralAuth wikis
 'wmgAllowLocalRenameuser' => [
 	'default' => false,
