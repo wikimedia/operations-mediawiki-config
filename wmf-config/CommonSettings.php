@@ -1413,43 +1413,21 @@ if ( $wmgUseTimedMediaHandler ) {
 	// Also enable a single WebM VP8 flat file for backwards compatibility.
 	$wgEnabledTranscodeSet['360p.webm'] = true;
 
-	// Enable HLS adaptive streaming tracks for compatibility with iOS
-	// -- brion vibber, October 2023
+	// [T363966] pre-iOS 17.4 compat tracks: QuickTime files with old but
+	// supported free codecs (MJPEG + MP3 and/or MPEG-4 Visual + MP3).
 	//
-	// This is a soft-launch, with playback of the HLS tracks used on
-	// iOS browsers and app web views but not yet on desktop.
-	//
-	// Eventually these will replace most of the WebM transcodes, as they
-	// can be played back in other browsers using Media Source Extensions
-	// giving us a single universal track set that can adapt to screen
-	// size/density and network conditions automatically.
-	//
-	// This whole section can be minimized or removed later once the new
-	// tracks are enabled by default:
+	// As of October 2024 we don't yet have legal confirmation for MPEG-4
+	// part 2 Visual codec but if this arrives in future we can flip them
+	// on for higher quality.
+	$wgEnabledTranscodeSet['144p.mjpeg.mov'] = true;
+	$wgEnabledTranscodeSet['360p.mpeg4.mov'] = false;
 
-	// MP3 stereo audio for iOS 16
-	$wgEnabledTranscodeSet['stereo.audio.mp3'] = true;
-
-	// Opus stereo audio for iOS 17
-	$wgEnabledTranscodeSet['stereo.audio.opus.mp4'] = true;
-
-	// MJPEG SDR video for older iOS devices without hardware VP9 codec
-	$wgEnabledTranscodeSet['144p.video.mjpeg.mov'] = true;
-
-	// [T373546] HLS VP9 experiment is being disabled circa August 2024
-	// as iOS 17.4 prefers the WebM tracks and mid-level iOS is kinda
-	// flaky with support.
-	// VP9 SDR video for newer iOS devices (circa iPhone 12)
-	$wgEnabledTranscodeSet['240p.video.vp9.mp4'] = false;
-	$wgEnabledTranscodeSet['360p.video.vp9.mp4'] = false;
-	$wgEnabledTranscodeSet['480p.video.vp9.mp4'] = false;
-	$wgEnabledTranscodeSet['720p.video.vp9.mp4'] = false;
-	$wgEnabledTranscodeSet['1080p.video.vp9.mp4'] = false;
+	// [T373546] HLS VP9 and JPEG experiments are being disabled in 2024
+	// as iOS 17.4 prefers the WebM tracks and iOS support of the JPEG
+	// is flakier than the non-HLS version now enabled above.
 
 	// Temporarilly disable 1440p and 2160p transcodes:
 	// they're very slow to generate and we need to tune
-	$wgEnabledTranscodeSet['1440p.video.vp9.mp4'] = false;
-	$wgEnabledTranscodeSet['2160p.video.vp9.mp4'] = false;
 	$wgEnabledTranscodeSet['1440p.vp9.webm'] = false;
 	$wgEnabledTranscodeSet['2160p.vp9.webm'] = false;
 
