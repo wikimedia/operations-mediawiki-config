@@ -12350,6 +12350,7 @@ return [
 	'swwiki' => true, // T366502
 	'arwiki' => true, // T370066
 	'zhwiki' => true, // T373821
+	'eswiki' => true, // T376786
 	'brwikimedia' => true, // T376747
 	'uawikimedia' => true, // T376695
 	'wikidatawiki' => true, // T375411

@@ -842,6 +842,16 @@ return [
 		'templateeditor' => [ 'templateeditor' => true ], // T148007
 	],
 	'+eswiki' => [
+		'event-organizer' => [ // T376786
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T376786
+			'campaignevents-organize-events' => false, // T376786
+			'campaignevents-email-participants' => false, // T376786
+		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
 		'rollbacker' => [
 			'rollback' => true,
@@ -3766,6 +3776,7 @@ return [
 			'rollbacker',
 			'autopatrolled',
 			'patroller',
+			'event-organizer', // T376786
 		],
 	],
 	'+eswikibooks' => [
@@ -5247,7 +5258,7 @@ return [
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor', 'botadmin', ], // T262174, T330470, T342484
-		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
+		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller', 'event-organizer', ], // T376786
 	],
 	'+eswikibooks' => [
 		'bureaucrat' => [ 'flood' ],
