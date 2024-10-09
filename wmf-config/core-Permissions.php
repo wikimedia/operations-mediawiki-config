@@ -383,7 +383,17 @@ return [
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T269709
 	],
 	'+brwikimedia' => [ // T65345
+		'user' => [
+			'campaignevents-enable-registration' => false, // T376747
+			'campaignevents-organize-events' => false, // T376747
+			'campaignevents-email-participants' => false, // T376747
+		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
+		'event-organizer' => [ // T376747
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
 	],
 	'+bswiki' => [
 		'rollbacker' => [ 'rollback' => true ],
@@ -3486,6 +3496,7 @@ return [
 			'autopatrolled', // T65345
 			'confirmed', // T65345
 			'translationadmin', // T60123
+			'event-organizer', // T376747
 		],
 	],
 	'+bswiki' => [
@@ -4999,6 +5010,7 @@ return [
 			'translationadmin', // T60123
 			'autopatrolled', // T65345
 			'confirmed', // T65345
+			'event-organizer', // T376747
 		],
 		'bureaucrat' => [
 			'sysop', // T65345

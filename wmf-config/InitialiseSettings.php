@@ -12400,6 +12400,7 @@ return [
 	'swwiki' => true, // T366502
 	'arwiki' => true, // T370066
 	'zhwiki' => true, // T373821
+	'brwikimedia' => true, // T376747
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
