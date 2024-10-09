@@ -11003,16 +11003,22 @@ return [
 	'default' => true,
 ],
 
-// https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
+	// TODO: Move patch forward in T317841 which proposes to make
+	// the extension default enabled everywhere.
 	'default' => false,
 	'cawiki' => true,
+	// T110661
 	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
 	'frwiktionary' => true,
 	'huwiki' => true,
+	'jawiki' => true,
 	'nowiki' => true,
+	'ptwiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
 ],
@@ -11064,6 +11070,57 @@ return [
 					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 				],
 			],
+		],
+		[
+			'name' => 'T369218 Safety Survey',
+			'type' => 'internal',
+			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
+			"privacyPolicy" =>
+				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
+			"enabled" => true,
+			// Coverage to be updated in the week of October 14
+			"coverage" => 0.0,
+			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
+			"audience" => [
+				"anons" => false,
+				"minEdits" => 5
+			],
+			"questions" => [
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"layout" => "single-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
+					],
+				],
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"dependsOn" => [
+						[
+							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						],
+					],
+					"layout" => "multiple-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
+							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
+					],
+				],
+			]
 		]
 	],
 	'eswiki' => [
@@ -11111,8 +11168,271 @@ return [
 					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
 				],
 			],
+		],
+		[
+			'name' => 'T369218 Safety Survey',
+			'type' => 'internal',
+			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
+			"privacyPolicy" =>
+				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
+			"enabled" => true,
+			// Coverage to be updated in the week of October 14
+			"coverage" => 0.0,
+			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
+			"audience" => [
+				"anons" => false,
+				"minEdits" => 5
+			],
+			"questions" => [
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"layout" => "single-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
+					],
+				],
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"dependsOn" => [
+						[
+							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						],
+					],
+					"layout" => "multiple-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
+							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
+					],
+				],
+			]
 		]
-	]
+	],
+	'fawiki' => [
+		[
+			'name' => 'T369218 Safety Survey',
+			'type' => 'internal',
+			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
+			"privacyPolicy" =>
+				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
+			"enabled" => true,
+			// Coverage to be updated in the week of October 14
+			"coverage" => 0.0,
+			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
+			"audience" => [
+				"anons" => false,
+				"minEdits" => 5
+			],
+			"questions" => [
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"layout" => "single-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
+					],
+				],
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"dependsOn" => [
+						[
+							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						],
+					],
+					"layout" => "multiple-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
+							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
+					],
+				],
+			]
+		]
+	],
+	'frwiki' => [
+		[
+			'name' => 'T369218 Safety Survey',
+			'type' => 'internal',
+			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
+			"privacyPolicy" =>
+				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
+			"enabled" => true,
+			// Coverage to be updated in the week of October 14
+			"coverage" => 0.0,
+			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
+			"audience" => [
+				"anons" => false,
+				"minEdits" => 5
+			],
+			"questions" => [
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"layout" => "single-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
+					],
+				],
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"dependsOn" => [
+						[
+							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						],
+					],
+					"layout" => "multiple-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
+							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
+					],
+				],
+			]
+		]
+	],
+	'jawiki' => [
+		[
+			'name' => 'T369218 Safety Survey',
+			'type' => 'internal',
+			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
+			"privacyPolicy" =>
+				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
+			"enabled" => true,
+			// Coverage to be updated in the week of October 14
+			"coverage" => 0.0,
+			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
+			"audience" => [
+				"anons" => false,
+				"minEdits" => 5
+			],
+			"questions" => [
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"layout" => "single-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
+					],
+				],
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"dependsOn" => [
+						[
+							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						],
+					],
+					"layout" => "multiple-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
+							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
+					],
+				],
+			]
+		]
+	],
+	'ptwiki' => [
+		[
+			'name' => 'T369218 Safety Survey',
+			'type' => 'internal',
+			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
+			"privacyPolicy" =>
+				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
+			"enabled" => true,
+			// Coverage to be updated in the week of October 14
+			"coverage" => 0.0,
+			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
+			"audience" => [
+				"anons" => false,
+				"minEdits" => 5
+			],
+			"questions" => [
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"layout" => "single-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
+						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
+					],
+				],
+				[
+					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"dependsOn" => [
+						[
+							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
+							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
+						],
+					],
+					"layout" => "multiple-answer",
+					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
+					"answers" => [
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
+							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
+						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
+					],
+				],
+			]
+		]
+	],
 ],
 
 // WikidataPageBanner extension (T98029)
