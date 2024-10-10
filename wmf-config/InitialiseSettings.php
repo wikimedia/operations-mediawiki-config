@@ -11911,30 +11911,11 @@ return [
 
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
-	// s3 + s5 + s6
+	// s2 + s3 + s5 + s6
 	'default' => [ 'local' => 60, 'WAN' => 60, ],
 
 	// s1
 	'enwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-
-	// s2
-	'bgwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'bgwiktionary' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'cswiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'enwikiquote' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'enwiktionary' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'eowiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'fiwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'idwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'itwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'nlwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'nowiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'plwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'ptwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'svwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'thwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'trwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'zhwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
 
 	// s4
 	'commonswiki' => [ 'local' => 3600, 'WAN' => 86400, ],
