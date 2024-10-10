@@ -48,8 +48,34 @@ function wmfHandleMissingWiki() {
 	// List of projects that are handled as another namespace in the language's Wikipedia
 	// Format: [project name => [language => [namespace, mainpage] ] ]
 	$wikisAsNamespaces = [
+		'wikibooks' => [
+			'bar' => [ 'Buach', 'Buach:Start' ],
+			'pfl' => [ 'Buch', 'Buch:Hauptseite' ],
+		],
 		'wiktionary' => [
+			'bar' => [ 'Woat', 'Woat:Start' ],
+			// zh-classical uses subpages in Project Namespace rather than a namespace
+			'pfl' => [ 'Wort', 'Wort:Hauptseite' ],
 			'sco' => [ 'Define', 'Define:Main Page' ],
+		],
+		'wikisource' => [
+			'bar' => [ 'Text', 'Text:Start' ],
+			'frr' => [ 'Text', 'Text:Hoodsid' ],
+			'pfl' => [ 'Text', 'Text:Hauptseite' ],
+			'pdc' => [ 'Text', 'Text:Haaptblatt' ],
+			'sw' => [ 'Wikichanzo', 'Wikichanzo:Mwanzo' ],
+		],
+		'wikiquote' => [
+			'bar' => [ 'Spruch', 'Spruch:Start' ],
+			'pfl' => [ 'Spruch', 'Spruch:Hauptseite' ],
+		],
+		'wikinews' => [
+			'bar' => [ 'Nochricht', 'Nochricht:Start' ],
+			'pfl' => [ 'Nochricht', 'Nochricht:Hauptseite' ],
+			// zh-classical and nds use subpages rather than a standalone namespace
+
+			// Various Russian languages use Russian Wikinews instead.  That would be better handled
+			// at the Apache layer, although going to incubator provides context for some of them.
 		]
 	];
 
