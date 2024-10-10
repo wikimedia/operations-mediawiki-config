@@ -49,16 +49,19 @@ function wmfHandleMissingWiki() {
 	// Format: [project name => [language => [namespace, mainpage] ] ]
 	$wikisAsNamespaces = [
 		'wikibooks' => [
+			'als' => [ 'Buech', 'Buech:Houptsyte' ],
 			'bar' => [ 'Buach', 'Buach:Start' ],
 			'pfl' => [ 'Buch', 'Buch:Hauptseite' ],
 		],
 		'wiktionary' => [
+			'als' => [ 'Wort', 'Wort:Houptsyte' ],
 			'bar' => [ 'Woat', 'Woat:Start' ],
 			// zh-classical uses subpages in Project Namespace rather than a namespace
 			'pfl' => [ 'Wort', 'Wort:Hauptseite' ],
 			'sco' => [ 'Define', 'Define:Main Page' ],
 		],
 		'wikisource' => [
+			'als' => [ 'Text', 'Text:Houptsyte' ],
 			'bar' => [ 'Text', 'Text:Start' ],
 			'frr' => [ 'Text', 'Text:Hoodsid' ],
 			'pfl' => [ 'Text', 'Text:Hauptseite' ],
@@ -66,17 +69,19 @@ function wmfHandleMissingWiki() {
 			'sw' => [ 'Wikichanzo', 'Wikichanzo:Mwanzo' ],
 		],
 		'wikiquote' => [
+			'als' => [ 'Spruch', 'Spruch:Houptsyte' ],
 			'bar' => [ 'Spruch', 'Spruch:Start' ],
 			'pfl' => [ 'Spruch', 'Spruch:Hauptseite' ],
 		],
 		'wikinews' => [
+			'als' => [ 'Nochricht', 'Nochricht:Dialäkt-Neuigkeite' ],
 			'bar' => [ 'Nochricht', 'Nochricht:Start' ],
 			'pfl' => [ 'Nochricht', 'Nochricht:Hauptseite' ],
 			// zh-classical and nds use subpages rather than a standalone namespace
 
 			// Various Russian languages use Russian Wikinews instead.  That would be better handled
 			// at the Apache layer, although going to incubator provides context for some of them.
-		]
+		],
 	];
 
 	[ $protocol, $host ] = wmfGetProtocolAndHost();
