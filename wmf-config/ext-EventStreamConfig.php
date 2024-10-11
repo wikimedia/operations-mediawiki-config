@@ -1821,6 +1821,7 @@ return [
 						'performer_language',
 						'performer_language_variant',
 						'performer_pageview_id',
+						'performer_id',
 					],
 				],
 			],
