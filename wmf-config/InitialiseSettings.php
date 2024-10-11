@@ -11922,7 +11922,6 @@ return [
 
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
-	// s2 + s3 + s5 + s6
 	'default' => [ 'local' => 60, 'WAN' => 60, ],
 
 	// s1
@@ -11931,20 +11930,6 @@ return [
 	// s4
 	'commonswiki' => [ 'local' => 3600, 'WAN' => 86400, ],
 	'testcommonswiki' => [ 'local' => 3600, 'WAN' => 86400, ],
-
-	// s7
-	'arwiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'cawiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'eswiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'fawiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'frwiktionary'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'hewiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'huwiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'kowiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'metawiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'rowiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'ukwiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
-	'viwiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
 
 	// s8
 	'wikidatawiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
