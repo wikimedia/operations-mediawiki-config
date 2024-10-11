@@ -2721,6 +2721,18 @@ return [
 	'+trwikivoyage' => [
 		'rollbacker' => [ 'rollback' => true ], // T314678
 	],
+	'+uawikimedia' => [
+		'user' => [
+			'campaignevents-enable-registration' => false, // T376695
+			'campaignevents-organize-events' => false, // T376695
+			'campaignevents-email-participants' => false, // T376695
+		],
+		'event-organizer' => [ // T376695
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+	],
 	'+ukwiki' => [
 		'patroller' => [
 			'patrol' => true,
@@ -4571,6 +4583,11 @@ return [
 			'patroller', // T272149
 		],
 	],
+	'+uawikimedia' => [
+		'sysop' => [
+			'event-organizer', // T376695
+		],
+	],
 	'+ukwiki' => [
 		'sysop' => [
 			'patroller',
@@ -5772,6 +5789,11 @@ return [
 	],
 	'+thwiki' => [
 		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
+	],
+	'+uawikimedia' => [
+		'sysop' => [
+			'event-organizer', // T376695
+		],
 	],
 	'+ukwiki' => [
 		'sysop' => [
