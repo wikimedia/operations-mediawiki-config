@@ -12408,6 +12408,7 @@ return [
 	'zhwiki' => true, // T373821
 	'brwikimedia' => true, // T376747
 	'uawikimedia' => true, // T376695
+	'wikidatawiki' => true, // T375411
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
@@ -12430,6 +12431,7 @@ return [
 	// T372582
 	'igwiki' => true,
 	'swwiki' => true,
+	'wikidatawiki' => true, // T375411
 ],
 
 'wgCampaignEventsShowEventInvitationSpecialPages' => [

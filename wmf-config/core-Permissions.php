@@ -2956,12 +2956,20 @@ return [
 		], // T74459
 		'user' => [
 			'changetags' => false, // T303682
+			'campaignevents-enable-registration' => false, // T375411
+			'campaignevents-organize-events' => false, // T375411
+			'campaignevents-email-participants' => false, // T375411
 		],
 		'sysop' => [
 			'changetags' => true, // T303682
 			'property-create' => true // T48953
 		],
 		'flood' => [ 'bot' => true ], // T50013
+		'event-organizer' => [ // T375411
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
 	],
 	'+wikifunctionswiki' => [
 		'*' => [
@@ -4677,6 +4685,7 @@ return [
 			'rollbacker', // T47165
 			'confirmed', // T47124
 			'propertycreator', // T48953
+			'event-organizer', // T375411
 		],
 		'bureaucrat' => [
 			'flood', // T50013
@@ -5877,6 +5886,7 @@ return [
 			'rollbacker', // T47165
 			'confirmed', // T47124
 			'propertycreator', // T48953
+			'event-organizer', // T375411
 		],
 		'bureaucrat' => [
 			'flood', // T50013
