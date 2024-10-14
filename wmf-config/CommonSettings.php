@@ -1596,24 +1596,6 @@ if ( $wmgUseContactPage ) {
 
 	if ( $wgDBname === 'metawiki' ) {
 		include __DIR__ . '/MetaContactPages.php';
-		$wgContactConfig['stewards'] = [ // T98625
-			'RecipientUser' => 'Wikimedia Stewards',
-			'SenderEmail' => $wgPasswordSender,
-			'RequireDetails' => true,
-			'IncludeIP' => true,
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'rows' => 20,
-					'required' => true
-				],
-				'Disclaimer' => [
-					'label-message' => 'contactpage-stewards-disclaimer-label',
-					'type' => 'info'
-				]
-			]
-		];
 	}
 	if ( $wgDBname === 'enwiki' ) {
 		include __DIR__ . '/EnWikiContactPages.php';
