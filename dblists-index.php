@@ -666,6 +666,7 @@ return [
 'nowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'nqowiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments' ],
 'nrmwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
+'nrwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'nsowiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'nvwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'growthexperiments' ],
 'nycwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
