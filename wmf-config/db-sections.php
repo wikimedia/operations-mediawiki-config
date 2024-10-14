@@ -35,6 +35,7 @@ $wgLBFactoryConf['sectionsByDB'] = [
 	'banwikisource' => 's5',
 	'bbcwiki' => 's5',
 	'bclwikiquote' => 's5',
+	'bclwikisource' => 's5',
 	'bclwiktionary' => 's5',
 	'bdrwiki' => 's5',
 	'bewwiki' => 's5',
