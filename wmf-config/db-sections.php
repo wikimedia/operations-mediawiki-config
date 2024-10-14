@@ -24,6 +24,7 @@ $wgLBFactoryConf['sectionsByDB'] = [
 	'aewikimedia' => 's5',
 	'altwiki' => 's5',
 	'amiwiki' => 's5',
+	'annwiki' => 's5',
 	'anpwiki' => 's5',
 	'apiportalwiki' => 's5',
 	'arbcom_itwiki' => 's5',
