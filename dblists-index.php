@@ -751,6 +751,7 @@ return [
 'rowikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'rowikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'rowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'rskwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'rswikimedia' => [ 'fishbowl', 'small', 'visualeditor-nondefault', 'group1' ],
 'ruewiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'ruwiki' => [ 'wikipedia', 'flaggedrevs', 'legacy-vector', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments' ],
