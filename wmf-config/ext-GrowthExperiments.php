@@ -376,6 +376,11 @@ return [
 	'zuwiki' => true,
 ],
 
+'wgGETempLinkRecommendationSwitchTagClearHook' => [
+	'default' => false,
+	'eswiki' => true,
+],
+
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
