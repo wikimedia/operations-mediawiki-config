@@ -405,6 +405,7 @@ return [
 'iawiki' => [ 'wikipedia', 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'iawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'iawiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'ibawiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'id_internalwikimedia' => [ 'private', 'small', 'group1' ],
 'idwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'idwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
