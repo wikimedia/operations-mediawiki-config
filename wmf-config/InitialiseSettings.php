@@ -3778,7 +3778,6 @@ return [
 	'default' => 30, // Default value of https://toolserver.org/~mzmcbride/watcher/
 ],
 
-# ROBOT @{
 'wgDefaultRobotPolicy' => [
 	'cawikimedia' => 'noindex,nofollow', // T272871
 ],
@@ -12242,6 +12241,11 @@ return [
 
 'wgParserEnableLegacyMediaDOM' => [
 	'default' => false,
+],
+
+'wgParserEnableUserLanguage' => [
+	'commonswiki' => true,
+	'metawiki' => true,
 ],
 
 'wgUseContentMediaStyles' => [
