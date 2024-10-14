@@ -306,6 +306,7 @@ return [
 	'amiwiki' => 'Asia/Taipei',
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
+	'annwiki' => 'Africa/Lagos',
 	'anpwiki' => 'Asia/Kolkata',
 	'altwiki' => 'Asia/Barnaul',
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
@@ -329,6 +330,7 @@ return [
 	'bclwikiquote' => 'Asia/Manila',
 	'bdrwiki' => 'Asia/Kuching',
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
+	'bclwikisource' => 'Asia/Manila',
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
@@ -405,6 +407,7 @@ return [
 	'gomwiktionary' => 'Asia/Kolkata', // T249506
 	'gorwiki' => 'Asia/Makassar', // T189109
 	'gorwiktionary' => 'Asia/Makassar', // T327986
+	'gorwikiquote' => 'Asia/Makassar',
 	'gpewiki' => 'Africa/Accra',
 	'grwikimedia' => 'Europe/Athens', // T245911
 	'gucwiki' => 'America/Bogota',
@@ -445,6 +448,7 @@ return [
 	'huwikiquote' => 'Europe/Berlin',
 	'huwikisource' => 'Europe/Berlin',
 	'huwiktionary' => 'Europe/Berlin',
+	'ibawiki' => 'Asia/Kuching',
 	'idwikimedia' => 'Asia/Jakarta', // T192726
 	'id_internalwikimedia' => 'Asia/Jakarta',
 	'iglwiki' => 'Africa/Lagos',
@@ -463,6 +467,7 @@ return [
 	'kbpwiki' => 'Africa/Lome', // T160868
 	'kcgwiki' => 'Africa/Lagos',
 	'kcgwiktionary' => 'Africa/Lagos',
+	'kgewiki' => 'Asia/Jakarta',
 	'kkwiki' => 'Asia/Almaty',
 	'kkwiktionary' => 'Asia/Almaty',
 	'kkwikibooks' => 'Asia/Almaty',
@@ -494,6 +499,7 @@ return [
 	'lmowiktionary' => 'Europe/Rome',
 	'lvwiki' => 'Europe/Riga', // T45592
 	'madwiki' => 'Asia/Jakarta',
+	'madwiktionary' => 'Asia/Jakarta',
 	'maiwiki' => 'Asia/Kathmandu', // T74346
 	'maiwikimedia' => 'Asia/Kathmandu',
 	'mkwiki' => 'Europe/Berlin',
@@ -507,6 +513,7 @@ return [
 	'mniwiktionary' => 'Asia/Kolkata',
 	'mnwwiki' => 'Asia/Yangon',
 	'mnwwiktionary' => 'Asia/Yangon',
+	'moswiki' => 'Africa/Ouagadougou',
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
@@ -571,6 +578,7 @@ return [
 	'rowikisource' => 'Europe/Chisinau',
 	'rowikivoyage' => 'Europe/Bucharest',
 	'ruwikivoyage' => 'Europe/Moscow', // T43992
+	'rskwiki' => 'Europe/Belgrade',
 	'ruewiki' => 'Europe/Berlin',
 	'sahwikiquote' => 'Asia/Yakutsk',
 	'sahwikisource' => 'Asia/Yakutsk',
@@ -582,6 +590,7 @@ return [
 	'skrwiktionary' => 'Asia/Karachi',
 	'shwiki' => 'Europe/Berlin',
 	'shiwiki' => 'Africa/Casablanca',
+	'shnwikinews' => 'Asia/Yangon',
 	'shnwiktionary' => 'Asia/Yangon',
 	'shnwikivoyage' => 'Asia/Yangon',
 	'shywiktionary' => 'Africa/Algiers',
@@ -615,6 +624,7 @@ return [
 	'szywiki' => 'Asia/Taipei',
 	'taywiki' => 'Asia/Taipei',
 	'tcywiki' => 'Asia/Kolkata', // T140898
+	'tddwiki' => 'Asia/Yangon',
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
 	'thwikisource' => 'Asia/Bangkok',
@@ -1307,6 +1317,7 @@ return [
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gorwiki' => 'Wikipedia', // T189109
 	'gorwiktionary' => 'Wikikamus',
+	'gorwikiquote' => 'Wikilumadu',
 	'grwikimedia' => 'Wikimedia User Group Greece', // T245911
 	'grantswiki' => 'Wikimedia Foundation Grants Discussion',
 	'gucwiki' => 'Wikipeetia',
@@ -1386,10 +1397,12 @@ return [
 	'kawikiquote' => 'ვიკიციტატა',
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
+	'kaawiktionary' => 'Wikisózlik',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
 	'kcgwiktionary' => 'Swánga̱lyiatwuki',
+	'kgewiki' => 'Wikipidiya',
 	'kkwiki' => 'Уикипедия',
 	'kkwikibooks' => 'Уикикітап',
 	'kkwikiquote' => 'Уикидәйек',
@@ -1439,6 +1452,7 @@ return [
 	'lvwiki' => 'Vikipēdija',
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'maiwikimedia' => 'मैथिली विकिमिडियन्स',
+	'madwiktionary' => 'Wikikamus',
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'MediaWiki',
 	'metawiki' => 'Meta',
@@ -1458,6 +1472,7 @@ return [
 	'mnwiktionary' => 'Викитоль',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
+	'moswiki' => 'Wikipidiya',
 	'movementroleswiki' => 'Movement Roles',
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
@@ -1488,6 +1503,7 @@ return [
 	'nowikimedia' => 'Wikimedia Norge',
 	'nowikinews' => 'Wikinytt',
 	'nowikisource' => 'Wikikilden',
+	'nrwiki' => 'Wikiphidiya',
 	'nqowiki' => 'ߥߞߌߔߘߋߞߎ',
 	'nycwikimedia' => 'Wikimedia New York City', // T31273
 	'ocwiki' => 'Wikipèdia', // T9123
@@ -1526,6 +1542,7 @@ return [
 	'punjabiwikimedia' => 'Punjabi Wikimedians',
 	'qualitywiki' => 'Wikimedia Quality',
 	'rmywiki' => 'Vikipidiya',
+	'rskwiki' => 'Википедия',
 	'rowikibooks' => 'Wikimanuale',
 	'rowikinews' => 'Wikiștiri',
 	'rowikiquote' => 'Wikicitat',
@@ -1554,6 +1571,7 @@ return [
 	'searchcomwiki' => 'Search Committee',
 	'shwiki' => 'Wikipedija', // T332468
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
+	'shnwikinews' => 'ဝီႇၶီႇၶၢဝ်ႇ',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',
 	'shnwikivoyage' => 'ဝီႇၶီႇဝွႆးဢဵတ်ႇꩡ်',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
@@ -1596,6 +1614,7 @@ return [
 	'tawikisource' => 'விக்கிமூலம்',
 	'taywiki' => 'Wikipidia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
+	'tddwiki' => 'ᥝᥤᥱ ᥑᥤᥱ ᥚᥤᥱ ᥖᥤᥱ ᥕᥣᥱ',
 	'techconductwiki' => 'CoC committee', // T165977
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332

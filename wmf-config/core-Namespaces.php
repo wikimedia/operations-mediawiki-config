@@ -235,6 +235,10 @@ return [
 	'+be_x_oldwiki' => [
 		'ВП' => NS_PROJECT,
 	],
+	'+bclwikisource' => [
+		'Author' => 102,
+		'Author_talk' => 103
+	],
 	'+bewikisource' => [
 		'ВК' => NS_PROJECT, // T43322
 		'Author' => 102, // T43322
@@ -3333,6 +3337,10 @@ return [
 		102 => 'Pangawi', // T284389 - Author
 		103 => 'Pabligbagan_Pangawi', // T284389 - Author talk
 	],
+	'bclwikisource' => [
+		102 => 'Kagsurat', // Author
+		103 => 'Olay_sa_kagsurat'// Author talk
+	],
 	'bewikisource' => [
 		102 => 'Аўтар', // Author
 		103 => 'Размовы_пра_аўтара',
@@ -5446,6 +5454,7 @@ return [
 	'bewikiquote' => 'Вікіцытатнік', // T196230
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік', // T175950
+	'bewwiki' => 'Wikipédi',
 	'bgwiki' => 'Уикипедия',
 	'bgwikibooks' => 'Уикикниги',
 	'bgwikinews' => 'Уикиновини',
@@ -5581,6 +5590,7 @@ return [
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gomwiktionary' => 'विक्शनरी', // T249506
 	'gorwiki' => 'Wikipedia', // T189109
+	'gorwikiquote' => 'Wikilumadu',
 	'grantswiki' => 'Project',
 	'gorwiktionary' => 'Wikikamus',
 	'gucwiki' => 'Wikipeetia',
@@ -5637,6 +5647,7 @@ return [
 	'idwiktionary' => 'Wikikamus', // T341173
 	'iegcomwiki' => 'Project',
 	'igwikiquote' => 'Wikikwotu',
+	'iglwiki' => 'Wikipídiya',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Incubator',
 	'inhwiki' => 'Википеди',
@@ -5662,11 +5673,13 @@ return [
 	'kawikiquote' => 'ვიკიციტატა',
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
+	'kaawiktionary' => 'Wikisózlik',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
 	'kcgwiki' => 'Wukipedia',
 	'kcgwiktionary' => 'Swánga̱lyiatwuki',
+	'kgewiki' => 'Wikipidiya',
 	'kkwiki' => 'Уикипедия',
 	'kkwikibooks' => 'Уикикітап',
 	'kkwikiquote' => 'Уикидәйек',
@@ -5691,6 +5704,7 @@ return [
 	'kuwikibooks' => 'Wîkîpirtûk',
 	'kuwikiquote' => 'Wîkîgotin',
 	'kuwiktionary' => 'Wîkîferheng',
+	'kuswiki' => 'Wikipiidia',
 	'kvwiki' => 'Википедия',
 	'kywiki' => 'Википедия', // T309866
 	'wikitech' => 'Wikitech',
@@ -5720,6 +5734,7 @@ return [
 	'lvwiki' => 'Vikipēdija',
 	'lvwiktionary' => 'Vikivārdnīca', // T170065
 	'madwiki' => 'Wikipèḍia',
+	'madwiktionary' => 'Wikikamus',
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'Project',
@@ -5740,6 +5755,7 @@ return [
 	'mnwiktionary' => 'Викитоль',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
+	'moswiki' => 'Wikipidiya',
 	'movementroleswiki' => 'Wikipedia', // This was set up incorrectly.
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
@@ -5768,6 +5784,7 @@ return [
 	'nowikibooks' => 'Wikibøker',
 	'nowikinews' => 'Wikinytt',
 	'nowikisource' => 'Wikikilden',
+	'nrwiki' => 'Wikiphidiya',
 	'nqowiki' => 'ߥߞߌߔߘߋߞߎ',
 	'nvwiki' => 'Wikiibíídiiya',
 	'nycwikimedia' => 'Wikimedia', // T31273
@@ -5812,6 +5829,7 @@ return [
 	'rswikimedia' => 'Викимедија',
 	'ruewiki' => 'Вікіпедія',
 	'ruwiki' => 'Википедия',
+	'rskwiki' => 'Википедия',
 	'ruwikibooks' => 'Викиучебник',
 	'ruwikimedia' => 'Викимедиа',
 	'ruwikinews' => 'Викиновости',
@@ -5834,6 +5852,7 @@ return [
 	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',
+	'shnwikinews' => 'ဝီႇၶီႇၶၢဝ်ႇ',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'shnwikivoyage' => 'ဝီႇၶီႇဝွႆးဢဵတ်ႇꩡ်',
 	'shywiktionary' => 'Wikasegzawal',
@@ -5876,6 +5895,7 @@ return [
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'taywiki' => 'Wikibitia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
+	'tddwiki' => 'ᥝᥤᥱ_ᥑᥤᥱ_ᥚᥤᥱ_ᥖᥤᥱ_ᥕᥣᥱ',
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
 	'tewikisource' => 'వికీసోర్స్',
