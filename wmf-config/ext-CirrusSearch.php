@@ -1239,12 +1239,8 @@ return [
 	'default' => true,
 ],
 'wgCirrusSearchIndexFieldsToCleanup' => [
-	// https://phabricator.wikimedia.org/P63465#254682
 	'default' => [
-		'ores_articletopic',
-		'ores_drafttopics',
-		'version_type',
-		'ores_articletopics'
+		'label_count' // T377226
 	]
 ],
 ];
