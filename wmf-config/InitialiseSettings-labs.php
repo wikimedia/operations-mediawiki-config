@@ -1339,6 +1339,9 @@ function wmfGetOverrideSettings() {
 				'personalized-praise' => true,
 			],
 		],
+		'-wgGEMentorshipReassignMenteesBatchSize' => [
+			'default' => 500,
+		],
 		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
 			'default' => true,
 			'enwiki' => false,

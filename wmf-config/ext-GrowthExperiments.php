@@ -697,6 +697,10 @@ return [
 	'eswiki' => 50, // T285235
 ],
 
+'wgGEMentorshipReassignMenteesBatchSize' => [
+	'default' => 5000,
+],
+
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
 ],
