@@ -6945,6 +6945,7 @@ return [
 	'testwiki' => true, // T348895
 	'loginwiki' => true, // T348895
 	'test2wiki' => true, // T371116
+	'metawiki' => false,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
@@ -6955,6 +6956,10 @@ return [
 // relevant wiki entry to `false` in `wmgEnableIPMasking`
 'wmgDisableIPMasking' => [
 	'default' => false,
+	// n.b. metawiki has not yet had temporary accounts enabled. However, we want to
+	// set the 'known' configuration to true, so that Special:GlobalContributions
+	// will work as intended on metawiki (T376612).
+	'metawiki' => true,
 ],
 
 // IPInfo extension
