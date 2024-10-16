@@ -2308,6 +2308,7 @@ if ( $wmgUseCentralNotice ) {
 			"wikidata",
 			"wikinews",
 			"wikisource",
+			"wikitech",
 			"wikiversity",
 			"wikivoyage",
 			"wikimedia",

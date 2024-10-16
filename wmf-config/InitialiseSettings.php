@@ -2086,6 +2086,7 @@ return [
 	'wikimania' => 'wikimedia',
 	'wikidata' => 'wikidata',
 	'wikifunctionswiki' => 'wikifunctions',
+	'wikitech' => 'wikitech',
 	'wikivoyage' => 'wikivoyage',
 ],
 
