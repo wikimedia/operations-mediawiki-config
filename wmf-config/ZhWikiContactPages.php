@@ -22,7 +22,7 @@ $wgContactConfig['ipbe'] = [
 			'required' => true,
 		],
 		'gfw' => [
-			'class' => 'HTMLMultiSelectField',
+			'type' => 'multiselect',
 			'label-message' => 'contactpage-ipbe-gfw',
 			'options-messages' => [
 				'contactpage-ipbe-gfwyes' => 'ipbe-gfw'
@@ -47,7 +47,6 @@ $wgContactConfig['ipbe'] = [
 			'type' => 'textarea',
 		],
 	],
-	'DisplayFormat' => 'table',
 	'RLModules' => [],
 	'RLStyleModules' => []
 ];
