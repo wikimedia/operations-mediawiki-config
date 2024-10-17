@@ -11092,8 +11092,8 @@ return [
 			"privacyPolicy" =>
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
-			// Coverage to be updated in the week of October 14
-			"coverage" => 0.0,
+			// T376517#10229073
+			"coverage" => 0.03,
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
@@ -11190,8 +11190,8 @@ return [
 			"privacyPolicy" =>
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
-			// Coverage to be updated in the week of October 14
-			"coverage" => 0.0,
+			// T376517#10229073
+			"coverage" => 0.12,
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
@@ -11243,8 +11243,8 @@ return [
 			"privacyPolicy" =>
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
-			// Coverage to be updated in the week of October 14
-			"coverage" => 0.0,
+			// T376517#10229073
+			"coverage" => 0.2,
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
@@ -11296,8 +11296,8 @@ return [
 			"privacyPolicy" =>
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
-			// Coverage to be updated in the week of October 14
-			"coverage" => 0.0,
+			// T376517#10229073
+			"coverage" => 0.15,
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
@@ -11349,8 +11349,8 @@ return [
 			"privacyPolicy" =>
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
-			// Coverage to be updated in the week of October 14
-			"coverage" => 0.0,
+			// T376517#10229073
+			"coverage" => 0.15,
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
@@ -11402,8 +11402,8 @@ return [
 			"privacyPolicy" =>
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
-			// Coverage to be updated in the week of October 14
-			"coverage" => 0.0,
+			// T376517#10229073
+			"coverage" => 0.2,
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
