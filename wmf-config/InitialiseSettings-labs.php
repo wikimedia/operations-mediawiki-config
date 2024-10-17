@@ -1296,14 +1296,6 @@ function wmfGetOverrideSettings() {
 		'wgGEHomepageDefaultVariant' => [
 			'default' => 'control',
 		],
-		'wgGEHomepageNewAccountVariantsByPlatform' => [
-			'default' => [
-				'control' => [
-					'mobile' => 100,
-					'desktop' => 100,
-				]
-			]
-		],
 		'wgGELinkRecommendationServiceTimeout' => [
 			'default' => 30,
 		],

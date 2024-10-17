@@ -407,6 +407,11 @@ if ( $wmgRealm == 'labs' ) {
 		// Overrides CommonSettings.php which would use LabsServices.php,
 		// but we can't use variables there.
 		$wgGEImageRecommendationServiceUrl = "https://$lang.$site.org/w/api.php";
+		// Community updates module experiment, T374664
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'control', [ 'user-bucket-growth', 'growth-community-updates', 50 ] ],
+			[ 'community-updates-module', [ 'user-bucket-growth', 'growth-community-updates', 100 ] ],
+		];
 	}
 
 	// Let Beta Cluster Commons do upload-from-URL from production Commons.
