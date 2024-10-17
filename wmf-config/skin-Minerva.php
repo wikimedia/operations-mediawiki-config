@@ -51,16 +51,6 @@ return [
 	],
 	'wmgMinervaNightModeExcludeNamespaces' => [
 		'default' => [],
-		'wikidatawiki' => [
-			// Item
-			0,
-			// Property
-			120,
-			// Query
-			122,
-			// Lexeme
-			146,
-		],
 	],
 	'wmgMinervaNightModeExcludeTitles' => [
 		'default' => [],
