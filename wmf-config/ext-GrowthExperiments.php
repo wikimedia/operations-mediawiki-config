@@ -43,6 +43,10 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'eswiki' => true,
+	'arwiki' => true,
+	'frwiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -709,15 +713,6 @@ return [
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
-],
-
-'wgGEHomepageNewAccountVariantsByPlatform' => [
-	'default' => [
-		'control' => [
-			'mobile' => 100,
-			'desktop' => 100,
-		],
-	],
 ],
 
 'wgGEMentorDashboardEnabled' => [

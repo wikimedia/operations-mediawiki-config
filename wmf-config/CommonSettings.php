@@ -4318,6 +4318,20 @@ if ( $wmgUseGrowthExperiments ) {
 
 	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
+
+	$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+		[ 'control',
+			[ 'user-bucket-growth', 'growth-community-updates', 50 ],
+			[ CUDCOND_AFTER, '20221102000000' ]
+		],
+		[ 'community-updates-module',
+			[ 'user-bucket-growth', 'growth-community-updates', 100 ],
+			[ CUDCOND_AFTER, '20221102000000' ]
+		],
+		[ 'control',
+			[ 'user-bucket-growth', 'growth-community-updates', 100 ]
+		],
+	];
 }
 
 if ( $wmgUseWikiLambda ) {
