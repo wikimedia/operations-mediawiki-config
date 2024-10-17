@@ -5407,6 +5407,7 @@ return [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'annwiki' => 'Wìkìpedia',
 	'anpwiki' => 'विकिपीडिया',
 	'arbcom_cswiki' => 'Projekt', // T151731
 	'arbcom_dewiki' => 'Project',
@@ -5770,6 +5771,7 @@ return [
 	'mwlwiki' => 'Biquipédia',
 	'myvwiki' => 'Википедиясь',
 	'mywiki' => 'ဝီကီပီးဒီးယား',
+	'mywikisource' => 'ဝီကီရင်းမြစ်',
 	'mywiktionary' => 'ဝစ်ရှင်နရီ',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',

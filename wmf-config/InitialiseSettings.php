@@ -549,6 +549,7 @@ return [
 	'nowikinews' => 'Europe/Berlin',
 	'nowikisource' => 'Europe/Berlin',
 	'nqowiki' => 'Africa/Conakry',
+	'nrwiki' => 'Africa/Johannesburg',
 	'nsowiki' => 'Africa/Johannesburg',
 	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
@@ -1126,6 +1127,7 @@ return [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'annwiki' => 'Wìkìpedia',
 	'anpwiki' => 'विकिपीडिया',
 	'amwiki' => 'ውክፔዲያ',
 	'altwiki' => 'Википедия',
