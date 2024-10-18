@@ -10900,6 +10900,7 @@ return [
 	'wikifunctionswiki' => 'wikifunctions',
 	'commonswiki' => 'commons',
 	'testcommonswiki' => 'commons',
+	'mediawikiwiki' => 'mediawiki',
 ],
 'wgRightsPage' => [
 	// Default: Use wgRightsUrl
