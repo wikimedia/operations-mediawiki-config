@@ -356,7 +356,16 @@ class Profiler {
 		}
 
 		if ( $error ) {
+			// statsd format (graphite)
 			self::sendMetric( "MediaWiki.arclamp_client_error.{$error}:1|c", $options['statsd-host'], 8125 );
+
+			// dogstatsd format (prometheus)
+			$normalizedError = self::normalizeTag( $error );
+			self::sendMetric(
+				"MediaWiki_arclamp_client_errors_total:1|c#error:{$normalizedError}",
+				$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+				9125
+			);
 		}
 	}
 
@@ -387,16 +396,39 @@ class Profiler {
 						$componentsInStack[$cname] = 1;
 					}
 				}
+
+				// statsd format (graphite)
 				self::sendMetric(
 					"MediaWiki.arclamp_samples.$handler.$verb:1|c",
 					$options['statsd-host'],
 					8125
 				);
+
+				// dogstatsd format (prometheus)
+				$normalizedHandler = self::normalizeTag( $handler );
+				$normalizedVerb = self::normalizeTag( $verb );
+				self::sendMetric( "mediawiki_arclamp_samples_total:1|c"
+					. "#handler:{$normalizedHandler}"
+					. ",verb:{$normalizedVerb}",
+					$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+					9125
+				);
+
 				foreach ( $componentsInStack as $cname => $hit ) {
+					// statsd format (graphite)
 					self::sendMetric(
 						"MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c",
 						$options['statsd-host'],
 						8125
+					);
+					// dogstatsd format (prometheus)
+					$normalizedComponent = self::normalizeTag( $cname );
+					self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c"
+						. "#handler:{$normalizedHandler}"
+						. ",verb:{$normalizedVerb}"
+						. ",component:{$normalizedComponent}",
+						$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+						9125
 					);
 				}
 			}
@@ -486,5 +518,21 @@ class Profiler {
 			@socket_sendto( $sock, $metric, strlen( $metric ), 0, $host, $port );
 			@socket_close( $sock );
 		}
+	}
+
+	/**
+	 * Normalizes tags to only alphanumerics and underscores.
+	 * Strips duplicated and leading/trailing underscores.
+	 *
+	 * Note: We are not using /i (case-insensitive flag)
+	 * or \d (digit character class escape) here because
+	 * their behavior changes with respect to locale settings.
+	 *
+	 * @param string $tag
+	 * @return string
+	 */
+	private static function normalizeTag( $tag ) {
+		$tag = preg_replace( '/[^a-zA-Z0-9]+/', '_', $tag );
+		return trim( $tag, '_' );
 	}
 }
