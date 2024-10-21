@@ -375,6 +375,7 @@ return [
 'wgGETempLinkRecommendationSwitchTagClearHook' => [
 	'default' => false,
 	'eswiki' => true,
+	'frwiki' => true,
 ],
 
 'wgGEImageRecommendationServiceUseTitles' => [
