@@ -4400,6 +4400,7 @@ if ( $wmgUseCampaignEvents ) {
 		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
 	];
 	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
+	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6009/sparql';
 }
 
 // T361643
