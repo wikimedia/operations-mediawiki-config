@@ -8949,12 +8949,9 @@ return [
 	'wikidatawiki' => 9,
 ],
 
-// T66315 - temporary rollout
+// T66315 - Maintain feature flag 1 month as security in case of error after rollout
 'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
-	'default' => false,
-	'fawiki' => true,
-	'hewiki' => true,
-	'ukwiki' => true,
+	'default' => true,
 ],
 
 'wmgWikibaseStringLimits' => [

@@ -2345,7 +2345,7 @@ function wmfGetOverrideSettings() {
 			'fishbowl' => false,
 		],
 
-		// T66315 - temporary rollout
+		// T66315 - Maintain feature flag 1 month as security in case of error after rollout
 		'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
 			'default' => true,
 		],
