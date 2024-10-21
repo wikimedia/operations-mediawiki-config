@@ -2304,6 +2304,10 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 		],
 
+		'-wgGlobalBlockingEnableAutoblocks' => [
+			'default' => true, // T377737
+		],
+
 		'wmgUseCommunityConfiguration' => [
 			'default' => false, // NOTE: Do not enable without Growth team OK
 			'growthexperiments' => true, // T364892
