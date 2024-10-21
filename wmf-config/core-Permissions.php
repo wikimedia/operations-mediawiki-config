@@ -1730,6 +1730,10 @@ return [
 			'checkuser-temporary-account' => false, // T377584
 			'checkuser-temporary-account-no-preference' => false, // T377584
 		],
+		'checkuser-temporary-account-viewer' => [
+			'checkuser-temporary-account' => false, // T377584
+			'read' => true, // T377584 Adding this to prevent a group with no rights from being autopromoted
+		],
 		'flood' => [ 'bot' => true, ], // T17176
 		'global-renamer' => [ // T142123, T71651
 			'autopatrol' => true,
