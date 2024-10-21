@@ -12383,12 +12383,6 @@ return [
 	'default' => true,
 ],
 
-'wgWikimediaCampaignEventsEnableCommunityList' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-],
-
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
