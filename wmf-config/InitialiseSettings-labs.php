@@ -2250,14 +2250,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgEnableIPMasking' => [
-			'default' => false,
-			'loginwiki' => true,
-			'cswiki' => true,
-			'dewiki' => true,
-			'commonswiki' => true, // T342067
-			'wikidatawiki' => true, // T343980
-			'fawiki' => true,
-			'enwiki' => true, // T372784
+			'default' => true, // T377262
+			'en-rtl' => false,
 		],
 
 		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
