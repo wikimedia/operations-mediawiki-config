@@ -27,56 +27,52 @@ $wgContactConfig['affcomusergroup'] = [
 		'ext.wikimediamessages.contactpage',
 	],
 	'AdditionalFields' => [
+		'InfoRules' => [
+			'label-message' => 'contactpage-affcom-user-group-rules-label',
+			'type' => 'info',
+			'cssclass' => 'cp-affcom-ug-toprules',
+		],
 		'GroupName' => [
 			'label-message' => 'contactpage-affcom-user-group-name-label',
 			'contactpage-email-label' => 'Group name',
-			'type' => 'text'
-		],
-		'GroupDescription' => [
-			'label-message' => 'contactpage-affcom-user-group-description-label',
-			'contactpage-email-label' => 'Group description',
-			'type' => 'textarea',
-			'rows' => 10
-
-		],
-		'GroupWikiPage' => [
-			'label-message' => 'contactpage-affcom-user-group-wikipage-label',
-			'contactpage-email-label' => 'Group wiki page',
-			'type' => 'text'
+			'type' => 'text',
+			'required' => true,
 		],
 		'GroupLocation' => [
 			'label-message' => 'contactpage-affcom-user-group-location-label',
 			'contactpage-email-label' => 'Group location',
-			'type' => 'text'
+			'type' => 'text',
+			'required' => true,
 		],
 		'GroupLeaders' => [
 			'label-message' => 'contactpage-affcom-user-group-leaders-label',
 			'contactpage-email-label' => 'Active Wikimedians',
 			'type' => 'textarea',
-			'rows' => 10
+			'rows' => 10,
+			'required' => true,
+		],
+		'GroupWikiPage' => [
+			'label-message' => 'contactpage-affcom-user-group-wikipage-label',
+			'contactpage-email-label' => 'Group wiki page',
+			'type' => 'text',
+			'required' => true,
+		],
+		'GroupIntent' => [
+			'label-message' => 'contactpage-affcom-user-group-intent-letter-label',
+			'contactpage-email-label' => 'Logo',
+			'type' => 'text',
+			'required' => true,
 		],
 		'GroupLogo' => [
 			'label-message' => 'contactpage-affcom-user-group-logo-label',
 			'contactpage-email-label' => 'Logo',
-			'type' => 'radio',
-			'options-messages' => [
-				'contactpage-affcom-user-group-logo-community' => 'Wikimedia community',
-				'contactpage-affcom-user-group-logo-affiliate' => 'Wikipedia affiliate'
-			]
+			'type' => 'text',
+			'required' => true,
 		],
-		'Rules' => [
-			'label-message' => 'contactpage-affcom-user-group-rules-label',
+		'InfoNote' => [
+			'label-message' => 'contactpage-affcom-user-group-application-note',
 			'type' => 'info',
 		],
-		'Terms' => [
-			'label-message' => 'contactpage-affcom-user-group-terms-label',
-			'contactpage-email-label' => 'Terms',
-			'type' => 'check',
-			'required' => true,
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
-		]
 	]
 ];
 
