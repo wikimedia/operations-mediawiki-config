@@ -1544,11 +1544,12 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_42';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_43';
+	$wgExtDistCandidateSnapshot = 'REL1_43';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_43',
 		'REL1_42',
 		'REL1_41',
 		'REL1_40',
