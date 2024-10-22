@@ -11882,7 +11882,6 @@ return [
 'wgRevisionSlotsCacheExpiry' => [
 	'default' => [ 'local' => 60, 'WAN' => 60, ],
 	'group0' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'enwiki' => [ 'local' => 3600, 'WAN' => 86400, ],
 	'wikidatawiki'  => [ 'local' => 3600, 'WAN' => 86400, ],
 ],
 
