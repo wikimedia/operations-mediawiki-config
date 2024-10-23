@@ -52,4 +52,13 @@ $wmgThrottlingExceptions[] = [
 	'value' => 80,
 ];
 
+// T377957
+$wmgThrottlingExceptions[] = [
+	'from' => '2024-10-24T0:00 +4:00',
+	'to' => '2024-10-29T0:00 +4:00',
+	'range' => [ '134.0.213.0/24' ],
+	'dbname' => [ 'arwiki' ],
+	'value' => 1000,
+];
+
 ## Add throttling definitions above.
