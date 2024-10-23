@@ -4319,7 +4319,7 @@ return [
 	'loginwiki' => '/static/favicon/wmf.ico',
 	'mediawikiwiki' => '/static/favicon/mediawiki.ico',
 	'metawiki' => '/static/favicon/community.ico',
-	'officewiki' => '/static/favicon/office.ico',
+	'officewiki' => '/static/favicon/wmf.ico',
 	'ombudsmenwiki' => '/static/favicon/wmf.ico', // T50404
 	'otrs_wikiwiki' => '/static/favicon/wmf.ico',
 	'outreachwiki' => '/static/favicon/community.ico',
