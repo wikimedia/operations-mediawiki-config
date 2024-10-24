@@ -597,5 +597,27 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseCommunityConfiguration ) {
 		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 	}
+
+	// T377988
+	if (
+		$wgDBname === 'commonswiki' &&
+		$wmgUseUploadWizard &&
+		$wmgUseWikibaseMediaInfo
+	) {
+		$wgUploadWizardConfig['wikibase']['properties'] = [
+			'date' => 'P253152',
+			'source' => 'P253153',
+			'operator' => 'P253154',
+			'described_at_url' => 'P253095',
+		];
+		$wgUploadWizardConfig['wikibase']['items'] = [
+			'file_available_on_the_internet' => 'Q631353',
+		];
+		$wgUploadWizardConfig['sourceStringToWikidataIdMapping'] = [
+			'facebook' => 'Q631354',
+			'google' => 'Q631355',
+			'youtube' => 'Q631356',
+		];
+	}
 }
 // end safeguard
