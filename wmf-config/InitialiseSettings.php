@@ -7407,6 +7407,12 @@ return [
 	'collabwiki' => false, // T313241
 	'ptwikisource' => false, // T339139
 ],
+
+'wgTranslateEnableEventLogging' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgTranslateESIndex' => [
 	'default' => 'ttmserver',
 	'testwiki' => 'ttmserver-test',
