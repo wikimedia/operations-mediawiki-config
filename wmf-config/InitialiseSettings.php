@@ -6455,16 +6455,16 @@ return [
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
-	// T361843 phase 1: all wikis but the following 6
+	// T361843 phase 1: all wikis but the following 5
 	// T373079 added plwiki
 	// T373022 added ruwiki
+	// T377551 added nlwiki
 	'wikipedia' => true,
 	'bnwiki' => false,
 	'dewiki' => false,
 	'enwiki' => false,
 	'hiwiki' => false,
 	'idwiki' => false,
-	'nlwiki' => false,
 ],
 
 'wgVisualEditorEditCheckABTest' => [
