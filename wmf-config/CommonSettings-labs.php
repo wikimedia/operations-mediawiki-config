@@ -538,6 +538,12 @@ if ( $wmgRealm == 'labs' ) {
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
 
+	// Remove any references to the checkuser-temporary-account-viewer group on the beta clusters, as this group
+	// is only present when CheckUser is installed. As it is not installed, we should remove the group and
+	// the auto-promotion conditions for the group.
+	unset( $wgAutopromoteOnce['onEdit']['checkuser-temporary-account-viewer'] );
+	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
 	$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
