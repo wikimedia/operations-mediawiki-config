@@ -3386,6 +3386,7 @@ return [
 			'templateeditor',
 			'extendedconfirmed', // T302860
 			'patroller', // T354063
+			'upwizcampeditors', // T378067
 		],
 	],
 	'+test2wiki' => [
@@ -4900,6 +4901,7 @@ return [
 			'templateeditor',
 			'extendedconfirmed', // T302860
 			'patroller', // T354063
+			'upwizcampeditors', // T378067
 		],
 	],
 	'+test2wiki' => [
