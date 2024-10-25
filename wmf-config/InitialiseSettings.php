@@ -12382,9 +12382,7 @@ return [
 ],
 
 'wgWikimediaCampaignEventsEnableCommunityList' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ],
 
 // T309900
