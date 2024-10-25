@@ -13,7 +13,12 @@
  * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
  * Wikibooks, and Wikinews to the Wikimedia Incubator.
  *
- * Non-existing languages of Wikisource and Wikiversity show a 404 page.
+ * Non-existing languages of Wikisource get redirected to Multilingual Wikisource.
+ *
+ * Non-existing languages of Wikiversity show an error page.
+ *
+ * Certain special cases where another project is hosted by the language's Wikipedia
+ * get redirected to that Wikipedia.
  *
  * The WikimediaIncubator extension ensures a localised "welcome page"
  * adapted to the given project/language.
@@ -172,6 +177,9 @@ function wmfHandleMissingWiki() {
 		wmfShowRedirect( "$protocol://$language.wikipedia.org/wiki/$page" );
 	} elseif ( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
+		if ( $page === '' ) {
+			$page = "Main_Page/$language";
+		}
 		wmfShowRedirect( $protocol . '://wikisource.org/wiki/' . $page );
 	} elseif ( $project === 'wikiversity' ) {
 		# Wikiversity gives an error page
