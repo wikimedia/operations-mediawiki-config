@@ -247,7 +247,7 @@ return [
 'enwikisource' => [ 'legacy-vector', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'enwikiversity' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'enwikivoyage' => [ 'legacy-vector', 'medium', 'wikidataclient', 'group1', 'cirrussearch-big-indices' ],
-'enwiktionary' => [ 'legacy-vector', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'enwiktionary' => [ 'legacy-vector', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'eowiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'eowikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'eowikinews' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
