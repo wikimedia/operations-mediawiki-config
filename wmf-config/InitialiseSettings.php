@@ -8190,6 +8190,7 @@ return [
 	'enwiki' => false,
 	'dewiki' => false,
 	'jawiki' => false, // T323973
+	'ltwiki' => false, // T364073
 ],
 
 'wgContentTranslationPublishRequirements' => [
