@@ -219,9 +219,6 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbFactoryConf['class'] = 'LBFactoryMulti';
-			$lbFactoryConf['groupLoadsBySection']['s11'] = [];
-			$lbFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
-			$lbFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 			return $lbFactoryConf;
 		};
 	} else {
@@ -370,12 +367,6 @@ if ( $wmgRealm === 'production' ) {
 
 	// CentralAuth DB lives on s7 since it was created prior to x1
 	$wgLBFactoryConf['sectionsByDB']['centralauth'] = 's7';
-
-	// labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
-	// etcd out of the loop entirely for this one.
-	$wgLBFactoryConf['groupLoadsBySection']['s11'] = [];
-	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
-	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
 	$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitor';
 	// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
@@ -726,22 +717,14 @@ $wmgPrivilegedPolicy = [
 	'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 	'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
-if ( $wgDBname === 'labtestwiki' ) {
-	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
-		'value' => 10,
-		'suggestChangeOnLogin' => true,
-		'forceChange' => true,
-	];
-} else {
-	foreach ( $wmgPrivilegedGroups as $group ) {
-		// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
-		// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
-		if ( $group === 'user' ) {
-			$group = 'default'; // For e.g. private and fishbowl wikis; covers 'user' in password policies
-		}
-		$wgPasswordPolicy['policies'][$group] = array_merge( $wgPasswordPolicy['policies'][$group] ?? [],
-			$wmgPrivilegedPolicy );
+foreach ( $wmgPrivilegedGroups as $group ) {
+	// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
+	// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
+	if ( $group === 'user' ) {
+		$group = 'default'; // For e.g. private and fishbowl wikis; covers 'user' in password policies
 	}
+	$wgPasswordPolicy['policies'][$group] = array_merge( $wgPasswordPolicy['policies'][$group] ?? [],
+		$wmgPrivilegedPolicy );
 }
 
 $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
@@ -1618,7 +1601,7 @@ if ( $wmgUseSecurePoll ) {
 		'securepollglobal' => 'securepoll-dblist-securepollglobal'
 	];
 	// T303135 / T287780
-	$wgSecurePollExcludedWikis = [ 'labswiki', 'labtestwiki', 'loginwiki' ];
+	$wgSecurePollExcludedWikis = [ 'labswiki', 'loginwiki' ];
 	// T173393 - This is number of days after the election ends, not
 	// number of days after the vote was cast. Lower to 60 days so that
 	// overall time retained is not > 90 days.
@@ -1663,10 +1646,6 @@ $wgHiddenPrefs[] = 'realname';
 
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
-
-if ( $wgDBname === 'labtestwiki' ) {
-	$wgUseInstantCommons = true;
-}
 
 if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
@@ -1902,10 +1881,6 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wmgEmergencyCaptcha ) {
 		$wgCaptchaTriggers['edit'] = true;
 		$wgCaptchaTriggers['create'] = true;
-	}
-
-	if ( $wgDBname === 'labtestwiki' ) {
-		$wgCaptchaTriggers['addurl'] = false;
 	}
 
 	# akosiaris 20180306. contact pages in metawiki are being abused by bots
@@ -3246,7 +3221,7 @@ if ( $wmgUseEcho ) {
 }
 
 // Wikitech specific settings
-if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+if ( $wgDBname === 'labswiki' ) {
 	$wgEmailConfirmToEdit = true;
 	$wgEnableCreativeCommonsRdf = true;
 
@@ -3257,20 +3232,8 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
 
-	# We don't want random strangers playing on labtestwiki, aka codfw1dev
-	# For prod wikitech ('labswiki') user registration is now managed by
-	# Bitu, https://idm.wikimedia.org.
+	# User registration is now managed by Bitu (https://idm.wikimedia.org).
 	$wgGroupPermissions['*']['createaccount'] = false;
-
-	if ( $wgDBname === 'labswiki' ) {
-		// Allow autocreating accounts from IDM.
-		$wgGroupPermissions['*']['autocreateaccount'] = true;
-		// Also block account creations by sysops just in case.
-		$wgGroupPermissions['sysop']['createaccount'] = false;
-
-		// Password resets are handled by IDM too.
-		$wgPasswordResetRoutes['email'] = true;
-	}
 
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
 	$wgGroupPermissions['contentadmin']['nuke'] = true;
@@ -3286,17 +3249,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 	if ( $wgDBname === 'labswiki' ) {
 		$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
-	} elseif ( $wgDBname === 'labtestwiki' ) {
-		$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
-	}
-
-	if ( $wgDBname === 'labtestwiki' ) {
-		// wgReadOnly is set by etcdConfig using datacenter-global configs.
-		// since labtestwikitech uses its own database, $wgReadOnly shouldn't
-		// be determined from etcd.
-		$wgReadOnly = null;
-		// Don't depend on other DB servers
-		$wgDefaultExternalStore = false;
 	}
 }
 
@@ -3819,13 +3771,8 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
-	if ( $wgDBname == 'labtestwiki' ) {
-		// Wikitech and its testing variant use local OAuth tables
-		$wgMWOAuthCentralWiki = false;
-	} else {
-		$wgMWOAuthCentralWiki = 'metawiki';
-		$wgMWOAuthSharedUserSource = 'CentralAuth';
-	}
+	$wgMWOAuthCentralWiki = 'metawiki';
+	$wgMWOAuthSharedUserSource = 'CentralAuth';
 	$wgMWOAuthSecureTokenTransfer = true;
 	$wgOAuth2GrantExpirationInterval = 'PT4H';
 	$wgOAuth2RefreshTokenTTL = 'P365D';

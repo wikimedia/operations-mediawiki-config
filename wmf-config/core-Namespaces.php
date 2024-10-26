@@ -5343,7 +5343,6 @@ return [
 	// They often have discussions, including their "village pump" equivalent, in the main namespace.
 	'+incubatorwiki' => [ NS_MAIN ],
 	'+labswiki' => [ NS_MAIN ],
-	'+labtestwiki' => [ NS_MAIN ],
 	'+mediawikiwiki' => [ NS_MAIN ],
 	'+metawiki' => [ NS_MAIN ],
 	'+outreachwiki' => [ NS_MAIN ],

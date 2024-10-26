@@ -141,5 +141,4 @@ $wgLBFactoryConf['sectionsByDB'] = [
 	'ukwiki' => 's7',
 	'viwiki' => 's7',
 	'wikidatawiki' => 's8',
-	'labtestwiki' => 's11',
 ];

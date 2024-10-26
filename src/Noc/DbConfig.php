@@ -154,8 +154,7 @@ class DbConfig {
 		} else {
 			foreach ( $this->getDBs( $sectionName ) as $i => $db ) {
 				$ret[] = $db;
-				// labtestweb seems unresponsive, avoid crawlers hitting it
-				if ( $i === 0 && $db !== 'labtestwiki' ) {
+				if ( $i === 0 ) {
 					// Use format=xml because it's cheap to generate and view
 					// and browsers tend to render it nicely.
 					// (json is hard to read by default, jsonfm is slower)

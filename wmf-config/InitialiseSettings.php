@@ -933,7 +933,6 @@ return [
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki' => '//internal.wikimedia.org',
 	'labswiki' => "//wikitech.wikimedia.org",
-	'labtestwiki' => "//labtestwikitech.wikimedia.org",
 	'legalteamwiki' => '//legalteam.wikimedia.org',
 	'loginwiki' => '//login.wikimedia.org',
 	'maiwikimedia' => '//mai.wikimedia.org',
@@ -1041,7 +1040,6 @@ return [
 	'incubatorwiki' => 'https://incubator.wikimedia.org',
 	'internalwiki' => 'https://internal.wikimedia.org',
 	'labswiki' => 'https://wikitech.wikimedia.org',
-	'labtestwiki' => 'https://labtestwikitech.wikimedia.org',
 	'legalteamwiki' => 'https://legalteam.wikimedia.org',
 	'loginwiki' => 'https://login.wikimedia.org',
 	'maiwikimedia' => 'https://mai.wikimedia.org',
@@ -1699,7 +1697,6 @@ return [
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
 	'testcommonswiki' => 'https://upload.wikimedia.org/wikipedia/testcommons',
 	'labswiki' => '//upload.wikimedia.org/wikipedia/labs',
-	'labtestwiki' => '//upload.wikimedia.org/wikipedia/labtest',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
 ],
@@ -3751,9 +3748,6 @@ return [
 	'private' => false,
 	'fishbowl' => false,
 	'closed' => false,
-
-	// 'global-multiwrite' backend isn't available, so disable for now
-	'labtestwiki' => false,
 ],
 
 'wmgEmergencyCaptcha' => [
@@ -4860,7 +4854,6 @@ return [
 
 'wgTitleBlacklistUsernameSources' => [
 	'default' => [ 'meta' ],
-	'labtestwiki' => '*',
 ],
 
 'wmgUseNewUserMessage' => [
@@ -5239,14 +5232,12 @@ return [
 	'default' => true,
 	'mediawikiwiki' => false,
 	'labswiki' => false,
-	'labtestwiki' => false,
 ],
 
 'wmgUseFooterTechCodeOfConductLink' => [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'labswiki' => true,
-	'labtestwiki' => true,
 ],
 
 'wgMaxMsgCacheEntrySize' => [
@@ -5295,7 +5286,6 @@ return [
 	'default' => true, # Enabled on all PUBLIC wikis
 	'closed' => false,
 	'private' => false,
-	'labtestwiki' => false,
 ],
 
 // This is also guarded by $wmgUseCentralAuth.
@@ -5574,7 +5564,6 @@ return [
 	'testcommonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
-	'labtestwiki' => [ 'local' ], // T162374
 	'zhwiki' => [], // T208397
 ],
 
@@ -5608,7 +5597,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'lockeddown' => false,
-	'labtestwiki' => false,
 ],
 
 'wgUrlShortenerReadOnly' => [
@@ -5677,7 +5665,6 @@ return [
 'wmgUseCommonsMetadata' => [
 	'default' => true,
 	'lockeddown' => false,
-	'labtestwiki' => false,
 ],
 
 'wmgCommonsMetadataForceRecalculate' => [
@@ -10778,7 +10765,6 @@ return [
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalBlocking' => [
 	'default' => true,
-	'labtestwiki' => false,
 	'fishbowl' => false,
 	'private' => false,
 ],
@@ -10786,7 +10772,6 @@ return [
 'wgGlobalBlockingAllowedRanges' => [
 	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
 	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
-	'labtestwiki' => [],
 	'fishbowl' => [],
 	'private' => [],
 ],
@@ -11015,7 +11000,6 @@ return [
 
 'wmgUseClusterJobqueue' => [
 	'default'  => true,
-	'labtestwiki' => false,
 ],
 
 // Thumbnail chaining
@@ -12120,7 +12104,6 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	'fishbowl' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	'private' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-	'labtestwiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
 'wgWatchersMaxAge' => [

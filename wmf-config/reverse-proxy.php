@@ -41,10 +41,6 @@ $wgCdnServersNoPurge = [
 	'2620:0:861:110::/64', # private1-f4-eqiad
 
 	## codfw
-	# public
-	'208.80.153.41', # cloudweb2002-dev.codfw.wmnet
-	'2620:0:860:2:208:80:153:41', # cloudweb2002-dev.codfw.wmnet
-	# private
 	'10.192.0.0/22', # private1-a-codfw
 	'2620:0:860:101::/64', # private1-a-codfw
 	'10.192.16.0/22', # private1-b-codfw

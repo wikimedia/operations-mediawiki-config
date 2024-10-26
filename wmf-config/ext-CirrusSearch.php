@@ -450,7 +450,6 @@ return [
 'wgCirrusSearchUseCompletionSuggester' => [
 	'default' => 'yes',
 	'wikidatawiki' => 'no',
-	'labtestwiki' => 'no', // disable while T328289 gets fixed
 ],
 
 // wgCirrusSearchCompletionSuggesterSubphrases @{

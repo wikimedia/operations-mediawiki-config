@@ -353,7 +353,7 @@ final class WmfManageDblistCli {
 		$sections = var_export(
 			array_merge( ...array_map( static function ( string $s ) {
 				return array_fill_keys( MWWikiversions::readDbListFile( $s ), $s );
-			}, [ 's1', 's2', 's4', 's5', 's6', 's7', 's8', 's11' ] ) ),
+			}, [ 's1', 's2', 's4', 's5', 's6', 's7', 's8' ] ) ),
 			true
 		);
 
