@@ -2686,6 +2686,7 @@ return [
 		'patroller' => [ 'patrol' => true, ], // T354063
 		'electionadmin' => [
 			'securepoll-create-poll' => true,
+			'securepoll-edit-poll' => true,
 			'editinterface' => true,
 		],
 	],
@@ -2943,6 +2944,7 @@ return [
 		'electionadmin' => [
 			'editinterface' => true,
 			'securepoll-view-voter-pii' => true,
+			'securepoll-edit-poll' => true,
 		],
 	],
 	'wikidata' => [
