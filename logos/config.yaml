@@ -2287,13 +2287,13 @@ Wiktionary:
         local_tagline: true
         local_wordmark: true
     knwiktionary:
-        commons: 'File:Wiktionary-logo-kn.svg'
-        commons_wordmark: 'File:Wiktionary-wordmark-tagline-kn.svg'
-        commons_icon: 'File:Wiktionary-icon-kn.svg'
-        comment_1_5x: T349036
-        comment_2x: T349036
-        comment: T349036
-        comment_icon: T349036
+        commons: 'File:Wiktionary-logo-kn-v3.svg'
+        commons_wordmark: 'File:Wiktionary-wordmark-tagline-kn-v2.svg'
+        commons_icon: 'File:Wiktionary-icon-kn-v2.svg'
+        comment_1_5x: T360022
+        comment_2x: T360022
+        comment: T360022
+        comment_icon: T360022
         comment_wordmark: T360022
     kowiktionary:
         comment_1_5x: T150618
