@@ -7781,6 +7781,7 @@ return [
 	'default' => false,
 	'commonswiki' => true,
 	'testwiki' => true, // T370322
+	'nowiki' => true, // T377990
 ],
 
 'wmgFlowNamespaces' => [
