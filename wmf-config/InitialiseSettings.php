@@ -6948,6 +6948,12 @@ return [
 	'loginwiki' => true, // T348895
 	'test2wiki' => true, // T371116
 	'metawiki' => false,
+	// T378334 - Minor pilot wikis rollout
+	'cswikiversity' => true,
+	'igwiki' => true,
+	'itwikiquote' => true,
+	'swwiki' => true,
+	'shwiki' => true,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
