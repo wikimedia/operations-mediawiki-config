@@ -1247,7 +1247,7 @@ $wgSiteMatrixSites = [
 $wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
-$wgSiteMatrixNonGlobalSites = MWWikiversions::readDbListFile( 'nonglobal' );
+$wgSiteMatrixNonGlobalSites = [];
 
 // list of codex icons to use for interwiki (based on SiteMatrix) search results widget
 // https://phabricator.wikimedia.org/T315269

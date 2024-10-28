@@ -58,7 +58,6 @@ class MWMultiVersion {
 		'lockeddown',
 		'group0',
 		'group1',
-		'nonglobal',
 		'wikitech',
 		'nonecho',
 		'mobile-anon-talk',

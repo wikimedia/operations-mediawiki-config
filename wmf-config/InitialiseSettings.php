@@ -98,7 +98,6 @@ return [
 
 'wgEnableBotPasswords' => [
 	'default' => true,
-	'nonglobal' => false,
 ],
 'wgBotPasswordsCluster' => [
 	'default' => false,
@@ -107,7 +106,6 @@ return [
 	'default' => 'metawiki',
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 # wgLanguageCode @{
@@ -2078,7 +2076,6 @@ return [
 	'advisorywiki' => false, // Per T27519
 	'fishbowl' => false, // Per T19718 Disable CentralNotice on private/fishbowl wikis
 	'lockeddown' => false, // T61702
-	'nonglobal' => false,
 	'fiwikimedia' => false, // T19718
 	'private' => false, // :D
 	'qualitywiki' => false,
@@ -4611,7 +4608,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 'wmgCentralAuthLoginIcon' => [
@@ -4696,7 +4692,6 @@ return [
 	'loginwiki' => false,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 // This is also guarded by $wmgUseCentralAuth
@@ -4704,7 +4699,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 	'labswiki' => false,
 ],
 
@@ -5293,7 +5287,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 'wgDisabledVariants' => [
@@ -7692,7 +7685,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 // Use extension1 db for all wikis
@@ -10670,7 +10662,6 @@ return [
 	// Enabled on all public sites, see T341159.
 	'default' => true,
 	'fishbowl' => false,
-	'nonglobal' => false,
 	'private' => false,
 
 	// Individual wiki overrides
@@ -10789,7 +10780,6 @@ return [
 	'default' => false,
 	'private' => true,
 	'fishbowl' => true,
-	'nonglobal' => true,
 	'labswiki' => true, // Until SUL migration is complete T161859
 ],
 
@@ -11317,7 +11307,6 @@ return [
 	'default' => true, // Roll out to specific groups
 	'private' => false, // T149614
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 'wmgUseWebAuthn' => [
@@ -11495,7 +11484,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 'wmgUseNewsletter' => [
@@ -11576,7 +11564,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 'wgReadingListsCluster' => [
 	'default' => 'extension1',
@@ -11730,7 +11717,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 'wgTwlEditCount' => [
@@ -12042,7 +12028,6 @@ return [
 'wmgCampaignEventsUseCentralDB' => [
 	'default' => true,
 	'private' => false,
-	'nonglobal' => false,
 	'testwiki' => false,
 	'test2wiki' => false,
 ],
