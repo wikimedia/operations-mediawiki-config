@@ -10950,6 +10950,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'votewiki' => true,
+	'enwiki' => true, // T378287
 ],
 
 'wgSecurePollEditOtherWikis' => [

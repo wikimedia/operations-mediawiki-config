@@ -781,6 +781,9 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'abusefilter-view-private' => true,
+			'securepoll-create-poll' => true, // T378287
+			'securepoll-edit-poll' => true, // T378287
+			'securepoll-view-voter-pii' => true, // T378287
 		], // T30465, T119446
 		'bureaucrat' => [
 			'move-subpages' => true,
@@ -811,6 +814,10 @@ return [
 			'oathauth-enable' => true, // T382879
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
+		'electionclerk' => [
+			'securepoll-create-poll' => true, // T378287
+			'securepoll-edit-poll' => true, // T378287
+		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T283523
 		'abusefilter-helper' => [ 'abusefilter-access-protected-vars' => true ], // T380332
 		'abusefilter' => [ 'abusefilter-access-protected-vars' => true ], // T380332
@@ -3757,6 +3764,7 @@ return [
 			'accountcreator',
 			'autoreviewer',
 			'confirmed',
+			'electionclerk', // T378287
 			'eventcoordinator', // T193075
 			'filemover',
 			'reviewer',
@@ -5289,6 +5297,7 @@ return [
 			'accountcreator',
 			'autoreviewer',
 			'confirmed',
+			'electionclerk', // T378287
 			'eventcoordinator', // T193075
 			'extendedconfirmed', // T126607
 			'extendedmover', // T133981 (page mover)
