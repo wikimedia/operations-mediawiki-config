@@ -1360,6 +1360,9 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
 		],
+		'wgGESurfacingStructuredTasksEnabled' => [
+			'enwiki' => true,
+		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'default' => [
 				'control' => [

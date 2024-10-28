@@ -383,6 +383,10 @@ return [
 	'testwiki' => true,
 ],
 
+'wgGESurfacingStructuredTasksEnabled' => [
+	'default' => false,
+],
+
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,
