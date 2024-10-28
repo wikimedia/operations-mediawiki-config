@@ -700,6 +700,10 @@ return [
 		'שתב' => NS_TEMPLATE_TALK,
 		'קט' => NS_CATEGORY,
 		'שקט' => NS_CATEGORY_TALK,
+
+		// T378303
+		'וק' => NS_PROJECT,
+		'שוק' => NS_PROJECT_TALK,
 	],
 	'+hewikinews' => [ // T349581
 		'מי' => NS_SPECIAL,
