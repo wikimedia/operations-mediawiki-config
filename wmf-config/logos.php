@@ -177,6 +177,7 @@ return [
 	'hywwiki' => '/static/images/project-logos/hywwiki.png', // T212597
 	'hzwiki' => '/static/images/project-logos/hzwiki.png',
 	'iawiki' => '/static/images/project-logos/iawiki.png',
+	'ibawiki' => '/static/images/project-logos/ibawiki.png', // T377538
 	'idwiki' => '/static/images/project-logos/idwiki.png',
 	'idwikisource' => '/static/images/project-logos/idwikisource.png', // T341171
 	'iewiki' => '/static/images/project-logos/iewiki.png', // T51125
@@ -1055,6 +1056,7 @@ return [
 	'hywiki' => '/static/images/project-logos/hywiki-1.5x.png', // T150620
 	'hywwiki' => '/static/images/project-logos/hywwiki-1.5x.png', // T212597
 	'iawiki' => '/static/images/project-logos/iawiki-1.5x.png', // T150618
+	'ibawiki' => '/static/images/project-logos/ibawiki-1.5x.png', // T377538
 	'idwiki' => '/static/images/project-logos/idwiki-1.5x.png', // T150618
 	'idwikisource' => '/static/images/project-logos/idwikisource-1.5x.png', // T341171
 	'iewiki' => '/static/images/project-logos/iewiki-1.5x.png', // T150618
@@ -1701,6 +1703,7 @@ return [
 	'hywiki' => '/static/images/project-logos/hywiki-2x.png', // T150620
 	'hywwiki' => '/static/images/project-logos/hywwiki-2x.png', // T212597
 	'iawiki' => '/static/images/project-logos/iawiki-2x.png', // T150618
+	'ibawiki' => '/static/images/project-logos/ibawiki-2x.png', // T377538
 	'idwiki' => '/static/images/project-logos/idwiki-2x.png', // T150618
 	'idwikisource' => '/static/images/project-logos/idwikisource-2x.png', // T341171
 	'iewiki' => '/static/images/project-logos/iewiki-2x.png', // T150618
@@ -6245,6 +6248,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ia.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'ibawiki' => [ // T377538
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iban.svg',
+		'width' => 120,
+		'height' => 12,
 	],
 	'idwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-id.svg',

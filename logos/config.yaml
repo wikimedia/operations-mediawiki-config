@@ -787,6 +787,13 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    ibawiki:
+        commons: 'File:Wikipedia-logo-v2-iba.svg'
+        comment: T377538
+        comment_1_5x: T377538
+        comment_2x: T377538
+        commons_tagline: 'File:Wikipedia-tagline-iba.svg'
+        comment_tagline: T377538
     idwiki:
         commons: 'File:Wikipedia-logo-v2-id.svg'
         comment_1_5x: T150618
