@@ -878,6 +878,7 @@ return [
 'tawiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'taywiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'tcywiki' => [ 'wikipedia', 'small', 'wikidataclient', 'growthexperiments' ],
+'tcywiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'tddwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'techconductwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'tenwiki' => [ 'wikipedia', 'closed', 'small', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
