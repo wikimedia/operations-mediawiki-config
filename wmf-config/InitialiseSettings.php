@@ -10786,7 +10786,11 @@ return [
 ],
 
 'wgGlobalBlockingEnableAutoblocks' => [
-	'default' => false, // T374853
+	'default' => true, // T377760
+],
+
+'wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
+	'default' => true, // T377760
 ],
 
 // Only allow local 'crats to rename on non-CentralAuth wikis
