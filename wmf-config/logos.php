@@ -310,6 +310,7 @@ return [
 	'roa_rupwiki' => '/static/images/project-logos/roa_rupwiki.png', // T42285
 	'roa_tarawiki' => '/static/images/project-logos/roa_tarawiki.png',
 	'rowiki' => '/static/images/project-logos/rowiki.png',
+	'rskwiki' => '/static/images/project-logos/rskwiki.png', // T377536
 	'ruewiki' => '/static/images/project-logos/ruewiki.png',
 	'ruwiki' => '/static/images/project-logos/ruwiki.png',
 	'rwwiki' => '/static/images/project-logos/rwwiki.png',
@@ -1180,6 +1181,7 @@ return [
 	'roa_rupwiki' => '/static/images/project-logos/roa_rupwiki-1.5x.png', // T150618
 	'roa_tarawiki' => '/static/images/project-logos/roa_tarawiki-1.5x.png', // T150618
 	'rowiki' => '/static/images/project-logos/rowiki-1.5x.png', // T150618
+	'rskwiki' => '/static/images/project-logos/rskwiki-1.5x.png', // T377536
 	'ruewiki' => '/static/images/project-logos/ruewiki-1.5x.png', // T150618
 	'ruwiki' => '/static/images/project-logos/ruwiki-1.5x.png',
 	'sahwiki' => '/static/images/project-logos/sahwiki-1.5x.png', // T150618
@@ -1827,6 +1829,7 @@ return [
 	'roa_rupwiki' => '/static/images/project-logos/roa_rupwiki-2x.png', // T150618
 	'roa_tarawiki' => '/static/images/project-logos/roa_tarawiki-2x.png', // T150618
 	'rowiki' => '/static/images/project-logos/rowiki-2x.png', // T150618
+	'rskwiki' => '/static/images/project-logos/rskwiki-2x.png', // T377536
 	'ruewiki' => '/static/images/project-logos/ruewiki-2x.png', // T150618
 	'ruwiki' => '/static/images/project-logos/ruwiki-2x.png',
 	'sahwiki' => '/static/images/project-logos/sahwiki-2x.png', // T150618
@@ -3120,6 +3123,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-roa_tara.svg',
 		'width' => 120,
 		'height' => 19,
+	],
+	'rskwiki' => [ // T377536
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-rsk.svg',
+		'width' => 110,
+		'height' => 18,
 	],
 	'ruewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-rue.svg',
@@ -6903,6 +6911,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ro.svg',
 		'width' => 120,
 		'height' => 13,
+	],
+	'rskwiki' => [ // T377536
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-rsk.svg',
+		'width' => 110,
+		'height' => 9,
 	],
 	'ruewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-rue.svg',
