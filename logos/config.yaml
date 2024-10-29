@@ -107,6 +107,15 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    annwiki:
+        commons: 'File:Wikipedia-logo-v2-ann.svg'
+        comment: T377535
+        comment_1_5x: T377535
+        comment_2x: T377535
+        commons_wordmark: 'File:Wikipedia-wordmark-ann.svg'
+        comment_wordmark: T377535
+        commons_tagline: 'File:Wikipedia-tagline-ann.svg'
+        comment_tagline: T377535
     anpwiki:
         commons: 'File:Wikipedia-logo-v2-anp.svg'
     anwiki:

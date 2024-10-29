@@ -53,6 +53,7 @@ return [
 	'amwiki' => '/static/images/project-logos/amwiki.png', // T42285
 	'amiwiki' => '/static/images/project-logos/amiwiki.png',
 	'angwiki' => '/static/images/project-logos/angwiki.png', // T51125
+	'annwiki' => '/static/images/project-logos/annwiki.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki.png',
 	'anwiki' => '/static/images/project-logos/anwiki.png',
 	'arcwiki' => '/static/images/project-logos/arcwiki.png',
@@ -935,6 +936,7 @@ return [
 	'amwiki' => '/static/images/project-logos/amwiki-1.5x.png', // T150618
 	'amiwiki' => '/static/images/project-logos/amiwiki-1.5x.png',
 	'angwiki' => '/static/images/project-logos/angwiki-1.5x.png', // T150618
+	'annwiki' => '/static/images/project-logos/annwiki-1.5x.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki-1.5x.png',
 	'anwiki' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
 	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T374430
@@ -1576,6 +1578,7 @@ return [
 	'amwiki' => '/static/images/project-logos/amwiki-2x.png', // T150618
 	'amiwiki' => '/static/images/project-logos/amiwiki-2x.png',
 	'angwiki' => '/static/images/project-logos/angwiki-2x.png', // T150618
+	'annwiki' => '/static/images/project-logos/annwiki-2x.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki-2x.png',
 	'anwiki' => '/static/images/project-logos/anwiki-2x.png', // T150618
 	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T374430
@@ -2281,6 +2284,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-an.svg',
 		'width' => 121,
 		'height' => 24,
+	],
+	'annwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ann.svg',
+		'width' => 120,
+		'height' => 17,
 	],
 	'arcwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-arc.svg',
@@ -5640,6 +5648,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-an.svg',
 		'width' => 120,
 		'height' => 14,
+	],
+	'annwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ann.svg',
+		'width' => 102,
+		'height' => 11,
 	],
 	'arcwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-arc.svg',
