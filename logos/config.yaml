@@ -2802,6 +2802,13 @@ Wikiquote:
         comment_2x: T317004
         commons_wordmark: 'File:Wikiquote.svg'
         comment_wordmark: T290091
+    gorwikiquote:
+        commons: 'File:Wikiquote-logo-gor.svg'
+        comment: T377542
+        comment_1_5x: T377542
+        comment_2x: T377542
+        commons_wordmark: 'File:Wikiquote-wordmark-gor.svg'
+        comment_wordmark: T377542
     guwikiquote:
         comment: T121853
         local_wordmark: true

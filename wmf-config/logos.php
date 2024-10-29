@@ -552,6 +552,7 @@ return [
 	'etwikiquote' => '/static/images/project-logos/etwikiquote.png', // T302683
 	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
 	'frwikiquote' => '/static/images/project-logos/frwikiquote.png', // T317004
+	'gorwikiquote' => '/static/images/project-logos/gorwikiquote.png', // T377542
 	'guwikiquote' => '/static/images/project-logos/guwikiquote.png', // T121853
 	'guwwikiquote' => '/static/images/project-logos/guwwikiquote.png',
 	'hewikiquote' => '/static/images/project-logos/hewikiquote.png',
@@ -1371,6 +1372,7 @@ return [
 	'etwikiquote' => '/static/images/project-logos/etwikiquote-1.5x.png', // T302683
 	'fawikiquote' => '/static/images/project-logos/fawikiquote-1.5x.png',
 	'frwikiquote' => '/static/images/project-logos/frwikiquote-1.5x.png', // T317004
+	'gorwikiquote' => '/static/images/project-logos/gorwikiquote-1.5x.png', // T377542
 	'guwikiquote' => '/static/images/project-logos/guwikiquote-1.5x.png',
 	'guwwikiquote' => '/static/images/project-logos/guwwikiquote-1.5x.png',
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-1.5x.png',
@@ -2015,6 +2017,7 @@ return [
 	'etwikiquote' => '/static/images/project-logos/etwikiquote-2x.png', // T302683
 	'fawikiquote' => '/static/images/project-logos/fawikiquote-2x.png',
 	'frwikiquote' => '/static/images/project-logos/frwikiquote-2x.png', // T317004
+	'gorwikiquote' => '/static/images/project-logos/gorwikiquote-2x.png', // T377542
 	'guwikiquote' => '/static/images/project-logos/guwikiquote-2x.png',
 	'guwwikiquote' => '/static/images/project-logos/guwwikiquote-2x.png',
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-2x.png',
@@ -4075,6 +4078,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-fr.svg',
 		'width' => 77,
 		'height' => 40,
+	],
+	'gorwikiquote' => [ // T377542
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-gor.svg',
+		'width' => 121,
+		'height' => 50,
 	],
 	'guwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-gu.svg',
