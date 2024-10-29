@@ -1552,7 +1552,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'REL1_43',
 		'REL1_42',
 		'REL1_41',
-		'REL1_40',
 		'REL1_39',
 	];
 
