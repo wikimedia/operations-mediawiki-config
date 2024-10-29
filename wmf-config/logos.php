@@ -6266,7 +6266,7 @@ return [
 		'height' => 13,
 	],
 	'ibawiki' => [ // T377538
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iban.svg',
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iba.svg',
 		'width' => 120,
 		'height' => 12,
 	],
