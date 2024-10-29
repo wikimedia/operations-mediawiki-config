@@ -3397,6 +3397,13 @@ Wikinews:
         no_2x: true
         comment_wordmark: Closed wiki. Known inconsistency between wordmark and legacy.
         local_wordmark: true
+    shnwikinews:
+        commons: 'File:WikiNews-Logo-shn.svg'
+        comment: T377543
+        comment_1_5x: T377543
+        comment_2x: T377543
+        commons_wordmark: 'File:Wikinews-wordmark-shn.svg'
+        comment_wordmark: T377543
     sqwikinews:
         comment: T30114
         no_1_5x: true

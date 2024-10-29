@@ -685,6 +685,7 @@ return [
 	'rowikinews' => '/static/images/project-logos/rowikinews.png',
 	'ruwikinews' => '/static/images/project-logos/ruwikinews.png',
 	'sdwikinews' => '/static/images/project-logos/sdwikinews.png',
+	'shnwikinews' => '/static/images/project-logos/shnwikinews.png', // T377543
 	'sqwikinews' => '/static/images/project-logos/sqwikinews.png', // T30114
 	'srwikinews' => '/static/images/project-logos/srwikinews.png',
 	'svwikinews' => '/static/images/project-logos/svwikinews.png',
@@ -1436,6 +1437,7 @@ return [
 	'frwikinews' => '/static/images/project-logos/frwikinews-1.5x.png', // T150618
 	'liwikinews' => '/static/images/project-logos/liwikinews-1.5x.png',
 	'ruwikinews' => '/static/images/project-logos/ruwikinews-1.5x.png', // T150618
+	'shnwikinews' => '/static/images/project-logos/shnwikinews-1.5x.png', // T377543
 	'srwikinews' => '/static/images/project-logos/srwikinews-1.5x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-1.5x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-1.5x.png',
@@ -2079,6 +2081,7 @@ return [
 	'frwikinews' => '/static/images/project-logos/frwikinews-2x.png', // T150618
 	'liwikinews' => '/static/images/project-logos/liwikinews-2x.png',
 	'ruwikinews' => '/static/images/project-logos/ruwikinews-2x.png', // T150618
+	'shnwikinews' => '/static/images/project-logos/shnwikinews-2x.png', // T377543
 	'srwikinews' => '/static/images/project-logos/srwikinews-2x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-2x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-2x.png',
@@ -4621,6 +4624,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sd.svg',
 		'width' => 146,
 		'height' => 32,
+	],
+	'shnwikinews' => [ // T377543
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-shn.svg',
+		'width' => 146,
+		'height' => 44,
 	],
 	'sqwikinews' => [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sq.svg',
