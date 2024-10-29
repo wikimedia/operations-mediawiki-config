@@ -349,6 +349,7 @@ return [
 	'tawiki' => '/static/images/project-logos/tawiki.png', // T29826
 	'taywiki' => '/static/images/project-logos/taywiki.png',
 	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T344557
+	'tddwiki' => '/static/images/project-logos/tddwiki.png', // T377537
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
@@ -1219,6 +1220,7 @@ return [
 	'tawiki' => '/static/images/project-logos/tawiki-1.5x.png',
 	'taywiki' => '/static/images/project-logos/taywiki-1.5x.png',
 	'tcywiki' => '/static/images/project-logos/tcywiki-1.5x.png', // T344557
+	'tddwiki' => '/static/images/project-logos/tddwiki-1.5x.png', // T377537
 	'tetwiki' => '/static/images/project-logos/tetwiki-1.5x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-1.5x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-1.5x.png', // T150618
@@ -1867,6 +1869,7 @@ return [
 	'tawiki' => '/static/images/project-logos/tawiki-2x.png',
 	'taywiki' => '/static/images/project-logos/taywiki-2x.png',
 	'tcywiki' => '/static/images/project-logos/tcywiki-2x.png', // T344557
+	'tddwiki' => '/static/images/project-logos/tddwiki-2x.png', // T377537
 	'tetwiki' => '/static/images/project-logos/tetwiki-2x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-2x.png', // T150618
@@ -3248,6 +3251,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tcy.svg',
 		'width' => 89,
 		'height' => 18,
+	],
+	'tddwiki' => [ // T377537
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tdd.svg',
+		'width' => 120,
+		'height' => 17,
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -7106,6 +7114,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tcy.svg',
 		'width' => 98,
 		'height' => 13,
+	],
+	'tddwiki' => [ // T377537
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tdd.svg',
+		'width' => 110,
+		'height' => 9,
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tet.svg',

@@ -1723,6 +1723,15 @@ Wikipedia:
         comment_wordmark: T344557
         commons_tagline: 'File:Wikipedia-tagline-tcy.svg'
         comment_tagline: T344557
+    tddwiki:
+        commons: 'File:Wikipedia-logo-v2-tdd.svg'
+        comment: T377537
+        comment_1_5x: T377537
+        comment_2x: T377537
+        commons_wordmark: 'File:Wikipedia-wordmark-tdd.svg'
+        comment_wordmark: T377537
+        commons_tagline: 'File:Wikipedia-tagline-tdd.svg'
+        comment_tagline: T377537
     tetwiki:
         comment: T48589
         comment_1_5x: T150618
