@@ -252,6 +252,7 @@ return [
 	'mniwiki' => '/static/images/project-logos/mniwiki.png',
 	'mnwwiki' => '/static/images/project-logos/mnwwiki.png',
 	'mnwwiktionary' => '/static/images/project-logos/mnwwiktionary.png',
+	'moswiki' => '/static/images/project-logos/moswiki.png', // T377539
 	'mrjwiki' => '/static/images/project-logos/mrjwiki.png',
 	'mrwiki' => '/static/images/project-logos/mrwiki.png',
 	'mswiki' => '/static/images/project-logos/mswiki.png',
@@ -1124,6 +1125,7 @@ return [
 	'mniwiki' => '/static/images/project-logos/mniwiki-1.5x.png',
 	'mnwwiki' => '/static/images/project-logos/mnwwiki-1.5x.png',
 	'mnwwiktionary' => '/static/images/project-logos/mnwwiktionary-1.5x.png',
+	'moswiki' => '/static/images/project-logos/moswiki-1.5x.png', // T377539
 	'mrjwiki' => '/static/images/project-logos/mrjwiki-1.5x.png', // T150618
 	'mrwiki' => '/static/images/project-logos/mrwiki-1.5x.png', // T150618
 	'mswiki' => '/static/images/project-logos/mswiki-1.5x.png',
@@ -1769,6 +1771,7 @@ return [
 	'mniwiki' => '/static/images/project-logos/mniwiki-2x.png',
 	'mnwwiki' => '/static/images/project-logos/mnwwiki-2x.png',
 	'mnwwiktionary' => '/static/images/project-logos/mnwwiktionary-2x.png',
+	'moswiki' => '/static/images/project-logos/moswiki-2x.png', // T377539
 	'mrjwiki' => '/static/images/project-logos/mrjwiki-2x.png', // T150618
 	'mrwiki' => '/static/images/project-logos/mrwiki-2x.png', // T150618
 	'mswiki' => '/static/images/project-logos/mswiki-2x.png',
@@ -2949,6 +2952,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mnw.svg',
 		'width' => 113,
 		'height' => 32,
+	],
+	'moswiki' => [ // T377539
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mos.svg',
+		'width' => 120,
+		'height' => 17,
 	],
 	'mrjwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mrj.svg',
@@ -6602,6 +6610,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-mnw.svg',
 		'width' => 121,
 		'height' => 19,
+	],
+	'moswiki' => [ // T377539
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mos.svg',
+		'width' => 120,
+		'height' => 11,
 	],
 	'mrjwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mrj.svg',
