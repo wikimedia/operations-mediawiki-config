@@ -202,6 +202,7 @@ return [
 	'kcgwiki' => '/static/images/project-logos/kcgwiki.png',
 	'kcgwiktionary' => '/static/images/project-logos/kcgwiktionary.png', // T335162
 	'kgwiki' => '/static/images/project-logos/kgwiki.png', // T189586
+	'kgewiki' => '/static/images/project-logos/kgewiki.png', // T377075
 	'kiwiki' => '/static/images/project-logos/kiwiki.png', // T50397
 	'kjwiki' => '/static/images/project-logos/kjwiki.png',
 	'kkwiki' => '/static/images/project-logos/kkwiki.png',
@@ -1074,6 +1075,7 @@ return [
 	'kcgwiki' => '/static/images/project-logos/kcgwiki-1.5x.png',
 	'kcgwiktionary' => '/static/images/project-logos/kcgwiktionary-1.5x.png', // T335162
 	'kgwiki' => '/static/images/project-logos/kgwiki-1.5x.png', // T189586
+	'kgewiki' => '/static/images/project-logos/kgewiki-1.5x.png', // T377075
 	'kiwiki' => '/static/images/project-logos/kiwiki-1.5x.png', // T150618
 	'kkwiki' => '/static/images/project-logos/kkwiki-1.5x.png', // T150618
 	'klwiki' => '/static/images/project-logos/klwiki-1.5x.png', // T150618
@@ -1716,6 +1718,7 @@ return [
 	'kcgwiki' => '/static/images/project-logos/kcgwiki-2x.png',
 	'kcgwiktionary' => '/static/images/project-logos/kcgwiktionary-2x.png', // T335162
 	'kgwiki' => '/static/images/project-logos/kgwiki-2x.png', // T189586
+	'kgewiki' => '/static/images/project-logos/kgewiki-2x.png', // T377075
 	'kiwiki' => '/static/images/project-logos/kiwiki-2x.png', // T150618
 	'kkwiki' => '/static/images/project-logos/kkwiki-2x.png', // T150618
 	'klwiki' => '/static/images/project-logos/klwiki-2x.png', // T150618
@@ -2755,6 +2758,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-kcg.svg',
 		'width' => 119,
 		'height' => 15,
+	],
+	'kgewiki' => [ // T377075
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kge.svg',
+		'width' => 110,
+		'height' => 23,
 	],
 	'kkwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kk.svg',
@@ -6328,6 +6336,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kg.svg',
 		'width' => 116,
 		'height' => 12,
+	],
+	'kgewiki' => [ // T377075
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kge.svg',
+		'width' => 117,
+		'height' => 17,
 	],
 	'kiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ki.svg',

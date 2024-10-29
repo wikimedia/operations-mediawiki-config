@@ -926,6 +926,15 @@ Wikipedia:
         comment_1_5x: T189586
         comment_2x: T189586
         local_tagline: true
+    kgewiki:
+        commons: 'File:Wikipedia-logo-v2-kge-lmpg.svg'
+        comment: T377075
+        comment_1_5x: T377075
+        comment_2x: T377075
+        commons_wordmark: 'File:Wikipedia-wordmark-kge.svg'
+        comment_wordmark: T377075
+        commons_tagline: 'File:Wikipedia-tagline-kge.svg'
+        comment_tagline: T377075
     kiwiki:
         comment: T50397
         comment_1_5x: T150618
