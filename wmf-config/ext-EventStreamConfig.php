@@ -1738,9 +1738,9 @@ return [
 				'rate' => 1,
 			],
 		],
-		// (T363685, T368028) MinT for Wikipedia Readers stream (Language & Product Localization)
-		'mediawiki.product_metrics.mint_for_readers' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
+		// (T363685, T368028, T378565) MinT for Wikipedia Readers stream (Language & Product Localization)
+		'mediawiki.product_metrics.translation_mint_for_readers' => [
+			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
