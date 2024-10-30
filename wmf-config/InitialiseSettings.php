@@ -12236,6 +12236,10 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCommunityRequestsEnable' => [
+	'default' => false,
+],
+
 'wgWikimediaMessagesAnonDonateLink' => [
 	'default' => true,
 ],
