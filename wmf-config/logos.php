@@ -757,6 +757,7 @@ return [
 	'srwikisource' => '/static/images/project-logos/srwikisource.png', // T54019, T310961
 	'suwikisource' => '/static/images/project-logos/suwikisource.png', // T344314
 	'tawikisource' => '/static/images/project-logos/tawikisource.png',
+	'tcywikisource' => '/static/images/project-logos/tcywikisource.png', // T378555
 	'tewikisource' => '/static/images/project-logos/tewikisource.png', // T46796
 	'thwikisource' => '/static/images/project-logos/thwikisource.png', // T54019
 	'trwikisource' => '/static/images/project-logos/trwikisource.png', // T54019
@@ -1478,6 +1479,7 @@ return [
 	'sourceswiki' => '/static/images/project-logos/sourceswiki-1.5x.png', // T150618
 	'srwikisource' => '/static/images/project-logos/srwikisource-1.5x.png', // T172268, T310961
 	'suwikisource' => '/static/images/project-logos/suwikisource-1.5x.png', // T344314
+	'tcywikisource' => '/static/images/project-logos/tcywikisource-1.5x.png', // T378555
 	'tewikisource' => '/static/images/project-logos/tewikisource-1.5x.png',
 	'viwikisource' => '/static/images/project-logos/enwikisource-1.5x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-1.5x.png',
@@ -2128,6 +2130,7 @@ return [
 	'sourceswiki' => '/static/images/project-logos/sourceswiki-2x.png', // T150618
 	'srwikisource' => '/static/images/project-logos/srwikisource-2x.png', // T172268, T310961
 	'suwikisource' => '/static/images/project-logos/suwikisource-2x.png', // T344314
+	'tcywikisource' => '/static/images/project-logos/tcywikisource-2x.png', // T378555
 	'tewikisource' => '/static/images/project-logos/tewikisource-2x.png',
 	'viwikisource' => '/static/images/project-logos/enwikisource-2x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-2x.png',
@@ -4969,6 +4972,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ta.svg',
 		'width' => 146,
 		'height' => 30,
+	],
+	'tcywikisource' => [ // T378555
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-tcy.svg',
+		'width' => 109,
+		'height' => 40,
 	],
 	'tewikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-te.svg',

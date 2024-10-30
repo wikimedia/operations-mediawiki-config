@@ -3778,6 +3778,13 @@ Wikisource:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    tcywikisource:
+        commons: 'File:ವಿಕಿಸೋರ್ಸ್.svg'
+        comment: T378555
+        comment_1_5x: T378555
+        comment_2x: T378555
+        commons_wordmark: 'File:Wikisource-workmark-tagline-tcy.svg'
+        comment_wordmark: T378555
     tewikisource:
         comment: T46796
         local_wordmark: true
