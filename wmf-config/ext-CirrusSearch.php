@@ -1243,4 +1243,7 @@ return [
 		'label_count' // T377226
 	]
 ],
+'wgCirrusSearchEnableEventBusWeightedTags' => [
+	'default' => true,
+]
 ];
