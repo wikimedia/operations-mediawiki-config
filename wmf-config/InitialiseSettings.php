@@ -12046,6 +12046,14 @@ return [
 	'wikidatawiki' => true, // T375411
 ],
 
+'wmgCampaignEventsProgramsAndEventsDashboardEnabled' => [ // T377252
+	'default' => true,
+	'wikimedia' => false,
+	'metawiki' => true,
+	'commonswiki' => true,
+	'incubatorwiki' => true,
+],
+
 'wgWikimediaCampaignEventsEnableCommunityList' => [
 	'default' => true,
 ],

@@ -4364,7 +4364,9 @@ if ( $wmgUseCampaignEvents ) {
 		'cluster' => 'extension1',
 		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
 	];
-	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
+	if ( $wmgCampaignEventsProgramsAndEventsDashboardEnabled ) {
+		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
+	}
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6009/sparql';
 }
 
