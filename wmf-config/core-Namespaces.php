@@ -5914,6 +5914,7 @@ return [
 	'taywiki' => 'Wikibitia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'tcywikisource' => 'ವಿಕಿಸೋರ್ಸ್', // T378555
+	'tcywiktionary' => 'ವಿಕ್ಷನರಿ', // T378556
 	'tddwiki' => 'ᥝᥤᥱ_ᥑᥤᥱ_ᥚᥤᥱ_ᥖᥤᥱ_ᥕᥣᥱ',
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332

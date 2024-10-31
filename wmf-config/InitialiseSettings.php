@@ -626,6 +626,7 @@ return [
 	'taywiki' => 'Asia/Taipei',
 	'tcywiki' => 'Asia/Kolkata', // T140898
 	'tcywikisource' => 'Asia/Kolkata', // T378555
+	'tcywiktionary' => 'Asia/Kolkata', // T378556
 	'tddwiki' => 'Asia/Yangon',
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
@@ -1618,6 +1619,7 @@ return [
 	'taywiki' => 'Wikipidia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'tcywikisource' => 'ವಿಕಿಸೋರ್ಸ್', // T378555
+	'tcywiktionary' => 'ವಿಕ್ಷನರಿ', // T378556
 	'tddwiki' => 'ᥝᥤᥱ ᥑᥤᥱ ᥚᥤᥱ ᥖᥤᥱ ᥕᥣᥱ',
 	'techconductwiki' => 'CoC committee', // T165977
 	'tewiki' => 'వికీపీడియా',
@@ -3645,6 +3647,7 @@ return [
 	'tawiktionary' => [ 'en', 'bn', 'w:en', 'w:ta', 'commons' ], // T196445
 	'tcywiki' => [ 'en', 'kn', 'te', 'c', 'meta' ], // T143397
 	'tcywikisource' => [ 'en', 'kn', 'c', 'meta', 'w:kn', 'oldwikisource' ], // T378555
+	'tcywiktionary' => [ 'en', 'kn', 'c', 'meta', 'w:kn' ], // T378555
 	'tewiki' => [ 'en', 'commons' ], // T43880
 	'tewikibooks' => [ 'w:te', 's:te' ], // T260107, T286978
 	'tewikisource' => [ 'w', 'b', 'en' ], // T94531
