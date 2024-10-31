@@ -5222,6 +5222,7 @@ return [
 
 'wmgUsePdfHandlerShellbox' => [
 	'default' => true,
+	'commonswiki' => false, // T289228#7588412
 ],
 
 'wmgUseFooterContactLink' => [
@@ -5591,7 +5592,6 @@ return [
 
 'wmgUseTimedMediaHandlerShellbox' => [
 	'default' => true,
-	'commonswiki' => false,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
