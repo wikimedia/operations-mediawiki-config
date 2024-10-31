@@ -1629,6 +1629,12 @@ return [
 		'Author' => 102, // T165813
 		'Author_talk' => 103, // T165813
 	],
+	'+tcywikisource' => [ // T378555
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Author' => 102,
+		'Author_talk' => 103,
+	],
 	'+testwiki' => [
 		'WT' => NS_PROJECT_TALK,
 	],
@@ -3656,6 +3662,12 @@ return [
 	'tawikisource' => [
 		102 => 'ஆசிரியர்', // T165813 - Author
 		103 => 'ஆசிரியர்_பேச்சு', // T165813 - Author talk
+	],
+	'tcywikisource' => [ // T378555
+		100 => 'ಸಂಪುಟ', // Portal
+		101 => 'ಸಸಂಪುಟೊದ_ಪಾತೆರ',
+		102 => 'ಬರೆಯಿನಾರ್', // Author
+		103 => 'ಬರೆಯಿನರೆನ_ಪಾತೆರ',
 	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
@@ -5901,6 +5913,7 @@ return [
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'taywiki' => 'Wikibitia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
+	'tcywikisource' => 'ವಿಕಿಸೋರ್ಸ್', // T378555
 	'tddwiki' => 'ᥝᥤᥱ_ᥑᥤᥱ_ᥚᥤᥱ_ᥖᥤᥱ_ᥕᥣᥱ',
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
