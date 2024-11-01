@@ -4142,6 +4142,9 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 		// Exclude bots from the autopromotion, as the group should be granted manually to these users.
 		[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 	];
+
+	// Exclude autopromotions into this group from RC by default (T377829)
+	$wgAutopromoteOnceRCExcludedGroups[] = 'checkuser-temporary-account-viewer';
 }
 
 // Ensure no users can be crated that match temporary account names (T361021).
