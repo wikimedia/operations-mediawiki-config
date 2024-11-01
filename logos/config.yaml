@@ -277,11 +277,6 @@ Wikipedia:
         comment_2x: T150618, T375055
         local_tagline: true
         local_wordmark: true
-    bjnwiktionary:
-        commons: 'File:Wiktionary-logo-v2-bjn.svg'
-        comment: T374898
-        comment_1_5x: T374898
-        comment_2x: T374898
     blkwiki:
         commons: 'File:Wikipedia-logo-v2-blk.svg'
         local_tagline: true
@@ -661,10 +656,6 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
-    gnwiktionary:
-        no_1_5x: true
-        no_2x: true
-        no_wordmark: true
     gomwiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -693,11 +684,6 @@ Wikipedia:
         comment_1_5x: T303727
         comment_2x: T303727
         commons: 'File:Wikipedia-logo-v2-gungbe.svg'
-    guwwikinews:
-      commons: 'File:WikiNews-logo-guw-v3.svg'
-      comment: T335162
-      comment_1_5x: T335162
-      comment_2x: T335162
     gvwiki:
         comment: T48589
         comment_1_5x: T150618
@@ -806,13 +792,6 @@ Wikipedia:
         comment_2x: T150618
         commons_tagline: 'File:Wikipedia-tagline-id.svg'
         comment_tagline: T258552
-    idwikisource:
-        commons: 'File:Wikisource-logo-id.svg'
-        comment: T341171
-        comment_1_5x: T341171
-        comment_2x: T341171
-        commons_wordmark: 'File:Wikisource-wordmark-id.svg'
-        comment_wordmark: T341177
     iewiki:
         comment: T51125
         comment_1_5x: T150618
@@ -928,12 +907,6 @@ Wikipedia:
     kcgwiki:
         commons: 'File:Wikipedia-logo-v2-kcg.svg'
         local_tagline: true
-    kcgwiktionary:
-        commons: 'File:Wiktionary-logo-kcg.svg'
-        comment: T335162
-        comment_1_5x: T335162
-        comment_2x: T335162
-        local_wordmark: true
     kgwiki:
         comment: T189586
         comment_1_5x: T189586
@@ -1215,10 +1188,6 @@ Wikipedia:
         comment_wordmark: T294189
         local_tagline: true
     mnwwiki:
-        local_tagline: true
-        local_wordmark: true
-    mnwwiktionary:
-        commons: 'File:Wiktionary-logo-mnw.svg'
         local_tagline: true
         local_wordmark: true
     moswiki:
@@ -2078,6 +2047,11 @@ Wiktionary:
     bgwiktionary:
         no_1_5x: true
         no_2x: true
+    bjnwiktionary:
+        commons: 'File:Wiktionary-logo-v2-bjn.svg'
+        comment: T374898
+        comment_1_5x: T374898
+        comment_2x: T374898
     blkwiktionary:
         commons: 'File:Wiktionary-logo-blk.svg'
         comment_1_5x: T344310
@@ -2222,6 +2196,10 @@ Wiktionary:
     glwiktionary:
         no_1_5x: true
         no_2x: true
+    gnwiktionary:
+        no_1_5x: true
+        no_2x: true
+        no_wordmark: true
     gorwiktionary:
         commons: 'File:Wiktionary-logo-gor.svg'
         comment: T327987
@@ -2334,6 +2312,12 @@ Wiktionary:
         comment_tagline: T368868
     kbdwiktionary:
         commons: 'File:Wiktionary-logo-kbd.svg'
+        local_wordmark: true
+    kcgwiktionary:
+        commons: 'File:Wiktionary-logo-kcg.svg'
+        comment: T335162
+        comment_1_5x: T335162
+        comment_2x: T335162
         local_wordmark: true
     kkwiktionary:
         comment_1_5x: T150618
@@ -2456,6 +2440,10 @@ Wiktionary:
         comment_2x: T317004
         commons_wordmark: 'File:Wiktionary-wordmark-mni.svg'
         comment_wordmark: T294709
+    mnwwiktionary:
+        commons: 'File:Wiktionary-logo-mnw.svg'
+        local_tagline: true
+        local_wordmark: true
     mrwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -3408,6 +3396,11 @@ Wikinews:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    guwwikinews:
+        commons: 'File:WikiNews-logo-guw-v3.svg'
+        comment: T335162
+        comment_1_5x: T335162
+        comment_2x: T335162
     itwikinews:
         no_1_5x: true
         no_2x: true
@@ -3641,6 +3634,13 @@ Wikisource:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    idwikisource:
+        commons: 'File:Wikisource-logo-id.svg'
+        comment: T341171
+        comment_1_5x: T341171
+        comment_2x: T341171
+        commons_wordmark: 'File:Wikisource-wordmark-id.svg'
+        comment_wordmark: T341177
     iswikisource:
         comment: T54019
         no_1_5x: true
