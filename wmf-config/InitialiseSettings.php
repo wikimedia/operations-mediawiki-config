@@ -7767,6 +7767,17 @@ return [
 	'commonswiki' => true,
 	'testwiki' => true, // T370322
 	'nowiki' => true, // T377990
+	'cswiki' => true, // T377990
+	'eowiki' => true, // T377990
+	'frwiktionary' => true, // T377990
+	'hewiki' => true, // T377990
+	'kkwiki' => true, // T377990
+	'pawiki' => true, // T377990
+	'specieswiki' => true, // T377990
+	'svwiki' => true, // T377990
+	'test2wiki' => true, // T377990
+	'tewiki' => true, // T377990
+	'outreachwiki' => true, // T377990
 ],
 
 'wmgFlowNamespaces' => [
