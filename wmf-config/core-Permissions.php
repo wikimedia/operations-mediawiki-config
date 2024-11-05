@@ -1804,10 +1804,6 @@ return [
 		],
 		'autoconfirmed' => [ 'unfuzzy' => true, ], // T368416
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
-		'bureaucrat' => [
-			'checkuser-temporary-account' => false, // T377584
-			'checkuser-temporary-account-no-preference' => false, // T377584
-		],
 		'bot' => [ 'changetags' => true ], // T283625
 		'event-organizer' => [ // T356070
 			'campaignevents-enable-registration' => true,
@@ -1820,14 +1816,6 @@ return [
 			'centralnotice-admin' => true,
 			'editinterface' => true,
 			'protect' => true, // T209873
-		],
-		'checkuser' => [
-			'checkuser-temporary-account' => false, // T377584
-			'checkuser-temporary-account-no-preference' => false, // T377584
-		],
-		'checkuser-temporary-account-viewer' => [
-			'checkuser-temporary-account' => false, // T377584
-			'read' => true, // T377584 Adding this to prevent a group with no rights from being autopromoted
 		],
 		'flood' => [ 'bot' => true, ], // T17176
 		'global-renamer' => [ // T142123, T71651
@@ -1858,14 +1846,8 @@ return [
 			'oathauth-verify-user' => true, // T251447
 			'oathauth-view-log' => true,
 		],
-		'suppress' => [
-			'checkuser-temporary-account' => false, // T377584
-			'checkuser-temporary-account-no-preference' => false, // T377584
-		],
 		'sysop' => [
 			'changetags' => true, // T283625
-			'checkuser-temporary-account' => false, // T377584
-			'checkuser-temporary-account-no-preference' => false, // T377584
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
