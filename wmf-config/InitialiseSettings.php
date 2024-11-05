@@ -2606,6 +2606,13 @@ return [
 	'ukwiki' => true,
 	'viwiki' => true,
 	// End T341491
+	// Start T379102
+	'frwiki' => true,
+	'eswiki' => true,
+	'jawiki' => true,
+	'ruwiki' => true,
+	'itwiki' => true,
+	// End T379102
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -8028,6 +8035,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements' => [
+	// Sync with sub-features below and wgVectorPromoteAddTopic
 	// Everywhere except wikipedias, commons and wikidata (T352087)
 	'default' => 'available',
 	'wikipedia' => 'default',
@@ -8055,6 +8063,13 @@ return [
 	'ukwiki' => 'available',
 	'viwiki' => 'available',
 	// End T341491
+	// Start T379102
+	'frwiki' => 'available',
+	'eswiki' => 'available',
+	'jawiki' => 'available',
+	'ruwiki' => 'available',
+	'itwiki' => 'available',
+	// End T379102
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
@@ -8086,6 +8101,13 @@ return [
 	'ukwiki' => 'available',
 	'viwiki' => 'available',
 	// End T341491
+	// Start T379102
+	'frwiki' => 'available',
+	'eswiki' => 'available',
+	'jawiki' => 'available',
+	'ruwiki' => 'available',
+	'itwiki' => 'available',
+	// End T379102
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
@@ -8117,6 +8139,13 @@ return [
 	'ukwiki' => 'available',
 	'viwiki' => 'available',
 	// End T341491
+	// Start T379102
+	'frwiki' => 'available',
+	'eswiki' => 'available',
+	'jawiki' => 'available',
+	'ruwiki' => 'available',
+	'itwiki' => 'available',
+	// End T379102
 ],
 
 'wgDiscussionToolsEnableThanks' => [
