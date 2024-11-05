@@ -3606,6 +3606,9 @@ if ( $wmgUseSearchExtraNS ) {
 if ( $wmgUseJsonConfig ) {
 	wfLoadExtension( 'JsonConfig' );
 
+	// FIXME T379067
+	$wgTrackGlobalJsonLinks = false;
+
 	if ( $wmgUseGraphWithJsonNamespace ) {
 		$wgJsonConfigModels['Json.JsonConfig'] = null;
 		$wgJsonConfigs['Json.JsonConfig'] = [
