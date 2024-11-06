@@ -7440,6 +7440,12 @@ return [
 'wgTranslateEnableMessageBundleIntegration' => [
 	'default' => false,
 	'metawiki' => true,
+	'testwiki' => true,
+],
+
+'wgTranslateEnableLuaIntegration' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgTranslateEnableMessageGroupSubscription' => [
