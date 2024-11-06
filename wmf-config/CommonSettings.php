@@ -3686,6 +3686,38 @@ if ( $wmgEnableDashikiData && $wmgUseJsonConfig ) {
 	wfLoadExtension( 'Dashiki' );
 }
 
+// T369945
+// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
+if ( $wmgUseChart ) {
+	wfLoadExtension( 'Chart' );
+	// set in ProductionServices.php
+	$wgChartServiceUrl = $wmgLocalServices['chart-renderer'] . '/v1/chart/render';
+
+	if ( $wmgEnableJsonConfigDataMode ) {
+		// Set up chart pages with JsonConfig
+		$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
+		$wgJsonConfigs['Chart.JsonConfig'] = [
+			'namespace' => 486,
+			'nsName' => 'Data',
+			// page name must end in ".chart", and contain at least one symbol
+			'pattern' => '/.\.chart$/',
+			'license' => 'CC0-1.0',
+			// allows the cache keys to be shared between wikis
+			'isLocal' => false,
+		];
+	}
+
+	if ( $wgDBname === 'testcommonswiki' ) {
+		$wgJsonConfigs['Chart.JsonConfig']['store'] = true;
+	} elseif ( $wgDBname === 'testwiki' ) {
+		$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
+			'url' => 'https://test-commons.wikimedia.org/w/api.php'
+		];
+	}
+
+	// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 

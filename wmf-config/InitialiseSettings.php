@@ -12226,9 +12226,18 @@ return [
 	'azwiki' => true, // T371440
 ],
 
-// Not ready for production yet, see T369944
+// T378127
+// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 'wmgUseChart' => [
-	'default' => false
+	'default' => false,
+	'testcommonswiki' => true,
+	'testwiki' => true,
+],
+
+'wgChartProgressiveEnhancement' => [
+	'default' => false,
+	'testcommonswiki' => true,
+	'testwiki' => true,
 ],
 
 // T372527

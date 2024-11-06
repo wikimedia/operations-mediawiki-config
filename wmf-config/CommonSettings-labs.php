@@ -507,6 +507,7 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	// T369945
+	// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 	if ( $wmgUseChart ) {
 		wfLoadExtension( 'Chart' );
 		$wgChartServiceUrl = $wmgLocalServices['chart-renderer'];
