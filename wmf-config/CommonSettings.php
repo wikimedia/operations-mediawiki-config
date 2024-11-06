@@ -3606,8 +3606,17 @@ if ( $wmgUseSearchExtraNS ) {
 if ( $wmgUseJsonConfig ) {
 	wfLoadExtension( 'JsonConfig' );
 
-	// FIXME T379067
-	$wgTrackGlobalJsonLinks = false;
+	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
+		// T379199 - temporary deployment of tracking tables on testcommonswiki
+		$wgTrackGlobalJsonLinks = true;
+		$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
+			'cluster' => 's4',
+			'db' => 'testcommonswiki'
+		];
+	} else {
+		// @todo finish production deployment for T379067
+		$wgTrackGlobalJsonLinks = false;
+	}
 
 	if ( $wmgUseGraphWithJsonNamespace ) {
 		$wgJsonConfigModels['Json.JsonConfig'] = null;
