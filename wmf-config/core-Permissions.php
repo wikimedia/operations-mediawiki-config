@@ -78,6 +78,27 @@ return [
 		],
 	],
 
+	// temporary to test Chart extension and JsonConfig usage tracking - T378127
+	'testcommonswiki' => [
+		'*' => [
+			'edit' => false,
+			'createaccount' => false,
+			'autocreateaccount' => false,
+		],
+		'user' => [
+			'edit' => false,
+			'move' => false,
+			'move-rootuserpages' => false,
+			'move-subpages' => false,
+			'upload' => false,
+		],
+		'sysop' => [
+			'edit' => true,
+			'move' => true,
+			'move-subpages' => true
+		],
+	],
+
 	// Account creation required
 	'nlwikimedia' => [
 		'*' => [ 'edit' => false, ]
