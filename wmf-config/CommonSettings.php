@@ -3334,27 +3334,8 @@ if ( $wgDBname === 'labswiki' ) {
 	$wgEmailConfirmToEdit = true;
 	$wgEnableCreativeCommonsRdf = true;
 
-	$wgGroupPermissions['contentadmin'] = $wgGroupPermissions['sysop'];
-	$wgGroupPermissions['contentadmin']['editinterface'] = false;
-	$wgGroupPermissions['contentadmin']['tboverride'] = false;
-	$wgGroupPermissions['contentadmin']['titleblacklistlog'] = false;
-	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
-	$wgGroupPermissions['contentadmin']['createaccount'] = false;
-
 	# User registration is now managed by Bitu (https://idm.wikimedia.org).
 	$wgGroupPermissions['*']['createaccount'] = false;
-
-	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
-	$wgGroupPermissions['contentadmin']['nuke'] = true;
-	$wgGroupPermissions['contentadmin']['massmessage'] = true;
-	$wgGroupPermissions['contentadmin']['spamblacklistlog'] = true;
-
-	// Grant AbuseFilter permissions regular sysops have - T242593
-	$wgGroupPermissions['contentadmin']['abusefilter-log-detail'] = true;
-	$wgGroupPermissions['contentadmin']['abusefilter-log-private'] = true;
-	$wgGroupPermissions['contentadmin']['abusefilter-modify'] = true;
-	$wgGroupPermissions['contentadmin']['abusefilter-modify-restricted'] = true;
-	$wgGroupPermissions['contentadmin']['abusefilter-view-private'] = true;
 
 	if ( $wgDBname === 'labswiki' ) {
 		$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?

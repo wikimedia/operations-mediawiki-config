@@ -1661,7 +1661,7 @@ return [
 			'editsitejson' => true,
 		],
 	],
-	'wikitech' => [ // contentadmin is handled in CommonSettings, not here
+	'wikitech' => [
 		'*' => [
 			'edit' => false,
 			'createaccount' => true,
@@ -4774,15 +4774,10 @@ return [
 		'sysop' => [ 'uploader' ], // T225505
 	],
 	'wikitech' => [
-		'contentadmin' => [
-			'autopatrolled',
-			'ipblock-exempt',
-		],
 		'bureaucrat' => [
 			'bot',
 			'bureaucrat',
 			'confirmed',
-			'contentadmin',
 			'interface-admin',
 			'oathauth',
 			'oauthadmin',
@@ -5980,14 +5975,9 @@ return [
 		'bureaucrat' => [ 'autopatrolled', ],
 	],
 	'wikitech' => [
-		'contentadmin' => [
-			'autopatrolled',
-			'ipblock-exempt',
-		],
 		'bureaucrat' => [
 			'bot',
 			'confirmed',
-			'contentadmin',
 			'flood',
 			'interface-admin',
 			'oathauth',
@@ -6110,7 +6100,6 @@ return [
 		'wikifunctions-staff' => [ 'interface-admin', 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat' ]
 	],
 	'wikitech' => [
-		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
 	],
 	'zhwiki' => [ 'sysop' => [ 'flood' ] ],
@@ -6157,7 +6146,6 @@ return [
 		'wikifunctions-staff' => [ 'interface-admin', 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat' ]
 	],
 	'wikitech' => [
-		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
 	],
 	'viwiki' => [ 'flood' => [ 'flood' ] ], // T303578
