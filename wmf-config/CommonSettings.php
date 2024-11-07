@@ -3661,13 +3661,24 @@ if ( $wmgEnableJsonConfigDataMode ) {
 	// Enable Tabular data namespace on Commons - T148745
 	// Enable Map (GeoJSON) data namespace on Commons - T149548
 	// TODO: Consider whether this hard-coding to Commons is appropriate
-	if ( $wgDBname === 'commonswiki' ) {
+	// See T378127 for testcommonswiki, using to test Chart extension
+	if ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
 		// Ensure we have a stable cross-wiki title resolution
 		// See JCSingleton::parseTitle()
 		$wgJsonConfigInterwikiPrefix = "meta";
 
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+	} elseif ( $wgDBname === 'testwiki' ) {
+		// temporary for testing Chart extension - T378127
+		$wgJsonConfigInterwikiPrefix = "testcommons";
+
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://test-commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://test-commons.wikimedia.org/w/api.php'
+		];
 	} else {
 		$wgJsonConfigInterwikiPrefix = "commons";
 
