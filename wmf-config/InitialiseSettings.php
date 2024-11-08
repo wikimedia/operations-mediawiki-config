@@ -7668,7 +7668,7 @@ return [
 	'default' => true,
 ],
 'wmgEchoEmailFooterAddress' => [
-	'default' => 'Wikimedia Foundation, 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA',
+	'default' => 'Wikimedia Foundation, 1 Sansome Street, Suite 1895, San Francisco, CA 94104, USA',
 ],
 'wmgEchoSiteNotificationIconUrl' => [
 	'default' => false,
