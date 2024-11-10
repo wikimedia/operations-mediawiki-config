@@ -6157,6 +6157,10 @@ return [
 		'filemover' => [ 'filemover' ], // T195247
 		'transwiki' => [ 'transwiki' ], // T250972
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt-grantor' ], // T357991
+		// T379500
+		'templateeditor' => [ 'templateeditor' ],
+		'confirmed' => [ 'confirmed' ],
+		'abusefilter-helper' => [ 'abusefilter-helper' ],
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
