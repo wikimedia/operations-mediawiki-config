@@ -82,7 +82,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 				'all',
 				// If you're adding a new section, make sure it's widely announced
 				// so all the people who do things per section know about it!
-				[ 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's11', ],
+				[ 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8' ],
 			],
 
 			'size' => [

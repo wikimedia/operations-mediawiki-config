@@ -78,6 +78,27 @@ return [
 		],
 	],
 
+	// temporary to test Chart extension and JsonConfig usage tracking - T378127
+	'testcommonswiki' => [
+		'*' => [
+			'edit' => false,
+			'createaccount' => false,
+			'autocreateaccount' => false,
+		],
+		'user' => [
+			'edit' => false,
+			'move' => false,
+			'move-rootuserpages' => false,
+			'move-subpages' => false,
+			'upload' => false,
+		],
+		'sysop' => [
+			'edit' => true,
+			'move' => true,
+			'move-subpages' => true
+		],
+	],
+
 	// Account creation required
 	'nlwikimedia' => [
 		'*' => [ 'edit' => false, ]
@@ -154,6 +175,9 @@ return [
 			'reupload' => false,
 			'reupload-own' => false,
 			'reupload-shared' => false,
+			'campaignevents-enable-registration' => false, // T370066
+			'campaignevents-organize-events' => false, // T370066
+			'campaignevents-email-participants' => false, // T370066
 		],
 		'autoconfirmed' => [
 			'upload' => false,
@@ -195,6 +219,11 @@ return [
 			'delete-redirect' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
+		],
+		'event-organizer' => [ // T370066
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 	],
 	'+arwikibooks' => [
@@ -375,7 +404,17 @@ return [
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T269709
 	],
 	'+brwikimedia' => [ // T65345
+		'user' => [
+			'campaignevents-enable-registration' => false, // T376747
+			'campaignevents-organize-events' => false, // T376747
+			'campaignevents-email-participants' => false, // T376747
+		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
+		'event-organizer' => [ // T376747
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
 	],
 	'+bswiki' => [
 		'rollbacker' => [ 'rollback' => true ],
@@ -686,7 +725,6 @@ return [
 		// The group exists as a courtesy, see T334692
 		'founder' => [ 'read' => true ],
 		'rollbacker' => [ 'rollback' => true ],
-		'abusefilter-helper' => [ 'spamblacklistlog' => true ], // T175684
 		'accountcreator' => [
 			'override-antispoof' => true,
 			'tboverride-account' => true,
@@ -825,6 +863,16 @@ return [
 		'templateeditor' => [ 'templateeditor' => true ], // T148007
 	],
 	'+eswiki' => [
+		'event-organizer' => [ // T376786
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T376786
+			'campaignevents-organize-events' => false, // T376786
+			'campaignevents-email-participants' => false, // T376786
+		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
 		'rollbacker' => [
 			'rollback' => true,
@@ -1428,7 +1476,6 @@ return [
 			'massmessage' => true,
 			'nominornewtalk' => true,
 			'noratelimit' => true,
-			'oathauth-enable' => true,
 			'override-antispoof' => true,
 			'protect' => true,
 			'skipcaptcha' => true,
@@ -1569,6 +1616,10 @@ return [
 		'sysop' => [ 'importupload' => true, ], // T359545
 		'flood' => [ 'bot' => true ], // T322472
 	],
+	'+knwikisource' => [ // T373073
+		'sysop' => [ 'importupload' => true, ],
+		'flood' => [ 'bot' => true ],
+	],
 	'+kowiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'uploader' => [ // T85621
@@ -1591,6 +1642,11 @@ return [
 			'reupload' => true,
 			'reupload-own' => true,
 			'reupload-shared' => true,
+		],
+	],
+	'+labswiki' => [
+		'*' => [
+			'autocreateaccount' => false,
 		],
 	],
 	'+ladwiki' => [
@@ -1684,6 +1740,10 @@ return [
 		],
 		'autoconfirmed' => [ 'unfuzzy' => true, ], // T368416
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
+		'bureaucrat' => [
+			'checkuser-temporary-account' => false, // T377584
+			'checkuser-temporary-account-no-preference' => false, // T377584
+		],
 		'bot' => [ 'changetags' => true ], // T283625
 		'event-organizer' => [ // T356070
 			'campaignevents-enable-registration' => true,
@@ -1696,6 +1756,14 @@ return [
 			'centralnotice-admin' => true,
 			'editinterface' => true,
 			'protect' => true, // T209873
+		],
+		'checkuser' => [
+			'checkuser-temporary-account' => false, // T377584
+			'checkuser-temporary-account-no-preference' => false, // T377584
+		],
+		'checkuser-temporary-account-viewer' => [
+			'checkuser-temporary-account' => false, // T377584
+			'read' => true, // T377584 Adding this to prevent a group with no rights from being autopromoted
 		],
 		'flood' => [ 'bot' => true, ], // T17176
 		'global-renamer' => [ // T142123, T71651
@@ -1726,7 +1794,15 @@ return [
 			'oathauth-verify-user' => true, // T251447
 			'oathauth-view-log' => true,
 		],
-		'sysop' => [ 'changetags' => true ], // T283625
+		'suppress' => [
+			'checkuser-temporary-account' => false, // T377584
+			'checkuser-temporary-account-no-preference' => false, // T377584
+		],
+		'sysop' => [
+			'changetags' => true, // T283625
+			'checkuser-temporary-account' => false, // T377584
+			'checkuser-temporary-account-no-preference' => false, // T377584
+		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
 			'banner-protect' => true,
@@ -1888,7 +1964,6 @@ return [
 			'editprotected' => true,
 		], // T195557
 		'flood' => [ 'bot' => true ], // T211181
-		'transwiki' => [ 'oathauth-enable' => true ], // T214036
 	],
 	'+nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -2583,7 +2658,6 @@ return [
 			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
-			'checkuser-temporary-account' => true, // T367170
 		],
 		'researcher' => [
 			'browsearchive' => true,
@@ -2697,6 +2771,18 @@ return [
 	],
 	'+trwikivoyage' => [
 		'rollbacker' => [ 'rollback' => true ], // T314678
+	],
+	'+uawikimedia' => [
+		'user' => [
+			'campaignevents-enable-registration' => false, // T376695
+			'campaignevents-organize-events' => false, // T376695
+			'campaignevents-email-participants' => false, // T376695
+		],
+		'event-organizer' => [ // T376695
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
 	],
 	'+ukwiki' => [
 		'patroller' => [
@@ -2910,7 +2996,6 @@ return [
 			'protect' => true,
 			'rollback' => true,
 			'skipcaptcha' => true,
-			'spamblacklistlog' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
 			'titleblacklistlog' => true,
@@ -2922,12 +3007,20 @@ return [
 		], // T74459
 		'user' => [
 			'changetags' => false, // T303682
+			'campaignevents-enable-registration' => false, // T375411
+			'campaignevents-organize-events' => false, // T375411
+			'campaignevents-email-participants' => false, // T375411
 		],
 		'sysop' => [
 			'changetags' => true, // T303682
 			'property-create' => true // T48953
 		],
 		'flood' => [ 'bot' => true ], // T50013
+		'event-organizer' => [ // T375411
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
 	],
 	'+wikifunctionswiki' => [
 		'*' => [
@@ -3036,6 +3129,11 @@ return [
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489
+		'user' => [
+			'campaignevents-enable-registration' => false, // T373821
+			'campaignevents-organize-events' => false, // T373821
+			'campaignevents-email-participants' => false, // T373821
+		],
 		'abusefilter-helper' => [ 'oathauth-enable' => true ], // T344398
 		'autoconfirmed' => [
 			'flow-hide' => true, // T264489
@@ -3081,6 +3179,19 @@ return [
 		'sysop' => [
 			'templateeditor' => true, // T260012
 			'extendedconfirmed' => true, // T287322
+		],
+		'arbcom' => [ // T374455
+			'abusefilter-log-detail' => true,
+			'abusefilter-log-private' => true,
+			'abusefilter-view-private' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+		],
+		'event-organizer' => [ // T373821
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 	],
 	'+zh_classicalwiki' => [
@@ -3148,6 +3259,7 @@ return [
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
 			'unblockself' => false, # T150826
+			'checkuser-temporary-account' => true, // T327913
 		],
 		'bot' => [
 			'noratelimit' => true,
@@ -3157,6 +3269,7 @@ return [
 		],
 		'bureaucrat' => [
 			'noratelimit' => true,
+			'checkuser-temporary-account' => true, // T327913
 		],
 		'steward' => [
 			'noratelimit' => true,
@@ -3201,6 +3314,7 @@ return [
 			'suppressionlog' => true,
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
+			'checkuser-temporary-account-no-preference' => true, // T371364
 		],
 	],
 
@@ -3293,6 +3407,7 @@ return [
 			'templateeditor',
 			'extendedconfirmed', // T302860
 			'patroller', // T354063
+			'upwizcampeditors', // T378067
 		],
 	],
 	'+test2wiki' => [
@@ -3323,6 +3438,7 @@ return [
 			'rollbacker',
 			'abusefilter',
 			'extendedmover', // T326434
+			'event-organizer', // T370066
 		],
 	],
 	'+arwikibooks' => [
@@ -3452,6 +3568,7 @@ return [
 			'autopatrolled', // T65345
 			'confirmed', // T65345
 			'translationadmin', // T60123
+			'event-organizer', // T376747
 		],
 	],
 	'+bswiki' => [
@@ -3681,6 +3798,7 @@ return [
 			'rollbacker',
 			'autopatrolled',
 			'patroller',
+			'event-organizer', // T376786
 		],
 	],
 	'+eswikibooks' => [
@@ -4021,6 +4139,9 @@ return [
 	],
 	'+knwiki' => [
 		'sysop' => [ 'flood' ], // T322472
+	],
+	'+knwikisource' => [
+		'sysop' => [ 'flood' ], // T373073
 	],
 	'+kowiki' => [
 		'sysop' => [
@@ -4523,6 +4644,11 @@ return [
 			'patroller', // T272149
 		],
 	],
+	'+uawikimedia' => [
+		'sysop' => [
+			'event-organizer', // T376695
+		],
+	],
 	'+ukwiki' => [
 		'sysop' => [
 			'patroller',
@@ -4612,6 +4738,7 @@ return [
 			'rollbacker', // T47165
 			'confirmed', // T47124
 			'propertycreator', // T48953
+			'event-organizer', // T375411
 		],
 		'bureaucrat' => [
 			'flood', // T50013
@@ -4669,7 +4796,10 @@ return [
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
-		'bureaucrat' => [ 'flood' ],
+		'bureaucrat' => [
+			'flood',
+			'arbcom', // T374455
+		],
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T357991
 		'sysop' => [
 			'abusefilter-helper', // T344398
@@ -4683,6 +4813,7 @@ return [
 			'transwiki', // T250972
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
+			'event-organizer', // T373821
 		],
 	],
 	'+zhwikibooks' => [
@@ -4791,6 +4922,7 @@ return [
 			'templateeditor',
 			'extendedconfirmed', // T302860
 			'patroller', // T354063
+			'upwizcampeditors', // T378067
 		],
 	],
 	'+test2wiki' => [
@@ -4823,6 +4955,7 @@ return [
 			'patroller',
 			'autopatrolled',
 			'extendedmover', // T326434
+			'event-organizer', // T370066
 		],
 	],
 	'+arwikibooks' => [
@@ -4957,6 +5090,7 @@ return [
 			'translationadmin', // T60123
 			'autopatrolled', // T65345
 			'confirmed', // T65345
+			'event-organizer', // T376747
 		],
 		'bureaucrat' => [
 			'sysop', // T65345
@@ -5147,7 +5281,7 @@ return [
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor', 'botadmin', ], // T262174, T330470, T342484
-		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
+		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller', 'event-organizer', ], // T376786
 	],
 	'+eswikibooks' => [
 		'bureaucrat' => [ 'flood' ],
@@ -5380,6 +5514,9 @@ return [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
 	'+knwiki' => [ // T322472
+		'sysop' => [ 'flood' ],
+	],
+	'+knwikisource' => [ // T373073
 		'sysop' => [ 'flood' ],
 	],
 	'+kowiki' => [
@@ -5716,6 +5853,11 @@ return [
 	'+thwiki' => [
 		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
 	],
+	'+uawikimedia' => [
+		'sysop' => [
+			'event-organizer', // T376695
+		],
+	],
 	'+ukwiki' => [
 		'sysop' => [
 			'patroller',
@@ -5798,6 +5940,7 @@ return [
 			'rollbacker', // T47165
 			'confirmed', // T47124
 			'propertycreator', // T48953
+			'event-organizer', // T375411
 		],
 		'bureaucrat' => [
 			'flood', // T50013
@@ -5849,7 +5992,10 @@ return [
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
-		'bureaucrat' => [ 'flood' ],
+		'bureaucrat' => [
+			'flood',
+			'arbcom', // T374455
+		],
 		'sysop' => [
 			'abusefilter-helper', // T344398
 			'patroller',
@@ -5863,7 +6009,9 @@ return [
 			'transwiki', // T250972
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
+			'event-organizer', // T373821
 		],
+		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T374504
 	],
 	'+zhwikibooks' => [
 		'sysop' => [
@@ -5932,6 +6080,7 @@ return [
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
 	'itwiktionary' => [ 'sysop' => [ 'flood' ] ], // T41306
 	'knwiki' => [ 'sysop' => [ 'flood' ] ], // T322472
+	'knwikisource' => [ 'sysop' => [ 'flood' ] ], // T373073
 	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
 	'plwiki' => [ 'sysop' => [ 'flood' ] ], // T22155
@@ -5971,6 +6120,7 @@ return [
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
 	'jawiki' => [ 'rollbacker' => [ 'rollbacker' ] ], // T258339
 	'knwiki' => [ 'flood' => [ 'flood' ] ], // T322472
+	'knwikisource' => [ 'flood' => [ 'flood' ] ], // T373073
 	'ladwiki' => [ 'flood' => [ 'flood' ] ], // T131527
 	'lvwiki' => [ 'flood' => [ 'flood' ] ], // T121238
 	'mlwiki' => [ 'botadmin' => [ 'botadmin' ] ],
@@ -6007,6 +6157,10 @@ return [
 		'filemover' => [ 'filemover' ], // T195247
 		'transwiki' => [ 'transwiki' ], // T250972
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt-grantor' ], // T357991
+		'templateeditor' => [ 'templateeditor' ], // T379500
+		'confirmed' => [ 'confirmed' ], // T379500
+		'abusefilter-helper' => [ 'abusefilter-helper' ], // T379500
+		'event-organizer' => [ 'event-organizer' ], // T376061
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546

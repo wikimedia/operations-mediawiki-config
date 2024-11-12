@@ -7,4 +7,6 @@ wikmedia
 [^2][[:digit:]]{3}\.codfw\.wmnet
 [^3][[:digit:]]{3}\.esams\.wmnet
 [^4][[:digit:]]{3}\.ulsfo\.wmnet
+[^5][[:digit:]]{3}\.eqsin\.wmnet
+[^6][[:digit:]]{3}\.drmrs\.wmnet
 enlgish

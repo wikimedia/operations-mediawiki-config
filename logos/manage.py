@@ -413,6 +413,7 @@ def make_block_lang_single(site: str, lang: Optional[str], lang_info: dict, data
             url = f"/{project_logos_path}/{selected}{size1}.png"
             text += f"\t\t\t'{size}' => '{url}',\n"
     for svg_type in ["wordmark", "tagline"]:
+        filename = ''
         if f"selected_{svg_type}" in lang_info:
             proj, lang = transform_name(data, site)
             name = ""
@@ -422,6 +423,10 @@ def make_block_lang_single(site: str, lang: Optional[str], lang_info: dict, data
                 name = f"{proj}-{svg_type}-{lang}"
             name += f"-{lang_info[f'selected_{svg_type}'][len(site) + 1:]}"
             filename = f"{name}.svg"
+        elif f"local_{svg_type}" in lang_info:
+            proj, origlang = transform_name(data, site)
+            filename = f"{proj}-{svg_type}-{lang}.svg"
+        if filename:
             if not (project_svgs / filename).exists():
                 raise RuntimeError(f"Error: {filename} doesn't exist!")
             url = f"/{project_svgs_path}/{filename}"

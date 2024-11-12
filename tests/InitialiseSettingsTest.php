@@ -83,7 +83,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		$knownToBeBad = [
 			'wgCirrusSearchUseCompletionSuggester',
 			'wgCirrusSearchUseIcuFolding',
-			"wgMFUseDesktopSpecialWatchlistPage",
+			"wgMFUseDesktopSpecialEditWatchlistPage",
 			'wmgUseCognate',
 			'wmgUseFileExporter',
 			'wmgUseFileImporter',
@@ -197,7 +197,6 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			if ( in_array( $db, [
 				// Special cases
 				'labswiki',
-				'labtestwiki',
 				// Defined in the 'Wikisource' list for sensible reasons
 				'sourceswiki',
 			] ) ) {
@@ -294,7 +293,6 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			'foundationwiki',
 			'internalwiki',
 			'labswiki',
-			'labtestwiki',
 			'loginwiki',
 			'mediawikiwiki',
 			'metawiki',

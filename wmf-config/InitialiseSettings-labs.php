@@ -147,10 +147,6 @@ function wmfGetOverrideSettings() {
 			'default' => 32,
 		],
 
-		'-wmgDefaultMonologHandlers' => [
-			'default' => 'wgDebugLogFile',
-		],
-
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
@@ -243,11 +239,21 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		'wgMetricsPlatformEnable' => [
+			'testwiki' => true
+		],
+
+		'wgMetricsPlatformEnableStreamConfigsMerging' => [
+			'testwiki' => true
+		],
+
 		// Log channels for beta cluster
 		// See detailed comments on 'wmgMonologChannels' in InitializeSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
 		'wmgMonologChannels' => [
 			'default' => [
+				// Enable logging errors from all channels not configured otherwise (T228838)
+				'@default' => 'error',
 				// Copied from default production
 				// For channels where there is production configuration that labs
 				// overrides, the relevant line from the production config is commented out
@@ -284,7 +290,6 @@ function wmfGetOverrideSettings() {
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
-				'DeferredUpdates' => 'error',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
 				'editpage' => 'warning', // T251023
@@ -297,7 +302,6 @@ function wmfGetOverrideSettings() {
 				'exception-json' => [ 'logstash' => false ],
 				'exec' => 'debug',
 				'export' => 'debug',
-				'ExtensionDistributor' => 'error', // T225243
 				'ExternalStore' => 'debug',
 				'fatal' => 'debug',
 				'FileImporter' => 'debug',
@@ -312,7 +316,6 @@ function wmfGetOverrideSettings() {
 				'goodpass-priv' => 'debug',
 				'GrowthExperiments' => 'info',
 				'headers-sent' => 'debug',
-				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
 				'ldap' => 'warning',
 				'Linter' => 'debug',
@@ -324,7 +327,6 @@ function wmfGetOverrideSettings() {
 				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 				'Math' => 'info', // mobrovac for T121445
 				'mediamoderation' => 'debug', // for T303312 changed from warning
-				'memcached' => 'error', // -aaron 2012/10/24
 				'message-format' => [ 'logstash' => 'warning' ],
 				'MessageCacheError' => 'debug',
 				'mobile' => 'debug',
@@ -383,7 +385,6 @@ function wmfGetOverrideSettings() {
 				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 				'WikibaseQualityConstraints' => 'debug',
 				'WikiLambda' => 'warning',
-				'WikimediaEvents' => 'error', // For T205754 & T208233
 				'Wikisource' => 'info',
 				'WikitechGerritBan' => 'debug',
 				'WikitechPhabBan' => 'debug',
@@ -491,10 +492,6 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => true,
 		],
 
-		'wgWMEDesktopWebUIActionsTracking' => [
-			'default' => 1,
-		],
-
 		'wgWMEPageSchemaSplitTestSamplingRatio' => [
 			'default' => 1,
 		],
@@ -511,19 +508,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseMobileFrontend' => [
 			'default' => true,
-		],
-
-		'wgWMEMobileWebUIActionsTracking' => [
-			'default' => 1, // T294738
-			'enwiki' => 1, // T346106
-		],
-
-		// T266065
-		'wgMFUseDesktopSpecialWatchlistPage' => [
-			'default' => [
-				'base' => true,
-				'amc' => true,
-			],
 		],
 
 		'wgMFAmcOutreach' => [
@@ -576,11 +560,6 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
 		],
 
-		// ResourceLoader
-		'wgResourceLoaderClientPreferences' => [
-			'default' => true,
-		],
-
 		'-wmgCentralAuthCookieDomain' => [
 			'default' => '',
 			// wiki families
@@ -622,9 +601,9 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// T370254
+		// T370254, T375787
 		'wgCentralAuthEnableSul3' => [
-			'default' => 'query-flag'
+			'default' => [ 'query-flag', 'cookie' ]
 		],
 
 		//
@@ -757,7 +736,35 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgQuickSurveysConfig' => [
-			'default' => []
+			'default' => [],
+			'enwiki' => [
+				[
+					"name" => "Empty search experiment survey",
+					"type" => "external",
+					'enabled' => true,
+					'coverage' => 1,
+					"privacyPolicy" => "ext-quicksurveys-empty-search-experiment-privacy-policy",
+					'platforms' => [
+						'desktop' => [ 'stable' ]
+					],
+					'audience' => [
+						"userAgent" => [
+							"Chrome",
+						]
+					],
+					"questions" => [
+						[
+							"name" => "Empty search experiment question",
+							"layout" => "single-answer",
+							"link" => 'ext-quicksurveys-empty-search-experiment-link',
+							"question" => "ext-quicksurveys-empty-search-experiment-question",
+							"description" => null,
+							"yesMsg" => "ext-quicksurveys-empty-search-experiment-yes",
+							"noMsg" => "ext-quicksurveys-empty-search-experiment-no",
+						],
+					],
+				]
+			]
 		],
 
 		'-wgScorePath' => [
@@ -1169,10 +1176,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'-wgAbuseFilterActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_NEW,
-		],
-
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
 			'default' => true,
 		],
@@ -1258,9 +1261,6 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
-		'wgGEUseNewImpactModule' => [
-			'default' => true,
-		],
 		'wgGECommunityUpdatesEnabled' => [
 			'default' => true,
 		],
@@ -1295,18 +1295,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGEHomepageDefaultVariant' => [
 			'default' => 'control',
-		],
-		'wgGEHomepageNewAccountVariantsByPlatform' => [
-			'default' => [
-				'control' => [
-					'mobile' => 50,
-					'desktop' => 50,
-				],
-				'oldimpact' => [
-					'mobile' => 50,
-					'desktop' => 50
-				]
-			]
 		],
 		'wgGELinkRecommendationServiceTimeout' => [
 			'default' => 30,
@@ -1343,6 +1331,9 @@ function wmfGetOverrideSettings() {
 				'personalized-praise' => true,
 			],
 		],
+		'-wgGEMentorshipReassignMenteesBatchSize' => [
+			'default' => 500,
+		],
 		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
 			'default' => true,
 			'enwiki' => false,
@@ -1360,6 +1351,9 @@ function wmfGetOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
+		],
+		'wgGESurfacingStructuredTasksEnabled' => [
+			'enwiki' => true,
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'default' => [
@@ -1971,11 +1965,26 @@ function wmfGetOverrideSettings() {
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
 				'includes/Rest/coreDevelopmentRoutes.json',
+				'includes/Rest/specs.v0.json',
+				'includes/Rest/content.v1.json'
 			],
 		],
 
-		'wgAllowRequiringEmailForResets' => [
-			'default' => true,
+		'wgRestSandboxSpecs' => [
+			'default' => [
+				'mw-extra' => [
+					'url' => '/w/rest.php/specs/v0/module/-',
+					'name' => 'MediaWiki REST API (routes not in modules)',
+				],
+			],
+			'specs.v0' => [
+				'url' => '/w/rest.php/specs/v0/module/specs/v0',
+				'name' => 'Content API',
+			],
+			'content.v1' => [
+				'url' => '/w/rest.php/specs/v0/module/content/v1',
+				'name' => 'Content API',
+			]
 		],
 
 		'wmgUseCSP' => [
@@ -2133,10 +2142,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgWikibaseTmpEnableMulLanguageCode' => [
-			'default' => true,
-		],
-
 		// Flag temporary - added in T339104, to be removed in T330217
 		// Set to false in T356169 to test limited version on beta
 		'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
@@ -2200,6 +2205,12 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+		'wgCampaignEventsEnableEventInvitation' => [
+			'default' => true,
+		],
+		'wgWikimediaCampaignEventsEnableCommunityList' => [
+			'default' => true, // T374617
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
@@ -2231,13 +2242,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgEnableIPMasking' => [
-			'default' => false,
-			'loginwiki' => true,
-			'cswiki' => true,
-			'dewiki' => true,
-			'commonswiki' => true, // T342067
-			'wikidatawiki' => true, // T343980
-			'fawiki' => true,
+			'default' => true, // T377262
+			'en-rtl' => false,
 		],
 
 		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
@@ -2279,11 +2285,19 @@ function wmfGetOverrideSettings() {
 				'default' => true,
 		],
 
+		'wgCodeMirrorLineNumberingNamespaces' => [
+				'default' => null,
+		],
+
 		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
 			'default' => true, // T356924, T356923
 			'wikitech' => false,
 			'fishbowl' => false,
 			'private' => false,
+		],
+
+		'-wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
+			'default' => false, // T377737, T377760
 		],
 
 		'wmgUseCommunityConfiguration' => [
@@ -2308,6 +2322,44 @@ function wmfGetOverrideSettings() {
 		// T20110
 		'wgConfirmEditEnabledAbuseFilterCustomActions' => [
 			'default' => [ 'showcaptcha' ]
+		],
+
+		'wmgUseNetworkSession' => [
+			'default' => true,
+			'loginwiki' => false,
+		],
+
+		// T369945
+		// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
+		'wmgUseChart' => [
+			'default' => true,
+			'loginwiki' => false,
+			'private' => false,
+			'fishbowl' => false,
+		],
+		// T378206
+		'wgChartProgressiveEnhancement' => [
+			'default' => true,
+		],
+
+		// T66315 - Maintain feature flag 1 month as security in case of error after rollout
+		'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
+			'default' => true,
+		],
+
+		// T372527
+		'-wmgUseCommunityRequests' => [
+			'default' => false,
+			'metawiki' => true,
+		],
+		// T374348
+		'wgBabelUseCommunityConfiguration' => [
+			'default' => true,
+		],
+		// T375610
+		'-wgUseCodexSpecialBlock' => [
+			'default' => false,
+			'testwiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()

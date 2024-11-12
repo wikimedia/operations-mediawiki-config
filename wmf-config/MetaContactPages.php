@@ -1,23 +1,21 @@
 <?php
-/**
- * Configuration for [[:meta:Special:Contact/affcomusergroup]]
- *
- * @see T95789
- */
 
 $wgHooks['ContactForm'][] = static function (
 	&$to, $reply, &$subject, &$text, $par, $data
 ) {
 	if ( $par === 'affcomusergroup' ) {
 		$subject = "User group request: {$data['GroupName']}";
-	}
-
-	if ( $par === 'affcomchapthorg' ) {
+	} elseif ( $par === 'affcomchapthorg' ) {
 		$subject = "Chapter/Thematic organization request: {$data['GroupName']}";
 	}
 	return true;
 };
 
+/**
+ * Configuration for [[:meta:Special:Contact/affcomusergroup]]
+ *
+ * @see T95789
+ */
 $wgContactConfig['affcomusergroup'] = [
 	'RecipientUser' => 'Usergroups',
 	'SenderName' => 'User group contact form on ' . $wgSitename,
@@ -29,56 +27,52 @@ $wgContactConfig['affcomusergroup'] = [
 		'ext.wikimediamessages.contactpage',
 	],
 	'AdditionalFields' => [
+		'InfoRules' => [
+			'label-message' => 'contactpage-affcom-user-group-rules-label',
+			'type' => 'info',
+			'cssclass' => 'cp-affcom-ug-toprules',
+		],
 		'GroupName' => [
 			'label-message' => 'contactpage-affcom-user-group-name-label',
 			'contactpage-email-label' => 'Group name',
-			'type' => 'text'
-		],
-		'GroupDescription' => [
-			'label-message' => 'contactpage-affcom-user-group-description-label',
-			'contactpage-email-label' => 'Group description',
-			'type' => 'textarea',
-			'rows' => 10
-
-		],
-		'GroupWikiPage' => [
-			'label-message' => 'contactpage-affcom-user-group-wikipage-label',
-			'contactpage-email-label' => 'Group wiki page',
-			'type' => 'text'
+			'type' => 'text',
+			'required' => true,
 		],
 		'GroupLocation' => [
 			'label-message' => 'contactpage-affcom-user-group-location-label',
 			'contactpage-email-label' => 'Group location',
-			'type' => 'text'
+			'type' => 'text',
+			'required' => true,
 		],
 		'GroupLeaders' => [
 			'label-message' => 'contactpage-affcom-user-group-leaders-label',
 			'contactpage-email-label' => 'Active Wikimedians',
 			'type' => 'textarea',
-			'rows' => 10
+			'rows' => 10,
+			'required' => true,
+		],
+		'GroupWikiPage' => [
+			'label-message' => 'contactpage-affcom-user-group-wikipage-label',
+			'contactpage-email-label' => 'Group wiki page',
+			'type' => 'text',
+			'required' => true,
+		],
+		'GroupIntent' => [
+			'label-message' => 'contactpage-affcom-user-group-intent-letter-label',
+			'contactpage-email-label' => 'Logo',
+			'type' => 'text',
+			'required' => true,
 		],
 		'GroupLogo' => [
 			'label-message' => 'contactpage-affcom-user-group-logo-label',
 			'contactpage-email-label' => 'Logo',
-			'type' => 'radio',
-			'options-messages' => [
-				'contactpage-affcom-user-group-logo-community' => 'Wikimedia community',
-				'contactpage-affcom-user-group-logo-affiliate' => 'Wikipedia affiliate'
-			]
+			'type' => 'text',
+			'required' => true,
 		],
-		'Rules' => [
-			'label-message' => 'contactpage-affcom-user-group-rules-label',
+		'InfoNote' => [
+			'label-message' => 'contactpage-affcom-user-group-application-note',
 			'type' => 'info',
 		],
-		'Terms' => [
-			'label-message' => 'contactpage-affcom-user-group-terms-label',
-			'contactpage-email-label' => 'Terms',
-			'type' => 'check',
-			'required' => true,
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
-		]
 	]
 ];
 
@@ -206,7 +200,6 @@ $wgContactConfig['affcomchapthorg'] = [
  * Configuration for legal contact forms (license stuff)
  * Modifications: T303359
  */
-
 $wgContactConfig['requestlicense'] = [
 	'RecipientUser' => 'Trademarks (WMF)',
 	// TODO: Replace with details submitted on form
@@ -237,7 +230,6 @@ $wgContactConfig['requestlicense'] = [
  *
  * @see T218363
  */
-
 $wgContactConfig['movecomsignup'] = [
 	'RecipientUser' => 'MoveCom-WMF',
 	'SenderName' => 'Movement communications group signup form on ' . $wgSitename,
@@ -295,7 +287,6 @@ $wgContactConfig['movecomsignup'] = [
  *
  * @see T271828
  */
-
 $wgContactConfig['ombudscommission'] = [
 	'RecipientUser' => 'Ombuds commission',
 	'SenderEmail' => $wgPasswordSender,
@@ -354,24 +345,32 @@ $wgContactConfig['ombudscommission'] = [
 /**
  * Configuration for contact form for account vanishing requests from mobile apps.
  *
- * @see T343536
+ * @see T372828
  */
-
 $wgContactConfig['accountvanishapps'] = [
-	'RecipientUser' => 'AccountVanishRequests',
-	'SenderName' => 'Account vanishing request form on ' . $wgSitename,
+	'Redirect' => 'https://meta.wikimedia.org/wiki/Special:GlobalVanishRequest'
+];
+
+/**
+ * Configuration for https://meta.wikimedia.org/wiki/Special:Contact/Stewards
+ *
+ * @see T98625
+ */
+$wgContactConfig['stewards'] = [
+	'RecipientUser' => 'Wikimedia Stewards',
 	'SenderEmail' => $wgPasswordSender,
 	'RequireDetails' => true,
-	'IncludeIP' => false,
-	'MustBeLoggedIn' => true,
+	'IncludeIP' => true,
 	'AdditionalFields' => [
 		'Text' => [
 			'label-message' => 'emailmessage',
 			'type' => 'textarea',
-			'rows' => 2,
-			'required' => false,
+			'rows' => 20,
+			'required' => true
 		],
-	],
-	'NameReadonly' => true,
-	'SubjectReadonly' => true
+		'Disclaimer' => [
+			'label-message' => 'contactpage-stewards-disclaimer-label',
+			'type' => 'info'
+		]
+	]
 ];

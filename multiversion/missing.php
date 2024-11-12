@@ -13,7 +13,12 @@
  * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
  * Wikibooks, and Wikinews to the Wikimedia Incubator.
  *
- * Non-existing languages of Wikisource and Wikiversity show a 404 page.
+ * Non-existing languages of Wikisource get redirected to Multilingual Wikisource.
+ *
+ * Non-existing languages of Wikiversity show an error page.
+ *
+ * Certain special cases where another project is hosted by the language's Wikipedia
+ * get redirected to that Wikipedia.
  *
  * The WikimediaIncubator extension ensures a localised "welcome page"
  * adapted to the given project/language.
@@ -39,11 +44,49 @@ function wmfHandleMissingWiki() {
 		'wikinews'    => 'n',
 		'wikipedia'   => 'p',
 		'wikiquote'   => 'q',
-		// forward compatibility, unused ATM (both 's' and 'v')
 		'wikisource'  => 's',
 		'wikiversity' => 'v',
 		'wikivoyage'  => 'y',
 		'wiktionary'  => 't',
+	];
+
+	// List of projects that are handled as another namespace in the language's Wikipedia
+	// Format: [project name => [language => [namespace, mainpage] ] ]
+	$wikisAsNamespaces = [
+		'wikibooks' => [
+			'als' => [ 'Buech', 'Buech:Houptsyte' ],
+			'bar' => [ 'Buach', 'Buach:Start' ],
+			'pfl' => [ 'Buch', 'Buch:Hauptseite' ],
+		],
+		'wiktionary' => [
+			'als' => [ 'Wort', 'Wort:Houptsyte' ],
+			'bar' => [ 'Woat', 'Woat:Start' ],
+			// zh-classical uses subpages in Project Namespace rather than a namespace
+			'pfl' => [ 'Wort', 'Wort:Hauptseite' ],
+			'sco' => [ 'Define', 'Define:Main Page' ],
+		],
+		'wikisource' => [
+			'als' => [ 'Text', 'Text:Houptsyte' ],
+			'bar' => [ 'Text', 'Text:Start' ],
+			'frr' => [ 'Text', 'Text:Hoodsid' ],
+			'pfl' => [ 'Text', 'Text:Hauptseite' ],
+			'pdc' => [ 'Text', 'Text:Haaptblatt' ],
+			'sw' => [ 'Wikichanzo', 'Wikichanzo:Mwanzo' ],
+		],
+		'wikiquote' => [
+			'als' => [ 'Spruch', 'Spruch:Houptsyte' ],
+			'bar' => [ 'Spruch', 'Spruch:Start' ],
+			'pfl' => [ 'Spruch', 'Spruch:Hauptseite' ],
+		],
+		'wikinews' => [
+			'als' => [ 'Nochricht', 'Nochricht:Dialäkt-Neuigkeite' ],
+			'bar' => [ 'Nochricht', 'Nochricht:Start' ],
+			'pfl' => [ 'Nochricht', 'Nochricht:Hauptseite' ],
+			// zh-classical and nds use subpages rather than a standalone namespace
+
+			// Various Russian languages use Russian Wikinews instead.  That would be better handled
+			// at the Apache layer, although going to incubator provides context for some of them.
+		],
 	];
 
 	[ $protocol, $host ] = wmfGetProtocolAndHost();
@@ -85,17 +128,29 @@ function wmfHandleMissingWiki() {
 		} catch ( Exception $e ) {
 		}
 
+		$prefix = strtok( $page, ':' );
 		if ( $db ) {
-			$prefix = strtok( $page, ':' );
+			$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );
 
-			# Try looking for lateral links (w: q: voy: ...)
+			# Try looking for lateral links (q: voy: ...)
+			# TODO: Make this work if the language doesn't have a Wikipedia
+			# (occasionally langcom approves some other project first)
 			$row = $db[ "{$language}wiki:$prefix" ] ?? null;
-			if ( !$row ) {
-				# Also try interlanguage links
-				$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );
-				if ( isset( $db[ "_$projectKey:$prefix" ] ) ) {
-					$row = $db[ "_$projectKey:$prefix" ];
-				}
+
+			# Also try interlanguage links
+			if ( !$row && isset( $db[ "_$projectKey:$prefix" ] ) ) {
+				$row = $db[ "_$projectKey:$prefix" ];
+			}
+			# And global links (most of which aren't local but this makes aa.wikinews.org/wiki/f: redirect to
+			# Wikifunctions properly for example)
+			if ( !$row && isset( $db[ "__global:$prefix" ] ) ) {
+				$row = $db[ "__global:$prefix" ];
+			}
+			# Special-case "w:" since the above won't find it as "_wikinews:w" doesn't exist
+			# in the interwiki map (instead there's "aawikinews:w" for every language) which
+			# the code above can't find since it looks for Wikipedias only.
+			if ( !$row && $prefix === "w" ) {
+				$row = "1 https://$language.wikipedia.org/wiki/$1";
 			}
 
 			if ( $row ) {
@@ -110,9 +165,21 @@ function wmfHandleMissingWiki() {
 			# We don't have an interwiki link, keep going and see what else we could have
 		}
 	}
-
-	if ( $project === 'wikisource' ) {
+	if ( isset( $wikisAsNamespaces[ $project ][ $language ] ) ) {
+		// Some languages include the other projects in the Wikipedia as namespaces,
+		// like Scots Wiktionary. Redirect there instead of Incubator
+		[ $namespace, $root ] = $wikisAsNamespaces[ $project ][ $language ];
+		if ( $page === '' ) {
+			$page = $root;
+		} else {
+			$page = "$namespace:$page";
+		}
+		wmfShowRedirect( "$protocol://$language.wikipedia.org/wiki/$page" );
+	} elseif ( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
+		if ( $page === '' ) {
+			$page = "Main_Page/$language";
+		}
 		wmfShowRedirect( $protocol . '://wikisource.org/wiki/' . $page );
 	} elseif ( $project === 'wikiversity' ) {
 		# Wikiversity gives an error page

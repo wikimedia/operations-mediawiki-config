@@ -57,16 +57,11 @@ $wgObjectCaches['mcrouter-wikifunctions'] = array_merge(
 	[ 'routingPrefix' => '/local/wf/' ]
 );
 
-if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-	// nutcracker only; no mcrouter present
-	$wgMainCacheType = 'memcached-pecl';
-} else {
-	$wgWANObjectCache = [
-		// Specify the route prefix that mcrouter listens for and broadcasts.
-		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
-		'broadcastRoutingPrefix' => '/*/mw-wan/',
-	];
-	$wgMainCacheType = 'mcrouter';
-}
+$wgWANObjectCache = [
+	// Specify the route prefix that mcrouter listens for and broadcasts.
+	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+	'broadcastRoutingPrefix' => '/*/mw-wan/',
+];
+$wgMainCacheType = 'mcrouter';
 
 # vim: set sts=4 sw=4 et :

@@ -57,10 +57,8 @@ $common = [
 	// IRC (broadcast RCFeed for irc.wikimedia.org)
 	// Not active-active.
 	'irc' => [
-		'208.80.155.105', # irc1001.wikimedia.org
-		'208.80.155.120', # irc1002.wikimedia.org
-		'208.80.153.62',  # irc2001.wikimedia.org
-		'208.80.153.73',  # irc2002.wikimedia.org
+		'208.80.154.72',  # irc1003.wikimedia.org
+		'208.80.153.10',  # irc2003.wikimedia.org
 	],
 
 	// Automatic dc-local discovery
@@ -85,8 +83,12 @@ $common = [
 	'shellbox-timeline' => 'http://localhost:6028',
 	'shellbox-video' => 'http://localhost:6036',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
+	// chart-renderer is not deployed in production yet; this has to be set here
+	// because it's also set for labs in LabsServices.php, where it is deployed
+	'chart-renderer' => 'http://localhost:6039',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
+	'mpic' => 'http://localhost:6037',
 
 	// cloudelastic only exists in eqiad.
 
@@ -131,8 +133,8 @@ $services = [
 		],
 
 		'poolcounter' => [
-			'10.64.0.151', # poolcounter1004.eqiad.wmnet
-			'10.64.32.236', # poolcounter1005.eqiad.wmnet
+			'10.64.0.150',  # poolcounter1006.eqiad.wmnet
+			'10.64.32.137', # poolcounter1007.eqiad.wmnet
 		],
 
 		// LOOKING FOR parsercache-dbs? It no longer lives in the production
@@ -186,8 +188,8 @@ $services = [
 		],
 
 		'poolcounter' => [
-			'10.192.0.132', # poolcounter2003.codfw.wmnet
-			'10.192.16.129', # poolcounter2004.codfw.wmnet
+			'10.192.0.9',    # poolcounter2005.codfw.wmnet
+			'10.192.16.6',   # poolcounter2006.codfw.wmnet
 		],
 
 		// LOOKING FOR parsercache-dbs? It no longer lives in the production

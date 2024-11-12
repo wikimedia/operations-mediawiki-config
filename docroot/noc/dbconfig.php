@@ -7,6 +7,9 @@
  * we won't change datastore as often as MediaWiki's code might change.
  *
  */
+
+use Wikimedia\MWConfig\Noc\EtcdCachedConfig;
+
 require_once __DIR__ . '/../../src/Noc/EtcdCachedConfig.php';
 
 if ( $_SERVER['HTTP_HOST'] == 'noc.wikimedia.org' && preg_match( '/^\/dbconfig\/(\w+).json/', $_SERVER['REQUEST_URI'], $matches ) ) {
@@ -18,7 +21,7 @@ if ( $_SERVER['HTTP_HOST'] == 'noc.wikimedia.org' && preg_match( '/^\/dbconfig\/
 		http_response_code( 404 );
 		exit( "Not found" );
 	}
-	$dbConfig = \Wikimedia\MWConfig\Noc\EtcdCachedConfig::getInstance()->getValue( $dc . '/dbconfig' );
+	$dbConfig = EtcdCachedConfig::getInstance()->getValue( $dc . '/dbconfig' );
 	header( "Content-type: application/json" );
 	print_r( json_encode( $dbConfig ) );
 }

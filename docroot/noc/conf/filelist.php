@@ -1,4 +1,6 @@
 <?php
+use Wikimedia\MWConfig\Noc\ConfigFile;
+
 // We don't want direct calls.
 require_once __DIR__ . '/../../../src/Noc/utils.php';
 
@@ -6,11 +8,11 @@ require_once __DIR__ . '/../../../src/Noc/ConfigFile.php';
 
 /**
  * Compute the allowed url -> file path
- * @return \Wikimedia\MWConfig\Noc\ConfigFile
+ * @return ConfigFile
  */
 function wmfLoadRoutes() {
 	/**
-	 * Add here file that you want to show in the interface of noc.wikimedia.org
+	 * Add files here that you want to show in the interface of noc.wikimedia.org
 	 */
 	// files we want to serve from basename($file).txt
 	$nocConfigFilesTxt = [
@@ -27,6 +29,7 @@ function wmfLoadRoutes() {
 		'wmf-config/core-Namespaces.php',
 		'wmf-config/core-Permissions.php',
 		'wmf-config/db-production.php',
+		'wmf-config/db-sections.php',
 		'wmf-config/db-labs.php',
 		'wmf-config/EnWikiContactPages.php',
 		'wmf-config/ext-Babel.php',
@@ -53,7 +56,7 @@ function wmfLoadRoutes() {
 		'wmf-config/reverse-proxy.php',
 		'wmf-config/reverse-proxy-labs.php',
 		'wmf-config/Wikibase.php',
-		'wmf-config/wikitech.php',
+		'wmf-config/ZhWikiContactPages.php',
 	];
 
 	// Create non-txt symlink from mediawiki-config
@@ -75,6 +78,6 @@ function wmfLoadRoutes() {
 	// directories we want to serve the contents of as text files
 	$nocConfigDirs = [ 'dblists' ];
 
-	$fileserv = new \Wikimedia\MWConfig\Noc\ConfigFile( $nocConfigFilesTxt, $nocConfigFilesPlain, $nocConfigDirs );
+	$fileserv = new ConfigFile( $nocConfigFilesTxt, $nocConfigFilesPlain, $nocConfigDirs );
 	return $fileserv;
 }

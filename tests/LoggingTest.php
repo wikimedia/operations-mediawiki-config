@@ -14,6 +14,19 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
  */
 class LoggingTest extends PHPUnit\Framework\TestCase {
 
+	public static function setUpBeforeClass(): void {
+		parent::setUpBeforeClass();
+		$GLOBALS['wmgEnableExtraLogFile'] = false;
+		$GLOBALS['wmgExtraLogFile'] = false;
+		$GLOBALS['wmgLogAuthmanagerMetrics'] = false;
+		$GLOBALS['wmgUseWikimediaEvents'] = false;
+		$GLOBALS['wmgUdp2logDest'] = 'localhost';
+		$GLOBALS['wmgEnableLogstash'] = true;
+		$GLOBALS['wmgUseEventBus'] = true;
+		$GLOBALS['wmgMonologChannels'] = [];
+		require_once __DIR__ . '/../wmf-config/logging.php';
+	}
+
 	public function provideHandlerSetup() {
 		return [
 			'Setting only a level sends to udp2log and logstash' => [
@@ -54,9 +67,9 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 				[ 'failuregroup|udp2log-debug-sampled-1000' ],
 			],
 
-			'false yields blackhole' => [
+			'false yields no handlers' => [
 				false,
-				[ 'blackhole' ],
+				[],
 			],
 		];
 	}
@@ -65,34 +78,22 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider provideHandlerSetup
 	 */
 	public function testHandlerSetup( $channelConfig, $expectHandlers ) {
-		// logging.php does not explicitly declare anything global, so it will
-		// only read from the local scope defined here.
-		$wmgDefaultMonologHandlers = 'blackhole';
-		// wmf-config/logging.php expects $wgDebugLogFile to be in the same scope that
-		// the file is loaded in (normally the global scope but not in this case)
-		// phpcs:ignore MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile
-		$wgDebugLogFile = false;
-		$wmgLogAuthmanagerMetrics = false;
-		$wmgUdp2logDest = 'localhost';
-		$wmgEnableLogstash = true;
-		$wmgUseEventBus = true;
-		$wmgMonologChannels = [ 'test' => $channelConfig ];
-		$wmgRealm = 'production';
+		$GLOBALS['wmgMonologChannels'] = [ 'test' => $channelConfig ];
+		$config = wmfGetLoggingConfig();
+		$GLOBALS['wmgMonologChannels'] = [];
 
-		include __DIR__ . '/../wmf-config/logging.php';
-
-		if ( $expectHandlers ) {
+		if ( $expectHandlers !== null ) {
 			foreach ( $expectHandlers as $handlerName ) {
-				$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+				$this->assertArrayHasKey( $handlerName, $config['handlers'] );
 			}
 
 			$this->assertEquals(
 				$expectHandlers,
-				$wmgMonologConfig['loggers']['test']['handlers']
+				$config['loggers']['test']['handlers']
 			);
 		} else {
-			$this->assertArrayHasKey( 'loggers', $wmgMonologConfig );
-			$this->assertArrayNotHasKey( 'test', $wmgMonologConfig['loggers'] );
+			$this->assertArrayHasKey( 'loggers', $config );
+			$this->assertArrayNotHasKey( 'test', $config['loggers'] );
 		}
 	}
 

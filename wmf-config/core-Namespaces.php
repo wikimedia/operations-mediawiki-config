@@ -235,6 +235,10 @@ return [
 	'+be_x_oldwiki' => [
 		'ВП' => NS_PROJECT,
 	],
+	'+bclwikisource' => [
+		'Author' => 102,
+		'Author_talk' => 103
+	],
 	'+bewikisource' => [
 		'ВК' => NS_PROJECT, // T43322
 		'Author' => 102, // T43322
@@ -696,6 +700,10 @@ return [
 		'שתב' => NS_TEMPLATE_TALK,
 		'קט' => NS_CATEGORY,
 		'שקט' => NS_CATEGORY_TALK,
+
+		// T378303
+		'וק' => NS_PROJECT,
+		'שוק' => NS_PROJECT_TALK,
 	],
 	'+hewikinews' => [ // T349581
 		'מי' => NS_SPECIAL,
@@ -1138,6 +1146,12 @@ return [
 		'ഘ' => 828, // T56951
 		'ഘസം' => 829, // T56951
 	],
+	'+mnwiki' => [
+		'Wikipedia-н хэлэлцүүлэг' => NS_PROJECT_TALK, // T366271
+	],
+	'+mnwiktionary' => [
+		'Wiktionary-н хэлэлцүүлэг' => NS_PROJECT_TALK // T366271
+	],
 	'+mnwwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -1185,6 +1199,14 @@ return [
 		'Portal_talk' => 101,
 		'Draft' => 118,
 		'Draft_talk' => 119,
+	],
+	'+mywikisource' => [ // T371060
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Author' => 102,
+		'Author_talk' => 103,
+		'Translation' => 114,
+		'Translation_talk' => 115,
 	],
 	'+mywiktionary' => [
 		'Appendix' => 100, // T291146
@@ -1444,6 +1466,14 @@ return [
 	'+sawikiquote' => [
 		'विकिसूक्तिःसम्भाषणम्' => NS_PROJECT_TALK, // T101634
 	],
+	'+scnwiki' => [
+		'CAT' => NS_CATEGORY, // T375979
+		'DP' => 103, // T375979
+		'DW' => NS_PROJECT_TALK, // T375979
+		'T' => NS_TEMPLATE, // T375979
+		'U' => NS_USER, // T375979
+		'DU' => NS_USER_TALK, // T375979
+	],
 	'+sewiki' => [
 		'Temasiidu' => 100, // T41206
 		'Temasiidoságastallan' => 101, // T41206
@@ -1598,6 +1628,12 @@ return [
 	'+tawikisource' => [
 		'Author' => 102, // T165813
 		'Author_talk' => 103, // T165813
+	],
+	'+tcywikisource' => [ // T378555
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Author' => 102,
+		'Author_talk' => 103,
 	],
 	'+testwiki' => [
 		'WT' => NS_PROJECT_TALK,
@@ -2182,6 +2218,7 @@ return [
 	'+strategywiki' => [ 0 => 1 ],
 	'+sysop_itwiki' => [ 0 => 1 ],
 	'+techconductwiki' => [ 0 => 1 ], // T260350
+	'+u4cwiki' => [ 0 => 1 ],
 	'+uawikimedia' => [ 0 => 1 ], // T91185
 	'+usabilitywiki' => [ 0 => 1 ],
 	'+wikidata' => [ 121 => 1 ], // T146271
@@ -2486,6 +2523,10 @@ return [
 		106 => 'Index',
 		107 => 'Index_talk',
 	],
+	'u4cwiki' => [ // T374439
+		100 => 'Case',
+		101 => 'Case_talk',
+	],
 	'usabilitywiki' => [
 		100 => 'Multimedia',
 		101 => 'Multimedia_talk',
@@ -2542,6 +2583,8 @@ return [
 	'aswiki' => [
 		100 => "ৱিকিচ'ৰা", // Portal
 		101 => "ৱিকিচ'ৰা_আলোচনা", // Portal talk
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'azwiki' => [
 		100 => 'Portal',
@@ -2596,6 +2639,8 @@ return [
 		101 => 'প্রবেশদ্বার_আলোচনা',
 		118 => 'খসড়া', // Draft - T350133
 		119 => 'খসড়া_আলোচনা', // Draft talk - T350133
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'bpywiki' => [
 		100 => 'হমিলদুৱার', // Portal
@@ -2646,6 +2691,8 @@ return [
 	'+dagwiki' => [
 		104 => 'Salima', // T289911
 		105 => 'Salima_yɛltɔɣa',
+		126 => 'MOS', // T363538
+		127 => 'MOS_yɛltɔɣa', // T363538
 	],
 	'dewiki' => [
 		100 => 'Portal',
@@ -2672,6 +2719,8 @@ return [
 		// 108, 109 were used for Book namespace, deleted as part of T285766
 		118 => 'Draft', // T59569
 		119 => 'Draft_talk',
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'eowiki' => [
 		100 => 'Portalo',
@@ -2785,7 +2834,9 @@ return [
 	],
 	'idwiki' => [
 		100 => 'Portal',
-		101 => 'Pembicaraan_Portal'
+		101 => 'Pembicaraan_Portal',
+		126 => 'MOS', // T363538
+		127 => 'Pembicaraan_MOS', // T363538
 	],
 	'inhwiki' => [
 		100 => 'Моартал',
@@ -2819,6 +2870,8 @@ return [
 		101 => 'Portal‐ノート',
 		102 => 'プロジェクト',
 		103 => 'プロジェクト‐ノート',
+		126 => 'MOS', // T363538
+		127 => 'MOS‐ノート', // T363538
 		829 => 'モジュール‐ノート', // T49933
 	],
 	'jamwiki' => [
@@ -2932,6 +2985,8 @@ return [
 	'mswiki' => [
 		100 => 'Portal',
 		101 => 'Perbincangan_portal',
+		126 => 'MOS', // T363538
+		127 => 'Perbincangan_MOS', // T363538
 	],
 	'mwlwiki' => [
 		100 => 'Portal', // T180052
@@ -3088,6 +3143,10 @@ return [
 		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
 	],
 	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
+	'simplewiki' => [
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
+	],
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
 		NS_USER => 'Redaktor', // T143472
@@ -3100,6 +3159,8 @@ return [
 		101 => 'Pogovor_o_portalu',
 		118 => 'Osnutek', // Draft, T332351
 		119 => 'Pogovor_o_osnutku', // Draft_talk, T332351
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'sowiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ], // T51600
 	'sqwiki' => [ 100 => 'Portal', 101 => 'Portal_diskutim' ],
@@ -3137,6 +3198,8 @@ return [
 		109 => 'คุยเรื่องหนังสือ', // Book talk
 		118 => 'ฉบับร่าง', // T216322, Draft
 		119 => 'คุยเรื่องฉบับร่าง', // Draft talk
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'tiwiki' => [
 		100 => 'ማዕጾ', // T259295 Portal
@@ -3224,6 +3287,8 @@ return [
 		103 => 'WikiProject_talk', // T271612
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
@@ -3281,6 +3346,10 @@ return [
 	'banwikisource' => [
 		102 => 'Pangawi', // T284389 - Author
 		103 => 'Pabligbagan_Pangawi', // T284389 - Author talk
+	],
+	'bclwikisource' => [
+		102 => 'Kagsurat', // Author
+		103 => 'Olay_sa_kagsurat'// Author talk
 	],
 	'bewikisource' => [
 		102 => 'Аўтар', // Author
@@ -3495,6 +3564,14 @@ return [
 		114 => 'Terjemahan', // Translation
 		115 => 'Perbincangan_terjemahan', // Translation talk
 	],
+	'mywikisource' => [ // T371060
+		100 => 'မုခ်ဝ', // Portal
+		101 => 'မုခ်ဝ_ဆွေးနွေးချက်', // Portal talk
+		102 => 'စာရေးသူ', // Author
+		103 => 'စာရေးသူ_ဆွေးနွေးချက်', // Author talk
+		114 => 'ဘာသာပြန်', // Translation
+		115 => 'ဘာသာပြန်_ဆွေးနွေးချက်', // Translation talk
+	],
 	'napwikisource' => [
 		102 => 'Autore', // Author
 		103 => 'Autore_chiàcchiera', // Author talk
@@ -3585,6 +3662,12 @@ return [
 	'tawikisource' => [
 		102 => 'ஆசிரியர்', // T165813 - Author
 		103 => 'ஆசிரியர்_பேச்சு', // T165813 - Author talk
+	],
+	'tcywikisource' => [ // T378555
+		100 => 'ಸಂಪುಟ', // Portal
+		101 => 'ಸಂಪುಟೊದ_ಪಾತೆರ',
+		102 => 'ಬರೆಯಿನಾರ್', // Author
+		103 => 'ಬರೆಯಿನಾರೆನ_ಪಾತೆರ',
 	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
@@ -4670,6 +4753,9 @@ return [
 # @} end of wgExtraNamespaces
 
 'wgNamespaceRobotPolicies' => [
+	'arwiki' => [
+		NS_USER => 'noindex,nofollow', // T371470
+	],
 	'azwiki' => [
 		118 => 'noindex,nofollow', // Draft - T299332
 		119 => 'noindex,nofollow',
@@ -5257,7 +5343,6 @@ return [
 	// They often have discussions, including their "village pump" equivalent, in the main namespace.
 	'+incubatorwiki' => [ NS_MAIN ],
 	'+labswiki' => [ NS_MAIN ],
-	'+labtestwiki' => [ NS_MAIN ],
 	'+mediawikiwiki' => [ NS_MAIN ],
 	'+metawiki' => [ NS_MAIN ],
 	'+outreachwiki' => [ NS_MAIN ],
@@ -5275,7 +5360,7 @@ return [
 	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
 	'+ruwiki' => [ 104, 106 ], // T125509 and T213049
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
-	'+sewikimedia' => [ 100 ], // T175363 - Projekt
+	'+sewikimedia' => [ 100, NS_USER ], // T175363 - Projekt
 	'+trwiki' => [ 102 ], // T166522 - Vikiproje
 	'+wikimaniawiki' => [ 128 ], // T221062
 ],
@@ -5337,6 +5422,7 @@ return [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'annwiki' => 'Wìkìpedia',
 	'anpwiki' => 'विकिपीडिया',
 	'arbcom_cswiki' => 'Projekt', // T151731
 	'arbcom_dewiki' => 'Project',
@@ -5376,6 +5462,7 @@ return [
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bclwiktionary' => 'Wiksyunaryo',
 	'bclwikiquote' => 'Wikisambit',
+	'bdrwiki' => 'Wikipidia',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
@@ -5383,6 +5470,7 @@ return [
 	'bewikiquote' => 'Вікіцытатнік', // T196230
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік', // T175950
+	'bewwiki' => 'Wikipédi',
 	'bgwiki' => 'Уикипедия',
 	'bgwikibooks' => 'Уикикниги',
 	'bgwikinews' => 'Уикиновини',
@@ -5438,6 +5526,7 @@ return [
 	'cswikiquote' => 'Wikicitáty',
 	'cswikiversity' => 'Wikiverzita',
 	'cswikisource' => 'Wikizdroje',
+	'cswikivoyage' => 'Wikicesty',
 	'cswiktionary' => 'Wikislovník',
 	'cuwiki' => 'Википєдїꙗ',
 	'cvwiki' => 'Википеди',
@@ -5517,6 +5606,7 @@ return [
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gomwiktionary' => 'विक्शनरी', // T249506
 	'gorwiki' => 'Wikipedia', // T189109
+	'gorwikiquote' => 'Wikilumadu',
 	'grantswiki' => 'Project',
 	'gorwiktionary' => 'Wikikamus',
 	'gucwiki' => 'Wikipeetia',
@@ -5573,6 +5663,7 @@ return [
 	'idwiktionary' => 'Wikikamus', // T341173
 	'iegcomwiki' => 'Project',
 	'igwikiquote' => 'Wikikwotu',
+	'iglwiki' => 'Wikipídiya',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Incubator',
 	'inhwiki' => 'Википеди',
@@ -5598,11 +5689,13 @@ return [
 	'kawikiquote' => 'ვიკიციტატა',
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
+	'kaawiktionary' => 'Wikisózlik',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
 	'kcgwiki' => 'Wukipedia',
 	'kcgwiktionary' => 'Swánga̱lyiatwuki',
+	'kgewiki' => 'Wikipidiya',
 	'kkwiki' => 'Уикипедия',
 	'kkwikibooks' => 'Уикикітап',
 	'kkwikiquote' => 'Уикидәйек',
@@ -5627,6 +5720,7 @@ return [
 	'kuwikibooks' => 'Wîkîpirtûk',
 	'kuwikiquote' => 'Wîkîgotin',
 	'kuwiktionary' => 'Wîkîferheng',
+	'kuswiki' => 'Wikipiidia',
 	'kvwiki' => 'Википедия',
 	'kywiki' => 'Википедия', // T309866
 	'wikitech' => 'Wikitech',
@@ -5656,6 +5750,7 @@ return [
 	'lvwiki' => 'Vikipēdija',
 	'lvwiktionary' => 'Vikivārdnīca', // T170065
 	'madwiki' => 'Wikipèḍia',
+	'madwiktionary' => 'Wikikamus',
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'Project',
@@ -5672,8 +5767,11 @@ return [
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
+	'mnwiki' => 'Википедиа',
+	'mnwiktionary' => 'Викитоль',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
+	'moswiki' => 'Wikipidiya',
 	'movementroleswiki' => 'Wikipedia', // This was set up incorrectly.
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
@@ -5688,6 +5786,7 @@ return [
 	'mwlwiki' => 'Biquipédia',
 	'myvwiki' => 'Википедиясь',
 	'mywiki' => 'ဝီကီပီးဒီးယား',
+	'mywikisource' => 'ဝီကီရင်းမြစ်',
 	'mywiktionary' => 'ဝစ်ရှင်နရီ',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
@@ -5702,6 +5801,7 @@ return [
 	'nowikibooks' => 'Wikibøker',
 	'nowikinews' => 'Wikinytt',
 	'nowikisource' => 'Wikikilden',
+	'nrwiki' => 'Wikiphidiya',
 	'nqowiki' => 'ߥߞߌߔߘߋߞߎ',
 	'nvwiki' => 'Wikiibíídiiya',
 	'nycwikimedia' => 'Wikimedia', // T31273
@@ -5746,6 +5846,7 @@ return [
 	'rswikimedia' => 'Викимедија',
 	'ruewiki' => 'Вікіпедія',
 	'ruwiki' => 'Википедия',
+	'rskwiki' => 'Википедия',
 	'ruwikibooks' => 'Викиучебник',
 	'ruwikimedia' => 'Викимедиа',
 	'ruwikinews' => 'Викиновости',
@@ -5768,6 +5869,7 @@ return [
 	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',
+	'shnwikinews' => 'ဝီႇၶီႇၶၢဝ်ႇ',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'shnwikivoyage' => 'ဝီႇၶီႇဝွႆးဢဵတ်ႇꩡ်',
 	'shywiktionary' => 'Wikasegzawal',
@@ -5810,6 +5912,9 @@ return [
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'taywiki' => 'Wikibitia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
+	'tcywikisource' => 'ವಿಕಿಸೋರ್ಸ್', // T378555
+	'tcywiktionary' => 'ವಿಕ್ಷನರಿ', // T378556
+	'tddwiki' => 'ᥝᥤᥱ_ᥑᥤᥱ_ᥚᥤᥱ_ᥖᥤᥱ_ᥕᥣᥱ',
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
 	'tewikisource' => 'వికీసోర్స్',
@@ -5825,7 +5930,7 @@ return [
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
-	'tlywiki' => 'Vikipediá', // T345316
+	'tlywiki' => 'Vikipedija', // T367009
 	'transitionteamwiki' => 'Project',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',
@@ -5892,6 +5997,7 @@ return [
 	'azwikimedia' => 'Müzakirə',
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
 	'bawikibooks' => 'Викидәреслек_буйынса_фекерләшеү', // T173471
+	'bdrwiki' => 'Wikipidia_Betutur',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
 	'bewiktionary' => 'Размовы_пра_Вікіслоўнік', // T175950
@@ -5900,6 +6006,7 @@ return [
 	'bswiktionary' => 'Razgovor_s_Wikirječnikom',
 	'btmwiktionary' => 'Pembicaraan_Wikikamus',
 	'cuwiki' => 'Википєдїѩ_бєсѣда', // T123654
+	'cswikivoyage' => 'Diskuse_k_Wikicestám',
 	'elwikinews' => 'Βικινέα_συζήτηση',
 	'elwikiversity' => 'Συζήτηση_Βικιεπιστημίου',
 	'elwiktionary' => 'Συζήτηση_βικιλεξικού',

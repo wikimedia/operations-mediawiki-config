@@ -42,9 +42,9 @@ $wgPoolCounterConf = [
 		'workers' => 432,
 		'maxqueue' => 450,
 	],
-	// Regex searches are much heavier then regular searches so we limit the
-	// concurrent number.
-	'CirrusSearch-Regex' => [
+	// Pool counter for expensive full text searches such as regex
+	// and deepcat.
+	'CirrusSearch-ExpensiveFullText' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 60,
 		'workers' => 10,
@@ -80,6 +80,13 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'slots' => 8,
 		'maxqueue' => 100
+	],
+	// Can be expensive (T370621)
+	'GeoData_spatial_search' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 15,
+		'maxqueue' => 50
 	],
 	'SpecialContributions' => [
 		'class' => 'PoolCounter_Client',

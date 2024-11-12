@@ -24,6 +24,7 @@ angwikibooks
 angwikiquote
 angwikisource
 angwiktionary
+annwiki
 anpwiki
 anwiki
 anwiktionary
@@ -69,7 +70,9 @@ bawikibooks
 bbcwiki
 bclwiki
 bclwikiquote
+bclwikisource
 bclwiktionary
+bdrwiki
 be_x_oldwiki
 bewiki
 bewikibooks
@@ -157,6 +160,7 @@ cswikinews
 cswikiquote
 cswikisource
 cswikiversity
+cswikivoyage
 cswiktionary
 cuwiki
 cvwiki
@@ -295,6 +299,7 @@ gnwiktionary
 gomwiki
 gomwiktionary
 gorwiki
+gorwikiquote
 gorwiktionary
 gotwiki
 gotwikibooks
@@ -358,6 +363,7 @@ hzwiki
 iawiki
 iawikibooks
 iawiktionary
+ibawiki
 idwiki
 idwikibooks
 idwikiquote
@@ -420,6 +426,7 @@ kbdwiktionary
 kbpwiki
 kcgwiki
 kcgwiktionary
+kgewiki
 kgwiki
 kiwiki
 kjwiki
@@ -507,6 +514,7 @@ lvwiki
 lvwikibooks
 lvwiktionary
 madwiki
+madwiktionary
 maiwiki
 map_bmswiki
 mdfwiki
@@ -539,6 +547,7 @@ mnwikibooks
 mnwiktionary
 mnwwiki
 mnwwiktionary
+moswiki
 mrjwiki
 mrwiki
 mrwikibooks
@@ -599,6 +608,7 @@ nowikisource
 nowiktionary
 nqowiki
 nrmwiki
+nrwiki
 nsowiki
 nvwiki
 nywiki
@@ -672,6 +682,7 @@ rowikiquote
 rowikisource
 rowikivoyage
 rowiktionary
+rskwiki
 ruewiki
 ruwiki
 ruwikibooks
@@ -709,6 +720,7 @@ sgwiktionary
 shiwiki
 shnwiki
 shnwikibooks
+shnwikinews
 shnwikivoyage
 shnwiktionary
 shwiki
@@ -786,6 +798,9 @@ tawikisource
 tawiktionary
 taywiki
 tcywiki
+tcywikisource
+tcywiktionary
+tddwiki
 tetwiki
 tewiki
 tewikibooks

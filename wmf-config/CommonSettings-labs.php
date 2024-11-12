@@ -34,9 +34,6 @@ if ( $wmgRealm == 'labs' ) {
 	# Use a different site name (T181908)
 	$wgSitename = "Beta $wgSitename";
 
-	# Enable for all Beta wikis, depends on $wmgAllServices.
-	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/wfDebug";
-
 	// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 	$wmgPrivilegedPolicy = [
 		'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
@@ -270,7 +267,7 @@ if ( $wmgRealm == 'labs' ) {
 
 	if ( $wmgUseMath ) {
 		$wgMathValidModes = [ 'source', 'mathml', 'native', 'mathjax' ];
-		$wgDefaultUserOptions[ 'math' ] = 'mathml';
+		$wgDefaultUserOptions[ 'math' ] = 'native';
 		$wgMathEnableFormulaLinks = true;
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
 		$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
@@ -410,6 +407,11 @@ if ( $wmgRealm == 'labs' ) {
 		// Overrides CommonSettings.php which would use LabsServices.php,
 		// but we can't use variables there.
 		$wgGEImageRecommendationServiceUrl = "https://$lang.$site.org/w/api.php";
+		// Community updates module experiment, T374664
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'control', [ 'user-bucket-growth', 'growth-community-updates', 50 ] ],
+			[ 'community-updates-module', [ 'user-bucket-growth', 'growth-community-updates', 100 ] ],
+		];
 	}
 
 	// Let Beta Cluster Commons do upload-from-URL from production Commons.
@@ -473,6 +475,7 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'staging';
 		$wgWikimediaCampaignEventsFluxxBaseUrl = 'https://wmf.preprod.fluxxlabs.com/api/rest/v2/';
 		$wgWikimediaCampaignEventsFluxxOauthUrl = 'https://wmf.preprod.fluxxlabs.com/oauth/token';
+		$wgWikimediaCampaignEventsSparqlEndpoint = 'https://query-main.wikidata.org/sparql';
 		// Re-add rights removed in the production config
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
@@ -503,9 +506,49 @@ if ( $wmgRealm == 'labs' ) {
 		wfLoadExtension( 'ReportIncident' );
 	}
 
+	// T369945
+	// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
+	if ( $wmgUseChart ) {
+		wfLoadExtension( 'Chart' );
+		$wgChartServiceUrl = $wmgLocalServices['chart-renderer'];
+
+		// Set up chart pages with JsonConfig
+		$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
+		$wgJsonConfigs['Chart.JsonConfig'] = [
+			'namespace' => 486,
+			'nsName' => 'Data',
+			// page name must end in ".chart", and contain at least one symbol
+			'pattern' => '/.\.chart$/',
+			'license' => 'CC0-1.0',
+			// allows the cache keys to be shared between wikis
+			'isLocal' => false,
+		];
+
+		if ( $wgDBname === 'commonswiki' ) {
+			$wgJsonConfigs['Chart.JsonConfig']['store'] = true;
+		} else {
+			$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
+				'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+			];
+		}
+
+		// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
+	}
+
+	// T372527
+	if ( $wmgUseCommunityRequests ) {
+		wfLoadExtension( 'CommunityRequests' );
+	}
+
 	// IP Masking / Temporary accounts
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
+
+	// Remove any references to the checkuser-temporary-account-viewer group on the beta clusters, as this group
+	// is only present when CheckUser is installed. As it is not installed, we should remove the group and
+	// the auto-promotion conditions for the group.
+	unset( $wgAutopromoteOnce['onEdit']['checkuser-temporary-account-viewer'] );
+	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
@@ -519,9 +562,68 @@ if ( $wmgRealm == 'labs' ) {
 	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
 	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 
-	// HACK for T370517: map this Codex message until this Codex i18n bug is fixed
-	$wgHooks['MessageCacheFetchOverrides'][] = static function ( &$keys ) {
-		$keys['cdx-search-input-search-button-label'] = 'searchbutton';
-	};
+	// show new donate link in beta for QA and testing
+	$wgWikimediaMessagesAnonDonateLink = true;
+
+	if ( $wmgUseNetworkSession ) {
+		$wgNetworkSessionProviderUsers = [
+			[
+				'username' => 'networksession_testuser',
+				'ip_ranges' => [
+					// Derived from modules/network/data/data.yaml in
+					// operations/puppet for cloud networks. This is not protecting
+					// anything, all anon's have read access anyways, this is to
+					// demonstrate it working in one place but not another.
+					'172.16.0.0/12',
+					'127.0.0.0/8',
+					'::1/128',
+					'10.64.20.0/24',
+					'2620:0:861:118::/64',
+					'10.64.148.0/24',
+					'2620:0:861:11c::/64',
+					'10.64.149.0/24',
+					'2620:0:861:11d::/64',
+					'10.64.150.0/24',
+					'2620:0:861:11e::/64',
+					'10.64.151.0/24',
+					'2620:0:861:11f::/64',
+					'10.192.20.0/24',
+					'2620:0:860:118::/64',
+				],
+				// In normal operation token would be secret, but for labs
+				// it only allows reading via api, which is already possible
+				// with anon, meaning this protects nothing. It does still
+				// demonstrate the functionality.
+				'token' => 'networksession-testuser-token',
+			],
+		];
+	}
+
+	// Community configuration
+	if ( $wmgUseCommunityConfiguration ) {
+		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
+	}
+
+	// T377988
+	if (
+		$wgDBname === 'commonswiki' &&
+		$wmgUseUploadWizard &&
+		$wmgUseWikibaseMediaInfo
+	) {
+		$wgUploadWizardConfig['wikibase']['properties'] = [
+			'date' => 'P253152',
+			'source' => 'P253153',
+			'operator' => 'P253154',
+			'described_at_url' => 'P253095',
+		];
+		$wgUploadWizardConfig['wikibase']['items'] = [
+			'file_available_on_the_internet' => 'Q631353',
+		];
+		$wgUploadWizardConfig['sourceStringToWikidataIdMapping'] = [
+			'facebook' => 'Q631354',
+			'google' => 'Q631355',
+			'youtube' => 'Q631356',
+		];
+	}
 }
 // end safeguard

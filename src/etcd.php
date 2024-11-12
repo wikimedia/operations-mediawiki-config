@@ -48,7 +48,7 @@ function wmfSetupEtcd( $etcdHost ) {
 /** In production, read the database loadbalancer config from etcd.
  * See https://wikitech.wikimedia.org/wiki/Dbctl
  *
- * This function must be called after db-{eqiad,codfw}.php has been loaded!
+ * This function must be called after db-production.php has been loaded!
  * It overwrites a few sections of $wgLBFactoryConf (passed by reference) and
  * populates the $wmgPCServers global with data from etcd.
  * @param array $localDbConfig Local config loaded from etcd, to be applied to

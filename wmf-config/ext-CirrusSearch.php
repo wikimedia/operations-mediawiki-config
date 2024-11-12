@@ -32,7 +32,12 @@ return [
 	],
 	// wikitech is not using kafka (T192361) should be re-evaluated when T237773 is adressed
 	'labswiki' => [ 'eqiad', 'codfw', 'cloudelastic' ],
-	'private' => [ 'eqiad', 'codfw' ],
+	// private wikis don't write to cloudelastic
+	'private' => [
+		'default' => [],
+		'archive' => [ 'eqiad', 'codfw' ],
+		'weighted_tags' => [ 'eqiad', 'codfw' ],
+	],
 ],
 
 'wgCirrusSearchReplicaGroup' => [
@@ -445,7 +450,6 @@ return [
 'wgCirrusSearchUseCompletionSuggester' => [
 	'default' => 'yes',
 	'wikidatawiki' => 'no',
-	'labtestwiki' => 'no', // disable while T328289 gets fixed
 ],
 
 // wgCirrusSearchCompletionSuggesterSubphrases @{
@@ -1234,12 +1238,14 @@ return [
 	'default' => true,
 ],
 'wgCirrusSearchIndexFieldsToCleanup' => [
-	// https://phabricator.wikimedia.org/P63465#254682
 	'default' => [
-		'ores_articletopic',
-		'ores_drafttopics',
-		'version_type',
-		'ores_articletopics'
+		'label_count' // T377226
 	]
 ],
+'wgCirrusSearchEnableEventBusWeightedTags' => [
+	// Appears to be broken, see T378983
+	'default' => false,
+	// To debug and test
+	'testwiki' => true,
+]
 ];

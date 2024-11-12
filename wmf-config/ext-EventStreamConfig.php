@@ -46,6 +46,13 @@ return [
 			],
 		],
 	],
+	'+private' => [
+		'producers' => [
+			'mediawiki_eventbus' => [
+				'enabled' => false,
+			],
+		],
+	],
 ],
 
 /*
@@ -132,17 +139,6 @@ return [
 		],
 		'eventlogging_CpuBenchmark' => [
 			'schema_title' => 'analytics/legacy/cpubenchmark',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_DesktopWebUIActionsTracking' => [
-			'schema_title' => 'analytics/legacy/desktopwebuiactionstracking',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -247,20 +243,6 @@ return [
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_MobileWebUIActionsTracking' => [
-			'schema_title' => 'analytics/legacy/mobilewebuiactionstracking',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-				'analytics_hive_ingestion' => [
 					'enabled' => true,
 				],
 			]
@@ -1090,6 +1072,21 @@ return [
 			],
 		],
 
+		// See https://phabricator.wikimedia.org/T370045
+		'wikibase.client.interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_skin',
+						'performer_is_logged_in',
+					],
+				],
+			],
+		],
+
 		// Wikistories streams
 		'mediawiki.wikistories_consumption_event' => [
 			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
@@ -1166,6 +1163,12 @@ return [
 			'destination_event_service' => 'eventgate-analytics',
 			// canary events will not work for regex streams.
 			'canary_events_enabled' => false,
+			'consumers' => [
+				// Don't ingest regex streams into Hadoop.
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
@@ -1206,6 +1209,21 @@ return [
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
+			],
+		],
+		// mediawiki.cirrussearch.page_rerender stream for private wikis
+		// https://phabricator.wikimedia.org/T346046
+		'mediawiki.cirrussearch.page_rerender.private.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/page_rerender',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => false,
+				],
 			],
 		],
 		'mediawiki.page-create' => [
@@ -1408,6 +1426,21 @@ return [
 			],
 			'destination_event_service' => 'eventgate-main',
 		],
+		// mediawiki.page_change stream for private wikis
+		// https://phabricator.wikimedia.org/T346046
+		'mediawiki.page_change.private.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => false,
+				],
+			],
+		],
 		// Declare version 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
@@ -1430,12 +1463,49 @@ return [
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
 		// This stream will be used by the streaming enrichment pipeline
-		// to emit error events encountered during enrichment.
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
 		// This follows the naming convention of <job_name>.error
 		'mw_page_content_change_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+		// This stream uses the mediawiki/page/change schema.
+		// It is produced by a PySpark job (T368755) that checks for
+		// inconsistencies on a datalake table that consumes stream
+		// 'mediawiki.page_content_change.v1'.
+		// It is meant to be enriched by a dowstrean Flink app.
+		'mediawiki.dump.revision_content_history.reconcile.rc0' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// we don't need these non-enriched events in Hadoop
+					'enabled' => false,
+				],
+			],
+		],
+		// Enriched stream of the above produced by a Flink app (T368787)
+		'mediawiki.dump.revision_content_history.reconcile.enriched.rc0' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		// This stream will be used by the above streaming enrichment pipeline
+		// This follows the naming convention of <job_name>.error
+		'mw_dump_rev_content_reconcile_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 		],
@@ -1463,11 +1533,31 @@ return [
 			'destination_event_service' => 'eventgate-main',
 		],
 		/*
-		 * == Search Update Pipeline (Flink) output streams ==
+		 * == Search Update Pipeline (Flink) streams ==
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
 		 */
+		'mediawiki.cirrussearch.page_weighted_tags_change.rc0' => [
+			'schema_title' => 'development/cirrussearch/page_weighted_tags_change',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
+		],
 		'cirrussearch.update_pipeline.update.rc0' => [
+			'schema_title' => 'development/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			// TODO: re-enable canary events once the schema is stabilized
+			'canary_events_enabled' => false,
+		],
+		'cirrussearch.update_pipeline.update.private.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/update',
 			'destination_event_service' => 'eventgate-main',
 			'message_key_fields' => [
@@ -1489,45 +1579,6 @@ return [
 		'mediawiki.maps_interaction' => [
 			'schema_title' => 'analytics/mediawiki/maps/interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
-		],
-
-		/*
-		 * webrequest.frontend describes the schema and topics that make up the
-		 * webrequest logs from our frontend webservers (haproxy).
-		 * It is an Event Platform stream, but is produced directly to Kafka by Benthos producer,
-		 * not eventgate.
-		 * `webrequest.frontent.rc0` is a development stream that will be deprecated (removed
-		 * from config) after GA release.
-		 */
-		'webrequest.frontend.rc0' => [
-			// Disable canary event production while the stream is under
-			// development.
-			'canary_events_enabled' => false,
-			// Development webrequest_frontend kafka topics have no prefix.
-			'topic_prefixes' => null,
-			// Point to a wip/developemnt version of the events schema.
-			// TODO: switch to GA once the schema is finalized and released.
-			'schema_title' => 'development/webrequest',
-			// webrequest.frontend stream explicitly declares its composite topics.
-			// These topics are produced to explicitly by haproxy logtailer.
-			// https://phabricator.wikimedia.org/T351117#9419578
-			'topics' => [
-				# TODO: set these composite topics in the GA release of the stream.
-				# 'webrequest.frontend.text',
-				# 'webrequest.frontend.upload',
-				'webrequest_text_test',
-				'webrequest_upload_test',
-			],
-			// Use eventgate-analytics for canary events.
-			// Note that the real webrequest events don't get produced via evengate.
-			'destination_event_service' => 'eventgate-analytics',
-			// Gobblin job webrequest_frontend ingests these topics.
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'webrequest_frontend',
-					'enabled' => true,
-				],
-			],
 		],
 
 		/*
@@ -1720,6 +1771,62 @@ return [
 				'rate' => 1,
 			],
 		],
+		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
+		'mediawiki.product_metrics.homepage_module_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_site_content_language',
+						'mediawiki_site_content_language_variant',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_name',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_registration_dt',
+						'performer_is_temp',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
+						'performer_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
+		// (T373967) App base stream configuration to support Metrics Platform's monotable
+		'product_metrics.app_base' => [
+			'schema_title' => 'analytics/product_metrics/app/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [],
+				],
+			],
+		],
+		// (T373967) Web base stream configuration to support Metrics Platform's monotable
+		'product_metrics.web_base' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+					],
+				],
+			],
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [
@@ -1732,6 +1839,39 @@ return [
 		'mediawiki.web_ui_actions' => [
 			'sample' => [
 				'rate' => 0,
+			],
+		],
+	],
+	'+private' => [
+		// private wikis have wgEnableEventBus set to TYPE_JOB|TYPE_EVENT.  But,
+		// wgEventStreamsDefaultSettings, we explicitly set mediawiki_eventbus.enabled => false
+		// to prevent most TYPE_EVENT streams from being produced.  We don't want the regular
+		// TYPE_EVENT streams from private wikis to be produced to the usual streams, as many
+		// of those streams are public.
+		// This is confusing, and would be simplified by https://phabricator.wikimedia.org/T370524.
+		// See also:
+		// - https://phabricator.wikimedia.org/T346046
+		// - https://phabricator.wikimedia.org/T371433
+		//
+		'/^mediawiki\\.job\\..+/' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'mediawiki.page_change.private.v1' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'mediawiki.cirrussearch.page_rerender.private.v1' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true,
+				],
 			],
 		],
 	],

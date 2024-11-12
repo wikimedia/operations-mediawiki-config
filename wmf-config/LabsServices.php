@@ -79,6 +79,7 @@ return [
 		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
 		// No envoy in beta cluster?
 		'mwapi' => null,
+		'mpic' => 'https://mpic-next.wikimedia.org',
 
 		### Logstash
 		'logstash' => [
@@ -86,10 +87,10 @@ return [
 		],
 
 		### Restbase
-		'restbase' => 'http://deployment-restbase04.deployment-prep.eqiad1.wikimedia.cloud:7231',
+		'restbase' => 'http://deployment-restbase05.deployment-prep.eqiad1.wikimedia.cloud:7231',
 
 		### Rest Gateway. Same as Restbase for now, may change when we get true beta rest gateway
-		'rest-gateway' => 'http://deployment-restbase04.deployment-prep.eqiad1.wikimedia.cloud:7231',
+		'rest-gateway' => 'http://deployment-restbase05.deployment-prep.eqiad1.wikimedia.cloud:7231',
 
 		### Poolcounter
 		'poolcounter' => [
@@ -97,7 +98,9 @@ return [
 		],
 
 		### Kask
-		'sessionstore' => 'http://deployment-sessionstore04.deployment-prep.eqiad1.wikimedia.cloud:8080',
-		'echostore' => 'http://deployment-echostore02.deployment-prep.eqiad1.wikimedia.cloud:8080',
+		'sessionstore' => 'http://sessionstore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
+		'echostore' => 'http://echostore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
+
+		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284/v1/chart/render',
 	],
 ];

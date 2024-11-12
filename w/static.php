@@ -48,6 +48,9 @@
 // details of the session. Enforce this constraint with respect to session use.
 define( 'MW_NO_SESSION', 1 );
 
+// Allow MediaWiki extensions to detect when they're called from this entry point (T374286)
+define( 'MW_ENTRY_POINT', 'static' );
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 

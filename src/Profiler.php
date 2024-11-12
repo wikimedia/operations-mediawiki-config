@@ -9,9 +9,12 @@
 
 namespace Wikimedia\MWConfig;
 
+use Exception;
 use ExcimerProfiler;
+use MediaWiki\Profiler\ProfilingContext;
 use PDO;
 use Redis;
+use ReflectionClass;
 use ReflectionException;
 use Wikimedia\ExcimerUI\Client\ExcimerClient;
 
@@ -329,7 +332,7 @@ class Profiler {
 					$redis->publish( $redisChannel, $line );
 				}
 			}
-		} catch ( \Exception $e ) {
+		} catch ( Exception $e ) {
 			// Known failure scenarios:
 			//
 			// - "RedisException: Connection timed out" (T206092, T348756)
@@ -368,8 +371,8 @@ class Profiler {
 	public static function excimerFlushToStatsd( $logLines, $options ) {
 		$dest = $options['statsd-host'] ?? null;
 		$verb = $_SERVER['REQUEST_METHOD'] ?? '';
-		$handler = class_exists( \MediaWiki\Profiler\ProfilingContext::class )
-			? \MediaWiki\Profiler\ProfilingContext::singleton()->getHandlerMetricPrefix()
+		$handler = class_exists( ProfilingContext::class )
+			? ProfilingContext::singleton()->getHandlerMetricPrefix()
 			: 'unknown';
 
 		if ( $dest && $verb !== '' && $handler !== 'unknown' ) {
@@ -410,7 +413,7 @@ class Profiler {
 
 		// Determine the class file path
 		try {
-			$path = ( new \ReflectionClass( $m[1] ) )->getFileName();
+			$path = ( new ReflectionClass( $m[1] ) )->getFileName();
 			$component = self::excimerComponentFromPath( $path );
 		} catch ( ReflectionException $e ) {
 			$component = 'unknown';

@@ -29,6 +29,7 @@ azwiktionary
 banwikisource
 bawikibooks
 bclwikiquote
+bclwikisource
 bclwiktionary
 bdwikimedia
 betawikiversity
@@ -38,7 +39,6 @@ bewikiquote
 bewikisource
 bewiktionary
 bgwikibooks
-bgwikinews
 bgwikiquote
 bgwikisource
 bgwiktionary
@@ -84,6 +84,7 @@ cswikinews
 cswikiquote
 cswikisource
 cswikiversity
+cswikivoyage
 cswiktionary
 cvwikibooks
 cywikibooks
@@ -181,6 +182,7 @@ glwikisource
 glwiktionary
 gnwiktionary
 gomwiktionary
+gorwikiquote
 gorwiktionary
 grantswiki
 grwikimedia
@@ -234,7 +236,6 @@ igwikiquote
 igwiktionary
 ilwikimedia
 incubatorwiki
-internalwiki
 iowiktionary
 iswikibooks
 iswikiquote
@@ -310,6 +311,7 @@ ltwikiquote
 ltwikisource
 ltwiktionary
 lvwiktionary
+madwiktionary
 maiwikimedia
 metawiki
 mgwikibooks
@@ -424,10 +426,10 @@ sawikisource
 sawiktionary
 scnwiktionary
 sdwiktionary
-searchcomwiki
 sewikimedia
 sgwiktionary
 shnwikibooks
+shnwikinews
 shnwikivoyage
 shnwiktionary
 shwiktionary
@@ -448,7 +450,6 @@ slwiktionary
 smwiktionary
 sourceswiki
 sowiktionary
-spcomwiki
 specieswiki
 sqwikibooks
 sqwikinews
@@ -479,6 +480,8 @@ tawikinews
 tawikiquote
 tawikisource
 tawiktionary
+tcywikisource
+tcywiktionary
 techconductwiki
 test2wiki
 tewikibooks
@@ -501,7 +504,6 @@ tnwiktionary
 tpiwiktionary
 trwikibooks
 trwikimedia
-trwikinews
 trwikiquote
 trwikisource
 trwikivoyage
@@ -538,8 +540,6 @@ wawiktionary
 wbwikimedia
 wikidatawiki
 wikifunctionswiki
-wikimania2017wiki
-wikimania2018wiki
 wikimaniateamwiki
 wikimaniawiki
 wowiktionary

@@ -55,6 +55,7 @@ $wmgMasterDatacenter = null;
 
 // Load file to obtain $wgLBFactoryConf
 require_once __DIR__ . '/../../wmf-config/db-production.php';
+require_once __DIR__ . '/../../wmf-config/db-sections.php';
 
 global $wgLBFactoryConf;
 $wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];

@@ -10,11 +10,10 @@
  *   meta.wikimedia.beta.wmflabs.org
  *     -> meta.m.wikimedia.beta.wmflabs.org
  *
- * There are three exceptions that need to be special-cased:
- * - wikisource.org, which does not have a www prefix and turns into m.wikisource.org;
- * - beta Wikidata and Wikifunctions as the two www-prefixed wikis which have a beta version
- *   (beta does not use www prefixes so they just get m. added to the front);
- * - wikitech, which does not use mobile domains.
+ * There are several exceptions that need to be special-cased:
+ * - Domains that do not have a www prefix, so they just get m. added to the front:
+ *   wikisource.org, and beta Wikidata and Wikifunctions (beta does not use www prefixes)
+ * - Domains that do not have a mobile version: Wikitech and the SSO domain (not a wiki).
  *
  * These mobile URL rules are manually mirrored by the following codebases.
  * If you change these rules, please notify the appropriate code stewards.
@@ -22,28 +21,27 @@
  * 1. Varnish mobile URL redirection
  *    steward: WMF SRE Traffic
  *    Phabricator tag: #Traffic
- *    repo: operations/puppet
- *    file: modules/varnish/templates/text-frontend.inc.vcl.erb
+ *    https://gerrit.wikimedia.org/g/operations/puppet/+/production/modules/varnish/templates/text-frontend.inc.vcl.erb
  * 2. Canonical wiki dataset
  *    steward: WMF Movement Insights
  *    Phabricator tag: #Movement-Insights
- *    repo: wikimedia-research/canonical-data on GitHub
- *    file: wiki/generate.ipynb
+ *    https://gitlab.wikimedia.org/repos/movement-insights/canonical-data/-/blob/main/wiki/generate.ipynb
  *
  * If you need a history of changes, previously these rules lived under
  * $wgMobileUrlTemplate in InitialiseSettings.php.
  */
 function wmfMobileUrlCallback( string $domain ): string {
-	// special cases
-	switch ( $domain ) {
-		case 'wikisource.org':
-			return 'm.wikisource.org';
-		case 'wikitech.wikimedia.org':
-			return 'wikitech.wikimedia.org';
-		case 'wikidata.beta.wmflabs.org':
-			return 'm.wikidata.beta.wmflabs.org';
-		case 'wikifunctions.beta.wmflabs.org':
-			return 'm.wikifunctions.beta.wmflabs.org';
+	static $specialCases = [
+		'wikisource.org' => 'm.wikisource.org',
+		'wikitech.wikimedia.org' => false,
+		'wikidata.beta.wmflabs.org' => 'm.wikidata.beta.wmflabs.org',
+		'wikifunctions.beta.wmflabs.org' => 'm.wikifunctions.beta.wmflabs.org',
+		// SSO domain doesn't have a mobile version (T375272)
+		'sso.wikimedia.org' => false,
+		'sso.wikimedia.beta.wmflabs.org' => false,
+	];
+	if ( isset( $specialCases[$domain] ) ) {
+		return $specialCases[$domain] ?: $domain;
 	}
 
 	$domainParts = explode( '.', $domain );

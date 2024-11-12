@@ -39,12 +39,14 @@ return [
 	'default' => true,
 ],
 
-'wgGEUseNewImpactModule' => [
-	'default' => true,
-],
-
 'wgGECommunityUpdatesEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'eswiki' => true,
+	'arwiki' => true,
+	'frwiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -196,7 +198,6 @@ return [
 	'htwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
-	'hywwiki' => true,
 	'iawiki' => true,
 	'idwiki' => true,
 	'iewiki' => true,
@@ -376,9 +377,17 @@ return [
 	'zuwiki' => true,
 ],
 
+'wgGETempLinkRecommendationSwitchTagClearHook' => [
+	'default' => true,
+],
+
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
+],
+
+'wgGESurfacingStructuredTasksEnabled' => [
+	'default' => false,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
@@ -437,11 +446,12 @@ return [
 	'cvwiki' => true,
 	'cywiki' => true,
 	'dawiki' => true,
-	'dewiki' => false, // T294712
+	'dewiki' => true,
 	'dinwiki' => true,
 	'dsbwiki' => true,
 	'eewiki' => true,
 	'elwiki' => true,
+	'enwiki' => true,
 	'emlwiki' => true,
 	'eowiki' => true,
 	'eswiki' => true,
@@ -480,7 +490,6 @@ return [
 	'hrwiki' => true,
 	'hsbwiki' => true,
 	'htwiki' => true,
-	'hywwiki' => false, // T308134#8548734
 	'huwiki' => true,
 	'hywiki' => true,
 	'iawiki' => true,
@@ -696,17 +705,12 @@ return [
 	'eswiki' => 50, // T285235
 ],
 
-'wgGEHomepageDefaultVariant' => [
-	'default' => 'control',
+'wgGEMentorshipReassignMenteesBatchSize' => [
+	'default' => 5000,
 ],
 
-'wgGEHomepageNewAccountVariantsByPlatform' => [
-	'default' => [
-		'control' => [
-			'mobile' => 100,
-			'desktop' => 100,
-		],
-	],
+'wgGEHomepageDefaultVariant' => [
+	'default' => 'control',
 ],
 
 'wgGEMentorDashboardEnabled' => [
@@ -902,9 +906,6 @@ return [
 
 'wgGEUseCommunityConfigurationExtension' => [
 	'default' => true,
-	// NOTE: Do not enable without Growth team OK
-	'dewiki' => false,
-	'frwiktionary' => false, // waiting on T369711
 ],
 
 ];
