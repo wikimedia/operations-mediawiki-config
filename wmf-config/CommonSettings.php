@@ -4144,6 +4144,12 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 
 	// Exclude autopromotions into this group from RC by default (T377829)
 	$wgAutopromoteOnceRCExcludedGroups[] = 'checkuser-temporary-account-viewer';
+
+	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
+	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';
+	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
+		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'GlobalBlockList';
+	}
 }
 
 // Ensure no users can be crated that match temporary account names (T361021).
