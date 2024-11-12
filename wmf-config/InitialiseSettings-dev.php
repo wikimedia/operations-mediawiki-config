@@ -98,5 +98,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUseEntitySchema' => [
 			'default' => false,
 		],
+		'-wmgUseCheckUser' => [
+			'default' => false,
+		],
 	];
 }
