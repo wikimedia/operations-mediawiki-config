@@ -42,7 +42,7 @@ return [
 				'enabled' => true,
 			],
 			'analytics_hive_ingestion' => [
-				'enabled' => false,
+				'enabled' => true,
 			],
 		],
 	],
@@ -157,6 +157,10 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			]
 		],
 		'eventlogging_HelpPanel' => [
@@ -201,6 +205,9 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			]
 		],
 		'eventlogging_KaiOSAppFirstRun' => [
@@ -212,6 +219,9 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			]
 		],
 		'eventlogging_KaiOSAppFeedback' => [
@@ -222,6 +232,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
 				],
 			]
 		],
@@ -244,6 +257,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
 				],
 			]
 		],
@@ -358,6 +374,10 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			]
 		],
 		'eventlogging_SaveTiming' => [
@@ -379,6 +399,10 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			]
 		],
@@ -525,6 +549,7 @@ return [
 				],
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
 				],
 			]
 		],
@@ -631,6 +656,12 @@ return [
 				'unit' => 'session',
 				'rate' => 0.1,
 			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		'app_session' => [
 			'schema_title' => 'analytics/mobile_apps/app_session',
@@ -682,6 +713,7 @@ return [
 				],
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			],
 		],
@@ -732,6 +764,12 @@ return [
 		'android.article_toolbar_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_toolbar_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.edit_history_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
@@ -752,6 +790,12 @@ return [
 		'android.breadcrumbs_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.app_appearance_settings_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_app_appearance_settings_interaction',
@@ -760,6 +804,12 @@ return [
 		'android.article_link_preview_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_link_preview_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.article_page_scroll_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_page_scroll_interaction',
@@ -811,6 +861,12 @@ return [
 			'sample' => [
 				'unit' => 'device',
 				'rate' => 1,
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			],
 		],
 		'android.product_metrics.article_toc_interaction' => [
@@ -873,6 +929,12 @@ return [
 			'sample' => [
 				'unit' => 'device',
 				'rate' => 1,
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			],
 		],
 		'android.product_metrics.find_in_page_interaction' => [
@@ -963,6 +1025,12 @@ return [
 			'sample' => [
 				'unit' => 'session',
 				'rate' => 0.2,
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			],
 		],
 		'mediawiki.web_ui_scroll' => [
@@ -1116,16 +1184,31 @@ return [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'kaios_app.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'w3c.reportingapi.network_error' => [
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
@@ -1141,18 +1224,42 @@ return [
 		'mediawiki.api-request' => [
 			'schema_title' => 'mediawiki/api/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		'mediawiki.cirrussearch-request' => [
 			'schema_title' => 'mediawiki/cirrussearch/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		'wdqs-internal.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'wdqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
@@ -1166,6 +1273,9 @@ return [
 			'consumers' => [
 				// Don't ingest regex streams into Hadoop.
 				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
 					'enabled' => false,
 				],
 			],
@@ -1189,6 +1299,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'enabled' => false,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			],
 		],
 		'mediawiki.centralnotice.campaign-change' => [
@@ -1209,6 +1322,12 @@ return [
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			],
 		],
 		// mediawiki.cirrussearch.page_rerender stream for private wikis
@@ -1254,6 +1373,11 @@ return [
 		'mediawiki.page-properties-change' => [
 			'schema_title' => 'mediawiki/page/properties-change',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.page-restrictions-change' => [
 			'schema_title' => 'mediawiki/page/restrictions-change',
@@ -1270,6 +1394,11 @@ return [
 		'mediawiki.recentchange' => [
 			'schema_title' => 'mediawiki/recentchange',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.revision-create' => [
 			'schema_title' => 'mediawiki/revision/create',
@@ -1281,6 +1410,7 @@ return [
 				],
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			],
 		],
@@ -1352,6 +1482,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'enabled' => false,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			],
 			// This stream is a testing stream for page-prediction-change events,
 			// and the events will be emitted by the Lift Wing platform.
@@ -1386,16 +1519,32 @@ return [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'resource-purge' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'change-prop.transcludes.resource-change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.revision-recommendation-create' => [
 			'schema_title' => 'mediawiki/revision/recommendation-create',
@@ -1425,6 +1574,12 @@ return [
 				'page_id' => 'page.page_id',
 			],
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		// mediawiki.page_change stream for private wikis
 		// https://phabricator.wikimedia.org/T346046
@@ -1462,6 +1617,12 @@ return [
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 
 		// This stream will be used by the streaming enrichment pipeline
@@ -1491,6 +1652,9 @@ return [
 					// we don't need these non-enriched events in Hadoop
 					'enabled' => false,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			],
 		],
 		// Enriched stream of the above produced by a Flink app (T368787)
@@ -1508,6 +1672,11 @@ return [
 		'mw_dump_rev_content_reconcile_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
@@ -1546,6 +1715,11 @@ return [
 			],
 			// TODO: re-enable canary events once the schema is stabilized
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'cirrussearch.update_pipeline.update.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/update',
@@ -1554,8 +1728,13 @@ return [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
 			],
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'cirrussearch.update_pipeline.update.private.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/update',
@@ -1564,14 +1743,12 @@ return [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
 			],
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 		'cirrussearch.update_pipeline.fetch_error.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
 			'destination_event_service' => 'eventgate-main',
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 
 		// Temporary analytics for Kartographer Nearby feature
@@ -1603,6 +1780,11 @@ return [
 		'eventgate-logging-external.test.event' => [
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-logging-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'eventgate-analytics-external.test.event' => [
 			'schema_title' => 'test/event',
@@ -1621,21 +1803,31 @@ return [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'eventgate-analytics-external.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 		'eventgate-analytics.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'eventgate-main.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 
 		'inuka.wiki_highlights_experiment' => [
