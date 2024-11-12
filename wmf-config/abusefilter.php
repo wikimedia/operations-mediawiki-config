@@ -31,6 +31,15 @@ $wgAbuseFilterLogPrivateDetailsAccess = true;
 $wgGroupPermissions['checkuser']['abusefilter-privatedetails'] = true;
 $wgGroupPermissions['checkuser']['abusefilter-privatedetails-log'] = true;
 
+// T379503 - AbuseFilter's extension.json gives the right to use protected vars to sysop
+// in order to support third-party wiki use cases. WMF wikis should only give this right
+// on wikis that know about temporary accounts, to avoid mistakes and confusion.
+if ( $wmgEnableIPMasking || $wmgDisableIPMasking ) {
+	$wgGroupPermissions['sysop']['abusefilter-access-protected-vars'] = true;
+} else {
+	$wgGroupPermissions['sysop']['abusefilter-access-protected-vars'] = false;
+}
+
 // T369610 - AbuseFilter's extension.json gives the right to view protected vars logs to sysop
 // in order to support third-party wiki use cases. WMF wikis will prefer to give this right
 // to the `checkuser` group in order to maintain parity with other privileged logs.
