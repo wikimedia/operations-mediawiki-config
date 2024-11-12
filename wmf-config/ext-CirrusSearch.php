@@ -1243,6 +1243,7 @@ return [
 	]
 ],
 'wgCirrusSearchEnableEventBusWeightedTags' => [
-	'default' => true,
+	// Temporarily switched to false because of T378983
+	'default' => false,
 ]
 ];
