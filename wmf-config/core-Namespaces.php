@@ -812,7 +812,11 @@ return [
 		'Author_talk' => 101,
 	],
 	'+hsbwiktionary' => [
-		'Wiktionary diskusija' => NS_PROJECT_TALK,
+		'WS' => NS_PROJECT, // T373634
+		'Kat' => NS_CATEGORY, // T373634
+		'P' => NS_TEMPLATE, // T373634
+		'RK' => /* Reconstruction */ 118, // T373634
+		'Wiktionary_diskusija' => NS_PROJECT_TALK,
 	],
 	'+huwiki' => [
 		'Portál_vita' => 101,
@@ -3871,6 +3875,18 @@ return [
 	'hewiktionary' => [
 		100 => 'נספח',
 		101 => 'שיחת_נספח'
+	],
+	'hsbwiktionary' => [
+		100 => 'Přidawk', // T373634
+		101 => 'Diskusija_k_přidawkej', // T373634
+		106 => 'Rymy', // T373634
+		107 => 'Diskusija_k_rymam', // T373634
+		110 => 'Tezawrus', // T373634
+		111 => 'Diskusija_k_tezawrusej', // T373634
+		114 => 'Citaty', // T373634
+		115 => 'Diskusija_k_citatam', // T373634
+		118 => 'Rekonstrukcija', // T373634
+		119 => 'Diskusija_k_rekonstrukciji' // T373634
 	],
 	'huwiktionary' => [
 		100 => 'Függelék', // T44505 - Appendix
