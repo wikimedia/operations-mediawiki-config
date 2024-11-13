@@ -11,6 +11,16 @@ return [
 	'growthexperiments' => true,
 ],
 
+'wmgGEActiveExperiment' => [
+	'default' => false,
+	'testwiki' => 'growth-community-updates',
+	'test2wiki' => 'growth-community-updates',
+	'eswiki' => 'growth-community-updates',
+	'arwiki' => 'growth-community-updates',
+	'frwiki' => 'growth-community-updates',
+	'cswiki' => 'growth-community-updates',
+],
+
 'wgGEDatabaseCluster' => [
 	'default' => 'extension1',
 ],

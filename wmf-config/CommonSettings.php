@@ -4333,19 +4333,24 @@ if ( $wmgUseGrowthExperiments ) {
 	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 
-	$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
-		[ 'control',
-			[ 'user-bucket-growth', 'growth-community-updates', 50 ],
-			[ CUDCOND_AFTER, '20221102000000' ]
-		],
-		[ 'community-updates-module',
-			[ 'user-bucket-growth', 'growth-community-updates', 100 ],
-			[ CUDCOND_AFTER, '20221102000000' ]
-		],
-		[ 'control',
-			[ 'user-bucket-growth', 'growth-community-updates', 100 ]
-		],
-	];
+	// Ensure experiment conditional options are applied only in wikis where
+	// the relevant experiment is enabled.
+	if ( $wmgGEActiveExperiment === 'growth-community-updates' ) {
+		// Community updates module experiment, T374664
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'control',
+				[ 'user-bucket-growth', 'growth-community-updates', 50 ],
+				[ CUDCOND_AFTER, '20221102000000' ]
+			],
+			[ 'community-updates-module',
+				[ 'user-bucket-growth', 'growth-community-updates', 100 ],
+				[ CUDCOND_AFTER, '20221102000000' ]
+			],
+			[ 'control',
+				[ 'user-bucket-growth', 'growth-community-updates', 100 ]
+			],
+		];
+	}
 }
 
 if ( $wmgUseWikiLambda ) {

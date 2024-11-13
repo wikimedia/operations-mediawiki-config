@@ -1261,6 +1261,9 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
+		'wmgGEActiveExperiment' => [
+			'default' => 'growth-community-updates',
+		],
 		'wgGECommunityUpdatesEnabled' => [
 			'default' => true,
 		],
