@@ -5945,6 +5945,7 @@ return [
 		'bureaucrat' => [
 			'flood', // T50013
 			'wikidata-staff', // T74459
+			'sysop', // T379635
 		],
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
