@@ -49,5 +49,6 @@ return [
 		'xhgui-pdo' => null,
 		'excimer-ui-url' => '',
 		'excimer-ui-server' => '',
+		'chart-renderer' => null,
 	]
 ];
