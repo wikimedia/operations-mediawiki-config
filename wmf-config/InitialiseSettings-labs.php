@@ -2275,6 +2275,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wgParserCacheNewKeySchemaRatio' => [
+			'default' => 2,
+		],
+
 		// T348487
 		'-wgUrlShortenerEnableQrCode' => [
 			'default' => true,
