@@ -83,7 +83,7 @@ return [
 		'*' => [
 			'edit' => false,
 			'createaccount' => false,
-			'autocreateaccount' => false,
+			'autocreateaccount' => true,
 		],
 		'user' => [
 			'edit' => false,
