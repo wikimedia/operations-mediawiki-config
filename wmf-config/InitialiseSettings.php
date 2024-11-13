@@ -12295,6 +12295,8 @@ return [
 	'ukwiki' => true,
 	// T378343
 	'viwiki' => true,
+	// T376597
+	'afwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -12307,6 +12309,8 @@ return [
 	'ukwiki' => "Автомодератор",
 	// T378343
 	'viwiki' => "Kiểm tra tự động",
+	// T376597
+	'afwiki' => "OutoModerator"
 ],
 
 // T341000
