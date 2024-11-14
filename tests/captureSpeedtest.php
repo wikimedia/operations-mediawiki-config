@@ -34,9 +34,9 @@ class WmfCaptureSpeedtest {
 
 	/**
 	 * @param string $url HTML-encoded URL from an attribute
-	 * @param string|null $defExt
+	 * @param ?string $defExt
 	 */
-	private function downloadUrlIfNew( string $url, string $defExt = null ): void {
+	private function downloadUrlIfNew( string $url, ?string $defExt = null ): void {
 		// Strip any query parameters
 		$urlPath = parse_url( $url, PHP_URL_PATH );
 		// Keep only a flat filename
