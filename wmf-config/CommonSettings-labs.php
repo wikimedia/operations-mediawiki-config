@@ -256,6 +256,16 @@ if ( $wmgRealm == 'labs' ) {
 		$wgUseInstantCommons = true;
 	}
 
+	if ( $wmgUseJsonConfig ) {
+		// T374746 cache invalidation issues for globaljsonlinks;
+		// globaljsonlinks* shared tables are not live on beta cluster
+		// as of 2024-11-14.
+		// Override the enabling for testwiki and testcommonswiki
+		// so their beta equivalents can run without breaking links
+		// updates and cache invalidation propagation.
+		$wgTrackGlobalJsonLinks = false;
+	}
+
 	if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
 
 		// Enable Tabular data namespace on Commons - T148745
