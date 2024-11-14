@@ -53,6 +53,7 @@ use MediaWiki\Extension\Notifications\Push\PushNotifier;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Session\SessionManager;
 use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
@@ -4388,7 +4389,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 			if (
 				defined( 'MW_NO_SESSION' ) ||
 				MW_ENTRY_POINT === 'cli' ||
-				!MediaWiki\Session\SessionManager::getGlobalSession()->isPersistent()
+				!SessionManager::getGlobalSession()->isPersistent()
 			) {
 				// There is no session, so don't set CSP, as we care more
 				// about actual users, and this allows quick revert since
@@ -4397,30 +4398,27 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 			}
 		}
 
-		if ( $wmgUseCSPReportOnly ) {
-			$wgCSPReportOnlyHeader['useNonces'] = false;
-			$wgCSPReportOnlyHeader['includeCORS'] = false;
-			$wgCSPReportOnlyHeader['default-src'] = array_merge(
+		$cspConfig = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => array_merge(
 				$wmgApprovedContentSecurityPolicyDomains,
 				[
 					// Needed for Math. Remove when/if math is fixed.
 					'wikimedia.org',
 				]
-			);
-			$wgCSPReportOnlyHeader['script-src'] = $wmgApprovedContentSecurityPolicyDomains;
+			),
+			'script-src' => $wmgApprovedContentSecurityPolicyDomains,
+		];
+
+		if ( $wmgUseCSPReportOnly ) {
+			// $wgCSPReportOnlyHeader defaults to false, so setup an array for config
+			$wgCSPReportOnlyHeader = $cspConfig;
 		}
 
 		if ( $wmgUseCSP ) {
-			$wgCSPHeader['useNonces'] = false;
-			$wgCSPHeader['includeCORS'] = false;
-			$wgCSPHeader['default-src'] = array_merge(
-				$wmgApprovedContentSecurityPolicyDomains,
-				[
-					// Needed for Math. Remove when/if math is fixed.
-					'wikimedia.org',
-				]
-			);
-			$wgCSPHeader['script-src'] = $wmgApprovedContentSecurityPolicyDomains;
+			// $wgCSPHeader defaults to false, so setup an array for config
+			$wgCSPHeader = $cspConfig;
 		}
 	};
 }
