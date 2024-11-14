@@ -4326,6 +4326,7 @@ if ( $wmgUseWikisource ) {
 
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
+	$wgVirtualDomainsMapping['virtual-growthexperiments'] = [ 'cluster' => 'extension1', 'db' => false ];
 
 	// T298122 temporary fix while mobile-only quality gate gets removed
 	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
