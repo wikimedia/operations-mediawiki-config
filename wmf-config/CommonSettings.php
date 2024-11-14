@@ -3610,7 +3610,6 @@ if ( $wmgUseJsonConfig ) {
 		// T379199 - temporary deployment of tracking tables on testcommonswiki
 		$wgTrackGlobalJsonLinks = true;
 		$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
-			'cluster' => 's4',
 			'db' => 'testcommonswiki'
 		];
 	} else {
