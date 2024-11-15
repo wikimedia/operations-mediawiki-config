@@ -12130,6 +12130,7 @@ return [
 	'arwiki' => true, // T370066
 	'zhwiki' => true, // T373821
 	'eswiki' => true, // T376786
+	'ptwiki' => true, // T380090
 	'brwikimedia' => true, // T376747
 	'uawikimedia' => true, // T376695
 	'wikidatawiki' => true, // T375411
@@ -12154,6 +12155,7 @@ return [
 	// T372582
 	'igwiki' => true,
 	'swwiki' => true,
+	'ptwiki' => true,
 	'wikidatawiki' => true, // T375411
 ],
 

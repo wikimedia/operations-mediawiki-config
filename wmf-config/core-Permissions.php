@@ -2160,7 +2160,12 @@ return [
 			'block' => true, // T37261
 			'abusefilter-log-private' => true, // T237830
 		], // T29563
-		'user' => [ 'move-rootuserpages' => false, ],
+		'user' => [
+			'move-rootuserpages' => false,
+			'campaignevents-enable-registration' => false, // T380090
+			'campaignevents-organize-events' => false, // T380090
+			'campaignevents-email-participants' => false, // T380090
+		],
 		'sysop' => [
 			'editautoreviewprotected' => true,
 			'extendedconfirmed' => true, // T281926
@@ -2182,6 +2187,11 @@ return [
 		'autoextendedconfirmed' => [
 			'extendedconfirmed' => true, // T292915
 			'move' => true, // T313802
+		],
+		'event-organizer' => [ // T380090
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 	],
 	'+ptwikinews' => [
@@ -4365,6 +4375,7 @@ return [
 			'autoreviewer',
 			'interface-editor', // T41905
 			'flood', // T228521
+			'event-organizer', // T380090
 		],
 		'sysop' => [
 			'rollbacker',
@@ -4373,6 +4384,7 @@ return [
 			'accountcreator', // T65750
 			'flood', // T228521
 			'extendedconfirmed', // T281926
+			'event-organizer', // T380090
 		],
 	],
 	'+ptwikinews' => [
@@ -5673,8 +5685,8 @@ return [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood' ], // T41905, T65750, T107661, T212735, T228521
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed' ], // T65750, T228521, T281926
+		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood', 'event-organizer' ], // T41905, T65750, T107661, T212735, T228521, T380090
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed', 'event-organizer' ], // T65750, T228521, T281926, T380090
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
