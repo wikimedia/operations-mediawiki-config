@@ -517,7 +517,7 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 // this will be '/en.wikipedia.org'. Empty when the current request is not
 // for sso.wikimedia.org (which also allows it to be used later in this file
 // as a feature flag).
-$wmgSsoPathPrefix = '';
+$wmgSharedDomainPathPrefix = '';
 
 // This must match the condition at MWMultiVersion::initializeFromServerData()
 if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['sso'] ) {
@@ -534,7 +534,7 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['sso'] ) {
 	// on sso.wikimedia.org. We want ResourceLoader to use the standard URL
 	// regardless to avoid an unnecessary cache split.
 	$wgLoadScript = "{$wgCanonicalServer}{$wgScriptPath}/load.php";
-	$wmgSsoPathPrefix = '/' . parse_url( $wgCanonicalServer, PHP_URL_HOST );
+	$wmgSharedDomainPathPrefix = '/' . parse_url( $wgCanonicalServer, PHP_URL_HOST );
 
 	// Override $wgServer, $wgCanonicalServer, and (below) $wgArticlePath,
 	// $wgScriptPath and $wgResourceBasePath for sso.wikimedia.org which might
@@ -550,9 +550,9 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['sso'] ) {
 }
 
 $wgInternalServer = $wgCanonicalServer;
-$wgArticlePath = "{$wmgSsoPathPrefix}/wiki/\$1";
+$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
 
-$wgScriptPath  = "{$wmgSsoPathPrefix}/w";
+$wgScriptPath  = "{$wmgSharedDomainPathPrefix}/w";
 $wgScript = "{$wgScriptPath}/index.php";
 
 // Don't include a hostname in $wgResourceBasePath and friends
@@ -560,7 +560,7 @@ $wgScript = "{$wgScriptPath}/index.php";
 // - Improves performance by leveraging HTTP/2
 // - $wgLocalStylePath MUST be relative
 // Apache rewrites /w/resources, /w/extensions, and /w/skins to /w/static.php (T99096)
-$wgResourceBasePath = "{$wmgSsoPathPrefix}/w";
+$wgResourceBasePath = "{$wmgSharedDomainPathPrefix}/w";
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
@@ -1933,13 +1933,13 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
-	$wgCentralAuthSsoUrlPrefix = "https://{$wmgHostnames['sso']}/"
+	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['sso']}/"
 		. preg_replace( '!^(https?:)?//!', '', $wgServer );
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
 	// T363695: When using the shared sso.wikimedia.org domain, ignore normal cookie domain settings,
 	// use cookie names that are the same for every wiki, and don't try to do central login or autologin.
-	if ( $wmgSsoPathPrefix ) {
+	if ( $wmgSharedDomainPathPrefix ) {
 		$wgCentralAuthCookieDomain = '';
 		$wgCookiePrefix = 'sso';
 		$wgSessionName = 'ssoSession';

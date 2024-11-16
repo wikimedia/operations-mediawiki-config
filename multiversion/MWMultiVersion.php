@@ -213,9 +213,9 @@ class MWMultiVersion {
 	 * @param ?string $requestUri CGI path info, from `$_SERVER['REQUEST_URI']`.
 	 * @return MWMultiVersion
 	 */
-	public static function initializeForSsoDomain( $requestUri ) {
+	public static function initializeForSharedDomain( $requestUri ) {
 		$instance = self::createInstance();
-		$instance->setSiteInfoForSsoDomain( $requestUri );
+		$instance->setSiteInfoForSharedDomain( $requestUri );
 		return $instance;
 	}
 
@@ -297,8 +297,9 @@ class MWMultiVersion {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
 		} elseif ( $serverName === 'sso.wikimedia.org' || $serverName === 'sso.wikimedia.beta.wmflabs.org' ) {
-			// SSO URL hit. The condition here must match the one in CommonSettings.php where $wmgPathPrefix is set.
-			return self::initializeForSsoDomain( $requestUri );
+			// Shared auth domain URL hit.
+			// The condition here must match the one in CommonSettings.php where $wmgSharedDomainPathPrefix is set.
+			return self::initializeForSharedDomain( $requestUri );
 		} else {
 			// Regular URL hit (wiki of origin)...
 			return self::initializeForWiki( $serverName );
@@ -402,7 +403,7 @@ class MWMultiVersion {
 	 * @param ?string $requestUri
 	 * @return void
 	 */
-	private function setSiteInfoForSsoDomain( $requestUri ) {
+	private function setSiteInfoForSharedDomain( $requestUri ) {
 		$pathBits = explode( '/', $requestUri, 3 );
 		if ( count( $pathBits ) < 3 ) {
 			self::error( "Invalid request URI (requestUri=" . $requestUri . "), can't determine language.\n" );
