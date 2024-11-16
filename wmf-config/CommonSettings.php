@@ -128,7 +128,7 @@ $wmgHostnames = [];
 switch ( $wmgRealm ) {
 	case 'labs':
 		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
-		$wmgHostnames['sso']           = 'sso.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['auth']          = 'auth.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
@@ -137,7 +137,7 @@ switch ( $wmgRealm ) {
 	case 'production':
 	default:
 		$wmgHostnames['meta']          = 'meta.wikimedia.org';
-		$wmgHostnames['sso']           = 'sso.wikimedia.org';
+		$wmgHostnames['auth']          = 'auth.wikimedia.org';
 		$wmgHostnames['test']          = 'test.wikipedia.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.org';
 		$wmgHostnames['wikidata']      = 'www.wikidata.org';
@@ -295,7 +295,7 @@ $wgLocalVirtualHosts = [
 	'ru.wikimedia.org',
 	'se.wikimedia.org',
 	'species.wikimedia.org',
-	'sso.wikimedia.org',
+	'auth.wikimedia.org',
 	'test-commons.wikimedia.org',
 	'tr.wikimedia.org',
 	'ua.wikimedia.org',
@@ -511,40 +511,40 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 # ResourceLoader settings
 # ######################################################################
 
-// The extra path segment used on sso.wikimedia.org, which is a shared domain
+// The extra path segment used on auth.wikimedia.org, which is a shared domain
 // used by all SUL wikis. (T363695) E.g. when the current request is for
-// https://sso.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin,
+// https://auth.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin,
 // this will be '/en.wikipedia.org'. Empty when the current request is not
-// for sso.wikimedia.org (which also allows it to be used later in this file
+// for auth.wikimedia.org (which also allows it to be used later in this file
 // as a feature flag).
 $wmgSharedDomainPathPrefix = '';
 
 // This must match the condition at MWMultiVersion::initializeFromServerData()
-if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['sso'] ) {
+if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth'] ) {
 	// Fail hard if the current wiki is not a SUL wiki - it's not a security
 	// risk since their normal authentication is applied, but extra defense in
 	// depth never hurts.
 	// Further defense in depth will happen in the CentralAuth extension.
 	if ( !$wmgUseCentralAuth ) {
-		print "sso.wikimedia.org can only be used for SUL wikis\n";
+		print "auth.wikimedia.org can only be used for SUL wikis\n";
 		exit( 1 );
 	}
 
 	// Do this before updating $wgScriptPath and $wgCanonicalServer when we are
-	// on sso.wikimedia.org. We want ResourceLoader to use the standard URL
+	// on auth.wikimedia.org. We want ResourceLoader to use the standard URL
 	// regardless to avoid an unnecessary cache split.
 	$wgLoadScript = "{$wgCanonicalServer}{$wgScriptPath}/load.php";
 	$wmgSharedDomainPathPrefix = '/' . parse_url( $wgCanonicalServer, PHP_URL_HOST );
 
 	// Override $wgServer, $wgCanonicalServer, and (below) $wgArticlePath,
-	// $wgScriptPath and $wgResourceBasePath for sso.wikimedia.org which might
+	// $wgScriptPath and $wgResourceBasePath for auth.wikimedia.org which might
 	// be using the configuration of any SUL wiki.
 	//
 	// Note that we don't override $wgConf->settings[...][$wgDBname].
 	// If anything uses that, chances are it's for some sort of external link for
 	// which it's better to use the canonical domain name of the current wiki.
-	$wgServer = '//' . $wmgHostnames['sso'];
-	$wgCanonicalServer = 'https://' . $wmgHostnames['sso'];
+	$wgServer = '//' . $wmgHostnames['auth'];
+	$wgCanonicalServer = 'https://' . $wmgHostnames['auth'];
 } else {
 	$wgLoadScript = "{$wgScriptPath}/load.php";
 }
@@ -980,7 +980,7 @@ if ( $wmgUseCORS ) {
 		'spcom.wikimedia.org',
 		'species.wikimedia.org',
 		'species.m.wikimedia.org',
-		// sso.wikimedia.org omitted to keep its functionality minimal
+		// auth.wikimedia.org omitted to keep its functionality minimal
 		'steward.wikimedia.org',
 		'steward.m.wikimedia.org',
 		'strategy.wikimedia.org',
@@ -1933,11 +1933,11 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
-	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['sso']}/"
+	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['auth']}/"
 		. preg_replace( '!^(https?:)?//!', '', $wgServer );
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
-	// T363695: When using the shared sso.wikimedia.org domain, ignore normal cookie domain settings,
+	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,
 	// use cookie names that are the same for every wiki, and don't try to do central login or autologin.
 	if ( $wmgSharedDomainPathPrefix ) {
 		$wgCentralAuthCookieDomain = '';

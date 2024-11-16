@@ -37,8 +37,8 @@ function wmfMobileUrlCallback( string $domain ): string {
 		'wikidata.beta.wmflabs.org' => 'm.wikidata.beta.wmflabs.org',
 		'wikifunctions.beta.wmflabs.org' => 'm.wikifunctions.beta.wmflabs.org',
 		// Shared auth domain doesn't have a mobile version (T375272)
-		'sso.wikimedia.org' => false,
-		'sso.wikimedia.beta.wmflabs.org' => false,
+		'auth.wikimedia.org' => false,
+		'auth.wikimedia.beta.wmflabs.org' => false,
 	];
 	if ( isset( $specialCases[$domain] ) ) {
 		return $specialCases[$domain] ?: $domain;

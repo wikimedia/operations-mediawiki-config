@@ -205,10 +205,10 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Create an instance for sso.wikimedia.org requests.
+	 * Create an instance for auth.wikimedia.org requests.
 	 *
 	 * For example:
-	 * <https://sso.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin>
+	 * <https://auth.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin>
 	 *
 	 * @param ?string $requestUri CGI path info, from `$_SERVER['REQUEST_URI']`.
 	 * @return MWMultiVersion
@@ -296,7 +296,7 @@ class MWMultiVersion {
 		) {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
-		} elseif ( $serverName === 'sso.wikimedia.org' || $serverName === 'sso.wikimedia.beta.wmflabs.org' ) {
+		} elseif ( $serverName === 'auth.wikimedia.org' || $serverName === 'auth.wikimedia.beta.wmflabs.org' ) {
 			// Shared auth domain URL hit.
 			// The condition here must match the one in CommonSettings.php where $wmgSharedDomainPathPrefix is set.
 			return self::initializeForSharedDomain( $requestUri );
@@ -398,7 +398,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize object state from an sso.wikimedia.org request path.
+	 * Initialize object state from an auth.wikimedia.org request path.
 	 *
 	 * @param ?string $requestUri
 	 * @return void

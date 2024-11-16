@@ -98,7 +98,7 @@ if ( $wmgRealm == 'labs' ) {
 		'meta.wikimedia.beta.wmflabs.org',
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
-		'sso.wikimedia.beta.wmflabs.org',
+		'auth.wikimedia.beta.wmflabs.org',
 		'wikifunctions.beta.wmflabs.org',
 
 		// new wmcloud instances
