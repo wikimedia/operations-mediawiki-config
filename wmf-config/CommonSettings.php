@@ -513,8 +513,8 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 
 // The extra path segment used on auth.wikimedia.org, which is a shared domain
 // used by all SUL wikis. (T363695) E.g. when the current request is for
-// https://auth.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin,
-// this will be '/en.wikipedia.org'. Empty when the current request is not
+// https://auth.wikimedia.org/enwiki/wiki/Special:Userlogin,
+// this will be '/enwiki'. Empty when the current request is not
 // for auth.wikimedia.org (which also allows it to be used later in this file
 // as a feature flag).
 $wmgSharedDomainPathPrefix = '';
@@ -534,7 +534,7 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth'] ) {
 	// on auth.wikimedia.org. We want ResourceLoader to use the standard URL
 	// regardless to avoid an unnecessary cache split.
 	$wgLoadScript = "{$wgCanonicalServer}{$wgScriptPath}/load.php";
-	$wmgSharedDomainPathPrefix = '/' . parse_url( $wgCanonicalServer, PHP_URL_HOST );
+	$wmgSharedDomainPathPrefix = "/$wgDBname";
 
 	// Override $wgServer, $wgCanonicalServer, and (below) $wgArticlePath,
 	// $wgScriptPath and $wgResourceBasePath for auth.wikimedia.org which might
@@ -1933,8 +1933,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
-	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['auth']}/"
-		. preg_replace( '!^(https?:)?//!', '', $wgServer );
+	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['auth']}/$wgDBname";
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
 	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,

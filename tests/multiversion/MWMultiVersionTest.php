@@ -186,10 +186,10 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/', '/', false ],
 
-			[ 'auth.wikimedia.org', '/w/index.php', '', '/en.wikipedia.org/wiki/Special:Userlogin', 'enwiki' ],
-			[ 'auth.wikimedia.org', '/w/index.php', '', '/de.wiktionary.org/wiki/Special:Userlogin', 'dewiktionary' ],
-			[ 'auth.wikimedia.beta.wmflabs.org', '/w/index.php', '',
-				'/en.wikipedia.beta.wmflabs.org/wiki/Special:Userlogin', 'enwiki' ],
+			[ 'auth.wikimedia.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
+			[ 'auth.wikimedia.org', '/w/index.php', '', '/dewiktionary/wiki/Special:Userlogin', 'dewiktionary' ],
+			[ 'auth.wikimedia.org', '/w/index.php', '', '/blah.blah/wiki/Special:Userlogin', 'blah.blah' ],
+			[ 'auth.wikimedia.beta.wmflabs.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/', false ],
 		];
 	}

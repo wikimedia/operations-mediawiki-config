@@ -174,7 +174,7 @@ class MWMultiVersion {
 	 * Create an instance by HTTP host name.
 	 *
 	 * Use this for all web requests, except those rewritten from
-	 * upload.wikimedia.org to /w/thumb.php.
+	 * upload.wikimedia.org to /w/thumb.php, or the shared auth domain.
 	 *
 	 * @param string $serverName HTTP host name from `$_SERVER['SERVER_NAME']`.
 	 * @return MWMultiVersion
@@ -208,7 +208,7 @@ class MWMultiVersion {
 	 * Create an instance for auth.wikimedia.org requests.
 	 *
 	 * For example:
-	 * <https://auth.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin>
+	 * <https://auth.wikimedia.org/enwiki/wiki/Special:Userlogin>
 	 *
 	 * @param ?string $requestUri CGI path info, from `$_SERVER['REQUEST_URI']`.
 	 * @return MWMultiVersion
@@ -408,8 +408,10 @@ class MWMultiVersion {
 		if ( count( $pathBits ) < 3 ) {
 			self::error( "Invalid request URI (requestUri=" . $requestUri . "), can't determine language.\n" );
 		}
-		[ , $serverName, ] = $pathBits;
-		$this->setSiteInfoForWiki( $serverName );
+		[ , $dbname, ] = $pathBits;
+		// No validation of $dbname at this point - if it's invalid, an error will be produced
+		// by getMediaWiki() when it checks isMissing().
+		$this->db = $dbname;
 	}
 
 	/**
