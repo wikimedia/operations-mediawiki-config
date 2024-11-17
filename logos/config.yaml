@@ -2772,6 +2772,11 @@ Wikiquote:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    bjnwikiquote:
+        commons: 'File:Wikiquote-logo-bjn.svg'
+        comment: 'T375054'
+        comment_1_5x: 'T375054'
+        comment_2x: 'T375054'
     bnwikiquote:
         commons: 'File:Wikiquote-logo-bn.svg'
         comment: 'T319183, T323131'
