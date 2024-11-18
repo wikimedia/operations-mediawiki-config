@@ -1940,8 +1940,8 @@ if ( $wmgUseCentralAuth ) {
 	// use cookie names that are the same for every wiki, and don't try to do central login or autologin.
 	if ( $wmgSharedDomainPathPrefix ) {
 		$wgCentralAuthCookieDomain = '';
-		$wgCookiePrefix = 'sso';
-		$wgSessionName = 'ssoSession';
+		$wgCookiePrefix = 'auth';
+		$wgSessionName = 'authSession';
 		$wgCentralAuthLoginWiki = null;
 		$wgCentralAuthAutoLoginWikis = [];
 	}
