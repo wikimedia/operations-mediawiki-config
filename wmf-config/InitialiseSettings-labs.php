@@ -2247,6 +2247,7 @@ function wmfGetOverrideSettings() {
 		'wmgEnableIPMasking' => [
 			'default' => true, // T377262
 			'en-rtl' => false,
+			'metawiki' => true, // T379108
 		],
 
 		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
@@ -2255,6 +2256,7 @@ function wmfGetOverrideSettings() {
 		// until temporary accounts are enabled again.
 		'wmgDisableIPMasking' => [
 			'default' => false,
+			'metawiki' => false, // T379108
 		],
 
 		// T342858
