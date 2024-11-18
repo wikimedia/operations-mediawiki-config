@@ -2346,6 +2346,9 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 			'fishbowl' => false,
 		],
+		'wgParsoidFragmentSupport' => [
+			'default' => true,
+		],
 		// T378206
 		'wgChartProgressiveEnhancement' => [
 			'default' => true,

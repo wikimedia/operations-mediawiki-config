@@ -5866,6 +5866,13 @@ return [
 	'private' => true,
 ],
 
+'wgParsoidFragmentSupport' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testcommonswiki' => true,
+],
+
 'wgParsoidSelectiveUpdateSampleRate' => [
 	'default' => 1000, // T371713: sample 1 in 1000 parses
 ],
