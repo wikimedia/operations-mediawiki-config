@@ -4350,6 +4350,16 @@ if ( $wmgUseGrowthExperiments ) {
 				[ 'user-bucket-growth', 'growth-community-updates', 100 ]
 			],
 		];
+	} elseif ( $wmgGEActiveExperiment === 'no-link-recommendation' ) {
+		// Add Link experiment, T377631
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'control',
+				[ 'user-bucket-growth', 'no-link-recommendation', 50 ],
+			],
+			[ 'no-link-recommendation',
+				[ 'user-bucket-growth', 'no-link-recommendation', 100 ],
+			],
+		];
 	}
 }
 
