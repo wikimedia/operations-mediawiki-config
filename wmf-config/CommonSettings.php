@@ -549,6 +549,61 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth'] ) {
 	$wgLoadScript = "{$wgScriptPath}/load.php";
 }
 
+// Override some settings while we are on the shared authentication domain
+// (see T373737), as a security hardening measure. Note that these overrides
+// might or might not get applied to the same wiki depending on what domain
+// is used to access it, and so must not include anything that requires
+// consistency between requests (e.g. due to caching).
+if ( $wmgSharedDomainPathPrefix ) {
+	$wmgUseCentralNotice = false;
+	$wmgUseCategoryTree = false;
+	$wmgUseScore = false;
+	$wmgUseScoreShellbox = false;
+	$wmgUsePhonos = false;
+	$wmgUseSpecialNuke = false;
+	$wmgUseLabeledSectionTransclusion = false;
+	$wmgUseGadgets = false;
+	$wmgUsePdfHandler = false;
+	$wmgUseMassMessage = false;
+	$wmgUseTimedMediaHandler = false;
+	$wmgUseUrlShortener = false;
+	$wmgUseBetaFeatures = false;
+	$wmgUseFileExporter = false;
+	$wmgUseCommonsMetadata = false;
+	$wmgUseMultimediaViewer = false;
+	$wmgUseLinter = false;
+	$wmgUseParsoid = false;
+	$wmgUseVisualEditor = false;
+	$wmgUseMath = false;
+	$wmgUseBabel = false;
+	$wmgUseVips = false;
+	$wmgUseFeaturedFeeds = false;
+	$wmgUseGuidedTour = false;
+	$wmgUseThanks = false;
+	$wmgUseDisambiguator = false;
+	$wmgUseDiscussionTools = false;
+	$wmgUseRealMe = false;
+	$wmgUseUniversalLanguageSelector = false;
+	$wmgUseTemplateSandbox = false;
+	$wmgUsePageImages = false;
+	$wmgUseCite = false;
+	$wmgUseCiteThisPage = false;
+	$wmgUsePoem = false;
+	$wmgUseInputBox = false;
+	$wmgUseImageMap = false;
+	$wmgUseSyntaxHighlight = false;
+	$wmgUseTimeline = false;
+	$wmgUseWikiHiero = false;
+	$wmgUsePagedTiffHandler = false;
+	$wmgUseTemplateData = false;
+	$wmgUseNearbyPages = false;
+
+	$wgAllowUserJs = false;
+	$wgAllowUserCss = false;
+	$wgUseSiteJs = false;
+	$wgUseSiteCss = false;
+}
+
 $wgInternalServer = $wgCanonicalServer;
 $wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
 
