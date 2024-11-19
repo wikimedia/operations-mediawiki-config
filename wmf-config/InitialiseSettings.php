@@ -6825,8 +6825,8 @@ return [
 ],
 
 'wgParserCacheNewKeySchemaRatio' => [
-	'default' => 100,
-	'testwiki' => 2,
+	'default' => 12,
+	'testwiki' => 1,
 ],
 
 'wgLanguageConverterCacheType' => [
