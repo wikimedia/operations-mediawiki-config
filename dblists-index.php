@@ -659,7 +659,7 @@ return [
 'noboard_chapterswikimedia' => [ 'private', 'small', 'visualeditor-nondefault', 'group1' ],
 'nostalgiawiki' => [ 'special', 'fishbowl', 'medium', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'novwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
-'nowiki' => [ 'wikipedia', 'flow', 'skin-themes', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
+'nowiki' => [ 'wikipedia', 'flow', 'skin-themes', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments' ],
 'nowikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'nowikimedia' => [ 'small', 'visualeditor-nondefault', 'group1', 'translate' ],
 'nowikinews' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
