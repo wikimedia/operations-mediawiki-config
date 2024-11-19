@@ -785,6 +785,8 @@ return [
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T283523
+		'abusefilter-helper' => [ 'abusefilter-access-protected-vars' => true ], // T380332
+		'abusefilter' => [ 'abusefilter-access-protected-vars' => true ], // T380332
 	],
 	'+enwikibooks' => [
 		'autoreview' => [ 'autopatrol' => true ], // T278300
