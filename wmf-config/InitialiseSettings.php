@@ -7458,6 +7458,7 @@ return [
 
 'wgTranslateEnableMessageGroupSubscription' => [
 	'default' => false,
+	'mediawikiwiki' => true,
 	'testwiki' => true,
 ],
 
