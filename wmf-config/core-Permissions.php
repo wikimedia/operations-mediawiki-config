@@ -2007,7 +2007,7 @@ return [
 			'rollback' => true,
 		],
 	],
-	'nowiki' => [
+	'+nowiki' => [
 		'patroller' => [
 			'patrol' => true,
 			'autopatrol' => true,
