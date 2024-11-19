@@ -59,13 +59,13 @@ $wgContactConfig['affcomusergroup'] = [
 		],
 		'GroupIntent' => [
 			'label-message' => 'contactpage-affcom-user-group-intent-letter-label',
-			'contactpage-email-label' => 'Logo',
+			'contactpage-email-label' => 'Letter of intent',
 			'type' => 'text',
 			'required' => true,
 		],
 		'GroupLogo' => [
 			'label-message' => 'contactpage-affcom-user-group-logo-label',
-			'contactpage-email-label' => 'Logo',
+			'contactpage-email-label' => 'Logo link',
 			'type' => 'text',
 			'required' => true,
 		],
