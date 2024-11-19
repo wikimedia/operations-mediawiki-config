@@ -527,6 +527,7 @@ if ( $wmgRealm == 'labs' ) {
 			'license' => 'CC0-1.0',
 			// allows the cache keys to be shared between wikis
 			'isLocal' => false,
+			'cacheKey' => 'commonswiki',
 		];
 
 		if ( $wgDBname === 'commonswiki' ) {

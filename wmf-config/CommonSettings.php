@@ -3607,12 +3607,14 @@ if ( $wmgUseJsonConfig ) {
 	wfLoadExtension( 'JsonConfig' );
 
 	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
+		$jsonWiki = 'testcommonswiki';
 		// T379199 - temporary deployment of tracking tables on testcommonswiki
 		$wgTrackGlobalJsonLinks = true;
 		$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
 			'db' => 'testcommonswiki'
 		];
 	} else {
+		$jsonWiki = 'commonswiki';
 		// @todo finish production deployment for T379067
 		$wgTrackGlobalJsonLinks = false;
 	}
@@ -3624,8 +3626,11 @@ if ( $wmgUseJsonConfig ) {
 			'nsName' => 'Data',
 			'isLocal' => true,
 			'pattern' => '/^Json:./',
+			'cacheKey' => $jsonWiki,
 		];
 	}
+
+	unset( $jsonWiki );
 }
 
 if ( $wmgEnableJsonConfigDataMode ) {
@@ -3637,6 +3642,12 @@ if ( $wmgEnableJsonConfigDataMode ) {
 
 	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
 
+	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
+		$jsonWiki = 'testcommonswiki';
+	} else {
+		$jsonWiki = 'commonswiki';
+	}
+
 	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
 	$wgJsonConfigs['Tabular.JsonConfig'] = [
 		'namespace' => 486,
@@ -3645,6 +3656,7 @@ if ( $wmgEnableJsonConfigDataMode ) {
 		'pattern' => '/.\.tab$/',
 		'license' => 'CC0-1.0',
 		'isLocal' => false,
+		'cacheKey' => $jsonWiki,
 	];
 
 	$wgJsonConfigModels['Map.JsonConfig'] = 'JsonConfig\JCMapDataContent';
@@ -3655,6 +3667,7 @@ if ( $wmgEnableJsonConfigDataMode ) {
 		'pattern' => '/.\.map$/',
 		'license' => 'CC0-1.0',
 		'isLocal' => false,
+		'cacheKey' => $jsonWiki,
 	];
 
 	// Enable Tabular data namespace on Commons - T148745
@@ -3688,6 +3701,8 @@ if ( $wmgEnableJsonConfigDataMode ) {
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
 	}
+
+	unset( $jsonWiki );
 }
 
 // Enable Config:Dashiki: sub-namespace on meta.wikimedia.org - T156971
@@ -3699,6 +3714,13 @@ if ( $wmgEnableDashikiData && $wmgUseJsonConfig ) {
 // T369945
 // Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 if ( $wmgUseChart ) {
+
+	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
+		$jsonWiki = 'testcommonswiki';
+	} else {
+		$jsonWiki = 'commonswiki';
+	}
+
 	wfLoadExtension( 'Chart' );
 	// set in ProductionServices.php
 	$wgChartServiceUrl = $wmgLocalServices['chart-renderer'] . '/v1/chart/render';
@@ -3714,6 +3736,7 @@ if ( $wmgUseChart ) {
 			'license' => 'CC0-1.0',
 			// allows the cache keys to be shared between wikis
 			'isLocal' => false,
+			'cacheKey' => $jsonWiki,
 		];
 	}
 
@@ -3724,6 +3747,8 @@ if ( $wmgUseChart ) {
 			'url' => 'https://test-commons.wikimedia.org/w/api.php'
 		];
 	}
+
+	unset( $jsonWiki );
 
 	// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
 }
