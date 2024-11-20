@@ -5,7 +5,7 @@
 return [
 	// T292552: Permanent override for Eszett, which is often used as a page title
 	// to describe the character (also used as a stylized B in usernames).
-  // Do not remove when cleaning up after the PHP 8.1 migration.
+	// Do not remove when cleaning up after the PHP 8.1 migration.
 	'ß' => 'ß',
 	// T372603: Overrides to maintain title-case consistency between PHP 7.4
 	// and 8.1, where mbstring supports Unicode 11.0 and 14.0, respectively.
