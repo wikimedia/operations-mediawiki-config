@@ -3615,8 +3615,12 @@ if ( $wmgUseJsonConfig ) {
 		];
 	} else {
 		$jsonWiki = 'commonswiki';
-		// @todo finish production deployment for T379067
-		$wgTrackGlobalJsonLinks = false;
+		// T379689 - deployment to Commons for pages + x1 for globaljsonlinks
+		$wgTrackGlobalJsonLinks = true;
+		$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
+			'cluster' => 'extension1',
+			'db' => 'commonswiki'
+		];
 	}
 
 	if ( $wmgUseGraphWithJsonNamespace ) {
@@ -3712,7 +3716,6 @@ if ( $wmgEnableDashikiData && $wmgUseJsonConfig ) {
 }
 
 // T369945
-// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 if ( $wmgUseChart ) {
 
 	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
@@ -3740,11 +3743,15 @@ if ( $wmgUseChart ) {
 		];
 	}
 
-	if ( $wgDBname === 'testcommonswiki' ) {
+	if ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
 		$wgJsonConfigs['Chart.JsonConfig']['store'] = true;
 	} elseif ( $wgDBname === 'testwiki' ) {
 		$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
 			'url' => 'https://test-commons.wikimedia.org/w/api.php'
+		];
+	} else {
+		$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
 	}
 

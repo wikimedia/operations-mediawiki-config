@@ -12353,11 +12353,12 @@ return [
 ],
 
 // T378127
-// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 'wmgUseChart' => [
 	'default' => false,
 	'testcommonswiki' => true,
 	'testwiki' => true,
+	'commonswiki' => true,
+	'test2wiki' => true,
 ],
 
 'wgChartProgressiveEnhancement' => [

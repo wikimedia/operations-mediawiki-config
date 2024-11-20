@@ -2339,7 +2339,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T369945
-		// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 		'wmgUseChart' => [
 			'default' => true,
 			'loginwiki' => false,
