@@ -1872,6 +1872,25 @@ return [
 				'rate' => 1,
 			],
 		],
+		// Instrument for the Incident Reporting System (T372823)
+		'mediawiki.product_metrics.incident_reporting_system_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'page_id',
+						'page_title',
+						'page_namespace_id',
+						'performer_language',
+						'performer_language_variant',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_name',
+					],
+				],
+			],
+		],
 		// (T350497) Update the WikiLambda instrumentation (Wikifunctions) to use core interaction events
 		'mediawiki.product_metrics.wikifunctions_ui' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
