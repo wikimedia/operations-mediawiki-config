@@ -12362,9 +12362,7 @@ return [
 ],
 
 'wgChartProgressiveEnhancement' => [
-	'default' => false,
-	'testcommonswiki' => true,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 // T372527
