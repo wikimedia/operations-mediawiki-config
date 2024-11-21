@@ -2052,42 +2052,6 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthAutoLoginWikis = [];
 	}
 
-	// Temporary fix for T350695: when setting a CentralAuth cookie without a 'domain' cookie attribute,
-	// clear pre-existing cookies with a domain attribute.
-	// Temporary fix for T351685: when setting a CentralAuth cookie with domain=wikisource.org,
-	// clear pre-existing cookies without a domain attribute
-	// Can be removed after 2024-11-08.
-	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
-		global $wgDBname, $wmgCentralAuthWebResponseSetCookieRecurse, $wgServer;
-		$realName = ( $options['prefix'] ?? '' ) . $name;
-		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token', 'centralauth_LoggedOut' ];
-		$shouldNotHaveCookieWithDomain = in_array( $wgDBname, [ 'commonswiki', 'metawiki' ] );
-		$shouldNotHaveCookieWithoutDomain = $wgDBname === 'sourceswiki';
-		$isSettingDomain = (bool)( $options['domain'] ?? '' );
-		if ( in_array( $realName, $centralAuthCookies )
-			&& ( $isSettingDomain ? $shouldNotHaveCookieWithoutDomain : $shouldNotHaveCookieWithDomain )
-			&& !$wmgCentralAuthWebResponseSetCookieRecurse
-		) {
-			$webResponse = RequestContext::getMain()->getRequest()->response();
-
-			$clearOptions = $options;
-			if ( $isSettingDomain ) {
-				$clearOptions['domain'] = '';
-			} else {
-				$serverUrl = wfExpandUrl( $wgServer, PROTO_CANONICAL );
-				if ( MobileContext::singleton()->usingMobileDomain() ) {
-					$serverUrl = MobileContext::singleton()->getMobileUrl( $serverUrl );
-				}
-				$parsedUrl = wfParseUrl( $serverUrl );
-				$clearOptions['domain'] = $parsedUrl['host'];
-			}
-
-			$wmgCentralAuthWebResponseSetCookieRecurse = true;
-			$webResponse->clearCookie( $name, $clearOptions );
-			$wmgCentralAuthWebResponseSetCookieRecurse = false;
-		}
-	};
-
 	/**
 	 * This function is used for both the CentralAuthWikiList and
 	 * GlobalUserPageWikis hooks.
