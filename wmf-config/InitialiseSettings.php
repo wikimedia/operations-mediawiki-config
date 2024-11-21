@@ -2265,6 +2265,7 @@ return [
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
 		'slow-parsoid' => 'info',
+		'SkinCodex' => 'info',
 		'SpamBlacklistHit' => 'debug',
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
