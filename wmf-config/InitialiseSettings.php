@@ -11241,6 +11241,25 @@ return [
 				],
 			],
 		],
+		// T378660
+		[
+			'name' => 'reader-demographics-2024-en',
+			'type' => 'external',
+			'enabled' => true,
+			'question' => 'reader-demographics-2-survey-question',
+			'description' => 'reader-demographics-2-survey-description',
+			'coverage' => 0,
+			'audience' => [
+				'anons' => true
+			],
+			'instanceTokenParameterName' => 'QS',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'link' => 'reader-demographics-2-survey-link',
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+		],
 	],
 	'eswiki' => [
 		[
