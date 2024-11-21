@@ -6833,7 +6833,7 @@ return [
 ],
 
 'wgParserCacheNewKeySchemaRatio' => [
-	'default' => 12,
+	'default' => 6,
 	'testwiki' => 1,
 ],
 
