@@ -1234,6 +1234,41 @@ if ( isset( $wmgSiteLogo1x ) ) {
 $wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
 
 # ######################################################################
+# Installer
+# ######################################################################
+
+$wgInstallerInitialPages = [ [
+	'titlemsg' => 'mainpage',
+	'text' => <<<EOT
+<div dir="ltr" lang="en" class="mw-content-ltr">
+==This subdomain is reserved for the creation of a [[wikimedia:Our projects|{{InstallerOption: SiteGroupInEnglish}}]] in '''[[w:en:{{InstallerOption: LanguageNameInEnglish}}|{{InstallerOption: LanguageNameInEnglish}}]]''' language==
+
+* Please '''do not start editing''' this new site. This site has a test project on the [[incubator:|Wikimedia Incubator]] (or on the [[betawikiversity:|Beta Wikiversity]] or on the [[oldwikisource:|Old Wikisource]]) and it will be imported to here.
+* If you would like to help translating the interface to this language, please do not translate here, but go to [[translatewiki:|translatewiki.net]], a special wiki for translating the interface. That way everyone can use it on every wiki using the [[mw:|same software]].
+* For information about how to edit and for other general help, see [[m:Help:Contents|Help on Wikimedia's Meta-Wiki]] or [[mw:Help:Contents|Help on MediaWiki.org]].
+
+== Sister projects ==
+<span class="plainlinks">
+[//www.wikipedia.org Wikipedia] |
+[//www.wiktionary.org Wiktionary] |
+[//www.wikibooks.org Wikibooks] |
+[//www.wikinews.org Wikinews] |
+[//www.wikiquote.org Wikiquote] |
+[//www.wikisource.org Wikisource] |
+[//www.wikiversity.org Wikiversity] |
+[//www.wikivoyage.org Wikivoyage] |
+[//species.wikimedia.org Wikispecies] |
+[//www.wikidata.org Wikidata] |
+[//www.wikifunctions.org Wikifunctions] |
+[//commons.wikimedia.org Commons]
+</span>
+
+See Wikimedia's [[m:|Meta-Wiki]] for the coordination of these projects.
+</div>
+EOT
+] ];
+
+# ######################################################################
 # Extensions
 # ######################################################################
 // Yeah the next 3000 or so lines is for extension configuration except for the
