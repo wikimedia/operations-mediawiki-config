@@ -555,6 +555,7 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth'] ) {
 // is used to access it, and so must not include anything that requires
 // consistency between requests (e.g. due to caching).
 if ( $wmgSharedDomainPathPrefix ) {
+	// Disable extensions not related to authentication.
 	$wmgUseCentralNotice = false;
 	$wmgUseCategoryTree = false;
 	$wmgUseScore = false;
@@ -597,7 +598,13 @@ if ( $wmgSharedDomainPathPrefix ) {
 	$wmgUsePagedTiffHandler = false;
 	$wmgUseTemplateData = false;
 	$wmgUseNearbyPages = false;
+	$wmgUseContentTranslation = false;
+	$wmgUseExternalGuidance = false;
+	$wmgUseGrowthExperiments = false;
+	$wmgUseAutoModerator = false;
 
+	// Disable on-wiki JS/CSS. This is mostly ineffective since these are mainly used by ResourceLoader, and load.php
+	// is invoked via the canonical domain. (We rely on OutputPage::disallowUserJs() instead.) Still, can't hurt.
 	$wgAllowUserJs = false;
 	$wgAllowUserCss = false;
 	$wgUseSiteJs = false;
