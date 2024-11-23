@@ -4449,9 +4449,8 @@ if ( $wmgUseGrowthExperiments ) {
 		// Add Link experiment, T377631
 		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
 			[ 'control',
-				[ 'user-bucket-growth', 'no-link-recommendation', 50 ],
-				// TODO: Bump to deployment date before releasing T377631
-				[ CUDCOND_AFTER, '20241118000000' ],
+				[ 'user-bucket-growth', 'no-link-recommendation', 2 ],
+				[ CUDCOND_AFTER, '20241125000000' ],
 			],
 			[ 'no-link-recommendation',
 				[ 'user-bucket-growth', 'no-link-recommendation', 100 ],
