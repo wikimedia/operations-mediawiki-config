@@ -520,7 +520,9 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 $wmgSharedDomainPathPrefix = '';
 
 // This must match the condition at MWMultiVersion::initializeFromServerData()
-if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth'] ) {
+if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth']
+	|| getenv( 'MW_USE_SHARED_DOMAIN' )
+) {
 	// Fail hard if the current wiki is not a SUL wiki - it's not a security
 	// risk since their normal authentication is applied, but extra defense in
 	// depth never hurts.
