@@ -11246,7 +11246,7 @@ return [
 			'name' => 'reader-demographics-2024-en',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0,
+			'coverage' => 0.005,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
