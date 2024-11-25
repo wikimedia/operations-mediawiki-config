@@ -22,10 +22,6 @@ return [
 	'cswiki' => 'growth-community-updates',
 ],
 
-'wgGEDatabaseCluster' => [
-	'default' => 'extension1',
-],
-
 'wgGEImageRecommendationApiHandler' => [
 	'default' => 'production',
 ],

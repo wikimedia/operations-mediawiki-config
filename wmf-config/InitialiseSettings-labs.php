@@ -1275,9 +1275,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'actionapi',
 		],
 		// $wgGEImageRecommendationServiceAccessToken is in private/PrivateSettings.php
-		'-wgGEDatabaseCluster' => [
-			'default' => false,
-		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
 		],
