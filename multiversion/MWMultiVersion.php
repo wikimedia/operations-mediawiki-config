@@ -37,6 +37,7 @@ class MWMultiVersion {
 	public const DB_LISTS = [
 		// Expand computed dblists with `./multiversion/bin/expanddblist`.
 		// When updating this list, run `composer manage-dblist update` afterwards.
+		'preinstall',
 		'wikipedia',
 		'special',
 		'private',
@@ -620,6 +621,18 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Whether the mapped wiki ID is marked as not fully installed. An error
+	 * should be shown to web clients, but maintenance scripts should be
+	 * allowed, since maintenance scripts are used to do the installation.
+	 *
+	 * @return bool
+	 */
+	public function isPreInstall() {
+		global $wmgRealm;
+		return in_array( 'preinstall', self::getTagsForWiki( $this->db, $wmgRealm ) );
+	}
+
+	/**
 	 * Get the version directory name for the current wiki ID.
 	 *
 	 * @return string Version directory name, e.g. "php-X.XX" or "php-master".
@@ -720,7 +733,7 @@ class MWMultiVersion {
 		}
 
 		// Wiki doesn't exist, yet?
-		if ( $multiVersion->isMissing() ) {
+		if ( $multiVersion->isMissing() || $multiVersion->isPreInstall() ) {
 			// same hack as CommonSettings.php
 			header( 'Cache-control: no-cache' );
 			include __DIR__ . '/missing.php';
