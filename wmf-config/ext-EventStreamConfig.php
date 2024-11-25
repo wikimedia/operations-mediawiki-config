@@ -1894,6 +1894,39 @@ return [
 				],
 			],
 		],
+		// Instrument for Special:Translate (T364460)
+		'mediawiki.product_metrics.translate_extension' => [
+			'schema_title' => 'analytics/product_metrics/web/translation',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_site_content_language',
+						'mediawiki_site_content_language_variant',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_name',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_registration_dt',
+						'performer_is_temp',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 		// (T350497) Update the WikiLambda instrumentation (Wikifunctions) to use core interaction events
 		'mediawiki.product_metrics.wikifunctions_ui' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
