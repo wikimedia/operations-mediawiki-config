@@ -15,10 +15,6 @@
 // It appears unused since MediaWiki 1.5.
 $wgDBsqlpassword = null;
 
-// FIXME: Is this still needed?
-// It appears unused since MediaWiki 1.24.
-$wgProxyKey = null;
-
 /**
  *
  * Usage (incomplete):
@@ -43,6 +39,12 @@ $wgProxyKey = null;
  * @see https://doc.wikimedia.org/mediawiki-core/master/php/DefaultSettings_8php.html#a38155f5bd16275bf8cd15745b899b19d
  */
 $wgSecretKey = null;
+
+$wgChronologyProtectorSecret = null;
+
+// FIXME: Is this still needed?
+// It appears unused since MediaWiki 1.24.
+$wgProxyKey = null;
 
 /**
  * MySQL database credentials for the current process,
@@ -170,6 +172,11 @@ $wmgSessionStoreHMACKey = null;
 $wmgXhguiDBuser = null;
 $wmgXhguiDBpassword = null;
 
+// RSA keys so the OAuth 2.0 library can create self-encoded access tokens. Which we don't actually need,
+// but the library chosen doesn't make it configurable.
+$wgOAuth2PrivateKey = null;
+$wgOAuth2PublicKey = null;
+
 /**
  * MediaModeration extension private API configuration details
  *
@@ -189,13 +196,9 @@ $wgWMEVectorPrefDiffSalt = null;
  */
 $wgShellboxSecretKey = null;
 
-/**
- * API key for Phonos' Google Cloud Speech API
- *
- * @see mediawiki/extensions/Phonos
- * @see https://phabricator.wikimedia.org/T315491
- */
-$wgPhonosApiKeyGoogle = null;
+// SimilarEditors plugin / similar-users service T308670
+$wgSimilarEditorsApiUser = null;
+$wgSimilarEditorsApiPassword = null;
 
 /**
  * API key for the [[m:Programs & Events Dashboard]].
@@ -205,9 +208,24 @@ $wgPhonosApiKeyGoogle = null;
 $wgCampaignEventsProgramsAndEventsDashboardAPISecret = null;
 
 /**
+ * API key for Phonos' Google Cloud Speech API
+ *
+ * @see mediawiki/extensions/Phonos
+ * @see https://phabricator.wikimedia.org/T315491
+ */
+$wgPhonosApiKeyGoogle = null;
+
+/**
  * Fluxx client ID and secret
  *
  * @see mediawiki/extensions/WikimediaCampaignEvents
  */
 $wgWikimediaCampaignEventsFluxxClientID = null;
 $wgWikimediaCampaignEventsFluxxClientSecret = null;
+
+/**
+ * Configuration for internal accounts used by APIs.
+ *
+ * @see https://phabricator.wikimedia.org/T341332
+ */
+$wgNetworkSessionProviderUsers = [];
