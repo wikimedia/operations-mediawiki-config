@@ -11246,24 +11246,26 @@ return [
 			'name' => 'reader-demographics-2024-en',
 			'type' => 'external',
 			'enabled' => true,
-			'questions' => [
-						[
-							'name' => 'question-1',
-							'question' => 'reader-demographics-2-survey-question',
-							'description' => 'reader-demographics-2-survey-description',
-							'link' => 'reader-demographics-2-survey-link',
-							'instanceTokenParameterName' => 'QS',
-						],
-					],
 			'coverage' => 0,
-			'audience' => [
-				'anons' => true
-			],
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
 			],
 			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes',
+					'noMsg' => 'ext-quicksurveys-external-survey-no',
+				],
+			],
 		],
 	],
 	'eswiki' => [
