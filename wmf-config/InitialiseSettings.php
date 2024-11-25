@@ -11246,7 +11246,7 @@ return [
 			'name' => 'reader-demographics-2024-en',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.005,
+			'coverage' => 0.05,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11262,8 +11262,8 @@ return [
 					'description' => 'reader-demographics-2-survey-description',
 					'link' => 'reader-demographics-2-survey-link',
 					'instanceTokenParameterName' => 'QS',
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes',
-					'noMsg' => 'ext-quicksurveys-external-survey-no',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 				],
 			],
 		],
