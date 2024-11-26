@@ -4040,10 +4040,10 @@ return [
 		'width' => 117,
 		'height' => 40,
 	],
-	'azwikiquote' => [
+	'azwikiquote' => [ // T380974
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-az.svg',
-		'width' => 146,
-		'height' => 44,
+		'width' => 78,
+		'height' => 40,
 	],
 	'bclwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bcl.svg',

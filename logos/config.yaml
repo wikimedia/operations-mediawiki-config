@@ -2759,7 +2759,8 @@ Wikiquote:
     azwikiquote:
         no_1_5x: true
         no_2x: true
-        local_wordmark: true
+        commons_wordmark: File:Wikiquote-wordmark-az.svg
+        comment_wordmark: T380974
     bclwikiquote:
         commons: 'File:Wikisambit-logo-01.svg'
         local_wordmark: true
