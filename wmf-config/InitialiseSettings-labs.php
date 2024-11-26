@@ -2366,12 +2366,6 @@ function wmfGetOverrideSettings() {
 		'wgChartProgressiveEnhancement' => [
 			'default' => true,
 		],
-
-		// T66315 - Maintain feature flag 1 month as security in case of error after rollout
-		'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
-			'default' => true,
-		],
-
 		// T372527
 		'-wmgUseCommunityRequests' => [
 			'default' => false,

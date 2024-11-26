@@ -324,7 +324,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['forceLocalShortDesc'] = $wmgWikibaseForceLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
-	$wgWBClientSettings['moveConnectedItemLinkToOtherProjects'] = $wmgWikibaseMoveConnectedItemLinkToOtherProjects;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 	$wgWBClientSettings['injectRecentChanges'] = $wmgWikibaseClientInjectRecentChanges;
 
