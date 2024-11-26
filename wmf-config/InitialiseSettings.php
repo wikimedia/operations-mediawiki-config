@@ -12366,6 +12366,11 @@ return [
 	'default' => [ 'showcaptcha' ],
 ],
 
+// T363587
+'wgEnableEventBusInstrumentation' => [
+	'default' => true,
+],
+
 'wmgUseNetworkSession' => [
 	'default' => false,
 	'private' => true,
