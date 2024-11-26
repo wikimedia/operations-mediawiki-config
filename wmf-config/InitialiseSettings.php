@@ -5965,8 +5965,7 @@ return [
 ],
 
 'wgParserMigrationCompactIndicator' => [
-	'default' => false,
-	'wikivoyage' => true,
+	'default' => true,
 ],
 
 // -------------- Shared Parsoid end --------------
