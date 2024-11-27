@@ -5917,6 +5917,7 @@ return [
 	'itwikivoyage' => true, // T374861
 	'dewikivoyage' => true, // T375394
 	'ruwikivoyage' => true, // T375394
+	'jawikivoyage' => true, // T380769
 	'dagwiki' => true, // T380401
 ],
 
@@ -5947,6 +5948,7 @@ return [
 	'viwikivoyage' => true, // T374861
 	'dewikivoyage' => true, // T375394
 	'ruwikivoyage' => true, // T375394
+	'jawikivoyage' => true, // T380769
 	'dagwiki' => true, // T380401
 ],
 
