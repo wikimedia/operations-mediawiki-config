@@ -224,6 +224,14 @@ $wgWikimediaCampaignEventsFluxxClientID = null;
 $wgWikimediaCampaignEventsFluxxClientSecret = null;
 
 /**
+ * Well-known subject line used by the Incident Reporting System
+ * when filing Zendesk requests (T380868).
+ *
+ * @see mediawiki/extensions/ReportIncident
+ */
+$wgReportIncidentZendeskSubjectLine = null;
+
+/**
  * Configuration for internal accounts used by APIs.
  *
  * @see https://phabricator.wikimedia.org/T341332
