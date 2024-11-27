@@ -11218,6 +11218,17 @@ return [
 	'nowiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
+	// T378660
+	'arwiki' => true,
+	'dewiki' => true,
+	// 'eswiki' => true,
+	'frwiki' => true,
+	'idwiki' => true,
+	'jawiki' => true,
+	'kowiki' => true,
+	'ptwiki' => true,
+	// 'ruwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
@@ -11312,6 +11323,276 @@ return [
 					'description' => null,
 					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
 					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
+				],
+			],
+		],
+		// T378660
+		[
+			'name' => 'reader-demographics-2024-es',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.06
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	// T378660
+	'arwiki' => [
+		[
+			'name' => 'reader-demographics-2024-ar',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.25
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'dewiki' => [
+		[
+			'name' => 'reader-demographics-2024-de',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.05
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'frwiki' => [
+		[
+			'name' => 'reader-demographics-2024-fr',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.1
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'idwiki' => [
+		[
+			'name' => 'reader-demographics-2024-id',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.3
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'jawiki' => [
+		[
+			'name' => 'reader-demographics-2024-ja',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.05
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'kowiki' => [
+		[
+			'name' => 'reader-demographics-2024-ko',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.3
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'ptwiki' => [
+		[
+			'name' => 'reader-demographics-2024-pt',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.15
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'ruwiki' => [
+		[
+			'name' => 'reader-demographics-2024-ru',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.02
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+	],
+	'zhwiki' => [
+		[
+			'name' => 'reader-demographics-2024-zh',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.0, // 0.1
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
+			'audience' => [
+				'anons' => true
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2-survey-description',
+					'link' => 'reader-demographics-2-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 				],
 			],
 		],
