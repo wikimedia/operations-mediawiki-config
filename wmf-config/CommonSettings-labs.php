@@ -509,6 +509,8 @@ if ( $wmgRealm == 'labs' ) {
 
 	if ( $wmgUseReportIncident ) {
 		wfLoadExtension( 'ReportIncident' );
+		// Don't send test reports to Zendesk.
+		$wgReportIncidentZendeskUrl = '';
 	}
 
 	// T369945

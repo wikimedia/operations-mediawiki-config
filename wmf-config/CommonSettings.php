@@ -4065,6 +4065,15 @@ if ( $wmgUseRealMe ) {
 	wfLoadExtension( 'RealMe' );
 }
 
+if ( $wmgUseReportIncident ) {
+	// Allow ReportIncident to reach Zendesk in production (T380908)
+	if ( $wmgRealm === 'production' ) {
+		$wgReportIncidentZendeskHTTPProxy = $wmgLocalServices['urldownloader'];
+
+		$wgReportIncidentZendeskUrl = 'https://wikimediats.zendesk.com';
+	}
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = true;
