@@ -1877,6 +1877,9 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'page_id',
