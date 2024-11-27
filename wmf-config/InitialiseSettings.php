@@ -11268,32 +11268,6 @@ return [
 				],
 			],
 		],
-		// T378660
-		[
-			'name' => 'reader-demographics-2024-en',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.05,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-			'audience' => [
-				'anons' => true
-			],
-			'questions' => [
-				[
-					'name' => 'question-1',
-					'question' => 'reader-demographics-2-survey-question',
-					'description' => 'reader-demographics-2-survey-description',
-					'link' => 'reader-demographics-2-survey-link',
-					'instanceTokenParameterName' => 'QS',
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
-					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
-				],
-			],
-		],
 	],
 	'eswiki' => [
 		[
