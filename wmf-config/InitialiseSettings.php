@@ -7473,7 +7473,13 @@ return [
 
 'wgTranslateEnableMessageGroupSubscription' => [
 	'default' => false,
+	'advisorswiki' => true,
+	'collabwiki' => true,
+	'commonswiki' => true,
+	'foundationwiki' => true,
+	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
+	'otrs_wikiwiki' => true,
 	'testwiki' => true,
 ],
 
