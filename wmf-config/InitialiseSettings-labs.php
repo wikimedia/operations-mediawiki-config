@@ -688,6 +688,15 @@ function wmfGetOverrideSettings() {
 			'default' => 'wiki@wikimedia.beta.wmflabs.org'
 		],
 
+		'wgReportIncidentZendeskUrl' => [
+			// Don't send test reports to Zendesk.
+			'default' => '',
+		],
+
+		'wgReportIncidentEnableInstrumentation' => [
+			'default' => true,
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
