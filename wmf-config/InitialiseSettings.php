@@ -3678,7 +3678,7 @@ return [
 	'arbcom_itwiki' => [ 'it' ], // T369264
 	'donatewiki' => [ 'meta', 'foundation' ],
 	'legalteamwiki' => [ 'meta' ], // T66070
-	'officewiki' => [ 'en', 'meta', 'commons' ],
+	'officewiki' => [ 'en', 'meta', 'commons', 'foundation' ], // T381063
 	'otrs_wikiwiki' => [ 'meta' ],
 	'projectcomwiki' => [ 'wikipedia:en', 'meta' ], // T143138
 	'sysop_itwiki' => [ 'b', 'q', 's', 'wikt', 'n', 'v', 'de', 'es', 'en', 'fr', 'meta', 'it' ], // T259243
