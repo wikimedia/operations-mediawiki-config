@@ -47,8 +47,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testDblistAllContainsEverything() {
 		$lists = DBList::getLists();
 
-		// Content of all.dblist
-		$all = $lists['all'];
+		// All wikis including preinstalled
+		$all = array_merge( $lists['all'], $lists['preinstall'] );
 
 		$skip = [
 			// No point in checking that all includes itself

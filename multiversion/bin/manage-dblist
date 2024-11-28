@@ -295,8 +295,8 @@ final class WmfManageDblistCli {
 			$this->error( "Wiki not in preinstall.dblist: $dbName" );
 			return;
 		}
-		$this->doDel( $dbName, 'preinstall' );
 		$this->doAdd( $dbName, 'all' );
+		$this->doDel( $dbName, 'preinstall' );
 	}
 
 	private function doInitLabs( string $dbName, string $lang ) {

@@ -76,12 +76,10 @@ EOT
 		$relPath = "maintenance/$relPath";
 	}
 
-	// For addwiki.php, the wiki DB doesn't yet exist, and for some
-	// other maintenance scripts we don't care what wiki DB is used...
+	// For some maintenance scripts we don't care what wiki DB is used...
 	$wikilessScripts = [
 		'maintenance/purgeList.php',
 		'maintenance/purgeMessageBlobStore.php',
-		'extensions/WikimediaMaintenance/addWiki.php',
 		'extensions/WikimediaMaintenance/dumpInterwiki.php',
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php',
