@@ -7064,6 +7064,7 @@ return [
 	'eswikivoyage' => true, // T122765
 	'fawiki' => true, // T35541
 	'fawiktionary' => true, // T35541
+	'foundationwiki' => true, // T381065
 	'hewiki' => true,
 	'hewikiquote' => true, // T266744
 	'hewikisource' => true, // T284864
