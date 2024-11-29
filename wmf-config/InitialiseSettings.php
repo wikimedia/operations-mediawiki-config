@@ -8677,6 +8677,7 @@ return [
 'wmgUseReportIncident' => [
 	'default' => false,
 	'testwiki' => true,
+	'ptwiki' => true,
 ],
 
 'wgReportIncidentEnableInstrumentation' => [
