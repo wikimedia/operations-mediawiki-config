@@ -679,15 +679,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => false,
 		],
 
-		'wgReportIncidentRecipientEmails' => [
-			'default' => [ 'incident-report-system-beta@wikimedia.org' ]
-		],
-
-		'wgReportIncidentEmailFromAddress' => [
-			// Same as $wgPasswordSender in CommonSettings-labs.php
-			'default' => 'wiki@wikimedia.beta.wmflabs.org'
-		],
-
 		'wgReportIncidentZendeskUrl' => [
 			// Don't send test reports to Zendesk.
 			'default' => '',
