@@ -411,7 +411,7 @@ return [
 'idwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'idwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'idwikimedia' => [ 'fishbowl', 'medium', 'group1', 'translate' ],
-'idwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
+'idwikiquote' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'idwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'idwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'idwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
