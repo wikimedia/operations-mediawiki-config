@@ -68,3 +68,4 @@ http://wikimania2012.wikimedia.org/wiki/Main_Page
 http://wikimania2013.wikimedia.org/wiki/Main_page
 http://wikimania2014.wikimedia.org/wiki/Main_page
 https://wikimaniateam.wikimedia.org/wiki/Main_page
+https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin
