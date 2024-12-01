@@ -603,7 +603,12 @@ function wmfGetOverrideSettings() {
 
 		// T370254, T375787
 		'wgCentralAuthEnableSul3' => [
-			'default' => [ 'query-flag', 'cookie' ]
+			'default' => [ 'query-flag', 'cookie' ],
+			# enable on the two cross-site wikis (T355281) + some other small wikis
+			'test2wiki' => [ 'always', 'query-flag', 'cookie' ],
+			'plwikivoyage' => [ 'always', 'query-flag', 'cookie' ],
+			'sqwiki' => [ 'always', 'query-flag', 'cookie' ],
+			'enwikinews' => [ 'always', 'query-flag', 'cookie' ],
 		],
 
 		//
