@@ -395,6 +395,7 @@ return [
 
 'wgGESurfacingStructuredTasksEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
