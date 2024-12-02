@@ -1736,7 +1736,147 @@ return [
 		 * == WDQS Streaming Updater (Flink) output streams ==
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
+		 *
+		 * Do not enable canary events on mutation streams yet, we are not sure of
+		 * the consequences on these topics that are populated by a "transactional"
+		 * producer.
 		 */
+		'rdf-streaming-updater.mutation.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation',
+				'codfw.rdf-streaming-updater.mutation'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-main.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-main',
+				'codfw.rdf-streaming-updater.mutation-main'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-scholarly.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-scholarly',
+				'codfw.rdf-streaming-updater.mutation-scholarly'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-staging',
+				'codfw.rdf-streaming-updater.mutation-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-main-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-main-staging',
+				'codfw.rdf-streaming-updater.mutation-main-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-scholarly-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-scholarly-staging',
+				'codfw.rdf-streaming-updater.mutation-scholarly-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'mediainfo-streaming-updater.mutation.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.mediainfo-streaming-updater.mutation',
+				'codfw.mediainfo-streaming-updater.mutation'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'mediainfo-streaming-updater.mutation-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.mediainfo-streaming-updater.mutation-staging',
+				'codfw.mediainfo-streaming-updater.mutation-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'rdf-streaming-updater.lapsed-action' => [
 			'schema_title' => 'rdf_streaming_updater/lapsed_action',
 			'destination_event_service' => 'eventgate-main',
