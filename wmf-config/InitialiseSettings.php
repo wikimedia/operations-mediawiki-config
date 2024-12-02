@@ -7478,7 +7478,7 @@ return [
 	'commonswiki' => true,
 	'foundationwiki' => true,
 	'incubatorwiki' => true,
-	'legalteamwiki' => true,
+	'legalteamwiki' => false, // Echo is not installed. See: T381250
 	'mediawikiwiki' => true,
 	'otrs_wikiwiki' => true,
 	'outreachwiki' => true,
