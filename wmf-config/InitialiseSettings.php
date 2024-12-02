@@ -11237,10 +11237,11 @@ return [
 	'default' => [],
 	'enwiki' => [
 		[
-			'name' => 'Empty search experiment survey',
+			// T380778
+			'name' => 'Web experimental browser extension survey',
 			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0.05,
+			'enabled' => true,
+			'coverage' => 0.06,
 			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
 			'audience' => [
@@ -11249,7 +11250,7 @@ return [
 			],
 			'questions' => [
 				[
-					'name' => 'Empty search experiment question',
+					'name' => 'Web experimental browser extension question',
 					'layout' => 'single-answer',
 					'link' => 'ext-quicksurveys-empty-search-experiment-link',
 					'question' => 'ext-quicksurveys-empty-search-experiment-question',
