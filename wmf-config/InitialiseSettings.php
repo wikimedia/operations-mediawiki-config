@@ -7476,6 +7476,7 @@ return [
 
 'wgTranslateEnableLuaIntegration' => [
 	'default' => false,
+	'metawiki' => true,
 	'testwiki' => true,
 ],
 
