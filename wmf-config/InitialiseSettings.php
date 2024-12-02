@@ -7851,10 +7851,6 @@ return [
 		2303, // Gadget_definition_talk from Gadgets
 		5501, // T176199 Newsletter talk from Newsletter extension
 	],
-	'cawiki' => [
-		NS_PROJECT_TALK, // T99117
-		103, // Viquiprojecte Discussió, T159047
-	],
 	'kabwiki' => [
 		NS_USER_TALK, // T140588
 	],
