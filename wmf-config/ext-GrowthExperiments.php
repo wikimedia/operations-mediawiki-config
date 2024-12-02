@@ -13,7 +13,6 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'testwiki' => 'no-link-recommendation',
 	'test2wiki' => 'growth-community-updates',
 	'enwiki' => 'no-link-recommendation',
 	'eswiki' => 'growth-community-updates',
