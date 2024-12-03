@@ -8673,7 +8673,12 @@ return [
 ],
 
 'wmgUseReportIncident' => [
-	'default' => false
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgReportIncidentEnableInstrumentation' => [
+	'default' => true,
 ],
 
 'wgReportIncidentLocalLinks' => [
