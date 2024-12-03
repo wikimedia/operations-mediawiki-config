@@ -4240,6 +4240,7 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';
 	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'GlobalBlockList';
+		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'MassGlobalBlock';
 	}
 }
 
