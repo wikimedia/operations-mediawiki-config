@@ -862,11 +862,6 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		'wgEntitySchemaEnableDatatype' => [
-			'default' => false,
-			'wikidatawiki' => true, // T332725
-		],
-
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',

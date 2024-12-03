@@ -7775,13 +7775,6 @@ return [
 	'wikidataclient-test' => true,
 ],
 
-'wgEntitySchemaEnableDatatype' => [
-	'default' => false,
-	'wikidata' => true, // T332724, T332157
-	'wikidataclient' => true,
-	'wikidataclient-test' => true,
-],
-
 'wgEntitySchemaIsRepo' => [
 	'default' => false,
 	'wikidata' => true,
