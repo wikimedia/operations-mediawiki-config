@@ -1871,7 +1871,6 @@ $wgGroupPermissions['bureaucrat']['renameuser'] = $wmgAllowLocalRenameuser;
 
 if ( $wmgUseSpecialNuke ) {
 	wfLoadExtension( 'Nuke' );
-	$wgNukeMaxAge = 90 * 86400; // T380846
 }
 
 if ( $wmgUseTorBlock ) {
