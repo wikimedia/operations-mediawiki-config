@@ -3156,7 +3156,8 @@ if ( $wmgEnablePageTriage ) {
 	$wgRemoveGroups['bureaucrat'][] = 'copyviobot'; // T206731
 }
 
-if ( $wmgEnableInterwiki ) {
+// This extension is being moved to core (T33951)
+if ( $wmgEnableInterwiki && !defined( 'MW_HAS_SPECIAL_INTERWIKI' ) ) {
 	wfLoadExtension( 'Interwiki' );
 	$wgInterwikiViewOnly = true;
 }
