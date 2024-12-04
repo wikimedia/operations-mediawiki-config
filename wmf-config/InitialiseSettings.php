@@ -7474,6 +7474,12 @@ return [
 'wgTranslateEnableMessageGroupSubscription' => [
 	'default' => false,
 	'advisorswiki' => true,
+	'aewikimedia' => true,
+	'amwikimedia' => true,
+	'azwikimedia' => true,
+	'bdwikimedia' => true,
+	'betawikiversity' => true,
+	'bewikimedia' => true,
 	'collabwiki' => true,
 	'commonswiki' => true,
 	'foundationwiki' => true,
