@@ -3262,6 +3262,15 @@ return [
 			'oathauth-enable' => true,
 			'abusefilter-access-protected-vars' => true, // T397788
 		],
+		'electionclerk' => [ // T380020
+			'securepoll-create-poll' => true,
+			'securepoll-edit-poll' => true,
+		],
+		'scrutineer' => [ // T380020
+			'securepoll-create-poll' => true,
+			'securepoll-edit-poll' => true,
+			'securepoll-view-voter-pii' => true,
+		],
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -4914,6 +4923,7 @@ return [
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
 			'abusefilter', // T386879
+			'electionclerk', // T380020
 		],
 	],
 	'+zhwikibooks' => [
@@ -6156,6 +6166,7 @@ return [
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
 			'abusefilter', // T386879
+			'electionclerk', // T380020
 		],
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T374504
 	],

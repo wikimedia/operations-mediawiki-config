@@ -10911,6 +10911,7 @@ return [
 'wgSecurePollUseMediaWikiNamespace' => [
 	'default' => false,
 	'enwiki' => true, // T398080
+	'zhwiki' => true, // T380020
 ],
 
 // Enable SecurePoll logging
@@ -10919,6 +10920,7 @@ return [
 	'testwiki' => true,
 	'votewiki' => true,
 	'enwiki' => true, // T378287
+	'zhwiki' => true, // T380020
 ],
 
 'wgSecurePollEditOtherWikis' => [
