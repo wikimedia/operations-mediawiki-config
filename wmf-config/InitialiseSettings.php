@@ -12676,6 +12676,12 @@ return [
 	'testwiki' => true,
 	'commonswiki' => true,
 	'test2wiki' => true,
+	// T381312 enabling 2024-12-04
+	'svwiki' => true,
+	'itwiki' => true,
+	'hewiki' => true,
+	// T381436 enabling 2024-12-04
+	'mediawikiwiki' => true,
 ],
 
 'wgChartProgressiveEnhancement' => [
