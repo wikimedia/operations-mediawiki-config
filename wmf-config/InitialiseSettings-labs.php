@@ -731,7 +731,7 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgRelatedArticlesABTestEnrollment' => [
+		'wgRelatedArticlesABTestEnrollment' => [
 			'default' => [
 				"name" => "RelatedArticles test experiment betacluster	",
 				"enabled" => true,
