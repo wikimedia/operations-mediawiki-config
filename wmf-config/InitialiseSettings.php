@@ -6431,19 +6431,14 @@ return [
 ],
 
 // Whether VisualEditor's feedback page should be consolidated down to just the
-// single Flow board on MediaWiki.org
+// single page on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => [
 	'default' => true,
 	'mediawikiwiki' => false, // This is the consolidation point
 	'dewiki' => false, // Retaining for local conversations
-	'enwiki' => false, // No local Flow install, so won't work
 	'zh_yuewiki' => false, // Retaining for local conversations
-	'betawikiversity' => false, // No local Flow install, so won't work
-	'dewikivoyage' => false, // No local Flow install, so won't work
-	'enwikiversity' => false, // No local Flow install, so won't work
-	'jawikiversity' => false, // No local Flow install, so won't work
-	'private' => false, // No local Flow install, so won't work; also risk of private data release
-	'lockeddown' => false, // No local Flow install, so won't work; also no editing on these wikis
+	'private' => false, // Risk of private data release
+	'lockeddown' => false, // No editing on these wikis
 ],
 
 // Should the citation button be moved from the primary toolbar into the "other" group
