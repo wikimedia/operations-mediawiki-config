@@ -449,6 +449,7 @@ return [
 	'huwiktionary' => 'Europe/Berlin',
 	'ibawiki' => 'Asia/Kuching',
 	'idwikimedia' => 'Asia/Jakarta', // T192726
+	'idwikivoyage' => 'Asia/Jakarta', // T381080
 	'id_internalwikimedia' => 'Asia/Jakarta',
 	'iglwiki' => 'Africa/Lagos',
 	'itwiki' => 'Europe/Berlin',
@@ -1368,6 +1369,7 @@ return [
 	'idwikimedia' => 'Wikimedia Indonesia', // T192726
 	'idwikiquote' => 'Wikikutip', // T341177
 	'idwikisource' => 'Wikisumber', // T341173
+	'idwikivoyage' => 'Wikiwisata', // T381080
 	'idwiktionary' => 'Wikikamus', // T341175
 	'id_internalwikimedia' => 'Wikimedia Indonesia (internal)',
 	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
