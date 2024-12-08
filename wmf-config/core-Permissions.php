@@ -1196,8 +1196,12 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 		], // T23044
-		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
+		'sysop' => [
+			'editextendedsemiprotected' => true, // T131109
+			'abusefilter-access-protected-vars' => false // T381722
+		],
 		'interface-admin' => [ 'editcontentmodel' => true ], // T369113
+		'abusefilter' => [ 'abusefilter-access-protected-vars' => true ], // T381722
 	],
 	'+frwikibooks' => [
 		'patroller' => [
