@@ -507,10 +507,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgAutoModeratorLiftWingAddHostHeader = false;
 	}
 
-	if ( $wmgUseReportIncident ) {
-		wfLoadExtension( 'ReportIncident' );
-	}
-
 	// T369945
 	if ( $wmgUseChart ) {
 		wfLoadExtension( 'Chart' );

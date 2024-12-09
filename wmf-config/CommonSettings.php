@@ -4047,6 +4047,7 @@ if ( $wmgUseRealMe ) {
 }
 
 if ( $wmgUseReportIncident ) {
+	wfLoadExtension( 'ReportIncident' );
 	// Allow ReportIncident to reach Zendesk in production (T380908)
 	if ( $wmgRealm === 'production' ) {
 		$wgReportIncidentZendeskHTTPProxy = $wmgLocalServices['urldownloader'];
