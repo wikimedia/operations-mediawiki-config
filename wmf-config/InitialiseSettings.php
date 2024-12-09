@@ -12724,4 +12724,10 @@ return [
 	'default' => true,
 ],
 
+// T377121
+'wgUseCodexSpecialBlock' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 ];
