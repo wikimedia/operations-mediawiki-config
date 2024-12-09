@@ -78,12 +78,8 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
-
-	// Pilot canShellboxGetTempUrl
-	if ( $wgDBname === 'testwiki' ) {
-		$wgFileBackends[ array_key_last( $wgFileBackends ) ]['canShellboxGetTempUrl'] = true;
-	}
 
 	// backend config for wiki's access to shared repo
 	$wgFileBackends[] = [
@@ -117,6 +113,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 
 	// backend config for wiki's access to shared files
@@ -142,6 +139,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 
 	// backend config for wiki's access to shared test repo
@@ -166,6 +164,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 }
 /* end DC-specific Swift backend config */
