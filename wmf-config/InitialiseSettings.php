@@ -11265,7 +11265,7 @@ return [
 			// T380778
 			'name' => 'Web experimental browser extension survey',
 			'type' => 'external',
-			'enabled' => true,
+			'enabled' => false,
 			'coverage' => 0.06,
 			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
@@ -11288,7 +11288,7 @@ return [
 		[
 			'name' => 'Web non-UI experiment survey',
 			'type' => 'external',
-			'enabled' => true,
+			'enabled' => false,
 			'coverage' => 0.05,
 			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
