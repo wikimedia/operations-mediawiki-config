@@ -3952,6 +3952,13 @@ Wikivoyage:
         comment_1_5x: T173013
         comment_2x: T173013
         local_wordmark: true
+    idwikivoyage:
+        comment: T381080
+        comment_1_5x: T381080
+        comment_2x: T381080
+        commons: 'File:Wikivoyage-logo-id-new.svg'
+        commons_wordmark: 'File:Wikivoyage-wordmark-id.svg'
+        comment_wordmark: 'T381080'
     plwikivoyage:
         local_wordmark: true
     pswikivoyage:

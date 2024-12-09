@@ -801,6 +801,7 @@ return [
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151570
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
 	'hiwikivoyage' => '/static/images/project-logos/hiwikivoyage.png', // T173013
+	'idwikivoyage' => '/static/images/project-logos/idwikivoyage.png', // T381080
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage.png',
@@ -1518,6 +1519,7 @@ return [
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage-1.5x.png',
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage-1.5x.png', // T208148
 	'hiwikivoyage' => '/static/images/project-logos/hiwikivoyage-1.5x.png', // T173013
+	'idwikivoyage' => '/static/images/project-logos/idwikivoyage-1.5x.png', // T381080
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage-1.5x.png',
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage-1.5x.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage-1.5x.png', // T150618
@@ -2170,6 +2172,7 @@ return [
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage-2x.png',
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage-2x.png', // T208148
 	'hiwikivoyage' => '/static/images/project-logos/hiwikivoyage-2x.png', // T173013
+	'idwikivoyage' => '/static/images/project-logos/idwikivoyage-2x.png', // T381080
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage-2x.png',
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage-2x.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage-2x.png', // T150618
@@ -5159,6 +5162,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-hi.svg',
 		'width' => 136,
 		'height' => 32,
+	],
+	'idwikivoyage' => [ // T381080
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-id.svg',
+		'width' => 120,
+		'height' => 20,
 	],
 	'plwikivoyage' => [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-pl.svg',
