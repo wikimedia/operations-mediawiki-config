@@ -11361,7 +11361,7 @@ return [
 			'name' => 'reader-demographics-2024-es',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.06
+			'coverage' => 0, // 0.06,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11389,7 +11389,7 @@ return [
 			'name' => 'reader-demographics-2024-ar',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.25
+			'coverage' => 0.25,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11416,7 +11416,7 @@ return [
 			'name' => 'reader-demographics-2024-de',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.05
+			'coverage' => 0, // 0.05,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11443,7 +11443,7 @@ return [
 			'name' => 'reader-demographics-2024-fr',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.1
+			'coverage' => 0, // 0.1,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11470,7 +11470,7 @@ return [
 			'name' => 'reader-demographics-2024-id',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.3
+			'coverage' => 0.3,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11497,7 +11497,7 @@ return [
 			'name' => 'reader-demographics-2024-ja',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.05
+			'coverage' => 0.05,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11524,7 +11524,7 @@ return [
 			'name' => 'reader-demographics-2024-ko',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.3
+			'coverage' => 0.3,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11551,7 +11551,7 @@ return [
 			'name' => 'reader-demographics-2024-pt',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.15
+			'coverage' => 0.15,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11578,7 +11578,7 @@ return [
 			'name' => 'reader-demographics-2024-ru',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.02
+			'coverage' => 0.02,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11605,7 +11605,7 @@ return [
 			'name' => 'reader-demographics-2024-zh',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.0, // 0.1
+			'coverage' => 0.1,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
