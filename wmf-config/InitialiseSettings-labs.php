@@ -2383,7 +2383,8 @@ function wmfGetOverrideSettings() {
 		],
 		// T375610
 		'-wgUseCodexSpecialBlock' => [
-			'default' => true,
+			'default' => false,
+			'testwiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()
