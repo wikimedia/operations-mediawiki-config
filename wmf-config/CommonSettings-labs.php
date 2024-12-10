@@ -282,6 +282,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
 		$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 		$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
+		$wgMathWikibasePropertyIdInDefiningFormula = 'P253157';
+		$wgMathWikibasePropertyIdSymbolRepresents = 'P253158';
 	}
 
 	// CORS (cross-domain AJAX, T22814)
