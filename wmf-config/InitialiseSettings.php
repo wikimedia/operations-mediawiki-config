@@ -12627,6 +12627,8 @@ return [
 	'viwiki' => true,
 	// T376597
 	'afwiki' => true,
+	// T381000
+	'bnwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -12640,7 +12642,9 @@ return [
 	// T378343
 	'viwiki' => "Kiểm tra tự động",
 	// T376597
-	'afwiki' => "OutoModerator"
+	'afwiki' => "OutoModerator",
+	// T381000
+	'bnwiki' => "স্বয়ংক্রিয় টহলদার",
 ],
 
 // T341000
