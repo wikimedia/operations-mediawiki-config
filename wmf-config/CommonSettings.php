@@ -4678,9 +4678,13 @@ if ( $wmgUseCommunityConfiguration ) {
 	$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.org/w/api.php';
 }
 
-if ( $wgMetricsPlatformEnable && $wgMetricsPlatformEnableStreamConfigsMerging ) {
+if ( $wmgUseMetricsPlatform ) {
 	wfLoadExtension( 'MetricsPlatform' );
 	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['mpic'];
+
+	// Note: This is temporary while we (Data Products) update the $wgMetricsPlatformEnable config
+	// variable (T381853).
+	$wgMetricsPlatformEnable = $wgMetricsPlatformEnableStreamConfigsMerging;
 }
 
 if ( $wmgUseNetworkSession ) {

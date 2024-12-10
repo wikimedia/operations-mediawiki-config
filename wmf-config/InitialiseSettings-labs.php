@@ -239,8 +239,8 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgMetricsPlatformEnable' => [
-			'testwiki' => true
+		'wmgUseMetricsPlatform' => [
+			'default' => true,
 		],
 
 		'wgMetricsPlatformEnableStreamConfigsMerging' => [

@@ -10504,8 +10504,8 @@ return [
 	'ptwikinews' => [ 'page', 'image', 'video', 'audio', 'other' ], // T299872, show cat first
 ],
 
-'wgMetricsPlatformEnable' => [
-	'default' => false
+'wmgUseMetricsPlatform' => [
+	'default' => false,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsMerging' => [
