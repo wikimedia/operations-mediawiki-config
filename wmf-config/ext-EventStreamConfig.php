@@ -841,12 +841,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -879,12 +873,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -910,12 +898,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -947,12 +929,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
