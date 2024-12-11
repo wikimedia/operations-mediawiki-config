@@ -792,7 +792,7 @@ return [
 				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
-			'pattern' => '/^typage-\w+-\w+-2023$/',
+			'pattern' => '/^typage-\w+-\w+-\d+$/',
 		],
 	],
 	'+testwiki' => [
@@ -809,16 +809,6 @@ return [
 		'social-latam-2022-control' => [
 			'pattern' => '/^social-latam-2022-B$/',
 		],
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
-		],
 		'thankyoubanner-2022' => [
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
@@ -830,16 +820,6 @@ return [
 		]
 	],
 	'+enwiki' => [
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-(latam|in|za)-en-2022$/'
-		],
 		'thankyoubanner-2022' => [
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
@@ -864,16 +844,6 @@ return [
 		'social-latam-2022-control' => [
 			'pattern' => '/^social-latam-2022-B$/',
 		],
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-latam-es-2022$/'
-		],
 		'thankyoubanner-2022' => [
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
@@ -885,16 +855,6 @@ return [
 		]
 	],
 	'+ptwiki' => [
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-latam-pt-2022$/'
-		],
 		'thankyoubanner-2022' => [
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
