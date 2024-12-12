@@ -11381,7 +11381,7 @@ return [
 			'name' => 'reader-demographics-2024-es',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0, // 0.06,
+			'coverage' => 0.06,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11436,7 +11436,7 @@ return [
 			'name' => 'reader-demographics-2024-de',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0, // 0.05,
+			'coverage' => 0.05,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11463,7 +11463,7 @@ return [
 			'name' => 'reader-demographics-2024-fr',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0, // 0.1,
+			'coverage' => 0.1,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
