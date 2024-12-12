@@ -8708,6 +8708,23 @@ return [
 	],
 ],
 
+'wgReportIncidentEnabledNamespaces' => [
+	'default' => [
+		NS_TALK,
+		NS_USER_TALK,
+		NS_PROJECT_TALK,
+		NS_FILE_TALK,
+		NS_MEDIAWIKI_TALK,
+		NS_TEMPLATE_TALK,
+		NS_HELP_TALK,
+		NS_CATEGORY_TALK,
+	],
+	'+ptwiki' => [
+		// Portuguese Wikipedia has DiscussionTools enabled in the Project namespace (T382061)
+		NS_PROJECT,
+	],
+],
+
 'wgReportIncidentDeveloperMode' => [
 	'default' => false,
 ],
