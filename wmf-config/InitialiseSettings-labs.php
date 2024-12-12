@@ -1372,6 +1372,9 @@ function wmfGetOverrideSettings() {
 		'wgGESurfacingStructuredTasksEnabled' => [
 			'enwiki' => true,
 		],
+		'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
+			'enwiki' => true,
+		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'default' => [
 				'control' => [

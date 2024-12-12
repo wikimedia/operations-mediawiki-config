@@ -399,6 +399,10 @@ return [
 	'eswiki' => true,
 	'frwiki' => true,
 ],
+'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
+	// Only enable in production after aligning with ServiceOps about T378536
+	'default' => false,
+],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
