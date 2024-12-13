@@ -1734,6 +1734,15 @@ Wikipedia:
         comment_2x: T249451
         local_tagline: true
         local_wordmark: true
+    tigwiki:
+        commons_wordmark: 'File:Wikipedia-wordmark-tig.svg'
+        commons_tagline: 'File:Wikipedia-tagline-tig.svg'
+        commons: 'File:Wikipedia-logo-v2-tig.svg'
+        comment_wordmark: T381379
+        comment_tagline: T381379
+        comment_2x: T381379
+        comment_1_5x: T381379
+        comment: T381379
     tkwiki:
         comment: T48589
         comment_1_5x: T150618

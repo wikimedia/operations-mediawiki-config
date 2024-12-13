@@ -349,6 +349,7 @@ return [
 	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
 	'thwiki' => '/static/images/project-logos/thwiki.png', // T341407
 	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
+	'tigwiki' => '/static/images/project-logos/tigwiki.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
 	'tlwiki' => '/static/images/project-logos/tlwiki.png',
 	'tlywiki' => '/static/images/project-logos/tlywiki.png', // T345316, T366431
@@ -1225,6 +1226,7 @@ return [
 	'tgwiki' => '/static/images/project-logos/tgwiki-1.5x.png', // T150618
 	'thwiki' => '/static/images/project-logos/thwiki-1.5x.png', // T150618
 	'tiwiki' => '/static/images/project-logos/tiwiki-1.5x.png', // T249451
+	'tigwiki' => '/static/images/project-logos/tigwiki-1.5x.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki-1.5x.png', // T150618
 	'tlwiki' => '/static/images/project-logos/tlwiki-1.5x.png', // T150618
 	'tlywiki' => '/static/images/project-logos/tlywiki-1.5x.png', // T345316, T366431
@@ -1878,6 +1880,7 @@ return [
 	'tgwiki' => '/static/images/project-logos/tgwiki-2x.png', // T150618
 	'thwiki' => '/static/images/project-logos/thwiki-2x.png', // T150618
 	'tiwiki' => '/static/images/project-logos/tiwiki-2x.png', // T249451
+	'tigwiki' => '/static/images/project-logos/tigwiki-2x.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki-2x.png', // T150618
 	'tlwiki' => '/static/images/project-logos/tlwiki-2x.png', // T150618
 	'tlywiki' => '/static/images/project-logos/tlywiki-2x.png', // T345316, T366431
@@ -3277,6 +3280,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ti.svg',
 		'width' => 103,
 		'height' => 18,
+	],
+	'tigwiki' => [ // T381379
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tig.svg',
+		'width' => 130,
+		'height' => 30,
 	],
 	'tkwiki' => [ // T314435
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tk.svg',
@@ -7166,6 +7174,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ti.svg',
 		'width' => 95,
 		'height' => 11,
+	],
+	'tigwiki' => [ // T381379
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tig.svg',
+		'width' => 120,
+		'height' => 15,
 	],
 	'tkwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tk.svg',
