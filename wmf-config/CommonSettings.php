@@ -4233,6 +4233,15 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 		[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 		// Exclude bots from the autopromotion, as the group should be granted manually to these users.
 		[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		// Exclude local autopromotion when the user has a global group which gives them access on all wikis.
+		// These global groups and their permissions are defined at Special:GlobalGroupPermissions.
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'abusefilter-helper' ] ],
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'abusefilter-maintainer' ] ],
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'global-rollbacker' ] ],
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'global-temporary-account-viewer' ] ],
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'ombuds' ] ],
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'staff' ] ],
+		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'steward' ] ],
 	];
 
 	// Exclude autopromotions into this group from RC by default (T377829)
