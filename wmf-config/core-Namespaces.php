@@ -5943,6 +5943,7 @@ return [
 	'thwikisource' => 'วิกิซอร์ซ',
 	'tiwiki' => 'ዊኪፐድያ', // T263840
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
+	'tigwiki' => 'ዊኪፒድያ', // T381379
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
 	'tlywiki' => 'Vikipedija', // T367009

@@ -633,6 +633,7 @@ return [
 	'thwikisource' => 'Asia/Bangkok',
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
+	'tigwiki' => 'Africa/Asmara', // T381379
 	'tlwikiquote' => 'Asia/Manila',
 	'tlywiki' => 'Asia/Baku', // T345316
 	'tnwiki' => 'Africa/Gaborone', // T318208
@@ -1634,6 +1635,7 @@ return [
 	'thwikisource' => 'วิกิซอร์ซ',
 	'tiwiki' => 'ዊኪፔዲያ',
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
+	'tigwiki' => 'ዊኪፒድያ', // T381379
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
 	'tlywiki' => 'Vikipedija', // T367009
