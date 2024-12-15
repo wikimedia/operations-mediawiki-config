@@ -5362,6 +5362,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
+	'arwikisource' => true, // T382218
 	'atjwiki' => true, // T182798
 	'azwiki' => true, // T282954
 	'bhwiki' => true,
