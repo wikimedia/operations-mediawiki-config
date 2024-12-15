@@ -80,6 +80,11 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'reqTimeout' => 900,
 	];
 
+	// Pilot canShellboxGetTempUrl
+	if ( $wgDBname === 'testwiki' ) {
+		$wgFileBackends[ array_key_last( $wgFileBackends ) ]['canShellboxGetTempUrl'] = true;
+	}
+
 	// backend config for wiki's access to shared repo
 	$wgFileBackends[] = [
 		'class' => SwiftFileBackend::class,
