@@ -269,7 +269,7 @@ return [
 	'arwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'bgwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'cawiki' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
+	'cebwiki' => [ 'content' => 8 /* T379002 */, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common.
