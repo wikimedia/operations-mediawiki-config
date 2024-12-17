@@ -1862,7 +1862,7 @@ Wikipedia:
         comment_2x: 'T150618'
         commons_wordmark: 'File:Wikipedia-wordmark-uz.svg'
         comment_wordmark: 'T205226, T254788'
-        local_tagline: true
+        commons_tagline: 'File:Wikipedia-tagline-uz.svg'
     vewiki:
         no_1_5x: true
         no_2x: true

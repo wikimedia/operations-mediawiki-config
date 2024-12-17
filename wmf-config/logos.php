@@ -7272,8 +7272,8 @@ return [
 	],
 	'uzwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-uz.svg',
-		'width' => 120,
-		'height' => 14,
+		'width' => 103,
+		'height' => 12,
 	],
 	'vewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-en.svg',
