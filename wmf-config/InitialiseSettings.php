@@ -12694,6 +12694,8 @@ return [
 	'afwiki' => true,
 	// T381000
 	'bnwiki' => true,
+	// T382286
+	'azwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -12710,6 +12712,8 @@ return [
 	'afwiki' => "OutoModerator",
 	// T381000
 	'bnwiki' => "স্বয়ংক্রিয় টহলদার",
+	// T382286
+	'azwiki' => 'Avtomoderator',
 ],
 
 // T341000
