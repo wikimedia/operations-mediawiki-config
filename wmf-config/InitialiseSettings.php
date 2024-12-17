@@ -11292,10 +11292,6 @@ return [
 	'nowiki' => true,
 	'ruwiki' => true,
 	'commonswiki' => true,
-	// T378660
-	// 'eswiki' => true,
-	'idwiki' => true,
-	'kowiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
@@ -11391,87 +11387,6 @@ return [
 					'description' => null,
 					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
 					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
-				],
-			],
-		],
-		// T378660
-		[
-			'name' => 'reader-demographics-2024-es',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.06,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-			'audience' => [
-				'anons' => true
-			],
-			'questions' => [
-				[
-					'name' => 'question-1',
-					'question' => 'reader-demographics-2-survey-question',
-					'description' => 'reader-demographics-2-survey-description',
-					'link' => 'reader-demographics-2-survey-link',
-					'instanceTokenParameterName' => 'QS',
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
-					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
-				],
-			],
-		],
-	],
-	// T378660
-	'idwiki' => [
-		[
-			'name' => 'reader-demographics-2024-id',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.3,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-			'audience' => [
-				'anons' => true
-			],
-			'questions' => [
-				[
-					'name' => 'question-1',
-					'question' => 'reader-demographics-2-survey-question',
-					'description' => 'reader-demographics-2-survey-description',
-					'link' => 'reader-demographics-2-survey-link',
-					'instanceTokenParameterName' => 'QS',
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
-					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
-				],
-			],
-		],
-	],
-	'kowiki' => [
-		[
-			'name' => 'reader-demographics-2024-ko',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.3,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'privacyPolicy' => 'reader-demographics-2-survey-privacy-policy',
-			'audience' => [
-				'anons' => true
-			],
-			'questions' => [
-				[
-					'name' => 'question-1',
-					'question' => 'reader-demographics-2-survey-question',
-					'description' => 'reader-demographics-2-survey-description',
-					'link' => 'reader-demographics-2-survey-link',
-					'instanceTokenParameterName' => 'QS',
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
-					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 				],
 			],
 		],
