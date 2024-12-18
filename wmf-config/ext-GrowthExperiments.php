@@ -383,10 +383,6 @@ return [
 	'zuwiki' => true,
 ],
 
-'wgGETempLinkRecommendationSwitchTagClearHook' => [
-	'default' => true,
-],
-
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
