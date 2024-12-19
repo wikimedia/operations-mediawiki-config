@@ -7823,6 +7823,22 @@ return [
 	'test2wiki' => true, // T377990
 	'tewiki' => true, // T377990
 	'outreachwiki' => true, // T377990
+	'bswiki' => true, // T378833
+	'elwiki' => true, // T378833
+	'euwiki' => true, // T378833
+	'fawiki' => true, // T378833
+	'fiwiki' => true, // T378833
+	'frwikiquote' => true, // T378833
+	'frwikisource' => true, // T378833
+	'frwikiversity' => true, // T378833
+	'frwikivoyage' => true, // T378833
+	'idwiki' => true, // T378833
+	'lvwiki' => true, // T378833
+	'plwiki' => true, // T378833
+	'ptwiki' => true, // T378833
+	'urwiki' => true, // T378833
+	'viwikisource' => true, // T378833
+	'zhwikisource' => true, // T378833
 ],
 
 'wmgFlowNamespaces' => [
