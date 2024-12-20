@@ -4554,7 +4554,7 @@ if ( $wmgUseCampaignEvents ) {
 	if ( $wmgCampaignEventsProgramsAndEventsDashboardEnabled ) {
 		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 	}
-	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6009/sparql';
+	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
 }
 
 // T361643
