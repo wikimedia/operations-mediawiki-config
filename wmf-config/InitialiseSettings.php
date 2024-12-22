@@ -11134,7 +11134,10 @@ return [
 	'enwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
 	'hewikinews' => 'https://creativecommons.org/licenses/by/4.0/',
 	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
+	'nlwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
 	'plwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
+	'ptwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
+	'rowikinews' => 'https://creativecommons.org/licenses/by/4.0/',
 	// Don't try to link to weird things like /deed.meta or /deed.commons
 	'special' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 	'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
@@ -11145,7 +11148,10 @@ return [
 	'enwikinews' => 'Creative Commons Attribution 4.0',
 	'hewikinews' => 'Creative Commons Attribution 4.0',
 	'huwikinews' => 'Creative Commons Attribution 3.0',
+	'nlwikinews' => 'Creative Commons Attribution 4.0',
 	'plwikinews' => 'Creative Commons Attribution 4.0',
+	'ptwikinews' => 'Creative Commons Attribution 4.0',
+	'rowikinews' => 'Creative Commons Attribution 4.0',
 	'wikinews' => 'Creative Commons Attribution 2.5',
 	// Wikidata footer, T112606
 	'wikidata' => 'All structured data from the main and property namespace is available under ' .
