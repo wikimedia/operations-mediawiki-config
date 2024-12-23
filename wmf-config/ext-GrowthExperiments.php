@@ -796,19 +796,6 @@ return [
 		],
 	],
 	'+testwiki' => [
-		'social-latam-2022' => [
-			'messageKey' => 'marketingvideocampaign',
-			'pattern' => '/^social-latam-2022-A$/',
-			'signupPageTemplate' => 'video',
-			'signupPageTemplateParameters' => [
-				'messageKey' => 'marketingvideocampaign',
-				'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
-				'thumbtime' => 38,
-			],
-		],
-		'social-latam-2022-control' => [
-			'pattern' => '/^social-latam-2022-B$/',
-		],
 		'thankyoubanner-2022' => [
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
@@ -831,19 +818,6 @@ return [
 		]
 	],
 	'+eswiki' => [
-		'social-latam-2022' => [
-			'messageKey' => 'marketingvideocampaign',
-			'signupPageTemplate' => 'video',
-			'signupPageTemplateParameters' => [
-				'messageKey' => 'marketingvideocampaign',
-				'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
-				'thumbtime' => 38,
-			],
-			'pattern' => '/^social-latam-2022-A$/'
-		],
-		'social-latam-2022-control' => [
-			'pattern' => '/^social-latam-2022-B$/',
-		],
 		'thankyoubanner-2022' => [
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
