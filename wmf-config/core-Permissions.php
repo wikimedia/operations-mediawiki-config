@@ -209,9 +209,15 @@ return [
 			'editeditorprotected' => true, // T321111
 			'ipblock-exempt' => true, // T366404
 		],
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+			'editcontentmodel' => true,
+		], // T382784
 		'sysop' => [
 			'editautoreviewprotected' => true,
 			'editeditorprotected' => true, // T321111
+			'templateeditor' => true, // T382784
 		],
 		'extendedmover' => [ // T326434
 			'move' => true,
@@ -3445,6 +3451,7 @@ return [
 			'import',
 			'reviewer',
 			'abusefilter',
+			'templateeditor', // T382784
 		],
 		'sysop' => [
 			'uploader',
@@ -4957,6 +4964,7 @@ return [
 			'import',
 			'reviewer',
 			'abusefilter',
+			'templateeditor', // T382784
 		],
 		'sysop' => [
 			'uploader',

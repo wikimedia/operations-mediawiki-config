@@ -1989,7 +1989,7 @@ return [
 		'autoconfirmed', // semi-protection level on
 		'sysop',
 	],
-	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'editeditorprotected', 'sysop' ], // T54109, T146575, T225896, T321111
+	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'editeditorprotected', 'templateeditor', 'sysop' ], // T54109, T146575, T225896, T321111, T382784
 	'azwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T281860
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
