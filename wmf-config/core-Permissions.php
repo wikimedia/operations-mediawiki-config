@@ -807,6 +807,8 @@ return [
 			'upload' => true,
 			'reupload' => true,
 		],
+		'import' => [ 'mergehistory' => true ], // T382785
+		'transwiki' => [ 'mergehistory' => true ], // T382785
 	],
 	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
