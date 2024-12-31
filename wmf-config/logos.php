@@ -4071,6 +4071,11 @@ return [
 		'width' => 146,
 		'height' => 44,
 	],
+	'bjnwikiquote' => [ // T382777
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bjn.svg',
+		'width' => 105,
+		'height' => 40,
+	],
 	'bnwikiquote' => [ // T341910
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bn.svg',
 		'width' => 101,
