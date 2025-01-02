@@ -7233,11 +7233,6 @@ return [
 	// Temporarily disabled in T351669 until T351362 is addressed.
 	'default' => false,
 ],
-
-'wgMFCollapseSectionsByDefault' => [
-	'default' => true,
-	'wiktionary' => false,
-],
 'wgMFEnableWikidataDescriptions' => [
 	'default' => [
 		'base' => true, 'beta' => true,
