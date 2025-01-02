@@ -788,6 +788,7 @@ return [
 			'tboverride' => true, // T209753
 			'move-categorypages' => true, // T219261
 			'delete-redirect' => true, // T278131
+			'oathauth-enable' => true, // T382879
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T283523
