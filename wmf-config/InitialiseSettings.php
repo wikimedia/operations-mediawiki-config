@@ -2425,21 +2425,6 @@ return [
 	'legacy-vector' => '1',
 ],
 
-'wgVectorStickyHeader' => [
-	'default' => [
-		'logged_in' => true,
-		'logged_out' => false,
-	],
-	'commonswiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'wikidatawiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-],
-
 'wgVectorNightMode' => [
 	'default' => [
 		'logged_out' => false,
