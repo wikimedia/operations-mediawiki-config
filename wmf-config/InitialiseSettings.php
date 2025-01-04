@@ -3060,16 +3060,8 @@ return [
 # @}
 
 'wgEnableDnsBlacklist' => [
+	// T382987 - sorbs.net service is terminated, so lists would be noops
 	'default' => false,
-	'enwikinews' => true,
-	'eswikinews' => true, // T237151
-	'eswikiquote' => true, // T230796
-	'testwiki' => true,
-	'thwiki' => true,
-	'thwikibooks' => true,
-	'thwikiquote' => true,
-	'thwikisource' => true,
-	'thwiktionary' => true,
 ],
 
 'wgCountCategorizedImagesAsUsed' => [

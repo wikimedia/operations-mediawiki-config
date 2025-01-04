@@ -106,13 +106,6 @@ if ( $wmgRealm == 'labs' ) {
 		'wikivoyage.beta.wmcloud.org',
 	];
 
-	# Attempt to auto block users using faulty servers
-	# See also http://www.us.sorbs.net/general/using.shtml
-	$wgEnableDnsBlacklist = true;
-	$wgDnsBlacklistUrls   = [
-		'proxies.dnsbl.sorbs.net.',
-	];
-
 	if ( $wmgUseGlobalPreferences ) {
 		// Allow global preferences for email-blacklist to be auto-set where it is overridden
 		// T231577
