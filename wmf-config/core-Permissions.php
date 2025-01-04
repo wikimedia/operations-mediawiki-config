@@ -812,6 +812,10 @@ return [
 	],
 	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
+		'editor' => [ // T382887
+			'suppressredirect' => true,
+			'delete-redirect' => true,
+		],
 	],
 	'+enwikiquote' => [
 		'rollbacker' => [ 'rollback' => true ], // T310950
