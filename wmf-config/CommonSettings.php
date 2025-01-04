@@ -695,6 +695,8 @@ foreach ( $wmgPCServers as $tag => $host ) {
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'flags' => 0,
+		'connectTimeout' => 1,
+		'receiveTimeout' => 5,
 	];
 }
 
