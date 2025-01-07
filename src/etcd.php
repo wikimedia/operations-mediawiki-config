@@ -105,7 +105,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 			// Expected parsercache $dbctlLoads structure: [ [ 'pcNNNN' => 0 ], [] ]
 			if ( is_array( $dbctlLoads ) && isset( $dbctlLoads[0] ) && is_array( $dbctlLoads[0] ) ) {
 				$host = array_key_first( $dbctlLoads[0] );
-				if ( is_string( $host ) ) {
+				if ( is_string( $host ) && $dbctlLoads[0][$host] !== 0 ) {
 					$wmgPCServers[$dbctlCluster] = $localDbConfig['hostsByName'][$host] ?? $host;
 				}
 			}
