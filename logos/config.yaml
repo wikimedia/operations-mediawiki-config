@@ -3931,6 +3931,8 @@ Wikivoyage:
         comment_wordmark: 'T196680, T298033'
     cswikivoyage:
         commons: 'File:Wikivoyage-Logo-v3-cs.svg'
+        commons_wordmark: 'File:Wikicesty_cs_text_logo.svg'
+        comment_wordmark: T382779
     elwikivoyage:
         no_1_5x: true
         no_2x: true

@@ -5136,6 +5136,11 @@ return [
 		'width' => 96,
 		'height' => 25,
 	],
+	'cswikivoyage' => [ // T382779
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-cs.svg',
+		'width' => 140,
+		'height' => 34,
+	],
 	'elwikivoyage' => [
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-el.svg',
 		'width' => 144,
