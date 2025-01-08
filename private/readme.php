@@ -11,10 +11,6 @@
  * @{
  */
 
-// FIXME: Is this still needed?
-// It appears unused since MediaWiki 1.5.
-$wgDBsqlpassword = null;
-
 /**
  *
  * Usage (incomplete):
