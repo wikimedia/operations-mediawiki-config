@@ -56,6 +56,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
 use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
+use Wikimedia\MWConfig\DBRecordCache;
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
@@ -77,6 +78,7 @@ if ( PHP_SAPI !== 'cli' ) {
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
 require_once __DIR__ . '/../src/ClusterConfig.php';
+require_once __DIR__ . '/../src/DBRecordCache.php';
 require_once __DIR__ . '/../src/etcd.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
@@ -224,6 +226,10 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbFactoryConf['class'] = 'LBFactoryMulti';
+			// On dumps, we use a different set of databases (T382947)
+			if ( ClusterConfig::getInstance()->isDumps() ) {
+				DBRecordCache::getInstance()->repopulateDbConf( $lbFactoryConf );
+			}
 			return $lbFactoryConf;
 		};
 	} else {
@@ -394,6 +400,11 @@ if ( $wmgRealm === 'production' ) {
 	}
 	// T360930
 	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;
+
+	// Dumps use their own set of databases
+	if ( ClusterConfig::getInstance()->isDumps() ) {
+		DBRecordCache::getInstance()->repopulateDbConf( $wgLBFactoryConf );
+	}
 }
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
