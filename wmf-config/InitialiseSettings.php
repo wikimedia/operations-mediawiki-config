@@ -12504,6 +12504,11 @@ return [
 		'endpoint' => 'http://main-opentelemetry-collector.opentelemetry-collector.svc.cluster.local:4318/v1/traces',
 		'samplingProbability' => 0, # Never initiate, just follow Envoy's decision
 	],
+	'group1' => [
+		'serviceName' => 'mediawiki',
+		'endpoint' => 'http://main-opentelemetry-collector.opentelemetry-collector.svc.cluster.local:4318/v1/traces',
+		'samplingProbability' => 0, # Never initiate, just follow Envoy's decision
+	],
 ]
 
 ];
