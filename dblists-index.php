@@ -73,7 +73,7 @@ return [
 'aywikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'aywiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'azbwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'rtl', 'growthexperiments' ],
-'azwiki' => [ 'wikipedia', 'legacy-vector', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
+'azwiki' => [ 'wikipedia', 'legacy-vector', 'medium', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments' ],
 'azwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'azwikimedia' => [ 'fishbowl', 'small', 'legacy-vector', 'group1', 'translate' ],
 'azwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
