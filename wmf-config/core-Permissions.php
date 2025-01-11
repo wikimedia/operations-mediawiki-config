@@ -1422,6 +1422,16 @@ return [
 	'idwiki' => [
 		'*' => [ 'createpage' => false ],
 		'rollbacker' => [ 'rollback' => true ], // T35508
+		'event-organizer' => [ // T383154
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T383154
+			'campaignevents-organize-events' => false, // T383154
+			'campaignevents-email-participants' => false, // T383154
+		],
 	],
 	'+igwiki' => [
 		'event-organizer' => [ // T362675
@@ -1505,13 +1515,23 @@ return [
 			'editautopatrolprotected' => true, // T308917
 			'changetags' => true, // T331051
 		],
-		'user' => [ 'changetags' => false ], // T331051
+		'user' => [
+			'changetags' => false, // T331051
+			'campaignevents-enable-registration' => false, // T383154
+			'campaignevents-organize-events' => false, // T383154
+			'campaignevents-email-participants' => false, // T383154
+		],
 		'arbcom' => [ // T363805
 			'abusefilter-log-detail' => true,
 			'abusefilter-log-private' => true,
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
+		],
+		'event-organizer' => [ // T383154
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 	],
 	'+itwikisource' => [
@@ -1936,6 +1956,18 @@ return [
 			'templateeditor' => true, // T269067
 		],
 	],
+	'+mswiki' => [
+		'event-organizer' => [ // T383154
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T383154
+			'campaignevents-organize-events' => false, // T383154
+			'campaignevents-email-participants' => false, // T383154
+		],
+	],
 	'+mywiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T341026
 		'patroller' => [
@@ -2117,6 +2149,16 @@ return [
 			'deletedtext' => true,
 		],
 		'interface-admin' => [ 'editcontentmodel' => true, ], // T325819
+		'event-organizer' => [ // T383154
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+		],
+		'user' => [
+			'campaignevents-enable-registration' => false, // T383154
+			'campaignevents-organize-events' => false, // T383154
+			'campaignevents-email-participants' => false, // T383154
+		],
 	],
 	'+plwikiquote' => [
 		'patroller' => [
@@ -4075,7 +4117,10 @@ return [
 		],
 	],
 	'+idwiki' => [
-		'sysop' => [ 'rollbacker' ],
+		'sysop' => [
+			'rollbacker',
+			'event-organizer', // T383154
+		],
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+idwikimedia' => [
@@ -4107,6 +4152,7 @@ return [
 			'accountcreator', // T63109
 			'autopatrolled',
 			'flood',
+			'event-organizer', // T383154
 		],
 	],
 	'+itwikibooks' => [
@@ -4275,6 +4321,11 @@ return [
 			'patroller', // T269067
 		],
 	],
+	'+mswiki' => [
+		'sysop' => [
+			'event-organizer', // T383154
+		],
+	],
 	'+mywiki' => [
 		'sysop' => [
 			'autopatrolled', // T341026
@@ -4378,6 +4429,9 @@ return [
 			'abusefilter',
 			'flood',
 			'arbcom', // T256572
+		],
+		'sysop' => [
+			'event-organizer', // T383154
 		],
 	],
 	'+plwikiquote' => [
@@ -5477,7 +5531,10 @@ return [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'templateeditor', 'interface-editor' ], // T74055, T109408
 	],
 	'+idwiki' => [
-		'sysop' => [ 'rollbacker' ],
+		'sysop' => [
+			'rollbacker',
+			'event-organizer', // T383154
+		],
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+idwikimedia' => [ // T192726
@@ -5497,7 +5554,11 @@ return [
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover', 'botadmin', 'arbcom', ], // T55913, T102770, T220915, T363805
-		'sysop' => [ 'accountcreator', 'flood', ], // T63109
+		'sysop' => [
+			'accountcreator', // T63109
+			'flood',
+			'event-organizer', // T383154
+		],
 	],
 	'+itwikibooks' => [
 		'sysop' => [ 'autopatrolled', 'accountcreator', 'confirmed', 'patroller', 'flood' ], // flood added per T41569
@@ -5610,6 +5671,11 @@ return [
 			'patroller', // T269067
 		],
 	],
+	'+mswiki' => [
+		'sysop' => [
+			'event-organizer', // T383154
+		],
+	],
 	'+mywiki' => [
 		'sysop' => [
 			'autopatrolled', // T341026
@@ -5691,6 +5757,9 @@ return [
 	],
 	'+plwiki' => [
 		'bureaucrat' => [ 'abusefilter', 'flood', 'arbcom' ], // T256572
+		'sysop' => [
+			'event-organizer', // T383154
+		],
 	],
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479

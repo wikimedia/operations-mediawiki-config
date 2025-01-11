@@ -12278,6 +12278,10 @@ return [
 	'brwikimedia' => true, // T376747
 	'uawikimedia' => true, // T376695
 	'wikidatawiki' => true, // T375411
+	'idwiki' => true, // T383154
+	'plwiki' => true, // T383154
+	'mswiki' => true, // T383154
+	'itwiki' => true, // T383154
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
