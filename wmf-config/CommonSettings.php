@@ -1803,6 +1803,7 @@ $wgFooterIcons['copyright']['copyright'] = [
 	'width' => 84,
 	'height' => 29,
 	'alt' => 'Wikimedia Foundation',
+	'lang' => 'en',
 ];
 
 # :SEARCH:
