@@ -12298,6 +12298,10 @@ return [
 	'incubatorwiki' => true,
 ],
 
+'wgCampaignEventsEnableEventWikis' => [
+	'default' => true,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
