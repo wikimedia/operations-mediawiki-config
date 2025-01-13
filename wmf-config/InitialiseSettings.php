@@ -5966,6 +5966,9 @@ return [
 	'ruwikivoyage' => true, // T375394
 	'jawikivoyage' => true, // T380769
 	'dagwiki' => true, // T380401
+	'idwikivoyage' => true, // T381080
+	'tcywiktionary' => true, // T378463
+	'tigwiki' => true, // T381379
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
