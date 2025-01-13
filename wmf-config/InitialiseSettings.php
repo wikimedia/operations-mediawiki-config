@@ -7833,6 +7833,13 @@ return [
 	'urwiki' => true, // T378833
 	'viwikisource' => true, // T378833
 	'zhwikisource' => true, // T378833
+	'arwiki' => true, // T378834
+	'frwiki' => true, // T378834
+	'orwiki' => true, // T378834
+	'wawiki' => true, // T378834
+	'wawiktionary' => true, // T378834
+	'wikidatawiki' => true, // T378834
+	'zhwiki' => true, // T378834
 ],
 
 'wmgFlowNamespaces' => [
