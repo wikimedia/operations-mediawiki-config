@@ -802,7 +802,7 @@ return [
 'shwiki' => [ 'wikipedia', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'shwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'shywiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'simplewiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments' ],
+'simplewiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments' ],
 'simplewikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'simplewikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'simplewiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
