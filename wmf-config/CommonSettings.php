@@ -617,7 +617,7 @@ if ( $wmgSharedDomainPathPrefix ) {
 	$wmgUseThanks = false;
 	$wmgUseTimedMediaHandler = false;
 	$wmgUseTimeline = false;
-	$wmgUseUniversalLanguageSelector = false;
+	$wmgUseTranslationNotifications = false;
 	$wmgUseUrlShortener = false;
 	$wmgUseVips = false;
 	$wmgUseVisualEditor = false;
