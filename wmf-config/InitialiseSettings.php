@@ -4691,13 +4691,6 @@ return [
 	'+ptwikivoyage' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 ],
 
-'wgCentralAuthEnableSul3' => [
-	'default' => [],
-	'testwiki' => [ 'always', 'query-flag', 'cookie' ],
-	'test2wiki' => [ 'always', 'query-flag', 'cookie' ],
-	'testwikidatawiki' => [ 'always', 'query-flag', 'cookie' ],
-],
-
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalCssJs' => [
 	'default' => true,
