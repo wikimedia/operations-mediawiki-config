@@ -2243,6 +2243,10 @@ return [
 				],
 			],
 		],
+		'analytics.haproxy_requestctl' => [
+			'schema_title' => 'analytics/haproxy_requestctl',
+			'destination_event_service' => 'eventgate-analytics',
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [
