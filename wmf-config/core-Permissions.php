@@ -2714,6 +2714,9 @@ return [
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
 			'upload' => true, // Exception to T14556, used for testing of upload tools
 			'pagelang' => true, // testing of T69223
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 		'templateeditor' => [
 			'templateeditor' => true, // T61084
@@ -2752,6 +2755,9 @@ return [
 			'upload_by_url' => true,
 			'upload' => true,
 			'createpagemainns' => false,
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
 		],
 		'qa_automation' => [ // For browser tests, T60375 and T63799
 			'block' => true,
