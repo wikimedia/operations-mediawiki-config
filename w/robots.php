@@ -1,5 +1,6 @@
 <?php
 define( 'MW_NO_SESSION', 1 );
+define( 'MW_ENTRY_POINT', 'static' );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 

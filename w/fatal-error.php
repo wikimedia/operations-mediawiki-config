@@ -17,6 +17,8 @@
 // all of the duplicate class names are only from this file being processed multiple times
 // phpcs:disable Generic.Classes.DuplicateClassName.Found
 
+define( 'MW_ENTRY_POINT', 'fatal-error' );
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 require_once __DIR__ . '/../private/FatalErrorSettings.php';
