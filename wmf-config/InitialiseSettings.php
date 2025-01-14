@@ -5942,6 +5942,7 @@ return [
 	'idwikivoyage' => true, // T381080
 	'tcywiktionary' => true, // T378463
 	'tigwiki' => true, // T381379
+	'test2wiki' => true, // T378645
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -5976,6 +5977,7 @@ return [
 	'idwikivoyage' => true, // T381080
 	'tcywiktionary' => true, // T378463
 	'tigwiki' => true, // T381379
+	'test2wiki' => true, // T378645
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
