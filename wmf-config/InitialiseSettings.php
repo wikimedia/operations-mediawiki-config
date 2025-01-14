@@ -9733,11 +9733,7 @@ return [
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
-	'default' => 'http://localhost:6041/sparql',
-],
-
-'wgWBQualityConstraintsAdditionalSparqlEndpoints' => [
-	'default' => [ 'http://localhost:6042/sparql' ],
+	'default' => 'http://localhost:6009/sparql',
 ],
 
 'wgWBQualityConstraintsSparqlMaxMillis' => [
