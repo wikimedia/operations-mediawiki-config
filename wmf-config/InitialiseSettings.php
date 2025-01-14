@@ -10570,10 +10570,12 @@ return [
 
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsMerging' => [
-	'default' => false
+	'default' => false,
+	'testwiki' => true,
 ],
 
 // Disable redirects for search inputs to exact matches by default
