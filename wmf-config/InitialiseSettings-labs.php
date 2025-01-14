@@ -243,6 +243,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'wgMetricsPlatformEnableStreamConfigsFetching' => [
+			'testwiki' => true,
+		],
+
 		'wgMetricsPlatformEnableStreamConfigsMerging' => [
 			'testwiki' => true
 		],

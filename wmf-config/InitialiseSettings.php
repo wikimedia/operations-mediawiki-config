@@ -10568,6 +10568,10 @@ return [
 	'default' => false,
 ],
 
+'wgMetricsPlatformEnableStreamConfigsFetching' => [
+	'default' => false,
+],
+
 'wgMetricsPlatformEnableStreamConfigsMerging' => [
 	'default' => false
 ],

@@ -4700,10 +4700,6 @@ if ( $wmgUseCommunityConfiguration ) {
 if ( $wmgUseMetricsPlatform ) {
 	wfLoadExtension( 'MetricsPlatform' );
 	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['mpic'];
-
-	// Note: This is temporary while we (Data Products) update the $wgMetricsPlatformEnable config
-	// variable (T381853).
-	$wgMetricsPlatformEnable = $wgMetricsPlatformEnableStreamConfigsMerging;
 }
 
 if ( $wmgUseNetworkSession ) {
