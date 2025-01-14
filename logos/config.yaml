@@ -939,14 +939,12 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     knwiki:
-        commons: 'File:Wikipedia-logo-v2-kn-new.svg'
-        commons_wordmark: 'File:Wikipedia-wordmark-kn.svg'
-        commons_tagline: 'File:Wikipedia-tagline-kn.svg'
-        comment: 'T48589, T338136'
-        comment_1_5x: 'T150618, T338136'
-        comment_2x: 'T150618, T338136'
-        comment_wordmark: T338136
-        comment_tagline: T338136
+        commons: 'File:Wikipedia-logo-v3-kn.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-tagline-kn.svg'
+        comment: 'T382802'
+        comment_1_5x: 'T382802'
+        comment_2x: 'T382802'
+        comment_wordmark: 'T382802'
     koiwiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -2332,14 +2330,14 @@ Wiktionary:
         local_tagline: true
         local_wordmark: true
     knwiktionary:
-        commons: 'File:Wiktionary-logo-kn-v3.svg'
-        commons_wordmark: 'File:Wiktionary-wordmark-tagline-kn-v2.svg'
+        commons: 'File:Wiktionary-logo-kn-v2.svg'
+        commons_wordmark: 'File:Wiktionary-wordmark-tagline-kn.svg'
         commons_icon: 'File:Wiktionary-icon-kn-v2.svg'
-        comment_1_5x: T360022
-        comment_2x: T360022
-        comment: T360022
-        comment_icon: T360022
-        comment_wordmark: T360022
+        comment_1_5x: T382802
+        comment_2x: T382802
+        comment: T382802
+        comment_icon: T382802
+        comment_wordmark: T382802
     kowiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -2904,11 +2902,12 @@ Wikiquote:
         no_2x: true
         local_wordmark: true
     knwikiquote:
-        commons: 'File:Wikiquote-logo-kn.svg'
-        comment: T104260
-        commons_wordmark: 'File:Wikiquote-wordmark-kn.svg'
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: 'File:Wikiquote-logo-kn-v2.svg'
+        commons_wordmark: 'File:Wikiquote-wordmark-kn-v2.svg'
+        comment_wordmark: T382802
+        comment: T382802
+        comment_1_5x: T382802
+        comment_2x: T382802
     kowikiquote:
         comment: T29548
         no_1_5x: true
@@ -3674,12 +3673,12 @@ Wikisource:
         commons_wordmark: 'File:Wikisource-wordmark-ka.svg'
         comment_wordmark: T368868
     knwikisource:
-        commons: 'File:Wikisource-logo-kn-v2.svg'
-        comment: T360022
-        comment_1_5x: T360022
-        comment_2x: T360022
-        commons_wordmark: 'File:Wikisource-wordmark-tagline-kn.svg'
-        comment_wordmark: T360022
+        commons: 'File:Wikisource-logo-kn-v3.svg'
+        comment: T382802
+        comment_1_5x: T382802
+        comment_2x: T382802
+        commons_wordmark: 'File:Wikisource-wordmark-tagline-kn-v2.svg'
+        comment_wordmark: T382802
     kowikisource:
         comment: T40543
         no_1_5x: true
