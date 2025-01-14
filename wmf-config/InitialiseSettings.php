@@ -10565,7 +10565,7 @@ return [
 ],
 
 'wmgUseMetricsPlatform' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
