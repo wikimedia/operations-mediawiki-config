@@ -437,8 +437,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgFavicon' => [
-			'dewiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
-			'enwiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
+			'dewiki' => '/static/favicon/wikipedia-purple.png',
+			'enwiki' => '/static/favicon/wikipedia-purple.png',
 		],
 
 		'-wmgEnableCaptcha' => [
