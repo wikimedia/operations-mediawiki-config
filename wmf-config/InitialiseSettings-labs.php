@@ -167,14 +167,20 @@ function wmfGetOverrideSettings() {
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
 			'+wikipedia' => [
-				// Override default settings to enable
-				// rc0.mediawiki.page_change on selective wikis as we roll it out and test it.
-				// https://phabricator.wikimedia.org/T311129
-				'rc0.mediawiki.page_change' => [
-					'producers' => [
-						'mediawiki_eventbus' => [
-							'enabled' => true,
-						],
+				// Bump sample rate to 100% for QA purposes
+				'mediawiki.web_ui_actions' => [
+					'sample' => [
+						'rate' => 1
+					],
+				],
+				'product_metrics.web_base.search_ab_test_session_ticks' => [
+					'sample' => [
+						'rate' => 1,
+					],
+				],
+				'product_metrics.web_base.search_ab_test_clicks' => [
+					'sample' => [
+						'rate' => 1,
 					],
 				],
 			],

@@ -69,6 +69,9 @@ return [
  * to dynamically add event streams that it should accept
  * and validate.
  * See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+ *
+ * For overriding this in the beta cluster please see
+ * wmf-config/InitialiseSettings-labs.php
  */
 'wgEventStreams' => [
 	'default' => [
