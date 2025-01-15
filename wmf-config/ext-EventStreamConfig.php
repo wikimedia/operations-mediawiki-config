@@ -1695,6 +1695,16 @@ return [
 				'page_id' => 'page.page_id',
 			],
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'event_default',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		// This stream will be used by the above streaming enrichment pipeline
 		// This follows the naming convention of <job_name>.error
