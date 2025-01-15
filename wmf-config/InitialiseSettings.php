@@ -8906,6 +8906,7 @@ return [
 		'cak' => 'Kaqchikel', // T278854
 		'cal' => 'Carolinian', // T308062
 		'cnh' => 'Hakha Chin', // T278853
+		'dso' => 'ଦେଶିଆ', // T383785 - Desiya Language
 		'dua' => 'Duala', // T263946
 		'en-us' => 'American English', // T154589
 		'eto' => 'Eton', // T263946
@@ -8942,6 +8943,7 @@ return [
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
 		'srq' => 'mbia cheë', // T113408
+		'thq' => 'काेचिला थारु', // T383785 - Kochila Tharu Language
 		'tpv' => 'Tanapag', // T308062
 		'tvu' => 'Tunen', // T263946
 		'vut' => 'Vute', // T263946
@@ -8969,6 +8971,7 @@ return [
 		'cak' => 'Kaqchikel', // T278854
 		'cal' => 'Carolinian', // T308062
 		'cnh' => 'Hakha Chin', // T278853
+		'dso' => 'ଦେଶିଆ', // T383785 - Desiya Language
 		'dua' => 'Duala', // T263946
 		'en-us' => 'American English', // T154589
 		'eto' => 'Eton', // T263946
@@ -9005,6 +9008,7 @@ return [
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T230480
 		'srq' => 'mbia cheë', // T230480
+		'thq' => 'काेचिला थारु', // T383785 - Kochila Tharu Language
 		'tpv' => 'Tanapag', // T308062
 		'tvu' => 'Tunen', // T263946
 		'vut' => 'Vute', // T263946
