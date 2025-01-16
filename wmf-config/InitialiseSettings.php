@@ -10553,12 +10553,24 @@ return [
 	'default' => true,
 ],
 
+'wgMetricsPlatformEnableExperiments' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
 	'default' => false,
 	'testwiki' => true,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsMerging' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+// Enables a test module for verifying experiment enrollment.
+// This config var is temporary - it will be removed in T383801
+'wgWMEExLabTest1Enabled' => [
 	'default' => false,
 	'testwiki' => true,
 ],
