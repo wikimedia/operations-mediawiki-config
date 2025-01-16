@@ -2326,12 +2326,10 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUseCommunityConfiguration' => [
-			'default' => false, // NOTE: Do not enable without Growth team OK
-			'growthexperiments' => true, // T364892
+			'default' => true,
 		],
 		'wgGEUseCommunityConfigurationExtension' => [
-			'default' => false,
-			'growthexperiments' => true, // T364892
+			'default' => true,
 		],
 
 		'wmgUseAutoModerator' => [ // T364034
