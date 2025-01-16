@@ -197,6 +197,7 @@ return [
 	'arbcom_itwiki' => 'it',
 	'arbcom_nlwiki' => 'nl',
 	'arbcom_ruwiki' => 'ru', // T262812
+	'arbcom_zhwiki' => 'zh',
 	'auditcomwiki' => 'en',
 	'betawikiversity' => 'en',
 	'chairwiki' => 'en',
@@ -709,6 +710,7 @@ return [
 	'zhwikinews' => false,
 
 	// Other individual wikis
+	'arbcom_zhwiki' => false,
 	'azwikimedia' => false,
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
 	'eswiki' => false, // T8408
@@ -906,6 +908,7 @@ return [
 	'amwikimedia' => '//am.wikimedia.org',
 	'apiportalwiki' => '//api.wikimedia.org',
 	'arbcom_itwiki' => '//wikipedia-it-arbcom.wikimedia.org',
+	'arbcom_zhwiki' => '//wikipedia-zh-arbcom.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
 	'azwikimedia' => '//az.wikimedia.org',
@@ -1013,6 +1016,7 @@ return [
 	'amwikimedia' => 'https://am.wikimedia.org',
 	'apiportalwiki' => 'https://api.wikimedia.org',
 	'arbcom_itwiki' => 'https://wikipedia-it-arbcom.wikimedia.org',
+	'arbcom_zhwiki' => 'https://wikipedia-zh-arbcom.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
 	'azwikimedia' => 'https://az.wikimedia.org',
@@ -1139,6 +1143,7 @@ return [
 	'arbcom_fiwiki' => 'Arbitration Committee',
 	'arbcom_nlwiki' => 'Arbitration Committee',
 	'arbcom_ruwiki' => 'Арбитражный комитет русской Википедии', // T262812
+	'arbcom_zhwiki' => '中文维基百科仲裁委员会',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا',
 	'arwikibooks' => 'ويكي الكتب', // T337725

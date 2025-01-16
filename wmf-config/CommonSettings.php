@@ -312,9 +312,11 @@ $wgLocalVirtualHosts = [
 	'ua.wikimedia.org',
 	've.wikimedia.org',
 	'wikimania.wikimedia.org',
+	'wikipedia-it-arbcom.wikimedia.org',
+	'wikipedia-zh-arbcom.wikimedia.org',
+	'wikitech.wikimedia.org',
 	'www.wikifunctions.org',
 	'm.wikifunctions.org',
-	'wikitech.wikimedia.org',
 ];
 
 $globals = MWConfigCacheGenerator::getConfigGlobals(

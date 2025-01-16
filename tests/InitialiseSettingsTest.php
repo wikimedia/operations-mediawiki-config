@@ -218,7 +218,8 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 					continue;
 				}
 
-				$this->assertTrue( DBList::isInDblist( $db, "all" ), "$db has images set but is not a known wiki" );
+				$known = DBList::isInDblist( $db, "all" ) || DBList::isInDblist( $db, "preinstall" );
+				$this->assertTrue( $known, "$db has images set but is not a known wiki" );
 			}
 		}
 	}
@@ -376,6 +377,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 				$this->assertTrue(
 					in_array( $dbNormalized, $dblistNames ) ||
 					DBList::isInDblist( $dbNormalized, "all" ) ||
+					DBList::isInDblist( $dbNormalized, "preinstall" ) ||
 					in_array( $dbNormalized, $langs ) ||
 					// TODO: revert back to $db == "default"
 					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ),

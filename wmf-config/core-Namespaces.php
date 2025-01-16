@@ -5444,6 +5444,7 @@ return [
 	'arbcom_fiwiki' => 'Project',
 	'arbcom_nlwiki' => 'Project',
 	'arbcom_ruwiki' => 'Арбитраж', // T262812
+	'arbcom_zhwiki' => '仲裁',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا', // T6672
 	'arwikibooks' => 'ويكي_الكتب',
@@ -6006,6 +6007,7 @@ return [
 	'altwiki' => 'Википедияти_шӱӱжери',
 	'arbcom_cswiki' => 'Diskuse_k_projektu', // T151731
 	'arbcom_ruwiki' => 'Обсуждение_арбитража', // T262812
+	'arbcom_zhwiki' => '仲裁讨论',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউৎস_বাৰ্তা', // T45129, T226027
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',

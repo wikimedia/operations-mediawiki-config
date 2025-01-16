@@ -332,6 +332,7 @@ class MWMultiVersion {
 			'www.wikifunctions.org' => 'wikifunctions',
 			'wikipedia-pl-sysop.wikimedia.org' => 'sysop_pl',
 			'wikipedia-it-arbcom.wikimedia.org' => 'arbcom_it',
+			'wikipedia-zh-arbcom.wikimedia.org' => 'arbcom_zh',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
