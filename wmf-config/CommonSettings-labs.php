@@ -460,9 +460,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Point to the deployment-prep kartotherian server, see T310150.
 	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 
-	// Temporary feature flag for the Parsoid support for Kartographer (T340134)
-	$wgKartographerParsoidSupport = true;
-
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 

@@ -11564,11 +11564,6 @@ return [
 	'default' => true,
 ],
 
-// T342871
-'wgKartographerParsoidSupport' => [
-	'default' => true,
-],
-
 'wmgUseMediaModeration' => [
 	'default' => true,
 ],
