@@ -9848,6 +9848,8 @@ return [
 	'default' => 'Q21502410',
 	'testwikidatawiki' => 'Q187928',
 	'testcommonswiki' => 'Q187928',
+	// set to non-existent ID so distinct-value constraints will not be checked on commons
+	'commonswiki' => 'Q999999999',
 ],
 
 'wgWBQualityConstraintsMultiValueConstraintId' => [
@@ -9878,8 +9880,8 @@ return [
 	'default' => 'Q21503250',
 	'testwikidatawiki' => 'Q187933',
 	'testcommonswiki' => 'Q187933',
-	'commonswiki' => 'Q999999999', // set to non-existent id so type constraints will not be
-		// checked on commons
+	// set to non-existent id so type constraints will not be checked on commons
+	'commonswiki' => 'Q999999999',
 ],
 
 'wgWBQualityConstraintsValueTypeConstraintId' => [
