@@ -791,50 +791,6 @@ return [
 			'pattern' => '/^typage-\w+-\w+-\d+$/',
 		],
 	],
-	'+testwiki' => [
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
-		]
-	],
-	'+enwiki' => [
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-(latam|in|za)-en-2022$/'
-		]
-	],
-	'+eswiki' => [
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-latam-es-2022$/'
-		]
-	],
-	'+ptwiki' => [
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-latam-pt-2022$/'
-		]
-	],
 ],
 
 'wgGECampaignTopics' => [
