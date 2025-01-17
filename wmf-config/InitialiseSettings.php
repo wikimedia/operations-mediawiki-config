@@ -9754,6 +9754,26 @@ return [
 	'commonswiki' => 150,
 ],
 
+'wgWBQualityConstraintsFormatCheckerKnownGoodRegexPatterns' => [
+	'default' => [
+		'[1-9]\d*',
+		'\d+',
+		'[1-9][0-9]*',
+		'[0-9]+',
+		'\d{5}',
+		'[1-9]\d{0,5}',
+		'[1-9]\d{0,4}',
+		'[a-z-]+',
+		'[1-9]\d{0,3}',
+		'[1-9]\d+',
+		'[0-9]\d*',
+		'[1-9]\d{0,6}',
+		'[^\s/]+',
+		'\d{9}',
+		'\d{6}',
+	],
+],
+
 'wgWBQualityConstraintsPropertyConstraintId' => [
 	'default' => false,
 	'testwikidatawiki' => 'P51064',
