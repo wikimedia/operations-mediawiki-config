@@ -788,7 +788,7 @@ return [
 				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
-			'pattern' => '/^typage-\w+-\w+-\d+$/',
+			'pattern' => '/^(typage|fundraising)-\w+-\w+-\d+$/',
 		],
 	],
 ],
