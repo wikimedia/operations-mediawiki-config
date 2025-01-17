@@ -572,6 +572,10 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth']
 	// which it's better to use the canonical domain name of the current wiki.
 	$wgServer = '//' . $wmgHostnames['auth'];
 	$wgCanonicalServer = 'https://' . $wmgHostnames['auth'];
+
+	// This cache can't be split based on $wmgSharedDomainPathPrefix (T383916).
+	// It's not critical given the expected low number of views on the auth domain.
+	$wgEnableSidebarCache = false;
 } else {
 	$wgLoadScript = "{$wgScriptPath}/load.php";
 }
