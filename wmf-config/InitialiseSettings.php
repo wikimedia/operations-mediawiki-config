@@ -6955,6 +6955,10 @@ return [
 	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
 ],
 
+'wgCheckUserEnableTempAccountsOnboardingDialog' => [
+	'default' => false,
+],
+
 // ----------- CheckUser end ----------
 
 // n.b. If setting this to `false` for a wiki, please also update the
