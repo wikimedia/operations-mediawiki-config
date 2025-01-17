@@ -43,7 +43,7 @@ return [
 'arbcom_itwiki' => [ 'special', 'private', 'small', 'group1' ],
 'arbcom_nlwiki' => [ 'wikipedia', 'private', 'small', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
 'arbcom_ruwiki' => [ 'wikipedia', 'private', 'small', 'legacy-vector', 'nowikidatadescriptiontaglines' ],
-'arbcom_zhwiki' => [ 'preinstall', 'special', 'private', 'small', 'group1' ],
+'arbcom_zhwiki' => [ 'special', 'private', 'small', 'group1' ],
 'arcwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments' ],
 'arwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'wikidataclient', 'cirrussearch-big-indices', 'rtl', 'growthexperiments' ],
 'arwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl' ],
