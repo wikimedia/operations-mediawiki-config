@@ -1701,7 +1701,6 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'flood' => [ 'bot' => true ],
 		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
-		'oauthadmin' => [ 'autopatrol' => true ],
 	],
 	'+legalteamwiki' => [ // T63222
 		'accountcreator' => [ 'noratelimit' => false ],
@@ -4855,7 +4854,6 @@ return [
 			'confirmed',
 			'interface-admin',
 			'oathauth',
-			'oauthadmin',
 			'sysop',
 			'transwiki',
 		],
@@ -6072,7 +6070,6 @@ return [
 			'flood',
 			'interface-admin',
 			'oathauth',
-			'oauthadmin',
 			'sysop',
 			'transwiki',
 		],
