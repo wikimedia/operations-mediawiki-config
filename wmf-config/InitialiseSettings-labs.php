@@ -2232,6 +2232,9 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventWikis' => [
 			'default' => true,
 		],
+		'wgCampaignEventsEnableEventTopics' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
