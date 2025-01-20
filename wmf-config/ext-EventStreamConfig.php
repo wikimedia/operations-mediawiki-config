@@ -1518,9 +1518,15 @@ return [
 			// and the events will be emitted by the Lift Wing platform.
 			// More info in T349919.
 		],
+		'mediawiki.article_country_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'mediawiki.page_outlink_topic_prediction_change.v1' => [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
+			// The discussions in T382295#10518032 and T366273#10492412 suggest
+			// renaming this stream to replace 'page' with 'article'.
 		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
