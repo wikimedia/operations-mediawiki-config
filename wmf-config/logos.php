@@ -678,9 +678,9 @@ return [
 	'fawikinews' => '/static/images/project-logos/fawikinews.png',
 	'fiwikinews' => '/static/images/project-logos/fiwikinews.png',
 	'frwikinews' => '/static/images/project-logos/frwikinews.png',
+	'guwwikinews' => '/static/images/project-logos/guwwikinews.png', // T335162
 	'hewikinews' => '/static/images/project-logos/hewikinews.png',
 	'huwikinews' => '/static/images/project-logos/huwikinews.png',
-	'guwwikinews' => '/static/images/project-logos/guwwikinews.png', // T335162
 	'itwikinews' => '/static/images/project-logos/itwikinews.png',
 	'jawikinews' => '/static/images/project-logos/jawikinews.png',
 	'kowikinews' => '/static/images/project-logos/kowikinews.png',
@@ -2319,15 +2319,15 @@ return [
 		'width' => 120,
 		'height' => 25,
 	],
-	'annwiki' => [ // T377535
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ann.svg',
-		'width' => 124,
-		'height' => 18,
-	],
 	'anwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-an.svg',
 		'width' => 121,
 		'height' => 24,
+	],
+	'annwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ann.svg',
+		'width' => 120,
+		'height' => 17,
 	],
 	'arcwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-arc.svg',
@@ -3131,8 +3131,8 @@ return [
 	],
 	'rskwiki' => [ // T377536
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-rsk.svg',
-		'width' => 127,
-		'height' => 21,
+		'width' => 110,
+		'height' => 18,
 	],
 	'ruewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-rue.svg',
@@ -3256,8 +3256,8 @@ return [
 	],
 	'tddwiki' => [ // T377537
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tdd.svg',
-		'width' => 119,
-		'height' => 9,
+		'width' => 120,
+		'height' => 17,
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -4136,8 +4136,8 @@ return [
 	],
 	'gorwikiquote' => [ // T377542
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-gor.svg',
-		'width' => 122,
-		'height' => 51,
+		'width' => 121,
+		'height' => 50,
 	],
 	'guwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-gu.svg',
@@ -4690,8 +4690,8 @@ return [
 	],
 	'shnwikinews' => [ // T377543
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-shn.svg',
-		'width' => 486,
-		'height' => 149,
+		'width' => 146,
+		'height' => 44,
 	],
 	'sqwikinews' => [
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-sq.svg',
@@ -5743,15 +5743,15 @@ return [
 		'width' => 114,
 		'height' => 13,
 	],
-	'annwiki' => [ // T377535
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ann.svg',
-		'width' => 103,
-		'height' => 12,
-	],
 	'anwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-an.svg',
 		'width' => 120,
 		'height' => 14,
+	],
+	'annwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ann.svg',
+		'width' => 102,
+		'height' => 11,
 	],
 	'arcwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-arc.svg',
@@ -6315,8 +6315,8 @@ return [
 	],
 	'ibawiki' => [ // T377538
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iba.svg',
-		'width' => 807,
-		'height' => 85,
+		'width' => 120,
+		'height' => 12,
 	],
 	'idwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-id.svg',
@@ -6675,7 +6675,7 @@ return [
 	],
 	'moswiki' => [ // T377539
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mos.svg',
-		'width' => 119,
+		'width' => 120,
 		'height' => 11,
 	],
 	'mrjwiki' => [
@@ -6960,8 +6960,8 @@ return [
 	],
 	'rskwiki' => [ // T377536
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-rsk.svg',
-		'width' => 119,
-		'height' => 10,
+		'width' => 110,
+		'height' => 9,
 	],
 	'ruewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-rue.svg',
@@ -7155,8 +7155,8 @@ return [
 	],
 	'tddwiki' => [ // T377537
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tdd.svg',
-		'width' => 120,
-		'height' => 8,
+		'width' => 110,
+		'height' => 9,
 	],
 	'tetwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tet.svg',
