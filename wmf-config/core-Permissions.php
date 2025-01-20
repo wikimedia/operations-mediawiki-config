@@ -437,6 +437,8 @@ return [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
+		'templateeditor' => [ 'templateeditor' => true ], // T384145
+		'sysop' => [ 'templateeditor' => true ], // T384145
 	],
 	'+cawikinews' => [
 		'flood' => [ 'bot' => true ], // T98576
@@ -3660,6 +3662,7 @@ return [
 			'autopatrolled',
 			'abusefilter',
 			'accountcreator', // T58570
+			'templateeditor', // T384145
 		],
 	],
 	'+cawikinews' => [
@@ -5194,6 +5197,7 @@ return [
 			'autopatrolled',
 			'abusefilter',
 			'accountcreator', // T58570
+			'templateeditor', // T384145
 		],
 	],
 	'+cawikinews' => [

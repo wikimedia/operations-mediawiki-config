@@ -1997,6 +1997,7 @@ return [
 	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'editeditorprotected', 'templateeditor', 'sysop' ], // T54109, T146575, T225896, T321111, T382784
 	'azwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T281860
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
+	'cawiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T384145
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
 	'commonswiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T227420, T357298
 	'cswiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T316283
