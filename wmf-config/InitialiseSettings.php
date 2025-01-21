@@ -11579,6 +11579,10 @@ return [
 	'default' => true,
 ],
 
+'wgWebAuthnNewCredsDisabled' => [
+	'default' => true, // T378402
+],
+
 // NearbyPages extension
 // T246493
 'wmgUseNearbyPages' => [
