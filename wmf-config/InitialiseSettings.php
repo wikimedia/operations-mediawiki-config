@@ -10579,16 +10579,19 @@ return [
 'wgMetricsPlatformEnableExperiments' => [
 	'default' => false,
 	'testwiki' => true,
+	'wikitech' => true,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
 	'default' => false,
 	'testwiki' => true,
+	'wikitech' => true,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsMerging' => [
 	'default' => false,
 	'testwiki' => true,
+	'wikitech' => true,
 ],
 
 // Enables a test module for verifying experiment enrollment.
@@ -10596,6 +10599,7 @@ return [
 'wgWMEExLabTest1Enabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'wikitech' => true,
 ],
 
 // Disable redirects for search inputs to exact matches by default
