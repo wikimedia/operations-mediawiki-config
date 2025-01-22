@@ -2251,7 +2251,11 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'mediawiki_site_content_language',
+						'page_id',
+						'performer_session_id',
 					],
 				]
 			],
