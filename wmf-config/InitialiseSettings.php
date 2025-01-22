@@ -794,17 +794,17 @@ return [
 	'zh_min_nanwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nan',
 
 	// Individual wikis
-	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
-	'arwiki' => '/wiki/ويكيبيديا:رفع', // T142450
-	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
-	'azwiki' => '/wiki/Vikipediya:Yükləmə_sehrbazı', // T364674
-	'azbwiki' => '/wiki/ویکی‌پدیا:یوکله‌مه', // T248971
-	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
-	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
-	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
+	// NOTE: Use full URLs even for same-wiki links (T383916)
+	'arwiki' => '//ar.wikipedia.org/wiki/ويكيبيديا:رفع', // T142450
+	'aswiki' => '//as.wikipedia.org/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
+	'azwiki' => '//az.wikipedia.org/wiki/Vikipediya:Yükləmə_sehrbazı', // T364674
+	'azbwiki' => '//azb.wikipedia.org/wiki/ویکی‌پدیا:یوکله‌مه', // T248971
+	'bgwiki' => '//bg.wikipedia.org/wiki/MediaWiki:Uploadtext', // T16836
+	'bnwiki' => '//bn.wikipedia.org/wiki/উইকিপিডিয়া:আপলোড',
+	'bswiki' => '//bs.wikipedia.org/wiki/Wikipedia:Upload', // T14044
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
-	'enwiki' => '/wiki/Wikipedia:File_Upload_Wizard', // T44263
+	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard', // T44263
 	'enwikinews' => false,
 	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikivoyage' => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
@@ -813,27 +813,27 @@ return [
 	'eswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // T44933
 	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
-	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
+	'fawiki' => '//fa.wikipedia.org/wiki/ویکی‌پدیا:بارگذاری',
 	'fawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?setlang=fa&campaign=fa', // T214048
-	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
-	'frwiki' => '/wiki/Aide:Importer_un_fichier',
+	'fawikivoyage' => '//fa.wikivoyage.org/wiki/ویکی‌سفر:بارگذاری', // T102714
+	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Importer_un_fichier',
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
 	'guwiki' => false,
 	'hewikinews' => false,
-	'hiwiki' => '/wiki/विकिपीडिया:अपलोड',
-	'hrwiki' => '/wiki/Wikipedija:Upload',
+	'hiwiki' => '//hi.wikipedia.org/wiki/विकिपीडिया:अपलोड',
+	'hrwiki' => '//hr.wikipedia.org/wiki/Wikipedija:Upload',
 	'huwikibooks' => false, // T74231
-	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
-	'iswiki' => '/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
+	'incubatorwiki' => '//incubator.wikimedia.org/wiki/Special:MyLanguage/Incubator:Upload',
+	'iswiki' => '//is.wikipedia.org/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
 	'iswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=is', // T360431
-	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // T13187
+	'iswiktionary' => '//is.wiktionary.org/wiki/Wikiorðabók:Hlaða_inn_skrá', // T13187
 	'itwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
+	'jawiki' => '//ja.wikipedia.org/wiki/Wikipedia:ファイルのアップロード',
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
-	'kowiki' => '/wiki/위키백과:파일_올리기', // T54076
+	'kowiki' => '//ko.wikipedia.org/wiki/위키백과:파일_올리기', // T54076
 	'lrcwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lrc', // T102026
 	'metawiki' => false, // T52287
-	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
+	'mlwiki' => '//ml.wikipedia.org/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
 	'mswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ms', // T126944
 	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
 	'nlwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
@@ -844,24 +844,24 @@ return [
 	'plwikinews' => false,
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // T70191
-	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
-	'ptwikinews' => '/wiki/Wikinotícias:Carregar_ficheiro', // T300466
+	'ptwiki' => '//pt.wikipedia.org/wiki/Wikipedia:Carregar_ficheiro',
+	'ptwikinews' => '//pt.wikinews.org/wiki/Wikinotícias:Carregar_ficheiro', // T300466
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // T44934
-	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C8%99ier', // T85665
+	'rowiki' => '//ro.wikipedia.org/wiki/Wikipedia:Trimite_fișier', // T85665
 	'ruwiki' => false, // T14334
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'sewikimedia' => false, // T63947
-	'srwiki' => '/wiki/Википедија:Водич_за_отпремање', // T165901
+	'srwiki' => '//sr.wikipedia.org/wiki/Википедија:Водич_за_отпремање', // T165901
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'wikifunctionswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'tawiki' => '/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
-	'tewiki' => '/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
-	'thwiki' => '/wiki/%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%B4%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2:%E0%B8%AD%E0%B8%B1%E0%B8%9B%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94',
-	'zhwiki' => '/wiki/Project:%E4%B8%8A%E4%BC%A0',
+	'tawiki' => '//ta.wikipedia.org/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
+	'tewiki' => '//te.wikipedia.org/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
+	'thwiki' => '//th.wikipedia.org/wiki/วิกิพีเดีย:อัปโหลด',
+	'zhwiki' => '//zh.wikipedia.org/wiki/Project:上传',
 	'zhwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=zh-hans',
-	'zh_yuewiki' => '/wiki/Project:%E4%B8%8A%E8%BC%89',
+	'zh_yuewiki' => '//zh-yue.wikipedia.org/wiki/Project:上載',
 ],
 # @} end of wgUploadNavigationUrl
 
