@@ -11775,13 +11775,13 @@ return [
 	'default' => 'k8s-mwdebug',
 ],
 
-// Migration to PHP 8.1 (T377042)
+// Migration to PHP 8.1 (T383845)
 'wgWMENewPHPVersion' => [
 	'default' => '8.1',
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 0, // turned off
+	'default' => 1000, // 0.1% (1 in 1000)
 ],
 
 'wmgUsePageViewInfo' => [
