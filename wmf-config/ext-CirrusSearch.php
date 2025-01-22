@@ -30,8 +30,6 @@ return [
 		'archive' => [ 'eqiad', 'codfw' ],
 		'weighted_tags' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	],
-	// wikitech is not using kafka (T192361) should be re-evaluated when T237773 is adressed
-	'labswiki' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	// private wikis don't write to cloudelastic
 	'private' => [
 		'default' => [],
