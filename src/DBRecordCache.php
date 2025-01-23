@@ -13,6 +13,9 @@ class DBRecordCache {
 	/** @var string */
 	public $srvRecordFmt = "_%s-analytics._tcp.eqiad.wmnet";
 
+	/** @var string */
+	private $defaultSectionName = 's3';
+
 	/**
 	 * Get the single instance of the cache
 	 * @return DBRecordCache
@@ -35,12 +38,22 @@ class DBRecordCache {
 		$this->cache = [];
 	}
 
+	public function setDefaultSectionName( $section ) {
+		$this->defaultSectionName = $section;
+	}
+
 	/**
 	 * Repopulate the DB configuration from the cache
 	 * @param array &$lbFactoryConf
 	 */
 	public function repopulateDbConf( &$lbFactoryConf ) {
 		foreach ( array_keys( $lbFactoryConf['sectionLoads'] ) as $section ) {
+			// If the section is the default section, we need to use the default section name
+			// when fetching the records from the cache, but we need to retain the label
+			$sectionLabel = $section;
+			if ( $section === 'DEFAULT' ) {
+				$section = $this->defaultSectionName;
+			}
 			if ( !$this->needsUpdate( $section ) ) {
 				// nothing changed, move to the next section
 				continue;
@@ -60,12 +73,12 @@ class DBRecordCache {
 			}
 
 			// Now, let's swap all the non-master servers in the sectionLoads array
-			$master = array_key_first( $lbFactoryConf['sectionLoads'][$section] );
-			$lbFactoryConf['sectionLoads'][$section] = [ $master => 0 ] + $serverLoads;
+			$master = array_key_first( $lbFactoryConf['sectionLoads'][$sectionLabel] );
+			$lbFactoryConf['sectionLoads'][$sectionLabel] = [ $master => 0 ] + $serverLoads;
 
 			// Finally let's repopulate the groupLoadsBySection array with dbstores only
-			foreach ( $lbFactoryConf['groupLoadsBySection'][$section] as $label => $load ) {
-				$lbFactoryConf['groupLoadsBySection'][$section][$label] = $serverLoads;
+			foreach ( $lbFactoryConf['groupLoadsBySection'][$sectionLabel] as $label => $load ) {
+				$lbFactoryConf['groupLoadsBySection'][$sectionLabel][$label] = $serverLoads;
 			}
 		}
 	}

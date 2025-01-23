@@ -74,23 +74,23 @@ class DBRecordCacheTest extends TestCase {
 	public function testRepopulateDbConf() {
 		$lbFactoryConf = [
 			'sectionLoads' => [
-				'test-section' => [
+				'DEFAULT' => [
 					'master' => 0,
 					'replica' => 12
 				]
 			],
 			'groupLoadsBySection' => [
-				'test-section' => [
+				'DEFAULT' => [
 					'group1' => [ 'db1' => 0 ],
 					'group2' => [ 'db2' => 0, 'db3' => 0 ]
 				]
 			],
 			'hostsByName' => []
 		];
-
+		$this->cacheRepopulate->setDefaultSectionName( 'test-section' );
 		$this->cacheRepopulate->repopulateDbConf( $lbFactoryConf );
 		$this->assertEquals( '192.0.2.1:3306', $lbFactoryConf['hostsByName']['target.example.com:3306'] );
 
-		$this->assertEquals( [ 'master' => 0, 'target.example.com:3306' => 5 ], $lbFactoryConf['sectionLoads']['test-section'] );
+		$this->assertEquals( [ 'master' => 0, 'target.example.com:3306' => 5 ], $lbFactoryConf['sectionLoads']['DEFAULT'] );
 	}
 }
