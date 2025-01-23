@@ -28,13 +28,11 @@ return [
 		// T363475: Writes shifted to SUP, archive writes remain.
 		'default' => [],
 		'archive' => [ 'eqiad', 'codfw' ],
-		'weighted_tags' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	],
 	// private wikis don't write to cloudelastic
 	'private' => [
 		'default' => [],
 		'archive' => [ 'eqiad', 'codfw' ],
-		'weighted_tags' => [ 'eqiad', 'codfw' ],
 	],
 ],
 
