@@ -805,4 +805,8 @@ return [
 	'default' => true,
 ],
 
+'wgGELinkRecommendationMinimumTasksPerTopic' => [
+	'default' => 500,
+],
+
 ];
