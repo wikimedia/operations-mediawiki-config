@@ -1334,6 +1334,10 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
+		'GEApiQueryGrowthTasksLookaheadSize' => [
+			'default' => null,
+			'enwiki' => 10,
+		],
 		'wmgGEActiveExperiment' => [
 			'default' => 'growth-community-updates',
 		],
