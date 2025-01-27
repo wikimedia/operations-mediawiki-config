@@ -11195,30 +11195,27 @@ return [
 	// For unrecognized language codes, creativecommons.org falls back to English
 	'default' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.$lang',
 	'arwikinews' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ar',
-	'enwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
+	'dewikinews' => 'https://creativecommons.org/licenses/by/2.5/',
+	'fawikinews' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.fa',
 	'frwikinews' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.fr',
-	'hewikinews' => 'https://creativecommons.org/licenses/by/4.0/',
 	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
-	'nlwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
-	'plwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
-	'ptwikinews' => 'https://creativecommons.org/licenses/by/4.0/',
-	'rowikinews' => 'https://creativecommons.org/licenses/by/4.0/',
+	'ruwikinews' => 'https://creativecommons.org/licenses/by/2.5/',
+	'svwikinews' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.sv',
 	// Don't try to link to weird things like /deed.meta or /deed.commons
+	// Wikinews default license changed to 4.0 per T384614
 	'special' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-	'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
+	'wikinews' => 'https://creativecommons.org/licenses/by/4.0/',
 ],
 'wgRightsText' => [
 	'default' => 'Creative Commons Attribution-Share Alike 4.0',
 	'arwikinews' => 'Creative Commons Attribution-Share Alike 4.0',
-	'enwikinews' => 'Creative Commons Attribution 4.0',
+	'dewikinews' => 'Creative Commons Attribution 2.5',
+	'fawikinews' => 'Creative Commons Attribution-Share Alike 4.0',
 	'frwikinews' => 'Creative Commons Attribution-Share Alike 4.0',
-	'hewikinews' => 'Creative Commons Attribution 4.0',
 	'huwikinews' => 'Creative Commons Attribution 3.0',
-	'nlwikinews' => 'Creative Commons Attribution 4.0',
-	'plwikinews' => 'Creative Commons Attribution 4.0',
-	'ptwikinews' => 'Creative Commons Attribution 4.0',
-	'rowikinews' => 'Creative Commons Attribution 4.0',
-	'wikinews' => 'Creative Commons Attribution 2.5',
+	'ruwikinews' => 'Creative Commons Attribution 2.5',
+	'svwikinews' => 'Creative Commons Attribution-Share Alike 4.0',
+	'wikinews' => 'Creative Commons Attribution 4.0',
 	// Wikidata footer, T112606
 	'wikidata' => 'All structured data from the main and property namespace is available under ' .
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
