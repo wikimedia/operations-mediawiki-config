@@ -3617,7 +3617,7 @@ return [
 	'sqwiki' => [ 'q' ], // T221234
 	'sqwikiquote' => [ 'w' ], // T221234
 	'srnwiki' => [ 'incubator' ],
-	'srwiki' => [ 'wikt', 'meta' ], // T64533
+	'srwiki' => [ 'wikt', 'meta', 'incubator' ], // T64533, T384069
 	'srwiktionary' => [ 'w' ],
 	'srwikinews' => [ 'w:sr' ], // T214562
 	'srwikisource' => [ 'w' ],
