@@ -188,6 +188,21 @@ function wmfGetOverrideSettings() {
 		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
+			'+metawiki' => [
+				// Test for https://phabricator.wikimedia.org/T382173
+				// This will be removed in production.
+				'eventlogging_NavigationTiming' => [
+					'producers' => [
+						'eventgate' => [
+							'hoist_fields_from_http_headers' => [
+								// set meta.request_id to value of x-request-id header
+								'meta.request_id' => 'x-request-id',
+								// TEST: Don't collect user-agent
+							],
+						],
+					],
+				],
+			],
 			'+wikipedia' => [
 				// Bump sample rate to 100% for QA purposes
 				'mediawiki.web_ui_actions' => [
@@ -203,20 +218,6 @@ function wmfGetOverrideSettings() {
 				'product_metrics.web_base.search_ab_test_clicks' => [
 					'sample' => [
 						'rate' => 1,
-					],
-				],
-
-				// Test for https://phabricator.wikimedia.org/T382173
-				// This will be removed in production.
-				'eventlogging_NavigationTiming' => [
-					'producers' => [
-						'eventgate' => [
-							'hoist_fields_from_http_headers' => [
-								// set meta.request_id to value of x-request-id header
-								'meta.request_id' => 'x-request-id',
-								// TEST: Don't collect user-agent
-							],
-						],
 					],
 				],
 			],
