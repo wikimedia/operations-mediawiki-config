@@ -10582,6 +10582,11 @@ return [
 	'wikitech' => true,
 ],
 
+'wgMetricsPlatformEnableExperimentOverrides' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
 	'default' => false,
 	'testwiki' => true,
