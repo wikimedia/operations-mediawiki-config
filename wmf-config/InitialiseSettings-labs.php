@@ -197,7 +197,8 @@ function wmfGetOverrideSettings() {
 							'hoist_fields_from_http_headers' => [
 								// set meta.request_id to value of x-request-id header
 								'meta.request_id' => 'x-request-id',
-								// TEST: Don't collect user-agent
+								// TEST: Opt out of collecting user-agent
+								'http.request_headers.user-agent' => false,
 							],
 						],
 					],
