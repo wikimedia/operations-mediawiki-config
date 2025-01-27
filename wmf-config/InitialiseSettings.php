@@ -12375,6 +12375,10 @@ return [
 	'default' => true,
 ],
 
+'wgCampaignEventsEnableEventTopics' => [
+	'default' => true,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
