@@ -160,12 +160,18 @@ function wmfGetOverrideSettings() {
 				// setting once it is verified to work in beta.
 				'producers' => [
 					'eventgate' => [
-						// If the event's schema has the specified field,
-						// the field is not already set in the event,
-						// and the http header is set, then
-						// the value header will be hoisted
-						// into the specified field.
-						'hoist_fields_from_http_headers' => [
+						// If
+						// - the event's schema has the field specified in the
+						//   enrich_fields_from_http_headers setting key
+						// - the field is not already set in the event
+						// - The HTTP request header specified in the
+						// - An HTTP header is specified in the
+						//   enrich_fields_from_http_headers setting value
+						//   (false can be used to explicitly disable)
+						// - The HTTP reuest header specified in the
+						//   enrich_fields_from_http_headers setting value
+						//   is set in the HTTP POST request to eventgate
+						'enrich_fields_from_http_headers' => [
 							// set meta.request_id to value of x-request-id header
 							'meta.request_id' => 'x-request-id',
 							// set http.request_headers['user-agent']
@@ -194,7 +200,7 @@ function wmfGetOverrideSettings() {
 				'eventlogging_NavigationTiming' => [
 					'producers' => [
 						'eventgate' => [
-							'hoist_fields_from_http_headers' => [
+							'enrich_fields_from_http_headers' => [
 								// set meta.request_id to value of x-request-id header
 								'meta.request_id' => 'x-request-id',
 								// TEST: Opt out of collecting user-agent
