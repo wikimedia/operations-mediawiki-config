@@ -12163,8 +12163,7 @@ return [
 
 // Temporary, added in T339104, to be removed in T330217
 'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
-	'default' => null,
-	'testwikidatawiki' => true, // T343409
+	'default' => true, // T312176
 ],
 
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
