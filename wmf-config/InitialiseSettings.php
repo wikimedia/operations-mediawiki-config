@@ -11778,7 +11778,7 @@ return [
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 100, // 1% (1 in 100)
+	'default' => 50, // 2% (1 in 50)
 ],
 
 'wmgUsePageViewInfo' => [
