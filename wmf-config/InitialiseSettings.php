@@ -6845,6 +6845,7 @@ return [
 	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
+	'svwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=sv', // T383452
 ],
 
 // Whether to show "Publish" rather than "Save" on the edit page (and related circumstances)
