@@ -6470,6 +6470,12 @@ return [
 	'enwiki' => false,
 ],
 
+'wgVisualEditorEditCheckSingleCheckMode' => [
+	'default' => true,
+	// T384658
+	'testwiki' => false,
+],
+
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
 ],

@@ -721,8 +721,6 @@ function wmfGetOverrideSettings() {
 			// T345658
 			'enwiki' => true,
 			'frwiki' => true,
-			// T384658
-			'testwiki' => true,
 		],
 
 		'wgVisualEditorEditCheckTagging' => [
@@ -730,14 +728,6 @@ function wmfGetOverrideSettings() {
 			// T345658
 			'enwiki' => true,
 			'frwiki' => true,
-			// T384658
-			'testwiki' => true,
-		],
-
-		'wgVisualEditorEditCheckSingleCheckMode' => [
-			'default' => true,
-			// T384658
-			'testwiki' => false,
 		],
 
 		// Whether to enable true section editing. false, true, 'mobile', or 'mobile-ab'
