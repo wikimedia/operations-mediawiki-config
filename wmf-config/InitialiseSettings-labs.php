@@ -201,13 +201,23 @@ function wmfGetOverrideSettings() {
 					'producers' => [
 						'eventgate' => [
 							'enrich_fields_from_http_headers' => [
-								// set meta.request_id to value of x-request-id header
-								'meta.request_id' => 'x-request-id',
 								// TEST: Opt out of collecting user-agent
 								'http.request_headers.user-agent' => false,
 							],
 						],
 					],
+				],
+				// Test for https://phabricator.wikimedia.org/T382173
+				// This will be removed in production.
+				'eventlogging_HomepageVisit' => [
+					'producers' => [
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								// TEST: Opt out of collecting user-agent
+								'http.request_headers.user-agent' => false,
+							],
+						],
+					]
 				],
 			],
 			'+wikipedia' => [
