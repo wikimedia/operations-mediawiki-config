@@ -17,7 +17,12 @@ return [
 // the entry does not already have the setting.
 'wgEventStreamsDefaultSettings' => [
 	'default' => [
+
+		// topic prefixes are used to compute the list of Kafka topics that compose a stream.
+		// If the 'topics' are not explicilty set for a stream, then the topics will be
+		// computed as these prefixes + the stream name.
 		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
+
 		// Canary events are produced into streams
 		// for ingestion monitoring purposes.
 		// Absence of these events either means
@@ -28,19 +33,51 @@ return [
 		// This is explicitly disabled for MW state change (EventBus) streams
 		// until https://phabricator.wikimedia.org/T266798 is done.
 		'canary_events_enabled' => true,
-		// By default, all events should be imported into Hadoop.
-		// The analytics hadoop ingestion consumer (Gobblin) will
-		// look for streams to ingest using these settings.
-		// Each stream in a job should have similar volumes to allow
-		// the job to scale properly and not cause stream ingestion starvation.
-		// The default job_name is event_default.
-		// Override this if the stream should be imported by a different job,
-		// or disabled altogether.
+
+		'producers' => [
+			'eventgate' => [
+				// If all of the following are true:
+				// - the event's schema has the field specified in the
+				//   enrich_fields_from_http_headers setting key
+				// - the field is not already set in the event
+				// - A HTTP header name is specified in the
+				//   enrich_fields_from_http_headers setting value
+				//   (false can be used to explicitly disable)
+				// - The HTTP request header specified
+				//   is set in the HTTP POST request to eventgate
+				// Then the specified field will be set to the value
+				// of the HTTP header in the POSTed event before it is produced to Kafka.
+				'enrich_fields_from_http_headers' => [
+					// set meta.request_id to value of x-request-id header
+					'meta.request_id' => 'x-request-id',
+					// set http.request_headers['user-agent']
+					// to value of user-agent header.
+					// See:
+					// - https://phabricator.wikimedia.org/T382173
+					// - https://schema.wikimedia.org/repositories//primary/jsonschema/fragment/http/current.yaml
+					// TODO: Disable default user-agent collection: https://phabricator.wikimedia.org/T384964
+					'http.request_headers.user-agent' => 'user-agent'
+				],
+			],
+		],
+
 		'consumers' => [
+			// All events should be imported into Hadoop HDFS by default.
+			// The analytics hadoop ingestion consumer (as of 2025, Gobblin) will
+			// look for streams to ingest using these settings.
+			// Each stream in a job should have similar volumes to allow
+			// the job to scale properly and not cause stream ingestion starvation.
+			// The default job_name is event_default.
+			// Override this if the stream should be imported by a different job,
+			// or disabled altogether.
+			// Gobblin jobs are configured in analytics/refinery and deployed by puppet (systemd).
+			// https://gerrit.wikimedia.org/r/plugins/gitiles/analytics/refinery/+/refs/heads/master/gobblin/jobs/
 			'analytics_hadoop_ingestion' => [
 				'job_name' => 'event_default',
 				'enabled' => true,
 			],
+			// This consumer ingests raw HDFS JSON data into Hive tables.
+			// As of 2025 this consumer is a WMF custom Spark job named Refine.
 			'analytics_hive_ingestion' => [
 				'enabled' => true,
 			],
@@ -48,6 +85,10 @@ return [
 	],
 	'+private' => [
 		'producers' => [
+			// MediaWiki Eventbus extension is responsible for producing events from MediaWiki.
+			// In general, we don't to produce events from private wikis (e.g. officewiki, etc.)
+			// by default.
+			// This can be manually enabled in some special cases with some overrided settings.
 			'mediawiki_eventbus' => [
 				'enabled' => false,
 			],

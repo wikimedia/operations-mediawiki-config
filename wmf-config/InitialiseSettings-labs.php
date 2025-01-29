@@ -151,34 +151,19 @@ function wmfGetOverrideSettings() {
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
 		// the entry does not already have the setting.
-		// Beta only has eqiad. prefixed topics.
 		'wgEventStreamsDefaultSettings' => [
+			// NOTE: there can only be one mediawiki-config 'default' (global wiki default).
+			// Settings from production 'default' wikis are not merged in here
+			// (unlike per wiki overrides with + prefix.)
 			'default' => [
+				// Beta only has eqiad. prefixed topics.
+				// See comment docs for this setting in ext-EventStreamConfig.php.
 				'topic_prefixes' => [ 'eqiad.' ],
-				// Test for https://phabricator.wikimedia.org/T382173
-				// This will be moved to main wgEventStreamsDefaultSettings
-				// setting once it is verified to work in beta.
 				'producers' => [
 					'eventgate' => [
-						// If
-						// - the event's schema has the field specified in the
-						//   enrich_fields_from_http_headers setting key
-						// - the field is not already set in the event
-						// - The HTTP request header specified in the
-						// - An HTTP header is specified in the
-						//   enrich_fields_from_http_headers setting value
-						//   (false can be used to explicitly disable)
-						// - The HTTP reuest header specified in the
-						//   enrich_fields_from_http_headers setting value
-						//   is set in the HTTP POST request to eventgate
+						// See comment docs for this setting in ext-EventStreamConfig.php.
 						'enrich_fields_from_http_headers' => [
-							// set meta.request_id to value of x-request-id header
 							'meta.request_id' => 'x-request-id',
-							// set http.request_headers['user-agent']
-							// to value of user-agent header.
-							// See:
-							// - https://phabricator.wikimedia.org/T382173
-							// - https://schema.wikimedia.org/repositories//primary/jsonschema/fragment/http/current.yaml
 							'http.request_headers.user-agent' => 'user-agent'
 						],
 					],
