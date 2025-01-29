@@ -240,9 +240,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
 	}
 
-	// Temporary, T297393
-	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
-		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
+	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
+		// Temporarily retain Tmp and non-Tmp version to support flag rename
+		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
+		$wgWBRepoSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
 }
 
@@ -374,9 +375,10 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
 
-	// Temporary, T297393
-	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
-		$wgWBClientSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
+	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
+		// Temporarily retain Tmp and non-Tmp version to support flag rename
+		$wgWBClientSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
+		$wgWBClientSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
 }
 

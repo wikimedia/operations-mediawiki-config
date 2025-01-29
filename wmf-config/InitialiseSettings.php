@@ -12192,7 +12192,7 @@ return [
 	'default' => true,
 ],
 
-'wmgWikibaseTmpEnableMulLanguageCode' => [
+'wmgWikibaseEnableMulLanguageCode' => [
 	'default' => true,
 ],
 
