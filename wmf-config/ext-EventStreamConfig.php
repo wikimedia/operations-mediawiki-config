@@ -1988,6 +1988,44 @@ return [
 			'canary_events_enabled' => true,
 		],
 
+		'mediawiki.cirrussearch.page_weighted_tags_change.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/page_weighted_tags_change',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+		],
+		'cirrussearch.update_pipeline.update.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
+		'cirrussearch.update_pipeline.update.private.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+		],
+		'cirrussearch.update_pipeline.fetch_error.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/update_pipeline/fetch_error',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => true,
+		],
+
 		// Temporary analytics for Kartographer Nearby feature
 		// See T315972
 		'mediawiki.maps_interaction' => [
