@@ -2014,51 +2014,6 @@ return [
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
 		 */
-		'mediawiki.cirrussearch.page_weighted_tags_change.rc0' => [
-			'schema_title' => 'development/cirrussearch/page_weighted_tags_change',
-			'destination_event_service' => 'eventgate-main',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
-				],
-			],
-		],
-		'cirrussearch.update_pipeline.update.rc0' => [
-			'schema_title' => 'development/cirrussearch/update_pipeline/update',
-			'destination_event_service' => 'eventgate-main',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page_id',
-			],
-			'canary_events_enabled' => true,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'medium',
-				],
-			],
-		],
-		'cirrussearch.update_pipeline.update.private.rc0' => [
-			'schema_title' => 'development/cirrussearch/update_pipeline/update',
-			'destination_event_service' => 'eventgate-main',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page_id',
-			],
-			'canary_events_enabled' => true,
-		],
-		'cirrussearch.update_pipeline.fetch_error.rc0' => [
-			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
-			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => true,
-		],
-
 		'mediawiki.cirrussearch.page_weighted_tags_change.v1' => [
 			'schema_title' => 'mediawiki/cirrussearch/page_weighted_tags_change',
 			'destination_event_service' => 'eventgate-main',
