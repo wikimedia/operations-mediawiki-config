@@ -12196,11 +12196,6 @@ return [
 	'default' => true,
 ],
 
-// Temporary, added in T339104, to be removed in T330217
-'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
-	'default' => true, // T312176
-],
-
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
