@@ -53,6 +53,6 @@ try {
 	trigger_error(
 		'EventLoggingLegacyConverter: Failed proxying legacy EventLogging event query string ' .
 			'to WMF Event Platform JSON: ' . get_class( $e ) . ': ' . $e->getMessage(),
-		E_USER_ERROR
+		E_USER_WARNING
 	);
 }
