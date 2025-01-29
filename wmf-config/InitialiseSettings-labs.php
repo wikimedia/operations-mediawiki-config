@@ -204,6 +204,18 @@ function wmfGetOverrideSettings() {
 						],
 					]
 				],
+				// Test for https://phabricator.wikimedia.org/T382173
+				// This will be removed in production.
+				'eventlogging_HelpPanel' => [
+					'producers' => [
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								// TEST: Opt out of collecting user-agent
+								'http.request_headers.user-agent' => false,
+							],
+						],
+					]
+				],
 			],
 			'+wikipedia' => [
 				// Bump sample rate to 100% for QA purposes
