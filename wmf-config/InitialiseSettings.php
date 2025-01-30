@@ -12410,9 +12410,8 @@ return [
 
 // Community configuration (T357766)
 'wmgUseCommunityConfiguration' => [
-	// NOTE: Do not enable without OK from the Growth team.
-	'default' => false,
-	'growthexperiments' => true,
+	'default' => true,
+	'lockeddown' => false,
 ],
 
 'wmgUseAutoModerator' => [
