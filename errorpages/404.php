@@ -7,26 +7,13 @@
  * - https://en.wikipedia.org/Example
  * - https://en.wikipedia.org/w/Example
  *
- * The response is similar to errorpages/404.html, except that it uses a
- * project-specific favicon (instead of generic wmf.ico).
+ * Compared to 404.html, which is used on domains that do not host MediaWiki at the root,
+ * this one recommends corrections for common URL mistakes (like a missing wiki/ prefix)
+ * and uses a project-specific favicon. Please keep them in sync apart from these differences.
  */
 header( 'Content-Type: text/html; charset=utf-8' );
 header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
-
-$path = $_SERVER['REQUEST_URI'];
-$encUrl = htmlspecialchars( $path );
-
-if ( preg_match( '/(%2f)/i', $path, $matches )
-	|| preg_match( '/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i', $path, $matches )
-) {
-	// "/w/Foo" -> "/wiki/Foo"
-	$target = '/wiki/' . $matches[1];
-} else {
-	// "/Foo" -> "/wiki/Foo"
-	$target = '/wiki' . $path;
-}
-$encTarget = htmlspecialchars( $target );
-$outputHtml = <<<END
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <meta charset="utf-8">
@@ -54,12 +41,26 @@ em { color: #72777d; font-style: normal; }
 <div class="content" role="main">
 <a href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
 <h1>Page not found</h1>
-<p><em>$encUrl</em></p>
+<?php
+$path = $_SERVER['REQUEST_URI'];
+$encUrl = htmlspecialchars( $path );
+echo "<p><em>$encUrl</em></p>\n";
+?>
 <p>We could not find the above page on our servers.</p>
-<p><b>Did you mean: <a href="$encTarget">$encTarget</a></b></p>
-<p style="clear:both;">Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="https://en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
+<?php
+if ( preg_match( '/(%2f)/i', $path, $matches )
+	|| preg_match( '/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i', $path, $matches )
+) {
+	// "/w/Foo" -> "/wiki/Foo"
+	$target = '/wiki/' . $matches[1];
+} else {
+	// "/Foo" -> "/wiki/Foo"
+	$target = '/wiki' . $path;
+}
+$encTarget = htmlspecialchars( $target );
+echo "<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a></b></p>\n";
+?>
+<p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="https://en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
 </div>
 </html>
-END;
-
-print $outputHtml;
+<!-- 404.php -->
