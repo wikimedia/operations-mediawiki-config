@@ -6278,6 +6278,9 @@ return [
 	'+cswikisource' => [
 		'Edice' => true, // T244133
 	],
+	'+kowikisource' => [
+		'초안' /* Draft */ => true, // T385162
+	],
 
 	// Wikinewses
 

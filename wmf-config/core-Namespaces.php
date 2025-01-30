@@ -1020,6 +1020,8 @@ return [
 		'Author_talk' => 101,
 		'Portal' => 102, // T71522
 		'Portal_talk' => 103,
+		'Draft' => 118, // T385162
+		'Draft_talk' => 119, // T385162
 	],
 	'+kowikiversity' => [
 		'Wikiversity토론' => NS_PROJECT_TALK, // T46899
@@ -3535,6 +3537,8 @@ return [
 		103 => '포털토론',
 		114 => '번역', // T183836, Translation
 		115 => '번역토론', // T183836, Traslation talk
+		118 => '초안', // T385162, Draft
+		119 => '초안토론', // T385162, Draft talk
 	],
 	'lawikisource' => [
 		102 => 'Scriptor',
@@ -4932,6 +4936,10 @@ return [
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
 	],
+	'kowikisource' => [
+		118 => 'noindex,nofollow', // Draft - T385162
+		119 => 'noindex,nofollow', // Draft talk - T385162
+	],
 	'mlwiki' => [ // Draft - T362653
 		118 => 'noindex,nofollow',
 		119 => 'noindex,nofollow',
@@ -5407,6 +5415,7 @@ return [
 	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
+	'kowikisource' => [ 118, 119 ], // draft and draft talk - T385162
 	'mlwiki' => [ 118, 119 ], // draft and draft talk - T362653
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
