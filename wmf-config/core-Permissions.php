@@ -95,7 +95,35 @@ return [
 		'sysop' => [
 			'edit' => true,
 			'move' => true,
-			'move-subpages' => true
+			'move-subpages' => true,
+		],
+	],
+
+	// Restrict Wikimedia Russia local chapter (ruwikimedia) activity - T382805
+	'ruwikimedia' => [
+		'*' => [
+			'edit' => false,
+			'createaccount' => false,
+			'autocreateaccount' => false,
+			'translate' => false,
+			'createpage' => false,
+		],
+		'user' => [
+			'edit' => false,
+			'move' => false,
+			'move-rootuserpages' => false,
+			'move-subpages' => false,
+			'upload' => false,
+			'createpage' => false,
+			'reupload-own' => false,
+		],
+		'sysop' => [
+			'edit' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'translate' => true,
+			'createpage' => true,
+			'reupload-own' => true,
 		],
 	],
 
