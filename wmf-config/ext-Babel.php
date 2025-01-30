@@ -7,8 +7,7 @@
 return [
 
 'wgBabelUseCommunityConfiguration' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wmgBabelCategoryNames' => [
