@@ -427,6 +427,15 @@ $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
+# Only enable OpenTelemetry tracing on Kubernetes.  It is not (yet?) supported on bare metal.
+if ( ClusterConfig::getInstance()->isK8s() ) {
+	$wgOpenTelemetryConfig = [
+		'serviceName' => 'mediawiki',
+		'endpoint' => 'http://main-opentelemetry-collector.opentelemetry-collector.svc.cluster.local:4318/v1/traces',
+		'samplingProbability' => 0, # Never initiate, just follow Envoy's decision
+	];
+}
+
 # ######################################################################
 # Revision backend settings
 # ######################################################################
