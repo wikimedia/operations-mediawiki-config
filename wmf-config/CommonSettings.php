@@ -595,60 +595,6 @@ if ( @$_SERVER['SERVER_NAME'] === $wmgHostnames['auth']
 // is used to access it, and so must not include anything that requires
 // consistency between requests (e.g. due to caching).
 if ( $wmgSharedDomainPathPrefix ) {
-	// Disable extensions not related to authentication. (New extensions that depend on one of the
-	// disabled extensions will also need to be added here.) This mostly follows past loginwiki
-	// restrictions (see the 'lockeddown' dblist).
-	$wmgUseAutoModerator = false;
-	$wmgUseBabel = false;
-	$wmgUseBetaFeatures = false;
-	$wmgUseCategoryTree = false;
-	$wmgUseCentralNotice = false;
-	$wmgUseCharInsert = false;
-	$wmgUseChart = false;
-	$wmgUseCite = false;
-	$wmgUseCiteThisPage = false;
-	$wmgUseCommonsMetadata = false;
-	$wmgUseCollection = false;
-	$wmgUseContentTranslation = false;
-	$wmgUseDisambiguator = false;
-	$wmgUseDiscussionTools = false;
-	$wmgUseExternalGuidance = false;
-	$wmgUseFeaturedFeeds = false;
-	$wmgUseFileExporter = false;
-	$wmgUseGadgets = false;
-	$wmgUseGlobalCssJs = false;
-	$wmgUseGrowthExperiments = false;
-	$wmgUseGuidedTour = false;
-	$wmgUseImageMap = false;
-	$wmgUseInputBox = false;
-	$wmgUseLabeledSectionTransclusion = false;
-	$wmgUseLinter = false;
-	$wmgUseMassMessage = false;
-	$wmgUseMath = false;
-	$wmgUseMultimediaViewer = false;
-	$wmgUseNearbyPages = false;
-	$wmgUsePageImages = false;
-	$wmgUsePagedTiffHandler = false;
-	$wmgUsePdfHandler = false;
-	$wmgUsePhonos = false;
-	$wmgUsePoem = false;
-	$wmgUseRealMe = false;
-	$wmgUseScore = false;
-	$wmgUseScoreShellbox = false;
-	$wmgUseSecurePoll = false;
-	$wmgUseSpecialNuke = false;
-	$wmgUseSyntaxHighlight = false;
-	$wmgUseTemplateData = false;
-	$wmgUseTemplateSandbox = false;
-	$wmgUseThanks = false;
-	$wmgUseTimedMediaHandler = false;
-	$wmgUseTimeline = false;
-	$wmgUseTranslationNotifications = false;
-	$wmgUseUrlShortener = false;
-	$wmgUseVips = false;
-	$wmgUseVisualEditor = false;
-	$wmgUseWikiHiero = false;
-
 	// Disable on-wiki JS/CSS. This is mostly ineffective since these are mainly used by ResourceLoader, and load.php
 	// is invoked via the canonical domain. (We rely on OutputPage::disallowUserJs() instead.) Still, can't hurt.
 	$wgUseSiteCss = false;
