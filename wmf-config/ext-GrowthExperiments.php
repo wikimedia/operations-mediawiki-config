@@ -807,6 +807,8 @@ return [
 
 'wgGELinkRecommendationMinimumTasksPerTopic' => [
 	'default' => 500,
+	'eswiki' => 2000,
+	'frwiki' => 2000,
 ],
 
 ];
