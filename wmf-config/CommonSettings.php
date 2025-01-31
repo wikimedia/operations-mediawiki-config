@@ -2901,10 +2901,7 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseBabel ) {
 	wfLoadExtension( 'Babel' );
-	$wgBabelCategoryNames = $wmgBabelCategoryNames;
-	$wgBabelMainCategory = $wmgBabelMainCategory;
 	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
-	$wgBabelUseUserLanguage = $wmgBabelUseUserLanguage;
 
 	$wgBabelUseDatabase = true;
 	if ( $wmgUseCentralAuth ) {
