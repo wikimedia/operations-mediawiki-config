@@ -473,6 +473,7 @@ return [
 	'kkwiktionary' => 'Asia/Almaty',
 	'kkwikibooks' => 'Asia/Almaty',
 	'kkwikiquote' => 'Asia/Almaty',
+	'kncwiki' => 'Africa/Lagos',
 	'knwikiquote' => 'Asia/Kolkata', // T322471
 	'knwiki' => 'Asia/Kolkata', // T322471
 	'knwikisource' => 'Asia/Kolkata', // T322471
@@ -5900,6 +5901,7 @@ return [
 	'tcywiktionary' => true, // T378463
 	'tigwiki' => true, // T381379
 	'test2wiki' => true, // T378645
+	'kncwiki' => true, // T385185
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -5911,6 +5913,7 @@ return [
 	'tcywiktionary' => true, // T378463
 	'tigwiki' => true, // T381379
 	'test2wiki' => true, // T378645
+	'kncwiki' => true, // T385185
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [

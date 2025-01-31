@@ -6059,6 +6059,7 @@ return [
 	'kbdwiktionary' => 'Википсалъалъэм_тепсэлъыхьын',
 	'kbpwiki' => 'Wikipediya_ndɔnjɔɔlɩyɛ', // T160868
 	'kcgwiktionary' => 'A̱lyiat_Swánga̱lyiatwuki',
+	'kncwiki' => 'Mana_kǝla_Wikipedia_yǝn', // T385185
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್_ಚರ್ಚೆ', // T110806
 	'kmwiki' => 'ការពិភាក្សាអំពីវិគីភីឌា',
 	'koiwiki' => 'Баитам_Википедия_йылiсь',
