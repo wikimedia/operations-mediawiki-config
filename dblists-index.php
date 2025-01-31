@@ -489,7 +489,7 @@ return [
 'kmwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments' ],
 'kmwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'kmwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'kncwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'kncwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'knwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'knwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'knwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
