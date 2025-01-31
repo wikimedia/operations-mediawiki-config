@@ -208,6 +208,8 @@ final class WmfManageDblistCli {
 	}
 
 	private function doPrepare( string $dbName, string $lang, string $family, string $visibility ) {
+		$visibility = strtolower( $visibility );
+
 		if ( !in_array( $visibility, [ 'public', 'fishbowl', 'private' ] ) ) {
 			$this->error( 'Unknown visibility' );
 			exit( 1 );
