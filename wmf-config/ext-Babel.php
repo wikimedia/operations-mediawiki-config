@@ -10,7 +10,7 @@ return [
 	'default' => true,
 ],
 
-'wmgBabelDefaultLevel' => [
+'wgBabelDefaultLevel' => [
 	'default' => 'N',
 ],
 

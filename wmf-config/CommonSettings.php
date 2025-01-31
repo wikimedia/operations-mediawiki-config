@@ -2901,7 +2901,6 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseBabel ) {
 	wfLoadExtension( 'Babel' );
-	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
 
 	$wgBabelUseDatabase = true;
 	if ( $wmgUseCentralAuth ) {
