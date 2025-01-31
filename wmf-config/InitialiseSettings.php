@@ -10904,12 +10904,6 @@ return [
 	'votewiki' => true,
 ],
 
-'wgSecurePollSingleTransferableVoteEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'votewiki' => true,
-],
-
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled on all public sites, see T341159.
 	'default' => true,
