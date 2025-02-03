@@ -708,7 +708,7 @@ return [
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
-	'enwiki' => 50, // T341399, T290927, T341399
+	'enwiki' => 75, // T341399, T290927, T341399, T384505
 	'eswiki' => 50, // T285235
 ],
 
