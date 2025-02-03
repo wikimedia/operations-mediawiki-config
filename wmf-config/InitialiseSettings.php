@@ -6865,7 +6865,7 @@ return [
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
-	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
+	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=pt',
 	'svwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=sv', // T383452
 ],
 
