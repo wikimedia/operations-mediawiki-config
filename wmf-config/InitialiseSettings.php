@@ -4715,6 +4715,11 @@ return [
 	'default' => false,
 ],
 
+'wgAllowAuthenticatedCrossOrigin' => [ // T322944
+	'default' => false,
+	'testwiki' => true,
+],
+
 // Enabling will disable use of insecure 'forceHttps' cookies.
 // See T256095
 'wgForceHTTPS' => [
