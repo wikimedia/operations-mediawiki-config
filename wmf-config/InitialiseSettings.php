@@ -4727,9 +4727,12 @@ return [
 	'default' => false,
 ],
 
+// As of 2025-02-08, OAuth is the only session provider known to be useful with the crossorigin=* feature,
+// so this should generally be enabled on the same wikis as wmgUseOAuth above.
 'wgAllowAuthenticatedCrossOrigin' => [ // T322944
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
 ],
 
 // Enabling will disable use of insecure 'forceHttps' cookies.
