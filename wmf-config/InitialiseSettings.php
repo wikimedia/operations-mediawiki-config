@@ -6420,8 +6420,8 @@ return [
 	// T373022 added ruwiki
 	// T377551 added nlwiki
 	// T366381 added hiwiki, bnwiki, idwiki
+	// T385205 added dewiki
 	'wikipedia' => true,
-	'dewiki' => false,
 	'enwiki' => false,
 ],
 
