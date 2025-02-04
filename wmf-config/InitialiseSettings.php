@@ -11818,6 +11818,12 @@ return [
 	'enwiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
 ],
 
+// T299951
+'wgCategoryLinksSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'group0' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+],
+
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
 	'default' => [ 'local' => 3600, 'WAN' => 86400, ],
