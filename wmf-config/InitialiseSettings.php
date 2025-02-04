@@ -12224,6 +12224,15 @@ return [
 	'wikifunctionswiki' => true,
 ],
 
+'wgWikiLambdaEnableRepoMode' => [
+	'default' => false,
+	'wikifunctionswiki' => true,
+],
+
+'wgWikiLambdaEnableClientMode' => [
+	'default' => false,
+],
+
 'wmgUseWikistories' => [
 	'default' => false,
 	'idwiki' => true, // T311143
