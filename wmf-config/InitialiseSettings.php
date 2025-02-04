@@ -7312,6 +7312,12 @@ return [
 	'default' => true,
 	'lockeddown' => false,
 ],
+'wgBabelUseCommunityConfiguration' => [
+	'default' => true,
+],
+'wgBabelDefaultLevel' => [
+	'default' => 'N',
+],
 'wmgUseApiFeatureUsage' => [
 	'default' => true,
 ],

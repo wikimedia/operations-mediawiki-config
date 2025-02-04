@@ -32,7 +32,6 @@ function wmfLoadRoutes() {
 		'wmf-config/db-sections.php',
 		'wmf-config/db-labs.php',
 		'wmf-config/EnWikiContactPages.php',
-		'wmf-config/ext-Babel.php',
 		'wmf-config/ext-CirrusSearch.php',
 		'wmf-config/ext-EventLogging.php',
 		'wmf-config/ext-EventStreamConfig.php',
