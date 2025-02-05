@@ -6203,6 +6203,9 @@ return [
 		'포털' /* Portal */ => true, // T224813
 		'초안' /* Draft */ => true, // T92798
 	],
+	'+kywiki' => [
+		'Макала_долбоору' /* Draft */ => true, // T385593
+	],
 	'+mlwiki' => [
 		'കരട്' /* Draft */ => true, // T362653
 	],

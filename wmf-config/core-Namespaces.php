@@ -1046,6 +1046,14 @@ return [
 	'+kvwiki' => [
 		'Обсуждение_Wikipedia' => NS_PROJECT_TALK,
 	],
+	'+kywiki' => [
+		'МД' => 118, // T385593
+		'МДТ' => 119, // T385593
+		'Draft' => 118, // T385593
+		'Draft_talk' => 119, // T385593
+		'Draft_article' => 118, // T385593
+		'Draft_article_talk' => 119, // T385593
+	],
 	'+lawiki' => [
 		'Disputatio_Wikipedia' => NS_PROJECT_TALK,
 	],
@@ -2929,6 +2937,10 @@ return [
 	'kwwiki' => [
 		100 => 'Porth',
 		101 => 'Keskows_Porth',
+	],
+	'kywiki' => [
+		118 => 'Макала_долбоору', // T385593 - draft
+		119 => 'Макала_долбоорун_талкуулоо', // T385593 - draft_talk
 	],
 	'ladwiki' => [
 		100 => 'Portal', // T161843
@@ -4940,6 +4952,10 @@ return [
 		118 => 'noindex,nofollow', // Draft - T385162
 		119 => 'noindex,nofollow', // Draft talk - T385162
 	],
+	'kywiki' => [
+		118 => 'noindex,nofollow', // draft - T385593
+		119 => 'noindex,nofollow', // draft talk - T385593
+	],
 	'mlwiki' => [ // Draft - T362653
 		118 => 'noindex,nofollow',
 		119 => 'noindex,nofollow',
@@ -5416,6 +5432,7 @@ return [
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'kowikisource' => [ 118, 119 ], // draft and draft talk - T385162
+	'kywiki' => [ 118, 119 ], // draft and draft talk - T385593
 	'mlwiki' => [ 118, 119 ], // draft and draft talk - T362653
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
