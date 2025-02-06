@@ -592,6 +592,7 @@ return [
 	'skrwiki' => 'Asia/Karachi',
 	'skrwiktionary' => 'Asia/Karachi',
 	'shwiki' => 'Europe/Berlin',
+	'shwiktionary' => 'Europe/Berlin', // T385833
 	'shiwiki' => 'Africa/Casablanca',
 	'shnwikinews' => 'Asia/Yangon',
 	'shnwiktionary' => 'Asia/Yangon',
@@ -1580,6 +1581,7 @@ return [
 	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',
 	'shwiki' => 'Wikipedija', // T332468
+	'shwiktionary' => 'Wikirječnik', // T385833
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwikinews' => 'ဝီႇၶီႇၶၢဝ်ႇ',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',

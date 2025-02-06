@@ -1568,6 +1568,18 @@ return [
 		'Портал' => 100, // NS_PORTAL
 		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	],
+	'+shwiktionary' => [ // T385833
+		'Wikirečnik' => NS_PROJECT,
+		'Vikirječnik' => NS_PROJECT,
+		'Vikirečnik' => NS_PROJECT,
+		'Викирјечник' => NS_PROJECT,
+		'Викиречник' => NS_PROJECT,
+		'Razgovor_o_Wikirečniku' => NS_PROJECT_TALK,
+		'Razgovor_o_Vikirječniku' => NS_PROJECT_TALK,
+		'Razgovor_o_Vikirečniku' => NS_PROJECT_TALK,
+		'Разговор_о_Викирјечнику' => NS_PROJECT_TALK,
+		'Разговор_о_Викиречнику' => NS_PROJECT_TALK,
+	],
 	'+shiwiki' => [
 		'Portal' => 100, // T288909
 		'Portal_talk' => 101,
@@ -5912,6 +5924,7 @@ return [
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
 	'shwiki' => 'Wikipedija', // T332614
+	'shwiktionary' => 'Wikirječnik', // T385833
 	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',
@@ -6125,6 +6138,7 @@ return [
 	'sahwikisource' => 'Бикитиэкэ_Ырытыы',
 	'sdwiki' => 'وڪيپيڊيا_بحث', // T186943
 	'shwiki' => 'Razgovor_o_Wikipediji', // T332614
+	'shwiktionary' => 'Razgovor_o_Wikirječniku', // T385833
 	'shnwiktionary' => 'လွင်ႈဢုပ်ႇဢူဝ်း_ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'siwiki' => 'විකිපීඩියා_සාකච්ඡාව',
 	'siwikibooks' => 'විකිපොත්_සාකච්ඡාව',
