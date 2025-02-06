@@ -235,6 +235,13 @@ class Profiler {
 		if ( ClusterConfig::getInstance()->isK8s() ) {
 			$redisChannel .= '-k8s';
 		}
+	   // Temporarily route PHP 8 profiles to a separate set of sinks
+	   // (excimer-k8s-php8, excimer-k8s-php8-wall) during the migration to
+	   // PHP 8, to facilitate comparison and diffing with PHP 7 profiles
+	   // (T385199).
+		if ( PHP_MAJOR_VERSION === 8 ) {
+			$redisChannel .= '-php8';
+		}
 
 		// The period is 60s, so there's no point waiting for more samples to arrive
 		// before the end of the request, they probably won't.
