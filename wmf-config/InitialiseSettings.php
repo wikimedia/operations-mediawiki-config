@@ -11756,7 +11756,7 @@ return [
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 2, // 50% (1 in 2)
+	'default' => 0, // turned off
 ],
 
 'wmgUsePageViewInfo' => [
