@@ -217,24 +217,6 @@ function wmfGetOverrideSettings() {
 					]
 				],
 			],
-			'+wikipedia' => [
-				// Bump sample rate to 100% for QA purposes
-				'mediawiki.web_ui_actions' => [
-					'sample' => [
-						'rate' => 1
-					],
-				],
-				'product_metrics.web_base.search_ab_test_session_ticks' => [
-					'sample' => [
-						'rate' => 1,
-					],
-				],
-				'product_metrics.web_base.search_ab_test_clicks' => [
-					'sample' => [
-						'rate' => 1,
-					],
-				],
-			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
 					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
@@ -257,6 +239,26 @@ function wmfGetOverrideSettings() {
 								'performer_is_logged_in',
 							],
 						],
+					],
+				],
+				// Bump sample rate to 100% for QA purposes
+				'mediawiki.web_ui_actions' => [
+					'sample' => [
+						'rate' => 1,
+						'unit' => 'session',
+					],
+				],
+				// See T385309 - Web  mobile search AB test
+				'product_metrics.web_base.search_ab_test_session_ticks' => [
+					'sample' => [
+						'rate' => 1,
+						'unit' => 'session',
+					],
+				],
+				'product_metrics.web_base.search_ab_test_clicks' => [
+					'sample' => [
+						'rate' => 1,
+						'unit' => 'session',
 					],
 				],
 			]
