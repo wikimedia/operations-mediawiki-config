@@ -1,11 +1,11 @@
 <?php
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
-require_once __DIR__ . '/MWWikiversions.php';
-require_once __DIR__ . '/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../multiversion/MWWikiversions.php';
+require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../tests/data/MWDefines.php';
-require_once __DIR__ . '/../tests/data/SiteConfiguration.php';
+require_once __DIR__ . '/data/MWDefines.php';
+require_once __DIR__ . '/data/SiteConfiguration.php';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
 global $wmgLogosPath;
@@ -14,7 +14,7 @@ $wmgLogosPath = '../';
 
 function wmfCheckMissingLogosAndGenerateHTML() {
 	global $wmgLogosPath;
-	$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+	$prodWikis = MWWikiversions::readDbListFile( 'all' );
 	$textareaVal = '';
 	foreach ( $prodWikis as $dbname ) {
 		$textareaVal .= $dbname . "\n";

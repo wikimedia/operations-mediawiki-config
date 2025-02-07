@@ -39,7 +39,7 @@
 			"@checkclean"
 		],
 		"manage-dblist": "php multiversion/bin/manage-dblist",
-		"buildLogoHTML": "php -e multiversion/buildLogoHTML.php",
+		"buildLogoHTML": "php -e tests/buildLogoHTML.php",
 		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [
 			"@putenv GIT_AUTHOR_EMAIL=diffConfig@localhost",
