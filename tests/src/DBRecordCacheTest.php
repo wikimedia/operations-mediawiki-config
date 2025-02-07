@@ -7,6 +7,9 @@ use Wikimedia\MWConfig\DNSSRVRecord;
  * @covers \Wikimedia\MWConfig\DBRecordCache
  */
 class DBRecordCacheTest extends TestCase {
+	private $cache;
+	private $cacheRepopulate;
+
 	public function setUp(): void {
 		// Create a mock of the DBRecordCache class
 		// Here we just mock the network calls, so we can test the cache logic
