@@ -34,18 +34,16 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 	$config->settings = $realms[$realm];
 
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
+		$globals = MWConfigCacheGenerator::getConfigGlobals( $wgDBname, $config, $realm );
 
-		$cachableConfig = MWConfigCacheGenerator::getMWConfigForCacheing(
-			$wgDBname, $config, $realm
-		);
 		// Reduce noise in diff when config settings are re-ordered,
 		// either in the same file or by moving them from a different file.
-		ksort( $cachableConfig );
-		$cachableConfig = json_encode( $cachableConfig, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+		ksort( $globals );
+		$globals = json_encode( $globals, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
 
 		file_put_contents(
 			__DIR__ . "/data/config-cache/conf-$realm-$wgDBname.json",
-			$cachableConfig
+			$globals
 		);
 	}
 

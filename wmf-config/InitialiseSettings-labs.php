@@ -40,7 +40,7 @@ use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
 
 /**
- * Get overrides for Beta Cluster settings. This is applied in MWConfigCacheGenerator.
+ * Get overrides for Beta Cluster settings. This is called in MWConfigCacheGenerator::applyOverrides().
  *
  * Keys that start with a hyphen will completely override the prodution settings
  * from InitializeSettings.php.

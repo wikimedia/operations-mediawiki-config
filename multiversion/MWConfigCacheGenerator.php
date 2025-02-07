@@ -8,19 +8,25 @@ use SiteConfiguration;
 require_once __DIR__ . '/MWMultiVersion.php';
 
 /**
- * Wrapper for config caching code.
+ * Wrapper for loading and interpreting wmf-config files.
  */
 class MWConfigCacheGenerator {
 
 	/**
-	 * Compute the config globals.
+	 * Compute a wiki's config globals.
 	 *
-	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
-	 * @param SiteConfiguration $siteConfiguration The global MultiVersion wgConf object
+	 * This is called on every request in wmf-config/CommonSettings.php
+	 *
+	 * @param string $dbName Database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param SiteConfiguration $siteConfiguration The wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
-	 * @return array The wiki's config
+	 * @return array
 	 */
-	public static function getMWConfigForCacheing( $dbName, $siteConfiguration, $realm = 'production' ) {
+	public static function getConfigGlobals(
+		string $dbName,
+		SiteConfiguration $siteConfiguration,
+		string $realm = 'production'
+	): array {
 		[ $site, $lang ] = $siteConfiguration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
@@ -34,24 +40,6 @@ class MWConfigCacheGenerator {
 		$wikiTags[] = $siteConfiguration->get( 'wgLanguageCode', $dbName, $dbSuffix, $confParams, $wikiTags );
 
 		return $siteConfiguration->getAll( $dbName, $dbSuffix, $confParams, $wikiTags );
-	}
-
-	/**
-	 * @param string $dbname Database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
-	 * @param SiteConfiguration $siteConfiguration The wgConf object
-	 * @param string $realm Realm, e.g. 'production' or 'labs'
-	 * @return array
-	 */
-	public static function getConfigGlobals(
-		string $dbname,
-		SiteConfiguration $siteConfiguration,
-		string $realm = 'production'
-	): array {
-		return self::getMWConfigForCacheing(
-			$dbname,
-			$siteConfiguration,
-			$realm
-		);
 	}
 
 	/**

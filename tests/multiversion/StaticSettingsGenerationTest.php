@@ -40,11 +40,11 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $inputSettings;
 
-		$calculatedSettings_enwiki = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$calculatedSettings_enwiki = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'enwiki', $conf, 'production'
 		);
 
-		$calculatedSettings_frwikt = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$calculatedSettings_frwikt = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'frwiktionary', $conf, 'production'
 		);
 

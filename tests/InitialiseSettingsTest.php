@@ -489,13 +489,13 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testImportantProductionSettings() {
-		$enwikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$enwikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'enwiki', $this->config, 'production'
 		);
-		$dewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$dewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'dewiki', $this->config, 'production'
 		);
-		$officewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$officewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'officewiki', $this->config, 'production'
 		);
 
@@ -510,7 +510,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testExampleLabsSettings() {
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'enwiki', $this->config, 'production'
 		);
 		$this->assertFalse(
@@ -518,7 +518,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			"settings array must have 'wmgUseFlow' set to 'false' for production enwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'mediawikiwiki', $this->config, 'production'
 		);
 		$this->assertTrue(
@@ -526,7 +526,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			"settings array must have 'wmgUseFlow' set to 'true' for production mediawikiwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 			'enwiki', $this->config, 'labs'
 		);
 		$this->assertTrue(
