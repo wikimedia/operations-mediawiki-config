@@ -2037,6 +2037,7 @@ return [
 	'srwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
+	'tcywiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T385828
 	'testwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T61084, T302860
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'editautopatrolprotected', 'sysop' ], // T215493, T296154, T303579
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
@@ -2069,6 +2070,7 @@ return [
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+ruwiki' => [ 'editautoreviewprotected' ], // T337430
 	'+svwiki' => [ 'extendedconfirmed' ], // T279836
+	'+tcywiki' => [ 'extendedconfirmed' ], // T385828
 	'+testwiki' => [ 'extendedconfirmed' ], // T302860
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 	'+zhwiki' => [ 'extendedconfirmed' ], // T287322
@@ -4482,6 +4484,14 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		], // T279836
+	],
+	'tcywiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T385828
 	],
 	'trwiki' => [
 		'autoreview' => [

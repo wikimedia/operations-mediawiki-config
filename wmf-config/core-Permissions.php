@@ -2713,6 +2713,11 @@ return [
 		], // T95180
 		'rollbacker' => [ 'rollback' => true ], // T95180
 	],
+	'+tcywiki' => [
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T385828
+		'sysop' => [ 'extendedconfirmed' => true ], // T385828
+		'bot' => [ 'extendedconfirmed' => true ], // T385828
+	],
 	'testwiki' => [
 		'accountcreator' => [
 			'override-antispoof' => true,
@@ -4729,6 +4734,9 @@ return [
 			'autopatrolled', // T95180
 		],
 	],
+	'+tcywiki' => [
+		'sysop' => [ 'extendedconfirmed' ], // T385828
+	],
 	'+trwiki' => [
 		'sysop' => [
 			'patroller', // T40690
@@ -5954,6 +5962,9 @@ return [
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
+	],
+	'+tcywiki' => [
+		'sysop' => [ 'extendedconfirmed' ], // T385828
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender', 'translator' ], // bureaucrat -> sysop, T40690, T147740, T356440
