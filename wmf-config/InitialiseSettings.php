@@ -12386,11 +12386,6 @@ return [
 	'default' => true,
 ],
 
-// Temporary, added in T384344
-'wmgWikibaseTmpFixRdf' => [
-	'default' => true,
-],
-
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,

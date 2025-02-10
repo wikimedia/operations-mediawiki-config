@@ -241,11 +241,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
 		$wgWBRepoSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
-
-	if ( isset( $wmgWikibaseTmpFixRdf ) ) {
-		$wgWBRepoSettings['tmpFixRdfSomevalueHash'] = $wmgWikibaseTmpFixRdf;
-		$wgWBRepoSettings['tmpFixRdfNodeNamespacePrefix'] = $wmgWikibaseTmpFixRdf;
-	}
 }
 
 if ( $wmgUseWikibaseClient ) {
