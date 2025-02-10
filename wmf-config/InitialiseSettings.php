@@ -12553,4 +12553,34 @@ return [
 	'default' => true,
 ],
 
+'wgRelatedArticlesABTestEnrollment' => [
+	'default' => [
+		"name" => "RelatedArticles experiment default",
+		"enabled" => false,
+		"buckets" => [
+			"nonExperiment-unsampled" => 0.99,
+			"experimentEnabled" => 0.005,
+			"experimentDisabled" => 0.005
+		],
+	],
+	'euwiki' => [
+		"name" => "RelatedArticles experiment test eu",
+		"enabled" => true,
+		"buckets" => [
+			"nonExperiment-unsampled" => 0.99,
+			"experimentEnabled" => 0.005,
+			"experimentDisabled" => 0.005
+		],
+	],
+	'cawiki' => [
+		"name" => "RelatedArticles experiment test ca",
+		"enabled" => true,
+		"buckets" => [
+			"nonExperiment-unsampled" => 0.99,
+			"experimentEnabled" => 0.005,
+			"experimentDisabled" => 0.005
+		],
+	]
+],
+
 ];

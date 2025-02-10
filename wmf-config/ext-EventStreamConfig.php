@@ -2295,10 +2295,10 @@ return [
 						'performer_is_logged_in'
 					],
 				],
-				'sample' => [
-					'unit' => 'session',
-					'rate' => 0,
-				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0,
 			],
 		],
 		// Web stream config for empty search recommendations A/B test
@@ -2314,10 +2314,10 @@ return [
 						'performer_is_logged_in'
 					],
 				],
-				'sample' => [
-					'unit' => 'session',
-					'rate' => 0,
-				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0,
 			],
 		],
 		'analytics.haproxy_requestctl' => [
@@ -2383,6 +2383,34 @@ return [
 		'mediawiki.web_ui_actions' => [
 			'sample' => [
 				'rate' => 0.01,
+			],
+		],
+	],
+	'+euwiki' => [
+		'product_metrics.web_base.search_ab_test_session_ticks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0.5,
+			],
+		],
+		'product_metrics.web_base.search_ab_test_clicks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0.5,
+			],
+		],
+	],
+	'+cawiki' => [
+		'product_metrics.web_base.search_ab_test_session_ticks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0.5,
+			],
+		],
+		'product_metrics.web_base.search_ab_test_clicks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0.5,
 			],
 		],
 	],
