@@ -2857,9 +2857,13 @@ return [
 			'extendedconfirmed' => true, // T215493
 			'templateeditor' => true, // T296154
 			'upload_by_url' => true, // T303577
+			'changetags' => true, // T385960
 		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T215493
-		'bot' => [ 'extendedconfirmed' => true ], // T215493
+		'bot' => [
+			'extendedconfirmed' => true, // T215493
+			'changetags' => true, // T385960
+		],
 		'templateeditor' => [
 			'templateeditor' => true,
 			'tboverride' => true,
@@ -2869,6 +2873,7 @@ return [
 			'upload' => true,
 			'upload_by_url' => true,
 		],
+		'user' => [ 'changetags' => false ], // T385960
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
