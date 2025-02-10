@@ -13,12 +13,7 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'test2wiki' => 'growth-community-updates',
 	'enwiki' => 'no-link-recommendation',
-	'eswiki' => 'growth-community-updates',
-	'arwiki' => 'growth-community-updates',
-	'frwiki' => 'growth-community-updates',
-	'cswiki' => 'growth-community-updates',
 ],
 
 'wgGEImageRecommendationApiHandler' => [
