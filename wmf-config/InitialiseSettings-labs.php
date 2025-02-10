@@ -1331,7 +1331,7 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
-		'GEApiQueryGrowthTasksLookaheadSize' => [
+		'wgGEApiQueryGrowthTasksLookaheadSize' => [
 			'default' => null,
 			'enwiki' => 10,
 		],
