@@ -2410,5 +2410,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'testwiki' => true,
 		],
+
+		// T384344
+		'wmgWikibaseTmpFixRdf' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
