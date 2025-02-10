@@ -1335,9 +1335,6 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 			'enwiki' => 10,
 		],
-		'wgGECommunityUpdatesEnabled' => [
-			'default' => true,
-		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],

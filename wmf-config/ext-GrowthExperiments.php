@@ -40,16 +40,6 @@ return [
 	'default' => true,
 ],
 
-'wgGECommunityUpdatesEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'eswiki' => true,
-	'arwiki' => true,
-	'frwiki' => true,
-	'cswiki' => true,
-],
-
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
