@@ -671,20 +671,20 @@ return [
 
 'wgCirrusSearchUserTesting' => [
 	'default' => [
-		// T377128
-		'mlr-2024' => [
+		// T385972
+		'mlr-2025-02' => [
 			'buckets' => [
 				'control' => [
 					'trigger' => 'control',
 				],
-				'mlr-2024' => [
-					'trigger' => 'mlr-2024',
+				'mlr-2025-02' => [
+					'trigger' => 'mlr-2025-02',
 					'globals' => [
 						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-next',
 					],
 				],
-				'mlr-2024i' => [
-					'trigger' => 'mlr-2024i',
+				'mlr-2025-02i' => [
+					'trigger' => 'mlr-2025-02i',
 					'globals' => [
 						'wgCirrusSearchInterleaveConfig' => [
 							'CirrusSearchRescoreProfile' => 'mlr-1024rs-next',
