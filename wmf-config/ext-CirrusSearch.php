@@ -669,6 +669,29 @@ return [
 	'frwiki' => 'phrase_suggest_glentM0_and_langdetect',
 ],
 
+// T385972
+'wgCirrusSearchActiveTest' => [
+	'default' => null,
+	'dewiki' => 'mlr-2025-02',
+	'enwiki' => 'mlr-2025-02',
+	'fawiki' => 'mlr-2025-02',
+	'fiwiki' => 'mlr-2025-02',
+	'frwiki' => 'mlr-2025-02',
+	'hewiki' => 'mlr-2025-02',
+	'idwiki' => 'mlr-2025-02',
+	'itwiki' => 'mlr-2025-02',
+	'jawiki' => 'mlr-2025-02',
+	'kowiki' => 'mlr-2025-02',
+	'nlwiki' => 'mlr-2025-02',
+	'nowiki' => 'mlr-2025-02',
+	'plwiki' => 'mlr-2025-02',
+	'ptwiki' => 'mlr-2025-02',
+	'ruwiki' => 'mlr-2025-02',
+	'svwiki' => 'mlr-2025-02',
+	'viwiki' => 'mlr-2025-02',
+	'zhwiki' => 'mlr-2025-02',
+],
+
 'wgCirrusSearchUserTesting' => [
 	'default' => [
 		// T385972
