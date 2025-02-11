@@ -119,7 +119,7 @@ return [
 	'idwiki' => 'mlr-1024rs',
 	'itwiki' => 'mlr-1024rs',
 	'jawiki' => 'classic', // TODO: switch back to 'mlr-1024rs',
-	'kowiki' => 'classic', // TODO: switch back to 'mlr-1024rs',
+	'kowiki' => 'mlr-1024rs',
 	'nlwiki' => 'mlr-1024rs',
 	'nowiki' => 'mlr-1024rs',
 	'plwiki' => 'mlr-1024rs',
@@ -127,7 +127,7 @@ return [
 	'ruwiki' => 'mlr-1024rs',
 	'svwiki' => 'mlr-1024rs',
 	'viwiki' => 'mlr-1024rs',
-	'zhwiki' => 'wsum_inclinks', // TODO: Switch back to 'mlr-1024rs',
+	'zhwiki' => 'mlr-1024rs',
 ],
 
 'wgCirrusSearchFullTextQueryBuilderProfile' => [
@@ -886,83 +886,83 @@ return [
 			'window' => 448,
 		],
 		'mlr-1024rs-next' => [
-			'model' => 'enwiki-20241122-20180215-query_explorer',
+			'model' => 'enwiki-20250110-20180215-query_explorer',
 			'window' => 448,
 		],
 	],
 	'arwiki' => [
-		'mlr-1024rs' => [ 'model' => 'arwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'arwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'arwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'arwiki-20250110-20180215-query_explorer' ],
 	],
 	'fawiki' => [
-		'mlr-1024rs' => [ 'model' => 'fawiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'fawiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'fawiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'fawiki-20250110-20180215-query_explorer' ],
 	],
 	'jawiki' => [
 		/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 		'mlr-1024rs' => [ 'model' => 'jawiki-20220421-20180215-query_explorer' ],
 		*/
-		'mlr-1024rs-next' => [ 'model' => 'jawiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'jawiki-20250110-20180215-query_explorer' ],
 	],
 	'svwiki' => [
-		'mlr-1024rs' => [ 'model' => 'svwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'svwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'svwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'svwiki-20250110-20180215-query_explorer' ],
 	],
 	'frwiki' => [
-		'mlr-1024rs' => [ 'model' => 'frwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'frwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'frwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'frwiki-20250110-20180215-query_explorer' ],
 	],
 	'itwiki' => [
-		'mlr-1024rs' => [ 'model' => 'itwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'itwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'itwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'itwiki-20250110-20180215-query_explorer' ],
 	],
 	'ptwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ptwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'ptwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'ptwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'ptwiki-20250110-20180215-query_explorer' ],
 	],
 	'ruwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ruwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'ruwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'ruwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'ruwiki-20250110-20180215-query_explorer' ],
 	],
 	'dewiki' => [
-		'mlr-1024rs' => [ 'model' => 'dewiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'dewiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'dewiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'dewiki-20250110-20180215-query_explorer' ],
 	],
 	'fiwiki' => [
-		'mlr-1024rs' => [ 'model' => 'fiwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'fiwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'fiwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'fiwiki-20250110-20180215-query_explorer' ],
 	],
 	'hewiki' => [
-		'mlr-1024rs' => [ 'model' => 'hewiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'hewiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'hewiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'hewiki-20250110-20180215-query_explorer' ],
 	],
 	'idwiki' => [
-		'mlr-1024rs' => [ 'model' => 'idwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'idwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'idwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'idwiki-20250110-20180215-query_explorer' ],
 	],
 	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'kowiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'kowiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'kowiki-20250110-20180215-query_explorer' ],
 	],
 	'nlwiki' => [
-		'mlr-1024rs' => [ 'model' => 'nlwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'nlwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'nlwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'nlwiki-20250110-20180215-query_explorer' ],
 	],
 	'nowiki' => [
-		'mlr-1024rs' => [ 'model' => 'nowiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'nowiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'nowiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'nowiki-20250110-20180215-query_explorer' ],
 	],
 	'plwiki' => [
-		'mlr-1024rs' => [ 'model' => 'plwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'plwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'plwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'plwiki-20250110-20180215-query_explorer' ],
 	],
 	'viwiki' => [
-		'mlr-1024rs' => [ 'model' => 'viwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'viwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'viwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'viwiki-20250110-20180215-query_explorer' ],
 	],
 	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
-		'mlr-1024rs-next' => [ 'model' => 'zhwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'zhwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'zhwiki-20250110-20180215-query_explorer' ],
 	],
 ],
 
