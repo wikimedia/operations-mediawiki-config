@@ -11861,10 +11861,7 @@ return [
 	'default' => [ 'local' => 3600, 'WAN' => 86400, ],
 	'commonswiki' => [ 'local' => 60, 'WAN' => 60, ],
 	'enwiki' => [ 'local' => 60, 'WAN' => 60, ],
-	'ukwiki' => [ 'local' => 60, 'WAN' => 60, ],
-	'viwiki' => [ 'local' => 60, 'WAN' => 60, ],
 	'wikidatawiki' => [ 'local' => 60, 'WAN' => 60, ],
-	'zhwiki' => [ 'local' => 60, 'WAN' => 60, ],
 ],
 
 'wgXmlDumpSchemaVersion' => [
