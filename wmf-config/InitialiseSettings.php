@@ -10566,7 +10566,6 @@ return [
 'wgMetricsPlatformEnableExperiments' => [
 	'default' => false,
 	'testwiki' => true,
-	'wikitech' => true,
 ],
 
 'wgMetricsPlatformEnableExperimentOverrides' => [
@@ -10581,14 +10580,6 @@ return [
 ],
 
 'wgMetricsPlatformEnableStreamConfigsMerging' => [
-	'default' => false,
-	'testwiki' => true,
-	'wikitech' => true,
-],
-
-// Enables a test module for verifying experiment enrollment.
-// This config var is temporary - it will be removed in T383801
-'wgWMEExLabTest1Enabled' => [
 	'default' => false,
 	'testwiki' => true,
 	'wikitech' => true,
