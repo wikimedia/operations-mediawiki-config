@@ -11850,7 +11850,11 @@ return [
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
 	'default' => [ 'local' => 3600, 'WAN' => 86400, ],
+
 	'dewiktionary' => [ 'local' => 60, 'WAN' => 60, ],
+	'diqwiki' => [ 'local' => 60, 'WAN' => 60 ],
+	'ttwiki' => [ 'local' => 60, 'WAN' => 60 ],
+
 	'commonswiki' => [ 'local' => 60, 'WAN' => 60, ],
 	'enwiki' => [ 'local' => 60, 'WAN' => 60, ],
 	'wikidatawiki' => [ 'local' => 60, 'WAN' => 60, ],
