@@ -59,8 +59,8 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\DBRecordCache;
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
+use Wikimedia\MWConfig\WmfConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
@@ -82,7 +82,7 @@ require_once __DIR__ . '/../src/ServiceConfig.php';
 require_once __DIR__ . '/../src/ClusterConfig.php';
 require_once __DIR__ . '/../src/DBRecordCache.php';
 require_once __DIR__ . '/../src/etcd.php';
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
 
 // Past this point we know:
 //
@@ -261,7 +261,7 @@ if ( $wgDBname === 'testwiki' ) {
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-$wgConf->settings = MWConfigCacheGenerator::getStaticConfig( $wmgRealm );
+$wgConf->settings = WmfConfig::getStaticConfig( $wmgRealm );
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
 
@@ -326,7 +326,7 @@ $wgLocalVirtualHosts = [
 	'm.wikifunctions.org',
 ];
 
-$globals = MWConfigCacheGenerator::getConfigGlobals(
+$globals = WmfConfig::getConfigGlobals(
 	$wgDBname,
 	$wgConf,
 	$wmgRealm

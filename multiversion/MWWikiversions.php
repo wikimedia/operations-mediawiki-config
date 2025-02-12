@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . '/defines.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
+
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * Helper class for reading the wikiversions.json file
@@ -92,20 +95,7 @@ class MWWikiversions {
 	 * @return string[]
 	 */
 	public static function readDbListFile( $dblist ) {
-		$fileName = dirname( __DIR__ ) . '/dblists/' . $dblist . '.dblist';
-		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
-		if ( $lines === false ) {
-			throw new Exception( __METHOD__ . ": unable to read $dblist." );
-		}
-
-		$dbs = [];
-		foreach ( $lines as $line ) {
-			// Ignore empty lines and lines that are comments
-			if ( $line !== '' && $line[0] !== '#' ) {
-				$dbs[] = $line;
-			}
-		}
-		return $dbs;
+		return WmfConfig::readDbListFile( $dblist );
 	}
 
 	/**

@@ -1,9 +1,9 @@
 <?php
 
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../multiversion/MWWikiversions.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../tests/data/MWDefines.php';
 require_once __DIR__ . '/../tests/data/SiteConfiguration.php';
@@ -19,8 +19,8 @@ require_once "{$configDir}/InitialiseSettings.php";
 require_once "{$configDir}/InitialiseSettings-labs.php";
 
 $realms = [];
-$realms['production'] = MWConfigCacheGenerator::getStaticConfig( 'production' );
-$realms['labs'] = MWConfigCacheGenerator::getStaticConfig( 'labs' );
+$realms['production'] = WmfConfig::getStaticConfig( 'production' );
+$realms['labs'] = WmfConfig::getStaticConfig( 'labs' );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {
 
@@ -34,7 +34,7 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 	$config->settings = $realms[$realm];
 
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
-		$globals = MWConfigCacheGenerator::getConfigGlobals( $wgDBname, $config, $realm );
+		$globals = WmfConfig::getConfigGlobals( $wgDBname, $config, $realm );
 
 		// Reduce noise in diff when config settings are re-ordered,
 		// either in the same file or by moving them from a different file.

@@ -1,8 +1,8 @@
 <?php
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 require_once __DIR__ . '/../multiversion/MWWikiversions.php';
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/data/MWDefines.php';
 require_once __DIR__ . '/data/SiteConfiguration.php';
@@ -74,9 +74,9 @@ HEREDOC;
 	$conf = new SiteConfiguration();
 	$conf->suffixes = MWMultiVersion::SUFFIXES;
 	$conf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
-	$conf->settings = MWConfigCacheGenerator::getStaticConfig( 'production' );
+	$conf->settings = WmfConfig::getStaticConfig( 'production' );
 	foreach ( $prodWikis as $dbname ) {
-		$fullConfig = MWConfigCacheGenerator::getConfigGlobals( $dbname, $conf );
+		$fullConfig = WmfConfig::getConfigGlobals( $dbname, $conf );
 		$skin = $fullConfig['wgDefaultSkin'] ?? null;
 		$wordmark = $fullConfig['wmgSiteLogoWordmark'] ?? null;
 		$icon = $fullConfig['wmgSiteLogoIcon'] ?? null;

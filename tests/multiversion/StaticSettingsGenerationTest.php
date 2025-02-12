@@ -1,7 +1,8 @@
 <?php
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
- * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator
+ * @covers \Wikimedia\MWConfig\WmfConfig
  */
 class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 
@@ -40,11 +41,11 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $inputSettings;
 
-		$calculatedSettings_enwiki = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+		$calculatedSettings_enwiki = WmfConfig::getConfigGlobals(
 			'enwiki', $conf, 'production'
 		);
 
-		$calculatedSettings_frwikt = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+		$calculatedSettings_frwikt = WmfConfig::getConfigGlobals(
 			'frwiktionary', $conf, 'production'
 		);
 

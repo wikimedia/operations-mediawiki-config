@@ -3,6 +3,9 @@ require_once __DIR__ . '/defines.php';
 require_once __DIR__ . '/MWMultiVersionException.php';
 require_once __DIR__ . '/MWRealm.php';
 require_once __DIR__ . '/MWWikiversions.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
+
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * Class to handle basic information related to what
@@ -72,12 +75,6 @@ class MWMultiVersion {
 		'wikifunctionsclient',
 		'growthexperiments',
 		'parsoidrendered',
-	];
-
-	/** @var string[] */
-	public const DB_LISTS_LABS = [
-		'closed' => 'closed-labs',
-		'flow' => 'flow-labs',
 	];
 
 	/**
@@ -809,32 +806,11 @@ class MWMultiVersion {
 	/**
 	 * Get a list of dblist names that contain a given wiki.
 	 *
-	 * This is for wmf-config array keys as interpreted by SiteConfiguration ($wgConf).
-	 *
-	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param string $dbName
 	 * @param string $realm
 	 * @return string[]
 	 */
 	public static function getTagsForWiki( string $dbName, string $realm = 'production' ): array {
-		$dblistsIndex = require __DIR__ . '/../dblists-index.php';
-
-		// Tolerate absence, e.g. for a labs-only wiki.
-		// The structure is verified by DbListTest.
-		// The freshness of the index is checked by composer buildDBLists/checkclean.
-		$wikiTags = $dblistsIndex[$dbName] ?? [];
-
-		// Replace some lists with labs-specific versions
-		if ( $realm === 'labs' ) {
-			foreach ( self::DB_LISTS_LABS as $tag => $fileName ) {
-				// Unset any reference to the prod-specific version
-				$wikiTags = array_values( array_diff( $wikiTags, [ $tag ] ) );
-				$dblist = MWWikiversions::readDbListFile( $fileName );
-				if ( in_array( $dbName, $dblist ) ) {
-					$wikiTags[] = $tag;
-				}
-			}
-		}
-
-		return $wikiTags;
+		return WmfConfig::getTagsForWiki( $dbName, $realm );
 	}
 }

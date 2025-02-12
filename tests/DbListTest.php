@@ -7,7 +7,7 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * @covers DBList
@@ -150,8 +150,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testNoUnusedDblistsLoaded() {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
-		$prodSettings = MWConfigCacheGenerator::getStaticConfig();
-		$labsSettings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
+		$prodSettings = WmfConfig::getStaticConfig();
+		$labsSettings = WmfConfig::getStaticConfig( 'labs' );
 
 		unset( $prodSettings['@replaceableSettings'] );
 		unset( $labsSettings['@replaceableSettings'] );

@@ -5,9 +5,9 @@ define( 'MW_PHPUNIT_TEST', true );
 // Load the shared utilities classes from here!
 require_once __DIR__ . '/../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/data/MWDefines.php';
 require_once __DIR__ . '/data/SiteConfiguration.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
 require_once __DIR__ . '/../src/ClusterConfig.php';
 require_once __DIR__ . '/../src/DBRecordCache.php';
 require_once __DIR__ . '/../src/Noc/EtcdCachedConfig.php';

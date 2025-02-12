@@ -1,6 +1,6 @@
 <?php
 
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * @coversNothing
@@ -8,7 +8,7 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
 class WikifunctionsTest extends PHPUnit\Framework\TestCase {
 
 	public function testCheckParsoidConfig() {
-		$productionConfig = MWConfigCacheGenerator::getStaticConfig();
+		$productionConfig = WmfConfig::getStaticConfig();
 
 		$wikifunctionsClientWikis = DBList::getLists()[ 'wikifunctionsclient' ];
 

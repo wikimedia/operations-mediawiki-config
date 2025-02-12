@@ -7,13 +7,13 @@
  * Then view <http://localhost:9412/>.
  */
 
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 // Verbose error reporting
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
-require_once __DIR__ . '/../../multiversion/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../../src/WmfConfig.php';
 require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../../tests/data/MWDefines.php';
 require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
@@ -22,7 +22,7 @@ require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 $wgConf = new SiteConfiguration();
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
-$wgConf->settings = MWConfigCacheGenerator::getStaticConfig();
+$wgConf->settings = WmfConfig::getStaticConfig();
 
 $selected = $_GET['wiki'] ?? 'enwiki';
 if ( !in_array( $selected, $wikis ) ) {
@@ -35,11 +35,11 @@ if ( !in_array( $selected, $wikis ) ) {
 $compare = $_GET['compare'] ?? '';
 $compare = in_array( $compare, $wikis ) ? $compare : null;
 
-$selectedGlobals = MWConfigCacheGenerator::getConfigGlobals(
+$selectedGlobals = WmfConfig::getConfigGlobals(
 	$selected,
 	$wgConf
 );
-$selectedGlobals['* wikitags'] = MWMultiVersion::getTagsForWiki( $selected );
+$selectedGlobals['* wikitags'] = WmfConfig::getTagsForWiki( $selected );
 $selectedGlobals['* dblists'] = array_keys( array_filter(
 	MWWikiversions::getAllDbListsForCLI(),
 	static function ( array $list ) use ( $selected ) {
@@ -49,11 +49,11 @@ $selectedGlobals['* dblists'] = array_keys( array_filter(
 wmfAssertNoPrivateSettings( $selectedGlobals );
 $isComparing = false;
 if ( $compare !== null ) {
-	$beforeGlobals = MWConfigCacheGenerator::getConfigGlobals(
+	$beforeGlobals = WmfConfig::getConfigGlobals(
 		$compare,
 		$wgConf
 	);
-	$beforeGlobals['* wikitags'] = MWMultiVersion::getTagsForWiki( $compare );
+	$beforeGlobals['* wikitags'] = WmfConfig::getTagsForWiki( $compare );
 	$beforeGlobals['* dblists'] = array_keys( array_filter(
 		MWWikiversions::getAllDbListsForCLI(),
 		static function ( array $list ) use ( $compare ) {
