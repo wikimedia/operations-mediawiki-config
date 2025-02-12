@@ -6008,6 +6008,7 @@ return [
 	# kept in sync with wikis where wgMFNamespacesWithLeadParagraphs is
 	# set to empty, due to T359002
 	'wikivoyage' => true,
+	'wiktionary' => true,
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontendTalkPages' => [
@@ -7184,6 +7185,7 @@ return [
 	// In WikiVoyage there are no infoboxes, so typically this results in images
 	// being hoisted into unexpected places. It is preferable to get these fixed on wiki.
 	'wikivoyage' => [],
+	'wiktionary' => [],
 	'nlwiki' => [ NS_MAIN, NS_USER, ] // T242030
 ],
 
