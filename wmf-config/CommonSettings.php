@@ -4518,6 +4518,8 @@ if ( $wmgUseCampaignEvents ) {
 	if ( $wmgCampaignEventsProgramsAndEventsDashboardEnabled ) {
 		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 	}
+	$wgAddGroups['sysop'][] = 'event-organizer';
+	$wgRemoveGroups['sysop'][] = 'event-organizer';
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
 }
 
