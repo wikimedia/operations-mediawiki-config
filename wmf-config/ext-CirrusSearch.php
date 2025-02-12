@@ -880,7 +880,7 @@ return [
 	'enwiki' => [
 		'mlr-1024rs' => [
 			// Name of model stored in elasticsearch ltr plugin
-			'model' => 'enwiki-20220421-20180215-query_explorer',
+			'model' => 'enwiki-20241122-20180215-query_explorer',
 			// Number of results to score per-shard. Defaults to
 			// 1024 if not provided.
 			'window' => 448,
