@@ -2356,13 +2356,6 @@ function wmfGetOverrideSettings() {
 				'default' => null,
 		],
 
-		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
-			'default' => true, // T356924, T356923
-			'wikitech' => false,
-			'fishbowl' => false,
-			'private' => false,
-		],
-
 		'-wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
 			'default' => false, // T377737, T377760
 		],
