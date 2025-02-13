@@ -12633,7 +12633,7 @@ return [
 
 'wgRelatedArticlesABTestEnrollment' => [
 	'default' => [
-		"name" => "RelatedArticles experiment default",
+		"name" => "RelatedArticles test experiment default",
 		"enabled" => false,
 		"buckets" => [
 			"nonExperiment-unsampled" => 0.99,
@@ -12642,7 +12642,7 @@ return [
 		],
 	],
 	'euwiki' => [
-		"name" => "RelatedArticles experiment test eu",
+		"name" => "RelatedArticles test experiment eu",
 		"enabled" => true,
 		"buckets" => [
 			"nonExperiment-unsampled" => 0.99,
@@ -12651,7 +12651,7 @@ return [
 		],
 	],
 	'cawiki' => [
-		"name" => "RelatedArticles experiment test ca",
+		"name" => "RelatedArticles test experiment ca",
 		"enabled" => true,
 		"buckets" => [
 			"nonExperiment-unsampled" => 0.99,
