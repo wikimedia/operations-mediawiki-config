@@ -3736,6 +3736,7 @@ return [
 			'autopatrolled',
 			'templateeditor',
 			'patroller', // T222008
+			'confirmed', // T386313
 		],
 		'bureaucrat' => [ 'patroller' ],
 	],
@@ -5208,7 +5209,8 @@ return [
 		'sysop' => [
 			'autopatrolled',
 			'templateeditor',
-			'patroller' // T222008
+			'patroller', // T222008
+			'confirmed', // T386313
 		],
 		'bureaucrat' => [ 'sysop', 'patroller' ],
 	],
