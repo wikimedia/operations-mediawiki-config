@@ -2331,6 +2331,9 @@ return [
 			'autoconfirmed' => true,
 			'editsemiprotected' => true,
 		],
+		'editor' => [
+			'suppressredirect' => true, // T386367
+		],
 		'rollbacker' => [ 'rollback' => true, 'suppressredirect' => true ],
 		'flood' => [ 'bot' => true ],
 	],
