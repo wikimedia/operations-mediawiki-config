@@ -1335,6 +1335,11 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 			'enwiki' => 10,
 		],
+		'wmgGEActiveExperiment' => [
+			'default' => null,
+			'enwiki' => 'no-link-recommendation',
+			'cswiki' => 'surfacing-structured-task',
+		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],

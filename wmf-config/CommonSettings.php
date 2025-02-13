@@ -4434,6 +4434,16 @@ if ( $wmgUseGrowthExperiments ) {
 				[ 'user-bucket-growth', 'no-link-recommendation', 100 ],
 			],
 		];
+	} elseif ( $wmgGEActiveExperiment === 'surfacing-structured-task' ) {
+		// Surfacing structured tasks experiment, T385903
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'surfacing-structured-task',
+				[ 'user-bucket-growth', 'surfacing-structured-task', 50 ],
+			],
+			[ 'control',
+				[ 'user-bucket-growth', 'surfacing-structured-task', 100 ],
+			],
+		];
 	}
 }
 
