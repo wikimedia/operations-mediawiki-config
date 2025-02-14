@@ -1,0 +1,107 @@
+[
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://en.wiktionary.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://el.wiktionary.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://nl.wiktionary.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://ru.wiktionary.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://zh.wiktionary.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://en.wikivoyage.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://el.wikivoyage.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://nl.wikivoyage.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://ru.wikivoyage.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://zh.wikivoyage.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://www.mediawiki.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://commons.wikimedia.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://meta.wikimedia.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://species.wikimedia.org"
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "web",
+			"site": "https://auth.wikimedia.org"
+		}
+	}
+]
