@@ -2788,7 +2788,9 @@ if ( $wmgUseCLDR ) {
 
 if ( $wmgUseIncubator ) {
 	wfLoadExtension( 'WikimediaIncubator' );
-	$wmincClosedWikis = $wgSiteMatrixClosedSites;
+	// $wmincClosedWikis can be removed once Ib84b70e49e7beff750ccd04cfcca73ef6afce2d2
+	// is in production.
+	$wmincClosedWikis = $wgWmincClosedWikis = $wgSiteMatrixClosedSites;
 }
 
 if ( $wmgUseWikiLove ) {
