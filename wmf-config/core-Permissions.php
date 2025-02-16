@@ -582,12 +582,14 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
 	'+commonswiki' => [
+		'*' => [ 'unfuzzy' => false ],
 		'user' => [
 			'changetags' => false, // T134196
 			'upload' => true, // exception for T14556
 			'upload_by_url' => true, // T251474
 			'move-rootuserpages' => false, // T236359
 		],
+		'autoconfirmed' => [ 'unfuzzy' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ // T214003
 			'autopatrol' => true,
