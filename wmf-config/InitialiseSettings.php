@@ -12492,6 +12492,7 @@ return [
 	'itwiki' => true, // T383154
 	'enwiki' => true, // T386290
 	'mswiktionary' => true, // T386538
+	'frwiki' => true, // T386622
 ],
 
 // This setting determines whether the CampaignEvents extension shall store

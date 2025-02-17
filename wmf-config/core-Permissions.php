@@ -1182,7 +1182,10 @@ return [
 			'autopatrol' => true, // T23078
 			'movefile' => true, // T87145
 			'changetags' => true, // T98629
-			'editextendedsemiprotected' => true // T131109
+			'editextendedsemiprotected' => true, // T131109
+			'campaignevents-enable-registration' => true, // T386622
+			'campaignevents-organize-events' => true, // T386622
+			'campaignevents-email-participants' => true // T386622
 		],
 		'rollbacker' => [
 			'rollback' => true, // T170780
@@ -3899,6 +3902,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter',
 			'rollbacker',
+			'event-organizer', // T386622
 		],
 	],
 	'+frwikibooks' => [
@@ -5346,7 +5350,7 @@ return [
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
-		'bureaucrat' => [ 'abusefilter', 'sysop', 'rollbacker' ],
+		'bureaucrat' => [ 'abusefilter', 'sysop', 'rollbacker', 'event-organizer' ], // T386622
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
