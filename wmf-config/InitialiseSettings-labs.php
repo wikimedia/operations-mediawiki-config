@@ -1421,6 +1421,7 @@ function wmfGetOverrideSettings() {
 			'viwiki' => null,
 		],
 		'wgGESurfacingStructuredTasksEnabled' => [
+			'cswiki' => true,
 			'enwiki' => true,
 		],
 		'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
