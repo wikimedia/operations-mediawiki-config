@@ -3271,7 +3271,6 @@ if ( $wmgUseEcho ) {
 // Wikitech specific settings
 if ( $wgDBname === 'labswiki' ) {
 	$wgEmailConfirmToEdit = true;
-	$wgEnableCreativeCommonsRdf = true;
 
 	# User registration is now managed by Bitu (https://idm.wikimedia.org).
 	$wgGroupPermissions['*']['createaccount'] = false;
