@@ -791,8 +791,12 @@ return [
 
 'wgGELinkRecommendationMinimumTasksPerTopic' => [
 	'default' => 500,
+	'arzwiki' => 2000,
 	'eswiki' => 2000,
+	'fawiki' => 2000,
 	'frwiki' => 2000,
+	'ptwiki' => 2000,
+	'ruwiki' => 2000,
 ],
 
 ];
