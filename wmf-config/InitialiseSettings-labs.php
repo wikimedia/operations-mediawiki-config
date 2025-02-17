@@ -1347,10 +1347,6 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
-		'wgGEApiQueryGrowthTasksLookaheadSize' => [
-			'default' => null,
-			'enwiki' => 10,
-		],
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
 			'cswiki' => 'surfacing-structured-task',

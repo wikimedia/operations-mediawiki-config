@@ -43,6 +43,10 @@ return [
 	'default' => true,
 ],
 
+'wgGEApiQueryGrowthTasksLookaheadSize' => [
+	'default' => 10,
+],
+
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 	'default' => true,
 ],
