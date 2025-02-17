@@ -161,7 +161,7 @@ if ( $wmgRealm == 'labs' ) {
 
 	if ( $wmgUseCite ) {
 		// Temporary until we deploy to production, T236894
-		$wgCiteBookReferencing = true;
+		$wgCiteSubReferencing = true;
 	}
 
 	// Labs override for GlobalCssJs
