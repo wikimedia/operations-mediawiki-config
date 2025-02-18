@@ -2610,7 +2610,6 @@ return [
 	'frwiki' => true,
 	'eswiki' => true,
 	'jawiki' => true,
-	'ruwiki' => true,
 	'itwiki' => true,
 	// End T379102
 ],
@@ -8067,7 +8066,6 @@ return [
 	'frwiki' => 'available',
 	'eswiki' => 'available',
 	'jawiki' => 'available',
-	'ruwiki' => 'available',
 	'itwiki' => 'available',
 	// End T379102
 ],
@@ -8105,7 +8103,6 @@ return [
 	'frwiki' => 'available',
 	'eswiki' => 'available',
 	'jawiki' => 'available',
-	'ruwiki' => 'available',
 	'itwiki' => 'available',
 	// End T379102
 ],
@@ -8143,7 +8140,6 @@ return [
 	'frwiki' => 'available',
 	'eswiki' => 'available',
 	'jawiki' => 'available',
-	'ruwiki' => 'available',
 	'itwiki' => 'available',
 	// End T379102
 ],
