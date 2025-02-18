@@ -5964,6 +5964,33 @@ return [
 	'thwiktionary' => true, // T386272
 	'trwiktionary' => true, // T386272
 	'viwiktionary' => true, // T386272
+	'afwiktionary' => true, // T386762
+	'azwiktionary' => true, // T386762
+	'cywiktionary' => true, // T386762
+	'dawiktionary' => true, // T386762
+	'eowiktionary' => true, // T386762
+	'etwiktionary' => true, // T386762
+	'hawiktionary' => true, // T386762
+	'hrwiktionary' => true, // T386762
+	'iowiktionary' => true, // T386762
+	'iswiktionary' => true, // T386762
+	'jvwiktionary' => true, // T386762
+	'kkwiktionary' => true, // T386762
+	'kmwiktionary' => true, // T386762
+	'liwiktionary' => true, // T386762
+	'ltwiktionary' => true, // T386762
+	'minwiktionary' => true, // T386762
+	'mlwiktionary' => true, // T386762
+	'mnwiktionary' => true, // T386762
+	'ocwiktionary' => true, // T386762
+	'sawiktionary' => true, // T386762
+	'skwiktionary' => true, // T386762
+	'swwiktionary' => true, // T386762
+	'tewiktionary' => true, // T386762
+	'tlwiktionary' => true, // T386762
+	'urwiktionary' => true, // T386762
+	'yuewiktionary' => true, // T386762
+	'zh_min_nanwiktionary' => true, // T386762
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -6009,6 +6036,33 @@ return [
 	'thwiktionary' => true, // T386272
 	'trwiktionary' => true, // T386272
 	'viwiktionary' => true, // T386272
+	'afwiktionary' => true, // T386762
+	'azwiktionary' => true, // T386762
+	'cywiktionary' => true, // T386762
+	'dawiktionary' => true, // T386762
+	'eowiktionary' => true, // T386762
+	'etwiktionary' => true, // T386762
+	'hawiktionary' => true, // T386762
+	'hrwiktionary' => true, // T386762
+	'iowiktionary' => true, // T386762
+	'iswiktionary' => true, // T386762
+	'jvwiktionary' => true, // T386762
+	'kkwiktionary' => true, // T386762
+	'kmwiktionary' => true, // T386762
+	'liwiktionary' => true, // T386762
+	'ltwiktionary' => true, // T386762
+	'minwiktionary' => true, // T386762
+	'mlwiktionary' => true, // T386762
+	'mnwiktionary' => true, // T386762
+	'ocwiktionary' => true, // T386762
+	'sawiktionary' => true, // T386762
+	'skwiktionary' => true, // T386762
+	'swwiktionary' => true, // T386762
+	'tewiktionary' => true, // T386762
+	'tlwiktionary' => true, // T386762
+	'urwiktionary' => true, // T386762
+	'yuewiktionary' => true, // T386762
+	'zh_min_nanwiktionary' => true, // T386762
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
