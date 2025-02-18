@@ -751,7 +751,12 @@ return [
 			// also in some exemption lists'
 		],
 		'autoreviewer' => [ 'autopatrol' => true ],
-		'eventcoordinator' => [ 'noratelimit' => true ], // T193075
+		'eventcoordinator' => [
+			'noratelimit' => true, // T193075
+			'campaignevents-enable-registration' => true, // T386290
+			'campaignevents-organize-events' => true, // T386290
+			'campaignevents-email-participants' => true // T386290
+		],
 		'researcher' => [
 			'browsearchive' => true,
 			'deletedhistory' => true,

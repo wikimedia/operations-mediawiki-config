@@ -12435,6 +12435,8 @@ return [
 	'plwiki' => true, // T383154
 	'mswiki' => true, // T383154
 	'itwiki' => true, // T383154
+	'enwiki' => true, // T386290
+	'mswiktionary' => true, // T386538
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
@@ -12449,6 +12451,7 @@ return [
 
 'wmgCampaignEventsUseEventOrganizerGroup' => [
 	'default' => true,
+	'enwiki' => false,
 ],
 
 'wgCampaignEventsEnableEventInvitation' => [
@@ -12462,6 +12465,8 @@ return [
 	'swwiki' => true,
 	'ptwiki' => true,
 	'wikidatawiki' => true, // T375411
+	'enwiki' => true,
+	'mswiktionary' => true,
 ],
 
 'wmgCampaignEventsProgramsAndEventsDashboardEnabled' => [ // T377252
