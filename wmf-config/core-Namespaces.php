@@ -321,6 +321,9 @@ return [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
+	'+cbk_zamwiki' => [
+		'Wikipedia_discusión' => NS_PROJECT_TALK, // T386722
+	],
 	'+cewiki' => [ // T49574
 		'Википедийа' => NS_PROJECT,
 		'Википедийа_дийцаре' => NS_PROJECT_TALK,
@@ -6095,6 +6098,7 @@ return [
 	'bswiki' => 'Razgovor_o_Wikipediji', // T115812 and T231654
 	'bswiktionary' => 'Razgovor_s_Wikirječnikom',
 	'btmwiktionary' => 'Pembicaraan_Wikikamus',
+	'cbk_zamwiki' => 'Discusión_del_Wikipedia', // T386722
 	'cuwiki' => 'Википєдїѩ_бєсѣда', // T123654
 	'cswikivoyage' => 'Diskuse_k_Wikicestám',
 	'elwikinews' => 'Βικινέα_συζήτηση',
