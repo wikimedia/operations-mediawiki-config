@@ -14,6 +14,7 @@ return [
 'wmgGEActiveExperiment' => [
 	'default' => false,
 	'enwiki' => 'no-link-recommendation',
+	'testwiki' => 'surfacing-structured-task', // T386739
 ],
 
 'wgGEImageRecommendationApiHandler' => [
@@ -375,6 +376,7 @@ return [
 
 'wgGESurfacingStructuredTasksEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
