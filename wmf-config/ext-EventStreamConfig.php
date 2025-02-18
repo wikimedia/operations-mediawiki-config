@@ -2291,6 +2291,8 @@ return [
 					'provide_values' => [
 						'mediawiki_site_content_language',
 						'mediawiki_skin',
+						'mediawiki_database',
+						'performer_is_temp',
 						'performer_session_id',
 						'performer_is_logged_in'
 					],
@@ -2310,6 +2312,8 @@ return [
 					'provide_values' => [
 						'mediawiki_site_content_language',
 						'mediawiki_skin',
+						'mediawiki_database',
+						'performer_is_temp',
 						'performer_session_id',
 						'performer_is_logged_in'
 					],
@@ -2378,6 +2382,18 @@ return [
 				'rate' => 1,
 			],
 		],
+		'product_metrics.web_base.search_ab_test_session_ticks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
+		'product_metrics.web_base.search_ab_test_clicks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
 	],
 	'+enwiki' => [
 		'mediawiki.web_ui_actions' => [
@@ -2390,13 +2406,13 @@ return [
 		'product_metrics.web_base.search_ab_test_session_ticks' => [
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0.5,
+				'rate' => 1,
 			],
 		],
 		'product_metrics.web_base.search_ab_test_clicks' => [
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0.5,
+				'rate' => 1,
 			],
 		],
 	],
@@ -2404,13 +2420,13 @@ return [
 		'product_metrics.web_base.search_ab_test_session_ticks' => [
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0.5,
+				'rate' => 1,
 			],
 		],
 		'product_metrics.web_base.search_ab_test_clicks' => [
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0.5,
+				'rate' => 1,
 			],
 		],
 	],

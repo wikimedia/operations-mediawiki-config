@@ -788,7 +788,7 @@ function wmfGetOverrideSettings() {
 
 		'wgRelatedArticlesABTestEnrollment' => [
 			'default' => [
-				"name" => "RelatedArticles test experiment betacluster	",
+				"name" => "RelatedArticles test experiment",
 				"enabled" => true,
 				"buckets" => [
 					"nonExperiment-unsampled" => 0,
