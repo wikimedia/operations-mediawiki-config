@@ -2275,6 +2275,9 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+		'wmgCampaignEventsUseEventOrganizerGroup' => [
+			'default' => false,
+		],
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],

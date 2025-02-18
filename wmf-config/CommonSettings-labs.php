@@ -478,9 +478,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
 		$wgGroupPermissions['user']['campaignevents-email-participants'] = true;
-		// This group is not needed in beta. Redundant entries in wgAddGroups and
-		// wgRemoveGroups are harmless.
-		unset( $wgGroupPermissions['event-organizer'] );
 	}
 
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)

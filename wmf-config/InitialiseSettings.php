@@ -12447,6 +12447,10 @@ return [
 	'test2wiki' => false,
 ],
 
+'wmgCampaignEventsUseEventOrganizerGroup' => [
+	'default' => true,
+],
+
 'wgCampaignEventsEnableEventInvitation' => [
 	'default' => false,
 	// T373041
