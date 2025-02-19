@@ -5986,7 +5986,7 @@ return [
 	'eswiktionary' => true, // T386272
 	'fawiktionary' => true, // T386272
 	'fiwiktionary' => true, // T386272
-	'frwiktionary' => true, // T386272
+	'frwiktionary' => false, // T386272, T356718
 	'hewiktionary' => true, // T386272
 	'hiwiktionary' => true, // T386272
 	'hywiktionary' => true, // T386272
