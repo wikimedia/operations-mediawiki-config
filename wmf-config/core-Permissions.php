@@ -4105,10 +4105,16 @@ return [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
 	'+knwiki' => [
-		'sysop' => [ 'flood' ], // T322472
+		'sysop' => [
+			'flood', // T322472
+			'confirmed' // T386781
+		],
 	],
 	'+knwikisource' => [
-		'sysop' => [ 'flood' ], // T373073
+		'sysop' => [
+			'flood', // T373073
+			'confirmed' // T386781
+		],
 	],
 	'+kowiki' => [
 		'sysop' => [
@@ -4590,6 +4596,11 @@ return [
 	],
 	'+tcywiki' => [
 		'sysop' => [ 'extendedconfirmed' ], // T385828
+	],
+	'+tcywikisource' => [
+		'sysop' => [
+			'confirmed', // T386781
+		],
 	],
 	'+trwiki' => [
 		'sysop' => [
@@ -5464,11 +5475,17 @@ return [
 	'+kkwiki' => [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
-	'+knwiki' => [ // T322472
-		'sysop' => [ 'flood' ],
+	'+knwiki' => [
+		'sysop' => [
+			'flood', // T322472
+			'confirmed' // T386781
+		],
 	],
-	'+knwikisource' => [ // T373073
-		'sysop' => [ 'flood' ],
+	'+knwikisource' => [
+		'sysop' => [
+			'flood', // T373073
+			'confirmed' // T386781
+		],
 	],
 	'+kowiki' => [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
@@ -5791,6 +5808,11 @@ return [
 	],
 	'+tcywiki' => [
 		'sysop' => [ 'extendedconfirmed' ], // T385828
+	],
+	'+tcywikisource' => [
+		'sysop' => [
+			'confirmed', // T386781
+		],
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender', 'translator' ], // bureaucrat -> sysop, T40690, T147740, T356440
