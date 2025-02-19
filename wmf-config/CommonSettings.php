@@ -1754,13 +1754,7 @@ if ( $wgDBname === 'nostalgiawiki' ) {
 
 $wgFooterIcons['copyright']['copyright'] = [
 	'url' => 'https://wikimediafoundation.org/',
-	'src' => '/static/images/icons/wikimedia_foundation.svg',
-	'sources' => [
-		'media' => '(min-width: 500px)',
-		'srcset' => $wmgWikimediaIcon,
-		'width' => 25,
-		'height' => 25,
-	],
+	'src' => $wmgWikimediaIcon,
 	'width' => 84,
 	'height' => 29,
 	'alt' => 'Wikimedia Foundation',
