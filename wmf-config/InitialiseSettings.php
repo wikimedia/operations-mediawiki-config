@@ -4926,6 +4926,7 @@ return [
 	'sqwikiquote' => true, // T234499
 	'tawiki' => true, // T100431
 	'tcywiki' => true, // T209432
+	'test2wiki' => true,
 	'thwiki' => true, // T30689
 	'thwiktionary' => true, // T33600
 	'thwikisource' => true, // T33600
