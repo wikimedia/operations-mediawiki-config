@@ -3006,6 +3006,13 @@ Wikiquote:
         no_2x: true
         local_wordmark: true
         selected_icon: arwikiquote
+    uzwikiquote:
+        commons: 'File:Wikiquote-logo-uz-v2.svg'
+        commons_wordmark: 'File:Wikiquote-wordmark-uz.svg'
+        comment_wordmark: T386569
+        comment: T386569
+        comment_1_5x: T386569
+        comment_2x: T386569
     viwikiquote: null
     zhwikiquote:
         commons: 'File:Wikiquote-logo-zh-hant.svg'

@@ -592,6 +592,7 @@ return [
 	'trwikiquote' => '/static/images/project-logos/trwikiquote.png', // T334732
 	'ukwikiquote' => '/static/images/project-logos/ukwikiquote.png',
 	'urwikiquote' => '/static/images/project-logos/urwikiquote.png', // T97510
+	'uzwikiquote' => '/static/images/project-logos/uzwikiquote.png', // T386569
 	'viwikiquote' => '/static/images/project-logos/viwikiquote.png',
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote.png', // T199863, T308620
 
@@ -1408,6 +1409,7 @@ return [
 	'tewikiquote' => '/static/images/project-logos/tewikiquote-1.5x.png',
 	'tlwikiquote' => '/static/images/project-logos/tlwikiquote-1.5x.png',
 	'trwikiquote' => '/static/images/project-logos/trwikiquote-1.5x.png', // T334732
+	'uzwikiquote' => '/static/images/project-logos/uzwikiquote-1.5x.png', // T386569
 	'viwikiquote' => '/static/images/project-logos/viwikiquote-1.5x.png',
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote-1.5x.png', // T150618, T199863, T308620
 
@@ -2063,6 +2065,7 @@ return [
 	'tewikiquote' => '/static/images/project-logos/tewikiquote-2x.png',
 	'tlwikiquote' => '/static/images/project-logos/tlwikiquote-2x.png',
 	'trwikiquote' => '/static/images/project-logos/trwikiquote-2x.png', // T334732
+	'uzwikiquote' => '/static/images/project-logos/uzwikiquote-2x.png', // T386569
 	'viwikiquote' => '/static/images/project-logos/viwikiquote-2x.png',
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote-2x.png', // T150618, T199863, T308620
 
@@ -4293,6 +4296,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ur.svg',
 		'width' => 146,
 		'height' => 44,
+	],
+	'uzwikiquote' => [ // T386569
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-uz.svg',
+		'width' => 122,
+		'height' => 40,
 	],
 	'zhwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-zh.svg',
