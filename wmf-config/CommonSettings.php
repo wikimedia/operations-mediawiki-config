@@ -4419,6 +4419,10 @@ if ( $wmgUseGrowthExperiments ) {
 		// Add Link experiment, T377631
 		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
 			[ 'control',
+				[ 'user-bucket-growth', 'no-link-recommendation', 15 ],
+				[ CUDCOND_AFTER, '20250220140000' ],
+			],
+			[ 'control',
 				[ 'user-bucket-growth', 'no-link-recommendation', 10 ],
 				[ CUDCOND_AFTER, '20250128090000' ],
 			],
