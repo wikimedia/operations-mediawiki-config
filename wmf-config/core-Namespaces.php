@@ -1080,6 +1080,11 @@ return [
 	'+lvwiki' => [
 		'VP' => NS_PROJECT, // T95106
 	],
+	'+madwiki' => [
+		'Berkas' => NS_FILE, // T382087
+		'Templat' => NS_TEMPLATE, // T382087
+		'Kategori' => NS_CATEGORY, // T382087
+	],
 	'+maiwiki' => [
 		'वि' => NS_PROJECT, // T125801
 		'वि_वा' => NS_PROJECT_TALK, // T125801
