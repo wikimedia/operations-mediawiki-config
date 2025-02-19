@@ -12456,18 +12456,12 @@ return [
 ],
 
 'wgCampaignEventsEnableEventInvitation' => [
-	'default' => false,
-	// T373041
-	'officewiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	// T372582
-	'igwiki' => true,
-	'swwiki' => true,
-	'ptwiki' => true,
-	'wikidatawiki' => true, // T375411
-	'enwiki' => true,
-	'mswiktionary' => true,
+	'default' => true, // T383800
+	'eswiki' => false,
+	'metawiki' => false,
+	'zhwiki' => false,
+	'brwikimedia' => false,
+	'uawikimedia' => false,
 ],
 
 'wmgCampaignEventsProgramsAndEventsDashboardEnabled' => [ // T377252
