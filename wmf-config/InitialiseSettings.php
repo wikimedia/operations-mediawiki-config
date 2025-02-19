@@ -585,6 +585,7 @@ return [
 	'ruewiki' => 'Europe/Berlin',
 	'sahwikiquote' => 'Asia/Yakutsk',
 	'sahwikisource' => 'Asia/Yakutsk',
+	'satwiktionary' => 'Asia/Kolkata', // T386631
 	'sawikiquote' => 'Asia/Kolkata',
 	'scwiki' => 'Europe/Berlin',
 	'scnwiki' => 'Europe/Berlin',
@@ -1577,6 +1578,7 @@ return [
 	'sahwikiquote' => 'Биики_Домох',
 	'sahwikisource' => 'Бикитиэкэ',
 	'satwiki' => 'ᱣᱤᱠᱤᱯᱤᱰᱤᱭᱟ',
+	'satwiktionary' => 'ᱣᱤᱠᱤ ᱟᱹᱲᱟᱹ ᱢᱩᱨᱟᱹᱭ', // T386631
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',

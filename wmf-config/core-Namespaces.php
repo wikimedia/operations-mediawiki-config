@@ -5921,6 +5921,7 @@ return [
 	'sahwiki' => 'Бикипиэдьийэ',
 	'sahwikisource' => 'Бикитиэкэ',
 	'satwiki' => 'ᱣᱤᱠᱤᱯᱤᱰᱤᱭᱟ', // T211294
+	'satwiktionary' => 'ᱣᱤᱠᱤ_ᱟᱹᱲᱟᱹ_ᱢᱩᱨᱟᱹᱭ', // T211294
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
