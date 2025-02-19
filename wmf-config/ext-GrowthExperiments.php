@@ -797,8 +797,8 @@ return [
 	'eswiki' => 2000,
 	'fawiki' => 2000,
 	'frwiki' => 2000,
+	'idwiki' => 2000,
 	'ptwiki' => 2000,
-	'ruwiki' => 2000,
 ],
 
 ];
