@@ -4070,7 +4070,8 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
-        local_wordmark: true
+        commons_wordmark: 'File:Imagotipo_Wikimedia_Colombia_Versión_horizontal_(negro)_2023.svg'
+        comment_wordmark: T386872
     dkwikimedia:
         commons: 'File:Wikimedia_Danmark_logo.svg'
         comment: T332784
