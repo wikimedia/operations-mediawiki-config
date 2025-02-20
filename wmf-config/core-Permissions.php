@@ -3031,6 +3031,7 @@ return [
 		],
 		'wikifunctions-staff' => [
 			// Special staff-only user group for helping the community with Christmas-tree rights.
+			'wikilambda-bypass-cache' => true,
 			'wikilambda-connect-implementation' => true,
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
