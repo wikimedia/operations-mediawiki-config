@@ -1336,7 +1336,6 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 10,
 		],
 		'wmgGEActiveExperiment' => [
-			'default' => null,
 			'enwiki' => 'no-link-recommendation',
 			'cswiki' => 'surfacing-structured-task',
 		],
