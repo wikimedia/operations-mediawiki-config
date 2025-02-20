@@ -494,6 +494,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-log-private'] = true; // T344398
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T344398
 		$wgGroupPermissions['rollbacker']['abusefilter-log-private'] = true; // T39676
+		$wgGroupPermissions['abusefilter-editor']['abusefilter-log-private'] = true; // T386879
+		$wgGroupPermissions['abusefilter-editor']['abusefilter-view-private'] = true; // T386879
+		$wgGroupPermissions['abusefilter-editor']['abusefilter-modify'] = true; // T386879
+		$wgGroupPermissions['abusefilter-editor']['managechangetags'] = true; // T386879
 		break;
 	case 'zhwikibooks':
 		$wgAbuseFilterActions['block'] = true; // T330026
