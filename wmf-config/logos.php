@@ -5264,10 +5264,10 @@ return [
 		'width' => 121,
 		'height' => 28,
 	],
-	'cowikimedia' => [ // T386872
+	'cowikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-co.svg',
-		'width' => 140,
-		'height' => 39,
+		'width' => 121,
+		'height' => 28,
 	],
 	'dkwikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-dk.svg',
