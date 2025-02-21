@@ -820,7 +820,7 @@ return [
 	'azwikimedia' => '/static/images/project-logos/azwikimedia.png',
 	'bdwikimedia' => '/static/images/project-logos/bdwikimedia.png',
 	'bewikimedia' => '/static/images/project-logos/bewikimedia.png',
-	'brwikimedia' => '/static/images/project-logos/brwikimedia.png', // T257925
+	'brwikimedia' => '/static/images/project-logos/brwikimedia.png', // T387125
 	'cawikimedia' => '/static/images/project-logos/cawikimedia.png',
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
 	'cowikimedia' => '/static/images/project-logos/cowikimedia.png',
@@ -1538,7 +1538,7 @@ return [
 	'aewikimedia' => '/static/images/project-logos/aewikimedia-1.5x.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-1.5x.png',
-	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png', // T257925
+	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-1.5x.png',
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia-1.5x.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-1.5x.png', // T135521
@@ -2194,7 +2194,7 @@ return [
 	'aewikimedia' => '/static/images/project-logos/aewikimedia-2x.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-2x.png',
-	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png', // T257925
+	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-2x.png',
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia-2x.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-2x.png', // T135521
@@ -5249,10 +5249,10 @@ return [
 		'width' => 120,
 		'height' => 28,
 	],
-	'brwikimedia' => [ // T313194
+	'brwikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-br.svg',
-		'width' => 120,
-		'height' => 29,
+		'width' => 140,
+		'height' => 31,
 	],
 	'cawikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ca.svg',
@@ -8333,7 +8333,7 @@ return [
 	'arwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'bdwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'bewikimedia' => '/static/images/icons/outreachwiki.svg',
-	'brwikimedia' => '/static/images/icons/brwikimedia.svg', // T313194
+	'brwikimedia' => '/static/images/icons/brwikimedia.svg',
 	'cnwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'cowikimedia' => '/static/images/icons/outreachwiki.svg',
 	'dkwikimedia' => '/static/images/icons/outreachwiki.svg',

@@ -4051,13 +4051,10 @@ Wikivoyage:
         selected_icon: outreachwiki
         local_wordmark: true
     brwikimedia:
-        comment: T257925
-        comment_1_5x: T257925
-        comment_2x: T257925
-        commons_wordmark: 'File:Wiki_Movimento_Brasil_wordmark.svg'
-        comment_wordmark: T313194
-        commons_icon: 'File:Wiki Movimento Brasil vector-2022 logo.svg'
-        comment_icon: T313194
+        comment: T387125
+        commons: 'File:Wikimedia Brasil - Logo vertical.svg'
+        commons_wordmark: 'File:Wikimedia Brasil - Logo texto - positivo.svg'
+        commons_icon: 'File:Wikimedia-logo.svg'
     cawikimedia:
         local_wordmark: true
     cnwikimedia:
