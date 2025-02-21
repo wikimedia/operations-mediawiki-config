@@ -1053,6 +1053,13 @@ return [
 		'Draft_talk' => 119, // T385593
 		'Draft_article' => 118, // T385593
 		'Draft_article_talk' => 119, // T385593
+		'Т' => NS_TALK, // T386617
+		'К' => NS_USER, // T386617
+		'Б' => NS_USER_TALK, // T386617
+		'ВП' => NS_PROJECT, // T386617
+		'ВТ' => NS_PROJECT_TALK, // T386617
+		'Ж' => NS_HELP, // T386617
+		'ЖТ' => NS_HELP_TALK, // T386617
 	],
 	'+lawiki' => [
 		'Disputatio_Wikipedia' => NS_PROJECT_TALK,
