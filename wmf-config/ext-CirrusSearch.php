@@ -1227,5 +1227,10 @@ return [
 ],
 'wgCirrusSearchEnableEventBusWeightedTags' => [
 	'default' => true,
-]
+],
+'wgCirrusSearchLanguageKeywordExtraFields' => [
+	'default' => [],
+	'wikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
+	'testwikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
+],
 ];
