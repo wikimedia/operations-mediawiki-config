@@ -3164,7 +3164,7 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 		],
-		'abusefilter-editor' => [ 'oathauth-enable' => true ], // T386879
+		'abusefilter' => [ 'oathauth-enable' => true ], // T386879
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -4777,7 +4777,7 @@ return [
 			'transwiki', // T250972
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
-			'abusefilter-editor', // T386879
+			'abusefilter', // T386879
 		],
 	],
 	'+zhwikibooks' => [
@@ -5971,7 +5971,7 @@ return [
 			'transwiki', // T250972
 			'templateeditor', // T260012
 			'ipblock-exempt-grantor', // T357991
-			'abusefilter-editor', // T386879
+			'abusefilter', // T386879
 		],
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T374504
 	],
@@ -6121,7 +6121,7 @@ return [
 		'confirmed' => [ 'confirmed' ], // T379500
 		'abusefilter-helper' => [ 'abusefilter-helper' ], // T379500
 		'event-organizer' => [ 'event-organizer' ], // T376061
-		'abusefilter-editor' => [ 'abusefilter-editor' ], // T386879
+		'abusefilter' => [ 'abusefilter' ], // T386879
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
