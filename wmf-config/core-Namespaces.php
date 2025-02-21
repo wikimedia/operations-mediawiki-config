@@ -4749,6 +4749,8 @@ return [
 		107 => 'Experiment_talk', // T212919
 		108 => 'Lesson', // T212919
 		109 => 'Lesson_talk', // T212919
+		110 => 'Transwiki', // T387055
+		111 => 'Transwiki_talk', // T387055
 	],
 	// @} end of Wikiversity
 
@@ -4804,6 +4806,10 @@ return [
 	'ukwikivoyage' => [
 		100 => 'Портал', // Portal
 		101 => 'Обговорення_порталу', // Portal talk
+	],
+	'zhwikivoyage' => [ // T387055
+		100 => 'Transwiki',
+		101 => 'Transwiki_talk',
 	],
 	// @} end of Wikivoyage
 

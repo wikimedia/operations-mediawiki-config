@@ -3716,6 +3716,8 @@ return [
 	'zhwikibooks' => 100, // Transwiki
 	'zhwikiquote' => 100, // Transwiki
 	'zhwikisource' => 108, // Transwiki
+	'zhwikivoyage' => 100, // Transwiki T387055
+	'zhwikiversity' => 110, // Transwiki T387055
 ],
 
 'wgFeedCacheTimeout' => [
