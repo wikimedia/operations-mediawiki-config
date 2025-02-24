@@ -4064,6 +4064,8 @@ Wikivoyage:
         selected_icon: outreachwiki
         local_wordmark: true
     cowikimedia:
+        commons: 'File:Imagotipo Wikimedia Colombia Versión horizontal (negro) 2023.svg'
+        comment: T386872
         no_1_5x: true
         no_2x: true
         selected_icon: outreachwiki
