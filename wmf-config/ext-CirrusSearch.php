@@ -1106,11 +1106,6 @@ return [
 	'default' => []
 ],
 
-// Set SPARQL endpoint for categories
-'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'https://query.wikidata.org/bigdata/namespace/categories/sparql'
-],
-
 // Our cluster often has issues completing master actions
 // within the default 30s timeout.
 'wgCirrusSearchMasterTimeout' => [
