@@ -1664,6 +1664,13 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    sylwiki:
+        commons: 'File:Wikipedia-logo-v2-syl.svg'
+        comment: T386464
+        comment_1_5x: T386464
+        comment_2x: T386464
+        commons_wordmark: 'File:Wikipedia-wordmark-syl.svg'
+        comment_wordmark: T386464
     szlwiki:
         comment_1_5x: T150618
         comment_2x: T150618

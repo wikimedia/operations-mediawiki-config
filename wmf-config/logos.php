@@ -338,6 +338,7 @@ return [
 	'suwiki' => '/static/images/project-logos/suwiki.png', // T42285
 	'svwiki' => '/static/images/project-logos/svwiki.png',
 	'swwiki' => '/static/images/project-logos/swwiki.png',
+	'sylwiki' => '/static/images/project-logos/sylwiki.png', // T386464
 	'szlwiki' => '/static/images/project-logos/szlwiki.png',
 	'szywiki' => '/static/images/project-logos/szywiki.png',
 	'tawiki' => '/static/images/project-logos/tawiki.png', // T29826
@@ -1217,6 +1218,7 @@ return [
 	'suwiki' => '/static/images/project-logos/suwiki-1.5x.png', // T150618
 	'svwiki' => '/static/images/project-logos/svwiki-1.5x.png', // T150618
 	'swwiki' => '/static/images/project-logos/swwiki-1.5x.png', // T150618
+	'sylwiki' => '/static/images/project-logos/sylwiki-1.5x.png', // T386464
 	'szlwiki' => '/static/images/project-logos/szlwiki-1.5x.png', // T150618
 	'szywiki' => '/static/images/project-logos/szywiki-1.5x.png',
 	'tawiki' => '/static/images/project-logos/tawiki-1.5x.png',
@@ -1873,6 +1875,7 @@ return [
 	'suwiki' => '/static/images/project-logos/suwiki-2x.png', // T150618
 	'svwiki' => '/static/images/project-logos/svwiki-2x.png', // T150618
 	'swwiki' => '/static/images/project-logos/swwiki-2x.png', // T150618
+	'sylwiki' => '/static/images/project-logos/sylwiki-2x.png', // T386464
 	'szlwiki' => '/static/images/project-logos/szlwiki-2x.png', // T150618
 	'szywiki' => '/static/images/project-logos/szywiki-2x.png',
 	'tawiki' => '/static/images/project-logos/tawiki-2x.png',
@@ -3231,6 +3234,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
 		'width' => 119,
 		'height' => 18,
+	],
+	'sylwiki' => [ // T386464
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-syl.svg',
+		'width' => 117,
+		'height' => 40,
 	],
 	'szlwiki' => [ // T233104
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-szl.svg',
