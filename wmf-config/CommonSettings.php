@@ -3693,16 +3693,10 @@ if ( $wmgEnableJsonConfigDataMode ) {
 	// TODO: Consider whether this hard-coding to Commons is appropriate
 	// See T378127 for testcommonswiki, using to test Chart extension
 	if ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
-		// Ensure we have a stable cross-wiki title resolution
-		// See JCSingleton::parseTitle()
-		$wgJsonConfigInterwikiPrefix = "meta";
-
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 	} elseif ( $wgDBname === 'testwiki' ) {
 		// temporary for testing Chart extension - T378127
-		$wgJsonConfigInterwikiPrefix = "testcommons";
-
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://test-commons.wikimedia.org/w/api.php'
 		];
@@ -3710,8 +3704,6 @@ if ( $wmgEnableJsonConfigDataMode ) {
 			'url' => 'https://test-commons.wikimedia.org/w/api.php'
 		];
 	} else {
-		$wgJsonConfigInterwikiPrefix = "commons";
-
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
