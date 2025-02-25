@@ -4715,7 +4715,6 @@ return [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'labswiki' => false,
 ],
 
 'wmgUseOAuth' => [
@@ -5594,7 +5593,7 @@ return [
 ],
 
 'wmgUseTimedMediaHandler' => [
-	'default' => true, // false for wikitech T371537
+	'default' => true,
 	'lockeddown' => false,
 ],
 
@@ -5868,7 +5867,7 @@ return [
 // whether to configure RESTBase as a Virtual REST Service
 // in MW Core
 'wmgUseRestbaseVRS' => [
-	'default' => true, // false for wikitech T371537
+	'default' => true,
 	'closed' => false, // T315383
 	'private' => false,
 	// For reasons lost to history RESTBase was never set up for these wikis: (T318325)
@@ -5883,7 +5882,7 @@ return [
 // -------------- Shared Parsoid start --------------
 
 'wmgUseParsoid' => [
-	'default' => true, // false for wikitech T371537 T241961
+	'default' => true,
 	'lockeddown' => false, # T61702
 ],
 
@@ -6895,7 +6894,7 @@ return [
 ],
 
 'wgParserCacheType' => [
-	'default' => 'mysql-multiwrite', // memcached-pecl for wikitech T371537
+	'default' => 'mysql-multiwrite',
 ],
 
 'wgParsoidCacheConfig' => [
@@ -6978,7 +6977,7 @@ return [
 ],
 
 'wgChronologyProtectorStash' => [
-	'default' => 'mcrouter', // memcached-pecl for wikitech T371537
+	'default' => 'mcrouter',
 ],
 
 // General cache epochs
@@ -7202,7 +7201,7 @@ return [
 ],
 
 'wmgUseMobileApp' => [
-	'default' => true, // false for wikitech T371537
+	'default' => true,
 ],
 
 // ----------- MobileFrontend start ----------
@@ -7331,7 +7330,7 @@ return [
 ],
 
 'wgMFAutodetectMobileView' => [
-	'default' => false, // true for wikitech T371537
+	'default' => false,
 ],
 
 'wgMFCustomSiteModules' => [
@@ -7474,7 +7473,7 @@ return [
 	'default' => true,
 ],
 'wmgUseBounceHandler' => [
-	'default' => true, // false for wikitech T371537
+	'default' => true,
 ],
 
 'wmgUseTranslate' => [
@@ -7865,7 +7864,6 @@ return [
 	'default' => 'extension1',
 	// The following wikis should be using extension1 db but started with
 	// the application main database, stick with the current setting
-	'wikitech' => false,
 	'mediawikiwiki' => false,
 	'metawiki' => false,
 	'officewiki' => false,
@@ -11210,7 +11208,6 @@ return [
 	'default' => false,
 	'private' => true,
 	'fishbowl' => true,
-	'labswiki' => true, // Until SUL migration is complete T161859
 ],
 
 // T15712
@@ -11368,28 +11365,28 @@ return [
 ],
 
 'wgMessageCacheType' => [
-	'default' => 'mcrouter', // memcached-pecl for wikitech T371537
+	'default' => 'mcrouter',
 ],
 'wgSessionCacheType' => [
 	'default' => 'kask-session',
 ],
 'wgEchoSeenTimeCacheType' => [
-	'default' => 'kask-echoseen', // memcached-pecl for wikitech T371537
+	'default' => 'kask-echoseen',
 ],
 'wgCentralAuthSessionCacheType' => [
-	'default' => 'kask-session', // memcached-pecl for wikitech T371537
+	'default' => 'kask-session',
 ],
 'wgMWOAuthSessionCacheType' => [
-	'default' => 'db-mainstash', // memcached-pecl for wikitech T371537
+	'default' => 'db-mainstash'
 ],
 'wgMWOAuthNonceCacheType' => [
-	'default' => 'mcrouter', // memcached-pecl for wikitech T371537
+	'default' => 'mcrouter'
 ],
 'wgMainStash' => [
-	'default' => 'db-mainstash', // memcached-pecl for wikitech T371537
+	'default' => 'db-mainstash',
 ],
 'wgMicroStashType' => [
-	'default' => 'mcrouter-primary-dc', // memcached-pecl for wikitech T371537
+	'default' => 'mcrouter-primary-dc',
 ],
 
 'wmgFileExtensions' => [
