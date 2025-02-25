@@ -824,7 +824,7 @@ return [
 	'brwikimedia' => '/static/images/project-logos/brwikimedia.png', // T387125
 	'cawikimedia' => '/static/images/project-logos/cawikimedia.png',
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
-	'cowikimedia' => '/static/images/project-logos/cowikimedia.png',
+	'cowikimedia' => '/static/images/project-logos/cowikimedia.png', // T386872
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia.png', // T135521
 	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
