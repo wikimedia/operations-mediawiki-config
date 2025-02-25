@@ -2349,7 +2349,7 @@ return [
 			],
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0,
+				'rate' => 1,
 			],
 		],
 		// Web stream config for empty search recommendations A/B test
@@ -2370,7 +2370,7 @@ return [
 			],
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0,
+				'rate' => 1,
 			],
 		],
 		'analytics.haproxy_requestctl' => [
@@ -2431,18 +2431,6 @@ return [
 				'rate' => 1,
 			],
 		],
-		'product_metrics.web_base.search_ab_test_session_ticks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 1,
-			],
-		],
-		'product_metrics.web_base.search_ab_test_clicks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 1,
-			],
-		],
 	],
 	'+enwiki' => [
 		'mediawiki.web_ui_actions' => [
@@ -2450,46 +2438,16 @@ return [
 				'rate' => 0.01,
 			],
 		],
-	],
-	'+frwiki' => [
 		'product_metrics.web_base.search_ab_test_session_ticks' => [
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 1,
+				'rate' => 0,
 			],
 		],
 		'product_metrics.web_base.search_ab_test_clicks' => [
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 1,
-			],
-		],
-	],
-	'+euwiki' => [
-		'product_metrics.web_base.search_ab_test_session_ticks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 1,
-			],
-		],
-		'product_metrics.web_base.search_ab_test_clicks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 1,
-			],
-		],
-	],
-	'+cawiki' => [
-		'product_metrics.web_base.search_ab_test_session_ticks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 1,
-			],
-		],
-		'product_metrics.web_base.search_ab_test_clicks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 1,
+				'rate' => 0,
 			],
 		],
 	],

@@ -12785,7 +12785,16 @@ return [
 
 'wgRelatedArticlesABTestEnrollment' => [
 	'default' => [
-		"name" => "RelatedArticles test experiment",
+		"name" => "RelatedArticles test experiment default",
+		"enabled" => true,
+		"buckets" => [
+			"nonExperiment-unsampled" => 0,
+			"experimentEnabled" => 0.5,
+			"experimentDisabled" => 0.5
+		],
+	],
+	'enwiki' => [
+		"name" => "RelatedArticles test experiment en",
 		"enabled" => false,
 		"buckets" => [
 			"nonExperiment-unsampled" => 0,
@@ -12793,42 +12802,6 @@ return [
 			"experimentDisabled" => 0.5
 		],
 	],
-	'frwiki' => [
-		"name" => "RelatedArticles test experiment v2",
-		"enabled" => true,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	],
-	'testwiki' => [
-		"name" => "RelatedArticles test experiment",
-		"enabled" => true,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	],
-	'euwiki' => [
-		"name" => "RelatedArticles test experiment",
-		"enabled" => true,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	],
-	'cawiki' => [
-		"name" => "RelatedArticles test experiment",
-		"enabled" => true,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	]
 ],
 
 ];
