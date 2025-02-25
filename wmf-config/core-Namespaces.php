@@ -5975,6 +5975,7 @@ return [
 	'stewardwiki' => 'Project',
 	'strategywiki' => 'Strategic_Planning',
 	'suwikisource' => 'Wikipabukon', // T344314
+	'sylwiki' => 'ꠃꠁꠇꠤꠙꠤꠒꠤꠀ',
 	'szlwiki' => 'Wikipedyjo',
 	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
