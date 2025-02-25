@@ -7620,6 +7620,86 @@ return [
 	'testwiki' => true,
 ],
 
+'wgTranslateDisabledTargetLanguages' => [
+	'default' => [
+		'*' => [
+			'gan-hans' => 'Translate in gan please.',
+			'gan-hant' => 'Translate in gan please.',
+
+			'ike-cans' => 'Translate in iu please.',
+			'ike-latn' => 'Translate in iu please.',
+
+			'kk-cyrl' => 'Translate in kk please.',
+			'kk-latn' => 'Translate in kk please.',
+			'kk-arab' => 'Translate in kk please.',
+			'kk-kz'   => 'Translate in kk please.',
+			'kk-tr'   => 'Translate in kk please.',
+			'kk-cn'   => 'Translate in kk please.',
+
+			'ku-latn' => 'Translate in ku please.',
+			'ku-arab' => 'Translate in ku please.',
+
+			'shi-tfng' => 'Translate in shi please.',
+			'shi-latn' => 'Translate in shi please.',
+
+			'sr-ec' => 'Translate in sr please.',
+			'sr-el' => 'Translate in sr please.',
+
+			'tg-latn' => 'Translate in tg please.',
+
+			'zh-hans' => 'Translate in zh please.',
+			'zh-hant' => 'Translate in zh please.',
+			'zh-cn' => 'Translate in zh please.',
+			'zh-hk' => 'Translate in zh please.',
+			'zh-mo' => 'Translate in zh please.',
+			'zh-my' => 'Translate in zh please.',
+			'zh-sg' => 'Translate in zh please.',
+			'zh-tw' => 'Translate in zh please.',
+		]
+	],
+	'metawiki' => [
+		// Allow translations to Chinese variants for message bundles.
+		// See: T387230
+		'*' => [
+			'gan-hans' => 'Translate in gan please.',
+			'gan-hant' => 'Translate in gan please.',
+
+			'ike-cans' => 'Translate in iu please.',
+			'ike-latn' => 'Translate in iu please.',
+
+			'kk-cyrl' => 'Translate in kk please.',
+			'kk-latn' => 'Translate in kk please.',
+			'kk-arab' => 'Translate in kk please.',
+			'kk-kz'   => 'Translate in kk please.',
+			'kk-tr'   => 'Translate in kk please.',
+			'kk-cn'   => 'Translate in kk please.',
+
+			'ku-latn' => 'Translate in ku please.',
+			'ku-arab' => 'Translate in ku please.',
+
+			'shi-tfng' => 'Translate in shi please.',
+			'shi-latn' => 'Translate in shi please.',
+
+			'sr-ec' => 'Translate in sr please.',
+			'sr-el' => 'Translate in sr please.',
+
+			'tg-latn' => 'Translate in tg please.',
+		],
+		// But continue to disable translations to Chinese variants for
+		// page translations
+		'page' => [
+			'zh-hans' => 'Translate in zh please.',
+			'zh-hant' => 'Translate in zh please.',
+			'zh-cn' => 'Translate in zh please.',
+			'zh-hk' => 'Translate in zh please.',
+			'zh-mo' => 'Translate in zh please.',
+			'zh-my' => 'Translate in zh please.',
+			'zh-sg' => 'Translate in zh please.',
+			'zh-tw' => 'Translate in zh please.',
+		]
+	]
+],
+
 'wmgTranslateESIndex' => [
 	'default' => 'ttmserver',
 	'testwiki' => 'ttmserver-test',
