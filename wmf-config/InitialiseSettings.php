@@ -8277,15 +8277,6 @@ return [
 	'svwiki' => 'default',
 ],
 
-'wgDiscussionToolsEnableThanks' => [
-	'default' => false,
-	// Wikis with wgUseReportIncident:
-	'testwiki' => true,
-	'ptwiki' => true,
-	// Wikis without the DT beta feature:
-	'mediawikiwiki' => true,
-],
-
 'wgDiscussionToolsAutoTopicSubEditor' => [
 	'default' => 'discussiontoolsapi', // T284836
 ],
