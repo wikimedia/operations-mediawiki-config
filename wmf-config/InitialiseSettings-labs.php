@@ -599,6 +599,13 @@ function wmfGetOverrideSettings() {
 				'loggedin' => true,
 			],
 		],
+		'wgMinervaDonateBanner' => [
+			'default' => [
+				'base' => true,
+				'logged_in' => false,
+				'amc' => false,
+			],
+		],
 		'wmgMinervaNightModeExcludeTitles' => [
 			'default' => [ 'Banana' ],
 		],
