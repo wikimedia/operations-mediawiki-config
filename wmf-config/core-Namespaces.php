@@ -552,6 +552,7 @@ return [
 		'ویکی پدیا' => NS_PROJECT,
 		'ويكي پديا' => NS_PROJECT,
 		'ويکي‌پديا' => NS_PROJECT,
+		'شن' => NS_PROJECT, // T387185
 		'بوپ' => NS_PROJECT_TALK, // T213733
 		'بحث ویکی پدیا' => NS_PROJECT_TALK,
 		'بحث ويکي پديا' => NS_PROJECT_TALK,
