@@ -12733,6 +12733,15 @@ return [
 			"experimentDisabled" => 0.5
 		],
 	],
+	'frwiki' => [
+		"name" => "RelatedArticles test experiment",
+		"enabled" => true,
+		"buckets" => [
+			"nonExperiment-unsampled" => 0,
+			"experimentEnabled" => 0.5,
+			"experimentDisabled" => 0.5
+		],
+	],
 	'testwiki' => [
 		"name" => "RelatedArticles test experiment",
 		"enabled" => true,
