@@ -869,6 +869,7 @@ return [
 'swwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments' ],
 'swwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'swwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'sylwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'sysop_itwiki' => [ 'wikipedia', 'private', 'small', 'nowikidatadescriptiontaglines' ],
 'sysop_plwiki' => [ 'special', 'private', 'small', 'group1' ],
 'szlwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
