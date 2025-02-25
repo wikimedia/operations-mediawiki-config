@@ -2402,6 +2402,20 @@ return [
 			],
 		],
 	],
+	'+frwiki' => [
+		'product_metrics.web_base.search_ab_test_session_ticks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
+		'product_metrics.web_base.search_ab_test_clicks' => [
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
+	],
 	'+euwiki' => [
 		'product_metrics.web_base.search_ab_test_session_ticks' => [
 			'sample' => [
