@@ -615,5 +615,8 @@ if ( $wmgRealm == 'labs' ) {
 			'youtube' => 'Q631356',
 		];
 	}
+
+	// T385592
+	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
 }
 // end safeguard
