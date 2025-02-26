@@ -184,8 +184,6 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	if ( isset( $wmgWikibaseRestApiEnabled ) && $wmgWikibaseRestApiEnabled ) {
-		$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.json';
-
 		if ( isset( $wmgWikibaseRestApiDevelopmentEnabled ) && $wmgWikibaseRestApiDevelopmentEnabled ) {
 			$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.dev.json';
 		}
