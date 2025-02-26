@@ -602,8 +602,15 @@ function wmfGetOverrideSettings() {
 		'wgMinervaDonateBanner' => [
 			'default' => [
 				'base' => true,
-				'logged_in' => false,
+				'loggedin' => false,
 				'amc' => false,
+			],
+		],
+		'wgMinervaDonateLink' => [
+			'default' => [
+				'base' => false,
+				'loggedin' => true,
+				'amc' => true,
 			],
 		],
 		'wmgMinervaNightModeExcludeTitles' => [
