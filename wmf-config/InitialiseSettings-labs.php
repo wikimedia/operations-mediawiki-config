@@ -1149,6 +1149,20 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
+		'-wmgJsonConfigDataModeConfig' => [
+			// All wikis access data from Commons; Commons accesses itself and stores data
+			'default' => [
+				'cacheKey' => 'commonswiki',
+				'remote' => [
+					'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+				]
+			],
+			'commonswiki' => [
+				'cacheKey' => 'commonswiki',
+				'store' => true,
+			],
+		],
+
 		'wmgEnableDashikiData' => [
 			'default' => true,
 		],

@@ -260,15 +260,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgTrackGlobalJsonLinksNamespaces = false;
 	}
 
-	if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
-
-		// Enable Tabular data namespace on Commons - T148745
-		$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
-
-		// Enable Map (GeoJSON) data namespace on Commons - T149548
-		$wgJsonConfigs['Map.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
-	}
-
 	if ( $wmgUseMath ) {
 		$wgMathValidModes = [ 'source', 'mathml', 'native', 'mathjax' ];
 		$wgDefaultUserOptions[ 'math' ] = 'native';
@@ -495,34 +486,6 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseAutoModerator ) {
 		$wgAutoModeratorLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/v1/models/';
 		$wgAutoModeratorLiftWingAddHostHeader = false;
-	}
-
-	// T369945
-	if ( $wmgUseChart ) {
-		wfLoadExtension( 'Chart' );
-
-		// Set up chart pages with JsonConfig
-		$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
-		$wgJsonConfigs['Chart.JsonConfig'] = [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".chart", and contain at least one symbol
-			'pattern' => '/.\.chart$/',
-			'license' => 'CC0-1.0',
-			// allows the cache keys to be shared between wikis
-			'isLocal' => false,
-			'cacheKey' => 'commonswiki',
-		];
-
-		if ( $wgDBname === 'commonswiki' ) {
-			$wgJsonConfigs['Chart.JsonConfig']['store'] = true;
-		} else {
-			$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
-				'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
-			];
-		}
-
-		// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
 	}
 
 	// T372527

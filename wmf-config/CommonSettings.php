@@ -3605,20 +3605,9 @@ if ( $wmgUseJsonConfig ) {
 }
 
 if ( $wmgEnableJsonConfigDataMode ) {
-	// Safety: before extension.json, these values were initialized by JsonConfig.php
-	$wgJsonConfigModels = $wgJsonConfigModels ?? [];
-	$wgJsonConfigs = $wgJsonConfigs ?? [];
-
 	$wgJsonConfigEnableLuaSupport = true;
 
 	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
-
-	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
-		$jsonWiki = 'testcommonswiki';
-	} else {
-		$jsonWiki = 'commonswiki';
-	}
-
 	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
 	$wgJsonConfigs['Tabular.JsonConfig'] = [
 		'namespace' => 486,
@@ -3627,8 +3616,8 @@ if ( $wmgEnableJsonConfigDataMode ) {
 		'pattern' => '/.\.tab$/',
 		'license' => 'CC0-1.0',
 		'isLocal' => false,
-		'cacheKey' => $jsonWiki,
-	];
+		// Per-wiki config defined in $wmgJsonConfigDataModeConfig
+	] + $wmgJsonConfigDataModeConfig;
 
 	$wgJsonConfigModels['Map.JsonConfig'] = 'JsonConfig\JCMapDataContent';
 	$wgJsonConfigs['Map.JsonConfig'] = [
@@ -3638,34 +3627,8 @@ if ( $wmgEnableJsonConfigDataMode ) {
 		'pattern' => '/.\.map$/',
 		'license' => 'CC0-1.0',
 		'isLocal' => false,
-		'cacheKey' => $jsonWiki,
-	];
-
-	// Enable Tabular data namespace on Commons - T148745
-	// Enable Map (GeoJSON) data namespace on Commons - T149548
-	// TODO: Consider whether this hard-coding to Commons is appropriate
-	// See T378127 for testcommonswiki, using to test Chart extension
-	if ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
-		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
-		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
-	} elseif ( $wgDBname === 'testwiki' ) {
-		// temporary for testing Chart extension - T378127
-		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
-			'url' => 'https://test-commons.wikimedia.org/w/api.php'
-		];
-		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
-			'url' => 'https://test-commons.wikimedia.org/w/api.php'
-		];
-	} else {
-		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
-			'url' => 'https://commons.wikimedia.org/w/api.php'
-		];
-		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
-			'url' => 'https://commons.wikimedia.org/w/api.php'
-		];
-	}
-
-	unset( $jsonWiki );
+		// Per-wiki config defined in $wmgJsonConfigDataModeConfig
+	] + $wmgJsonConfigDataModeConfig;
 }
 
 // Enable Config:Dashiki: sub-namespace on meta.wikimedia.org - T156971
@@ -3676,13 +3639,6 @@ if ( $wmgEnableDashikiData && $wmgUseJsonConfig ) {
 
 // T369945
 if ( $wmgUseChart ) {
-
-	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
-		$jsonWiki = 'testcommonswiki';
-	} else {
-		$jsonWiki = 'commonswiki';
-	}
-
 	wfLoadExtension( 'Chart' );
 	// set in ProductionServices.php / LabsServices.php
 	$wgChartServiceUrl = $wmgLocalServices['chart-renderer'] . '/v1/chart/render';
@@ -3696,25 +3652,10 @@ if ( $wmgUseChart ) {
 			// page name must end in ".chart", and contain at least one symbol
 			'pattern' => '/.\.chart$/',
 			'license' => 'CC0-1.0',
-			// allows the cache keys to be shared between wikis
 			'isLocal' => false,
-			'cacheKey' => $jsonWiki,
-		];
+			// Per-wiki config defined in $wmgJsonConfigDataModeConfig
+		] + $wmgJsonConfigDataModeConfig;
 	}
-
-	if ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
-		$wgJsonConfigs['Chart.JsonConfig']['store'] = true;
-	} elseif ( $wgDBname === 'testwiki' ) {
-		$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
-			'url' => 'https://test-commons.wikimedia.org/w/api.php'
-		];
-	} else {
-		$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
-			'url' => 'https://commons.wikimedia.org/w/api.php'
-		];
-	}
-
-	unset( $jsonWiki );
 
 	// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
 }

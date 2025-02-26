@@ -7224,11 +7224,44 @@ return [
 	'default' => true,
 ],
 
+// Enable tabular, map and chart data to be stored in the 'Data:' namespace (486) on Commons
+// (or another wiki, see `wmgJsonConfigDataModeConfig` below),
+// and to be accessed cross-wiki from Scribunto modules and other extensions on other wikis.
+// Relevant tasks:
+// - Enable Tabular data namespace on Commons - T148745
+// - Enable Map (GeoJSON) data namespace on Commons - T149548
+// - See T378127 for testcommonswiki, using to test Chart extension
 'wmgEnableJsonConfigDataMode' => [
 	'default' => true,
-	# Technically they could be enabled as well, but keep them off just in case for now
+	// Technically they could be enabled as well, but keep them off just in case for now
 	'private' => false,
 	'fishbowl' => false,
+],
+
+'wmgJsonConfigDataModeConfig' => [
+	// Production wikis access data from Commons; Commons accesses itself and stores data
+	// TODO: Consider whether this hard-coding to Commons is appropriate
+	'default' => [
+		'cacheKey' => 'commonswiki',
+		'remote' => [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		]
+	],
+	'commonswiki' => [
+		'cacheKey' => 'commonswiki',
+		'store' => true,
+	],
+	// Test Wikipedia accesses data from Test Commons; Test Commons accesses itself and stores data
+	'testwiki' => [
+		'cacheKey' => 'testcommonswiki',
+		'remote' => [
+			'url' => 'https://test-commons.wikimedia.org/w/api.php'
+		]
+	],
+	'testcommonswiki' => [
+		'cacheKey' => 'testcommonswiki',
+		'store' => true,
+	],
 ],
 
 'wmgEnableDashikiData' => [
