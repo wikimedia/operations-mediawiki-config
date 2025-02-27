@@ -185,8 +185,6 @@ if ( $wmgRealm == 'labs' ) {
 		// Labs overrides
 		$wgUrlShortenerReadOnly = false;
 		$wgUrlShortenerServer = 'w-beta.wmflabs.org';
-		$wgUrlShortenerDBCluster = false;
-		$wgUrlShortenerDBName = 'wikishared';
 		$wgUrlShortenerEnableSidebar = true;
 		$wgUrlShortenerAllowedDomains = [
 			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
