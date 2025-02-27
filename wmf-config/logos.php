@@ -1542,6 +1542,7 @@ return [
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-1.5x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-1.5x.png',
+	'cowikimedia' => '/static/images/project-logos/cowikimedia-1.5x.png', // T386872
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia-1.5x.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-1.5x.png', // T135521
 	'gewikimedia' => '/static/images/project-logos/gewikimedia-1.5x.png', // T236389
@@ -2199,6 +2200,7 @@ return [
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-2x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-2x.png',
+	'cowikimedia' => '/static/images/project-logos/cowikimedia-2x.png', // T386872
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia-2x.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-2x.png', // T135521
 	'gewikimedia' => '/static/images/project-logos/gewikimedia-2x.png', // T236389
@@ -8348,7 +8350,7 @@ return [
 	'bewikimedia' => '/static/images/icons/outreachwiki.svg',
 	'brwikimedia' => '/static/images/icons/brwikimedia.svg',
 	'cnwikimedia' => '/static/images/icons/outreachwiki.svg',
-	'cowikimedia' => '/static/images/icons/outreachwiki.svg',
+	'cowikimedia' => '/static/images/icons/cowikimedia.svg', // T386872
 	'dkwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'ecwikimedia' => '/static/images/icons/ecwikimedia.svg',
 	'etwikimedia' => '/static/images/icons/outreachwiki.svg',

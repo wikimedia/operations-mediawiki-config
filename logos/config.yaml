@@ -4075,10 +4075,12 @@ Wikivoyage:
     cowikimedia:
         commons: 'File:Imagotipo Wikimedia Colombia Versión horizontal (negro) 2023.svg'
         comment: T386872
-        no_1_5x: true
-        no_2x: true
-        selected_icon: outreachwiki
-        local_wordmark: true
+        comment_1_5x: T386872
+        comment_2x: T386872
+        commons_icon: 'File:Wikimedia-icon-v1.svg'
+        comment_icon: T386872
+        commons_wordmark: 'File:Imagotipo_Wikimedia_Colombia_Versión_horizontal_(negro)_2023-wordmark.svg'
+        comment_wordmark: T386872
     dkwikimedia:
         commons: 'File:Wikimedia_Danmark_logo.svg'
         comment: T332784
