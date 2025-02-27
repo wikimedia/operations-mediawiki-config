@@ -12796,7 +12796,7 @@ return [
 		],
 	],
 	'frwiki' => [
-		"name" => "RelatedArticles test experiment",
+		"name" => "RelatedArticles test experiment v2",
 		"enabled" => true,
 		"buckets" => [
 			"nonExperiment-unsampled" => 0,
