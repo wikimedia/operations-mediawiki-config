@@ -3634,9 +3634,13 @@ if ( $wmgUseJsonConfig ) {
 		$wgTrackGlobalJsonLinks = true;
 		// cf T385917 - this test table is deprecated and won't get the schema update
 		$wgTrackGlobalJsonLinksNamespace = false;
-		$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
-			'db' => 'testcommonswiki'
-		];
+
+		// T387417 - beta has no testcommonswiki
+		if ( $wmgRealm === 'production' ) {
+			$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
+				'db' => 'testcommonswiki'
+			];
+		}
 	} else {
 		$jsonWiki = 'commonswiki';
 		// T379689 - deployment to Commons for pages + x1 for globaljsonlinks
