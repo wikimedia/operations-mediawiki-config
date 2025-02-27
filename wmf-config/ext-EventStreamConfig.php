@@ -2165,6 +2165,19 @@ return [
 				'rate' => 1,
 			],
 		],
+		// (T382147) MassDelete extension stream
+		'mediawiki.product_metrics.ext_massdelete' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/ext_massdelete',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'performer_session_id',
+					],
+				],
+			],
+		],
 		// (T336722, T350497) Wikifunctions-specific stream
 		'mediawiki.product_metrics.wikifunctions_ui' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
