@@ -2903,7 +2903,6 @@ if ( $wmgUseMath ) {
 if ( $wmgUseBabel ) {
 	wfLoadExtension( 'Babel' );
 
-	$wgBabelUseDatabase = true;
 	if ( $wmgUseCentralAuth ) {
 		$wgBabelCentralDb = 'metawiki';
 	}
