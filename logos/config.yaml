@@ -900,6 +900,7 @@ Wikipedia:
         local_wordmark: true
     kcgwiki:
         commons: 'File:Wikipedia-logo-v2-kcg.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-kcg.svg'
         local_tagline: true
     kgwiki:
         comment: T189586

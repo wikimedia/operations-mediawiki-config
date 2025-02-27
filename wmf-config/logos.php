@@ -2792,6 +2792,11 @@ return [
 		'width' => 120,
 		'height' => 18,
 	],
+	'kcgwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kcg.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'kgewiki' => [ // T377075
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kge.svg',
 		'width' => 110,
