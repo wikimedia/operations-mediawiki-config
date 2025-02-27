@@ -3237,8 +3237,8 @@ return [
 	],
 	'sylwiki' => [ // T386464
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-syl.svg',
-		'width' => 117,
-		'height' => 40,
+		'width' => 111,
+		'height' => 21,
 	],
 	'szlwiki' => [ // T233104
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-szl.svg',
@@ -7143,6 +7143,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-sw.svg',
 		'width' => 117,
 		'height' => 10,
+	],
+	'sylwiki' => [ // T386464
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-syl.svg',
+		'width' => 74,
+		'height' => 14,
 	],
 	'szlwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-szl.svg',
