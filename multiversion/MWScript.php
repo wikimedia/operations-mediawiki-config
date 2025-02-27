@@ -22,57 +22,6 @@ EOT
 }
 
 /**
- * Waits for the mesh network to be available before allowing the script to be
- * executed.
- *
- * In some conditions, a script might be executed while the service mesh is
- * unavailable or unhealthy, which results in undefined behaviour for some
- * scripts. See T387208.
- *
- * The possibility of bypassing the check is offered for specific emergency situations
- * and/or to avoid checking for every single wiki in a recurring script like
- * foreachwiki.
- */
-function wmfWaitForMesh() {
-	$skip = getenv( 'MESH_CHECK_SKIP' );
-	if ( $skip == "1" ) {
-		return;
-	}
-	$meshAvailable = false;
-
-	$ch = curl_init();
-	curl_setopt( $ch, CURLOPT_URL, 'http://localhost:9361/healthz' );
-	// We set aggressive timeouts as it's localhost and it's a simple admin interface.
-	// Random sampling in production yields sub-millisecond response times for this endpoint
-	curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT_MS, 100 );
-	curl_setopt( $ch, CURLOPT_TIMEOUT_MS, 200 );
-	// We want to return the curl response and not display it.
-	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-	// We retry 20 times at increasing time intervals
-	for ( $i = 0; $i < 20; $i++ ) {
-		if ( curl_exec( $ch ) == "OK" && curl_getinfo( $ch, CURLINFO_HTTP_CODE ) == 200 ) {
-			$meshAvailable = true;
-			break;
-		}
-			// sleep 10 * i^2 milliseconds, so 10, 40, 90, 250... for a total
-			// possible delay of 18 seconds
-			usleep( 10000 * $i * $i );
-	}
-	curl_close( $ch );
-
-	if ( !$meshAvailable ) {
-		fwrite( STDERR, <<<EOT
-The service mesh is unavailable, which can lead to unexpected results.
-
-Therefore, the script will not be executed. If you are *very* sure your script will
-not need the service mesh at all, you can run it again with MESH_CHECK_SKIP=1
-EOT
-		);
-		exit( 1 );
-	}
-}
-
-/**
  * Run a MediaWiki script based on the parameters (like --wiki) given to CLI.
  *
  * The first argument must be the relative (to MediaWiki) script file path.
@@ -204,6 +153,4 @@ EOT
 }
 
 // Run the script!
-$scriptWithArgs = wmfGetMWScriptWithArgs();
-wmfWaitForMesh();
-require_once $scriptWithArgs;
+require_once wmfGetMWScriptWithArgs();
