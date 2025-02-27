@@ -4252,12 +4252,6 @@ return [
 	'default' => true,
 ],
 
-'wgParserConf' => [
-	'default' => [
-		'class' => Parser::class,
-	],
-],
-
 # Enable magic links regardless of core default (T145604)
 'wgEnableMagicLinks' => [
 	'default' => [
