@@ -178,8 +178,15 @@ $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 $formatIsJson = ( $_GET['format'] ?? null ) === 'json';
 if ( $formatIsJson ) {
 	$data = [];
-	foreach ( $selectedGlobals as $name => $val ) {
-		$data[$name] = $isComparing ? $val['after'] : $val;
+	// Only allow to show a single variable if we're not comparing.
+	$varToShow = $_GET['var'] ?? null;
+	if ( is_string( $varToShow ) && !$isComparing ) {
+		$key = htmlspecialchars( $varToShow );
+		$data[$key] = $selectedGlobals[$key] ?? null;
+	} else {
+		foreach ( $selectedGlobals as $name => $val ) {
+			$data[$name] = $isComparing ? $val['after'] : $val;
+		}
 	}
 	header( 'Content-Type: application/json; charset=utf-8' );
 	echo json_encode( $data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
