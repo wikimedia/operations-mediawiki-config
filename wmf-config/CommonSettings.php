@@ -3837,6 +3837,9 @@ if ( $wmgUseGraph ) {
 	$wgTrackingCategories[] = 'graph-tracking-category';
 	$wgTrackingCategories[] = 'graph-disabled-category';
 
+	// Don't show "Insert graph" tool in VE
+	$wgGraphShowInToolbar = false;
+
 	function wmfAddGraphTagToHideRawUsage( Parser $parser ) {
 		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
 	}
