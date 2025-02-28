@@ -111,6 +111,10 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 			}
 			continue;
 		}
+		if ( substr( $dbctlCluster, 0, 2 ) === 'ms' ) {
+			// ignore ms for now
+			continue;
+		}
 		// Merge the same way as sectionLoads
 		if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
 			$localMaster = array_key_first( $dbctlLoads[0] );
