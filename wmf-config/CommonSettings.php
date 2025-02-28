@@ -3222,7 +3222,7 @@ if ( $wmgUseEcho ) {
 	}
 
 	// Limit the 'push-subscription-manager' group to Meta-Wiki only (T261625)
-	$wgExtensionFunctions[] = static function () {
+	$wgHooks['MediaWikiServices'][] = static function () {
 		global $wgGroupPermissions, $wgDBname;
 		if ( $wgDBname !== 'metawiki' ) {
 			unset( $wgGroupPermissions['push-subscription-manager'] );
