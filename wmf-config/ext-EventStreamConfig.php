@@ -2294,6 +2294,17 @@ return [
 				'rate' => 1,
 			],
 		],
+		'mediawiki.product_metrics.growth_product_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			]
+		],
 		// (T373967) App base stream configuration to support Metrics Platform's monotable
 		'product_metrics.app_base' => [
 			'schema_title' => 'analytics/product_metrics/app/base',

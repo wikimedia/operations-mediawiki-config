@@ -91,6 +91,7 @@ return [
 		'mediawiki.product_metrics.translate_extension',
 		'mediawiki.product_metrics.translation_mint_for_readers',
 		'mediawiki.product_metrics.homepage_module_interaction',
+		'mediawiki.product_metrics.growth_product_interaction',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
 		'product_metrics.app_base',
