@@ -2023,6 +2023,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['auth']}/$wgDBname";
+	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
 	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,
