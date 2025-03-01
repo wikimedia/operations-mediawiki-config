@@ -8693,6 +8693,7 @@ return [
 'wgContentTranslationEnableUnifiedDashboard' => [
 	'default' => false,
 	'testwiki' => true, // T337915
+	'sqwiki' => true, // T386719
 ],
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
