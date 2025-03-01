@@ -502,7 +502,6 @@ if ( $wmgRealm == 'labs' ) {
 	// T369945
 	if ( $wmgUseChart ) {
 		wfLoadExtension( 'Chart' );
-		$wgChartServiceUrl = $wmgLocalServices['chart-renderer'];
 
 		// Set up chart pages with JsonConfig
 		$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';

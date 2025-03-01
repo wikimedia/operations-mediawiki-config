@@ -3731,7 +3731,7 @@ if ( $wmgUseChart ) {
 	}
 
 	wfLoadExtension( 'Chart' );
-	// set in ProductionServices.php
+	// set in ProductionServices.php / LabsServices.php
 	$wgChartServiceUrl = $wmgLocalServices['chart-renderer'] . '/v1/chart/render';
 
 	if ( $wmgEnableJsonConfigDataMode ) {

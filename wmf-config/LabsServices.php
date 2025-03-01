@@ -101,6 +101,6 @@ return [
 		'sessionstore' => 'http://sessionstore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'echostore' => 'http://echostore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 
-		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284/v1/chart/render',
+		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284',
 	],
 ];
