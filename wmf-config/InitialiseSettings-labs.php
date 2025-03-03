@@ -147,6 +147,14 @@ function wmfGetOverrideSettings() {
 			'default' => 32,
 		],
 
+		'-wgThumbnailStepsRatio' => [
+			'default' => 0.5,
+		],
+
+		'-wgThumbnailSteps' => [
+			'default' => [ 20, 40, 60, 120, 250, 330, 500, 960 ],
+		],
+
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
