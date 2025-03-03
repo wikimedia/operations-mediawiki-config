@@ -5895,7 +5895,18 @@ return [
 ],
 
 'wgParsoidFragmentSupport' => [
-	'default' => 'v2',
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testcommonswiki' => true,
+
+	# keep in sync with wmgUseChart
+	// T381312 enabling 2024-12-05
+	'svwiki' => true,
+	'itwiki' => true,
+	'hewiki' => true,
+	// T381436 enabling 2024-12-05
+	'mediawikiwiki' => true,
 ],
 
 'wgParsoidSelectiveUpdateSampleRate' => [
