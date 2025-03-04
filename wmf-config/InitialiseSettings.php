@@ -8023,6 +8023,8 @@ return [
 	'wawiktionary' => true, // T378834
 	'wikidatawiki' => true, // T378834
 	'zhwiki' => true, // T378834
+	'cawiki' => true, // T378834
+	'mediawikiwiki' => true, // T378834
 ],
 
 'wmgFlowNamespaces' => [
