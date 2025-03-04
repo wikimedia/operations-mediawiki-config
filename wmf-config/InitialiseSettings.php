@@ -12753,15 +12753,6 @@ return [
 			"experimentDisabled" => 0.5
 		],
 	],
-	'enwiki' => [
-		"name" => "RelatedArticles test experiment en",
-		"enabled" => false,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	],
 ],
 
 ];

@@ -2438,18 +2438,6 @@ return [
 				'rate' => 0.01,
 			],
 		],
-		'product_metrics.web_base.search_ab_test_session_ticks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 0,
-			],
-		],
-		'product_metrics.web_base.search_ab_test_clicks' => [
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 0,
-			],
-		],
 	],
 ],
 
