@@ -259,7 +259,7 @@ if ( $wmgRealm == 'labs' ) {
 		// so their beta equivalents can run without breaking links
 		// updates and cache invalidation propagation.
 		$wgTrackGlobalJsonLinks = false;
-		$wgTrackGlobalJsonLinksNamespace = false;
+		$wgTrackGlobalJsonLinksNamespaces = false;
 	}
 
 	if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
