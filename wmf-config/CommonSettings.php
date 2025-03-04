@@ -1690,9 +1690,6 @@ if ( $wmgUseSecurePoll ) {
 	// overall time retained is not > 90 days.
 	$wgSecurePollKeepPrivateInfoDays = 60;
 
-	// T209802 - gpg2 is untested and evidently broken
-	$wgSecurePollGPGCommand = 'gpg1';
-
 	if ( strpos( ClusterConfig::getInstance()->getHostname(), 'mwmaint' ) === 0 ) {
 		$wgSecurePollShowErrorDetail = true;
 	}
