@@ -1157,12 +1157,6 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
-		'wgReadingListsCluster' => [
-			'default' => false,
-		],
-		'wgReadingListsDatabase' => [
-			'default' => 'metawiki',
-		],
 		'wgReadingListsWebAuthenticatedPreviews' => [
 			'default' => true,
 		],

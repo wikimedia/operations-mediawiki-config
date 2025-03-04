@@ -12082,17 +12082,8 @@ return [
 	'private' => false,
 	'fishbowl' => false,
 ],
-'wgReadingListsCluster' => [
-	'default' => 'extension1',
-],
-'wgReadingListsDatabase' => [
-	'default' => 'wikishared',
-],
 'wgReadingListsCentralWiki' => [
 	'default' => 'metawiki',
-],
-'wgReadingListsWeb' => [
-	'default' => true,
 ],
 'wgReadingListsAnonymizedPreviews' => [
 	'default' => true,
