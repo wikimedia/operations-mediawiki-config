@@ -2967,14 +2967,14 @@ if ( $wmgUseTranslate ) {
 		// it's back up.
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
-		$wgTranslateServices = [
+		$translateServices = [
 			// Switch to 'eqiad' or 'codfw' if you plan to bring down
 			// the elastic cluster equals to $wmgDatacenter
 			'default' => [ 'service' => $wmgDatacenter, 'writable' => false ],
 			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
 			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
 		];
-		foreach ( $wgTranslateServices as $service => $conf ) {
+		foreach ( $translateServices as $service => $conf ) {
 			if ( !isset( $wmgAllServices[$conf['service']]['search-chi'] ) ) {
 				continue;
 			}
@@ -3002,7 +3002,7 @@ if ( $wmgUseTranslate ) {
 				],
 			];
 		}
-		unset( $wgTranslateServices );
+		unset( $translateServices );
 	} else {
 		$wgTranslateTranslationDefaultService = false;
 	}
