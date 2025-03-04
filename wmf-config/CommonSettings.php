@@ -3407,10 +3407,6 @@ if ( $wmgUseEventLogging ) {
 		$wgExtraNamespaces[471] = 'Schema_talk';
 	}
 
-	if ( $wgDBname === $wgEventLoggingDBname ) {
-		wfLoadExtension( 'CodeEditor' );
-	}
-
 	// Depends on EventLogging
 	if ( $wmgUseCampaigns ) {
 		wfLoadExtension( 'Campaigns' );
