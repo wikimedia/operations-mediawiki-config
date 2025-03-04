@@ -3328,7 +3328,6 @@ if ( $wmgUseDiscussionTools ) {
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 	wfLoadExtension( 'CodeEditor' );
-	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 }
 
 if ( $wmgUseScribunto ) {
@@ -3413,7 +3412,6 @@ if ( $wmgUseEventLogging ) {
 
 	if ( $wgDBname === $wgEventLoggingDBname ) {
 		wfLoadExtension( 'CodeEditor' );
-		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
 
 	// Depends on EventLogging
