@@ -1166,7 +1166,7 @@ return [
 
 // Internal WDQS endpoint
 'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'http://localhost:6009/bigdata/namespace/categories/sparql'
+	'default' => 'http://localhost:6041/bigdata/namespace/categories/sparql'
 ],
 
 'wgCirrusSearchCompletionBannedPageIds' => [
