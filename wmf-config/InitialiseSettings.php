@@ -12002,11 +12002,6 @@ return [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
-// T299421
-'wgTemplateLinksSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-],
-
 // T299947
 'wgPageLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
