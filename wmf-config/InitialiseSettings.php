@@ -8675,7 +8675,17 @@ return [
 'wgContentTranslationEnableUnifiedDashboard' => [
 	'default' => false,
 	'testwiki' => true, // T337915
-	'sqwiki' => true, // T386719
+	'sqwiki' => true, // T387818 (phase 1)
+	'bewiki' => true, // T387820 (phase 2)
+	'bnwiki' => true, // T387820 (phase 2)
+	'eowiki' => true, // T387820 (phase 2)
+	'euwiki' => true, // T387820 (phase 2)
+	'hawiki' => true, // T387820 (phase 2)
+	'idwiki' => true, // T387820 (phase 2)
+	'igwiki' => true, // T387820 (phase 2)
+	'mkwiki' => true, // T387820 (phase 2)
+	'urwiki' => true, // T387820 (phase 2)
+	'uzwiki' => true, // T387820 (phase 2)
 ],
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
