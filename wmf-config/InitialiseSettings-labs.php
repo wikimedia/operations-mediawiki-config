@@ -2299,10 +2299,6 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => true, // T322325
 		],
 
-		'wgOATHAuthMultipleDevicesMigrationStage' => [
-			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
-		],
-
 		// Testing while new Chart extension is being developed
 		'-wmgUseGraph' => [
 			'default' => true,

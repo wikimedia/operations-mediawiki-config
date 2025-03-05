@@ -12560,12 +12560,6 @@ return [
 	],
 ],
 
-'wgOATHAuthMultipleDevicesMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-	'fishbowl' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-	'private' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-],
-
 'wgWatchersMaxAge' => [
 	'default' => 30 * 24 * 3600, // T336250
 ],
