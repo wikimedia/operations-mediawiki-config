@@ -12535,14 +12535,6 @@ return [
 	'uawikimedia' => false,
 ],
 
-'wmgCampaignEventsProgramsAndEventsDashboardEnabled' => [ // T377252
-	'default' => true,
-	'wikimedia' => false,
-	'metawiki' => true,
-	'commonswiki' => true,
-	'incubatorwiki' => true,
-],
-
 'wgCampaignEventsSeparateOngoingEvents' => [
 	'default' => true,
 ],

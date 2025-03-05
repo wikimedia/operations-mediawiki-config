@@ -4478,9 +4478,7 @@ if ( $wmgUseCampaignEvents ) {
 		'cluster' => 'extension1',
 		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
 	];
-	if ( $wmgCampaignEventsProgramsAndEventsDashboardEnabled ) {
-		$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
-	}
+	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
 	if ( !$wmgCampaignEventsUseEventOrganizerGroup ) {
 		// Unset the event-organizer group if not needed. Must be done after extension settings
 		// have been merged and applied, and also not in an extension function due to T275334.
