@@ -11599,6 +11599,12 @@ return [
 	'default' => 'http',
 ],
 
+'wgThumbnailStepsRatio' => [
+	'default' => 0,
+	'private' => 0,
+	'testwiki' => 0.5,
+],
+
 // Virtual media views endpoint used by Media Viewer
 'wgMediaViewerRecordVirtualViewBeaconURI' => [
 	'default' => '/beacon/media',
