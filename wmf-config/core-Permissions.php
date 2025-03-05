@@ -2029,6 +2029,9 @@ return [
 		'user' => [
 			'massmessage' => true, // T66978
 			'ipblock-exempt' => true, // T231943
+			'campaignevents-enable-registration' => true, // T387943
+			'campaignevents-organize-events' => true, // T387943
+			'campaignevents-email-participants' => true, // T387943
 		],
 		'sysop' => [ 'importupload' => true, ], // T101663
 		'securepoll' => [

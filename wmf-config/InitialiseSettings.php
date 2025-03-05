@@ -12560,6 +12560,7 @@ return [
 'wmgCampaignEventsUseEventOrganizerGroup' => [
 	'default' => true,
 	'enwiki' => false,
+	'officewiki' => false, // T387943
 ],
 
 'wgCampaignEventsEnableEventInvitation' => [
