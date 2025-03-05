@@ -4174,6 +4174,10 @@ if ( $wmgDisableIPMasking ) {
 	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
 }
 
+// T387205: Until we are ready to rename the checkuser-temporary-account-viewer group on WMF wikis,
+// unset the new name for the group to avoid logstash warnings about duplicate translations.
+unset( $wgGroupPermissions['temporary-account-viewer'] );
+
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	// Allow users to be auto-promoted to the checkuser-temporary-account-viewer group based on criteria
 	// listed at https://w.wiki/BESb#Patrollers_and_other_users (T369187).
