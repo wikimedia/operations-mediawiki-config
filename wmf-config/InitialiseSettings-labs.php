@@ -2125,9 +2125,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'-wgDiscussionToolsABTest' => [
-		],
-
 		'-wgDiscussionTools_visualenhancements' => [
 			'default' => 'default',
 		],

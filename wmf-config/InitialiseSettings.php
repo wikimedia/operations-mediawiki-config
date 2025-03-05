@@ -8101,10 +8101,6 @@ return [
 	'mediawikiwiki' => false, // T310960
 ],
 
-'wgDiscussionToolsABTest' => [
-	'default' => false,
-],
-
 'wgDiscussionToolsReplyIndentation' => [
 	'default' => 'invisible',
 	'ruwiki' => 'bullet', // T259864
