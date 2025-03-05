@@ -4488,8 +4488,6 @@ if ( $wmgUseCampaignEvents ) {
 			unset( $wgGroupPermissions['event-organizer'] );
 		};
 	}
-	$wgAddGroups['sysop'][] = 'event-organizer';
-	$wgRemoveGroups['sysop'][] = 'event-organizer';
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
 }
 
