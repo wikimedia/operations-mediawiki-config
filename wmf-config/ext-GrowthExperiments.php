@@ -692,10 +692,6 @@ return [
 	'testwiki' => 'simplewiki',
 ],
 
-'wgGENewcomerTasksOresTopicConfigTitle' => [
-	'default' => 'mw:MediaWiki:NewcomerTopicsOres.json',
-],
-
 'wgGENewcomerTasksTopicType' => [
 	'default' => 'ores',
 ],
