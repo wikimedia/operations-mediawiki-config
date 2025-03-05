@@ -4133,12 +4133,18 @@ if ( $wmgDisableIPMasking ) {
 } else {
 	// Hide the checkuser-temporary-account-viewer group if the wiki does not know about temporary accounts to reduce
 	// confusion about a unused user group.
-	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+	$wgHooks['MediaWikiServices'][] = static function () {
+		global $wgGroupPermissions;
+		unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+	};
 }
 
 // T387205: Until we are ready to rename the checkuser-temporary-account-viewer group on WMF wikis,
 // unset the new name for the group to avoid logstash warnings about duplicate translations.
-unset( $wgGroupPermissions['temporary-account-viewer'] );
+$wgHooks['MediaWikiServices'][] = static function () {
+	global $wgGroupPermissions;
+	unset( $wgGroupPermissions['temporary-account-viewer'] );
+};
 
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	// Allow users to be auto-promoted to the checkuser-temporary-account-viewer group based on criteria
