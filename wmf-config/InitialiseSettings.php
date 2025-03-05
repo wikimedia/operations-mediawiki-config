@@ -4692,10 +4692,19 @@ return [
 ],
 
 'wgCentralAuthEnableSul3' => [
-	'default' => [],
+	'default' => [ 'query-flag', 'cookie', 'global-pref' ],
 	'testwiki' => [ 'always', 'query-flag', 'cookie' ],
 	'test2wiki' => [ 'always', 'query-flag', 'cookie' ],
 	'testwikidatawiki' => [ 'always', 'query-flag', 'cookie' ],
+],
+
+'wgSul3RolloutAnonSignupPercentage' => [
+	'default' => 0,
+	'group0' => 100,
+],
+
+'wgSul3RolloutUserPercentage' => [
+	'default' => 0,
 ],
 
 // This is also guarded by $wmgUseCentralAuth
