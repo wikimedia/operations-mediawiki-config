@@ -5399,10 +5399,10 @@ return [
 		'width' => 146,
 		'height' => 32,
 	],
-	'sewikimedia' => [
-		'src' => '/static/images/mobile/copyright/advisorswiki-wordmark.svg',
-		'width' => 100,
-		'height' => 12,
+	'sewikimedia' => [ // T377921
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-se.svg',
+		'width' => 140,
+		'height' => 38,
 	],
 	'trwikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-tr.svg',
@@ -8176,11 +8176,6 @@ return [
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-rs.svg',
 		'width' => 45,
 		'height' => 9,
-	],
-	'sewikimedia' => [
-		'src' => '/static/images/mobile/copyright/wikimedia-tagline-se.svg',
-		'width' => 169,
-		'height' => 17,
 	],
 	'uawikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-ua.svg',

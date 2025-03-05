@@ -4217,8 +4217,8 @@ Wikivoyage:
     sewikimedia:
         no_1_5x: true
         no_2x: true
-        selected_wordmark: advisorswiki
-        local_tagline: true
+        commons_wordmark: 'File:Wikimedia Sverige wordmark- horizontal.svg'
+        comment_wordmark: T377921
     trwikimedia:
         commons: 'File:Wikimedia CUG Turkey Logo in Turkish.svg'
         comment: T323850
