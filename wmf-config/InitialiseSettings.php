@@ -4701,9 +4701,7 @@ return [
 'wgSul3RolloutAnonSignupPercentage' => [
 	'default' => 0,
 	'group0' => 100,
-	'group1' => 1,
-	'wikidatawiki' => 0,
-	'commonswiki' => 0,
+	'group1' => 10,
 ],
 
 'wgSul3RolloutUserPercentage' => [
