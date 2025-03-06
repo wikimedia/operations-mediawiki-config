@@ -4701,7 +4701,7 @@ return [
 'wgSul3RolloutAnonSignupPercentage' => [
 	'default' => 0,
 	'group0' => 100,
-	'group1' => 10,
+	'group1' => 50,
 ],
 
 'wgSul3RolloutUserPercentage' => [
