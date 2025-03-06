@@ -9014,24 +9014,6 @@ return [
 	'default' => 1000,
 ],
 
-'wgNavigationTimingSurveySamplingFactor' => [
-	// Sub-factor of the above. The lower the value, the more the survey
-	// will be displayed to users.
-	'default' => 0,
-	'cawiki' => 100,
-	'enwikivoyage' => 1,
-	'frwiki' => 1,
-	'ruwiki' => 1,
-	'eswiki' => 1,
-],
-
-'wgNavigationTimingSurveyAuthenticatedSamplingFactor' => [
-	'default' => 0,
-	'ruwiki' => 10,
-	'eswiki' => 10,
-	'cawiki' => 1000,
-],
-
 'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
 	'default' => 2,
 	'eswiki' => 1,
