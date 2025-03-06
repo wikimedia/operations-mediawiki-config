@@ -3401,9 +3401,7 @@ if ( $wmgUseDiscussionTools ) {
 	];
 }
 
-if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
-	wfLoadExtension( 'CodeEditor' );
-}
+wfLoadExtension( 'CodeEditor' );
 
 if ( $wmgUseScribunto ) {
 	wfLoadExtension( 'Scribunto' );
@@ -3518,9 +3516,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
-	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
-		$wgULSNoImeSelectors[] = '.ace_editor textarea';
-	}
+	// For CodeEditor and Scribunto:
+	$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
 		$wgTranslatePageTranslationULS = true;
 	}

@@ -8153,10 +8153,6 @@ return [
 	'default' => true,
 ],
 
-'wmgUseCodeEditorForCore' => [
-	'default' => true,
-],
-
 'wmgUseScribunto' => [
 	'default' => true,
 	'lockeddown' => false,
