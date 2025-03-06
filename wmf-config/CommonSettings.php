@@ -247,8 +247,8 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	# On kubernetes, use the exporter service where available, not the pod sidecar.
 	# When it is the case, the kubernetes api will populate the environment variable
 	# STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST with the service IP.
-	$wgStatsHost = $_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost';
-	$wgStatsTarget = "udp://$wgStatsHost:9125";
+	$statsHost = $_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost';
+	$wgStatsTarget = "udp://$statsHost:9125";
 	$wgStatsdServer = $wmgLocalServices['statsd'];
 }
 
