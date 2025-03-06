@@ -3538,9 +3538,6 @@ if ( $wmgUseCognate ) {
 	wfLoadExtension( 'Cognate' );
 	$wgVirtualDomainsMapping['virtual-cognate'] = [ 'cluster' => 'extension1', 'db' => 'cognate_wiktionary' ];
 	$wgCognateNamespaces = [ 0 ];
-	// Temp b/c for T348526
-	$wgCognateDb = 'cognate_' . $wmgUseCognate;
-	$wgCognateCluster = 'extension1';
 }
 
 if ( $wmgUseInterwikiSorting ) {
