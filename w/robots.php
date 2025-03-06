@@ -5,6 +5,7 @@ require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 $page = MediaWikiServices::getInstance()
 	->getWikiPageFactory()
