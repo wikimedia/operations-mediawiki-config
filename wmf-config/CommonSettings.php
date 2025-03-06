@@ -3284,7 +3284,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
-	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
 
 	if ( $wmgFlowAllowAutoconfirmedEdit ) {
 		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;

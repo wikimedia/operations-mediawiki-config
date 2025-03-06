@@ -8073,9 +8073,6 @@ return [
 	'default' => 'extension1',
 	'private' => false,
 ],
-'wmgFlowMaintenanceMode' => [
-	'default' => false,
-],
 'wmgFlowEnableOptInBetaFeature' => [
 	'default' => false,
 	'testwiki' => true,
