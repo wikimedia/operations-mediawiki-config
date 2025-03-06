@@ -3004,7 +3004,6 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateUsePreSaveTransform = true; // T39304
 
 	$wgEnablePageTranslation = true;
-	$wgTranslateDelayedMessageIndexRebuild = true;
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTranslateMessageNamespaces[] = NS_MEDIAWIKI;
