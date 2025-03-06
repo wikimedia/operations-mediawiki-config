@@ -223,10 +223,6 @@ return [
 	],
 ],
 
-'wgCirrusSearchInstantIndexNew' => [
-	'default' => [],
-],
-
 'wgCirrusSearchRefreshInterval' => [
 	'default' => 30,
 ],
@@ -565,10 +561,6 @@ return [
 // 'no': disable, 'yes': force
 'wgCirrusSearchUseIcuFolding' => [
 	'default' => 'default',
-],
-
-'wgCirrusSearchAllFields' => [
-	'default' => [ 'build' => true, 'use' => true ],
 ],
 
 'wgCirrusSearchNearMatchWeight' => [
@@ -1028,15 +1020,6 @@ return [
 
 'wgCirrusSearchOptimizeIndexForExperimentalHighlighter' => [
 	'default' => true
-],
-
-// We had an incident of filling up the entire clusters redis instances after
-// 6 hours, and problems with the new kafka (before we enabled compression)
-// based job queue as well. Cut the time down to 2 hours, as this is not supposed
-// to ride out a full-fledged outage, but paper over minor unavailabilities
-// for cluster/network/etc maintenance.
-'wgCirrusSearchDropDelayedJobsAfter' => [
-	'default' => 60 * 60 * 2
 ],
 
 // Commons is special
