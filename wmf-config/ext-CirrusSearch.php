@@ -59,7 +59,7 @@ return [
 	],
 ],
 
-'wgCirrusSimilarityProfiles' => [
+'wgCirrusSearchSimilarityProfiles' => [
 	// Push all our similarity settings to default so that we can reuse them
 	// on multiple wikis
 	'default' => [
@@ -100,7 +100,7 @@ return [
 
 'wgCirrusSearchSimilarityProfile' => [
 	'default' => 'wmf_defaults',
-	"wikidata" => "wikibase_similarity",
+	"wikidatawiki" => "wikibase_similarity",
 	"testwikidatawiki" => "wikibase_similarity",
 	"commonswiki" => "wikibase_similarity",
 	"testwikidatawiki" => "wikibase_similarity",
