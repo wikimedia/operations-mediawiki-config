@@ -2462,17 +2462,6 @@ return [
 	'default' => true,
 ],
 
-// Reveal Vector 2022 appearance menu.
-// FIXME: Remove entire block after 12th September
-'wgVectorAppearance' => [
-	'default' => [
-		'logged_in' => true,
-		'logged_out' => true,
-		// Important to disable this to disable the beta feature
-		'beta' => false,
-	],
-],
-
 // T366334
 'wgVectorFontSizeConfigurableOptions' => [
 	'default' => [

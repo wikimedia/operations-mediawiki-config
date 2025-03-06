@@ -698,19 +698,6 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true
 			],
 		],
-		'wgVectorZebraDesign' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-			]
-		],
-		'wgVectorAppearance' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-				'beta' => true,
-			],
-		],
 		'wgVectorPromoteAddTopic' => [
 			'default' => true
 		],
