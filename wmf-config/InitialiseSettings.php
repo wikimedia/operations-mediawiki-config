@@ -9759,10 +9759,6 @@ return [
 	'urwiki' => true, // T186451
 ],
 
-'wgArticlePlaceholderSearchIntegrationBackend' => [
-	'default' => 'API',
-],
-
 'wgArticlePlaceholderRepoApiUrl' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 ],
