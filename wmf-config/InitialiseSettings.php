@@ -5625,11 +5625,6 @@ return [
 	'rtl' => true,
 ],
 
-'wgAllowMicrodataAttributes' => [
-	'default' => false,
-	'hewikisource' => true, // T89655
-],
-
 // ----------- BetaFeatures start ----------
 // Move things out of this when they're no longer in beta!
 
