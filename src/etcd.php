@@ -97,6 +97,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'x2' => true,
 	];
 	$wmgPCServers = [];
+	$wmgMainStashServers = [];
 	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
 		// While parsercache sections are included in externalLoads, they are not
 		// accessed through LBFactoryMulti. Instead, populate to wmgPCServers for
@@ -112,7 +113,17 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 			continue;
 		}
 		if ( substr( $dbctlCluster, 0, 2 ) === 'ms' ) {
-			// ignore ms for now
+			if ( $dbctlCluster !== 'ms1' ) {
+				// ignore the rest of ms hosts for now
+				continue;
+			}
+			// Expected mainstash $dbctlLoads structure: [ [ 'dbNNNN' => 0 ], [] ]
+			if ( is_array( $dbctlLoads ) && isset( $dbctlLoads[0] ) && is_array( $dbctlLoads[0] ) ) {
+				$host = array_key_first( $dbctlLoads[0] );
+				if ( is_string( $host ) && $dbctlLoads[0][$host] !== 0 ) {
+					$wmgMainStashServers[$dbctlCluster] = $localDbConfig['hostsByName'][$host] ?? $host;
+				}
+			}
 			continue;
 		}
 		// Merge the same way as sectionLoads

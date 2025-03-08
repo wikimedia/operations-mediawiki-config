@@ -675,6 +675,18 @@ foreach ( $wmgPCServers as $tag => $host ) {
 	];
 }
 
+$mainStashServers = [];
+foreach ( $wmgMainStashServers as $tag => $host ) {
+	$mainStashServers[$tag] = [
+		'type' => 'mysql',
+		'host' => $host,
+		'user' => $wgDBuser,
+		'password' => $wgDBpassword,
+		'dbname' => 'mainstash',
+		'flags' => 0,
+	];
+}
+
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => [
@@ -722,9 +734,7 @@ $wgObjectCaches['kask-echoseen'] = [
 ];
 $wgObjectCaches['db-mainstash'] = [
 	'class' => 'SqlBagOStuff',
-	'cluster' => 'extension2',
-	'dbDomain' => 'mainstash',
-	'globalKeyLbDomain' => 'mainstash',
+	'servers' => $mainStashServers,
 	'tableName' => 'objectstash',
 	'multiPrimaryMode' => true,
 	'purgePeriod' => 100,
