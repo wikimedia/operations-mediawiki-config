@@ -5176,6 +5176,9 @@ return [
 		NS_FILE      => [ 'editinterface' ],
 		NS_FILE_TALK => [ 'editinterface' ],
 	],
+	'+enwikivoyage' => [
+		828 => [ 'autoconfirmed', 'confirmed' ], // T388301 - Module:
+	],
 	'+eswiki' => [
 		NS_FILE => [ 'editinterface' ],
 		NS_FILE_TALK => [ 'editinterface' ],
