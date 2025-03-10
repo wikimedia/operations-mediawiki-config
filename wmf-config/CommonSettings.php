@@ -4510,10 +4510,7 @@ $wgParsoidSettings = [
 
 if ( ClusterConfig::getInstance()->isParsoid() ) {
 	// Parsoid testing special case
-	if ( in_array(
-		ClusterConfig::getInstance()->getHostname(),
-		[ 'parsoidtest1001', 'scandium' ]
-	) ) {
+	if ( ClusterConfig::getInstance()->getHostname() === 'parsoidtest1001' ) {
 		// parsoidtest1001 has its own special check out of parsoid for testing.
 		$parsoidDir = __DIR__ . "/../../parsoid-testing";
 		// Override settings specific to round-trip testing on parsoidtest1001
