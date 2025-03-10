@@ -2424,10 +2424,16 @@ function wmfGetOverrideSettings() {
 		'wgBabelUseCommunityConfiguration' => [
 			'default' => true,
 		],
-		// T375610
+		// T377121
 		'-wgUseCodexSpecialBlock' => [
-			'default' => false,
-			'testwiki' => true,
+			'default' => true,
+			'enwikisource' => false,
+		],
+		// T377121
+		'-wgEnableMultiBlocks' => [
+			'default' => true,
+			'enwikisource' => false,
+			'enwikivoyage' => false,
 		],
 	];
 } # wmfGetOverrideSettings()
