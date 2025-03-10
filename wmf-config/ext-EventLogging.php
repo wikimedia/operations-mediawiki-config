@@ -37,8 +37,6 @@ return [
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
 		'eventlogging_SearchSatisfaction',
-		'eventlogging_TemplateDataApi',
-		'eventlogging_TemplateDataEditor',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
 		'eventlogging_UniversalLanguageSelector',
