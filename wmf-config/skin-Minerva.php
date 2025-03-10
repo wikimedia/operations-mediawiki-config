@@ -26,9 +26,25 @@ return [
 		'default' => [
 			'base' => true,
 		],
+		'testwiki' => [
+			'base' => false,
+		],
 		// T360783
 		'nowikimedia' => [
 			'base' => false,
+		],
+	],
+
+	'wgMinervaDonateBanner' => [
+		'default' => [
+			'base' => false,
+			'loggedin' => false,
+			'amc' => false,
+		],
+		'testwiki' => [
+			'base' => true,
+			'loggedin' => false,
+			'amc' => false,
 		],
 	],
 
