@@ -1188,6 +1188,8 @@ return [
 		'Rhymes_talk' => 107, // T330689 , T341940
 		'Reconstruction' => 118, // T330689 , T341940
 		'Reconstruction_talk' => 119, // T330689 , T341940
+		'Thesaurus' => 110, // T356620
+		'Thesaurus_talk' => 111, // T356620
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
@@ -4018,6 +4020,8 @@ return [
 		107 => 'ကာရန်_ဓရီုကျာ', // T330689 , T341940 - Rhymes_talk
 		118 => 'ဗီုပြင်သိုင်တၟိ', // T330689 , T341940 - Reconstruction
 		119 => 'ဗီုပြင်သိုင်တၟိ_ဓရီုကျာ', // T330689 , T341940 - Reconstruction_talk
+		110 => 'အဘိဓာန်', // T356620 - Thesaurus
+		111 => 'အဘိဓာန်_ဓရီုကျာ', // T356620 - Thesaurus_talk
 	],
 	'mrwiktionary' => [
 		104 => 'सूची',
