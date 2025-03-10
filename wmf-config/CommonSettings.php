@@ -2090,7 +2090,6 @@ if ( $wmgUseCentralAuth ) {
 	// Allows automatic account vanishing (for qualifying users)
 	$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
 	$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
-	$wgCentralAuthAutomaticVanishWiki = 'metawiki';
 
 	// Configuration for guidance given to blocked users when requesting vanishing
 	$wgCentralAuthBlockAppealWikidataIds = [ "Q13360396", "Q175291" ];
