@@ -2028,7 +2028,7 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthCookieDomain = '';
 		$wgCookiePrefix = 'auth';
 		$wgSessionName = 'authSession';
-		$wgCentralAuthLoginWiki = false;
+		$wgCentralAuthLoginWiki = null;
 		$wgCentralAuthAutoLoginWikis = [];
 	}
 
