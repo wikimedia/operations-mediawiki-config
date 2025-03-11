@@ -4702,7 +4702,7 @@ return [
 	'default' => 0,
 	'group0' => 100,
 	'group1' => 100,
-	'group2' => 10,
+	'group2' => 50,
 ],
 
 'wgSul3RolloutUserPercentage' => [
