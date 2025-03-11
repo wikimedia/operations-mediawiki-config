@@ -4491,6 +4491,8 @@ if ( $wmgUseWikiLambda ) {
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
+
+	$wgWikiLambdaClientWikis = MWWikiversions::readDbListFile( 'wikifunctionsclient' );
 }
 
 if ( $wmgUseWikistories ) {

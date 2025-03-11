@@ -12368,6 +12368,7 @@ return [
 'wmgUseWikiLambda' => [
 	'default' => false,
 	'wikifunctionswiki' => true,
+	'wikifunctionsclient' => true,
 ],
 
 'wgWikiLambdaEnableRepoMode' => [
@@ -12377,6 +12378,7 @@ return [
 
 'wgWikiLambdaEnableClientMode' => [
 	'default' => false,
+	'wikifunctionsclient' => true,
 ],
 
 'wmgUseWikistories' => [
