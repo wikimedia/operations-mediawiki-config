@@ -202,7 +202,7 @@ return [
 'cywikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'cywikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cywiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'dagwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
+'dagwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'wikifunctionsclient', 'growthexperiments' ],
 'dawiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments' ],
 'dawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'dawikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
