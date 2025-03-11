@@ -3596,6 +3596,74 @@ if ( $wmgUseContentTranslation ) {
 		'key' => $wmgContentTranslationCXServerAuthKey,
 		'age' => '3600',
 	];
+
+	if ( $wmgUseQuickSurveys ) {
+		$wgQuickSurveysConfig[] = [
+			'name' => 'Automatic Translation Feedback',
+			'type' => 'internal',
+			'embedElementId' => 'ax-translation-viewer-section-container',
+			'confirmMsg' => 'ax-translation-view-feedback-confirm-title',
+			'confirmDescription' => 'ax-translation-view-feedback-confirm-description',
+			'privacyPolicy' => 'ax-translation-view-feedback-privacy-statement',
+			'enabled' => true,
+			'audience' => [
+				// Specify an invalid pageId to avoid loading the "ext.quicksurveys.init" unless requested
+				'pageIds' => [ -1111 ]
+			],
+			'coverage' => 0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'questions' => [
+				[
+					'name' => 'question-1',
+					'layout' => 'single-answer',
+					'question' => 'ax-translation-view-feedback-title',
+					'answers' => [
+						[ 'label' => 'ax-translation-view-feedback-positive' ],
+						[ 'label' => 'ax-translation-view-feedback-negative' ]
+					]
+				],
+
+				[
+					'name' => 'positive-question-2',
+					'dependsOn' => [
+						[
+							'question' => 'question-1',
+							'answerIsOneOf' => [ 'ax-translation-view-feedback-positive' ]
+						]
+					],
+					'layout' => 'multiple-answer',
+					'question' => 'ax-translation-view-feedback-details-question',
+					'answers' => [
+						[ 'label' => 'ax-translation-view-feedback-positive-missing-information' ],
+						[ 'label' => 'ax-translation-view-feedback-positive-translation-quality' ],
+						[ 'label' => 'ax-translation-view-feedback-positive-quick-overview' ],
+						[ 'label' => 'ax-translation-view-feedback-positive-technical-aspect' ],
+					],
+				],
+
+				[
+					'name' => 'negative-question-2',
+					'dependsOn' => [
+						[
+							'question' => 'question-1',
+							'answerIsOneOf' => [ 'ax-translation-view-feedback-negative' ]
+						]
+					],
+					'layout' => 'multiple-answer',
+					'question' => 'ax-translation-view-feedback-details-question',
+					'answers' => [
+						[ 'label' => 'ax-translation-view-feedback-negative-missing-information' ],
+						[ 'label' => 'ax-translation-view-feedback-negative-translation-quality' ],
+						[ 'label' => 'ax-translation-view-feedback-negative-quick-overview' ],
+						[ 'label' => 'ax-translation-view-feedback-negative-technical-aspect' ]
+					],
+				],
+			]
+		];
+	}
 }
 
 if ( $wmgUseExternalGuidance ) {
