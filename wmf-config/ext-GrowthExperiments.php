@@ -696,6 +696,12 @@ return [
 	'testwiki' => 'simplewiki',
 ],
 
+'wgGELinkRecommendationsRefreshByIteratingThroughAllTitles' => [
+	'default' => false,
+	'eswiki' => true,
+	'cswiki' => true,
+],
+
 'wgGENewcomerTasksTopicType' => [
 	'default' => 'ores',
 ],
