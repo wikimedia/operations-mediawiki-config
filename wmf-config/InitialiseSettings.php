@@ -8675,7 +8675,7 @@ return [
 	'eowiki' => true, // T387820 (phase 2)
 	'euwiki' => true, // T387820 (phase 2)
 	'hawiki' => true, // T387820 (phase 2)
-	'idwiki' => true, // T387820 (phase 2)
+	'idwiki' => false, // T387820 (phase 2) Disabled temporarily since SX is not enabled
 	'igwiki' => true, // T387820 (phase 2)
 	'mkwiki' => true, // T387820 (phase 2)
 	'urwiki' => true, // T387820 (phase 2)
