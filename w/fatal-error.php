@@ -241,7 +241,7 @@ class CauseFatalError {
 	}
 
 	public static function doCache() {
-		header( 'Cache-Control: max-age=10' );
+		header( 'Cache-Control: max-age=30' );
 		header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
 		print 'And the winner is ' . random_int( 1e5, 1e6 ) . "\n";
 	}
@@ -249,7 +249,7 @@ class CauseFatalError {
 	public static function doCacheSlow() {
 		sleep( 10 );
 
-		header( 'Cache-Control: max-age=10' );
+		header( 'Cache-Control: max-age=30' );
 		header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
 		print 'And the winner is ' . random_int( 1e5, 1e6 ) . "\n";
 	}
@@ -257,7 +257,7 @@ class CauseFatalError {
 	public static function doCacheSlowSwr() {
 		sleep( 10 );
 
-		header( 'Cache-Control: max-age=10, stale-while-revalidate=60' );
+		header( 'Cache-Control: max-age=30, stale-while-revalidate=60' );
 		header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
 		print 'And the winner is ' . random_int( 1e5, 1e6 ) . "\n";
 	}
