@@ -6910,10 +6910,6 @@ return [
 	'default' => CACHE_ACCEL,
 ],
 
-'wgChronologyProtectorStash' => [
-	'default' => 'mcrouter',
-],
-
 // General cache epochs
 'wgCacheEpoch' => [
 	'default' => '20130601000000',
