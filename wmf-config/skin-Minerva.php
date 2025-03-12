@@ -46,6 +46,11 @@ return [
 			'loggedin' => false,
 			'amc' => false,
 		],
+		'cawiki' => [
+			'base' => true,
+			'loggedin' => false,
+			'amc' => false,
+		],
 	],
 
 	'wgMinervaNightMode' => [
