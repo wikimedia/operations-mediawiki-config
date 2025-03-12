@@ -2992,8 +2992,6 @@ if ( $wmgUseBounceHandler ) {
 	$wgVERPdomainPart = 'wikimedia.org';
 	$wgBounceHandlerUnconfirmUsers = true;
 	$wgBounceRecordLimit = 5;
-	$wgBounceHandlerCluster = 'extension1';
-	$wgBounceHandlerSharedDB = 'wikishared';
 	$wgVirtualDomainsMapping['virtual-bouncehandler'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 	$wgBounceHandlerInternalIPs = [
 		'208.80.154.76', # mx1001
