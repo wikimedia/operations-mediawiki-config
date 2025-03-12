@@ -2847,9 +2847,6 @@ $wgDefaultUserOptions['vector-theme'] = 'day';
 // Turn on volunteer recruitment
 $wgMFEnableJSConsoleRecruitment = true;
 
-// Brute-force bandwidth optimization by stripping srcset (T119797)
-$wgMFStripResponsiveImages = true;
-
 $wgMFUseWikibase = true;
 
 # MUST be after MobileFrontend initialization
