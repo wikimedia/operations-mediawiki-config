@@ -4,7 +4,7 @@ Site logo management
 ### Setup
 
 You need to install:
-* Python 3.7+
+* Python 3.9+
 * [tox](https://tox.readthedocs.io/en/latest/index.html)
 * [pngquant](https://github.com/kornelski/pngquant) (usually packaged)
 * [zopflipng](https://github.com/google/zopfli) (usually packaged)
