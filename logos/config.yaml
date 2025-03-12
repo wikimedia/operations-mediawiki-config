@@ -3415,6 +3415,11 @@ Wikinews:
         comment_1_5x: T150618
         comment_2x: T150618
         selected_wordmark: enwikinews
+    guwwikinews:
+        commons: 'File:WikiNews-logo-guw-v3.svg'
+        comment: T335162
+        comment_1_5x: T335162
+        comment_2x: T335162
     hewikinews:
         no_1_5x: true
         no_2x: true
@@ -3423,11 +3428,6 @@ Wikinews:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
-    guwwikinews:
-        commons: 'File:WikiNews-logo-guw-v3.svg'
-        comment: T335162
-        comment_1_5x: T335162
-        comment_2x: T335162
     itwikinews:
         no_1_5x: true
         no_2x: true
