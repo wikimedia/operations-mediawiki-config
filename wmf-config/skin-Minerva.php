@@ -195,6 +195,7 @@ return [
 		'trwiki' => true,
 		'wikifunctionswiki' => true, // T345463
 		'newiki' => true, // T347814
+		'fawiki' => true,
 	],
 
 	// T183665
