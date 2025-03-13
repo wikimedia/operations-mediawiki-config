@@ -2929,15 +2929,19 @@ return [
 		100 => 'Gapura', // T252343 - Portal (Talk)
 		101 => 'Parembugan_Gapura',
 	],
-	'kawiki' => [
-		100 => 'პორტალი',
-		101 => 'პორტალი_განხილვა',
+	'kaawiki' => [
+		100 => 'Portal', // T388158
+		101 => 'Portal_talqılawı', // T388158
 	],
 	'kabwiki' => [
 		100 => 'Awwur', // T77017 - Portal
 		101 => 'Amyannan_uwwur',
 		102 => 'Asenfaṛ', // T77017 - Project
 		103 => 'Amyannan_usenfaṛ',
+	],
+	'kawiki' => [
+		100 => 'პორტალი',
+		101 => 'პორტალი_განხილვა',
 	],
 	'kkwiki' => [
 		100 => 'Портал', // Portal
