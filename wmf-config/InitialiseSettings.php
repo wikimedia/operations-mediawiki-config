@@ -11406,12 +11406,13 @@ return [
 ],
 
 'wgThumbnailStepsRatio' => [
-	'default' => 0.05,
+	'default' => 0.1,
 	'private' => 0,
 	'testwiki' => 1,
 	'test2wiki' => 1,
 	'mediawikiwiki' => 1,
 	'labswiki' => 1,
+	'testwikidatawiki' => 1,
 ],
 
 // Virtual media views endpoint used by Media Viewer
