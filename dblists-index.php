@@ -994,7 +994,7 @@ return [
 'wawiktionary' => [ 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'wbwikimedia' => [ 'fishbowl', 'small', 'group1', 'translate' ],
 'wg_enwiki' => [ 'wikipedia', 'private', 'small', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
-'wikidatawiki' => [ 'special', 'flow', 'legacy-vector', 'wikidata', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'translate' ],
+'wikidatawiki' => [ 'special', 'flow', 'wikidata', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'translate' ],
 'wikifunctionswiki' => [ 'special', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'translate' ],
 'wikimania2005wiki' => [ 'special', 'closed', 'small', 'wikimania', 'group0', 'nowikidatadescriptiontaglines' ],
 'wikimania2006wiki' => [ 'special', 'closed', 'small', 'wikimania', 'group0', 'nowikidatadescriptiontaglines' ],
