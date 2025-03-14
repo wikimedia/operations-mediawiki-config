@@ -6886,11 +6886,6 @@ return [
 	],
 ],
 
-'wgParserCacheNewKeySchemaRatio' => [
-	'default' => 1,
-	'testwiki' => 1,
-],
-
 'wgLanguageConverterCacheType' => [
 	// For CLI, this is effectively CACHE_NONE
 	'default' => CACHE_ACCEL,
