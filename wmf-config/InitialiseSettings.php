@@ -10367,10 +10367,6 @@ return [
 	],
 ],
 
-'wgMediaInfoMediaSearchHasLtrPlugin' => [
-	'commonswiki' => true,
-],
-
 'wgMediaInfoCustomMatchFeature' => [
 	'commonswiki' => [
 		'depicts_or_linked_from' => [
