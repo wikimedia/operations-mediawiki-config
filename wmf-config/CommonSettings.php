@@ -3449,7 +3449,6 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 
-	$wgRelatedArticlesLoggingBucketSize = 0;
 	$wgRelatedArticlesOnlyUseCirrusSearch = false;
 	$wgRelatedArticlesDescriptionSource = 'wikidata';
 }
