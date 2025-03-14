@@ -5657,11 +5657,6 @@ return [
 	'default' => 'restbaseHTML',
 ],
 
-// T197719 Enable PagePreviews for all newly created accounts
-'wgPopupsOptInStateForNewAccounts' => [
-	'default' => '1',
-],
-
 'wgPopupsOptInDefaultState' => [
 	'default' => '0',
 	'enwikivoyage' => '1',
