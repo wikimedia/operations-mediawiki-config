@@ -2432,9 +2432,6 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralNoticeMessageProtectRight = 'banner-protect';
 	}
 
-	// Set fundraising banners to use HTTPS on foundation wiki
-	$wgNoticeFundraisingUrl = 'https://donate.wikimedia.org/wiki/Special:LandingCheck';
-
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
 
