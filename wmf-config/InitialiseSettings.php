@@ -2470,24 +2470,6 @@ return [
 	],
 ],
 
-'wgVectorWebABTestEnrollment' => [
-	'default' => [
-		'name' => 'skin-vector-zebra-experiment',
-		'enabled' => false,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0
-			],
-			'control' => [
-				'samplingRate' => 0.5
-			],
-			'treatment' => [
-				'samplingRate' => 0.5
-			],
-		],
-	]
-],
-
 'wgVectorLanguageInHeader' => [
 	'default' => [
 		'logged_in' => true,
