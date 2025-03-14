@@ -3575,8 +3575,8 @@ if ( $wmgUseJsonConfig ) {
 	if ( $wgDBname === 'testwiki' || $wgDBname === 'testcommonswiki' ) {
 		// T379199 - temporary deployment of tracking tables on testcommonswiki
 		$wgTrackGlobalJsonLinks = true;
-		// cf T385917 - this test table is deprecated and won't get the schema update
-		$wgTrackGlobalJsonLinksNamespaces = false;
+		// cf T385917 - this test table is deprecated, may vanish in future
+		$wgTrackGlobalJsonLinksNamespaces = true;
 
 		// T387417 - beta has no testcommonswiki
 		if ( $wmgRealm === 'production' ) {
@@ -3589,7 +3589,7 @@ if ( $wmgUseJsonConfig ) {
 		$wgTrackGlobalJsonLinks = true;
 		// T385917 - after deployment of patch-gjl_namespace_text.sql on x1.commonswiki,
 		// set this to true to enable use of the new field.
-		$wgTrackGlobalJsonLinksNamespaces = false;
+		$wgTrackGlobalJsonLinksNamespaces = true;
 		$wgVirtualDomainsMapping['virtual-globaljsonlinks'] = [
 			'cluster' => 'extension1',
 			'db' => 'commonswiki'
