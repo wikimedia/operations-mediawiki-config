@@ -2455,13 +2455,6 @@ return [
 	],
 ],
 
-// Increase font size on Vector 2022 from 14px to 16px
-// for users registered after May 2nd 2024
-// as well as anonymoues users.
-'wmgIncreaseDefaultVectorFontSize' => [
-	'default' => true,
-],
-
 // T366334
 'wgVectorFontSizeConfigurableOptions' => [
 	'default' => [
