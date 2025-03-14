@@ -4691,8 +4691,8 @@ return [
 
 'wgSul3RolloutUserPercentage' => [
 	'default' => 0,
+	'group0' => 100,
 	'test2wiki' => 50,
-	'testwikidatawiki' => 100,
 ],
 
 // This is also guarded by $wmgUseCentralAuth
