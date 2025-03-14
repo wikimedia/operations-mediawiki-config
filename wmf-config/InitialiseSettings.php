@@ -6513,6 +6513,8 @@ return [
 
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
+	// T384372
+	'test2wiki' => true,
 ],
 
 'wgVisualEditorEnableCollabBeta' => [
