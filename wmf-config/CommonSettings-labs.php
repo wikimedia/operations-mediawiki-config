@@ -231,9 +231,6 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseTimedMediaHandler ) {
-		$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] = [
-			"commons" => [ 'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php' ]
-		];
 		// enable transcoding on labs
 		$wgEnableTranscode = true;
 		// use new ffmpeg build w/ VP9 & Opus support
