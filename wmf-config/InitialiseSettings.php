@@ -5652,10 +5652,6 @@ return [
 	'default' => 0.01,
 ],
 
-'wgPopupsEventLogging' => [
-	'default' => false,
-],
-
 'wgPopupsGateway' => [
 	// mwApiPlain should never be used in a production setting as it is not cached.
 	'default' => 'restbaseHTML',

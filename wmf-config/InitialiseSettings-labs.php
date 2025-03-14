@@ -1101,12 +1101,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
-		// can prove the killswitch works.
-		'-wgPopupsEventLogging' => [
-			'default' => false,
-			'enwiki' => true,
-		],
 		// T184793: Enable the VirtualPageViews on beta so we can easily test and track
 		// Popups visible for more than 1s as a virtual page views
 		'wgPopupsVirtualPageViews' => [
