@@ -2383,9 +2383,6 @@ if ( $wmgUseCentralNotice ) {
 	// Relative URL which is hardcoded to HTTP 204 in Varnish config.
 	$wgCentralBannerRecorder = "{$wgServer}/beacon/impression";
 
-	// Allow only these domains to access CentralNotice data through the reporter
-	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
-
 	$wgCentralDBname = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-centralnotice'] = [
 		'db' => 'metawiki'
