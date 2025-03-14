@@ -4240,6 +4240,15 @@ $wgCheckUserGroupRequirements = [
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
 
 if ( $wmgUseCentralAuth ) {
+	// Ensure users in certain local and global groups are automatically promoted to and demoted from
+	// the global temporary account viewer group (T376315). Note that the global groups in the array
+	// keys must not have local groups with the same name, and vice-versa.
+	$wgCentralAuthAutomaticGlobalGroups = [
+		'checkuser' => [ 'global-temporary-account-viewer' ], // local checkuser group
+		'suppress' => [ 'global-temporary-account-viewer' ], // local suppress group
+		'global-sysop' => [ 'global-temporary-account-viewer' ],
+	];
+
 	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
 	// uses a unique serial number across all wikis. This will have no effect if
 	// `$wgAutoCreateTempUser['enabled']` is false.
