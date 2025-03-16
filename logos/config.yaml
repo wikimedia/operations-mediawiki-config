@@ -2619,9 +2619,15 @@ Wiktionary:
         local_tagline: true
         local_wordmark: true
     sqwiktionary:
-        no_1_5x: true
-        no_2x: true
+        commons: 'File:Wiktionary-logo-sq-v2.svg'
+        comment: T342172
+        comment_1_5x: T342172
+        comment_2x: T342172
+        commons_tagline: 'File:Wiktionary-tagline-sq.svg'
+        comment_tagline: T342172
         local_wordmark: true
+        commons_icon: 'File:Wiktionary-icon-sq.svg'
+        comment_icon: T342172
     srwiktionary:
         comment_1_5x: T172245
         comment_2x: T172245
