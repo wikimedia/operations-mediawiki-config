@@ -4057,14 +4057,20 @@ if ( $wmgDisableIPMasking ) {
 	// T357586
 	$wgImplicitGroups[] = 'temp';
 } else {
-	// Hide the checkuser-temporary-account-viewer group if the wiki does not know about temporary accounts to reduce
+	// Hide the temporary-account-viewer group if the wiki does not know about temporary accounts to reduce
 	// confusion about a unused user group.
 	$wgHooks['MediaWikiServices'][] = static function () {
 		global $wgGroupPermissions;
-		unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
 		unset( $wgGroupPermissions['temporary-account-viewer'] );
 	};
 }
+
+// T387205: Remove the old group name for local Temporary account IP viewers,
+// now that all users are in the new group.
+$wgHooks['MediaWikiServices'][] = static function () {
+	global $wgGroupPermissions;
+	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+};
 
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	// Allow users to be auto-promoted to the temporary-account-viewer group based on criteria
