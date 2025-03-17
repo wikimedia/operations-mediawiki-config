@@ -4062,20 +4062,14 @@ if ( $wmgDisableIPMasking ) {
 	$wgHooks['MediaWikiServices'][] = static function () {
 		global $wgGroupPermissions;
 		unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+		unset( $wgGroupPermissions['temporary-account-viewer'] );
 	};
 }
 
-// T387205: Until we are ready to rename the checkuser-temporary-account-viewer group on WMF wikis,
-// unset the new name for the group to avoid logstash warnings about duplicate translations.
-$wgHooks['MediaWikiServices'][] = static function () {
-	global $wgGroupPermissions;
-	unset( $wgGroupPermissions['temporary-account-viewer'] );
-};
-
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
-	// Allow users to be auto-promoted to the checkuser-temporary-account-viewer group based on criteria
+	// Allow users to be auto-promoted to the temporary-account-viewer group based on criteria
 	// listed at https://w.wiki/BESb#Patrollers_and_other_users (T369187).
-	$wgAutopromoteOnce['onEdit']['checkuser-temporary-account-viewer'] = [ '&',
+	$wgAutopromoteOnce['onEdit']['temporary-account-viewer'] = [ '&',
 		[ APCOND_EDITCOUNT, 300 ],
 		[ APCOND_AGE, 6 * 30 * 86400 ], // 6 * 30 * seconds in a day, which makes 6 months
 		// Exclude auto-promoting when the user already has the right through another group that has access
@@ -4097,7 +4091,7 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	];
 
 	// Exclude autopromotions into this group from RC by default (T377829)
-	$wgAutopromoteOnceRCExcludedGroups[] = 'checkuser-temporary-account-viewer';
+	$wgAutopromoteOnceRCExcludedGroups[] = 'temporary-account-viewer';
 
 	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
 	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';

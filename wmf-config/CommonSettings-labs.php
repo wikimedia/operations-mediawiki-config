@@ -500,8 +500,8 @@ if ( $wmgRealm == 'labs' ) {
 	// Remove any references to the checkuser-temporary-account-viewer group on the beta clusters, as this group
 	// is only present when CheckUser is installed. As it is not installed, we should remove the group and
 	// the auto-promotion conditions for the group.
-	unset( $wgAutopromoteOnce['onEdit']['checkuser-temporary-account-viewer'] );
-	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+	unset( $wgAutopromoteOnce['onEdit']['temporary-account-viewer'] );
+	unset( $wgGroupPermissions['temporary-account-viewer'] );
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
