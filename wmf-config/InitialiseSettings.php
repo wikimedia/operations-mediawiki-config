@@ -11878,7 +11878,7 @@ return [
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 1, // 100%
+	'default' => 0, // disable enrollment
 ],
 
 'wmgUsePageViewInfo' => [
