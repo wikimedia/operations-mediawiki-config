@@ -698,8 +698,13 @@ return [
 
 'wgGELinkRecommendationsRefreshByIteratingThroughAllTitles' => [
 	'default' => false,
-	'eswiki' => true,
+	'arzwiki' => true,
 	'cswiki' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'idwiki' => true,
+	'ptwiki' => true,
 ],
 
 'wgGENewcomerTasksTopicType' => [
