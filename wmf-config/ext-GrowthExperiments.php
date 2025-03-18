@@ -707,11 +707,6 @@ return [
 	'default' => 'ores',
 ],
 
-'wgGEMentorshipEnabled' => [
-	// overriden in community configuration for mentorship-enabled wikis
-	'default' => false,
-],
-
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
 	'eswiki' => 70, // T285235
@@ -800,10 +795,6 @@ return [
 
 'wgGERestbaseUrl' => [
 	'default' => false,
-],
-
-'wgGEUseCommunityConfigurationExtension' => [
-	'default' => true,
 ],
 
 'wgGELinkRecommendationMinimumTasksPerTopic' => [

@@ -1379,12 +1379,6 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 			'default' => 300,
 		],
-		'wgGEHelpPanelHelpDeskTitle' => [
-			'enwiki' => 'Wikipedia:Help_desk',
-		],
-		'wgGEHelpPanelViewMoreTitle' => [
-			'enwiki' => 'Help:Contents',
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
@@ -2359,9 +2353,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUseCommunityConfiguration' => [
-			'default' => true,
-		],
-		'wgGEUseCommunityConfigurationExtension' => [
 			'default' => true,
 		],
 
