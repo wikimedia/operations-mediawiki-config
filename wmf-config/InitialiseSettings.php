@@ -6506,6 +6506,18 @@ return [
 	'default' => false,
 	// T384372
 	'test2wiki' => true,
+	'arwiki' => true,
+	'afwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'igwiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'ptwiki' => true,
+	'swwiki' => true,
+	'yowiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wgVisualEditorEnableCollabBeta' => [
