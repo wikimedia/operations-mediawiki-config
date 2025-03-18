@@ -26,6 +26,9 @@ return [
 		'default' => [
 			'base' => true,
 		],
+		'cawiki' => [
+			'base' => false,
+		],
 		'testwiki' => [
 			'base' => false,
 		],
