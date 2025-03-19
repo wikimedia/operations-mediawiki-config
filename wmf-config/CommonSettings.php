@@ -3222,7 +3222,6 @@ if ( $wmgUseEcho ) {
 // Wikitech specific settings
 if ( $wgDBname === 'labswiki' ) {
 	$wgEmailConfirmToEdit = true;
-	$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
 }
 
 if ( $wmgUseThanks ) {
