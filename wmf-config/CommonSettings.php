@@ -2385,6 +2385,9 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
 
 	$wgCentralDBname = 'metawiki';
+	$wgVirtualDomainsMapping['virtual-centralnotice'] = [
+		'db' => 'metawiki'
+	];
 	$wgNoticeInfrastructure = false;
 	$wgCentralNoticeAdminGroup = false;
 
@@ -2395,6 +2398,9 @@ if ( $wmgUseCentralNotice ) {
 		// test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 		$wgNoticeInfrastructure = true;
+		$wgVirtualDomainsMapping['virtual-centralnotice'] = [
+			'db' => 'testwiki'
+		];
 	} elseif ( $wgDBname === 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
