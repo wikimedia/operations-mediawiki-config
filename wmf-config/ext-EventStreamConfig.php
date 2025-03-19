@@ -2328,20 +2328,38 @@ return [
 				],
 			],
 		],
-		// (T373967) Web base stream configuration to support Metrics Platform's monotable
+
+		// Web base stream configuration to support Experiment Platform's monotable.
+		//
+		// See T373967 for context.
 		'product_metrics.web_base' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_skin',
-						'mediawiki_site_content_language',
-						'page_id',
-						'performer_session_id',
+
+						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
+						'agent_client_platform',
+						'agent_client_platform_family',
+
+						// Make user authentication status available as a dimension during analysis.
+						'performer_is_logged_in',
+						'performer_is_temp',
+
+						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
+						// session ID" contextual attribute so that analysts can calculate all three flavors of
+						// click-through rate (see
+						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
+						'performer_active_browsing_session_token',
 					],
-				]
+				],
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						// Don't collect the user agent
+						'http.request_headers.user-agent' => false,
+					],
+				],
 			],
 		],
 		// Web stream config for empty search recommendations A/B test
