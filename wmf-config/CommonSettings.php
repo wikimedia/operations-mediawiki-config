@@ -2568,7 +2568,6 @@ if ( $wmgUseCentralNotice ) {
 	// Relative URL which is hardcoded to HTTP 204 in Varnish config.
 	$wgCentralBannerRecorder = '/beacon/impression';
 
-	$wgCentralDBname = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-centralnotice'] = [
 		'db' => 'metawiki'
 	];
@@ -2580,7 +2579,6 @@ if ( $wmgUseCentralNotice ) {
 
 	if ( $wmgRealm == 'production' && $wgDBname === 'testwiki' ) {
 		// test.wikipedia.org has its own central database:
-		$wgCentralDBname = 'testwiki';
 		$wgNoticeInfrastructure = true;
 		$wgVirtualDomainsMapping['virtual-centralnotice'] = [
 			'db' => 'testwiki'
