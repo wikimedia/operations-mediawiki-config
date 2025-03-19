@@ -12,11 +12,11 @@ return [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => 'eqiad',
+	'default' => 'codfw',
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'eqiad',
+	'default' => 'codfw',
 ],
 
 'wgCirrusSearchClusterOverrides' => [

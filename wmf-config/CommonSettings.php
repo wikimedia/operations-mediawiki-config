@@ -3044,7 +3044,7 @@ if ( $wmgUseTranslate ) {
 		$translateServices = [
 			// Switch to 'eqiad' or 'codfw' if you plan to bring down
 			// the elastic cluster equals to $wmgDatacenter
-			'default' => [ 'service' => 'eqiad', 'writable' => false ],
+			'default' => [ 'service' => 'codfw', 'writable' => false ],
 			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
 			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
 		];
