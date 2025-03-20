@@ -3921,12 +3921,11 @@ if ( $wmgUseGraph ) {
 	];
 } elseif ( $wmgHideGraphTags ) {
 	// Hide raw tags that are displayed due to T334895
-	// Note this still uses messages from E:Graph, which are available
-	// as long as it is in wmf-config/extension-list.
+	// Note this uses messages from E:WikimediaMessages, replacing those from E:Graph
 	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';
 	$wgHooks['ParserAfterParse'][] = 'wmfInstrumentGraphDataSources';
-	$wgTrackingCategories[] = 'graph-tracking-category';
-	$wgTrackingCategories[] = 'graph-disabled-category';
+	$wgTrackingCategories[] = 'wikimedia-graph-tracking-category';
+	$wgTrackingCategories[] = 'wikimedia-graph-disabled-category';
 
 	// Don't show "Insert graph" tool in VE
 	$wgGraphShowInToolbar = false;
@@ -3944,8 +3943,8 @@ if ( $wmgUseGraph ) {
 	 */
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		// Add tracking categories
-		$parser->addTrackingCategory( 'graph-tracking-category' );
-		$parser->addTrackingCategory( 'graph-disabled-category' );
+		$parser->addTrackingCategory( 'wikimedia-graph-tracking-category' );
+		$parser->addTrackingCategory( 'wikimedia-graph-disabled-category' );
 
 		// Track data sources used by this graph
 		$parseResult = FormatJson::parse(
@@ -3980,12 +3979,18 @@ if ( $wmgUseGraph ) {
 		}
 
 		// Return the placeholder message, if there is one
-		$msg = $parser->msg( 'graph-disabled' );
-		if ( $msg->isDisabled() ) {
-			return '';
-		} else {
+		$msg = $parser->msg( 'wikimedia-graph-disabled' );
+		if ( !$msg->isDisabled() ) {
 			return $msg->parseAsBlock();
 		}
+
+		// Temporarily fallback to the old message, in case wikis are using it
+		$msg = $parser->msg( 'graph-disabled' );
+		if ( !$msg->isDisabled() ) {
+			return $msg->parseAsBlock();
+		}
+
+		return '';
 	}
 
 	function wmfInstrumentGraphDataSources( Parser $parser ) {
