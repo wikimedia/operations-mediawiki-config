@@ -2031,6 +2031,66 @@ if ( $wmgUseCentralAuth ) {
 	}
 
 	/**
+	 * Helper method for fixing problems caused by changing cookie domain settings
+	 * ($wgCookieDomain, $wgCentralAuthCookieDomain).
+	 * Clears affected cookies on $oldCookieDomain every time an affected cookie is set.
+	 * @param string $wiki ID of affected wiki
+	 * @param string $type 'local' (after $wgCookieDomain change) or 'central' (after $wgCentralAuthCookieDomain change)
+	 * @param string $oldCookieDomain The old value of $wgCookieDomain or $wgCentralAuthCookieDomain (or the empty
+	 *   string if it was unset)
+	 */
+	function wmfClearOldSessionCookies( string $wiki, string $type, $oldCookieDomain ): void {
+		// phpcs:ignore MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgHooks
+		global $wgDBname, $wmgSharedDomainPathPrefix, $wgSessionName, $wgCookiePrefix, $wgHooks;
+		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token', 'centralauth_LoggedOut' ];
+		$localCookies = [ $wgSessionName, $wgCookiePrefix . 'UserID', $wgCookiePrefix . 'UserName' ];
+
+		if ( $wgDBname !== $wiki
+			// not needed on the shared domain
+			|| $wmgSharedDomainPathPrefix
+		) {
+			return;
+		}
+		$cookies = ( $type === 'central' ) ? $centralAuthCookies : $localCookies;
+
+		/**
+		 * @param string &$name Cookie name passed to WebResponse::setcookie()
+		 * @param string &$value Cookie value passed to WebResponse::setcookie()
+		 * @param int|null &$expire Cookie expiration, as for PHP's setcookie()
+		 * @param array &$options Options passed to WebResponse::setcookie()
+		 * @return bool|void True or no return value to continue, or false to prevent setting of the cookie
+		 * @return void
+		 */
+		$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) use ( $cookies, $oldCookieDomain ) {
+			global $wmgCentralAuthWebResponseSetCookieRecurse;
+
+			$realName = ( $options['prefix'] ?? '' ) . $name;
+			if ( $oldCookieDomain
+				&& class_exists( MobileContext::class )
+				&& MobileContext::singleton()->usingMobileDomain()
+			) {
+				$oldCookieDomain = wmfMobileUrlCallback( $oldCookieDomain );
+			}
+
+			if ( in_array( $realName, $cookies, true )
+				&& ( $options['domain'] ?? '' ) !== $oldCookieDomain
+				&& !$wmgCentralAuthWebResponseSetCookieRecurse
+			) {
+				$webResponse = RequestContext::getMain()->getRequest()->response();
+				$clearOptions = $options;
+				$clearOptions['domain'] = $oldCookieDomain;
+
+				$wmgCentralAuthWebResponseSetCookieRecurse = true;
+				$webResponse->clearCookie( $name, $clearOptions );
+				$wmgCentralAuthWebResponseSetCookieRecurse = false;
+			}
+		};
+	}
+
+	// Temporary fix for T389433, remove after 2026-04
+	wmfClearOldSessionCookies( 'labswiki', 'local', 'wikitech.wikimedia.org' );
+
+	/**
 	 * This function is used for both the CentralAuthWikiList and
 	 * GlobalUserPageWikis hooks.
 	 *
