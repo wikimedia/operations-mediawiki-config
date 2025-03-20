@@ -2439,6 +2439,34 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		// (T389097) Stream to track Article Summaries.
+		'product_metrics.web_base.article_summaries' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'page_id',
+						'page_title',
+						'page_namespace_id',
+						'mediawiki_skin',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'performer_session_id',
+						'performer_name',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
