@@ -10694,13 +10694,6 @@ return [
 	'wikitech' => true,
 ],
 
-// Enables a test module for verifying experiment enrollment.
-// This config var is temporary - it will be removed in T383801
-'wgWMEExLabTest1Enabled' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
