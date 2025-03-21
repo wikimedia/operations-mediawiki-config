@@ -362,7 +362,7 @@ class Profiler {
 			// dogstatsd format (prometheus)
 			$normalizedError = self::normalizeTag( $error );
 			self::sendMetric(
-				"MediaWiki_arclamp_client_errors_total:1|c#error:{$normalizedError}",
+				"MediaWiki_arclamp_client_errors_total:1|c|#error:{$normalizedError}",
 				$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
 				9125
 			);
@@ -407,7 +407,7 @@ class Profiler {
 				// dogstatsd format (prometheus)
 				$normalizedHandler = self::normalizeTag( $handler );
 				$normalizedVerb = self::normalizeTag( $verb );
-				self::sendMetric( "mediawiki_arclamp_samples_total:1|c"
+				self::sendMetric( "mediawiki_arclamp_samples_total:1|c|"
 					. "#handler:{$normalizedHandler}"
 					. ",verb:{$normalizedVerb}",
 					$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
@@ -423,7 +423,7 @@ class Profiler {
 					);
 					// dogstatsd format (prometheus)
 					$normalizedComponent = self::normalizeTag( $cname );
-					self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c"
+					self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c|"
 						. "#handler:{$normalizedHandler}"
 						. ",verb:{$normalizedVerb}"
 						. ",component:{$normalizedComponent}",
