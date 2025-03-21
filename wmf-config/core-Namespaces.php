@@ -1379,6 +1379,8 @@ return [
 		'Utilizador_Discussão' => NS_USER_TALK, // T29495
 		'Discussão_Portal' => 101,
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
+		'PRE' => NS_TEMPLATE, // T389609
+		'CAT' => NS_CATEGORY, // T389609
 	],
 	'+ptwikibooks' => [
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
