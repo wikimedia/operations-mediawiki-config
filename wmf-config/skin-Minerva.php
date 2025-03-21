@@ -24,33 +24,21 @@ return [
 
 	'wgMinervaDonateLink' => [
 		'default' => [
+			'base' => false,
+		],
+		'enwiki' => [
 			'base' => true,
-		],
-		'cawiki' => [
-			'base' => false,
-		],
-		'testwiki' => [
-			'base' => false,
-		],
-		// T360783
-		'nowikimedia' => [
-			'base' => false,
 		],
 	],
 
 	'wgMinervaDonateBanner' => [
 		'default' => [
+			'base' => true,
+			'loggedin' => false,
+			'amc' => false,
+		],
+		'enwiki' => [
 			'base' => false,
-			'loggedin' => false,
-			'amc' => false,
-		],
-		'testwiki' => [
-			'base' => true,
-			'loggedin' => false,
-			'amc' => false,
-		],
-		'cawiki' => [
-			'base' => true,
 			'loggedin' => false,
 			'amc' => false,
 		],
