@@ -2925,10 +2925,12 @@ Wikiquote:
         comment_1_5x: T382802
         comment_2x: T382802
     kowikiquote:
-        comment: T29548
-        no_1_5x: true
-        no_2x: true
-        local_wordmark: true
+        commons: 'File:Wikiquote-logo-ko.svg'
+        comment: 'T29548, T389631'
+        comment_1_5x: T389631
+        comment_2x: T389631
+        commons_wordmark: 'File:Wikiquote-wordmark-ko.svg'
+        comment_wordmark: T389631
     kuwikiquote:
         no_1_5x: true
         no_2x: true

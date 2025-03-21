@@ -571,7 +571,7 @@ return [
 	'iswikiquote' => '/static/images/project-logos/iswikiquote.png',
 	'kawikiquote' => '/static/images/project-logos/kawikiquote.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote.png', // T382802
-	'kowikiquote' => '/static/images/project-logos/kowikiquote.png', // T29548
+	'kowikiquote' => '/static/images/project-logos/kowikiquote.png', // T29548, T389631
 	'kuwikiquote' => '/static/images/project-logos/kuwikiquote.png',
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote.png', // T44771
 	'nlwikiquote' => '/static/images/project-logos/nlwikiquote.png',
@@ -1400,6 +1400,7 @@ return [
 	'idwikiquote' => '/static/images/project-logos/idwikiquote-1.5x.png', // T341177
 	'igwikiquote' => '/static/images/project-logos/igwikiquote-1.5x.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-1.5x.png', // T382802
+	'kowikiquote' => '/static/images/project-logos/kowikiquote-1.5x.png', // T389631
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-1.5x.png', // T150618
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-1.5x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-1.5x.png', // T197508
@@ -2059,6 +2060,7 @@ return [
 	'idwikiquote' => '/static/images/project-logos/idwikiquote-2x.png', // T341177
 	'igwikiquote' => '/static/images/project-logos/igwikiquote-2x.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-2x.png', // T382802
+	'kowikiquote' => '/static/images/project-logos/kowikiquote-2x.png', // T389631
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-2x.png', // T150618
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-2x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-2x.png', // T197508
@@ -4214,10 +4216,10 @@ return [
 		'width' => 133,
 		'height' => 40,
 	],
-	'kowikiquote' => [
+	'kowikiquote' => [ // T389631
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ko.svg',
-		'width' => 146,
-		'height' => 44,
+		'width' => 113,
+		'height' => 37,
 	],
 	'kuwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ku.svg',
