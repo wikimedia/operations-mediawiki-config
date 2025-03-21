@@ -174,6 +174,9 @@ class MWMultiVersion {
 	private function __clone() {
 	}
 
+	/**
+	 * @return self
+	 */
 	private static function createInstance() {
 		if ( isset( self::$instance ) ) {
 			self::error( "MWMultiVersion instance already set!\n" );

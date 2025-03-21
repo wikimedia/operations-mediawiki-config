@@ -7,6 +7,8 @@
  * Then view <http://localhost:9412/>.
  */
 
+// phpcs:disable MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic
+
 use Wikimedia\MWConfig\WmfConfig;
 
 // Verbose error reporting

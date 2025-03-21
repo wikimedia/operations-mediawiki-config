@@ -7,7 +7,9 @@ use Wikimedia\MWConfig\DNSSRVRecord;
  * @covers \Wikimedia\MWConfig\DBRecordCache
  */
 class DBRecordCacheTest extends TestCase {
+	/** @var DBRecordCache */
 	private $cache;
+	/** @var DBRecordCache */
 	private $cacheRepopulate;
 
 	public function setUp(): void {

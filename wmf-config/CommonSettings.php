@@ -3856,6 +3856,13 @@ if ( $wmgUseGraph ) {
 		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
 	}
 
+	/**
+	 * @param ?string $input
+	 * @param array $args
+	 * @param Parser $parser
+	 * @param PPFrame $frame
+	 * @return string
+	 */
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		// Add tracking categories
 		$parser->addTrackingCategory( 'graph-tracking-category' );
