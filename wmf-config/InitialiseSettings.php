@@ -8521,7 +8521,7 @@ return [
 // SectionTranslation configuration
 'wgContentTranslationEnableSectionTranslation' => [
 	'default' => false,
-	'wikipedia' => true, // T298235
+	'wikipedia' => true, // T387821
 	'testwiki' => true,
 	'test2wiki' => false,
 	'arbcom_cswiki' => false,
@@ -8532,54 +8532,10 @@ return [
 	'arbcom_ruwiki' => false,
 	'sysop_itwiki' => false,
 	'wg_enwiki' => false,
-	"abwiki" => false,
-	"afwiki" => false,
-	"alswiki" => false,
-	"arcwiki" => false,
-	"atjwiki" => false,
-	"azbwiki" => false,
-	"be_x_oldwiki" => false,
-	"bxrwiki" => false,
-	"cbk_zamwiki" => false,
-	"chywiki" => false,
-	"csbwiki" => false,
-	"cvwiki" => false,
-	"dtywiki" => false,
-	"enwiki" => false,
-	"extwiki" => false,
-	"gawiki" => false,
-	"gdwiki" => false,
-	"gotwiki" => false,
-	"idwiki" => false,
-	"ikwiki" => false,
-	"inhwiki" => false,
-	"jbowiki" => false,
-	"kshwiki" => false,
-	"lawiki" => false,
-	"lbewiki" => false,
-	"lfnwiki" => false,
-	"novwiki" => false,
-	"nrmwiki" => false,
-	"nvwiki" => false,
-	"olowiki" => false,
-	"pflwiki" => false,
-	"pihwiki" => false,
-	"piwiki" => false,
-	"pntwiki" => false,
-	"rmywiki" => false,
-	"roa_tarawiki" => false,
-	"ruwiki" => false,
-	"simplewiki" => false,
-	"szywiki" => false,
-	"ugwiki" => false,
-	"ukwiki" => false,
-	"zeawiki" => false,
-	"zh_classicalwiki" => false,
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'ace', 'ady', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'ary', 'arz', 'as', 'ast', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'ca', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'ckb', 'co', 'cr', 'crh', 'cs', 'cu', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dv', 'dz', 'ee', 'el', 'eml', 'eo', 'es', 'et', 'eu', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'gag', 'gan', 'gcr', 'gl', 'glk', 'gn', 'gom', 'gor', 'gpe', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'ie', 'ig', 'igl', 'ilo', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ku', 'kus', 'kv', 'kw', 'ky', 'lad', 'lb', 'lez', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nqo', 'nr', 'nso', 'ny', 'oc', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pl', 'pms', 'pnb', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rn', 'ro', 'rsk', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zgh', 'zh', 'zu' ],
 	'testwiki' => [ 'ab', 'ace', 'ady', 'af', 'als', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'avk', 'av', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'bew', 'be_x_old', 'bg', 'bh', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fiu_vro', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'no', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'rsk', 'ro', 'roa_tara', 'rup', 'rue', 'ru', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'wa', 'war', 'wg_en', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'za', 'zea', 'zgh', 'zh', 'zh_yue', 'zu' ],
 ],
 
@@ -8591,18 +8547,17 @@ return [
 
 'wgContentTranslationEnableUnifiedDashboard' => [
 	'default' => false,
-	'testwiki' => true, // T337915
-	'sqwiki' => true, // T387818 (phase 1)
-	'bewiki' => true, // T387820 (phase 2)
-	'bnwiki' => true, // T387820 (phase 2)
-	'eowiki' => true, // T387820 (phase 2)
-	'euwiki' => true, // T387820 (phase 2)
-	'hawiki' => true, // T387820 (phase 2)
-	'idwiki' => false, // T387820 (phase 2) Disabled temporarily since SX is not enabled
-	'igwiki' => true, // T387820 (phase 2)
-	'mkwiki' => true, // T387820 (phase 2)
-	'urwiki' => true, // T387820 (phase 2)
-	'uzwiki' => true, // T387820 (phase 2)
+	'wikipedia' => true, // T387821
+	'testwiki' => true,
+	'test2wiki' => false,
+	'arbcom_cswiki' => false,
+	'arbcom_dewiki' => false,
+	'arbcom_enwiki' => false,
+	'arbcom_fiwiki' => false,
+	'arbcom_nlwiki' => false,
+	'arbcom_ruwiki' => false,
+	'sysop_itwiki' => false,
+	'wg_enwiki' => false,
 ],
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
