@@ -349,7 +349,6 @@ function wmfGetOverrideSettings() {
 				// 'EventBus' => [ 'logstash' => 'error' ],
 				'EventLogging' => 'debug',
 				'exception' => 'debug',
-				'exception-json' => [ 'logstash' => false ],
 				'exec' => 'debug',
 				'export' => 'debug',
 				'ExternalStore' => 'debug',
