@@ -55,7 +55,7 @@ function wmfSetupEtcd( $etcdHost ) {
  * @param array &$lbFactoryConf LBFactoryConf array to be updated using $localDbConfig
  */
 function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
-	global $wmgRemoteMasterDbConfig, $wmgPCServers;
+	global $wmgRemoteMasterDbConfig, $wmgPCServers, $wmgMainStashServers;
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
 	$lbFactoryConf['groupLoadsBySection'] = $localDbConfig['groupLoadsBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
