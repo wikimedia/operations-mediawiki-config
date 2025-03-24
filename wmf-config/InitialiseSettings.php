@@ -12405,10 +12405,6 @@ return [
 	'uawikimedia' => false,
 ],
 
-'wgCampaignEventsSeparateOngoingEvents' => [
-	'default' => true,
-],
-
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
