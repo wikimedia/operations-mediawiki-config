@@ -9179,6 +9179,7 @@ return [
 	'default' => true,
 ],
 
+// T384455 - temporary rollout
 'wmgWikibaseEntityAccessLimit' => [
 	'default' => 400,
 	'wikidatawiki' => 500,
