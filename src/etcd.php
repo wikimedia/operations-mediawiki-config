@@ -90,11 +90,6 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'es6' => [ 'cluster30' ],
 		'es7' => [ 'cluster31' ],
 		'x1' => [ 'extension1' ],
-		'x2' => [ 'extension2' ],
-	];
-	// x2 uses circular replication so there is no need for cross-DC connections
-	$circularReplicationClusters = [
-		'x2' => true,
 	];
 	$wmgPCServers = [];
 	$wmgMainStashServers = [];
@@ -122,22 +117,20 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 			}
 			continue;
 		}
-		// Merge the same way as sectionLoads
-		if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
-			$localMaster = array_key_first( $dbctlLoads[0] );
-			// Override the 'ssl' flag set in masterTemplateOverrides via db-production.php
-			$lbFactoryConf['templateOverridesByServer'][$localMaster]['ssl'] = false;
-			$loadByHost = array_merge( ...$dbctlLoads );
+
+		if ( $dbctlCluster == 'x2' ) {
+			// To be removed. Ignore.
+			continue;
+		}
+
+		$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
+		if ( $crossDCLoads ) {
+			$remoteMaster = array_key_first( $crossDCLoads );
+			$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
+			$lbFactoryConf['hostsByName'][$remoteMaster] =
+				$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
 		} else {
-			$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
-			if ( $crossDCLoads ) {
-				$remoteMaster = array_key_first( $crossDCLoads );
-				$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
-				$lbFactoryConf['hostsByName'][$remoteMaster] =
-					$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
-			} else {
-				$loadByHost = array_merge( ...$dbctlLoads );
-			}
+			$loadByHost = array_merge( ...$dbctlLoads );
 		}
 
 		foreach ( $externalStoreAliasesByCluster[$dbctlCluster] as $mwLoadName ) {
