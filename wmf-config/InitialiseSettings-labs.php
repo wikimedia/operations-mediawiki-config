@@ -256,19 +256,6 @@ function wmfGetOverrideSettings() {
 						'unit' => 'session',
 					],
 				],
-				// See T385309 - Web  mobile search AB test
-				'product_metrics.web_base.search_ab_test_session_ticks' => [
-					'sample' => [
-						'rate' => 1,
-						'unit' => 'session',
-					],
-				],
-				'product_metrics.web_base.search_ab_test_clicks' => [
-					'sample' => [
-						'rate' => 1,
-						'unit' => 'session',
-					],
-				],
 			]
 		],
 
@@ -798,7 +785,7 @@ function wmfGetOverrideSettings() {
 		'wgRelatedArticlesABTestEnrollment' => [
 			'default' => [
 				"name" => "RelatedArticles test experiment",
-				"enabled" => true,
+				"enabled" => false,
 				"buckets" => [
 					"nonExperiment-unsampled" => 0,
 					"experimentEnabled" => 0.5,

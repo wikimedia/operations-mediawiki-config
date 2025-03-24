@@ -2362,7 +2362,7 @@ return [
 			],
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 1,
+				'rate' => 0,
 			],
 		],
 		// Web stream config for empty search recommendations A/B test
@@ -2383,7 +2383,7 @@ return [
 			],
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 1,
+				'rate' => 0,
 			],
 		],
 		'analytics.haproxy_requestctl' => [

@@ -12588,7 +12588,7 @@ return [
 'wgRelatedArticlesABTestEnrollment' => [
 	'default' => [
 		"name" => "RelatedArticles test experiment default",
-		"enabled" => true,
+		"enabled" => false,
 		"buckets" => [
 			"nonExperiment-unsampled" => 0,
 			"experimentEnabled" => 0.5,
