@@ -8552,7 +8552,6 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'ace', 'ast', 'azb', 'bcl', 'bjn', 'bh', 'crh', 'ff', 'fon', 'ig', 'is', 'ki', 'ks', 'lmo', 'min', 'sat', 'ss', 'tn', 'vec' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
