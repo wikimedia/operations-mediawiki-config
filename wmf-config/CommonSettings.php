@@ -747,7 +747,8 @@ $wgObjectCaches['db-mainstash'] = [
 	'multiPrimaryMode' => true,
 	'purgePeriod' => 100,
 	'purgeLimit' => 1000,
-	'reportDupes' => false
+	'reportDupes' => false,
+	'dataRedundancy' => 2,
 ];
 
 session_name( $lang . 'wikiSession' );

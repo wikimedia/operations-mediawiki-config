@@ -113,10 +113,6 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 			continue;
 		}
 		if ( substr( $dbctlCluster, 0, 2 ) === 'ms' ) {
-			if ( $dbctlCluster !== 'ms1' ) {
-				// ignore the rest of ms hosts for now
-				continue;
-			}
 			// Expected mainstash $dbctlLoads structure: [ [ 'dbNNNN' => 0 ], [] ]
 			if ( is_array( $dbctlLoads ) && isset( $dbctlLoads[0] ) && is_array( $dbctlLoads[0] ) ) {
 				$host = array_key_first( $dbctlLoads[0] );
