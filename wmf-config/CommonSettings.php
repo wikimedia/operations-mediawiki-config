@@ -2061,8 +2061,10 @@ if ( $wmgUseCentralAuth ) {
 	function wmfClearOldSessionCookies( string $wiki, string $type, $oldCookieDomain ): void {
 		// phpcs:ignore MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgHooks
 		global $wgDBname, $wmgSharedDomainPathPrefix, $wgSessionName, $wgCookiePrefix, $wgHooks;
+		// $wgCookiePrefix may not be set yet when this runs. It defaults to $wgDBname.
+		$cookiePrefix = $wgCookiePrefix ?? $wgDBname;
 		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token', 'centralauth_LoggedOut' ];
-		$localCookies = [ $wgSessionName, $wgCookiePrefix . 'UserID', $wgCookiePrefix . 'UserName' ];
+		$localCookies = [ $wgSessionName, $cookiePrefix . 'UserID', $cookiePrefix . 'UserName' ];
 
 		if ( $wgDBname !== $wiki
 			// not needed on the shared domain
