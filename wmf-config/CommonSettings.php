@@ -675,6 +675,14 @@ foreach ( $wmgPCServers as $tag => $host ) {
 	];
 }
 
+if ( $wmgRealm === 'labs' ) {
+	$wmgMainStashServers = [
+		// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+		'ms1' => '172.16.5.150',
+		// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
+		'ms2' => '172.16.5.170',
+	];
+}
 $mainStashServers = [];
 foreach ( $wmgMainStashServers as $tag => $host ) {
 	$mainStashServers[$tag] = [
