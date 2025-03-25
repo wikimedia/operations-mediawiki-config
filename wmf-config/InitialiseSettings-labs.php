@@ -2405,5 +2405,10 @@ function wmfGetOverrideSettings() {
 			'enwikisource' => false,
 			'enwikivoyage' => false,
 		],
+		// T377975
+		'-wgTemplateDataEnableDiscovery' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
