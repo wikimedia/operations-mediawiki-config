@@ -3429,6 +3429,9 @@ return [
 		'sysop' => [ 'rollbacker', ], // T189732
 	],
 	'+arwikisource' => [
+		'bureaucrat' => [
+			'import', // T389952
+		],
 		'sysop' => [
 			'patroller',
 			'autopatrolled',
@@ -4939,6 +4942,9 @@ return [
 		'sysop' => [ 'rollbacker', ], // T189732
 	],
 	'+arwikisource' => [
+		'bureaucrat' => [
+			'import', // T389952
+		],
 		'sysop' => [
 			'patroller',
 			'autopatrolled',
