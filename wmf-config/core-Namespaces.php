@@ -989,6 +989,8 @@ return [
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Translate' => 114, // T388955
+		'Translate_talk' => 115, // T388955
 	],
 	'+kowiki' => [
 		'백' => NS_PROJECT,
@@ -1677,6 +1679,8 @@ return [
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Translate' => 114, // T388955
+		'Translate_talk' => 115, // T388955
 	],
 	'+testwiki' => [
 		'WT' => NS_PROJECT_TALK,
@@ -3575,6 +3579,8 @@ return [
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
 		102 => 'ಕರ್ತೃ', // Author
 		103 => 'ಕರ್ತೃ_ಚರ್ಚೆ',
+		114 => 'ಅನುವಾದ', // Translate T388955
+		115 => 'ಅನುವಾದ_ಚರ್ಚೆ',
 	],
 	'kowikisource' => [
 		100 => '저자',
@@ -3724,6 +3730,8 @@ return [
 		101 => 'ಸಂಪುಟೊದ_ಪಾತೆರ',
 		102 => 'ಬರೆಯಿನಾರ್', // Author
 		103 => 'ಬರೆಯಿನಾರೆನ_ಪಾತೆರ',
+		114 => 'ಅನುವಾದೊ', // Translate T388955
+		115 => 'ಅನುವಾದೊ_ಪಾತೆರ',
 	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
