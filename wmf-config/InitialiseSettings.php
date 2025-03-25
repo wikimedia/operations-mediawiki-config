@@ -11326,6 +11326,9 @@ return [
 	'huwiki' => true,
 	'nowiki' => true,
 	'ruwiki' => true,
+	// See: T390023, T381886
+	'vecwiki' => true,
+	'tnwiki' => true,
 	'commonswiki' => true,
 ],
 
