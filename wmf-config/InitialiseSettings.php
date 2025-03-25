@@ -2501,25 +2501,8 @@ return [
 		// T312861
 		'logged_out' => true,
 	],
-	// Some of the following wikis are part of the `desktop-improvements` group,
 	// but have special treatment due to their wiki-specific language handling.
-	'commonswiki' => [
-		'logged_in' => false,
-		'logged_out' => false
-	],
-	'wikidatawiki' => [
-		'logged_in' => false,
-		'logged_out' => false
-	],
-	'wikifunctionswiki' => [
-		'logged_in' => false,
-		'logged_out' => false
-	],
-	'mediawikiwiki' => [
-		'logged_in' => false,
-		'logged_out' => false
-	],
-	'specieswiki' => [
+	'vector-2022-language-links' => [
 		'logged_in' => false,
 		'logged_out' => false
 	],
@@ -7298,18 +7281,25 @@ return [
 ],
 'wgMFEnableWikidataDescriptions' => [
 	'default' => [
-		'base' => true, 'beta' => true,
+		'base' => true,
+		'beta' => true,
+		'amc' => true,
+		'loggedin' => true,
 	],
 ],
 
 'wgMFUseDesktopSpecialEditWatchlistPage' => [
 	'default' => [
 		'base' => false,
+		'beta' => true,
+		'loggedin' => true,
 		'amc' => true,
 	],
 	// T263633
 	'wikidatawiki' => [
 		'base' => true,
+		'beta' => true,
+		'loggedin' => true,
 		'amc' => true,
 	]
 ],
@@ -7337,13 +7327,18 @@ return [
 			'.mbox-image',
 			'.vertical-navbox'
 		],
-		'beta' => [
+		'loggedin' => [
 			'.navbox',
 			'.nomobile',
 			'.mbox-image',
 			'.vertical-navbox'
 		],
-		'HTML' => [],
+		'amc' => [
+			'.navbox',
+			'.nomobile',
+			'.mbox-image',
+			'.vertical-navbox'
+		],
 	],
 ],
 
@@ -7352,14 +7347,8 @@ return [
 	'default' => [
 		'base' => true,
 		'beta' => true,
-	],
-	'private' => [
-		'base' => false,
-		'beta' => true,
-	],
-	'fishbowl' => [
-		'base' => false,
-		'beta' => true,
+		'loggedin' => true,
+		'amc' => true,
 	],
 ],
 

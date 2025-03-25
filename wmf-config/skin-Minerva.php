@@ -18,16 +18,22 @@ return [
 	// T210553, T210554
 	'wgMinervaPageIssuesNewTreatment' => [
 		'default' => [
-			"base" => true,
+			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
 	'wgMinervaDonateLink' => [
 		'default' => [
 			'base' => false,
+			'loggedin' => false,
+			'amc' => false,
 		],
 		'enwiki' => [
 			'base' => true,
+			'loggedin' => false,
+			'amc' => false,
 		],
 	],
 
@@ -55,10 +61,6 @@ return [
 			'loggedin' => true,
 			'amc' => true,
 		],
-		'testwiki' => [
-			'base' => true,
-			'loggedin' => true,
-		],
 	],
 	'wmgMinervaNightModeQueryString' => [
 		'default' => [],
@@ -84,10 +86,13 @@ return [
 		'default' => [
 			'base' => false,
 			'loggedin' => true,
+			'amc' => true,
 		],
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -101,6 +106,8 @@ return [
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -114,19 +121,22 @@ return [
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
 	'wgMinervaOverflowInPageActions' => [
 		'default' => [
 			'base' => false,
-			'beta' => false,
 			'loggedin' => true,
 			'amc' => true,
 		],
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -137,13 +147,11 @@ return [
 			'loggedin' => false,
 			'amc' => true,
 		],
-		// T365323
-		'enwiktionary' => [
+		// T365323, T290812
+		'mobile-anon-categories' => [
 			'base' => true,
-		],
-		// T290812
-		'ptwikinews' => [
-			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -153,15 +161,13 @@ return [
 			'base' => false,
 			'beta' => false,
 			'loggedin' => true,
+			'amc' => true,
 		],
 		'mobile-anon-talk' => [
 			'base' => true,
 			'beta' => true,
 			'loggedin' => true,
-		],
-		// T290812
-		'ptwikinews' => [
-			'base' => true,
+			'amc' => true,
 		],
 	],
 

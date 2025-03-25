@@ -107,6 +107,55 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testFeatureModes() {
+		foreach ( $this->settings as $settingName => $settingsArray ) {
+			$isVectorSetting = false;
+			$isMobileSetting = false;
+			// Ignore features that are not Vector, MF or Minerva.
+			if (
+				strpos( $settingName, 'Vector' ) === false &&
+				strpos( $settingName, 'MF' ) === false
+				&& strpos( $settingName, 'Minerva' ) === false
+			) {
+				continue;
+			}
+			foreach ( $settingsArray as $dbKey => $value ) {
+				// Only need to check feature arrays
+				if ( !is_array( $value ) ) {
+					continue;
+				}
+				if ( isset( $value['logged_out'] ) || isset( $value['logged_in'] ) ) {
+					$isVectorSetting = true;
+					// it's a Vector feature
+					// check setup correctly.
+					$this->assertTrue(
+						isset( $value['logged_out'] ) &&
+							isset( $value['logged_in'] ),
+						"Vector feature $settingName must define expected value for each mode: logged_out, logged_in."
+					);
+				} elseif ( isset( $value['base'] ) ) {
+					$isMobileSetting = true;
+					// it's a MobileFrontend feature
+					// check setup correctly.
+					$this->assertTrue(
+						isset( $value['loggedin'] ) &&
+							isset( $value['amc'] ),
+						"MobileFrontend feature $settingName must define expected value for each mode: beta, amc, loggedin, base."
+					);
+				}
+			}
+			if ( $isMobileSetting || $isVectorSetting ) {
+					$this->assertTrue(
+						count(
+							array_keys( $settingsArray )
+						) <= 2,
+						"Skin features $settingName should use a dblist. We should look to minimize difference in feature flag configurations between wikis to " .
+						"2 different variants at any given time so that we can reliably maintain."
+					);
+			}
+		}
+	}
+
 	public function testLogos() {
 		$scalarLogoKeys = [
 			'1x' => 'wmgSiteLogo1x',
