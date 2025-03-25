@@ -11341,7 +11341,7 @@ return [
 ],
 
 'wgThumbnailStepsRatio' => [
-	'default' => 0.35,
+	'default' => 0.4,
 	'private' => 0,
 	'testwiki' => 1,
 	'test2wiki' => 1,
