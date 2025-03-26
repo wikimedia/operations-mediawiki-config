@@ -7291,8 +7291,7 @@ return [
 'wgMFUseDesktopSpecialEditWatchlistPage' => [
 	'default' => [
 		'base' => false,
-		'beta' => true,
-		'loggedin' => true,
+		'loggedin' => false,
 		'amc' => true,
 	],
 	// T263633
