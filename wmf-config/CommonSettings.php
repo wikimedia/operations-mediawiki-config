@@ -2268,8 +2268,8 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $
 	$guessed = false;
 	if ( !$user && $username ) {
 		$user = MediaWikiServices::getInstance()
-			->getUserIdentityLookup()
-			->getUserIdentityByName( $username );
+			->getUserFactory()
+			->newFromName( $username );
 		$guessed = true;
 	}
 	if ( !$user || !in_array( $response->status,
