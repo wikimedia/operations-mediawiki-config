@@ -2047,6 +2047,7 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthCookieDomain = '';
 		$wgCookiePrefix = 'auth';
 		$wgSessionName = 'authSession';
+		$wgWebAuthnNewCredsDisabled = false;
 	}
 
 	/**
