@@ -4665,7 +4665,8 @@ return [
 
 'wgCentralAuthEnableSul3' => [
 	'default' => [ 'query-flag', 'cookie', 'global-pref' ],
-	'+testwiki' => [ 'always' ],
+	'+group0' => [ 'always' ],
+	'+group1' => [ 'always' ],
 ],
 
 'wgSul3RolloutAnonSignupPercentage' => [
