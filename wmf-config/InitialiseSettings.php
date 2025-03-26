@@ -7974,6 +7974,7 @@ return [
 	'zhwiki' => true, // T378834
 	'cawiki' => true, // T378834
 	'mediawikiwiki' => true, // T378834
+	'officewiki' => true, // T380909
 ],
 
 'wmgFlowNamespaces' => [
