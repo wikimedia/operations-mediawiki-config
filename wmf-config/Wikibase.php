@@ -68,6 +68,10 @@ define( 'WB_NS_QUERY_TALK', 123 );
 // and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
 $wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
+$testWikidataClients = MWWikiversions::readDbListFile( 'wikidataclient-test' );
+$termsDomainDb = $wgDBname === 'testwikidatawiki' || in_array( $wgDBname, $testWikidataClients ) ? 'testwikidatawiki' : 'wikidatawiki';
+$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => $termsDomainDb ];
+
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
 		// Disable Special:ItemDisambiguation on wikidata.org T195756, T271389
@@ -89,7 +93,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient-test' );
+		$wgWBRepoSettings['localClientDatabases'] = $testWikidataClients;
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient' );
 		// Exclude closed wikis
