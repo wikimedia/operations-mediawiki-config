@@ -30,21 +30,11 @@ return [
 			'loggedin' => false,
 			'amc' => false,
 		],
-		'enwiki' => [
-			'base' => true,
-			'loggedin' => false,
-			'amc' => false,
-		],
 	],
 
 	'wgMinervaDonateBanner' => [
 		'default' => [
 			'base' => true,
-			'loggedin' => false,
-			'amc' => false,
-		],
-		'enwiki' => [
-			'base' => false,
 			'loggedin' => false,
 			'amc' => false,
 		],
