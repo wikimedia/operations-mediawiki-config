@@ -3027,7 +3027,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
-		$wgTranslateTranslationDefaultService = 'default';
+		$wgTranslateTranslationDefaultService = 'eqiad';
 
 		// If the downtime is long (> 10mins) consider disabling
 		// mirroring in this var to avoid logspam about ttm updates
