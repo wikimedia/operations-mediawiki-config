@@ -3093,6 +3093,18 @@ return [
 			'reupload' => true,
 			'reupload-own' => true,
 		],
+		'sysop' => [
+			'extendedconfirmed' => true, // T389729
+		],
+		'bot' => [
+			'extendedconfirmed' => true, // T389729
+		],
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T389729
+		],
+		'translationadmin' => [
+			'editprotected' => true, // T389729
+		],
 	],
 	'+wuuwiki' => [
 		'rollbacker' => [
@@ -4739,7 +4751,15 @@ return [
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
-		'sysop' => [ 'uploader' ], // T225505
+		'sysop' => [
+			'extendedconfirmed', // T389729
+			'uploader', // T225505
+		],
+		'extendedconfirmed' => [ 'extendedconfirmed' ], // T389729
+		'translationadmin' => [
+			'editprotected',
+			'extendedconfirmed'
+		], // T389729,
 	],
 	'wikitech' => [
 		'bureaucrat' => [
@@ -5942,7 +5962,14 @@ return [
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
-		'sysop' => [ 'uploader' ], // T225505
+		'sysop' => [
+			'extendedconfirmed', // T389729
+			'uploader', // T225505
+		],
+		'translationadmin' => [
+			'editprotected', // T389729
+			'extendedconfirmed', // T389729
+		],
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'autopatrolled', ],

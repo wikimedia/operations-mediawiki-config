@@ -1980,6 +1980,7 @@ return [
 	'ukwiki' => 10, // T355972
 	'viwiki' => 10, // T322105
 	'wikidata' => 50, // T48461
+	'wikimania' => 10, // T389729
 	'wuuwiki' => 10, // T122476
 	'zhwiki' => 50, // T16624
 	'zh_classicalwiki' => 25, // T228141
@@ -2046,6 +2047,7 @@ return [
 	'tcywiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T385828
 	'testwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T61084, T302860
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'editautopatrolprotected', 'sysop' ], // T215493, T296154, T303579
+	'wikimaniawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T389729
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
@@ -2079,6 +2081,7 @@ return [
 	'+tcywiki' => [ 'extendedconfirmed' ], // T385828
 	'+testwiki' => [ 'extendedconfirmed' ], // T302860
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
+	'+wikimaniawiki' => [ 'extendedconfirmed' ], // T389729
 	'+zhwiki' => [ 'extendedconfirmed' ], // T287322
 ],
 
@@ -4499,6 +4502,15 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T215493
+	],
+	'wikimaniawiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'translationadmin' ] ],
+		], // T389729
 	],
 	'zhwiki' => [
 		'extendedconfirmed' => [ '&',
