@@ -1216,6 +1216,24 @@ return [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					// Override the default so we collect user-agent
+					// as well as some IP geocoding info.
+					'enrich_fields_from_http_headers' => [
+						'meta.request_id' => 'x-request-id',
+						'http.request_headers.user-agent' => 'user-agent',
+						// For eventgate-logging-external's incoming requests,
+						// the CDN layer performs a GeoIP lookup and attaches a
+						// bunch of data as request headers.
+						'http.request_headers.x-geoip-isp' => 'x-geoip-isp',
+						'http.request_headers.x-geoip-organization' => 'x-geoip-organization',
+						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
+						'http.request_headers.x-geoip-country' => 'x-geoip-country',
+						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => false,
@@ -1226,6 +1244,24 @@ return [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					// Override the default so we collect user-agent
+					// as well as some IP geocoding info.
+					'enrich_fields_from_http_headers' => [
+						'meta.request_id' => 'x-request-id',
+						'http.request_headers.user-agent' => 'user-agent',
+						// For eventgate-logging-external's incoming requests,
+						// the CDN layer performs a GeoIP lookup and attaches a
+						// bunch of data as request headers.
+						'http.request_headers.x-geoip-isp' => 'x-geoip-isp',
+						'http.request_headers.x-geoip-organization' => 'x-geoip-organization',
+						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
+						'http.request_headers.x-geoip-country' => 'x-geoip-country',
+						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => false,
@@ -1236,6 +1272,24 @@ return [
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					// Override the default so we collect user-agent
+					// as well as some IP geocoding info.
+					'enrich_fields_from_http_headers' => [
+						'meta.request_id' => 'x-request-id',
+						'http.request_headers.user-agent' => 'user-agent',
+						// For eventgate-logging-external's incoming requests,
+						// the CDN layer performs a GeoIP lookup and attaches a
+						// bunch of data as request headers.
+						'http.request_headers.x-geoip-isp' => 'x-geoip-isp',
+						'http.request_headers.x-geoip-organization' => 'x-geoip-organization',
+						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
+						'http.request_headers.x-geoip-country' => 'x-geoip-country',
+						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => false,
