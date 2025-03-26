@@ -1849,10 +1849,10 @@ return [
 			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 				'analytics_hive_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 			],
 		],
@@ -1866,10 +1866,10 @@ return [
 			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 				'analytics_hive_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 			],
 		],
@@ -1883,10 +1883,10 @@ return [
 			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 				'analytics_hive_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 			],
 		],
@@ -1951,10 +1951,10 @@ return [
 			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 				'analytics_hive_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 			],
 		],
