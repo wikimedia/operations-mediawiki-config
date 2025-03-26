@@ -17,14 +17,12 @@ return [
 		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
-			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
 			// These MUST match the installed SSL certs
-			// transitional hack to use search-psi as the service to access
-			// the new opensearch cluster in deployment-prep
 			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
 			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
 			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
@@ -32,9 +30,9 @@ return [
 		'search-omega' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		// cloudelastic is not duplicated in labs, it is a write-only cluster and multi-cluster
 		// is sufficiently tested with the clusters above.
