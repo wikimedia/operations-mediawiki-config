@@ -22,11 +22,12 @@ return [
 			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
-			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
+			// transitional hack to use search-psi as the service to access
+			// the new opensearch cluster in deployment-prep
+			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-omega' => [
 			// Same as search-chi for now to match production services

@@ -21,6 +21,13 @@ $wgCirrusSearchClusters = [
 			'host' => $host,
 		];
 	}, $wmgAllServices['eqiad']['search-chi'] ),
+	'eqiad-opensearch' => array_map( static function ( $host ) {
+		return [
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+			'port' => '9243',
+			'host' => $host,
+		];
+	}, $wmgAllServices['eqiad']['search-psi'] ),
 ];
 
 // wgCirrusSearchShardCount is still handled through wmg vars for no good reasons
