@@ -12069,7 +12069,152 @@ return [
 		],
 		'specs.v0' => [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
 			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	// Enable a small set of wikis for initial public rollout (T389407)
+	'arwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'dewiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'frwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'hewiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'iawiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'nlwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'zhwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'content.v1' => [
+			'url' => '/w/rest.php/specs/v0/module/content/v1',
+			'name' => 'Content API',
+		],
+		'wmf-restbase' => [
+			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
+	'enwiktionary' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
 		],
 		'content.v1' => [
 			'url' => '/w/rest.php/specs/v0/module/content/v1',
