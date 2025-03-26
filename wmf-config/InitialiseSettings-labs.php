@@ -1202,7 +1202,7 @@ function wmfGetOverrideSettings() {
 
 		# write to all configured clusters, there should only be one in labs
 		'-wgCirrusSearchWriteClusters' => [
-			'default' => [ 'eqiad' ],
+			'default' => [ 'eqiad', 'eqiad-opensearch' ],
 		],
 
 		'-wgCirrusSearchLanguageToWikiMap' => [
