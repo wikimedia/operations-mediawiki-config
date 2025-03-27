@@ -1320,9 +1320,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgGELevelingUpFeaturesEnabled' => [
-			'default' => true,
-		],
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
 			'cswiki' => 'surfacing-structured-task',

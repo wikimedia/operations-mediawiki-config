@@ -39,10 +39,6 @@ return [
 	'default' => [],
 ],
 
-'wgGELevelingUpFeaturesEnabled' => [
-	'default' => true,
-],
-
 'wgGEApiQueryGrowthTasksLookaheadSize' => [
 	'default' => 10,
 ],
@@ -727,10 +723,6 @@ return [
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
-],
-
-'wgGEMentorDashboardEnabled' => [
-	'default' => true,
 ],
 
 'wgGEMentorDashboardEnabledModules' => [
