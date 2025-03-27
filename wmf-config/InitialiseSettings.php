@@ -7971,6 +7971,9 @@ return [
 	'cawiki' => true, // T378834
 	'mediawikiwiki' => true, // T378834
 	'officewiki' => true, // T380909
+	'cawikiquote' => true, // T380909
+	'kabwiki' => true, // T380909
+	'sewikimedia' => true, // T380909
 ],
 
 'wmgFlowNamespaces' => [
