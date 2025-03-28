@@ -4639,17 +4639,7 @@ return [
 ],
 
 'wgCentralAuthEnableSul3' => [
-	'default' => [ 'query-flag', 'cookie', 'global-pref' ],
-	'+group0' => [ 'always' ],
-	'+group1' => [ 'always' ],
-],
-
-'wgSul3RolloutAnonSignupPercentage' => [
-	'default' => 100,
-],
-
-'wgSul3RolloutUserPercentage' => [
-	'default' => 100,
+	'default' => [ 'always', 'query-flag', 'cookie' ],
 ],
 
 // This is also guarded by $wmgUseCentralAuth
