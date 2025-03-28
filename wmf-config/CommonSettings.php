@@ -3974,6 +3974,8 @@ if ( $wmgUseOATHAuth ) {
 		}
 	}
 
+	$wgOATHRequiredForGroups[] = 'interface-admin';
+
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
