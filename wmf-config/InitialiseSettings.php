@@ -5790,6 +5790,11 @@ return [
 	'medium' => 100,
 ],
 
+// T390315
+'wgLoginNotifyDenyUnknownIPs' => [
+	'default' => false,
+],
+
 // -------------- RESTBase start --------------
 
 // whether to configure RESTBase as a Virtual REST Service
