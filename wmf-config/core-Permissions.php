@@ -5648,7 +5648,7 @@ return [
 		'sysop' => [ 'validator' ], // T341428
 	],
 	'+plwiki' => [
-		'bureaucrat' => [ 'abusefilter', 'flood', 'arbcom' ], // T256572
+		'bureaucrat' => [ 'abusefilter', 'flood', 'arbcom', 'sysop' ], // T256572, T389829
 	],
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479
