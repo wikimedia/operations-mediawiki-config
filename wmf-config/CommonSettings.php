@@ -3975,6 +3975,7 @@ if ( $wmgUseOATHAuth ) {
 	}
 
 	$wgOATHRequiredForGroups[] = 'interface-admin';
+	$wgOATHRequiredForGroups[] = 'centralnoticeadmin';
 
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
