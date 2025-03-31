@@ -45,6 +45,7 @@ $IP/extensions/DonationInterface/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
+$IP/extensions/EmailAuth/extension.json
 $IP/extensions/EntitySchema/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
