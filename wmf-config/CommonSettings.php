@@ -3028,7 +3028,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
-		$wgTranslateTranslationDefaultService = 'eqiad';
+		$wgTranslateTranslationDefaultService = 'default';
 
 		// If the downtime is long (> 10mins) consider disabling
 		// mirroring in this var to avoid logspam about ttm updates
@@ -3039,7 +3039,7 @@ if ( $wmgUseTranslate ) {
 		$translateServices = [
 			// Switch to 'eqiad' or 'codfw' if you plan to bring down
 			// the elastic cluster equals to $wmgDatacenter
-			'default' => [ 'service' => $wmgDatacenter, 'writable' => false ],
+			'default' => [ 'service' => 'eqiad', 'writable' => false ],
 			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
 			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
 		];
