@@ -4784,6 +4784,10 @@ return [
 	// ta/gu/ml/ne/ur (T39154, T39384, T39672, T39374, T43714).
 ],
 
+'wmgUseEmailAuth' => [
+	'default' => true, // T390437
+],
+
 'wmgUseElectronPdfService' => [
 	'default' => true, // T165954
 	'apiportalwiki' => false, // T264043

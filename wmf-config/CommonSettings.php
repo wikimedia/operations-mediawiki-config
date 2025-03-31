@@ -2551,6 +2551,12 @@ if ( $wmgUseElectronPdfService ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
+if ( $wmgUseEmailAuth ) {
+	wfLoadExtension( 'EmailAuth' );
+	// Do not enforce email auth yet. Deploy in log-only mode.
+	$wgWikimediaEventsEmailAuthEnforce = false;
+}
+
 wfLoadExtension( 'AdvancedSearch' );
 
 # Various system to allow/prevent flooding

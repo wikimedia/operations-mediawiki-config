@@ -908,6 +908,10 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
+		'wmgUseEmailAuth' => [
+			'default' => true,
+		],
+
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',
