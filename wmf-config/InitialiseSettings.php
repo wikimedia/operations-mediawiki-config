@@ -2217,6 +2217,7 @@ return [
 		'DuplicateParse' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ],
 		'editpage' => 'warning', // T251023
 		'Echo' => 'debug',
+		'EmailAuth' => 'info',
 		'Elastica' => 'info',
 		'error' => 'debug',
 		'EventBus' => [ 'logstash' => 'error' ],
