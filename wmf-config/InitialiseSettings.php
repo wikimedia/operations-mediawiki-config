@@ -12041,6 +12041,30 @@ return [
 		'includes/Rest/specs.v0.json',
 		'includes/Rest/content.v1.json'
 	],
+	'arwiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'dewiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'frwiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'hewiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'iawiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'nlwiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'zhwiki' => [
+		'includes/Rest/specs.v0.json',
+	],
+	'enwiktionary' => [
+		'includes/Rest/specs.v0.json',
+	],
 ],
 
 'wgRestAllowCrossOriginCookieAuth' => [
@@ -12061,10 +12085,6 @@ return [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
 		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
-		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Wikimedia RESTbase APIs'
@@ -12080,10 +12100,6 @@ return [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
 		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
-		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Wikimedia RESTbase APIs'
@@ -12097,10 +12113,6 @@ return [
 		'specs.v0' => [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
-		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
 		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
@@ -12116,10 +12128,6 @@ return [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
 		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
-		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Wikimedia RESTbase APIs'
@@ -12133,10 +12141,6 @@ return [
 		'specs.v0' => [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
-		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
 		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
@@ -12152,10 +12156,6 @@ return [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
 		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
-		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Wikimedia RESTbase APIs'
@@ -12169,10 +12169,6 @@ return [
 		'specs.v0' => [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
-		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
 		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
@@ -12188,10 +12184,6 @@ return [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
 		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
-		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Wikimedia RESTbase APIs'
@@ -12205,10 +12197,6 @@ return [
 		'specs.v0' => [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
-		],
-		'content.v1' => [
-			'url' => '/w/rest.php/specs/v0/module/content/v1',
-			'name' => 'Content API',
 		],
 		'wmf-restbase' => [
 			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
