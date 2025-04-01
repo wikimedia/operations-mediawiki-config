@@ -5872,6 +5872,7 @@ return [
 	'iawiktionary' => false,
 	'zuwiktionary' => false,
 	'iuwiktionary' => false,
+	'incubatorwiki' => true, // T380768
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -5903,13 +5904,14 @@ return [
 	'iawiktionary' => false,
 	'zuwiktionary' => false,
 	'iuwiktionary' => false,
+	'incubatorwiki' => true, // T380768
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
 	'default' => false,
 	'officewiki' => true,
-	# kept in sync with wikis where wgMFNamespacesWithLeadParagraphs is
-	# set to empty, due to T359002
+	'incubatorwiki' => true, // T380768
+	'dagwiki' => true, // T381002
 	'wikivoyage' => true,
 	'wiktionary' => true,
 ],
