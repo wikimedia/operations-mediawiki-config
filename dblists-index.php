@@ -703,7 +703,7 @@ return [
 'pcmwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'pdcwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'pflwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'growthexperiments' ],
-'pihwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
+'pihwiki' => [ 'wikipedia', 'closed', 'small', 'skin-themes', 'wikidataclient', 'group0', 'growthexperiments' ],
 'piwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'piwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'plwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'skin-themes', 'wikidataclient', 'modern-mainpage', 'cirrussearch-big-indices', 'growthexperiments' ],
