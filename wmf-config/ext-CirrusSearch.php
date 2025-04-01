@@ -8,15 +8,8 @@ use CirrusSearch\LanguageDetector\TextCat;
 
 return [
 
-// NOTE: don't forget to update TTM default cluster via
-// $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
-// bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => 'codfw',
-],
-// Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
-'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'codfw',
+	'default' => 'dnsdisc',
 ],
 
 'wgCirrusSearchClusterOverrides' => [
@@ -26,11 +19,6 @@ return [
 'wgCirrusSearchWriteClusters' => [
 	'default' => [
 		// T363475: Writes shifted to SUP, archive writes remain.
-		'default' => [],
-		'archive' => [ 'eqiad', 'codfw' ],
-	],
-	// private wikis don't write to cloudelastic
-	'private' => [
 		'default' => [],
 		'archive' => [ 'eqiad', 'codfw' ],
 	],

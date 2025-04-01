@@ -633,13 +633,10 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
-	global $wmgMasterDatacenter, $wmgEtcdLastModifiedIndex, $wmgCirrusSearchDefaultCluster,
-		$wgCirrusSearchDefaultCluster;
+	global $wmgMasterDatacenter, $wmgEtcdLastModifiedIndex;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmgMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmgEtcdLastModifiedIndex,
-		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
-		'wgCirrusSearchDefaultCluster' => $wgCirrusSearchDefaultCluster,
 	];
 };
 
@@ -2223,7 +2220,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
 		'class' => ApiFeatureUsageQueryEngineElastica::class,
-		'serverList' => $wmgLocalServices['search-chi'],
+		'serverList' => $wmgLocalServices['search-chi-dnsdisc'],
 	];
 }
 
@@ -3043,22 +3040,24 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
 		$wgTranslateTranslationDefaultService = 'default';
-
-		// If the downtime is long (> 10mins) consider disabling
-		// mirroring in this var to avoid logspam about ttm updates
-		// then plan to refresh this index via ttmserver-export when
-		// it's back up.
-		// NOTE: these settings are also used for the labs cluster
-		// where codfw may not be available
 		$translateServices = [
-			// Switch to 'eqiad' or 'codfw' if you plan to bring down
-			// the elastic cluster equals to $wmgDatacenter
-			'default' => [ 'service' => 'codfw', 'writable' => false ],
-			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
-			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
+			'default' => [
+				// dnsdisc doesn't exist in the deployment-prep cluster
+				'service' => $wmgLocalServices['search-chi-dnsdisc'] ?? $wmgAllServices['eqiad']['search-chi'],
+				'writable' => false,
+			],
+			'eqiad' => [
+				'service' => $wmgAllServices['eqiad']['search-chi'],
+				'writable' => true,
+			],
+			'codfw' => [
+				// codfw doesn't exist in the deployment-prep cluster
+				'service' => $wmgAllServices['codfw']['search-chi'] ?? null,
+				'writable' => true,
+			],
 		];
 		foreach ( $translateServices as $service => $conf ) {
-			if ( !isset( $wmgAllServices[$conf['service']]['search-chi'] ) ) {
+			if ( $conf['service'] === null ) {
 				continue;
 			}
 			// see https://www.mediawiki.org/wiki/Help:Extension:Translate/Translation_memories#Configuration
@@ -3074,14 +3073,16 @@ if ( $wmgUseTranslate ) {
 				'config' => [
 					'servers' => array_map( static function ( $hostConfig ) {
 						if ( is_array( $hostConfig ) ) {
+							// production services
 							return $hostConfig;
 						}
+						// deployment-prep
 						return [
 							'host' => $hostConfig,
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmgAllServices[$conf['service']]['search-chi'] ),
+					}, $conf['service'] ),
 				],
 			];
 		}
