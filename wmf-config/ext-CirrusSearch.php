@@ -100,10 +100,8 @@ return [
 
 'wgCirrusSearchSimilarityProfile' => [
 	'default' => 'wmf_defaults',
-	"wikidatawiki" => "wikibase_similarity",
-	"testwikidatawiki" => "wikibase_similarity",
-	"commonswiki" => "wikibase_similarity",
-	"testwikidatawiki" => "wikibase_similarity",
+	'wikidata' => 'wikibase_similarity',
+	'commonswiki' => 'wikibase_similarity',
 ],
 
 'wgCirrusSearchRescoreProfile' => [
