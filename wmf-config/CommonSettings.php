@@ -3983,8 +3983,12 @@ if ( $wmgUseOATHAuth ) {
 		}
 	}
 
-	$wgOATHRequiredForGroups[] = 'interface-admin';
-	$wgOATHRequiredForGroups[] = 'centralnoticeadmin';
+	$wgOATHRequiredForGroups = [
+		'interface-admin',
+		'centralnoticeadmin',
+		'checkuser', // T150898
+		'suppress' // T150898
+	];
 
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
