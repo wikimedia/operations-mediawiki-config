@@ -111,6 +111,27 @@ $common = [
 			'port' => 6107,
 		],
 	],
+	'search-chi-dnsdisc' => [
+		[ // forwarded to https://search.discovery.wmnet:9243/
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6302,
+		]
+	],
+	'search-omega-dnsdisc' => [
+		[ // forwarded to https://search.discovery.wmnet:9443/
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6303,
+		]
+	],
+	'search-psi-dnsdisc' => [
+		[ // forwarded to https://search.discovery.wmnet:9643/
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6304,
+		]
+	],
 ];
 
 $services = [
