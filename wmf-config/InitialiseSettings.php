@@ -10578,12 +10578,10 @@ return [
 
 'wgMetricsPlatformEnableExperiments' => [
 	'default' => false,
-	'testwiki' => true,
 ],
 
 'wgMetricsPlatformEnableExperimentOverrides' => [
 	'default' => false,
-	'testwiki' => true,
 ],
 
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
