@@ -2407,10 +2407,5 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
-		// T384455
-		'wmgWikibaseEntityAccessLimit' => [
-			'default' => 500,
-			'commonswiki' => 400,
-		],
 	];
 } # wmfGetOverrideSettings()

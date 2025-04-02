@@ -9126,10 +9126,10 @@ return [
 	'default' => true,
 ],
 
-// T384455 - temporary rollout
+// T384455
 'wmgWikibaseEntityAccessLimit' => [
-	'default' => 400,
-	'wikidatawiki' => 500,
+	'default' => 500,
+	'commonswiki' => 400,
 ],
 
 'wmgWikibaseAllowDataAccessInUserLanguage' => [
