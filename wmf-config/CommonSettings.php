@@ -3411,6 +3411,8 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 	$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 200; // see T85461#3100878
 	$wgScribuntoEngineConf['luasandbox']['memoryLimit'] = $wmgScribuntoMemoryLimit;
+	// Temporarily disable profiling, for T389734
+	$wgScribuntoEngineConf['luasandbox']['profilerPeriod'] = false;
 }
 
 if ( $wmgUseSubpageSortkey ) {
