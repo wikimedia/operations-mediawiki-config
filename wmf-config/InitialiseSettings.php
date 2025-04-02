@@ -4788,6 +4788,12 @@ return [
 	'default' => true, // T390437
 ],
 
+'wgWikimediaEventsEmailAuthEnforce' => [
+	'default' => false,
+	'group0' => true,
+	'group1' => true,
+],
+
 'wmgUseElectronPdfService' => [
 	'default' => true, // T165954
 	'apiportalwiki' => false, // T264043
