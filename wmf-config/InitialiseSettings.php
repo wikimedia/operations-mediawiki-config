@@ -4694,6 +4694,7 @@ return [
 
 'wgMathValidModes' => [
 	'default' => [ 'source', 'mathml', 'native', 'mathjax' ],
+	'wikifunctionswiki' => [ 'source', 'native', 'mathjax' ],
 ],
 
 'wmgMathDefaultUserOptions' => [
