@@ -6379,31 +6379,6 @@ return [
 	'collabwiki' => true,
 ],
 
-'wgVisualEditorMobileInsertMenu' => [
-	'default' => true,
-	// Top 20 mobile VE wikis (T388604)
-	'arwiki' => false,
-	'bnwiki' => false,
-	'dewiki' => false,
-	'enwiki' => false,
-	'eswiki' => false,
-	'fawiki' => false,
-	'frwiki' => false,
-	'hewiki' => false,
-	'idwiki' => false,
-	'itwiki' => false,
-	'jawiki' => false,
-	'kowiki' => false,
-	'nlwiki' => false,
-	'plwiki' => false,
-	'ptwiki' => false,
-	'ruwiki' => false,
-	'thwiki' => false,
-	'trwiki' => false,
-	'ukwiki' => false,
-	'zhwiki' => false,
-],
-
 // Whether VisualEditor's feedback page should be consolidated down to just the
 // single page on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => [
