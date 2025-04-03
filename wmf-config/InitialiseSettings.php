@@ -4700,6 +4700,7 @@ return [
 
 'wmgMathDefaultUserOptions' => [
 	'default' => 'mathml',
+	'wikifunctionswiki' => 'native',
 	'group0' => 'native',
 ],
 
