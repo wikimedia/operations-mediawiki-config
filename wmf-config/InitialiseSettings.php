@@ -4789,7 +4789,9 @@ return [
 ],
 
 'wgWikimediaEventsEmailAuthEnforce' => [
-	'default' => true,
+	'default' => false,
+	'group0' => true,
+	'group1' => true,
 ],
 
 'wmgUseElectronPdfService' => [
