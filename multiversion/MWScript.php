@@ -35,6 +35,8 @@ EOT
  * The possibility of bypassing the check is offered for specific emergency situations
  * and/or to avoid checking for every single wiki in a recurring script like
  * foreachwiki.
+ *
+ * Exit with code 42 if the mesh isn't available at the end of the 62 second timeout.
  */
 function wmfWaitForMesh() {
 	global $wmgRealm;
@@ -57,14 +59,14 @@ function wmfWaitForMesh() {
 	// We want to return the curl response and not display it.
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 
-	// We retry 20 times at increasing time intervals
-	for ( $i = 0; $i < 20; $i++ ) {
+	// We retry 26 times at increasing time intervals
+	for ( $i = 0; $i < 26; $i++ ) {
 		if ( curl_exec( $ch ) == "OK" && curl_getinfo( $ch, CURLINFO_HTTP_CODE ) == 200 ) {
 			$meshAvailable = true;
 			break;
 		}
 			// sleep 10 * i^2 milliseconds, so 10, 40, 90, 250... for a total
-			// possible delay of 18 seconds
+			// possible delay of 62 seconds
 			usleep( 10000 * $i * $i );
 	}
 
@@ -78,7 +80,7 @@ Therefore, the script will not be executed. If you are *very* sure your script w
 not need the service mesh at all, you can run it again with MESH_CHECK_SKIP=1
 EOT
 		);
-		exit( 1 );
+		exit( 42 );
 	}
 }
 
