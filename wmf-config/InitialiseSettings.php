@@ -2578,40 +2578,20 @@ return [
 
 'wgVectorPromoteAddTopic' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except wikipedias, commons and wikidata (T352087)
+	// Everywhere except 12 wikis (T392121)
 	'default' => true,
-	'wikipedia' => false,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
-	// Enabled wikipedias
-	'arwiki' => true, // T331313
-	'cswiki' => true, // T331313
-	'huwiki' => true, // T331313
-	'wikitech' => true, // T355374
-	// Start T341491
-	'azwiki' => true,
-	'bnwiki' => true,
-	'dewiki' => true,
-	'fawiki' => true,
-	'hewiki' => true,
-	'hiwiki' => true,
-	'idwiki' => true,
-	'kowiki' => true,
-	'nlwiki' => true,
-	'ptwiki' => true,
-	'rowiki' => true,
-	'thwiki' => true,
-	'trwiki' => true,
-	'ukwiki' => true,
-	'viwiki' => true,
-	// End T341491
-	// Start T379102
-	'frwiki' => true,
-	'eswiki' => true,
-	'jawiki' => true,
-	'itwiki' => true,
-	// End T379102
-	'zhwiki' => true, // T379264
+	'cawiki' => false,
+	'dawiki' => false,
+	'elwiki' => false,
+	'enwiki' => false,
+	'euwiki' => false,
+	'fiwiki' => false,
+	'lvwiki' => false,
+	'nowiki' => false,
+	'plwiki' => false,
+	'ruwiki' => false,
+	'simplewiki' => false,
+	'svwiki' => false,
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -8063,116 +8043,56 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	// Sync with sub-features below and wgVectorPromoteAddTopic
-	// Everywhere except wikipedias, commons and wikidata (T352087)
+	// Everywhere except 12 wikis (T392121)
 	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
-	'arwiki' => 'available', // T329407
-	'cswiki' => 'available', // T329407
-	'huwiki' => 'available', // T329407
-	'wikitech' => 'available', // T355374
-	// Start T341491
-	'azwiki' => 'available',
-	'bnwiki' => 'available',
-	'dewiki' => 'available',
-	'fawiki' => 'available',
-	'hewiki' => 'available',
-	'hiwiki' => 'available',
-	'idwiki' => 'available',
-	'kowiki' => 'available',
-	'nlwiki' => 'available',
-	'ptwiki' => 'available',
-	'rowiki' => 'available',
-	'thwiki' => 'available',
-	'trwiki' => 'available',
-	'ukwiki' => 'available',
-	'viwiki' => 'available',
-	// End T341491
-	// Start T379102
-	'frwiki' => 'available',
-	'eswiki' => 'available',
-	'jawiki' => 'available',
-	'itwiki' => 'available',
-	// End T379102
-	'zhwiki' => 'available', // T379264
+	'cawiki' => 'default',
+	'dawiki' => 'default',
+	'elwiki' => 'default',
+	'enwiki' => 'default',
+	'euwiki' => 'default',
+	'fiwiki' => 'default',
+	'lvwiki' => 'default',
+	'nowiki' => 'default',
+	'plwiki' => 'default',
+	'ruwiki' => 'default',
+	'simplewiki' => 'default',
+	'svwiki' => 'default',
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except wikipedias, commons and wikidata (T352087)
+	// Everywhere except 12 wikis (T392121)
 	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
-	'arwiki' => 'available', // T329407
-	'cswiki' => 'available', // T329407
-	'huwiki' => 'available', // T329407
-	'wikitech' => 'available', // T355374
-	// Start T341491
-	'azwiki' => 'available',
-	'bnwiki' => 'available',
-	'dewiki' => 'available',
-	'fawiki' => 'available',
-	'hewiki' => 'available',
-	'hiwiki' => 'available',
-	'idwiki' => 'available',
-	'kowiki' => 'available',
-	'nlwiki' => 'available',
-	'ptwiki' => 'available',
-	'rowiki' => 'available',
-	'thwiki' => 'available',
-	'trwiki' => 'available',
-	'ukwiki' => 'available',
-	'viwiki' => 'available',
-	// End T341491
-	// Start T379102
-	'frwiki' => 'available',
-	'eswiki' => 'available',
-	'jawiki' => 'available',
-	'itwiki' => 'available',
-	// End T379102
-	'zhwiki' => 'available', // T379264
+	'cawiki' => 'default',
+	'dawiki' => 'default',
+	'elwiki' => 'default',
+	'enwiki' => 'default',
+	'euwiki' => 'default',
+	'fiwiki' => 'default',
+	'lvwiki' => 'default',
+	'nowiki' => 'default',
+	'plwiki' => 'default',
+	'ruwiki' => 'default',
+	'simplewiki' => 'default',
+	'svwiki' => 'default',
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except wikipedias, commons and wikidata (T352087)
+	// Everywhere except 12 wikis (T392121)
 	'default' => 'available',
-	'wikipedia' => 'default',
-	'commonswiki' => 'default',
-	'wikidatawiki' => 'default',
-	// Enabled wikipedias
-	'arwiki' => 'available', // T329407
-	'cswiki' => 'available', // T329407
-	'huwiki' => 'available', // T329407
-	'wikitech' => 'available', // T355374
-	// Start T341491
-	'azwiki' => 'available',
-	'bnwiki' => 'available',
-	'dewiki' => 'available',
-	'fawiki' => 'available',
-	'hewiki' => 'available',
-	'hiwiki' => 'available',
-	'idwiki' => 'available',
-	'kowiki' => 'available',
-	'nlwiki' => 'available',
-	'ptwiki' => 'available',
-	'rowiki' => 'available',
-	'thwiki' => 'available',
-	'trwiki' => 'available',
-	'ukwiki' => 'available',
-	'viwiki' => 'available',
-	// End T341491
-	// Start T379102
-	'frwiki' => 'available',
-	'eswiki' => 'available',
-	'jawiki' => 'available',
-	'itwiki' => 'available',
-	// End T379102
-	'zhwiki' => 'available', // T379264
+	'cawiki' => 'default',
+	'dawiki' => 'default',
+	'elwiki' => 'default',
+	'enwiki' => 'default',
+	'euwiki' => 'default',
+	'fiwiki' => 'default',
+	'lvwiki' => 'default',
+	'nowiki' => 'default',
+	'plwiki' => 'default',
+	'ruwiki' => 'default',
+	'simplewiki' => 'default',
+	'svwiki' => 'default',
 ],
 
 'wgDiscussionToolsEnableThanks' => [
