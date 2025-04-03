@@ -2563,6 +2563,7 @@ return [
 	'jawiki' => true,
 	'itwiki' => true,
 	// End T379102
+	'zhwiki' => true, // T379264
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -8028,6 +8029,7 @@ return [
 	'jawiki' => 'available',
 	'itwiki' => 'available',
 	// End T379102
+	'zhwiki' => 'available', // T379264
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
@@ -8065,6 +8067,7 @@ return [
 	'jawiki' => 'available',
 	'itwiki' => 'available',
 	// End T379102
+	'zhwiki' => 'available', // T379264
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
@@ -8102,6 +8105,7 @@ return [
 	'jawiki' => 'available',
 	'itwiki' => 'available',
 	// End T379102
+	'zhwiki' => 'available', // T379264
 ],
 
 'wgDiscussionToolsEnableThanks' => [
