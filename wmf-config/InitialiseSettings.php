@@ -4792,6 +4792,7 @@ return [
 	'default' => false,
 	'group0' => true,
 	'group1' => true,
+	'group2' => true, // short-term testing
 ],
 
 'wmgUseElectronPdfService' => [
