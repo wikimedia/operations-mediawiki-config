@@ -12676,12 +12676,16 @@ return [
 'wgUseCodexSpecialBlock' => [
 	'default' => false,
 	'plwiki' => true,
+	'dewiki' => true,
+	'itwiki' => true
 ],
 
 // T377121
 'wgEnableMultiBlocks' => [
 	'default' => false,
 	'plwiki' => true,
+	'dewiki' => true,
+	'itwiki' => true
 ],
 
 ];
