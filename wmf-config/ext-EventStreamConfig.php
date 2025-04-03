@@ -1586,6 +1586,10 @@ return [
 			// The discussions in T382295#10518032 and T366273#10492412 suggest
 			// renaming this stream to replace 'page' with 'article'.
 		],
+		'mediawiki.page_revert_risk_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
