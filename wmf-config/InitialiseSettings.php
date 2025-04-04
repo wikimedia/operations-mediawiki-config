@@ -5908,16 +5908,11 @@ return [
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
-	'default' => false,
-	'officewiki' => true,
-	'incubatorwiki' => true, // T380768
-	'dagwiki' => true, // T381002
-	'wikivoyage' => true,
-	'wiktionary' => true,
+	'default' => true,
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontendTalkPages' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
