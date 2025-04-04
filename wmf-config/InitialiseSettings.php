@@ -6941,11 +6941,6 @@ return [
 	'default' => 1800,
 ],
 
-// Should match the definition in wgGlobalBlockingAllowedRanges
-'wgCheckUserCentralIndexRangesToExclude' => [
-	'default' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
-],
-
 'wgCheckUserEnableTempAccountsOnboardingDialog' => [
 	'default' => false,
 ],
@@ -11072,7 +11067,6 @@ return [
 ],
 
 'wgGlobalBlockingAllowedRanges' => [
-	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
 	'default' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
 	'fishbowl' => [],
 	'private' => [],
