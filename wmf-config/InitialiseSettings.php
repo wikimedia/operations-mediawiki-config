@@ -5826,7 +5826,7 @@ return [
 ],
 
 'wgParsoidFragmentSupport' => [
-	'default' => 'v2', // T380758
+	'default' => 'v3', // T380758,T390420
 ],
 
 'wgParsoidSelectiveUpdateSampleRate' => [
