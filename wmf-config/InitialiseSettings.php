@@ -7864,6 +7864,11 @@ return [
 	'testwikidatawiki' => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 40, 42, 123, 570, 734, 735, 999, 1234, 3300, 11424, 12345 ],
 ],
 
+'wgEntitySchemaTmpFixRdfUri' => [
+	'wikidatawiki' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseFlow' => [
 	'default' => false,
 	'flow' => true,
