@@ -742,7 +742,6 @@ $wgObjectCaches['db-mainstash'] = [
 	'class' => 'SqlBagOStuff',
 	'servers' => $mainStashServers,
 	'tableName' => 'objectstash',
-	'multiPrimaryMode' => true,
 	'purgePeriod' => 100,
 	'purgeLimit' => 1000,
 	'reportDupes' => false,
