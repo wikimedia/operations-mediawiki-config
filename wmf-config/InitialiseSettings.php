@@ -12756,4 +12756,10 @@ return [
 	'itwiki' => true
 ],
 
+// T377975
+'wgTemplateDataEnableDiscovery' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 ];
