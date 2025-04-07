@@ -2622,6 +2622,7 @@ return [
 			'abusefilter-log-detail' => true,
 		], // T95180
 		'rollbacker' => [ 'rollback' => true ], // T95180
+		'translator' => [ 'autoconfirmed' => true ], // T391171
 	],
 	'+tcywiki' => [
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T385828
@@ -4604,6 +4605,7 @@ return [
 			'patroller', // T95180
 			'rollbacker', // T95180
 			'autopatrolled', // T95180
+			'translator', // T391171
 		],
 	],
 	'+tcywiki' => [
@@ -5820,7 +5822,7 @@ return [
 	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
+		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled', 'translator' ], // T95180, T391171
 	],
 	'+tcywiki' => [
 		'sysop' => [ 'extendedconfirmed' ], // T385828

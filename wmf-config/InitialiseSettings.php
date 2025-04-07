@@ -8303,6 +8303,9 @@ return [
 	'ruwiki' => [ // T362440
 		'userGroups' => [ 'autoreview', 'editor', 'sysop' ]
 	],
+	'tawiki' => [ // T391171
+		'userGroups' => [ 'translator' ]
+	],
 	'trwiki' => [ // T356879
 		'userGroups' => [ 'translator' ]
 	],
