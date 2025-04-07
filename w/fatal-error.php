@@ -1,24 +1,47 @@
 <?php
-
 /**
- * For intentionally causing fatal errors in production, to confirm error/logging behavior.
+ * Intentionally cause a fatal or slow response in production, to test
+ * error handling, logging, and caching behavior.
  *
- * Usage: browse to a url of the form:
- *   https://test.wikipedia.org/w/fatal-error.php?password=foo&action=nomethod&postsend=no
+ * This works both via mwdebug, and directly on production MediaWiki clusters.
+ * It is tolerated in production because the endpoint requires a private token
+ * obtained via the deployment shell.
  *
- * Allowed values for "postsend" are "yes" and "no".  "yes" causes the fatal error to be
- * executed after output is sent to the browser, so it is expected that error information
- * will not be displayed on the page.
+ * Usage:
  *
- * See $allowedActions below for allowed values for "action".
+ *   Browse to a URL like so
+ *   https://test.wikipedia.org/w/fatal-error.php?password=foo&action=nomethod
+ *
+ * Options:
+ *
+ * - action (Required) See $allowedActions below for allowed values for "action".
+ *
+ * - from (Optional) By default, the action is performed directly during the main
+ *   part of the response. For error and timeout actions, you can set "from"
+ *   to one of "postsend", "shutdown", or "destruct" to cause the fatal error
+ *   after the output is sent to the browser. It is expected that these errors
+ *   will not be displayed on the page, but instead be available via Logstash,
+ *   mwlog, local error logs, etc.
+ *
+ * Local development:
+ *
+ * Note that from=postsend requires MediaWiki, and patches changing this
+ * should be tested on mwdebug instead. Others can be developed locally:
+ *
+ * - Comment out the three require_once statements below,
+ *   and put `$fatalErrorPassword = 'local';` there instead.
+ * - Run `php -S localhost:4000` in the repo.
+ * - Navigate to http://localhost:4000/w/fatal-error.php?password=local&action=cache-slow-swr
  */
 
 // This file is reached with multiple paths due to symbolic links for the doc root folders,
 // all of the duplicate class names are only from this file being processed multiple times
 // phpcs:disable Generic.Classes.DuplicateClassName.Found
 
+define( 'MW_ENTRY_POINT', 'fatal-error' );
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
-require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
+require_once MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 require_once __DIR__ . '/../private/FatalErrorSettings.php';
 
 CauseFatalError::go();
@@ -30,25 +53,35 @@ CauseFatalError::go();
 class CauseFatalError {
 	/** @var string[] */
 	private static $allowedActions = [
-		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault', 'coredump',
+		'noerror',
+		'exception',
+		'nomethod',
+		'oom',
+		'timeout',
+		'segfault',
+		'coredump',
+		// Test request coalescing (ignores 'from')
+		'cache',
+		'cache-slow',
+		'cache-slow-swr',
 	];
 	/** @var string[] */
 	private static $allowedFrom = [
-		'main', 'postsend', 'shutdown', 'destruct',
+		'main',
+		'postsend',
+		'shutdown',
+		'destruct',
 	];
 
 	/**
 	 * Checks request parameters and (if possible) performs the requested action
 	 */
 	public static function go() {
-		$mediawiki = new MediaWiki();
-		$request = RequestContext::getMain()->getRequest();
-
 		// This global should probably be renamed but that requires coordination with
 		// deployment to the private file that sets it
 		// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 		global $fatalErrorPassword;
-		$password = $request->getRawVal( 'password' ) ?? '';
+		$password = $_GET['password'] ?? '';
 		if ( !isset( $fatalErrorPassword ) ) {
 			echo "Error: password not found in file FatalErrorSettings.php.";
 			return;
@@ -58,14 +91,19 @@ class CauseFatalError {
 			return;
 		}
 
-		$action = $request->getRawVal( 'action' ) ?? 'noerror';
-		$from = $request->getRawVal( 'from' ) ?? 'main';
+		$action = $_GET['action'] ?? 'noerror';
+		$from = $_GET['from'] ?? 'main';
 
 		$paramsOkay = true;
 		$checkActionResult = static::checkParam( $action, 'action', self::$allowedActions );
 		if ( $checkActionResult !== true ) {
 			echo "{$checkActionResult}";
 			$paramsOkay = false;
+		}
+
+		if ( strpos( $action, 'cache' ) === 0 && $from !== 'main' ) {
+			echo "Error: 'from' parameter not valid on cache action.";
+			return;
 		}
 
 		$checkFromResult = static::checkParam( $from, 'from', self::$allowedFrom );
@@ -78,7 +116,15 @@ class CauseFatalError {
 			return;
 		}
 
-		$actionMethod = __CLASS__ . '::do' . ucFirst( $action );
+		// foo > Foo,         foo-bar > FooBar
+		// foo > self::doFoo, foo-bar > self::doFooBar
+		$actionCamel = preg_replace_callback(
+			'/(?:-|^)([a-z])/',
+			fn ( $m ) => strtoupper( $m[1] ),
+			$action
+		);
+		$actionMethod = __CLASS__ . '::do' . $actionCamel;
+
 		if ( !is_callable( $actionMethod ) ) {
 			// Because the action parameter has already been validated against possible values,
 			// this is a really just a sanity check and should never actually occur.
@@ -97,6 +143,7 @@ class CauseFatalError {
 		// 3. destructor callbacks(), new stack for each.
 
 		if ( $from === 'postsend' ) {
+			$mediawiki = new MediaWiki();
 			DeferredUpdates::addCallableUpdate( $actionMethod );
 			$mediawiki->doPostOutputShutdown( 'normal' );
 		} elseif ( $from === 'shutdown' ) {
@@ -191,6 +238,28 @@ class CauseFatalError {
 		posix_setrlimit( POSIX_RLIMIT_CORE, (int)10e9, POSIX_RLIMIT_INFINITY );
 		// 6 is the value of SIGABRT
 		posix_kill( posix_getpid(), 6 );
+	}
+
+	public static function doCache() {
+		header( 'Cache-Control: max-age=30' );
+		header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
+		print 'And the winner is ' . random_int( 1e5, 1e6 ) . "\n";
+	}
+
+	public static function doCacheSlow() {
+		sleep( 10 );
+
+		header( 'Cache-Control: max-age=30' );
+		header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
+		print 'And the winner is ' . random_int( 1e5, 1e6 ) . "\n";
+	}
+
+	public static function doCacheSlowSwr() {
+		sleep( 10 );
+
+		header( 'Cache-Control: max-age=30, stale-while-revalidate=60' );
+		header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
+		print 'And the winner is ' . random_int( 1e5, 1e6 ) . "\n";
 	}
 }
 

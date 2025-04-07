@@ -98,19 +98,12 @@ if ( $wmgRealm == 'labs' ) {
 		'meta.wikimedia.beta.wmflabs.org',
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
-		'sso.wikimedia.beta.wmflabs.org',
+		'auth.wikimedia.beta.wmflabs.org',
 		'wikifunctions.beta.wmflabs.org',
 
 		// new wmcloud instances
 		'wikipedia.beta.wmcloud.org',
 		'wikivoyage.beta.wmcloud.org',
-	];
-
-	# Attempt to auto block users using faulty servers
-	# See also http://www.us.sorbs.net/general/using.shtml
-	$wgEnableDnsBlacklist = true;
-	$wgDnsBlacklistUrls   = [
-		'proxies.dnsbl.sorbs.net.',
 	];
 
 	if ( $wmgUseGlobalPreferences ) {
@@ -162,13 +155,15 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseCentralNotice ) {
 		// Emit CSP headers on banner previews. This can go away when full CSP
 		// support (T135963) is deployed.
-		// www.pages04.net is used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses to our email campaign vendor
-		$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org wikifunctions.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://wikifunctions.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
+	// www.pages04.net and app.goacoustic.com are used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses or phone numbers to our email campaign vendor
+		$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org wikifunctions.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://wikifunctions.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org wikifunctions.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
 	}
 
 	if ( $wmgUseCite ) {
 		// Temporary until we deploy to production, T236894
-		$wgCiteBookReferencing = true;
+		$wgCiteSubReferencing = true;
+		// Temporary while developing feature, T378807
+		$wgCiteBacklinkCommunityConfiguration = true;
 	}
 
 	// Labs override for GlobalCssJs
@@ -190,8 +185,6 @@ if ( $wmgRealm == 'labs' ) {
 		// Labs overrides
 		$wgUrlShortenerReadOnly = false;
 		$wgUrlShortenerServer = 'w-beta.wmflabs.org';
-		$wgUrlShortenerDBCluster = false;
-		$wgUrlShortenerDBName = 'wikishared';
 		$wgUrlShortenerEnableSidebar = true;
 		$wgUrlShortenerAllowedDomains = [
 			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
@@ -227,20 +220,13 @@ if ( $wmgRealm == 'labs' ) {
 
 	// Labs override for BounceHandler
 	if ( $wmgUseBounceHandler ) {
-		// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
-		$wgBounceHandlerCluster = false;
-		$wgBounceHandlerSharedDB = false;
+		unset( $wgVirtualDomainsMapping['virtual-bouncehandler'] );
 		// deployment-mx03.deployment-prep.eqiad1.wikimedia.cloud
 		$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.6.221' ];
-		$wgBounceHandlerUnconfirmUsers = true;
-		$wgBounceRecordLimit = 5;
 		$wgVERPdomainPart = 'beta.wmflabs.org';
 	}
 
 	if ( $wmgUseTimedMediaHandler ) {
-		$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] = [
-			"commons" => [ 'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php' ]
-		];
 		// enable transcoding on labs
 		$wgEnableTranscode = true;
 		// use new ffmpeg build w/ VP9 & Opus support
@@ -256,13 +242,15 @@ if ( $wmgRealm == 'labs' ) {
 		$wgUseInstantCommons = true;
 	}
 
-	if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
-
-		// Enable Tabular data namespace on Commons - T148745
-		$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
-
-		// Enable Map (GeoJSON) data namespace on Commons - T149548
-		$wgJsonConfigs['Map.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
+	if ( $wmgUseJsonConfig ) {
+		// T374746 cache invalidation issues for globaljsonlinks;
+		// globaljsonlinks* shared tables are not live on beta cluster
+		// as of 2024-11-14.
+		// Override the enabling for testwiki and testcommonswiki
+		// so their beta equivalents can run without breaking links
+		// updates and cache invalidation propagation.
+		$wgTrackGlobalJsonLinks = false;
+		$wgTrackGlobalJsonLinksNamespaces = false;
 	}
 
 	if ( $wmgUseMath ) {
@@ -272,6 +260,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
 		$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 		$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
+		$wgMathWikibasePropertyIdInDefiningFormula = 'P253157';
+		$wgMathWikibasePropertyIdSymbolRepresents = 'P253158';
 	}
 
 	// CORS (cross-domain AJAX, T22814)
@@ -393,7 +383,7 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseStopForumSpam ) {
 		wfLoadExtension( 'StopForumSpam' );
 		$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
-		$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
+		$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
 	}
 
 	$wgMessageCacheType = CACHE_ACCEL;
@@ -407,11 +397,6 @@ if ( $wmgRealm == 'labs' ) {
 		// Overrides CommonSettings.php which would use LabsServices.php,
 		// but we can't use variables there.
 		$wgGEImageRecommendationServiceUrl = "https://$lang.$site.org/w/api.php";
-		// Community updates module experiment, T374664
-		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
-			[ 'control', [ 'user-bucket-growth', 'growth-community-updates', 50 ] ],
-			[ 'community-updates-module', [ 'user-bucket-growth', 'growth-community-updates', 100 ] ],
-		];
 	}
 
 	// Let Beta Cluster Commons do upload-from-URL from production Commons.
@@ -453,9 +438,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Point to the deployment-prep kartotherian server, see T310150.
 	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 
-	// Temporary feature flag for the Parsoid support for Kartographer (T340134)
-	$wgKartographerParsoidSupport = true;
-
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
@@ -480,9 +462,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
 		$wgGroupPermissions['user']['campaignevents-email-participants'] = true;
-		// This group is not needed in beta. Redundant entries in wgAddGroups and
-		// wgRemoveGroups are harmless.
-		unset( $wgGroupPermissions['event-organizer'] );
 	}
 
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
@@ -502,39 +481,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgAutoModeratorLiftWingAddHostHeader = false;
 	}
 
-	if ( $wmgUseReportIncident ) {
-		wfLoadExtension( 'ReportIncident' );
-	}
-
-	// T369945
-	// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
-	if ( $wmgUseChart ) {
-		wfLoadExtension( 'Chart' );
-		$wgChartServiceUrl = $wmgLocalServices['chart-renderer'];
-
-		// Set up chart pages with JsonConfig
-		$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
-		$wgJsonConfigs['Chart.JsonConfig'] = [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".chart", and contain at least one symbol
-			'pattern' => '/.\.chart$/',
-			'license' => 'CC0-1.0',
-			// allows the cache keys to be shared between wikis
-			'isLocal' => false,
-		];
-
-		if ( $wgDBname === 'commonswiki' ) {
-			$wgJsonConfigs['Chart.JsonConfig']['store'] = true;
-		} else {
-			$wgJsonConfigs['Chart.JsonConfig']['remote'] = [
-				'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
-			];
-		}
-
-		// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
-	}
-
 	// T372527
 	if ( $wmgUseCommunityRequests ) {
 		wfLoadExtension( 'CommunityRequests' );
@@ -547,8 +493,8 @@ if ( $wmgRealm == 'labs' ) {
 	// Remove any references to the checkuser-temporary-account-viewer group on the beta clusters, as this group
 	// is only present when CheckUser is installed. As it is not installed, we should remove the group and
 	// the auto-promotion conditions for the group.
-	unset( $wgAutopromoteOnce['onEdit']['checkuser-temporary-account-viewer'] );
-	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
+	unset( $wgAutopromoteOnce['onEdit']['temporary-account-viewer'] );
+	unset( $wgGroupPermissions['temporary-account-viewer'] );
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
@@ -625,5 +571,8 @@ if ( $wmgRealm == 'labs' ) {
 			'youtube' => 'Q631356',
 		];
 	}
+
+	// T385592
+	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
 }
 // end safeguard

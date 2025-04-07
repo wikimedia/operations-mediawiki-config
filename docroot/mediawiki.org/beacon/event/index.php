@@ -1,16 +1,14 @@
 <?php
 
 require_once __DIR__ . '/../../../../multiversion/MWMultiVersion.php';
-require_once __DIR__ . '/../../../../src/ServiceConfig.php';
-require MWMultiVersion::getMediaWiki( 'extensions/EventLogging/includes/Libs/Legacy/EventLoggingLegacyConverter.php' );
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
+use MediaWiki\Extension\EventBus\EventBus;
 use MediaWiki\Extension\EventLogging\Libs\Legacy\EventLoggingLegacyConverter;
-use Wikimedia\MWConfig\ServiceConfig;
 
 /**
  * Expects that the incoming HTTP query string is a 'qson' event (URL encoded JSON string).
- * This event will be parsed, converted and posted to EVENT_INTAKE_URL env var,
- * or the local eventgate-analytics-external service.
+ * This event will be parsed, converted and sent along via EventLogging::submit.
  */
 
 // NOTE: As of 2024-01, the only legacy EventLogging schema this needs to support is
@@ -28,33 +26,33 @@ use Wikimedia\MWConfig\ServiceConfig;
 // out there that send events using this legacy endpoint, we can remove this endpoint and related
 // code (EventLogging extension's EventLoggingLegacyConverter) entirely.
 
-$wmgServiceConfig = ServiceConfig::getInstance();
-
-// Get the URL to which we should POST events.
-if ( getenv( 'EVENT_INTAKE_URL' ) ) {
-	$eventIntakeUrl = getenv( 'EVENT_INTAKE_URL' );
-} elseif ( $wmgServiceConfig->getLocalService( 'eventgate-analytics-external' ) ) {
-	$eventIntakeUrl = $wmgServiceConfig->getLocalService( 'eventgate-analytics-external' ) .
-		'/v1/events?hasty=true';
-}
-
-if ( !isset( $eventIntakeUrl ) ) {
-	throw new InvalidArgumentException(
-		"Could not determine event intake url, must set one of EVENT_INTAKE_URL env var " .
-		"or a 'eventgate-analytics-external' service in MediaWiki config."
-	);
-}
-
 try {
-	// Attempt to convert the legacy event from the HTTP request query string.
+	// Return 204 ASAP, just like /beacon/event handled by varnish used to.
+	http_response_code( 204 );
+
+	// Attempt to convert the legacy event from the HTTP request query string
 	$convertedEvent = EventLoggingLegacyConverter::fromHttpRequest();
 
-	// NOTE: httpProxyPostJson will handle errors and set http_response_code and response body.
-	EventLoggingLegacyConverter::httpProxyPostJson( $eventIntakeUrl, $convertedEvent );
+	$streamName = $convertedEvent['meta']['stream'] ?? null;
+	if ( !$streamName ) {
+		throw new RuntimeException(
+			'Cannot submit event: event must have stream name set in  meta.stream field.'
+		);
+	}
+
+	// NOTE: Here we use EventBus (via 'EventBus.EventBusFactory' MW Service)
+	// directly to send the event, rather than 'EventLogging.EventSubmitter'.
+	// EventLogging.EventSubmitter is a EventBusEventSubmitter in production,
+	// which wraps the EventBus->send call in a DeferredUpdate.
+	// Because this /beacon/event/index.php file is a custom PHP endpoint,
+	// DeferredUpdates are not initialized to execute.  We don't really
+	// want this send() call to be in a DeferredUpdate anyway, as we have already
+	// closed the HTTP response and can just send the event now.
+	EventBus::getInstanceForStream( $streamName )->send( $convertedEvent );
 } catch ( Throwable $e ) {
 	trigger_error(
 		'EventLoggingLegacyConverter: Failed proxying legacy EventLogging event query string ' .
 			'to WMF Event Platform JSON: ' . get_class( $e ) . ': ' . $e->getMessage(),
-		E_USER_ERROR
+		E_USER_WARNING
 	);
 }

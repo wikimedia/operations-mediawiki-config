@@ -99,7 +99,6 @@ class MWConfigCacheGenerator {
 			( require $configDir . '/core-Permissions.php' ) +
 			( require $configDir . '/ext-ORES.php' ) +
 			( require $configDir . '/ext-CirrusSearch.php' ) +
-			( require $configDir . '/ext-Babel.php' ) +
 			( require $configDir . '/ext-EventLogging.php' ) +
 			( require $configDir . '/ext-EventStreamConfig.php' ) +
 			( require $configDir . '/ext-GrowthExperiments.php' ) +

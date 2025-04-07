@@ -4,6 +4,9 @@ if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
 	exit( 1 );
 }
 
+use Wikimedia\MWConfig\ClusterConfig;
+
+require_once __DIR__ . '/../src/ClusterConfig.php';
 require_once __DIR__ . '/MWMultiVersion.php';
 
 function wmfUsage() {
@@ -19,6 +22,64 @@ The --wiki option is required for most maintenance scripts.
 EOT
 	);
 	exit( 1 );
+}
+
+/**
+ * Waits for the mesh network to be available before allowing the script to be
+ * executed.
+ *
+ * In some conditions, a script might be executed while the service mesh is
+ * unavailable or unhealthy, which results in undefined behaviour for some
+ * scripts. See T387208.
+ *
+ * The possibility of bypassing the check is offered for specific emergency situations
+ * and/or to avoid checking for every single wiki in a recurring script like
+ * foreachwiki.
+ */
+function wmfWaitForMesh() {
+	global $wmgRealm;
+	$skip = getenv( 'MESH_CHECK_SKIP' );
+	// The service mesh is only used in production.
+	// Furthermore, we're limiting ourselves to k8s-only. We will soon have completely dismissed the
+	// non-k8s users of mwscript besides the deployment hosts.
+	if ( $skip == "1" || $wmgRealm !== 'production' || !ClusterConfig::getInstance()->isK8s() ) {
+		return;
+	}
+
+	$meshAvailable = false;
+
+	$ch = curl_init();
+	curl_setopt( $ch, CURLOPT_URL, 'http://localhost:9361/healthz' );
+	// We set aggressive timeouts as it's localhost and it's a simple admin interface.
+	// Random sampling in production yields sub-millisecond response times for this endpoint
+	curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT_MS, 100 );
+	curl_setopt( $ch, CURLOPT_TIMEOUT_MS, 200 );
+	// We want to return the curl response and not display it.
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+
+	// We retry 20 times at increasing time intervals
+	for ( $i = 0; $i < 20; $i++ ) {
+		if ( curl_exec( $ch ) == "OK" && curl_getinfo( $ch, CURLINFO_HTTP_CODE ) == 200 ) {
+			$meshAvailable = true;
+			break;
+		}
+			// sleep 10 * i^2 milliseconds, so 10, 40, 90, 250... for a total
+			// possible delay of 18 seconds
+			usleep( 10000 * $i * $i );
+	}
+
+	curl_close( $ch );
+
+	if ( !$meshAvailable ) {
+		fwrite( STDERR, <<<EOT
+The service mesh is unavailable, which can lead to unexpected results.
+
+Therefore, the script will not be executed. If you are *very* sure your script will
+not need the service mesh at all, you can run it again with MESH_CHECK_SKIP=1
+EOT
+		);
+		exit( 1 );
+	}
 }
 
 /**
@@ -76,12 +137,10 @@ EOT
 		$relPath = "maintenance/$relPath";
 	}
 
-	// For addwiki.php, the wiki DB doesn't yet exist, and for some
-	// other maintenance scripts we don't care what wiki DB is used...
+	// For some maintenance scripts we don't care what wiki DB is used...
 	$wikilessScripts = [
 		'maintenance/purgeList.php',
 		'maintenance/purgeMessageBlobStore.php',
-		'extensions/WikimediaMaintenance/addWiki.php',
 		'extensions/WikimediaMaintenance/dumpInterwiki.php',
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php',
@@ -155,4 +214,6 @@ EOT
 }
 
 // Run the script!
-require_once wmfGetMWScriptWithArgs();
+$scriptWithArgs = wmfGetMWScriptWithArgs();
+wmfWaitForMesh();
+require_once $scriptWithArgs;

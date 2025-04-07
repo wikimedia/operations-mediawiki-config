@@ -55,7 +55,7 @@ function wmfSetupEtcd( $etcdHost ) {
  * @param array &$lbFactoryConf LBFactoryConf array to be updated using $localDbConfig
  */
 function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
-	global $wmgRemoteMasterDbConfig, $wmgPCServers;
+	global $wmgRemoteMasterDbConfig, $wmgPCServers, $wmgMainStashServers;
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
 	$lbFactoryConf['groupLoadsBySection'] = $localDbConfig['groupLoadsBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
@@ -90,13 +90,9 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'es6' => [ 'cluster30' ],
 		'es7' => [ 'cluster31' ],
 		'x1' => [ 'extension1' ],
-		'x2' => [ 'extension2' ],
-	];
-	// x2 uses circular replication so there is no need for cross-DC connections
-	$circularReplicationClusters = [
-		'x2' => true,
 	];
 	$wmgPCServers = [];
+	$wmgMainStashServers = [];
 	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
 		// While parsercache sections are included in externalLoads, they are not
 		// accessed through LBFactoryMulti. Instead, populate to wmgPCServers for
@@ -105,28 +101,36 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 			// Expected parsercache $dbctlLoads structure: [ [ 'pcNNNN' => 0 ], [] ]
 			if ( is_array( $dbctlLoads ) && isset( $dbctlLoads[0] ) && is_array( $dbctlLoads[0] ) ) {
 				$host = array_key_first( $dbctlLoads[0] );
-				if ( is_string( $host ) ) {
+				if ( is_string( $host ) && $dbctlLoads[0][$host] !== 0 ) {
 					$wmgPCServers[$dbctlCluster] = $localDbConfig['hostsByName'][$host] ?? $host;
 				}
 			}
 			continue;
 		}
-		// Merge the same way as sectionLoads
-		if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
-			$localMaster = array_key_first( $dbctlLoads[0] );
-			// Override the 'ssl' flag set in masterTemplateOverrides via db-production.php
-			$lbFactoryConf['templateOverridesByServer'][$localMaster]['ssl'] = false;
-			$loadByHost = array_merge( ...$dbctlLoads );
-		} else {
-			$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
-			if ( $crossDCLoads ) {
-				$remoteMaster = array_key_first( $crossDCLoads );
-				$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
-				$lbFactoryConf['hostsByName'][$remoteMaster] =
-					$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
-			} else {
-				$loadByHost = array_merge( ...$dbctlLoads );
+		if ( substr( $dbctlCluster, 0, 2 ) === 'ms' ) {
+			// Expected mainstash $dbctlLoads structure: [ [ 'dbNNNN' => 0 ], [] ]
+			if ( is_array( $dbctlLoads ) && isset( $dbctlLoads[0] ) && is_array( $dbctlLoads[0] ) ) {
+				$host = array_key_first( $dbctlLoads[0] );
+				if ( is_string( $host ) && $dbctlLoads[0][$host] !== 0 ) {
+					$wmgMainStashServers[$dbctlCluster] = $localDbConfig['hostsByName'][$host] ?? $host;
+				}
 			}
+			continue;
+		}
+
+		if ( $dbctlCluster == 'x2' ) {
+			// To be removed. Ignore.
+			continue;
+		}
+
+		$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
+		if ( $crossDCLoads ) {
+			$remoteMaster = array_key_first( $crossDCLoads );
+			$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
+			$lbFactoryConf['hostsByName'][$remoteMaster] =
+				$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
+		} else {
+			$loadByHost = array_merge( ...$dbctlLoads );
 		}
 
 		foreach ( $externalStoreAliasesByCluster[$dbctlCluster] as $mwLoadName ) {

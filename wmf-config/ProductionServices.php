@@ -83,8 +83,6 @@ $common = [
 	'shellbox-timeline' => 'http://localhost:6028',
 	'shellbox-video' => 'http://localhost:6036',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
-	// chart-renderer is not deployed in production yet; this has to be set here
-	// because it's also set for labs in LabsServices.php, where it is deployed
 	'chart-renderer' => 'http://localhost:6039',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',

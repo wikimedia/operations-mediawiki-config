@@ -9,26 +9,28 @@
  */
 
 return [
-	'wgMinervaApplyKnownTemplateHacks' => [
-		// Temporarily enabled for cached HTML
-		'default' => true,
-		// [[phab:T361589]]
-		'frwiki' => false,
-	],
 	// T210553, T210554
 	'wgMinervaPageIssuesNewTreatment' => [
 		'default' => [
-			"base" => true,
+			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
 	'wgMinervaDonateLink' => [
 		'default' => [
-			'base' => true,
-		],
-		// T360783
-		'nowikimedia' => [
 			'base' => false,
+			'loggedin' => false,
+			'amc' => false,
+		],
+	],
+
+	'wgMinervaDonateBanner' => [
+		'default' => [
+			'base' => true,
+			'loggedin' => false,
+			'amc' => false,
 		],
 	],
 
@@ -42,10 +44,6 @@ return [
 			'base' => true,
 			'loggedin' => true,
 			'amc' => true,
-		],
-		'testwiki' => [
-			'base' => true,
-			'loggedin' => true,
 		],
 	],
 	'wmgMinervaNightModeQueryString' => [
@@ -72,10 +70,13 @@ return [
 		'default' => [
 			'base' => false,
 			'loggedin' => true,
+			'amc' => true,
 		],
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -89,6 +90,8 @@ return [
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -102,19 +105,22 @@ return [
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
 	'wgMinervaOverflowInPageActions' => [
 		'default' => [
 			'base' => false,
-			'beta' => false,
 			'loggedin' => true,
 			'amc' => true,
 		],
 		// T290812
 		'ptwikinews' => [
 			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -125,13 +131,11 @@ return [
 			'loggedin' => false,
 			'amc' => true,
 		],
-		// T365323
-		'enwiktionary' => [
+		// T365323, T290812
+		'mobile-anon-categories' => [
 			'base' => true,
-		],
-		// T290812
-		'ptwikinews' => [
-			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
 		],
 	],
 
@@ -141,15 +145,13 @@ return [
 			'base' => false,
 			'beta' => false,
 			'loggedin' => true,
+			'amc' => true,
 		],
 		'mobile-anon-talk' => [
 			'base' => true,
 			'beta' => true,
 			'loggedin' => true,
-		],
-		// T290812
-		'ptwikinews' => [
-			'base' => true,
+			'amc' => true,
 		],
 	],
 
@@ -179,6 +181,7 @@ return [
 		'trwiki' => true,
 		'wikifunctionswiki' => true, // T345463
 		'newiki' => true, // T347814
+		'fawiki' => true,
 	],
 
 	// T183665

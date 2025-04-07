@@ -17,23 +17,22 @@ return [
 		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
-			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
-			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-omega' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		// cloudelastic is not duplicated in labs, it is a write-only cluster and multi-cluster
 		// is sufficiently tested with the clusters above.
@@ -43,7 +42,7 @@ return [
 		// No parser cache DBs in beta yet
 		'parsercache-dbs' => [],
 		'urldownloader' => 'http://url-downloader.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
-		'parsoid' => 'http://parsoid.svc.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
+		'parsoid' => 'http://appservers.svc.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://deployment-docker-mathoid02.deployment-prep.eqiad1.wikimedia.cloud:10044',
 		'eventgate-analytics' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8192',
 		'eventgate-analytics-external' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8492',
@@ -101,6 +100,6 @@ return [
 		'sessionstore' => 'http://sessionstore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'echostore' => 'http://echostore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 
-		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284/v1/chart/render',
+		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284',
 	],
 ];

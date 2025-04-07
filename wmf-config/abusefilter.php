@@ -132,7 +132,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotifications = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
+		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T383332
 		$wgAbuseFilterActions['block'] = true; // T273864
 		break;
 	case 'enwikinews':
@@ -494,6 +494,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-log-private'] = true; // T344398
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T344398
 		$wgGroupPermissions['rollbacker']['abusefilter-log-private'] = true; // T39676
+		$wgGroupPermissions['abusefilter']['abusefilter-log-private'] = true; // T386879
+		$wgGroupPermissions['abusefilter']['abusefilter-view-private'] = true; // T386879
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T386879
+		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T386879
 		break;
 	case 'zhwikibooks':
 		$wgAbuseFilterActions['block'] = true; // T330026

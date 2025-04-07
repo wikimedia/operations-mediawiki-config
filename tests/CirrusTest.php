@@ -330,7 +330,7 @@ class CirrusTest extends WgConfTestCase {
 			'zhwiki' => [ 'zhwiki', 'wiki',
 				[
 					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
+					'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
 					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 					'wgCirrusSearchMaxPhraseTokens' => 10,
 				],

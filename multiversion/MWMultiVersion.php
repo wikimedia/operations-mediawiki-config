@@ -37,6 +37,7 @@ class MWMultiVersion {
 	public const DB_LISTS = [
 		// Expand computed dblists with `./multiversion/bin/expanddblist`.
 		// When updating this list, run `composer manage-dblist update` afterwards.
+		'preinstall',
 		'wikipedia',
 		'special',
 		'private',
@@ -46,6 +47,7 @@ class MWMultiVersion {
 		'flaggedrevs',
 		'small',
 		'skin-themes',
+		'vector-2022-language-links',
 		'legacy-vector',
 		'medium',
 		'wikimania',
@@ -60,6 +62,7 @@ class MWMultiVersion {
 		'group1',
 		'wikitech',
 		'nonecho',
+		'mobile-anon-categories',
 		'mobile-anon-talk',
 		'modern-mainpage',
 		'nowikidatadescriptiontaglines',
@@ -174,7 +177,7 @@ class MWMultiVersion {
 	 * Create an instance by HTTP host name.
 	 *
 	 * Use this for all web requests, except those rewritten from
-	 * upload.wikimedia.org to /w/thumb.php.
+	 * upload.wikimedia.org to /w/thumb.php, or the shared auth domain.
 	 *
 	 * @param string $serverName HTTP host name from `$_SERVER['SERVER_NAME']`.
 	 * @return MWMultiVersion
@@ -205,17 +208,17 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Create an instance for sso.wikimedia.org requests.
+	 * Create an instance for auth.wikimedia.org requests.
 	 *
 	 * For example:
-	 * <https://sso.wikimedia.org/en.wikipedia.org/wiki/Special:Userlogin>
+	 * <https://auth.wikimedia.org/enwiki/wiki/Special:Userlogin>
 	 *
 	 * @param ?string $requestUri CGI path info, from `$_SERVER['REQUEST_URI']`.
 	 * @return MWMultiVersion
 	 */
-	public static function initializeForSsoDomain( $requestUri ) {
+	public static function initializeForSharedDomain( $requestUri ) {
 		$instance = self::createInstance();
-		$instance->setSiteInfoForSsoDomain( $requestUri );
+		$instance->setSiteInfoForSharedDomain( $requestUri );
 		return $instance;
 	}
 
@@ -296,9 +299,10 @@ class MWMultiVersion {
 		) {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
-		} elseif ( $serverName === 'sso.wikimedia.org' || $serverName === 'sso.wikimedia.beta.wmflabs.org' ) {
-			// SSO URL hit. The condition here must match the one in CommonSettings.php where $wmgPathPrefix is set.
-			return self::initializeForSsoDomain( $requestUri );
+		} elseif ( $serverName === 'auth.wikimedia.org' || $serverName === 'auth.wikimedia.beta.wmflabs.org' ) {
+			// Shared auth domain URL hit.
+			// The condition here must match the one in CommonSettings.php where $wmgSharedDomainPathPrefix is set.
+			return self::initializeForSharedDomain( $requestUri );
 		} else {
 			// Regular URL hit (wiki of origin)...
 			return self::initializeForWiki( $serverName );
@@ -330,6 +334,7 @@ class MWMultiVersion {
 			'www.wikifunctions.org' => 'wikifunctions',
 			'wikipedia-pl-sysop.wikimedia.org' => 'sysop_pl',
 			'wikipedia-it-arbcom.wikimedia.org' => 'arbcom_it',
+			'wikipedia-zh-arbcom.wikimedia.org' => 'arbcom_zh',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
@@ -397,18 +402,20 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize object state from an sso.wikimedia.org request path.
+	 * Initialize object state from an auth.wikimedia.org request path.
 	 *
 	 * @param ?string $requestUri
 	 * @return void
 	 */
-	private function setSiteInfoForSsoDomain( $requestUri ) {
+	private function setSiteInfoForSharedDomain( $requestUri ) {
 		$pathBits = explode( '/', $requestUri, 3 );
 		if ( count( $pathBits ) < 3 ) {
 			self::error( "Invalid request URI (requestUri=" . $requestUri . "), can't determine language.\n" );
 		}
-		[ , $serverName, ] = $pathBits;
-		$this->setSiteInfoForWiki( $serverName );
+		[ , $dbname, ] = $pathBits;
+		// No validation of $dbname at this point - if it's invalid, an error will be produced
+		// by getMediaWiki() when it checks isMissing().
+		$this->db = $dbname;
 	}
 
 	/**
@@ -617,6 +624,18 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Whether the mapped wiki ID is marked as not fully installed. An error
+	 * should be shown to web clients, but maintenance scripts should be
+	 * allowed, since maintenance scripts are used to do the installation.
+	 *
+	 * @return bool
+	 */
+	public function isPreInstall() {
+		global $wmgRealm;
+		return in_array( 'preinstall', self::getTagsForWiki( $this->db, $wmgRealm ) );
+	}
+
+	/**
 	 * Get the version directory name for the current wiki ID.
 	 *
 	 * @return string Version directory name, e.g. "php-X.XX" or "php-master".
@@ -717,7 +736,7 @@ class MWMultiVersion {
 		}
 
 		// Wiki doesn't exist, yet?
-		if ( $multiVersion->isMissing() ) {
+		if ( $multiVersion->isMissing() || $multiVersion->isPreInstall() ) {
 			// same hack as CommonSettings.php
 			header( 'Cache-control: no-cache' );
 			include __DIR__ . '/missing.php';

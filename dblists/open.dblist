@@ -28,6 +28,7 @@ arbcom_fiwiki
 arbcom_itwiki
 arbcom_nlwiki
 arbcom_ruwiki
+arbcom_zhwiki
 arcwiki
 arwiki
 arwikibooks
@@ -365,6 +366,7 @@ idwikibooks
 idwikimedia
 idwikiquote
 idwikisource
+idwikivoyage
 idwiktionary
 iegcomwiki
 iewiki
@@ -433,6 +435,7 @@ klwiktionary
 kmwiki
 kmwikibooks
 kmwiktionary
+kncwiki
 knwiki
 knwikiquote
 knwikisource
@@ -620,7 +623,6 @@ pcdwiki
 pcmwiki
 pdcwiki
 pflwiki
-pihwiki
 piwiki
 plwiki
 plwikibooks
@@ -684,6 +686,7 @@ sahwiki
 sahwikiquote
 sahwikisource
 satwiki
+satwiktionary
 sawiki
 sawikibooks
 sawikiquote
@@ -766,6 +769,7 @@ svwikivoyage
 svwiktionary
 swwiki
 swwiktionary
+sylwiki
 sysop_itwiki
 sysop_plwiki
 szlwiki
@@ -801,6 +805,7 @@ thwikibooks
 thwikiquote
 thwikisource
 thwiktionary
+tigwiki
 tiwiki
 tiwiktionary
 tkwiki

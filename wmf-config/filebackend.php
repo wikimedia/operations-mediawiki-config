@@ -23,6 +23,8 @@
 // would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
+use Wikimedia\MWConfig\ClusterConfig;
+
 global $wmgSwiftConfig;
 // Common OpenStack Swift backend convenience variables
 $wmgSwiftBigWikis = [ // DO NOT change without proper migration first
@@ -78,6 +80,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 
 	// backend config for wiki's access to shared repo
@@ -112,6 +115,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 
 	// backend config for wiki's access to shared files
@@ -137,6 +141,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 
 	// backend config for wiki's access to shared test repo
@@ -161,6 +166,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'connTimeout' => 10,
 		// T226979
 		'reqTimeout' => 900,
+		'canShellboxGetTempUrl' => true,
 	];
 }
 /* end DC-specific Swift backend config */
@@ -261,6 +267,7 @@ $wgLocalFileRepo = [
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
 	'scriptDirUrl' => $wgScriptPath,
 	'hashLevels' => 2,
+	'disableLocalTransform' => ClusterConfig::getInstance()->isK8s(),
 	'thumbScriptUrl' => $wgThumbnailScriptPath,
 	'transformVia404' => true,
 	'useJsonMetadata' => true,

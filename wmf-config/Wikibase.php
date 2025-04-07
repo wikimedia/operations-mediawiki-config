@@ -68,6 +68,10 @@ define( 'WB_NS_QUERY_TALK', 123 );
 // and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
 $wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
+$testWikidataClients = MWWikiversions::readDbListFile( 'wikidataclient-test' );
+$termsDomainDb = $wgDBname === 'testwikidatawiki' || in_array( $wgDBname, $testWikidataClients ) ? 'testwikidatawiki' : 'wikidatawiki';
+$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => $termsDomainDb ];
+
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
 		// Disable Special:ItemDisambiguation on wikidata.org T195756, T271389
@@ -89,7 +93,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient-test' );
+		$wgWBRepoSettings['localClientDatabases'] = $testWikidataClients;
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient' );
 		// Exclude closed wikis
@@ -184,8 +188,6 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	if ( isset( $wmgWikibaseRestApiEnabled ) && $wmgWikibaseRestApiEnabled ) {
-		$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.json';
-
 		if ( isset( $wmgWikibaseRestApiDevelopmentEnabled ) && $wmgWikibaseRestApiDevelopmentEnabled ) {
 			$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.dev.json';
 		}
@@ -240,14 +242,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
 	}
 
-	// Temporary, T297393
-	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
-		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
-	}
-
-	// Temporary, added in T339104, to be removed in T330217
-	if ( isset( $wmgWikibaseTmpAlwaysShowMulLanguageCode ) ) {
-		$wgWBRepoSettings['tmpAlwaysShowMulLanguageCode'] = $wmgWikibaseTmpAlwaysShowMulLanguageCode;
+	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
+		$wgWBRepoSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
 }
 
@@ -324,7 +320,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['forceLocalShortDesc'] = $wmgWikibaseForceLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
-	$wgWBClientSettings['moveConnectedItemLinkToOtherProjects'] = $wmgWikibaseMoveConnectedItemLinkToOtherProjects;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 	$wgWBClientSettings['injectRecentChanges'] = $wmgWikibaseClientInjectRecentChanges;
 
@@ -380,9 +375,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
 
-	// Temporary, T297393
-	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
-		$wgWBClientSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
+	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
+		$wgWBClientSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
 }
 

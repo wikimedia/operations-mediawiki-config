@@ -17,7 +17,12 @@ return [
 // the entry does not already have the setting.
 'wgEventStreamsDefaultSettings' => [
 	'default' => [
+
+		// topic prefixes are used to compute the list of Kafka topics that compose a stream.
+		// If the 'topics' are not explicilty set for a stream, then the topics will be
+		// computed as these prefixes + the stream name.
 		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
+
 		// Canary events are produced into streams
 		// for ingestion monitoring purposes.
 		// Absence of these events either means
@@ -28,26 +33,62 @@ return [
 		// This is explicitly disabled for MW state change (EventBus) streams
 		// until https://phabricator.wikimedia.org/T266798 is done.
 		'canary_events_enabled' => true,
-		// By default, all events should be imported into Hadoop.
-		// The analytics hadoop ingestion consumer (Gobblin) will
-		// look for streams to ingest using these settings.
-		// Each stream in a job should have similar volumes to allow
-		// the job to scale properly and not cause stream ingestion starvation.
-		// The default job_name is event_default.
-		// Override this if the stream should be imported by a different job,
-		// or disabled altogether.
+
+		'producers' => [
+			'eventgate' => [
+				// If all of the following are true:
+				// - the event's schema has the field specified in the
+				//   enrich_fields_from_http_headers setting key
+				// - the field is not already set in the event
+				// - A HTTP header name is specified in the
+				//   enrich_fields_from_http_headers setting value
+				//   (false can be used to explicitly disable)
+				// - The HTTP request header specified
+				//   is set in the HTTP POST request to eventgate
+				// Then the specified field will be set to the value
+				// of the HTTP header in the POSTed event before it is produced to Kafka.
+				'enrich_fields_from_http_headers' => [
+					// set meta.request_id to value of x-request-id header
+					'meta.request_id' => 'x-request-id',
+					// set http.request_headers['user-agent']
+					// to value of user-agent header.
+					// See:
+					// - https://phabricator.wikimedia.org/T382173
+					// - https://schema.wikimedia.org/repositories//primary/jsonschema/fragment/http/current.yaml
+					// TODO: Disable default user-agent collection: https://phabricator.wikimedia.org/T384964
+					'http.request_headers.user-agent' => 'user-agent'
+				],
+			],
+		],
+
 		'consumers' => [
+			// All events should be imported into Hadoop HDFS by default.
+			// The analytics hadoop ingestion consumer (as of 2025, Gobblin) will
+			// look for streams to ingest using these settings.
+			// Each stream in a job should have similar volumes to allow
+			// the job to scale properly and not cause stream ingestion starvation.
+			// The default job_name is event_default.
+			// Override this if the stream should be imported by a different job,
+			// or disabled altogether.
+			// Gobblin jobs are configured in analytics/refinery and deployed by puppet (systemd).
+			// https://gerrit.wikimedia.org/r/plugins/gitiles/analytics/refinery/+/refs/heads/master/gobblin/jobs/
 			'analytics_hadoop_ingestion' => [
 				'job_name' => 'event_default',
 				'enabled' => true,
 			],
+			// This consumer ingests raw HDFS JSON data into Hive tables.
+			// As of 2025 this consumer is a WMF custom Spark job named Refine.
 			'analytics_hive_ingestion' => [
-				'enabled' => false,
+				'enabled' => true,
 			],
 		],
 	],
 	'+private' => [
 		'producers' => [
+			// MediaWiki Eventbus extension is responsible for producing events from MediaWiki.
+			// In general, we don't to produce events from private wikis (e.g. officewiki, etc.)
+			// by default.
+			// This can be manually enabled in some special cases with some overrided settings.
 			'mediawiki_eventbus' => [
 				'enabled' => false,
 			],
@@ -69,6 +110,9 @@ return [
  * to dynamically add event streams that it should accept
  * and validate.
  * See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+ *
+ * For overriding this in the beta cluster please see
+ * wmf-config/InitialiseSettings-labs.php
  */
 'wgEventStreams' => [
 	'default' => [
@@ -157,6 +201,10 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			]
 		],
 		'eventlogging_HelpPanel' => [
@@ -201,6 +249,9 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			]
 		],
 		'eventlogging_KaiOSAppFirstRun' => [
@@ -212,6 +263,9 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			]
 		],
 		'eventlogging_KaiOSAppFeedback' => [
@@ -222,6 +276,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
 				],
 			]
 		],
@@ -244,6 +301,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
 				],
 			]
 		],
@@ -358,6 +418,10 @@ return [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			]
 		],
 		'eventlogging_SaveTiming' => [
@@ -379,6 +443,10 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
 					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			]
 		],
@@ -525,6 +593,7 @@ return [
 				],
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
 				],
 			]
 		],
@@ -631,6 +700,12 @@ return [
 				'unit' => 'session',
 				'rate' => 0.1,
 			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		'app_session' => [
 			'schema_title' => 'analytics/mobile_apps/app_session',
@@ -645,6 +720,14 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'app_places_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'app_rabbit_holes' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'app_game_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
@@ -682,6 +765,7 @@ return [
 				],
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			],
 		],
@@ -709,6 +793,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'ios.article_link_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/ios_article_link_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -732,6 +820,12 @@ return [
 		'android.article_toolbar_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_toolbar_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.edit_history_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
@@ -752,6 +846,12 @@ return [
 		'android.breadcrumbs_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.app_appearance_settings_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_app_appearance_settings_interaction',
@@ -760,6 +860,12 @@ return [
 		'android.article_link_preview_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_link_preview_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.article_page_scroll_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_page_scroll_interaction',
@@ -787,12 +893,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -812,6 +912,12 @@ return [
 				'unit' => 'device',
 				'rate' => 1,
 			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.product_metrics.article_toc_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/product_metrics/android_article_toc_interaction',
@@ -819,12 +925,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -850,12 +950,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -874,6 +968,12 @@ return [
 				'unit' => 'device',
 				'rate' => 1,
 			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'android.product_metrics.find_in_page_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/product_metrics/android_find_in_page_interaction',
@@ -881,12 +981,6 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'agent_app_install_id',
-						'agent_app_flavor',
-						'agent_app_theme',
-						'agent_app_version',
-						'agent_device_language',
-						'agent_release_status',
 						'mediawiki_database',
 						'page_id',
 						'page_title',
@@ -963,6 +1057,12 @@ return [
 			'sample' => [
 				'unit' => 'session',
 				'rate' => 0.2,
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			],
 		],
 		'mediawiki.web_ui_scroll' => [
@@ -1116,16 +1216,85 @@ return [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					// Override the default so we collect user-agent
+					// as well as some IP geocoding info.
+					'enrich_fields_from_http_headers' => [
+						'meta.request_id' => 'x-request-id',
+						'http.request_headers.user-agent' => 'user-agent',
+						// For eventgate-logging-external's incoming requests,
+						// the CDN layer performs a GeoIP lookup and attaches a
+						// bunch of data as request headers.
+						'http.request_headers.x-geoip-isp' => 'x-geoip-isp',
+						'http.request_headers.x-geoip-organization' => 'x-geoip-organization',
+						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
+						'http.request_headers.x-geoip-country' => 'x-geoip-country',
+						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'kaios_app.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					// Override the default so we collect user-agent
+					// as well as some IP geocoding info.
+					'enrich_fields_from_http_headers' => [
+						'meta.request_id' => 'x-request-id',
+						'http.request_headers.user-agent' => 'user-agent',
+						// For eventgate-logging-external's incoming requests,
+						// the CDN layer performs a GeoIP lookup and attaches a
+						// bunch of data as request headers.
+						'http.request_headers.x-geoip-isp' => 'x-geoip-isp',
+						'http.request_headers.x-geoip-organization' => 'x-geoip-organization',
+						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
+						'http.request_headers.x-geoip-country' => 'x-geoip-country',
+						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'w3c.reportingapi.network_error' => [
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					// Override the default so we collect user-agent
+					// as well as some IP geocoding info.
+					'enrich_fields_from_http_headers' => [
+						'meta.request_id' => 'x-request-id',
+						'http.request_headers.user-agent' => 'user-agent',
+						// For eventgate-logging-external's incoming requests,
+						// the CDN layer performs a GeoIP lookup and attaches a
+						// bunch of data as request headers.
+						'http.request_headers.x-geoip-isp' => 'x-geoip-isp',
+						'http.request_headers.x-geoip-organization' => 'x-geoip-organization',
+						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
+						'http.request_headers.x-geoip-country' => 'x-geoip-country',
+						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
@@ -1141,18 +1310,42 @@ return [
 		'mediawiki.api-request' => [
 			'schema_title' => 'mediawiki/api/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		'mediawiki.cirrussearch-request' => [
 			'schema_title' => 'mediawiki/cirrussearch/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 		'wdqs-internal.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'wdqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
@@ -1166,6 +1359,9 @@ return [
 			'consumers' => [
 				// Don't ingest regex streams into Hadoop.
 				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
 					'enabled' => false,
 				],
 			],
@@ -1189,6 +1385,9 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'enabled' => false,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			],
 		],
 		'mediawiki.centralnotice.campaign-change' => [
@@ -1209,6 +1408,12 @@ return [
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
 			],
 		],
 		// mediawiki.cirrussearch.page_rerender stream for private wikis
@@ -1254,6 +1459,11 @@ return [
 		'mediawiki.page-properties-change' => [
 			'schema_title' => 'mediawiki/page/properties-change',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.page-restrictions-change' => [
 			'schema_title' => 'mediawiki/page/restrictions-change',
@@ -1270,6 +1480,11 @@ return [
 		'mediawiki.recentchange' => [
 			'schema_title' => 'mediawiki/recentchange',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.revision-create' => [
 			'schema_title' => 'mediawiki/revision/create',
@@ -1281,6 +1496,7 @@ return [
 				],
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			],
 		],
@@ -1352,14 +1568,23 @@ return [
 				'analytics_hadoop_ingestion' => [
 					'enabled' => false,
 				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
 			],
 			// This stream is a testing stream for page-prediction-change events,
 			// and the events will be emitted by the Lift Wing platform.
 			// More info in T349919.
 		],
+		'mediawiki.article_country_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'mediawiki.page_outlink_topic_prediction_change.v1' => [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
+			// The discussions in T382295#10518032 and T366273#10492412 suggest
+			// renaming this stream to replace 'page' with 'article'.
 		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
@@ -1386,16 +1611,32 @@ return [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'resource-purge' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'change-prop.transcludes.resource-change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'mediawiki.revision-recommendation-create' => [
 			'schema_title' => 'mediawiki/revision/recommendation-create',
@@ -1425,6 +1666,12 @@ return [
 				'page_id' => 'page.page_id',
 			],
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		// mediawiki.page_change stream for private wikis
 		// https://phabricator.wikimedia.org/T346046
@@ -1462,6 +1709,12 @@ return [
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 
 		// This stream will be used by the streaming enrichment pipeline
@@ -1472,11 +1725,14 @@ return [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 		],
+
 		// This stream uses the mediawiki/page/change schema.
 		// It is produced by a PySpark job (T368755) that checks for
 		// inconsistencies on a datalake table that consumes stream
 		// 'mediawiki.page_content_change.v1'.
 		// It is meant to be enriched by a dowstrean Flink app.
+		// TODO: remove once mediawiki.content_history.reconcile.v1 streams
+		// 	are released.
 		'mediawiki.dump.revision_content_history.reconcile.rc0' => [
 			'schema_title' => 'mediawiki/page/change',
 			// https://phabricator.wikimedia.org/T338231
@@ -1489,6 +1745,9 @@ return [
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					// we don't need these non-enriched events in Hadoop
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
 					'enabled' => false,
 				],
 			],
@@ -1508,13 +1767,214 @@ return [
 		'mw_dump_rev_content_reconcile_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// This stream uses the mediawiki/page/change schema.
+		// It is produced by a PySpark job (T368755) that checks for
+		// inconsistencies on a datalake table that consumes stream
+		// 'mediawiki.page_content_change.v1'.
+		// It is meant to be enriched by a dowstrean Flink app.
+		'mediawiki.content_history_reconcile.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// we don't need these non-enriched events in Hadoop
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		// Enriched stream of the above produced by a Flink app (T368787)
+		'mediawiki.content_history_reconcile_enriched.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			// https://phabricator.wikimedia.org/T338231
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'event_default',
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
+		],
+		// This stream will be used by the above streaming enrichment pipeline
+		// This follows the naming convention of <job_name>.error
+		'mw_content_history_reconcile_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
 		 * == WDQS Streaming Updater (Flink) output streams ==
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
+		 *
+		 * Do not enable canary events on mutation streams yet, we are not sure of
+		 * the consequences on these topics that are populated by a "transactional"
+		 * producer.
 		 */
+		'rdf-streaming-updater.mutation.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation',
+				'codfw.rdf-streaming-updater.mutation'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-main.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-main',
+				'codfw.rdf-streaming-updater.mutation-main'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-scholarly.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-scholarly',
+				'codfw.rdf-streaming-updater.mutation-scholarly'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-staging',
+				'codfw.rdf-streaming-updater.mutation-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-main-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-main-staging',
+				'codfw.rdf-streaming-updater.mutation-main-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'rdf-streaming-updater.mutation-scholarly-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.rdf-streaming-updater.mutation-scholarly-staging',
+				'codfw.rdf-streaming-updater.mutation-scholarly-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		'mediainfo-streaming-updater.mutation.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.mediainfo-streaming-updater.mutation',
+				'codfw.mediainfo-streaming-updater.mutation'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => true,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+				],
+			],
+		],
+		'mediainfo-streaming-updater.mutation-staging.v2' => [
+			'schema_title' => 'mediawiki/wikibase/entity/rdf_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'eqiad.mediainfo-streaming-updater.mutation-staging',
+				'codfw.mediainfo-streaming-updater.mutation-staging'
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'rdf-streaming-updater.lapsed-action' => [
 			'schema_title' => 'rdf_streaming_updater/lapsed_action',
 			'destination_event_service' => 'eventgate-main',
@@ -1546,6 +2006,11 @@ return [
 			],
 			// TODO: re-enable canary events once the schema is stabilized
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'cirrussearch.update_pipeline.update.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/update',
@@ -1554,8 +2019,13 @@ return [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
 			],
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'cirrussearch.update_pipeline.update.private.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/update',
@@ -1564,14 +2034,50 @@ return [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page_id',
 			],
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 		'cirrussearch.update_pipeline.fetch_error.rc0' => [
 			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
 			'destination_event_service' => 'eventgate-main',
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
+		],
+
+		'mediawiki.cirrussearch.page_weighted_tags_change.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/page_weighted_tags_change',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+		],
+		'cirrussearch.update_pipeline.update.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
+		'cirrussearch.update_pipeline.update.private.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/update_pipeline/update',
+			'destination_event_service' => 'eventgate-main',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+		],
+		'cirrussearch.update_pipeline.fetch_error.v1' => [
+			'schema_title' => 'mediawiki/cirrussearch/update_pipeline/fetch_error',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => true,
 		],
 
 		// Temporary analytics for Kartographer Nearby feature
@@ -1603,6 +2109,11 @@ return [
 		'eventgate-logging-external.test.event' => [
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-logging-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'eventgate-analytics-external.test.event' => [
 			'schema_title' => 'test/event',
@@ -1621,21 +2132,31 @@ return [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'eventgate-analytics-external.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 		'eventgate-analytics.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		'eventgate-main.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 		],
 
 		'inuka.wiki_highlights_experiment' => [
@@ -1643,31 +2164,53 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
-		// (T336722) Wikifunctions-specific stream
-		'wikifunctions.ui' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+		// Instrument for the Incident Reporting System (T372823)
+		'mediawiki.product_metrics.incident_reporting_system_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'page_id',
+						'page_title',
+						'page_namespace_id',
+						'performer_language',
+						'performer_language_variant',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_name',
+					],
+				],
+			],
+		],
+		// Instrument for Special:Translate (T364460)
+		'mediawiki.product_metrics.translate_extension' => [
+			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
-					'events' => [
-						'wf.ui.',
-					],
 					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_site_content_language',
+						'mediawiki_site_content_language_variant',
+						'page_content_language',
+						'agent_client_platform',
 						'agent_client_platform_family',
-						'page_id',
-						'page_title',
-						'page_revision_id',
-						'performer_is_logged_in',
-						'performer_id',
-						'performer_name',
 						'performer_session_id',
-						'performer_pageview_id',
-						'performer_language',
-						'performer_language_variant',
-						'performer_edit_count',
+						'performer_active_browsing_session_token',
+						'performer_name',
+						'performer_is_bot',
+						'performer_is_logged_in',
 						'performer_edit_count_bucket',
 						'performer_groups',
-						'performer_is_bot',
+						'performer_registration_dt',
+						'performer_is_temp',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
 					],
 				],
 			],
@@ -1676,7 +2219,20 @@ return [
 				'rate' => 1,
 			],
 		],
-		// (T350497) Update the WikiLambda instrumentation (Wikifunctions) to use core interaction events
+		// (T382147) MassDelete extension stream
+		'mediawiki.product_metrics.ext_massdelete' => [
+			'schema_title' => 'analytics/mediawiki/product_metrics/ext_massdelete',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'performer_session_id',
+					],
+				],
+			],
+		],
+		// (T336722, T350497) Wikifunctions-specific stream
 		'mediawiki.product_metrics.wikifunctions_ui' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -1738,9 +2294,9 @@ return [
 				'rate' => 1,
 			],
 		],
-		// (T363685, T368028) MinT for Wikipedia Readers stream (Language & Product Localization)
-		'mediawiki.product_metrics.mint_for_readers' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
+		// (T363685, T368028, T378565) MinT for Wikipedia Readers stream (Language & Product Localization)
+		'mediawiki.product_metrics.translation_mint_for_readers' => [
+			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
@@ -1805,6 +2361,17 @@ return [
 				'rate' => 1,
 			],
 		],
+		'mediawiki.product_metrics.growth_product_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			]
+		],
 		// (T373967) App base stream configuration to support Metrics Platform's monotable
 		'product_metrics.app_base' => [
 			'schema_title' => 'analytics/product_metrics/app/base',
@@ -1815,17 +2382,85 @@ return [
 				],
 			],
 		],
-		// (T373967) Web base stream configuration to support Metrics Platform's monotable
+
+		// Web base stream configuration to support Experiment Platform's monotable.
+		//
+		// See T373967 for context.
 		'product_metrics.web_base' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
+
+						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
+						'agent_client_platform',
 						'agent_client_platform_family',
+
+						// Make user authentication status available as a dimension during analysis.
+						'performer_is_logged_in',
+						'performer_is_temp',
+
+						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
+						// session ID" contextual attribute so that analysts can calculate all three flavors of
+						// click-through rate (see
+						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
+						'performer_active_browsing_session_token',
+					],
+				],
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						// Don't collect the user agent
+						'http.request_headers.user-agent' => false,
 					],
 				],
 			],
+		],
+		// Web stream config for empty search recommendations A/B test
+		'product_metrics.web_base.search_ab_test_session_ticks' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_site_content_language',
+						'mediawiki_skin',
+						'mediawiki_database',
+						'performer_is_temp',
+						'performer_session_id',
+						'performer_is_logged_in'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0,
+			],
+		],
+		// Web stream config for empty search recommendations A/B test
+		'product_metrics.web_base.search_ab_test_clicks' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_site_content_language',
+						'mediawiki_skin',
+						'mediawiki_database',
+						'performer_is_temp',
+						'performer_session_id',
+						'performer_is_logged_in'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0,
+			],
+		],
+		'analytics.haproxy_requestctl' => [
+			'schema_title' => 'analytics/haproxy_requestctl',
+			'destination_event_service' => 'eventgate-analytics',
 		],
 	],
 	'+legacy-vector' => [

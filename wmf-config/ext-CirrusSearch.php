@@ -12,11 +12,11 @@ return [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => $GLOBALS['wmgDatacenter'],
+	'default' => 'eqiad',
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
+	'default' => 'eqiad',
 ],
 
 'wgCirrusSearchClusterOverrides' => [
@@ -28,15 +28,11 @@ return [
 		// T363475: Writes shifted to SUP, archive writes remain.
 		'default' => [],
 		'archive' => [ 'eqiad', 'codfw' ],
-		'weighted_tags' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	],
-	// wikitech is not using kafka (T192361) should be re-evaluated when T237773 is adressed
-	'labswiki' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	// private wikis don't write to cloudelastic
 	'private' => [
 		'default' => [],
 		'archive' => [ 'eqiad', 'codfw' ],
-		'weighted_tags' => [ 'eqiad', 'codfw' ],
 	],
 ],
 
@@ -63,7 +59,7 @@ return [
 	],
 ],
 
-'wgCirrusSimilarityProfiles' => [
+'wgCirrusSearchSimilarityProfiles' => [
 	// Push all our similarity settings to default so that we can reuse them
 	// on multiple wikis
 	'default' => [
@@ -104,10 +100,8 @@ return [
 
 'wgCirrusSearchSimilarityProfile' => [
 	'default' => 'wmf_defaults',
-	"wikidata" => "wikibase_similarity",
-	"testwikidatawiki" => "wikibase_similarity",
-	"commonswiki" => "wikibase_similarity",
-	"testwikidatawiki" => "wikibase_similarity",
+	'wikidata' => 'wikibase_similarity',
+	'commonswiki' => 'wikibase_similarity',
 ],
 
 'wgCirrusSearchRescoreProfile' => [
@@ -123,7 +117,7 @@ return [
 	'idwiki' => 'mlr-1024rs',
 	'itwiki' => 'mlr-1024rs',
 	'jawiki' => 'classic', // TODO: switch back to 'mlr-1024rs',
-	'kowiki' => 'classic', // TODO: switch back to 'mlr-1024rs',
+	'kowiki' => 'mlr-1024rs',
 	'nlwiki' => 'mlr-1024rs',
 	'nowiki' => 'mlr-1024rs',
 	'plwiki' => 'mlr-1024rs',
@@ -131,7 +125,7 @@ return [
 	'ruwiki' => 'mlr-1024rs',
 	'svwiki' => 'mlr-1024rs',
 	'viwiki' => 'mlr-1024rs',
-	'zhwiki' => 'wsum_inclinks', // TODO: Switch back to 'mlr-1024rs',
+	'zhwiki' => 'mlr-1024rs',
 ],
 
 'wgCirrusSearchFullTextQueryBuilderProfile' => [
@@ -227,10 +221,6 @@ return [
 	],
 ],
 
-'wgCirrusSearchInstantIndexNew' => [
-	'default' => [],
-],
-
 'wgCirrusSearchRefreshInterval' => [
 	'default' => 30,
 ],
@@ -269,7 +259,7 @@ return [
 	'arwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'bgwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'cawiki' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
+	'cebwiki' => [ 'content' => 8 /* T379002 */, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common.
@@ -571,10 +561,6 @@ return [
 	'default' => 'default',
 ],
 
-'wgCirrusSearchAllFields' => [
-	'default' => [ 'build' => true, 'use' => true ],
-],
-
 'wgCirrusSearchNearMatchWeight' => [
 	'default' => 10, // T257922
 ],
@@ -675,49 +661,24 @@ return [
 
 'wgCirrusSearchUserTesting' => [
 	'default' => [
-		// T219534
-		'mlr-2020-test' => [
+		// T385972
+		'mlr-2025-02' => [
 			'buckets' => [
 				'control' => [
 					'trigger' => 'control',
 				],
-				'mlr-2020-test' => [
-					'trigger' => 'mlr-2020-test',
+				'mlr-2025-02' => [
+					'trigger' => 'mlr-2025-02',
 					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
+						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-next',
 					],
 				],
-			],
-		],
-		# T246947
-		'glent_m0' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
+				'mlr-2025-02i' => [
+					'trigger' => 'mlr-2025-02i',
 					'globals' => [
-						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
-					],
-				],
-				'glent_m0' => [
-					'trigger' => 'glent_m0',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM0_and_langdetect',
-					],
-				],
-			],
-		],
-		'T262612_glent_m01' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					'globals' => [
-						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
-					],
-				],
-				'glent_m01' => [
-					'trigger' => 'glent_m01',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs-next',
+						]
 					],
 				],
 			],
@@ -909,78 +870,90 @@ return [
 	'enwiki' => [
 		'mlr-1024rs' => [
 			// Name of model stored in elasticsearch ltr plugin
-			'model' => 'enwiki-20220421-20180215-query_explorer',
+			'model' => 'enwiki-20241122-20180215-query_explorer',
 			// Number of results to score per-shard. Defaults to
 			// 1024 if not provided.
 			'window' => 448,
 		],
+		'mlr-1024rs-next' => [
+			'model' => 'enwiki-20250110-20180215-query_explorer',
+			'window' => 448,
+		],
 	],
 	'arwiki' => [
-		'mlr-1024rs' => [ 'model' => 'arwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'arwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'arwiki-20250110-20180215-query_explorer' ],
 	],
 	'fawiki' => [
-		'mlr-1024rs' => [ 'model' => 'fawiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'fawiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'fawiki-20250110-20180215-query_explorer' ],
 	],
-	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 	'jawiki' => [
+		/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 		'mlr-1024rs' => [ 'model' => 'jawiki-20220421-20180215-query_explorer' ],
+		*/
+		'mlr-1024rs-next' => [ 'model' => 'jawiki-20250110-20180215-query_explorer' ],
 	],
-	*/
 	'svwiki' => [
-		'mlr-1024rs' => [ 'model' => 'svwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'svwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'svwiki-20250110-20180215-query_explorer' ],
 	],
 	'frwiki' => [
-		'mlr-1024rs' => [ 'model' => 'frwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'frwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'frwiki-20250110-20180215-query_explorer' ],
 	],
 	'itwiki' => [
-		'mlr-1024rs' => [ 'model' => 'itwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'itwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'itwiki-20250110-20180215-query_explorer' ],
 	],
 	'ptwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ptwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'ptwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'ptwiki-20250110-20180215-query_explorer' ],
 	],
 	'ruwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ruwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'ruwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'ruwiki-20250110-20180215-query_explorer' ],
 	],
 	'dewiki' => [
-		'mlr-1024rs' => [ 'model' => 'dewiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'dewiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'dewiki-20250110-20180215-query_explorer' ],
 	],
 	'fiwiki' => [
-		'mlr-1024rs' => [ 'model' => 'fiwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'fiwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'fiwiki-20250110-20180215-query_explorer' ],
 	],
 	'hewiki' => [
-		'mlr-1024rs' => [ 'model' => 'hewiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'hewiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'hewiki-20250110-20180215-query_explorer' ],
 	],
 	'idwiki' => [
-		'mlr-1024rs' => [ 'model' => 'idwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'idwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'idwiki-20250110-20180215-query_explorer' ],
 	],
-	/* TODO: re-enable once we have a model trained with the nori analyzer (T219534)
 	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'kowiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'kowiki-20250110-20180215-query_explorer' ],
 	],
-	*/
 	'nlwiki' => [
-		'mlr-1024rs' => [ 'model' => 'nlwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'nlwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'nlwiki-20250110-20180215-query_explorer' ],
 	],
 	'nowiki' => [
-		'mlr-1024rs' => [ 'model' => 'nowiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'nowiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'nowiki-20250110-20180215-query_explorer' ],
 	],
 	'plwiki' => [
-		'mlr-1024rs' => [ 'model' => 'plwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'plwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'plwiki-20250110-20180215-query_explorer' ],
 	],
 	'viwiki' => [
-		'mlr-1024rs' => [ 'model' => 'viwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'viwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'viwiki-20250110-20180215-query_explorer' ],
 	],
 	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'zhwiki-20241122-20180215-query_explorer' ],
+		'mlr-1024rs-next' => [ 'model' => 'zhwiki-20250110-20180215-query_explorer' ],
 	],
-	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
-	],
-	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
-	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
-	],
-	*/
 ],
 
 'wgCirrusSearchElasticQuirks' => [
@@ -1045,15 +1018,6 @@ return [
 
 'wgCirrusSearchOptimizeIndexForExperimentalHighlighter' => [
 	'default' => true
-],
-
-// We had an incident of filling up the entire clusters redis instances after
-// 6 hours, and problems with the new kafka (before we enabled compression)
-// based job queue as well. Cut the time down to 2 hours, as this is not supposed
-// to ride out a full-fledged outage, but paper over minor unavailabilities
-// for cluster/network/etc maintenance.
-'wgCirrusSearchDropDelayedJobsAfter' => [
-	'default' => 60 * 60 * 2
 ],
 
 // Commons is special
@@ -1140,11 +1104,6 @@ return [
 	'default' => []
 ],
 
-// Set SPARQL endpoint for categories
-'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'https://query.wikidata.org/bigdata/namespace/categories/sparql'
-],
-
 // Our cluster often has issues completing master actions
 // within the default 30s timeout.
 'wgCirrusSearchMasterTimeout' => [
@@ -1205,7 +1164,7 @@ return [
 
 // Internal WDQS endpoint
 'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'http://localhost:6009/bigdata/namespace/categories/sparql'
+	'default' => 'http://localhost:6041/bigdata/namespace/categories/sparql'
 ],
 
 'wgCirrusSearchCompletionBannedPageIds' => [
@@ -1243,9 +1202,11 @@ return [
 	]
 ],
 'wgCirrusSearchEnableEventBusWeightedTags' => [
-	// Appears to be broken, see T378983
-	'default' => false,
-	// To debug and test
-	'testwiki' => true,
-]
+	'default' => true,
+],
+'wgCirrusSearchLanguageKeywordExtraFields' => [
+	'default' => [],
+	'wikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
+	'testwikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
+],
 ];

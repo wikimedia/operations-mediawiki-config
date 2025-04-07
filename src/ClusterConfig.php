@@ -22,6 +22,7 @@ class ClusterConfig {
 		'parsoid' => [ 'parsoid' ],
 		'debug' => [ 'debug' ],
 		'api'  => [ 'api_', 'api-' ],
+		'dumps' => [ 'dumps' ],
 	];
 
 	/**
@@ -44,6 +45,12 @@ class ClusterConfig {
 
 	private function __construct() {
 		$this->cluster = $_SERVER['SERVERGROUP'] ?? '';
+		# If servergroup is not set, it means we're on bare metal and
+		# we're running from CLI. In this case, we try to read the /etc/wikimedia-servergroup file if it exists.
+		# TODO: remove this once we're fully migrated to k8s
+		if ( !$this->cluster ) {
+			$this->cluster = trim( @file_get_contents( '/etc/wikimedia-servergroup' ) ?: '' );
+		}
 		$this->hostname = '';
 	}
 
@@ -117,6 +124,15 @@ class ClusterConfig {
 	 */
 	public function isApi() {
 		return $this->hasTrait( 'api' );
+	}
+
+	/**
+	 * Is this cluster group a dumps cluster?
+	 *
+	 * @return bool
+	 */
+	public function isDumps() {
+		return $this->hasTrait( 'dumps' );
 	}
 
 	/**

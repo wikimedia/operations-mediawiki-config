@@ -22,6 +22,10 @@ if ( $_SERVER['HTTP_HOST'] == 'noc.wikimedia.org' && preg_match( '/^\/dbconfig\/
 		exit( "Not found" );
 	}
 	$dbConfig = EtcdCachedConfig::getInstance()->getValue( $dc . '/dbconfig' );
+	ksort( $dbConfig['externalLoads'] );
+	ksort( $dbConfig['sectionLoads'] );
+	ksort( $dbConfig['groupLoadsBySection'] );
+	ksort( $dbConfig['hostsByName'] );
 	header( "Content-type: application/json" );
 	print_r( json_encode( $dbConfig ) );
 }

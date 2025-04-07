@@ -30,12 +30,12 @@ class Profiler {
 	 *   - redis-host: The host used for Xenon events
 	 *   - redis-port: The port used for Xenon events
 	 *   - redis-timeout: The redis socket timeout
+	 *   - statsd-host (string|null): StatsD host address (ip:port or hostname:port).
+	 *   - excimer-ui-url (string|null): The url for Wikimedia\ExcimerUI\Client\ExcimerClient
+	 *   - excimer-ui-server (string|null): The ingestionUrl for Wikimedia\ExcimerUI\Client\ExcimerClient
 	 *   - xhgui-conf: [optional] The configuration array to pass to XhguiSaverPdo
 	 *     - pdo.connect: connection string for PDO (e.g. `mysql:host=mydbhost;dbname=xhgui`)
 	 *     - pdo.table: table name within the xhgui database where the profiles are stored.
-	 *   - statsd-host: StatsD host address (ip:port or hostname:port).
-	 *   - excimer-ui-url (string|null): The url for Wikimedia\ExcimerUI\Client\ExcimerClient
-	 *   - excimer-ui-server (string|null): The ingestionUrl for Wikimedia\ExcimerUI\Client\ExcimerClient
 	 */
 	public static function setup( array $options ): void {
 		global $wmgProfiler;
@@ -235,6 +235,13 @@ class Profiler {
 		if ( ClusterConfig::getInstance()->isK8s() ) {
 			$redisChannel .= '-k8s';
 		}
+	   // Temporarily route PHP 8 profiles to a separate set of sinks
+	   // (excimer-k8s-php8, excimer-k8s-php8-wall) during the migration to
+	   // PHP 8, to facilitate comparison and diffing with PHP 7 profiles
+	   // (T385199).
+		if ( PHP_MAJOR_VERSION === 8 ) {
+			$redisChannel .= '-php8';
+		}
 
 		// The period is 60s, so there's no point waiting for more samples to arrive
 		// before the end of the request, they probably won't.
@@ -349,14 +356,16 @@ class Profiler {
 		}
 
 		if ( $error ) {
-			$dest = $options['statsd-host'] ?? null;
-			if ( $dest ) {
-				$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
-				if ( $error ) {
-					$stat = "MediaWiki.arclamp_client_error.{$error}:1|c";
-					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
-				}
-			}
+			// statsd format (graphite)
+			self::sendMetric( "MediaWiki.arclamp_client_error.{$error}:1|c", $options['statsd-host'], 8125 );
+
+			// dogstatsd format (prometheus)
+			$normalizedError = self::normalizeTag( $error );
+			self::sendMetric(
+				"MediaWiki_arclamp_client_errors_total:1|c|#error:{$normalizedError}",
+				$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+				9125
+			);
 		}
 	}
 
@@ -369,14 +378,12 @@ class Profiler {
 	 * @param array $options
 	 */
 	public static function excimerFlushToStatsd( $logLines, $options ) {
-		$dest = $options['statsd-host'] ?? null;
 		$verb = $_SERVER['REQUEST_METHOD'] ?? '';
 		$handler = class_exists( ProfilingContext::class )
 			? ProfilingContext::singleton()->getHandlerMetricPrefix()
 			: 'unknown';
 
-		if ( $dest && $verb !== '' && $handler !== 'unknown' ) {
-			$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+		if ( $verb !== '' && $handler !== 'unknown' ) {
 			foreach ( $logLines as $line ) {
 				if ( $line === '' ) {
 					// $collapsed ends with a line break
@@ -389,11 +396,40 @@ class Profiler {
 						$componentsInStack[$cname] = 1;
 					}
 				}
-				$stat = "MediaWiki.arclamp_samples.$handler.$verb:1|c\n";
-				@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+
+				// statsd format (graphite)
+				self::sendMetric(
+					"MediaWiki.arclamp_samples.$handler.$verb:1|c",
+					$options['statsd-host'],
+					8125
+				);
+
+				// dogstatsd format (prometheus)
+				$normalizedHandler = self::normalizeTag( $handler );
+				$normalizedVerb = self::normalizeTag( $verb );
+				self::sendMetric( "mediawiki_arclamp_samples_total:1|c|"
+					. "#handler:{$normalizedHandler}"
+					. ",verb:{$normalizedVerb}",
+					$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+					9125
+				);
+
 				foreach ( $componentsInStack as $cname => $hit ) {
-					$stat = "MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c\n";
-					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+					// statsd format (graphite)
+					self::sendMetric(
+						"MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c",
+						$options['statsd-host'],
+						8125
+					);
+					// dogstatsd format (prometheus)
+					$normalizedComponent = self::normalizeTag( $cname );
+					self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c|"
+						. "#handler:{$normalizedHandler}"
+						. ",verb:{$normalizedVerb}"
+						. ",component:{$normalizedComponent}",
+						$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+						9125
+					);
 				}
 			}
 		}
@@ -465,5 +501,38 @@ class Profiler {
 		}
 
 		return 'other';
+	}
+
+	/**
+	 * Sends a metric to the stats host
+	 *
+	 * @param string $metric
+	 * @param string|null $host
+	 * @param int $port
+	 * @return void
+	 */
+	private static function sendMetric( $metric, $host, $port ): void {
+		if ( $host ) {
+			$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+			$metric = trim( $metric ) . "\n";
+			@socket_sendto( $sock, $metric, strlen( $metric ), 0, $host, $port );
+			@socket_close( $sock );
+		}
+	}
+
+	/**
+	 * Normalizes tags to only alphanumerics and underscores.
+	 * Strips duplicated and leading/trailing underscores.
+	 *
+	 * Note: We are not using /i (case-insensitive flag)
+	 * or \d (digit character class escape) here because
+	 * their behavior changes with respect to locale settings.
+	 *
+	 * @param string $tag
+	 * @return string
+	 */
+	private static function normalizeTag( $tag ) {
+		$tag = preg_replace( '/[^a-zA-Z0-9]+/', '_', $tag );
+		return trim( $tag, '_' );
 	}
 }

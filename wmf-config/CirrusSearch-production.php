@@ -47,14 +47,6 @@ $wgCirrusSearchShardCount = [
 	'cloudelastic' => $wmgCirrusSearchShardCount,
 ];
 
-$wgCirrusSearchDropDelayedJobsAfter = [
-	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
-	// cloudelastic jobs are dropped after 15 minutes, it is not as important as prod services
-	// and can be backfilled as necessary.
-	'cloudelastic' => 900,
-];
-
 // T295705#7719071 Reduce write isolation to only cloudelastic to reduce job queue rates
 $wgCirrusSearchWriteIsolateClusters = [ 'cloudelastic' ];
 $wgCirrusSearchElasticaWritePartitionCounts = [ 'cloudelastic' => 3 ];

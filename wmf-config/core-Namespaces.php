@@ -321,6 +321,9 @@ return [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
+	'+cbk_zamwiki' => [
+		'Wikipedia_discusión' => NS_PROJECT_TALK, // T386722
+	],
 	'+cewiki' => [ // T49574
 		'Википедийа' => NS_PROJECT,
 		'Википедийа_дийцаре' => NS_PROJECT_TALK,
@@ -552,6 +555,7 @@ return [
 		'ویکی پدیا' => NS_PROJECT,
 		'ويكي پديا' => NS_PROJECT,
 		'ويکي‌پديا' => NS_PROJECT,
+		'شن' => NS_PROJECT, // T387185
 		'بوپ' => NS_PROJECT_TALK, // T213733
 		'بحث ویکی پدیا' => NS_PROJECT_TALK,
 		'بحث ويکي پديا' => NS_PROJECT_TALK,
@@ -812,7 +816,11 @@ return [
 		'Author_talk' => 101,
 	],
 	'+hsbwiktionary' => [
-		'Wiktionary diskusija' => NS_PROJECT_TALK,
+		'WS' => NS_PROJECT, // T373634
+		'Kat' => NS_CATEGORY, // T373634
+		'P' => NS_TEMPLATE, // T373634
+		'RK' => /* Reconstruction */ 118, // T373634
+		'Wiktionary_diskusija' => NS_PROJECT_TALK,
 	],
 	'+huwiki' => [
 		'Portál_vita' => 101,
@@ -975,13 +983,14 @@ return [
 		'ಪೋರ್ಟಲ್' => 100, // T355662
 		'ಪೋರ್ಟಲ್_ಚರ್ಚೆ' => 101, // T355662
 		'ಕರಡು_ಚರ್ಚೆ' => 119, // T346583
-		'ಮಾಡ್ಯೂಲ್_ಚರ್ಚೆ' => 829, // T346583
 	],
 	'+knwikisource' => [ // T39676
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Translate' => 114, // T388955
+		'Translate_talk' => 115, // T388955
 	],
 	'+kowiki' => [
 		'백' => NS_PROJECT,
@@ -1017,6 +1026,8 @@ return [
 		'Author_talk' => 101,
 		'Portal' => 102, // T71522
 		'Portal_talk' => 103,
+		'Draft' => 118, // T385162
+		'Draft_talk' => 119, // T385162
 	],
 	'+kowikiversity' => [
 		'Wikiversity토론' => NS_PROJECT_TALK, // T46899
@@ -1040,6 +1051,21 @@ return [
 	],
 	'+kvwiki' => [
 		'Обсуждение_Wikipedia' => NS_PROJECT_TALK,
+	],
+	'+kywiki' => [
+		'МД' => 118, // T385593
+		'МДТ' => 119, // T385593
+		'Draft' => 118, // T385593
+		'Draft_talk' => 119, // T385593
+		'Draft_article' => 118, // T385593
+		'Draft_article_talk' => 119, // T385593
+		'Т' => NS_TALK, // T386617
+		'К' => NS_USER, // T386617
+		'Б' => NS_USER_TALK, // T386617
+		'ВП' => NS_PROJECT, // T386617
+		'ВТ' => NS_PROJECT_TALK, // T386617
+		'Ж' => NS_HELP, // T386617
+		'ЖТ' => NS_HELP_TALK, // T386617
 	],
 	'+lawiki' => [
 		'Disputatio_Wikipedia' => NS_PROJECT_TALK,
@@ -1066,6 +1092,11 @@ return [
 	],
 	'+lvwiki' => [
 		'VP' => NS_PROJECT, // T95106
+	],
+	'+madwiki' => [
+		'Berkas' => NS_FILE, // T382087
+		'Templat' => NS_TEMPLATE, // T382087
+		'Kategori' => NS_CATEGORY, // T382087
 	],
 	'+maiwiki' => [
 		'वि' => NS_PROJECT, // T125801
@@ -1163,6 +1194,8 @@ return [
 		'Rhymes_talk' => 107, // T330689 , T341940
 		'Reconstruction' => 118, // T330689 , T341940
 		'Reconstruction_talk' => 119, // T330689 , T341940
+		'Thesaurus' => 110, // T356620
+		'Thesaurus_talk' => 111, // T356620
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
@@ -1346,6 +1379,8 @@ return [
 		'Utilizador_Discussão' => NS_USER_TALK, // T29495
 		'Discussão_Portal' => 101,
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
+		'PRE' => NS_TEMPLATE, // T389609
+		'CAT' => NS_CATEGORY, // T389609
 	],
 	'+ptwikibooks' => [
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
@@ -1555,6 +1590,18 @@ return [
 		'Портал' => 100, // NS_PORTAL
 		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	],
+	'+shwiktionary' => [ // T385833
+		'Wikirečnik' => NS_PROJECT,
+		'Vikirječnik' => NS_PROJECT,
+		'Vikirečnik' => NS_PROJECT,
+		'Викирјечник' => NS_PROJECT,
+		'Викиречник' => NS_PROJECT,
+		'Razgovor_o_Wikirečniku' => NS_PROJECT_TALK,
+		'Razgovor_o_Vikirječniku' => NS_PROJECT_TALK,
+		'Razgovor_o_Vikirečniku' => NS_PROJECT_TALK,
+		'Разговор_о_Викирјечнику' => NS_PROJECT_TALK,
+		'Разговор_о_Викиречнику' => NS_PROJECT_TALK,
+	],
 	'+shiwiki' => [
 		'Portal' => 100, // T288909
 		'Portal_talk' => 101,
@@ -1634,6 +1681,8 @@ return [
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Translate' => 114, // T388955
+		'Translate_talk' => 115, // T388955
 	],
 	'+testwiki' => [
 		'WT' => NS_PROJECT_TALK,
@@ -1828,6 +1877,10 @@ return [
 		'VP' => NS_PROJECT, // T48534
 		'VM' => NS_PROJECT_TALK, // T48534
 	],
+	'+uzwiktionary' => [
+		'Vikilug‘at' => NS_PROJECT,
+		'Vikilug‘at_munozarasi' => NS_PROJECT_TALK,
+	], // T362620
 	'+vecwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -2882,15 +2935,19 @@ return [
 		100 => 'Gapura', // T252343 - Portal (Talk)
 		101 => 'Parembugan_Gapura',
 	],
-	'kawiki' => [
-		100 => 'პორტალი',
-		101 => 'პორტალი_განხილვა',
+	'kaawiki' => [
+		100 => 'Portal', // T388158
+		101 => 'Portal_talqılawı', // T388158
 	],
 	'kabwiki' => [
 		100 => 'Awwur', // T77017 - Portal
 		101 => 'Amyannan_uwwur',
 		102 => 'Asenfaṛ', // T77017 - Project
 		103 => 'Amyannan_usenfaṛ',
+	],
+	'kawiki' => [
+		100 => 'პორტალი',
+		101 => 'პორტალი_განხილვა',
 	],
 	'kkwiki' => [
 		100 => 'Портал', // Portal
@@ -2899,11 +2956,10 @@ return [
 		103 => 'Жоба_талқылауы',
 	],
 	'knwiki' => [
-		100 => 'ಹೆಬ್ಬಾಗಿಲು', // Portal - T355662
-		101 => 'ಹೆಬ್ಬಾಗಿಲು_ಚರ್ಚೆಪುಟ', // Portal_talk
+		100 => 'ಸಂಪುಟ', // Portal - T355662, T380366
+		101 => 'ಸಂಪುಟ_ಚರ್ಚೆಪುಟ', // Portal_talk
 		118 => 'ಕರಡು', // T129052 - Draft
 		119 => 'ಕರಡು_ಚರ್ಚೆಪುಟ', // T129052, T255337
-		829 => 'ಮಾಡ್ಯೂಲ್_ಚರ್ಚೆಪುಟ', // T346583
 	],
 	'kowiki' => [
 		100 => '포털', // T87528
@@ -2921,6 +2977,10 @@ return [
 	'kwwiki' => [
 		100 => 'Porth',
 		101 => 'Keskows_Porth',
+	],
+	'kywiki' => [
+		118 => 'Макала_долбоору', // T385593 - draft
+		119 => 'Макала_долбоорун_талкуулоо', // T385593 - draft_talk
 	],
 	'ladwiki' => [
 		100 => 'Portal', // T161843
@@ -3521,6 +3581,8 @@ return [
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
 		102 => 'ಕರ್ತೃ', // Author
 		103 => 'ಕರ್ತೃ_ಚರ್ಚೆ',
+		114 => 'ಅನುವಾದ', // Translate T388955
+		115 => 'ಅನುವಾದ_ಚರ್ಚೆ',
 	],
 	'kowikisource' => [
 		100 => '저자',
@@ -3529,6 +3591,8 @@ return [
 		103 => '포털토론',
 		114 => '번역', // T183836, Translation
 		115 => '번역토론', // T183836, Traslation talk
+		118 => '초안', // T385162, Draft
+		119 => '초안토론', // T385162, Draft talk
 	],
 	'lawikisource' => [
 		102 => 'Scriptor',
@@ -3668,6 +3732,8 @@ return [
 		101 => 'ಸಂಪುಟೊದ_ಪಾತೆರ',
 		102 => 'ಬರೆಯಿನಾರ್', // Author
 		103 => 'ಬರೆಯಿನಾರೆನ_ಪಾತೆರ',
+		114 => 'ಅನುವಾದೊ', // Translate T388955
+		115 => 'ಅನುವಾದೊ_ಪಾತೆರ',
 	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
@@ -3874,6 +3940,18 @@ return [
 		100 => 'נספח',
 		101 => 'שיחת_נספח'
 	],
+	'hsbwiktionary' => [
+		100 => 'Přidawk', // T373634
+		101 => 'Diskusija_k_přidawkej', // T373634
+		106 => 'Rymy', // T373634
+		107 => 'Diskusija_k_rymam', // T373634
+		110 => 'Tezawrus', // T373634
+		111 => 'Diskusija_k_tezawrusej', // T373634
+		114 => 'Citaty', // T373634
+		115 => 'Diskusija_k_citatam', // T373634
+		118 => 'Rekonstrukcija', // T373634
+		119 => 'Diskusija_k_rekonstrukciji' // T373634
+	],
 	'huwiktionary' => [
 		100 => 'Függelék', // T44505 - Appendix
 		101 => 'Függelékvita',
@@ -3960,6 +4038,8 @@ return [
 		107 => 'ကာရန်_ဓရီုကျာ', // T330689 , T341940 - Rhymes_talk
 		118 => 'ဗီုပြင်သိုင်တၟိ', // T330689 , T341940 - Reconstruction
 		119 => 'ဗီုပြင်သိုင်တၟိ_ဓရီုကျာ', // T330689 , T341940 - Reconstruction_talk
+		110 => 'အဘိဓာန်', // T356620 - Thesaurus
+		111 => 'အဘိဓာန်_ဓရီုကျာ', // T356620 - Thesaurus_talk
 	],
 	'mrwiktionary' => [
 		104 => 'सूची',
@@ -4691,6 +4771,8 @@ return [
 		107 => 'Experiment_talk', // T212919
 		108 => 'Lesson', // T212919
 		109 => 'Lesson_talk', // T212919
+		110 => 'Transwiki', // T387055
+		111 => 'Transwiki_talk', // T387055
 	],
 	// @} end of Wikiversity
 
@@ -4747,6 +4829,10 @@ return [
 		100 => 'Портал', // Portal
 		101 => 'Обговорення_порталу', // Portal talk
 	],
+	'zhwikivoyage' => [ // T387055
+		100 => 'Transwiki',
+		101 => 'Transwiki_talk',
+	],
 	// @} end of Wikivoyage
 
 ],
@@ -4755,6 +4841,7 @@ return [
 'wgNamespaceRobotPolicies' => [
 	'arwiki' => [
 		NS_USER => 'noindex,nofollow', // T371470
+		NS_USER_TALK => 'noindex,nofollow', // T371470
 	],
 	'azwiki' => [
 		118 => 'noindex,nofollow', // Draft - T299332
@@ -4913,6 +5000,14 @@ return [
 		NS_USER => 'noindex,follow', // T121301
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
+	],
+	'kowikisource' => [
+		118 => 'noindex,nofollow', // Draft - T385162
+		119 => 'noindex,nofollow', // Draft talk - T385162
+	],
+	'kywiki' => [
+		118 => 'noindex,nofollow', // draft - T385593
+		119 => 'noindex,nofollow', // draft talk - T385593
 	],
 	'mlwiki' => [ // Draft - T362653
 		118 => 'noindex,nofollow',
@@ -5102,6 +5197,9 @@ return [
 	'+cswiktionary' => [
 		NS_FILE      => [ 'editinterface' ],
 		NS_FILE_TALK => [ 'editinterface' ],
+	],
+	'+enwikivoyage' => [
+		828 => [ 'autoconfirmed' ], // T388301 - Module:
 	],
 	'+eswiki' => [
 		NS_FILE => [ 'editinterface' ],
@@ -5389,6 +5487,8 @@ return [
 	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
+	'kowikisource' => [ 118, 119 ], // draft and draft talk - T385162
+	'kywiki' => [ 118, 119 ], // draft and draft talk - T385593
 	'mlwiki' => [ 118, 119 ], // draft and draft talk - T362653
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
@@ -5430,6 +5530,7 @@ return [
 	'arbcom_fiwiki' => 'Project',
 	'arbcom_nlwiki' => 'Project',
 	'arbcom_ruwiki' => 'Арбитраж', // T262812
+	'arbcom_zhwiki' => '仲裁',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا', // T6672
 	'arwikibooks' => 'ويكي_الكتب',
@@ -5660,6 +5761,7 @@ return [
 	'idwikimedia' => 'Wikimedia_Indonesia',
 	'idwikiquote' => 'Wikikutip', // T341177
 	'idwikisource' => 'Wikisumber', // T341173
+	'idwikivoyage' => 'Wikiwisata', // T381080
 	'idwiktionary' => 'Wikikamus', // T341173
 	'iegcomwiki' => 'Project',
 	'igwikiquote' => 'Wikikwotu',
@@ -5862,10 +5964,12 @@ return [
 	'sahwiki' => 'Бикипиэдьийэ',
 	'sahwikisource' => 'Бикитиэкэ',
 	'satwiki' => 'ᱣᱤᱠᱤᱯᱤᱰᱤᱭᱟ', // T211294
+	'satwiktionary' => 'ᱣᱤᱠᱤ_ᱟᱹᱲᱟᱹ_ᱢᱩᱨᱟᱹᱭ', // T211294
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
 	'shwiki' => 'Wikipedija', // T332614
+	'shwiktionary' => 'Wikirječnik', // T385833
 	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',
@@ -5902,6 +6006,7 @@ return [
 	'stewardwiki' => 'Project',
 	'strategywiki' => 'Strategic_Planning',
 	'suwikisource' => 'Wikipabukon', // T344314
+	'sylwiki' => 'ꠃꠁꠇꠤꠙꠤꠒꠤꠀ',
 	'szlwiki' => 'Wikipedyjo',
 	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
@@ -5928,6 +6033,7 @@ return [
 	'thwikisource' => 'วิกิซอร์ซ',
 	'tiwiki' => 'ዊኪፐድያ', // T263840
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
+	'tigwiki' => 'ዊኪፒድያ', // T381379
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
 	'tlywiki' => 'Vikipedija', // T367009
@@ -5960,7 +6066,7 @@ return [
 	'uzwiki' => 'Vikipediya',
 	'uzwikibooks' => 'Vikikitob',
 	'uzwikiquote' => 'Vikiiqtibos',
-	'uzwiktionary' => 'Vikilug‘at',
+	'uzwiktionary' => 'Vikilugʻat', // T362620
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki' => 'Vikipedii',
 	'vewikimedia' => 'Asociación',
@@ -5990,6 +6096,7 @@ return [
 	'altwiki' => 'Википедияти_шӱӱжери',
 	'arbcom_cswiki' => 'Diskuse_k_projektu', // T151731
 	'arbcom_ruwiki' => 'Обсуждение_арбитража', // T262812
+	'arbcom_zhwiki' => '仲裁讨论',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউৎস_বাৰ্তা', // T45129, T226027
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
@@ -6005,6 +6112,7 @@ return [
 	'bswiki' => 'Razgovor_o_Wikipediji', // T115812 and T231654
 	'bswiktionary' => 'Razgovor_s_Wikirječnikom',
 	'btmwiktionary' => 'Pembicaraan_Wikikamus',
+	'cbk_zamwiki' => 'Discusión_del_Wikipedia', // T386722
 	'cuwiki' => 'Википєдїѩ_бєсѣда', // T123654
 	'cswikivoyage' => 'Diskuse_k_Wikicestám',
 	'elwikinews' => 'Βικινέα_συζήτηση',
@@ -6037,6 +6145,7 @@ return [
 	'kbdwiktionary' => 'Википсалъалъэм_тепсэлъыхьын',
 	'kbpwiki' => 'Wikipediya_ndɔnjɔɔlɩyɛ', // T160868
 	'kcgwiktionary' => 'A̱lyiat_Swánga̱lyiatwuki',
+	'kncwiki' => 'Mana_kǝla_Wikipedia_yǝn', // T385185
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್_ಚರ್ಚೆ', // T110806
 	'kmwiki' => 'ការពិភាក្សាអំពីវិគីភីឌា',
 	'koiwiki' => 'Баитам_Википедия_йылiсь',
@@ -6076,6 +6185,7 @@ return [
 	'sahwikisource' => 'Бикитиэкэ_Ырытыы',
 	'sdwiki' => 'وڪيپيڊيا_بحث', // T186943
 	'shwiki' => 'Razgovor_o_Wikipediji', // T332614
+	'shwiktionary' => 'Razgovor_o_Wikirječniku', // T385833
 	'shnwiktionary' => 'လွင်ႈဢုပ်ႇဢူဝ်း_ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'siwiki' => 'විකිපීඩියා_සාකච්ඡාව',
 	'siwikibooks' => 'විකිපොත්_සාකච්ඡාව',

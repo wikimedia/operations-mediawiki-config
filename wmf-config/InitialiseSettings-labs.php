@@ -80,7 +80,7 @@ function wmfGetOverrideSettings() {
 			'wikivoyage'     => 'Wikivoyage',
 		],
 
-		// when using the SSO domain, this will be overridden in CommonSettings.php
+		// when using the shared auth domain, this will be overridden in CommonSettings.php
 		'-wgServer' => [
 			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
@@ -106,7 +106,7 @@ function wmfGetOverrideSettings() {
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
-		// when using the SSO domain, this will be overridden in CommonSettings.php
+		// when using the shared auth domain, this will be overridden in CommonSettings.php
 		'-wgCanonicalServer' => [
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
 			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
@@ -147,14 +147,35 @@ function wmfGetOverrideSettings() {
 			'default' => 32,
 		],
 
+		'-wgThumbnailStepsRatio' => [
+			'default' => 0.5,
+		],
+
+		'-wgThumbnailSteps' => [
+			'default' => [ 20, 40, 60, 120, 250, 330, 500, 960 ],
+		],
+
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
 		// the entry does not already have the setting.
-		// Beta only has eqiad. prefixed topics.
 		'wgEventStreamsDefaultSettings' => [
+			// NOTE: there can only be one mediawiki-config 'default' (global wiki default).
+			// Settings from production 'default' wikis are not merged in here
+			// (unlike per wiki overrides with + prefix.)
 			'default' => [
+				// Beta only has eqiad. prefixed topics.
+				// See comment docs for this setting in ext-EventStreamConfig.php.
 				'topic_prefixes' => [ 'eqiad.' ],
+				'producers' => [
+					'eventgate' => [
+						// See comment docs for this setting in ext-EventStreamConfig.php.
+						'enrich_fields_from_http_headers' => [
+							'meta.request_id' => 'x-request-id',
+							'http.request_headers.user-agent' => 'user-agent'
+						],
+					],
+				],
 			],
 		],
 
@@ -166,16 +187,42 @@ function wmfGetOverrideSettings() {
 		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
-			'+wikipedia' => [
-				// Override default settings to enable
-				// rc0.mediawiki.page_change on selective wikis as we roll it out and test it.
-				// https://phabricator.wikimedia.org/T311129
-				'rc0.mediawiki.page_change' => [
+			'+metawiki' => [
+				// Test for https://phabricator.wikimedia.org/T382173
+				// This will be removed in production.
+				'eventlogging_NavigationTiming' => [
 					'producers' => [
-						'mediawiki_eventbus' => [
-							'enabled' => true,
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								// TEST: Opt out of collecting user-agent
+								'http.request_headers.user-agent' => false,
+							],
 						],
 					],
+				],
+				// Test for https://phabricator.wikimedia.org/T382173
+				// This will be removed in production.
+				'eventlogging_HomepageVisit' => [
+					'producers' => [
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								// TEST: Opt out of collecting user-agent
+								'http.request_headers.user-agent' => false,
+							],
+						],
+					]
+				],
+				// Test for https://phabricator.wikimedia.org/T382173
+				// This will be removed in production.
+				'eventlogging_HelpPanel' => [
+					'producers' => [
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								// TEST: Opt out of collecting user-agent
+								'http.request_headers.user-agent' => false,
+							],
+						],
+					]
 				],
 			],
 			'+enwiki' => [
@@ -200,6 +247,13 @@ function wmfGetOverrideSettings() {
 								'performer_is_logged_in',
 							],
 						],
+					],
+				],
+				// Bump sample rate to 100% for QA purposes
+				'mediawiki.web_ui_actions' => [
+					'sample' => [
+						'rate' => 1,
+						'unit' => 'session',
 					],
 				],
 			]
@@ -239,12 +293,8 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgMetricsPlatformEnable' => [
-			'testwiki' => true
-		],
-
-		'wgMetricsPlatformEnableStreamConfigsMerging' => [
-			'testwiki' => true
+		'wmgUseMetricsPlatform' => [
+			'default' => true,
 		],
 
 		// Log channels for beta cluster
@@ -299,7 +349,6 @@ function wmfGetOverrideSettings() {
 				// 'EventBus' => [ 'logstash' => 'error' ],
 				'EventLogging' => 'debug',
 				'exception' => 'debug',
-				'exception-json' => [ 'logstash' => false ],
 				'exec' => 'debug',
 				'export' => 'debug',
 				'ExternalStore' => 'debug',
@@ -437,8 +486,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgFavicon' => [
-			'dewiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
-			'enwiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
+			'dewiki' => '/static/favicon/wikipedia-purple.png',
+			'enwiki' => '/static/favicon/wikipedia-purple.png',
 		],
 
 		'-wmgEnableCaptcha' => [
@@ -544,6 +593,20 @@ function wmfGetOverrideSettings() {
 				'loggedin' => true,
 			],
 		],
+		'wgMinervaDonateBanner' => [
+			'default' => [
+				'base' => true,
+				'loggedin' => false,
+				'amc' => false,
+			],
+		],
+		'wgMinervaDonateLink' => [
+			'default' => [
+				'base' => false,
+				'loggedin' => true,
+				'amc' => true,
+			],
+		],
 		'wmgMinervaNightModeExcludeTitles' => [
 			'default' => [ 'Banana' ],
 		],
@@ -603,7 +666,12 @@ function wmfGetOverrideSettings() {
 
 		// T370254, T375787
 		'wgCentralAuthEnableSul3' => [
-			'default' => [ 'query-flag', 'cookie' ]
+			'default' => [ 'query-flag', 'cookie' ],
+			# enable on the two cross-site wikis (T355281) + some other small wikis
+			'test2wiki' => [ 'always', 'query-flag', 'cookie' ],
+			'plwikivoyage' => [ 'always', 'query-flag', 'cookie' ],
+			'sqwiki' => [ 'always', 'query-flag', 'cookie' ],
+			'enwikinews' => [ 'always', 'query-flag', 'cookie' ],
 		],
 
 		//
@@ -614,19 +682,6 @@ function wmfGetOverrideSettings() {
 			'default' => [
 				'logged_in' => true,
 				'logged_out' => true
-			],
-		],
-		'wgVectorZebraDesign' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-			]
-		],
-		'wgVectorAppearance' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-				'beta' => true,
 			],
 		],
 		'wgVectorPromoteAddTopic' => [
@@ -679,13 +734,13 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => false,
 		],
 
-		'wgReportIncidentRecipientEmails' => [
-			'default' => [ 'incident-report-system-beta@wikimedia.org' ]
+		'wgReportIncidentZendeskUrl' => [
+			// Don't send test reports to Zendesk.
+			'default' => '',
 		],
 
-		'wgReportIncidentEmailFromAddress' => [
-			// Same as $wgPasswordSender in CommonSettings-labs.php
-			'default' => 'wiki@wikimedia.beta.wmflabs.org'
+		'wgReportIncidentEnableInstrumentation' => [
+			'default' => true,
 		],
 
 		'wmgUseRSSExtension' => [
@@ -724,6 +779,18 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseRelatedArticles' => [
 			'default' => true,
+		],
+
+		'wgRelatedArticlesABTestEnrollment' => [
+			'default' => [
+				"name" => "RelatedArticles test experiment",
+				"enabled" => false,
+				"buckets" => [
+					"nonExperiment-unsampled" => 0,
+					"experimentEnabled" => 0.5,
+					"experimentDisabled" => 0.5
+				],
+			]
 		],
 
 		'wmgExtraLanguageNames' => [
@@ -806,11 +873,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgSecurePollSingleTransferableVoteEnabled' => [
-			'default' => true,
-			'eswiki' => false,
-		],
-
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
@@ -845,9 +907,8 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		'wgEntitySchemaEnableDatatype' => [
-			'default' => false,
-			'wikidatawiki' => true, // T332725
+		'wmgUseEmailAuth' => [
+			'default' => true,
 		],
 
 		'wgLexemeLanguageCodePropertyId' => [
@@ -1043,12 +1104,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
-		// can prove the killswitch works.
-		'-wgPopupsEventLogging' => [
-			'default' => false,
-			'enwiki' => true,
-		],
 		// T184793: Enable the VirtualPageViews on beta so we can easily test and track
 		// Popups visible for more than 1s as a virtual page views
 		'wgPopupsVirtualPageViews' => [
@@ -1065,6 +1120,20 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
+		'-wmgJsonConfigDataModeConfig' => [
+			// All wikis access data from Commons; Commons accesses itself and stores data
+			'default' => [
+				'cacheKey' => 'commonswiki',
+				'remote' => [
+					'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+				]
+			],
+			'commonswiki' => [
+				'cacheKey' => 'commonswiki',
+				'store' => true,
+			],
+		],
+
 		'wmgEnableDashikiData' => [
 			'default' => true,
 		],
@@ -1073,12 +1142,6 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
-		'wgReadingListsCluster' => [
-			'default' => false,
-		],
-		'wgReadingListsDatabase' => [
-			'default' => 'metawiki',
-		],
 		'wgReadingListsWebAuthenticatedPreviews' => [
 			'default' => true,
 		],
@@ -1168,12 +1231,12 @@ function wmfGetOverrideSettings() {
 			'default' => null
 		],
 
-		'-wgTemplateLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+		'-wgFileSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
-		'-wgExternalLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+		'-wgCategoryLinksSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
@@ -1261,8 +1324,9 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
-		'wgGECommunityUpdatesEnabled' => [
-			'default' => true,
+		'wmgGEActiveExperiment' => [
+			'enwiki' => 'no-link-recommendation',
+			'cswiki' => 'surfacing-structured-task',
 		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
@@ -1272,9 +1336,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'actionapi',
 		],
 		// $wgGEImageRecommendationServiceAccessToken is in private/PrivateSettings.php
-		'-wgGEDatabaseCluster' => [
-			'default' => false,
-		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
 		],
@@ -1353,6 +1414,10 @@ function wmfGetOverrideSettings() {
 			'viwiki' => null,
 		],
 		'wgGESurfacingStructuredTasksEnabled' => [
+			'cswiki' => true,
+			'enwiki' => true,
+		],
+		'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
 			'enwiki' => true,
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
@@ -1976,15 +2041,15 @@ function wmfGetOverrideSettings() {
 					'url' => '/w/rest.php/specs/v0/module/-',
 					'name' => 'MediaWiki REST API (routes not in modules)',
 				],
+				'specs.v0' => [
+					'url' => '/w/rest.php/specs/v0/module/specs/v0',
+					'name' => 'Content API',
+				],
+				'content.v1' => [
+					'url' => '/w/rest.php/specs/v0/module/content/v1',
+					'name' => 'Content API',
+				]
 			],
-			'specs.v0' => [
-				'url' => '/w/rest.php/specs/v0/module/specs/v0',
-				'name' => 'Content API',
-			],
-			'content.v1' => [
-				'url' => '/w/rest.php/specs/v0/module/content/v1',
-				'name' => 'Content API',
-			]
 		],
 
 		'wmgUseCSP' => [
@@ -2043,9 +2108,6 @@ function wmfGetOverrideSettings() {
 				// the new wmcloud instances to test the SUL project
 				'*.wikipedia.beta.wmcloud.org',
 			],
-		],
-
-		'-wgDiscussionToolsABTest' => [
 		],
 
 		'-wgDiscussionTools_visualenhancements' => [
@@ -2142,13 +2204,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Flag temporary - added in T339104, to be removed in T330217
-		// Set to false in T356169 to test limited version on beta
-		'wmgWikibaseTmpAlwaysShowMulLanguageCode' => [
-			'default' => null,
-			'wikidatawiki' => false,
-		],
-
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],
@@ -2205,11 +2260,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+		'wmgCampaignEventsUseEventOrganizerGroup' => [
+			'default' => false,
+		],
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
-		],
-		'wgWikimediaCampaignEventsEnableCommunityList' => [
-			'default' => true, // T374617
 		],
 		// T314294
 		'-wmgUsePhonos' => [
@@ -2229,10 +2284,6 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => true, // T322325
 		],
 
-		'wgOATHAuthMultipleDevicesMigrationStage' => [
-			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
-		],
-
 		// Testing while new Chart extension is being developed
 		'-wmgUseGraph' => [
 			'default' => true,
@@ -2244,6 +2295,7 @@ function wmfGetOverrideSettings() {
 		'wmgEnableIPMasking' => [
 			'default' => true, // T377262
 			'en-rtl' => false,
+			'metawiki' => true, // T379108
 		],
 
 		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
@@ -2252,6 +2304,7 @@ function wmfGetOverrideSettings() {
 		// until temporary accounts are enabled again.
 		'wmgDisableIPMasking' => [
 			'default' => false,
+			'metawiki' => false, // T379108
 		],
 
 		// T342858
@@ -2289,34 +2342,20 @@ function wmfGetOverrideSettings() {
 				'default' => null,
 		],
 
-		'-wgGlobalBlockingAllowGlobalAccountBlocks' => [
-			'default' => true, // T356924, T356923
-			'wikitech' => false,
-			'fishbowl' => false,
-			'private' => false,
-		],
-
 		'-wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
 			'default' => false, // T377737, T377760
 		],
 
 		'wmgUseCommunityConfiguration' => [
-			'default' => false, // NOTE: Do not enable without Growth team OK
-			'growthexperiments' => true, // T364892
+			'default' => true,
 		],
 		'wgGEUseCommunityConfigurationExtension' => [
-			'default' => false,
-			'growthexperiments' => true, // T364892
+			'default' => true,
 		],
 
 		'wmgUseAutoModerator' => [ // T364034
 			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
 			'enwiki' => true,
-		],
-
-		// T363587
-		'wgEnableEventBusInstrumentation' => [
-			'default' => true,
 		],
 
 		// T20110
@@ -2330,23 +2369,19 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T369945
-		// Warning: T374661 known to have compatibility problems with Parsoid as of 2024-11-07
 		'wmgUseChart' => [
 			'default' => true,
 			'loginwiki' => false,
 			'private' => false,
 			'fishbowl' => false,
 		],
+		'wgParsoidFragmentSupport' => [
+			'default' => true,
+		],
 		// T378206
 		'wgChartProgressiveEnhancement' => [
 			'default' => true,
 		],
-
-		// T66315 - Maintain feature flag 1 month as security in case of error after rollout
-		'wmgWikibaseMoveConnectedItemLinkToOtherProjects' => [
-			'default' => true,
-		],
-
 		// T372527
 		'-wmgUseCommunityRequests' => [
 			'default' => false,
@@ -2356,10 +2391,26 @@ function wmfGetOverrideSettings() {
 		'wgBabelUseCommunityConfiguration' => [
 			'default' => true,
 		],
-		// T375610
+		// T377121
 		'-wgUseCodexSpecialBlock' => [
+			'default' => true,
+			'enwikisource' => false,
+		],
+		// T377121
+		'-wgEnableMultiBlocks' => [
+			'default' => true,
+			'enwikisource' => false,
+			'enwikivoyage' => false,
+		],
+		// T377975
+		'-wgTemplateDataEnableDiscovery' => [
 			'default' => false,
-			'testwiki' => true,
+			'enwiki' => true,
+		],
+		// T384455
+		'wmgWikibaseEntityAccessLimit' => [
+			'default' => 500,
+			'commonswiki' => 400,
 		],
 	];
 } # wmfGetOverrideSettings()

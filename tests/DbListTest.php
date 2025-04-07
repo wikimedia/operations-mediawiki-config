@@ -47,8 +47,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testDblistAllContainsEverything() {
 		$lists = DBList::getLists();
 
-		// Content of all.dblist
-		$all = $lists['all'];
+		// All wikis including preinstalled
+		$all = array_merge( $lists['all'], $lists['preinstall'] );
 
 		$skip = [
 			// No point in checking that all includes itself
@@ -138,8 +138,14 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Production code that is web-facing MUST NOT load unnecessary dblists.
-	 * Loading these from disk on every web request takes time.
+	 * dblists were formerly loaded into web requests by doing file() at runtime.
+	 * This test complained if any files were loaded unnecessarily.
+	 *
+	 * That's not how it works anymore -- we have a pregenerated PHP array so
+	 * it's pretty fast to load this information. The referenced constant is not
+	 * accessed at runtime.
+	 *
+	 * I suppose it still saves some nanoseconds.
 	 */
 	public function testNoUnusedDblistsLoaded() {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
@@ -161,6 +167,9 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 				unset( $unusedDblists[ $wiki ] );
 			}
 		}
+
+		// Used in MWMultiVersion::isPreInstall
+		unset( $unusedDblists['preinstall'] );
 
 		// The diff will report dblist names that are unused,
 		// and also mention the array offset in MWMultiVersion::DB_LISTS.

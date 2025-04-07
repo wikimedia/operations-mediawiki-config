@@ -54,13 +54,19 @@ final class WmfManageDblistCli {
 			Normalize all dblist files,
 			including expansion of ".dbexpr" files.
 
-	init <dbname> <language code> <family> <privacy>
-			Initializes the dblists of a new wiki
+	prepare <dbname> <language code> <family> <privacy>
+			Set up a new wiki, getting it ready for installation. It will be
+			added to preinstall.dblist.
 			<privacy> must be one of 'public', 'fishbowl' or 'private'
-			Example: manage-dblist init fatwiki fat wikipedia public
+			Example: manage-dblist prepare fatwiki fat wikipedia public
+
+	activate <dbname>
+			Move a wiki from preinstall.dblist to all.dblist. This indicates
+			that the database is ready to use.
 
 	init-labs <dbname> <language code>
-			Initializes the dblists of a new wiki in the Beta Cluster.
+			Prepare and activate a new wiki in the Beta Cluster, adding it to
+			all-labs.dblist.
 
 			The wiki must be present in the production config
 			(wikiversions.json) already.
@@ -90,8 +96,11 @@ final class WmfManageDblistCli {
 			case 'update':
 				$this->doUpdate( ...$this->params );
 				return;
-			case 'init':
-				$this->doInit( ...$this->params );
+			case 'prepare':
+				$this->doPrepare( ...$this->params );
+				return;
+			case 'activate':
+				$this->doActivate( ...$this->params );
 				return;
 			case 'init-labs':
 				$this->doInitLabs( ...$this->params );
@@ -127,7 +136,7 @@ final class WmfManageDblistCli {
 	}
 
 	private function doAdd( string $dbname, string $listname ): void {
-		if ( $listname !== 'all' && $listname !== 'all-labs' ) {
+		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall', 'preinstall-labs' ] ) ) {
 			$validDbnames = strpos( $listname, 'labs' )
 				? array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) )
 				: array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
@@ -165,7 +174,7 @@ final class WmfManageDblistCli {
 		//
 		// This caveat is validated by DblistTest::testDblistAllContainsEverything().
 		//
-		$labsOnlyTags = [ 'all-labs', 'closed-labs', 'flow_only_labs', 'flow-labs' ];
+		$labsOnlyTags = [ 'all-labs', 'closed-labs', 'flow_only_labs', 'flow-labs', 'preinstall-labs' ];
 		$untracked = [
 			// This naturally contains wikis we don't know about
 			'deleted',
@@ -198,7 +207,9 @@ final class WmfManageDblistCli {
 		$this->generateDbSectionMapping();
 	}
 
-	private function doInit( string $dbName, string $lang, string $family, string $visibility ) {
+	private function doPrepare( string $dbName, string $lang, string $family, string $visibility ) {
+		$visibility = strtolower( $visibility );
+
 		if ( !in_array( $visibility, [ 'public', 'fishbowl', 'private' ] ) ) {
 			$this->error( 'Unknown visibility' );
 			exit( 1 );
@@ -248,7 +259,7 @@ final class WmfManageDblistCli {
 		ksort( $versions );
 		MWWikiVersions::writeWikiVersionsFile( 'wikiversions.json', $versions );
 
-		$this->doAdd( $dbName, 'all' );
+		$this->doAdd( $dbName, 'preinstall' );
 		$this->doAdd( $dbName, $family );
 		$this->doAdd( $dbName, 's5' ); // all wikis are currently created in s5
 		$this->doAdd( $dbName, 'small' );
@@ -278,6 +289,16 @@ final class WmfManageDblistCli {
 		}
 
 		$this->generateDbSectionMapping();
+	}
+
+	private function doActivate( string $dbName ) {
+		$preinstallWikis = MWWikiversions::readDbListFile( 'preinstall' );
+		if ( !in_array( $dbName, $preinstallWikis ) ) {
+			$this->error( "Wiki not in preinstall.dblist: $dbName" );
+			return;
+		}
+		$this->doAdd( $dbName, 'all' );
+		$this->doDel( $dbName, 'preinstall' );
 	}
 
 	private function doInitLabs( string $dbName, string $lang ) {

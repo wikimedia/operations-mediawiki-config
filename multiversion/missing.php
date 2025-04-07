@@ -8,7 +8,11 @@
  * - Run `php -S localhost:9412` from this directory.
  * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404)
- * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (interwiki redirect)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (lateral interwiki redirect)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=f:foo> (global interwiki redirect)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=w:foo> ("w:" redirect to Wikipedia is special-cased)
+ * - <http://localhost:9412/missing.php?host=als.wikibooks.org (redirect to namespace in Wikipedia)
+ * - <http://localhost:9412/missing.php?host=als.wikivoyage.org (redirect to subpage in Wikipedia)
  *
  * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
  * Wikibooks, and Wikinews to the Wikimedia Incubator.
@@ -82,11 +86,27 @@ function wmfHandleMissingWiki() {
 			'als' => [ 'Nochricht', 'Nochricht:Dialäkt-Neuigkeite' ],
 			'bar' => [ 'Nochricht', 'Nochricht:Start' ],
 			'pfl' => [ 'Nochricht', 'Nochricht:Hauptseite' ],
-			// zh-classical and nds use subpages rather than a standalone namespace
-
-			// Various Russian languages use Russian Wikinews instead.  That would be better handled
-			// at the Apache layer, although going to incubator provides context for some of them.
+			// Various Russian languages use Russian Wikinews instead. These aren't handled here
 		],
+	];
+
+	// List of projects that are handled as a subpage of another page in the language's Wikipedia
+	// Format: [project name => [language => basepage] ] ]
+	$wikisAsSubpages = [
+		'wiktionary' => [
+			// Needs to be stated for both language codes since the lzh<-->zh-classical mapping
+			// is done only for Wikipedia at the Apache layer
+			'lzh' => '維基大典:維基爾雅',
+			'zh-classical' => '維基大典:維基爾雅'
+		],
+		'wikinews' => [
+			'nds' => 'Portal:Wikinews',
+			'lzh' => '維基大典:世事',
+			'zh-classical' => '維基大典:世事',
+		],
+		'wikivoyage' => [
+			'als' => 'Buech:Raisefierer',
+		]
 	];
 
 	[ $protocol, $host ] = wmfGetProtocolAndHost();
@@ -175,6 +195,12 @@ function wmfHandleMissingWiki() {
 			$page = "$namespace:$page";
 		}
 		wmfShowRedirect( "$protocol://$language.wikipedia.org/wiki/$page" );
+	} elseif ( isset( $wikisAsSubpages[$project][$language] ) ) {
+		$destTitle = $wikisAsSubpages[ $project ][ $language ];
+		if ( $page !== '' ) {
+			$destTitle = "$destTitle/$page";
+		}
+		wmfShowRedirect( "$protocol://$language.wikipedia.org/wiki/$destTitle" );
 	} elseif ( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
 		if ( $page === '' ) {

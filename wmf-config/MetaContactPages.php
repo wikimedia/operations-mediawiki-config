@@ -59,13 +59,13 @@ $wgContactConfig['affcomusergroup'] = [
 		],
 		'GroupIntent' => [
 			'label-message' => 'contactpage-affcom-user-group-intent-letter-label',
-			'contactpage-email-label' => 'Logo',
+			'contactpage-email-label' => 'Letter of intent',
 			'type' => 'text',
 			'required' => true,
 		],
 		'GroupLogo' => [
 			'label-message' => 'contactpage-affcom-user-group-logo-label',
-			'contactpage-email-label' => 'Logo',
+			'contactpage-email-label' => 'Logo link',
 			'type' => 'text',
 			'required' => true,
 		],
@@ -370,6 +370,66 @@ $wgContactConfig['stewards'] = [
 		],
 		'Disclaimer' => [
 			'label-message' => 'contactpage-stewards-disclaimer-label',
+			'type' => 'info'
+		]
+	]
+];
+
+/**
+ * Configuration for contact form for [[:meta:U4C]]
+ *
+ * @see T379317
+ */
+$wgContactConfig['u4c'] = [
+	'RecipientUser' => 'U4C',
+	'SenderEmail' => $wgPasswordSender,
+	'RequireDetails' => true,
+	'IncludeIP' => false,
+	'AdditionalFields' => [
+		'CaseExplanation' => [
+			'label-message' => 'contactpage-u4c-case-explanation',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => true
+		],
+		'RelevantLinks' => [
+			'label-message' => 'contactpage-u4c-relevant-links',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => true
+		],
+		'ViolationType' => [
+			'label-message' => 'contactpage-u4c-violation-type',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => true
+		],
+		'InvolvedUsers' => [
+			'label-message' => 'contactpage-u4c-involved-users',
+			'type' => 'textarea',
+			'rows' => 5,
+			'required' => false
+		],
+		'AffectedAccounts' => [
+			'label-message' => 'contactpage-u4c-affected-accounts',
+			'type' => 'textarea',
+			'rows' => 5,
+			'required' => false
+		],
+		'ProposedSolution' => [
+			'label-message' => 'contactpage-u4c-proposed-solution',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => true
+		],
+		'AdditionalInformation' => [
+			'label-message' => 'contactpage-u4c-additional-information',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => false
+		],
+		'Disclaimer' => [
+			'label-message' => 'contactpage-u4c-disclaimer-label',
 			'type' => 'info'
 		]
 	]

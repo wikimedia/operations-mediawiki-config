@@ -11,8 +11,16 @@ return [
 	'growthexperiments' => true,
 ],
 
-'wgGEDatabaseCluster' => [
-	'default' => 'extension1',
+'wmgGEActiveExperiment' => [
+	'default' => false,
+	'testwiki' => 'surfacing-structured-task', // T386739
+	'arzwiki' => 'surfacing-structured-task',
+	'enwiki' => 'no-link-recommendation',
+	'eswiki' => 'surfacing-structured-task',
+	'fawiki' => 'surfacing-structured-task',
+	'frwiki' => 'surfacing-structured-task',
+	'idwiki' => 'surfacing-structured-task',
+	'ptwiki' => 'surfacing-structured-task',
 ],
 
 'wgGEImageRecommendationApiHandler' => [
@@ -35,18 +43,12 @@ return [
 	'default' => true,
 ],
 
-'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
-	'default' => true,
+'wgGEApiQueryGrowthTasksLookaheadSize' => [
+	'default' => 10,
 ],
 
-'wgGECommunityUpdatesEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'eswiki' => true,
-	'arwiki' => true,
-	'frwiki' => true,
-	'cswiki' => true,
+'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
+	'default' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -377,16 +379,24 @@ return [
 	'zuwiki' => true,
 ],
 
-'wgGETempLinkRecommendationSwitchTagClearHook' => [
-	'default' => true,
-],
-
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
 ],
 
 'wgGESurfacingStructuredTasksEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+	'arzwiki' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'idwiki' => true,
+	'ptwiki' => true,
+],
+
+'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
+	// Only enable in production after aligning with ServiceOps about T378536
 	'default' => false,
 ],
 
@@ -686,8 +696,15 @@ return [
 	'testwiki' => 'simplewiki',
 ],
 
-'wgGENewcomerTasksOresTopicConfigTitle' => [
-	'default' => 'mw:MediaWiki:NewcomerTopicsOres.json',
+'wgGELinkRecommendationsRefreshByIteratingThroughAllTitles' => [
+	'default' => false,
+	'arzwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'idwiki' => true,
+	'ptwiki' => true,
 ],
 
 'wgGENewcomerTasksTopicType' => [
@@ -701,7 +718,6 @@ return [
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
-	'enwiki' => 50, // T341399, T290927, T341399
 	'eswiki' => 50, // T285235
 ],
 
@@ -781,118 +797,8 @@ return [
 				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
-			'pattern' => '/^typage-\w+-\w+-2023$/',
+			'pattern' => '/^(typage|fundraising)-\w+-\w+-\d+$/',
 		],
-	],
-	'+testwiki' => [
-		'social-latam-2022' => [
-			'messageKey' => 'marketingvideocampaign',
-			'pattern' => '/^social-latam-2022-A$/',
-			'signupPageTemplate' => 'video',
-			'signupPageTemplateParameters' => [
-				'messageKey' => 'marketingvideocampaign',
-				'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
-				'thumbtime' => 38,
-			],
-		],
-		'social-latam-2022-control' => [
-			'pattern' => '/^social-latam-2022-B$/',
-		],
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
-		],
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
-		]
-	],
-	'+enwiki' => [
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-(latam|in|za)-en-2022$/'
-		],
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-(latam|in|za)-en-2022$/'
-		]
-	],
-	'+eswiki' => [
-		'social-latam-2022' => [
-			'messageKey' => 'marketingvideocampaign',
-			'signupPageTemplate' => 'video',
-			'signupPageTemplateParameters' => [
-				'messageKey' => 'marketingvideocampaign',
-				'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
-				'thumbtime' => 38,
-			],
-			'pattern' => '/^social-latam-2022-A$/'
-		],
-		'social-latam-2022-control' => [
-			'pattern' => '/^social-latam-2022-B$/',
-		],
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-latam-es-2022$/'
-		],
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-latam-es-2022$/'
-		]
-	],
-	'+ptwiki' => [
-		'thankyoupage-2022' => [
-			'messageKey' => 'thankyoupage',
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
-			'pattern' => '/^typage-latam-pt-2022$/'
-		],
-		'thankyoubanner-2022' => [
-			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoubanner',
-			],
-			'pattern' => '/^tybanner-latam-pt-2022$/'
-		]
 	],
 ],
 
@@ -906,6 +812,16 @@ return [
 
 'wgGEUseCommunityConfigurationExtension' => [
 	'default' => true,
+],
+
+'wgGELinkRecommendationMinimumTasksPerTopic' => [
+	'default' => 500,
+	'arzwiki' => 2000,
+	'eswiki' => 2000,
+	'fawiki' => 2000,
+	'frwiki' => 2000,
+	'idwiki' => 2000,
+	'ptwiki' => 2000,
 ],
 
 ];

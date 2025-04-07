@@ -1,0 +1,5 @@
+# The auth.wikimedia.org domain doesn't contain any crawlable content.
+User-agent: *
+Allow: /$
+Allow: /.well-known/
+Disallow: /
