@@ -7900,7 +7900,7 @@ return [
 ],
 
 'wgEntitySchemaTmpFixRdfUri' => [
-	'wikidatawiki' => false,
+	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
 ],
 
