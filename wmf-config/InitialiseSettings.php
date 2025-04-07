@@ -10926,6 +10926,11 @@ return [
 	'votewiki' => true,
 ],
 
+'wgSecurePollEditOtherWikis' => [
+	'default' => false,
+	'votewiki' => true,
+],
+
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled on all public sites, see T341159.
 	'default' => true,
