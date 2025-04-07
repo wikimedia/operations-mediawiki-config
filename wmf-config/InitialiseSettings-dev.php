@@ -101,5 +101,14 @@ function wmfGetOverrideSettings() {
 		'-wmgUseCheckUser' => [
 			'default' => false,
 		],
+		'-wmgUseJsonConfig' => [
+			'default' => false,
+		],
+		'-wmgUseGrowthExperiments' => [
+			'default' => false,
+		],
+		'-wmgUseChart' => [
+			'default' => false,
+		],
 	];
 }

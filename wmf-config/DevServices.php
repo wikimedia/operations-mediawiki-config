@@ -50,5 +50,6 @@ return [
 		'excimer-ui-url' => '',
 		'excimer-ui-server' => '',
 		'chart-renderer' => null,
+		'mpic' => null,
 	]
 ];

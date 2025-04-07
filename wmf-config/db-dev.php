@@ -3,3 +3,5 @@
 
 # No parser cache DBs.  Just using memcached
 $wmgParserCacheDBs = [];
+
+$wmgMainStashServers = [];
