@@ -12,7 +12,7 @@
  *
  * There are several exceptions that need to be special-cased:
  * - Domains that do not have a www prefix, so they just get m. added to the front:
- *   wikisource.org, and beta Wikidata and Wikifunctions (beta does not use www prefixes)
+ *   wikisource.org, and beta Wikidata (beta does not use www prefixes)
  * - Domains that do not have a mobile version: Wikitech and the shared auth domain (not a wiki).
  *
  * These mobile URL rules are manually mirrored by the following codebases.
@@ -34,7 +34,6 @@ function wmfMobileUrlCallback( string $domain ): string {
 	static $specialCases = [
 		'wikisource.org' => 'm.wikisource.org',
 		'wikidata.beta.wmflabs.org' => 'm.wikidata.beta.wmflabs.org',
-		'wikifunctions.beta.wmflabs.org' => 'm.wikifunctions.beta.wmflabs.org',
 		'wikitech.wikimedia.org' => false,
 		// No mobile version for authentication-related domains,
 		// we don't want to split cookies

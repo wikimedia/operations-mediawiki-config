@@ -136,7 +136,6 @@ switch ( $wmgRealm ) {
 		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
-		$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
 		break;
 	case 'production':
 	default:

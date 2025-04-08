@@ -340,7 +340,6 @@ class MWMultiVersion {
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
 			'beta.wmflabs.org' => 'deployment',
 			'wikidata.beta.wmflabs.org' => 'wikidata',
-			'wikifunctions.beta.wmflabs.org' => 'wikifunctions',
 		];
 
 		$lang = null;

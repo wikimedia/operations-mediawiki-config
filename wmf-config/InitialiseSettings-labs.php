@@ -99,7 +99,6 @@ function wmfGetOverrideSettings() {
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
@@ -124,7 +123,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
@@ -468,7 +466,6 @@ function wmfGetOverrideSettings() {
 			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
 			'wikivoyage' => '/static/images/project-logos/betacommons.png',
 			'wiktionary' => '/static/images/project-logos/betacommons.png',
-			'wikifunctionswiki' => '/static/images/project-logos/betawikifunctions.png',
 		],
 		'-wmgSiteLogo1_5x' => [],
 		'-wmgSiteLogo2x' => [],
@@ -656,7 +653,6 @@ function wmfGetOverrideSettings() {
 				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
-				'wikifunctions.beta.wmflabs.org' => 'wikifunctionswiki',
 
 				// Wikis for SUL project hosted on wmcloud.org
 				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
@@ -2080,8 +2076,6 @@ function wmfGetOverrideSettings() {
 				'm.wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
-				'wikifunctions.beta.wmflabs.org',
-				'm.wikifunctions.beta.wmflabs.org',
 
 				// Prod domains, to allow easier gadget testing
 				'*.wikimedia.org',
