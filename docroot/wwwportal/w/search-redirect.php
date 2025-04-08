@@ -20,7 +20,7 @@ $language = wmfGetFromGET( 'language', 'en' );
 $search   = wmfGetFromGET( 'search', '' );
 $fulltext = (bool)wmfGetFromGET( 'fulltext', '0' );
 $go       = (bool)wmfGetFromGET( 'go', '0' );
-$family   = wmfGetFromGET( 'family', 'wikipedia' );
+$family   = strtolower( wmfGetFromGET( 'family', 'wikipedia' ) );
 
 if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' )
 	|| ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' )
