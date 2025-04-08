@@ -2412,6 +2412,17 @@ Wiktionary:
         local_wordmark: true
         local_tagline: true
         local_icon: true
+    madwiktionary:
+        commons: 'File:Wiktionary-logo-mad.svg'
+        comment: T391318
+        comment_1_5x: T391318
+        comment_2x: T391318
+        commons_wordmark: 'File:Wiktionary-wordmark-mad.svg'
+        comment_wordmark: T391318
+        commons_tagline: 'File:Wiktionary-tagline-mad.svg'
+        comment_tagline: T391318
+        commons_icon: 'File:Wiktionary-logo-mad_(no_text).svg'
+        comment_icon: T391318
     mgwiktionary:
         no_1_5x: true
         no_2x: true

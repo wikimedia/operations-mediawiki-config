@@ -471,6 +471,7 @@ return [
 	'ltwiktionary' => '/static/images/project-logos/ltwiktionary.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary.png', // T45240
 	'niawiktionary' => '/static/images/project-logos/niawiktionary.png',
+	'madwiktionary' => '/static/images/project-logos/madwiktionary.png', // T391318
 	'mgwiktionary' => '/static/images/project-logos/mgwiktionary.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary.png', // T236861
 	'miwiktionary' => '/static/images/project-logos/miwiktionary.png', // T45240
@@ -1327,6 +1328,7 @@ return [
 	'lmowiktionary' => '/static/images/project-logos/lmowiktionary-1.5x.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-1.5x.png', // T150618
 	'niawiktionary' => '/static/images/project-logos/niawiktionary-1.5x.png',
+	'madwiktionary' => '/static/images/project-logos/madwiktionary-1.5x.png', // T391318
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-1.5x.png', // T236861
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-1.5x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-1.5x.png', // T150618
@@ -1987,6 +1989,7 @@ return [
 	'lmowiktionary' => '/static/images/project-logos/lmowiktionary-2x.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-2x.png', // T150618
 	'niawiktionary' => '/static/images/project-logos/niawiktionary-2x.png',
+	'madwiktionary' => '/static/images/project-logos/madwiktionary-2x.png', // T391318
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-2x.png', // T236861
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-2x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-2x.png', // T150618
@@ -3778,6 +3781,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-nia.svg',
 		'width' => 120,
 		'height' => 23,
+	],
+	'madwiktionary' => [ // T391318
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mad.svg',
+		'width' => 120,
+		'height' => 25,
 	],
 	'mgwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mg.svg',
@@ -7627,6 +7635,11 @@ return [
 		'width' => 120,
 		'height' => 15,
 	],
+	'madwiktionary' => [ // T391318
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-mad.svg',
+		'width' => 120,
+		'height' => 15,
+	],
 	'minwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-min.svg',
 		'width' => 121,
@@ -8331,6 +8344,7 @@ return [
 	'guwwiktionary' => '/static/images/icons/enwiktionary.svg',
 	'knwiktionary' => '/static/images/icons/knwiktionary.svg', // T382802
 	'niawiktionary' => '/static/images/icons/niawiktionary.svg',
+	'madwiktionary' => '/static/images/icons/madwiktionary.svg', // T391318
 	'minwiktionary' => '/static/images/icons/enwiktionary.svg',
 	'shywiktionary' => '/static/images/icons/shywiktionary.svg',
 	'sqwiktionary' => '/static/images/icons/sqwiktionary.svg', // T342172
