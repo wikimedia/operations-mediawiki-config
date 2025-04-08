@@ -1392,6 +1392,9 @@ return [
 		'Discussão_Em_tradução' => 109,
 		'Discussão_em_tradução' => 109,
 	],
+	'+ptwiktionary' => [
+		'WS' => 110, // T391299
+	],
 	'+rowiki' => [
 		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
 		'Portal_talk' => 101, // T127607
@@ -4119,6 +4122,8 @@ return [
 		107 => 'Portal_Discussão',
 		108 => 'Citações',
 		109 => 'Citações_Discussão',
+		110 => 'Wikisaurus', // T391299
+		111 => 'Wikisaurus_Discussão', // T391299
 	],
 	'rowiktionary' => [
 		100 => 'Portal',
