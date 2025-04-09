@@ -69,6 +69,7 @@ class MWMultiVersion {
 		'cirrussearch-big-indices',
 		'rtl',
 		'translate',
+		'wikifunctionsclient',
 		'growthexperiments',
 	];
 

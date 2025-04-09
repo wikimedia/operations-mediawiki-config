@@ -887,7 +887,7 @@ return [
 'tddwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'techconductwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'tenwiki' => [ 'wikipedia', 'closed', 'small', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
-'test2wiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'medium', 'wikidataclient-test', 'group1', 'nowikidatadescriptiontaglines', 'growthexperiments' ],
+'test2wiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'medium', 'wikidataclient-test', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'growthexperiments' ],
 'testcommonswiki' => [ 'special', 'small', 'wikibaserepo', 'wikidataclient-test', 'visualeditor-nondefault', 'group0', 'translate' ],
 'testwiki' => [ 'wikipedia', 'flow', 'skin-themes', 'medium', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'growthexperiments' ],
 'testwikidatawiki' => [ 'special', 'medium', 'wikidata', 'wikibaserepo', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate' ],
