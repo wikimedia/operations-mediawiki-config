@@ -8504,7 +8504,7 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'tn', 'vec' ],
+	'wikipedia' => [ 'tn', 'vec', 'ast', 'lmo' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
