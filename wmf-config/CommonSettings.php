@@ -1689,8 +1689,6 @@ if ( $wmgUseContactPage ) {
 	}
 }
 
-// At the moment securepoll doesn't work on k8s, or on newer linux distributions,
-// see T209892. TODO: properly disable it on votewiki when gnupg1 isn't available.
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 
