@@ -4655,7 +4655,7 @@ return [
 ],
 
 'wgCentralAuthEnableSul3' => [
-	'default' => [ 'always', 'query-flag', 'cookie' ],
+	'default' => true,
 ],
 
 // This is also guarded by $wmgUseCentralAuth
