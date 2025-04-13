@@ -8189,7 +8189,7 @@ return [
 		'width' => 106,
 		'height' => 14,
 	],
-	'punjabiwikimedia' => [
+	'punjabiwikimedia' => [ // T348611
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-punjabi.svg',
 		'width' => 120,
 		'height' => 26,

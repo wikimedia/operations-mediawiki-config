@@ -4217,7 +4217,8 @@ Wikivoyage:
         no_2x: true
         selected_icon: outreachwiki
         local_wordmark: true
-        local_tagline: true
+        commons_tagline: 'File:Wikimedia-tagline-punjabi.svg'
+        comment_tagline: T348611
     romdwikimedia:
         commons: 'File:Wikimedia Community Logo WMROMD.svg'
         comment: T187184
