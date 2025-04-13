@@ -2311,6 +2311,7 @@ return [
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 		'WikibaseQualityConstraints' => 'debug',
 		'WikiLambda' => 'warning',
+		'WikiLambdaClient' => 'info',
 		'Wikisource' => 'info',
 		'WikitechGerritBan' => 'debug',
 		'WikitechPhabBan' => 'debug',
