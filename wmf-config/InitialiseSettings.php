@@ -3560,6 +3560,7 @@ return [
 	'scnwiktionary' => [ 'w', 'it', 'en', 'fr' ], // T15155
 	'scowiki' => [ 'en', 'simple' ], // T31913
 	'sewiki' => [ 'en', 'fi', 'no', 'nn', 'sv' ], // T45411
+	'shwiktionary' => [ 'ar', 'bs', 'de', 'en', 'es', 'fr', 'id', 'ru', 'zh', 'w', 'w:en', 'commons', 'incubator', 'meta' ], // T391621
 	'simplewiki' => [ 'en', 'wikt', 'b', 'q' ],
 	'simplewiktionary' => [ 'en', 'w', 'b', 'q' ],
 	'skwiki' => [ 'b', 'meta', 'q', 's', 'wikt' ],
