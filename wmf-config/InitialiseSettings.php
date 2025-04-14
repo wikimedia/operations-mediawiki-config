@@ -12722,7 +12722,8 @@ return [
 	'default' => false,
 	'plwiki' => true,
 	'dewiki' => true,
-	'itwiki' => true
+	'itwiki' => true,
+	'testwiki' => true,
 ],
 
 // T377121
@@ -12730,7 +12731,8 @@ return [
 	'default' => false,
 	'plwiki' => true,
 	'dewiki' => true,
-	'itwiki' => true
+	'itwiki' => true,
+	'testwiki' => true,
 ],
 
 // T377975
