@@ -12363,6 +12363,8 @@ return [
 	'default' => true,
 ],
 
+### Wikifunctions-related configuration
+
 'wmgUseWikiLambda' => [
 	'default' => false,
 	'wikifunctionswiki' => true,
@@ -12374,10 +12376,20 @@ return [
 	'wikifunctionswiki' => true,
 ],
 
+// Disabling this will break all pages with Wikifunctions calls on them.
 'wgWikiLambdaEnableClientMode' => [
 	'default' => false,
 	'wikifunctionsclient' => true,
 ],
+
+// This is a "kill switch" to disable further Wikifunctions calls in an emergency.
+// Disabling this will not break pages with Wikifunctions calls on them, but show
+// a message if the call isn't already cached.
+'wgWikiLambdaClientModeOffline' => [
+	'wikifunctionsclient' => false,
+],
+
+### Wikistories-related configuration
 
 'wmgUseWikistories' => [
 	'default' => false,
