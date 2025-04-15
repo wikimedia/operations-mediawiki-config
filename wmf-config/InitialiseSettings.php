@@ -6409,6 +6409,7 @@ return [
 
 'wgVisualEditorMobileInsertMenu' => [
 	'default' => false,
+	'wikifunctionsclient' => true, // T383145
 ],
 
 // Whether VisualEditor's feedback page should be consolidated down to just the
