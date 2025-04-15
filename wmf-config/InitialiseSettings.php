@@ -6407,6 +6407,10 @@ return [
 	'collabwiki' => true,
 ],
 
+'wgVisualEditorMobileInsertMenu' => [
+	'default' => false,
+],
+
 // Whether VisualEditor's feedback page should be consolidated down to just the
 // single page on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => [
