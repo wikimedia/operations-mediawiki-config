@@ -7907,6 +7907,8 @@ return [
 	'cawikiquote' => true, // T380909
 	'kabwiki' => true, // T380909
 	'sewikimedia' => true, // T380909
+	'fiwikimedia' => true, // T380909
+	'gomwiki' => true, // T380909
 ],
 
 'wmgFlowNamespaces' => [
