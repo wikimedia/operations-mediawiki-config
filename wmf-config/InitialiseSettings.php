@@ -4573,6 +4573,7 @@ return [
 
 # CENTRAL AUTH @{
 'wmgUseCentralAuth' => [
+	// NOTE: Update dblists/sul.dbexpr and run `manage-dblist` when changing
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
