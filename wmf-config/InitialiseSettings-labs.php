@@ -2418,5 +2418,14 @@ function wmfGetOverrideSettings() {
 		'-wmgOATHAuthDisableRight' => [
 			'default' => false,
 		],
+
+		'wgGEUserImpactMaxEdits' => [
+			'default' => 1000,
+			'eswiki' => 10000,
+		],
+		'wgGEUserImpactMaxThanks' => [
+			'default' => 1000,
+			'eswiki' => 10000,
+		],
 	];
 } # wmfGetOverrideSettings()
