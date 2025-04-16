@@ -5090,6 +5090,8 @@ return [
 
 # @}
 
+// Do not add more exceptions.
+// Thumbnails must be shared between wikis.
 'wgThumbLimits' => [
 	'default' => [ 120, 150, 180, 200, 220, 250, 300, 400 ],
 	'+itwikiquote' => [ 360 ],
@@ -5097,12 +5099,10 @@ return [
 	# nlwiki uses 260 instead of 250 (T215106)
 	'nlwiki' => [ 120, 150, 180, 200, 220, 260, 300, 400 ],
 ],
+// Do not add more exceptions. Default should stay the same between wikis.
 'wmgThumbsizeIndex' => [
-	'default' => 4,
-	'fiwiki' => 5, // T162376
-	'nowiki' => 5, // T155892
+	'default' => 5,
 	'svwiki' => 2, // T18739
-	'nlwiki' => 5, // T215106
 ],
 
 'wgTorTagChanges' => [
