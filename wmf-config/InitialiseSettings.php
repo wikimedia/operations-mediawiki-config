@@ -5863,6 +5863,7 @@ return [
 	'default' => false,
 	'wikitech' => true, // T355374
 	'officewiki' => true, // T355566
+	'wikifunctionswiki' => true,
 	'wikivoyage' => true, // T365367
 	'zhwikivoyage' => false, // T371640#10037314
 	'dagwiki' => true, // T380401
@@ -5895,6 +5896,7 @@ return [
 	'default' => false,
 	'wikitech' => false,
 	'officewiki' => true, // T355566
+	'wikifunctionswiki' => true,
 	'wikivoyage' => true, // T365367
 	'zhwikivoyage' => false, // T371640#10037314
 	'dagwiki' => true, // T380401
