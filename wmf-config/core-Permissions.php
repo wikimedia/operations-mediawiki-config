@@ -3107,8 +3107,9 @@ return [
 			'extendedconfirmed' => true, // T389729
 		],
 		'translationadmin' => [
-			'editprotected' => true, // T389729
-		],
+			'editprotected' => true,
+			'extendedconfirmed' => true,
+		], // T389729
 	],
 	'+wuuwiki' => [
 		'rollbacker' => [
