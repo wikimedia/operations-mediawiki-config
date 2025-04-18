@@ -5717,6 +5717,7 @@ return [
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
 	'+sewikimedia' => [ 100, NS_USER ], // T175363 - Projekt
 	'+trwiki' => [ 102 ], // T166522 - Vikiproje
+	'+u4cwiki' => [ 100 ], // T392286 - Case
 	'+wikimaniawiki' => [ 128 ], // T221062
 ],
 
