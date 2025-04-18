@@ -690,7 +690,9 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgCentralAuthEnableSul3' => [
-			'default' => true,
+			// Note: votewiki is in Beta Cluster but not an SUL wiki
+			'default' => false,
+			'sul' => true,
 			// Leave one wiki in SUL2-compatibility mode for testing
 			'testwiki' => false,
 		],
@@ -1330,12 +1332,16 @@ function wmfGetOverrideSettings() {
 		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
+			// Note: votewiki is in Beta Cluster but not an SUL wiki
+			'default' => false,
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
-			'default' => true,
+			'sul' => true,
 		],
 		'wmgLocalAuthLoginOnly' => [
+			// Note: votewiki is in Beta Cluster but not an SUL wiki
+			'default' => false,
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
-			'default' => true,
+			'sul' => true,
 		],
 		'wmgEnablePageTriage' => [
 			'zhwiki' => true, // T323378

@@ -104,9 +104,8 @@ return [
 	'default' => false,
 ],
 'wgBotPasswordsDatabase' => [
-	'default' => 'metawiki',
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => 'metawiki',
 ],
 
 # wgLanguageCode @{
@@ -2096,12 +2095,12 @@ return [
 ],
 
 'wmgUseCentralNotice' => [
-	'default' => true,
+	'default' => true, // Cannot use 'sul' here because of lockeddown carve out
 	'advisorywiki' => false, // Per T27519
-	'fishbowl' => false, // Per T19718 Disable CentralNotice on private/fishbowl wikis
+	'fishbowl' => false,
 	'lockeddown' => false, // T61702
 	'fiwikimedia' => false, // T19718
-	'private' => false, // :D
+	'private' => false,
 	'qualitywiki' => false,
 ],
 
@@ -2359,9 +2358,8 @@ return [
 ],
 
 'wgAccountCreationThrottle' => [
-	'default' => [ [ 'count' => 6, 'seconds' => 86400 ] ],
-	'private' => [ [ 'count' => 0, 'seconds' => 86400 ] ], // disable for wikis with sysop-only account creation
-	'fishbowl' => [ [ 'count' => 0, 'seconds' => 86400 ] ],
+	'default' => [ [ 'count' => 0, 'seconds' => 86400 ] ],
+	'sul' => [ [ 'count' => 6, 'seconds' => 86400 ] ],
 	'eswikiquote' => [ [ 'count' => 1, 'seconds' => 86400 ] ], // T230796
 	'hewikibooks' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 	'hewikinews' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
@@ -3003,9 +3001,8 @@ return [
 # @}
 
 'wgUseNPPatrol' => [
-	'default' => true, // brion 2007-11-16
-	'fishbowl' => false, // T74239
-	'private' => false, // T74239
+	'default' => false, // T74239
+	'sul' => true,
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T33650
 	'sqwiki' => false, // T27822
@@ -3249,9 +3246,8 @@ return [
 ],
 
 'wgEmailAuthentication' => [
-	'default' => true,
-	'private' => false, // disable for wikis with account approval
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wgBlockDisablesLogin' => [
@@ -3730,12 +3726,8 @@ return [
 # Cleaned up old commented out wikis. -- hashar 20110930
 # @{
 'wmgEnableCaptcha' => [
-	'default' => true,
-
-	// private/closed wikis don't need it
-	'private' => false,
-	'fishbowl' => false,
-	'closed' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
@@ -4603,10 +4595,8 @@ return [
 
 # CENTRAL AUTH @{
 'wmgUseCentralAuth' => [
-	// NOTE: Update dblists/sul.dbexpr and run `manage-dblist` when changing
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true, // Canonically true as SUL === CentralAuth
 ],
 
 'wmgCentralAuthLoginIcon' => [
@@ -4691,23 +4681,20 @@ return [
 
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalCssJs' => [
-	'default' => true,
+	'default' => false,
+	'sul' => true,
 	'loginwiki' => false,
-	'private' => false,
-	'fishbowl' => false,
 ],
 
 // This is also guarded by $wmgUseCentralAuth
 'wmgLocalAuthLoginOnly' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wmgUseOAuth' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wgOAuthAutoApprove' => [
@@ -4847,15 +4834,13 @@ return [
 ],
 
 'wmgUseSpamBlacklist' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false, // not needed, private editing...
+	'default' => false,
+	'sul' => true,
 ],
 
 'wmgUseGlobalTitleBlacklist' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false, // not needed, private editing...
+	'default' => false,
+	'sul' => true,
 ],
 
 'wgTitleBlacklistUsernameSources' => [
@@ -4984,9 +4969,8 @@ return [
 ],
 
 'wmgApplyGlobalBlocks' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 	'metawiki' => false,
 ],
 
@@ -5299,9 +5283,8 @@ return [
 
 // This is also guarded by $wmgUseCentralAuth.
 'wmgUseGlobalUserPage' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wgDisabledVariants' => [
@@ -7109,10 +7092,8 @@ return [
 // - Enable Map (GeoJSON) data namespace on Commons - T149548
 // - See T378127 for testcommonswiki, using to test Chart extension
 'wmgEnableJsonConfigDataMode' => [
-	'default' => true,
-	// Technically they could be enabled as well, but keep them off just in case for now
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wmgJsonConfigDataModeConfig' => [
@@ -7804,9 +7785,8 @@ return [
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 ],
 'wmgEchoCrossWikiByDefault' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 // Use extension1 db for all wikis
@@ -8549,7 +8529,7 @@ return [
 ],
 
 'wmgUseRealMe' => [
-	'default' => true,
+	'default' => true, // Cannot use 'sul' here because of lockeddown carve out
 	'private' => false,
 	'fishbowl' => false,
 	'lockeddown' => false,
@@ -8682,15 +8662,14 @@ return [
 ],
 
 'wmgUseWikimediaEvents' => [
-	'default' => true,
+	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721
 	'private' => false,
 	'fishbowl' => false,
 ],
 
 'wmgUseNavigationTiming' => [
-	'default' => true,
-	'wikitech' => false,
+	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false,
 	'private' => false,
 	'fishbowl' => false,
@@ -10818,9 +10797,8 @@ return [
 
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled on all public sites, see T341159.
-	'default' => true,
-	'fishbowl' => false,
-	'private' => false,
+	'default' => false,
+	'sul' => true,
 
 	// Individual wiki overrides
 	'enwiki' => false, // T341159
@@ -10913,15 +10891,14 @@ return [
 
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalBlocking' => [
-	'default' => true,
-	'fishbowl' => false,
-	'private' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wgGlobalBlockingAllowedRanges' => [
-	'default' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
-	'fishbowl' => [],
-	'private' => [],
+	'default' => [],
+	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
+	'sul' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
 ],
 
 'wgGlobalBlockingEnableAutoblocks' => [
@@ -10934,9 +10911,8 @@ return [
 
 // Only allow local 'crats to rename on non-CentralAuth wikis
 'wmgAllowLocalRenameuser' => [
-	'default' => false,
-	'private' => true,
-	'fishbowl' => true,
+	'default' => true,
+	'sul' => false,
 ],
 
 // T15712
@@ -11474,9 +11450,8 @@ return [
 ],
 
 'wmgOATHAuthDisableRight' => [
-	'default' => true, // Roll out to specific groups
-	'private' => false, // T149614
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wmgUseWebAuthn' => [
@@ -11664,9 +11639,8 @@ return [
 ],
 
 'wmgUsePageViewInfo' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wmgUseNewsletter' => [
@@ -11741,9 +11715,8 @@ return [
 	'default' => XML_DUMP_SCHEMA_VERSION_11,
 ],
 'wmgUseReadingLists' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 'wgReadingListsCentralWiki' => [
 	'default' => 'metawiki',
@@ -11890,9 +11863,8 @@ return [
 
 'wmgUseTheWikipediaLibrary' => [
 	// T288070
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
+	'default' => false,
+	'sul' => true,
 ],
 
 'wgTwlEditCount' => [
