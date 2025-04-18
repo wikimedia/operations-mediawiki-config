@@ -5851,10 +5851,6 @@ return [
 	'default' => 1000, // T371713: sample 1 in 1000 parses
 ],
 
-'wgParserMigrationEnableQueryString' => [
-	'default' => true,
-],
-
 // T333179
 'wmgUseParserMigration' => [
 	'default' => true,
@@ -5875,24 +5871,8 @@ return [
 	'labswiki' => false,
 ],
 
-'wgParserMigrationEnableParsoidMobileFrontend' => [
-	'default' => true,
-],
-
-'wgParserMigrationEnableParsoidMobileFrontendTalkPages' => [
-	'default' => true,
-],
-
 'wgParserMigrationUserNoticeVersion' => [
 	'default' => 1,
-],
-
-'wgParserMigrationUserNoticeDays' => [
-	'default' => 60,
-],
-
-'wgParserMigrationCompactIndicator' => [
-	'default' => true,
 ],
 
 // -------------- Shared Parsoid end --------------
