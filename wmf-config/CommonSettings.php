@@ -4105,6 +4105,12 @@ if ( $wmgAllowLabsAnonEdits ) {
 	$wgSoftBlockRanges[] = '185.15.56.0/24';
 	// Cloud VPS IPv6 ranges
 	$wgSoftBlockRanges[] = ' 2a02:ec80:a000::/48';
+
+	// Cloud VPS is also exempt from autoblocks, so that someone abusing using a tool
+	// does not get everyone else using that tool blocked.
+	$wgAutoblockExemptions[] = '172.16.0.0/16';
+	$wgAutoblockExemptions[] = '185.15.56.0/24';
+	$wgAutoblockExemptions[] = '2a02:ec80:a000::/48';
 }
 
 // On Special:Version, link to useful release notes
