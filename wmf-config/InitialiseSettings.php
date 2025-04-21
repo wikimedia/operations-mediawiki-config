@@ -3211,9 +3211,9 @@ return [
 	],
 	'+testwikidatawiki' => [
 		// Browser tests run by Jenkins on WMCS instances - T167432
-		// Network ranges come from:
-		//   https://wikitech.wikimedia.org/wiki/Portal:Cloud_VPS/Admin/Neutron
-		'172.16.0.0/21', # LAN for instances (eqiad1 Neutron)
+		'172.16.0.0/16',
+		'185.15.56.0/24',
+		'2a02:ec80:a000::/48',
 	],
 ],
 
@@ -6943,7 +6943,7 @@ return [
 
 // Should match the definition in wgGlobalBlockingAllowedRanges
 'wgCheckUserCentralIndexRangesToExclude' => [
-	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
+	'default' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
 ],
 
 'wgCheckUserEnableTempAccountsOnboardingDialog' => [
@@ -11073,7 +11073,7 @@ return [
 
 'wgGlobalBlockingAllowedRanges' => [
 	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
-	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
+	'default' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
 	'fishbowl' => [],
 	'private' => [],
 ],

@@ -849,7 +849,10 @@ function wmfGetOverrideSettings() {
 				'198.73.209.0/24', // T87841 Office IP
 				'162.222.72.0/21', // T126585 Sauce Labs IP range for browser tests
 				'66.85.48.0/21', // also Sauce Labs
-				'172.16.0.0/12', // browser tests run by Jenkins instances - T167432
+				// Cloud VPS - browser tests run by Jenkins instances - T167432
+				'172.16.0.0/16',
+				'185.15.56.0/24',
+				'2a02:ec80:a000::/48',
 			],
 		],
 

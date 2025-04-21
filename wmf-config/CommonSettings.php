@@ -4104,6 +4104,8 @@ if ( $wmgAllowLabsAnonEdits ) {
 	$wgSoftBlockRanges[] = '172.16.0.0/12';
 	// Cloud VPS VMs with floating/public addresses
 	$wgSoftBlockRanges[] = '185.15.56.0/24';
+	// Cloud VPS IPv6 ranges
+	$wgSoftBlockRanges[] = ' 2a02:ec80:a000::/48';
 }
 
 // On Special:Version, link to useful release notes
