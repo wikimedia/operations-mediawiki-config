@@ -1134,6 +1134,18 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wgReadingListBetaFeature' => [
+			'default' => true,
+		],
+
+		'wgReadingListsDeveloperMode' => [
+			'default' => true,
+		],
+
+		'wgReadingListAndroidAppDownloadLink' => "https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingListsShare",
+
+		'wgReadingListiOSAppDownloadLink' => "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingListsShare",
+
 		'wgReadingListsWebAuthenticatedPreviews' => [
 			'default' => true,
 		],
