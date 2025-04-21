@@ -2462,6 +2462,11 @@ return [
 				'rate' => 0,
 			],
 		],
+		// Stream configuration for PES1.3 Wikirun game: https://wikirun-game.toolforge.org/
+		'product_metrics.web_base.wikrun_game' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
