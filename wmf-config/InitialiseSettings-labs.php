@@ -1147,7 +1147,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgReadingListiOSAppDownloadLink' => [
-			"https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingListsShare",
+			'default' => "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingListsShare",
 		],
 
 		'wgReadingListsWebAuthenticatedPreviews' => [
