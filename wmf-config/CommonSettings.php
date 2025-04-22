@@ -2034,7 +2034,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
-	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['auth']}/$wgDBname";
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 
