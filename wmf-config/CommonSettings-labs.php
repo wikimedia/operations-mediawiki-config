@@ -489,9 +489,9 @@ if ( $wmgRealm == 'labs' ) {
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
 
-	// Remove any references to the checkuser-temporary-account-viewer group on the beta clusters, as this group
-	// is only present when CheckUser is installed. As it is not installed, we should remove the group and
-	// the auto-promotion conditions for the group.
+	// Remove any references to the temporary-account-viewer group, as this group is only present when CheckUser is
+	// installed which it is not on the beta clusters. This means removing the group definition and the auto-promotion
+	// conditions for the group.
 	unset( $wgAutopromoteOnce['onEdit']['temporary-account-viewer'] );
 	unset( $wgGroupPermissions['temporary-account-viewer'] );
 
