@@ -5841,8 +5841,8 @@ return [
 	'private' => true,
 ],
 
-'wgParsoidFragmentSupport' => [
-	'default' => 'v3', // T380758,T390420
+'wgParsoidFragmentInput' => [
+	'default' => true, // T268144
 ],
 
 'wgParsoidSelectiveUpdateSampleRate' => [
