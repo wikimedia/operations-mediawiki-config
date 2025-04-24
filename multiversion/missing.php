@@ -7,7 +7,9 @@
  * - Uncomment MISSING_PHP_TEST
  * - Run `php -S localhost:9412` from this directory.
  * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
- * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404 Subdomain)
+ * - <http://localhost:9412/missing.php?host=foo.example.org> (404 Generic)
+ * - <http://localhost:9412/missing.php?host=nl.m.wikipedia.org> (404 Mobile)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (lateral interwiki redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=f:foo> (global interwiki redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=w:foo> ("w:" redirect to Wikipedia is special-cased)
@@ -113,7 +115,18 @@ function wmfHandleMissingWiki() {
 
 	if ( strpos( $host, '.m.' ) !== false ) {
 		// Invalid request to mobile site, not rewritten by Varnish
-		wmfShowMobileError();
+		//
+		// Output an error which indicates that a request for *.m.wik*.org was received
+
+		// Disable caching, due to the suspicion that T49807 is caused by cache poisoning.
+		header( 'Cache-Control: no-cache' );
+
+		wmfShowErrorPage( [
+			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png',
+			'title' => 'Internal error',
+			'heading' => 'Internal error',
+			'messageHtml' => '<p>Mobile domains are not served from this server IP address.</p>',
+		] );
 		return;
 	}
 
@@ -136,7 +149,14 @@ function wmfHandleMissingWiki() {
 	}
 
 	if ( !$incubatorCode ) {
-		wmfShowGenericError();
+		// Show a generic error message which does not refer to any particular project.
+		wmfShowErrorPage( [
+			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png',
+			'title' => 'No wiki found',
+			'heading' => 'No wiki found',
+			'messageHtml' => '<p>Sorry, we were not able to work out what wiki you were trying to view.
+				Please specify a valid Host header.</p>',
+		] );
 		return;
 	}
 
@@ -209,7 +229,21 @@ function wmfHandleMissingWiki() {
 		wmfShowRedirect( $protocol . '://wikisource.org/wiki/' . $page );
 	} elseif ( $project === 'wikiversity' ) {
 		# Wikiversity gives an error page
-		wmfShowMissingSubdomainError( $project, $language );
+
+		// Output an error message explaining that no wiki for the given subdomain exists.
+		// This has been superseded by an Incubator redirect for all projects other than
+		// Wikiversity.
+		$escLanguage = htmlspecialchars( $language );
+		wmfShowErrorPage( [
+			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
+			'favicon' => 'https://beta.wikiversity.org/favicon.ico',
+			'title' => "$language Wikiversity does not exist",
+			'heading' => 'This wiki does not exist',
+			'messageHtml' => '<h2>Welcome to Wikiversity</h2>'
+				. "<p>Unfortunately, Wikiversity in {$escLanguage} does not exist on its own domain yet, or it has been closed.</p>"
+				. '<p>You may like to visit <a href="https://beta.wikiversity.org">Beta Wikiversity</a> to start or improve <em>' . $escLanguage . '&nbsp;Wikiversity</em> there.</p>'
+				. '<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>',
+		] );
 	} else {
 		if ( $language === 'zh-min-nan' ) {
 			// T86915
@@ -247,12 +281,27 @@ function wmfGetProtocolAndHost() {
 }
 
 /**
- * Get a stylesheet with the specified logo in the background.
- * @param string $logo
- * @return string
+ * @param array{logo:string,heading:string,content:string} $info
+ * @return string HTML
  */
-function wmfGetStyleSheet( $logo ) {
-	return <<<CSS
+function wmfShowErrorPage( array $info ) {
+	http_response_code( 404 );
+	header( 'Content-Type: text/html; charset=utf-8' );
+
+	$titleHtml = htmlspecialchars( $info['title'] );
+	$headingHtml = htmlspecialchars( $info['heading'] );
+	$messageHtml = $info['messageHtml'];
+	$faviconHtml = isset( $info['favicon'] )
+		? sprintf( '<link rel="shortcut icon" href="%s" />' . "\n",
+			$info['favicon']
+		)
+		: '';
+	echo <<<HTML
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>{$titleHtml}</title>
+{$faviconHtml}<style>
 * {
 	font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
 	margin: 0;
@@ -267,7 +316,7 @@ body {
 }
 
 #page {
-  background: url('$logo') center left no-repeat;
+  background: url('{$info['logo']}') center left no-repeat;
   height: 300px;
   left: 50%;
   margin: -150px 0 0 -360px;
@@ -294,94 +343,15 @@ a:link, a:visited {
 a:hover, a:active {
 	color: #900;
 }
-CSS;
-}
-
-/**
- * Output an error which indicates that a request for *.m.wik*.org was received
- */
-function wmfShowMobileError() {
-	header( 'HTTP/1.x 403 Forbidden' );
-	header( 'Content-Type: text/html; charset=utf-8' );
-
-	// Disable caching, due to the suspicion that T49807 is caused by cache poisoning.
-	header( 'Cache-Control: no-cache' );
-
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<style type="text/css">
-/* <![CDATA[ */
-<?php echo wmfGetStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
-/* ]]> */
 </style>
-<title>Internal error</title>
-</head>
-<body>
-	<div id="page">
-		<div id="message">
-			<h1>Internal error</h1>
-			<p>Mobile domains are not served from this server IP address.</p>
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
-		</div>
-	</div>
-</body>
-</html>
-
-<?php
-}
-
-/**
- * Output an error message explaining that no wiki for the given subdomain exists.
- * This has been superseded by an Incubator redirect for all projects other than
- * Wikiversity.
- *
- * @param string $project
- * @param string $language
- */
-function wmfShowMissingSubdomainError( $project, $language ) {
-	$projectInfos = [
-		'wikiversity' => [
-			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
-			'home' => 'https://beta.wikiversity.org',
-			'name' => 'Wikiversity',
-			'home-name' => 'Beta Wikiversity',
-		]
-	];
-	$info = $projectInfos[$project];
-	header( 'HTTP/1.x 404 Not Found' );
-	header( 'Content-Type: text/html; charset=utf-8' );
-
-	$escLanguage = htmlspecialchars( $language );
-	$escName = htmlspecialchars( $info['name'] );
-
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-	<title><?php echo "$escLanguage&nbsp;$escName"; ?> does not exist</title>
-	<meta charset="UTF-8" />
-	<link rel="shortcut icon" href="<?php echo $info['home']; ?>/favicon.ico" />
-	<style type="text/css">
-/* <![CDATA[ */
-<?php echo wmfGetStyleSheet( $info['logo'] ); ?>
-/* ]]> */
-	</style>
 </head>
 <body>
 	<div id="page">
 		<div id="message">
 
-			<h1>This wiki does not exist</h1>
+			<h1>{$headingHtml}</h1>
 
-			<h2>Welcome to <?php echo $escName; ?></h2>
-
-			<p>Unfortunately, <?php echo $escName; ?> in "<?php echo $escLanguage; ?>" does not exist on its own domain yet, or it has been closed.</p>
-
-			<p>You may like to visit <a href="<?php echo $info['home']; ?>"><?php echo $info['home-name']; ?></a> to start or improve <em><?php echo "$escLanguage&nbsp;$escName"; ?></em> there.</p>
-
-			<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>
+			{$messageHtml}
 
 			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 
@@ -389,44 +359,7 @@ function wmfShowMissingSubdomainError( $project, $language ) {
 	</div>
 </body>
 </html>
-
-<?php
-}
-
-/**
- * Show a generic error message which does not refer to any particular project.
- */
-function wmfShowGenericError() {
-	header( 'HTTP/1.x 404 Not Found' );
-	header( 'Content-Type: text/html; charset=utf-8' );
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-	<title>No wiki found</title>
-	<style type="text/css">
-/* <![CDATA[ */
-<?php echo wmfGetStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
-/* ]]> */
-	</style>
-</head>
-<body>
-	<div id="page">
-		<div id="message">
-
-			<h1>No wiki found</h1>
-
-			<p>Sorry, we were not able to work out what wiki you were trying to view.
-			Please specify a valid Host header.</p>
-
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
-
-		</div>
-	</div>
-</body>
-</html>
-
-<?php
+HTML;
 }
 
 /**
