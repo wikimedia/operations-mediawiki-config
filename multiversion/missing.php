@@ -9,6 +9,7 @@
  * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404 Subdomain)
  * - <http://localhost:9412/missing.php?host=foo.example.org> (404 Generic)
+ * - <http://localhost:9412/missing.php?host=auth.wikimedia.org> (404 Auth)
  * - <http://localhost:9412/missing.php?host=nl.m.wikipedia.org> (404 Mobile)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (lateral interwiki redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=f:foo> (global interwiki redirect)
@@ -146,6 +147,19 @@ function wmfHandleMissingWiki() {
 			$page = $_GET['title'] ?? '';
 		}
 		$incubatorCode = $projects[$project] ?? null;
+	}
+
+	if ( $language === 'auth' ) {
+		// E.g. https://auth.wikimedia.org/foowiki/w/index.php
+		// or https://auth.wikimedia.beta.wmflabs.org/foo/wiki/
+		wmfShowErrorPage( [
+			'logo' => 'https://www.wikimedia.org/static/images/wmf-2x.png',
+			'title' => 'No wiki found',
+			'heading' => 'No wiki found',
+			'messageHtml' => '<p>Sorry, we were not able to work out what wiki you were trying to view.
+				Please specify a valid wiki ID in the path.</p>',
+		] );
+		return;
 	}
 
 	if ( !$incubatorCode ) {
