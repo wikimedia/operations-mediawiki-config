@@ -23,6 +23,7 @@ header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
 * { margin: 0; padding: 0; }
 body { background: #fff; color: #202122; font: 0.938em/1.6 sans-serif; }
 .content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; }
+.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
 img { float: left; margin: 0 2em 2em 0; }
 a img { border: 0; }
 h1 { margin-top: 1em; font-size: 1.2em; }

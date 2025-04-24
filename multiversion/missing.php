@@ -122,10 +122,10 @@ function wmfHandleMissingWiki() {
 		header( 'Cache-Control: no-cache' );
 
 		wmfShowErrorPage( [
-			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png',
+			'logo' => 'https://www.wikimedia.org/static/images/wmf-2x.png',
 			'title' => 'Internal error',
 			'heading' => 'Internal error',
-			'messageHtml' => '<p>Mobile domains are not served from this server IP address.</p>',
+			'messageHtml' => '<p>This request to a mobile domain was routed to a MediaWiki server without host rewrite, and thus cannot be served here.</p>',
 		] );
 		return;
 	}
@@ -151,7 +151,7 @@ function wmfHandleMissingWiki() {
 	if ( !$incubatorCode ) {
 		// Show a generic error message which does not refer to any particular project.
 		wmfShowErrorPage( [
-			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png',
+			'logo' => 'https://www.wikimedia.org/static/images/wmf-2x.png',
 			'title' => 'No wiki found',
 			'heading' => 'No wiki found',
 			'messageHtml' => '<p>Sorry, we were not able to work out what wiki you were trying to view.
@@ -237,12 +237,11 @@ function wmfHandleMissingWiki() {
 		wmfShowErrorPage( [
 			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
 			'favicon' => 'https://beta.wikiversity.org/favicon.ico',
-			'title' => "$language Wikiversity does not exist",
-			'heading' => 'This wiki does not exist',
-			'messageHtml' => '<h2>Welcome to Wikiversity</h2>'
-				. "<p>Unfortunately, Wikiversity in {$escLanguage} does not exist on its own domain yet, or it has been closed.</p>"
-				. '<p>You may like to visit <a href="https://beta.wikiversity.org">Beta Wikiversity</a> to start or improve <em>' . $escLanguage . '&nbsp;Wikiversity</em> there.</p>'
-				. '<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>',
+			'title' => 'This wiki does not exist',
+			'heading' => 'Welcome to Wikiversity',
+			'messageHtml' => ''
+				. '<p>Unfortunately, Wikiversity in "' . $escLanguage . '" does not exist on its own domain yet. You may like to visit <a href="https://beta.wikiversity.org">Beta Wikiversity</a> and start or improve "' . $escLanguage . '" pages there.</p>'
+				. '<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">Requests&nbsp;for new languages</a> on Meta-Wiki.</p>',
 		] );
 	} else {
 		if ( $language === 'zh-min-nan' ) {
@@ -291,74 +290,45 @@ function wmfShowErrorPage( array $info ) {
 	$titleHtml = htmlspecialchars( $info['title'] );
 	$headingHtml = htmlspecialchars( $info['heading'] );
 	$messageHtml = $info['messageHtml'];
-	$faviconHtml = isset( $info['favicon'] )
-		? sprintf( '<link rel="shortcut icon" href="%s" />' . "\n",
-			$info['favicon']
-		)
-		: '';
+	$faviconHtml = sprintf( '<link rel="shortcut icon" href="%s" />',
+			$info['favicon'] ?? '//foundation.wikimedia.org/favicon.ico'
+	);
 	echo <<<HTML
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+<meta charset="utf-8">
 <title>{$titleHtml}</title>
-{$faviconHtml}<style>
-* {
-	font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-  background: #fff url('https://upload.wikimedia.org/wikipedia/commons/9/96/Errorbg.png') repeat-x;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-#page {
-  background: url('{$info['logo']}') center left no-repeat;
-  height: 300px;
-  left: 50%;
-  margin: -150px 0 0 -360px;
-  overflow: visible;
-  position: absolute;
-  top: 50%;
-  width: 720px;
-}
-
-#message {
-	background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/Errorline.png') center left no-repeat;
-	margin-left: 300px;
-	padding-left: 15px;
-}
-
-h1, h2, p {
-	margin-bottom: 1em;
-}
-
-a:link, a:visited {
-	color: #005b90;
-}
-
-a:hover, a:active {
-	color: #900;
+{$faviconHtml}
+<meta name="color-scheme" content="light dark">
+<style>
+* { margin: 0; padding: 0; }
+body { background: #fff; color: #202122; font: 0.938em/1.6 sans-serif; }
+.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; }
+.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
+img { float: left; margin: 0 2em 5em 0; }
+a img { border: 0; }
+h1 { margin-top: 1em; font-size: 1.2em; }
+p { margin: 0.7em 0 1em 0; }
+a { color: #36c; text-decoration: none; }
+a:hover { text-decoration: underline; }
+em { color: #72777d; font-style: normal; }
+@media (prefers-color-scheme: dark) {
+  body { background: transparent; color: #dfdedd; }
+  a { color: #9e9eff; }
+  em { color: #8d8882; }
+  #logo { filter: invert(1) hue-rotate(180deg); }
 }
 </style>
-</head>
-<body>
-	<div id="page">
-		<div id="message">
-
-			<h1>{$headingHtml}</h1>
-
-			{$messageHtml}
-
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
-
-		</div>
-	</div>
-</body>
+<div class="content" role="main">
+<a href="https://www.wikimedia.org"><img id="logo" src="{$info['logo']}" alt=Logo width=135></a>
+<h1>{$headingHtml}</h1>
+{$messageHtml}
+</div>
+<div class="footer">
+<p>A <a href="https://www.wikimedia.org">Wikimedia</a> project.</p>
+</div>
 </html>
+<!-- missing.php -->
 HTML;
 }
 
@@ -377,7 +347,7 @@ function wmfShowRedirect( $url ) {
 <a href="$escUrl">The document has moved.</a>
 </body>
 </html>
-
+<!-- missing.php -->
 HTML;
 }
 
