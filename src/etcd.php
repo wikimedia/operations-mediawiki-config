@@ -90,6 +90,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'es6' => [ 'cluster30' ],
 		'es7' => [ 'cluster31' ],
 		'x1' => [ 'extension1' ],
+		'x3' => [ 'extension3' ],
 	];
 	$wmgPCServers = [];
 	$wmgMainStashServers = [];
@@ -115,11 +116,6 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 					$wmgMainStashServers[$dbctlCluster] = $localDbConfig['hostsByName'][$host] ?? $host;
 				}
 			}
-			continue;
-		}
-
-		if ( $dbctlCluster == 'x2' ) {
-			// To be removed. Ignore.
 			continue;
 		}
 
