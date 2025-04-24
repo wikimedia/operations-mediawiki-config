@@ -2420,48 +2420,6 @@ return [
 				],
 			],
 		],
-		// Web stream config for empty search recommendations A/B test
-		'product_metrics.web_base.search_ab_test_session_ticks' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_site_content_language',
-						'mediawiki_skin',
-						'mediawiki_database',
-						'performer_is_temp',
-						'performer_session_id',
-						'performer_is_logged_in'
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 0,
-			],
-		],
-		// Web stream config for empty search recommendations A/B test
-		'product_metrics.web_base.search_ab_test_clicks' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_site_content_language',
-						'mediawiki_skin',
-						'mediawiki_database',
-						'performer_is_temp',
-						'performer_session_id',
-						'performer_is_logged_in'
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 0,
-			],
-		],
 		// Stream configuration for PES1.3 Wikirun game: https://wikirun-game.toolforge.org/
 		'product_metrics.web_base.wikrun_game' => [
 			'schema_title' => 'analytics/product_metrics/web/base',

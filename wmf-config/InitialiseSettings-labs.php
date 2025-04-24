@@ -773,18 +773,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgRelatedArticlesABTestEnrollment' => [
-			'default' => [
-				"name" => "RelatedArticles test experiment",
-				"enabled" => false,
-				"buckets" => [
-					"nonExperiment-unsampled" => 0,
-					"experimentEnabled" => 0.5,
-					"experimentDisabled" => 0.5
-				],
-			]
-		],
-
 		'wmgExtraLanguageNames' => [
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 			'wikidata' => [],

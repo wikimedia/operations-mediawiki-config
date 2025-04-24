@@ -97,8 +97,6 @@ return [
 		'mediawiki.accountcreation.login',
 		'product_metrics.app_base',
 		'product_metrics.web_base',
-		'product_metrics.web_base.search_ab_test_session_ticks',
-		'product_metrics.web_base.search_ab_test_clicks',
 		'wikibase.client.interaction',
 	],
 ],

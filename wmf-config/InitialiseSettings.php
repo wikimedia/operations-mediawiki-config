@@ -12677,18 +12677,6 @@ return [
 	'default' => true,
 ],
 
-'wgRelatedArticlesABTestEnrollment' => [
-	'default' => [
-		"name" => "RelatedArticles test experiment default",
-		"enabled" => false,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	],
-],
-
 // T377121
 'wgUseCodexSpecialBlock' => [
 	'default' => false,
