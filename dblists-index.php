@@ -673,7 +673,7 @@ return [
 'nrmwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
 'nrwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'nsowiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
-'nupwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'nupwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'parsoidrendered' ],
 'nvwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'growthexperiments' ],
 'nycwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
 'nywiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments' ],
