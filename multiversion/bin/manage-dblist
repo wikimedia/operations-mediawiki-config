@@ -264,6 +264,11 @@ final class WmfManageDblistCli {
 		$this->doAdd( $dbName, 's5' ); // all wikis are currently created in s5
 		$this->doAdd( $dbName, 'small' );
 
+		// (T376827) All new wikis are created with parsoidrendered enabled, except Wikisources
+		if ($family !== 'wikisource') {
+			$this->doAdd($dbName, 'parsoidrendered');
+		}
+
 		$data = file( 'langlist' );
 		if ( !in_array( $lang . "\n", $data ) ) {
 			$data[] = $lang . "\n";
