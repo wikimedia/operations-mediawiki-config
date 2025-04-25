@@ -13,6 +13,7 @@ class WikifunctionsTest extends PHPUnit\Framework\TestCase {
 		$wikifunctionsClientWikis = DBList::getLists()[ 'wikifunctionsclient' ];
 
 		$defaultSetting = $productionConfig['wgParserMigrationEnableParsoidArticlePages']['default'];
+		$dbListSetting = $productionConfig['wgParserMigrationEnableParsoidArticlePages']['parsoidrendered'];
 
 		foreach ( $wikifunctionsClientWikis as $key => $val ) {
 			if ( $val === 'testwiki' ) {
@@ -20,10 +21,20 @@ class WikifunctionsTest extends PHPUnit\Framework\TestCase {
 				continue;
 			}
 
-			$this->assertTrue(
-				$productionConfig['wgParserMigrationEnableParsoidArticlePages'][$val] ?? $defaultSetting,
-				'Wikis with Wikifunctions client mode enabled must be Parsoid read-mode, but "' . $val . '" is not.'
-			);
+			if ( DBList::isInDblist( $val, 'parsoidrendered' ) ) {
+				// This wiki is in the parsoidrendered dblist, so check that setting
+				$this->assertTrue(
+					$dbListSetting,
+					'Wikis with Wikifunctions client mode enabled must be Parsoid read-mode, but "' . $val . '" is in parsoidrendered but it is not enabled.'
+				);
+			} else {
+				// This wiki is not in the parsoidrendered dblist, so check its direct setting (or default)
+				$actualSetting = $productionConfig['wgParserMigrationEnableParsoidArticlePages'][$val] ?? $defaultSetting;
+				$this->assertTrue(
+					$actualSetting,
+					'Wikis with Wikifunctions client mode enabled must be Parsoid read-mode, but "' . $val . '" is not.'
+				);
+			}
 		}
 	}
 }

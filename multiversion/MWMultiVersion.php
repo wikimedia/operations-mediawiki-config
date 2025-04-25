@@ -71,6 +71,7 @@ class MWMultiVersion {
 		'translate',
 		'wikifunctionsclient',
 		'growthexperiments',
+		'parsoidrendered',
 	];
 
 	/** @var string[] */

@@ -5861,68 +5861,16 @@ return [
 
 'wgParserMigrationEnableParsoidDiscussionTools' => [
 	'default' => false,
-	'wikitech' => true, // T355374
-	'officewiki' => true, // T355566
-	'wikifunctionswiki' => true,
-	'wikivoyage' => true, // T365367
-	'zhwikivoyage' => false, // T371640#10037314
-	'dagwiki' => true, // T380401
-	'tigwiki' => true, // T381379
-	'test2wiki' => true, // T378645
-	'kncwiki' => true, // T385185
-	'sylwiki' => true, // T386464
-	'wiktionary' => true,
-	'enwiktionary' => false,
-	'zhwiktionary' => false,
-	'huwiktionary' => false,
-	'ukwiktionary' => false,
-	'uzwiktionary' => false,
-	'kuwiktionary' => false,
-	'srwiktionary' => false,
-	'glwiktionary' => false,
-	'wawiktionary' => false,
-	'kawiktionary' => false,
-	'shwiktionary' => false,
-	'astwiktionary' => false,
-	'tgwiktionary' => false,
-	'gdwiktionary' => false,
-	'iawiktionary' => false,
-	'zuwiktionary' => false,
-	'iuwiktionary' => false,
-	'incubatorwiki' => true, // T380768
+	'parsoidrendered' => true,
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
-	'wikitech' => false,
-	'officewiki' => true, // T355566
-	'wikifunctionswiki' => true,
-	'wikivoyage' => true, // T365367
-	'zhwikivoyage' => false, // T371640#10037314
-	'dagwiki' => true, // T380401
-	'tigwiki' => true, // T381379
-	'test2wiki' => true, // T378645
-	'kncwiki' => true, // T385185
-	'sylwiki' => true, // T386464
-	'wiktionary' => true,
-	'enwiktionary' => false,
-	'zhwiktionary' => false,
-	'huwiktionary' => false,
-	'ukwiktionary' => false,
-	'uzwiktionary' => false,
-	'kuwiktionary' => false,
-	'srwiktionary' => false,
-	'glwiktionary' => false,
-	'wawiktionary' => false,
-	'kawiktionary' => false,
-	'shwiktionary' => false,
-	'astwiktionary' => false,
-	'tgwiktionary' => false,
-	'gdwiktionary' => false,
-	'iawiktionary' => false,
-	'zuwiktionary' => false,
-	'iuwiktionary' => false,
-	'incubatorwiki' => true, // T380768
+	'parsoidrendered' => true,
+
+	// In general, the dblist should suffice, but if a wiki needs to have different config between
+	// talk and article pages, it can be over-ridden here.
+	'labswiki' => false,
 ],
 
 'wgParserMigrationEnableParsoidMobileFrontend' => [
