@@ -83,43 +83,42 @@ final class WmfManageDblistCli {
 	public function run(): void {
 		try {
 			switch ( $this->command ) {
-			case 'add':
-				$this->doAdd( ...$this->params );
-				return;
-			case 'list':
-				$this->doList( ...$this->params );
-				return;
-			case 'del':
-			case 'remove':
-				$this->doDel( ...$this->params );
-				return;
-			case 'update':
-				$this->doUpdate( ...$this->params );
-				return;
-			case 'prepare':
-				$this->doPrepare( ...$this->params );
-				return;
-			case 'activate':
-				$this->doActivate( ...$this->params );
-				return;
-			case 'init-labs':
-				$this->doInitLabs( ...$this->params );
-				return;
-			case 'close':
-				$this->doClose( ...$this->params );
-				return;
-			case '':
-			case 'help':
-				$this->help();
-				exit( 1 );
-			default:
-				$this->error( 'Unknown command' );
-				return;
+				case 'add':
+					$this->doAdd( ...$this->params );
+					return;
+				case 'list':
+					$this->doList( ...$this->params );
+					return;
+				case 'del':
+				case 'remove':
+					$this->doDel( ...$this->params );
+					return;
+				case 'update':
+					$this->doUpdate( ...$this->params );
+					return;
+				case 'prepare':
+					$this->doPrepare( ...$this->params );
+					return;
+				case 'activate':
+					$this->doActivate( ...$this->params );
+					return;
+				case 'init-labs':
+					$this->doInitLabs( ...$this->params );
+					return;
+				case 'close':
+					$this->doClose( ...$this->params );
+					return;
+				case '':
+				case 'help':
+					$this->help();
+					exit( 1 );
+				default:
+					$this->error( 'Unknown command' );
+					return;
 			}
 		} catch ( Throwable $e ) {
 			$this->error( (string)$e );
 		}
-
 	}
 
 	private function doList( string $dbname ): void {
@@ -218,42 +217,42 @@ final class WmfManageDblistCli {
 		// add wiki to wikiversion.json
 		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions.json' );
 		switch ( $family ) {
-		case 'wikipedia':
-			$key = 'enwiki';
-			break;
-		case 'wikimania':
-			$key = 'wikimaniawiki';
-			break;
-		case 'wikimedia':
-			$key = 'vewikimedia';
-			break;
-		case 'wikibooks':
-			$key = 'enwikibooks';
-			break;
-		case 'wikinews':
-			$key = 'enwikinews';
-			break;
-		case 'wikiquote':
-			$key = 'enwikiquote';
-			break;
-		case 'wikisource':
-			$key = 'enwikisource';
-			break;
-		case 'wikiversity':
-			$key = 'enwikiversity';
-			break;
-		case 'wikivoyage':
-			$key = 'enwikivoyage';
-			break;
-		case 'wiktionary':
-			$key = 'enwiktionary';
-			break;
-		case 'special':
-			$key = 'apiportalwiki';
-			break;
-		default:
-			$this->error( 'Unknown family' );
-			exit( 1 );
+			case 'wikipedia':
+				$key = 'enwiki';
+				break;
+			case 'wikimania':
+				$key = 'wikimaniawiki';
+				break;
+			case 'wikimedia':
+				$key = 'vewikimedia';
+				break;
+			case 'wikibooks':
+				$key = 'enwikibooks';
+				break;
+			case 'wikinews':
+				$key = 'enwikinews';
+				break;
+			case 'wikiquote':
+				$key = 'enwikiquote';
+				break;
+			case 'wikisource':
+				$key = 'enwikisource';
+				break;
+			case 'wikiversity':
+				$key = 'enwikiversity';
+				break;
+			case 'wikivoyage':
+				$key = 'enwikivoyage';
+				break;
+			case 'wiktionary':
+				$key = 'enwiktionary';
+				break;
+			case 'special':
+				$key = 'apiportalwiki';
+				break;
+			default:
+				$this->error( 'Unknown family' );
+				exit( 1 );
 		}
 		$versions[$dbName] = $versions[$key];
 		ksort( $versions );
@@ -277,20 +276,20 @@ final class WmfManageDblistCli {
 		}
 
 		switch ( $visibility ) {
-		case 'public':
-			if ( $family != 'wikimedia' ) {
-				$this->doAdd( $dbName, 'wikidataclient' );
-			}
-			$this->doAdd( $dbName, 'commonsuploads' );
-			$this->doAdd( $dbName, 'securepollglobal' );
-			break;
-		case 'fishbowl':
-			$this->doAdd( $dbName, 'fishbowl' );
-			break;
-		case 'private':
-			$this->doAdd( $dbName, 'private' );
-			break;
-		default:
+			case 'public':
+				if ( $family != 'wikimedia' ) {
+					$this->doAdd( $dbName, 'wikidataclient' );
+				}
+				$this->doAdd( $dbName, 'commonsuploads' );
+				$this->doAdd( $dbName, 'securepollglobal' );
+				break;
+			case 'fishbowl':
+				$this->doAdd( $dbName, 'fishbowl' );
+				break;
+			case 'private':
+				$this->doAdd( $dbName, 'private' );
+				break;
+			default:
 		}
 
 		$this->generateDbSectionMapping();
