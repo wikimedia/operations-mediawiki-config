@@ -11376,7 +11376,7 @@ return [
 			'name' => 'Design Research participant DB recruitment',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.01,
+			'coverage' => 0.07,
 			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
 			'questions' => [
