@@ -34,7 +34,7 @@ final class WmfManageDblistCli {
 
 	private function help(): void {
 		print <<<TEXT
-	usage: manage-dblist <command> [<args>]
+	usage: composer manage-dblist <command> [<args>]
 
 	COMMANDS
 
@@ -47,11 +47,11 @@ final class WmfManageDblistCli {
 			If the wiki isn't valid for that list (e.g. not yet in "all.dblist"),
 			then the addition is ignored.
 
-			Example: manage-dblist add aawiki closed
+			Example: composer manage-dblist add aawiki closed
 
 	del <dbname> <dblist>
 			Remove a wiki from a dblist, and normalize all dblist files.
-			Example: manage-dblist del aawiki open
+			Example: composer manage-dblist del aawiki open
 			Alias: remove
 	update
 			Normalize all dblist files,
@@ -61,7 +61,7 @@ final class WmfManageDblistCli {
 			Set up a new wiki, getting it ready for installation. It will be
 			added to preinstall.dblist.
 			<privacy> must be one of 'public', 'fishbowl' or 'private'
-			Example: manage-dblist prepare fatwiki fat wikipedia public
+			Example: composer manage-dblist prepare fatwiki fat wikipedia public
 
 	activate <dbname>
 			Move a wiki from preinstall.dblist to all.dblist. This indicates
@@ -74,11 +74,11 @@ final class WmfManageDblistCli {
 			The wiki must be present in the production config
 			(wikiversions.json) already.
 
-			Example: manage-dblist init-labs fatwiki fat
+			Example: composer manage-dblist init-labs fatwiki fat
 
 	close <dbname>
 			Update the dblists of a wiki to reflect it being closed
-			Example: manage-dblist close enwiki
+			Example: composer manage-dblist close enwiki
 
 	TEXT;
 	}
