@@ -17,9 +17,10 @@
 require_once dirname( __DIR__ ) . '/MWWikiversions.php';
 require_once dirname( __DIR__ ) . '/MWMultiVersion.php';
 
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 final class WmfManageDblistCli {
-	private $command;
-	private $params;
+	private string $command;
+	private array $params;
 
 	/**
 	 * @param string[] $argv
@@ -260,7 +261,8 @@ final class WmfManageDblistCli {
 
 		$this->doAdd( $dbName, 'preinstall' );
 		$this->doAdd( $dbName, $family );
-		$this->doAdd( $dbName, 's5' ); // all wikis are currently created in s5
+		// all wikis are currently created in s5
+		$this->doAdd( $dbName, 's5' );
 		$this->doAdd( $dbName, 'small' );
 
 		// (T376827) All new wikis are created with parsoidrendered enabled, except Wikisources
@@ -336,7 +338,7 @@ final class WmfManageDblistCli {
 		}
 	}
 
-	private function doClose( $dbName ) {
+	private function doClose( string $dbName ): void {
 		$this->doAdd( $dbName, 'closed' );
 		$this->doAdd( $dbName, 'group0' );
 		$this->doDel( $dbName, 'securepollglobal' );
