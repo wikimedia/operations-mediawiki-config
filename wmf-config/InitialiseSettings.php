@@ -6155,6 +6155,7 @@ return [
 		'Cikkjelölt' => true, // Draft - T333083
 	],
 	'+hywiki' => [
+		'Project' => true, // T359815
 		'Սևագիր' => true, // Draft, T260825
 		'Վիքինախագիծ' => true, // Wikiproject, T260825
 	],
