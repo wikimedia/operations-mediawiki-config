@@ -955,7 +955,7 @@ return [
 	'annwiki' => '/static/images/project-logos/annwiki-1.5x.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki-1.5x.png',
 	'anwiki' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
-	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T374430
+	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T392858
 	'arywiki' => '/static/images/project-logos/arywiki-1.5x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-1.5x.png', // T150618
 	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618, T292742
@@ -1616,7 +1616,7 @@ return [
 	'annwiki' => '/static/images/project-logos/annwiki-2x.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki-2x.png',
 	'anwiki' => '/static/images/project-logos/anwiki-2x.png', // T150618
-	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T374430
+	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T392858
 	'arywiki' => '/static/images/project-logos/arywiki-2x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-2x.png', // T150618
 	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618, T292742
@@ -2349,7 +2349,7 @@ return [
 		'width' => 119,
 		'height' => 19,
 	],
-	'arwiki' => [ // T374430
+	'arwiki' => [ // T392858
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
 		'width' => 112,
 		'height' => 39,
@@ -5793,7 +5793,7 @@ return [
 		'width' => 110,
 		'height' => 11,
 	],
-	'arwiki' => [ // T374430
+	'arwiki' => [ // T392858
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
 		'width' => 105,
 		'height' => 22,
