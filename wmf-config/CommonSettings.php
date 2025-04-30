@@ -3565,7 +3565,7 @@ if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
 
 	// T76200: Public URL for cxserver instance
-	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
+	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver.wikimedia.org/v1';
 
 	$wgContentTranslationSiteTemplates['cookieDomain'] = '.wikipedia.org';
 
