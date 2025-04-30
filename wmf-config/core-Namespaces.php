@@ -1217,11 +1217,15 @@ return [
 	'+mswikibooks' => [
 		'Perbualan_Resipi' => 101,
 	],
-	'+mswikisource' => [ // T369047
-		'Translation' => 114,
-		'Translation_talk' => 115,
-		'Author' => 102,
-		'Author_talk' => 103,
+	'+mswikisource' => [
+		'Translation' => 114, // T369047
+		'Translation_talk' => 115, // T369047
+		'Author' => 102, // T369047
+		'Author_talk' => 103, // T369047
+		'Portal' => 100, // T392984
+		'Portal_talk' => 101, // T392984
+		'Work' => 112, // T392984
+		'Work_talk' => 113, // T392984
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
@@ -3631,11 +3635,15 @@ return [
 		102 => 'साहित्यिक', // Author
 		103 => 'साहित्यिक_चर्चा', // Author talk
 	],
-	'mswikisource' => [ // T369047
-		102 => 'Pengarang', // Author
+	'mswikisource' => [
+		102 => 'Pengarang', // Author - T369047
 		103 => 'Perbincangan_pengarang', // Author talk
-		114 => 'Terjemahan', // Translation
+		114 => 'Terjemahan', // Translation - T369047
 		115 => 'Perbincangan_terjemahan', // Translation talk
+		100 => 'Gerbang', // Portal - T392984
+		101 => 'Perbincangan_gerbang', // Portal talk
+		112 => 'Karya', // Work - T392984
+		113 => 'Perbincangan_karya', // Work talk
 	],
 	'mywikisource' => [ // T371060
 		100 => 'မုခ်ဝ', // Portal
