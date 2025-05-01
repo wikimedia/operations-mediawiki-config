@@ -125,4 +125,12 @@ $wmgThrottlingExceptions[] = [
 	'value' => 30,
 ];
 
+// T382309 (Istanbul Hackathon 2025)
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-05-01T00:00 +0:00',
+	'to' => '2024-05-05T23:59 +0:00',
+	'range' => '88.255.11.32/28',
+	'value' => 400,
+];
+
 ## Add throttling definitions above.
