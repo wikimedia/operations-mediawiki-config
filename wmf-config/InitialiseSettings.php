@@ -12935,6 +12935,11 @@ return [
 	'group0' => true,
 ],
 
+// T362324
+'wgPHPSessionHandling' => [
+	'default' => 'warn',
+],
+
 // T377975
 'wgTemplateDataEnableDiscovery' => [
 	'default' => false,
