@@ -222,6 +222,20 @@ function wmfGetOverrideSettings() {
 						],
 					]
 				],
+				// DEVELOPMENT ONLY: X-Experiment-Enrollments handling beta cluster EventGate (T391959)
+				'product_metrics.web_base.experiment_enrollment_handling.dev0' => [
+					'schema_title' => 'analytics/product_metrics/web/base',
+					'destination_event_service' => 'eventgate-analytics-external',
+					'canary_events_enabled' => false,
+					'producers' => [
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								'http.request_headers.user-agent' => false,
+							],
+							'use_edge_uniques' => true,
+						],
+					],
+				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
