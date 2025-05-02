@@ -5247,7 +5247,22 @@ return [
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'ipblock-exempt', 'sysop' ],
-		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
+		'sysop' => [
+			'abusefilter-helper', // T175684 (edit filter helper)
+			'abusefilter',
+			'accountcreator',
+			'autoreviewer',
+			'confirmed',
+			'eventcoordinator', // T193075
+			'extendedconfirmed', // T126607
+			'extendedmover', // T133981 (page mover)
+			'filemover',
+			'massmessage-sender',
+			'patroller', // T149019 (new page reviewer)
+			'reviewer',
+			'rollbacker',
+			'templateeditor',
+		],
 	],
 	'+enwikibooks' => [
 		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
