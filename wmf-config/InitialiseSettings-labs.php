@@ -99,7 +99,6 @@ function wmfGetOverrideSettings() {
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
@@ -123,7 +122,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
