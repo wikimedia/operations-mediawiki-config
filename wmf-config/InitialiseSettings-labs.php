@@ -2404,5 +2404,8 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+		'-wmgOATHAuthDisableRight' => [
+			'default' => false,
+		],
 	];
 } # wmfGetOverrideSettings()
