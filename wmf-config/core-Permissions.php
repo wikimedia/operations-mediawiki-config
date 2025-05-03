@@ -791,6 +791,7 @@ return [
 			'templateeditor' => true,
 			'tboverride' => true,
 			'editcontentmodel' => true, // T253081
+			'move-subpages' => true, // T393167
 		], // T57432
 		'sysop' => [
 			'templateeditor' => true, // T57432
