@@ -16,7 +16,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 
 	public static function provideFamilyDbnames() {
 		foreach ( DBList::getLists() as $family => $databases ) {
-			if ( !DBlist::isWikiFamily( $family ) ) {
+			if ( !in_array( $family, MWMultiVersion::SUFFIXES ) ) {
 				// Skip non-family files such as "s1", "private", etc.
 				continue;
 			}
@@ -148,7 +148,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 * I suppose it still saves some nanoseconds.
 	 */
 	public function testNoUnusedDblistsLoaded() {
-		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
+		$unusedDblists = array_flip( MWMultiVersion::DB_LISTS );
 
 		$prodSettings = WmfConfig::getStaticConfig();
 		$labsSettings = WmfConfig::getStaticConfig( 'labs' );
@@ -185,10 +185,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 * that contain expressions because these have a significant performance cost.
 	 */
 	public function testNoExpressionListUsedInSettings() {
-		$dblists = DBList::getDblistsUsedInSettings();
-
 		$actual = [];
-		foreach ( $dblists as $file ) {
+		foreach ( MWMultiVersion::DB_LISTS as $file ) {
 			$content = file_get_contents( dirname( __DIR__ ) . "/dblists/$file.dblist" );
 			if ( strpos( $content, '%' ) !== false ) {
 				$actual[] = $file;
