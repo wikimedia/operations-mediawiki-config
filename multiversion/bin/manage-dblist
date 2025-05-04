@@ -126,7 +126,7 @@ final class WmfManageDblistCli {
 
 	private function doList( string $dbname ): void {
 		$dblists = array_keys( array_filter(
-			MWWikiversions::getAllDbListsForCLI(),
+			WmfConfig::getAllDbListsForCLI(),
 			static function ( array $list ) use ( $dbname ) {
 				return in_array( $dbname, $list );
 			}
@@ -139,9 +139,9 @@ final class WmfManageDblistCli {
 
 	private function doAdd( string $dbname, string $listname ): void {
 		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall', 'preinstall-labs' ] ) ) {
-			$validDbnames = strpos( $listname, 'labs' )
-				? array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) )
-				: array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+			$validDbnames = strpos( $listname, 'labs' ) !== false
+				? WmfConfig::readDbListFile( 'all-labs' )
+				: WmfConfig::readDbListFile( 'all' );
 			if ( !in_array( $dbname, $validDbnames ) ) {
 				$this->error( "Unknown wiki: $dbname" );
 				return;
@@ -166,9 +166,9 @@ final class WmfManageDblistCli {
 	}
 
 	private function doUpdate(): void {
-		$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
-		$labsOnlyWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) );
-		$knownDBLists = MWWikiversions::getAllDbListsForCLI();
+		$prodWikis = WmfConfig::readDbListFile( 'all' );
+		$labsOnlyWikis = WmfConfig::readDbListFile( 'all-labs' );
+		$knownDBLists = WmfConfig::getAllDbListsForCLI();
 
 		// There is only one set of dblists for all realms combined.
 		// This means it is important that a labs-only wiki never be included in
@@ -185,7 +185,7 @@ final class WmfManageDblistCli {
 		$sources = [];
 		foreach ( glob( __DIR__ . '/../../dblists/*.dbexpr' ) as $filepath ) {
 			$listname = basename( $filepath, '.dbexpr' );
-			$contents = MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) );
+			$contents = WmfConfig::evalDbExpressionForCli( file_get_contents( $filepath ) );
 			$knownDBLists[$listname] = $contents;
 			$sources[$listname] = 'dbexpr';
 		}
@@ -314,11 +314,13 @@ final class WmfManageDblistCli {
 		// assumes the wiki receives settings from production dblists such as the wiki family.
 		// Adding a wiki that doesn't exist in production to the Beta Cluster is possible but
 		// more complicated and not supported by this tool.
-		$validDbNames = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+		$validDbNames = WmfConfig::readDbListFile( 'all' );
 		if ( !in_array( $dbName, $validDbNames ) ) {
 			$this->error( "Wiki not in production config: $dbName" );
 			return;
 		}
+
+		$this->doAdd( $dbName, 'all-labs' );
 
 		// add wiki to wikiversion-labs.json
 		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions-labs.json' );
@@ -329,8 +331,6 @@ final class WmfManageDblistCli {
 		$versions[$dbName] = 'php-master';
 		ksort( $versions );
 		MWWikiVersions::writeWikiVersionsFile( 'wikiversions-labs.json', $versions );
-
-		$this->doAdd( $dbName, 'all-labs' );
 
 		$data = file( 'langlist-labs' );
 		if ( !in_array( $lang . "\n", $data ) ) {

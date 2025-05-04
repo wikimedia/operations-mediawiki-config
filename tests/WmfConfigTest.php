@@ -4,7 +4,7 @@ use Wikimedia\MWConfig\WmfConfig;
 /**
  * @covers \Wikimedia\MWConfig\WmfConfig
  */
-class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
+class WmfConfigTest extends PHPUnit\Framework\TestCase {
 
 	public function testInheritance() {
 		$inputSettings = [
@@ -102,5 +102,15 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 			$calculatedSettings_frwikt['boom'] ?? null,
 			"Settings neither set nor inherited are null."
 		);
+	}
+
+	public function testEvalDbListExpression() {
+		$allDbs = WmfConfig::readDbListFile( 'all' );
+		$allPrivateDbs = WmfConfig::readDbListFile( 'private' );
+		$exprDbs = WmfConfig::evalDbExpressionForCli( 'all - private' );
+		$expectedDbs = array_diff( $allDbs, $allPrivateDbs );
+		sort( $exprDbs );
+		sort( $expectedDbs );
+		$this->assertEquals( $expectedDbs, $exprDbs );
 	}
 }

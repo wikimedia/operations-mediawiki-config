@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-require_once dirname( __DIR__ ) . '/MWWikiversions.php';
+require_once __DIR__ . '/../../src/WmfConfig.php';
 
 if ( $argc < 2 ) {
 	print "Usage: expanddblist [<dblist>, <dblistname> or <expression>]\n";
@@ -9,6 +9,6 @@ if ( $argc < 2 ) {
 
 $param = trim( $argv[1] );
 
-foreach ( MWWikiversions::evalDbListExpression( $param ) as $wiki ) {
+foreach ( WmfConfig::evalDbExpressionForCli( $param ) as $wiki ) {
 	echo "$wiki\n";
 }

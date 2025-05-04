@@ -121,7 +121,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testWikisAreIncluded( string $input, array $dbLists ) {
 		$lists = DBList::getLists();
 
-		$all = array_fill_keys( MWWikiversions::evalDbListExpression( $input ), [] );
+		$all = array_fill_keys( WmfConfig::evalDbExpressionForCli( $input ), [] );
 
 		foreach ( $dbLists as $list ) {
 			foreach ( $lists[$list] as $name ) {

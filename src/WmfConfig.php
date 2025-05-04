@@ -87,10 +87,12 @@ class WmfConfig {
 	/**
 	 * Get a list of DB names from a .dblist file.
 	 *
-	 * This function is slow and should only be called in CLI code, or in code specific to
-	 * the "labs" realm. It must not be used during web requests in production.
+	 * This MUST NOT be called during web requests in production.
 	 * Production use case have been implemented and optimised via
 	 * WmfConfig::getTagsForWiki() instead.
+	 *
+	 * WARNING: This function is slow and should only be called in CLI code,
+	 * or in code specific to the "labs" realm.
 	 *
 	 * @param string $dblist
 	 * @return string[]
@@ -110,6 +112,57 @@ class WmfConfig {
 			}
 		}
 		return $dbs;
+	}
+
+	/**
+	 * Evaluate a dblist expression.
+	 *
+	 * This MUST NOT be called during web requests in production.
+	 * Production use case have been implemented and optimised via
+	 * WmfConfig::getTagsForWiki() instead.
+	 *
+	 * WARNING: This function is slow and should only be called in CLI code.
+	 *
+	 * A dblist expression contains one or more dblist file names separated by '+' and '-'.
+	 *
+	 * @par Example:
+	 * @code
+	 *  %% all.dblist - wikipedia.dblist
+	 * @endcode
+	 *
+	 * @param string $expr
+	 * @return array
+	 */
+	public static function evalDbExpressionForCli( $expr ) {
+		$expr = trim( strtok( $expr, "#\n" ), "% " );
+		$tokens = preg_split( '/ +([-+&]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+		$result = self::readDbListFile( basename( $tokens[0], '.dblist' ) );
+		// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
+			$dbs = self::readDbListFile( basename( $term, '.dblist' ) );
+			if ( $op === '+' ) {
+				$result = array_unique( array_merge( $result, $dbs ) );
+			} elseif ( $op === '-' ) {
+				$result = array_diff( $result, $dbs );
+			} elseif ( $op === '&' ) {
+				$result = array_intersect( $result, $dbs );
+			}
+		}
+		sort( $result );
+		return $result;
+	}
+
+	/**
+	 * @return array<string,string[]>
+	 */
+	public static function getAllDbListsForCLI() {
+		$lists = [];
+		foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filename ) {
+			$basename = basename( $filename, '.dblist' );
+			$lists[$basename] = self::readDbListFile( $basename );
+		}
+		return $lists;
 	}
 
 	/**

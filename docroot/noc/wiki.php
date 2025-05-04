@@ -14,7 +14,6 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 require_once __DIR__ . '/../../src/WmfConfig.php';
-require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../../tests/data/MWDefines.php';
 require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 
@@ -41,7 +40,7 @@ $selectedGlobals = WmfConfig::getConfigGlobals(
 );
 $selectedGlobals['* wikitags'] = WmfConfig::getTagsForWiki( $selected );
 $selectedGlobals['* dblists'] = array_keys( array_filter(
-	MWWikiversions::getAllDbListsForCLI(),
+	WmfConfig::getAllDbListsForCLI(),
 	static function ( array $list ) use ( $selected ) {
 		return in_array( $selected, $list );
 	}
@@ -55,7 +54,7 @@ if ( $compare !== null ) {
 	);
 	$beforeGlobals['* wikitags'] = WmfConfig::getTagsForWiki( $compare );
 	$beforeGlobals['* dblists'] = array_keys( array_filter(
-		MWWikiversions::getAllDbListsForCLI(),
+		WmfConfig::getAllDbListsForCLI(),
 		static function ( array $list ) use ( $compare ) {
 			return in_array( $compare, $list );
 		}

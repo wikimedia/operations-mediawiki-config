@@ -56,36 +56,13 @@ class MWWikiversions {
 	}
 
 	/**
-	 * Evaluate a dblist expression.
-	 *
-	 * A dblist expression contains one or more dblist file names separated by '+' and '-'.
-	 *
-	 * @par Example:
-	 * @code
-	 *  %% all.dblist - wikipedia.dblist
-	 * @endcode
+	 * NOTE: Called at operations/puppet.git:/modules/scap/files/expanddblist.
 	 *
 	 * @param string $expr
 	 * @return array
 	 */
 	public static function evalDbListExpression( $expr ) {
-		$expr = trim( strtok( $expr, "#\n" ), "% " );
-		$tokens = preg_split( '/ +([-+&]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
-		$result = self::readDbListFile( basename( $tokens[0], '.dblist' ) );
-		// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
-		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
-		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
-			$dbs = self::readDbListFile( basename( $term, '.dblist' ) );
-			if ( $op === '+' ) {
-				$result = array_unique( array_merge( $result, $dbs ) );
-			} elseif ( $op === '-' ) {
-				$result = array_diff( $result, $dbs );
-			} elseif ( $op === '&' ) {
-				$result = array_intersect( $result, $dbs );
-			}
-		}
-		sort( $result );
-		return $result;
+		return WmfConfig::evalDbExpressionForCli( $expr );
 	}
 
 	/**
@@ -96,18 +73,6 @@ class MWWikiversions {
 	 */
 	public static function readDbListFile( $dblist ) {
 		return WmfConfig::readDbListFile( $dblist );
-	}
-
-	/**
-	 * @return array<string,string[]>
-	 */
-	public static function getAllDbListsForCLI() {
-		$lists = [];
-		foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filename ) {
-			$basename = basename( $filename, '.dblist' );
-			$lists[$basename] = self::readDbListFile( $basename );
-		}
-		return $lists;
 	}
 
 	/**

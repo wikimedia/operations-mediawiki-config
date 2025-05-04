@@ -8,6 +8,8 @@
  * @file
  */
 
+use Wikimedia\MWConfig\WmfConfig;
+
 class DBList {
 
 	/**
@@ -16,7 +18,7 @@ class DBList {
 	public static function getLists() {
 		static $lists;
 		if ( !$lists ) {
-			$lists = MWWikiversions::getAllDbListsForCLI();
+			$lists = WmfConfig::getAllDbListsForCLI();
 		}
 		return $lists;
 	}
