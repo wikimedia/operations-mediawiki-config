@@ -2,7 +2,6 @@
 
 use Wikimedia\MWConfig\WmfConfig;
 
-require_once __DIR__ . '/../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../src/WmfConfig.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../tests/data/MWDefines.php';
@@ -24,16 +23,14 @@ $realms['labs'] = WmfConfig::getStaticConfig( 'labs' );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {
 
-	$wikiversionsFile = ( $realm === 'labs' ) ? 'wikiversions-labs.json' : 'wikiversions.json';
-
-	$wikiversions = MWWikiversions::readWikiVersionsFile( $wikiversionsFile );
+	$wikis = WmfConfig::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
 
 	$config = new SiteConfiguration();
 	$config->suffixes = WmfConfig::SUFFIXES;
-	$config->wikis = WmfConfig::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
+	$config->wikis = $wikis;
 	$config->settings = $realms[$realm];
 
-	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
+	foreach ( $wikis as $wgDBname ) {
 		$globals = WmfConfig::getConfigGlobals( $wgDBname, $config, $realm );
 
 		// Reduce noise in diff when config settings are re-ordered,
