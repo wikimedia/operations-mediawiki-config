@@ -1,7 +1,6 @@
 <?php
 use Wikimedia\MWConfig\WmfConfig;
 
-require_once __DIR__ . '/../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../src/WmfConfig.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/data/MWDefines.php';
@@ -14,7 +13,7 @@ $wmgLogosPath = '../';
 
 function wmfCheckMissingLogosAndGenerateHTML() {
 	global $wmgLogosPath;
-	$prodWikis = MWWikiversions::readDbListFile( 'all' );
+	$prodWikis = WmfConfig::readDbListFile( 'all' );
 	$textareaVal = '';
 	foreach ( $prodWikis as $dbname ) {
 		$textareaVal .= $dbname . "\n";
@@ -72,8 +71,8 @@ $textareaVal
 HEREDOC;
 
 	$conf = new SiteConfiguration();
-	$conf->suffixes = MWMultiVersion::SUFFIXES;
-	$conf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
+	$conf->suffixes = WmfConfig::SUFFIXES;
+	$conf->wikis = $wikis = WmfConfig::readDbListFile( 'all' );
 	$conf->settings = WmfConfig::getStaticConfig( 'production' );
 	foreach ( $prodWikis as $dbname ) {
 		$fullConfig = WmfConfig::getConfigGlobals( $dbname, $conf );

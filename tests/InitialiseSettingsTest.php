@@ -28,7 +28,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->settings = WmfConfig::getStaticConfig();
 
 		$conf = new SiteConfiguration();
-		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->suffixes = WmfConfig::SUFFIXES;
 		$conf->settings = $this->settings;
 		$this->config = $conf;
 	}

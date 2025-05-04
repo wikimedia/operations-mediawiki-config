@@ -14,8 +14,10 @@
  * you think about it. It also validates and normalizes the files.
  */
 
-require_once dirname( __DIR__ ) . '/MWWikiversions.php';
-require_once dirname( __DIR__ ) . '/MWMultiVersion.php';
+require_once __DIR__ . '/../MWWikiversions.php';
+require_once __DIR__ . '/../../src/WmfConfig.php';
+
+use Wikimedia\MWConfig\WmfConfig;
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 final class WmfManageDblistCli {
@@ -146,14 +148,14 @@ final class WmfManageDblistCli {
 			}
 		}
 
-		$content = MWWikiversions::readDbListFile( $listname );
+		$content = WmfConfig::readDbListFile( $listname );
 		$content[] = $dbname;
 		$this->writeDblist( $listname, $content );
 		$this->doUpdate();
 	}
 
 	private function doDel( string $dbname, string $listname ): void {
-		$content = MWWikiversions::readDbListFile( $listname );
+		$content = WmfConfig::readDbListFile( $listname );
 		$i = array_search( $dbname, $content );
 		if ( $i !== false ) {
 			unset( $content[$i] );
@@ -298,7 +300,7 @@ final class WmfManageDblistCli {
 	}
 
 	private function doActivate( string $dbName ) {
-		$preinstallWikis = MWWikiversions::readDbListFile( 'preinstall' );
+		$preinstallWikis = WmfConfig::readDbListFile( 'preinstall' );
 		if ( !in_array( $dbName, $preinstallWikis ) ) {
 			$this->error( "Wiki not in preinstall.dblist: $dbName" );
 			return;
@@ -379,7 +381,7 @@ final class WmfManageDblistCli {
 	private function generateDbSectionMapping(): void {
 		$sections = var_export(
 			array_merge( ...array_map( static function ( string $s ) {
-				return array_fill_keys( MWWikiversions::readDbListFile( $s ), $s );
+				return array_fill_keys( WmfConfig::readDbListFile( $s ), $s );
 			}, [ 's1', 's2', 's4', 's5', 's6', 's7', 's8' ] ) ),
 			true
 		);
@@ -428,7 +430,7 @@ final class WmfManageDblistCli {
 	 */
 	private function writeDblistsIndex( array $dblists ): void {
 		$indexByDbname = [];
-		foreach ( MWMultiVersion::DB_LISTS as $listname ) {
+		foreach ( WmfConfig::DB_LISTS as $listname ) {
 			$contents = $dblists[$listname];
 			foreach ( $contents as $dbname ) {
 				$indexByDbname[$dbname][] = $listname;

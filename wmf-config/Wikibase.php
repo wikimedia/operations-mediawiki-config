@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use Wikibase\Lib\Units\JsonUnitStorage;
+use Wikimedia\MWConfig\WmfConfig;
 
 // Load the Repo
 if ( !empty( $wmgUseWikibaseRepo ) ) {
@@ -68,7 +69,7 @@ define( 'WB_NS_QUERY_TALK', 123 );
 // and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
 $wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
-$testWikidataClients = MWWikiversions::readDbListFile( 'wikidataclient-test' );
+$testWikidataClients = WmfConfig::readDbListFile( 'wikidataclient-test' );
 $termsDomainDb = $wgDBname === 'testwikidatawiki' || in_array( $wgDBname, $testWikidataClients ) ? 'testwikidatawiki' : 'wikidatawiki';
 $wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => $termsDomainDb ];
 
@@ -95,16 +96,16 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['localClientDatabases'] = $testWikidataClients;
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient' );
+		$wgWBRepoSettings['localClientDatabases'] = WmfConfig::readDbListFile( 'wikidataclient' );
 		// Exclude closed wikis
 		$wgWBRepoSettings['localClientDatabases'] = array_diff(
 			$wgWBRepoSettings['localClientDatabases'],
-			MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'closed-labs' : 'closed' )
+			WmfConfig::readDbListFile( $wmgRealm === 'labs' ? 'closed-labs' : 'closed' )
 		);
 		// Exclude non-existent wikis in labs
 		if ( $wmgRealm === 'labs' ) {
 			$wgWBRepoSettings['localClientDatabases'] = array_intersect(
-				MWWikiversions::readDbListFile( 'all-labs' ),
+				WmfConfig::readDbListFile( 'all-labs' ),
 				$wgWBRepoSettings['localClientDatabases']
 			);
 		}
@@ -291,7 +292,7 @@ if ( $wmgUseWikibaseClient ) {
 			array_values( $wgProofreadPageNamespaceIds )
 		);
 
-		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
+		if ( in_array( $wgDBname, WmfConfig::readDbListFile( 'wiktionary' ) ) ) {
 			$excludeNamespaces[] = NS_MAIN;
 			// citations namespace
 			$excludeNamespaces[] = 114;

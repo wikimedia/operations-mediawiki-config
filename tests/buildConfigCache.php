@@ -29,8 +29,8 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 	$wikiversions = MWWikiversions::readWikiVersionsFile( $wikiversionsFile );
 
 	$config = new SiteConfiguration();
-	$config->suffixes = MWMultiVersion::SUFFIXES;
-	$config->wikis = MWWikiversions::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
+	$config->suffixes = WmfConfig::SUFFIXES;
+	$config->wikis = WmfConfig::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
 	$config->settings = $realms[$realm];
 
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {

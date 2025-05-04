@@ -14,15 +14,14 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 require_once __DIR__ . '/../../src/WmfConfig.php';
-require_once __DIR__ . '/../../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../../tests/data/MWDefines.php';
 require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 
 // Based on $wgConf in CommonSettings.php
 $wgConf = new SiteConfiguration();
-$wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
+$wgConf->suffixes = WmfConfig::SUFFIXES;
+$wgConf->wikis = $wikis = WmfConfig::readDbListFile( 'all' );
 $wgConf->settings = WmfConfig::getStaticConfig();
 
 $selected = $_GET['wiki'] ?? 'enwiki';

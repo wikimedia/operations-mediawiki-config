@@ -38,7 +38,7 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 			],
 		];
 		$conf = new SiteConfiguration();
-		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->suffixes = WmfConfig::SUFFIXES;
 		$conf->settings = $inputSettings;
 
 		$calculatedSettings_enwiki = WmfConfig::getConfigGlobals(

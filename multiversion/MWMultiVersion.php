@@ -15,70 +15,11 @@ use Wikimedia\MWConfig\WmfConfig;
  */
 class MWMultiVersion {
 
-	public const SUFFIXES = [
-		// For legacy reasons, wikipedias and specials both use the "wiki" suffix,
-		// and for both the internal $site family will map to "wikipedia".
-		'wikipedia' => 'wiki',
-		'wiktionary',
-		'wikiquote',
-		'wikibooks',
-		'wikinews',
-		'wikisource',
-		'wikiversity',
-		'wikimedia',
-		'wikivoyage',
-	];
+	/** @deprecated */
+	public const SUFFIXES = WmfConfig::SUFFIXES;
 
-	/**
-	 * Note that most wiki families are available as tags for free without
-	 * needing a dblist to be maintained and read from disk, because their
-	 * dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
-	 * available as SiteConfiguration tag in InitialiseSettings.php.
-	 *
-	 * @var string[]
-	 */
-	public const DB_LISTS = [
-		// Expand computed dblists with `./multiversion/bin/expanddblist`.
-		// When updating this list, run `composer manage-dblist update` afterwards.
-		'preinstall',
-		'wikipedia',
-		'special',
-		'private',
-		'fishbowl',
-		'closed',
-		'flow',
-		'flaggedrevs',
-		'small',
-		'skin-themes',
-		'vector-2022-language-links',
-		'legacy-vector',
-		'medium',
-		'wikimania',
-		'wikidata',
-		'wikibaserepo',
-		'wikidataclient',
-		'wikidataclient-test',
-		'visualeditor-nondefault',
-		'commonsuploads',
-		'lockeddown',
-		'group0',
-		'group1',
-		'wikitech',
-		'nonecho',
-		'mobile-anon-categories',
-		'mobile-anon-talk',
-		'modern-mainpage',
-		'nowikidatadescriptiontaglines',
-		'cirrussearch-big-indices',
-		'rtl',
-		'translate',
-		'wikifunctionsclient',
-		'growthexperiments',
-		'parsoidrendered',
-		'charts-phase1',
-		'charts-phase2',
-		'charts-phase3',
-	];
+	/** @deprecated */
+	public const DB_LISTS = WmfConfig::DB_LISTS;
 
 	/**
 	 * @var MWMultiVersion

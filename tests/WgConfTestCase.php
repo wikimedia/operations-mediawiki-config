@@ -99,8 +99,8 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		require __DIR__ . '/data/TestServices.php';
 
 		$conf = new SiteConfiguration();
-		$conf->suffixes = MWMultiVersion::SUFFIXES;
-		$conf->wikis = MWWikiversions::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
+		$conf->suffixes = WmfConfig::SUFFIXES;
+		$conf->wikis = WmfConfig::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
 		$conf->settings = WmfConfig::getStaticConfig();
 
 		// Make sure globals are restored, else they will be serialized on each

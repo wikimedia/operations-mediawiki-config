@@ -259,8 +259,8 @@ if ( $wgDBname === 'testwiki' ) {
 }
 
 $wgConf = new SiteConfiguration;
-$wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->suffixes = WmfConfig::SUFFIXES;
+$wgConf->wikis = WmfConfig::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
 $wgConf->settings = WmfConfig::getStaticConfig( $wmgRealm );
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
@@ -1347,9 +1347,9 @@ $wgSiteMatrixSites = [
 	],
 ];
 
-$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
-$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
-$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
+$wgSiteMatrixClosedSites = WmfConfig::readDbListFile( 'closed' );
+$wgSiteMatrixPrivateSites = WmfConfig::readDbListFile( 'private' );
+$wgSiteMatrixFishbowlSites = WmfConfig::readDbListFile( 'fishbowl' );
 $wgSiteMatrixNonGlobalSites = [];
 
 // list of codex icons to use for interwiki (based on SiteMatrix) search results widget
@@ -4462,7 +4462,7 @@ if ( $wmgUseWikiLambda ) {
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
 
-	$wgWikiLambdaClientWikis = MWWikiversions::readDbListFile( 'wikifunctionsclient' );
+	$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
 }
 
 if ( $wmgUseWikistories ) {
@@ -4738,7 +4738,7 @@ class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 }
 
 if (
-	in_array( $wgDBname, MWWikiversions::readDbListFile( 'closed' ) ) &&
+	in_array( $wgDBname, WmfConfig::readDbListFile( 'closed' ) ) &&
 	$wmgUseCentralAuth
 ) {
 	$wgAuthManagerAutoConfig['preauth'][ClosedWikiProvider::class] = [

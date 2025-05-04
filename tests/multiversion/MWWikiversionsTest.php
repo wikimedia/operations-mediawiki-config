@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\MWConfig\WmfConfig;
+
 class MWWikiversionsTest extends PHPUnit\Framework\TestCase {
 
 	/**
@@ -7,7 +9,7 @@ class MWWikiversionsTest extends PHPUnit\Framework\TestCase {
 	 */
 	public function testWikiversionsFileComplete() {
 		$wikiversions = MWWikiversions::readWikiVersionsFile( __DIR__ . '/../../wikiversions.json' );
-		$allDbs = MWWikiversions::readDbListFile( 'all' );
+		$allDbs = WmfConfig::readDbListFile( 'all' );
 
 		$missingVersionKeys = array_diff( $allDbs, array_keys( $wikiversions ) );
 		$this->assertEquals( [], $missingVersionKeys );
@@ -17,8 +19,8 @@ class MWWikiversionsTest extends PHPUnit\Framework\TestCase {
 	 * @covers MWWikiversions::evalDbListExpression
 	 */
 	public function testEvalDbListExpression() {
-		$allDbs = MWWikiversions::readDbListFile( 'all' );
-		$allPrivateDbs = MWWikiversions::readDbListFile( 'private' );
+		$allDbs = WmfConfig::readDbListFile( 'all' );
+		$allPrivateDbs = WmfConfig::readDbListFile( 'private' );
 		$exprDbs = MWWikiversions::evalDbListExpression( 'all - private' );
 		$expectedDbs = array_diff( $allDbs, $allPrivateDbs );
 		sort( $exprDbs );

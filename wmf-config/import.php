@@ -6,6 +6,8 @@
 
 # NOTE: Labs only for now. Will be put into production later
 
+use Wikimedia\MWConfig\WmfConfig;
+
 /**
  * Set up import sources for transwiki import (T17583)
  *
@@ -15,8 +17,8 @@ function wmfImportSources( &$sources ) {
 	// $lang is the site language from, eg, CommonSettings.php
 	// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 	global $wgConf, $lang;
-	$wikipedias = array_flip( MWWikiversions::readDbListFile( 'wikipedia' ) );
-	$privates = array_flip( MWWikiversions::readDbListFile( 'private' ) );
+	$wikipedias = array_flip( WmfConfig::readDbListFile( 'wikipedia' ) );
+	$privates = array_flip( WmfConfig::readDbListFile( 'private' ) );
 
 	// REMEMBER when editing this function, the values here are *interwiki prefixes*.
 	// Sometimes the interwiki map does things you don't expect.
