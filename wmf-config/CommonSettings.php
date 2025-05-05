@@ -2223,10 +2223,16 @@ $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
 /**
- * Get an array of groups (in $wmgPrivilegedGroups) that $username is part of
+ * Get a list of "privileged" groups and global groups the user is part of.
+ * Typically this means groups with powers comparable to admins and above
+ * (block, delete, edit i18n messages etc).
+ * On SUL wikis, this will take into account group memberships on any wiki,
+ * not just the current one.
  *
  * @param UserIdentity $user
- * @return array Any elevated/privileged groups the user is a member of
+ * @return string[] Any elevated/privileged groups the user is a member of
+ *
+ * @note This method is also used in WikimediaEvents.
  */
 function wmfGetPrivilegedGroups( $user ) {
 	global $wmgUseCentralAuth, $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups;
