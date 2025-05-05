@@ -11308,15 +11308,21 @@ return [
 	// TODO: Move patch forward in T317841 which proposes to make
 	// the extension default enabled everywhere.
 	'default' => false,
+	'arwiki' => true, // T389401
 	'cawiki' => true,
 	// T110661
 	'enwiki' => true,
 	'enwikivoyage' => true,
+	'enwikisource' => true, // T389401
+	'enwiktionary' => true, // T389401
 	'eswiki' => true,
 	'frwiktionary' => true,
-	'huwiki' => true,
+	'huwiki' => true, // T389401
+	'idwiki' => true, // T389401
 	'nowiki' => true,
 	'ruwiki' => true,
+	'simplewiki' => true, // T389401
+	'urwiki' => true, // T389401
 	'vecwiki' => true, // T390023, T381886
 	'tnwiki' => true, // T390023, T381886
 	'astwiki' => true, // T390023, T381886
@@ -11326,6 +11332,34 @@ return [
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	'arwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
 	'enwiki' => [
 		[
 			// T380778
@@ -11374,6 +11408,62 @@ return [
 			],
 		],
 	],
+	'enwikisource' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'enwiktionary' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
 	'eswiki' => [
 		[
 			'name' => 'Empty search experiment survey',
@@ -11417,6 +11507,118 @@ return [
 					'description' => null,
 					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
 					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
+				],
+			],
+		],
+	],
+	'huwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'idwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'simplewiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'urwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
 				],
 			],
 		],
