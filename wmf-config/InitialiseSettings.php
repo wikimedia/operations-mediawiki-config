@@ -11816,6 +11816,10 @@ return [
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 ],
+'wgNearbyPagesNamespaces' => [
+	'default' => [ 0 ],
+	'commonswiki' => [ 6 ],
+],
 'wgNearbyRandomButton' => [
 	'default' => false,
 ],
