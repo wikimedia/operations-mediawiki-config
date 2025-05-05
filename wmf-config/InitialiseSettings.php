@@ -11338,7 +11338,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11414,7 +11414,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11442,7 +11442,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11517,7 +11517,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11545,7 +11545,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11573,7 +11573,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
@@ -11601,7 +11601,7 @@ return [
 			'type' => 'external',
 			'enabled' => true,
 			'coverage' => 1,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-link',
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
