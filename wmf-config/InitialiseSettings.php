@@ -553,6 +553,7 @@ return [
 	'nqowiki' => 'Africa/Conakry',
 	'nrwiki' => 'Africa/Johannesburg',
 	'nsowiki' => 'Africa/Johannesburg',
+	'nupwiki' => 'Africa/Lagos', // T390711
 	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
