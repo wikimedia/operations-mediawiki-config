@@ -6463,6 +6463,7 @@ return [
 	'lawiki' => true, // T160844
 	'metawiki' => true, // T200707
 	'mswiki' => true, // T165247
+	'nnwiki' => true, // T393299
 	'nowiki' => true, // T160362
 	'plwiki' => true, // T315333
 	'ptwiki' => true, // T189658
