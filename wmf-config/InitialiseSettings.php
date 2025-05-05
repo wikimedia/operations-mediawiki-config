@@ -11373,25 +11373,6 @@ return [
 				],
 			],
 		],
-		// T392325
-		[
-			'name' => 'Design Research participant DB recruitment',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.07,
-			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
-			'platforms' => [ 'desktop' => [ 'stable' ] ],
-			'questions' => [
-				[
-					'name' => 'Invitation to participate',
-					'question' => 'design-research-participant-recruitment-survey-question',
-					'description' => 'design-research-participant-recruitment-survey-description',
-					'link' => 'design-research-participant-recruitment-survey-link',
-					'yesMsg' => 'design-research-participant-recruitment-survey-yes-button',
-					'noMsg' => 'design-research-participant-recruitment-survey-no-button',
-				],
-			],
-		],
 	],
 	'eswiki' => [
 		[
