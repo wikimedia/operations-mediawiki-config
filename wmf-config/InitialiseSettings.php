@@ -6231,6 +6231,9 @@ return [
 	'+bnwikibooks' => [
 		'উইকিশৈশব' => true, // T241893
 	],
+	'+ruwikibooks' => [
+		'Рецепт' => true, // T392803
+	],
 
 	// Wikisources
 	'+cswikisource' => [
