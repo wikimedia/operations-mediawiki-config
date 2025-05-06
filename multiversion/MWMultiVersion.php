@@ -75,6 +75,9 @@ class MWMultiVersion {
 		'wikifunctionsclient',
 		'growthexperiments',
 		'parsoidrendered',
+		'charts-phase1',
+		'charts-phase2',
+		'charts-phase3',
 	];
 
 	/**
