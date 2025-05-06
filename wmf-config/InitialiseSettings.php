@@ -12911,7 +12911,7 @@ return [
 	'plwiki' => true,
 	'dewiki' => true,
 	'itwiki' => true,
-	'testwiki' => true,
+	'group0' => true,
 ],
 
 // T377121
@@ -12920,7 +12920,7 @@ return [
 	'plwiki' => true,
 	'dewiki' => true,
 	'itwiki' => true,
-	'testwiki' => true,
+	'group0' => true,
 ],
 
 // T377975
