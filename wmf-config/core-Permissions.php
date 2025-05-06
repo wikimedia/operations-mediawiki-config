@@ -3283,6 +3283,7 @@ return [
 			'editcontentmodel' => true,
 			'unblockself' => false, # T150826
 			'checkuser-temporary-account' => true, // T327913
+			'checkuser-temporary-account-auto-reveal' => true, // T386492
 		],
 		'bot' => [
 			'noratelimit' => true,
@@ -3293,6 +3294,7 @@ return [
 		'bureaucrat' => [
 			'noratelimit' => true,
 			'checkuser-temporary-account' => true, // T327913
+			'checkuser-temporary-account-auto-reveal' => true, // T386492
 		],
 		'steward' => [
 			'noratelimit' => true,
@@ -3338,6 +3340,7 @@ return [
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
 			'checkuser-temporary-account-no-preference' => true, // T371364
+			'checkuser-temporary-account-auto-reveal' => true, // T386492
 		],
 	],
 
