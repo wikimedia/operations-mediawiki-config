@@ -4226,32 +4226,6 @@ if ( $wmgDisableIPMasking ) {
 }
 
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
-	// Allow users to be auto-promoted to the temporary-account-viewer group based on criteria
-	// listed at https://w.wiki/BESb#Patrollers_and_other_users (T369187).
-	$wgAutopromoteOnce['onEdit']['temporary-account-viewer'] = [ '&',
-		[ APCOND_EDITCOUNT, 300 ],
-		[ APCOND_AGE, 6 * 30 * 86400 ], // 6 * 30 * seconds in a day, which makes 6 months
-		// Exclude auto-promoting when the user already has the right through another group that has access
-		[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-		[ '!', [ APCOND_INGROUPS, 'checkuser' ] ],
-		[ '!', [ APCOND_INGROUPS, 'suppress' ] ],
-		[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
-		// Exclude bots from the autopromotion, as the group should be granted manually to these users.
-		[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		// Exclude local autopromotion when the user has a global group which gives them access on all wikis.
-		// These global groups and their permissions are defined at Special:GlobalGroupPermissions.
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'abusefilter-helper' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'abusefilter-maintainer' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'global-rollbacker' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'global-temporary-account-viewer' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'ombuds' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'staff' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'steward' ] ],
-	];
-
-	// Exclude autopromotions into this group from RC by default (T377829)
-	$wgAutopromoteOnceRCExcludedGroups[] = 'temporary-account-viewer';
-
 	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
 	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';
 	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
