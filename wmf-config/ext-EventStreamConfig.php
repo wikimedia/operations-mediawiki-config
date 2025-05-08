@@ -1032,10 +1032,6 @@ return [
 			'schema_title' => 'analytics/mediawiki/web_ui_reading_depth',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		'mediawiki.web_ab_test_enrollment' => [
-			'schema_title' => 'analytics/mediawiki/web_ab_test_enrollment',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
 		'mediawiki.web_ui_actions' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/web_ui_actions',
 			'destination_event_service' => 'eventgate-analytics-external',
