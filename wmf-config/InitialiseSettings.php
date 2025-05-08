@@ -11065,39 +11065,7 @@ return [
 
 'wmgUseORES' => [
 	'default' => false,
-	'arwiki' => true, // T192498
-	'bswiki' => true, // T197010
-	'cawiki' => true, // T192501
-	'cswiki' => true, // T151611
-	'enwiki' => true, // T140003
-	'eswiki' => true, // T130279
-	'eswikibooks' => true, // T145394
-	'eswikiquote' => true, // T219160
-	'etwiki' => true, // T159609
-	'euwiki' => true, // T198358
-	'fawiki' => true, // T130211
-	'fiwiki' => true, // T163011
-	'frwiki' => true,
-	'hewiki' => true, // T161621
-	'huwiki' => true, // T192496
-	'itwiki' => true, // T211032
-	'kowiki' => true, // T161628
-	'lvwiki' => true, // T192499
-	'nlwiki' => true, // T139432
-	'plwiki' => true, // T140005
-	'ptwiki' => true, // T139692
-	'rowiki' => true, // T170723
-	'ruwiki' => true,
-	'simplewiki' => true, // T182012
-	'sqwiki' => true, // T170723
-	'srwiki' => true, // T197012
-	'svwiki' => true, // T174560
-	'testwiki' => true, // T199913
-	'test2wiki' => true, // T200412
-	'trwiki' => true, // T139992
-	'ukwiki' => true, // T256887
-	'wikidatawiki' => true, // T130212
-	'zhwiki' => true, // T225562
+	'ores' => true, // T391103
 ],
 ### End (roughly) of general extensions ########################
 

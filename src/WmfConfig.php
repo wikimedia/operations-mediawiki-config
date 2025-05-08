@@ -76,6 +76,7 @@ class WmfConfig {
 		'charts-phase1',
 		'charts-phase2',
 		'charts-phase3',
+		'ores',
 	];
 
 	/** @var string[] */
