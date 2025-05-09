@@ -7516,8 +7516,29 @@ return [
 			'zh-my' => 'Translate in zh please.',
 			'zh-sg' => 'Translate in zh please.',
 			'zh-tw' => 'Translate in zh please.',
-		]
-	]
+		],
+	],
+	'wikifunctionswiki' => [
+		'*' => [
+			'cdo' => 'This language code should remain unused. Localise in cdo-hant, cdo-hans or cdo-latn please.',
+			'cdo-hani' => 'This language code should remain unused. Localise in cdo-hant or cdo-hans please.',
+			'cpx' => 'This language code should remain unused. Localise in cpx-hans, cpx-hant or cpx-latn please.',
+			'crh' => 'This language code should remain unused. Localise in crh-latn or crh-cyrl please.',
+			'gan' => 'This language code should remain unused. Localise in gan-hant or gan-hans please.',
+			'ku' => 'This code is for compatibility purposes only. Localise in \'ku-latn\'',
+			'nan' => 'This language code should remain unused. Localise in nan-hans, nan-hant, nan-latn-pehoeji or nan-latn-tailo please.',
+			'nan-hani' => 'This language code should remain unused. Localise in nan-hans or nan-hant please.',
+			'nan-latn' => 'This language code should remain unused. Localise in nan-latn-pehoeji or nan-latn-tailo please.',
+			'wuu' => 'This language code should remain unused. Localise in wuu-hans or wuu-hant please.',
+			'yue' => 'This language code should remain unused. Localise in yue-hans or yue-hant please.',
+			'zh' => 'This language code should remain unused. Localise in zh-hans or zh-hant please.',
+			'zh-cn' => 'This language code should remain unused. Localise in zh-hans please.',
+			'zh-tw' => 'This language code should remain unused. Localise in zh-hant please.',
+			'zh-mo' => 'This language code should remain unused. Localise in zh-hk please.',
+			'zh-my' => 'This language code should remain unused. Localise in zh-sg please.',
+			'zh-sg' => 'This language code should remain unused. Localise in zh-hans please.',
+		],
+	],
 ],
 
 'wmgTranslateESIndex' => [
