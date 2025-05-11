@@ -750,8 +750,6 @@ $wgObjectCaches['db-mainstash'] = [
 	'dataRedundancy' => 2,
 ];
 
-session_name( $lang . 'wikiSession' );
-
 $wgPasswordDefault = 'E';
 
 $wgPasswordConfig['E'] = [
