@@ -25,6 +25,7 @@ return [
 	'frwiki' => true,
 	'hewiki' => true, // T161621
 	'huwiki' => true, // T192496
+	'idwiki' => false, // T382171
 	'itwiki' => true, // T211032
 	'kowiki' => true, // T161628
 	'lvwiki' => true, // T192499
@@ -81,6 +82,11 @@ return [
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'idwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
@@ -413,6 +419,11 @@ return [
 			// https://ores.wikimedia.org/v3/scores/huwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.85''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.165 ], // 'maximum recall @ precision >= 0.85'
 		],
+	],
+	'idwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.845, 'max' => 1 ] // based on desired false positive rate of < 15%
+			],
 	],
 	'itwiki' => [
 		'damaging' => [

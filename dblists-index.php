@@ -409,7 +409,7 @@ return [
 'iawiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'ibawiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'charts-phase1' ],
 'id_internalwikimedia' => [ 'private', 'small', 'group1' ],
-'idwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'skin-themes', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'charts-phase1' ],
+'idwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'skin-themes', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'charts-phase1', 'ores' ],
 'idwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'idwikimedia' => [ 'fishbowl', 'medium', 'group1', 'translate' ],
 'idwikiquote' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
