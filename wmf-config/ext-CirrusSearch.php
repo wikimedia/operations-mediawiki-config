@@ -996,17 +996,10 @@ return [
 	]
 ],
 
-# Enable the ores_articletopics field
-'wgCirrusSearchWMFExtraFeatures' => [
+'wgCirrusSearchWeightedTags' => [
 	'default' => [
-		'ores_articletopics' => [
-			'build' => true,
-			'use' => true,
-		],
-		'weighted_tags' => [
-			'build' => true,
-			'use' => true,
-		]
+		'build' => true,
+		'use' => true,
 	]
 ],
 
