@@ -1209,10 +1209,4 @@ return [
 	'wikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
 	'testwikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
 ],
-'wgCirrusSearchIndexWeightedTagsPrefixMap' => [
-	'default' => [
-		'classification.ores.articletopic' => 'classification.prediction.articletopic', // T389053
-		'classification.ores.drafttopic' => 'classification.prediction.drafttopic', // T389053
-	]
-]
 ];
