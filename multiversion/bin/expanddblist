@@ -2,6 +2,8 @@
 <?php
 require_once __DIR__ . '/../../src/WmfConfig.php';
 
+use Wikimedia\MWConfig\WmfConfig;
+
 if ( $argc < 2 ) {
 	print "Usage: expanddblist [<dblist>, <dblistname> or <expression>]\n";
 	exit( 1 );
