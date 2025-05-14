@@ -11490,6 +11490,31 @@ return [
 				],
 			],
 		],
+		// T394315
+		[
+			'name' => 'design-research-participant-recruitment-survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0, // 0.03
+			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'Survey single external question',
+					'question' => 'design-research-participant-recruitment-survey-question',
+					'description' => 'design-research-participant-recruitment-survey-description',
+					'link' => 'design-research-participant-recruitment-survey-link',
+					'yesMsg' => 'design-research-participant-recruitment-survey-yes-button',
+					'noMsg' => 'design-research-participant-recruitment-survey-no-button',
+				],
+			],
+		],
 	],
 	'huwiki' => [ // T389401
 		[
