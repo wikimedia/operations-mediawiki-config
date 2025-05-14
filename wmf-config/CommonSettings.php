@@ -2035,6 +2035,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
+	$wgCentralAuthRestrictSharedDomain = true;
 
 	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,
 	// and use cookie names that are the same for every wiki.
