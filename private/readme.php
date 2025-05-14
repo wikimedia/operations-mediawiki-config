@@ -178,7 +178,7 @@ $wgOAuth2PublicKey = null;
  *
  * @see mediawiki/extensions/MediaModeration
  */
-$wgMediaModerationPhotoDNASubscriptionKey = 'subscription-key';
+$wgMediaModerationPhotoDNASubscriptionKey = '';
 $wgMediaModerationRecipientList = [];
 
 /**
