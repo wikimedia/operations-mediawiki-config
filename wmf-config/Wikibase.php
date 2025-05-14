@@ -70,8 +70,12 @@ define( 'WB_NS_QUERY_TALK', 123 );
 $wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
 $testWikidataClients = WmfConfig::readDbListFile( 'wikidataclient-test' );
-$termsDomainDb = $wgDBname === 'testwikidatawiki' || in_array( $wgDBname, $testWikidataClients ) ? 'testwikidatawiki' : 'wikidatawiki';
-$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => $termsDomainDb ];
+// Set term store virtual domain
+if ( in_array( $wgDBname, $testWikidataClients ) || $wgDBname === 'testwikidatawiki' ) {
+	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'testwikidatawiki' ];
+} else {
+	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki', 'cluster' => 'extension3' ];
+}
 
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
