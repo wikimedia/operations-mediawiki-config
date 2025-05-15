@@ -2527,6 +2527,10 @@ return [
 		'showThumbnail' => false,
 		'showDescription' => true,
 	],
+	'labswiki' => [
+		'showThumbnail' => false,
+		'showDescription' => false,
+	],
 ],
 
 // T328045
