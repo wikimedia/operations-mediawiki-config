@@ -4849,6 +4849,7 @@ return [
 	'fawikiquote' => true, // T179442
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
+	'frwiki' => true, // T382199
 	// 'gomwiki' => true, // T106169.  Disabled until T131957 is fixed.
 	'guwiki' => true, // T42872
 	'guwikiquote' => true, // T134253
@@ -4947,6 +4948,7 @@ return [
 	'default' => true,
 	'arwiki' => false,
 	'fawiki' => false,
+	'frwiki' => false, // T382199
 	'kkwiki' => false, // T149563
 	'plwiki' => false, // T138169
 	'incubatorwiki' => false,
