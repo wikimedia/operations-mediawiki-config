@@ -12516,6 +12516,7 @@ return [
 	'viwiki' => true,
 	'warwiki' => true,
 	// End batch for T392240
+	'cbk_zamwiki' => true, // T393604
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
