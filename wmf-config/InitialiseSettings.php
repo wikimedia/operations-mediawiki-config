@@ -12901,7 +12901,7 @@ return [
 	'charts-phase1' => true,
 
 	// T393518 Enable these for phase 2:
-	'charts-phase2' => false,
+	'charts-phase2' => true,
 
 	// T393519 Enable these for phase 3:
 	'charts-phase3' => false,
