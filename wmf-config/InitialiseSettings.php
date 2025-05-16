@@ -3646,6 +3646,7 @@ return [
 	'arbcom_dewiki' => [ 'w', 'w:de', ],
 	'arbcom_enwiki' => [ 'meta', 'w' ], // T19730
 	'arbcom_itwiki' => [ 'it' ], // T369264
+	'arbcom_zhwiki' => [ 'w:en', 'w:zh', 'meta' ], // T394505
 	'donatewiki' => [ 'meta', 'foundation' ],
 	'legalteamwiki' => [ 'meta' ], // T66070
 	'officewiki' => [ 'en', 'meta', 'commons', 'foundation' ], // T381063
