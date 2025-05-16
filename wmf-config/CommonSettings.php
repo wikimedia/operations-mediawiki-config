@@ -4170,28 +4170,6 @@ if ( $wmgUseCheckUser ) {
 	$wgCheckUserGlobalContributionsCentralWikiId = 'metawiki';
 }
 
-if ( $wmgUseIPInfo ) {
-	wfLoadExtension( 'IPInfo' );
-	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
-	// It is only present on application servers. See
-	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
-	// for list of relevant sections of operations/puppet config.
-	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIPInfo/GeoLite2-';
-
-	// Consult the Legal team before updating these, since they
-	// must remain compatible with our contract with MaxMind
-
-	$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
-	$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
-
-	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
-
-	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
-	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
-
-	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
-}
-
 if ( $wmgUseIPReputation ) {
 	wfLoadExtension( 'IPReputation' );
 	// Switch on in case of emergency. Non-sighted users
@@ -4299,6 +4277,42 @@ if ( $wmgUseRC2UDP ) {
 }
 
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
+
+if ( $wmgUseIPInfo ) {
+	wfLoadExtension( 'IPInfo' );
+	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
+	// It is only present on application servers. See
+	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
+	// for list of relevant sections of operations/puppet config.
+	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIPInfo/GeoLite2-';
+
+	// On wikis with temporary accounts, grant full access to members of the "temporary-account-viewer"
+	// group provided by CheckUser to ensure that access to IP information reflects our policy (T375086).
+	// On Beta Cluster wikis, which do not have CheckUser installed, this amounts to making the feature
+	// admin-only.
+	// Keep full access for autoconfirmed users on wikis where temporary accounts are not known
+	// to avoid disruption.
+	if ( $wgAutoCreateTempUser['known'] ) {
+		if ( $wmgUseCheckUser ) {
+			$wgGroupPermissions['temporary-account-viewer']['ipinfo'] = true;
+			$wgGroupPermissions['temporary-account-viewer']['ipinfo-view-full'] = true;
+		}
+	} else {
+		$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
+		$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
+	}
+
+	$wgGroupPermissions['sysop']['ipinfo'] = true;
+	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
+
+	if ( $wmgUseCheckUser ) {
+		$wgGroupPermissions['checkuser']['ipinfo'] = true;
+		$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
+		$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
+	}
+
+	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
+}
 
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );

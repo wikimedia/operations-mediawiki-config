@@ -145,12 +145,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgContentTranslationTranslateInTarget = false;
 	}
 
-	if ( $wmgUseIPInfo ) {
-		// This allows admins on beta to test the feature.
-		$wgGroupPermissions['sysop']['ipinfo'] = true;
-		$wgGroupPermissions['sysop']['ipinfo-view-basic'] = true;
-	}
-
 	if ( $wmgUseCentralNotice ) {
 		// Emit CSP headers on banner previews. This can go away when full CSP
 		// support (T135963) is deployed.
