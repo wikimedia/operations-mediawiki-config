@@ -311,9 +311,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgEchoSharedTrackingCluster = false;
 	}
 
-	// Enabling thank-you-edit on beta for testing T128249. Still disabled in prod.
-	$wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = true;
-
 	// Enabling article-reminder on beta for testing T166973. Still disabled in prod.
 	$wgAllowArticleReminderNotification = true;
 
