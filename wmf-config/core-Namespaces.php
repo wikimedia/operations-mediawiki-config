@@ -3056,8 +3056,8 @@ return [
 		101 => 'Diskussjoni_portal',
 	],
 	'mswiki' => [
-		100 => 'Portal',
-		101 => 'Perbincangan_portal',
+		100 => 'Gerbang', // T394603
+		101 => 'Perbincangan_gerbang', // T394603
 		126 => 'MOS', // T363538
 		127 => 'Perbincangan_MOS', // T363538
 	],
