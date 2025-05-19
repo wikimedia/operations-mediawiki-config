@@ -11469,7 +11469,7 @@ return [
 			'name' => 'design-research-participant-recruitment-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.03,
+			'coverage' => 0.25,
 			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
