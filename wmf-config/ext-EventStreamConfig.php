@@ -2406,6 +2406,13 @@ return [
 						// click-through rate (see
 						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
 						'performer_active_browsing_session_token',
+
+						// Temporary: The first everyone experiment run by Web will use this stream. Make skin and
+						// database (DBname) available as dimensions during analysis for the duration of that
+						// experiment. See https://phabricator.wikimedia.org/T394457 and
+						// https://phabricator.wikimedia.org/T394093 for detail.
+						'mediawiki_skin',
+						'mediawiki_database',
 					],
 				],
 				'eventgate' => [
