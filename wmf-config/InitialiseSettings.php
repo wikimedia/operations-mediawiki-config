@@ -12814,6 +12814,8 @@ return [
 	'azwiki' => true,
 	// T367306
 	'zhwiki' => true,
+	// T391248
+	'eswiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -12834,6 +12836,8 @@ return [
 	'azwiki' => 'Avtomoderator',
 	// T367306
 	'zhwiki' => 'AutoModerator',
+	// T391248
+	'eswiki' => 'Automoderador',
 ],
 
 // T341000
