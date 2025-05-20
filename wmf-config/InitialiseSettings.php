@@ -6358,8 +6358,28 @@ return [
 ],
 
 'wgVisualEditorMobileInsertMenu' => [
-	'default' => false,
+	'default' => [ 'citoid', 'syntaxhighlightDialog', 'hiero' ],
 	'wikifunctionsclient' => true, // T383145
+	'arwiki' => false, // (T388604) Arabic Wikipedia
+	'commonswiki' => false, // (T388604) Wikimedia Commons
+	'cswiki' => false, // (T388604) Czech Wikipedia
+	'dewiki' => false, // (T388604) German Wikipedia
+	'enwiki' => false, // (T388604) English Wikipedia
+	'enwiktionary' => false, // (T388604) English Wiktionary
+	'eswiki' => false, // (T388604) Spanish Wikipedia
+	'fawiki' => false, // (T388604) Persian Wikipedia
+	'hewiki' => false, // (T388604) Hebrew Wikipedia
+	'idwiki' => false, // (T388604) Indonesian Wikipedia
+	'itwiki' => false, // (T388604) Italian Wikipedia
+	'jawiki' => false, // (T388604) Japanese Wikipedia
+	'metawiki' => false, // (T388604) Meta-Wiki
+	'nlwiki' => false, // (T388604) Dutch Wikipedia
+	'plwiki' => false, // (T388604) Polish Wikipedia
+	'ptwiki' => false, // (T388604) Portuguese Wikipedia
+	'ruwiki' => false, // (T388604) Russian Wikipedia
+	'trwiki' => false, // (T388604) Turkish Wikipedia
+	'ukwiki' => false, // (T388604) Ukrainian Wikipedia
+	'zhwiki' => false, // (T388604) Chinese Wikipedia
 ],
 
 // Whether VisualEditor's feedback page should be consolidated down to just the
