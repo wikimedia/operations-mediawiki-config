@@ -791,6 +791,7 @@ return [
 			'templateeditor' => true,
 			'tboverride' => true,
 			'editcontentmodel' => true, // T253081
+			'move-subpages' => true, // T393167
 		], // T57432
 		'sysop' => [
 			'templateeditor' => true, // T57432
@@ -1196,8 +1197,12 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 		], // T23044
-		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
+		'sysop' => [
+			'editextendedsemiprotected' => true, // T131109
+			'abusefilter-access-protected-vars' => false // T381722
+		],
 		'interface-admin' => [ 'editcontentmodel' => true ], // T369113
+		'abusefilter' => [ 'abusefilter-access-protected-vars' => true ], // T381722
 	],
 	'+frwikibooks' => [
 		'patroller' => [
@@ -3093,6 +3098,19 @@ return [
 			'reupload' => true,
 			'reupload-own' => true,
 		],
+		'sysop' => [
+			'extendedconfirmed' => true, // T389729
+		],
+		'bot' => [
+			'extendedconfirmed' => true, // T389729
+		],
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T389729
+		],
+		'translationadmin' => [
+			'editprotected' => true,
+			'extendedconfirmed' => true,
+		], // T389729
 	],
 	'+wuuwiki' => [
 		'rollbacker' => [
@@ -4739,7 +4757,10 @@ return [
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
-		'sysop' => [ 'uploader' ], // T225505
+		'sysop' => [
+			'extendedconfirmed', // T389729
+			'uploader', // T225505
+		],
 	],
 	'wikitech' => [
 		'bureaucrat' => [
@@ -5227,7 +5248,22 @@ return [
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'ipblock-exempt', 'sysop' ],
-		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
+		'sysop' => [
+			'abusefilter-helper', // T175684 (edit filter helper)
+			'abusefilter',
+			'accountcreator',
+			'autoreviewer',
+			'confirmed',
+			'eventcoordinator', // T193075
+			'extendedconfirmed', // T126607
+			'extendedmover', // T133981 (page mover)
+			'filemover',
+			'massmessage-sender',
+			'patroller', // T149019 (new page reviewer)
+			'reviewer',
+			'rollbacker',
+			'templateeditor',
+		],
 	],
 	'+enwikibooks' => [
 		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
@@ -5942,7 +5978,10 @@ return [
 		'wikifunctions-staff' => [ 'functioneer', 'functionmaintainer', 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
-		'sysop' => [ 'uploader' ], // T225505
+		'sysop' => [
+			'extendedconfirmed', // T389729
+			'uploader', // T225505
+		],
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'autopatrolled', ],

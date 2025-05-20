@@ -46,7 +46,3 @@ $wgCirrusSearchShardCount = [
 	'codfw' => $wmgCirrusSearchShardCount,
 	'cloudelastic' => $wmgCirrusSearchShardCount,
 ];
-
-// T295705#7719071 Reduce write isolation to only cloudelastic to reduce job queue rates
-$wgCirrusSearchWriteIsolateClusters = [ 'cloudelastic' ];
-$wgCirrusSearchElasticaWritePartitionCounts = [ 'cloudelastic' => 3 ];

@@ -130,12 +130,12 @@ Wikipedia:
         local_wordmark: true
     arwiki:
         commons: 'File:Wikipedia-logo-v3-ar.svg'
-        comment_1_5x: T374430
-        comment_2x: T374430
+        comment_1_5x: T392858
+        comment_2x: T392858
         commons_wordmark: 'File:Wikipedia wordmark-ar-alt2.svg'
-        commons_tagline: 'File:Wikipedia-tagline-ar-alt.svg'
-        comment_tagline: T374430
-        comment_wordmark: T374430
+        commons_tagline: 'File:Wikipedia-tagline-ar-alt3.svg'
+        comment_tagline: T392858
+        comment_wordmark: T392858
         width_wordmark: '112'
         height_wordmark: '39'
         width_tagline: '105'
@@ -2412,6 +2412,17 @@ Wiktionary:
         local_wordmark: true
         local_tagline: true
         local_icon: true
+    madwiktionary:
+        commons: 'File:Wiktionary-logo-mad.svg'
+        comment: T391318
+        comment_1_5x: T391318
+        comment_2x: T391318
+        commons_wordmark: 'File:Wiktionary-wordmark-mad.svg'
+        comment_wordmark: T391318
+        commons_tagline: 'File:Wiktionary-tagline-mad.svg'
+        comment_tagline: T391318
+        commons_icon: 'File:Wiktionary-logo-mad_(no_text).svg'
+        comment_icon: T391318
     mgwiktionary:
         no_1_5x: true
         no_2x: true
@@ -4206,7 +4217,8 @@ Wikivoyage:
         no_2x: true
         selected_icon: outreachwiki
         local_wordmark: true
-        local_tagline: true
+        commons_tagline: 'File:Wikimedia-tagline-punjabi.svg'
+        comment_tagline: T348611
     romdwikimedia:
         commons: 'File:Wikimedia Community Logo WMROMD.svg'
         comment: T187184
@@ -4722,8 +4734,8 @@ Wikivoyage:
         comment_1_5x: T194340, T337044
         comment_2x: T194340, T337044
         no_icon: true
-        local_wordmark: true
-        comment_wordmark: T286405
+        commons_wordmark: File:Wikimania Nairobi wordmark.svg
+        comment_wordmark: T392239
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
         commons_icon: 'File:Wikitech-logo-vector2022.svg'

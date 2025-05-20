@@ -1217,11 +1217,15 @@ return [
 	'+mswikibooks' => [
 		'Perbualan_Resipi' => 101,
 	],
-	'+mswikisource' => [ // T369047
-		'Translation' => 114,
-		'Translation_talk' => 115,
-		'Author' => 102,
-		'Author_talk' => 103,
+	'+mswikisource' => [
+		'Translation' => 114, // T369047
+		'Translation_talk' => 115, // T369047
+		'Author' => 102, // T369047
+		'Author_talk' => 103, // T369047
+		'Portal' => 100, // T392984
+		'Portal_talk' => 101, // T392984
+		'Work' => 112, // T392984
+		'Work_talk' => 113, // T392984
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
@@ -1391,6 +1395,9 @@ return [
 		'Em_tradução' => 108,
 		'Discussão_Em_tradução' => 109,
 		'Discussão_em_tradução' => 109,
+	],
+	'+ptwiktionary' => [
+		'WS' => 110, // T391299
 	],
 	'+rowiki' => [
 		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
@@ -2339,7 +2346,9 @@ return [
 	// Wikimania
 	'+wikimaniawiki' => [
 		120 => 1, 122 => 1, 124 => 1, 126 => 1, 128 => 1, // T220950
+		130 => 1, 132 => 1, 134 => 1, // T389729
 		136 => 1, 138 => 1, 140 => 1, 142 => 2, // T347622
+		144 => 1, 146 => 1, // T389729
 	],
 ],
 # @} end of wgNamespacesWithSubpages
@@ -2418,6 +2427,10 @@ return [
 		141 => '2025_talk', // T347622
 		142 => '2026', // T347622
 		143 => '2026_talk', // T347622
+		144 => '2027', // T389729
+		145 => '2027_talk', // T389729
+		146 => '2028', // T389729
+		147 => '2028_talk', // T389729
 	],
 	# @}
 
@@ -3043,8 +3056,8 @@ return [
 		101 => 'Diskussjoni_portal',
 	],
 	'mswiki' => [
-		100 => 'Portal',
-		101 => 'Perbincangan_portal',
+		100 => 'Gerbang', // T394603
+		101 => 'Perbincangan_gerbang', // T394603
 		126 => 'MOS', // T363538
 		127 => 'Perbincangan_MOS', // T363538
 	],
@@ -3622,11 +3635,15 @@ return [
 		102 => 'साहित्यिक', // Author
 		103 => 'साहित्यिक_चर्चा', // Author talk
 	],
-	'mswikisource' => [ // T369047
-		102 => 'Pengarang', // Author
+	'mswikisource' => [
+		102 => 'Pengarang', // Author - T369047
 		103 => 'Perbincangan_pengarang', // Author talk
-		114 => 'Terjemahan', // Translation
+		114 => 'Terjemahan', // Translation - T369047
 		115 => 'Perbincangan_terjemahan', // Translation talk
+		100 => 'Gerbang', // Portal - T392984
+		101 => 'Perbincangan_gerbang', // Portal talk
+		112 => 'Karya', // Work - T392984
+		113 => 'Perbincangan_karya', // Work talk
 	],
 	'mywikisource' => [ // T371060
 		100 => 'မုခ်ဝ', // Portal
@@ -4119,6 +4136,8 @@ return [
 		107 => 'Portal_Discussão',
 		108 => 'Citações',
 		109 => 'Citações_Discussão',
+		110 => 'Wikisaurus', // T391299
+		111 => 'Wikisaurus_Discussão', // T391299
 	],
 	'rowiktionary' => [
 		100 => 'Portal',
@@ -5241,6 +5260,34 @@ return [
 		120 => [ 'autoconfirmed' ], // Property namespace per T254280
 		122 => [ 'query-update' ], // Query namespace per T51001
 	],
+	'+wikimaniawiki' => [ /* T389729: 10-146, 828. */
+		10 => [ 'autoconfirmed' ],
+		100 => [ 'autoconfirmed' ],
+		102 => [ 'autoconfirmed' ],
+		104 => [ 'autoconfirmed' ],
+		106 => [ 'autoconfirmed' ],
+		108 => [ 'autoconfirmed' ],
+		110 => [ 'autoconfirmed' ],
+		112 => [ 'autoconfirmed' ],
+		114 => [ 'autoconfirmed' ],
+		116 => [ 'autoconfirmed' ],
+		118 => [ 'autoconfirmed' ],
+		120 => [ 'autoconfirmed' ],
+		122 => [ 'autoconfirmed' ],
+		124 => [ 'autoconfirmed' ],
+		126 => [ 'autoconfirmed' ],
+		128 => [ 'autoconfirmed' ],
+		130 => [ 'autoconfirmed' ],
+		132 => [ 'autoconfirmed' ],
+		134 => [ 'autoconfirmed' ],
+		136 => [ 'autoconfirmed' ],
+		138 => [ 'autoconfirmed' ],
+		140 => [ 'autoconfirmed' ],
+		142 => [ 'autoconfirmed' ],
+		144 => [ 'autoconfirmed' ],
+		146 => [ 'autoconfirmed' ],
+		828 => [ 'autoconfirmed' ],
+	],
 	'+wikitech' => [
 		666 => [ 'editprotected' ], // Block editing of former Hiera: namespace.
 	],
@@ -5305,6 +5352,7 @@ return [
 	'+mediawikiwiki' => [ 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ], // T85807
 	'+metawiki' => [ 12 => 1, 200 => 1, 202 => 1 ],
 	'+mlwikisource' => [ 100 => 1, 104 => 1 ],
+	'+mswikisource' => [ 100 => 1, 102 => 1, 112 => 1, 114 => 1, 252 => 1 ], // T392984
 	'+nlwikisource' => [ 102 => 1 ],
 	'+nlwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+nowikimedia' => [ 100 => 1 ], // T181625
@@ -5337,8 +5385,8 @@ return [
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikimaniawiki' => [
-		136 => 1, // 2023, T316928
 		138 => 1, // 2024, T332782
+		140 => 1, // 2025, T389729
 	],
 	'+zhwikisource' => [
 		100 => 1, // T308393, Portal
@@ -5410,6 +5458,11 @@ return [
 	'+vecwikisource' => [ 100 ],
 	'+viwikibooks' => [ 104, 106 ],
 	'+viwikisource' => [ 102 ],
+	'+wikimaniawiki' => [
+		100, 102, 104, 106, 108, 110, 112, 114, 116, 118, // T389729
+		120, 122, 124, 126, 128, 130, 132, 134, 136, 138, // T389729
+		140, 142, 144, 146, // T389729 (140-146)
+	],
 	'+wikitech' => [ NS_HELP, 116 ], // Tools - T122865
 	'+zhwikisource' => [ 102, 114 ], // T66127
 	'+zhwikiversity' => [ 100, 102, 104, 106, 108 ], // T201675, T212919 (106, 108)

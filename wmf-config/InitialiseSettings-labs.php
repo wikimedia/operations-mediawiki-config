@@ -40,7 +40,7 @@ use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
 use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
 
 /**
- * Get overrides for Beta Cluster settings. This is applied in MWConfigCacheGenerator.
+ * Get overrides for Beta Cluster settings. This is called in WmfConfig::applyOverrides().
  *
  * Keys that start with a hyphen will completely override the prodution settings
  * from InitializeSettings.php.
@@ -99,7 +99,6 @@ function wmfGetOverrideSettings() {
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
@@ -124,7 +123,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
@@ -223,6 +221,20 @@ function wmfGetOverrideSettings() {
 							],
 						],
 					]
+				],
+				// DEVELOPMENT ONLY: X-Experiment-Enrollments handling beta cluster EventGate (T391959)
+				'product_metrics.web_base.experiment_enrollment_handling.dev0' => [
+					'schema_title' => 'analytics/product_metrics/web/base',
+					'destination_event_service' => 'eventgate-analytics-external',
+					'canary_events_enabled' => false,
+					'producers' => [
+						'eventgate' => [
+							'enrich_fields_from_http_headers' => [
+								'http.request_headers.user-agent' => false,
+							],
+							'use_edge_uniques' => true,
+						],
+					],
 				],
 			],
 			'+enwiki' => [
@@ -468,7 +480,6 @@ function wmfGetOverrideSettings() {
 			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
 			'wikivoyage' => '/static/images/project-logos/betacommons.png',
 			'wiktionary' => '/static/images/project-logos/betacommons.png',
-			'wikifunctionswiki' => '/static/images/project-logos/betawikifunctions.png',
 		],
 		'-wmgSiteLogo1_5x' => [],
 		'-wmgSiteLogo2x' => [],
@@ -656,7 +667,6 @@ function wmfGetOverrideSettings() {
 				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
-				'wikifunctions.beta.wmflabs.org' => 'wikifunctionswiki',
 
 				// Wikis for SUL project hosted on wmcloud.org
 				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
@@ -664,14 +674,10 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// T370254, T375787
 		'wgCentralAuthEnableSul3' => [
-			'default' => [ 'query-flag', 'cookie' ],
-			# enable on the two cross-site wikis (T355281) + some other small wikis
-			'test2wiki' => [ 'always', 'query-flag', 'cookie' ],
-			'plwikivoyage' => [ 'always', 'query-flag', 'cookie' ],
-			'sqwiki' => [ 'always', 'query-flag', 'cookie' ],
-			'enwikinews' => [ 'always', 'query-flag', 'cookie' ],
+			'default' => true,
+			// Leave one wiki in SUL2-compatibility mode for testing
+			'testwiki' => false,
 		],
 
 		//
@@ -781,18 +787,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgRelatedArticlesABTestEnrollment' => [
-			'default' => [
-				"name" => "RelatedArticles test experiment",
-				"enabled" => false,
-				"buckets" => [
-					"nonExperiment-unsampled" => 0,
-					"experimentEnabled" => 0.5,
-					"experimentDisabled" => 0.5
-				],
-			]
-		],
-
 		'wmgExtraLanguageNames' => [
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 			'wikidata' => [],
@@ -857,7 +851,10 @@ function wmfGetOverrideSettings() {
 				'198.73.209.0/24', // T87841 Office IP
 				'162.222.72.0/21', // T126585 Sauce Labs IP range for browser tests
 				'66.85.48.0/21', // also Sauce Labs
-				'172.16.0.0/12', // browser tests run by Jenkins instances - T167432
+				// Cloud VPS - browser tests run by Jenkins instances - T167432
+				'172.16.0.0/16',
+				'185.15.56.0/24',
+				'2a02:ec80:a000::/48',
 			],
 		],
 
@@ -1142,6 +1139,22 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wgReadingListBetaFeature' => [
+			'default' => true,
+		],
+
+		'wgReadingListsDeveloperMode' => [
+			'default' => true,
+		],
+
+		'wgReadingListAndroidAppDownloadLink' => [
+			'default' => "https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingListsShare",
+		],
+
+		'wgReadingListiOSAppDownloadLink' => [
+			'default' => "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingListsShare",
+		],
+
 		'wgReadingListsWebAuthenticatedPreviews' => [
 			'default' => true,
 		],
@@ -1321,9 +1334,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgGELevelingUpFeaturesEnabled' => [
-			'default' => true,
-		],
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
 			'cswiki' => 'surfacing-structured-task',
@@ -1368,12 +1378,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 			'default' => 300,
-		],
-		'wgGEHelpPanelHelpDeskTitle' => [
-			'enwiki' => 'Wikipedia:Help_desk',
-		],
-		'wgGEHelpPanelViewMoreTitle' => [
-			'enwiki' => 'Help:Contents',
 		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
@@ -2080,8 +2084,6 @@ function wmfGetOverrideSettings() {
 				'm.wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
-				'wikifunctions.beta.wmflabs.org',
-				'm.wikifunctions.beta.wmflabs.org',
 
 				// Prod domains, to allow easier gadget testing
 				'*.wikimedia.org',
@@ -2162,6 +2164,10 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		// T392520
+		'wmgUseArticleSummaries' => [
+			'default' => true,
+		],
 		// T246493
 		'wmgUseNearbyPages' => [
 			'default' => true,
@@ -2349,9 +2355,6 @@ function wmfGetOverrideSettings() {
 		'wmgUseCommunityConfiguration' => [
 			'default' => true,
 		],
-		'wgGEUseCommunityConfigurationExtension' => [
-			'default' => true,
-		],
 
 		'wmgUseAutoModerator' => [ // T364034
 			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
@@ -2407,10 +2410,17 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
-		// T384455
-		'wmgWikibaseEntityAccessLimit' => [
-			'default' => 500,
-			'commonswiki' => 400,
+		'-wmgOATHAuthDisableRight' => [
+			'default' => false,
+		],
+
+		'wgGEUserImpactMaxEdits' => [
+			'default' => 1000,
+			'eswiki' => 10000,
+		],
+		'wgGEUserImpactMaxThanks' => [
+			'default' => 1000,
+			'eswiki' => 10000,
 		],
 	];
 } # wmfGetOverrideSettings()

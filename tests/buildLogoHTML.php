@@ -1,11 +1,10 @@
 <?php
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
-require_once __DIR__ . '/MWWikiversions.php';
-require_once __DIR__ . '/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../tests/data/MWDefines.php';
-require_once __DIR__ . '/../tests/data/SiteConfiguration.php';
+require_once __DIR__ . '/data/MWDefines.php';
+require_once __DIR__ . '/data/SiteConfiguration.php';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
 global $wmgLogosPath;
@@ -14,7 +13,7 @@ $wmgLogosPath = '../';
 
 function wmfCheckMissingLogosAndGenerateHTML() {
 	global $wmgLogosPath;
-	$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+	$prodWikis = WmfConfig::readDbListFile( 'all' );
 	$textareaVal = '';
 	foreach ( $prodWikis as $dbname ) {
 		$textareaVal .= $dbname . "\n";
@@ -72,11 +71,11 @@ $textareaVal
 HEREDOC;
 
 	$conf = new SiteConfiguration();
-	$conf->suffixes = MWMultiVersion::SUFFIXES;
-	$conf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
-	$conf->settings = MWConfigCacheGenerator::getStaticConfig( 'production' );
+	$conf->suffixes = WmfConfig::SUFFIXES;
+	$conf->wikis = $wikis = WmfConfig::readDbListFile( 'all' );
+	$conf->settings = WmfConfig::getStaticConfig( 'production' );
 	foreach ( $prodWikis as $dbname ) {
-		$fullConfig = MWConfigCacheGenerator::getConfigGlobals( $dbname, $conf );
+		$fullConfig = WmfConfig::getConfigGlobals( $dbname, $conf );
 		$skin = $fullConfig['wgDefaultSkin'] ?? null;
 		$wordmark = $fullConfig['wmgSiteLogoWordmark'] ?? null;
 		$icon = $fullConfig['wmgSiteLogoIcon'] ?? null;

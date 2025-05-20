@@ -3,12 +3,12 @@
 declare( strict_types = 1 );
 
 use Symfony\Component\Yaml\Yaml;
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * Structure test for the wmf-config settings themselves.
  *
- * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator
+ * @covers \Wikimedia\MWConfig\WmfConfig
  */
 class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	private $settings;
@@ -25,10 +25,10 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->originalWmfDC = $GLOBALS['wmgDatacenter'];
 		$GLOBALS['wmgDatacenter'] = 'testvalue';
 
-		$this->settings = MWConfigCacheGenerator::getStaticConfig();
+		$this->settings = WmfConfig::getStaticConfig();
 
 		$conf = new SiteConfiguration();
-		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->suffixes = WmfConfig::SUFFIXES;
 		$conf->settings = $this->settings;
 		$this->config = $conf;
 	}
@@ -489,13 +489,13 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testImportantProductionSettings() {
-		$enwikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$enwikiSettings = WmfConfig::getConfigGlobals(
 			'enwiki', $this->config, 'production'
 		);
-		$dewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$dewikiSettings = WmfConfig::getConfigGlobals(
 			'dewiki', $this->config, 'production'
 		);
-		$officewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$officewikiSettings = WmfConfig::getConfigGlobals(
 			'officewiki', $this->config, 'production'
 		);
 
@@ -510,7 +510,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testExampleLabsSettings() {
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$settings = WmfConfig::getConfigGlobals(
 			'enwiki', $this->config, 'production'
 		);
 		$this->assertFalse(
@@ -518,7 +518,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			"settings array must have 'wmgUseFlow' set to 'false' for production enwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$settings = WmfConfig::getConfigGlobals(
 			'mediawikiwiki', $this->config, 'production'
 		);
 		$this->assertTrue(
@@ -526,7 +526,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			"settings array must have 'wmgUseFlow' set to 'true' for production mediawikiwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$settings = WmfConfig::getConfigGlobals(
 			'enwiki', $this->config, 'labs'
 		);
 		$this->assertTrue(

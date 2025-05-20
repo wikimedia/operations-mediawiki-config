@@ -3,6 +3,9 @@ require_once __DIR__ . '/defines.php';
 require_once __DIR__ . '/MWMultiVersionException.php';
 require_once __DIR__ . '/MWRealm.php';
 require_once __DIR__ . '/MWWikiversions.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
+
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * Class to handle basic information related to what
@@ -12,71 +15,11 @@ require_once __DIR__ . '/MWWikiversions.php';
  */
 class MWMultiVersion {
 
-	public const SUFFIXES = [
-		// For legacy reasons, wikipedias and specials both use the "wiki" suffix,
-		// and for both the internal $site family will map to "wikipedia".
-		'wikipedia' => 'wiki',
-		'wiktionary',
-		'wikiquote',
-		'wikibooks',
-		'wikinews',
-		'wikisource',
-		'wikiversity',
-		'wikimedia',
-		'wikivoyage',
-	];
+	/** @deprecated */
+	public const SUFFIXES = WmfConfig::SUFFIXES;
 
-	/**
-	 * Note that most wiki families are available as tags for free without
-	 * needing a dblist to be maintained and read from disk, because their
-	 * dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
-	 * available as SiteConfiguration tag in InitialiseSettings.php.
-	 *
-	 * @var string[]
-	 */
-	public const DB_LISTS = [
-		// Expand computed dblists with `./multiversion/bin/expanddblist`.
-		// When updating this list, run `composer manage-dblist update` afterwards.
-		'preinstall',
-		'wikipedia',
-		'special',
-		'private',
-		'fishbowl',
-		'closed',
-		'flow',
-		'flaggedrevs',
-		'small',
-		'skin-themes',
-		'vector-2022-language-links',
-		'legacy-vector',
-		'medium',
-		'wikimania',
-		'wikidata',
-		'wikibaserepo',
-		'wikidataclient',
-		'wikidataclient-test',
-		'visualeditor-nondefault',
-		'commonsuploads',
-		'lockeddown',
-		'group0',
-		'group1',
-		'wikitech',
-		'nonecho',
-		'mobile-anon-categories',
-		'mobile-anon-talk',
-		'modern-mainpage',
-		'nowikidatadescriptiontaglines',
-		'cirrussearch-big-indices',
-		'rtl',
-		'translate',
-		'growthexperiments',
-	];
-
-	/** @var string[] */
-	public const DB_LISTS_LABS = [
-		'closed' => 'closed-labs',
-		'flow' => 'flow-labs',
-	];
+	/** @deprecated */
+	public const DB_LISTS = WmfConfig::DB_LISTS;
 
 	/**
 	 * @var MWMultiVersion
@@ -340,7 +283,6 @@ class MWMultiVersion {
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
 			'beta.wmflabs.org' => 'deployment',
 			'wikidata.beta.wmflabs.org' => 'wikidata',
-			'wikifunctions.beta.wmflabs.org' => 'wikifunctions',
 		];
 
 		$lang = null;
@@ -808,32 +750,11 @@ class MWMultiVersion {
 	/**
 	 * Get a list of dblist names that contain a given wiki.
 	 *
-	 * This is for wmf-config array keys as interpreted by SiteConfiguration ($wgConf).
-	 *
-	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param string $dbName
 	 * @param string $realm
 	 * @return string[]
 	 */
 	public static function getTagsForWiki( string $dbName, string $realm = 'production' ): array {
-		$dblistsIndex = require __DIR__ . '/../dblists-index.php';
-
-		// Tolerate absence, e.g. for a labs-only wiki.
-		// The structure is verified by DbListTest.
-		// The freshness of the index is checked by composer buildDBLists/checkclean.
-		$wikiTags = $dblistsIndex[$dbName] ?? [];
-
-		// Replace some lists with labs-specific versions
-		if ( $realm === 'labs' ) {
-			foreach ( self::DB_LISTS_LABS as $tag => $fileName ) {
-				// Unset any reference to the prod-specific version
-				$wikiTags = array_values( array_diff( $wikiTags, [ $tag ] ) );
-				$dblist = MWWikiversions::readDbListFile( $fileName );
-				if ( in_array( $dbName, $dblist ) ) {
-					$wikiTags[] = $tag;
-				}
-			}
-		}
-
-		return $wikiTags;
+		return WmfConfig::getTagsForWiki( $dbName, $realm );
 	}
 }

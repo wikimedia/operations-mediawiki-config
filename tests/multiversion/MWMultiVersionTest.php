@@ -149,7 +149,6 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'testwiki', 'test.wikipedia.beta.wmflabs.org' ],
 
 			[ 'wikidatawiki', 'wikidata.beta.wmflabs.org' ],
-			[ 'wikifunctionswiki', 'wikifunctions.beta.wmflabs.org' ],
 
 			// wikis hosted on new wmcloud.org domain
 			[ 'test2wiki', 'test2.wikipedia.beta.wmcloud.org' ],

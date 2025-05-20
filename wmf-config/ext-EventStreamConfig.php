@@ -1032,10 +1032,6 @@ return [
 			'schema_title' => 'analytics/mediawiki/web_ui_reading_depth',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		'mediawiki.web_ab_test_enrollment' => [
-			'schema_title' => 'analytics/mediawiki/web_ab_test_enrollment',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
 		'mediawiki.web_ui_actions' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/web_ui_actions',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -1585,6 +1581,10 @@ return [
 			'destination_event_service' => 'eventgate-main',
 			// The discussions in T382295#10518032 and T366273#10492412 suggest
 			// renaming this stream to replace 'page' with 'article'.
+		],
+		'mediawiki.page_revert_risk_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
 		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
@@ -2406,6 +2406,13 @@ return [
 						// click-through rate (see
 						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
 						'performer_active_browsing_session_token',
+
+						// Temporary: The first everyone experiment run by Web will use this stream. Make skin and
+						// database (DBname) available as dimensions during analysis for the duration of that
+						// experiment. See https://phabricator.wikimedia.org/T394457 and
+						// https://phabricator.wikimedia.org/T394093 for detail.
+						'mediawiki_skin',
+						'mediawiki_database',
 					],
 				],
 				'eventgate' => [
@@ -2416,46 +2423,51 @@ return [
 				],
 			],
 		],
-		// Web stream config for empty search recommendations A/B test
-		'product_metrics.web_base.search_ab_test_session_ticks' => [
+		// DEVELOPMENT ONLY: X-Experiment-Enrollments handling prod cluster EventGate (T391959)
+		'product_metrics.web_base.experiment_enrollment_handling.dev1' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'canary_events_enabled' => false,
 			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_site_content_language',
-						'mediawiki_skin',
-						'mediawiki_database',
-						'performer_is_temp',
-						'performer_session_id',
-						'performer_is_logged_in'
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
 					],
+					'use_edge_uniques' => true,
 				],
-			],
-			'sample' => [
-				'unit' => 'session',
-				'rate' => 0,
 			],
 		],
-		// Web stream config for empty search recommendations A/B test
-		'product_metrics.web_base.search_ab_test_clicks' => [
+		// Stream configuration for PES1.3 Wikirun game: https://wikirun-game.toolforge.org/
+		'product_metrics.web_base.wikrun_game' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		// (T389097) Stream to track Article Summaries.
+		'product_metrics.web_base.article_summaries' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
-						'mediawiki_site_content_language',
-						'mediawiki_skin',
 						'mediawiki_database',
-						'performer_is_temp',
+						'page_id',
+						'page_title',
+						'page_namespace_id',
+						'mediawiki_skin',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_is_logged_in'
+						'performer_name',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
 					],
 				],
 			],
 			'sample' => [
-				'unit' => 'session',
-				'rate' => 0,
+				'unit' => 'pageview',
+				'rate' => 1,
 			],
 		],
 		'analytics.haproxy_requestctl' => [

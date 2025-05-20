@@ -59,8 +59,8 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\DBRecordCache;
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
+use Wikimedia\MWConfig\WmfConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
@@ -82,7 +82,7 @@ require_once __DIR__ . '/../src/ServiceConfig.php';
 require_once __DIR__ . '/../src/ClusterConfig.php';
 require_once __DIR__ . '/../src/DBRecordCache.php';
 require_once __DIR__ . '/../src/etcd.php';
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../src/WmfConfig.php';
 
 // Past this point we know:
 //
@@ -136,7 +136,6 @@ switch ( $wmgRealm ) {
 		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
-		$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
 		break;
 	case 'production':
 	default:
@@ -260,9 +259,9 @@ if ( $wgDBname === 'testwiki' ) {
 }
 
 $wgConf = new SiteConfiguration;
-$wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-$wgConf->settings = MWConfigCacheGenerator::getStaticConfig( $wmgRealm );
+$wgConf->suffixes = WmfConfig::SUFFIXES;
+$wgConf->wikis = WmfConfig::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->settings = WmfConfig::getStaticConfig( $wmgRealm );
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
 
@@ -327,7 +326,7 @@ $wgLocalVirtualHosts = [
 	'm.wikifunctions.org',
 ];
 
-$globals = MWConfigCacheGenerator::getConfigGlobals(
+$globals = WmfConfig::getConfigGlobals(
 	$wgDBname,
 	$wgConf,
 	$wmgRealm
@@ -401,7 +400,7 @@ if ( $wmgRealm === 'production' ) {
 		$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 	}
 	// T360930
-	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;
+	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 450;
 
 	// Dumps use their own set of databases
 	if ( ClusterConfig::getInstance()->isDumps() ) {
@@ -750,8 +749,6 @@ $wgObjectCaches['db-mainstash'] = [
 	'reportDupes' => false,
 	'dataRedundancy' => 2,
 ];
-
-session_name( $lang . 'wikiSession' );
 
 $wgPasswordDefault = 'E';
 
@@ -1350,9 +1347,9 @@ $wgSiteMatrixSites = [
 	],
 ];
 
-$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
-$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
-$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
+$wgSiteMatrixClosedSites = WmfConfig::readDbListFile( 'closed' );
+$wgSiteMatrixPrivateSites = WmfConfig::readDbListFile( 'private' );
+$wgSiteMatrixFishbowlSites = WmfConfig::readDbListFile( 'fishbowl' );
 $wgSiteMatrixNonGlobalSites = [];
 
 // list of codex icons to use for interwiki (based on SiteMatrix) search results widget
@@ -1630,11 +1627,12 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_43';
 
 	// Current development snapshot
-	//$wgExtDistCandidateSnapshot = 'REL1_44';
+	$wgExtDistCandidateSnapshot = 'REL1_44';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_44',
 		'REL1_43',
 		'REL1_42',
 		'REL1_39',
@@ -1690,8 +1688,6 @@ if ( $wmgUseContactPage ) {
 	}
 }
 
-// At the moment securepoll doesn't work on k8s, or on newer linux distributions,
-// see T209892. TODO: properly disable it on votewiki when gnupg1 isn't available.
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 
@@ -2039,9 +2035,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
-	$wgCentralAuthSharedDomainPrefix = "https://{$wmgHostnames['auth']}/$wgDBname";
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
+	$wgCentralAuthRestrictSharedDomain = true;
 
 	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,
 	// and use cookie names that are the same for every wiki.
@@ -2229,10 +2225,16 @@ $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
 /**
- * Get an array of groups (in $wmgPrivilegedGroups) that $username is part of
+ * Get a list of "privileged" groups and global groups the user is part of.
+ * Typically this means groups with powers comparable to admins and above
+ * (block, delete, edit i18n messages etc).
+ * On SUL wikis, this will take into account group memberships on any wiki,
+ * not just the current one.
  *
  * @param UserIdentity $user
- * @return array Any elevated/privileged groups the user is a member of
+ * @return string[] Any elevated/privileged groups the user is a member of
+ *
+ * @note This method is also used in WikimediaEvents.
  */
 function wmfGetPrivilegedGroups( $user ) {
 	global $wmgUseCentralAuth, $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups;
@@ -3043,7 +3045,7 @@ if ( $wmgUseTranslate ) {
 		$translateServices = [
 			// Switch to 'eqiad' or 'codfw' if you plan to bring down
 			// the elastic cluster equals to $wmgDatacenter
-			'default' => [ 'service' => 'eqiad', 'writable' => false ],
+			'default' => [ 'service' => 'codfw', 'writable' => false ],
 			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
 			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
 		];
@@ -3571,7 +3573,7 @@ if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
 
 	// T76200: Public URL for cxserver instance
-	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
+	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver.wikimedia.org/v1';
 
 	$wgContentTranslationSiteTemplates['cookieDomain'] = '.wikipedia.org';
 
@@ -3983,8 +3985,12 @@ if ( $wmgUseOATHAuth ) {
 		}
 	}
 
-	$wgOATHRequiredForGroups[] = 'interface-admin';
-	$wgOATHRequiredForGroups[] = 'centralnoticeadmin';
+	$wgOATHRequiredForGroups = [
+		'interface-admin',
+		'centralnoticeadmin',
+		'checkuser', // T150898
+		'suppress' // T150898
+	];
 
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
@@ -4109,6 +4115,14 @@ if ( $wmgAllowLabsAnonEdits ) {
 	$wgSoftBlockRanges[] = '172.16.0.0/12';
 	// Cloud VPS VMs with floating/public addresses
 	$wgSoftBlockRanges[] = '185.15.56.0/24';
+	// Cloud VPS IPv6 ranges
+	$wgSoftBlockRanges[] = ' 2a02:ec80:a000::/48';
+
+	// Cloud VPS is also exempt from autoblocks, so that someone abusing using a tool
+	// does not get everyone else using that tool blocked.
+	$wgAutoblockExemptions[] = '172.16.0.0/16';
+	$wgAutoblockExemptions[] = '185.15.56.0/24';
+	$wgAutoblockExemptions[] = '2a02:ec80:a000::/48';
 }
 
 // On Special:Version, link to useful release notes
@@ -4214,49 +4228,9 @@ if ( $wmgDisableIPMasking ) {
 
 	// T357586
 	$wgImplicitGroups[] = 'temp';
-} else {
-	// Hide the temporary-account-viewer group if the wiki does not know about temporary accounts to reduce
-	// confusion about a unused user group.
-	$wgHooks['MediaWikiServices'][] = static function () {
-		global $wgGroupPermissions;
-		unset( $wgGroupPermissions['temporary-account-viewer'] );
-	};
 }
 
-// T387205: Remove the old group name for local Temporary account IP viewers,
-// now that all users are in the new group.
-$wgHooks['MediaWikiServices'][] = static function () {
-	global $wgGroupPermissions;
-	unset( $wgGroupPermissions['checkuser-temporary-account-viewer'] );
-};
-
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
-	// Allow users to be auto-promoted to the temporary-account-viewer group based on criteria
-	// listed at https://w.wiki/BESb#Patrollers_and_other_users (T369187).
-	$wgAutopromoteOnce['onEdit']['temporary-account-viewer'] = [ '&',
-		[ APCOND_EDITCOUNT, 300 ],
-		[ APCOND_AGE, 6 * 30 * 86400 ], // 6 * 30 * seconds in a day, which makes 6 months
-		// Exclude auto-promoting when the user already has the right through another group that has access
-		[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-		[ '!', [ APCOND_INGROUPS, 'checkuser' ] ],
-		[ '!', [ APCOND_INGROUPS, 'suppress' ] ],
-		[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
-		// Exclude bots from the autopromotion, as the group should be granted manually to these users.
-		[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		// Exclude local autopromotion when the user has a global group which gives them access on all wikis.
-		// These global groups and their permissions are defined at Special:GlobalGroupPermissions.
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'abusefilter-helper' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'abusefilter-maintainer' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'global-rollbacker' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'global-temporary-account-viewer' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'ombuds' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'staff' ] ],
-		[ '!', [ 67651 /* APCOND_CA_INGLOBALGROUPS */, 'steward' ] ],
-	];
-
-	// Exclude autopromotions into this group from RC by default (T377829)
-	$wgAutopromoteOnceRCExcludedGroups[] = 'temporary-account-viewer';
-
 	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
 	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';
 	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
@@ -4494,6 +4468,8 @@ if ( $wmgUseWikiLambda ) {
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
+
+	$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
 }
 
 if ( $wmgUseWikistories ) {
@@ -4624,6 +4600,10 @@ if ( $wmgUseWikimediaApiPortalOAuth ) {
 
 if ( $wmgUseGlobalWatchlist ) {
 	wfLoadExtension( 'GlobalWatchlist' );
+}
+
+if ( $wmgUseArticleSummaries ) {
+	wfLoadExtension( 'ArticleSummaries' );
 }
 
 if ( $wmgUseNearbyPages ) {
@@ -4769,7 +4749,7 @@ class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 }
 
 if (
-	in_array( $wgDBname, MWWikiversions::readDbListFile( 'closed' ) ) &&
+	in_array( $wgDBname, WmfConfig::readDbListFile( 'closed' ) ) &&
 	$wmgUseCentralAuth
 ) {
 	$wgAuthManagerAutoConfig['preauth'][ClosedWikiProvider::class] = [

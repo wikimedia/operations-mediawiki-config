@@ -39,10 +39,6 @@ return [
 	'default' => [],
 ],
 
-'wgGELevelingUpFeaturesEnabled' => [
-	'default' => true,
-],
-
 'wgGEApiQueryGrowthTasksLookaheadSize' => [
 	'default' => 10,
 ],
@@ -711,14 +707,9 @@ return [
 	'default' => 'ores',
 ],
 
-'wgGEMentorshipEnabled' => [
-	// overriden in community configuration for mentorship-enabled wikis
-	'default' => false,
-],
-
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
-	'eswiki' => 50, // T285235
+	'eswiki' => 70, // T285235
 ],
 
 'wgGEMentorshipReassignMenteesBatchSize' => [
@@ -727,10 +718,6 @@ return [
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
-],
-
-'wgGEMentorDashboardEnabled' => [
-	'default' => true,
 ],
 
 'wgGEMentorDashboardEnabledModules' => [
@@ -808,10 +795,6 @@ return [
 
 'wgGERestbaseUrl' => [
 	'default' => false,
-],
-
-'wgGEUseCommunityConfigurationExtension' => [
-	'default' => true,
 ],
 
 'wgGELinkRecommendationMinimumTasksPerTopic' => [

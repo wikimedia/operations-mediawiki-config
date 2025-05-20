@@ -99,7 +99,6 @@ if ( $wmgRealm == 'labs' ) {
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
 		'auth.wikimedia.beta.wmflabs.org',
-		'wikifunctions.beta.wmflabs.org',
 
 		// new wmcloud instances
 		'wikipedia.beta.wmcloud.org',
@@ -156,7 +155,7 @@ if ( $wmgRealm == 'labs' ) {
 		// Emit CSP headers on banner previews. This can go away when full CSP
 		// support (T135963) is deployed.
 	// www.pages04.net and app.goacoustic.com are used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses or phone numbers to our email campaign vendor
-		$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org wikifunctions.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://wikifunctions.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org wikifunctions.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
+		$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
 	}
 
 	if ( $wmgUseCite ) {
@@ -311,9 +310,6 @@ if ( $wmgRealm == 'labs' ) {
 		// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
 		$wgEchoSharedTrackingCluster = false;
 	}
-
-	// Enabling thank-you-edit on beta for testing T128249. Still disabled in prod.
-	$wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = true;
 
 	// Enabling article-reminder on beta for testing T166973. Still disabled in prod.
 	$wgAllowArticleReminderNotification = true;
@@ -490,10 +486,9 @@ if ( $wmgRealm == 'labs' ) {
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
 
-	// Remove any references to the checkuser-temporary-account-viewer group on the beta clusters, as this group
-	// is only present when CheckUser is installed. As it is not installed, we should remove the group and
-	// the auto-promotion conditions for the group.
-	unset( $wgAutopromoteOnce['onEdit']['temporary-account-viewer'] );
+	// Remove any references to the temporary-account-viewer group, as this group is only present when CheckUser is
+	// installed which it is not on the beta clusters. This means removing the group definition and the auto-promotion
+	// conditions for the group.
 	unset( $wgGroupPermissions['temporary-account-viewer'] );
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874

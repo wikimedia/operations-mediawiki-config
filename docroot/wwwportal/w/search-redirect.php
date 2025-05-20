@@ -1,10 +1,26 @@
 <?php
-// get params
-$language = $_GET['language'] ?? 'en';
-$search = $_GET['search'] ?? '';
-$fulltext = $_GET['fulltext'] ?? false;
-$go = $_GET['go'] ?? false;
-$family = strtolower( $_GET['family'] ?? 'wikipedia' );
+
+/**
+ * Utility function to extract type-checked string values from $_GET, avoiding issues with
+ * faulty/attempted breach inputs like `?family[$hello]=1`.
+ *
+ * @param string $key
+ * @param string $default
+ * @return string
+ */
+function wmfGetFromGET( string $key, string $default ): string {
+	if ( isset( $_GET[$key] ) && is_string( $_GET[$key] ) ) {
+		return $_GET[$key];
+	} else {
+		return $default;
+	}
+}
+
+$language = wmfGetFromGET( 'language', 'en' );
+$search   = wmfGetFromGET( 'search', '' );
+$fulltext = (bool)wmfGetFromGET( 'fulltext', '0' );
+$go       = (bool)wmfGetFromGET( 'go', '0' );
+$family   = strtolower( wmfGetFromGET( 'family', 'wikipedia' ) );
 
 if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' )
 	|| ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' )

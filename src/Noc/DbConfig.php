@@ -2,7 +2,7 @@
 
 namespace Wikimedia\MWConfig\Noc;
 
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 class DbConfig {
 	/** @var string[] */
@@ -97,7 +97,7 @@ class DbConfig {
 		static $canonicalServers;
 		if ( $canonicalServers === null ) {
 			require_once __DIR__ . '/../../tests/data/MWDefines.php';
-			$settings = MWConfigCacheGenerator::getStaticConfig();
+			$settings = WmfConfig::getStaticConfig();
 			$canonicalServers = $settings['wgCanonicalServer'];
 		}
 		if ( isset( $canonicalServers[$db] ) ) {

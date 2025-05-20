@@ -471,6 +471,7 @@ return [
 	'ltwiktionary' => '/static/images/project-logos/ltwiktionary.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary.png', // T45240
 	'niawiktionary' => '/static/images/project-logos/niawiktionary.png',
+	'madwiktionary' => '/static/images/project-logos/madwiktionary.png', // T391318
 	'mgwiktionary' => '/static/images/project-logos/mgwiktionary.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary.png', // T236861
 	'miwiktionary' => '/static/images/project-logos/miwiktionary.png', // T45240
@@ -954,7 +955,7 @@ return [
 	'annwiki' => '/static/images/project-logos/annwiki-1.5x.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki-1.5x.png',
 	'anwiki' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
-	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T374430
+	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T392858
 	'arywiki' => '/static/images/project-logos/arywiki-1.5x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-1.5x.png', // T150618
 	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618, T292742
@@ -1327,6 +1328,7 @@ return [
 	'lmowiktionary' => '/static/images/project-logos/lmowiktionary-1.5x.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-1.5x.png', // T150618
 	'niawiktionary' => '/static/images/project-logos/niawiktionary-1.5x.png',
+	'madwiktionary' => '/static/images/project-logos/madwiktionary-1.5x.png', // T391318
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-1.5x.png', // T236861
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-1.5x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-1.5x.png', // T150618
@@ -1614,7 +1616,7 @@ return [
 	'annwiki' => '/static/images/project-logos/annwiki-2x.png', // T377535
 	'anpwiki' => '/static/images/project-logos/anpwiki-2x.png',
 	'anwiki' => '/static/images/project-logos/anwiki-2x.png', // T150618
-	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T374430
+	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T392858
 	'arywiki' => '/static/images/project-logos/arywiki-2x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-2x.png', // T150618
 	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618, T292742
@@ -1987,6 +1989,7 @@ return [
 	'lmowiktionary' => '/static/images/project-logos/lmowiktionary-2x.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-2x.png', // T150618
 	'niawiktionary' => '/static/images/project-logos/niawiktionary-2x.png',
+	'madwiktionary' => '/static/images/project-logos/madwiktionary-2x.png', // T391318
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-2x.png', // T236861
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-2x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-2x.png', // T150618
@@ -2346,7 +2349,7 @@ return [
 		'width' => 119,
 		'height' => 19,
 	],
-	'arwiki' => [ // T374430
+	'arwiki' => [ // T392858
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
 		'width' => 112,
 		'height' => 39,
@@ -3778,6 +3781,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-nia.svg',
 		'width' => 120,
 		'height' => 23,
+	],
+	'madwiktionary' => [ // T391318
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mad.svg',
+		'width' => 120,
+		'height' => 25,
 	],
 	'mgwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mg.svg',
@@ -5697,10 +5705,10 @@ return [
 		'width' => 145,
 		'height' => 17,
 	],
-	'wikimaniawiki' => [ // T286405
+	'wikimaniawiki' => [ // T392239
 		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
-		'width' => 144,
-		'height' => 17,
+		'width' => 123,
+		'height' => 40,
 	],
 	'wikitech' => [ // T334666
 		'src' => '/static/images/mobile/copyright/wikitech-wordmark.svg',
@@ -5785,7 +5793,7 @@ return [
 		'width' => 110,
 		'height' => 11,
 	],
-	'arwiki' => [ // T374430
+	'arwiki' => [ // T392858
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
 		'width' => 105,
 		'height' => 22,
@@ -7627,6 +7635,11 @@ return [
 		'width' => 120,
 		'height' => 15,
 	],
+	'madwiktionary' => [ // T391318
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-mad.svg',
+		'width' => 120,
+		'height' => 15,
+	],
 	'minwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-min.svg',
 		'width' => 121,
@@ -8176,7 +8189,7 @@ return [
 		'width' => 106,
 		'height' => 14,
 	],
-	'punjabiwikimedia' => [
+	'punjabiwikimedia' => [ // T348611
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-punjabi.svg',
 		'width' => 120,
 		'height' => 26,
@@ -8331,6 +8344,7 @@ return [
 	'guwwiktionary' => '/static/images/icons/enwiktionary.svg',
 	'knwiktionary' => '/static/images/icons/knwiktionary.svg', // T382802
 	'niawiktionary' => '/static/images/icons/niawiktionary.svg',
+	'madwiktionary' => '/static/images/icons/madwiktionary.svg', // T391318
 	'minwiktionary' => '/static/images/icons/enwiktionary.svg',
 	'shywiktionary' => '/static/images/icons/shywiktionary.svg',
 	'sqwiktionary' => '/static/images/icons/sqwiktionary.svg', // T342172

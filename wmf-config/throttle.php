@@ -35,13 +35,80 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T390290
+// T394639 - Leeds University 21 May
 $wmgThrottlingExceptions[] = [
-	'from' => '2025-04-09T14:00 -3:00',
-	'to' => '2025-04-09T20:00 -3:00',
-	'IP' => '163.10.36.2',
+	'from' => '2025-05-21T11:00 +0:00',
+	'to' => '2024-05-21T16:59 +0:00',
+	'IP' => '194.80.232.29',
+	'dbname' => [ 'commonswiki', 'enwiki' ],
+	'value' => 40,
+];
+
+// T391999 - 7 Edit-a-thons at Universidad Nacional de La Plata
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-05-20T12:45 -3:00',
+	'to' => '2025-05-20T19:15 -3:00',
+	'IP' => '163.10.23.201',
 	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 65,
+	'value' => 60,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-03T12:45 -3:00',
+	'to' => '2025-06-03T19:15 -3:00',
+	'IP' => '163.10.23.201',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 60,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-10T12:45 -3:00',
+	'to' => '2025-06-10T19:15 -3:00',
+	'IP' => '163.10.23.201',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 60,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-17T12:45 -3:00',
+	'to' => '2025-06-17T19:15 -3:00',
+	'IP' => '163.10.23.201',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 60,
+];
+
+// T391764 - 4 Edit-a-thons at University in Japan
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-16T14:30 +9:00',
+	'to' => '2025-06-16T17:30 +9:00',
+	'IP' => '202.25.155.253',
+	'dbname' => [ 'jawiki' ],
+	'value' => 30,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-23T14:30 +9:00',
+	'to' => '2025-06-23T17:30 +9:00',
+	'IP' => '202.25.155.253',
+	'dbname' => [ 'jawiki' ],
+	'value' => 30,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-07-10T10:00 +9:00',
+	'to' => '2025-07-10T13:00 +9:00',
+	'IP' => '202.25.155.253',
+	'dbname' => [ 'jawiki' ],
+	'value' => 30,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-07-17T10:00 +9:00',
+	'to' => '2025-07-17T13:00 +9:00',
+	'IP' => '202.25.155.253',
+	'dbname' => [ 'jawiki' ],
+	'value' => 30,
 ];
 
 ## Add throttling definitions above.

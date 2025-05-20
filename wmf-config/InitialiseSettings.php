@@ -553,6 +553,7 @@ return [
 	'nqowiki' => 'Africa/Conakry',
 	'nrwiki' => 'Africa/Johannesburg',
 	'nsowiki' => 'Africa/Johannesburg',
+	'nupwiki' => 'Africa/Lagos', // T390711
 	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
@@ -1980,6 +1981,7 @@ return [
 	'ukwiki' => 10, // T355972
 	'viwiki' => 10, // T322105
 	'wikidata' => 50, // T48461
+	'wikimania' => 10, // T389729
 	'wuuwiki' => 10, // T122476
 	'zhwiki' => 50, // T16624
 	'zh_classicalwiki' => 25, // T228141
@@ -2046,6 +2048,7 @@ return [
 	'tcywiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T385828
 	'testwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T61084, T302860
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'editautopatrolprotected', 'sysop' ], // T215493, T296154, T303579
+	'wikimaniawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T389729
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
@@ -2079,6 +2082,7 @@ return [
 	'+tcywiki' => [ 'extendedconfirmed' ], // T385828
 	'+testwiki' => [ 'extendedconfirmed' ], // T302860
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
+	'+wikimaniawiki' => [ 'extendedconfirmed' ], // T389729
 	'+zhwiki' => [ 'extendedconfirmed' ], // T287322
 ],
 
@@ -2209,6 +2213,7 @@ return [
 		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
 		'CommunityConfiguration' => 'info',
+		'ContentTranslation' => 'info',
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'rdbms' => 'warning',
@@ -2311,6 +2316,7 @@ return [
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 		'WikibaseQualityConstraints' => 'debug',
 		'WikiLambda' => 'warning',
+		'WikiLambdaClient' => 'info',
 		'Wikisource' => 'info',
 		'WikitechGerritBan' => 'debug',
 		'WikitechPhabBan' => 'debug',
@@ -2520,6 +2526,10 @@ return [
 	'testwikidatawiki' => [
 		'showThumbnail' => false,
 		'showDescription' => true,
+	],
+	'labswiki' => [
+		'showThumbnail' => false,
+		'showDescription' => false,
 	],
 ],
 
@@ -3206,9 +3216,9 @@ return [
 	],
 	'+testwikidatawiki' => [
 		// Browser tests run by Jenkins on WMCS instances - T167432
-		// Network ranges come from:
-		//   https://wikitech.wikimedia.org/wiki/Portal:Cloud_VPS/Admin/Neutron
-		'172.16.0.0/21', # LAN for instances (eqiad1 Neutron)
+		'172.16.0.0/16',
+		'185.15.56.0/24',
+		'2a02:ec80:a000::/48',
 	],
 ],
 
@@ -3556,6 +3566,7 @@ return [
 	'scnwiktionary' => [ 'w', 'it', 'en', 'fr' ], // T15155
 	'scowiki' => [ 'en', 'simple' ], // T31913
 	'sewiki' => [ 'en', 'fi', 'no', 'nn', 'sv' ], // T45411
+	'shwiktionary' => [ 'ar', 'bs', 'de', 'en', 'es', 'fr', 'id', 'ru', 'zh', 'w', 'w:en', 'commons', 'incubator', 'meta' ], // T391621
 	'simplewiki' => [ 'en', 'wikt', 'b', 'q' ],
 	'simplewiktionary' => [ 'en', 'w', 'b', 'q' ],
 	'skwiki' => [ 'b', 'meta', 'q', 's', 'wikt' ],
@@ -4249,7 +4260,7 @@ return [
 	'arbcom_itwiki' => '/static/favicon/arbcom_itwiki.ico', // T368532
 	'arbcom_ruwiki' => '/static/favicon/arbcom_ruwiki.ico', // T264430
 	'chapcomwiki' => '/static/favicon/wmf.ico', // T41482
-	'checkuserwiki' => '/static/favicon/community.ico',
+	'checkuserwiki' => '/static/favicon/checkuser.ico', // T393246
 	'commonswiki' => '/static/favicon/commons.ico',
 	'testcommonswiki' => '/static/favicon/commons.ico',
 	'donatewiki' => '/static/favicon/wmf.ico',
@@ -4499,6 +4510,15 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T215493
 	],
+	'wikimaniawiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'translationadmin' ] ],
+		], // T389729
+	],
 	'zhwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
@@ -4558,6 +4578,7 @@ return [
 
 # CENTRAL AUTH @{
 'wmgUseCentralAuth' => [
+	// NOTE: Update dblists/sul.dbexpr and run `manage-dblist` when changing
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
@@ -4640,7 +4661,7 @@ return [
 ],
 
 'wgCentralAuthEnableSul3' => [
-	'default' => [ 'always', 'query-flag', 'cookie' ],
+	'default' => true,
 ],
 
 // This is also guarded by $wmgUseCentralAuth
@@ -4700,6 +4721,7 @@ return [
 
 'wmgMathDefaultUserOptions' => [
 	'default' => 'mathml',
+	'wikifunctionswiki' => 'native',
 	'group0' => 'native',
 ],
 
@@ -4831,6 +4853,7 @@ return [
 	'fawikiquote' => true, // T179442
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
+	'frwiki' => true, // T382199
 	// 'gomwiki' => true, // T106169.  Disabled until T131957 is fixed.
 	'guwiki' => true, // T42872
 	'guwikiquote' => true, // T134253
@@ -4929,6 +4952,7 @@ return [
 	'default' => true,
 	'arwiki' => false,
 	'fawiki' => false,
+	'frwiki' => false, // T382199
 	'kkwiki' => false, // T149563
 	'plwiki' => false, // T138169
 	'incubatorwiki' => false,
@@ -5075,6 +5099,8 @@ return [
 
 # @}
 
+// Do not add more exceptions.
+// Thumbnails must be shared between wikis.
 'wgThumbLimits' => [
 	'default' => [ 120, 150, 180, 200, 220, 250, 300, 400 ],
 	'+itwikiquote' => [ 360 ],
@@ -5082,12 +5108,10 @@ return [
 	# nlwiki uses 260 instead of 250 (T215106)
 	'nlwiki' => [ 120, 150, 180, 200, 220, 260, 300, 400 ],
 ],
+// Do not add more exceptions. Default should stay the same between wikis.
 'wmgThumbsizeIndex' => [
-	'default' => 4,
-	'fiwiki' => 5, // T162376
-	'nowiki' => 5, // T155892
+	'default' => 5,
 	'svwiki' => 2, // T18739
-	'nlwiki' => 5, // T215106
 ],
 
 'wgTorTagChanges' => [
@@ -5825,16 +5849,12 @@ return [
 	'private' => true,
 ],
 
-'wgParsoidFragmentSupport' => [
-	'default' => 'v3', // T380758,T390420
+'wgParsoidFragmentInput' => [
+	'default' => true, // T268144
 ],
 
 'wgParsoidSelectiveUpdateSampleRate' => [
 	'default' => 1000, // T371713: sample 1 in 1000 parses
-],
-
-'wgParserMigrationEnableQueryString' => [
-	'default' => true,
 ],
 
 // T333179
@@ -5845,86 +5865,20 @@ return [
 
 'wgParserMigrationEnableParsoidDiscussionTools' => [
 	'default' => false,
-	'wikitech' => true, // T355374
-	'officewiki' => true, // T355566
-	'wikivoyage' => true, // T365367
-	'zhwikivoyage' => false, // T371640#10037314
-	'dagwiki' => true, // T380401
-	'tigwiki' => true, // T381379
-	'test2wiki' => true, // T378645
-	'kncwiki' => true, // T385185
-	'sylwiki' => true, // T386464
-	'wiktionary' => true,
-	'enwiktionary' => false,
-	'zhwiktionary' => false,
-	'huwiktionary' => false,
-	'ukwiktionary' => false,
-	'uzwiktionary' => false,
-	'kuwiktionary' => false,
-	'srwiktionary' => false,
-	'glwiktionary' => false,
-	'wawiktionary' => false,
-	'kawiktionary' => false,
-	'shwiktionary' => false,
-	'astwiktionary' => false,
-	'tgwiktionary' => false,
-	'gdwiktionary' => false,
-	'iawiktionary' => false,
-	'zuwiktionary' => false,
-	'iuwiktionary' => false,
-	'incubatorwiki' => true, // T380768
+	'parsoidrendered' => true,
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
-	'wikitech' => false,
-	'officewiki' => true, // T355566
-	'wikivoyage' => true, // T365367
-	'zhwikivoyage' => false, // T371640#10037314
-	'dagwiki' => true, // T380401
-	'tigwiki' => true, // T381379
-	'test2wiki' => true, // T378645
-	'kncwiki' => true, // T385185
-	'sylwiki' => true, // T386464
-	'wiktionary' => true,
-	'enwiktionary' => false,
-	'zhwiktionary' => false,
-	'huwiktionary' => false,
-	'ukwiktionary' => false,
-	'uzwiktionary' => false,
-	'kuwiktionary' => false,
-	'srwiktionary' => false,
-	'glwiktionary' => false,
-	'wawiktionary' => false,
-	'kawiktionary' => false,
-	'shwiktionary' => false,
-	'astwiktionary' => false,
-	'tgwiktionary' => false,
-	'gdwiktionary' => false,
-	'iawiktionary' => false,
-	'zuwiktionary' => false,
-	'iuwiktionary' => false,
-	'incubatorwiki' => true, // T380768
-],
+	'parsoidrendered' => true,
 
-'wgParserMigrationEnableParsoidMobileFrontend' => [
-	'default' => true,
-],
-
-'wgParserMigrationEnableParsoidMobileFrontendTalkPages' => [
-	'default' => true,
+	// In general, the dblist should suffice, but if a wiki needs to have different config between
+	// talk and article pages, it can be over-ridden here.
+	'labswiki' => false,
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
 	'default' => 1,
-],
-
-'wgParserMigrationUserNoticeDays' => [
-	'default' => 60,
-],
-
-'wgParserMigrationCompactIndicator' => [
-	'default' => true,
 ],
 
 // -------------- Shared Parsoid end --------------
@@ -6263,6 +6217,9 @@ return [
 	'+bnwikibooks' => [
 		'উইকিশৈশব' => true, // T241893
 	],
+	'+ruwikibooks' => [
+		'Рецепт' => true, // T392803
+	],
 
 	// Wikisources
 	'+cswikisource' => [
@@ -6290,11 +6247,29 @@ return [
 
 	// Wikimanias
 	'+wikimaniawiki' => [
+		'2005' => true, // T389729
+		'2006' => true, // T389729
+		'2007' => true, // T389729
+		'2008' => true, // T389729
+		'2009' => true, // T389729
+		'2010' => true, // T389729
+		'2011' => true, // T389729
+		'2012' => true, // T389729
+		'2013' => true, // T389729
+		'2014' => true, // T389729
+		'2015' => true, // T389729
+		'2016' => true, // T389729
+		'2017' => true, // T389729
+		'2018' => true, // T389729
 		'2019' => true, // T218645
 		'2021' => true, // T287197
 		'2022' => true, // T295267
 		'2023' => true, // T316928
 		'2024' => true, // T332782
+		'2025' => true, // T389729
+		'2026' => true, // T389729
+		'2027' => true, // T389729
+		'2028' => true, // T389729
 	],
 
 	// Wikimedias
@@ -6372,6 +6347,11 @@ return [
 	'metawiki' => true, // T129546#8109242
 	'officewiki' => true,
 	'collabwiki' => true,
+],
+
+'wgVisualEditorMobileInsertMenu' => [
+	'default' => false,
+	'wikifunctionsclient' => true, // T383145
 ],
 
 // Whether VisualEditor's feedback page should be consolidated down to just the
@@ -6472,6 +6452,7 @@ return [
 	'lawiki' => true, // T160844
 	'metawiki' => true, // T200707
 	'mswiki' => true, // T165247
+	'nnwiki' => true, // T393299
 	'nowiki' => true, // T160362
 	'plwiki' => true, // T315333
 	'ptwiki' => true, // T189658
@@ -6900,11 +6881,6 @@ return [
 // T344797
 'wgCheckUserClientHintsRestApiMaxTimeLag' => [
 	'default' => 1800,
-],
-
-// Should match the definition in wgGlobalBlockingAllowedRanges
-'wgCheckUserCentralIndexRangesToExclude' => [
-	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
 ],
 
 'wgCheckUserEnableTempAccountsOnboardingDialog' => [
@@ -7917,6 +7893,8 @@ return [
 	'cawikiquote' => true, // T380909
 	'kabwiki' => true, // T380909
 	'sewikimedia' => true, // T380909
+	'fiwikimedia' => true, // T380909
+	'gomwiki' => true, // T380909
 ],
 
 'wmgFlowNamespaces' => [
@@ -8498,6 +8476,7 @@ return [
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
+	'wikipedia' => [ 'tn', 'vec', 'ast', 'lmo' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
@@ -9124,10 +9103,10 @@ return [
 	'default' => true,
 ],
 
-// T384455 - temporary rollout
+// T384455
 'wmgWikibaseEntityAccessLimit' => [
-	'default' => 400,
-	'wikidatawiki' => 500,
+	'default' => 500,
+	'commonswiki' => 400,
 ],
 
 'wmgWikibaseAllowDataAccessInUserLanguage' => [
@@ -10919,6 +10898,11 @@ return [
 	'votewiki' => true,
 ],
 
+'wgSecurePollEditOtherWikis' => [
+	'default' => false,
+	'votewiki' => true,
+],
+
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled on all public sites, see T341159.
 	'default' => true,
@@ -11022,8 +11006,7 @@ return [
 ],
 
 'wgGlobalBlockingAllowedRanges' => [
-	// If updating this make sure to also sync the changes to wgCheckUserCentralIndexRangesToExclude
-	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
+	'default' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
 	'fishbowl' => [],
 	'private' => [],
 ],
@@ -11082,39 +11065,7 @@ return [
 
 'wmgUseORES' => [
 	'default' => false,
-	'arwiki' => true, // T192498
-	'bswiki' => true, // T197010
-	'cawiki' => true, // T192501
-	'cswiki' => true, // T151611
-	'enwiki' => true, // T140003
-	'eswiki' => true, // T130279
-	'eswikibooks' => true, // T145394
-	'eswikiquote' => true, // T219160
-	'etwiki' => true, // T159609
-	'euwiki' => true, // T198358
-	'fawiki' => true, // T130211
-	'fiwiki' => true, // T163011
-	'frwiki' => true,
-	'hewiki' => true, // T161621
-	'huwiki' => true, // T192496
-	'itwiki' => true, // T211032
-	'kowiki' => true, // T161628
-	'lvwiki' => true, // T192499
-	'nlwiki' => true, // T139432
-	'plwiki' => true, // T140005
-	'ptwiki' => true, // T139692
-	'rowiki' => true, // T170723
-	'ruwiki' => true,
-	'simplewiki' => true, // T182012
-	'sqwiki' => true, // T170723
-	'srwiki' => true, // T197012
-	'svwiki' => true, // T174560
-	'testwiki' => true, // T199913
-	'test2wiki' => true, // T200412
-	'trwiki' => true, // T139992
-	'ukwiki' => true, // T256887
-	'wikidatawiki' => true, // T130212
-	'zhwiki' => true, // T225562
+	'ores' => true, // T391103
 ],
 ### End (roughly) of general extensions ########################
 
@@ -11282,13 +11233,8 @@ return [
 ],
 
 'wgThumbnailStepsRatio' => [
-	'default' => 0.7,
+	'default' => 1,
 	'private' => 0,
-	'testwiki' => 1,
-	'test2wiki' => 1,
-	'mediawikiwiki' => 1,
-	'labswiki' => 1,
-	'testwikidatawiki' => 1,
 ],
 
 // Virtual media views endpoint used by Media Viewer
@@ -11316,20 +11262,58 @@ return [
 	// TODO: Move patch forward in T317841 which proposes to make
 	// the extension default enabled everywhere.
 	'default' => false,
+	'arwiki' => true, // T389401
 	'cawiki' => true,
 	// T110661
 	'enwiki' => true,
 	'enwikivoyage' => true,
+	'enwikisource' => true, // T389401
+	'enwiktionary' => true, // T389401
 	'eswiki' => true,
 	'frwiktionary' => true,
-	'huwiki' => true,
+	'huwiki' => true, // T389401
+	'idwiki' => true, // T389401
 	'nowiki' => true,
 	'ruwiki' => true,
+	'simplewiki' => true, // T389401
+	'urwiki' => true, // T389401
+	'vecwiki' => true, // T390023, T381886
+	'tnwiki' => true, // T390023, T381886
+	'astwiki' => true, // T390023, T381886
+	'lmowiki' => true, // T390023, T381886
 	'commonswiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	'arwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
 	'enwiki' => [
 		[
 			// T380778
@@ -11378,6 +11362,62 @@ return [
 			],
 		],
 	],
+	'enwikisource' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'enwiktionary' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
 	'eswiki' => [
 		[
 			'name' => 'Empty search experiment survey',
@@ -11421,6 +11461,143 @@ return [
 					'description' => null,
 					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
 					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
+				],
+			],
+		],
+		// T394315
+		[
+			'name' => 'design-research-participant-recruitment-survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0.25,
+			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'Survey single external question',
+					'question' => 'design-research-participant-recruitment-survey-question',
+					'description' => 'design-research-participant-recruitment-survey-description',
+					'link' => 'design-research-participant-recruitment-survey-link',
+					'yesMsg' => 'design-research-participant-recruitment-survey-yes-button',
+					'noMsg' => 'design-research-participant-recruitment-survey-no-button',
+				],
+			],
+		],
+	],
+	'huwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'idwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'simplewiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
+				],
+			],
+		],
+	],
+	'urwiki' => [ // T389401
+		[
+			'name' => 'Patroller tools external survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 1,
+			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+				'anons' => false,
+				'minEdits' => 500,
+				'registrationEnd' => '2024-11-05',
+			],
+			'questions' => [
+				[
+					'name' => 'Patroller tools external survey question',
+					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
+					'description' => null,
+					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
+					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
+					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
 				],
 			],
 		],
@@ -11590,6 +11767,11 @@ return [
 	'default' => true, // T378402
 ],
 
+// T392520
+'wmgUseArticleSummaries' => [
+	'default' => false,
+],
+
 // NearbyPages extension
 // T246493
 'wmgUseNearbyPages' => [
@@ -11612,6 +11794,10 @@ return [
 	'default' => false,
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
+],
+'wgNearbyPagesNamespaces' => [
+	'default' => [ 0 ],
+	'commonswiki' => [ 6 ],
 ],
 'wgNearbyRandomButton' => [
 	'default' => false,
@@ -11757,15 +11943,6 @@ return [
 	'default' => 'k8s-mwdebug',
 ],
 
-// Migration to PHP 8.1 (T383845)
-'wgWMENewPHPVersion' => [
-	'default' => '8.1',
-],
-
-'wgWMENewPHPSamplingRate' => [
-	'default' => 0, // disable enrollment
-],
-
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
@@ -11840,8 +12017,6 @@ return [
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
 	'default' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'commonswiki' => [ 'local' => 60, 'WAN' => 60, ],
-	'enwiki' => [ 'local' => 60, 'WAN' => 60, ],
 	'wikidatawiki' => [ 'local' => 60, 'WAN' => 60, ],
 ],
 
@@ -12355,9 +12530,12 @@ return [
 	'default' => true,
 ],
 
+### Wikifunctions-related configuration
+
 'wmgUseWikiLambda' => [
 	'default' => false,
 	'wikifunctionswiki' => true,
+	'wikifunctionsclient' => true,
 ],
 
 'wgWikiLambdaEnableRepoMode' => [
@@ -12365,9 +12543,20 @@ return [
 	'wikifunctionswiki' => true,
 ],
 
+// Disabling this will break all pages with Wikifunctions calls on them.
 'wgWikiLambdaEnableClientMode' => [
 	'default' => false,
+	'wikifunctionsclient' => true,
 ],
+
+// This is a "kill switch" to disable further Wikifunctions calls in an emergency.
+// Disabling this will not break pages with Wikifunctions calls on them, but show
+// a message if the call isn't already cached.
+'wgWikiLambdaClientModeOffline' => [
+	'wikifunctionsclient' => false,
+],
+
+### Wikistories-related configuration
 
 'wmgUseWikistories' => [
 	'default' => false,
@@ -12444,6 +12633,52 @@ return [
 	'enwiki' => true, // T386290
 	'mswiktionary' => true, // T386538
 	'frwiki' => true, // T386622
+	'azwiki' => true, // T390805
+	// Start batch for T392240
+	'acewiki' => true,
+	'banwiki' => true,
+	'bbcwiki' => true,
+	'bclwiki' => true,
+	'bewwiki' => true,
+	'bjnwiki' => true,
+	'bnwiki' => true,
+	'btmwiki' => true,
+	'bugwiki' => true,
+	'cebwiki' => true,
+	'dtpwiki' => true,
+	'gorwiki' => true,
+	'hiwiki' => true,
+	'ibawiki' => true,
+	'ilowiki' => true,
+	'jawiki' => true,
+	'jvwiki' => true,
+	'kgewiki' => true,
+	'kmwiki' => true,
+	'kowiki' => true,
+	'lowiki' => true,
+	'madwiki' => true,
+	'map_bmswiki' => true,
+	'minwiki' => true,
+	'mlwiki' => true,
+	'mnwiki' => true,
+	'mywiki' => true,
+	'newiki' => true,
+	'niawiki' => true,
+	'orwiki' => true,
+	'pagwiki' => true,
+	'pamwiki' => true,
+	'pawiki' => true,
+	'pwnwiki' => true,
+	'suwiki' => true,
+	'tawiki' => true,
+	'tetwiki' => true,
+	'tewiki' => true,
+	'thwiki' => true,
+	'tlwiki' => true,
+	'urwiki' => true,
+	'viwiki' => true,
+	'warwiki' => true,
+	// End batch for T392240
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
@@ -12626,18 +12861,28 @@ return [
 
 // T378127
 'wmgUseChart' => [
-	// Keep this in sync with wgParsoidFragmentSupport
+	// Note: requires wgParsoidFragmentSupport on
+	// Phase 4: update the default for full rollout later ...
 	'default' => false,
-	'testcommonswiki' => true,
-	'testwiki' => true,
+
+	// Explicitly enabled from earlier rollouts:
 	'commonswiki' => true,
-	'test2wiki' => true,
-	// T381312 enabling 2024-12-04
-	'svwiki' => true,
-	'itwiki' => true,
-	'hewiki' => true,
-	// T381436 enabling 2024-12-04
 	'mediawikiwiki' => true,
+	'testcommonswiki' => true,
+
+	// T393517 Phase 1 -on for Wikipedias except the phase 2/3 ones and
+	// any private arbcom wikis which won't work with the Json data setup
+	'charts-phase1' => true,
+
+	// T393518 Enable these for phase 2:
+	'charts-phase2' => true,
+
+	// T393519 Enable these for phase 3:
+	'charts-phase3' => false,
+
+	// disabled due to wmgEnableJsonConfigDataMode
+	'private' => false,
+	'fishbowl' => false,
 ],
 
 'wgChartProgressiveEnhancement' => [
@@ -12658,24 +12903,14 @@ return [
 	'default' => true,
 ],
 
-'wgRelatedArticlesABTestEnrollment' => [
-	'default' => [
-		"name" => "RelatedArticles test experiment default",
-		"enabled" => false,
-		"buckets" => [
-			"nonExperiment-unsampled" => 0,
-			"experimentEnabled" => 0.5,
-			"experimentDisabled" => 0.5
-		],
-	],
-],
-
 // T377121
 'wgUseCodexSpecialBlock' => [
 	'default' => false,
 	'plwiki' => true,
 	'dewiki' => true,
-	'itwiki' => true
+	'itwiki' => true,
+	'hewiki' => true,
+	'group0' => true,
 ],
 
 // T377121
@@ -12683,7 +12918,20 @@ return [
 	'default' => false,
 	'plwiki' => true,
 	'dewiki' => true,
-	'itwiki' => true
+	'itwiki' => true,
+	'hewiki' => true,
+	'group0' => true,
+],
+
+// T362324
+'wgPHPSessionHandling' => [
+	'default' => 'warn',
+],
+
+// T377975
+'wgTemplateDataEnableDiscovery' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 ];

@@ -168,10 +168,6 @@ $wmgSessionStoreHMACKey = null;
 $wmgXhguiDBuser = null;
 $wmgXhguiDBpassword = null;
 
-// disable custom providers for SUL3 local login (like almost all other providers, they should only run on the shared domain)
-$wgCentralAuthSul3SharedDomainRestrictions['disallowedLocalProviders']['preauth'] ??= [];
-$wgCentralAuthSul3SharedDomainRestrictions['disallowedLocalProviders']['preauth'] += [];
-
 // RSA keys so the OAuth 2.0 library can create self-encoded access tokens. Which we don't actually need,
 // but the library chosen doesn't make it configurable.
 $wgOAuth2PrivateKey = null;
@@ -182,7 +178,7 @@ $wgOAuth2PublicKey = null;
  *
  * @see mediawiki/extensions/MediaModeration
  */
-$wgMediaModerationPhotoDNASubscriptionKey = 'subscription-key';
+$wgMediaModerationPhotoDNASubscriptionKey = '';
 $wgMediaModerationRecipientList = [];
 
 /**

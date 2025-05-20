@@ -1,9 +1,10 @@
 <?php
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
- * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator
+ * @covers \Wikimedia\MWConfig\WmfConfig
  */
-class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
+class WmfConfigTest extends PHPUnit\Framework\TestCase {
 
 	public function testInheritance() {
 		$inputSettings = [
@@ -37,14 +38,14 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 			],
 		];
 		$conf = new SiteConfiguration();
-		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->suffixes = WmfConfig::SUFFIXES;
 		$conf->settings = $inputSettings;
 
-		$calculatedSettings_enwiki = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$calculatedSettings_enwiki = WmfConfig::getConfigGlobals(
 			'enwiki', $conf, 'production'
 		);
 
-		$calculatedSettings_frwikt = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+		$calculatedSettings_frwikt = WmfConfig::getConfigGlobals(
 			'frwiktionary', $conf, 'production'
 		);
 
@@ -101,5 +102,15 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 			$calculatedSettings_frwikt['boom'] ?? null,
 			"Settings neither set nor inherited are null."
 		);
+	}
+
+	public function testEvalDbListExpression() {
+		$allDbs = WmfConfig::readDbListFile( 'all' );
+		$allPrivateDbs = WmfConfig::readDbListFile( 'private' );
+		$exprDbs = WmfConfig::evalDbExpressionForCli( 'all - private' );
+		$expectedDbs = array_diff( $allDbs, $allPrivateDbs );
+		sort( $exprDbs );
+		sort( $expectedDbs );
+		$this->assertEquals( $expectedDbs, $exprDbs );
 	}
 }

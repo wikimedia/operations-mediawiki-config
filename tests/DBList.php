@@ -8,6 +8,8 @@
  * @file
  */
 
+use Wikimedia\MWConfig\WmfConfig;
+
 class DBList {
 
 	/**
@@ -16,17 +18,9 @@ class DBList {
 	public static function getLists() {
 		static $lists;
 		if ( !$lists ) {
-			$lists = MWWikiversions::getAllDbListsForCLI();
+			$lists = WmfConfig::getAllDbListsForCLI();
 		}
 		return $lists;
-	}
-
-	/**
-	 * @param string $dbname
-	 * @return bool
-	 */
-	public static function isWikiFamily( $dbname ) {
-		return in_array( $dbname, MWMultiVersion::SUFFIXES );
 	}
 
 	/**
@@ -41,14 +35,5 @@ class DBList {
 		// to benefit caching during the many calls from data-provided tests.
 		$list = self::getLists()[$dblist];
 		return in_array( $dbname, $list );
-	}
-
-	/**
-	 * Get list of dblist names loaded in CommonSettings.php.
-	 *
-	 * @return string[]
-	 */
-	public static function getDblistsUsedInSettings() {
-		return MWMultiVersion::DB_LISTS;
 	}
 }

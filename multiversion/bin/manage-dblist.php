@@ -14,12 +14,15 @@
  * you think about it. It also validates and normalizes the files.
  */
 
-require_once dirname( __DIR__ ) . '/MWWikiversions.php';
-require_once dirname( __DIR__ ) . '/MWMultiVersion.php';
+require_once __DIR__ . '/../MWWikiversions.php';
+require_once __DIR__ . '/../../src/WmfConfig.php';
 
+use Wikimedia\MWConfig\WmfConfig;
+
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 final class WmfManageDblistCli {
-	private $command;
-	private $params;
+	private string $command;
+	private array $params;
 
 	/**
 	 * @param string[] $argv
@@ -31,7 +34,7 @@ final class WmfManageDblistCli {
 
 	private function help(): void {
 		print <<<TEXT
-	usage: manage-dblist <command> [<args>]
+	usage: composer manage-dblist <command> [<args>]
 
 	COMMANDS
 
@@ -44,11 +47,11 @@ final class WmfManageDblistCli {
 			If the wiki isn't valid for that list (e.g. not yet in "all.dblist"),
 			then the addition is ignored.
 
-			Example: manage-dblist add aawiki closed
+			Example: composer manage-dblist add aawiki closed
 
 	del <dbname> <dblist>
 			Remove a wiki from a dblist, and normalize all dblist files.
-			Example: manage-dblist del aawiki open
+			Example: composer manage-dblist del aawiki open
 			Alias: remove
 	update
 			Normalize all dblist files,
@@ -58,7 +61,7 @@ final class WmfManageDblistCli {
 			Set up a new wiki, getting it ready for installation. It will be
 			added to preinstall.dblist.
 			<privacy> must be one of 'public', 'fishbowl' or 'private'
-			Example: manage-dblist prepare fatwiki fat wikipedia public
+			Example: composer manage-dblist prepare fatwiki fat wikipedia public
 
 	activate <dbname>
 			Move a wiki from preinstall.dblist to all.dblist. This indicates
@@ -71,11 +74,11 @@ final class WmfManageDblistCli {
 			The wiki must be present in the production config
 			(wikiversions.json) already.
 
-			Example: manage-dblist init-labs fatwiki fat
+			Example: composer manage-dblist init-labs fatwiki fat
 
 	close <dbname>
 			Update the dblists of a wiki to reflect it being closed
-			Example: manage-dblist close enwiki
+			Example: composer manage-dblist close enwiki
 
 	TEXT;
 	}
@@ -83,48 +86,47 @@ final class WmfManageDblistCli {
 	public function run(): void {
 		try {
 			switch ( $this->command ) {
-			case 'add':
-				$this->doAdd( ...$this->params );
-				return;
-			case 'list':
-				$this->doList( ...$this->params );
-				return;
-			case 'del':
-			case 'remove':
-				$this->doDel( ...$this->params );
-				return;
-			case 'update':
-				$this->doUpdate( ...$this->params );
-				return;
-			case 'prepare':
-				$this->doPrepare( ...$this->params );
-				return;
-			case 'activate':
-				$this->doActivate( ...$this->params );
-				return;
-			case 'init-labs':
-				$this->doInitLabs( ...$this->params );
-				return;
-			case 'close':
-				$this->doClose( ...$this->params );
-				return;
-			case '':
-			case 'help':
-				$this->help();
-				exit( 1 );
-			default:
-				$this->error( 'Unknown command' );
-				return;
+				case 'add':
+					$this->doAdd( ...$this->params );
+					return;
+				case 'list':
+					$this->doList( ...$this->params );
+					return;
+				case 'del':
+				case 'remove':
+					$this->doDel( ...$this->params );
+					return;
+				case 'update':
+					$this->doUpdate( ...$this->params );
+					return;
+				case 'prepare':
+					$this->doPrepare( ...$this->params );
+					return;
+				case 'activate':
+					$this->doActivate( ...$this->params );
+					return;
+				case 'init-labs':
+					$this->doInitLabs( ...$this->params );
+					return;
+				case 'close':
+					$this->doClose( ...$this->params );
+					return;
+				case '':
+				case 'help':
+					$this->help();
+					exit( 1 );
+				default:
+					$this->error( 'Unknown command' );
+					return;
 			}
 		} catch ( Throwable $e ) {
 			$this->error( (string)$e );
 		}
-
 	}
 
 	private function doList( string $dbname ): void {
 		$dblists = array_keys( array_filter(
-			MWWikiversions::getAllDbListsForCLI(),
+			WmfConfig::getAllDbListsForCLI(),
 			static function ( array $list ) use ( $dbname ) {
 				return in_array( $dbname, $list );
 			}
@@ -137,23 +139,23 @@ final class WmfManageDblistCli {
 
 	private function doAdd( string $dbname, string $listname ): void {
 		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall', 'preinstall-labs' ] ) ) {
-			$validDbnames = strpos( $listname, 'labs' )
-				? array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) )
-				: array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+			$validDbnames = strpos( $listname, 'labs' ) !== false
+				? WmfConfig::readDbListFile( 'all-labs' )
+				: WmfConfig::readDbListFile( 'all' );
 			if ( !in_array( $dbname, $validDbnames ) ) {
 				$this->error( "Unknown wiki: $dbname" );
 				return;
 			}
 		}
 
-		$content = MWWikiversions::readDbListFile( $listname );
+		$content = WmfConfig::readDbListFile( $listname );
 		$content[] = $dbname;
 		$this->writeDblist( $listname, $content );
 		$this->doUpdate();
 	}
 
 	private function doDel( string $dbname, string $listname ): void {
-		$content = MWWikiversions::readDbListFile( $listname );
+		$content = WmfConfig::readDbListFile( $listname );
 		$i = array_search( $dbname, $content );
 		if ( $i !== false ) {
 			unset( $content[$i] );
@@ -164,9 +166,9 @@ final class WmfManageDblistCli {
 	}
 
 	private function doUpdate(): void {
-		$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
-		$labsOnlyWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) );
-		$knownDBLists = MWWikiversions::getAllDbListsForCLI();
+		$prodWikis = WmfConfig::readDbListFile( 'all' );
+		$labsOnlyWikis = WmfConfig::readDbListFile( 'all-labs' );
+		$knownDBLists = WmfConfig::getAllDbListsForCLI();
 
 		// There is only one set of dblists for all realms combined.
 		// This means it is important that a labs-only wiki never be included in
@@ -183,7 +185,7 @@ final class WmfManageDblistCli {
 		$sources = [];
 		foreach ( glob( __DIR__ . '/../../dblists/*.dbexpr' ) as $filepath ) {
 			$listname = basename( $filepath, '.dbexpr' );
-			$contents = MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) );
+			$contents = WmfConfig::evalDbExpressionForCli( file_get_contents( $filepath ) );
 			$knownDBLists[$listname] = $contents;
 			$sources[$listname] = 'dbexpr';
 		}
@@ -218,42 +220,42 @@ final class WmfManageDblistCli {
 		// add wiki to wikiversion.json
 		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions.json' );
 		switch ( $family ) {
-		case 'wikipedia':
-			$key = 'enwiki';
-			break;
-		case 'wikimania':
-			$key = 'wikimaniawiki';
-			break;
-		case 'wikimedia':
-			$key = 'vewikimedia';
-			break;
-		case 'wikibooks':
-			$key = 'enwikibooks';
-			break;
-		case 'wikinews':
-			$key = 'enwikinews';
-			break;
-		case 'wikiquote':
-			$key = 'enwikiquote';
-			break;
-		case 'wikisource':
-			$key = 'enwikisource';
-			break;
-		case 'wikiversity':
-			$key = 'enwikiversity';
-			break;
-		case 'wikivoyage':
-			$key = 'enwikivoyage';
-			break;
-		case 'wiktionary':
-			$key = 'enwiktionary';
-			break;
-		case 'special':
-			$key = 'apiportalwiki';
-			break;
-		default:
-			$this->error( 'Unknown family' );
-			exit( 1 );
+			case 'wikipedia':
+				$key = 'enwiki';
+				break;
+			case 'wikimania':
+				$key = 'wikimaniawiki';
+				break;
+			case 'wikimedia':
+				$key = 'vewikimedia';
+				break;
+			case 'wikibooks':
+				$key = 'enwikibooks';
+				break;
+			case 'wikinews':
+				$key = 'enwikinews';
+				break;
+			case 'wikiquote':
+				$key = 'enwikiquote';
+				break;
+			case 'wikisource':
+				$key = 'enwikisource';
+				break;
+			case 'wikiversity':
+				$key = 'enwikiversity';
+				break;
+			case 'wikivoyage':
+				$key = 'enwikivoyage';
+				break;
+			case 'wiktionary':
+				$key = 'enwiktionary';
+				break;
+			case 'special':
+				$key = 'apiportalwiki';
+				break;
+			default:
+				$this->error( 'Unknown family' );
+				exit( 1 );
 		}
 		$versions[$dbName] = $versions[$key];
 		ksort( $versions );
@@ -261,8 +263,14 @@ final class WmfManageDblistCli {
 
 		$this->doAdd( $dbName, 'preinstall' );
 		$this->doAdd( $dbName, $family );
-		$this->doAdd( $dbName, 's5' ); // all wikis are currently created in s5
+		// all wikis are currently created in s5
+		$this->doAdd( $dbName, 's5' );
 		$this->doAdd( $dbName, 'small' );
+
+		// (T376827) All new wikis are created with parsoidrendered enabled, except Wikisources
+		if ( $family !== 'wikisource' ) {
+			$this->doAdd( $dbName, 'parsoidrendered' );
+		}
 
 		$data = file( 'langlist' );
 		if ( !in_array( $lang . "\n", $data ) ) {
@@ -272,27 +280,27 @@ final class WmfManageDblistCli {
 		}
 
 		switch ( $visibility ) {
-		case 'public':
-			if ( $family != 'wikimedia' ) {
-				$this->doAdd( $dbName, 'wikidataclient' );
-			}
-			$this->doAdd( $dbName, 'commonsuploads' );
-			$this->doAdd( $dbName, 'securepollglobal' );
-			break;
-		case 'fishbowl':
-			$this->doAdd( $dbName, 'fishbowl' );
-			break;
-		case 'private':
-			$this->doAdd( $dbName, 'private' );
-			break;
-		default:
+			case 'public':
+				if ( $family != 'wikimedia' ) {
+					$this->doAdd( $dbName, 'wikidataclient' );
+				}
+				$this->doAdd( $dbName, 'commonsuploads' );
+				$this->doAdd( $dbName, 'securepollglobal' );
+				break;
+			case 'fishbowl':
+				$this->doAdd( $dbName, 'fishbowl' );
+				break;
+			case 'private':
+				$this->doAdd( $dbName, 'private' );
+				break;
+			default:
 		}
 
 		$this->generateDbSectionMapping();
 	}
 
 	private function doActivate( string $dbName ) {
-		$preinstallWikis = MWWikiversions::readDbListFile( 'preinstall' );
+		$preinstallWikis = WmfConfig::readDbListFile( 'preinstall' );
 		if ( !in_array( $dbName, $preinstallWikis ) ) {
 			$this->error( "Wiki not in preinstall.dblist: $dbName" );
 			return;
@@ -306,11 +314,13 @@ final class WmfManageDblistCli {
 		// assumes the wiki receives settings from production dblists such as the wiki family.
 		// Adding a wiki that doesn't exist in production to the Beta Cluster is possible but
 		// more complicated and not supported by this tool.
-		$validDbNames = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+		$validDbNames = WmfConfig::readDbListFile( 'all' );
 		if ( !in_array( $dbName, $validDbNames ) ) {
 			$this->error( "Wiki not in production config: $dbName" );
 			return;
 		}
+
+		$this->doAdd( $dbName, 'all-labs' );
 
 		// add wiki to wikiversion-labs.json
 		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions-labs.json' );
@@ -322,8 +332,6 @@ final class WmfManageDblistCli {
 		ksort( $versions );
 		MWWikiVersions::writeWikiVersionsFile( 'wikiversions-labs.json', $versions );
 
-		$this->doAdd( $dbName, 'all-labs' );
-
 		$data = file( 'langlist-labs' );
 		if ( !in_array( $lang . "\n", $data ) ) {
 			$data[] = $lang . "\n";
@@ -332,7 +340,7 @@ final class WmfManageDblistCli {
 		}
 	}
 
-	private function doClose( $dbName ) {
+	private function doClose( string $dbName ): void {
 		$this->doAdd( $dbName, 'closed' );
 		$this->doAdd( $dbName, 'group0' );
 		$this->doDel( $dbName, 'securepollglobal' );
@@ -373,7 +381,7 @@ final class WmfManageDblistCli {
 	private function generateDbSectionMapping(): void {
 		$sections = var_export(
 			array_merge( ...array_map( static function ( string $s ) {
-				return array_fill_keys( MWWikiversions::readDbListFile( $s ), $s );
+				return array_fill_keys( WmfConfig::readDbListFile( $s ), $s );
 			}, [ 's1', 's2', 's4', 's5', 's6', 's7', 's8' ] ) ),
 			true
 		);
@@ -422,7 +430,7 @@ final class WmfManageDblistCli {
 	 */
 	private function writeDblistsIndex( array $dblists ): void {
 		$indexByDbname = [];
-		foreach ( MWMultiVersion::DB_LISTS as $listname ) {
+		foreach ( WmfConfig::DB_LISTS as $listname ) {
 			$contents = $dblists[$listname];
 			foreach ( $contents as $dbname ) {
 				$indexByDbname[$dbname][] = $listname;

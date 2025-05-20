@@ -7,7 +7,7 @@
  * @copyright Copyright © 2015, Erik Bernhardson <ebernhardson@wikimedia.org>
  * @file
  */
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * @covers wmf-config/logging.php
@@ -98,7 +98,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredProductionChannels() {
-		$settings = MWConfigCacheGenerator::getStaticConfig();
+		$settings = WmfConfig::getStaticConfig();
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
 				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
@@ -108,7 +108,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredBetaClusterChannels() {
-		$settings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
+		$settings = WmfConfig::getStaticConfig( 'labs' );
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
 				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];

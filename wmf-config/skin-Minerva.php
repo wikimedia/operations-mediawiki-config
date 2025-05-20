@@ -159,6 +159,7 @@ return [
 		'default' => false,
 		'closed' => true, // T261357
 		'arwiki' => true,
+		'arywiki' => true, // T391316
 		'arwikisource' => true, // T356460
 		'azwiki' => true, // T352621
 		'bnwiki' => true, // T299529
@@ -168,6 +169,7 @@ return [
 		'kowiki' => true, // T172630
 		'ptwikinews' => true, // T332813
 		'pawiki' => true, // T366434
+		'shwiki' => true, // T392334
 		// WikidataPageBanner extensions must enable for Minerva support.
 		// (T254391)
 		'testwiki' => true,
@@ -181,7 +183,6 @@ return [
 		'trwiki' => true,
 		'wikifunctionswiki' => true, // T345463
 		'newiki' => true, // T347814
-		'fawiki' => true,
 	],
 
 	// T183665

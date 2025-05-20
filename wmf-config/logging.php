@@ -183,6 +183,9 @@ function wmfGetLoggingConfig() {
 		'psr' => [
 			'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 		],
+		'context' => [
+			'class' => \MediaWiki\Logger\Monolog\ContextProcessor::class,
+		],
 	];
 
 	$monologHandlers = [];

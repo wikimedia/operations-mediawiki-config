@@ -7,7 +7,7 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
+use Wikimedia\MWConfig\WmfConfig;
 
 /**
  * @covers DBList
@@ -16,7 +16,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 
 	public static function provideFamilyDbnames() {
 		foreach ( DBList::getLists() as $family => $databases ) {
-			if ( !DBlist::isWikiFamily( $family ) ) {
+			if ( !in_array( $family, WmfConfig::SUFFIXES ) ) {
 				// Skip non-family files such as "s1", "private", etc.
 				continue;
 			}
@@ -121,7 +121,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testWikisAreIncluded( string $input, array $dbLists ) {
 		$lists = DBList::getLists();
 
-		$all = array_fill_keys( MWWikiversions::evalDbListExpression( $input ), [] );
+		$all = array_fill_keys( WmfConfig::evalDbExpressionForCli( $input ), [] );
 
 		foreach ( $dbLists as $list ) {
 			foreach ( $lists[$list] as $name ) {
@@ -148,10 +148,10 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 * I suppose it still saves some nanoseconds.
 	 */
 	public function testNoUnusedDblistsLoaded() {
-		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
+		$unusedDblists = array_flip( WmfConfig::DB_LISTS );
 
-		$prodSettings = MWConfigCacheGenerator::getStaticConfig();
-		$labsSettings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
+		$prodSettings = WmfConfig::getStaticConfig();
+		$labsSettings = WmfConfig::getStaticConfig( 'labs' );
 
 		unset( $prodSettings['@replaceableSettings'] );
 		unset( $labsSettings['@replaceableSettings'] );
@@ -172,7 +172,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		unset( $unusedDblists['preinstall'] );
 
 		// The diff will report dblist names that are unused,
-		// and also mention the array offset in MWMultiVersion::DB_LISTS.
+		// and also mention the array offset in WmfConfig::DB_LISTS.
 		$this->assertEquals(
 			[],
 			$unusedDblists,
@@ -185,10 +185,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 * that contain expressions because these have a significant performance cost.
 	 */
 	public function testNoExpressionListUsedInSettings() {
-		$dblists = DBList::getDblistsUsedInSettings();
-
 		$actual = [];
-		foreach ( $dblists as $file ) {
+		foreach ( WmfConfig::DB_LISTS as $file ) {
 			$content = file_get_contents( dirname( __DIR__ ) . "/dblists/$file.dblist" );
 			if ( strpos( $content, '%' ) !== false ) {
 				$actual[] = $file;
@@ -230,7 +228,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		}
 		$siteMatrix = json_decode( $siteMatrix, true );
 
-		$rtl = array_flip( MWWikiversions::readDbListFile( 'rtl' ) );
+		$rtl = array_flip( WmfConfig::readDbListFile( 'rtl' ) );
 		$shouldBeRtl = [];
 
 		foreach ( $siteMatrix['sitematrix'] as $key => $lang ) {
