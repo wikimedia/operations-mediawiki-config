@@ -12040,7 +12040,10 @@ return [
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 ],
-
+'wgReadingListBetaFeature' => [
+	'default' => false,
+	'testwiki' => true,
+],
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
 'wmgUseGlobalPreferences' => [
