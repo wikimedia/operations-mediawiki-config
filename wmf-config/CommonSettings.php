@@ -44,7 +44,6 @@ use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
-use MediaWiki\Extension\ConfirmEdit\FancyCaptcha\FancyCaptcha;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
@@ -1966,7 +1965,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectoryLevels = 3;
 	$wgCaptchaStorageClass = CaptchaCacheStore::class;
-	$wgCaptchaClass = FancyCaptcha::class;
+	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist =
 		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
@@ -1977,6 +1976,46 @@ if ( $wmgEnableCaptcha ) {
 	// http://meta.wikimedia.org/wiki/User:Jorunn/tracks
 	// (added 2008-05-08 -- brion)
 	$wgCaptchaRegexes[] = '/<a +href/i';
+
+	if ( $wmgEnableHCaptcha ) {
+		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
+
+		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
+		// mode which challenges only a very few users, it should not distrupt the account creation flow for
+		// nearly all new users.
+		$wgCaptchaTriggers['createaccount'] = [
+			'trigger' => true,
+			'class' => 'HCaptcha',
+		];
+
+		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php
+
+		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
+		$wgHCaptchaEnterprise = true;
+		$wgHCaptchaSecureEnclave = true;
+		$wgHCaptchaInvisibleMode = true;
+
+		$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
+
+		// Same as default, but be explicit incase default changed in extension
+		$wgHCaptchaSendRemoteIP = false;
+
+		// Route requests to hCaptcha on the client-side through our proxy.
+		$wgHCaptchaApiUrl = wfAppendQuery(
+			'https://hcaptcha.wikimedia.org/1/api.js',
+			[
+				'endpoint' => 'https://hcaptcha.wikimedia.org',
+				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
+				'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
+				'reportapi' => 'https://report-hcaptcha.wikimedia.org',
+				'render' => 'explicit',
+				'sentry' => false,
+			]
+		);
+
+		// Remove default hcaptcha.com rules
+		$wgHCaptchaCSPRules = [];
+	}
 
 	// For emergencies
 	if ( $wmgEmergencyCaptcha ) {

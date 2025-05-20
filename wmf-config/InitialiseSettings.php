@@ -3730,6 +3730,10 @@ return [
 	'sul' => true,
 ],
 
+'wmgEnableHCaptcha' => [
+	'default' => false,
+],
+
 'wmgEmergencyCaptcha' => [
 	'default' => false,
 ],
