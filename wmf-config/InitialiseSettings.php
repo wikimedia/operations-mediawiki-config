@@ -2502,6 +2502,12 @@ return [
 		'logged_out' => true,
 	],
 ],
+
+'wgVectorSearchRecommendationsApiUrl' => [
+	'default' => null,
+	'testwiki' => '/rest.php/v1/search/page?q=morelike:$1&limit=10',
+],
+
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
 		'showThumbnail' => true,
