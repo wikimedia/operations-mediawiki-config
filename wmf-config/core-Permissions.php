@@ -5515,7 +5515,7 @@ return [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover', 'botadmin', 'arbcom', ], // T55913, T102770, T220915, T363805
+		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover', 'botadmin', 'arbcom', 'sysop' ], // T55913, T102770, T220915, T363805, T394752
 		'sysop' => [
 			'accountcreator', // T63109
 			'flood',
