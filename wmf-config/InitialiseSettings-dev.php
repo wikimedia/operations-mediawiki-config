@@ -110,5 +110,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUseChart' => [
 			'default' => false,
 		],
+		'-wmgUsePoolCounter' => [
+			'default' => false,
+		],
 	];
 }
