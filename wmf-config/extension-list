@@ -35,7 +35,6 @@ $IP/extensions/CommunityConfiguration/extension.json
 $IP/extensions/CommunityRequests/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
-$IP/extensions/ConfirmEdit/hCaptcha/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/CreditsSource/extension.json
