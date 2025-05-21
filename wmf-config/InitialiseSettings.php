@@ -1926,6 +1926,7 @@ return [
 'wgWhitelistRead' => [
 	'private' => [ 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ],
 	'+sysop_itwiki' => [ 'Pagina principale', 'Wikipedia:Bacheca_pubblica' ],
+	'+arbcom_zhwiki' => [ '首页' ], // T394919
 ],
 # @} end of wgWhitelistRead
 
