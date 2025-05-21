@@ -250,6 +250,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
 		$wgWBRepoSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
+
+	// Enabled scoped typeahead search if set in config T394669 / T321543
+	if ( isset( $wmgWikibaseTmpEnableScopedTypeaheadSearch ) ) {
+		$wgWBRepoSettings['tmpEnableScopedTypeaheadSearch'] = $wmgWikibaseTmpEnableScopedTypeaheadSearch;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {

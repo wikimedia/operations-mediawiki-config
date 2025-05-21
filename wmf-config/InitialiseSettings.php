@@ -12476,6 +12476,10 @@ return [
 	'default' => true,
 ],
 
+'wmgWikibaseTmpEnableScopedTypeaheadSearch' => [
+	'testwikidatawiki' => true,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
