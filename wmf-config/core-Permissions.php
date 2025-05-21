@@ -3046,8 +3046,19 @@ return [
 		'functioneer' => [
 			// Temporarily during early, limited deployment, Functioneers can't do this
 			"wikilambda-create-type" => false,
+			"wikilambda-create-generic-enum" => false,
+			"wikilambda-edit-generic-enum-item" => false,
 
 			"autopatrol" => true, // T344085
+		],
+		'sysop' => [
+			// Temporarily during early deployment, don't let sysops do major breaking changes
+			"wikilambda-create-boolean" => false,
+			"wikilambda-create-unit" => false,
+			"wikilambda-edit-boolean" => false,
+			"wikilambda-edit-generic-enum-id" => false,
+			"wikilambda-edit-object-type" => false,
+			"wikilambda-edit-unit" => false,
 		],
 		'wikifunctions-staff' => [
 			// Special staff-only user group for helping the community with Christmas-tree rights.
@@ -3055,10 +3066,13 @@ return [
 			'wikilambda-connect-implementation' => true,
 			'wikilambda-connect-tester' => true,
 			'wikilambda-create' => true,
+			'wikilambda-create-arbitrary-zid' => true,
 			'wikilambda-create-boolean' => true,
 			'wikilambda-create-converter' => true,
 			'wikilambda-create-enum-value' => true,
+			'wikilambda-create-function-call' => true,
 			'wikilambda-create-function' => true,
+			'wikilambda-create-generic-enum' => true,
 			'wikilambda-create-implementation' => true,
 			'wikilambda-create-language' => true,
 			'wikilambda-create-predefined' => true,
@@ -3072,12 +3086,16 @@ return [
 			'wikilambda-edit-argument-label' => true,
 			'wikilambda-edit-attached-implementation' => true,
 			'wikilambda-edit-attached-tester' => true,
+			'wikilambda-edit-boolean' => true,
 			'wikilambda-edit-builtin-function' => true,
 			'wikilambda-edit-connected-converter' => true,
 			'wikilambda-edit-converter' => true,
-			'wikilambda-edit-boolean' => true,
 			'wikilambda-edit-enum-value' => true,
 			'wikilambda-edit-error-key-label' => true,
+			'wikilambda-edit-function-call' => true,
+			'wikilambda-edit-generic-enum-id' => true,
+			'wikilambda-edit-generic-enum-item' => true,
+			'wikilambda-edit-generic-enum-type' => true,
 			'wikilambda-edit-implementation' => true,
 			'wikilambda-edit-key-label' => true,
 			'wikilambda-edit-language' => true,
