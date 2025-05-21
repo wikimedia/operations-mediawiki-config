@@ -12509,17 +12509,9 @@ return [
 	'default' => false,
 ],
 
-'wgParserEnableLegacyMediaDOM' => [
-	'default' => false,
-],
-
 'wgParserEnableUserLanguage' => [
 	'commonswiki' => true,
 	'metawiki' => true,
-],
-
-'wgUseContentMediaStyles' => [
-	'default' => false,
 ],
 
 'wgUseLegacyMediaStyles' => [
