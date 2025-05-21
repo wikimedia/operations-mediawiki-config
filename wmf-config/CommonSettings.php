@@ -4233,6 +4233,16 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	}
 }
 
+// T393615
+$wgCheckUserGroupRequirements = [
+	'temporary-account-viewer' => [
+		'edits' => 300,
+		'age' => 86400 * 30 * 6,
+		'exemptGroups' => [ 'steward' ],
+		'reason' => 'checkuser-group-requirements-temporary-account-viewer',
+	],
+];
+
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
