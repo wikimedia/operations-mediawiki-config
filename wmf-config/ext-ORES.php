@@ -25,7 +25,7 @@ return [
 	'frwiki' => true,
 	'hewiki' => true, // T161621
 	'huwiki' => true, // T192496
-	'idwiki' => false, // T382171
+	'idwiki' => true, // T382171
 	'itwiki' => true, // T211032
 	'kowiki' => true, // T161628
 	'lvwiki' => true, // T192499
