@@ -12893,7 +12893,7 @@ return [
 	'charts-phase2' => true,
 
 	// T393519 Enable these for phase 3:
-	'charts-phase3' => false,
+	'charts-phase3' => true,
 
 	// disabled due to wmgEnableJsonConfigDataMode
 	'private' => false,
