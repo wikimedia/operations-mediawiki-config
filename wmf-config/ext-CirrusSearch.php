@@ -661,29 +661,28 @@ return [
 
 'wgCirrusSearchUserTesting' => [
 	'default' => [
-		// T385972
-		'mlr-2025-02' => [
+		// T262612
+		'glent-2025-01' => [
 			'buckets' => [
 				'control' => [
 					'trigger' => 'control',
 				],
-				'mlr-2025-02' => [
-					'trigger' => 'mlr-2025-02',
+				'glent-2025-01' => [
+					'trigger' => 'glent-2025-01',
 					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-next',
-					],
-				],
-				'mlr-2025-02i' => [
-					'trigger' => 'mlr-2025-02i',
-					'globals' => [
-						'wgCirrusSearchInterleaveConfig' => [
-							'CirrusSearchRescoreProfile' => 'mlr-1024rs-next',
-						]
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
 					],
 				],
 			],
 		],
 	],
+],
+
+'wgCirrusSearchActiveTest' => [
+	'default' => null,
+	'dewiki' => 'glent-2025-01',
+	'enwiki' => 'glent-2025-01',
+	'frwiki' => 'glent-2025-01',
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
