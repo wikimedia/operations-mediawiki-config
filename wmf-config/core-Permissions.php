@@ -3381,7 +3381,10 @@ return [
 			'bot',
 			'confirmed',
 		],
-		'sysop' => [ 'ipblock-exempt' ],
+		'sysop' => [
+			'ipblock-exempt',
+			'temporary-account-viewer',
+		],
 	],
 	'+private' => [
 		'bureaucrat' => [
@@ -4891,7 +4894,10 @@ return [
 			'confirmed',
 			'interface-admin',
 		],
-		'sysop' => [ 'ipblock-exempt' ],
+		'sysop' => [
+			'ipblock-exempt',
+			'temporary-account-viewer',
+		],
 	],
 	'+private' => [
 		'bureaucrat' => [
