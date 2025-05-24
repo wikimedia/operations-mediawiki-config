@@ -1211,8 +1211,9 @@ return [
 		'Author_talk' => 103,
 	],
 	'+mswiki' => [
+		'Portal' => 100, // T394603
 		'Portal_talk' => 101,
-		'Perbualan_Portal' => 101,
+		'Perbincangan_portal' => 101, // T394603
 	],
 	'+mswikibooks' => [
 		'Perbualan_Resipi' => 101,
