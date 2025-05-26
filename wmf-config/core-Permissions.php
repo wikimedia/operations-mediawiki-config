@@ -2788,6 +2788,15 @@ return [
 			'movefile' => true,
 			'suppressredirect' => true,
 		], // T119636
+		'extendedmover' => [
+			'suppressredirect' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'move-categorypages' => true,
+			'tboverride' => true,
+			'delete-redirect' => true,
+			'oathauth-enable' => true,
+		], // T395285
 		'flood' => [ 'bot' => true ], // T319243
 	],
 	'+ukwikivoyage' => [
@@ -4656,6 +4665,7 @@ return [
 			'patroller',
 			'rollbacker',
 			'accountcreator', // T104034
+			'extendedmover', // T395285
 			'filemover', // T119636
 			'flood', // T319243
 		],
@@ -5883,6 +5893,7 @@ return [
 			'patroller',
 			'rollbacker',
 			'accountcreator', // T104034
+			'extendedmover', // T395285
 			'filemover', // T119636
 			'flood', // T319243
 		],

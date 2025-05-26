@@ -3208,6 +3208,11 @@ return [
 			'user' => [ 90, 60 ],
 		],
 	],
+	'+ukwiki' => [
+		'move' => [
+			'extendedmover' => [ 16, 60 ], // T395285
+		],
+	],
 ],
 # @} end of wgRateLimits
 
