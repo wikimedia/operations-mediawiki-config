@@ -1470,6 +1470,8 @@ return [
 		'Ш' => NS_TEMPLATE, // T196719
 		'К' => NS_CATEGORY, // T196719
 		'М' => 828, // T196719
+		'Author' => 102, // T395193
+		'Author_talk' => 103, // T395193
 
 	],
 	'ruwikiquote' => [
@@ -3714,6 +3716,10 @@ return [
 	'rowikisource' => [
 		102 => 'Autor',
 		103 => 'Discuție_Autor',
+	],
+	'ruwikisource' => [
+		102 => 'Автор', // T395193 - Author
+		103 => 'Обсуждение_автора',
 	],
 	'sawikisource' => [
 		100 => 'प्रवेशद्वारम्', // T235343 - Portal
