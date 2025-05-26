@@ -12931,6 +12931,8 @@ return [
 'wgTemplateDataEnableDiscovery' => [
 	'default' => false,
 	'testwiki' => true,
+	'plwiki' => true,
+	'arwiki' => true,
 ],
 
 ];
