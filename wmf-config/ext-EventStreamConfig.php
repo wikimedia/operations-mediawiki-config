@@ -2449,20 +2449,6 @@ return [
 				],
 			],
 		],
-		// DEVELOPMENT ONLY: X-Experiment-Enrollments handling prod cluster EventGate (T391959)
-		'product_metrics.web_base.experiment_enrollment_handling.dev1' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'canary_events_enabled' => false,
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
-					],
-					'use_edge_uniques' => true,
-				],
-			],
-		],
 		// Stream configuration for PES1.3 Wikirun game: https://wikirun-game.toolforge.org/
 		'product_metrics.web_base.wikrun_game' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
