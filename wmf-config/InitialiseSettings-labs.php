@@ -698,7 +698,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgVectorSearchRecommendationsApiUrl' => [
-			'default' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=10'
+			'default' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3'
 		],
 
 		///
