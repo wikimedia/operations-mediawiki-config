@@ -8039,7 +8039,7 @@ return [
 		'width' => 90,
 		'height' => 26,
 	],
-	'slwikibooks' => [
+	'slwikibooks' => [ // T393551
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-sl.svg',
 		'width' => 108,
 		'height' => 10,
