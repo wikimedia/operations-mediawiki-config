@@ -723,6 +723,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'app_tabs_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'app_rabbit_holes' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
