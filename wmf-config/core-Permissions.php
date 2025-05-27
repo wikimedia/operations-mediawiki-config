@@ -968,14 +968,13 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ], // T69557
 	],
 	'+eswikivoyage' => [
-		'rollbacker' => [
+		'reviewer' => [
 			'rollback' => true,
-			'autopatrol' => true,
-		], // T46285, T49325
-		'patroller' => [
 			'patrol' => true,
 			'autopatrol' => true,
-		], // T46285, T49325
+			'editprotected' => true,
+			'suppressredirect' => true,
+		], // T395293
 		'autopatrolled' => [ 'autopatrol' => true, ], // T57665
 	],
 	'+eswiktionary' => [
@@ -3837,8 +3836,7 @@ return [
 	],
 	'+eswikivoyage' => [
 		'sysop' => [
-			'rollbacker', // T46285
-			'patroller', // T46285
+			'reviewer', // T395293
 			'autopatrolled', // T57665
 		],
 	],
@@ -5323,7 +5321,7 @@ return [
 		'sysop' => [ 'autopatrolled' ], // T69557
 	],
 	'+eswikivoyage' => [
-		'sysop' => [ 'rollbacker', 'patroller', 'autopatrolled', ], // T46285, T57665
+		'sysop' => [ 'reviewer', 'autopatrolled', ], // T57665, T395293
 	],
 	'+eswiktionary' => [
 		'bureaucrat' => [ 'autopatrolled', 'patroller', 'rollbacker' ],
