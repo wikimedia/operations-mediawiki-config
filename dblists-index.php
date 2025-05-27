@@ -177,7 +177,7 @@ return [
 'commonswiki' => [ 'special', 'flow', 'skin-themes', 'vector-2022-language-links', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'translate' ],
 'cowiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'charts-phase1' ],
 'cowikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
-'cowikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
+'cowikimedia' => [ 'small', 'visualeditor-nondefault', 'group1', 'translate' ],
 'cowikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'cowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'parsoidrendered' ],
 'crhwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'charts-phase1' ],

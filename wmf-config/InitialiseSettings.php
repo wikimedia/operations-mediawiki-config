@@ -7528,6 +7528,7 @@ return [
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
 	'commonswiki' => true, // T126901
+	'cowikimedia' => true, // T386776
 	'testcommonswiki' => true, // T126901
 	'frwiktionary' => true, // T138972
 	'gewikimedia' => true, // T236389
