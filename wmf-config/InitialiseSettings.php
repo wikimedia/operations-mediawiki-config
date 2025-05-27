@@ -11762,10 +11762,9 @@ return [
 	'default' => true, // T378402
 ],
 
-// T393940
+// T392520
 'wmgUseArticleSummaries' => [
 	'default' => false,
-	'enwiki' => true
 ],
 
 // NearbyPages extension
