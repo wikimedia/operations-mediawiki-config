@@ -12054,6 +12054,7 @@ return [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'testwiki' => true,
 ],
 'wgReadingListBetaFeature' => [
 	'default' => false,
