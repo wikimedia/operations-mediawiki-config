@@ -596,6 +596,13 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
+		'wgMinervaTypeahead' => [
+			'default' => [
+				'enabled' => true,
+				'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+				'apiUrl' => '/w/rest.php',
+			],
+		],
 		'wgMinervaNightMode' => [
 			'default' => [
 				'base' => true,
