@@ -11,8 +11,8 @@ return [
 ],
 'wgOresUiEnabled' => [
 	'default' => false,
-	'arwiki' => true, // T192498
 	'afwiki' => true, // T395823
+	'arwiki' => true, // T192498
 	'bewiki' => true, // T395823
 	'bnwiki' => true, // T395823
 	'bswiki' => true, // T197010
@@ -33,10 +33,16 @@ return [
 	'idwiki' => true, // T382171
 	'iswiki' => true, // T395823
 	'itwiki' => true, // T211032
-	'kowiki' => true, // T161628
 	'kkwiki' => true, // T395823
+	'kowiki' => true, // T161628
+	'lawiki' => false, // T395824
 	'lvwiki' => true, // T192499
+	'mkwiki' => false, // T395824
+	'mlwiki' => false, // T395824
+	'mrwiki' => false, // T395824
 	'nlwiki' => true, // T139432
+	'nnwiki' => false, // T395824
+	'pawiki' => false, // T395824
 	'plwiki' => true, // T140005
 	'ptwiki' => true, // T139692
 	'rowiki' => true, // T170723
@@ -45,8 +51,11 @@ return [
 	'sqwiki' => true, // T170723
 	'srwiki' => true, // T197012
 	'svwiki' => true, // T174560
-	'testwiki' => true, // T199913
+	'swwiki' => false, // T395824
 	'test2wiki' => true, // T200412
+	'testwiki' => true, // T199913
+	'tewiki' => false, // T395824
+	'tlwiki' => false, // T395824
 	'trwiki' => true, // T139992
 	'ukwiki' => true, // T256887
 	'wikidatawiki' => true, // T130212
@@ -130,6 +139,36 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
+	'lawiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'mkwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'mlwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'mrwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'nnwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'pawiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for srwiki (T197012)
@@ -137,6 +176,20 @@ return [
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'swwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'test2wiki' => [
+		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
+		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
+		'reverted' => [ 'enabled' => false ],
+		// articlequality and draftquality are disabled until ORES is configured to allow these
+		// for test2wiki. See T198997
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'testwiki' => [
 		'revertrisk-language-agnostic' => [ 'enabled' => false ],
@@ -147,14 +200,15 @@ return [
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true, 'keepForever' => true, ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
 	],
-	'test2wiki' => [
-		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
-		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
-		'reverted' => [ 'enabled' => false ],
-		// articlequality and draftquality are disabled until ORES is configured to allow these
-		// for test2wiki. See T198997
-		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
+	'tewiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'tlwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
 	'zhwiki' => [
 		'damaging' => [ 'enabled' => true ],
@@ -545,6 +599,11 @@ return [
 			'verylikelybad' => false,
 		],
 	],
+	'lawiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.634, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
 	'lvwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/lvwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -567,6 +626,26 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.007 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'mkwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.505, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'mlwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.936, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'mrwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.867, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'nnwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.416, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
 	'nlwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/nlwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -588,6 +667,11 @@ return [
 			// https://ores.wikimedia.org/v3/scores/nlwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ], // 'maximum recall @ precision >= 0.9'
 		],
+	],
+	'pawiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.545, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
 	],
 	'plwiki' => [
 		'damaging' => [
@@ -758,6 +842,11 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.226 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'swwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.748, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
 	'testwiki' => [
 		// Same as enwiki
 		'damaging' => [
@@ -772,6 +861,16 @@ return [
 			'likelybad' => [ 'min' => 0, 'max' => 0.353 ],
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ],
 		],
+	],
+	'tewiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.367, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'tlwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.607, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
 	],
 	'trwiki' => [
 		'damaging' => [
