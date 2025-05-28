@@ -171,6 +171,11 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		// Used in MWMultiVersion::isPreInstall
 		unset( $unusedDblists['preinstall'] );
 
+		// Being removed
+		unset( $unusedDblists['charts-phase1'] );
+		unset( $unusedDblists['charts-phase2'] );
+		unset( $unusedDblists['charts-phase3'] );
+
 		// The diff will report dblist names that are unused,
 		// and also mention the array offset in WmfConfig::DB_LISTS.
 		$this->assertEquals(

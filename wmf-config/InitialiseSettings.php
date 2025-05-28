@@ -12881,23 +12881,7 @@ return [
 // T378127
 'wmgUseChart' => [
 	// Note: requires wgParsoidFragmentSupport on
-	// Phase 4: update the default for full rollout later ...
-	'default' => false,
-
-	// Explicitly enabled from earlier rollouts:
-	'commonswiki' => true,
-	'mediawikiwiki' => true,
-	'testcommonswiki' => true,
-
-	// T393517 Phase 1 -on for Wikipedias except the phase 2/3 ones and
-	// any private arbcom wikis which won't work with the Json data setup
-	'charts-phase1' => true,
-
-	// T393518 Enable these for phase 2:
-	'charts-phase2' => true,
-
-	// T393519 Enable these for phase 3:
-	'charts-phase3' => true,
+	'default' => true,
 
 	// disabled due to wmgEnableJsonConfigDataMode
 	'private' => false,
