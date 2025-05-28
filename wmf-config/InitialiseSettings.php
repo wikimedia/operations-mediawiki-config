@@ -2505,9 +2505,9 @@ return [
 
 'wgVectorSearchRecommendationsApiUrl' => [
 	'default' => null,
-	'testwiki' => '/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'wikivoyage' => '/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'group1-wikipedia' => '/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'testwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'wikivoyage' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'group1-wikipedia' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 ],
 
 'wgVectorWvuiSearchOptions' => [

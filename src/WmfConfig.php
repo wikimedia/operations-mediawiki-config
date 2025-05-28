@@ -60,6 +60,7 @@ class WmfConfig {
 		'commonsuploads',
 		'lockeddown',
 		'group0',
+		'group1-wikipedia',
 		'group1',
 		'wikitech',
 		'nonecho',
