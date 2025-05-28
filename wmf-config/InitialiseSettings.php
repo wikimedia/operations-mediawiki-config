@@ -12914,9 +12914,8 @@ return [
 	'default' => false,
 	'plwiki' => true,
 	'dewiki' => true,
-	'itwiki' => true,
-	'hewiki' => true,
 	'group0' => true,
+	'group1' => true,
 ],
 
 // T377121
@@ -12924,9 +12923,8 @@ return [
 	'default' => false,
 	'plwiki' => true,
 	'dewiki' => true,
-	'itwiki' => true,
-	'hewiki' => true,
 	'group0' => true,
+	'group1' => true,
 ],
 
 // T362324
