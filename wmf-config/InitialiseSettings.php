@@ -3482,6 +3482,7 @@ return [
 	'hrwikibooks' => [ 'w' ], // T176320
 	'hsbwiki' => [ 'w', 'de', 'dsb', 'en', 'cs', 'pl', 'ru', 'hr', 'sr', 'sh' ], // T152382
 	'hsbwiktionary' => [ 'incubator', 'w' ],
+	'huwikibooks' => [ 'w' ], // T395397
 	'idwiki' => [ 'ms' ], // T18033
 	'idwikibooks' => [ 'w' ],
 	'idwikiquote' => [ 'w' ],
