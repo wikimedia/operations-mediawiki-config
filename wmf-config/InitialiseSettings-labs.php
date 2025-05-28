@@ -1248,6 +1248,10 @@ function wmfGetOverrideSettings() {
 			'default' => null
 		],
 
+		'-wgCirrusSearchEnableEventBusWeightedTags' => [
+			'default' => false,
+		],
+
 		'-wgFileSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
