@@ -2389,6 +2389,14 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 			'fishbowl' => false,
 		],
+		// T388434
+		'wgJsonConfigTransformsEnabled' => [
+			'default' => true,
+		],
+		// T388616
+		'wgChartTransformsEnabled' => [
+			'default' => true,
+		],
 		'wgParsoidFragmentSupport' => [
 			'default' => true,
 		],

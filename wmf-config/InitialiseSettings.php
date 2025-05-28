@@ -12892,6 +12892,20 @@ return [
 	'default' => true,
 ],
 
+// T388434 - low-level json transform support
+'wgJsonConfigTransformsEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+	'testcommonswiki' => true,
+],
+
+// T388616 - high-level charts transform support
+'wgChartTransformsEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+	'testcommonswiki' => true,
+],
+
 // T372527
 'wmgUseCommunityRequests' => [
 	'default' => false,
