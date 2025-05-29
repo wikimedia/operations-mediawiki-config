@@ -2047,6 +2047,13 @@ if ( $wmgUseCentralAuth ) {
 		$wgCookiePrefix = 'auth';
 		$wgSessionName = 'authSession';
 		$wgWebAuthnNewCredsDisabled = false;
+
+		// T395185: Enable sending client hints data on shared domain for all requests.
+		// This domain has restricted actions only to the authentication workflow,
+		// so we won't be collecting client hints data for actions that are not
+		// supposed to be collected.
+		$wgCheckUserClientHintsEnabled = true;
+		$wgCheckUserAlwaysSetClientHintHeaders = true;
 	}
 
 	/**
