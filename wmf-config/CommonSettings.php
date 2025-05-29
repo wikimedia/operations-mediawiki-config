@@ -3568,6 +3568,15 @@ if ( $wmgUseFileImporter ) {
 if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
 
+	$wgVirtualDomainsMapping['virtual-cx'] = [
+		'cluster' => 'extension1',
+		'db' => 'wikishared',
+	];
+
+	if ( $wmgRealm === 'production' && $wgDBname === 'testwiki' ) {
+		unset( $wgVirtualDomainsMapping['virtual-cx'] );
+	}
+
 	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver.wikimedia.org/v1';
 
