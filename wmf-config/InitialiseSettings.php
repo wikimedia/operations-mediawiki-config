@@ -12915,6 +12915,8 @@ return [
 	'plwiki' => true,
 	'arwiki' => true,
 	'mediawikiwiki' => true,
+	'enwikisource' => true,
+	'itwikisource' => true,
 ],
 
 // T377975
