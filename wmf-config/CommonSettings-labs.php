@@ -485,6 +485,17 @@ if ( $wmgRealm == 'labs' ) {
 	// conditions for the group.
 	unset( $wgGroupPermissions['temporary-account-viewer'] );
 
+	// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
+	// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
+	$rightsToRemoveOnBeta = [ 'checkuser-temporary-account', 'checkuser-temporary-account-no-preference' ];
+	foreach ( $wgGroupPermissions as $group => $permissions ) {
+		foreach ( $rightsToRemoveOnBeta as $rightToCheck ) {
+			if ( array_key_exists( $rightToCheck, $permissions ) ) {
+				$wgGroupPermissions[$group][$rightToCheck] = false;
+			}
+		}
+	}
+
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
 	$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
