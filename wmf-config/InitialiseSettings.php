@@ -12532,10 +12532,6 @@ return [
 	'twwiki' => null, // T302852
 ],
 
-'wgParserEnableLegacyHeadingDOM' => [
-	'default' => false,
-],
-
 'wgParserEnableUserLanguage' => [
 	'commonswiki' => true,
 	'metawiki' => true,
