@@ -10587,6 +10587,11 @@ return [
 	'default' => false,
 ],
 
+// See T391411 and T393918.
+'wgMetricsPlatformExperimentEventIntakeServiceUrl' => [
+	'default' => '/evt-103e/v2/events?hasty=true',
+],
+
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
 	'default' => false,
 	'testwiki' => true,
