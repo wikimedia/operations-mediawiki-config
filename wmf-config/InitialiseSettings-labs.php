@@ -1265,6 +1265,7 @@ function wmfGetOverrideSettings() {
 			'default' => null
 		],
 
+		// Beta lacks infrastructure to use weighed tags via EventBus (T395425#10870511)
 		'-wgCirrusSearchEnableEventBusWeightedTags' => [
 			'default' => false,
 		],
