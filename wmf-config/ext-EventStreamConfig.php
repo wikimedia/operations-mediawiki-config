@@ -2446,6 +2446,7 @@ return [
 						// Don't collect the user agent
 						'http.request_headers.user-agent' => false,
 					],
+					'use_edge_uniques' => true,
 				],
 			],
 		],

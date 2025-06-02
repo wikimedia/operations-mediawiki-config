@@ -10580,7 +10580,7 @@ return [
 ],
 
 'wgMetricsPlatformEnableExperiments' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgMetricsPlatformEnableExperimentOverrides' => [

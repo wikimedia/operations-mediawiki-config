@@ -220,13 +220,6 @@ function wmfGetOverrideSettings() {
 						],
 					]
 				],
-				'product_metrics.web_base' => [
-					'producers' => [
-						'eventgate' => [
-							'use_edge_uniques' => true,
-						],
-					],
-				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
