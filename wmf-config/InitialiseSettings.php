@@ -11327,6 +11327,29 @@ return [
 	'default' => [],
 	'enwiki' => [
 		[
+			// T389393
+			'name' => 'Web simple summaries survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0,
+			'privacyPolicy' => 'ext-quicksurveys-simple-summaries-survey-privacy-policy',
+			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'Web simple summaries survey question',
+					'layout' => 'single-answer',
+					'link' => 'ext-quicksurveys-simple-summaries-survey-link',
+					'question' => 'ext-quicksurveys-simple-summaries-survey-question',
+					'description' => null,
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
+		[
 			// T380778
 			'name' => 'Web experimental browser extension survey',
 			'type' => 'external',
