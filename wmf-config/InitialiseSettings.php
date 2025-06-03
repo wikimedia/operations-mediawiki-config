@@ -2175,7 +2175,7 @@ return [
 // channel => [ 'udp2log'=>level, 'logstash'=>level, 'sample'=>rate, 'buffer'=>buffer, 'eventbus' => 'debug' ]
 // Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'sample'=>false, 'buffer'=>false, 'eventbus' => 'debug' ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
-// Note: sampled logs will not be sent to Logstash
+// The sample rate is a positive integer.
 // Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}
 'wmgMonologChannels' => [
 	// When changing the default, please also update the -labs settings to ensure that the
@@ -2313,7 +2313,7 @@ return [
 		'usermailer' => 'info',
 		'VisualEditor' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
-		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
+		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning' ],
 		'WikibaseQualityConstraints' => 'debug',
 		'WikiLambda' => 'warning',
 		'WikiLambdaClient' => 'info',
