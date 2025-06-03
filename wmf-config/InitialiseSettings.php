@@ -11331,11 +11331,11 @@ return [
 			'name' => 'Web simple summaries survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0,
+			'coverage' => 0.2,
 			'privacyPolicy' => 'ext-quicksurveys-simple-summaries-survey-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
 			'audience' => [
-				'anons' => true,
+				'anons' => false,
 			],
 			'questions' => [
 				[
