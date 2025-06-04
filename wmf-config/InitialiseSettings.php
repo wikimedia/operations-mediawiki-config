@@ -12771,6 +12771,14 @@ return [
 	'testwiki' => true,
 	'plwiki' => true,
 	'arwiki' => true,
+	'mediawikiwiki' => true,
+],
+
+// T377975
+'wgTemplateDataEnableCategoryBrowser' => [
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 ];

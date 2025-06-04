@@ -2448,6 +2448,11 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+		// T377975
+		'-wgTemplateDataEnableCategoryBrowser' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 		'-wmgOATHAuthDisableRight' => [
 			'default' => false,
 		],
