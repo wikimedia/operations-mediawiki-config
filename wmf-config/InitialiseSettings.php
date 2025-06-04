@@ -12779,7 +12779,6 @@ return [
 'wgTemplateDataEnableCategoryBrowser' => [
 	'default' => false,
 	'testwiki' => true,
-	'mediawikiwiki' => true,
 ],
 
 ];
