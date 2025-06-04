@@ -6566,7 +6566,11 @@ return [
 	// Single-language wikis
 	'abwiki' => 'uppercase-ab', // T183430
 	'azwiki' => 'uca-az', // T201770
+	'azwikibooks' => 'uca-az', // T395896
 	'azwikimedia' => 'uca-az',
+	'azwikiquote' => 'uca-az', // T395896
+	'azwikisource' => 'uca-az', // T395896
+	'azwiktionary' => 'uca-az', // T395896
 	'bawiki' => 'uppercase-ba', // T162823
 	'bawikibooks' => 'uppercase-ba', // T162823
 	'be_x_oldwiki' => 'uca-be-tarask', // T48005
