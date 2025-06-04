@@ -177,7 +177,7 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseUrlShortener ) {
 		// Labs overrides
 		$wgUrlShortenerReadOnly = false;
-		$wgUrlShortenerServer = 'w-beta.wmflabs.org';
+		$wgUrlShortenerServer = 'w.beta.wmcloud.org';
 		$wgUrlShortenerEnableSidebar = true;
 		$wgUrlShortenerAllowedDomains = [
 			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
