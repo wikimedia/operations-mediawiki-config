@@ -6877,7 +6877,7 @@ return [
 ],
 
 // ----------- CheckUser start ----------
-// Do not change these settings without Legal, T&S, and Security sign-off first.
+// Do not change these settings without Trust and Safety Product, Legal, T&S, and Security sign-off first.
 
 // On in all Production, disabled in all Labs; varied for Labs only.
 'wmgUseCheckUser' => [
@@ -6902,6 +6902,12 @@ return [
 'wgCheckUserCollapseCheckUserHelperByDefault' => [
 	'default' => 2500,
 	'loginwiki' => true
+],
+
+// T396010
+'wgCheckUserDisableCheckUserAPI' => [
+	'default' => true,
+	'loginwiki' => false,
 ],
 
 // T337944
