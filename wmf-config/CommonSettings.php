@@ -3998,7 +3998,7 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 
 	if ( $wmgUseCentralAuth ) {
-		$wgOATHAuthAccountPrefix = 'Wikimedia';
+		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
 	}
 
