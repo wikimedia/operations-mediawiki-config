@@ -43,7 +43,7 @@ use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter
  * Get overrides for Beta Cluster settings. This is called in WmfConfig::applyOverrides().
  *
  * Keys that start with a hyphen will completely override the prodution settings
- * from InitializeSettings.php.
+ * from InitialiseSettings.php.
  *
  * Keys that don't start with a hyphen will have their settings merged with
  * the production settings.
@@ -320,7 +320,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		// Log channels for beta cluster
-		// See detailed comments on 'wmgMonologChannels' in InitializeSettings.php
+		// See detailed comments on 'wmgMonologChannels' in InitialiseSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
 		'wmgMonologChannels' => [
 			'default' => [
