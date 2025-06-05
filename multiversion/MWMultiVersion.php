@@ -174,18 +174,6 @@ class MWMultiVersion {
 	private function __clone() {
 	}
 
-	/**
-	 * TODO: Remove, unused, replaced by initializeFromDBName().
-	 *
-	 * @param string $dbName
-	 * @return MWMultiVersion
-	 */
-	public static function newFromDBName( $dbName ) {
-		$m = new self();
-		$m->db = $dbName;
-		return $m;
-	}
-
 	private static function createInstance() {
 		if ( isset( self::$instance ) ) {
 			self::error( "MWMultiVersion instance already set!\n" );
