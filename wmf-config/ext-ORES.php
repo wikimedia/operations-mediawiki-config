@@ -12,9 +12,13 @@ return [
 'wgOresUiEnabled' => [
 	'default' => false,
 	'arwiki' => true, // T192498
+	'afwiki' => false, // T395823
+	'bewiki' => false, // T395823
+	'bnwiki' => false, // T395823
 	'bswiki' => true, // T197010
 	'cawiki' => true, // T192501
 	'cswiki' => true, // T151611
+	'cywiki' => false, // T395823
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
@@ -23,11 +27,14 @@ return [
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
 	'frwiki' => true,
+	'hawiki' => false, // T395823
 	'hewiki' => true, // T161621
 	'huwiki' => true, // T192496
 	'idwiki' => true, // T382171
+	'iswiki' => false, // T395823
 	'itwiki' => true, // T211032
 	'kowiki' => true, // T161628
+	'kkwiki' => false, // T395823
 	'lvwiki' => true, // T192499
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
@@ -61,6 +68,11 @@ return [
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
+	'afwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
 	'arwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for arwiki (T192498, T193905)
@@ -68,6 +80,21 @@ return [
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'bewiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'bnwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'cywiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
 	'enwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
@@ -83,7 +110,22 @@ return [
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
+	'hawiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
 	'idwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'iswiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'kkwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
@@ -140,6 +182,21 @@ return [
 			'verylikelybad' => false,
 		],
 		// goodfaith is disabled for arwiki (T192498, T193905)
+	],
+	'afwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.736, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'bewiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.572, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'bnwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.647, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+		],
 	],
 	'bswiki' => [
 		'damaging' => [
@@ -206,6 +263,11 @@ return [
 			// https://ores.wikimedia.org/v3/scores/cswiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.98''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.118 ], // 'maximum recall @ precision >= 0.98'
 		],
+	],
+	'cywiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.111, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
 	],
 	'enwiki' => [
 		'damaging' => [
@@ -378,6 +440,11 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.112 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'hawiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.736, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+		],
+	],
 	'hewiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/hewiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -422,8 +489,13 @@ return [
 	],
 	'idwiki' => [
 		'revertrisklanguageagnostic' => [
-			'revertrisk' => [ 'min' => 0.845, 'max' => 1 ] // based on desired false positive rate of < 15%
+			'revertrisk' => [ 'min' => 0.845, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
+	],
+	'iswiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.889, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+		],
 	],
 	'itwiki' => [
 		'damaging' => [
@@ -446,6 +518,11 @@ return [
 			// https://ores.wikimedia.org/v3/scores/itwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.163 ], // 'maximum recall @ precision >= 0.9'
 		],
+	],
+	'kkwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.605, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
 	],
 	'kowiki' => [
 		'damaging' => [
