@@ -1180,7 +1180,7 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 		'wgReadingListsAnonymizedPreviews' => [
-			'default' => false,
+			'default' => true,
 		],
 
 		'-wgPageCreationLog' => [
