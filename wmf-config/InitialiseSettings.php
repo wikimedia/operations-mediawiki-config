@@ -2508,7 +2508,8 @@ return [
 	'default' => null,
 	'testwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 	'wikivoyage' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'group1-wikipedia' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'wikipedia' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'enwiki' => null,
 ],
 
 'wgVectorWvuiSearchOptions' => [
@@ -2540,6 +2541,34 @@ return [
 		'showThumbnail' => false,
 		'showDescription' => false,
 	],
+],
+
+'wgMinervaTypeahead' => [
+	'default' => [
+		'enabled' => false,
+		'recommendationApiUrl' => null,
+		'apiUrl' => '/w/rest.php',
+	],
+	'enwiki' => [
+		'enabled' => false,
+		'recommendationApiUrl' => null,
+		'apiUrl' => '/w/rest.php',
+	],
+	'testwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'wikivoyage' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'group1-wikipedia' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	]
 ],
 
 // T328045
