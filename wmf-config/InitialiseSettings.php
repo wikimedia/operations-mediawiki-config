@@ -3091,7 +3091,7 @@ return [
 ],
 
 'wmgRC2UDPPrefix' => [
-	// Do NOT add any more wikis here; this is a list of legacy exceptions
+	// T30276: Do NOT add any more wikis here; this is a list of legacy exceptions
 	'default' => false,
 	'advisorywiki' => "#advisory.wikipedia\t",
 	'donatewiki' => "#donate.wikimedia.org\t",
