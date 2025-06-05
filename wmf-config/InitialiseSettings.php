@@ -11336,8 +11336,8 @@ return [
 			// T389393
 			'name' => 'Web simple summaries survey',
 			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.2,
+			'enabled' => false,
+			'coverage' => 0,
 			'privacyPolicy' => 'ext-quicksurveys-simple-summaries-survey-privacy-policy',
 			'platforms' => [ 'desktop' => [ 'stable' ] ],
 			'audience' => [
