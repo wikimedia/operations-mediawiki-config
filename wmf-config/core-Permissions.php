@@ -3366,7 +3366,8 @@ return [
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
 			'unblockself' => false, # T150826
-			'checkuser-temporary-account' => true, // T327913
+			 // T327913 (Do not change without reading T396217):
+			'checkuser-temporary-account' => true,
 			'checkuser-temporary-account-auto-reveal' => true, // T386492
 		],
 		'bot' => [
@@ -3377,7 +3378,8 @@ return [
 		],
 		'bureaucrat' => [
 			'noratelimit' => true,
-			'checkuser-temporary-account' => true, // T327913
+			// T327913 (Do not change without reading T396217):
+			'checkuser-temporary-account' => true,
 			'checkuser-temporary-account-auto-reveal' => true, // T386492
 			'oathauth-verify-user' => true, // T265726
 			'oathauth-view-log' => true, // T401350
@@ -3425,7 +3427,8 @@ return [
 			'suppressionlog' => true,
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
-			'checkuser-temporary-account-no-preference' => true, // T371364
+			// T371364 (Do not change without reading T396217):
+			'checkuser-temporary-account-no-preference' => true,
 			'checkuser-temporary-account-auto-reveal' => true, // T386492
 		],
 	],
