@@ -1332,6 +1332,12 @@ return [
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'/^swift\.(.+\.)?upload-complete$/' => [
 			'schema_title' => 'swift/upload/complete',
