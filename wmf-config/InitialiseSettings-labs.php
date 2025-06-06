@@ -2465,5 +2465,8 @@ function wmfGetOverrideSettings() {
 			'default' => 1000,
 			'eswiki' => 10000,
 		],
+		'wgGENewcomerTasksStarterDifficultyEnabled' => [
+			'default' => true,
+		]
 	];
 } # wmfGetOverrideSettings()
