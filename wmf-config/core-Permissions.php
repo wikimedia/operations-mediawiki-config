@@ -450,6 +450,11 @@ return [
 		'templateeditor' => [ 'templateeditor' => true ], // T384145
 		'sysop' => [ 'templateeditor' => true ], // T384145
 	],
+	'+cawikimedia' => [
+		'*' => [ 'edit' => false ],
+		'user' => [ 'edit' => false ],
+		'autoconfirmed' => [ 'edit' => true ],
+	], // T396178
 	'+cawikinews' => [
 		'flood' => [ 'bot' => true ], // T98576
 	],
