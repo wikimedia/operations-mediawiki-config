@@ -12854,6 +12854,7 @@ return [
 // T362324
 'wgPHPSessionHandling' => [
 	'default' => 'warn',
+	'testwiki' => 'disable',
 ],
 
 // T377975

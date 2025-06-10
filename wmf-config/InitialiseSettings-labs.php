@@ -2443,6 +2443,10 @@ function wmfGetOverrideSettings() {
 			'enwikisource' => false,
 			'enwikivoyage' => false,
 		],
+		// T362324
+		'-wgPHPSessionHandling' => [
+			'default' => 'disable',
+		],
 		// T377975
 		'-wgTemplateDataEnableDiscovery' => [
 			'default' => false,
