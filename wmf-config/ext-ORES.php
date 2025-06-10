@@ -1424,4 +1424,8 @@ return [
 		],
 	]
 ],
+// T364705
+'wgORESRevertRiskAbuseFilterIntegrationEnabled' => [
+	'default' => false,
+],
 ];
