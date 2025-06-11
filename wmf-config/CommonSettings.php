@@ -4503,6 +4503,7 @@ if ( $wmgUseWikiLambda ) {
 	if ( $wgWikiLambdaEnableRepoMode ) {
 		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
+		$wgWikiLambdaPersistBackendCache = true;
 	}
 }
 
