@@ -6974,6 +6974,10 @@ return [
 	'srwiki' => true,
 	'rowiki' => true,
 	'nowiki' => true,
+	// T396464 - Major rollout (i)
+	'trwiki' => true,
+	'cswiki' => true,
+	'kowiki' => true,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
