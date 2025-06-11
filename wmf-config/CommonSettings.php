@@ -4498,10 +4498,12 @@ if ( $wmgUseGrowthExperiments ) {
 if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
-	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
 
-	$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
+	if ( $wgWikiLambdaEnableRepoMode ) {
+		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
+		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
+	}
 }
 
 if ( $wmgUseWikistories ) {
