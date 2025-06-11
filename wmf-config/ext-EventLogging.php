@@ -84,6 +84,7 @@ return [
 		'mediawiki.web_ui_actions',
 		'mediawiki.web_ui_scroll_migrated',
 		'mediawiki.reference_previews',
+		'mediawiki.product_metrics.checkuser_ip_auto_reveal_interaction',
 		'mediawiki.product_metrics.incident_reporting_system_interaction',
 		'mediawiki.product_metrics.wikifunctions_ui',
 		'mediawiki.product_metrics.wikilambda_api',

@@ -2189,7 +2189,27 @@ return [
 			'schema_title' => 'analytics/external/wiki_highlights_experiment',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-
+		// Instrument for IP auto-reveal (T387600)
+		'mediawiki.product_metrics.checkuser_ip_auto_reveal_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'eventgate' => [
+				'enrich_fields_from_http_headers' => [
+					'http.request_headers.user-agent' => false,
+				],
+			],
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'performer_id',
+						'performer_name',
+						'performer_active_browsing_session_token',
+						'performer_session_id',
+						'agent_client_platform_family',
+					],
+				],
+			],
+		],
 		// Instrument for the Incident Reporting System (T372823)
 		'mediawiki.product_metrics.incident_reporting_system_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
