@@ -54,7 +54,11 @@
 			"@buildConfigCache",
 			"git add -f tests/data/config-cache/",
 			"git stash",
-			"git diff stash@{0} stash@{1} --minimal --color --exit-code",
+			"git diff stash@{0} stash@{1} --minimal --color",
+			"echo '--------------------------------------------'",
+			"echo ' Files changed'",
+			"echo '--------------------------------------------'",
+			"git diff --name-only stash@{0} stash@{1} --exit-code tests/data/config-cache/",
 			"git stash drop",
 			"git stash drop"
 		],
