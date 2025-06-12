@@ -1084,6 +1084,15 @@ return [
 			'delete-redirect' => true, // T299038
 		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T303173
+		'checkuser' => [
+			'securepoll-create-poll' => true, // T396347
+			'securepoll-edit-poll' => true, // T396347
+			'securepoll-view-voter-pii' => true, // T396347
+		],
+		'electionclerk' => [
+			'securepoll-create-poll' => true, // T396347
+			'securepoll-edit-poll' => true, // T396347
+		],
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -4009,6 +4018,7 @@ return [
 			'extendedconfirmed', // T140839
 			'eliminator', // T162396
 			'extendedmover', // T299038
+			'electionclerk', // T396347
 		]
 	],
 	'+fawikibooks' => [
@@ -5519,6 +5529,7 @@ return [
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
 			'extendedmover', // T299038
+			'electionclerk', // T396347
 		],
 	],
 	'+fawikibooks' => [

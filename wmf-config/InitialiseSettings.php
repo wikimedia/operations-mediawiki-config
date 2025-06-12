@@ -10918,6 +10918,7 @@ return [
 	'votewiki' => true,
 	'enwiki' => true, // T378287
 	'zhwiki' => true, // T380020
+	'fawiki' => true, // T396347
 ],
 
 'wgSecurePollEditOtherWikis' => [
