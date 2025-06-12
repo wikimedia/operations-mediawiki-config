@@ -1199,6 +1199,8 @@ return [
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
+		'Draft' => 118, // T396551
+		'Draft_talk' => 119,
 	],
 	'+mrwikibooks' => [
 		'Wikibooks_talk' => NS_PROJECT_TALK, // T73774
@@ -3053,6 +3055,8 @@ return [
 	'mrwiki' => [
 		100 => 'दालन',
 		101 => 'दालन_चर्चा',
+		118 => 'मसूदा', // T396551 - Draft
+		119 => 'मसूदा_चर्चा',
 	],
 	'mtwiki' => [
 		100 => 'Portal',
@@ -5036,6 +5040,10 @@ return [
 		119 => 'noindex,nofollow', // draft talk - T385593
 	],
 	'mlwiki' => [ // Draft - T362653
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
+	],
+	'mrwiki' => [ // Draft - T396551
 		118 => 'noindex,nofollow',
 		119 => 'noindex,nofollow',
 	],
