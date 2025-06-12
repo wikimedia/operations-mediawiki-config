@@ -2809,6 +2809,15 @@ return [
 			'oathauth-enable' => true,
 		], // T395285
 		'flood' => [ 'bot' => true ], // T319243
+		'arbcom' => [
+			'oathauth-enable' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-log-detail' => true,
+			'abusefilter-log-private' => true,
+			'abusefilter-view-private' => true,
+			'browsearchive' => true,
+		], // T396668
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
@@ -4704,6 +4713,7 @@ return [
 			'filemover', // T119636
 			'flood', // T319243
 		],
+		'bureaucrat' => [ 'arbcom' ], // T396668
 	],
 	'+ukwikivoyage' => [
 		'sysop' => [
@@ -5936,6 +5946,7 @@ return [
 			'filemover', // T119636
 			'flood', // T319243
 		],
+		'bureaucrat' => [ 'arbcom' ], // T396668
 	],
 	'+ukwikivoyage' => [
 		'sysop' => [ 'rollbacker', 'uploader', 'autopatrolled' ], // T56229
