@@ -12,13 +12,13 @@ return [
 'wgOresUiEnabled' => [
 	'default' => false,
 	'arwiki' => true, // T192498
-	'afwiki' => true, // T395823
-	'bewiki' => true, // T395823
-	'bnwiki' => true, // T395823
+	'afwiki' => false, // T395823
+	'bewiki' => false, // T395823
+	'bnwiki' => false, // T395823
 	'bswiki' => true, // T197010
 	'cawiki' => true, // T192501
 	'cswiki' => true, // T151611
-	'cywiki' => true, // T395823
+	'cywiki' => false, // T395823
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
@@ -27,14 +27,14 @@ return [
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
 	'frwiki' => true,
-	'hawiki' => true, // T395823
+	'hawiki' => false, // T395823
 	'hewiki' => true, // T161621
 	'huwiki' => true, // T192496
 	'idwiki' => true, // T382171
-	'iswiki' => true, // T395823
+	'iswiki' => false, // T395823
 	'itwiki' => true, // T211032
 	'kowiki' => true, // T161628
-	'kkwiki' => true, // T395823
+	'kkwiki' => false, // T395823
 	'lvwiki' => true, // T192499
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
@@ -130,11 +130,6 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
-	'simplewiki' => [
-		'damaging' => [ 'enabled' => true ],
-		'goodfaith' => [ 'enabled' => true ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
-	],
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for srwiki (T197012)
@@ -160,11 +155,6 @@ return [
 		// for test2wiki. See T198997
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
-	],
-	'trwiki' => [
-		'damaging' => [ 'enabled' => true ],
-		'goodfaith' => [ 'enabled' => true ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
 	'zhwiki' => [
 		'damaging' => [ 'enabled' => true ],
@@ -708,9 +698,6 @@ return [
 			// https://ores.wikimedia.org/v3/scores/simplewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ], // 'maximum recall @ precision >= 0.9'
 		],
-		'revertrisklanguageagnostic' => [
-			'revertrisk' => [ 'min' => 0.906, 'max' => 1 ] // based on desired false positive rate of < 15% T392148#10834187
-		],
 	],
 	'sqwiki' => [
 		'damaging' => [
@@ -806,9 +793,6 @@ return [
 			'likelybad' => [ 'min' => 0, 'max' => 0.275 ], // 'maximum recall @ precision >= 0.45'
 			// https://ores.wikimedia.org/v3/scores/trwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.75''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.145 ], // 'maximum recall @ precision >= 0.75'
-		],
-		'revertrisklanguageagnostic' => [
-			'revertrisk' => [ 'min' => 0.608, 'max' => 1 ] // based on desired false positive rate of < 15% T392148#10834187
 		],
 	],
 	'ukwiki' => [
