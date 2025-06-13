@@ -7639,11 +7639,7 @@ return [
 ],
 
 'wmgUseVips' => [
-	'default' => true,
-	'group0' => false,
-	'group1' => false,
-	'wikitech' => false,
-	'lockeddown' => false,
+	'default' => false,
 ],
 
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
