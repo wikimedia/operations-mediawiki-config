@@ -6475,6 +6475,13 @@ return [
 
 // --------------- VisualEditor end ---------------
 
+'wgCiteSubReferencing' => [
+	'default' => false,
+	// T395871
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 
