@@ -2427,6 +2427,9 @@ return [
 						'performer_is_logged_in',
 						'performer_is_temp',
 
+						// Enable the calculation of the "click-through per page visit" generic metric.
+						'performer_pageview_id',
+
 						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
 						// session ID" contextual attribute so that analysts can calculate all three flavors of
 						// click-through rate (see
