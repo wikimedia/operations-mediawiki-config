@@ -11948,11 +11948,6 @@ return [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
-// T299947
-'wgPageLinksSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-],
-
 // T28741
 'wgFileSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
