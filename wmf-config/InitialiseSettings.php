@@ -11885,11 +11885,6 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
-// T183490 - MCR Stage 4
-'wgRevisionSlotsCacheExpiry' => [
-	'default' => [ 'local' => 3600, 'WAN' => 86400, ],
-],
-
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_11,
 ],
