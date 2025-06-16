@@ -7649,10 +7649,6 @@ return [
 	'testwiki' => [ NS_MAIN, NS_HELP, NS_USER ]
 ],
 
-'wmgUseVips' => [
-	'default' => false,
-],
-
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
 'wmgUseShortUrl' => [
 	'default' => false,
