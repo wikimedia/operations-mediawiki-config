@@ -782,9 +782,6 @@ $wgPasswordConfig['pbkdf2'] = [
 // Temporary for T57420
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
-// Used for compromised accounts so they can do a password reset
-$wgPasswordConfig['scrambled'] = [ 'class' => InvalidPassword::class ];
-
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 //
 // For global policies, see $wgCentralAuthGlobalPasswordPolicies below
