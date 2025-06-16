@@ -121,65 +121,47 @@ $wgContactConfig['affcomchapthorg'] = [
 		'LegalStatus' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-legal-status-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'GroupMission' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-group-mission-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'Inclusivity' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-inclusivity-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'StructureMemberRights' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-structure-member-rights-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'BoardStructure' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-board-structure-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'MeetingTerms' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-meeting-terms-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'Elections' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-elections-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'Representation' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-representation-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'CodeOfConduct' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-coc-label',
 			'type' => 'check',
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
+			'required' => true,
 		],
 		'Rules' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-rules-label',
@@ -189,9 +171,6 @@ $wgContactConfig['affcomchapthorg'] = [
 			'label-message' => 'contactpage-affcom-chapter-thorg-terms-label',
 			'type' => 'check',
 			'required' => true,
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
 		]
 	]
 ];
@@ -275,9 +254,6 @@ $wgContactConfig['movecomsignup'] = [
 			'label-message' => 'contactpage-movecom-signup-terms-label',
 			'type' => 'check',
 			'required' => true,
-			'validation-callback' => static function ( $value ) {
-				return (bool)$value;
-			}
 		]
 	]
 ];
