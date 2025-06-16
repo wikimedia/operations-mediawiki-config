@@ -11961,7 +11961,6 @@ return [
 // T183490 - MCR Stage 4
 'wgRevisionSlotsCacheExpiry' => [
 	'default' => [ 'local' => 3600, 'WAN' => 86400, ],
-	'wikidatawiki' => [ 'local' => 60, 'WAN' => 60, ],
 ],
 
 'wgXmlDumpSchemaVersion' => [
