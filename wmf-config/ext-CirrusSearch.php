@@ -653,36 +653,18 @@ return [
 	'nlwiki' => 'phrase_suggest_and_language_detection',
 	'ptwiki' => 'phrase_suggest_and_language_detection',
 	'ruwiki' => 'phrase_suggest_and_language_detection',
-	// Glent M0 & PhraseSuggest & Language detection
-	'dewiki' => 'phrase_suggest_glentM0_and_langdetect',
-	'enwiki' => 'phrase_suggest_glentM0_and_langdetect',
-	'frwiki' => 'phrase_suggest_glentM0_and_langdetect',
+	// Glent M0, M1, PhraseSuggest, and Language detection
+	'dewiki' => 'phrase_suggest_glentM01_and_langdetect',
+	'enwiki' => 'phrase_suggest_glentM01_and_langdetect',
+	'frwiki' => 'phrase_suggest_glentM01_and_langdetect',
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		// T262612
-		'glent-2025-01' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-				],
-				'glent-2025-01' => [
-					'trigger' => 'glent-2025-01',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
-					],
-				],
-			],
-		],
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchActiveTest' => [
 	'default' => null,
-	'dewiki' => 'glent-2025-01',
-	'enwiki' => 'glent-2025-01',
-	'frwiki' => 'glent-2025-01',
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
