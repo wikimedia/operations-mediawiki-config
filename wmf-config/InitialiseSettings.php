@@ -12819,6 +12819,9 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'testcommonswiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+	'commonswiki' => true,
 ],
 
 // T388616 - high-level charts transform support
@@ -12826,6 +12829,9 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'testcommonswiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+	'commonswiki' => true,
 ],
 
 // T372527
