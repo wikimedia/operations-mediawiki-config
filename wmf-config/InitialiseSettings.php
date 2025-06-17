@@ -12860,22 +12860,20 @@ return [
 
 // T388434 - low-level json transform support
 'wgJsonConfigTransformsEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'testcommonswiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'commonswiki' => true,
+	'default' => true,
+
+	// disabled due to wmgEnableJsonConfigDataMode
+	'private' => false,
+	'fishbowl' => false,
 ],
 
 // T388616 - high-level charts transform support
 'wgChartTransformsEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'testcommonswiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'commonswiki' => true,
+	'default' => true,
+
+	// disabled due to wmgEnableJsonConfigDataMode
+	'private' => false,
+	'fishbowl' => false,
 ],
 
 // T372527
