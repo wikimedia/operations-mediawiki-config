@@ -2398,6 +2398,35 @@ return [
 				],
 			]
 		],
+		// (T386440) Instrument for the User Info Card
+		'mediawiki.product_metrics.user_info_card_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'eventgate' => [
+				'enrich_fields_from_http_headers' => [
+					'http.request_headers.user-agent' => false,
+				],
+			],
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_namespace',
+						'page_namespace_id',
+						'performer_active_browsing_session_token',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_language',
+						'performer_language_variant',
+						'performer_name',
+						'performer_registration_dt',
+						'performer_session_id',
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
+			],
+		],
 		// (T373967) App base stream configuration to support Metrics Platform's monotable
 		'product_metrics.app_base' => [
 			'schema_title' => 'analytics/product_metrics/app/base',

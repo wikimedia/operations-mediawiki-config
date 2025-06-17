@@ -92,6 +92,7 @@ return [
 		'mediawiki.product_metrics.homepage_module_interaction',
 		'mediawiki.product_metrics.growth_product_interaction',
 		'mediawiki.product_metrics.ext_massdelete',
+		'mediawiki.product_metrics.user_info_card_interaction',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
 		'product_metrics.app_base',
