@@ -120,7 +120,7 @@ class CauseFatalError {
 		// foo > self::doFoo, foo-bar > self::doFooBar
 		$actionCamel = preg_replace_callback(
 			'/(?:-|^)([a-z])/',
-			fn ( $m ) => strtoupper( $m[1] ),
+			static fn ( $m ) => strtoupper( $m[1] ),
 			$action
 		);
 		$actionMethod = __CLASS__ . '::do' . $actionCamel;

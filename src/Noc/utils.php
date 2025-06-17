@@ -12,7 +12,7 @@ function getWikiVersions( $strip_php = false ) {
 	sort( $inuse );
 
 	if ( $strip_php ) {
-		return array_map( fn ( $v ) => str_replace( 'php-', '', $v ), $inuse );
+		return array_map( static fn ( $v ) => str_replace( 'php-', '', $v ), $inuse );
 	}
 	return $inuse;
 }
