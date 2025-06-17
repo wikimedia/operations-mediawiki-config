@@ -11314,7 +11314,7 @@ return [
 	'default' => false,
 	'cawiki' => true,
 	'dewiki' => true, // T396250
-	'enwiki' => true, // T110661, T396250
+	'enwiki' => true, // T110661
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'frwiki' => true, // T396250
@@ -11426,32 +11426,6 @@ return [
 					'description' => null,
 					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
 					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
-				],
-			],
-		],
-		[ // T396250
-			'name' => 'Patroller tools external survey',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.04,
-			'privacyPolicy' => 'ext-quicksurveys-patrollertools-external-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'audience' => [
-				'anons' => false,
-				'minEdits' => 500,
-				'registrationEnd' => '2024-12-09',
-			],
-			'questions' => [
-				[
-					'name' => 'Patroller tools external survey question',
-					'question' => 'ext-quicksurveys-patrollertools-external-survey-question',
-					'description' => null,
-					'link' => 'ext-quicksurveys-patrollertools-external-survey-link',
-					'yesMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-positive', // reusing from another survey
-					'noMsg' => 'ext-quicksurveys-automoderator-patroller-workstream-external-answer-negative', // reusing from another survey
 				],
 			],
 		],
