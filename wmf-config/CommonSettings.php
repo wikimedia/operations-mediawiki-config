@@ -2276,7 +2276,7 @@ function wmfGetPrivilegedGroups( $user ) {
 	return $groups;
 }
 
-$wgHooks['GetSecurityLogContext'] = static function ( array $info, array &$context ) {
+$wgHooks['GetSecurityLogContext'][] = static function ( array $info, array &$context ) {
 	/** @var WebRequest $request */
 	$request = $info['request'];
 	/** @var ?UserIdentity $user */
