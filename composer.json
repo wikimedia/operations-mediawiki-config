@@ -15,6 +15,7 @@
 		"php-parallel-lint/php-parallel-lint": "1.4.0",
 		"phpunit/php-code-coverage": "9.2.32",
 		"phpunit/phpunit": "9.6.23",
+		"seld/jsonlint": "1.11.0",
 		"symfony/yaml": "6.4.21",
 		"wikimedia/ip-utils": "5.0.0"
 	},
@@ -29,9 +30,11 @@
 		"phpunit": [
 			"phpunit"
 		],
+		"jsonlint": "jsonlint composer.json debug.json wikiversions.json wikiversions-labs.json wmf-config/unitConversionConfig.json",
 		"test": [
 			"@checkTypos",
 			"@lint",
+			"@jsonlint",
 			"@phpunit",
 			"@phpcs",
 			"minus-x check .",
