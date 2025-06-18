@@ -132,7 +132,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		foreach ( $externalStoreAliasesByCluster[$dbctlCluster] as $mwLoadName ) {
 			// If the ES section is set to RO, remove any registered cluster from "write clusters"
 			if (
-				in_array( $dbctlCluster, $localDbConfig['readOnlyBySection'] ) &&
+				array_key_exists( $dbctlCluster, $localDbConfig['readOnlyBySection'] ) &&
 				in_array( 'DB://' . $mwLoadName, $wgDefaultExternalStore ) &&
 				count( $wgDefaultExternalStore ) > 1
 			) {
