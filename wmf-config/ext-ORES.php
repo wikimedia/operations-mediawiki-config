@@ -13,6 +13,7 @@ return [
 	'default' => false,
 	'afwiki' => true, // T395823
 	'arwiki' => true, // T192498
+	'azwiki' => false, // T395823
 	'bewiki' => true, // T395823
 	'bnwiki' => true, // T395823
 	'bswiki' => true, // T197010
@@ -89,6 +90,11 @@ return [
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'azwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
 	'bewiki' => [
 		'damaging' => [ 'enabled' => false ],
@@ -240,6 +246,11 @@ return [
 	'afwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.736, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'azwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.536, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
 	'bewiki' => [
