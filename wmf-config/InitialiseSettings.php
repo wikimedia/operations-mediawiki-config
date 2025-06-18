@@ -2545,7 +2545,12 @@ return [
 
 'wgMinervaTypeahead' => [
 	'default' => [
-		'enabled' => true,
+		'enabled' => false,
+		'recommendationApiUrl' => null,
+		'apiUrl' => '/w/rest.php',
+	],
+	'enwiki' => [
+		'enabled' => false,
 		'recommendationApiUrl' => null,
 		'apiUrl' => '/w/rest.php',
 	],
