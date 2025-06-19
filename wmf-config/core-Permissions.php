@@ -3990,6 +3990,7 @@ return [
 			'abusefilter',
 			'rollbacker',
 			'event-organizer', // T386622
+			'temporary-account-viewer', // T397063
 		],
 	],
 	'+frwikibooks' => [
@@ -5468,7 +5469,12 @@ return [
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
-		'bureaucrat' => [ 'abusefilter', 'sysop', 'rollbacker', 'event-organizer' ], // T386622
+		'bureaucrat' => [ 'abusefilter',
+			'sysop',
+			'rollbacker',
+			'event-organizer', // T386622
+			'temporary-account-viewer', // T397063
+		],
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
