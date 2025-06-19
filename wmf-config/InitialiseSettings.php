@@ -12350,7 +12350,7 @@ return [
 ],
 
 'wmgWikibaseTmpEnableScopedTypeaheadSearch' => [
-	'testwikidatawiki' => true,
+	'wikidata' => true, // T394669, T394670
 ],
 
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">

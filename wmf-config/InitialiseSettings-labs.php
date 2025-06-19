@@ -2235,11 +2235,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T394669
-		'wmgWikibaseTmpEnableScopedTypeaheadSearch' => [
-			'wikidatawiki' => true,
-		],
-
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],
