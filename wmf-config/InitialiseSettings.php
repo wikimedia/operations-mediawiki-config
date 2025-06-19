@@ -6650,6 +6650,7 @@ return [
 	'nowikimedia' => 'uca-nb-u-kn', // T185630
 	'olowiki' => 'uca-fi-u-kn', // T147064
 	'plwiki' => 'uca-pl-u-kn', // T44413, T146675
+	'plwikiquote' => 'uca-pl-u-kn', // T397466
 	'plwikisource' => 'uca-pl', // T86821
 	'plwikivoyage' => 'uca-pl', // T47968
 	'plwiktionary' => 'uca-default', // T48081
