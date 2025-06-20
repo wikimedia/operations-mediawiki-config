@@ -2319,8 +2319,6 @@ return [
 		'WikiLambda' => 'warning',
 		'WikiLambdaClient' => 'info',
 		'Wikisource' => 'info',
-		'WikitechGerritBan' => 'debug',
-		'WikitechPhabBan' => 'debug',
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'xff' => [ 'logstash' => false ],
 		'XMP' => 'warning', // T89532
