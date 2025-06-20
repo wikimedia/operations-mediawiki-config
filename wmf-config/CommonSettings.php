@@ -2447,7 +2447,7 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralSelectedBannerDispatcher = "//{$wmgHostnames['meta']}/w/index.php?title=Special:BannerLoader";
 	}
 	// Relative URL which is hardcoded to HTTP 204 in Varnish config.
-	$wgCentralBannerRecorder = "{$wgServer}/beacon/impression";
+	$wgCentralBannerRecorder = '/beacon/impression';
 
 	$wgCentralDBname = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-centralnotice'] = [
