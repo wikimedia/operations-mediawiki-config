@@ -3333,6 +3333,7 @@ return [
 			'noratelimit' => true,
 			'checkuser-temporary-account' => true, // T327913
 			'checkuser-temporary-account-auto-reveal' => true, // T386492
+			'oathauth-verify-user' => true, // T265726
 		],
 		'steward' => [
 			'noratelimit' => true,
