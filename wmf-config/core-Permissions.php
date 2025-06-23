@@ -432,6 +432,13 @@ return [
 	'+brwikimedia' => [ // T65345
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
+	'+brwiki' => [
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		], // T397576
+	],
 	'+bswiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'flood' => [
@@ -3623,6 +3630,9 @@ return [
 			'translationadmin', // T60123
 		],
 	],
+	'+brwiki' => [
+		'sysop' => [ 'patroller' ], // T397576
+	],
 	'+bswiki' => [
 		'sysop' => [ 'flood' ], // T52425
 		'bureaucrat' => [
@@ -5153,6 +5163,9 @@ return [
 			'sysop', // T65345
 			'bureaucrat', // T65345
 		],
+	],
+	'+brwiki' => [
+		'sysop' => [ 'patroller' ], // T397576
 	],
 	'+bswiki' => [
 		'sysop' => [ 'flood' ], // T52425
