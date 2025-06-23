@@ -396,6 +396,26 @@ return [
 	'default' => false,
 ],
 
+'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
+	'default' => 48 * 3600,
+	'arwiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+	'eswiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+	'frwiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+	'testwiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+],
+
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,
