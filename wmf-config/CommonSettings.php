@@ -4194,6 +4194,13 @@ if ( $wmgUseCheckUser ) {
 
 	// Force redirect of all wikis' Special:GlobalContributions pages to meta's (T376612)
 	$wgCheckUserGlobalContributionsCentralWikiId = 'metawiki';
+
+	// UserInfoCard
+	if ( $wgDBname === 'testwiki' ) {
+		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
+			[ '1', [ CUDCOND_NAMED ] ]
+		];
+	}
 }
 
 if ( $wmgUseIPReputation ) {
