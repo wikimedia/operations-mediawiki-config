@@ -307,11 +307,11 @@ class MWMultiVersion {
 	 */
 	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri ) {
 		if ( $scriptName === '/w/thumb.php'
-			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' )
+			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' || $serverName === 'upload.wikimedia.beta.wmcloud.org' )
 		) {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
-		} elseif ( $serverName === 'auth.wikimedia.org' || $serverName === 'auth.wikimedia.beta.wmflabs.org' ) {
+		} elseif ( $serverName === 'auth.wikimedia.org' || $serverName === 'auth.wikimedia.beta.wmflabs.org' || $serverName === 'auth.wikimedia.beta.wmcloud.org' ) {
 			// Shared auth domain URL hit.
 			// The condition here must match the one in CommonSettings.php where $wmgSharedDomainPathPrefix is set.
 			return self::initializeForSharedDomain( $requestUri );
@@ -348,12 +348,19 @@ class MWMultiVersion {
 			'wikipedia-it-arbcom.wikimedia.org' => 'arbcom_it',
 			'wikipedia-zh-arbcom.wikimedia.org' => 'arbcom_zh',
 
-			// Labs
-			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
-			'api.wikimedia.beta.wmcloud.org' => 'apiportal',
+			// Beta-only
 			'wikidata.beta.wmflabs.org' => 'wikidata',
 			'wikidata.beta.wmcloud.org' => 'wikidata',
 		];
+
+		if (
+			( strpos( $serverName, 'wmflabs' ) !== false || strpos( $serverName, 'wmcloud' ) !== false )
+			&& preg_match( '/^([^.]+)\.([^.]+)\.beta\.(wmflabs|wmcloud)\.org$/', $serverName, $matches )
+		) {
+			// http://en.wikipedia.beta.wmcloud.org/
+			// T289318: or http://en.wikipedia.beta.wmflabs.org/
+			$serverName = $matches[1] . '.' . $matches[2] . '.org';
+		}
 
 		$lang = null;
 		$site = "wikipedia";
@@ -362,30 +369,21 @@ class MWMultiVersion {
 			if ( $serverName === 'ee.wikimedia.org' ) {
 				$site = "wikimedia";
 			}
+		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
+			$lang = $matches[1];
+			if ( $matches[2] !== 'wikimedia'
+				|| ( $matches[2] === 'wikimedia' && in_array(
+					$lang,
+					$this->wikimediaSubdomains
+				) ) ) {
+				// wikimedia (non chapters) sites stay as wiki
+				$site = $matches[2];
+			}
 		} else {
-			if (
-				( strpos( $serverName, 'wmflabs' ) !== false || strpos( $serverName, 'wmcloud' ) !== false )
-				&& preg_match( '/^([^.]+)\.([^.]+)\.beta\.(wmflabs|wmcloud)\.org$/', $serverName, $matches )
-			) {
-				// http://en.wikipedia.beta.wmflabs.org/ or http://en.wikipedia.beta.wmcloud.org/
-				$serverName = $matches[1] . '.' . $matches[2] . '.org';
-			}
-			if ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
-				$lang = $matches[1];
-				if ( $matches[2] !== 'wikimedia'
-					|| ( $matches[2] === 'wikimedia' && in_array(
-						$lang,
-						$this->wikimediaSubdomains
-					) ) ) {
-					// wikimedia (non chapters) sites stay as wiki
-					$site = $matches[2];
-				}
-			} else {
-				$ip = @$_SERVER['REQUEST_ADDR'];
-				$xff = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-				$request = @$_SERVER['REQUEST_URI'];
-				self::error( "Invalid host name (server: $serverName, request: $request, ip: $ip, xff: $xff).\n", 400 );
-			}
+			$ip = @$_SERVER['REQUEST_ADDR'];
+			$xff = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+			$request = @$_SERVER['REQUEST_URI'];
+			self::error( "Invalid host name (server: $serverName, request: $request, ip: $ip, xff: $xff).\n", 400 );
 		}
 		$this->loadDBFromSite( $site, $lang );
 	}

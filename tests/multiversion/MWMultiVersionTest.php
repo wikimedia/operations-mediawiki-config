@@ -172,8 +172,9 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'en.wikipedia.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
 			[ 'en.wikipedia.org', '/w/api.php', '', '/w/api.php', 'enwiki' ],
 			[ 'en.wiktionary.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiktionary' ],
-			[ 'boardgovcom.wikimedia.org', '/w/index.php', '', '/wiki/Main_Page', 'boardgovcomwiki' ],
 			[ 'en.wikipedia.beta.wmflabs.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
+			[ 'en.wikipedia.beta.wmcloud.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
+			[ 'boardgovcom.wikimedia.org', '/w/index.php', '', '/wiki/Main_Page', 'boardgovcomwiki' ],
 			[ 'example.org', '/w/index.php', '', '/wiki/Main_Page', false ],
 
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png',
@@ -188,7 +189,14 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/dewiktionary/wiki/Special:Userlogin', 'dewiktionary' ],
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/blah.blah/wiki/Special:Userlogin', 'blah.blah' ],
 			[ 'auth.wikimedia.beta.wmflabs.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
+			[ 'auth.wikimedia.beta.wmcloud.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/', false ],
+
+			[ 'wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', false ],
+			[ 'www.wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
+			[ 'wikidata.beta.wmflabs.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
+			[ 'wikidata.beta.wmcloud.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
+			[ 'www.wikidata.beta.wmcloud.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
 		];
 	}
 
