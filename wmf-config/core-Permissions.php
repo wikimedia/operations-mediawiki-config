@@ -3202,7 +3202,6 @@ return [
 		],
 		'patroller' => [
 			'patrol' => true,
-			'autopatrol' => true,
 			'movefile' => true, // T195247
 			'suppressredirect' => true, // T201160
 			'unwatchedpages' => true, // T219285
