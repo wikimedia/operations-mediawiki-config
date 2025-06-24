@@ -3194,7 +3194,10 @@ return [
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489
-		'abusefilter-helper' => [ 'oathauth-enable' => true ], // T344398
+		'abusefilter-helper' => [ // T344398
+			'oathauth-enable' => true,
+			'abusefilter-access-protected-vars' => true, // T397788
+		],
 		'autoconfirmed' => [
 			'flow-hide' => true, // T264489
 			'upload_by_url' => true, // T142991
@@ -3247,7 +3250,10 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 		],
-		'abusefilter' => [ 'oathauth-enable' => true ], // T386879
+		'abusefilter' => [ // T386879
+			'oathauth-enable' => true,
+			'abusefilter-access-protected-vars' => true, // T397788
+		],
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
