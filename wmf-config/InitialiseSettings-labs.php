@@ -1361,7 +1361,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
-			'cswiki' => 'surfacing-structured-task',
 		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
@@ -1441,13 +1440,6 @@ function wmfGetOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
-		],
-		'wgGESurfacingStructuredTasksEnabled' => [
-			'cswiki' => true,
-			'enwiki' => true,
-		],
-		'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
-			'enwiki' => true,
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'default' => [

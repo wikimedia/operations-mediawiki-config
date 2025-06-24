@@ -13,14 +13,7 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'testwiki' => 'surfacing-structured-task', // T386739
-	'arzwiki' => 'surfacing-structured-task',
 	'enwiki' => 'no-link-recommendation',
-	'eswiki' => 'surfacing-structured-task',
-	'fawiki' => 'surfacing-structured-task',
-	'frwiki' => 'surfacing-structured-task',
-	'idwiki' => 'surfacing-structured-task',
-	'ptwiki' => 'surfacing-structured-task',
 ],
 
 'wgGEImageRecommendationApiHandler' => [
@@ -382,13 +375,6 @@ return [
 
 'wgGESurfacingStructuredTasksEnabled' => [
 	'default' => false,
-	'testwiki' => true,
-	'arzwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'ptwiki' => true,
 ],
 
 'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
