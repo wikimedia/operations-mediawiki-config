@@ -11175,10 +11175,6 @@ return [
 	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
 ],
 
-'wmgUseClusterJobqueue' => [
-	'default'  => true,
-],
-
 // Thumbnail chaining
 
 'wgThumbnailBuckets' => [
@@ -11408,11 +11404,6 @@ return [
 
 'wgWPBBannerProperty' => [
 	'default' => 'P948',
-],
-
-// TODO: remove when enabling EventBus on ALL wikis but for jobs only
-'wmgUseEventBus' => [
-	'default' => true,
 ],
 
 'wgEnableEventBus' => [
