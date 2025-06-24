@@ -6948,11 +6948,6 @@ return [
 	'default' => 1800,
 ],
 
-'wgCheckUserEnableTempAccountsOnboardingDialog' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 // ----------- CheckUser end ----------
 
 // n.b. If setting this to `false` for a wiki, please also update the
