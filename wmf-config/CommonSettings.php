@@ -4520,6 +4520,17 @@ if ( $wmgUseGrowthExperiments ) {
 				[ 'local-user-bucket-growth', 'surfacing-structured-task', 100 ],
 			],
 		];
+	} elseif ( $wmgGEActiveExperiment === 'get-started-notification' ) {
+		// Get Started experiment, T394958
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'get-started-notification',
+				[ 'user-bucket-growth', 'get-started-notification', 50 ],
+				[ CUDCOND_AFTER, '20250624000000' ],
+			],
+			[ 'control',
+				[ 'user-bucket-growth', 'get-started-notification', 100 ],
+			],
+		];
 	}
 }
 
