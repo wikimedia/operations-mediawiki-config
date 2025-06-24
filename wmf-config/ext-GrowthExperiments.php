@@ -387,15 +387,6 @@ return [
 	'testwiki' => true,
 ],
 
-'wgGESurfacingStructuredTasksEnabled' => [
-	'default' => false,
-],
-
-'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
-	// Only enable in production after aligning with ServiceOps about T378536
-	'default' => false,
-],
-
 'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
 	'default' => 48 * 3600,
 	'arwiki' => [
