@@ -2082,27 +2082,13 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Domains that go in script-src and default-src for CSP.
-		// This also includes the prod domains for the sole purpose
-		// of allowing users to test gadgets at beta.
-		// beta itself should never call prod.
+		// Same as production InitialiseSettings.php, and extended (not replaced)
+		// with Beta Cluster domains.
+		//
+		// This includes the prod domains for the purpose of easier testing of gadgets.
+		// The MediaWiki software itself should never call prod from Beta.
 		'wmgApprovedContentSecurityPolicyDomains' => [
 			'default' => [
-				'*.wikimedia.beta.wmflabs.org',
-				'*.wikipedia.beta.wmflabs.org',
-				'*.wikinews.beta.wmflabs.org',
-				'*.wiktionary.beta.wmflabs.org',
-				'*.wikibooks.beta.wmflabs.org',
-				'*.wikiversity.beta.wmflabs.org',
-				'*.wikisource.beta.wmflabs.org',
-				// No multilingual wikisource on beta.
-				'*.wikiquote.beta.wmflabs.org',
-				// Unlike production, wikidata does not use www. on beta
-				'wikidata.beta.wmflabs.org',
-				'm.wikidata.beta.wmflabs.org',
-				'*.wikivoyage.beta.wmflabs.org',
-				'*.mediawiki.beta.wmflabs.org',
-
 				// Prod domains, to allow easier gadget testing
 				'*.wikimedia.org',
 				'*.wikipedia.org',
@@ -2118,11 +2104,36 @@ function wmfGetOverrideSettings() {
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
 
-				// Special entry for VE-RealTime until it can be done properly
-				'ws://visualeditor-realtime.wmflabs.org',
+				// Beta Cluster equivalants
+				'*.wikimedia.beta.wmflabs.org',
+				'*.wikipedia.beta.wmflabs.org',
+				'*.wikinews.beta.wmflabs.org',
+				'*.wiktionary.beta.wmflabs.org',
+				'*.wikibooks.beta.wmflabs.org',
+				'*.wikiversity.beta.wmflabs.org',
+				'*.wikisource.beta.wmflabs.org',
+				'wikidata.beta.wmflabs.org',
+				'm.wikidata.beta.wmflabs.org',
+				'*.wikivoyage.beta.wmflabs.org',
+				// T289318
+				'*.wikimedia.beta.wmcloud.org',
+				'*.wikipedia.beta.wmcloud.org',
+				'*.wikinews.beta.wmcloud.org',
+				'*.wiktionary.beta.wmcloud.org',
+				'*.wikibooks.beta.wmcloud.org',
+				'*.wikiversity.beta.wmcloud.org',
+				'*.wikisource.beta.wmcloud.org',
+				// wikisource.org - No multilingual wikisource in Beta
+				// *.wikidata.org - Without www in Beta
+				'wikidata.beta.wmcloud.org',
+				'm.wikidata.beta.wmcloud.org',
+				'*.wikivoyage.beta.wmcloud.org',
 
-				// T322323, CX Server in Beta Cluster, recommendation service
+				// Beta-only: VE-RealTime, experiment
+				'ws://visualeditor-realtime.wmflabs.org',
+				// Beta-only: CX Server, standalone webproxy (T322323)
 				'cxserver-beta.wmcloud.org',
+				// Beta-only: Recommendation service, standalone webproxy
 				'recommend.wmflabs.org',
 
 				// the new wmcloud instances to test the SUL project

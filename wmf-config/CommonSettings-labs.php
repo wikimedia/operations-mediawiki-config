@@ -99,10 +99,19 @@ if ( $wmgRealm == 'labs' ) {
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
 		'auth.wikimedia.beta.wmflabs.org',
-
-		// new wmcloud instances
+		// T289318
 		'wikipedia.beta.wmcloud.org',
+		'wiktionary.beta.wmcloud.org',
+		'wikibooks.beta.wmcloud.org',
+		'wikiquote.beta.wmcloud.org',
+		'wikinews.beta.wmcloud.org',
+		'wikisource.beta.wmcloud.org',
+		'wikiversity.beta.wmcloud.org',
 		'wikivoyage.beta.wmcloud.org',
+		'meta.wikimedia.beta.wmcloud.org',
+		'commons.wikimedia.beta.wmcloud.org',
+		'api.wikimedia.beta.wmcloud.org',
+		'auth.wikimedia.beta.wmcloud.org',
 	];
 
 	if ( $wmgUseGlobalPreferences ) {
@@ -146,10 +155,13 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseCentralNotice ) {
-		// Emit CSP headers on banner previews. This can go away when full CSP
-		// support (T135963) is deployed.
-	// www.pages04.net and app.goacoustic.com are used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses or phone numbers to our email campaign vendor
-		$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
+		// Same as production CommonSettings.php, but adding *.wikimedia.beta.wmflabs.org
+		// and *.wikimedia.beta.wmcloud.org (T289318) for meta, upload, and commons in Beta Cluster.
+		$wgCentralNoticeContentSecurityPolicy =
+			"script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline' *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org; "
+			. "default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org; "
+			. "style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline' *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org; "
+			. "connect-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org;";
 	}
 
 	if ( $wmgUseCite ) {
@@ -190,9 +202,17 @@ if ( $wmgRealm == 'labs' ) {
 			'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 			'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 			'(.*\.)?wikidata\.beta\.wmflabs\.org',
-			// wmcloud.org domains
+			// T289318
 			'(.*\.)?wikipedia\.beta\.wmcloud\.org',
+			'(.*\.)?wiktionary\.beta\.wmcloud\.org',
+			'(.*\.)?wikibooks\.beta\.wmcloud\.org',
+			'(.*\.)?wikinews\.beta\.wmcloud\.org',
+			'(.*\.)?wikiquote\.beta\.wmcloud\.org',
+			'(.*\.)?wikisource\.beta\.wmcloud\.org',
+			'(.*\.)?wikiversity\.beta\.wmcloud\.org',
 			'(.*\.)?wikivoyage\.beta\.wmcloud\.org',
+			'(.*\.)?wikimedia\.beta\.wmcloud\.org',
+			'(.*\.)?wikidata\.beta\.wmcloud\.org',
 		];
 		$wgUrlShortenerApprovedDomains = [
 			'*.wikipedia.beta.wmflabs.org',
@@ -205,9 +225,17 @@ if ( $wmgRealm == 'labs' ) {
 			'*.wikivoyage.beta.wmflabs.org',
 			'*.wikimedia.beta.wmflabs.org',
 			'*.wikidata.beta.wmflabs.org',
-			// wmcloud.org domains
+			// T289318
 			'*.wikipedia.beta.wmcloud.org',
+			'*.wiktionary.beta.wmcloud.org',
+			'*.wikibooks.beta.wmcloud.org',
+			'*.wikinews.beta.wmcloud.org',
+			'*.wikiquote.beta.wmcloud.org',
+			'*.wikisource.beta.wmcloud.org',
+			'*.wikiversity.beta.wmcloud.org',
 			'*.wikivoyage.beta.wmcloud.org',
+			'*.wikimedia.beta.wmcloud.org',
+			'*.wikidata.beta.wmcloud.org',
 		];
 	}
 
