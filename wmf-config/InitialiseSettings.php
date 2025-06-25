@@ -6970,6 +6970,15 @@ return [
 	'arwiki' => true,
 	'viwiki' => true,
 	'hiwiki' => true,
+	// T397940 - Major rollout (iii)
+	'dewiki' => true,
+	'nlwiki' => true,
+	'hewiki' => true,
+	'jawiki' => true,
+	'ukwiki' => true,
+	'azwiki' => true,
+	'mediawikiwiki' => true,
+	'ptwiki' => true,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
