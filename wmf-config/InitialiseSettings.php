@@ -12693,10 +12693,6 @@ return [
 // T388685 temporary feature flag
 'wmgWikibaseClientResolveWikibaseLabels' => [
 	'default' => false,
-	// Temporary pilot wiki rollout
-	'hewiki' => true,
-	'cawiki' => true,
-	'ukwiki' => true,
 ],
 
 ];
