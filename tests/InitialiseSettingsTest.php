@@ -11,9 +11,8 @@ use Wikimedia\MWConfig\WmfConfig;
  * @covers \Wikimedia\MWConfig\WmfConfig
  */
 class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
-	private $settings;
-	private $conf;
-	private $config;
+	private array $settings;
+	private SiteConfiguration $config;
 
 	/**
 	 * @var string original value of $wmgDatacenter

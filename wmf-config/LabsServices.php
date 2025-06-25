@@ -34,6 +34,10 @@ return [
 			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
 			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
 		],
+		// deployment-prep doesn't have dns discovery
+		'search-chi-dnsdisc' => null,
+		'search-psi-dnsdisc' => null,
+		'search-omega-dnsdisc' => null,
 		// cloudelastic is not duplicated in labs, it is a write-only cluster and multi-cluster
 		// is sufficiently tested with the clusters above.
 		'cloudelastic-chi' => null,

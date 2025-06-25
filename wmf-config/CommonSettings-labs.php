@@ -145,12 +145,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgContentTranslationTranslateInTarget = false;
 	}
 
-	if ( $wmgUseIPInfo ) {
-		// This allows admins on beta to test the feature.
-		$wgGroupPermissions['sysop']['ipinfo'] = true;
-		$wgGroupPermissions['sysop']['ipinfo-view-basic'] = true;
-	}
-
 	if ( $wmgUseCentralNotice ) {
 		// Emit CSP headers on banner previews. This can go away when full CSP
 		// support (T135963) is deployed.
@@ -183,7 +177,7 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseUrlShortener ) {
 		// Labs overrides
 		$wgUrlShortenerReadOnly = false;
-		$wgUrlShortenerServer = 'w-beta.wmflabs.org';
+		$wgUrlShortenerServer = 'w.beta.wmcloud.org';
 		$wgUrlShortenerEnableSidebar = true;
 		$wgUrlShortenerAllowedDomains = [
 			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
@@ -372,9 +366,7 @@ if ( $wmgRealm == 'labs' ) {
 		$wgFileImporterCodexMode = true;
 	}
 
-	if ( $wmgUseEventBus ) {
-		$wgEventBusEnableRunJobAPI = true;
-	}
+	$wgEventBusEnableRunJobAPI = true;
 
 	if ( $wmgUseStopForumSpam ) {
 		wfLoadExtension( 'StopForumSpam' );
@@ -482,14 +474,31 @@ if ( $wmgRealm == 'labs' ) {
 		wfLoadExtension( 'CommunityRequests' );
 	}
 
+	if ( !$wmgUseCheckUser ) {
+		unset( $wgGroupPermissions['checkuser'] );
+	}
+
 	// IP Masking / Temporary accounts
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
 
-	// Remove any references to the temporary-account-viewer group, as this group is only present when CheckUser is
-	// installed which it is not on the beta clusters. This means removing the group definition and the auto-promotion
-	// conditions for the group.
-	unset( $wgGroupPermissions['temporary-account-viewer'] );
+	if ( !$wmgUseCheckUser ) {
+		// Remove any references to the temporary-account-viewer group, as this group is only present when CheckUser is
+		// installed which it is not on the beta clusters. This means removing the group definition and the auto-promotion
+		// conditions for the group.
+		unset( $wgGroupPermissions['temporary-account-viewer'] );
+
+		// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
+		// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
+		$rightsToRemoveOnBeta = [ 'checkuser-temporary-account', 'checkuser-temporary-account-no-preference' ];
+		foreach ( $wgGroupPermissions as $group => $permissions ) {
+			foreach ( $rightsToRemoveOnBeta as $rightToCheck ) {
+				if ( array_key_exists( $rightToCheck, $permissions ) ) {
+					$wgGroupPermissions[$group][$rightToCheck] = false;
+				}
+			}
+		}
+	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';

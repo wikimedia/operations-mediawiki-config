@@ -633,13 +633,10 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
-	global $wmgMasterDatacenter, $wmgEtcdLastModifiedIndex, $wmgCirrusSearchDefaultCluster,
-		$wgCirrusSearchDefaultCluster;
+	global $wmgMasterDatacenter, $wmgEtcdLastModifiedIndex;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmgMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmgEtcdLastModifiedIndex,
-		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
-		'wgCirrusSearchDefaultCluster' => $wgCirrusSearchDefaultCluster,
 	];
 };
 
@@ -784,6 +781,9 @@ $wgPasswordConfig['pbkdf2'] = [
 
 // Temporary for T57420
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
+
+// Used for compromised accounts so they can do a password reset
+$wgPasswordConfig['scrambled'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 //
@@ -2046,6 +2046,13 @@ if ( $wmgUseCentralAuth ) {
 		$wgCookiePrefix = 'auth';
 		$wgSessionName = 'authSession';
 		$wgWebAuthnNewCredsDisabled = false;
+
+		// T395185: Enable sending client hints data on shared domain for all requests.
+		// This domain has restricted actions only to the authentication workflow,
+		// so we won't be collecting client hints data for actions that are not
+		// supposed to be collected.
+		$wgCheckUserClientHintsEnabled = true;
+		$wgCheckUserAlwaysSetClientHintHeaders = true;
 	}
 
 	/**
@@ -2215,7 +2222,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
 		'class' => ApiFeatureUsageQueryEngineElastica::class,
-		'serverList' => $wmgLocalServices['search-chi'],
+		'serverList' => $wmgLocalServices['search-chi-dnsdisc'],
 	];
 }
 
@@ -2268,6 +2275,24 @@ function wmfGetPrivilegedGroups( $user ) {
 	return $groups;
 }
 
+$wgHooks['GetSecurityLogContext'][] = static function ( array $info, array &$context ) {
+	/** @var WebRequest $request */
+	$request = $info['request'];
+	/** @var ?UserIdentity $user */
+	$user = $info['user'] ?? null;
+
+	$context += [
+		'geocookie' => $request->getCookie( 'GeoIP', '' ),
+	];
+	if ( $user ) {
+		$privilegedGroups = wmfGetPrivilegedGroups( $user );
+		$context += [
+			'user_is_privileged' => (bool)$privilegedGroups,
+			'user_privileged_groups' => implode( ', ', $privilegedGroups ),
+		];
+	}
+};
+
 // log suspicious or sensitive login attempts
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $user, $username ) {
 	$guessed = false;
@@ -2284,30 +2309,28 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $
 	}
 
 	global $wgRequest;
-	$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
+	$context = $wgRequest->getSecurityLogContext( $user );
+	$privileged = $context['user_is_privileged'];
 	$successful = $response->status === AuthenticationResponse::PASS;
-	$privGroups = wmfGetPrivilegedGroups( $user );
 
 	$channel = $successful ? 'goodpass' : 'badpass';
-	if ( $privGroups ) {
+	if ( $privileged ) {
 		$channel .= '-priv';
 	}
 	$logger = LoggerFactory::getInstance( $channel );
 	$verb = $successful ? 'succeeded' : 'failed';
 
-	$logger->info( "Login $verb for {priv} {name} from {clientip} - {xff} - {ua} - {geocookie}: {messagestr}", [
+	$logger->info( "Login $verb for {priv} {user} from {clientIp} - {ua} - {geocookie}: {messagestr}", [
 		'successful' => $successful,
-		'groups' => implode( ', ', $privGroups ),
-		'priv' => ( $privGroups ? 'elevated' : 'normal' ),
-		'name' => $user->getName(),
-		'clientip' => $wgRequest->getIP(),
-		'xff' => @$headers['X-Forwarded-For'],
-		'ua' => @$headers['User-Agent'],
+		// Backwards compatibility
+		'name' => $context['user'],
+		// Backwards compatibility
+		'clientip' => $context['clientIp'],
+		'priv' => ( $privileged ? 'elevated' : 'normal' ),
 		'guessed' => $guessed,
 		'msgname' => $response->message ? $response->message->getKey() : '-',
 		'messagestr' => $response->message ? $response->message->inLanguage( 'en' )->text() : '',
-		'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
-	] );
+	] + $context );
 };
 
 // log sysop password changes
@@ -2318,22 +2341,18 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = static function ( $req, $status ) 
 		->getUserIdentityByName( $req->username );
 	$status = Status::wrap( $status );
 	if ( $req instanceof PasswordAuthenticationRequest ) {
-		$privGroups = wmfGetPrivilegedGroups( $user );
-		$priv = ( $privGroups ? 'elevated' : 'normal' );
-		if ( $priv === 'elevated' ) {
-			$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
-
+		$context = $wgRequest->getSecurityLogContext( $user );
+		$privileged = $context['user_is_privileged'];
+		if ( $privileged ) {
 			$logger = LoggerFactory::getInstance( 'badpass' );
-			$logger->info( 'Password change in prefs for {priv} {name}: {status} - {clientip} - {xff} - {ua} - {geocookie}', [
-				'name' => $user->getName(),
-				'groups' => implode( ', ', $privGroups ),
-				'priv' => $priv,
+			$logger->info( 'Password change in prefs for {priv} {user}: {status} - {clientIp} - {ua} - {geocookie}', [
+				// Backwards compatibility
+				'name' => $context['user'],
+				// Backwards compatibility
+				'clientip' => $context['clientIp'],
+				'priv' => ( $privileged ? 'elevated' : 'normal' ),
 				'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
-				'clientip' => $wgRequest->getIP(),
-				'xff' => @$headers['X-Forwarded-For'],
-				'ua' => @$headers['User-Agent'],
-				'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
-			] );
+			] + $context );
 		}
 	}
 };
@@ -3035,22 +3054,24 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
 		$wgTranslateTranslationDefaultService = 'default';
-
-		// If the downtime is long (> 10mins) consider disabling
-		// mirroring in this var to avoid logspam about ttm updates
-		// then plan to refresh this index via ttmserver-export when
-		// it's back up.
-		// NOTE: these settings are also used for the labs cluster
-		// where codfw may not be available
 		$translateServices = [
-			// Switch to 'eqiad' or 'codfw' if you plan to bring down
-			// the elastic cluster equals to $wmgDatacenter
-			'default' => [ 'service' => 'codfw', 'writable' => false ],
-			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
-			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
+			'default' => [
+				// dnsdisc doesn't exist in the deployment-prep cluster
+				'service' => $wmgLocalServices['search-chi-dnsdisc'] ?? $wmgAllServices['eqiad']['search-chi'],
+				'writable' => false,
+			],
+			'eqiad' => [
+				'service' => $wmgAllServices['eqiad']['search-chi'],
+				'writable' => true,
+			],
+			'codfw' => [
+				// codfw doesn't exist in the deployment-prep cluster
+				'service' => $wmgAllServices['codfw']['search-chi'] ?? null,
+				'writable' => true,
+			],
 		];
 		foreach ( $translateServices as $service => $conf ) {
-			if ( !isset( $wmgAllServices[$conf['service']]['search-chi'] ) ) {
+			if ( $conf['service'] === null ) {
 				continue;
 			}
 			// see https://www.mediawiki.org/wiki/Help:Extension:Translate/Translation_memories#Configuration
@@ -3066,14 +3087,16 @@ if ( $wmgUseTranslate ) {
 				'config' => [
 					'servers' => array_map( static function ( $hostConfig ) {
 						if ( is_array( $hostConfig ) ) {
+							// production services
 							return $hostConfig;
 						}
+						// deployment-prep
 						return [
 							'host' => $hostConfig,
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmgAllServices[$conf['service']]['search-chi'] ),
+					}, $conf['service'] ),
 				],
 			];
 		}
@@ -3126,27 +3149,6 @@ if ( $wmgUseTranslationNotifications ) {
 
 if ( $wmgUseFundraisingTranslateWorkflow ) {
 	wfLoadExtension( 'FundraisingTranslateWorkflow' );
-}
-
-if ( $wmgUseVips ) {
-	wfLoadExtension( 'VipsScaler' );
-	$wgVipsOptions = [
-		[
-			'conditions' => [
-				'mimeType' => 'image/png',
-				'minArea' => 2e7,
-			],
-		],
-		[
-			'conditions' => [
-				'mimeType' => 'image/tiff',
-				'minShrinkFactor' => 1.2,
-				'minArea' => 5e7,
-			],
-			'sharpen' => [ 'sigma' => 0.8 ],
-		],
-	];
-
 }
 
 if ( $wmgUseShortUrl ) {
@@ -3848,6 +3850,13 @@ if ( $wmgUseGraph ) {
 		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
 	}
 
+	/**
+	 * @param ?string $input
+	 * @param array $args
+	 * @param Parser $parser
+	 * @param PPFrame $frame
+	 * @return string
+	 */
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		// Add tracking categories
 		$parser->addTrackingCategory( 'graph-tracking-category' );
@@ -3997,7 +4006,7 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 
 	if ( $wmgUseCentralAuth ) {
-		$wgOATHAuthAccountPrefix = 'Wikimedia';
+		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
 	}
 
@@ -4174,28 +4183,13 @@ if ( $wmgUseCheckUser ) {
 
 	// Force redirect of all wikis' Special:GlobalContributions pages to meta's (T376612)
 	$wgCheckUserGlobalContributionsCentralWikiId = 'metawiki';
-}
 
-if ( $wmgUseIPInfo ) {
-	wfLoadExtension( 'IPInfo' );
-	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
-	// It is only present on application servers. See
-	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
-	// for list of relevant sections of operations/puppet config.
-	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIPInfo/GeoLite2-';
-
-	// Consult the Legal team before updating these, since they
-	// must remain compatible with our contract with MaxMind
-
-	$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
-	$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
-
-	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
-
-	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
-	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
-
-	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
+	// UserInfoCard
+	if ( $wgDBname === 'testwiki' ) {
+		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
+			[ '1', [ CUDCOND_NAMED ] ]
+		];
+	}
 }
 
 if ( $wmgUseIPReputation ) {
@@ -4239,11 +4233,30 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	}
 }
 
+// T393615
+$wgCheckUserGroupRequirements = [
+	'temporary-account-viewer' => [
+		'edits' => 300,
+		'age' => 86400 * 30 * 6,
+		'exemptGroups' => [ 'steward' ],
+		'reason' => 'checkuser-group-requirements-temporary-account-viewer',
+	],
+];
+
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
 
 if ( $wmgUseCentralAuth ) {
+	// Ensure users in certain local and global groups are automatically promoted to and demoted from
+	// the global temporary account viewer group (T376315). Note that the global groups in the array
+	// keys must not have local groups with the same name, and vice-versa.
+	$wgCentralAuthAutomaticGlobalGroups = [
+		'checkuser' => [ 'global-temporary-account-viewer' ], // local checkuser group
+		'suppress' => [ 'global-temporary-account-viewer' ], // local suppress group
+		'global-sysop' => [ 'global-temporary-account-viewer' ],
+	];
+
 	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
 	// uses a unique serial number across all wikis. This will have no effect if
 	// `$wgAutoCreateTempUser['enabled']` is false.
@@ -4296,6 +4309,42 @@ if ( $wmgUseRC2UDP ) {
 
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
+if ( $wmgUseIPInfo ) {
+	wfLoadExtension( 'IPInfo' );
+	// n.b. if you are looking for this path on mwmaint or deployment servers, you will not find it.
+	// It is only present on application servers. See
+	// https://codesearch.wmcloud.org/search/?q=GeoIPInfo&files=&excludeFiles=&repos=#operations/puppet
+	// for list of relevant sections of operations/puppet config.
+	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIPInfo/GeoLite2-';
+
+	// On wikis with temporary accounts, grant full access to members of the "temporary-account-viewer"
+	// group provided by CheckUser to ensure that access to IP information reflects our policy (T375086).
+	// On Beta Cluster wikis, which do not have CheckUser installed, this amounts to making the feature
+	// admin-only.
+	// Keep full access for autoconfirmed users on wikis where temporary accounts are not known
+	// to avoid disruption.
+	if ( $wgAutoCreateTempUser['known'] ) {
+		if ( $wmgUseCheckUser ) {
+			$wgGroupPermissions['temporary-account-viewer']['ipinfo'] = true;
+			$wgGroupPermissions['temporary-account-viewer']['ipinfo-view-full'] = true;
+		}
+	} else {
+		$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
+		$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
+	}
+
+	$wgGroupPermissions['sysop']['ipinfo'] = true;
+	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
+
+	if ( $wmgUseCheckUser ) {
+		$wgGroupPermissions['checkuser']['ipinfo'] = true;
+		$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
+		$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
+	}
+
+	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
+}
+
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
@@ -4304,48 +4353,44 @@ if ( $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'QuickSurveys' );
 }
 
-if ( $wmgUseEventBus ) {
-	wfLoadExtension( 'EventBus' );
+wfLoadExtension( 'EventBus' );
 
-	// For analytics purposes, we forward the X-Client-IP header to eventgate.
-	// eventgate will use this to set a default http.client_ip in event data when relevant.
-	// https://phabricator.wikimedia.org/T288853
-	//
-	// NOTE: if you change request timeout values here, you should
-	// also change eventgate timeout and prestop_sleep settings.
-	// - https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/fd8492c76352ac48d07ebb8d950d3281b91181fa/charts/eventgate/values.yaml#59
-	// - https://phabricator.wikimedia.org/T349823
-	$wgEventServices = [
-		'eventgate-analytics' => [
-			'url' => "{$wmgLocalServices['eventgate-analytics']}/v1/events?hasty=true",
-			'timeout' => 11,
-			'x_client_ip_forwarding_enabled' => true,
-		],
-		'eventgate-analytics-external' => [
-			'url' => "{$wmgLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
-			'timeout' => 11,
-			'x_client_ip_forwarding_enabled' => true,
-		],
-		'eventgate-main' => [
-			'url' => "{$wmgLocalServices['eventgate-main']}/v1/events",
-			'timeout' => 62, // envoy overall req timeout + 1
-		]
-	];
+// For analytics purposes, we forward the X-Client-IP header to eventgate.
+// eventgate will use this to set a default http.client_ip in event data when relevant.
+// https://phabricator.wikimedia.org/T288853
+//
+// NOTE: if you change request timeout values here, you should
+// also change eventgate timeout and prestop_sleep settings.
+// - https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/fd8492c76352ac48d07ebb8d950d3281b91181fa/charts/eventgate/values.yaml#59
+// - https://phabricator.wikimedia.org/T349823
+$wgEventServices = [
+	'eventgate-analytics' => [
+		'url' => "{$wmgLocalServices['eventgate-analytics']}/v1/events?hasty=true",
+		'timeout' => 11,
+		'x_client_ip_forwarding_enabled' => true,
+	],
+	'eventgate-analytics-external' => [
+		'url' => "{$wmgLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
+		'timeout' => 11,
+		'x_client_ip_forwarding_enabled' => true,
+	],
+	'eventgate-main' => [
+		'url' => "{$wmgLocalServices['eventgate-main']}/v1/events",
+		'timeout' => 62, // envoy overall req timeout + 1
+	]
+];
 
-	$wgRCFeeds['eventbus'] = [
-		'formatter' => EventBusRCFeedFormatter::class,
-		'class' => EventBusRCFeedEngine::class,
-	];
+$wgRCFeeds['eventbus'] = [
+	'formatter' => EventBusRCFeedFormatter::class,
+	'class' => EventBusRCFeedEngine::class,
+];
 
-	if ( $wmgUseClusterJobqueue ) {
-		$wgJobTypeConf['default'] = [
-			'class' => JobQueueEventBus::class,
-			'readOnlyReason' => false
-		];
-	}
+$wgJobTypeConf['default'] = [
+	'class' => JobQueueEventBus::class,
+	'readOnlyReason' => false
+];
 
-	$wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
-}
+$wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
 
 if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
@@ -4460,16 +4505,30 @@ if ( $wmgUseGrowthExperiments ) {
 				[ 'local-user-bucket-growth', 'surfacing-structured-task', 100 ],
 			],
 		];
+	} elseif ( $wmgGEActiveExperiment === 'get-started-notification' ) {
+		// Get Started experiment, T394958
+		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
+			[ 'get-started-notification',
+				[ 'user-bucket-growth', 'get-started-notification', 50 ],
+				[ CUDCOND_AFTER, '20250624000000' ],
+			],
+			[ 'control',
+				[ 'user-bucket-growth', 'get-started-notification', 100 ],
+			],
+		];
 	}
 }
 
 if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
-	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
 
-	$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
+	if ( $wgWikiLambdaEnableRepoMode ) {
+		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
+		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
+		$wgWikiLambdaPersistBackendCache = true;
+	}
 }
 
 if ( $wmgUseWikistories ) {

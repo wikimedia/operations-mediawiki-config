@@ -55,7 +55,7 @@ function wmfSetupEtcd( $etcdHost ) {
  * @param array &$lbFactoryConf LBFactoryConf array to be updated using $localDbConfig
  */
 function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
-	global $wmgRemoteMasterDbConfig, $wmgPCServers, $wmgMainStashServers;
+	global $wmgRemoteMasterDbConfig, $wmgPCServers, $wmgMainStashServers, $wgDefaultExternalStore;
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
 	$lbFactoryConf['groupLoadsBySection'] = $localDbConfig['groupLoadsBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
@@ -130,6 +130,15 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		}
 
 		foreach ( $externalStoreAliasesByCluster[$dbctlCluster] as $mwLoadName ) {
+			// If the ES section is set to RO, remove any registered cluster from "write clusters"
+			if (
+				array_key_exists( $dbctlCluster, $localDbConfig['readOnlyBySection'] ) &&
+				in_array( 'DB://' . $mwLoadName, $wgDefaultExternalStore ) &&
+				count( $wgDefaultExternalStore ) > 1
+			) {
+				$wgDefaultExternalStore = array_values( array_diff( $wgDefaultExternalStore, [ 'DB://' . $mwLoadName ] ) );
+			}
+
 			$lbFactoryConf['externalLoads'][$mwLoadName] = $loadByHost;
 		}
 	}

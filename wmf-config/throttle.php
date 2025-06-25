@@ -35,41 +35,7 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T394639 - Leeds University 21 May
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-05-21T11:00 +0:00',
-	'to' => '2024-05-21T16:59 +0:00',
-	'IP' => '194.80.232.29',
-	'dbname' => [ 'commonswiki', 'enwiki' ],
-	'value' => 40,
-];
-
 // T391999 - 7 Edit-a-thons at Universidad Nacional de La Plata
-
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-05-20T12:45 -3:00',
-	'to' => '2025-05-20T19:15 -3:00',
-	'IP' => '163.10.23.201',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 60,
-];
-
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-06-03T12:45 -3:00',
-	'to' => '2025-06-03T19:15 -3:00',
-	'IP' => '163.10.23.201',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 60,
-];
-
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-06-10T12:45 -3:00',
-	'to' => '2025-06-10T19:15 -3:00',
-	'IP' => '163.10.23.201',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 60,
-];
-
 $wmgThrottlingExceptions[] = [
 	'from' => '2025-06-17T12:45 -3:00',
 	'to' => '2025-06-17T19:15 -3:00',
@@ -111,4 +77,21 @@ $wmgThrottlingExceptions[] = [
 	'value' => 30,
 ];
 
+// T396128
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-16T08:00 +0:00',
+	'to' => '2025-06-16T18:15 +0:00',
+	'IP' => '82.219.32.157',
+	'dbname' => [ 'enwiki' ],
+	'value' => 40,
+];
+
+// T396980 - wikipedia workshop - cs.wikipedia on 19June2025
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-06-19T13:00 +2:00',
+	'to' => '2025-06-19T20:30 +2:00',
+	'IP' => '78.128.191.240',
+	'dbname' => [ 'commonswiki', 'cswiki', 'enwiki' ],
+	'value' => 60,
+];
 ## Add throttling definitions above.

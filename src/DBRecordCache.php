@@ -38,6 +38,9 @@ class DBRecordCache {
 		$this->cache = [];
 	}
 
+	/**
+	 * @param string $section
+	 */
 	public function setDefaultSectionName( $section ) {
 		$this->defaultSectionName = $section;
 	}

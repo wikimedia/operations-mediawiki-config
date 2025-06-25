@@ -93,6 +93,9 @@ class XWikimediaDebug {
 		return $this->options[$optName] ?? null;
 	}
 
+	/**
+	 * @return int
+	 */
 	protected function time() {
 		return time();
 	}

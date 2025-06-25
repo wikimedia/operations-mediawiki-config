@@ -275,11 +275,6 @@ function wmfGetLoggingConfig() {
 			'logstash' => ( $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
 		];
 
-		// Sampled logs are never passed to logstash
-		if ( $opts['sample'] !== false ) {
-			$opts['logstash'] = false;
-		}
-
 		$handlers = [];
 
 		if ( $opts['udp2log'] ) {

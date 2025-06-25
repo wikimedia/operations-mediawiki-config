@@ -60,6 +60,7 @@ class WmfConfig {
 		'commonsuploads',
 		'lockeddown',
 		'group0',
+		'group1-wikipedia',
 		'group1',
 		'wikitech',
 		'nonecho',
@@ -73,9 +74,6 @@ class WmfConfig {
 		'wikifunctionsclient',
 		'growthexperiments',
 		'parsoidrendered',
-		'charts-phase1',
-		'charts-phase2',
-		'charts-phase3',
 		'ores',
 	];
 

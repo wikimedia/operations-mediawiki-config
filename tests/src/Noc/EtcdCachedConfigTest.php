@@ -2,7 +2,7 @@
 require_once __DIR__ . '/TestableCachedConfig.php';
 
 class EtcdCachedConfigTest extends PHPUnit\Framework\TestCase {
-	private $etcdConfig;
+	private TestableCachedConfig $etcdConfig;
 
 	protected function setUp(): void {
 		parent::setUp();

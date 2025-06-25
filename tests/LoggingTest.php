@@ -62,9 +62,9 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 				[ 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ],
 			],
 
-			'can enable sampling, which disables logstash' => [
+			'can enable sampling' => [
 				[ 'sample' => 1000 ],
-				[ 'failuregroup|udp2log-debug-sampled-1000' ],
+				[ 'failuregroup|udp2log-debug-sampled-1000|logstash-info-sampled-1000' ],
 			],
 
 			'false yields no handlers' => [

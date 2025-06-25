@@ -26,7 +26,7 @@ if ( !$fileName || !file_exists( $fileName ) ) {
 
 $lastModified = date( 'D, d M Y H:m:s T', filemtime( $fileName ) );
 // Cache the value for 5 minutes.
-wmfNocHeader( 'Cache-control: max-age: 300, s-maxage: 300, must-revalidate' );
+wmfNocHeader( 'Cache-control: max-age=300, s-maxage=300, must-revalidate' );
 wmfNocHeader( 'Last-Modified: ' . $lastModified );
 wmfNocHeader( 'Content-type: text/plain' );
 echo file_get_contents( $fileName );

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
+	<rule ref="Generic.Files.LineLength.TooLong">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
+		<properties>
+			<property name="ignoreList" type="array" value="$IP" />
+			<property name="allowedPrefixes" type="array" value="wg,wmg" />
+		</properties>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.PrefixedGlobalFunctions">
+		<properties>
+			<property name="allowedPrefixes" type="array" value="wg,wmf" />
+		</properties>
+	</rule>
+
+	<file>.</file>
+	<arg name="encoding" value="utf8"/>
+	<arg name="extensions" value="php"/>
+	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
+	<!-- Symlinks -->
+	<exclude-pattern type="relative">^w/404\.php</exclude-pattern>
+	<exclude-pattern type="relative">^docroot/wwwportal/w/404\.php</exclude-pattern>
+	<!-- Git sub repos -->
+	<exclude-pattern type="relative">^portals/</exclude-pattern>
+	<exclude-pattern type="relative">^lib/excimer-ui-client/</exclude-pattern>
+	<!-- Auto generated files -->
+	<exclude-pattern type="relative">^dblists-index\.php</exclude-pattern>
+	<exclude-pattern type="relative">^wmf-config/interwiki\.php</exclude-pattern>
+	<exclude-pattern type="relative">^wmf-config/interwiki-labs\.php</exclude-pattern>
+</ruleset>

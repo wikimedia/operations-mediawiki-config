@@ -440,6 +440,21 @@ switch ( $wgDBname ) {
 	case 'srwiki':
 		$wgAbuseFilterActions['block'] = true; // T349727
 		break;
+	case 'srwikibooks':
+		$wgAbuseFilterActions['block'] = true; // T392363
+		break;
+	case 'srwikinews':
+		$wgAbuseFilterActions['block'] = true; // T392363
+		break;
+	case 'srwikisource':
+		$wgAbuseFilterActions['block'] = true; // T392363
+		break;
+	case 'srwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T392363
+		break;
+	case 'srwiktionary':
+		$wgAbuseFilterActions['block'] = true; // T392363
+		break;
 	case 'testwiki':
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterAnonBlockDuration = '24 hours';

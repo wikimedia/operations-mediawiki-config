@@ -35,6 +35,7 @@ $IP/extensions/CommunityConfiguration/extension.json
 $IP/extensions/CommunityRequests/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
+$IP/extensions/ConfirmEdit/hCaptcha/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/CreditsSource/extension.json
@@ -165,7 +166,6 @@ $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
-$IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VueTest/extension.json
 $IP/extensions/WebAuthn/extension.json

@@ -1199,6 +1199,8 @@ return [
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
+		'Draft' => 118, // T396551
+		'Draft_talk' => 119,
 	],
 	'+mrwikibooks' => [
 		'Wikibooks_talk' => NS_PROJECT_TALK, // T73774
@@ -1211,8 +1213,9 @@ return [
 		'Author_talk' => 103,
 	],
 	'+mswiki' => [
+		'Portal' => 100, // T394603
 		'Portal_talk' => 101,
-		'Perbualan_Portal' => 101,
+		'Perbincangan_portal' => 101, // T394603
 	],
 	'+mswikibooks' => [
 		'Perbualan_Resipi' => 101,
@@ -1469,6 +1472,8 @@ return [
 		'Ш' => NS_TEMPLATE, // T196719
 		'К' => NS_CATEGORY, // T196719
 		'М' => 828, // T196719
+		'Author' => 102, // T395193
+		'Author_talk' => 103, // T395193
 
 	],
 	'ruwikiquote' => [
@@ -3050,6 +3055,8 @@ return [
 	'mrwiki' => [
 		100 => 'दालन',
 		101 => 'दालन_चर्चा',
+		118 => 'मसूदा', // T396551 - Draft
+		119 => 'मसूदा_चर्चा',
 	],
 	'mtwiki' => [
 		100 => 'Portal',
@@ -3713,6 +3720,10 @@ return [
 	'rowikisource' => [
 		102 => 'Autor',
 		103 => 'Discuție_Autor',
+	],
+	'ruwikisource' => [
+		102 => 'Автор', // T395193 - Author
+		103 => 'Обсуждение_автора',
 	],
 	'sawikisource' => [
 		100 => 'प्रवेशद्वारम्', // T235343 - Portal
@@ -5032,6 +5043,10 @@ return [
 		118 => 'noindex,nofollow',
 		119 => 'noindex,nofollow',
 	],
+	'mrwiki' => [ // Draft - T396551
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
+	],
 	'mywiki' => [ // T352424
 		118 => 'noindex,nofollow', // Draft
 		119 => 'noindex,nofollow', // Draft_talk
@@ -5364,7 +5379,7 @@ return [
 	'+ptwikisource' => [ 102 => 1, 104 => 1 ],
 	'+rowikisource' => [ 102 => 1, 106 => 1 ], // T31190
 	'+ruwikibooks' => [ 104 => 1 ], // Recipe, T341708
-	'+ruwikisource' => [ 106 => 1 ],
+	'+ruwikisource' => [ 102 => 1, 104 => 1, 106 => 1 ], // T395632
 	'+ruwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+sewikimedia' => [ 100 => 1 ], // T48882
 	'+slwikisource' => [ 104 => 1 ],

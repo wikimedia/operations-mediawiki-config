@@ -8,15 +8,8 @@ use CirrusSearch\LanguageDetector\TextCat;
 
 return [
 
-// NOTE: don't forget to update TTM default cluster via
-// $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
-// bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => 'codfw',
-],
-// Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
-'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'codfw',
+	'default' => 'dnsdisc',
 ],
 
 'wgCirrusSearchClusterOverrides' => [
@@ -26,11 +19,6 @@ return [
 'wgCirrusSearchWriteClusters' => [
 	'default' => [
 		// T363475: Writes shifted to SUP, archive writes remain.
-		'default' => [],
-		'archive' => [ 'eqiad', 'codfw' ],
-	],
-	// private wikis don't write to cloudelastic
-	'private' => [
 		'default' => [],
 		'archive' => [ 'eqiad', 'codfw' ],
 	],
@@ -653,37 +641,18 @@ return [
 	'nlwiki' => 'phrase_suggest_and_language_detection',
 	'ptwiki' => 'phrase_suggest_and_language_detection',
 	'ruwiki' => 'phrase_suggest_and_language_detection',
-	// Glent M0 & PhraseSuggest & Language detection
-	'dewiki' => 'phrase_suggest_glentM0_and_langdetect',
-	'enwiki' => 'phrase_suggest_glentM0_and_langdetect',
-	'frwiki' => 'phrase_suggest_glentM0_and_langdetect',
+	// Glent M0, M1, PhraseSuggest, and Language detection
+	'dewiki' => 'phrase_suggest_glentM01_and_langdetect',
+	'enwiki' => 'phrase_suggest_glentM01_and_langdetect',
+	'frwiki' => 'phrase_suggest_glentM01_and_langdetect',
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		// T385972
-		'mlr-2025-02' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-				],
-				'mlr-2025-02' => [
-					'trigger' => 'mlr-2025-02',
-					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-next',
-					],
-				],
-				'mlr-2025-02i' => [
-					'trigger' => 'mlr-2025-02i',
-					'globals' => [
-						'wgCirrusSearchInterleaveConfig' => [
-							'CirrusSearchRescoreProfile' => 'mlr-1024rs-next',
-						]
-					],
-				],
-			],
-		],
-	],
+	'default' => [],
+],
+
+'wgCirrusSearchActiveTest' => [
+	'default' => null,
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
@@ -997,17 +966,10 @@ return [
 	]
 ],
 
-# Enable the ores_articletopics field
-'wgCirrusSearchWMFExtraFeatures' => [
+'wgCirrusSearchWeightedTags' => [
 	'default' => [
-		'ores_articletopics' => [
-			'build' => true,
-			'use' => true,
-		],
-		'weighted_tags' => [
-			'build' => true,
-			'use' => true,
-		]
+		'build' => true,
+		'use' => true,
 	]
 ],
 

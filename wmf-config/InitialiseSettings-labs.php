@@ -99,7 +99,6 @@ function wmfGetOverrideSettings() {
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
@@ -123,7 +122,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
@@ -222,20 +220,6 @@ function wmfGetOverrideSettings() {
 						],
 					]
 				],
-				// DEVELOPMENT ONLY: X-Experiment-Enrollments handling beta cluster EventGate (T391959)
-				'product_metrics.web_base.experiment_enrollment_handling.dev0' => [
-					'schema_title' => 'analytics/product_metrics/web/base',
-					'destination_event_service' => 'eventgate-analytics-external',
-					'canary_events_enabled' => false,
-					'producers' => [
-						'eventgate' => [
-							'enrich_fields_from_http_headers' => [
-								'http.request_headers.user-agent' => false,
-							],
-							'use_edge_uniques' => true,
-						],
-					],
-				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
@@ -305,8 +289,34 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wmgUseMetricsPlatform' => [
+		// See T393918.
+		'wgMetricsPlatformEnableExperiments' => [
 			'default' => true,
+		],
+
+		// See T393918.
+		'wgMetricsPlatformEnableExperimentOverrides' => [
+			'default' => true,
+		],
+
+		// See T393918 and T395342.
+		//
+		// This configures a temporary logged-in A/B experiment to test T393918 and T395342 end to
+		// end. The test matches the configuration for T395342 but with a higher sample rate to
+		// make it more likely that a user is enrolled in the experiment.
+		'wgMetricsPlatformExperiments' => [
+			'default' => [
+				[
+					'name' => 'sds2-4-11-synth-aa-test',
+					'groups' => [
+						'control',
+						'control-2',
+					],
+					'sample' => [
+						'rate' => 0.5,
+					],
+				],
+			],
 		],
 
 		// Log channels for beta cluster
@@ -598,6 +608,13 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
+		'wgMinervaTypeahead' => [
+			'default' => [
+				'enabled' => true,
+				'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+				'apiUrl' => '/w/rest.php',
+			],
+		],
 		'wgMinervaNightMode' => [
 			'default' => [
 				'base' => true,
@@ -695,6 +712,10 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
+		],
+
+		'wgVectorSearchRecommendationsApiUrl' => [
+			'default' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3'
 		],
 
 		///
@@ -1159,7 +1180,7 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 		'wgReadingListsAnonymizedPreviews' => [
-			'default' => false,
+			'default' => true,
 		],
 
 		'-wgPageCreationLog' => [
@@ -1242,6 +1263,10 @@ function wmfGetOverrideSettings() {
 		// Restore to default behaviour, unlike production config
 		'-wgCirrusSearchPrivateClusters' => [
 			'default' => null
+		],
+
+		'-wgCirrusSearchEnableEventBusWeightedTags' => [
+			'default' => false,
 		],
 
 		'-wgFileSchemaMigrationStage' => [
@@ -1336,7 +1361,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
-			'cswiki' => 'surfacing-structured-task',
 		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
@@ -1416,13 +1440,6 @@ function wmfGetOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
-		],
-		'wgGESurfacingStructuredTasksEnabled' => [
-			'cswiki' => true,
-			'enwiki' => true,
-		],
-		'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
-			'enwiki' => true,
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'default' => [
@@ -2378,6 +2395,14 @@ function wmfGetOverrideSettings() {
 			'private' => false,
 			'fishbowl' => false,
 		],
+		// T388434
+		'wgJsonConfigTransformsEnabled' => [
+			'default' => true,
+		],
+		// T388616
+		'wgChartTransformsEnabled' => [
+			'default' => true,
+		],
 		'wgParsoidFragmentSupport' => [
 			'default' => true,
 		],
@@ -2405,15 +2430,23 @@ function wmfGetOverrideSettings() {
 			'enwikisource' => false,
 			'enwikivoyage' => false,
 		],
+		// T362324
+		'-wgPHPSessionHandling' => [
+			'default' => 'disable',
+		],
 		// T377975
 		'-wgTemplateDataEnableDiscovery' => [
+			'default' => false,
+			'enwiki' => true,
+		],
+		// T377975
+		'-wgTemplateDataEnableCategoryBrowser' => [
 			'default' => false,
 			'enwiki' => true,
 		],
 		'-wmgOATHAuthDisableRight' => [
 			'default' => false,
 		],
-
 		'wgGEUserImpactMaxEdits' => [
 			'default' => 1000,
 			'eswiki' => 10000,
@@ -2422,5 +2455,12 @@ function wmfGetOverrideSettings() {
 			'default' => 1000,
 			'eswiki' => 10000,
 		],
+		'wgGENewcomerTasksStarterDifficultyEnabled' => [
+			'default' => true,
+		],
+		// T388685 temporary feature flag
+		'wmgWikibaseClientResolveWikibaseLabels' => [
+			'default' => true,
+		]
 	];
 } # wmfGetOverrideSettings()

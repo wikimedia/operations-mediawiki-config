@@ -13,14 +13,8 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'testwiki' => 'surfacing-structured-task', // T386739
-	'arzwiki' => 'surfacing-structured-task',
+	'testwiki' => 'get-started-notification',
 	'enwiki' => 'no-link-recommendation',
-	'eswiki' => 'surfacing-structured-task',
-	'fawiki' => 'surfacing-structured-task',
-	'frwiki' => 'surfacing-structured-task',
-	'idwiki' => 'surfacing-structured-task',
-	'ptwiki' => 'surfacing-structured-task',
 ],
 
 'wgGEImageRecommendationApiHandler' => [
@@ -382,18 +376,31 @@ return [
 
 'wgGESurfacingStructuredTasksEnabled' => [
 	'default' => false,
-	'testwiki' => true,
-	'arzwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'ptwiki' => true,
 ],
 
 'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
 	// Only enable in production after aligning with ServiceOps about T378536
 	'default' => false,
+],
+
+'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
+	'default' => 48 * 3600,
+	'arwiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+	'eswiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+	'frwiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
+	'testwiki' => [
+		'default' => 48 * 3600,
+		'get-started-notification' => 20 * 3600,
+	],
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [

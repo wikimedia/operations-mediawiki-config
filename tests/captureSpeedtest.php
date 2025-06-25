@@ -3,10 +3,6 @@
 $id = $argv[1] ?? '';
 $url = $argv[2] ?? '';
 
-if ( PHP_VERSION_ID < 80000 ) {
-	print "error: PHP 8.0+ required\n";
-	exit( 1 );
-}
 if ( !$url || count( $argv ) !== 3 ) {
 	print "usage: php {$argv[0]} <id> <url>\n";
 	exit( 1 );

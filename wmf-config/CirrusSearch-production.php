@@ -15,12 +15,17 @@
 #
 
 $wgCirrusSearchClusters = [
+	'dnsdisc-chi' => $wmgLocalServices['search-chi-dnsdisc'] + [ 'group' => 'chi', 'replica' => 'dnsdisc' ],
 	'eqiad-chi' => $wmgAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
 	'codfw-chi' => $wmgAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],
 	'cloudelastic-chi' => $wmgAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
+
+	'dnsdisc-psi' => $wmgLocalServices['search-psi-dnsdisc'] + [ 'group' => 'psi', 'replica' => 'dnsdisc' ],
 	'eqiad-psi' => $wmgAllServices['eqiad']['search-psi'] + [ 'group' => 'psi', 'replica' => 'eqiad' ],
 	'codfw-psi' => $wmgAllServices['codfw']['search-psi'] + [ 'group' => 'psi', 'replica' => 'codfw' ],
 	'cloudelastic-psi' => $wmgAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
+
+	'dnsdisc-omega' => $wmgLocalServices['search-omega-dnsdisc'] + [ 'group' => 'omega', 'replica' => 'dnsdisc' ],
 	'eqiad-omega' => $wmgAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
 	'codfw-omega' => $wmgAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
 	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],

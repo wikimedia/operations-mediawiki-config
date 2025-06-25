@@ -12,8 +12,8 @@ class CirrusTest extends WgConfTestCase {
 		// This is transformed from 'local' to 'unittest', but if it was set
 		// to a specific cluster and not 'local' this fails.
 		// $this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
-		// (2 DCs + 1 cloudelastic) * 3 ES clusters per
-		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
+		// (2 DCs + 1 cloudelastic + 1 dnsdisc) * 3 ES clusters per
+		$this->assertCount( 4 * 3, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes only via SUP, cirrus must not send writes.
 		$this->assertCount( 0, $config['wgCirrusSearchWriteClusters']['default'] );
@@ -50,27 +50,35 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		// (2 DCs + 1 cloudelastic) * 3 ES clusters per
-		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
+		// (2 DCs + 1 cloudelastic + 1 dnsdisc) * 3 ES clusters per
+		$this->assertCount( 4 * 3, $config['wgCirrusSearchClusters'] );
+		// dnsdisc is read only, only writable clusters should be listed
 		$this->assertCount( 3, $config['wgCirrusSearchShardCount'] );
 		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );
 
-		$dc_config_tested = 0;
+		$dcConfigSeen = [];
 		foreach ( $config['wgCirrusSearchClusters'] as $key => $clusterConf ) {
 			$this->assertArrayHasKey( 'replica', $clusterConf );
 			$this->assertArrayHasKey( 'group', $clusterConf );
-			if ( $clusterConf['group'] !== 'chi' ) {
-				// enwiki is chi, the test would pass but it seems
-				// weird to test unrelated groups.
-				continue;
+			if ( $clusterConf['group'] === 'chi' ) {
+				// enwiki is chi
+				$dcConfigSeen[] = $clusterConf['replica'];
 			}
-			$dc = $clusterConf['replica'];
-			$dc_config_tested += 1;
-			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchShardCount'] );
-			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
 		}
+		// Verify we have a dns-discovery cluster, then drop to simplify later tests
+		$this->assertContains( 'dnsdisc', $dcConfigSeen );
+		$dcConfigSeen = array_diff( $dcConfigSeen, [ 'dnsdisc' ] );
+
+		// The number of shards and replicas must be defined for all clusters.
+		$this->assertEqualsCanonicalizing(
+			$dcConfigSeen,
+			array_keys( $config['wgCirrusSearchShardCount'] ) );
+		$this->assertEqualsCanonicalizing(
+			$dcConfigSeen,
+			array_keys( $config['wgCirrusSearchReplicas'] ) );
+
 		// Test that we scanned the 2 dc's + cloudelastic for the group chi
-		$this->assertEquals( 3, $dc_config_tested );
+		$this->assertCount( 3, $dcConfigSeen );
 		// No writes performed by Cirrus, everything to SUP.
 		$this->assertCount( 0, $config['wgCirrusSearchWriteClusters']['default'] );
 		// archives still write to eqiad and codfw

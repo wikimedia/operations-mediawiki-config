@@ -6,6 +6,7 @@ use Wikimedia\MWConfig\DNSSRVRecord;
  * @covers \Wikimedia\MWConfig\DNSSRVRecord
  */
 class DNSSRVRecordTest extends TestCase {
+	/** @var DNSSRVRecord */
 	private $record;
 
 	public function setUp(): void {

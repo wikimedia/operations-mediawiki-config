@@ -128,6 +128,13 @@ Disallow: /
 User-agent: WebReaper
 Disallow: /
 
+# Per their statement, semrushbot respects crawl-delay directives
+# We want them to overall stay within reasonable request rates to
+# the backend (20 rps); keeping in mind that the crawl-delay will 
+# be applied by site and not globally by the bot, 5 seconds seem
+# like a reasonable approximation
+User-agent: SemrushBot
+Crawl-delay: 5
 
 #
 # Friendly, low-speed bots are welcome viewing article pages, but not

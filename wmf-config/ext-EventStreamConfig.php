@@ -723,6 +723,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'app_tabs_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'app_rabbit_holes' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -1688,6 +1692,28 @@ return [
 				],
 			],
 		],
+
+		// Staging version of the mediawiki.page_change stream.
+		// This stream is used for validation of https://phabricator.wikimedia.org/T391254
+		'mediawiki.page_change.staging.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			# When producing this stream to kafka, use a message key
+			# like { wiki_id: X, page_id: Y }.  X and Y will be
+			# obtained from the message value at wiki_id and page.page_id.
+			# See also: https://phabricator.wikimedia.org/T318846
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
+
 		// Declare version 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
@@ -2163,7 +2189,27 @@ return [
 			'schema_title' => 'analytics/external/wiki_highlights_experiment',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-
+		// Instrument for IP auto-reveal (T387600)
+		'mediawiki.product_metrics.checkuser_ip_auto_reveal_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'eventgate' => [
+				'enrich_fields_from_http_headers' => [
+					'http.request_headers.user-agent' => false,
+				],
+			],
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'performer_id',
+						'performer_name',
+						'performer_active_browsing_session_token',
+						'performer_session_id',
+						'agent_client_platform_family',
+					],
+				],
+			],
+		],
 		// Instrument for the Incident Reporting System (T372823)
 		'mediawiki.product_metrics.incident_reporting_system_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
@@ -2372,6 +2418,35 @@ return [
 				],
 			]
 		],
+		// (T386440) Instrument for the User Info Card
+		'mediawiki.product_metrics.user_info_card_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'eventgate' => [
+				'enrich_fields_from_http_headers' => [
+					'http.request_headers.user-agent' => false,
+				],
+			],
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_namespace',
+						'page_namespace_id',
+						'performer_active_browsing_session_token',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_language',
+						'performer_language_variant',
+						'performer_name',
+						'performer_registration_dt',
+						'performer_session_id',
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
+			],
+		],
 		// (T373967) App base stream configuration to support Metrics Platform's monotable
 		'product_metrics.app_base' => [
 			'schema_title' => 'analytics/product_metrics/app/base',
@@ -2401,6 +2476,9 @@ return [
 						'performer_is_logged_in',
 						'performer_is_temp',
 
+						// Enable the calculation of the "click-through per page visit" generic metric.
+						'performer_pageview_id',
+
 						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
 						// session ID" contextual attribute so that analysts can calculate all three flavors of
 						// click-through rate (see
@@ -2418,19 +2496,6 @@ return [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
 						// Don't collect the user agent
-						'http.request_headers.user-agent' => false,
-					],
-				],
-			],
-		],
-		// DEVELOPMENT ONLY: X-Experiment-Enrollments handling prod cluster EventGate (T391959)
-		'product_metrics.web_base.experiment_enrollment_handling.dev1' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'canary_events_enabled' => false,
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
 						'http.request_headers.user-agent' => false,
 					],
 					'use_edge_uniques' => true,
