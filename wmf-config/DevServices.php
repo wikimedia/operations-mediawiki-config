@@ -27,6 +27,7 @@ return [
 		'poolcounter' => '',
 		'urldownloader' => '',
 		'search-chi' => '',
+		'search-chi-dnsdisc' => '',
 		'restbase' => '',
 		'parsercache-dbs' => [],
 		'parsoid' => '',
