@@ -2318,13 +2318,17 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $
 	$logger = LoggerFactory::getInstance( $channel );
 	$verb = $successful ? 'succeeded' : 'failed';
 
-	$logger->info( "Login $verb for {priv} {name} from {clientip} - {ua} - {geocookie}: {messagestr}", [
+	$logger->info( "Login $verb for {priv} {user} from {clientIp} - {ua} - {geocookie}: {messagestr}", [
 		'successful' => $successful,
+		// Backwards compatibility
+		'name' => $context['user'],
+		// Backwards compatibility
+		'clientip' => $context['clientIp'],
 		'priv' => ( $privileged ? 'elevated' : 'normal' ),
 		'guessed' => $guessed,
 		'msgname' => $response->message ? $response->message->getKey() : '-',
 		'messagestr' => $response->message ? $response->message->inLanguage( 'en' )->text() : '',
-	] );
+	] + $context );
 };
 
 // log sysop password changes
@@ -2339,10 +2343,14 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = static function ( $req, $status ) 
 		$privileged = $context['user_is_privileged'];
 		if ( $privileged ) {
 			$logger = LoggerFactory::getInstance( 'badpass' );
-			$logger->info( 'Password change in prefs for {priv} {name}: {status} - {clientip} - {ua} - {geocookie}', [
+			$logger->info( 'Password change in prefs for {priv} {user}: {status} - {clientIp} - {ua} - {geocookie}', [
+				// Backwards compatibility
+				'name' => $context['user'],
+				// Backwards compatibility
+				'clientip' => $context['clientIp'],
 				'priv' => ( $privileged ? 'elevated' : 'normal' ),
 				'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
-			] );
+			] + $context );
 		}
 	}
 };
