@@ -167,7 +167,6 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/VisualEditor/extension.json
-$IP/extensions/VueTest/extension.json
 $IP/extensions/WebAuthn/extension.json
 $IP/extensions/Wikibase/extension-client.json
 $IP/extensions/Wikibase/extension-repo.json

@@ -4690,10 +4690,6 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosApiProxy = $wgCopyUploadProxy;
 }
 
-if ( $wmgUseVueTest ) {
-	wfLoadExtension( 'VueTest' );
-}
-
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
 }

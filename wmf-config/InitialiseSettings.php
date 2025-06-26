@@ -12349,11 +12349,6 @@ return [
 	'testwiki' => true,
 ],
 
-// Only for test wikis, do not enable this on non-test wikis
-'wmgUseVueTest' => [
-	'default' => false,
-],
-
 'wgSFSReportOnly' => [
 	'default' => true,
 	'eswikiversity' => false, // T331182
