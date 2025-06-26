@@ -3881,7 +3881,8 @@ Wikisource:
         comment_wordmark: 'T261076, T308620'
 Wikiversity:
     arwikiversity:
-        local_wordmark: true
+        commons_wordmark: 'File:Wikiversity-wordmark-ar.svg'
+        comment_wordmark: T397845
     betawikiversity:
         commons: 'File:Wikiversity-logo-beta-v2.svg'
         comment: T308604

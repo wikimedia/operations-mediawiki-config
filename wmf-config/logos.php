@@ -5077,10 +5077,10 @@ return [
 	],
 
 	// Wikiversity
-	'arwikiversity' => [
+	'arwikiversity' => [ // T397845
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-ar.svg',
-		'width' => 147,
-		'height' => 25,
+		'width' => 140,
+		'height' => 24,
 	],
 	'betawikiversity' => [
 		'src' => '/static/images/mobile/copyright/wikiversity-wordmark-beta.svg',
