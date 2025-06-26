@@ -12668,7 +12668,7 @@ return [
 	'mediawikiwiki' => true,
 ],
 
-// T388685 temporary feature flag
+// T388685: temporary feature flag
 'wmgWikibaseClientResolveWikibaseLabels' => [
 	'default' => false,
 ],
