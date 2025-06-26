@@ -6630,10 +6630,6 @@ return [
 	'wg_enwiki' => true,
 ],
 
-'wgVisualEditorEditCheckSingleCheckMode' => [
-	'default' => false, // T395519
-],
-
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
 	// T406134 addReference check a/b test
