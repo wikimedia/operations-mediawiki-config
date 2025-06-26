@@ -7482,6 +7482,9 @@ return [
 			'ku-latn' => 'Translate in ku please.',
 			'ku-arab' => 'Translate in ku please.',
 
+			'sh-cyrl' => 'Translate in sh please.', // T397913
+			'sh-latn' => 'Translate in sh please.', // T397913
+
 			'shi-tfng' => 'Translate in shi please.',
 			'shi-latn' => 'Translate in shi please.',
 
@@ -7519,6 +7522,9 @@ return [
 
 			'ku-latn' => 'Translate in ku please.',
 			'ku-arab' => 'Translate in ku please.',
+
+			'sh-cyrl' => 'Translate in sh please.', // T397913
+			'sh-latn' => 'Translate in sh please.', // T397913
 
 			'shi-tfng' => 'Translate in shi please.',
 			'shi-latn' => 'Translate in shi please.',
