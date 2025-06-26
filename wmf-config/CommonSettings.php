@@ -2864,7 +2864,7 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
-	$wgCitoidFullRestbaseURL = "/api/rest_";
+
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20

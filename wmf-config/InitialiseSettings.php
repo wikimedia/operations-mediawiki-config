@@ -11876,6 +11876,16 @@ return [
 	'testwikidatawiki' => 'https://en.wikipedia.org/api/rest_', // T228412
 ],
 
+'wgCitoidServiceUrl' => [
+	'default' => false,
+	'testwiki' => '/api/rest_v1/data/citation' // T361576
+],
+
+'wgCitoidFullRestbaseURL' => [
+	'default' => "/api/rest_",
+	'testwiki' => false // T361576
+],
+
 'wgFundraiserLandingPageELSampleRate' => [
 	'default' => 0,
 	'donatewiki' => 1
