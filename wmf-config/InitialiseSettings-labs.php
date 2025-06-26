@@ -2311,10 +2311,6 @@ function wmfGetOverrideSettings() {
 			'default' => true, // T336763
 		],
 
-		'wmgUseVueTest' => [
-			'default' => true,
-		],
-
 		'wmgUseContentTranslation' => [
 			'wikivoyage' => true, // T322325
 		],
