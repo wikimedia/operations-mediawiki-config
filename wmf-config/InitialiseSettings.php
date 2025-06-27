@@ -4154,10 +4154,6 @@ return [
 	'default' => true, // set 2007-12-17 by brion
 	'lockeddown' => false,
 ],
-'wgSpecialGadgetUsageActiveUsers' => [
-	'default' => true,
-	'enwiki' => false, // T121949
-],
 
 # @} end of EXTENSIONS
 
