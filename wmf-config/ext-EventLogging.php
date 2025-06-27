@@ -42,8 +42,6 @@ return [
 		'eventlogging_TemplateDataEditor',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
-		'eventlogging_TwoColConflictConflict',
-		'eventlogging_TwoColConflictExit',
 		'eventlogging_UniversalLanguageSelector',
 		'eventlogging_VirtualPageView',
 		'eventlogging_VisualEditorFeatureUse',

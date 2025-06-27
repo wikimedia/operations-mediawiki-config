@@ -549,28 +549,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_TwoColConflictConflict' => [
-			'schema_title' => 'analytics/legacy/twocolconflictconflict',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_TwoColConflictExit' => [
-			'schema_title' => 'analytics/legacy/twocolconflictexit',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_UniversalLanguageSelector' => [
 			'schema_title' => 'analytics/legacy/universallanguageselector',
 			'topic_prefixes' => null,
