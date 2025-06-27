@@ -10837,7 +10837,7 @@ return [
 	'loginwiki' => false,
 ],
 
-'wmgSecurePollUseNamespace' => [
+'wgSecurePollUseNamespace' => [
 	'default' => false,
 	'testwiki' => true,
 	'votewiki' => true,

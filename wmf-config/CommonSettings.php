@@ -1691,7 +1691,6 @@ if ( $wmgUseContactPage ) {
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 
-	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
 	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) use ( $site, $lang ) {
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
 	};
