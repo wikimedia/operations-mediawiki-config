@@ -11765,6 +11765,7 @@ return [
 // T299951
 'wgCategoryLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
