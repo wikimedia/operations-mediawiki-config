@@ -458,6 +458,7 @@ switch ( $wgDBname ) {
 	case 'testwiki':
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T398107
 		break;
 	case 'thwiki':
 		// T30502
