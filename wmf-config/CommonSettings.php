@@ -4350,44 +4350,48 @@ if ( $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'QuickSurveys' );
 }
 
-wfLoadExtension( 'EventBus' );
+if ( $wmgUseEventBus ) {
+	wfLoadExtension( 'EventBus' );
 
-// For analytics purposes, we forward the X-Client-IP header to eventgate.
-// eventgate will use this to set a default http.client_ip in event data when relevant.
-// https://phabricator.wikimedia.org/T288853
-//
-// NOTE: if you change request timeout values here, you should
-// also change eventgate timeout and prestop_sleep settings.
-// - https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/fd8492c76352ac48d07ebb8d950d3281b91181fa/charts/eventgate/values.yaml#59
-// - https://phabricator.wikimedia.org/T349823
-$wgEventServices = [
-	'eventgate-analytics' => [
-		'url' => "{$wmgLocalServices['eventgate-analytics']}/v1/events?hasty=true",
-		'timeout' => 11,
-		'x_client_ip_forwarding_enabled' => true,
-	],
-	'eventgate-analytics-external' => [
-		'url' => "{$wmgLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
-		'timeout' => 11,
-		'x_client_ip_forwarding_enabled' => true,
-	],
-	'eventgate-main' => [
-		'url' => "{$wmgLocalServices['eventgate-main']}/v1/events",
-		'timeout' => 62, // envoy overall req timeout + 1
-	]
-];
+	// For analytics purposes, we forward the X-Client-IP header to eventgate.
+	// eventgate will use this to set a default http.client_ip in event data when relevant.
+	// https://phabricator.wikimedia.org/T288853
+	//
+	// NOTE: if you change request timeout values here, you should
+	// also change eventgate timeout and prestop_sleep settings.
+	// - https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/fd8492c76352ac48d07ebb8d950d3281b91181fa/charts/eventgate/values.yaml#59
+	// - https://phabricator.wikimedia.org/T349823
+	$wgEventServices = [
+		'eventgate-analytics' => [
+			'url' => "{$wmgLocalServices['eventgate-analytics']}/v1/events?hasty=true",
+			'timeout' => 11,
+			'x_client_ip_forwarding_enabled' => true,
+		],
+		'eventgate-analytics-external' => [
+			'url' => "{$wmgLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
+			'timeout' => 11,
+			'x_client_ip_forwarding_enabled' => true,
+		],
+		'eventgate-main' => [
+			'url' => "{$wmgLocalServices['eventgate-main']}/v1/events",
+			'timeout' => 62, // envoy overall req timeout + 1
+		]
+	];
 
-$wgRCFeeds['eventbus'] = [
-	'formatter' => EventBusRCFeedFormatter::class,
-	'class' => EventBusRCFeedEngine::class,
-];
+	$wgRCFeeds['eventbus'] = [
+		'formatter' => EventBusRCFeedFormatter::class,
+		'class' => EventBusRCFeedEngine::class,
+	];
 
-$wgJobTypeConf['default'] = [
-	'class' => JobQueueEventBus::class,
-	'readOnlyReason' => false
-];
+	if ( $wmgUseClusterJobqueue ) {
+		$wgJobTypeConf['default'] = [
+			'class' => JobQueueEventBus::class,
+			'readOnlyReason' => false
+		];
+	}
 
-$wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
+	$wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
+}
 
 if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
