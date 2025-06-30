@@ -8322,7 +8322,6 @@ return [
 	'default' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
-		'cxstats' => true,
 		'newarticle' => true,
 		'specialcx' => true,
 		'staff-recommender' => true,
@@ -8344,7 +8343,6 @@ return [
 	'dewiki' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
-		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
 		'staff-recommender' => true,
@@ -8366,7 +8364,6 @@ return [
 	'enwiki' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
-		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
 		'staff-recommender' => true,
@@ -8388,7 +8385,6 @@ return [
 	'eswiki' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
-		'cxstats' => true,
 		'eswiki-recommender' => true,
 		'newarticle' => true,
 		'specialcx' => true,
@@ -8411,7 +8407,6 @@ return [
 	'fiwiki' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
-		'cxstats' => true,
 		'newarticle' => false, // T277473
 		'specialcx' => true,
 		'staff-recommender' => true,
@@ -8433,7 +8428,6 @@ return [
 	'frwiki' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
-		'cxstats' => true,
 		'frwiki-recommender' => true,
 		'newarticle' => true,
 		'specialcx' => true,
