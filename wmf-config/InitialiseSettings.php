@@ -10504,6 +10504,12 @@ return [
 	'default' => '/evt-103e/v2/events?hasty=true',
 ],
 
+// T397144
+'wgMetricsPlatformEnableExperimentConfigsFetching' => [
+	'default' => false,
+	'group0' => true
+],
+
 'wgMetricsPlatformEnableStreamConfigsFetching' => [
 	'default' => false,
 	'testwiki' => true,
