@@ -1996,6 +1996,11 @@ return [
 			'deletedtext' => true,
 			'browsearchive' => true,
 		],
+		'vrt-agent' => [
+			'ipblock-exempt' => true,
+			'centralauth-createlocal' => true,
+			'noratelimit' => true,
+		], // T398216
 		'rollbacker' => [ 'rollback' => true ],
 		'sysop' => [ 'extendedconfirmed' => true ], // T329642
 		'user' => [ 'move-categorypages' => false ], // T161551
@@ -4341,6 +4346,10 @@ return [
 			'arbcom',
 			'extendedconfirmed', // T329642
 			'rollbacker',
+			'vrt-agent', // T398216
+		],
+		'vrt-agent' => [
+			'ipblock-exempt', // T398216
 		],
 	],
 	'+nlwikibooks' => [
@@ -5713,6 +5722,7 @@ return [
 			'arbcom',
 			'extendedconfirmed', // T329642
 			'rollbacker',
+			'vrt-agent', // T398216
 		],
 	],
 	'+nlwikibooks' => [
