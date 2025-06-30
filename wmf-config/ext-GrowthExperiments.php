@@ -369,6 +369,12 @@ return [
 	'zuwiki' => true,
 ],
 
+'wgGENewcomerTasksStarterDifficultyEnabled' => [
+	'default' => false,
+	'enwiki' => true,
+	'testwiki' => true,
+],
+
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
