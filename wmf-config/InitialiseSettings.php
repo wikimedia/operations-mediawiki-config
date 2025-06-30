@@ -5979,6 +5979,14 @@ return [
 	'commonswiki' => false, // T364228; should hopefully be resolved by T351113
 ],
 
+'wgParserMigrationEnableIndicator' => [
+	'default' => false, // T373472
+],
+
+'wgParserMigrationEnableUserNotice' => [
+	'default' => false, // T363484
+],
+
 'wgParserMigrationEnableParsoidDiscussionTools' => [
 	'default' => false,
 	'parsoidrendered' => true,
