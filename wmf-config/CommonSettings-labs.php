@@ -405,9 +405,7 @@ if ( $wmgRealm == 'labs' ) {
 		$wgFileImporterCodexMode = true;
 	}
 
-	if ( $wmgUseEventBus ) {
-		$wgEventBusEnableRunJobAPI = true;
-	}
+	$wgEventBusEnableRunJobAPI = true;
 
 	if ( $wmgUseStopForumSpam ) {
 		wfLoadExtension( 'StopForumSpam' );

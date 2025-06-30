@@ -31,7 +31,6 @@
 #           'sample'=>rate,
 #           'buffer'=>buffer
 #     ]`
-# - $wmgUseEventBus: Whether EventBus extension is enabled on the wiki
 #
 #   Default for all channels for fields not otherwise specified:
 #   ```
@@ -99,8 +98,8 @@ function wmfApplyDebugLoggingHacks() {
 }
 
 function wmfGetLoggingConfig() {
-	global $wmgExtraLogFile, $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUseEventBus,
-		$wmgUdp2logDest, $wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
+	global $wmgExtraLogFile, $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUdp2logDest,
+		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
 	// T124985: The Processors listed in $monologProcessors are applied to
 	// a message list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
@@ -286,7 +285,7 @@ function wmfGetLoggingConfig() {
 			}
 		}
 
-		if ( $opts['eventbus'] && $wmgUseEventBus ) {
+		if ( $opts['eventbus'] ) {
 			$eventBusHandler = "eventbus-{$opts['eventbus']}";
 			// Register handler that will only pass events of the given log level
 			$monologHandlers[$eventBusHandler] ??= [

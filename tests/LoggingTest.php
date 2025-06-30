@@ -22,7 +22,6 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$GLOBALS['wmgUseWikimediaEvents'] = false;
 		$GLOBALS['wmgUdp2logDest'] = 'localhost';
 		$GLOBALS['wmgEnableLogstash'] = true;
-		$GLOBALS['wmgUseEventBus'] = true;
 		$GLOBALS['wmgMonologChannels'] = [];
 		require_once __DIR__ . '/../wmf-config/logging.php';
 	}
