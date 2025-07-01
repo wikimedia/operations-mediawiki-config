@@ -2566,6 +2566,11 @@ return [
 		'enabled' => true,
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 		'apiUrl' => '/w/rest.php',
+	],
+	'wikipedia' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
 	]
 ],
 
