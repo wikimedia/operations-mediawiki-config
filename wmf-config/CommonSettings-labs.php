@@ -387,13 +387,17 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseFileImporter ) {
-		// Beta commons references configuration files hosted locally.
-		// Note that beta testwiki will continue to fetch its configuration from production mw.org .
+		// In production, all wikis fetch configuration centrally from mediawiki.org.
+		// In the Beta Cluster, the extenison is enabled only on Commons and testwiki:
+		// - Beta commons hosts its configuration files locally instead, to allow testing
+		//   new/custom configuration changes.
+		// - Beta testwiki fetches configuration from production mediawiki.org, to allow
+		//   testing software changes against the always-current production config.
 		if ( $wgDBname == 'commonswiki' ) {
 			$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmflabs.org';
 			$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
 			$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Extension:FileImporter/Data';
-			$wgFileImporterWikidataEntityEndpoint = 'https://wikidata.beta.wmflabs.org/wiki/Special:EntityData/';
+			$wgFileImporterWikidataEntityEndpoint = 'https://www.wikidata.beta.wmcloud.org/wiki/Special:EntityData/';
 			$wgFileImporterWikidataNowCommonsEntity = 'Q531650';
 		}
 

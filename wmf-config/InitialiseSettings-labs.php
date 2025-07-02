@@ -98,7 +98,7 @@ function wmfGetOverrideSettings() {
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
-			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
+			'wikidatawiki'  => 'https://www.wikidata.beta.wmcloud.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
@@ -121,7 +121,7 @@ function wmfGetOverrideSettings() {
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
-			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
+			'wikidatawiki'  => 'https://www.wikidata.beta.wmcloud.org',
 
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
@@ -683,7 +683,7 @@ function wmfGetOverrideSettings() {
 				'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
 				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
+				'www.wikidata.beta.wmcloud.org' => 'wikidatawiki',
 
 				// Wikis for SUL project hosted on wmcloud.org
 				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
@@ -917,7 +917,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgArticlePlaceholderRepoApiUrl' => [
-			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		'wmgUseEntitySchema' => [
@@ -989,7 +989,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
-			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'commonswiki' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		'wgMediaInfoHelpUrls' => [
@@ -1004,7 +1004,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgMediaSearchExternalEntitySearchBaseUri' => [
-			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'commonswiki' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		// switch 'audio' and 'video' mediasearch tabs for testing
@@ -1571,7 +1571,7 @@ function wmfGetOverrideSettings() {
 						'lexeme' => 146,
 					],
 					'repoDatabase' => 'wikidatawiki',
-					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'baseUri' => 'https://www.wikidata.beta.wmcloud.org/entity/',
 					'rdfNodeNamespacePrefix' => 'wd',
 					'rdfPredicateNamespacePrefix' => '',
 					'interwikiPrefix' => 'd',
@@ -1585,7 +1585,7 @@ function wmfGetOverrideSettings() {
 						'lexeme' => 146,
 					],
 					'repoDatabase' => 'wikidatawiki',
-					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'baseUri' => 'https://www.wikidata.beta.wmcloud.org/entity/',
 					'rdfNodeNamespacePrefix' => 'wd',
 					'rdfPredicateNamespacePrefix' => '',
 					'interwikiPrefix' => 'd',
@@ -1651,7 +1651,7 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 		],
 		'-wmgWikibaseClientRepoUrl' => [
-			'default' => 'https://wikidata.beta.wmflabs.org',
+			'default' => 'https://www.wikidata.beta.wmcloud.org',
 		],
 
 		'-wmgWikibaseSSRTermboxServerUrl' => [
@@ -2124,9 +2124,7 @@ function wmfGetOverrideSettings() {
 				'*.wikiversity.beta.wmcloud.org',
 				'*.wikisource.beta.wmcloud.org',
 				// wikisource.org - No multilingual wikisource in Beta
-				// *.wikidata.org - Without www in Beta
-				'wikidata.beta.wmcloud.org',
-				'm.wikidata.beta.wmcloud.org',
+				'*.wikidata.beta.wmcloud.org',
 				'*.wikivoyage.beta.wmcloud.org',
 
 				// Beta-only: VE-RealTime, experiment
@@ -2216,7 +2214,7 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 		'wgGlobalWatchlistWikibaseSite' => [
-			'default' => 'wikidata.beta.wmflabs.org',
+			'default' => 'www.wikidata.beta.wmcloud.org',
 		],
 
 		// T253271 Don't deploy Cirrus AB tests to beta
@@ -2275,7 +2273,7 @@ function wmfGetOverrideSettings() {
 			'ruwiki' => true,
 		],
 		'wgQuickViewDataRepositoryApiBaseUri' => [
-			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
 			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',

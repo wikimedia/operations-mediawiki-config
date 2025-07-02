@@ -136,7 +136,7 @@ switch ( $wmgRealm ) {
 		$wmgHostnames['auth']          = 'auth.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
-		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
+		$wmgHostnames['wikidata']      = 'www.wikidata.beta.wmcloud.org';
 		break;
 	case 'production':
 	default:

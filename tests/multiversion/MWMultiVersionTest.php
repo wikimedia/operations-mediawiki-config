@@ -194,8 +194,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
 			[ 'wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', false ],
 			[ 'www.wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
-			[ 'wikidata.beta.wmflabs.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
-			[ 'wikidata.beta.wmcloud.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
+			[ 'www.wikidata.beta.wmflabs.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
 			[ 'www.wikidata.beta.wmcloud.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
 		];
 	}

@@ -33,7 +33,6 @@
 function wmfMobileUrlCallback( string $domain ): string {
 	static $specialCases = [
 		'wikisource.org' => 'm.wikisource.org',
-		'wikidata.beta.wmflabs.org' => 'm.wikidata.beta.wmflabs.org',
 		'wikitech.wikimedia.org' => false,
 		// No mobile version for authentication-related domains,
 		// we don't want to split cookies

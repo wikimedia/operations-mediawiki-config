@@ -349,8 +349,10 @@ class MWMultiVersion {
 			'wikipedia-zh-arbcom.wikimedia.org' => 'arbcom_zh',
 
 			// Beta-only
+			// wikidata canonical is www.wikidata in both prod and beta, handled above.
+			// This entry is for back-compat with legacy beta.wmflabs.org.
+			// TODO: Remove once we have a generic Apache redirect rule (T289318)
 			'wikidata.beta.wmflabs.org' => 'wikidata',
-			'wikidata.beta.wmcloud.org' => 'wikidata',
 		];
 
 		if (
