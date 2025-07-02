@@ -12650,14 +12650,4 @@ return [
 	'ukwiki' => true,
 ],
 
-// T341599
-'wgGEUserImpactMaxEdits' => [
-	'default' => 1000,
-	'enwiki' => 10000,
-	'testwiki' => 10000,
-],
-'wgGEUserImpactMaxThanks' => [
-	'default' => 1000,
-],
-
 ];
