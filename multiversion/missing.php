@@ -10,6 +10,7 @@
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404 Subdomain)
  * - <http://localhost:9412/missing.php?host=foo.example.org> (404 Generic)
  * - <http://localhost:9412/missing.php?host=auth.wikimedia.org> (404 Auth)
+ * - <http://localhost:9412/missing.php?host=auth.wikimedia.beta.wmcloud.org> (404 Auth in Beta)
  * - <http://localhost:9412/missing.php?host=nl.m.wikipedia.org> (404 Mobile)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (lateral interwiki redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=f:foo> (global interwiki redirect)
@@ -131,16 +132,16 @@ function wmfHandleMissingWiki() {
 		return;
 	}
 
-	# $language.$project.org
+	// Given $language.$project.org or $language.$project.beta.wmcloud.org
 	$tmp = explode( '.', $host );
-	$project = $incubatorCode = false;
-	if ( count( $tmp ) == 3 ) {
-		[ $language, $project, $tld ] = $tmp;
+	$language = $project = $incubatorCode = false;
+	if ( count( $tmp ) >= 3 ) {
+		[ $language, $project, ] = $tmp;
 		if ( isset( $_SERVER['PATH_INFO'] )
 			&& preg_match( '!^/(.*)$!', $_SERVER['PATH_INFO'], $m ) ) {
 			$page = $m[1];
 		} elseif ( isset( $_SERVER['REQUEST_URI'] ) && preg_match( '!^/wiki/(.*)$!', $_SERVER['REQUEST_URI'], $m ) ) {
-			// /wiki rewrite rule seems not to set PATH_INFO so check REQUEST_URI
+			// The "/wiki" rewrite rule does not set PATH_INFO, so check REQUEST_URI
 			$page = $m[1];
 		} else {
 			// Fall back to title given as a query parameter, or the empty string (Main Page) otherwise
