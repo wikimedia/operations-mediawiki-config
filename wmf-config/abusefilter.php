@@ -405,6 +405,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '2 hours'; // T224617
 		$wgAbuseFilterAnonBlockDuration = '2 hours'; // T224617
 		break;
+	case 'plwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T398137
+		break;
 	case 'ptwiktionary':
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
