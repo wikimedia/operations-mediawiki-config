@@ -12625,13 +12625,7 @@ return [
 
 // T377975
 'wgTemplateDataEnableDiscovery' => [
-	'default' => false,
-	'testwiki' => true,
-	'plwiki' => true,
-	'arwiki' => true,
-	'mediawikiwiki' => true,
-	'enwikisource' => true,
-	'itwikisource' => true,
+	'default' => true,
 ],
 
 // T377975
