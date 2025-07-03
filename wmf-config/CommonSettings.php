@@ -40,6 +40,7 @@ use MediaWiki\Auth\AbstractPreAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Auth\PasswordAuthenticationRequest;
+use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
@@ -3741,6 +3742,10 @@ if ( $wmgUseJsonConfig ) {
 		];
 	}
 }
+
+// Needed to handle deleted and old revisions on mediawikiwiki and collabwiki
+// after changing JsonConfig configuration (T124748)
+$wgContentHandlers['Json.JsonConfig'] = FallbackContentHandler::class;
 
 if ( $wmgEnableJsonConfigDataMode ) {
 	$wgJsonConfigEnableLuaSupport = true;

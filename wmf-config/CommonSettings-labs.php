@@ -18,6 +18,7 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
 
 // safe guard
@@ -531,8 +532,8 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
-	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
-	$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
+	$wgContentHandlers['JadeEntity'] = FallbackContentHandler::class;
+	$wgContentHandlers['JadeJudgment'] = FallbackContentHandler::class;
 
 	$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
 
