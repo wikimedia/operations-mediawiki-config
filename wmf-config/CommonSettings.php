@@ -3794,6 +3794,7 @@ if ( $wmgUseJsonConfig ) {
 // Needed to handle deleted and old revisions on mediawikiwiki and collabwiki
 // after changing JsonConfig configuration (T124748)
 $wgContentHandlers['Json.JsonConfig'] = FallbackContentHandler::class;
+$wgContentHandlers['Graph.JsonConfig'] = FallbackContentHandler::class;
 
 if ( $wmgEnableJsonConfigDataMode ) {
 	$wgJsonConfigEnableLuaSupport = true;
