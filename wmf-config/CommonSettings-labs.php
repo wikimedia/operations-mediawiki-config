@@ -88,6 +88,22 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	$wgLocalVirtualHosts = [
+		'wikipedia.beta.wmcloud.org',
+		'wiktionary.beta.wmcloud.org',
+		'wikiquote.beta.wmcloud.org',
+		'wikibooks.beta.wmcloud.org',
+		'wikiquote.beta.wmcloud.org',
+		'wikinews.beta.wmcloud.org',
+		'wikisource.beta.wmcloud.org',
+		'wikiversity.beta.wmcloud.org',
+		'wikivoyage.beta.wmcloud.org',
+		'www.wikidata.beta.wmcloud.org',
+		'api.wikimedia.beta.wmcloud.org',
+		'commons.wikimedia.beta.wmcloud.org',
+		'login.wikimedia.beta.wmcloud.org',
+		'meta.wikimedia.beta.wmcloud.org',
+		'auth.wikimedia.beta.wmcloud.org',
+		// T289318: Legacy compat
 		'wikipedia.beta.wmflabs.org',
 		'wiktionary.beta.wmflabs.org',
 		'wikibooks.beta.wmflabs.org',
@@ -96,23 +112,8 @@ if ( $wmgRealm == 'labs' ) {
 		'wikisource.beta.wmflabs.org',
 		'wikiversity.beta.wmflabs.org',
 		'wikivoyage.beta.wmflabs.org',
-		'meta.wikimedia.beta.wmflabs.org',
 		'commons.wikimedia.beta.wmflabs.org',
 		'api.wikimedia.beta.wmflabs.org',
-		'auth.wikimedia.beta.wmflabs.org',
-		// T289318
-		'wikipedia.beta.wmcloud.org',
-		'wiktionary.beta.wmcloud.org',
-		'wikibooks.beta.wmcloud.org',
-		'wikiquote.beta.wmcloud.org',
-		'wikinews.beta.wmcloud.org',
-		'wikisource.beta.wmcloud.org',
-		'wikiversity.beta.wmcloud.org',
-		'wikivoyage.beta.wmcloud.org',
-		'meta.wikimedia.beta.wmcloud.org',
-		'commons.wikimedia.beta.wmcloud.org',
-		'api.wikimedia.beta.wmcloud.org',
-		'auth.wikimedia.beta.wmcloud.org',
 	];
 
 	if ( $wmgUseGlobalPreferences ) {
@@ -176,14 +177,14 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 		// Load from betalabs metawiki
 		$wgResourceLoaderSources['metawiki'] = [
-			'apiScript' => '//meta.wikimedia.beta.wmflabs.org/w/api.php',
-			'loadScript' => '//meta.wikimedia.beta.wmflabs.org/w/load.php',
+			'apiScript' => '//meta.wikimedia.beta.wmcloud.org/w/api.php',
+			'loadScript' => '//meta.wikimedia.beta.wmcloud.org/w/load.php',
 		];
 	}
 
 	if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 		// Labs override
-		$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
+		$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmcloud.org/w/api.php';
 		$wgGlobalUserPageDBname = 'metawiki';
 	}
 
@@ -438,8 +439,8 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseWikimediaApiPortalOAuth ) {
-		$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
-		$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmflabs.org/w/rest.php';
+		$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmcloud.org/w/api.php';
+		$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmcloud.org/w/rest.php';
 	}
 
 	// Test of new import source configuration on labs cluster

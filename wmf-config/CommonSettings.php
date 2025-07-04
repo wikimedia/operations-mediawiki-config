@@ -132,8 +132,8 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 $wmgHostnames = [];
 switch ( $wmgRealm ) {
 	case 'labs':
-		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
-		$wmgHostnames['auth']          = 'auth.wikimedia.beta.wmflabs.org';
+		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmcloud.org';
+		$wmgHostnames['auth']          = 'auth.wikimedia.beta.wmcloud.org';
 		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
 		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
 		$wmgHostnames['wikidata']      = 'www.wikidata.beta.wmcloud.org';

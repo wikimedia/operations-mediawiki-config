@@ -152,7 +152,7 @@ function wmfHandleMissingWiki() {
 
 	if ( $language === 'auth' ) {
 		// E.g. https://auth.wikimedia.org/foowiki/w/index.php
-		// or https://auth.wikimedia.beta.wmflabs.org/foo/wiki/
+		// or https://auth.wikimedia.beta.wmcloud.org/foo/wiki/
 		wmfShowErrorPage( [
 			'logo' => 'https://www.wikimedia.org/static/images/wmf-2x.png',
 			'title' => 'No wiki found',

@@ -7,8 +7,8 @@
  * E.g.
  *   www.wikidata.org -> m.wikidata.org
  *   en.wikipedia.org -> en.m.wikipedia.org
- *   meta.wikimedia.beta.wmflabs.org
- *     -> meta.m.wikimedia.beta.wmflabs.org
+ *   meta.wikimedia.beta.wmcloud.org
+ *     -> meta.m.wikimedia.beta.wmcloud.org
  *
  * There are several exceptions that need to be special-cased:
  * - Domains that do not have a www prefix, so they just get m. added to the front:
@@ -37,9 +37,9 @@ function wmfMobileUrlCallback( string $domain ): string {
 		// No mobile version for authentication-related domains,
 		// we don't want to split cookies
 		'login.wikimedia.org' => false,
-		'login.wikimedia.beta.wmflabs.org' => false,
+		'login.wikimedia.beta.wmcloud.org' => false,
 		'auth.wikimedia.org' => false,
-		'auth.wikimedia.beta.wmflabs.org' => false,
+		'auth.wikimedia.beta.wmcloud.org' => false,
 	];
 	if ( isset( $specialCases[$domain] ) ) {
 		return $specialCases[$domain] ?: $domain;
