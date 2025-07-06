@@ -3446,6 +3446,44 @@ return [
 			'temporary-account-viewer',
 		],
 	],
+	// Start overrides without the '+'
+	'wikitech' => [
+		'bureaucrat' => [
+			'bot',
+			'bureaucrat',
+			'confirmed',
+			'interface-admin',
+			'sysop',
+			'transwiki',
+		],
+		'sysop' => [
+			'autopatrolled',
+			'ipblock-exempt',
+			'temporary-account-viewer',
+		],
+	],
+	'ukwiki' => [
+		'sysop' => [
+			'ipblock-exempt',
+			'patroller',
+			'rollbacker',
+			'accountcreator', // T104034
+			'extendedmover', // T395285
+			'filemover', // T119636
+			'flood', // T319243
+		],
+		'bureaucrat' => [
+			'accountcreator',
+			'sysop',
+			'interface-admin',
+			'bureaucrat',
+			'bot',
+			'confirmed',
+			'arbcom', // T396668
+			'temporary-account-viewer', // T398738
+		],
+	],
+	// End overrides without the '+'
 	'+private' => [
 		'bureaucrat' => [
 			'import',
@@ -4730,17 +4768,6 @@ return [
 			'patroller', // T272149
 		],
 	],
-	'+ukwiki' => [
-		'sysop' => [
-			'patroller',
-			'rollbacker',
-			'accountcreator', // T104034
-			'extendedmover', // T395285
-			'filemover', // T119636
-			'flood', // T319243
-		],
-		'bureaucrat' => [ 'arbcom' ], // T396668
-	],
 	'+ukwikivoyage' => [
 		'sysop' => [
 			'rollbacker',
@@ -4841,20 +4868,6 @@ return [
 		'sysop' => [
 			'extendedconfirmed', // T389729
 			'uploader', // T225505
-		],
-	],
-	'wikitech' => [
-		'bureaucrat' => [
-			'bot',
-			'bureaucrat',
-			'confirmed',
-			'interface-admin',
-			'sysop',
-			'transwiki',
-		],
-		'sysop' => [
-			'autopatrolled',
-			'ipblock-exempt',
 		],
 	],
 	'+wuuwiki' => [
@@ -4969,6 +4982,42 @@ return [
 			'temporary-account-viewer',
 		],
 	],
+	// Start overrides without the '+'
+	'ukwiki' => [
+		'sysop' => [
+			'ipblock-exempt',
+			'patroller',
+			'rollbacker',
+			'accountcreator', // T104034
+			'extendedmover', // T395285
+			'filemover', // T119636
+			'flood', // T319243
+		],
+		'bureaucrat' => [
+			'accountcreator',
+			'bot',
+			'confirmed',
+			'interface-admin',
+			'arbcom', // T396668
+			'temporary-account-viewer', // T398738
+		],
+	],
+	'wikitech' => [
+		'bureaucrat' => [
+			'bot',
+			'confirmed',
+			'flood',
+			'interface-admin',
+			'sysop',
+			'transwiki',
+		],
+		'sysop' => [
+			'autopatrolled',
+			'ipblock-exempt',
+			'temporary-account-viewer',
+		],
+	],
+	// End overrides without the '+'
 	'+private' => [
 		'bureaucrat' => [
 			'sysop',
@@ -5972,17 +6021,6 @@ return [
 	'+thwiki' => [
 		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
 	],
-	'+ukwiki' => [
-		'sysop' => [
-			'patroller',
-			'rollbacker',
-			'accountcreator', // T104034
-			'extendedmover', // T395285
-			'filemover', // T119636
-			'flood', // T319243
-		],
-		'bureaucrat' => [ 'arbcom' ], // T396668
-	],
 	'+ukwikivoyage' => [
 		'sysop' => [ 'rollbacker', 'uploader', 'autopatrolled' ], // T56229
 	],
@@ -6081,20 +6119,6 @@ return [
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'autopatrolled', ],
-	],
-	'wikitech' => [
-		'bureaucrat' => [
-			'bot',
-			'confirmed',
-			'flood',
-			'interface-admin',
-			'sysop',
-			'transwiki',
-		],
-		'sysop' => [
-			'autopatrolled',
-			'ipblock-exempt',
-		],
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
