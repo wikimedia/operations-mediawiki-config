@@ -4282,7 +4282,7 @@ $wgAutoCreateTempUser['matchPattern'] = '~2$1';
 
 // Start numbers at 1500 to avoid using any numbers defined in T337090 which are considered defamatory.
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
-$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric', 'offset' => 1500 ];
+$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'readable-numeric', 'offset' => 1500 ];
 
 // T39211
 $wgUseCombinedLoginLink = false;
