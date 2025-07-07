@@ -6177,7 +6177,7 @@ return [
 		'കരട്' /* Draft */ => true, // T362653
 	],
 	'+mrwiki' => [
-		'मसूदा' /* Draft */ => true, // T396551
+		'मसुदा' /* Draft */ => true, // T396551, T398792
 	],
 	'+nlwiki' => [
 		'Project' => true, // T164435
