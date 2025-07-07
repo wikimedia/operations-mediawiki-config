@@ -80,51 +80,54 @@ function wmfGetOverrideSettings() {
 			'wikivoyage'     => 'Wikivoyage',
 		],
 
-		// when using the shared auth domain, this will be overridden in CommonSettings.php
+		// NOTE: Same as prod, but without protocol-relative URL (T118413)
 		'-wgServer' => [
-			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
-			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
-			'wikiversity'	=> 'https://$lang.wikiversity.beta.wmflabs.org',
-			'wikisource'	=> 'https://$lang.wikisource.beta.wmflabs.org',
-			'wikiquote'	=> 'https://$lang.wikiquote.beta.wmflabs.org',
-			'wikinews'	=> 'https://$lang.wikinews.beta.wmflabs.org',
-			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
-			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
+			// Projects
+			'wikipedia' => 'https://$lang.wikipedia.beta.wmflabs.org',
+			'wikibooks' => 'https://$lang.wikibooks.beta.wmcloud.org',
+			'wikinews' => 'https://$lang.wikinews.beta.wmcloud.org',
+			'wikiquote' => 'https://$lang.wikiquote.beta.wmcloud.org',
+			'wikisource' => 'https://$lang.wikisource.beta.wmcloud.org',
+			'wikiversity' => 'https://$lang.wikiversity.beta.wmcloud.org',
+			'wikivoyage' => 'https://$lang.wikivoyage.beta.wmcloud.org',
+			'wiktionary' => 'https://$lang.wiktionary.beta.wmcloud.org',
 
-			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
-			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
-			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
-			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmflabs.org',
-			'loginwiki'     => 'https://login.wikimedia.beta.wmcloud.org',
-			'metawiki'      => 'https://meta.wikimedia.beta.wmcloud.org',
-			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
-			'wikidatawiki'  => 'https://www.wikidata.beta.wmcloud.org',
+			// Individual wikis
+			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
+			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
+			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
+			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmcloud.org',
+			'loginwiki' => 'https://login.wikimedia.beta.wmcloud.org',
+			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
+			'votewiki' => 'https://vote.wikimedia.beta.wmcloud.org',
+			'wikidatawiki' => 'https://www.wikidata.beta.wmcloud.org',
 
+			// Temporary
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
-			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
-		// when using the shared auth domain, this will be overridden in CommonSettings.php
 		'-wgCanonicalServer' => [
-			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
-			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
-			'wikiquote'	=> 'https://$lang.wikiquote.beta.wmflabs.org',
-			'wikinews'	=> 'https://$lang.wikinews.beta.wmflabs.org',
-			'wikisource'	=> 'https://$lang.wikisource.beta.wmflabs.org',
-			'wikiversity'     => 'https://$lang.wikiversity.beta.wmflabs.org',
-			'wiktionary'     => 'https://$lang.wiktionary.beta.wmflabs.org',
-			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
+			// Projects
+			'wikipedia' => 'https://$lang.wikipedia.beta.wmflabs.org',
+			'wikibooks' => 'https://$lang.wikibooks.beta.wmcloud.org',
+			'wikiquote' => 'https://$lang.wikiquote.beta.wmcloud.org',
+			'wikinews' => 'https://$lang.wikinews.beta.wmcloud.org',
+			'wikisource' => 'https://$lang.wikisource.beta.wmcloud.org',
+			'wikiversity' => 'https://$lang.wikiversity.beta.wmcloud.org',
+			'wiktionary' => 'https://$lang.wiktionary.beta.wmcloud.org',
+			'wikivoyage' => 'https://$lang.wikivoyage.beta.wmcloud.org',
 
-			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
-			'metawiki'      => 'https://meta.wikimedia.beta.wmcloud.org',
-			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
-			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
-			'loginwiki'     => 'https://login.wikimedia.beta.wmcloud.org',
-			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
-			'wikidatawiki'  => 'https://www.wikidata.beta.wmcloud.org',
+			// Individual wikis
+			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
+			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
+			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
+			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
+			'loginwiki' => 'https://login.wikimedia.beta.wmcloud.org',
+			'votewiki' => 'https://vote.wikimedia.beta.wmcloud.org',
+			'wikidatawiki' => 'https://www.wikidata.beta.wmcloud.org',
 
+			// Temporary
 			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
-			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wgUploadPath' => [
@@ -654,40 +657,35 @@ function wmfGetOverrideSettings() {
 		'-wmgCentralAuthCookieDomain' => [
 			'default' => '',
 			// wiki families
+			'wikibooks' => '.wikibooks.beta.wmcloud.org',
+			'wikinews' => '.wikinews.beta.wmcloud.org',
 			'wikipedia' => '.wikipedia.beta.wmflabs.org',
-			'wikibooks' => '.wikibooks.beta.wmflabs.org',
-			'wikinews' => '.wikinews.beta.wmflabs.org',
-			'wikiquote' => '.wikiquote.beta.wmflabs.org',
-			'wikisource' => '.wikisource.beta.wmflabs.org',
-			'wikiversity' => '.wikiversity.beta.wmflabs.org',
-			'wikivoyage' => '.wikivoyage.beta.wmflabs.org',
-			'wiktionary' => '.wiktionary.beta.wmflabs.org',
-			// wikis which are not Wikipedias but use *.wikipedia.beta.wmflabs.org
-			'testwiki' => '.wikipedia.beta.wmflabs.org',
-
-			// Wikis for SUL project hosted on wmcloud.org
+			'wikiquote' => '.wikiquote.beta.wmcloud.org',
+			'wikisource' => '.wikisource.beta.wmcloud.org',
+			'wikiversity' => '.wikiversity.beta.wmcloud.org',
+			'wikivoyage' => '.wikivoyage.beta.wmcloud.org',
+			'wiktionary' => '.wiktionary.beta.wmcloud.org',
+			// Temporary: test2wiki already on beta.wmcloud.org
 			'test2wiki' => '.wikipedia.beta.wmcloud.org',
-			'plwikivoyage' => '.wikivoyage.beta.wmcloud.org',
 		],
 
 		'-wmgCentralAuthAutoLoginWikis' => [
 			'default' => [
 				'.wikipedia.beta.wmflabs.org' => 'enwiki',
-				'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
-				'.wikinews.beta.wmflabs.org' => 'enwikinews',
-				'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
-				'.wikisource.beta.wmflabs.org' => 'enwikisource',
-				'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
-				'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
-				'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
-				'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
-				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
+				'.wikibooks.beta.wmcloud.org' => 'enwikibooks',
+				'.wikinews.beta.wmcloud.org' => 'enwikinews',
+				'.wikiquote.beta.wmcloud.org' => 'enwikiquote',
+				'.wikisource.beta.wmcloud.org' => 'enwikisource',
+				'.wikiversity.beta.wmcloud.org' => 'enwikiversity',
+				'.wikivoyage.beta.wmcloud.org' => 'enwikivoyage',
+				'.wiktionary.beta.wmcloud.org' => 'enwiktionary',
+				'api.wikimedia.beta.wmcloud.org' => 'apiportalwiki',
+				'commons.wikimedia.beta.wmcloud.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmcloud.org' => 'metawiki',
 				'www.wikidata.beta.wmcloud.org' => 'wikidatawiki',
 
-				// Wikis for SUL project hosted on wmcloud.org
+				// Temporary: test2wiki already on beta.wmcloud.org
 				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
-				'.wikivoyage.beta.wmcloud.org' => 'plwikivoyage',
 			],
 		],
 
