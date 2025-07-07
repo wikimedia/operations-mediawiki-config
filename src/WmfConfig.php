@@ -75,6 +75,7 @@ class WmfConfig {
 		'growthexperiments',
 		'parsoidrendered',
 		'ores',
+		'wikilove',
 	];
 
 	/** @var string[] */
