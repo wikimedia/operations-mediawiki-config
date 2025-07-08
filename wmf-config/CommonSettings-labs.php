@@ -342,10 +342,6 @@ if ( $wmgRealm == 'labs' ) {
 		// **** THIS LIST MUST MATCH puppet/blob/production/hieradata/cloud/eqiad1/deployment-prep/common.yaml ****
 		// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 		$wgGraphAllowedDomains = [
-			// TODO: Is 'http' needed in Beta specifically? Prod doesn't allow it at all.
-			'http' => [
-				'wmflabs.org',
-			],
 			'https' => [
 				'beta.wmflabs.org',
 				// T289318
