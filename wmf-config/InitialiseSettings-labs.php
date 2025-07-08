@@ -83,7 +83,7 @@ function wmfGetOverrideSettings() {
 		// NOTE: Same as prod, but without protocol-relative URL (T118413)
 		'-wgServer' => [
 			// Projects
-			'wikipedia' => 'https://$lang.wikipedia.beta.wmflabs.org',
+			'wikipedia' => 'https://$lang.wikipedia.beta.wmcloud.org',
 			'wikibooks' => 'https://$lang.wikibooks.beta.wmcloud.org',
 			'wikinews' => 'https://$lang.wikinews.beta.wmcloud.org',
 			'wikiquote' => 'https://$lang.wikiquote.beta.wmcloud.org',
@@ -101,14 +101,11 @@ function wmfGetOverrideSettings() {
 			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
 			'votewiki' => 'https://vote.wikimedia.beta.wmcloud.org',
 			'wikidatawiki' => 'https://www.wikidata.beta.wmcloud.org',
-
-			// Temporary
-			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 		],
 
 		'-wgCanonicalServer' => [
 			// Projects
-			'wikipedia' => 'https://$lang.wikipedia.beta.wmflabs.org',
+			'wikipedia' => 'https://$lang.wikipedia.beta.wmcloud.org',
 			'wikibooks' => 'https://$lang.wikibooks.beta.wmcloud.org',
 			'wikiquote' => 'https://$lang.wikiquote.beta.wmcloud.org',
 			'wikinews' => 'https://$lang.wikinews.beta.wmcloud.org',
@@ -125,9 +122,6 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => 'https://login.wikimedia.beta.wmcloud.org',
 			'votewiki' => 'https://vote.wikimedia.beta.wmcloud.org',
 			'wikidatawiki' => 'https://www.wikidata.beta.wmcloud.org',
-
-			// Temporary
-			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
 		],
 
 		'-wgUploadPath' => [
@@ -659,19 +653,17 @@ function wmfGetOverrideSettings() {
 			// wiki families
 			'wikibooks' => '.wikibooks.beta.wmcloud.org',
 			'wikinews' => '.wikinews.beta.wmcloud.org',
-			'wikipedia' => '.wikipedia.beta.wmflabs.org',
+			'wikipedia' => '.wikipedia.beta.wmcloud.org',
 			'wikiquote' => '.wikiquote.beta.wmcloud.org',
 			'wikisource' => '.wikisource.beta.wmcloud.org',
 			'wikiversity' => '.wikiversity.beta.wmcloud.org',
 			'wikivoyage' => '.wikivoyage.beta.wmcloud.org',
 			'wiktionary' => '.wiktionary.beta.wmcloud.org',
-			// Temporary: test2wiki already on beta.wmcloud.org
-			'test2wiki' => '.wikipedia.beta.wmcloud.org',
 		],
 
 		'-wmgCentralAuthAutoLoginWikis' => [
 			'default' => [
-				'.wikipedia.beta.wmflabs.org' => 'enwiki',
+				'.wikipedia.beta.wmcloud.org' => 'enwiki',
 				'.wikibooks.beta.wmcloud.org' => 'enwikibooks',
 				'.wikinews.beta.wmcloud.org' => 'enwikinews',
 				'.wikiquote.beta.wmcloud.org' => 'enwikiquote',
@@ -683,9 +675,6 @@ function wmfGetOverrideSettings() {
 				'commons.wikimedia.beta.wmcloud.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmcloud.org' => 'metawiki',
 				'www.wikidata.beta.wmcloud.org' => 'wikidatawiki',
-
-				// Temporary: test2wiki already on beta.wmcloud.org
-				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
 			],
 		],
 
@@ -1143,7 +1132,7 @@ function wmfGetOverrideSettings() {
 			'default' => [
 				'cacheKey' => 'commonswiki',
 				'remote' => [
-					'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+					'url' => 'https://commons.wikimedia.beta.wmcloud.org/w/api.php'
 				]
 			],
 			'commonswiki' => [
@@ -1599,7 +1588,7 @@ function wmfGetOverrideSettings() {
 						'mediainfo' => '6/mediainfo',
 					],
 					'repoDatabase' => 'commonswiki',
-					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
+					'baseUri' => 'https://commons.wikimedia.beta.wmcloud.org/entity/',
 					'rdfNodeNamespacePrefix' => 'sdc',
 					'rdfPredicateNamespacePrefix' => 'sdc',
 					'interwikiPrefix' => 'c',
@@ -2050,7 +2039,7 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 		'wgWBCitoidFullRestbaseURL' => [
-			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
+			'wikidatawiki' => 'https://en.wikipedia.beta.wmcloud.org/api/rest_',
 		],
 
 		'wgRestAPIAdditionalRouteFiles' => [
@@ -2109,6 +2098,20 @@ function wmfGetOverrideSettings() {
 				'*.mediawiki.org',
 
 				// Beta Cluster equivalants
+				'*.wikimedia.beta.wmcloud.org',
+				'*.wikipedia.beta.wmcloud.org',
+				'*.wikinews.beta.wmcloud.org',
+				'*.wiktionary.beta.wmcloud.org',
+				'*.wikibooks.beta.wmcloud.org',
+				'*.wikiversity.beta.wmcloud.org',
+				'*.wikisource.beta.wmcloud.org',
+				// wikisource.org - No multilingual wikisource in Beta
+				'*.wikidata.beta.wmcloud.org',
+				// wikifunctions.org - Not in Beta
+				'*.wikivoyage.beta.wmcloud.org',
+				// mediawiki.org - Not in Beta
+
+				// T289318: Legacy
 				'*.wikimedia.beta.wmflabs.org',
 				'*.wikipedia.beta.wmflabs.org',
 				'*.wikinews.beta.wmflabs.org',
@@ -2119,17 +2122,6 @@ function wmfGetOverrideSettings() {
 				'wikidata.beta.wmflabs.org',
 				'm.wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
-				// T289318
-				'*.wikimedia.beta.wmcloud.org',
-				'*.wikipedia.beta.wmcloud.org',
-				'*.wikinews.beta.wmcloud.org',
-				'*.wiktionary.beta.wmcloud.org',
-				'*.wikibooks.beta.wmcloud.org',
-				'*.wikiversity.beta.wmcloud.org',
-				'*.wikisource.beta.wmcloud.org',
-				// wikisource.org - No multilingual wikisource in Beta
-				'*.wikidata.beta.wmcloud.org',
-				'*.wikivoyage.beta.wmcloud.org',
 
 				// Beta-only: VE-RealTime, experiment
 				'ws://visualeditor-realtime.wmflabs.org',
@@ -2280,13 +2272,13 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
+			'default' => 'https://commons.wikimedia.beta.wmcloud.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositorySearchUri' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
+			'default' => 'https://commons.wikimedia.beta.wmcloud.org/wiki/Special:MediaSearch?search=%s',
 		],
 		'wgQuickViewMediaRepositoryUri' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org',
+			'default' => 'https://commons.wikimedia.beta.wmcloud.org',
 		],
 		'wgQuickViewSearchFilterForQID' => [
 			'default' => 'haswbstatement:P245962=%s',

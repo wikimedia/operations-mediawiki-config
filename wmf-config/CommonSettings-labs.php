@@ -147,7 +147,7 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseFileExporter ) {
-		$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
+		$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmcloud.org/wiki/Special:ImportFile';
 	}
 
 	if ( $wmgUseContentTranslation ) {
@@ -194,17 +194,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgUrlShortenerServer = 'w.beta.wmcloud.org';
 		$wgUrlShortenerEnableSidebar = true;
 		$wgUrlShortenerAllowedDomains = [
-			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
-			'(.*\.)?wiktionary\.beta\.wmflabs\.org',
-			'(.*\.)?wikibooks\.beta\.wmflabs\.org',
-			'(.*\.)?wikinews\.beta\.wmflabs\.org',
-			'(.*\.)?wikiquote\.beta\.wmflabs\.org',
-			'(.*\.)?wikisource\.beta\.wmflabs\.org',
-			'(.*\.)?wikiversity\.beta\.wmflabs\.org',
-			'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
-			'(.*\.)?wikimedia\.beta\.wmflabs\.org',
-			'(.*\.)?wikidata\.beta\.wmflabs\.org',
-			// T289318
 			'(.*\.)?wikipedia\.beta\.wmcloud\.org',
 			'(.*\.)?wiktionary\.beta\.wmcloud\.org',
 			'(.*\.)?wikibooks\.beta\.wmcloud\.org',
@@ -215,19 +204,19 @@ if ( $wmgRealm == 'labs' ) {
 			'(.*\.)?wikivoyage\.beta\.wmcloud\.org',
 			'(.*\.)?wikimedia\.beta\.wmcloud\.org',
 			'(.*\.)?wikidata\.beta\.wmcloud\.org',
+			// T289318: Legacy
+			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
+			'(.*\.)?wiktionary\.beta\.wmflabs\.org',
+			'(.*\.)?wikibooks\.beta\.wmflabs\.org',
+			'(.*\.)?wikinews\.beta\.wmflabs\.org',
+			'(.*\.)?wikiquote\.beta\.wmflabs\.org',
+			'(.*\.)?wikisource\.beta\.wmflabs\.org',
+			'(.*\.)?wikiversity\.beta\.wmflabs\.org',
+			'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
+			'(.*\.)?wikimedia\.beta\.wmflabs\.org',
+			'(.*\.)?wikidata\.beta\.wmflabs\.org',
 		];
 		$wgUrlShortenerApprovedDomains = [
-			'*.wikipedia.beta.wmflabs.org',
-			'*.wiktionary.beta.wmflabs.org',
-			'*.wikibooks.beta.wmflabs.org',
-			'*.wikinews.beta.wmflabs.org',
-			'*.wikiquote.beta.wmflabs.org',
-			'*.wikisource.beta.wmflabs.org',
-			'*.wikiversity.beta.wmflabs.org',
-			'*.wikivoyage.beta.wmflabs.org',
-			'*.wikimedia.beta.wmflabs.org',
-			'*.wikidata.beta.wmflabs.org',
-			// T289318
 			'*.wikipedia.beta.wmcloud.org',
 			'*.wiktionary.beta.wmcloud.org',
 			'*.wikibooks.beta.wmcloud.org',
@@ -238,6 +227,17 @@ if ( $wmgRealm == 'labs' ) {
 			'*.wikivoyage.beta.wmcloud.org',
 			'*.wikimedia.beta.wmcloud.org',
 			'*.wikidata.beta.wmcloud.org',
+			// T289318: Legacy
+			'*.wikipedia.beta.wmflabs.org',
+			'*.wiktionary.beta.wmflabs.org',
+			'*.wikibooks.beta.wmflabs.org',
+			'*.wikinews.beta.wmflabs.org',
+			'*.wikiquote.beta.wmflabs.org',
+			'*.wikisource.beta.wmflabs.org',
+			'*.wikiversity.beta.wmflabs.org',
+			'*.wikivoyage.beta.wmflabs.org',
+			'*.wikimedia.beta.wmflabs.org',
+			'*.wikidata.beta.wmflabs.org',
 		];
 	}
 
@@ -292,8 +292,8 @@ if ( $wmgRealm == 'labs' ) {
 	// DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
 	if ( $wmgUseCORS ) {
 		$wgCrossSiteAJAXdomains = [
-			'*.beta.wmflabs.org',
 			'*.beta.wmcloud.org',
+			'*.beta.wmflabs.org',
 		];
 	}
 
@@ -343,15 +343,15 @@ if ( $wmgRealm == 'labs' ) {
 		// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 		$wgGraphAllowedDomains = [
 			'https' => [
-				'beta.wmflabs.org',
-				// T289318
 				'beta.wmcloud.org',
+				// T289318: Legacy
+				'beta.wmflabs.org',
 			],
 			'wikirawupload' => [
 				'upload.wikimedia.org',
-				'upload.wikimedia.beta.wmflabs.org',
-				// T289318
 				'upload.wikimedia.beta.wmcloud.org',
+				// T289318: Legacy
+				'upload.wikimedia.beta.wmflabs.org',
 			],
 			'wikidatasparql' => [
 				'wdqs-test.wmflabs.org',
@@ -391,9 +391,9 @@ if ( $wmgRealm == 'labs' ) {
 		// - Beta testwiki fetches configuration from production mediawiki.org, to allow
 		//   testing software changes against the always-current production config.
 		if ( $wgDBname == 'commonswiki' ) {
-			$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmflabs.org';
+			$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmcloud.org';
 			$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
-			$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Extension:FileImporter/Data';
+			$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmcloud.org/wiki/Extension:FileImporter/Data';
 			$wgFileImporterWikidataEntityEndpoint = 'https://www.wikidata.beta.wmcloud.org/wiki/Special:EntityData/';
 			$wgFileImporterWikidataNowCommonsEntity = 'Q531650';
 		}
@@ -586,7 +586,7 @@ if ( $wmgRealm == 'labs' ) {
 
 	// Community configuration
 	if ( $wmgUseCommunityConfiguration ) {
-		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
+		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmcloud.org/w/api.php';
 	}
 
 	// T377988
