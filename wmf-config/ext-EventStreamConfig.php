@@ -1632,6 +1632,15 @@ return [
 			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
 		],
+		// We add the OS suffix to the stream name because we need
+		// to identify what platform the maps backends are running on.
+		// Every time an OS upgrade happens the tegola tiles cache
+		// needs to be re-created, from a brand new Postgres cluster
+		// (with a different version etc..).
+		'maps.tiles_change_bookworm.v1' => [
+			'schema_title' => 'maps/tiles_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		// mediawiki.page_change stream.
 		// This stream is using major API versioning.
