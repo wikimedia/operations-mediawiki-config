@@ -380,6 +380,7 @@ return [
 
 'wgGENewcomerTasksStarterDifficultyEnabled' => [
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
 	'testwiki' => true,
 ],
