@@ -12519,8 +12519,8 @@ return [
 // its data in a shared database (wikishared). This can only be set to true
 // for SUL wikis.
 'wmgCampaignEventsUseCentralDB' => [
-	'default' => true,
-	'private' => false,
+	'default' => false,
+	'sul' => true,
 	'testwiki' => false,
 	'test2wiki' => false,
 ],
