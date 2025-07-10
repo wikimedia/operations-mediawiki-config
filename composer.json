@@ -17,11 +17,13 @@
 		"phpunit/phpunit": "9.6.23",
 		"seld/jsonlint": "1.11.0",
 		"symfony/yaml": "6.4.21",
-		"wikimedia/ip-utils": "5.0.0"
+		"wikimedia/ip-utils": "5.0.0",
+		"mediawiki/mediawiki-phan-config": "0.16.0"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
 		"phpcs": "phpcs -p -s",
+		"phan": "phan --long-progress-bar",
 		"checkTypos": "sh -c \"! git grep -E -I -f typos -- . ':(exclude)typos'\"",
 		"fix": [
 			"phpcbf",
@@ -37,6 +39,7 @@
 			"@jsonlint",
 			"@phpunit",
 			"@phpcs",
+			"@phan",
 			"minus-x check .",
 			"@manage-dblist update",
 			"@checkclean"

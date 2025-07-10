@@ -9624,10 +9624,9 @@ return [
 	'specieswiki' => 'species',
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
-	'wikifunctionswiki' => 'wikifunctions',
+	'wikifunctionswiki' => 'wikifunctions', // T342857
 	'wikimaniawiki' => 'wikimania',
 	'outreachwiki' => 'outreach',
-	'wikifunctionswiki' => 'wikifunctions', // T342857
 
 	// TODO: clean these up (T183549)
 	'arbcom_cswiki' => 'wikipedia',

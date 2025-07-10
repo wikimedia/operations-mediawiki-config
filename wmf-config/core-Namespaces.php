@@ -261,9 +261,7 @@ return [
 		'बिसेस' => NS_SPECIAL,
 		'सदस्य' => NS_USER,
 		'स' => NS_USER,
-		'सदस्य' => NS_USER,
 		'U' => NS_USER,
-		'वि' => NS_PROJECT,
 		'वि' => NS_PROJECT,
 	],
 	'+bjnwiki' => [
@@ -570,8 +568,6 @@ return [
 		'بحث_پیشنویس' => 119, // T92760
 		'پيشنويس' => 118, // T92760
 		'بحث_پيشنويس' => 119, // T92760
-		'پیش_نویس' => 118, // T92760
-		'بحث_پیش_نویس' => 119, // T92760
 		'پیش_نویس' => 118, // T92760
 		'بحث_پیش_نویس' => 119, // T92760
 		'پيش_نويس' => 118, // T92760
@@ -1285,7 +1281,6 @@ return [
 		'वि' => NS_PROJECT,
 		'विवा' => NS_PROJECT_TALK,
 		'CT' => NS_CATEGORY_TALK,
-		'वि' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'U' => NS_USER,
 		'UT' => NS_USER_TALK,
