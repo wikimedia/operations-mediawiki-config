@@ -2219,6 +2219,27 @@ return [
 				],
 			],
 		],
+		// Instrument for Special:CreateAccount (T394744)
+		'mediawiki.product_metrics.special_create_account' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+					],
+				],
+			],
+		],
+
 		// Instrument for Special:Translate (T364460)
 		'mediawiki.product_metrics.translate_extension' => [
 			'schema_title' => 'analytics/product_metrics/web/translation',
