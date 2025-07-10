@@ -109,6 +109,11 @@ return [
 		'У' => NS_USER, // T272292
 		'UT' => NS_USER_TALK, // T272292
 		'ОУ' => NS_USER_TALK, // T272292
+
+		// TODO: consider cleaning up (T183549)
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
 	],
 	'+arwiki' => [
 		'وب' => NS_PROJECT,
@@ -2172,6 +2177,43 @@ return [
 		'幫手傾偈' => NS_HELP_TALK,
 		'分類' => NS_CATEGORY,
 		'分類傾偈' => NS_CATEGORY_TALK,
+	],
+
+	// TODO: consider cleaning up (T183549)
+	'+arbcom_cswiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+	],
+	'+arbcom_dewiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+	],
+	'+arbcom_enwiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+	],
+	'+arbcom_fiwiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+	],
+	'+arbcom_nlwiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+	],
+	'+sysop_itwiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+	],
+	'+wg_enwiki' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
 	],
 ],
 # @} end of wgNamespaceAliases
@@ -6153,6 +6195,10 @@ return [
 	'zghwiki' => 'ⵡⵉⴽⵉⴱⵉⴷⵢⴰ', // T350241
 	'zh_min_nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
+
+	// TODO: consider cleaning up (T183549)
+	'sysop_itwiki' => 'Wikipedia',
+	'wg_enwiki' => 'Wikipedia',
 ],
 # @} end of wgMetaNamespace
 

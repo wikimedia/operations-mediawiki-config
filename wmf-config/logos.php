@@ -5446,6 +5446,11 @@ return [
 	'arbcom_cswiki' => null,
 	'arbcom_dewiki' => null,
 	'arbcom_enwiki' => null,
+	'arbcom_fiwiki' => [ // TODO: consider cleaning up (T183549)
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+		'width' => 120,
+		'height' => 18,
+	],
 	'arbcom_itwiki' => [ // T368532
 		'src' => '/static/images/mobile/copyright/arbcom_itwiki-wordmark.svg',
 		'width' => 140,
@@ -8406,6 +8411,7 @@ return [
 	'arbcom_cswiki' => '/static/images/icons/arbcom_cswiki.svg',
 	'arbcom_dewiki' => '/static/images/icons/arbcom_dewiki.svg',
 	'arbcom_enwiki' => '/static/images/icons/arbcom_enwiki.svg',
+	'arbcom_fiwiki' => '/static/images/icons/wikipedia.png', // TODO: consider cleaning up (T183549)
 	'arbcom_itwiki' => '/static/images/icons/arbcom_itwiki.svg', // T368532
 	'arbcom_nlwiki' => '/static/images/icons/arbcom_nlwiki.svg',
 	'arbcom_ruwiki' => '/static/images/icons/arbcom_ruwiki.png',

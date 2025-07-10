@@ -2522,6 +2522,16 @@ return [
 	'wikivoyage' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 	'wikipedia' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 	'enwiki' => null,
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'arbcom_dewiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'arbcom_enwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'arbcom_fiwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'arbcom_nlwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'arbcom_ruwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'sysop_itwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	'wg_enwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 ],
 
 'wgVectorWvuiSearchOptions' => [
@@ -2585,7 +2595,49 @@ return [
 		'enabled' => true,
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 		'apiUrl' => '/w/rest.php',
-	]
+	],
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'arbcom_dewiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'arbcom_enwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'arbcom_fiwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'arbcom_nlwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'arbcom_ruwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'sysop_itwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
+	'wg_enwiki' => [
+		'enabled' => true,
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'apiUrl' => '/w/rest.php',
+	],
 ],
 
 // T328045
@@ -3695,6 +3747,12 @@ return [
 	'sysop_itwiki' => [ 'b', 'q', 's', 'wikt', 'n', 'v', 'de', 'es', 'en', 'fr', 'meta', 'it' ], // T259243
 	'u4cwiki' => [ 'de', 'en', 'meta' ], // T368522
 	'wikimaniawiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_fiwiki' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'arbcom_nlwiki' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'arbcom_ruwiki' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'wg_enwiki' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
 ],
 # @} end of wgImportSources
 
@@ -4336,6 +4394,12 @@ return [
 	'wikidatawiki' => '/static/favicon/wikidata.ico',
 	'wikifunctionswiki' => '/static/favicon/wikifunctions.ico',
 	'wikimaniateamwiki' => '/static/favicon/wikimania.ico',
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => '/static/favicon/wikipedia.ico',
+	'arbcom_fiwiki' => '/static/favicon/wikipedia.ico',
+	'arbcom_nlwiki' => '/static/favicon/wikipedia.ico',
+	'wg_enwiki' => '/static/favicon/wikipedia.ico',
 ],
 # @} end of wgFavicon
 
@@ -4594,6 +4658,16 @@ return [
 	'wikidata' => '/static/apple-touch/wikidata.png', // T72996
 	'enwiktionary' => '/static/apple-touch/wiktionary/en.png', // T48431
 	'dewiktionary' => '/static/apple-touch/wiktionary/de.png', // T202902
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => '/static/apple-touch/wikipedia.png',
+	'arbcom_dewiki' => '/static/apple-touch/wikipedia.png',
+	'arbcom_enwiki' => '/static/apple-touch/wikipedia.png',
+	'arbcom_fiwiki' => '/static/apple-touch/wikipedia.png',
+	'arbcom_nlwiki' => '/static/apple-touch/wikipedia.png',
+	'arbcom_ruwiki' => '/static/apple-touch/wikipedia.png',
+	'sysop_itwiki' => '/static/apple-touch/wikipedia.png',
+	'wg_enwiki' => '/static/apple-touch/wikipedia.png',
 ],
 
 'wgReferrerPolicy' => [
@@ -4641,6 +4715,16 @@ return [
 	'brwikimedia' => '/srv/mediawiki/static/images/sul/foundation.png',
 	'apiportalwiki' => '/srv/mediawiki/static/images/sul/foundation-black.png',
 	'wikimaniawiki' => '/srv/mediawiki/static/images/sul/wikimania.png',
+
+	// TODO: clean these up (T183549)
+	'arbcom_cswiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'arbcom_dewiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'arbcom_enwiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'arbcom_fiwiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'arbcom_nlwiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'arbcom_ruwiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'sysop_itwiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
+	'wg_enwiki' => '/srv/mediawiki/static/images/sul/wikipedia.png',
 ],
 
 'wmgCentralAuthCookieDomain' => [
@@ -4662,6 +4746,16 @@ return [
 	// single wikis with a safe parent domain (to share cookies with their mobile domain)
 	'mediawikiwiki' => '.mediawiki.org',
 	'sourceswiki' => '.wikisource.org',
+
+	// TODO: clean these up (T183549)
+	'arbcom_cswiki' => '.wikipedia.org',
+	'arbcom_dewiki' => '.wikipedia.org',
+	'arbcom_enwiki' => '.wikipedia.org',
+	'arbcom_fiwiki' => '.wikipedia.org',
+	'arbcom_nlwiki' => '.wikipedia.org',
+	'arbcom_ruwiki' => '.wikipedia.org',
+	'sysop_itwiki' => '.wikipedia.org',
+	'wg_enwiki' => '.wikipedia.org',
 ],
 
 'wmgCentralAuthAutoLoginWikis' => [
@@ -5693,6 +5787,15 @@ return [
 	'hewikivoyage' => true, // T222017
 	'zhwikivoyage' => true, // T230624
 	'dewikivoyage' => true, // T264305
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'wg_enwiki' => true,
 ],
 
 'wgPopupsVirtualPageViews' => [
@@ -6425,6 +6528,16 @@ return [
 	'wikipedia' => false,
 	'wikibooks' => false,
 	'wikiversity' => false,
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => false,
+	'arbcom_dewiki' => false,
+	'arbcom_enwiki' => false,
+	'arbcom_fiwiki' => false,
+	'arbcom_nlwiki' => false,
+	'arbcom_ruwiki' => false,
+	'sysop_itwiki' => false,
+	'wg_enwiki' => false,
 ],
 
 // ExternalGuidance extension initiated edit tags in VE (T216123)
@@ -6437,6 +6550,16 @@ return [
 'wgVisualEditorEditCheckTagging' => [
 	'default' => false,
 	'wikipedia' => true,
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'sysop_itwiki' => true,
+	'wg_enwiki' => true,
 ],
 
 'wgVisualEditorEditCheck' => [
@@ -6449,6 +6572,16 @@ return [
 	// T385205 added dewiki
 	'wikipedia' => true,
 	'enwiki' => false,
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'sysop_itwiki' => true,
+	'wg_enwiki' => true,
 ],
 
 'wgVisualEditorEditCheckSingleCheckMode' => [
@@ -7735,9 +7868,6 @@ return [
 	'ukwiki' => true, // T66143
 ],
 
-// arbcom_*wiki, sysop_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
-// will be overriden by 'wikipedia' => true in their cases, since they are both in wikipedia.dblist
-// and special.dblist. (T183549)
 'wmgEnableGeoData' => [
 	'default' => false,
 	'wikipedia' => true,
@@ -7747,16 +7877,8 @@ return [
 	'wikivoyage' => true,
 	'commonswiki' => true,
 	'testcommonswiki' => true,
-	'arbcom_cswiki' => false, // T151731
-	'arbcom_dewiki' => false,
-	'arbcom_enwiki' => false,
-	'arbcom_fiwiki' => false,
-	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false, // T262812
-	'sysop_itwiki' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'wg_enwiki' => false,
 	'wikidata' => true,
 	'incubatorwiki' => true,
 	'specieswiki' => true, // T324348
@@ -7799,6 +7921,16 @@ return [
 	'wikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 	'wikifunctionswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikifunctions-logo.svg.png',
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'arbcom_dewiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'arbcom_enwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'arbcom_fiwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'arbcom_nlwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'arbcom_ruwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'sysop_itwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
+	'wg_enwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
 ],
 'wmgEchoCrossWikiByDefault' => [
 	'default' => false,
@@ -8110,16 +8242,8 @@ return [
 'wmgUseContentTranslation' => [
 	'default' => false,
 	'wikipedia' => true,
-	'arbcom_cswiki' => false, // T151731
-	'arbcom_dewiki' => false,
-	'arbcom_enwiki' => false,
-	'arbcom_fiwiki' => false,
-	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false, // T262812
-	'sysop_itwiki' => false,
 	'testwiki' => true,
 	'test2wiki' => false,
-	'wg_enwiki' => false,
 ],
 
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
@@ -8382,6 +8506,16 @@ return [
 	'default' => null,
 	'wikipedia' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
 	'testwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+
+	// TODO: clean up (T183549)
+	'arbcom_cswiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'arbcom_dewiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'arbcom_enwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'arbcom_fiwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'arbcom_nlwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'arbcom_ruwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'sysop_itwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
+	'wg_enwiki' => [ 'ab', 'ace', 'ady', 'af', 'alt', 'am', 'ami', 'an', 'ang', 'ann', 'anp', 'ar', 'arc', 'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'ay', 'az', 'azb', 'ba', 'ban', 'bar', 'bbc', 'bcl', 'bdr', 'be', 'be-tarask', 'bew', 'bg', 'bho', 'bi', 'bjn', 'blk', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'btm', 'bug', 'bxr', 'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chr', 'chy', 'ckb', 'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'cy', 'da', 'dag', 'de', 'dga', 'din', 'diq', 'dsb', 'dtp', 'dty', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'fat', 'ff', 'fi', 'fj', 'fo', 'fon', 'fr', 'frp', 'frr', 'fur', 'fy', 'ga', 'gag', 'gan', 'gcr', 'gd', 'gl', 'glk', 'gn', 'gom', 'gor', 'got', 'gpe', 'gsw', 'gu', 'guc', 'gur', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hif', 'hr', 'hsb', 'ht', 'hu', 'hy', 'hyw', 'ia', 'iba', 'id', 'ie', 'ig', 'igl', 'ik', 'ilo', 'inh', 'io', 'is', 'it', 'iu', 'ja', 'jam', 'jbo', 'jv', 'ka', 'kaa', 'kab', 'kbd', 'kbp', 'kcg', 'kg', 'kge', 'ki', 'kk', 'kl', 'km', 'kn', 'knc', 'ko', 'koi', 'krc', 'ks', 'ksh', 'ku', 'kus', 'kv', 'kw', 'ky', 'la', 'lad', 'lb', 'lbe', 'lez', 'lfn', 'lg', 'li', 'lij', 'lld', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'lv', 'lzh', 'mad', 'mai', 'map-bms', 'mdf', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mnw', 'mos', 'mr', 'mrj', 'ms', 'mt', 'mwl', 'my', 'myv', 'mzn', 'nah', 'nan', 'nap', 'nb', 'nds', 'nds-nl', 'ne', 'new', 'nia', 'nl', 'nn', 'nov', 'nqo', 'nr', 'nrm', 'nso', 'nv', 'ny', 'oc', 'olo', 'om', 'or', 'os', 'pa', 'pag', 'pam', 'pap', 'pcd', 'pcm', 'pdc', 'pfl', 'pi', 'pih', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'pwn', 'qu', 'rm', 'rmy', 'rn', 'ro', 'roa-tara', 'rsk', 'ru', 'rue', 'rup', 'rw', 'sa', 'sah', 'sat', 'sc', 'scn', 'sco', 'sd', 'se', 'sg', 'sgs', 'sh', 'shi', 'shn', 'si', 'simple', 'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv', 'sw', 'syl', 'szl', 'szy', 'ta', 'tay', 'tcy', 'tdd', 'te', 'tet', 'tg', 'th', 'ti', 'tig', 'tk', 'tl', 'tly', 'tn', 'to', 'tpi', 'tr', 'trv', 'ts', 'tt', 'tum', 'tw', 'ty', 'tyv', 'udm', 'ug', 'uk', 'ur', 'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'vro', 'wa', 'war', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
@@ -8395,19 +8529,21 @@ return [
 	'wikipedia' => true, // T387821
 	'testwiki' => true,
 	'test2wiki' => false,
-	'arbcom_cswiki' => false,
-	'arbcom_dewiki' => false,
-	'arbcom_enwiki' => false,
-	'arbcom_fiwiki' => false,
-	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false,
-	'sysop_itwiki' => false,
-	'wg_enwiki' => false,
 ],
 
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'tn', 'vec', 'ast', 'lmo' ],
+
+	// TODO: clean up (T183549)
+	'arbcom_cswiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'arbcom_dewiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'arbcom_enwiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'arbcom_fiwiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'arbcom_nlwiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'arbcom_ruwiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'sysop_itwiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
+	'wg_enwiki' => [ 'tn', 'vec', 'ast', 'lmo' ],
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
@@ -8501,11 +8637,31 @@ return [
 	'zh_classicalwiki' => [],
 	'zh_yuewiki' => [],
 	'zhwiki' => [],
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => [ "minerva", "vector-2022" ],
+	'arbcom_dewiki' => [ "minerva", "vector-2022" ],
+	'arbcom_enwiki' => [ "minerva", "vector-2022" ],
+	'arbcom_fiwiki' => [ "minerva", "vector-2022" ],
+	'arbcom_nlwiki' => [ "minerva", "vector-2022" ],
+	'arbcom_ruwiki' => [ "minerva", "vector-2022" ],
+	'sysop_itwiki' => [ "minerva", "vector-2022" ],
+	'wg_enwiki' => [ "minerva", "vector-2022" ],
 ],
 
 'wmgUseExternalGuidance' => [
 	'default' => false,
 	'wikipedia' => true,
+
+	// TODO: clean these up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'sysop_itwiki' => true,
+	'wg_enwiki' => true,
 ],
 
 'wmgUseMapSources' => [
@@ -8548,6 +8704,16 @@ return [
 	'eswikinews' => true, // T230660
 	'frwikinews' => true, // T143480
 	'zhwikinews' => true, // T266933
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'sysop_itwiki' => true,
+	'wg_enwiki' => true,
 ],
 
 'wmgUseReportIncident' => [
@@ -8665,6 +8831,16 @@ return [
 	'wikidata' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'wikipedia' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'wikivoyage' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'arbcom_dewiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'arbcom_enwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'arbcom_fiwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'arbcom_nlwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'arbcom_ruwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'sysop_itwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'wg_enwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
@@ -8862,6 +9038,16 @@ return [
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
 	'wikifunctionswiki' => 'interlanguage',
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => 'interlanguage',
+	'arbcom_dewiki' => 'interlanguage',
+	'arbcom_enwiki' => 'interlanguage',
+	'arbcom_fiwiki' => 'interlanguage',
+	'arbcom_nlwiki' => 'interlanguage',
+	'arbcom_ruwiki' => 'interlanguage',
+	'sysop_itwiki' => 'interlanguage',
+	'wg_enwiki' => 'interlanguage',
 ],
 
 // Whether ime is enabled *by default*
@@ -9086,16 +9272,6 @@ return [
 'wmgEchoEnablePush' => [
 	'default' => false,
 	'wikipedia' => true, // Enabled on all Wikipedias
-
-	// exclude arbcom wikis, see T291128
-	'arbcom_cswiki' => false,
-	'arbcom_dewiki' => false,
-	'arbcom_enwiki' => false,
-	'arbcom_fiwiki' => false,
-	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false,
-	'sysop_itwiki' => false,
-	'wg_enwiki' => false,
 ],
 
 // ---T208755---
@@ -9451,7 +9627,17 @@ return [
 	'wikifunctionswiki' => 'wikifunctions',
 	'wikimaniawiki' => 'wikimania',
 	'outreachwiki' => 'outreach',
-	'wikifunctionswiki' => 'wikifunctions' // T342857
+	'wikifunctionswiki' => 'wikifunctions', // T342857
+
+	// TODO: clean these up (T183549)
+	'arbcom_cswiki' => 'wikipedia',
+	'arbcom_dewiki' => 'wikipedia',
+	'arbcom_enwiki' => 'wikipedia',
+	'arbcom_fiwiki' => 'wikipedia',
+	'arbcom_nlwiki' => 'wikipedia',
+	'arbcom_ruwiki' => 'wikipedia',
+	'sysop_itwiki' => 'wikipedia',
+	'wg_enwiki' => 'wikipedia',
 ],
 
 'wmgWikibaseEntityDataFormats' => [
@@ -10738,6 +10924,16 @@ return [
 	'default' => false,
 	// T152115
 	'wikipedia' => true,
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'sysop_itwiki' => true,
+	'wg_enwiki' => true,
 ],
 'wgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
@@ -10747,6 +10943,16 @@ return [
 	'default' => [ NS_FILE ],
 	// T320510
 	'wikipedia' => [ NS_MAIN, NS_FILE ],
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => [ NS_MAIN, NS_FILE ],
+	'arbcom_dewiki' => [ NS_MAIN, NS_FILE ],
+	'arbcom_enwiki' => [ NS_MAIN, NS_FILE ],
+	'arbcom_fiwiki' => [ NS_MAIN, NS_FILE ],
+	'arbcom_nlwiki' => [ NS_MAIN, NS_FILE ],
+	'arbcom_ruwiki' => [ NS_MAIN, NS_FILE ],
+	'sysop_itwiki' => [ NS_MAIN, NS_FILE ],
+	'wg_enwiki' => [ NS_MAIN, NS_FILE ],
 ],
 
 'wmgUseTorBlock' => [
@@ -11020,6 +11226,16 @@ return [
 	// Wikinews default license changed to 4.0 per T384614
 	'special' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 	'wikinews' => 'https://creativecommons.org/licenses/by/4.0/',
+
+	// TODO: clean these up (T183549)
+	'arbcom_cswiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.arbcom-cs',
+	'arbcom_dewiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.arbcom-de',
+	'arbcom_enwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.arbcom-en',
+	'arbcom_fiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.arbcom-fi',
+	'arbcom_nlwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.arbcom-nl',
+	'arbcom_ruwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.arbcom-ru',
+	'sysop_itwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.sysop-it',
+	'wg_enwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.wg-en',
 ],
 'wgRightsText' => [
 	'default' => 'Creative Commons Attribution-Share Alike 4.0',
@@ -12349,14 +12565,6 @@ return [
 	'uawikimedia' => true, // T376695
 	'wikidatawiki' => true, // T375411
 	'mswiktionary' => true, // T386538
-	'arbcom_cswiki' => false, // T396784
-	'arbcom_dewiki' => false, // T396784
-	'arbcom_enwiki' => false, // T396784
-	'arbcom_fiwiki' => false, // T396784
-	'arbcom_nlwiki' => false, // T396784
-	'arbcom_ruwiki' => false, // T396784
-	'sysop_itwiki' => false, // T396784
-	'wg_enwiki' => false, // T396784
 ],
 
 // This setting determines whether the CampaignEvents extension shall store

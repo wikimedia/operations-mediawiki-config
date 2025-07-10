@@ -141,6 +141,16 @@ return [
 	'itwikisource' => true,
 	'itwikiversity' => true,
 	'itwikivoyage' => true,
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_ruwiki' => true,
+	'sysop_itwiki' => true,
+	'wg_enwiki' => true,
 ],
 
 // Tune crossproject ordering
@@ -833,6 +843,88 @@ return [
 		"zh-hant-tw" => "zh",
 		"zh-hk" => "zh",
 		"zh-tw" => "zh"
+	],
+
+	// TODO: consider cleaning up (T183549)
+	'arbcom_cswiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'arbcom_dewiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'arbcom_enwiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'arbcom_fiwiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'arbcom_nlwiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'arbcom_ruwiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'sysop_itwiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
+	],
+	'wg_enwiki' => [
+		"ar" => "ar", "ay" => "ay", "az" => "az", "bg" => "bg", "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da",
+		"de" => "de", "el" => "el", "en" => "en", "es" => "es", "et" => "et", "fa" => "fa", "fi" => "fi", "fil" => "tl",
+		"fr" => "fr", "gu" => "gu", "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it",
+		"ja" => "ja", "km" => "km", "ko" => "ko", "lt" => "lt", "lv" => "lv", "mk" => "mk", "ml" => "ml", "mr" => "mr",
+		"ms" => "ms", "nb" => "no", "nl" => "nl", "no" => "no", "pa" => "pa", "pl" => "pl", "pt" => "pt", "ro" => "ro",
+		"ru" => "ru", "si" => "si", "sk" => "sk", "sl" => "sl", "sq" => "sq", "sv" => "sv", "sw" => "sw", "ta" => "ta",
+		"te" => "te", "th" => "th", "tl" => "tl", "tr" => "tr", "uk" => "uk", "ur" => "ur", "vi" => "vi", "zh" => "zh",
+		"zh-cn" => "zh", "zh-hans-cn" => "zh", "zh-hant-hk" => "zh", "zh-hant-tw" => "zh", "zh-hk" => "zh", "zh-tw" => "zh"
 	],
 ],
 # @} end of wgCirrusSearchLanguageToWikiMap

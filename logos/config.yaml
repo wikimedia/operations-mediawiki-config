@@ -4302,7 +4302,13 @@ Wikivoyage:
     arbcom_fiwiki:
         comment_1_5x: T150618
         comment_2x: T150618
+        selected_icon: wikipedia
+        local_icon: true
+        no_svg_icon: true
+        comment_icon: 'TODO: consider cleaning up (T183549)'
         selected_tagline: fiwiki
+        selected_wordmark: enwiki
+        comment_wordmark: 'TODO: consider cleaning up (T183549)'
     arbcom_itwiki:
         commons: 'File:Wikipedia Arbitration Committee Logo it.svg'
         comment: T368532
