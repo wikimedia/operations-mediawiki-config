@@ -3822,6 +3822,7 @@ return [
 
 'wmgEnableHCaptcha' => [
 	'default' => false,
+	'test2wiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
