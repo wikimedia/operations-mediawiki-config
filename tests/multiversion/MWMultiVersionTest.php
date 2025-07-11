@@ -195,7 +195,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 				'/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png', 'commonswiki' ],
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
 				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
-			[ 'upload.wikimedia.beta.wmflabs.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
+			[ 'upload.wikimedia.beta.wmcloud.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
 				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/', '/', false ],
 

@@ -37,7 +37,7 @@ $wmgSwiftShardCommon = in_array( 'commonswiki', $wmgSwiftBigWikis ) ? 2 : 0; // 
 if ( $wmgRealm === 'labs' ) {
 	$redisLockServers = [ 'rdb1' ];
 	$commonsUrl = "https://commons.wikimedia.beta.wmcloud.org";
-	$uploadUrl = "//upload.wikimedia.beta.wmflabs.org";
+	$uploadUrl = '//upload.wikimedia.beta.wmcloud.org';
 } else {
 	$redisLockServers = [ 'rdb1', 'rdb2', 'rdb3' ];
 	$commonsUrl = "https://commons.wikimedia.org";
