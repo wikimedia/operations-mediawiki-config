@@ -11254,6 +11254,7 @@ return [
 					'question' => 'reader-foundational-oe-survey-question',
 					'description' => 'reader-foundational-oe-survey-description',
 					'link' => 'reader-foundational-oe-survey-link',
+					'instanceTokenParameterName' => 'QS',
 					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
 					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 				],
