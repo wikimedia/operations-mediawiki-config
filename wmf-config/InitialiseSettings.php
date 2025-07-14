@@ -12588,13 +12588,9 @@ return [
 	'default' => true,
 ],
 
-// T388685: temporary feature flag
+// T388685 temporary feature flag, to be removed 18/08/25 if feature is validated
 'wmgWikibaseClientResolveWikibaseLabels' => [
-	'default' => false,
-	// Temporary pilot wiki rollout
-	'hewiki' => true,
-	'cawiki' => true,
-	'ukwiki' => true,
+	'default' => true,
 ],
 
 ];
