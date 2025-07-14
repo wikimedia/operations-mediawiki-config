@@ -3619,10 +3619,6 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationUnmodifiedMTThresholdForPublish = $wmgContentTranslationUnmodifiedMTThresholdForPublish;
 
-	if ( $wmgContentTranslationCluster ) {
-		$wgContentTranslationCluster = $wmgContentTranslationCluster;
-	}
-
 	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 
 	$wgContentTranslationCXServerAuth = [

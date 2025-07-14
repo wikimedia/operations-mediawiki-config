@@ -8091,16 +8091,6 @@ return [
 	'wikivoyage' => true,
 ],
 
-'wmgContentTranslationCluster' => [
-	'default' => 'extension1',
-	'testwiki' => false,
-],
-
-'wgContentTranslationDatabase' => [
-	'default' => 'wikishared',
-	'testwiki' => 'testwiki',
-],
-
 'wmgUseContentTranslation' => [
 	'default' => false,
 	'wikipedia' => true,

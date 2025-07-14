@@ -766,9 +766,6 @@ function wmfGetOverrideSettings() {
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
 
-		'wmgContentTranslationCluster' => [
-			'default' => false,
-		],
 		'wmgContentTranslationCampaigns' => [
 			'default' => [ 'newarticle' ],
 		],
