@@ -12571,9 +12571,7 @@ return [
 
 // T377975
 'wgTemplateDataEnableCategoryBrowser' => [
-	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
 ],
 
 // T388685: temporary feature flag
