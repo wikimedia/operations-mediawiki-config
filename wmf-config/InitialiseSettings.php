@@ -7704,10 +7704,6 @@ return [
 	'default' => 90,
 ],
 
-'wmgEnableInterwiki' => [
-	'default' => true,
-],
-
 'wmgUseGuidedTour' => [
 	'default' => true,
 	'lockeddown' => false,
