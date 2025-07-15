@@ -500,6 +500,9 @@ switch ( $wgDBname ) {
 	case 'urwiki':
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T47643
 		break;
+	case 'viwiki': // T399535
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		break;
 	case 'wikidatawiki':
 		$wgAbuseFilterActions['block'] = true; // T59681
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T59681

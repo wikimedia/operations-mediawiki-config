@@ -2937,6 +2937,10 @@ return [
 			'upload_by_url' => true,
 		],
 		'user' => [ 'changetags' => false ], // T385960
+		'abusefilter' => [ // T399535
+			'changetags' => true,
+			'managechangetags' => true,
+		],
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
@@ -4821,6 +4825,7 @@ return [
 			'extendedconfirmed', // T215493
 			'templateeditor', // T296154
 			'uploader', // T303577
+			'abusefilter', // T399535
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -6065,6 +6070,7 @@ return [
 			'extendedconfirmed', // T215493
 			'templateeditor', // T296154
 			'uploader', // T303577
+			'abusefilter', // T399535
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
