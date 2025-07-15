@@ -10781,11 +10781,6 @@ return [
 	'officewiki' => true,
 ],
 
-'wgSecurePollUseMediaWikiNamespace' => [
-	'default' => false,
-	'enwiki' => true, // T398080
-],
-
 // Enable SecurePoll logging
 'wgSecurePollUseLogging' => [
 	'default' => false,
