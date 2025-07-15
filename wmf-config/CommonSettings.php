@@ -3202,12 +3202,6 @@ if ( $wmgEnablePageTriage ) {
 	$wgRemoveGroups['bureaucrat'][] = 'copyviobot'; // T206731
 }
 
-// This extension is being moved to core (T33951)
-if ( $wmgEnableInterwiki && !defined( 'MW_HAS_SPECIAL_INTERWIKI' ) ) {
-	wfLoadExtension( 'Interwiki' );
-	$wgInterwikiViewOnly = true;
-}
-
 # Avoid excessive CPU due to cache misses from rapid invalidations
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50; // pages/sec per runner
 
