@@ -307,11 +307,11 @@ class MWMultiVersion {
 	 */
 	public static function initializeFromServerData( $serverName, $scriptName, $pathInfo, $requestUri ) {
 		if ( $scriptName === '/w/thumb.php'
-			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmflabs.org' || $serverName === 'upload.wikimedia.beta.wmcloud.org' )
+			&& ( $serverName === 'upload.wikimedia.org' || $serverName === 'upload.wikimedia.beta.wmcloud.org' )
 		) {
 			// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			return self::initializeForUploadWiki( $pathInfo );
-		} elseif ( $serverName === 'auth.wikimedia.org' || $serverName === 'auth.wikimedia.beta.wmflabs.org' || $serverName === 'auth.wikimedia.beta.wmcloud.org' ) {
+		} elseif ( $serverName === 'auth.wikimedia.org' || $serverName === 'auth.wikimedia.beta.wmcloud.org' ) {
 			// Shared auth domain URL hit.
 			// The condition here must match the one in CommonSettings.php where $wmgSharedDomainPathPrefix is set.
 			return self::initializeForSharedDomain( $requestUri );
@@ -347,20 +347,14 @@ class MWMultiVersion {
 			'wikipedia-pl-sysop.wikimedia.org' => 'sysop_pl',
 			'wikipedia-it-arbcom.wikimedia.org' => 'arbcom_it',
 			'wikipedia-zh-arbcom.wikimedia.org' => 'arbcom_zh',
-
-			// Beta-only
-			// wikidata canonical is www.wikidata in both prod and beta, handled above.
-			// This entry is for back-compat with legacy beta.wmflabs.org.
-			// TODO: Remove once we have a generic Apache redirect rule (T289318)
-			'wikidata.beta.wmflabs.org' => 'wikidata',
 		];
 
+		// http://en.wikipedia.beta.wmcloud.org > http://en.wikipedia.org/
+		// http://www.wikidata.beta.wmcloud.org > http://www.wikidata.org/
 		if (
-			( strpos( $serverName, 'wmflabs' ) !== false || strpos( $serverName, 'wmcloud' ) !== false )
-			&& preg_match( '/^([^.]+)\.([^.]+)\.beta\.(wmflabs|wmcloud)\.org$/', $serverName, $matches )
+			( str_ends_with( $serverName, '.beta.wmcloud.org' ) )
+			&& preg_match( '/^([^.]+)\.([^.]+)\.beta\.wmcloud\.org$/', $serverName, $matches )
 		) {
-			// http://en.wikipedia.beta.wmcloud.org/
-			// T289318: or http://en.wikipedia.beta.wmflabs.org/
 			$serverName = $matches[1] . '.' . $matches[2] . '.org';
 		}
 

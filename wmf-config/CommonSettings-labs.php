@@ -103,17 +103,6 @@ if ( $wmgRealm == 'labs' ) {
 		'login.wikimedia.beta.wmcloud.org',
 		'meta.wikimedia.beta.wmcloud.org',
 		'auth.wikimedia.beta.wmcloud.org',
-		// T289318: Legacy compat
-		'wikipedia.beta.wmflabs.org',
-		'wiktionary.beta.wmflabs.org',
-		'wikibooks.beta.wmflabs.org',
-		'wikiquote.beta.wmflabs.org',
-		'wikinews.beta.wmflabs.org',
-		'wikisource.beta.wmflabs.org',
-		'wikiversity.beta.wmflabs.org',
-		'wikivoyage.beta.wmflabs.org',
-		'commons.wikimedia.beta.wmflabs.org',
-		'api.wikimedia.beta.wmflabs.org',
 	];
 
 	if ( $wmgUseGlobalPreferences ) {
@@ -157,13 +146,13 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseCentralNotice ) {
-		// Same as production CommonSettings.php, but adding *.wikimedia.beta.wmflabs.org
-		// and *.wikimedia.beta.wmcloud.org (T289318) for meta, upload, and commons in Beta Cluster.
+		// Same as production CommonSettings.php, but adding *.wikimedia.beta.wmcloud.org
+		// for meta, upload, and commons in Beta Cluster.
 		$wgCentralNoticeContentSecurityPolicy =
-			"script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline' *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org; "
-			. "default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org; "
-			. "style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline' *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org; "
-			. "connect-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com *.wikimedia.beta.wmflabs.org *.wikimedia.beta.wmcloud.org;";
+			"script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline' *.wikimedia.beta.wmcloud.org; "
+			. "default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net *.wikimedia.beta.wmcloud.org; "
+			. "style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline' .wikimedia.beta.wmcloud.org; "
+			. "connect-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com *.wikimedia.beta.wmcloud.org;";
 	}
 
 	if ( $wmgUseCite ) {
@@ -204,17 +193,6 @@ if ( $wmgRealm == 'labs' ) {
 			'(.*\.)?wikivoyage\.beta\.wmcloud\.org',
 			'(.*\.)?wikimedia\.beta\.wmcloud\.org',
 			'(.*\.)?wikidata\.beta\.wmcloud\.org',
-			// T289318: Legacy
-			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
-			'(.*\.)?wiktionary\.beta\.wmflabs\.org',
-			'(.*\.)?wikibooks\.beta\.wmflabs\.org',
-			'(.*\.)?wikinews\.beta\.wmflabs\.org',
-			'(.*\.)?wikiquote\.beta\.wmflabs\.org',
-			'(.*\.)?wikisource\.beta\.wmflabs\.org',
-			'(.*\.)?wikiversity\.beta\.wmflabs\.org',
-			'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
-			'(.*\.)?wikimedia\.beta\.wmflabs\.org',
-			'(.*\.)?wikidata\.beta\.wmflabs\.org',
 		];
 		$wgUrlShortenerApprovedDomains = [
 			'*.wikipedia.beta.wmcloud.org',
@@ -227,17 +205,6 @@ if ( $wmgRealm == 'labs' ) {
 			'*.wikivoyage.beta.wmcloud.org',
 			'*.wikimedia.beta.wmcloud.org',
 			'*.wikidata.beta.wmcloud.org',
-			// T289318: Legacy
-			'*.wikipedia.beta.wmflabs.org',
-			'*.wiktionary.beta.wmflabs.org',
-			'*.wikibooks.beta.wmflabs.org',
-			'*.wikinews.beta.wmflabs.org',
-			'*.wikiquote.beta.wmflabs.org',
-			'*.wikisource.beta.wmflabs.org',
-			'*.wikiversity.beta.wmflabs.org',
-			'*.wikivoyage.beta.wmflabs.org',
-			'*.wikimedia.beta.wmflabs.org',
-			'*.wikidata.beta.wmflabs.org',
 		];
 	}
 
@@ -344,14 +311,10 @@ if ( $wmgRealm == 'labs' ) {
 		$wgGraphAllowedDomains = [
 			'https' => [
 				'beta.wmcloud.org',
-				// T289318: Legacy
-				'beta.wmflabs.org',
 			],
 			'wikirawupload' => [
 				'upload.wikimedia.org',
 				'upload.wikimedia.beta.wmcloud.org',
-				// T289318: Legacy
-				'upload.wikimedia.beta.wmflabs.org',
 			],
 			'wikidatasparql' => [
 				'wdqs-test.wmflabs.org',

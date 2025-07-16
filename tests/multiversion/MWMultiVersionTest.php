@@ -147,26 +147,6 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'loginwiki', 'login.wikimedia.beta.wmcloud.org' ],
 			[ 'metawiki', 'meta.wikimedia.beta.wmcloud.org' ],
 			[ 'wikidatawiki', 'www.wikidata.beta.wmcloud.org' ],
-
-			// T289318: Legacy compat. Remove after canonical switch and generic redirect.
-			[ 'aawiki', 'aa.wikipedia.beta.wmflabs.org' ],
-			[ 'commonswiki', 'commons.wikimedia.beta.wmflabs.org' ],
-			[ 'dewiki', 'de.wikipedia.beta.wmflabs.org' ],
-			[ 'dewikivoyage', 'de.wikivoyage.beta.wmflabs.org' ],
-			[ 'enwiki', 'en.wikipedia.beta.wmflabs.org' ],
-			[ 'enwikibooks', 'en.wikibooks.beta.wmflabs.org' ],
-			[ 'enwikinews', 'en.wikinews.beta.wmflabs.org' ],
-			[ 'enwikiquote', 'en.wikiquote.beta.wmflabs.org' ],
-			[ 'enwikisource', 'en.wikisource.beta.wmflabs.org' ],
-			[ 'enwikiversity', 'en.wikiversity.beta.wmflabs.org' ],
-			[ 'enwikivoyage', 'en.wikivoyage.beta.wmflabs.org' ],
-			[ 'enwiktionary', 'en.wiktionary.beta.wmflabs.org' ],
-			[ 'loginwiki', 'login.wikimedia.beta.wmflabs.org' ],
-			[ 'metawiki', 'meta.wikimedia.beta.wmflabs.org' ],
-			[ 'simplewiki', 'simple.wikipedia.beta.wmflabs.org' ],
-			[ 'sqwiki', 'sq.wikipedia.beta.wmflabs.org' ],
-			[ 'testwiki', 'test.wikipedia.beta.wmflabs.org' ],
-			[ 'wikidatawiki', 'wikidata.beta.wmflabs.org' ],
 		];
 	}
 
@@ -208,11 +188,6 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', false ],
 			[ 'www.wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
 			[ 'www.wikidata.beta.wmcloud.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
-
-			// T289318: Legacy compat
-			[ 'en.wikipedia.beta.wmflabs.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
-			[ 'auth.wikimedia.beta.wmflabs.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
-			[ 'wikidata.beta.wmflabs.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
 		];
 	}
 

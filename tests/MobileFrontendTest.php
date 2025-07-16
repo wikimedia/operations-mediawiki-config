@@ -30,7 +30,7 @@ class MobileFrontendTest extends TestCase {
 			[ 'www.wikidata.org', 'm.wikidata.org' ],
 			[ 'wikisource.org', 'm.wikisource.org' ],
 			[ 'wikitech.wikimedia.org', 'wikitech.wikimedia.org' ],
-			[ 'en.wikipedia.beta.wmflabs.org', 'en.m.wikipedia.beta.wmflabs.org' ],
+			[ 'en.wikipedia.beta.wmcloud.org', 'en.m.wikipedia.beta.wmcloud.org' ],
 			[ 'www.wikidata.beta.wmcloud.org', 'm.wikidata.beta.wmcloud.org' ],
 		];
 	}
