@@ -24,6 +24,11 @@ return [
 	],
 ],
 
+'wgCirrusSearchManagedClusters' => [
+	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+	'private' => [ 'eqiad', 'codfw' ],
+],
+
 'wgCirrusSearchReplicaGroup' => [
 	'default' => [
 		'type' => 'roundrobin',
