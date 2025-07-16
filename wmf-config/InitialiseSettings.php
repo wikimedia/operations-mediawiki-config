@@ -11233,6 +11233,32 @@ return [
 				],
 			],
 		],
+		// T399736
+		[
+			'name' => 'reader-foundational-oe-survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0,
+			'privacyPolicy' => 'reader-foundational-oe-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable', 'beta' ]
+			],
+			'audience' => [
+				'anons' => true,
+			],
+			'questions' => [
+				[
+					'name' => 'Survey single external question',
+					'question' => 'reader-foundational-oe-survey-question',
+					'description' => 'reader-foundational-oe-survey-description',
+					'link' => 'reader-foundational-oe-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
 	],
 	'eswiki' => [
 		[
