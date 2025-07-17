@@ -1489,7 +1489,7 @@ return [
 	'madwiktionary' => 'Wikikamus',
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'MediaWiki',
-	'metawiki' => 'Meta',
+	'metawiki' => 'Meta-Wiki',
 	'mhrwiki' => 'Википедий',
 	'minwikibooks' => 'Wikibuku', // T395499
 	'minwiktionary' => 'Wikikato',
