@@ -255,6 +255,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpEnableScopedTypeaheadSearch ) ) {
 		$wgWBRepoSettings['tmpEnableScopedTypeaheadSearch'] = $wmgWikibaseTmpEnableScopedTypeaheadSearch;
 	}
+
+	// Enable MEX / wbui2025 if set in config T394704 / T399703
+	if ( isset( $wmgWikibaseTmpMobileEditingUI ) ) {
+		$wgWBRepoSettings['tmpMobileEditingUI'] = $wmgWikibaseTmpMobileEditingUI;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {

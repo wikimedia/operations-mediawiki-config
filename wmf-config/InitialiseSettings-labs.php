@@ -2458,6 +2458,11 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseClientResolveWikibaseLabels' => [
 			'default' => true,
 		],
+		// T394704 / T399703 temporary feature flag
+		'wmgWikibaseTmpMobileEditingUI' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
 		// T391064
 		'-wgTemplateDataEnableFeaturedTemplates' => [
 			'default' => false,

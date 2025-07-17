@@ -12215,6 +12215,10 @@ return [
 	'wikidata' => true, // T394669, T394670
 ],
 
+'wmgWikibaseTmpMobileEditingUI' => [
+	'default' => false,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
