@@ -1153,6 +1153,7 @@ $wgAvailableRights[] = 'editextendedsemiprotected';
 $wgAvailableRights[] = 'extendedconfirmed';
 $wgAvailableRights[] = 'editautoreviewprotected';
 $wgAvailableRights[] = 'editautopatrolprotected';
+$wgAvailableRights[] = 'editpatrolprotected';
 $wgAvailableRights[] = 'edittrustedprotected';
 $wgGrantPermissions['editprotected']['templateeditor'] = true;
 $wgGrantPermissions['editprotected']['editeditorprotected'] = true;
@@ -1160,6 +1161,7 @@ $wgGrantPermissions['editprotected']['editextendedsemiprotected'] = true;
 $wgGrantPermissions['editprotected']['extendedconfirmed'] = true;
 $wgGrantPermissions['editprotected']['editautoreviewprotected'] = true;
 $wgGrantPermissions['editprotected']['editautopatrolprotected'] = true;
+$wgGrantPermissions['editprotected']['editpatrolprotected'] = true;
 $wgGrantPermissions['editprotected']['edittrustedprotected'] = true;
 $wgGrantPermissions['editprotected']['edit-legal'] = true;
 
@@ -1198,6 +1200,12 @@ $wgHooks['TitleQuickPermissions'][] = static function ( Title $title, User $user
 if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['sysop']['editautopatrolprotected'] = true;
 	$wgGroupPermissions['bot']['editautopatrolprotected'] = true;
+}
+
+// Assign "editpatrolprotected" to sysops and bots, if patroller restriction level is enabled
+if ( in_array( 'editpatrolprotected', $wgRestrictionLevels ) ) {
+	$wgGroupPermissions['sysop']['editpatrolprotected'] = true;
+	$wgGroupPermissions['bot']['editpatrolprotected'] = true;
 }
 
 // Extension:StopForumSpam rights, so they can be assigned to global groups (T334856)
