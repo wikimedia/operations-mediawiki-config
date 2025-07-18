@@ -32,8 +32,12 @@
 	<!-- Git sub repos -->
 	<exclude-pattern type="relative">^portals/</exclude-pattern>
 	<exclude-pattern type="relative">^lib/excimer-ui-client/</exclude-pattern>
-	<!-- Auto generated files -->
-	<exclude-pattern type="relative">^dblists-index\.php</exclude-pattern>
-	<exclude-pattern type="relative">^wmf-config/interwiki\.php</exclude-pattern>
-	<exclude-pattern type="relative">^wmf-config/interwiki-labs\.php</exclude-pattern>
+	<!-- Auto generated files.
+		Avoid type="relative" which doesn't work for files passed directly to PHPCS,
+		as CI does for changed files on commits that update these.
+		https://github.com/squizlabs/PHP_CodeSniffer/issues/981
+	-->
+	<exclude-pattern>dblists-index.php</exclude-pattern>
+	<exclude-pattern>wmf-config/interwiki.php</exclude-pattern>
+	<exclude-pattern>wmf-config/interwiki-labs.php</exclude-pattern>
 </ruleset>
