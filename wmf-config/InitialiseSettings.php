@@ -5997,6 +5997,20 @@ return [
 	'default' => 1,
 ],
 
+'wgParserMigrationEnableReportVisualBug' => [
+	'default' => true,
+],
+
+'wmgParserMigrationConsolidateFeedback' => [
+	'default' => true,
+	'mediawikiwiki' => false, // This is the consolidation point
+	'private' => false, // Risk of private data release
+],
+
+'wmgParserMigrationFeedbackTitle' => [
+	'default' => 'Parsoid/Feedback',
+],
+
 // -------------- Shared Parsoid end --------------
 
 // -------------- VisualEditor start --------------

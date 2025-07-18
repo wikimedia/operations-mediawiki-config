@@ -4771,6 +4771,14 @@ unset( $parsoidDir );
 
 if ( $wmgUseParserMigration ) {
 	wfLoadExtension( 'ParserMigration' );
+
+	if ( $wmgParserMigrationConsolidateFeedback ) {
+		$wgParserMigrationFeedbackTitle = 'Parsoid/Feedback';
+		$wgParserMigrationFeedbackTitleURL = 'https://www.mediawiki.org/wiki/Parsoid/Feedback';
+		$wgParserMigrationFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
+	} else {
+		$wgParserMigrationFeedbackTitle = $wmgParserMigrationFeedbackTitle;
+	}
 }
 
 // T350653
