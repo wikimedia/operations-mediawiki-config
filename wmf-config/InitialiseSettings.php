@@ -11415,7 +11415,7 @@ return [
 			'name' => 'reader-foundational-oe-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0,
+			'coverage' => 0.0025,
 			'privacyPolicy' => 'reader-foundational-oe-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
