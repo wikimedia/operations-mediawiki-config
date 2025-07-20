@@ -5790,7 +5790,7 @@ return [
 // Note: If you're adding new wikis to this list, also make sure that the Popups
 // extension knows the local names of the NavPopups or Reference Tooltips gadgets
 // by setting wgPopupsConflictingNavPopupsGadgetName and
-// wgPopupsConflictingRefTooltipsGadgetName accordingly.
+// wgCiteReferencePreviewsConflictingRefTooltipsGadgetName accordingly.
 'wmgUsePopups' => [
 	'default' => false,
 	'sewikimedia' => true, // T68374
