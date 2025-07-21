@@ -12764,15 +12764,14 @@ return [
 	'default' => true,
 ],
 
-// T388685 temporary feature flag, to be removed 18/08/25 if feature is validated
-'wmgWikibaseClientResolveWikibaseLabels' => [
+// T391064
+'wgTemplateDataEnableFeaturedTemplates' => [
 	'default' => true,
 ],
 
-// T391064
-'wgTemplateDataEnableFeaturedTemplates' => [
-	'default' => false,
-	'testwiki' => true,
+// T388685 temporary feature flag, to be removed 18/08/25 if feature is validated
+'wmgWikibaseClientResolveWikibaseLabels' => [
+	'default' => true,
 ],
 
 ];
