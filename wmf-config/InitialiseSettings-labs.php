@@ -2457,6 +2457,12 @@ function wmfGetOverrideSettings() {
 		// T388685 temporary feature flag
 		'wmgWikibaseClientResolveWikibaseLabels' => [
 			'default' => true,
-		]
+		],
+		// T391064
+		'-wgTemplateDataEnableFeaturedTemplates' => [
+			'default' => false,
+			'enwiki' => true,
+			'commonswiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()

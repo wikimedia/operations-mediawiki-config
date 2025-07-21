@@ -12578,12 +12578,12 @@ return [
 	'testwiki' => 'disable',
 ],
 
-// T377975
+// T377975 / T391064
 'wgTemplateDataEnableDiscovery' => [
 	'default' => true,
 ],
 
-// T377975
+// T377975 / T391064
 'wgTemplateDataEnableCategoryBrowser' => [
 	'default' => true,
 ],
@@ -12591,6 +12591,12 @@ return [
 // T388685 temporary feature flag, to be removed 18/08/25 if feature is validated
 'wmgWikibaseClientResolveWikibaseLabels' => [
 	'default' => true,
+],
+
+// T391064
+'wgTemplateDataEnableFeaturedTemplates' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 ];
