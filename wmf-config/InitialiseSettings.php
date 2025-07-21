@@ -10449,36 +10449,38 @@ return [
 			'hasLtrPlugin' => true,
 			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
 		],
-		'mediasearch_synonyms' => [
+		'T385286' => [
 			'boost' => [
 				'statement' => [
 					// depicts
-					'P180' => 1 * 0.11098311564161133,
+					'P180' => 0.00171714285714285,
 					// digital representation of
-					'P6243' => 1.1 * 0.11098311564161133,
-					// main subject of - arbitrary small value in case we *only* have a match in this field
-					// see T367774
-					'P921' => 0.0001,
+					'P6243' => 0.0781428571428571,
+					// main subject of
+					'P921' => 0.0285714285714285,
 				],
-				'descriptions.$language' => 0.019320230186222098,
-				'descriptions.$language.plain' => 0,
-				'title' => 0.0702949038300864,
-				'title.plain' => 0,
-				'category' => 0.05158078808882278,
-				'category.plain' => 0,
-				'heading' => 0,
-				'heading.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'auxiliary_text' => 0.0001,
-				'auxiliary_text.plain' => 0,
+				'weighted_tags' => [
+					'image.linked.from.wikidata.p18/' => 0.0715714285714285,
+					'image.linked.from.wikidata.p373/' => 0.242857142857142,
+					'image.linked.from.wikipedia.lead_image/' => 10.7142857142857,
+				],
+				'descriptions.$language' => 0.00555714285714285,
+				'descriptions.$language.plain' => 0.00471142857142857,
+				'title' => 0.00707042857142857,
+				'title.plain' => 0.00842857142857142,
+				'category' => 0.0142857142857142,
+				'category.plain' => 0.0158142857142857,
+				'heading' => 0.0568571428571428,
+				'heading.plain' => 0.0428571428571428,
+				'auxiliary_text' => 0.00571428571428571,
+				'auxiliary_text.plain' => 0.00857142857142857,
 				'file_text' => 0,
 				'file_text.plain' => 0,
-				'redirect.title' => 0.01060150471482338,
-				'redirect.title.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'text' => 0.0001,
-				'text.plain' => 0,
-				'suggest' => 0,
+				'redirect.title' => 0.0128571428571428,
+				'redirect.title.plain' => 0.00714285714285714,
+				'text' => 0.00471428571428571,
+				'text.plain' => 0.00372857142857142,
+				'suggest' => 0.0685714285714285,
 			],
 			'decay' => [
 				'descriptions.$language' => 0.9,
@@ -10486,54 +10488,15 @@ return [
 				// below is not actually a field
 				'synonyms' => 0.5,
 			],
-			'logisticRegressionIntercept' => -1.1975600089068401,
+			'logisticRegressionIntercept' => -0.158738529783097,
 			'entitiesVariableBoost' => true,
 			'normalizeMultiClauseScores' => true,
 			'applyLogisticFunction' => true,
 			'useSynonyms' => true,
-		],
-		'mediasearch_logistic_regression' => [
-			'boost' => [
-				'statement' => [
-					// depicts
-					'P180' => 1 * 0.11098311564161133,
-					// digital representation of
-					'P6243' => 1.1 * 0.11098311564161133,
-					// main subject of - arbitrary small value in case we *only* have a match in this field
-					// see T367774
-					'P921' => 0.0001,
-				],
-				'descriptions.$language' => 0.019320230186222098,
-				'descriptions.$language.plain' => 0,
-				'title' => 0.0702949038300864,
-				'title.plain' => 0,
-				'category' => 0.05158078808882278,
-				'category.plain' => 0,
-				'heading' => 0,
-				'heading.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'auxiliary_text' => 0.0001,
-				'auxiliary_text.plain' => 0,
-				'file_text' => 0,
-				'file_text.plain' => 0,
-				'redirect.title' => 0.01060150471482338,
-				'redirect.title.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'text' => 0.0001,
-				'text.plain' => 0,
-				'suggest' => 0,
-			],
-			'decay' => [
-				'descriptions.$language' => 0.9,
-				'descriptions.$language.plain' => 0.9,
-				// below is not actually a field
-				'synonyms' => 0,
-			],
-			'logisticRegressionIntercept' => -1.1975600089068401,
-			'entitiesVariableBoost' => true,
-			'normalizeMultiClauseScores' => true,
-			'applyLogisticFunction' => true,
-			'useSynonyms' => false,
+			"synonymsMinScoreThreshold" => 0.25,
+			"weightedTagsMinScoreThreshold" => 0.25,
+			'hasLtrPlugin' => true,
+			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
 		],
 	],
 ],
