@@ -7933,7 +7933,7 @@ return [
 	'wikifunctionswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikifunctions-logo.svg.png',
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 
-	// TODO: consider cleaning up (T183549)
+	// These use the Wikipedia logo for historical reasons in lieu of a nicer or more specific alternative (T400070)
 	'arbcom_cswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
 	'arbcom_dewiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
 	'arbcom_enwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
