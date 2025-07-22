@@ -68,9 +68,6 @@ return [
 		'mediaSwiftStore' => 'http://deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud/v1/AUTH_mw',
 		'push-notifications' => 'http://push-notifications.svc.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
-		// No public API (T306349). Not actually used, we proxy via production
-		// action API (cannot be configured here, as the domain depends on the current one).
-		'image-suggestion' => null,
 		'data-gateway' => null,
 		// No public API.
 		'ipoid' => null,
