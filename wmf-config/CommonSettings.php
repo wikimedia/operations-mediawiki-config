@@ -2690,6 +2690,7 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 if ( $wmgUseGlobalUsage ) {
 	wfLoadExtension( 'GlobalUsage' );
 	$wgGlobalUsageDatabase = 'commonswiki';
+	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
 }
