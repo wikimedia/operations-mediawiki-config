@@ -4511,7 +4511,7 @@ if ( $wmgUseGrowthExperiments ) {
 	// T298122 temporary fix while mobile-only quality gate gets removed
 	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
 
-	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
+	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['data-gateway'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 
 	// Ensure experiment conditional options are applied only in wikis where
@@ -4698,6 +4698,9 @@ if ( $wmgUseNearbyPages ) {
 
 if ( $wmgUseImageSuggestions ) {
 	wfLoadExtension( 'ImageSuggestions' );
+
+	$wgImageSuggestionsSuggestionsApi = $wmgLocalServices['data-gateway'] . '/public/image_suggestions/suggestions/%1$s/%2$d';
+	$wgImageSuggestionsInstanceOfApi = $wmgLocalServices['data-gateway'] . '/private/image_suggestions/instanceof_cache/%1$s/%2$d';
 }
 
 if ( $wmgUseSearchVue ) {

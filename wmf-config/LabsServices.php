@@ -71,6 +71,7 @@ return [
 		// No public API (T306349). Not actually used, we proxy via production
 		// action API (cannot be configured here, as the domain depends on the current one).
 		'image-suggestion' => null,
+		'data-gateway' => null,
 		// No public API.
 		'ipoid' => null,
 		// No Shellbox/k8s in beta cluster (T286298)
