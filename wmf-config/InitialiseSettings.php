@@ -12543,6 +12543,7 @@ return [
 	'uawikimedia' => true, // T376695
 	'wikidatawiki' => true, // T375411
 	'mswiktionary' => true, // T386538
+	'wikimaniawiki' => true, // T397369
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
@@ -12559,6 +12560,7 @@ return [
 	'default' => true,
 	'enwiki' => false,
 	'officewiki' => false, // T387943
+	'wikimaniawiki' => false, // T397369
 ],
 
 'wgCampaignEventsEnableEventInvitation' => [

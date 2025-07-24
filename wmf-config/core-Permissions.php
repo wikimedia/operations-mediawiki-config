@@ -3173,6 +3173,11 @@ return [
 			'editprotected' => true,
 			'extendedconfirmed' => true,
 		], // T389729
+		'autoconfirmed' => [
+			'campaignevents-enable-registration' => true, // T397369
+			'campaignevents-organize-events' => true, // T397369
+			'campaignevents-email-participants' => true // T397369
+		],
 	],
 	'+wuuwiki' => [
 		'rollbacker' => [
