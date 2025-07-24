@@ -2302,6 +2302,7 @@ return [
 		'RevisionStore' => 'info',
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
 		'SaveParse' => 'debug',
+		'SecurePoll' => 'warning',
 		'security' => 'debug',
 		'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
