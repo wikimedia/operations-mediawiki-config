@@ -2219,6 +2219,7 @@ return [
 		'CampaignEvents' => 'debug',
 		'CentralAuth' => 'info', // Don't log personal names by default T312704
 		'CentralNotice' => 'debug',
+		'CheckUser' => 'warning',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchDeprecation' => 'debug',
 		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug' ],
@@ -2254,6 +2255,7 @@ return [
 		'FSFileBackend' => 'debug', // - gilles for T75229
 		'generated-pp-node-count' => 'debug',
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+		'GlobalBlocking' => 'warning',
 		'GlobalWatchlist' => 'info', // T260862
 		'goodpass' => 'debug',
 		'goodpass-priv' => 'debug',
@@ -2261,6 +2263,8 @@ return [
 		'headers-sent' => 'debug',
 		'HtmlOutputRendererHelper' => 'debug', // T356157
 		'IpReputation' => 'debug',
+		'IPInfo' => 'warning',
+		'IPReputation' => 'warning',
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'Kartographer' => 'debug', // Temporary monitoring for T304813.
 		'ldap' => 'warning',
