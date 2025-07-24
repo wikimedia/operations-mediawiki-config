@@ -8190,6 +8190,9 @@ return [
 
 'wgDiscussionToolsEnableThanks' => [
 	'default' => false,
+	// Wikis with wgUseReportIncident:
+	'testwiki' => true,
+	'ptwiki' => true,
 ],
 
 'wgDiscussionToolsAutoTopicSubEditor' => [
