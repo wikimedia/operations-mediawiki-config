@@ -35,63 +35,56 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T391999 - 7 Edit-a-thons at Universidad Nacional de La Plata
+// T400276 - Wikimania 2025 - Novotel Hotel – Nairobi, Kenya
 $wmgThrottlingExceptions[] = [
-	'from' => '2025-06-17T12:45 -3:00',
-	'to' => '2025-06-17T19:15 -3:00',
-	'IP' => '163.10.23.201',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 60,
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '197.248.219.168',
+	'value' => 250,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '105.27.234.62',
+	'value' => 250,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '147.161.162.112',
+	'value' => 250,
 ];
 
-// T391764 - 4 Edit-a-thons at University in Japan
+// T400276 - Wikimania 2025 - Trademark and Tribe – Nairobi, Kenya
 $wmgThrottlingExceptions[] = [
-	'from' => '2025-06-16T14:30 +9:00',
-	'to' => '2025-06-16T17:30 +9:00',
-	'IP' => '202.25.155.253',
-	'dbname' => [ 'jawiki' ],
-	'value' => 30,
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '41.242.0.58',
+	'value' => 250,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '41.242.0.34',
+	'value' => 250,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '41.242.3.138',
+	'value' => 250,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'IP' => '41.242.3.139',
+	'value' => 250,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-08-05T00:01 +3:00',
+	'to' => '2025-08-10T15:00 +3:00',
+	'range' => '41.242.0.54/30',
+	'value' => 250,
 ];
 
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-06-23T14:30 +9:00',
-	'to' => '2025-06-23T17:30 +9:00',
-	'IP' => '202.25.155.253',
-	'dbname' => [ 'jawiki' ],
-	'value' => 30,
-];
-
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-07-10T10:00 +9:00',
-	'to' => '2025-07-10T13:00 +9:00',
-	'IP' => '202.25.155.253',
-	'dbname' => [ 'jawiki' ],
-	'value' => 30,
-];
-
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-07-17T10:00 +9:00',
-	'to' => '2025-07-17T13:00 +9:00',
-	'IP' => '202.25.155.253',
-	'dbname' => [ 'jawiki' ],
-	'value' => 30,
-];
-
-// T396128
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-06-16T08:00 +0:00',
-	'to' => '2025-06-16T18:15 +0:00',
-	'IP' => '82.219.32.157',
-	'dbname' => [ 'enwiki' ],
-	'value' => 40,
-];
-
-// T396980 - wikipedia workshop - cs.wikipedia on 19June2025
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-06-19T13:00 +2:00',
-	'to' => '2025-06-19T20:30 +2:00',
-	'IP' => '78.128.191.240',
-	'dbname' => [ 'commonswiki', 'cswiki', 'enwiki' ],
-	'value' => 60,
-];
 ## Add throttling definitions above.
