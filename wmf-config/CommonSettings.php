@@ -55,6 +55,7 @@ use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
+use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
@@ -1838,7 +1839,7 @@ $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 	if ( $wmgUseFooterContactLink ) {
 		$footerlinks['contact'] = Html::element(
 			'a',
-			[ 'href' => $sk->msg( 'contact-url' )->escaped() ],
+			[ 'href' => Skin::makeInternalOrExternalUrl( $sk->msg( 'contact-url' )->escaped() ) ],
 			$sk->msg( 'contact' )->text()
 		);
 	}
@@ -1852,7 +1853,7 @@ $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 	}
 	$footerlinks['wm-codeofconduct'] = Html::element(
 		'a',
-		[ 'href' => $sk->msg( $urlKey )->escaped() ],
+		[ 'href' => Skin::makeInternalOrExternalUrl( $sk->msg( $urlKey )->escaped() ) ],
 		$sk->msg( $msgKey )->text()
 	);
 };
