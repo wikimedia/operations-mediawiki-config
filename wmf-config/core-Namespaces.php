@@ -151,6 +151,8 @@ return [
 		'Author_talk' => 103, // T72464
 		'লিখক' => 102, // T72464
 		'লিখক_আলোচনা' => 103, // T72464
+		'Publisher' => 104, // T399269
+		'Publisher_talk' => 105, // T399269
 	],
 	'+astwiki' => [
 		'Uiquipedia' => NS_PROJECT, // T94341
@@ -3459,6 +3461,8 @@ return [
 	'aswikisource' => [
 		102 => 'লেখক', // T72464 - Author
 		103 => 'লেখক_আলোচনা',
+		104 => 'প্ৰকাশক', // T399269 - Publisher
+		105 => 'প্ৰকাশক_আলোচনা',
 	],
 	'banwikisource' => [
 		102 => 'Pangawi', // T284389 - Author
