@@ -314,6 +314,17 @@ function wmfGetOverrideSettings() {
 						'rate' => 0.5,
 					],
 				],
+				// T401308
+				[
+					'name' => 'growthexperiments-get-started-notification',
+					'groups' => [
+						'control',
+						'treatment',
+					],
+					'sample' => [
+						'rate' => 0.5,
+					],
+				],
 			],
 		],
 
@@ -1413,6 +1424,9 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => false,
 		],
 		'wgGENotificationsTrackingEnabled' => [
+			'default' => true,
+		],
+		'wgGEUseMetricsPlatformExtension' => [
 			'default' => true,
 		],
 		'wgGEHelpPanelSearchForeignAPI' => [
