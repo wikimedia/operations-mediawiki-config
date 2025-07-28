@@ -5971,6 +5971,7 @@ return [
 	'mhrwiki' => 'Википедий',
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
+	'mkwikibooks' => 'Викикниги', // T400644
 	'mkwiktionary' => 'Викиречник', // T140566
 	'mkwikimedia' => 'Викимедија',
 	'mlwiki' => 'വിക്കിപീഡിയ',

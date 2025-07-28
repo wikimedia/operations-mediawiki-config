@@ -1487,6 +1487,7 @@ return [
 	'mhrwiki' => 'Википедий',
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
+	'mkwikibooks' => 'Викикниги', // T400644
 	'mkwikimedia' => 'Викимедија Македонија',
 	'mkwiktionary' => 'Викиречник', // T140566
 	'mlwiki' => 'വിക്കിപീഡിയ',
