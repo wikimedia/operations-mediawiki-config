@@ -13,7 +13,6 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'testwiki' => 'get-started-notification',
 	'enwiki' => 'no-link-recommendation',
 ],
 
