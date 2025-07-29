@@ -3863,10 +3863,6 @@ return [
 	'default' => 30, // Default value of https://toolserver.org/~mzmcbride/watcher/
 ],
 
-'wgDefaultRobotPolicy' => [
-	'cawikimedia' => 'noindex,nofollow', // T272871
-],
-
 'wgLoginLanguageSelector' => [
 	'default' => true,
 	'enwiki' => false,
@@ -6872,6 +6868,18 @@ return [
 // Varied for Labs only.
 'wmgUsePoolCounter' => [
 	'default' => true,
+],
+
+'wgDefaultRobotPolicy' => [
+	'cawikimedia' => 'noindex,nofollow', // T272871
+],
+
+'wmgEnableSitemapApi' => [
+	'default' => true, // T400023
+	'private' => false,
+	'closed' => false,
+	'cawikimedia' => false, // not indexed
+	'wikinews' => false, // uses GNSM
 ],
 
 'wmgUseGoogleNewsSitemap' => [

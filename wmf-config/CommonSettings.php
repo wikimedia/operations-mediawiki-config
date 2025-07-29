@@ -4786,6 +4786,10 @@ if ( $wmgUseNetworkSession ) {
 	$wgNetworkSessionProviderCanAlwaysAutocreate = true;
 }
 
+if ( $wmgEnableSitemapApi ) {
+	$wgSitemapApiConfig['enabled'] = true;
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 	/**
