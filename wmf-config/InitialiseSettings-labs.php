@@ -313,6 +313,17 @@ function wmfGetOverrideSettings() {
 						'rate' => 0.5,
 					],
 				],
+				// T397728
+				[
+					'name' => 'fy24-25-we-1-7-rc-grouping-toggle',
+					'groups' => [
+						'control',
+						'toggle-shown',
+					],
+					'sample' => [
+						'rate' => 0.5,
+					],
+				],
 			],
 		],
 
