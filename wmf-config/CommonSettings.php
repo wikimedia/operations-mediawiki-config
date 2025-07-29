@@ -4076,6 +4076,8 @@ if ( $wmgUseOATHAuth ) {
 		}
 	}
 
+	$wgOATHRolloutPercent = 10; // T400579
+
 	$wgOATHRequiredForGroups = [
 		'interface-admin',
 		'centralnoticeadmin',
