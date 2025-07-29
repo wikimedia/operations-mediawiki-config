@@ -4058,6 +4058,8 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgUseWebAuthn ) {
 		wfLoadExtension( 'WebAuthn' );
+
+		$wgWebAuthnLimitPasskeysToRoaming = true;
 	}
 }
 
