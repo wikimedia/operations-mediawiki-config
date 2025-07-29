@@ -2395,6 +2395,9 @@ function wmfGetOverrideSettings() {
 		'wmgUseCommunityConfiguration' => [
 			'default' => true,
 		],
+		'wmgUseCommunityConfigurationExample' => [
+			'default' => false,
+		],
 
 		'wmgUseAutoModerator' => [ // T364034
 			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.

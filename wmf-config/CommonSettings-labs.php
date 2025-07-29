@@ -551,6 +551,12 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseCommunityConfiguration ) {
 		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmcloud.org/w/api.php';
 	}
+	if ( $wmgUseCommunityConfigurationExample ) {
+		// This is intentionally here (and not in CommonSettings.php), as we do not intend
+		// to ever deploy the extension to production (it is a catalogue of CC's abilities,
+		// which is useful to have in beta for QA purposes, but not a feature any user would want).
+		wfLoadExtension( 'CommunityConfigurationExample' );
+	}
 
 	// T377988
 	if (
