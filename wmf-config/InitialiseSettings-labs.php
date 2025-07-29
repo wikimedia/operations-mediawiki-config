@@ -2397,6 +2397,7 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgUseCommunityConfigurationExample' => [
 			'default' => false,
+			'cswiki' => true,
 		],
 
 		'wmgUseAutoModerator' => [ // T364034
