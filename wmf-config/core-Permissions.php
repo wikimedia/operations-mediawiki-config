@@ -1808,7 +1808,6 @@ return [
 			'globalgrouppermissions' => true, // T207531
 			'centralauth-lock' => true, // T208035
 			'centralauth-suppress' => true, // T302675
-			'centralauth-unmerge' => true, // T208035
 			'globalblock' => true, // T208035
 			'urlshortener-manage-url' => true, // T133109
 			'urlshortener-view-log' => true, // T221073
