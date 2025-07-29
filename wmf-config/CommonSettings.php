@@ -150,7 +150,6 @@ switch ( $wmgRealm ) {
 }
 
 $wgDBname = $multiVersion->getDatabase();
-$wgDBuser = 'wikiuser'; // Don't rely on MW default (T46251)
 $wgSQLMode = null;
 
 $wmgVersionNumber = $multiVersion->getVersionNumber();
