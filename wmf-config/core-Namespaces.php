@@ -5318,7 +5318,7 @@ return [
 		120 => [ 'autoconfirmed' ], // Property namespace per T254280
 		122 => [ 'query-update' ], // Query namespace per T51001
 	],
-	'+wikimaniawiki' => [ /* T389729: 10-146, 828. */
+	'+wikimaniawiki' => [ /* T389729: 10-146, 828. T400833: 140 removal */
 		10 => [ 'autoconfirmed' ],
 		100 => [ 'autoconfirmed' ],
 		102 => [ 'autoconfirmed' ],
@@ -5340,7 +5340,6 @@ return [
 		134 => [ 'autoconfirmed' ],
 		136 => [ 'autoconfirmed' ],
 		138 => [ 'autoconfirmed' ],
-		140 => [ 'autoconfirmed' ],
 		142 => [ 'autoconfirmed' ],
 		144 => [ 'autoconfirmed' ],
 		146 => [ 'autoconfirmed' ],
