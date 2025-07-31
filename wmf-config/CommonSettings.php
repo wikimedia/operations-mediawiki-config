@@ -4236,6 +4236,7 @@ if ( $wmgUseCheckUser ) {
 		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
 			[ '1', [ CUDCOND_NAMED ] ]
 		];
+		$wgCheckUserUserInfoCardFeatureVisible = true;
 	}
 }
 
