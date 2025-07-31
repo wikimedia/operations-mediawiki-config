@@ -1985,6 +1985,9 @@ function wmfGetOverrideSettings() {
 		'wgWikisourceEnableOcr' => [
 			'wikisource' => true,
 		],
+		'wgWikisourceEnableBulkOcr' => [
+			'wikisource' => true,
+		],
 		'wgWikisourceOcrUrl' => [
 			'wikisource' => 'https://ocr-test.wmcloud.org',
 		],
