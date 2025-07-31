@@ -7152,8 +7152,19 @@ return [
 
 // ----------- MobileFrontend start ----------
 
+// NOTE: This must be kept in sync with "mobile_redirect" in Varnish. [1]
+//
+// It is recommended to first uninstall MobileFrontend, and then exclude from Varnish.
+// If Varnish already excludes the wiki but MobileFrontend is still installed, then
+// pages may contain links that don't load (DNS not found) or 404 (Domain not served).
+// Ref T400855.
+//
+// [1]: https://gerrit.wikimedia.org/g/operations/puppet/+/HEAD/modules/varnish/templates/text-frontend.inc.vcl.erb#100
 'wmgUseMobileFrontend' => [
 	'default' => true,
+
+	'nostalgiawiki' => false, // T400855
+	'thankyouwiki' => false, // T259002#6364656, T152882, T400855
 	'wikifunctionswiki' => false, // T349408
 ],
 
