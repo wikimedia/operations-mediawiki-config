@@ -7091,6 +7091,11 @@ return [
 	'default' => 1800,
 ],
 
+// T398681
+'wgCheckUserUserInfoCardFeatureVisible' => [
+	'default' => true,
+],
+
 // ----------- CheckUser end ----------
 
 // n.b. If setting this to `false` for a wiki, please also update the
