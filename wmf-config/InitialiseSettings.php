@@ -7103,7 +7103,7 @@ return [
 'wmgEnableIPMasking' => [
 	'default' => false,
 	'metawiki' => false,
-	// T348895 T371116 T378334 T378336 T396464 T396465 T397940
+	// T348895 T371116 T378334 T378336 T396464 T396465 T397940 T400672
 	'tempaccounts' => true,
 ],
 

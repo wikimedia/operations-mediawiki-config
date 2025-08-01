@@ -4329,6 +4329,11 @@ $wgAutoCreateTempUser['matchPattern'] = '~2$1';
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'readable-numeric', 'offset' => 1500 ];
 
+// Disable temp accounts onboarding dialog for wikis where temporary accounts won't exist
+if ( in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) ) {
+	$wgDefaultUserOptions['checkuser-temporary-accounts-onboarding-dialog-seen'] = true;
+}
+
 // T39211
 $wgUseCombinedLoginLink = false;
 
