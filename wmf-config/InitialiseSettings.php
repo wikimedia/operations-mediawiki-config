@@ -10563,24 +10563,6 @@ return [
 	'default' => '/evt-103e/v2/events?hasty=true',
 ],
 
-// T397144
-'wgMetricsPlatformEnableExperimentConfigsFetching' => [
-	'default' => false,
-	'group0' => true
-],
-
-'wgMetricsPlatformEnableStreamConfigsFetching' => [
-	'default' => false,
-	'testwiki' => true,
-	'wikitech' => true,
-],
-
-'wgMetricsPlatformEnableStreamConfigsMerging' => [
-	'default' => false,
-	'testwiki' => true,
-	'wikitech' => true,
-],
-
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
