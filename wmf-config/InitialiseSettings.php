@@ -7097,46 +7097,9 @@ return [
 // relevant wiki entry to `true` in `wmgDisableIPMasking`
 'wmgEnableIPMasking' => [
 	'default' => false,
-	'testwiki' => true, // T348895
-	'loginwiki' => true, // T348895
-	'test2wiki' => true, // T371116
 	'metawiki' => false,
-	// T378334 - Minor pilot wikis rollout (i)
-	'cswikiversity' => true,
-	'igwiki' => true,
-	'itwikiquote' => true,
-	'swwiki' => true,
-	'shwiki' => true,
-	// T378336 - Minor pilot wikis rollout (ii)
-	'fawiktionary' => true,
-	'jawikibooks' => true,
-	'zh_yuewiki' => true,
-	'dawiki' => true,
-	'srwiki' => true,
-	'rowiki' => true,
-	'nowiki' => true,
-	// T396464 - Major rollout (i)
-	'trwiki' => true,
-	'cswiki' => true,
-	'kowiki' => true,
-	// T396465 - Major rollout (ii)
-	'frwiki' => true,
-	'zhwiki' => true,
-	'fawiki' => true,
-	'plwiki' => true,
-	'idwiki' => true,
-	'arwiki' => true,
-	'viwiki' => true,
-	'hiwiki' => true,
-	// T397940 - Major rollout (iii)
-	'dewiki' => true,
-	'nlwiki' => true,
-	'hewiki' => true,
-	'jawiki' => true,
-	'ukwiki' => true,
-	'azwiki' => true,
-	'mediawikiwiki' => true,
-	'ptwiki' => true,
+	// T348895 T371116 T378334 T378336 T396464 T396465 T397940
+	'tempaccounts' => true,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
