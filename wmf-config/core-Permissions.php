@@ -315,7 +315,11 @@ return [
 			'reupload-own' => true,
 			'reupload-shared' => true
 		], // T360847
-		'sysop' => [ 'extendedconfirmed' => true ], // T281860
+		'sysop' => [
+			'extendedconfirmed' => true, // T281860
+			'sboverride' => true, // T400428
+			'abusefilter-bypass-blocked-external-domains' => true // T400428
+		],
 		'pagemover' => [
 			'move' => true,
 			'move-categorypages' => true,
@@ -325,6 +329,10 @@ return [
 			'movefile' => true, // T304968
 			'suppressredirect' => true, // T359614
 		],
+		'interface-admin' => [
+			'sboverride' => true,
+			'abusefilter-bypass-blocked-external-domains' => true
+		] // T400428
 	],
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
