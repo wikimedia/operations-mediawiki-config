@@ -663,27 +663,11 @@ return [
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		// T397732
-		'compfuzz-2025-01' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-				],
-				'compfuzz-2025-01' => [
-					'trigger' => 'compfuzz-2025-01',
-					'globals' => [
-						'wgCirrusSearchCompletionResolveFuzzy' => true,
-					],
-				],
-			],
-		],
-	],
-
+	'default' => [],
 ],
 
 'wgCirrusSearchActiveTest' => [
-	'default' => 'compfuzz-2025-01',
+	'default' => null,
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
