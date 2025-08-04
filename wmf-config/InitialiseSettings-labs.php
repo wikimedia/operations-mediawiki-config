@@ -2369,13 +2369,18 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T357795
-		'wgCodeMirrorV6' => [
-				'default' => true,
+		// T373711
+		'wmgCodeMirrorReplaceCodeEditor' => [
+			'default' => true,
+		],
+
+		// T373711
+		'-wgCodeMirrorV6' => [
+			'default' => false,
 		],
 
 		'wgCodeMirrorLineNumberingNamespaces' => [
-				'default' => null,
+			'default' => null,
 		],
 
 		'-wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
