@@ -12433,6 +12433,11 @@ return [
 	'uawikimedia' => false,
 ],
 
+// T397476
+'wgCampaignEventsCountrySchemaMigrationStage' => [
+	'default' => MIGRATION_WRITE_BOTH,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
