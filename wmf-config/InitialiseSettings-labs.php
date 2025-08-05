@@ -1405,6 +1405,11 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 			'default' => 300,
 		],
+		'wgGELevelingUpNewNotificationsEnabled' => [
+			'default' => true,
+			// Keep one wiki with first version of notifications for testing
+			'simplewiki' => false,
+		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
