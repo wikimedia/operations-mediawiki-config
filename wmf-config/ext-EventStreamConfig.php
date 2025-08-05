@@ -2430,12 +2430,12 @@ return [
 		'mediawiki.product_metrics.user_info_card_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'eventgate' => [
-				'enrich_fields_from_http_headers' => [
-					'http.request_headers.user-agent' => false,
-				],
-			],
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
