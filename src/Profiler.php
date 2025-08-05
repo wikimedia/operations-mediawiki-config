@@ -46,8 +46,6 @@ class Profiler {
 			// Used for XHGui or inline profile.
 			// No-op unless enabled via WikimediaDebug (web) or --profile (CLI).
 			self::xhprofSetup( $options, 'xhprof' );
-		} elseif ( extension_loaded( 'tideways_xhprof' ) ) {
-			self::xhprofSetup( $options, 'tideways_xhprof' );
 		}
 
 		if ( PHP_SAPI !== 'cli' && extension_loaded( 'excimer' ) ) {
@@ -63,22 +61,21 @@ class Profiler {
 	 * Set up XHProf.
 	 *
 	 * @param array $options
-	 * @param string $ext One of 'xhprof' or 'tideways_xhprof'
 	 */
-	private static function xhprofSetup( array $options, string $ext ) {
+	private static function xhprofSetup( array $options ) {
 		global $wmgProfiler;
 		$xwd = XWikimediaDebug::getInstance();
 		$profileToStdout = $xwd->hasOption( 'forceprofile' );
 		$profileToXhgui = $xwd->hasOption( 'profile' ) && !empty( $options['xhgui-conf'] );
 
-		$xhprofFlags = $ext === 'xhprof' ? ( 0
+		$xhprofFlags = ( 0
 			// Add 'cpu' keys to profile entries.
 			| XHPROF_FLAGS_CPU
 			// Add 'mu' and 'pmu' keys to profile entries.
 			| XHPROF_FLAGS_MEMORY
 			// Make output more concise (doesn't modify output format)
 			| XHPROF_FLAGS_NO_BUILTINS
-		) : ( TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS );
+		);
 
 		// For web requests with XWD "profile" or "forceprofile", start the profiler now.
 		//
@@ -86,11 +83,7 @@ class Profiler {
 		// web requests because we want to measure even the pre-MediaWiki setup (such as multiversion
 		// and wmf-config) which is significant during low-latency requests.
 		if ( $profileToStdout || $profileToXhgui ) {
-			if ( $ext === 'xhprof' ) {
-				xhprof_enable( $xhprofFlags );
-			} else {
-				tideways_xhprof_enable( $xhprofFlags );
-			}
+			xhprof_enable( $xhprofFlags );
 
 			// https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
 			if ( $profileToStdout ) {
@@ -120,7 +113,7 @@ class Profiler {
 		// and save the profile to XHGui.
 		if ( $profileToXhgui ) {
 			// XHGui save callback
-			$saveCallback = static function () use ( $options, $ext ) {
+			$saveCallback = static function () use ( $options ) {
 				require_once __DIR__ . '/../src/XhguiSaverPdo.php';
 
 				// These globals are set by private/PrivateSettings.php and may only be
@@ -129,7 +122,7 @@ class Profiler {
 				// only materialise these globals during the save callback, not sooner.
 				global $wmgXhguiDBuser, $wmgXhguiDBpassword;
 
-				$profile = ( $ext === 'xhprof' ) ? xhprof_disable() : tideways_xhprof_disable();
+				$profile = xhprof_disable();
 				if ( !isset( $profile['main()'] ) ) {
 					// There isn't valid profile data to save (T271865).
 					return;
