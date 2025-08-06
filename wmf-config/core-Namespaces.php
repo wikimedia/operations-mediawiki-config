@@ -1716,8 +1716,9 @@ return [
 		'Wiktionary_చర్చ' => NS_PROJECT_TALK, // T38533
 	],
 	'+thwiki' => [
-		'H' => NS_HELP,
-	], // T70108
+		'H' => NS_HELP, // T70108
+		'WT' => NS_PROJECT_TALK, // T401287
+	],
 	'+thwikibooks' => [
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
 		'Cookbook' => 104, // T251118
