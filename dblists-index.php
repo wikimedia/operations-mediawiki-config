@@ -902,7 +902,7 @@ return [
 'tgwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'tgwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'thankyouwiki' => [ 'special', 'fishbowl', 'small', 'legacy-vector', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
-'thwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul' ],
+'thwiki' => [ 'wikipedia', 'skin-themes', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul', 'wikilove' ],
 'thwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'thwikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'thwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
