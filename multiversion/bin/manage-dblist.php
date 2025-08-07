@@ -141,7 +141,7 @@ final class WmfManageDblistCli {
 		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall', 'preinstall-labs' ] ) ) {
 			$validDbnames = strpos( $listname, 'labs' ) !== false
 				? WmfConfig::readDbListFile( 'all-labs' )
-				: WmfConfig::readDbListFile( 'all' );
+				: $this->getProdWikis();
 			if ( !in_array( $dbname, $validDbnames ) ) {
 				$this->error( "Unknown wiki: $dbname" );
 				return;
@@ -166,7 +166,7 @@ final class WmfManageDblistCli {
 	}
 
 	private function doUpdate(): void {
-		$prodWikis = WmfConfig::readDbListFile( 'all' );
+		$prodWikis = $this->getProdWikis();
 		$labsOnlyWikis = WmfConfig::readDbListFile( 'all-labs' );
 		$knownDBLists = WmfConfig::getAllDbListsForCLI();
 
@@ -400,6 +400,13 @@ final class WmfManageDblistCli {
 			. '$wgLBFactoryConf[\'sectionsByDB\'] = '
 			. $sections
 		);
+	}
+
+	/**
+	 * @return string[]
+	 */
+	private function getProdWikis(): array {
+		return array_merge( WmfConfig::readDbListFile( 'all' ), WmfConfig::readDbListFile( 'preinstall' ) );
 	}
 
 	/**
