@@ -918,7 +918,7 @@ return [
 'tlwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul' ],
 'tlwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'tlwikiquote' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
-'tlwikisource' => [ 'preinstall', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
+'tlwikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
 'tlwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
 'tlywiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'sul' ],
 'tnwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
