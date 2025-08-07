@@ -286,6 +286,7 @@ final class WmfManageDblistCli {
 				}
 				$this->doAdd( $dbName, 'commonsuploads' );
 				$this->doAdd( $dbName, 'securepollglobal' );
+				$this->doAdd( $dbName, 'sul' );
 				break;
 			case 'fishbowl':
 				$this->doAdd( $dbName, 'fishbowl' );
