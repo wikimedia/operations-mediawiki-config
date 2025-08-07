@@ -12269,6 +12269,7 @@ return [
 
 'wgParserEnableUserLanguage' => [
 	'commonswiki' => true,
+	'incubatorwiki' => true, // T401372
 	'metawiki' => true,
 ],
 
