@@ -1754,6 +1754,10 @@ return [
 	'+tiwiktionary' => [ // T263840
 		'ዊኪ-መዝገበ-ቃላት_ምይይጥ' => NS_PROJECT_TALK,
 	],
+	'+tlwikisource' => [
+		'Author' => 102, // T388654
+		'Author_talk' => 103,
+	],
 	'+trwiki' => [
 		'T' => NS_TALK, // T265336
 		'K' => NS_USER, // T265336
@@ -3820,6 +3824,10 @@ return [
 		103 => 'คุยเรื่องผู้สร้างสรรค์', // Author talk, T216322 and T236640
 		114 => 'งานแปล', // Translation, T216322
 		115 => 'คุยเรื่องงานแปล', // Translation talk, T216322
+	],
+	'tlwikisource' => [
+		102 => 'Manunulat', // T388654 - Author
+		103 => 'Usapan_sa_manunulat', // T388654 - Author talk
 	],
 	'trwikisource' => [
 		100 => 'Kişi',
