@@ -34,12 +34,17 @@ class WmfConfig {
 	 * dbname suffix (as mapped in WmfConfig::SUFFIXES) already makes them
 	 * available as SiteConfiguration tag in InitialiseSettings.php.
 	 *
+	 * Expand computed dblists with `./multiversion/bin/expanddblist`.
+	 * When updating this list, run `composer manage-dblist update` afterwards.
+	 *
 	 * @var string[]
 	 */
 	public const DB_LISTS = [
-		// Expand computed dblists with `./multiversion/bin/expanddblist`.
-		// When updating this list, run `composer manage-dblist update` afterwards.
+		// 'preinstall' is called on every request from MWMultiVersion::isPreInstall
 		'preinstall',
+		// 'wikipedia' is the only family that needs its own index. While other families
+		// have their own family suffix (::SUFFIXES), the 'wiki' suffix is used by both
+		// Wikipedia and by special wikis.
 		'wikipedia',
 		'special',
 		'private',
