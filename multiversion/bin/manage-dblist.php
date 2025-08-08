@@ -138,10 +138,10 @@ final class WmfManageDblistCli {
 	}
 
 	private function doAdd( string $dbname, string $listname ): void {
-		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall', 'preinstall-labs' ] ) ) {
+		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall' ] ) ) {
 			$validDbnames = strpos( $listname, 'labs' ) !== false
 				? WmfConfig::readDbListFile( 'all-labs' )
-				: $this->getProdWikis();
+				: WmfConfig::evalDbExpressionForCli( 'all + preinstall' );
 			if ( !in_array( $dbname, $validDbnames ) ) {
 				$this->error( "Unknown wiki: $dbname" );
 				return;
@@ -166,7 +166,7 @@ final class WmfManageDblistCli {
 	}
 
 	private function doUpdate(): void {
-		$prodWikis = $this->getProdWikis();
+		$prodWikis = WmfConfig::evalDbExpressionForCli( 'all + preinstall' );
 		$labsOnlyWikis = WmfConfig::readDbListFile( 'all-labs' );
 		$knownDBLists = WmfConfig::getAllDbListsForCLI();
 
@@ -176,7 +176,7 @@ final class WmfManageDblistCli {
 		//
 		// This caveat is validated by DblistTest::testDblistAllContainsEverything().
 		//
-		$labsOnlyTags = [ 'all-labs', 'closed-labs', 'flow_only_labs', 'flow-labs', 'preinstall-labs' ];
+		$labsOnlyTags = [ 'all-labs', 'closed-labs', 'flow_only_labs', 'flow-labs' ];
 		$untracked = [
 			// This naturally contains wikis we don't know about
 			'deleted',
@@ -400,13 +400,6 @@ final class WmfManageDblistCli {
 			. '$wgLBFactoryConf[\'sectionsByDB\'] = '
 			. $sections
 		);
-	}
-
-	/**
-	 * @return string[]
-	 */
-	private function getProdWikis(): array {
-		return array_merge( WmfConfig::readDbListFile( 'all' ), WmfConfig::readDbListFile( 'preinstall' ) );
 	}
 
 	/**
