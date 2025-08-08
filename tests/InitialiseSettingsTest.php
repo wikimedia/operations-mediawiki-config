@@ -414,22 +414,35 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	public function testOnlyExistingWikis() {
-		$dblistNames = array_keys( DBList::getLists() );
-		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
+	/**
+	 * Sub-keys in $wgConf / InitialiseSettings must be one of three things:
+	 * 1. a known dbname in all.dblist
+	 * 2. a known dbname in preinstall.dblist
+	 * 3. an indexed dblist (WmfConfig::DB_LISTS) thus optimized for production web traffic
+	 *    via dblists-index.php.
+	 * 4. a family db suffix (WmfConfig::SUFFIXES)
+	 * 4. "default"
+	 *
+	 * Specifically they must not be:
+	 * - any other dblist not indexed or CLI-only dblist-expressions.
+	 * - a non-existing dblist.
+	 * - a non-existing dbname.
+	 */
+	public function testValidWikiTagsOnly() {
+		$indexedDblists = WmfConfig::DB_LISTS;
 		$settings = $this->settings;
 		unset( $settings['@replaceableSettings'] );
 		foreach ( $settings as $setting => $config ) {
-			foreach ( $config as $db => $entry ) {
-				$dbNormalized = str_replace( "+", "", $db );
+			foreach ( $config as $tag => $entry ) {
+				$tag = str_replace( "+", "", $tag );
 				$this->assertTrue(
-					in_array( $dbNormalized, $dblistNames ) ||
-					DBList::isInDblist( $dbNormalized, "all" ) ||
-					DBList::isInDblist( $dbNormalized, "preinstall" ) ||
-					in_array( $dbNormalized, $langs ) ||
-					// TODO: revert back to $db == "default"
-					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ),
-					"$dbNormalized is referenced for $setting, but it isn't either a wiki or a dblist" );
+					DBList::isInDblist( $tag, "all" ) ||
+					DBList::isInDblist( $tag, "preinstall" ) ||
+					in_array( $tag, WmfConfig::DB_LISTS ) ||
+					in_array( $tag, WmfConfig::SUFFIXES ) ||
+					$tag === "default",
+					"$tag key for $setting is not a known wiki or indexed dblist"
+				);
 			}
 		}
 	}
