@@ -4263,10 +4263,6 @@ if ( $wmgDisableIPMasking ) {
 	$wgAutoCreateTempUser['enabled'] = true;
 	$wgAutoCreateTempUser['known'] = true;
 
-	if ( $wgDBname !== 'loginwiki' ) {
-		$wgGroupPermissions['temp']['edit'] = true;
-	}
-
 	// T357586
 	$wgImplicitGroups[] = 'temp';
 }
