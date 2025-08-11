@@ -568,6 +568,7 @@ return [
 'lvwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'lvwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
 'madwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
+'madwikisource' => [ 'preinstall', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
 'madwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
 'maiwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'maiwikimedia' => [ 'fishbowl', 'small', 'group1', 'translate' ],
