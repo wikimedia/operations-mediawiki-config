@@ -1039,6 +1039,7 @@ return [
 'zawiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
 'zeawiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'zghwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'sul' ],
+'zghwiktionary' => [ 'preinstall', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
 'zh_classicalwiki' => [ 'wikipedia', 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'zh_min_nanwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'sul' ],
 'zh_min_nanwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
