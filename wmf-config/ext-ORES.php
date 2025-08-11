@@ -365,6 +365,9 @@ return [
 			// https://ores.wikimedia.org/v3/scores/enwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ], // 'maximum recall @ precision >= 0.9'
 		],
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.831, 'max' => 1 ] // based on a false positive rate of < 15% T400590
+		],
 	],
 	'eswiki' => [
 		'damaging' => [
