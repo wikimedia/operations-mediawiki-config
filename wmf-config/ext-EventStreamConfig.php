@@ -303,7 +303,7 @@ return [
 					'enabled' => true,
 				],
 				'analytics_hive_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 			]
 		],
