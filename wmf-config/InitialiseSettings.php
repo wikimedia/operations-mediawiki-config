@@ -640,6 +640,7 @@ return [
 	'thwikiquote' => 'Asia/Bangkok',
 	'tigwiki' => 'Africa/Asmara', // T381379
 	'tlwikiquote' => 'Asia/Manila',
+	'tlwikisource' => 'Asia/Manila', // T388654
 	'tlywiki' => 'Asia/Baku', // T345316
 	'tnwiki' => 'Africa/Gaborone', // T318208
 	'trwikimedia' => 'Europe/Istanbul',
