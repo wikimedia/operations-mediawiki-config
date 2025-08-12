@@ -6289,9 +6289,10 @@ return [
 	'ltwiktionary' => 'Vikižodyno_aptarimas',
 	'lvwiki' => 'Vikipēdijas_diskusija',
 	'lvwiktionary' => 'Vikivārdnīcas_diskusija', // T170065
+	'minwikibooks' => 'Rundiang_Wikibuku', // T395452
 	'madwikisource' => 'Parembhâghân_Wikigherbhung', // T391767
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',
-	'mrwikibooks'	=> 'विकिबुक्स_चर्चा', // T73774
+	'mrwikibooks' => 'विकिबुक्स_चर्चा', // T73774
 	'mznwiki' => 'ویکی‌پدیا_گپ', // T32752 T85383
 	'newiki' => 'विकिपिडिया_वार्ता', // T184865
 	'newwiki' => 'विकिपिडिया_खँलाबँला',
@@ -6348,6 +6349,7 @@ return [
 	'wawiktionary' => 'Wiccionaire_copene', // T181782
 	'wikifunctionswiki' => 'Wikifunctions_talk',
 	'xmfwiki' => 'ვიკიპედია_სხუნუა',
+	'zghwiktionary' => 'ⴰⵎⵙⴳⴷⴰⵍ_ⵏ_ⵡⵉⴽⵉⵎⴰⵡⴰⵍ', // T399785
 ],
 # @} end of wgMetaNamespaceTalk
 
