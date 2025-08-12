@@ -5971,6 +5971,7 @@ return [
 	'lvwiki' => 'Vikipēdija',
 	'lvwiktionary' => 'Vikivārdnīca', // T170065
 	'madwiki' => 'Wikipèḍia',
+	'madwikisource' => 'Wikigherbhung', // T391767
 	'madwiktionary' => 'Wikikamus',
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',
@@ -6288,6 +6289,7 @@ return [
 	'ltwiktionary' => 'Vikižodyno_aptarimas',
 	'lvwiki' => 'Vikipēdijas_diskusija',
 	'lvwiktionary' => 'Vikivārdnīcas_diskusija', // T170065
+	'madwikisource' => 'Parembhâghân_Wikigherbhung', // T391767
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',
 	'mrwikibooks'	=> 'विकिबुक्स_चर्चा', // T73774
 	'mznwiki' => 'ویکی‌پدیا_گپ', // T32752 T85383
