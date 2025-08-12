@@ -2766,6 +2766,15 @@ Wiktionary:
     yuewiktionary:
         local_tagline: true
         local_wordmark: true
+    zghwiktionary:
+        commons: 'File:Wiktionary logo zgh v2.svg'
+        commons_wordmark: 'File:Wiktionary_wordmark_zgh.svg'
+        commons_tagline: 'File:Wiktionary_tagline_zgh.svg'
+        comment_1_5x: T399785
+        comment_2x: T399785
+        comment: T399785
+        comment_wordmark: T399785
+        comment_tagline: T399785
     zh_min_nanwiktionary:
         comment: T45240
         comment_1_5x: T150618

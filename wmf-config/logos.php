@@ -534,6 +534,7 @@ return [
 	'wowiktionary' => '/static/images/project-logos/wowiktionary.png',
 	'yiwiktionary' => '/static/images/project-logos/yiwiktionary.png', // T308411, T310961
 	'yuewiktionary' => '/static/images/project-logos/yuewiktionary.png',
+	'zghwiktionary' => '/static/images/project-logos/zghwiktionary.png', // T399785
 	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary.png', // T45240
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary.png', // T308620
 
@@ -1377,6 +1378,7 @@ return [
 	'wawiktionary' => '/static/images/project-logos/wawiktionary-1.5x.png', // T150618
 	'yiwiktionary' => '/static/images/project-logos/yiwiktionary-1.5x.png', // T308411, T310961
 	'yuewiktionary' => '/static/images/project-logos/yuewiktionary-1.5x.png',
+	'zghwiktionary' => '/static/images/project-logos/zghwiktionary-1.5x.png', // T399785
 	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', // T150618
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-1.5x.png', // T150618, T308620
 
@@ -2039,6 +2041,7 @@ return [
 	'wawiktionary' => '/static/images/project-logos/wawiktionary-2x.png', // T150618
 	'yiwiktionary' => '/static/images/project-logos/yiwiktionary-2x.png', // T308411, T310961
 	'yuewiktionary' => '/static/images/project-logos/yuewiktionary-2x.png',
+	'zghwiktionary' => '/static/images/project-logos/zghwiktionary-2x.png', // T399785
 	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png', // T150618
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-2x.png', // T150618, T308620
 
@@ -4069,6 +4072,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-yue.svg',
 		'width' => 120,
 		'height' => 27,
+	],
+	'zghwiktionary' => [ // T399785
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-zgh.svg',
+		'width' => 135,
+		'height' => 25,
 	],
 	'zhwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-zh.svg',
@@ -7877,6 +7885,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-yue.svg',
 		'width' => 120,
 		'height' => 12,
+	],
+	'zghwiktionary' => [ // T399785
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-zgh.svg',
+		'width' => 125,
+		'height' => 15,
 	],
 	'zhwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-zh.svg',
