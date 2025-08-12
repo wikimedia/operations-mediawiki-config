@@ -5969,6 +5969,7 @@ return [
 	'mediawikiwiki' => 'Project',
 	'metawiki' => 'Meta',
 	'mhrwiki' => 'Википедий',
+	'minwikibooks' => 'Wikibuku', // T395499
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
 	'mkwikibooks' => 'Викикниги', // T400644
