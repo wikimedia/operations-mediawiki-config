@@ -743,6 +743,7 @@ return [
 	'lawikisource' => '/static/images/project-logos/lawikisource.png', // T54019
 	'liwikisource' => '/static/images/project-logos/liwikisource.png', // T54019
 	'ltwikisource' => '/static/images/project-logos/ltwikisource.png', // T54019
+	'madwikisource' => '/static/images/project-logos/madwikisource.png', // T391767
 	'mkwikisource' => '/static/images/project-logos/mkwikisource.png', // T54019
 	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
 	'mrwikisource' => '/static/images/project-logos/mrwikisource.png', // T103655
@@ -1484,6 +1485,7 @@ return [
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-1.5x.png',
 	'kawikisource' => '/static/images/project-logos/kawikisource-1.5x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-1.5x.png', // T382802
+	'madwikisource' => '/static/images/project-logos/madwikisource-1.5x.png', // T391767
 	'mswikisource' => '/static/images/project-logos/mswikisource-1.5x.png',
 	'mywikisource' => '/static/images/project-logos/mywikisource-1.5x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
@@ -2145,6 +2147,7 @@ return [
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-2x.png',
 	'kawikisource' => '/static/images/project-logos/kawikisource-2x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-2x.png', // T382802
+	'madwikisource' => '/static/images/project-logos/madwikisource-2x.png', // T391767
 	'mswikisource' => '/static/images/project-logos/mswikisource-2x.png',
 	'mywikisource' => '/static/images/project-logos/mywikisource-2x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
@@ -4938,6 +4941,11 @@ return [
 	'ltwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-lt.svg',
 		'width' => 146,
+		'height' => 20,
+	],
+	'madwikisource' => [ // T391767
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-mad.svg',
+		'width' => 130,
 		'height' => 20,
 	],
 	'mkwikisource' => [
