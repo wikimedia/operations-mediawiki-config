@@ -657,6 +657,7 @@ return [
 	'xmfwiki' => 'Asia/Tbilisi',
 	'wuuwiki' => 'Asia/Shanghai', // T122476
 	'zghwiki' => 'Africa/Casablanca', // T350241
+	'zghwiktionary' => 'Africa/Casablanca', // T399785
 	'zhwikivoyage' => 'Asia/Shanghai', // T61077
 ],
 # @} end of wgLocaltimezone
@@ -1715,6 +1716,7 @@ return [
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
 	'zghwiki' => 'ⵡⵉⴽⵉⴱⵉⴷⵢⴰ', // T350241
+	'zghwiktionary' => 'ⵡⵉⴽⵉⵎⴰⵡⴰⵍ', // T399785
 	'zh_min_nanwikisource' => 'Wiki Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 	'zhwikiversity' => '維基學院',
