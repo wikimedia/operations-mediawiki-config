@@ -642,6 +642,7 @@ return [
 	'ltwikibooks' => '/static/images/project-logos/ltwikibooks.png',
 	'mgwikibooks' => '/static/images/project-logos/mgwikibooks.png', // T150618
 	'miwikibooks' => '/static/images/project-logos/miwikibooks.png', // T150618
+	'minwikibooks' => '/static/images/project-logos/minwikibooks.png', // T395499
 	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png', // T54019
 	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png', // T45111
 	'mrwikibooks' => '/static/images/project-logos/mrwikibooks.png', // T104132
@@ -1450,6 +1451,7 @@ return [
 	'lawikibooks' => '/static/images/project-logos/lawikibooks-1.5x.png',
 	'mgwikibooks' => '/static/images/project-logos/mgwikibooks-1.5x.png', // T150618
 	'miwikibooks' => '/static/images/project-logos/miwikibooks-1.5x.png', // T150618
+	'minwikibooks' => '/static/images/project-logos/minwikibooks-1.5x.png', // T395499
 	'mlwikibooks' => '/static/images/project-logos/mlwikibooks-1.5x.png', // T150618
 	'nowikibooks' => '/static/images/project-logos/nowikibooks-1.5x.png',
 	'ruwikibooks' => '/static/images/project-logos/ruwikibooks-1.5x.png', // T150618
@@ -2113,6 +2115,7 @@ return [
 	'lawikibooks' => '/static/images/project-logos/lawikibooks-2x.png',
 	'mgwikibooks' => '/static/images/project-logos/mgwikibooks-2x.png', // T150618
 	'miwikibooks' => '/static/images/project-logos/miwikibooks-2x.png', // T150618
+	'minwikibooks' => '/static/images/project-logos/minwikibooks-2x.png', // T395499
 	'mlwikibooks' => '/static/images/project-logos/mlwikibooks-2x.png', // T150618
 	'nowikibooks' => '/static/images/project-logos/nowikibooks-2x.png',
 	'ruwikibooks' => '/static/images/project-logos/ruwikibooks-2x.png', // T150618
@@ -4486,6 +4489,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-lt.svg',
 		'width' => 119,
 		'height' => 13,
+	],
+	'minwikibooks' => [ // T395499
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-min.svg',
+		'width' => 135,
+		'height' => 25,
 	],
 	'mkwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-mk.svg',
@@ -8024,6 +8032,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-lt.svg',
 		'width' => 121,
 		'height' => 10,
+	],
+	'minwikibooks' => [ // T395499
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-min.svg',
+		'width' => 135,
+		'height' => 15,
 	],
 	'mkwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-mk.svg',

@@ -3265,6 +3265,15 @@ Wikibooks:
         comment: T150618
         comment_1_5x: T150618
         comment_2x: T150618
+    minwikibooks:
+        commons: 'File:Wikibooks-logo-min.svg'
+        comment: T395499
+        comment_1_5x: T395499
+        comment_2x: T395499
+        commons_wordmark: 'File:Wikibooks-wordmark-min.svg'
+        comment_wordmark: T395499
+        commons_tagline: 'File:Wikibooks-tagline-min.svg'
+        comment_tagline: T395499
     mkwikibooks:
         comment: T54019
         local_tagline: true
