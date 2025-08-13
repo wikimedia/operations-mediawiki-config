@@ -576,6 +576,7 @@ return [
 	'pnbwiktionary' => 'Asia/Karachi',
 	'punjabiwikimedia' => 'Asia/Kolkata',
 	'pwnwiki' => 'Asia/Taipei',
+	'rkiwiki' => 'Asia/Yangon', // T392499
 	'rmwiki' => 'Europe/Berlin',
 	'roa_tarawiki' => 'Europe/Rome', // T263123
 	'romdwikimedia' => 'Europe/Chisinau',
@@ -1576,6 +1577,7 @@ return [
 	'ptwiktionary' => 'Wikcionário',
 	'punjabiwikimedia' => 'Punjabi Wikimedians',
 	'qualitywiki' => 'Wikimedia Quality',
+	'rkiwiki' => 'ဝီကီးပီးဒီးယား', // T392499
 	'rmywiki' => 'Vikipidiya',
 	'rskwiki' => 'Википедия',
 	'rowikibooks' => 'Wikimanuale',

@@ -6062,6 +6062,7 @@ return [
 	'ptwiktionary' => 'Wikcionário',
 	'qualitywiki' => 'Project',
 	'quwiki' => 'Wikipidiya', // T355129
+	'rkiwiki' => 'ဝီကီးပီးဒီးယား', // T392499
 	'rmywiki' => 'Vikipidiya',
 	'rowikibooks' => 'Wikimanuale',
 	'rowikinews' => 'Wikiștiri',
