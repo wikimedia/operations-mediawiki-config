@@ -2270,6 +2270,7 @@ return [
 		'GrowthExperiments' => 'info',
 		'headers-sent' => 'debug',
 		'HtmlOutputRendererHelper' => 'debug', // T356157
+		'ImageSuggestions' => 'info',
 		'IpReputation' => 'debug',
 		'IPInfo' => 'warning',
 		'IPReputation' => 'warning',
