@@ -1449,6 +1449,15 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    rkiwiki:
+        commons: 'File:Wikipedia-logo-v2-rki.svg'
+        comment: T392499
+        comment_1_5x: T392499
+        comment_2x: T392499
+        commons_wordmark: 'File:Wikipedia-wordmark-v2-rki.svg'
+        comment_wordmark: T392499
+        commons_tagline: 'File:Wikipedia-tagline-v2-rki.svg'
+        comment_tagline: T392499
     rmwiki:
         comment: T48589
         comment_1_5x: T150618

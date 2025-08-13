@@ -298,6 +298,7 @@ return [
 	'ptwiki' => '/static/images/project-logos/ptwiki.png',
 	'pwnwiki' => '/static/images/project-logos/pwnwiki.png',
 	'quwiki' => '/static/images/project-logos/quwiki.png',
+	'rkiwiki' => '/static/images/project-logos/rkiwiki.png', // T392499
 	'rmwiki' => '/static/images/project-logos/rmwiki.png', // T48589
 	'rmywiki' => '/static/images/project-logos/rmywiki.png', // T48589
 	'rnwiki' => '/static/images/project-logos/rnwiki.png',
@@ -1184,6 +1185,7 @@ return [
 	'ptwiki' => '/static/images/project-logos/ptwiki-1.5x.png', // T150618
 	'pwnwiki' => '/static/images/project-logos/pwnwiki-1.5x.png',
 	'quwiki' => '/static/images/project-logos/quwiki-1.5x.png', // T150618
+	'rkiwiki' => '/static/images/project-logos/rkiwiki-1.5x.png', // T392499
 	'rmwiki' => '/static/images/project-logos/rmwiki-1.5x.png', // T150618
 	'rmywiki' => '/static/images/project-logos/rmywiki-1.5x.png', // T150618
 	'roa_rupwiki' => '/static/images/project-logos/roa_rupwiki-1.5x.png', // T150618
@@ -1848,6 +1850,7 @@ return [
 	'ptwiki' => '/static/images/project-logos/ptwiki-2x.png', // T150618
 	'pwnwiki' => '/static/images/project-logos/pwnwiki-2x.png',
 	'quwiki' => '/static/images/project-logos/quwiki-2x.png', // T150618
+	'rkiwiki' => '/static/images/project-logos/rkiwiki-2x.png', // T392499
 	'rmwiki' => '/static/images/project-logos/rmwiki-2x.png', // T150618
 	'rmywiki' => '/static/images/project-logos/rmywiki-2x.png', // T150618
 	'roa_rupwiki' => '/static/images/project-logos/roa_rupwiki-2x.png', // T150618
@@ -3142,6 +3145,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-qu.svg',
 		'width' => 120,
 		'height' => 18,
+	],
+	'rkiwiki' => [ // T392499
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-rki.svg',
+		'width' => 120,
+		'height' => 23,
 	],
 	'rmwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-rm.svg',
@@ -6991,6 +6999,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-qu.svg',
 		'width' => 120,
 		'height' => 15,
+	],
+	'rkiwiki' => [ // T392499
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-rki.svg',
+		'width' => 90,
+		'height' => 17,
 	],
 	'rmwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-rm.svg',
