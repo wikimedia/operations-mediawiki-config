@@ -500,6 +500,7 @@ return [
 	'lmowiktionary' => 'Europe/Rome',
 	'lvwiki' => 'Europe/Riga', // T45592
 	'madwiki' => 'Asia/Jakarta',
+	'madwikisource' => 'Asia/Jakarta', // T391767
 	'madwiktionary' => 'Asia/Jakarta',
 	'maiwiki' => 'Asia/Kathmandu', // T74346
 	'maiwikimedia' => 'Asia/Kathmandu',
@@ -1483,6 +1484,7 @@ return [
 	'lvwiki' => 'Vikipēdija',
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'maiwikimedia' => 'मैथिली विकिमिडियन्स',
+	'madwikisource' => 'Wikigherbhung', // T391767
 	'madwiktionary' => 'Wikikamus',
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'MediaWiki',
