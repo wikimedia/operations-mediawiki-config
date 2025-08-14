@@ -11784,6 +11784,7 @@ return [
 
 	'group0' => SCHEMA_COMPAT_NEW,
 	'small' => SCHEMA_COMPAT_NEW,
+	'medium' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
