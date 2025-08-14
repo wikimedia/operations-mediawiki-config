@@ -11600,6 +11600,13 @@ return [
 	'cswiki' => 14, // T148327
 ],
 
+// Reduced default for large wikis (T399455)
+'wmgDefaultRecentChangesDays' => [
+	'default' => 1,
+	'small' => 7,
+	'medium' => 7,
+],
+
 'wmgEnhancedRecentChanges' => [
 	'default' => false,
 	'arwiki' => true, // T220186

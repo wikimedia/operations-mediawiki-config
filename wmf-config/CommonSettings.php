@@ -2734,6 +2734,7 @@ $wgDefaultUserOptions['watchrollback'] = (int)$wmgWatchRollback;
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
+$wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 $wgDefaultUserOptions['usenewrc'] = (int)$wmgEnhancedRecentChanges;
 $wgDefaultUserOptions['extendwatchlist'] = (int)$wmgEnhancedWatchlist;
 $wgDefaultUserOptions['forceeditsummary'] = (int)$wmgForceEditSummary;
