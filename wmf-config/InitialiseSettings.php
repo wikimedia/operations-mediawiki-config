@@ -4625,7 +4625,7 @@ return [
 	],
 	'wikimaniawiki' => [
 		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_EDITCOUNT, 100 ], // T401537
 			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
