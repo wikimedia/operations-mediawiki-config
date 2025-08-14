@@ -1756,6 +1756,7 @@ return [
 			'flow-hide' => false, // T245780
 			'flow-edit-title' => false, // T328097
 			'unfuzzy' => false, // T366994
+			'translate-empty-category' => false // T401878
 		],
 		'autoconfirmed' => [
 			'flow-hide' => true, // T245780
@@ -1770,7 +1771,13 @@ return [
 			'reupload-own' => true,
 			'reupload-shared' => true,
 		],
-		'translationadmin' => [ 'autopatrol' => true, ],
+		'translationadmin' => [
+			'autopatrol' => true,
+			'translate-empty-category' => true // T401878
+		 ],
+		 'sysop' => [
+			'translate-empty-category' => true // T401878
+		 ]
 	],
 	'+metawiki' => [
 		'*' => [
