@@ -2385,6 +2385,38 @@ return [
 				'rate' => 1,
 			],
 		],
+		// (T397043, T397600) MinT for Wiki Readers: pagevisit instrumentation for experiment (Language & Product Localization)
+		'mediawiki.product_metrics.translation_mint_for_readers.experiments' => [
+			'schema_title' => 'analytics/product_metrics/web/translation',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_skin',
+						'mediawiki_site_content_language',
+						'mediawiki_site_content_language_variant',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
+					],
+				],
+			],
+			'eventgate' => [
+				'enrich_fields_from_http_headers' => [
+					// Don't collect the user agent
+					'http.request_headers.user-agent' => false,
+				],
+				'use_edge_uniques' => true,
+			],
+		],
 		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
 		'mediawiki.product_metrics.homepage_module_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
