@@ -11791,6 +11791,10 @@ return [
 	'group0' => SCHEMA_COMPAT_NEW,
 	'small' => SCHEMA_COMPAT_NEW,
 	'medium' => SCHEMA_COMPAT_NEW,
+	'cebwiki' => SCHEMA_COMPAT_NEW,
+	'dewiki' => SCHEMA_COMPAT_NEW,
+	'shwiki' => SCHEMA_COMPAT_NEW,
+	'srwiki' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
