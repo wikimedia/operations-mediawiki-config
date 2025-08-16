@@ -5238,6 +5238,10 @@ return [
 		118 => 'noindex,nofollow', // T91223
 		119 => 'noindex,nofollow',
 	],
+	'zhwikisource' => [
+		NS_USER => 'noindex,nofollow', // T401070
+		NS_USER_TALK => 'noindex,nofollow', // T401070
+	],
 ],
 # @} end of ROBOT
 
