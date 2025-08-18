@@ -4556,36 +4556,7 @@ if ( $wmgUseGrowthExperiments ) {
 	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['data-gateway'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 
-	// Ensure experiment conditional options are applied only in wikis where
-	// the relevant experiment is enabled.
-	if ( $wmgGEActiveExperiment === 'no-link-recommendation' ) {
-		// Add Link experiment, T377631
-		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
-			[ 'control',
-				[ 'user-bucket-growth', 'no-link-recommendation', 20 ],
-				[ CUDCOND_AFTER, '20250324000000' ],
-			],
-			[ 'control',
-				[ 'user-bucket-growth', 'no-link-recommendation', 15 ],
-				[ CUDCOND_AFTER, '20250220140000' ],
-			],
-			[ 'control',
-				[ 'user-bucket-growth', 'no-link-recommendation', 10 ],
-				[ CUDCOND_AFTER, '20250128090000' ],
-			],
-			[ 'control',
-				[ 'user-bucket-growth', 'no-link-recommendation', 5 ],
-				[ CUDCOND_AFTER, '20250107000000' ],
-			],
-			[ 'control',
-				[ 'user-bucket-growth', 'no-link-recommendation', 2 ],
-				[ CUDCOND_AFTER, '20241125000000' ],
-			],
-			[ 'no-link-recommendation',
-				[ 'user-bucket-growth', 'no-link-recommendation', 100 ],
-			],
-		];
-	}
+	// put if conditions for $wmgGEActiveExperiment here
 }
 
 if ( $wmgUseWikiLambda ) {

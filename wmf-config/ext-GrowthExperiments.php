@@ -13,7 +13,6 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'enwiki' => 'no-link-recommendation',
 ],
 
 'wgGEImageRecommendationApiHandler' => [

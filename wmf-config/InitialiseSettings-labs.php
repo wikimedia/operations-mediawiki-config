@@ -1370,9 +1370,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wmgGEActiveExperiment' => [
-			'enwiki' => 'no-link-recommendation',
-		],
 		'wmgUseGrowthExperiments' => [
 			'wikidatawiki' => true,
 		],
