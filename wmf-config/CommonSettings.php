@@ -2968,6 +2968,7 @@ $wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQuery
 $wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExcludeNamespaces;
 $wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
 $wgVectorNightModeOptions = $wgMinervaNightModeOptions;
+$wgMinervaTypeahead = $wgVectorTypeahead;
 
 # Mobile-related configuration
 if ( $wmgUseMobileFrontend ) {

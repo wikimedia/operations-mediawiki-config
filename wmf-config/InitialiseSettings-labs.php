@@ -618,9 +618,11 @@ function wmfGetOverrideSettings() {
 		],
 		'wgMinervaTypeahead' => [
 			'default' => [
-				'enabled' => true,
 				'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-				'apiUrl' => '/w/rest.php',
+				'options' => [
+					'showThumbnail' => true,
+					'showDescription' => true
+				]
 			],
 		],
 		'wgMinervaNightMode' => [
@@ -716,6 +718,16 @@ function wmfGetOverrideSettings() {
 
 		'wgVectorSearchRecommendationsApiUrl' => [
 			'default' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3'
+		],
+
+		'wgVectorTypeahead' => [
+			'default' => [
+				'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+				'options' => [
+					'showThumbnail' => true,
+					'showDescription' => true
+				]
+			],
 		],
 
 		///

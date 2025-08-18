@@ -2534,6 +2534,71 @@ return [
 	],
 ],
 
+'wgVectorTypeahead' => [
+	'default' => [
+		'recommendationApiUrl' => null,
+		'options' => [
+			'showThumbnail' => true,
+			'showDescription' => true
+		]
+	],
+	'+enwiki' => [
+		'recommendationApiUrl' => null,
+	],
+	'+testwiki' => [
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => false
+		]
+	],
+	'+wikivoyage' => [
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	],
+	'+wikipedia' => [
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	],
+	'+group1-wikipedia' => [
+		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+	],
+	'+officewiki' => [
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+	'+commonswiki' => [
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+	'+wikifunctionswiki' => [
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => true,
+		],
+	],
+	'+wikidatawiki' => [
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => true,
+		],
+	],
+	'+testwikidatawiki' => [
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => true,
+		],
+	],
+	'+labswiki' => [
+		'options' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+],
+
 'wgVectorSearchRecommendationsApiUrl' => [
 	'default' => null,
 	'testwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
@@ -2580,81 +2645,6 @@ return [
 	'labswiki' => [
 		'showThumbnail' => false,
 		'showDescription' => false,
-	],
-],
-
-'wgMinervaTypeahead' => [
-	'default' => [
-		'enabled' => true,
-		'recommendationApiUrl' => null,
-		'apiUrl' => '/w/rest.php',
-	],
-	'enwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => null,
-		'apiUrl' => '/w/rest.php',
-	],
-	'testwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'wikivoyage' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'group1-wikipedia' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'wikipedia' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'arbcom_dewiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'arbcom_enwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'arbcom_fiwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'arbcom_nlwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'arbcom_ruwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'sysop_itwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
-	],
-	'wg_enwiki' => [
-		'enabled' => true,
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'apiUrl' => '/w/rest.php',
 	],
 ],
 
