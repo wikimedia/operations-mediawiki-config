@@ -4272,7 +4272,6 @@ if ( $wmgDisableIPMasking ) {
 
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
-	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';
 	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'GlobalBlockList';
 		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'MassGlobalBlock';
