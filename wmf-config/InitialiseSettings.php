@@ -8525,13 +8525,6 @@ return [
 	'wikipedia' => false,
 ],
 
-'wgContentTranslationEnableUnifiedDashboard' => [
-	'default' => false,
-	'wikipedia' => true, // T387821
-	'testwiki' => true,
-	'test2wiki' => false,
-],
-
 'wgAutomaticTranslationLanguageSearcherEntrypointEnabledLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'tn', 'vec', 'ast', 'lmo' ],
