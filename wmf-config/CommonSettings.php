@@ -2923,7 +2923,7 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
-
+	$wgCitoidServiceUrl = "/api/rest_v1/data/citation";
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
