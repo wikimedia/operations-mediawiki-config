@@ -51,3 +51,7 @@ $wgCirrusSearchShardCount = [
 	'codfw' => $wmgCirrusSearchShardCount,
 	'cloudelastic' => $wmgCirrusSearchShardCount,
 ];
+
+// CirrusSearch internal user allowed to bypass cirrusbuilddoc PoolCounter protection (T401220)
+// (This user is declared in the private settings)
+$wgCirrusSearchStreamingUpdaterUsername = 'CirrusSearch Streaming Updater';
