@@ -4240,6 +4240,11 @@ if ( $wmgUseCheckUser ) {
 		];
 		$wgCheckUserUserInfoCardFeatureVisible = true;
 	}
+
+	// Link to the central Special:CentralAuth page if available (T397690)
+	if ( $wmgUseCentralAuth ) {
+		$wgCheckUserUserInfoCardCentralWikiId = 'metawiki';
+	}
 }
 
 if ( $wmgUseIPReputation ) {
