@@ -11784,10 +11784,25 @@ return [
 	'group0' => SCHEMA_COMPAT_NEW,
 	'small' => SCHEMA_COMPAT_NEW,
 	'medium' => SCHEMA_COMPAT_NEW,
+
+	// s2 & large
+	'cswiki' => SCHEMA_COMPAT_NEW,
+	'enwiktionary' => SCHEMA_COMPAT_NEW,
+	'nlwiki' => SCHEMA_COMPAT_NEW,
+	'svwiki' => SCHEMA_COMPAT_NEW,
+	'zhwiki' => SCHEMA_COMPAT_NEW,
+
+	// s5 & large
 	'cebwiki' => SCHEMA_COMPAT_NEW,
 	'dewiki' => SCHEMA_COMPAT_NEW,
-	'shwiki' => SCHEMA_COMPAT_NEW,
+	'mgwiktionary' => SCHEMA_COMPAT_NEW,
 	'srwiki' => SCHEMA_COMPAT_NEW,
+	'shwiki' => SCHEMA_COMPAT_NEW,
+
+	// s6 & large
+	'frwiki' => SCHEMA_COMPAT_NEW,
+	'jawiki' => SCHEMA_COMPAT_NEW,
+	'ruwiki' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
