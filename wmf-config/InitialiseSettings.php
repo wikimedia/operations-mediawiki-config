@@ -11778,52 +11778,11 @@ return [
 
 // T299951
 'wgCategoryLinksSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'default' => SCHEMA_COMPAT_NEW,
 
 	// pending T399249
 	'enwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	'commonswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-
-	'group0' => SCHEMA_COMPAT_NEW,
-	'small' => SCHEMA_COMPAT_NEW,
-	'medium' => SCHEMA_COMPAT_NEW,
-
-	// s2 & large
-	'cswiki' => SCHEMA_COMPAT_NEW,
-	'enwiktionary' => SCHEMA_COMPAT_NEW,
-	'fiwiki' => SCHEMA_COMPAT_NEW,
-	'idwiki' => SCHEMA_COMPAT_NEW,
-	'itwiki' => SCHEMA_COMPAT_NEW,
-	'nlwiki' => SCHEMA_COMPAT_NEW,
-	'nowiki' => SCHEMA_COMPAT_NEW,
-	'plwiki' => SCHEMA_COMPAT_NEW,
-	'ptwiki' => SCHEMA_COMPAT_NEW,
-	'svwiki' => SCHEMA_COMPAT_NEW,
-	'trwiki' => SCHEMA_COMPAT_NEW,
-	'zhwiki' => SCHEMA_COMPAT_NEW,
-
-	// s3 & large
-	'enwikinews' => SCHEMA_COMPAT_NEW,
-	'enwikisource' => SCHEMA_COMPAT_NEW,
-	'frwikisource' => SCHEMA_COMPAT_NEW,
-	'incubatorwiki' => SCHEMA_COMPAT_NEW,
-	'ruwikinews' => SCHEMA_COMPAT_NEW,
-	'ruwiktionary' => SCHEMA_COMPAT_NEW,
-	'specieswiki' => SCHEMA_COMPAT_NEW,
-	'warwiki' => SCHEMA_COMPAT_NEW,
-	'zhwiktionary' => SCHEMA_COMPAT_NEW,
-
-	// s5 & large
-	'cebwiki' => SCHEMA_COMPAT_NEW,
-	'dewiki' => SCHEMA_COMPAT_NEW,
-	'mgwiktionary' => SCHEMA_COMPAT_NEW,
-	'srwiki' => SCHEMA_COMPAT_NEW,
-	'shwiki' => SCHEMA_COMPAT_NEW,
-
-	// s6 & large
-	'frwiki' => SCHEMA_COMPAT_NEW,
-	'jawiki' => SCHEMA_COMPAT_NEW,
-	'ruwiki' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
