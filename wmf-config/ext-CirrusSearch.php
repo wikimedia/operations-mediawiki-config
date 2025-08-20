@@ -1182,4 +1182,10 @@ return [
 		'classification.ores.drafttopic' => 'classification.prediction.drafttopic', // T389053
 	],
 ],
+'wgCirrusSearchPhraseSuggestBuildVariant' => [
+	'default' => true,
+],
+'wgCirrusSearchPhraseSuggestUseOpeningText' => [
+	'default' => true,
+],
 ];
