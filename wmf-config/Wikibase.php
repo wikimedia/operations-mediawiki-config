@@ -353,7 +353,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
-	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
+	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'A' => 10, 'L' => 10, 'C' => 33 ];
 	if ( isset( $wmgEntityUsageModifierLimitsStatement ) ) {
 		$wgWBClientSettings['entityUsageModifierLimits']['C'] = $wmgEntityUsageModifierLimitsStatement;
 	}
