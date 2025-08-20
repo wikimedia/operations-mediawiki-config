@@ -83,7 +83,7 @@ class WmfConfig {
 		'ores',
 		'sul',
 		'wikilove',
-		'tempaccounts',
+		'tempaccounts_disabled',
 	];
 
 	/** @var string[] */
