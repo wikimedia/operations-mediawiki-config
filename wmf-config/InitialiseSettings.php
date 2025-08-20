@@ -11789,9 +11789,27 @@ return [
 	// s2 & large
 	'cswiki' => SCHEMA_COMPAT_NEW,
 	'enwiktionary' => SCHEMA_COMPAT_NEW,
+	'fiwiki' => SCHEMA_COMPAT_NEW,
+	'idwiki' => SCHEMA_COMPAT_NEW,
+	'itwiki' => SCHEMA_COMPAT_NEW,
 	'nlwiki' => SCHEMA_COMPAT_NEW,
+	'nowiki' => SCHEMA_COMPAT_NEW,
+	'plwiki' => SCHEMA_COMPAT_NEW,
+	'ptwiki' => SCHEMA_COMPAT_NEW,
 	'svwiki' => SCHEMA_COMPAT_NEW,
+	'trwiki' => SCHEMA_COMPAT_NEW,
 	'zhwiki' => SCHEMA_COMPAT_NEW,
+
+	// s3 & large
+	'enwikinews' => SCHEMA_COMPAT_NEW,
+	'enwikisource' => SCHEMA_COMPAT_NEW,
+	'frwikisource' => SCHEMA_COMPAT_NEW,
+	'incubatorwiki' => SCHEMA_COMPAT_NEW,
+	'ruwikinews' => SCHEMA_COMPAT_NEW,
+	'ruwiktionary' => SCHEMA_COMPAT_NEW,
+	'specieswiki' => SCHEMA_COMPAT_NEW,
+	'warwiki' => SCHEMA_COMPAT_NEW,
+	'zhwiktionary' => SCHEMA_COMPAT_NEW,
 
 	// s5 & large
 	'cebwiki' => SCHEMA_COMPAT_NEW,
