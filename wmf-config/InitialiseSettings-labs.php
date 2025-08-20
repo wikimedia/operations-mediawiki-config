@@ -1125,6 +1125,10 @@ function wmfGetOverrideSettings() {
 			'default' => true
 		],
 
+		'wgPopupsRestGatewayEndpoint' => [
+			'default' => 'https://en.wikipedia.org/api/rest_v1/page/summary/',
+		],
+
 		// T165018: Make Page Previews (Popups) use RESTBase's page summary endpoint
 		// and consume the HTML returned.
 		'-wgPopupsGateway' => [
