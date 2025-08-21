@@ -1024,6 +1024,7 @@ if ( $wmgUseCORS ) {
 		'foundation.wikimedia.org',
 		'foundation.m.wikimedia.org',
 		'grants.wikimedia.org',
+		'hcaptcha.wikimedia.org',
 		'incubator.wikimedia.org',
 		'incubator.m.wikimedia.org',
 		'internal.wikimedia.org',
