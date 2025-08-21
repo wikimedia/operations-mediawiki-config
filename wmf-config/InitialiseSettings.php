@@ -12466,7 +12466,7 @@ return [
 
 // T397476
 'wgCampaignEventsCountrySchemaMigrationStage' => [
-	'default' => MIGRATION_WRITE_BOTH,
+	'default' => MIGRATION_WRITE_NEW,
 ],
 
 // T309900
