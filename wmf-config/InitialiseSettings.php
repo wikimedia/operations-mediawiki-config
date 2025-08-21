@@ -334,6 +334,7 @@ return [
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
 	'bewwiki' => 'Asia/Jakarta',
+	'bewwiktionary' => 'Asia/Jakarta', // T402134
 	'bjnwiki' => 'Asia/Makassar', // T328887
 	'bjnwikiquote' => 'Asia/Makassar', // T350235
 	'bjnwiktionary' => 'Asia/Makassar',
@@ -1206,6 +1207,7 @@ return [
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік',
 	'bewwiki' => 'Wikipédi',
+	'bewwiktionary' => 'Wikikamus', // T402134
 	'bgwiki' => 'Уикипедия',
 	'bgwikibooks' => 'Уикикниги',
 	'bgwikinews' => 'Уикиновини',

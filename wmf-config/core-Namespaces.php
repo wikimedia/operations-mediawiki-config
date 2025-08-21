@@ -251,6 +251,10 @@ return [
 		'Author' => 102, // T43322
 		'Author_talk' => 103,
 	],
+	'+bewwiktionary' => [
+		'Appendix' => 100, // T402134
+		'Appendix_talk' => 101, // T402134
+	],
 	'+bgwiki' => [
 		'Draft' => 118, // T299224
 		'Draft_talk' => 119,
@@ -3879,6 +3883,10 @@ return [
 		100 => 'Əlavə', // Appendix - T143851
 		101 => 'Əlavə_müzakirəsi',
 	],
+	'bewwiktionary' => [
+		100 => 'Tèmplokan', // Appendix - T402134
+		101 => 'Kongko_tèmplokan',
+	],
 	'bgwiktionary' => [
 		100 => 'Словоформи',
 		101 => 'Словоформи_беседа'
@@ -5692,6 +5700,7 @@ return [
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік', // T175950
 	'bewwiki' => 'Wikipédi',
+	'bewwiktionary' => 'Wikikamus', // T402134
 	'bgwiki' => 'Уикипедия',
 	'bgwikibooks' => 'Уикикниги',
 	'bgwikinews' => 'Уикиновини',
