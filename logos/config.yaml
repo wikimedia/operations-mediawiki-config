@@ -2066,6 +2066,15 @@ Wiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
         local_wordmark: true
+    bewwiktionary:
+        commons: 'File:Wiktionary-logo-bew-v2.svg'
+        comment: T402134
+        comment_1_5x: T402134
+        comment_2x: T402134
+        commons_tagline: 'File:Wiktionary-tagline-bew.svg'
+        comment_tagline: T402134
+        commons_wordmark: 'File:Wiktionary-wordmark-bew.svg'
+        comment_wordmark: T402134
     bgwiktionary:
         no_1_5x: true
         no_2x: true
