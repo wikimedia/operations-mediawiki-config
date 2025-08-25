@@ -1368,6 +1368,9 @@ function wmfGetOverrideSettings() {
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
 		],
+		'wmgUseGrowthExperiments' => [
+			'wikidatawiki' => true,
+		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
