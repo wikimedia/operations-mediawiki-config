@@ -31,6 +31,10 @@
  * $wgMobileUrlTemplate in InitialiseSettings.php.
  */
 function wmfMobileUrlCallback( string $domain ): string {
+	// * Don't add wikis here where MobileFrontend is not installed.
+	//   That has no effect as the function is only called from MF-enabled code.
+	// * Don't add wikis here that use MobileFrontend without m-dot domain.
+	//   That breaks compat CDN purging (T400855, T401595).
 	static $specialCases = [
 		'wikisource.org' => 'm.wikisource.org',
 		'wikitech.wikimedia.org' => false,

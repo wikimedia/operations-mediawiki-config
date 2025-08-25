@@ -2978,9 +2978,31 @@ if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
 	require_once 'MobileUrlCallback.php';
-	$wgMobileUrlCallback = 'wmfMobileUrlCallback';
 
 	$wgMFMobileHeader = 'X-Subdomain';
+
+	if ( $wmgUseMdotRouting ) {
+		$wgMobileUrlCallback = 'wmfMobileUrlCallback';
+	} else {
+		$wgMobileUrlCallback = null;
+
+		// https://www.mediawiki.org/wiki/Manual:Hooks/TitleSquidURLs
+		$wgHooks['TitleSquidURLs'][] = static function ( $title, &$urls ): void {
+			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+			foreach ( $urls as $url ) {
+				$normUrl = $urlUtils->expand( $url, PROTO_CURRENT );
+				$bits = $urlUtils->parse( $normUrl );
+				if ( $bits ) {
+					$bits['host'] = wmfMobileUrlCallback( $bits['host'] );
+					$newUrl = MediaWiki\Utils\UrlUtils::assemble( $bits );
+					if ( $newUrl !== $normUrl ) {
+						$urls[] = $newUrl;
+					}
+				}
+			}
+		};
+	}
+
 } else {
 	// For sites without MobileFrontend, instead enable Vector's "responsive" state.
 	$wgVectorResponsive = true;
