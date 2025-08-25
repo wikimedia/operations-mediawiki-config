@@ -52,6 +52,8 @@ return [
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => false,
 ],
 
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
@@ -825,6 +827,24 @@ return [
 	'frwiki' => 2000,
 	'idwiki' => 2000,
 	'ptwiki' => 2000,
+],
+
+'wgWelcomeSurveyEnabled' => [
+	'default' => true,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => false,
+],
+
+'wgGEHelpPanelNewAccountEnableWithHomepage' => [
+	'default' => true,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => false,
+],
+
+'wgGEHelpPanelNewAccountEnablePercentage' => [
+	'default' => 100,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => 0,
 ],
 
 ];
