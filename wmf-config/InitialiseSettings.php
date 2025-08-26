@@ -2542,8 +2542,12 @@ return [
 			'showDescription' => true
 		]
 	],
-	'+enwiki' => [
+	'enwiki' => [
 		'recommendationApiUrl' => null,
+		'options' => [
+			'showThumbnail' => true,
+			'showDescription' => true
+		]
 	],
 	'+testwiki' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
