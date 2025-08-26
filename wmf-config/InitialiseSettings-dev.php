@@ -113,5 +113,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUsePoolCounter' => [
 			'default' => false,
 		],
+		'-wmgUseContentTranslation' => [
+			'default' => false,
+		],
 	];
 }
