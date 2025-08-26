@@ -19,7 +19,13 @@ class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 			'kube-mw-jobrunner', [ 'async', 'k8s' ]
 		];
 		yield 'api-int on k8s' => [
-			'kube-mw-api-int', [ 'api', 'k8s' ]
+			'kube-mw-api-int', [ 'api', 'k8s', 'api-int' ]
+		];
+		yield 'api-ext on k8s' => [
+			'kube-mw-api-ext', [ 'api', 'k8s' ]
+		];
+		yield 'mw-web on k8s' => [
+			'kube-mw-web', [ 'k8s' ]
 		];
 		yield 'parsoid' => [
 			'parsoid', [ 'parsoid' ]
@@ -50,6 +56,7 @@ class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 		$this->assertSame( in_array( 'parsoid', $expected_traits ), $toTest->isParsoid() );
 		$this->assertSame( in_array( 'debug', $expected_traits ), $toTest->isDebug() );
 		$this->assertSame( in_array( 'api', $expected_traits ), $toTest->isApi() );
+		$this->assertSame( in_array( 'api-int', $expected_traits ), $toTest->isInternalApi() );
 		$this->assertSame( in_array( 'canary', $expected_traits ), $toTest->isCanary() );
 	}
 

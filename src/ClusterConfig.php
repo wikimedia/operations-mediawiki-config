@@ -22,6 +22,7 @@ class ClusterConfig {
 		'parsoid' => [ 'parsoid' ],
 		'debug' => [ 'debug' ],
 		'api'  => [ 'api_', 'api-' ],
+		'api-int'  => [ 'api-int' ],
 		'dumps' => [ 'dumps' ],
 	];
 
@@ -124,6 +125,15 @@ class ClusterConfig {
 	 */
 	public function isApi() {
 		return $this->hasTrait( 'api' );
+	}
+
+	/**
+	 * Is this cluster group an internal api cluster?
+	 *
+	 * @return bool
+	 */
+	public function isInternalApi() {
+		return $this->hasTrait( 'api-int' );
 	}
 
 	/**
