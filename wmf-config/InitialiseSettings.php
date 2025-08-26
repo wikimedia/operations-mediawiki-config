@@ -2549,53 +2549,65 @@ return [
 			'showDescription' => true
 		]
 	],
-	'+testwiki' => [
+	'testwiki' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => false
 		]
 	],
-	'+wikivoyage' => [
+	'wikivoyage' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'options' => [
+			'showThumbnail' => true,
+			'showDescription' => true
+		]
 	],
-	'+wikipedia' => [
+	'wikipedia' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'options' => [
+			'showThumbnail' => true,
+			'showDescription' => true
+		]
 	],
-	'+group1-wikipedia' => [
+	'group1-wikipedia' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
+		'options' => [
+			'showThumbnail' => true,
+			'showDescription' => true
+		]
 	],
-	'+officewiki' => [
+	'officewiki' => [
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => false,
 		],
 	],
-	'+commonswiki' => [
+	'commonswiki' => [
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => false,
 		],
 	],
-	'+wikifunctionswiki' => [
+	'wikifunctionswiki' => [
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => true,
 		],
 	],
-	'+wikidatawiki' => [
+	'wikidatawiki' => [
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => true,
 		],
 	],
-	'+testwikidatawiki' => [
+	'testwikidatawiki' => [
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => true,
 		],
 	],
-	'+labswiki' => [
+	'labswiki' => [
 		'options' => [
 			'showThumbnail' => false,
 			'showDescription' => false,
