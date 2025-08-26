@@ -568,6 +568,9 @@ return [
 		106 => 0.9,
 	],
 	'commonswiki' => [
+		// T401590: Reduce weight of galleries
+		0 => 0.6,
+		// On most wikis NS_FILE is discounted, but not on commons
 		6 => 1.0,
 	],
 	'labswiki' => [
