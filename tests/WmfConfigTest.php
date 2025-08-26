@@ -104,7 +104,7 @@ class WmfConfigTest extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	public function testEvalDbListExpression() {
+	public function testEvalDbExpressionBasic() {
 		$allDbs = WmfConfig::readDbListFile( 'all' );
 		$allPrivateDbs = WmfConfig::readDbListFile( 'private' );
 		$exprDbs = WmfConfig::evalDbExpressionForCli( 'all - private' );
@@ -112,5 +112,26 @@ class WmfConfigTest extends PHPUnit\Framework\TestCase {
 		sort( $exprDbs );
 		sort( $expectedDbs );
 		$this->assertEquals( $expectedDbs, $exprDbs );
+	}
+
+	public function testEvalDbExpressionAdvanced() {
+		$this->assertEquals(
+			[ 'enwiki' ],
+			WmfConfig::evalDbExpressionForCli( '../../../dblists/s1.dblist' )
+		);
+		$this->assertEquals(
+			[ 'commonswiki' ],
+			WmfConfig::evalDbExpressionForCli( '/some/path/to/dblists/s4.dblist & large' )
+		);
+		$this->assertEquals(
+			[ 'commonswiki', 'enwiki' ],
+			WmfConfig::evalDbExpressionForCli( 'group0 + group1.dblist + /a/path/group2.dblist & /else/where/s1.dblist + /some/path/to/dblists/s4.dblist & large' ),
+			'tokens are evaluated from left to right'
+		);
+	}
+
+	public function testEvalDbExpressionNotFound() {
+		$this->expectExceptionMessage( 'Unable to read whatever' );
+		WmfConfig::evalDbExpressionForCli( 's1 + whatever' );
 	}
 }

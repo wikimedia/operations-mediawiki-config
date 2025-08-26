@@ -303,7 +303,7 @@ return [
 					'enabled' => true,
 				],
 				'analytics_hive_ingestion' => [
-					'enabled' => false,
+					'enabled' => true,
 				],
 			]
 		],
@@ -549,28 +549,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_TwoColConflictConflict' => [
-			'schema_title' => 'analytics/legacy/twocolconflictconflict',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_TwoColConflictExit' => [
-			'schema_title' => 'analytics/legacy/twocolconflictexit',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_UniversalLanguageSelector' => [
 			'schema_title' => 'analytics/legacy/universallanguageselector',
 			'topic_prefixes' => null,
@@ -732,6 +710,10 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'app_game_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/app_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'app_activity_tab' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
@@ -1350,6 +1332,12 @@ return [
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 		'/^swift\.(.+\.)?upload-complete$/' => [
 			'schema_title' => 'swift/upload/complete',
@@ -1651,6 +1639,15 @@ return [
 			'destination_event_service' => 'eventgate-main',
 		],
 		'maps.tiles_change' => [
+			'schema_title' => 'maps/tiles_change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		// We add the OS suffix to the stream name because we need
+		// to identify what platform the maps backends are running on.
+		// Every time an OS upgrade happens the tegola tiles cache
+		// needs to be re-created, from a brand new Postgres cluster
+		// (with a different version etc..).
+		'maps.tiles_change_bookworm.v1' => [
 			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
 		],
@@ -2023,51 +2020,6 @@ return [
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
 		 */
-		'mediawiki.cirrussearch.page_weighted_tags_change.rc0' => [
-			'schema_title' => 'development/cirrussearch/page_weighted_tags_change',
-			'destination_event_service' => 'eventgate-main',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			// TODO: re-enable canary events once the schema is stabilized
-			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
-				],
-			],
-		],
-		'cirrussearch.update_pipeline.update.rc0' => [
-			'schema_title' => 'development/cirrussearch/update_pipeline/update',
-			'destination_event_service' => 'eventgate-main',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page_id',
-			],
-			'canary_events_enabled' => true,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'medium',
-				],
-			],
-		],
-		'cirrussearch.update_pipeline.update.private.rc0' => [
-			'schema_title' => 'development/cirrussearch/update_pipeline/update',
-			'destination_event_service' => 'eventgate-main',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page_id',
-			],
-			'canary_events_enabled' => true,
-		],
-		'cirrussearch.update_pipeline.fetch_error.rc0' => [
-			'schema_title' => 'development/cirrussearch/update_pipeline/fetch_error',
-			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => true,
-		],
-
 		'mediawiki.cirrussearch.page_weighted_tags_change.v1' => [
 			'schema_title' => 'mediawiki/cirrussearch/page_weighted_tags_change',
 			'destination_event_service' => 'eventgate-main',
@@ -2232,6 +2184,27 @@ return [
 				],
 			],
 		],
+		// Instrument for Special:CreateAccount (T394744)
+		'mediawiki.product_metrics.special_create_account' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+					],
+				],
+			],
+		],
+
 		// Instrument for Special:Translate (T364460)
 		'mediawiki.product_metrics.translate_extension' => [
 			'schema_title' => 'analytics/product_metrics/web/translation',
@@ -2373,6 +2346,38 @@ return [
 				'rate' => 1,
 			],
 		],
+		// (T397043, T397600) MinT for Wiki Readers: pagevisit instrumentation for experiment (Language & Product Localization)
+		'mediawiki.product_metrics.translation_mint_for_readers.experiments' => [
+			'schema_title' => 'analytics/product_metrics/web/translation',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_skin',
+						'mediawiki_site_content_language',
+						'mediawiki_site_content_language_variant',
+						'page_content_language',
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'performer_session_id',
+						'performer_active_browsing_session_token',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_language',
+						'performer_language_variant',
+						'performer_pageview_id',
+					],
+				],
+			],
+			'eventgate' => [
+				'enrich_fields_from_http_headers' => [
+					// Don't collect the user agent
+					'http.request_headers.user-agent' => false,
+				],
+				'use_edge_uniques' => true,
+			],
+		],
 		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
 		'mediawiki.product_metrics.homepage_module_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
@@ -2422,12 +2427,12 @@ return [
 		'mediawiki.product_metrics.user_info_card_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'eventgate' => [
-				'enrich_fields_from_http_headers' => [
-					'http.request_headers.user-agent' => false,
-				],
-			],
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',

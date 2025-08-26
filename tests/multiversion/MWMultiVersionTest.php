@@ -121,37 +121,32 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'trwikimedia', 'tr.wikimedia.org' ],
 			[ 'uawikimedia', 'ua.wikimedia.org' ],
 
-			// labs stuffs taken from /wikiversions-labs.dat
-			[ 'aawiki', 'aa.wikipedia.beta.wmflabs.org' ],
-			[ 'arwiki', 'ar.wikipedia.beta.wmflabs.org' ],
-			[ 'commonswiki', 'commons.wikimedia.beta.wmflabs.org' ],
-			[ 'dewiki', 'de.wikipedia.beta.wmflabs.org' ],
-			[ 'dewikivoyage', 'de.wikivoyage.beta.wmflabs.org' ],
+			// Beta Cluster
+			[ 'enwiki', 'en.wikipedia.beta.wmcloud.org' ],
+			[ 'enwikibooks', 'en.wikibooks.beta.wmcloud.org' ],
+			[ 'enwikinews', 'en.wikinews.beta.wmcloud.org' ],
+			[ 'enwikiquote', 'en.wikiquote.beta.wmcloud.org' ],
+			[ 'enwikisource', 'en.wikisource.beta.wmcloud.org' ],
+			[ 'enwikiversity', 'en.wikiversity.beta.wmcloud.org' ],
+			[ 'enwikivoyage', 'en.wikivoyage.beta.wmcloud.org' ],
+			[ 'enwiktionary', 'en.wiktionary.beta.wmcloud.org' ],
 
-			[ 'enwiki', 'en.wikipedia.beta.wmflabs.org' ],
-			[ 'enwikibooks', 'en.wikibooks.beta.wmflabs.org' ],
-			[ 'enwikinews', 'en.wikinews.beta.wmflabs.org' ],
-			[ 'enwikiquote', 'en.wikiquote.beta.wmflabs.org' ],
-			[ 'enwikisource', 'en.wikisource.beta.wmflabs.org' ],
-			[ 'enwikiversity', 'en.wikiversity.beta.wmflabs.org' ],
-			[ 'enwikivoyage', 'en.wikivoyage.beta.wmflabs.org' ],
-			[ 'enwiktionary', 'en.wiktionary.beta.wmflabs.org' ],
-
-			[ 'eowiki', 'eo.wikipedia.beta.wmflabs.org' ],
-			[ 'hewiki', 'he.wikipedia.beta.wmflabs.org' ],
-
-			[ 'loginwiki', 'login.wikimedia.beta.wmflabs.org' ],
-			[ 'metawiki', 'meta.wikimedia.beta.wmflabs.org' ],
-
-			[ 'simplewiki', 'simple.wikipedia.beta.wmflabs.org' ],
-			[ 'sqwiki', 'sq.wikipedia.beta.wmflabs.org' ],
-			[ 'testwiki', 'test.wikipedia.beta.wmflabs.org' ],
-
-			[ 'wikidatawiki', 'wikidata.beta.wmflabs.org' ],
-
-			// wikis hosted on new wmcloud.org domain
-			[ 'test2wiki', 'test2.wikipedia.beta.wmcloud.org' ],
+			[ 'aawiki', 'aa.wikipedia.beta.wmcloud.org' ],
+			[ 'arwiki', 'ar.wikipedia.beta.wmcloud.org' ],
+			[ 'dewiki', 'de.wikipedia.beta.wmcloud.org' ],
+			[ 'dewikivoyage', 'de.wikivoyage.beta.wmcloud.org' ],
+			[ 'eowiki', 'eo.wikipedia.beta.wmcloud.org' ],
+			[ 'hewiki', 'he.wikipedia.beta.wmcloud.org' ],
 			[ 'plwikivoyage', 'pl.wikivoyage.beta.wmcloud.org' ],
+			[ 'simplewiki', 'simple.wikipedia.beta.wmcloud.org' ],
+			[ 'sqwiki', 'sq.wikipedia.beta.wmcloud.org' ],
+			[ 'test2wiki', 'test2.wikipedia.beta.wmcloud.org' ],
+			[ 'testwiki', 'test.wikipedia.beta.wmcloud.org' ],
+
+			[ 'commonswiki', 'commons.wikimedia.beta.wmcloud.org' ],
+			[ 'loginwiki', 'login.wikimedia.beta.wmcloud.org' ],
+			[ 'metawiki', 'meta.wikimedia.beta.wmcloud.org' ],
+			[ 'wikidatawiki', 'www.wikidata.beta.wmcloud.org' ],
 		];
 	}
 
@@ -170,25 +165,29 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 	public function provideInitializeFromServerData() {
 		return [
 			[ 'en.wikipedia.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
+			[ 'en.wikipedia.beta.wmcloud.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
 			[ 'en.wikipedia.org', '/w/api.php', '', '/w/api.php', 'enwiki' ],
 			[ 'en.wiktionary.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiktionary' ],
 			[ 'boardgovcom.wikimedia.org', '/w/index.php', '', '/wiki/Main_Page', 'boardgovcomwiki' ],
-			[ 'en.wikipedia.beta.wmflabs.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
 			[ 'example.org', '/w/index.php', '', '/wiki/Main_Page', false ],
 
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png',
 				'/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png', 'commonswiki' ],
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
 				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
-			[ 'upload.wikimedia.beta.wmflabs.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
+			[ 'upload.wikimedia.beta.wmcloud.org', '/w/thumb.php', '/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png',
 				'/wikipedia/en/thumb/8/84/Example.svg/240px-Example.svg.png', 'enwiki' ],
 			[ 'upload.wikimedia.org', '/w/thumb.php', '/', '/', false ],
 
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
+			[ 'auth.wikimedia.beta.wmcloud.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/dewiktionary/wiki/Special:Userlogin', 'dewiktionary' ],
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/blah.blah/wiki/Special:Userlogin', 'blah.blah' ],
-			[ 'auth.wikimedia.beta.wmflabs.org', '/w/index.php', '', '/enwiki/wiki/Special:Userlogin', 'enwiki' ],
 			[ 'auth.wikimedia.org', '/w/index.php', '', '/', false ],
+
+			[ 'wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', false ],
+			[ 'www.wikidata.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
+			[ 'www.wikidata.beta.wmcloud.org', '/w/index.php', '', '/wiki/Special:BlankPage', 'wikidatawiki' ],
 		];
 	}
 

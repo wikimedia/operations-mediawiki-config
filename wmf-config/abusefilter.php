@@ -405,6 +405,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '2 hours'; // T224617
 		$wgAbuseFilterAnonBlockDuration = '2 hours'; // T224617
 		break;
+	case 'plwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T398137
+		break;
 	case 'ptwiktionary':
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
@@ -458,6 +461,7 @@ switch ( $wgDBname ) {
 	case 'testwiki':
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T398107
 		break;
 	case 'thwiki':
 		// T30502
@@ -495,6 +499,9 @@ switch ( $wgDBname ) {
 		break;
 	case 'urwiki':
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T47643
+		break;
+	case 'viwiki': // T399535
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		break;
 	case 'wikidatawiki':
 		$wgAbuseFilterActions['block'] = true; // T59681

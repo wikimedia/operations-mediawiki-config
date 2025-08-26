@@ -80,6 +80,7 @@ bewikiquote
 bewikisource
 bewiktionary
 bewwiki
+bewwiktionary
 bgwiki
 bgwikibooks
 bgwikinews
@@ -516,6 +517,7 @@ lvwiki
 lvwikibooks
 lvwiktionary
 madwiki
+madwikisource
 madwiktionary
 maiwiki
 map_bmswiki
@@ -529,6 +531,7 @@ mhrwiki
 mhwiki
 mhwiktionary
 minwiki
+minwikibooks
 minwiktionary
 miwiki
 miwikibooks
@@ -669,6 +672,7 @@ quwiki
 quwikibooks
 quwikiquote
 quwiktionary
+rkiwiki
 rmwiki
 rmwikibooks
 rmwiktionary
@@ -831,6 +835,7 @@ tkwiktionary
 tlwiki
 tlwikibooks
 tlwikiquote
+tlwikisource
 tlwiktionary
 tlywiki
 tnwiki
@@ -924,6 +929,7 @@ zawikiquote
 zawiktionary
 zeawiki
 zghwiki
+zghwiktionary
 zh_classicalwiki
 zh_min_nanwiki
 zh_min_nanwikibooks

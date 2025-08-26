@@ -1449,6 +1449,15 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    rkiwiki:
+        commons: 'File:Wikipedia-logo-v2-rki.svg'
+        comment: T392499
+        comment_1_5x: T392499
+        comment_2x: T392499
+        commons_wordmark: 'File:Wikipedia-wordmark-v2-rki.svg'
+        comment_wordmark: T392499
+        commons_tagline: 'File:Wikipedia-tagline-v2-rki.svg'
+        comment_tagline: T392499
     rmwiki:
         comment: T48589
         comment_1_5x: T150618
@@ -2057,6 +2066,15 @@ Wiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
         local_wordmark: true
+    bewwiktionary:
+        commons: 'File:Wiktionary-logo-bew-v2.svg'
+        comment: T402134
+        comment_1_5x: T402134
+        comment_2x: T402134
+        commons_tagline: 'File:Wiktionary-tagline-bew.svg'
+        comment_tagline: T402134
+        commons_wordmark: 'File:Wiktionary-wordmark-bew.svg'
+        comment_wordmark: T402134
     bgwiktionary:
         no_1_5x: true
         no_2x: true
@@ -2766,6 +2784,15 @@ Wiktionary:
     yuewiktionary:
         local_tagline: true
         local_wordmark: true
+    zghwiktionary:
+        commons: 'File:Wiktionary logo zgh v2.svg'
+        commons_wordmark: 'File:Wiktionary_wordmark_zgh.svg'
+        commons_tagline: 'File:Wiktionary_tagline_zgh.svg'
+        comment_1_5x: T399785
+        comment_2x: T399785
+        comment: T399785
+        comment_wordmark: T399785
+        comment_tagline: T399785
     zh_min_nanwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -3256,6 +3283,15 @@ Wikibooks:
         comment: T150618
         comment_1_5x: T150618
         comment_2x: T150618
+    minwikibooks:
+        commons: 'File:Wikibooks-logo-min.svg'
+        comment: T395499
+        comment_1_5x: T395499
+        comment_2x: T395499
+        commons_wordmark: 'File:Wikibooks-wordmark-min.svg'
+        comment_wordmark: T395499
+        commons_tagline: 'File:Wikibooks-tagline-min.svg'
+        comment_tagline: T395499
     mkwikibooks:
         comment: T54019
         local_tagline: true
@@ -3738,6 +3774,13 @@ Wikisource:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    madwikisource:
+        commons: 'File:Wikisource-logo-mad-v2.svg'
+        comment: T391767
+        comment_1_5x: T391767
+        comment_2x: T391767
+        commons_wordmark: 'File:Wikisource-wordmark-mad.svg'
+        comment_wordmark: T391767
     mkwikisource:
         comment: T54019
         no_1_5x: true
@@ -3881,7 +3924,8 @@ Wikisource:
         comment_wordmark: 'T261076, T308620'
 Wikiversity:
     arwikiversity:
-        local_wordmark: true
+        commons_wordmark: 'File:Wikiversity-wordmark-ar.svg'
+        comment_wordmark: T397845
     betawikiversity:
         commons: 'File:Wikiversity-logo-beta-v2.svg'
         comment: T308604
@@ -4301,7 +4345,13 @@ Wikivoyage:
     arbcom_fiwiki:
         comment_1_5x: T150618
         comment_2x: T150618
+        selected_icon: wikipedia
+        local_icon: true
+        no_svg_icon: true
+        comment_icon: 'TODO: consider cleaning up (T183549)'
         selected_tagline: fiwiki
+        selected_wordmark: enwiki
+        comment_wordmark: 'TODO: consider cleaning up (T183549)'
     arbcom_itwiki:
         commons: 'File:Wikipedia Arbitration Committee Logo it.svg'
         comment: T368532

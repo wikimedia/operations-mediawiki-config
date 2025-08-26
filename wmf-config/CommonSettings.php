@@ -40,10 +40,10 @@ use MediaWiki\Auth\AbstractPreAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Auth\PasswordAuthenticationRequest;
+use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
-use MediaWiki\Extension\ConfirmEdit\FancyCaptcha\FancyCaptcha;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
@@ -55,6 +55,7 @@ use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
+use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
@@ -131,11 +132,11 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 $wmgHostnames = [];
 switch ( $wmgRealm ) {
 	case 'labs':
-		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
-		$wmgHostnames['auth']          = 'auth.wikimedia.beta.wmflabs.org';
-		$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
-		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
-		$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
+		$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmcloud.org';
+		$wmgHostnames['auth']          = 'auth.wikimedia.beta.wmcloud.org';
+		$wmgHostnames['test']          = 'test.wikipedia.beta.wmcloud.org';
+		$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmcloud.org';
+		$wmgHostnames['wikidata']      = 'www.wikidata.beta.wmcloud.org';
 		break;
 	case 'production':
 	default:
@@ -149,7 +150,6 @@ switch ( $wmgRealm ) {
 }
 
 $wgDBname = $multiVersion->getDatabase();
-$wgDBuser = 'wikiuser'; // Don't rely on MW default (T46251)
 $wgSQLMode = null;
 
 $wmgVersionNumber = $multiVersion->getVersionNumber();
@@ -400,7 +400,7 @@ if ( $wmgRealm === 'production' ) {
 		$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 	}
 	// T360930
-	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 450;
+	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;
 
 	// Dumps use their own set of databases
 	if ( ClusterConfig::getInstance()->isDumps() ) {
@@ -701,9 +701,10 @@ $wgObjectCaches['mysql-multiwrite'] = [
 		1 => [
 			'class' => 'SqlBagOStuff',
 			'servers' => $pcServers,
-			'purgePeriod' => 0,
 			'tableName' => 'pc',
 			'shards' => 256,
+			'purgePeriod' => 50,
+			'purgeLimit' => 20,
 			'reportDupes' => false
 		],
 	],
@@ -781,9 +782,6 @@ $wgPasswordConfig['pbkdf2'] = [
 
 // Temporary for T57420
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
-
-// Used for compromised accounts so they can do a password reset
-$wgPasswordConfig['scrambled'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 //
@@ -1026,6 +1024,7 @@ if ( $wmgUseCORS ) {
 		'foundation.wikimedia.org',
 		'foundation.m.wikimedia.org',
 		'grants.wikimedia.org',
+		'hcaptcha.wikimedia.org',
 		'incubator.wikimedia.org',
 		'incubator.m.wikimedia.org',
 		'internal.wikimedia.org',
@@ -1156,6 +1155,7 @@ $wgAvailableRights[] = 'editextendedsemiprotected';
 $wgAvailableRights[] = 'extendedconfirmed';
 $wgAvailableRights[] = 'editautoreviewprotected';
 $wgAvailableRights[] = 'editautopatrolprotected';
+$wgAvailableRights[] = 'editpatrolprotected';
 $wgAvailableRights[] = 'edittrustedprotected';
 $wgGrantPermissions['editprotected']['templateeditor'] = true;
 $wgGrantPermissions['editprotected']['editeditorprotected'] = true;
@@ -1163,6 +1163,7 @@ $wgGrantPermissions['editprotected']['editextendedsemiprotected'] = true;
 $wgGrantPermissions['editprotected']['extendedconfirmed'] = true;
 $wgGrantPermissions['editprotected']['editautoreviewprotected'] = true;
 $wgGrantPermissions['editprotected']['editautopatrolprotected'] = true;
+$wgGrantPermissions['editprotected']['editpatrolprotected'] = true;
 $wgGrantPermissions['editprotected']['edittrustedprotected'] = true;
 $wgGrantPermissions['editprotected']['edit-legal'] = true;
 
@@ -1203,6 +1204,12 @@ if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['bot']['editautopatrolprotected'] = true;
 }
 
+// Assign "editpatrolprotected" to sysops and bots, if patroller restriction level is enabled
+if ( in_array( 'editpatrolprotected', $wgRestrictionLevels ) ) {
+	$wgGroupPermissions['sysop']['editpatrolprotected'] = true;
+	$wgGroupPermissions['bot']['editpatrolprotected'] = true;
+}
+
 // Extension:StopForumSpam rights, so they can be assigned to global groups (T334856)
 $wgAvailableRights[] = 'sfsblock-bypass';
 
@@ -1234,7 +1241,7 @@ $wgInstallerInitialPages = [ [
 	'titlemsg' => 'mainpage',
 	'text' => <<<EOT
 <div dir="ltr" lang="en" class="mw-content-ltr">
-==This subdomain is reserved for the creation of a [[wikimedia:Our projects|{{InstallerOption: SiteGroupInEnglish}}]] in '''[[w:en:{{InstallerOption: LanguageNameInEnglish}}|{{InstallerOption: LanguageNameInEnglish}}]]''' language==
+==This subdomain is reserved for the creation of a [[foundationsite:our-work/wikimedia-projects|{{InstallerOption: SiteGroupInEnglish}}]] in '''[[w:en:{{InstallerOption: LanguageNameInEnglish}}|{{InstallerOption: LanguageNameInEnglish}}]]''' language==
 
 * Please '''do not start editing''' this new site. This site has a test project on the [[incubator:|Wikimedia Incubator]] (or on the [[betawikiversity:|Beta Wikiversity]] or on the [[oldwikisource:|Old Wikisource]]) and it will be imported to here.
 * If you would like to help translating the interface to this language, please do not translate here, but go to [[translatewiki:|translatewiki.net]], a special wiki for translating the interface. That way everyone can use it on every wiki using the [[mw:|same software]].
@@ -1624,17 +1631,16 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_43';
+	$wgExtDistDefaultSnapshot = 'REL1_44';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_44';
+	//$wgExtDistCandidateSnapshot = 'REL1_44';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
 		'REL1_44',
 		'REL1_43',
-		'REL1_42',
 		'REL1_39',
 	];
 
@@ -1691,7 +1697,6 @@ if ( $wmgUseContactPage ) {
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 
-	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
 	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) use ( $site, $lang ) {
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
 	};
@@ -1836,7 +1841,7 @@ $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 	if ( $wmgUseFooterContactLink ) {
 		$footerlinks['contact'] = Html::element(
 			'a',
-			[ 'href' => $sk->msg( 'contact-url' )->escaped() ],
+			[ 'href' => Skin::makeInternalOrExternalUrl( $sk->msg( 'contact-url' )->escaped() ) ],
 			$sk->msg( 'contact' )->text()
 		);
 	}
@@ -1850,7 +1855,7 @@ $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 	}
 	$footerlinks['wm-codeofconduct'] = Html::element(
 		'a',
-		[ 'href' => $sk->msg( $urlKey )->escaped() ],
+		[ 'href' => Skin::makeInternalOrExternalUrl( $sk->msg( $urlKey )->escaped() ) ],
 		$sk->msg( $msgKey )->text()
 	);
 };
@@ -1972,7 +1977,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectoryLevels = 3;
 	$wgCaptchaStorageClass = CaptchaCacheStore::class;
-	$wgCaptchaClass = FancyCaptcha::class;
+	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist =
 		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
@@ -1983,6 +1988,46 @@ if ( $wmgEnableCaptcha ) {
 	// http://meta.wikimedia.org/wiki/User:Jorunn/tracks
 	// (added 2008-05-08 -- brion)
 	$wgCaptchaRegexes[] = '/<a +href/i';
+
+	if ( $wmgEnableHCaptcha ) {
+		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
+
+		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
+		// mode which challenges only a very few users, it should not distrupt the account creation flow for
+		// nearly all new users.
+		$wgCaptchaTriggers['createaccount'] = [
+			'trigger' => true,
+			'class' => 'HCaptcha',
+		];
+
+		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php
+
+		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
+		$wgHCaptchaEnterprise = true;
+		$wgHCaptchaSecureEnclave = true;
+		$wgHCaptchaInvisibleMode = true;
+
+		$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
+
+		// Same as default, but be explicit incase default changed in extension
+		$wgHCaptchaSendRemoteIP = false;
+
+		// Route requests to hCaptcha on the client-side through our proxy.
+		$wgHCaptchaApiUrl = wfAppendQuery(
+			'https://hcaptcha.wikimedia.org/1/api.js',
+			[
+				'endpoint' => 'https://hcaptcha.wikimedia.org',
+				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
+				'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
+				'reportapi' => 'https://report-hcaptcha.wikimedia.org',
+				'render' => 'explicit',
+				'sentry' => false,
+			]
+		);
+
+		// Remove default hcaptcha.com rules
+		$wgHCaptchaCSPRules = [];
+	}
 
 	// For emergencies
 	if ( $wmgEmergencyCaptcha ) {
@@ -2405,7 +2450,7 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralSelectedBannerDispatcher = "//{$wmgHostnames['meta']}/w/index.php?title=Special:BannerLoader";
 	}
 	// Relative URL which is hardcoded to HTTP 204 in Varnish config.
-	$wgCentralBannerRecorder = "{$wgServer}/beacon/impression";
+	$wgCentralBannerRecorder = '/beacon/impression';
 
 	$wgCentralDBname = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-centralnotice'] = [
@@ -2648,7 +2693,7 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 
 if ( $wmgUseGlobalUsage ) {
 	wfLoadExtension( 'GlobalUsage' );
-	$wgGlobalUsageDatabase = 'commonswiki';
+	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
 }
@@ -2692,6 +2737,7 @@ $wgDefaultUserOptions['watchrollback'] = (int)$wmgWatchRollback;
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
+$wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 $wgDefaultUserOptions['usenewrc'] = (int)$wmgEnhancedRecentChanges;
 $wgDefaultUserOptions['extendwatchlist'] = (int)$wmgEnhancedWatchlist;
 $wgDefaultUserOptions['forceeditsummary'] = (int)$wmgForceEditSummary;
@@ -2870,7 +2916,7 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
-	$wgCitoidFullRestbaseURL = "/api/rest_";
+
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
@@ -3167,12 +3213,6 @@ if ( $wmgEnablePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
 	$wgAddGroups['bureaucrat'][] = 'copyviobot'; // T206731
 	$wgRemoveGroups['bureaucrat'][] = 'copyviobot'; // T206731
-}
-
-// This extension is being moved to core (T33951)
-if ( $wmgEnableInterwiki && !defined( 'MW_HAS_SPECIAL_INTERWIKI' ) ) {
-	wfLoadExtension( 'Interwiki' );
-	$wgInterwikiViewOnly = true;
 }
 
 # Avoid excessive CPU due to cache misses from rapid invalidations
@@ -3574,6 +3614,15 @@ if ( $wmgUseFileImporter ) {
 if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
 
+	$wgVirtualDomainsMapping['virtual-cx'] = [
+		'cluster' => 'extension1',
+		'db' => 'wikishared',
+	];
+
+	if ( $wmgRealm === 'production' && $wgDBname === 'testwiki' ) {
+		unset( $wgVirtualDomainsMapping['virtual-cx'] );
+	}
+
 	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver.wikimedia.org/v1';
 
@@ -3582,10 +3631,6 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationTranslateInTarget = $wmgContentTranslationTranslateInTarget;
 
 	$wgContentTranslationUnmodifiedMTThresholdForPublish = $wmgContentTranslationUnmodifiedMTThresholdForPublish;
-
-	if ( $wmgContentTranslationCluster ) {
-		$wgContentTranslationCluster = $wmgContentTranslationCluster;
-	}
 
 	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 
@@ -3747,6 +3792,11 @@ if ( $wmgUseJsonConfig ) {
 		];
 	}
 }
+
+// Needed to handle deleted and old revisions on mediawikiwiki and collabwiki
+// after changing JsonConfig configuration (T124748)
+$wgContentHandlers['Json.JsonConfig'] = FallbackContentHandler::class;
+$wgContentHandlers['Graph.JsonConfig'] = FallbackContentHandler::class;
 
 if ( $wmgEnableJsonConfigDataMode ) {
 	$wgJsonConfigEnableLuaSupport = true;
@@ -4012,6 +4062,8 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgUseWebAuthn ) {
 		wfLoadExtension( 'WebAuthn' );
+
+		$wgWebAuthnLimitPasskeysToRoaming = true;
 	}
 }
 
@@ -4189,6 +4241,12 @@ if ( $wmgUseCheckUser ) {
 		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
 			[ '1', [ CUDCOND_NAMED ] ]
 		];
+		$wgCheckUserUserInfoCardFeatureVisible = true;
+	}
+
+	// Link to the central Special:CentralAuth page if available (T397690)
+	if ( $wmgUseCentralAuth ) {
+		$wgCheckUserUserInfoCardCentralWikiId = 'metawiki';
 	}
 }
 
@@ -4216,17 +4274,12 @@ if ( $wmgDisableIPMasking ) {
 	$wgAutoCreateTempUser['enabled'] = true;
 	$wgAutoCreateTempUser['known'] = true;
 
-	if ( $wgDBname !== 'loginwiki' ) {
-		$wgGroupPermissions['temp']['edit'] = true;
-	}
-
 	// T357586
 	$wgImplicitGroups[] = 'temp';
 }
 
 if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
-	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'AbuseLog';
 	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'GlobalBlockList';
 		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'MassGlobalBlock';
@@ -4284,7 +4337,12 @@ $wgAutoCreateTempUser['matchPattern'] = '~2$1';
 
 // Start numbers at 1500 to avoid using any numbers defined in T337090 which are considered defamatory.
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
-$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'plain-numeric', 'offset' => 1500 ];
+$wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'readable-numeric', 'offset' => 1500 ];
+
+// Disable temp accounts onboarding dialog for wikis where temporary accounts won't exist
+if ( in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) ) {
+	$wgDefaultUserOptions['checkuser-temporary-accounts-onboarding-dialog-seen'] = true;
+}
 
 // T39211
 $wgUseCombinedLoginLink = false;
@@ -4463,7 +4521,7 @@ if ( $wmgUseGrowthExperiments ) {
 	// T298122 temporary fix while mobile-only quality gate gets removed
 	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
 
-	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
+	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['data-gateway'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 
 	// Ensure experiment conditional options are applied only in wikis where
@@ -4493,27 +4551,6 @@ if ( $wmgUseGrowthExperiments ) {
 			],
 			[ 'no-link-recommendation',
 				[ 'user-bucket-growth', 'no-link-recommendation', 100 ],
-			],
-		];
-	} elseif ( $wmgGEActiveExperiment === 'surfacing-structured-task' ) {
-		// Surfacing structured tasks experiment, T385903
-		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
-			[ 'surfacing-structured-task',
-				[ 'local-user-bucket-growth', 'surfacing-structured-task', 50 ],
-			],
-			[ 'control',
-				[ 'local-user-bucket-growth', 'surfacing-structured-task', 100 ],
-			],
-		];
-	} elseif ( $wmgGEActiveExperiment === 'get-started-notification' ) {
-		// Get Started experiment, T394958
-		$wgConditionalUserOptions['growthexperiments-homepage-variant'] = [
-			[ 'get-started-notification',
-				[ 'user-bucket-growth', 'get-started-notification', 50 ],
-				[ CUDCOND_AFTER, '20250624000000' ],
-			],
-			[ 'control',
-				[ 'user-bucket-growth', 'get-started-notification', 100 ],
 			],
 		];
 	}
@@ -4671,6 +4708,9 @@ if ( $wmgUseNearbyPages ) {
 
 if ( $wmgUseImageSuggestions ) {
 	wfLoadExtension( 'ImageSuggestions' );
+
+	$wgImageSuggestionsSuggestionsApi = $wmgLocalServices['data-gateway'] . '/public/image_suggestions/suggestions/%1$s/%2$d';
+	$wgImageSuggestionsInstanceOfApi = $wmgLocalServices['data-gateway'] . '/private/image_suggestions/instanceof_cache/%1$s/%2$d';
 }
 
 if ( $wmgUseSearchVue ) {
@@ -4690,10 +4730,6 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosEngine = 'google';
 	$wgPhonosFileBackend = 'global-multiwrite';
 	$wgPhonosApiProxy = $wgCopyUploadProxy;
-}
-
-if ( $wmgUseVueTest ) {
-	wfLoadExtension( 'VueTest' );
 }
 
 if ( $wmgUsePageNotice ) {
@@ -4730,6 +4766,14 @@ unset( $parsoidDir );
 
 if ( $wmgUseParserMigration ) {
 	wfLoadExtension( 'ParserMigration' );
+
+	if ( $wmgParserMigrationConsolidateFeedback ) {
+		$wgParserMigrationFeedbackTitle = 'Parsoid/Feedback';
+		$wgParserMigrationFeedbackTitleURL = 'https://www.mediawiki.org/wiki/Parsoid/Feedback';
+		$wgParserMigrationFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
+	} else {
+		$wgParserMigrationFeedbackTitle = $wmgParserMigrationFeedbackTitle;
+	}
 }
 
 // T350653
@@ -4754,6 +4798,10 @@ if ( $wmgUseNetworkSession ) {
 	wfLoadExtension( 'NetworkSession' );
 	$wgNetworkSessionProviderAllowedUserRights = [ 'read' ];
 	$wgNetworkSessionProviderCanAlwaysAutocreate = true;
+}
+
+if ( $wmgEnableSitemapApi ) {
+	$wgSitemapApiConfig['enabled'] = true;
 }
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch

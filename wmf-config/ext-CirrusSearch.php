@@ -24,6 +24,11 @@ return [
 	],
 ],
 
+'wgCirrusSearchManagedClusters' => [
+	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+	'private' => [ 'eqiad', 'codfw' ],
+],
+
 'wgCirrusSearchReplicaGroup' => [
 	'default' => [
 		'type' => 'roundrobin',
@@ -1176,5 +1181,11 @@ return [
 		'classification.ores.articletopic' => 'classification.prediction.articletopic', // T389053
 		'classification.ores.drafttopic' => 'classification.prediction.drafttopic', // T389053
 	],
+],
+'wgCirrusSearchPhraseSuggestBuildVariant' => [
+	'default' => true,
+],
+'wgCirrusSearchPhraseSuggestUseOpeningText' => [
+	'default' => true,
 ],
 ];

@@ -43,7 +43,7 @@ use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter
  * Get overrides for Beta Cluster settings. This is called in WmfConfig::applyOverrides().
  *
  * Keys that start with a hyphen will completely override the prodution settings
- * from InitializeSettings.php.
+ * from InitialiseSettings.php.
  *
  * Keys that don't start with a hyphen will have their settings merged with
  * the production settings.
@@ -80,59 +80,56 @@ function wmfGetOverrideSettings() {
 			'wikivoyage'     => 'Wikivoyage',
 		],
 
-		// when using the shared auth domain, this will be overridden in CommonSettings.php
+		// NOTE: Same as prod, but without protocol-relative URL (T118413)
 		'-wgServer' => [
-			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
-			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
-			'wikiversity'	=> 'https://$lang.wikiversity.beta.wmflabs.org',
-			'wikisource'	=> 'https://$lang.wikisource.beta.wmflabs.org',
-			'wikiquote'	=> 'https://$lang.wikiquote.beta.wmflabs.org',
-			'wikinews'	=> 'https://$lang.wikinews.beta.wmflabs.org',
-			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
-			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
+			// Projects
+			'wikipedia' => 'https://$lang.wikipedia.beta.wmcloud.org',
+			'wikibooks' => 'https://$lang.wikibooks.beta.wmcloud.org',
+			'wikinews' => 'https://$lang.wikinews.beta.wmcloud.org',
+			'wikiquote' => 'https://$lang.wikiquote.beta.wmcloud.org',
+			'wikisource' => 'https://$lang.wikisource.beta.wmcloud.org',
+			'wikiversity' => 'https://$lang.wikiversity.beta.wmcloud.org',
+			'wikivoyage' => 'https://$lang.wikivoyage.beta.wmcloud.org',
+			'wiktionary' => 'https://$lang.wiktionary.beta.wmcloud.org',
 
-			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
-			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
-			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
-			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmflabs.org',
-			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
-			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
-			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
-			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-
-			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
-			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
+			// Individual wikis
+			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
+			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
+			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
+			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmcloud.org',
+			'loginwiki' => 'https://login.wikimedia.beta.wmcloud.org',
+			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
+			'votewiki' => 'https://vote.wikimedia.beta.wmcloud.org',
+			'wikidatawiki' => 'https://www.wikidata.beta.wmcloud.org',
 		],
 
-		// when using the shared auth domain, this will be overridden in CommonSettings.php
 		'-wgCanonicalServer' => [
-			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
-			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
-			'wikiquote'	=> 'https://$lang.wikiquote.beta.wmflabs.org',
-			'wikinews'	=> 'https://$lang.wikinews.beta.wmflabs.org',
-			'wikisource'	=> 'https://$lang.wikisource.beta.wmflabs.org',
-			'wikiversity'     => 'https://$lang.wikiversity.beta.wmflabs.org',
-			'wiktionary'     => 'https://$lang.wiktionary.beta.wmflabs.org',
-			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
+			// Projects
+			'wikipedia' => 'https://$lang.wikipedia.beta.wmcloud.org',
+			'wikibooks' => 'https://$lang.wikibooks.beta.wmcloud.org',
+			'wikiquote' => 'https://$lang.wikiquote.beta.wmcloud.org',
+			'wikinews' => 'https://$lang.wikinews.beta.wmcloud.org',
+			'wikisource' => 'https://$lang.wikisource.beta.wmcloud.org',
+			'wikiversity' => 'https://$lang.wikiversity.beta.wmcloud.org',
+			'wiktionary' => 'https://$lang.wiktionary.beta.wmcloud.org',
+			'wikivoyage' => 'https://$lang.wikivoyage.beta.wmcloud.org',
 
-			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
-			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
-			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
-			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
-			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
-			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
-			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
-
-			'test2wiki' => 'https://test2.wikipedia.beta.wmcloud.org',
-			'plwikivoyage' => 'https://pl.wikivoyage.beta.wmcloud.org',
+			// Individual wikis
+			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
+			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
+			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
+			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
+			'loginwiki' => 'https://login.wikimedia.beta.wmcloud.org',
+			'votewiki' => 'https://vote.wikimedia.beta.wmcloud.org',
+			'wikidatawiki' => 'https://www.wikidata.beta.wmcloud.org',
 		],
 
 		'-wgUploadPath' => [
-			'default' => 'https://upload.wikimedia.beta.wmflabs.org/$site/$lang',
+			'default' => 'https://upload.wikimedia.beta.wmcloud.org/$site/$lang',
 			'private' => '/w/img_auth.php',
-			'commonswiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/commons',
-			'metawiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/meta',
-			'testwiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/test',
+			'commonswiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/commons',
+			'metawiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/meta',
+			'testwiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/test',
 		],
 
 		'-wgThumbnailBuckets' => [
@@ -316,11 +313,22 @@ function wmfGetOverrideSettings() {
 						'rate' => 0.5,
 					],
 				],
+				// T397728
+				[
+					'name' => 'fy24-25-we-1-7-rc-grouping-toggle',
+					'groups' => [
+						'control',
+						'toggle-shown',
+					],
+					'sample' => [
+						'rate' => 0.5,
+					],
+				],
 			],
 		],
 
 		// Log channels for beta cluster
-		// See detailed comments on 'wmgMonologChannels' in InitializeSettings.php
+		// See detailed comments on 'wmgMonologChannels' in InitialiseSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
 		'wmgMonologChannels' => [
 			'default' => [
@@ -654,45 +662,37 @@ function wmfGetOverrideSettings() {
 		'-wmgCentralAuthCookieDomain' => [
 			'default' => '',
 			// wiki families
-			'wikipedia' => '.wikipedia.beta.wmflabs.org',
-			'wikibooks' => '.wikibooks.beta.wmflabs.org',
-			'wikinews' => '.wikinews.beta.wmflabs.org',
-			'wikiquote' => '.wikiquote.beta.wmflabs.org',
-			'wikisource' => '.wikisource.beta.wmflabs.org',
-			'wikiversity' => '.wikiversity.beta.wmflabs.org',
-			'wikivoyage' => '.wikivoyage.beta.wmflabs.org',
-			'wiktionary' => '.wiktionary.beta.wmflabs.org',
-			// wikis which are not Wikipedias but use *.wikipedia.beta.wmflabs.org
-			'testwiki' => '.wikipedia.beta.wmflabs.org',
-
-			// Wikis for SUL project hosted on wmcloud.org
-			'test2wiki' => '.wikipedia.beta.wmcloud.org',
-			'plwikivoyage' => '.wikivoyage.beta.wmcloud.org',
+			'wikibooks' => '.wikibooks.beta.wmcloud.org',
+			'wikinews' => '.wikinews.beta.wmcloud.org',
+			'wikipedia' => '.wikipedia.beta.wmcloud.org',
+			'wikiquote' => '.wikiquote.beta.wmcloud.org',
+			'wikisource' => '.wikisource.beta.wmcloud.org',
+			'wikiversity' => '.wikiversity.beta.wmcloud.org',
+			'wikivoyage' => '.wikivoyage.beta.wmcloud.org',
+			'wiktionary' => '.wiktionary.beta.wmcloud.org',
 		],
 
 		'-wmgCentralAuthAutoLoginWikis' => [
 			'default' => [
-				'.wikipedia.beta.wmflabs.org' => 'enwiki',
-				'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
-				'.wikinews.beta.wmflabs.org' => 'enwikinews',
-				'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
-				'.wikisource.beta.wmflabs.org' => 'enwikisource',
-				'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
-				'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
-				'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
-				'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
-				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
-				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-				'wikidata.beta.wmflabs.org' => 'wikidatawiki',
-
-				// Wikis for SUL project hosted on wmcloud.org
-				'.wikipedia.beta.wmcloud.org' => 'test2wiki',
-				'.wikivoyage.beta.wmcloud.org' => 'plwikivoyage',
+				'.wikipedia.beta.wmcloud.org' => 'enwiki',
+				'.wikibooks.beta.wmcloud.org' => 'enwikibooks',
+				'.wikinews.beta.wmcloud.org' => 'enwikinews',
+				'.wikiquote.beta.wmcloud.org' => 'enwikiquote',
+				'.wikisource.beta.wmcloud.org' => 'enwikisource',
+				'.wikiversity.beta.wmcloud.org' => 'enwikiversity',
+				'.wikivoyage.beta.wmcloud.org' => 'enwikivoyage',
+				'.wiktionary.beta.wmcloud.org' => 'enwiktionary',
+				'api.wikimedia.beta.wmcloud.org' => 'apiportalwiki',
+				'commons.wikimedia.beta.wmcloud.org' => 'commonswiki',
+				'meta.wikimedia.beta.wmcloud.org' => 'metawiki',
+				'www.wikidata.beta.wmcloud.org' => 'wikidatawiki',
 			],
 		],
 
 		'wgCentralAuthEnableSul3' => [
-			'default' => true,
+			// Note: votewiki is in Beta Cluster but not an SUL wiki
+			'default' => false,
+			'sul' => true,
 			// Leave one wiki in SUL2-compatibility mode for testing
 			'testwiki' => false,
 		],
@@ -777,9 +777,6 @@ function wmfGetOverrideSettings() {
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
 
-		'wmgContentTranslationCluster' => [
-			'default' => false,
-		],
 		'wmgContentTranslationCampaigns' => [
 			'default' => [ 'newarticle' ],
 		],
@@ -850,11 +847,11 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgScorePath' => [
-			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
+			'default' => "//upload.wikimedia.beta.wmcloud.org/score",
 		],
 
 		'-wgPhonosPath' => [
-			'default' => "//upload.wikimedia.beta.wmflabs.org/phonos",
+			'default' => "//upload.wikimedia.beta.wmcloud.org/phonos",
 		],
 
 		'wgRateLimits' => [
@@ -917,7 +914,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgArticlePlaceholderRepoApiUrl' => [
-			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		'wmgUseEntitySchema' => [
@@ -989,7 +986,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
-			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'commonswiki' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		'wgMediaInfoHelpUrls' => [
@@ -1004,7 +1001,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgMediaSearchExternalEntitySearchBaseUri' => [
-			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'commonswiki' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		// switch 'audio' and 'video' mediasearch tabs for testing
@@ -1143,7 +1140,7 @@ function wmfGetOverrideSettings() {
 			'default' => [
 				'cacheKey' => 'commonswiki',
 				'remote' => [
-					'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+					'url' => 'https://commons.wikimedia.beta.wmcloud.org/w/api.php'
 				]
 			],
 			'commonswiki' => [
@@ -1265,6 +1262,7 @@ function wmfGetOverrideSettings() {
 			'default' => null
 		],
 
+		// Beta lacks infrastructure to use weighed tags via EventBus (T395425#10870511)
 		'-wgCirrusSearchEnableEventBusWeightedTags' => [
 			'default' => false,
 		],
@@ -1274,7 +1272,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgCategoryLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'default' => SCHEMA_COMPAT_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
@@ -1331,12 +1329,16 @@ function wmfGetOverrideSettings() {
 		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
+			// Note: votewiki is in Beta Cluster but not an SUL wiki
+			'default' => false,
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
-			'default' => true,
+			'sul' => true,
 		],
 		'wmgLocalAuthLoginOnly' => [
+			// Note: votewiki is in Beta Cluster but not an SUL wiki
+			'default' => false,
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
-			'default' => true,
+			'sul' => true,
 		],
 		'wmgEnablePageTriage' => [
 			'zhwiki' => true, // T323378
@@ -1361,6 +1363,9 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgGEActiveExperiment' => [
 			'enwiki' => 'no-link-recommendation',
+		],
+		'wmgUseGrowthExperiments' => [
+			'wikidatawiki' => true,
 		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
@@ -1402,6 +1407,11 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 			'default' => 300,
+		],
+		'wgGELevelingUpNewNotificationsEnabled' => [
+			'default' => true,
+			// Keep one wiki with first version of notifications for testing
+			'simplewiki' => false,
 		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
@@ -1570,7 +1580,7 @@ function wmfGetOverrideSettings() {
 						'lexeme' => 146,
 					],
 					'repoDatabase' => 'wikidatawiki',
-					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'baseUri' => 'https://www.wikidata.beta.wmcloud.org/entity/',
 					'rdfNodeNamespacePrefix' => 'wd',
 					'rdfPredicateNamespacePrefix' => '',
 					'interwikiPrefix' => 'd',
@@ -1584,7 +1594,7 @@ function wmfGetOverrideSettings() {
 						'lexeme' => 146,
 					],
 					'repoDatabase' => 'wikidatawiki',
-					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'baseUri' => 'https://www.wikidata.beta.wmcloud.org/entity/',
 					'rdfNodeNamespacePrefix' => 'wd',
 					'rdfPredicateNamespacePrefix' => '',
 					'interwikiPrefix' => 'd',
@@ -1594,7 +1604,7 @@ function wmfGetOverrideSettings() {
 						'mediainfo' => '6/mediainfo',
 					],
 					'repoDatabase' => 'commonswiki',
-					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
+					'baseUri' => 'https://commons.wikimedia.beta.wmcloud.org/entity/',
 					'rdfNodeNamespacePrefix' => 'sdc',
 					'rdfPredicateNamespacePrefix' => 'sdc',
 					'interwikiPrefix' => 'c',
@@ -1650,7 +1660,7 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 		],
 		'-wmgWikibaseClientRepoUrl' => [
-			'default' => 'https://wikidata.beta.wmflabs.org',
+			'default' => 'https://www.wikidata.beta.wmcloud.org',
 		],
 
 		'-wmgWikibaseSSRTermboxServerUrl' => [
@@ -1983,6 +1993,9 @@ function wmfGetOverrideSettings() {
 		'wgWikisourceEnableOcr' => [
 			'wikisource' => true,
 		],
+		'wgWikisourceEnableBulkOcr' => [
+			'wikisource' => true,
+		],
 		'wgWikisourceOcrUrl' => [
 			'wikisource' => 'https://ocr-test.wmcloud.org',
 		],
@@ -2045,7 +2058,7 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 		'wgWBCitoidFullRestbaseURL' => [
-			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
+			'wikidatawiki' => 'https://en.wikipedia.beta.wmcloud.org/api/rest_',
 		],
 
 		'wgRestAPIAdditionalRouteFiles' => [
@@ -2081,27 +2094,13 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Domains that go in script-src and default-src for CSP.
-		// This also includes the prod domains for the sole purpose
-		// of allowing users to test gadgets at beta.
-		// beta itself should never call prod.
+		// Same as production InitialiseSettings.php, and extended (not replaced)
+		// with Beta Cluster domains.
+		//
+		// This includes the prod domains for the purpose of easier testing of gadgets.
+		// The MediaWiki software itself should never call prod from Beta.
 		'wmgApprovedContentSecurityPolicyDomains' => [
 			'default' => [
-				'*.wikimedia.beta.wmflabs.org',
-				'*.wikipedia.beta.wmflabs.org',
-				'*.wikinews.beta.wmflabs.org',
-				'*.wiktionary.beta.wmflabs.org',
-				'*.wikibooks.beta.wmflabs.org',
-				'*.wikiversity.beta.wmflabs.org',
-				'*.wikisource.beta.wmflabs.org',
-				// No multilingual wikisource on beta.
-				'*.wikiquote.beta.wmflabs.org',
-				// Unlike production, wikidata does not use www. on beta
-				'wikidata.beta.wmflabs.org',
-				'm.wikidata.beta.wmflabs.org',
-				'*.wikivoyage.beta.wmflabs.org',
-				'*.mediawiki.beta.wmflabs.org',
-
 				// Prod domains, to allow easier gadget testing
 				'*.wikimedia.org',
 				'*.wikipedia.org',
@@ -2117,11 +2116,37 @@ function wmfGetOverrideSettings() {
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
 
-				// Special entry for VE-RealTime until it can be done properly
-				'ws://visualeditor-realtime.wmflabs.org',
+				// Beta Cluster equivalants
+				'*.wikimedia.beta.wmcloud.org',
+				'*.wikipedia.beta.wmcloud.org',
+				'*.wikinews.beta.wmcloud.org',
+				'*.wiktionary.beta.wmcloud.org',
+				'*.wikibooks.beta.wmcloud.org',
+				'*.wikiversity.beta.wmcloud.org',
+				'*.wikisource.beta.wmcloud.org',
+				// wikisource.org - No multilingual wikisource in Beta
+				'*.wikidata.beta.wmcloud.org',
+				// wikifunctions.org - Not in Beta
+				'*.wikivoyage.beta.wmcloud.org',
+				// mediawiki.org - Not in Beta
 
-				// T322323, CX Server in Beta Cluster, recommendation service
+				// T289318: Legacy
+				'*.wikimedia.beta.wmflabs.org',
+				'*.wikipedia.beta.wmflabs.org',
+				'*.wikinews.beta.wmflabs.org',
+				'*.wiktionary.beta.wmflabs.org',
+				'*.wikibooks.beta.wmflabs.org',
+				'*.wikiversity.beta.wmflabs.org',
+				'*.wikisource.beta.wmflabs.org',
+				'wikidata.beta.wmflabs.org',
+				'm.wikidata.beta.wmflabs.org',
+				'*.wikivoyage.beta.wmflabs.org',
+
+				// Beta-only: VE-RealTime, experiment
+				'ws://visualeditor-realtime.wmflabs.org',
+				// Beta-only: CX Server, standalone webproxy (T322323)
 				'cxserver-beta.wmcloud.org',
+				// Beta-only: Recommendation service, standalone webproxy
 				'recommend.wmflabs.org',
 
 				// the new wmcloud instances to test the SUL project
@@ -2204,7 +2229,7 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 		'wgGlobalWatchlistWikibaseSite' => [
-			'default' => 'wikidata.beta.wmflabs.org',
+			'default' => 'www.wikidata.beta.wmcloud.org',
 		],
 
 		// T253271 Don't deploy Cirrus AB tests to beta
@@ -2263,16 +2288,16 @@ function wmfGetOverrideSettings() {
 			'ruwiki' => true,
 		],
 		'wgQuickViewDataRepositoryApiBaseUri' => [
-			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
+			'default' => 'https://commons.wikimedia.beta.wmcloud.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositorySearchUri' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
+			'default' => 'https://commons.wikimedia.beta.wmcloud.org/wiki/Special:MediaSearch?search=%s',
 		],
 		'wgQuickViewMediaRepositoryUri' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org',
+			'default' => 'https://commons.wikimedia.beta.wmcloud.org',
 		],
 		'wgQuickViewSearchFilterForQID' => [
 			'default' => 'haswbstatement:P245962=%s',
@@ -2297,10 +2322,6 @@ function wmfGetOverrideSettings() {
 		// T332787
 		'-wgPhonosInlineAudioPlayerMode' => [
 			'default' => true, // T336763
-		],
-
-		'wmgUseVueTest' => [
-			'default' => true,
 		],
 
 		'wmgUseContentTranslation' => [
@@ -2356,13 +2377,18 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T357795
-		'wgCodeMirrorV6' => [
-				'default' => true,
+		// T373711
+		'wmgCodeMirrorReplaceCodeEditor' => [
+			'default' => true,
+		],
+
+		// T373711
+		'-wgCodeMirrorV6' => [
+			'default' => false,
 		],
 
 		'wgCodeMirrorLineNumberingNamespaces' => [
-				'default' => null,
+			'default' => null,
 		],
 
 		'-wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
@@ -2371,6 +2397,10 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseCommunityConfiguration' => [
 			'default' => true,
+		],
+		'wmgUseCommunityConfigurationExample' => [
+			'default' => false,
+			'cswiki' => true,
 		],
 
 		'wmgUseAutoModerator' => [ // T364034
@@ -2455,12 +2485,20 @@ function wmfGetOverrideSettings() {
 			'default' => 1000,
 			'eswiki' => 10000,
 		],
-		'wgGENewcomerTasksStarterDifficultyEnabled' => [
-			'default' => true,
-		],
 		// T388685 temporary feature flag
 		'wmgWikibaseClientResolveWikibaseLabels' => [
 			'default' => true,
-		]
+		],
+		// T394704 / T399703 temporary feature flag
+		'wmgWikibaseTmpMobileEditingUI' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+		// T391064
+		'-wgTemplateDataEnableFeaturedTemplates' => [
+			'default' => false,
+			'enwiki' => true,
+			'commonswiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()

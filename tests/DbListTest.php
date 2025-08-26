@@ -54,7 +54,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			// No point in checking that all includes itself
 			'all',
 
-			// Labs wikis (beta.wmflabs.org) might not (yet) exist in production.
+			// Beta Cluster wikis might not (yet) exist in production.
 			'all-labs',
 			'closed-labs',
 			'flow-labs',
@@ -247,5 +247,31 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		}
 		$this->assertEquals( [], array_keys( $rtl ), 'All entries in rtl.dblist should correspond to RTL wikis' );
 		$this->assertEquals( [], $shouldBeRtl, 'All RTL wikis should be registered in rtl.dblist' );
+	}
+
+	/**
+	 * @dataProvider provideSULDBLists
+	 */
+	public function testWikisInDBListAreSUL( string $dbList ) {
+		$dbLists = DBList::getLists();
+		$sulWikis = $dbLists['sul'];
+		$this->assertSame( [], array_diff( $dbLists[$dbList], $sulWikis ) );
+	}
+
+	public static function provideSULDBLists(): Generator {
+		$dbLists = [
+			'wikibooks',
+			'wikidata',
+			'wikinews',
+			'wikipedia',
+			'wikiquote',
+			'wikisource',
+			'wikiversity',
+			'wikivoyage',
+			'wiktionary',
+		];
+		foreach ( $dbLists as $dbList ) {
+			yield $dbList => [ $dbList ];
+		}
 	}
 }

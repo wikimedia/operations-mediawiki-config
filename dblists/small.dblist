@@ -68,6 +68,7 @@ bewikimedia
 bewikiquote
 bewiktionary
 bewwiki
+bewwiktionary
 bgwikibooks
 bgwikinews
 bgwikisource
@@ -331,12 +332,14 @@ ltwikiquote
 ltwikisource
 lvwikibooks
 madwiki
+madwikisource
 madwiktionary
 maiwikimedia
 mdfwiki
 mgwikibooks
 mhwiki
 mhwiktionary
+minwikibooks
 minwiktionary
 miwikibooks
 miwiktionary
@@ -428,6 +431,7 @@ qualitywiki
 quwikibooks
 quwikiquote
 quwiktionary
+rkiwiki
 rmwiki
 rmwikibooks
 rmwiktionary
@@ -533,6 +537,7 @@ tkwikiquote
 tkwiktionary
 tlwikibooks
 tlwikiquote
+tlwikisource
 tlywiki
 tnwiki
 tnwiktionary
@@ -611,6 +616,7 @@ zawikiquote
 zawiktionary
 zeawiki
 zghwiki
+zghwiktionary
 zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource

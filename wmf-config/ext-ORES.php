@@ -175,6 +175,11 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
+	'simplewiki' => [
+		'damaging' => [ 'enabled' => true ],
+		'goodfaith' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for srwiki (T197012)
@@ -214,6 +219,11 @@ return [
 	'tlwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'trwiki' => [
+		'damaging' => [ 'enabled' => true ],
+		'goodfaith' => [ 'enabled' => true ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
 	'zhwiki' => [
@@ -354,6 +364,9 @@ return [
 			'likelybad' => [ 'min' => 0, 'max' => 0.353 ], // 'maximum recall @ precision >= 0.6'
 			// https://ores.wikimedia.org/v3/scores/enwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ], // 'maximum recall @ precision >= 0.9'
+		],
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.831, 'max' => 1 ] // based on a false positive rate of < 15% T400590
 		],
 	],
 	'eswiki' => [
@@ -793,6 +806,9 @@ return [
 			// https://ores.wikimedia.org/v3/scores/simplewiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.9''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ], // 'maximum recall @ precision >= 0.9'
 		],
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.906, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+		],
 	],
 	'sqwiki' => [
 		'damaging' => [
@@ -903,6 +919,9 @@ return [
 			'likelybad' => [ 'min' => 0, 'max' => 0.275 ], // 'maximum recall @ precision >= 0.45'
 			// https://ores.wikimedia.org/v3/scores/trwiki?models=goodfaith&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.75''"
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.145 ], // 'maximum recall @ precision >= 0.75'
+		],
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.608, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 		],
 	],
 	'ukwiki' => [

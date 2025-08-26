@@ -156,6 +156,7 @@ User-agent: *
 Allow: /w/api.php?action=mobileview&
 Allow: /w/load.php?
 Allow: /api/rest_v1/?doc
+Allow: /w/rest.php/site/v1/sitemap
 Disallow: /w/
 Disallow: /api/
 Disallow: /trap/

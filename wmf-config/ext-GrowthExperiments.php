@@ -13,7 +13,6 @@ return [
 
 'wmgGEActiveExperiment' => [
 	'default' => false,
-	'testwiki' => 'get-started-notification',
 	'enwiki' => 'no-link-recommendation',
 ],
 
@@ -41,9 +40,20 @@ return [
 	'default' => true,
 ],
 
+// T341599
+'wgGEUserImpactMaxEdits' => [
+	'default' => 1000,
+	'testwiki' => 10000,
+],
+'wgGEUserImpactMaxThanks' => [
+	'default' => 1000,
+],
+
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => false,
 ],
 
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
@@ -369,18 +379,13 @@ return [
 	'zuwiki' => true,
 ],
 
+'wgGENewcomerTasksStarterDifficultyEnabled' => [
+	'default' => true,
+],
+
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
-],
-
-'wgGESurfacingStructuredTasksEnabled' => [
-	'default' => false,
-],
-
-'wgGESurfacingStructuredTasksReadModeUpdateEnabled' => [
-	// Only enable in production after aligning with ServiceOps about T378536
-	'default' => false,
 ],
 
 'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
@@ -703,11 +708,21 @@ return [
 	'default' => false,
 	'arzwiki' => true,
 	'cswiki' => true,
+	'cawiki' => true,
+	'dewiki' => true,
+	'enwiki' => true,
 	'eswiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
+	'hewiki' => true,
 	'idwiki' => true,
+	'itwiki' => true,
+	'nlwiki' => true,
 	'ptwiki' => true,
+	'ruwiki' => true,
+	'srwiki' => true,
+	'shwiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGENewcomerTasksTopicType' => [
@@ -812,6 +827,24 @@ return [
 	'frwiki' => 2000,
 	'idwiki' => 2000,
 	'ptwiki' => 2000,
+],
+
+'wgWelcomeSurveyEnabled' => [
+	'default' => true,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => false,
+],
+
+'wgGEHelpPanelNewAccountEnableWithHomepage' => [
+	'default' => true,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => false,
+],
+
+'wgGEHelpPanelNewAccountEnablePercentage' => [
+	'default' => 100,
+	// Only effective for Beta rn, cf. T400937
+	'wikidata' => 0,
 ],
 
 ];

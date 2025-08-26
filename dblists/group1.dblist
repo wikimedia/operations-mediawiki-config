@@ -8,7 +8,13 @@ amwikimedia
 amwiktionary
 angwiktionary
 anwiktionary
+arbcom_cswiki
+arbcom_dewiki
+arbcom_enwiki
+arbcom_fiwiki
 arbcom_itwiki
+arbcom_nlwiki
+arbcom_ruwiki
 arbcom_zhwiki
 arwikibooks
 arwikimedia
@@ -39,6 +45,7 @@ bewikimedia
 bewikiquote
 bewikisource
 bewiktionary
+bewwiktionary
 bgwikibooks
 bgwikiquote
 bgwikisource
@@ -313,11 +320,13 @@ ltwikiquote
 ltwikisource
 ltwiktionary
 lvwiktionary
+madwikisource
 madwiktionary
 maiwikimedia
 metawiki
 mgwikibooks
 mgwiktionary
+minwikibooks
 minwiktionary
 miwiktionary
 mkwikibooks
@@ -477,6 +486,7 @@ svwikiversity
 svwikivoyage
 svwiktionary
 swwiktionary
+sysop_itwiki
 sysop_plwiki
 tawikibooks
 tawikinews
@@ -502,6 +512,7 @@ tiwiktionary
 tkwiktionary
 tlwikibooks
 tlwikiquote
+tlwikisource
 tlwiktionary
 tnwiktionary
 tpiwiktionary
@@ -541,6 +552,7 @@ vowiktionary
 wawikisource
 wawiktionary
 wbwikimedia
+wg_enwiki
 wikidatawiki
 wikifunctionswiki
 wikimaniateamwiki
@@ -549,6 +561,7 @@ wowiktionary
 yiwikisource
 yiwiktionary
 yuewiktionary
+zghwiktionary
 zh_min_nanwikisource
 zh_min_nanwiktionary
 zhwikibooks

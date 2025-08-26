@@ -18,6 +18,7 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
 
 // safe guard
@@ -87,22 +88,21 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	$wgLocalVirtualHosts = [
-		'wikipedia.beta.wmflabs.org',
-		'wiktionary.beta.wmflabs.org',
-		'wikibooks.beta.wmflabs.org',
-		'wikiquote.beta.wmflabs.org',
-		'wikinews.beta.wmflabs.org',
-		'wikisource.beta.wmflabs.org',
-		'wikiversity.beta.wmflabs.org',
-		'wikivoyage.beta.wmflabs.org',
-		'meta.wikimedia.beta.wmflabs.org',
-		'commons.wikimedia.beta.wmflabs.org',
-		'api.wikimedia.beta.wmflabs.org',
-		'auth.wikimedia.beta.wmflabs.org',
-
-		// new wmcloud instances
 		'wikipedia.beta.wmcloud.org',
+		'wiktionary.beta.wmcloud.org',
+		'wikiquote.beta.wmcloud.org',
+		'wikibooks.beta.wmcloud.org',
+		'wikiquote.beta.wmcloud.org',
+		'wikinews.beta.wmcloud.org',
+		'wikisource.beta.wmcloud.org',
+		'wikiversity.beta.wmcloud.org',
 		'wikivoyage.beta.wmcloud.org',
+		'www.wikidata.beta.wmcloud.org',
+		'api.wikimedia.beta.wmcloud.org',
+		'commons.wikimedia.beta.wmcloud.org',
+		'login.wikimedia.beta.wmcloud.org',
+		'meta.wikimedia.beta.wmcloud.org',
+		'auth.wikimedia.beta.wmcloud.org',
 	];
 
 	if ( $wmgUseGlobalPreferences ) {
@@ -136,7 +136,7 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseFileExporter ) {
-		$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
+		$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmcloud.org/wiki/Special:ImportFile';
 	}
 
 	if ( $wmgUseContentTranslation ) {
@@ -146,10 +146,13 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseCentralNotice ) {
-		// Emit CSP headers on banner previews. This can go away when full CSP
-		// support (T135963) is deployed.
-	// www.pages04.net and app.goacoustic.com are used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses or phone numbers to our email campaign vendor
-		$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
+		// Same as production CommonSettings.php, but adding *.wikimedia.beta.wmcloud.org
+		// for meta, upload, and commons in Beta Cluster.
+		$wgCentralNoticeContentSecurityPolicy =
+			"script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline' *.wikimedia.beta.wmcloud.org; "
+			. "default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net *.wikimedia.beta.wmcloud.org; "
+			. "style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline' .wikimedia.beta.wmcloud.org; "
+			. "connect-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com *.wikimedia.beta.wmcloud.org;";
 	}
 
 	if ( $wmgUseCite ) {
@@ -163,14 +166,14 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 		// Load from betalabs metawiki
 		$wgResourceLoaderSources['metawiki'] = [
-			'apiScript' => '//meta.wikimedia.beta.wmflabs.org/w/api.php',
-			'loadScript' => '//meta.wikimedia.beta.wmflabs.org/w/load.php',
+			'apiScript' => '//meta.wikimedia.beta.wmcloud.org/w/api.php',
+			'loadScript' => '//meta.wikimedia.beta.wmcloud.org/w/load.php',
 		];
 	}
 
 	if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 		// Labs override
-		$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
+		$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmcloud.org/w/api.php';
 		$wgGlobalUserPageDBname = 'metawiki';
 	}
 
@@ -180,34 +183,28 @@ if ( $wmgRealm == 'labs' ) {
 		$wgUrlShortenerServer = 'w.beta.wmcloud.org';
 		$wgUrlShortenerEnableSidebar = true;
 		$wgUrlShortenerAllowedDomains = [
-			'(.*\.)?wikipedia\.beta\.wmflabs\.org',
-			'(.*\.)?wiktionary\.beta\.wmflabs\.org',
-			'(.*\.)?wikibooks\.beta\.wmflabs\.org',
-			'(.*\.)?wikinews\.beta\.wmflabs\.org',
-			'(.*\.)?wikiquote\.beta\.wmflabs\.org',
-			'(.*\.)?wikisource\.beta\.wmflabs\.org',
-			'(.*\.)?wikiversity\.beta\.wmflabs\.org',
-			'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
-			'(.*\.)?wikimedia\.beta\.wmflabs\.org',
-			'(.*\.)?wikidata\.beta\.wmflabs\.org',
-			// wmcloud.org domains
 			'(.*\.)?wikipedia\.beta\.wmcloud\.org',
+			'(.*\.)?wiktionary\.beta\.wmcloud\.org',
+			'(.*\.)?wikibooks\.beta\.wmcloud\.org',
+			'(.*\.)?wikinews\.beta\.wmcloud\.org',
+			'(.*\.)?wikiquote\.beta\.wmcloud\.org',
+			'(.*\.)?wikisource\.beta\.wmcloud\.org',
+			'(.*\.)?wikiversity\.beta\.wmcloud\.org',
 			'(.*\.)?wikivoyage\.beta\.wmcloud\.org',
+			'(.*\.)?wikimedia\.beta\.wmcloud\.org',
+			'(.*\.)?wikidata\.beta\.wmcloud\.org',
 		];
 		$wgUrlShortenerApprovedDomains = [
-			'*.wikipedia.beta.wmflabs.org',
-			'*.wiktionary.beta.wmflabs.org',
-			'*.wikibooks.beta.wmflabs.org',
-			'*.wikinews.beta.wmflabs.org',
-			'*.wikiquote.beta.wmflabs.org',
-			'*.wikisource.beta.wmflabs.org',
-			'*.wikiversity.beta.wmflabs.org',
-			'*.wikivoyage.beta.wmflabs.org',
-			'*.wikimedia.beta.wmflabs.org',
-			'*.wikidata.beta.wmflabs.org',
-			// wmcloud.org domains
 			'*.wikipedia.beta.wmcloud.org',
+			'*.wiktionary.beta.wmcloud.org',
+			'*.wikibooks.beta.wmcloud.org',
+			'*.wikinews.beta.wmcloud.org',
+			'*.wikiquote.beta.wmcloud.org',
+			'*.wikisource.beta.wmcloud.org',
+			'*.wikiversity.beta.wmcloud.org',
 			'*.wikivoyage.beta.wmcloud.org',
+			'*.wikimedia.beta.wmcloud.org',
+			'*.wikidata.beta.wmcloud.org',
 		];
 	}
 
@@ -262,8 +259,8 @@ if ( $wmgRealm == 'labs' ) {
 	// DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
 	if ( $wmgUseCORS ) {
 		$wgCrossSiteAJAXdomains = [
-			'*.beta.wmflabs.org',
 			'*.beta.wmcloud.org',
+			'*.beta.wmflabs.org',
 		];
 	}
 
@@ -312,15 +309,12 @@ if ( $wmgRealm == 'labs' ) {
 		// **** THIS LIST MUST MATCH puppet/blob/production/hieradata/cloud/eqiad1/deployment-prep/common.yaml ****
 		// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 		$wgGraphAllowedDomains = [
-			'http' => [
-				'wmflabs.org',
-			],
 			'https' => [
-				'beta.wmflabs.org',
+				'beta.wmcloud.org',
 			],
 			'wikirawupload' => [
-				'upload.wikimedia.beta.wmflabs.org',
 				'upload.wikimedia.org',
+				'upload.wikimedia.beta.wmcloud.org',
 			],
 			'wikidatasparql' => [
 				'wdqs-test.wmflabs.org',
@@ -353,13 +347,17 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseFileImporter ) {
-		// Beta commons references configuration files hosted locally.
-		// Note that beta testwiki will continue to fetch its configuration from production mw.org .
+		// In production, all wikis fetch configuration centrally from mediawiki.org.
+		// In the Beta Cluster, the extenison is enabled only on Commons and testwiki:
+		// - Beta commons hosts its configuration files locally instead, to allow testing
+		//   new/custom configuration changes.
+		// - Beta testwiki fetches configuration from production mediawiki.org, to allow
+		//   testing software changes against the always-current production config.
 		if ( $wgDBname == 'commonswiki' ) {
-			$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmflabs.org';
+			$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmcloud.org';
 			$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
-			$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Extension:FileImporter/Data';
-			$wgFileImporterWikidataEntityEndpoint = 'https://wikidata.beta.wmflabs.org/wiki/Special:EntityData/';
+			$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmcloud.org/wiki/Extension:FileImporter/Data';
+			$wgFileImporterWikidataEntityEndpoint = 'https://www.wikidata.beta.wmcloud.org/wiki/Special:EntityData/';
 			$wgFileImporterWikidataNowCommonsEntity = 'Q531650';
 		}
 
@@ -398,8 +396,8 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseWikimediaApiPortalOAuth ) {
-		$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
-		$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmflabs.org/w/rest.php';
+		$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmcloud.org/w/api.php';
+		$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmcloud.org/w/rest.php';
 	}
 
 	// Test of new import source configuration on labs cluster
@@ -501,8 +499,8 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
-	$wgContentHandlers['JadeEntity'] = 'FallbackContentHandler';
-	$wgContentHandlers['JadeJudgment'] = 'FallbackContentHandler';
+	$wgContentHandlers['JadeEntity'] = FallbackContentHandler::class;
+	$wgContentHandlers['JadeJudgment'] = FallbackContentHandler::class;
 
 	$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
 
@@ -551,7 +549,13 @@ if ( $wmgRealm == 'labs' ) {
 
 	// Community configuration
 	if ( $wmgUseCommunityConfiguration ) {
-		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
+		$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.beta.wmcloud.org/w/api.php';
+	}
+	if ( $wmgUseCommunityConfigurationExample ) {
+		// This is intentionally here (and not in CommonSettings.php), as we do not intend
+		// to ever deploy the extension to production (it is a catalogue of CC's abilities,
+		// which is useful to have in beta for QA purposes, but not a feature any user would want).
+		wfLoadExtension( 'CommunityConfigurationExample' );
 	}
 
 	// T377988
@@ -578,5 +582,35 @@ if ( $wmgRealm == 'labs' ) {
 
 	// T385592
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
+
+	// CodeMirror (T373711)
+	if ( $wmgCodeMirrorReplaceCodeEditor ) {
+		// CodeMirror
+		// We don't set $wgCodeMirrorV6 as that's controlled by the beta feature.
+		$wgCodeMirrorEnabledModes['javascript'] = true;
+		$wgCodeMirrorEnabledModes['json'] = true;
+		$wgCodeMirrorEnabledModes['css'] = true;
+		$wgCodeMirrorEnabledModes['lua'] = true;
+		// CodeEditor
+		$wgCodeEditorEnabledModes['javascript'] = false;
+		$wgCodeEditorEnabledModes['json'] = false;
+		$wgCodeEditorEnabledModes['css'] = false;
+		$wgCodeEditorEnabledModes['lua'] = false;
+		// Gadgets
+		$wgGadgetsDefinitionsUseCodeEditor = false;
+		$wgGadgetsDefinitionsUseCodeMirror = true;
+		// JsonConfig
+		$wgJsonConfigUseCodeEditor = false;
+		$wgJsonConfigUseCodeMirror = true;
+		// Scribunto
+		$wgScribuntoUseCodeEditor = false;
+		$wgScribuntoUseCodeMirror = true;
+		// TemplateStyles
+		$wgTemplateStylesUseCodeEditor = false;
+		$wgTemplateStylesUseCodeMirror = true;
+		// UploadWizard
+		$wgUploadWizardUseCodeEditor = false;
+		$wgUploadWizardUseCodeMirror = true;
+	}
 }
 // end safeguard
