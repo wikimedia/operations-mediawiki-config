@@ -1676,6 +1676,7 @@ return [
 	'tigwiki' => 'ዊኪፒድያ', // T381379
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
+	'tlwiktionary' => 'Wiksiyonaryo', // T402725
 	'tlywiki' => 'Vikipedija', // T367009
 	'transitionteamwiki' => 'Transition Team Wiki',
 	'trwiki' => 'Vikipedi',
