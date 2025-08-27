@@ -2704,10 +2704,10 @@ return [
 		'width' => 120,
 		'height' => 28,
 	],
-	'gotwiki' => [
+	'gotwiki' => [ // T402706
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-got.svg',
-		'width' => 116,
-		'height' => 22,
+		'width' => 140,
+		'height' => 25,
 	],
 	'guwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-gu.svg',
@@ -6307,6 +6307,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-gor.svg',
 		'width' => 106,
 		'height' => 13,
+	],
+	'gotwiki' => [ // T402706
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-got.svg',
+		'width' => 130,
+		'height' => 12,
 	],
 	'guwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-gu.svg',
