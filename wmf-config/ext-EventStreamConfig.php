@@ -2318,6 +2318,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -2351,6 +2356,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
