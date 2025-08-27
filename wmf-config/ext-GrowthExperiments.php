@@ -725,10 +725,6 @@ return [
 	'viwiki' => true,
 ],
 
-'wgGENewcomerTasksTopicType' => [
-	'default' => 'ores',
-],
-
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
 	'eswiki' => 70, // T285235
