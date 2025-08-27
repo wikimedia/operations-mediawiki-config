@@ -12336,6 +12336,16 @@ return [
 	'wikifunctionsclient' => false,
 ],
 
+// (T397403) Temporary deployment feature flag
+'wgWikifunctionsEnableWikidataInputTypes' => [
+	'wikifunctionsclient' => true,
+],
+
+// (T397402) Temporary deployment feature flag, awaiting security review
+'wgWikifunctionsEnableHTMLOutput' => [
+	'wikifunctionsclient' => false,
+],
+
 ### Wikistories-related configuration
 
 'wmgUseWikistories' => [
