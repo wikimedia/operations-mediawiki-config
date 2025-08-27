@@ -160,7 +160,7 @@ return [
 	'guwwiki' => '/static/images/project-logos/guwwiki.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki.png', // T48589
 	'hakwiki' => '/static/images/project-logos/hakwiki.png', // T48589
-	'hawiki' => '/static/images/project-logos/hawiki-temp.png', // T376049
+	'hawiki' => '/static/images/project-logos/hawiki.png', // T48589
 	'hawwiki' => '/static/images/project-logos/hawwiki.png', // T42285
 	'hewiki' => '/static/images/project-logos/hewiki.png',
 	'hifwiki' => '/static/images/project-logos/hifwiki.png', // T29361
@@ -1058,7 +1058,7 @@ return [
 	'guwwiki' => '/static/images/project-logos/guwwiki-1.5x.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki-1.5x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-1.5x.png', // T150618
-	'hawiki' => '/static/images/project-logos/hawiki-temp-1.5x.png', // T376049
+	'hawiki' => '/static/images/project-logos/hawiki-1.5x.png', // T150618
 	'hawwiki' => '/static/images/project-logos/hawwiki-1.5x.png', // T150618
 	'hewiki' => '/static/images/project-logos/hewiki-1.5x.png', // T145017
 	'hifwiki' => '/static/images/project-logos/hifwiki-1.5x.png', // T150618
@@ -1724,7 +1724,7 @@ return [
 	'guwwiki' => '/static/images/project-logos/guwwiki-2x.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki-2x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-2x.png', // T150618
-	'hawiki' => '/static/images/project-logos/hawiki-temp-2x.png', // T376049
+	'hawiki' => '/static/images/project-logos/hawiki-2x.png', // T150618
 	'hawwiki' => '/static/images/project-logos/hawwiki-2x.png', // T150618
 	'hewiki' => '/static/images/project-logos/hewiki-2x.png', // T145017
 	'hifwiki' => '/static/images/project-logos/hifwiki-2x.png', // T150618
@@ -6328,10 +6328,10 @@ return [
 		'width' => 120,
 		'height' => 12,
 	],
-	'hawiki' => [ // T376049
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ha-temp.svg',
-		'width' => 140,
-		'height' => 23,
+	'hawiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ha.svg',
+		'width' => 119,
+		'height' => 12,
 	],
 	'hawwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-haw.svg',
