@@ -3160,6 +3160,16 @@ return [
 		],
 	],
 	'+wikimaniawiki' => [
+		// Temporary account autocreation is broken on wikimania wiki as it disallows account creation.
+		// Therefore, editing should be disabled to avoid exposing IP addresses of users - T403067
+		'*' => [
+			'edit' => false,
+			'unfuzzy' => false,
+		],
+		'user' => [
+			'edit' => true,
+			'unfuzzy' => true,
+		],
 		// Uploads are restricted to sysop and an uploader group - T225505
 		'uploader' => [
 			'upload' => true,
