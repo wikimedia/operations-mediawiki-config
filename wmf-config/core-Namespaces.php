@@ -1527,6 +1527,7 @@ return [
 		'DW' => NS_PROJECT_TALK, // T375979
 		'T' => NS_TEMPLATE, // T375979
 		'U' => NS_USER, // T375979
+		'DT' => NS_TEMPLATE_TALK, // T375979
 		'DU' => NS_USER_TALK, // T375979
 	],
 	'+sewiki' => [
