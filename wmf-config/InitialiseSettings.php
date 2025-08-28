@@ -2618,55 +2618,6 @@ return [
 	],
 ],
 
-'wgVectorSearchRecommendationsApiUrl' => [
-	'default' => null,
-	'testwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'wikivoyage' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'wikipedia' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'enwiki' => null,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'arbcom_dewiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'arbcom_enwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'arbcom_fiwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'arbcom_nlwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'arbcom_ruwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'sysop_itwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-	'wg_enwiki' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-],
-
-'wgVectorWvuiSearchOptions' => [
-	'default' => [
-		'showThumbnail' => true,
-		'showDescription' => true,
-	],
-	'officewiki' => [
-		'showThumbnail' => false,
-		'showDescription' => false,
-	],
-	'commonswiki' => [
-		'showThumbnail' => false,
-		'showDescription' => false,
-	],
-	'wikifunctionswiki' => [
-		'showThumbnail' => false,
-		'showDescription' => true,
-	],
-	'wikidatawiki' => [
-		'showThumbnail' => false,
-		'showDescription' => true,
-	],
-	'testwikidatawiki' => [
-		'showThumbnail' => false,
-		'showDescription' => true,
-	],
-	'labswiki' => [
-		'showThumbnail' => false,
-		'showDescription' => false,
-	],
-],
-
 // T328045
 'wgVectorTableOfContentsCollapseAtCount' => [
 	'default' => 28,

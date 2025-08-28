@@ -626,15 +626,6 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
-		'wgMinervaTypeahead' => [
-			'default' => [
-				'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-				'options' => [
-					'showThumbnail' => true,
-					'showDescription' => true
-				]
-			],
-		],
 		'wgMinervaNightMode' => [
 			'default' => [
 				'base' => true,
@@ -724,10 +715,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
-		],
-
-		'wgVectorSearchRecommendationsApiUrl' => [
-			'default' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3'
 		],
 
 		'wgVectorTypeahead' => [

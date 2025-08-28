@@ -427,6 +427,8 @@ if ( $wmgRealm == 'labs' ) {
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
+	$wgMinervaTypeahead = $wgVectorTypeahead;
+
 	// T360098 - change Vector font-size for anons, existing named users or newly created users.
 	$wgDefaultUserOptions['vector-font-size'] = 1;
 	$wgConditionalUserOptions['vector-font-size'] = [
