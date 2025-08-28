@@ -1425,6 +1425,9 @@ function wmfGetOverrideSettings() {
 			// Keep one wiki with first version of notifications for testing
 			'simplewiki' => false,
 		],
+		'wgGENotificationsTrackingEnabled' => [
+			'default' => true,
+		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
