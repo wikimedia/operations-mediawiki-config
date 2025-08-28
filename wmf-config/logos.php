@@ -5750,10 +5750,10 @@ return [
 		'width' => 145,
 		'height' => 17,
 	],
-	'wikimaniawiki' => [ // T392239
+	'wikimaniawiki' => [ // T286405
 		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
-		'width' => 123,
-		'height' => 40,
+		'width' => 144,
+		'height' => 17,
 	],
 	'wikitech' => [ // T334666
 		'src' => '/static/images/mobile/copyright/wikitech-wordmark.svg',
