@@ -831,16 +831,4 @@ return [
 	'wikidata' => false,
 ],
 
-'wgGEHelpPanelNewAccountEnableWithHomepage' => [
-	'default' => true,
-	// Only effective for Beta rn, cf. T400937
-	'wikidata' => false,
-],
-
-'wgGEHelpPanelNewAccountEnablePercentage' => [
-	'default' => 100,
-	// Only effective for Beta rn, cf. T400937
-	'wikidata' => 0,
-],
-
 ];
