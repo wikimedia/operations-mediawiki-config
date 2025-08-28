@@ -2005,6 +2005,9 @@ if ( $wmgEnableCaptcha ) {
 		$wgHCaptchaSecureEnclave = true;
 		$wgHCaptchaInvisibleMode = true;
 
+		// Enable collection of risk scores
+		$wgHCaptchaUseRiskScore = true;
+
 		$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
 
 		// Same as default, but be explicit incase default changed in extension
