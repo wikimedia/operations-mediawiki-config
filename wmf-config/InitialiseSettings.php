@@ -3353,10 +3353,6 @@ return [
 	'default' => true,
 ],
 
-'wgEnablePartialActionBlocks' => [
-	'default' => true, // T353496
-],
-
 'wgGroupInheritsPermissions' => [
 	'default' => [
 		// Confirmed can do anything autoconfirmed can.
