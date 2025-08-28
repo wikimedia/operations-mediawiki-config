@@ -470,6 +470,8 @@ if ( $wmgRealm == 'labs' ) {
 	// T372527
 	if ( $wmgUseCommunityRequests ) {
 		wfLoadExtension( 'CommunityRequests' );
+		// T401268
+		$wgCommunityRequestsEnable = true;
 	}
 
 	if ( !$wmgUseCheckUser ) {
