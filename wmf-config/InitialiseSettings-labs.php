@@ -522,6 +522,10 @@ function wmfGetOverrideSettings() {
 		'-wmgEnableCaptcha' => [
 			'default' => true,
 		],
+		// Relevant secrets aren't provisioned for beta, so turn off hCaptcha
+		'-wmgEnableHCaptcha' => [
+			'default' => false,
+		],
 
 		'-wmgEchoCluster' => [
 			'default' => false,
