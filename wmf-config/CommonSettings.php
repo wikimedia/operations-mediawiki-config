@@ -1991,11 +1991,15 @@ if ( $wmgEnableCaptcha ) {
 		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
-		// mode which challenges only a very few users, it should not distrupt the account creation flow for
+		// mode which challenges only a very few users, it should not disrupt the account creation flow for
 		// nearly all new users.
 		$wgCaptchaTriggers['createaccount'] = [
 			'trigger' => true,
-			'class' => 'HCaptcha',
+			// If this is an API context, use the FancyCaptcha class for now, as mobile apps
+			// do not yet support hCaptcha (T379190)
+			'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
+				'FancyCaptcha' :
+				'HCaptcha',
 		];
 
 		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php
