@@ -4635,6 +4635,26 @@ if ( $wmgUseCampaignEvents ) {
 		'db' => $wmgCampaignEventsUseCentralDB ? 'wikishared' : false,
 	];
 	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'production';
+	// T402353
+	$wgCampaignEventsContributionTrackingDisallowedCountries = [
+		'BH' => 'Bahrain',
+		'BY' => 'Belarus',
+		'CN' => "People's Republic of China",
+		'CU' => 'Cuba',
+		'EG' => 'Egypt',
+		'ER' => 'Eritrea',
+		'HK' => 'Hong Kong',
+		'IR' => 'Iran',
+		'KP' => 'North Korea',
+		'MM' => 'Myanmar',
+		'MO' => 'Macau',
+		'RU' => 'Russia',
+		'SA' => 'Saudi Arabia',
+		'SY' => 'Syria',
+		'TM' => 'Turkmenistan',
+		'TR' => 'Turkey',
+		'VN' => 'Vietnam',
+	];
 	if ( !$wmgCampaignEventsUseEventOrganizerGroup ) {
 		// Unset the event-organizer group if not needed. Must be done after extension settings
 		// have been merged and applied, and also not in an extension function due to T275334.
