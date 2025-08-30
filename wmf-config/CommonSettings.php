@@ -2083,6 +2083,8 @@ if ( $wmgUseCentralAuth ) {
 	}
 
 	$wgCentralAuthLoginWiki = 'loginwiki';
+	// T402527: Use 'metawiki' as central wiki for SUL3
+	$wgCentralAuthCentralWiki = 'metawiki';
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
