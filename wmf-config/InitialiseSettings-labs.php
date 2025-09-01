@@ -594,10 +594,8 @@ function wmfGetOverrideSettings() {
 
 		// T214998
 		'-wmgUseMdotRouting' => [
-			'default' => true,
-
-			// T401595: Phase 0: testwiki in Beta
-			'testwiki' => false,
+			// T401595
+			'default' => false,
 		],
 
 		'wgMFAmcOutreach' => [
