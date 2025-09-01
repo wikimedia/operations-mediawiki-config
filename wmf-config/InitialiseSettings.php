@@ -7171,6 +7171,7 @@ return [
 //
 'wmgUseMdotRouting' => [
 	'default' => true,
+	'testwiki' => false, // T401595
 ],
 
 'wgMFQueryPropModules' => [

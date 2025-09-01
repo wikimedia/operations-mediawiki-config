@@ -594,8 +594,7 @@ function wmfGetOverrideSettings() {
 
 		// T214998
 		'-wmgUseMdotRouting' => [
-			// T401595
-			'default' => false,
+			'default' => false, // T401595
 		],
 
 		'wgMFAmcOutreach' => [
