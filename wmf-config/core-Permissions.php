@@ -1466,6 +1466,10 @@ return [
 	'idwiki' => [
 		'*' => [ 'createpage' => false ],
 		'rollbacker' => [ 'rollback' => true ], // T35508
+		'sysop' => [ 'extendedconfirmed' => true ], // T402755
+		'bot' => [ 'extendedconfirmed' => true ], // T402755
+		'interface-editor' => [ 'extendedconfirmed' => true ], // T402755
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T402755
 	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'upload' => true ],
@@ -4214,6 +4218,7 @@ return [
 	'+idwiki' => [
 		'sysop' => [
 			'rollbacker',
+			'extendedconfirmed', // T402755
 		],
 		'bureaucrat' => [ 'rollbacker' ],
 	],
@@ -5666,6 +5671,7 @@ return [
 	'+idwiki' => [
 		'sysop' => [
 			'rollbacker',
+			'extendedconfirmed', // T402755
 		],
 		'bureaucrat' => [ 'rollbacker' ],
 	],

@@ -2054,6 +2054,7 @@ return [
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'hewikisource' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T275076
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
+	'idwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T402755
 	'itwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T308917
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
@@ -2099,6 +2100,7 @@ return [
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+fiwiki' => [ 'editautoreviewprotected' ], // T347069
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
+	'+idwiki' => [ 'extendedconfirmed' ], // T402755
 	'+itwiki' => [ 'editautopatrolprotected' ], // T308917
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
@@ -4515,6 +4517,15 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T140839
+	],
+	'idwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE_FROM_EDIT, 60 * 86400 ], // 60 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'interface-admin' ] ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T249820
 	],
 	'jawiki' => [
 		'extendedconfirmed' => [ '&',
