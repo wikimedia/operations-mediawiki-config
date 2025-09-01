@@ -3247,6 +3247,10 @@ return [
 			'extendedconfirmed' => true, // T287322
 			'movefile' => true, // T331691
 		],
+		'event-organizer' => [
+			'noratelimit' => true, // T403350
+			'centralauth-createlocal' => true, // T403350
+		],
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
@@ -4926,6 +4930,7 @@ return [
 			'flood',
 			'arbcom', // T374455
 		],
+		'event-organizer' => [ 'confirmed' ], // T403350
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T357991
 		'sysop' => [
 			'abusefilter-helper', // T344398
