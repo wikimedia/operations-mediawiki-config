@@ -6574,6 +6574,10 @@ return [
 
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
+	// T389231 tone check a/b test
+	'frwiki' => 'tone',
+	'jawiki' => 'tone',
+	'ptwiki' => 'tone',
 ],
 
 'wgVisualEditorEnableCollabBeta' => [
