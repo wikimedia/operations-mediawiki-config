@@ -11375,6 +11375,34 @@ return [
 				],
 			],
 		],
+		// T402915
+		[
+			'name' => 'newcomers-2025-survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0, # 0.5,
+			'privacyPolicy' => 'newcomers-2025-survey-privacy-policy',
+			'platforms' => [
+					'desktop' => [ 'stable' ],
+					'mobile' => [ 'stable', 'beta' ]
+			],
+			'audience' => [
+					'minEdits' => 25,
+					'registrationStart' => '2025-03-01',
+					'anons' => false,
+			],
+			'questions' => [
+					[
+							'name' => 'Survey single external question',
+							'question' => 'newcomers-2025-survey-question ',
+							'description' => 'reader-foundational-oe-survey-description', # reusing blank message
+							'link' => 'newcomers-2025-survey-link',
+							'instanceTokenParameterName' => 'QS',
+							'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+							'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+					],
+			],
+		],
 	],
 	'eswiki' => [
 		[
