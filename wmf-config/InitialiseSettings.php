@@ -7177,7 +7177,12 @@ return [
 //
 'wmgUseMdotRouting' => [
 	'default' => true,
-	'testwiki' => false, // T401595
+
+	// T401595: Pilot wikis
+	'testwiki' => false,
+	'testwikidatawiki' => false,
+	'labswiki' => false,
+	'officewiki' => false,
 ],
 
 'wgMFQueryPropModules' => [
