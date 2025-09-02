@@ -3671,6 +3671,8 @@ if ( $wmgUseContentTranslation ) {
 		'age' => '3600',
 	];
 
+	$wgContentTranslationCxServerHost = $wmgLocalServices['cxserver'];
+
 	if ( $wmgUseQuickSurveys ) {
 		$wgQuickSurveysConfig[] = [
 			'name' => 'Automatic Translation Feedback',
