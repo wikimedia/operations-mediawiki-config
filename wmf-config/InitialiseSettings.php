@@ -7183,6 +7183,9 @@ return [
 	'testwikidatawiki' => false,
 	'labswiki' => false,
 	'officewiki' => false,
+
+	// T403510
+	'mediawikiwiki' => false,
 ],
 
 'wgMFQueryPropModules' => [
