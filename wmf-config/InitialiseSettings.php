@@ -11345,7 +11345,7 @@ return [
 			'questions' => [
 					[
 							'name' => 'Survey single external question',
-							'question' => 'newcomers-2025-survey-question ',
+							'question' => 'newcomers-2025-survey-question',
 							'description' => 'reader-foundational-oe-survey-description', # reusing blank message
 							'link' => 'newcomers-2025-survey-link',
 							'instanceTokenParameterName' => 'QS',
