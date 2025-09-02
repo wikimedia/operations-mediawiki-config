@@ -2716,6 +2716,13 @@ Wiktionary:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    tlwiktionary:
+        comment: T403433
+        comment_1_5x: T403433
+        comment_2x: T403433
+        commons: 'File:Wiktionary-logo-tl.svg'
+        commons_wordmark: 'File:Wiktionary-wordmark-tl.svg'
+        commons_tagline: 'File:Wiktionary-tagline-tl.svg'
     trwiktionary:
         comment: T176008
         comment_1_5x: T176008
