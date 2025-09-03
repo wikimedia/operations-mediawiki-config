@@ -5749,15 +5749,6 @@ return [
 	'hewikivoyage' => true, // T222017
 	'zhwikivoyage' => true, // T230624
 	'dewikivoyage' => true, // T264305
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'wg_enwiki' => true,
 ],
 
 'wgPopupsVirtualPageViews' => [
@@ -8652,16 +8643,6 @@ return [
 	'eswikinews' => true, // T230660
 	'frwikinews' => true, // T143480
 	'zhwikinews' => true, // T266933
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'sysop_itwiki' => true,
-	'wg_enwiki' => true,
 ],
 
 'wmgUseReportIncident' => [
@@ -10806,16 +10787,6 @@ return [
 	'default' => false,
 	// T152115
 	'wikipedia' => true,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'sysop_itwiki' => true,
-	'wg_enwiki' => true,
 ],
 'wgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
