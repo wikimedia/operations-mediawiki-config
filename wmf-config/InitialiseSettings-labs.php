@@ -475,6 +475,7 @@ function wmfGetOverrideSettings() {
 				// Additional logging for labs
 				'CentralAuthVerbose' => 'debug',
 				'CirrusSearch' => 'info',
+				'CommunityRequests' => 'debug',
 				'csp' => 'info',
 				'csp-report-only' => 'info',
 				'dnsblacklist' => 'debug',
