@@ -2483,10 +2483,6 @@ function wmfGetOverrideSettings() {
 			'default' => 1000,
 			'eswiki' => 10000,
 		],
-		// T388685 temporary feature flag
-		'wmgWikibaseClientResolveWikibaseLabels' => [
-			'default' => true,
-		],
 		// T394704 / T399703 temporary feature flag
 		'wmgWikibaseTmpMobileEditingUI' => [
 			'default' => false,

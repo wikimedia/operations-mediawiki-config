@@ -393,8 +393,6 @@ if ( $wmgUseWikibaseClient ) {
 	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
 		$wgWBClientSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
-
-	$wgWBClientSettings['resolveWikibaseLabels'] = $wmgWikibaseClientResolveWikibaseLabels;
 }
 
 unset( $wmgWBSharedCacheKey );
