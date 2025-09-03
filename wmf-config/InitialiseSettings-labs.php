@@ -619,19 +619,6 @@ function wmfGetOverrideSettings() {
 		'wgVectorWrapTablesTemporary' => [
 			'default' => true,
 		],
-
-		'wgVectorNightMode' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-			],
-		],
-		'wgMinervaNightMode' => [
-			'default' => [
-				'base' => true,
-				'loggedin' => true,
-			],
-		],
 		'wgMinervaDonateBanner' => [
 			'default' => [
 				'base' => true,

@@ -54,7 +54,6 @@ class WmfConfig {
 		'flaggedrevs',
 		'small',
 		'specialcontribute',
-		'skin-themes',
 		'vector-2022-language-links',
 		'legacy-vector',
 		'medium',

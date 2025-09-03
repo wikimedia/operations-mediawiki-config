@@ -36,11 +36,6 @@ return [
 
 	'wgMinervaNightMode' => [
 		'default' => [
-			'base' => false,
-			'loggedin' => true,
-			'amc' => true,
-		],
-		'skin-themes' => [
 			'base' => true,
 			'loggedin' => true,
 			'amc' => true,
