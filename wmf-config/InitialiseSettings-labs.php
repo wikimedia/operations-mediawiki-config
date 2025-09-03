@@ -286,16 +286,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// See T393918.
-		'wgMetricsPlatformEnableExperiments' => [
-			'default' => true,
-		],
-
-		// See T393918.
-		'wgMetricsPlatformEnableExperimentOverrides' => [
-			'default' => true,
-		],
-
 		// See T393918 and T395342.
 		//
 		// This configures a temporary logged-in A/B experiment to test T393918 and T395342 end to

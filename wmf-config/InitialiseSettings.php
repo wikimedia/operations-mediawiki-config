@@ -10491,8 +10491,9 @@ return [
 	'default' => true,
 ],
 
+// See T402369.
 'wgMetricsPlatformEnableExperimentOverrides' => [
-	'default' => false,
+	'default' => true,
 ],
 
 // See T391411 and T393918.
