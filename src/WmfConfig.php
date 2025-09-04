@@ -84,6 +84,7 @@ class WmfConfig {
 		'sul',
 		'wikilove',
 		'tempaccounts_disabled',
+		'checkuser-suggested-investigations',
 	];
 
 	/** @var string[] */

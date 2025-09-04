@@ -7067,6 +7067,12 @@ return [
 	'default' => true,
 ],
 
+// T402025
+'wgCheckUserSuggestedInvestigationsEnabled' => [
+	'default' => false,
+	'checkuser-suggested-investigations' => false, // T403471
+],
+
 // ----------- CheckUser end ----------
 
 // n.b. If setting this to `false` for a wiki, please also update the
