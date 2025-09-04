@@ -3898,37 +3898,7 @@ if ( $wmgUseChart ) {
 	// Tabular data pages are already set up with JsonConfig through $wmgEnableJsonConfigDataMode
 }
 
-if ( $wmgUseGraph ) {
-	wfLoadExtension( 'Graph' );
-
-	// **** THIS LIST MUST MATCH puppet/hieradata/role/common/scb.yaml ****
-	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
-	//
-	$wgGraphAllowedDomains = [
-		'https' => [
-			'mediawiki.org',
-			'wikibooks.org',
-			'wikidata.org',
-			'wikimedia.org',
-			'wikinews.org',
-			'wikipedia.org',
-			'wikiquote.org',
-			'wikisource.org',
-			'wikiversity.org',
-			'wikivoyage.org',
-			'wiktionary.org',
-		],
-		'wikirawupload' => [
-			'upload.wikimedia.org',
-		],
-		'wikidatasparql' => [
-			'query.wikidata.org',
-		],
-		'geoshape' => [
-			'maps.wikimedia.org',
-		],
-	];
-} elseif ( $wmgHideGraphTags ) {
+if ( $wmgHideGraphTags ) {
 	// Hide raw tags that are displayed due to T334895
 	// Note this uses messages from E:WikimediaMessages, replacing those from E:Graph
 	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';

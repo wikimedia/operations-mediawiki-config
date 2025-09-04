@@ -309,27 +309,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Enabling article-reminder on beta for testing T166973. Still disabled in prod.
 	$wgAllowArticleReminderNotification = true;
 
-	if ( $wmgUseGraph ) {
-		// **** THIS LIST MUST MATCH puppet/blob/production/hieradata/cloud/eqiad1/deployment-prep/common.yaml ****
-		// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
-		$wgGraphAllowedDomains = [
-			'https' => [
-				'beta.wmcloud.org',
-			],
-			'wikirawupload' => [
-				'upload.wikimedia.org',
-				'upload.wikimedia.beta.wmcloud.org',
-			],
-			'wikidatasparql' => [
-				'wdqs-test.wmflabs.org',
-				'query.wikidata.org',
-			],
-			'geoshape' => [
-				'maps.wikimedia.org',
-			],
-		];
-	}
-
 	if ( $wmgUseMediaModeration ) {
 		$wgVirtualDomainsMapping['virtual-mediamoderation'] = [ 'db' => false ];
 	}

@@ -2345,14 +2345,6 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => true, // T322325
 		],
 
-		// Testing while new Chart extension is being developed
-		'-wmgUseGraph' => [
-			'default' => true,
-		],
-		'-wmgHideGraphTags' => [
-			'default' => false,
-		],
-
 		'wmgEnableIPMasking' => [
 			'default' => true, // T377262
 			'en-rtl' => false,
