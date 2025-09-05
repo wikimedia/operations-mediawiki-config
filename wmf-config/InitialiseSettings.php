@@ -6740,6 +6740,7 @@ return [
 	'kuwiktionary' => 'uca-ku-u-kn', // T48235
 	'kuwikibooks' => 'uca-ku-u-kn', // T48235
 	'kuwikiquote' => 'uca-ku-u-kn', // T48235
+	'lbwiki' => 'uca-lb-u-kn', // T402083
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
 	'mkwiki' => 'uca-mk-u-kn', // T26953
