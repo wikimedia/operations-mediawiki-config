@@ -5658,6 +5658,7 @@ return [
 	'arbcom_enwiki' => 'Project',
 	'arbcom_fiwiki' => 'Project',
 	'arbcom_nlwiki' => 'Project',
+	'arbcom_plwiki' => 'Komarwiki', // T391009
 	'arbcom_ruwiki' => 'Арбитраж', // T262812
 	'arbcom_zhwiki' => '仲裁',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
@@ -6236,6 +6237,7 @@ return [
 	'angwiktionary' => 'Wikiwordbōcmōtung', // T58634
 	'altwiki' => 'Википедияти_шӱӱжери',
 	'arbcom_cswiki' => 'Diskuse_k_projektu', // T151731
+	'arbcom_plwiki' => 'Dyskusja_Komarwiki', // T391009
 	'arbcom_ruwiki' => 'Обсуждение_арбитража', // T262812
 	'arbcom_zhwiki' => '仲裁讨论',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',

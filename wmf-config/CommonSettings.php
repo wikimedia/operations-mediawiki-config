@@ -321,6 +321,7 @@ $wgLocalVirtualHosts = [
 	've.wikimedia.org',
 	'wikimania.wikimedia.org',
 	'wikipedia-it-arbcom.wikimedia.org',
+	'wikipedia-pl-arbcom.wikimedia.org',
 	'wikipedia-zh-arbcom.wikimedia.org',
 	'wikitech.wikimedia.org',
 	'www.wikifunctions.org',

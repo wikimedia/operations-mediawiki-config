@@ -4373,6 +4373,12 @@ Wikivoyage:
         comment_2x: T150618
         no_wordmark: true
         local_icon: true
+    arbcom_plwiki:
+        commons: 'File:Wikipedia Arbitration Committee Logo pl.svg'
+        comment: T391009
+        comment_1_5x: T391009
+        comment_2x: T391009
+        no_wordmark: true
     arbcom_ruwiki:
         comment: T262812
         comment_1_5x: T262812

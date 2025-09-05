@@ -195,6 +195,7 @@ return [
 	'arbcom_fiwiki' => 'fi',
 	'arbcom_itwiki' => 'it',
 	'arbcom_nlwiki' => 'nl',
+	'arbcom_plwiki' => 'pl',
 	'arbcom_ruwiki' => 'ru', // T262812
 	'arbcom_zhwiki' => 'zh',
 	'auditcomwiki' => 'en',
@@ -313,6 +314,7 @@ return [
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_itwiki' => 'Europe/Rome',
 	'arbcom_nlwiki' => 'Europe/Berlin',
+	'arbcom_plwiki' => 'Europe/Warsaw',
 	'arywiki' => 'Africa/Casablanca',
 	'aswikiquote' => 'Asia/Kolkata',
 	'aswikisource' => 'Asia/Kolkata', // T45129
@@ -923,6 +925,7 @@ return [
 	'arbcom_fiwiki' => '//arbcom-fi.wikipedia.org',
 	'arbcom_itwiki' => '//wikipedia-it-arbcom.wikimedia.org',
 	'arbcom_nlwiki' => '//arbcom-nl.wikipedia.org',
+	'arbcom_plwiki' => '//wikipedia-pl-arbcom.wikimedia.org',
 	'arbcom_ruwiki' => '//arbcom-ru.wikipedia.org',
 	'arbcom_zhwiki' => '//wikipedia-zh-arbcom.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
@@ -1039,6 +1042,7 @@ return [
 	'arbcom_fiwiki' => 'https://arbcom-fi.wikipedia.org',
 	'arbcom_itwiki' => 'https://wikipedia-it-arbcom.wikimedia.org',
 	'arbcom_nlwiki' => 'https://arbcom-nl.wikipedia.org',
+	'arbcom_plwiki' => 'https://wikipedia-pl-arbcom.wikimedia.org',
 	'arbcom_ruwiki' => 'https://arbcom-ru.wikipedia.org',
 	'arbcom_zhwiki' => 'https://wikipedia-zh-arbcom.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
@@ -1168,6 +1172,7 @@ return [
 	'arbcom_enwiki' => 'Arbitration Committee',
 	'arbcom_fiwiki' => 'Arbitration Committee',
 	'arbcom_nlwiki' => 'Arbitration Committee',
+	'arbcom_plwiki' => 'Komitet Arbitrażowy',
 	'arbcom_ruwiki' => 'Арбитражный комитет русской Википедии', // T262812
 	'arbcom_zhwiki' => '中文维基百科仲裁委员会',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
