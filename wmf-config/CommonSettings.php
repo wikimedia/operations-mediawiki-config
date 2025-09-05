@@ -2019,7 +2019,7 @@ if ( $wmgEnableCaptcha ) {
 
 		// Route requests to hCaptcha on the client-side through our proxy.
 		$wgHCaptchaApiUrl = wfAppendQuery(
-			'https://hcaptcha.wikimedia.org/1/api.js',
+			'https://hcaptcha.wikimedia.org/1/secure-api.js',
 			[
 				'endpoint' => 'https://hcaptcha.wikimedia.org',
 				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
