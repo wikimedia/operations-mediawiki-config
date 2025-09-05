@@ -4,7 +4,9 @@ namespace Wikimedia\MWConfig;
 
 require_once __DIR__ . '/DNSSRVRecord.php';
 
-// container for the cache of DB records
+/**
+ * container for the cache of DB records
+ */
 class DBRecordCache {
 	/** @var DBRecordCache|null */
 	private static $instance;

@@ -12,13 +12,13 @@
 	</rule>
 	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
 		<properties>
-			<property name="ignoreList" type="array" value="$IP" />
-			<property name="allowedPrefixes" type="array" value="wg,wmg" />
+			<property name="ignoreList[]" value="$IP" />
+			<property name="allowedPrefixes[]" value="wg,wmg" />
 		</properties>
 	</rule>
 	<rule ref="MediaWiki.NamingConventions.PrefixedGlobalFunctions">
 		<properties>
-			<property name="allowedPrefixes" type="array" value="wg,wmf" />
+			<property name="allowedPrefixes[]" value="wg,wmf" />
 		</properties>
 	</rule>
 

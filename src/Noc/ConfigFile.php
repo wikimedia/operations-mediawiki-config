@@ -25,7 +25,6 @@ class ConfigFile {
 	 * @param array $txt The list of files to serve with a ".txt" extension
 	 * @param array $plain The list of files to serve with the provided path
 	 * @param array $dir The list of directories to serve the files for
-	 *
 	 */
 	public function __construct( $txt, $plain, $dir ) {
 		$this->routes = [];
