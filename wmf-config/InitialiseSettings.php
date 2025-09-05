@@ -7188,6 +7188,9 @@ return [
 
 	// T403510
 	'mediawikiwiki' => false,
+	'cawiki' => false,
+	'hewiki' => false,
+	'itwiki' => false,
 ],
 
 'wgMFQueryPropModules' => [
