@@ -7093,10 +7093,6 @@ return [
 // relevant wiki entry to `false` in `wmgEnableIPMasking`
 'wmgDisableIPMasking' => [
 	'default' => false,
-	// n.b. metawiki has not yet had temporary accounts enabled. However, we want to
-	// set the 'known' configuration to true, so that Special:GlobalContributions
-	// will work as intended on metawiki (T376612).
-	'metawiki' => true,
 ],
 
 // IPInfo extension
