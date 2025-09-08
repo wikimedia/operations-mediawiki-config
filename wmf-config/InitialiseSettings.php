@@ -8200,6 +8200,8 @@ return [
 	// Wikis with wgUseReportIncident:
 	'testwiki' => true,
 	'ptwiki' => true,
+	// Wikis without the DT beta feature:
+	'mediawikiwiki' => true,
 ],
 
 'wgDiscussionToolsAutoTopicSubEditor' => [
