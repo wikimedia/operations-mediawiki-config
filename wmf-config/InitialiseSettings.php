@@ -11258,7 +11258,7 @@ return [
 			'name' => 'newcomers-2025-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0, # 0.5,
+			'coverage' => 0.5,
 			'privacyPolicy' => 'newcomers-2025-survey-privacy-policy',
 			'platforms' => [
 					'desktop' => [ 'stable' ],
