@@ -12598,6 +12598,12 @@ return [
 	'default' => 'disable',
 ],
 
+// T399631
+'wgUseSessionCookieJwt' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 // T377975 / T391064
 'wgTemplateDataEnableDiscovery' => [
 	'default' => true,

@@ -2462,6 +2462,9 @@ function wmfGetOverrideSettings() {
 			'enwikisource' => false,
 			'enwikivoyage' => false,
 		],
+		'-wgUseSessionCookieJwt' => [
+			'default' => true,
+		],
 		// T377975
 		'-wgTemplateDataEnableDiscovery' => [
 			'default' => false,
