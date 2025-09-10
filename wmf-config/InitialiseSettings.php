@@ -12587,6 +12587,7 @@ return [
 'wgPHPSessionHandling' => [
 	'default' => 'warn',
 	'group0' => 'disable',
+	'group1' => 'disable',
 ],
 
 // T377975 / T391064
