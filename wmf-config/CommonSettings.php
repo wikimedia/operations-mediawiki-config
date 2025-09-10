@@ -2016,9 +2016,12 @@ if ( $wmgEnableCaptcha ) {
 		// Same as default, but be explicit incase default changed in extension
 		$wgHCaptchaSendRemoteIP = false;
 
+		// Set the integrity property of the secure-api.js script, for subresource integrity
+		$wgHCaptchaApiUrlIntegrityHash = 'sha384-Y5Jmja9okpbjr6EsoyuMWaiF9PbehV8SVrk0tl5ep5qXAd/CejV9HzfFTU3Xk60l';
 		// Route requests to hCaptcha on the client-side through our proxy.
 		$wgHCaptchaApiUrl = wfAppendQuery(
-			'https://hcaptcha.wikimedia.org/1/secure-api.js',
+			// Pin the secure-api.js version to 73f27c192b38c05ce2ebce596a0e28f88a2a56bf
+			'https://assets-hcaptcha.wikimedia.org/captcha/1/73f27c192b38c05ce2ebce596a0e28f88a2a56bf/secure-api.js',
 			[
 				'endpoint' => 'https://hcaptcha.wikimedia.org',
 				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
