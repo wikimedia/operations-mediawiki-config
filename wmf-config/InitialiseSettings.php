@@ -2546,13 +2546,6 @@ return [
 			'showDescription' => true
 		]
 	],
-	'enwiki' => [
-		'recommendationApiUrl' => null,
-		'options' => [
-			'showThumbnail' => true,
-			'showDescription' => true
-		]
-	],
 	'testwiki' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 		'options' => [
@@ -2567,14 +2560,8 @@ return [
 			'showDescription' => true
 		]
 	],
+	// T402048
 	'wikipedia' => [
-		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
-		'options' => [
-			'showThumbnail' => true,
-			'showDescription' => true
-		]
-	],
-	'group1-wikipedia' => [
 		'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=morelike:$1&limit=3',
 		'options' => [
 			'showThumbnail' => true,
