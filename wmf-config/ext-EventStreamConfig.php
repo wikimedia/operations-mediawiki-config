@@ -2549,6 +2549,31 @@ return [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
 		],
+		// (T403255, T403259) Image browsing experiment by Reader Growth.
+		//
+		// Sampling unit and rates are set up in the
+		// Metrics Platform Experimentation Lab (MPIC) at
+		// https://mpic.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
+		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
+			'schema_title' => '/analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+			],
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [

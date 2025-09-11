@@ -100,6 +100,7 @@ return [
 		'product_metrics.web_base',
 		'product_metrics.web_base.article_summaries',
 		'wikibase.client.interaction',
+		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 	],
 ],
 
