@@ -11481,7 +11481,8 @@ return [
 ],
 
 'wgWebAuthnNewCredsDisabled' => [
-	'default' => true, // T378402
+	'default' => false,
+	'sul' => true, // T378402
 ],
 
 // T392520
