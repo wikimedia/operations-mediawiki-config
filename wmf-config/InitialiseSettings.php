@@ -8707,16 +8707,6 @@ return [
 	'wikidata' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'wikipedia' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'wikivoyage' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'arbcom_dewiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'arbcom_enwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'arbcom_fiwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'arbcom_nlwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'arbcom_ruwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'sysop_itwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'wg_enwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
