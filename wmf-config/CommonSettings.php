@@ -4887,6 +4887,7 @@ if (
 		'class' => ClosedWikiProvider::class,
 		'sort' => 0,
 	];
+	$wgCentralAuthSul3SharedDomainRestrictions['allowedLocalProviders']['preauth'][] = ClosedWikiProvider::class;
 }
 
 $wgLogRestrictions = array_merge( $wgLogRestrictions, $wmgLogRestrictions );
