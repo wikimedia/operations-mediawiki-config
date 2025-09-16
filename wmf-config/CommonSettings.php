@@ -315,6 +315,7 @@ $wgLocalVirtualHosts = [
 	'species.wikimedia.org',
 	'auth.wikimedia.org',
 	'test-commons.wikimedia.org',
+	'th.wikimedia.org',
 	'tr.wikimedia.org',
 	'ua.wikimedia.org',
 	've.wikimedia.org',

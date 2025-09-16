@@ -156,6 +156,7 @@ class MWMultiVersion {
 		'rs',
 		'ru',
 		'se',
+		'th',
 		'tr',
 		'ua',
 		'uk',
