@@ -8071,6 +8071,12 @@ return [
 	'sewikimedia' => true, // T380909
 	'fiwikimedia' => true, // T380909
 	'gomwiki' => true, // T380909
+	'enwikinews' => true, // 404687
+	'enwiktionary' => true, // 404687
+	'huwiki' => true, // 404687
+	'strategywiki' => true, // 404687
+	'svwikisource' => true, // 404687
+	'wikimania2010wiki' => true, // 404687
 ],
 
 'wmgFlowNamespaces' => [
