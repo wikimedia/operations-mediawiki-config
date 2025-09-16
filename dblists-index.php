@@ -616,6 +616,7 @@ return [
 'mrwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'mswiki' => [ 'wikipedia', 'specialcontribute', 'skin-themes', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul' ],
 'mswikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'mswikiquote' => [ 'preinstall', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
 'mswikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
 'mswiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'mtwiki' => [ 'wikipedia', 'specialcontribute', 'skin-themes', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],

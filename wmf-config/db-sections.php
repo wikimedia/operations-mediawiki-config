@@ -96,6 +96,7 @@ $wgLBFactoryConf['sectionsByDB'] = [
 	'mniwiktionary' => 's5',
 	'mnwwiktionary' => 's5',
 	'moswiki' => 's5',
+	'mswikiquote' => 's5',
 	'mswikisource' => 's5',
 	'muswiki' => 's5',
 	'mywikisource' => 's5',
