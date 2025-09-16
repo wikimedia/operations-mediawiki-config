@@ -35,6 +35,15 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
+// T404592 - Edit-a-thon by Wikimedistas en Cruce
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-09-26T11:30 -3:00',
+	'to' => '2025-09-26T21:00 -3:00',
+	'IP' => '186.0.208.20',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 65,
+];
+
 // T404218 - Workshop at University of Pretoria
 $wmgThrottlingExceptions[] = [
 	'from' => '2025-09-29T08:01 +2:00',
