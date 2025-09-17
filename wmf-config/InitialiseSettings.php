@@ -13016,4 +13016,9 @@ return [
 'wgTemplateDataEnableFeaturedTemplates' => [
 	'default' => true,
 ],
+
+// T404398
+'wmgUseReaderExperiments' => [
+	'default' => false,
+],
 ];
