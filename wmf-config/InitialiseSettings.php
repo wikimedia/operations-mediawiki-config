@@ -12367,6 +12367,7 @@ return [
 	'mswiktionary' => true, // T386538
 	'wikimaniawiki' => true, // T397369
 	'wikisource' => true, // T402329
+	'commonswiki' => true, // T403667
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
