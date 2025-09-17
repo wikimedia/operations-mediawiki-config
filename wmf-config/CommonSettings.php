@@ -4284,6 +4284,8 @@ if ( $wmgUseCheckUser ) {
 	if ( $wmgUseCentralAuth ) {
 		$wgCheckUserUserInfoCardCentralWikiId = 'metawiki';
 	}
+
+	$wgVirtualDomainsMapping['virtual-checkuser'] = [ 'cluster' => 'extension1', 'db' => false ];
 }
 
 if ( $wmgUseIPReputation ) {
