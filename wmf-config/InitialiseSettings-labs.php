@@ -2508,5 +2508,9 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 			'commonswiki' => true,
 		],
+		// T404398
+		'wmgUseReaderExperiments' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
