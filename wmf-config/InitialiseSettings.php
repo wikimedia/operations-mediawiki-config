@@ -7075,6 +7075,8 @@ return [
 'wgCheckUserSuggestedInvestigationsEnabled' => [
 	'default' => false,
 	'checkuser-suggested-investigations' => false, // T403471
+	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 // ----------- CheckUser end ----------
