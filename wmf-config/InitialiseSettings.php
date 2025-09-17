@@ -3781,6 +3781,9 @@ return [
 'wmgEnableHCaptcha' => [
 	'default' => false,
 	'test2wiki' => true,
+	'idwiki' => true,
+	'jawiki' => true,
+	'ptwiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
