@@ -2358,8 +2358,10 @@ return [
 			'producers' => [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
+						// Don't collect the user agent
 						'http.request_headers.user-agent' => false,
 					],
+					'use_edge_uniques' => true,
 				],
 				'metrics_platform_client' => [
 					'provide_values' => [
@@ -2379,13 +2381,6 @@ return [
 						'performer_pageview_id',
 					],
 				],
-			],
-			'eventgate' => [
-				'enrich_fields_from_http_headers' => [
-					// Don't collect the user agent
-					'http.request_headers.user-agent' => false,
-				],
-				'use_edge_uniques' => true,
 			],
 		],
 		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
