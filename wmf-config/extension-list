@@ -125,6 +125,7 @@ $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/PropertySuggester/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
+$IP/extensions/ReaderExperiments/extension.json
 $IP/extensions/ReadingLists/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RealMe/extension.json
