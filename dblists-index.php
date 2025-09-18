@@ -909,7 +909,7 @@ return [
 'thankyouwiki' => [ 'special', 'fishbowl', 'small', 'legacy-vector', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'thwiki' => [ 'wikipedia', 'specialcontribute', 'skin-themes', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul', 'wikilove' ],
 'thwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
-'thwikimedia' => [ 'preinstall', 'fishbowl', 'small', 'group1', 'parsoidrendered' ],
+'thwikimedia' => [ 'fishbowl', 'small', 'group1', 'parsoidrendered' ],
 'thwikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'thwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'thwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
