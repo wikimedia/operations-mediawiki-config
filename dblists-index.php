@@ -893,7 +893,7 @@ return [
 'tddwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'sul' ],
 'techconductwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'tenwiki' => [ 'wikipedia', 'closed', 'small', 'specialcontribute', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
-'test2wiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'specialcontribute', 'medium', 'wikidataclient-test', 'group1-wikipedia', 'group1', 'nowikidatadescriptiontaglines', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations' ],
+'test2wiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'specialcontribute', 'medium', 'wikidataclient-test', 'group1-wikipedia', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations' ],
 'testcommonswiki' => [ 'special', 'small', 'wikibaserepo', 'wikidataclient-test', 'visualeditor-nondefault', 'group0', 'translate', 'sul', 'wikilove' ],
 'testwiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'skin-themes', 'medium', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'wikifunctionsclient', 'growthexperiments', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'testwikidatawiki' => [ 'special', 'medium', 'wikidata', 'wikibaserepo', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'sul' ],
