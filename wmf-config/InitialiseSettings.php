@@ -7195,6 +7195,8 @@ return [
 	'cawiki' => false,
 	'hewiki' => false,
 	'itwiki' => false,
+	'fawiki' => false,
+	'metawiki' => false,
 ],
 
 'wgMFQueryPropModules' => [
