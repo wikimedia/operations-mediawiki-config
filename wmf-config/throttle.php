@@ -35,6 +35,22 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
+// T405069 - Training events at Nottingham Central Library
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-09-24T15:30 +0:00',
+	'to' => '2025-09-24T18:30 +0:00',
+	'range' => '194.61.233.64/29',
+	'dbname' => [ 'enwiki' ],
+	'value' => 22,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-09-24T15:30 +0:00',
+	'to' => '2025-09-24T18:30 +0:00',
+	'range' => '194.61.207.64/29',
+	'dbname' => [ 'enwiki' ],
+	'value' => 22,
+];
+
 // T404592 - Edit-a-thon by Wikimedistas en Cruce
 $wmgThrottlingExceptions[] = [
 	'from' => '2025-09-26T11:30 -3:00',
@@ -51,6 +67,22 @@ $wmgThrottlingExceptions[] = [
 	'IP' => '137.215.181.178',
 	'dbname' => [ 'enwiki', 'nrwiki', 'sswiki', 'vewiki', 'tnwiki', 'tswiki', 'zuwiki', 'xhwiki', 'nsowiki', 'afwiki', 'stwiki' ],
 	'value' => 160,
+];
+
+// T405069 - Training events at Nottingham Central Library
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-18T08:30 +0:00',
+	'to' => '2025-10-18T15:30 +0:00',
+	'range' => '194.61.233.64/29',
+	'dbname' => [ 'enwiki' ],
+	'value' => 22,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-18T08:30 +0:00',
+	'to' => '2025-10-18T15:30 +0:00',
+	'range' => '194.61.207.64/29',
+	'dbname' => [ 'enwiki' ],
+	'value' => 22,
 ];
 
 ## Add throttling definitions above.
