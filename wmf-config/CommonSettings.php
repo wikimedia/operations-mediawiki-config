@@ -2001,6 +2001,14 @@ if ( $wmgEnableCaptcha ) {
 				'FancyCaptcha' :
 				'HCaptcha',
 		];
+		if ( $wgDBname === 'test2wiki' ) {
+			// Unconditionally enable hCaptcha on test2wiki web and API requests to support
+			// mobile apps integration testing (T405107)
+			$wgCaptchaTriggers['createaccount'] = [
+				'trigger' => true,
+				'class' => 'HCaptcha',
+			];
+		}
 
 		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php
 
