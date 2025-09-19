@@ -4368,7 +4368,7 @@ if ( $wmgUseCentralAuth ) {
 	// `$wgAutoCreateTempUser['enabled']` is false.
 	$wgAutoCreateTempUser['serialProvider'] = [
 		'type' => 'centralauth',
-		'numShards' => 8,
+		'numShards' => 30,
 	];
 } else {
 	// If CentralAuth is not installed, then use the local provider.
