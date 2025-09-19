@@ -579,6 +579,7 @@ return [
 	'kowikiquote' => '/static/images/project-logos/kowikiquote.png', // T29548, T389631
 	'kuwikiquote' => '/static/images/project-logos/kuwikiquote.png',
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote.png', // T44771
+	'mswikiquote' => '/static/images/project-logos/mswikiquote.png', // T404700
 	'nlwikiquote' => '/static/images/project-logos/nlwikiquote.png',
 	'nnwikiquote' => '/static/images/project-logos/nnwikiquote.png', // T29555
 	'plwikiquote' => '/static/images/project-logos/plwikiquote.png',
@@ -1415,6 +1416,7 @@ return [
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-1.5x.png', // T382802
 	'kowikiquote' => '/static/images/project-logos/kowikiquote-1.5x.png', // T389631
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-1.5x.png', // T150618
+	'mswikiquote' => '/static/images/project-logos/mswikiquote-1.5x.png', // T404700
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-1.5x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-1.5x.png', // T197508
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote-1.5x.png', // T222065
@@ -2083,6 +2085,7 @@ return [
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-2x.png', // T382802
 	'kowikiquote' => '/static/images/project-logos/kowikiquote-2x.png', // T389631
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-2x.png', // T150618
+	'mswikiquote' => '/static/images/project-logos/mswikiquote-2x.png', // T404700
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-2x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-2x.png', // T197508
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote-2x.png', // T222065
@@ -4279,6 +4282,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ml.svg',
 		'width' => 146,
 		'height' => 50,
+	],
+	'mswikiquote' => [ // T404700
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ms.svg',
+		'width' => 78,
+		'height' => 40,
 	],
 	'nnwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-nn.svg',
