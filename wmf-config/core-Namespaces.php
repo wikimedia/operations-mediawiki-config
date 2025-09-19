@@ -6015,6 +6015,7 @@ return [
 	'mrwikisource' => 'विकिस्रोत',
 	'mrwiktionary' => 'विक्शनरी',
 	'mswikibooks' => 'Wikibuku', // T368003
+	'mswikiquote' => 'Wikipetik', // T404700
 	'mswikisource' => 'Wikisumber', // T369047
 	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
@@ -6309,6 +6310,7 @@ return [
 	'madwikisource' => 'Parembhâghân_Wikigherbhung', // T391767
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',
 	'mrwikibooks' => 'विकिबुक्स_चर्चा', // T73774
+	'mswikiquote' => 'Perbincangan_Wikipetik', // T404700
 	'mznwiki' => 'ویکی‌پدیا_گپ', // T32752 T85383
 	'newiki' => 'विकिपिडिया_वार्ता', // T184865
 	'newwiki' => 'विकिपिडिया_खँलाबँला',

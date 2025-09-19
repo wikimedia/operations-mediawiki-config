@@ -523,6 +523,7 @@ return [
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
+	'mswikiquote' => 'Asia/Kuala_Lumpur', // T404700
 	'mswikisource' => 'Asia/Kuala_Lumpur',
 	'mywikisource' => 'Asia/Yangon',
 	'napwiki' => 'Europe/Rome', // T192568
@@ -1523,6 +1524,7 @@ return [
 	'mrwikibooks' => 'विकिबुक्स', // T104132
 	'mrwikisource' => 'विकिस्रोत',
 	'mswikibooks' => 'Wikibuku', // T368003
+	'mswikiquote' => 'Wikipetik', // T404700
 	'mswikisource' => 'Wikisumber', // T369047
 	'mswiktionary' => 'Wikikamus', // T366549
 	'mtwiki' => 'Wikipedija',
