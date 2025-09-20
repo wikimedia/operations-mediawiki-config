@@ -6586,6 +6586,8 @@ return [
 	// T395871
 	'testwiki' => true,
 	'test2wiki' => true,
+
+	'dewiki' => true, // T398669
 ],
 
 'wgCiteResponsiveReferences' => [
