@@ -6162,6 +6162,7 @@ return [
 	'thwiki' => 'วิกิพีเดีย',
 	'thwikibooks' => 'วิกิตำรา',
 	'thwiktionary' => 'วิกิพจนานุกรม',
+	'thwikimedia' => 'วิกิมีเดียประเทศไทย', // T400001
 	'thwikinews' => 'วิกิข่าว',
 	'thwikiquote' => 'วิกิคำคม',
 	'thwikisource' => 'วิกิซอร์ซ',
@@ -6351,6 +6352,7 @@ return [
 	'thwikiquote' => 'คุยเรื่องวิกิคำคม',
 	'tiwiki' => 'ምይይጥ_ዊኪፐድያ', // T263840
 	'tiwiktionary' => 'ምይይጥ_ዊኪ-መዝገበ-ቃላት', // T263840
+	'thwikimedia' => 'พูดคุยเรื่องวิกิมีเดียประเทศไทย', // T400001
 	'thwiktionary' => 'คุยเรื่องวิกิพจนานุกรม', // T42717
 	'tlwikiquote' => 'Wikikawikaan',
 	'tyvwiki' => 'Википедия_дугайында_сүмелел', // T51328

@@ -639,6 +639,7 @@ return [
 	'tddwiki' => 'Asia/Yangon',
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
+	'thwikimedia' => 'Asia/Bangkok', // T400001
 	'thwikisource' => 'Asia/Bangkok',
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
