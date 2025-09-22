@@ -42,7 +42,7 @@ return [
 'arbcom_fiwiki' => [ 'special', 'private', 'small', 'specialcontribute', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'arbcom_itwiki' => [ 'special', 'private', 'small', 'group1' ],
 'arbcom_nlwiki' => [ 'special', 'private', 'small', 'specialcontribute', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
-'arbcom_plwiki' => [ 'preinstall', 'special', 'private', 'small', 'group1', 'parsoidrendered' ],
+'arbcom_plwiki' => [ 'special', 'private', 'small', 'group1', 'parsoidrendered' ],
 'arbcom_ruwiki' => [ 'special', 'private', 'small', 'specialcontribute', 'group1', 'nowikidatadescriptiontaglines' ],
 'arbcom_zhwiki' => [ 'special', 'private', 'small', 'group1' ],
 'arcwiki' => [ 'wikipedia', 'small', 'skin-themes', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments', 'parsoidrendered', 'sul' ],
