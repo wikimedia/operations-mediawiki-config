@@ -3775,8 +3775,11 @@ return [
 	'default' => false,
 	'test2wiki' => true,
 	'idwiki' => true,
+	'fawiki' => true,
 	'jawiki' => true,
+	'trwiki' => true,
 	'ptwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
