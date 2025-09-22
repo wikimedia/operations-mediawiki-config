@@ -1347,7 +1347,7 @@ return [
 	'gawiktionary' => 'Vicífhoclóir',
 	'gcrwiki' => 'Wikipédja',
 	'gdwiki' => 'Uicipeid',
-	'gewikimedia' => 'ვიკიმედიის მომხმარებელთა საქართველოს ჯგუფი', // T236389
+	'gewikimedia' => 'ვიკიმედია საქართველო', // T236389. T405147
 	'gnwiki' => 'Vikipetã',
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gorwiki' => 'Wikipedia', // T189109

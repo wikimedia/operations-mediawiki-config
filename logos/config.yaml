@@ -4177,10 +4177,12 @@ Wikivoyage:
         selected_icon: outreachwiki
         local_wordmark: true
     gewikimedia:
-        comment: T236389
-        comment_1_5x: T236389
-        comment_2x: T236389
-        local_wordmark: true
+        commons: 'File:Wikimedia Georgia logo black.svg'
+        comment: 'T236389, T405147'
+        comment_1_5x: 'T236389, T405147'
+        comment_2x: 'T236389, T405147'
+        commons_wordmark: 'File:Wikimedia-wordmark-ge.svg'
+        comment_wordmark: T405147
     grwikimedia:
         comment: T245911
         selected_icon: outreachwiki
