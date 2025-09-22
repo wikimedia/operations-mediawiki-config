@@ -7183,6 +7183,8 @@ return [
 //
 'wmgUseMdotRouting' => [
 	'default' => true,
+	// T403510: Families
+	'wikinews' => false,
 
 	// T401595: Pilot wikis
 	'testwiki' => false,
@@ -7190,7 +7192,7 @@ return [
 	'labswiki' => false,
 	'officewiki' => false,
 
-	// T403510
+	// T403510: Other individual wikis
 	'mediawikiwiki' => false,
 	'cawiki' => false,
 	'hewiki' => false,
