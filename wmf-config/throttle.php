@@ -85,4 +85,34 @@ $wmgThrottlingExceptions[] = [
 	'value' => 22,
 ];
 
+// T405095 - Edit-a-thon by Wikimedistas de la Universidad Nacional de La Plata and the Bachillerato de Bellas Artes of the Universidad Nacional de La Plata
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-09-29T10:00 -3:00',
+	'to' => '2025-09-29T12:00 -3:00',
+	'IP' => '163.10.250.98',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 65,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-06T10:00 -3:00',
+	'to' => '2025-10-06T12:00 -3:00',
+	'IP' => '163.10.250.98',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 65,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-13T10:00 -3:00',
+	'to' => '2025-10-13T12:00 -3:00',
+	'IP' => '163.10.250.98',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 65,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-20T10:00 -3:00',
+	'to' => '2025-10-20T12:00 -3:00',
+	'IP' => '163.10.250.98',
+	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 65,
+];
+
 ## Add throttling definitions above.
