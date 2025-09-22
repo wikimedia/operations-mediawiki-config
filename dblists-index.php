@@ -441,7 +441,7 @@ return [
 'iswikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'iswikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'iswiktionary' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
-'itwiki' => [ 'wikipedia', 'specialcontribute', 'skin-themes', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'tempaccounts_disabled' ],
+'itwiki' => [ 'wikipedia', 'specialcontribute', 'skin-themes', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul' ],
 'itwikibooks' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'itwikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'itwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul', 'wikilove' ],
