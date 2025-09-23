@@ -8496,6 +8496,7 @@ return [
 	'arbcom_fiwiki' => '/static/images/icons/wikipedia.png', // TODO: consider cleaning up (T183549)
 	'arbcom_itwiki' => '/static/images/icons/arbcom_itwiki.svg', // T368532
 	'arbcom_nlwiki' => '/static/images/icons/arbcom_nlwiki.svg',
+	'arbcom_plwiki' => '/static/images/icons/arbcom_plwiki.svg', // T391009
 	'arbcom_ruwiki' => '/static/images/icons/arbcom_ruwiki.png',
 	'auditcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'boardwiki' => '/static/images/icons/outreachwiki.svg',
