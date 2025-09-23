@@ -10423,6 +10423,23 @@ return [
 				'params' => [ 'intercept' => -0.29925433614892966 ],
 			]
 		],
+		'linked_from' => [
+			'fields' => [
+				'weighted_tags' => [
+					[ 'prefix' => 'image.linked.from.wikidata.p18/', 'boost' => 1.984794590275781 ],
+					[ 'prefix' => 'image.linked.from.wikidata.p373/', 'boost' => 5.739424158364518 ],
+					[
+						'prefix' => 'image.linked.from.wikipedia.lead_image/',
+						'boost' => 3.74983393205065
+					],
+				],
+			],
+			// logistic function
+			'functionScore' => [
+				'scriptCode' => '100 / ( 1 + exp( -1 * ( _score + intercept ) ) )',
+				'params' => [ 'intercept' => -0.29925433614892966 ],
+			]
+		],
 	],
 ],
 
