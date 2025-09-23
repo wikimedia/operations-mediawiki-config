@@ -7194,6 +7194,8 @@ return [
 	'default' => true,
 	// T403510: Families
 	'wikinews' => false,
+	'wikibooks' => false,
+	'wikiquote' => false,
 
 	// T401595: Pilot wikis
 	'testwiki' => false,
