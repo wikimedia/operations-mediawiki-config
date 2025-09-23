@@ -4288,11 +4288,10 @@ if ( $wmgUseCheckUser ) {
 	$wgCheckUserGlobalContributionsCentralWikiId = 'metawiki';
 
 	// UserInfoCard
-	if ( $wgDBname === 'testwiki' ) {
+	if ( $wmgUseUserInfoCard ) {
 		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
 			[ '1', [ CUDCOND_NAMED ] ]
 		];
-		$wgCheckUserUserInfoCardFeatureVisible = true;
 	}
 
 	// Link to the central Special:CentralAuth page if available (T397690)

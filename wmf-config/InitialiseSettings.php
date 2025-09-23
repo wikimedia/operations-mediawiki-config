@@ -7083,6 +7083,15 @@ return [
 	'frwiki' => true,
 ],
 
+'wmgUseUserInfoCard' => [
+	// T405342
+	'default' => false,
+	'testwiki' => true,
+	'azwiki' => true,
+	'urwiki' => true,
+	'viwiki' => true,
+],
+
 // ----------- CheckUser end ----------
 
 // n.b. If setting this to `false` for a wiki, please also update the
