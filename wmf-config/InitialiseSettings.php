@@ -12113,6 +12113,20 @@ return [
 			'name' => 'Specs API',
 		],
 	],
+	'testwiki' => [
+		'mw-extra' => [
+			'url' => '/w/rest.php/specs/v0/module/-',
+			'name' => 'MediaWiki REST API (routes not in modules)',
+		],
+		'specs.v0' => [
+			'url' => '/w/rest.php/specs/v0/module/specs/v0',
+			'name' => 'Specs API',
+		],
+		'wmf-restbase' => [
+			'url' => '/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs'
+		]
+	],
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
