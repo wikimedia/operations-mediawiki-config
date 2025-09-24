@@ -2056,6 +2056,19 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCaptchaTriggers['contactpage'] = true;
 	}
+
+	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname, $wmgUseMetricsPlatform ) {
+		// T405239 - A/B test on frwiki
+		// The $wmgUseMetricsPlatform and $wgDBname checks aren't strictly necessary, but reduce the scope of
+		// problems in the event of exceptions in ExperimentManager
+		if ( $wmgUseMetricsPlatform && $wgDBname === 'frwiki' && $action === 'createaccount' ) {
+			$experimentManager = MediaWikiServices::getInstance()->getService( 'MetricsPlatform.XLab.ExperimentManager' );
+			$experiment = $experimentManager->getExperiment( 'hcaptcha-on-french-wikipedia' );
+			if ( $experiment->isAssignedGroup( 'control', 'user-viewing-fancy-captcha' ) ) {
+				$className = 'FancyCaptcha';
+			}
+		}
+	};
 }
 
 if ( extension_loaded( 'wikidiff2' ) ) {
