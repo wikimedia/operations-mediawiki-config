@@ -13,9 +13,7 @@ return [
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [
-		'more_like' => 'eqiad',
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchWriteClusters' => [
