@@ -4063,7 +4063,7 @@ if ( $wmgUseOATHAuth ) {
 		}
 	}
 
-	$wgOATHRolloutPercent = 10; // T400579
+	$wgOATHRolloutPercent = 20; // T400579
 
 	$wgOATHRequiredForGroups = [
 		'interface-admin',
