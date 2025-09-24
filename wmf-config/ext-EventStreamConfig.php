@@ -2555,7 +2555,7 @@ return [
 		// Metrics Platform Experimentation Lab (MPIC) at
 		// https://mpic.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
-			'schema_title' => '/analytics/product_metrics/web/base',
+			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
