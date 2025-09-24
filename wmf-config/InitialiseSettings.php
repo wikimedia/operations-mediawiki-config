@@ -7199,6 +7199,8 @@ return [
 	'wikinews' => false,
 	'wikibooks' => false,
 	'wikiquote' => false,
+	'wikivoyage' => false,
+	'wikiversity' => false,
 
 	// T401595: Pilot wikis
 	'testwiki' => false,
