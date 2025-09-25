@@ -860,6 +860,16 @@ function wmfGetOverrideSettings() {
 				[
 					'name' => 'reader-foundational-ce',
 					'type' => 'internal',
+					'enabled' => true,
+					'coverage' => 0,
+					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+					'audience' => [
+						'anons' => true,
+					],
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
 					'confirmMsg' => 'ext-quicksurveys-survey-test-confirm-msg',
 					'confirmDescription' => 'ext-quicksurveys-survey-test-confirm-description',
 					'questions' => [
