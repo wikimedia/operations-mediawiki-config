@@ -7224,8 +7224,6 @@ return [
 
 	// Mobile redirect enabled
 	'wiktionary' => true,
-	'wikisource' => true,
-	'sourceswiki' => true,
 	'commonswiki' => true,
 	'wikidatawiki' => true,
 	'wikipedia' => true,
