@@ -7161,6 +7161,23 @@ return [
 	'nostalgiawiki' => false, // T400855
 	'thankyouwiki' => false, // T259002#6364656, T152882, T400855
 	'wikifunctionswiki' => false, // T349408
+
+	// T152882
+	'auditcomwiki' => false,
+	'boardgovcomwiki' => false,
+	'boardwiki' => false,
+	'chairwiki' => false,
+	'chapcomwiki' => false,
+	'collabwiki' => false,
+	'execwiki' => false,
+	'grantswiki' => false,
+	'iegcomwiki' => false,
+	'internalwiki' => false,
+	'movementroleswiki' => false,
+	'noboard_chapterswikimedia' => false,
+	'searchcomwiki' => false,
+	'spcomwiki' => false,
+	'transitionteamwiki' => false,
 ],
 
 // Temporary variable during roll-out of T214998
