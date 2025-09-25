@@ -7217,27 +7217,23 @@ return [
 // 2. Add wiki below and set it to false.
 //
 'wmgUseMdotRouting' => [
-	'default' => true,
-	// T403510: Families
-	'wikinews' => false,
-	'wikibooks' => false,
-	'wikiquote' => false,
-	'wikivoyage' => false,
-	'wikiversity' => false,
+	'default' => false,
 
-	// T401595: Pilot wikis
+	// Mobile redirect enabled
+	'wiktionary' => true,
+	'wikisource' => true,
+	'sourceswiki' => true,
+	'commonswiki' => true,
+	'wikidatawiki' => true,
+	'wikipedia' => true,
+
+	// Mobile redirect disabled ahead of rest in the same family
+	// (T401595, T403510)
 	'testwiki' => false,
-	'testwikidatawiki' => false,
-	'labswiki' => false,
-	'officewiki' => false,
-
-	// T403510: Other individual wikis
-	'mediawikiwiki' => false,
 	'cawiki' => false,
 	'hewiki' => false,
 	'itwiki' => false,
 	'fawiki' => false,
-	'metawiki' => false,
 ],
 
 'wgMFQueryPropModules' => [
