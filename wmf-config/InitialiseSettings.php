@@ -7223,7 +7223,6 @@ return [
 	'default' => false,
 
 	// Mobile redirect enabled
-	'wiktionary' => true,
 	'commonswiki' => true,
 	'wikidatawiki' => true,
 	'wikipedia' => true,
