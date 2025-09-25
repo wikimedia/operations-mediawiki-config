@@ -63,6 +63,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'mcrouter',
 		],
 
+		'wgAnonSessionCacheType' => [
+			'default' => 'kask-session',
+		],
+
 		'wgParsoidCacheConfig' => [
 			'default' => [
 				'StashType' => null, // defaults to using MainStash
