@@ -11333,6 +11333,7 @@ return [
 	'astwiki' => true, // T390023, T381886
 	'lmowiki' => true, // T390023, T381886
 	'commonswiki' => true,
+	'jawiki' => true, // T405577
 ],
 
 'wgQuickSurveysConfig' => [
@@ -11452,6 +11453,33 @@ return [
 					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
 					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
 				],
+			],
+		],
+	],
+	'jawiki' => [
+		// T405577
+		[
+			'name' => 'design-research-participant-recruitment-survey',
+			'type' => 'external',
+			'enabled' => true,
+			'coverage' => 0, // 0.03,
+			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
+			'platforms' => [
+					'desktop' => [ 'stable' ],
+					'mobile' => [ 'stable' ]
+			],
+			'audience' => [
+					'anons' => true,
+			],
+			'questions' => [
+					[
+							'name' => 'Survey single external question',
+							'question' => 'design-research-participant-recruitment-survey-question',
+							'description' => 'design-research-participant-recruitment-survey-description',
+							'link' => 'design-research-participant-recruitment-survey-link',
+							'yesMsg' => 'design-research-participant-recruitment-survey-yes-button',
+							'noMsg' => 'design-research-participant-recruitment-survey-no-button',
+					],
 			],
 		],
 	],
