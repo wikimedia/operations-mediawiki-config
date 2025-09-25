@@ -8608,6 +8608,7 @@ return [
 	'dawiki' => "Wikipedia:Efterspurgte artikler",
 	'dewiki' => "Wikipedia:Artikelwünsche",
 	'elwiki' => "Βικιπαίδεια:Προτεινόμενα θέματα",
+	'enwiki' => "Wikipedia:Requested_articles",
 	'eowiki' => "Vikipedio:Dezirataj artikoloj",
 	'eswiki' => "Wikipedia:Artículos solicitados",
 	'etwiki' => "Vikipeedia:Soovitud artiklid",
