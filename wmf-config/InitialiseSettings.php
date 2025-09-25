@@ -7225,7 +7225,6 @@ return [
 	'default' => false,
 
 	// Mobile redirect enabled
-	'commonswiki' => true,
 	'wikipedia' => true,
 
 	// Mobile redirect disabled ahead of rest in the same family
