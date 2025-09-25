@@ -7077,13 +7077,7 @@ return [
 	'checkuser-suggested-investigations' => false, // T403471
 	'testwiki' => true,
 	'test2wiki' => true,
-	// T405109
-	'enwiki' => true,
-	'frwiki' => true,
-],
-
-'wgCheckUserSuggestedInvestigationsHidden' => [
-	// T405109
+	// T405109, T405556
 	'enwiki' => true,
 	'frwiki' => true,
 ],
