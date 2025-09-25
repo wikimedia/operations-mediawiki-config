@@ -7234,6 +7234,13 @@ return [
 	'hewiki' => false,
 	'itwiki' => false,
 	'fawiki' => false,
+	// Final ramp up
+	'idwiki' => false,
+	'frwiki' => false,
+	'dewiki' => false,
+	'eswiki' => false,
+	'ruwiki' => false,
+	'jawiki' => false,
 ],
 
 'wgMFQueryPropModules' => [
