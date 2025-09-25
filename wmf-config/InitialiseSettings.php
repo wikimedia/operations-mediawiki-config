@@ -7224,7 +7224,6 @@ return [
 
 	// Mobile redirect enabled
 	'commonswiki' => true,
-	'wikidatawiki' => true,
 	'wikipedia' => true,
 
 	// Mobile redirect disabled ahead of rest in the same family
