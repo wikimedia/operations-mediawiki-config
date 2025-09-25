@@ -11445,8 +11445,8 @@ return [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
 			],
-			'confirmMsg' => 'ext-quicksurveys-survey-test-confirm-msg',
-			'confirmDescription' => 'ext-quicksurveys-survey-test-confirm-description',
+			'confirmMsg' => 'reader-foundational-ce-confirm-msg',
+			'confirmDescription' => 'reader-foundational-ce-confirm-description',
 			'questions' => [
 				[
 					'name' => 'reader-foundational-ce-q1',
@@ -11458,7 +11458,7 @@ return [
 						[ 'label' => 'reader-foundational-ce-q1-a2' ],
 						[
 							'label' => 'reader-foundational-ce-q1-a3',
-							'freeformTextLabel' => 'reader-foundational-ce-q1-a3'
+							'freeformTextLabel' => 'reader-foundational-ce-q1-a3-placeholder'
 						],
 					]
 				],
@@ -11567,12 +11567,12 @@ return [
 					'question' => 'reader-foundational-ce-q7b',
 					'shuffleAnswersDisplay' => false,
 					'answers' => [
-						[ 'label' => 'reader-student-edu1' ],
-						[ 'label' => 'reader-student-edu2' ],
-						[ 'label' => 'reader-student-edu3' ],
-						[ 'label' => 'reader-student-edu4' ],
-						[ 'label' => 'reader-student-edu-dk' ],
-						[ 'label' => 'reader-student-edu-rf' ],
+						[ 'label' => 'reader-edu1' ],
+						[ 'label' => 'reader-edu2' ],
+						[ 'label' => 'reader-edu3' ],
+						[ 'label' => 'reader-edu4' ],
+						[ 'label' => 'reader-edu-dk' ],
+						[ 'label' => 'reader-edu-rf' ],
 					],
 					'dependsOn' => [
 						[
@@ -11614,7 +11614,8 @@ return [
 				[
 					'name' => 'reader-foundational-ce-q9',
 					'layout' => 'multiple-answer',
-					'question' => 'reader-foundational-ce-q9',
+					'question' => 'reader-gender',
+					'description' => 'reader-multiselect',
 					'shuffleAnswersDisplay' => false,
 					'answers' => [
 						[ 'label' => 'reader-gender-man' ],
