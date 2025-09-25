@@ -7225,9 +7225,6 @@ return [
 'wmgUseMdotRouting' => [
 	// Mobile redirect disabled (T401595, T403510)
 	'default' => false,
-
-	// Mobile redirect enabled
-	'enwiki' => true,
 ],
 
 'wgMFQueryPropModules' => [
