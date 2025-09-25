@@ -11677,8 +11677,8 @@ return [
 			'name' => 'design-research-participant-recruitment-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0, // 0.03,
-			'privacyPolicy' => 'design-research-participant-recruitment-privacy-policy',
+			'coverage' => 0.03,
+			'privacyPolicy' => 'design-research-participant-recruitment-survey-privacy-policy',
 			'platforms' => [
 					'desktop' => [ 'stable' ],
 					'mobile' => [ 'stable' ]
