@@ -7223,25 +7223,11 @@ return [
 // 2. Add wiki below and set it to false.
 //
 'wmgUseMdotRouting' => [
+	// Mobile redirect disabled (T401595, T403510)
 	'default' => false,
 
 	// Mobile redirect enabled
-	'wikipedia' => true,
-
-	// Mobile redirect disabled ahead of rest in the same family
-	// (T401595, T403510)
-	'testwiki' => false,
-	'cawiki' => false,
-	'hewiki' => false,
-	'itwiki' => false,
-	'fawiki' => false,
-	// Final ramp up
-	'idwiki' => false,
-	'frwiki' => false,
-	'dewiki' => false,
-	'eswiki' => false,
-	'ruwiki' => false,
-	'jawiki' => false,
+	'enwiki' => true,
 ],
 
 'wgMFQueryPropModules' => [
