@@ -7163,6 +7163,8 @@ return [
 	'wikifunctionswiki' => false, // T349408
 
 	// T152882
+	'advisorswiki' => false,
+	'apiportalwiki' => false,
 	'auditcomwiki' => false,
 	'boardgovcomwiki' => false,
 	'boardwiki' => false,
@@ -7172,12 +7174,16 @@ return [
 	'execwiki' => false,
 	'grantswiki' => false,
 	'iegcomwiki' => false,
+	'ilwikimedia' => false,
 	'internalwiki' => false,
 	'movementroleswiki' => false,
 	'noboard_chapterswikimedia' => false,
+	'projectcomwiki' => false,
 	'searchcomwiki' => false,
 	'spcomwiki' => false,
+	'techconductwiki' => false,
 	'transitionteamwiki' => false,
+	'wg_enwiki' => false,
 ],
 
 // Temporary variable during roll-out of T214998
