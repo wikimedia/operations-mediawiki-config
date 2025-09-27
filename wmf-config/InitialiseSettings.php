@@ -12631,6 +12631,7 @@ return [
 	'commonswiki' => true,
 	'incubatorwiki' => true, // T401372
 	'metawiki' => true,
+	'wikidata' => true, // T405830
 ],
 
 'wgUseLegacyMediaStyles' => [
