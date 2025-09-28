@@ -471,6 +471,9 @@ return [
 		'WikiSaurus_Diskussion' => 105,
 		'BD' => NS_USER_TALK,
 	],
+	'+diqwiki' => [
+		'Portal_vaten' => 101, // T328207
+	],
 	'+dvwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -2822,7 +2825,7 @@ return [
 	],
 	'diqwiki' => [
 		100 => 'Portal', // T133702
-		101 => 'Portal_vaten'
+		101 => 'Werênayışê_portali', // T328207
 	],
 	'dvwiki' => [
 		NS_PROJECT_TALK => 'ވިކިޕީޑިއާ_ޚިޔާލު', // T50075
