@@ -2560,6 +2560,8 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
+						// Contextual attributes, see
+						// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Contextual_attributes
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'mediawiki_database',
@@ -2570,6 +2572,12 @@ return [
 						'performer_is_logged_in',
 						'performer_is_temp',
 						'performer_session_id',
+					],
+				],
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						// Don't collect the HTTP user agent.
+						'http.request_headers.user-agent' => false,
 					],
 				],
 			],
