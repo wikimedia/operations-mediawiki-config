@@ -11490,6 +11490,20 @@ return [
 					]
 				],
 				[
+					'name' => 'reader-foundational-ce-q4x',
+					'layout' => 'single-answer',
+					'question' => 'reader-frequency',
+					'shuffleAnswersDisplay' => false,
+					'answers' => [
+						[ 'label' => 'reader-frequency-a1' ],
+						[ 'label' => 'reader-frequency-a2' ],
+						[ 'label' => 'reader-frequency-a3' ],
+						[ 'label' => 'reader-frequency-a4' ],
+						[ 'label' => 'reader-frequency-a5' ],
+						[ 'label' => 'reader-frequency-dk' ],
+					]
+				],
+				[
 					'name' => 'reader-foundational-ce-q4',
 					'layout' => 'single-answer',
 					'question' => 'reader-foundational-ce-q4',
@@ -11576,6 +11590,7 @@ return [
 						[ 'label' => 'reader-edu2' ],
 						[ 'label' => 'reader-edu3' ],
 						[ 'label' => 'reader-edu4' ],
+						[ 'label' => 'reader-edu5' ],
 						[ 'label' => 'reader-edu-dk' ],
 						[ 'label' => 'reader-edu-rf' ],
 					],
