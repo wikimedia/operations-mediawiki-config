@@ -120,6 +120,7 @@ switch ( $wgDBname ) {
 	case 'enwiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T405999
 		$wgGroupPermissions['abusefilter']['changetags'] = true; // T97013
 		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T141847
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
