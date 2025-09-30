@@ -11234,6 +11234,7 @@ return [
 'wgAnonSessionCacheType' => [
 	'default' => false,
 	'group0' => 'kask-session',
+	'group1' => 'kask-session',
 ],
 'wgEchoSeenTimeCacheType' => [
 	'default' => 'kask-echoseen',
