@@ -2552,11 +2552,18 @@ return [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		// (T403255, T403259) Image browsing experiment by Reader Growth.
+		// (T403255, T403259, T405489) Image browsing experiment by Reader Growth.
 		//
-		// Sampling unit and rates are set up in the
+		// We collect all events produced by this stream,
+		// so we leave the default analytics sampling rate of 1,
+		// thus not explicitly setting the `sample` key here.
+		//
+		// Experiment enrollment sampling (AKA bucketing) is instead set on the
 		// Metrics Platform Experimentation Lab (MPIC) at
 		// https://mpic.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
+		//
+		// See https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Analytics_sampling,
+		// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Experiment_enrolment_sampling
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -2582,6 +2589,9 @@ return [
 						// Don't collect the HTTP user agent.
 						'http.request_headers.user-agent' => false,
 					],
+					// Target non-logged readers through edge unique cookies, see
+					// https://wikitech.wikimedia.org/wiki/Edge_uniques
+					'use_edge_uniques' => true,
 				],
 			],
 		],
