@@ -13000,7 +13000,7 @@ return [
 // T399631
 'wgUseSessionCookieJwt' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true,
 ],
 
 // T377975 / T391064
