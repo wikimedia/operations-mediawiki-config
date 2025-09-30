@@ -12678,9 +12678,9 @@ return [
 	'wikifunctionsclient' => true,
 ],
 
-// (T397402) Temporary deployment feature flag, awaiting security review
+// (T397402) Temporary deployment feature flag
 'wgWikifunctionsEnableHTMLOutput' => [
-	'wikifunctionsclient' => false,
+	'wikifunctionsclient' => true,
 ],
 
 ### Wikistories-related configuration
