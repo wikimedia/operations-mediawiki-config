@@ -13191,4 +13191,9 @@ return [
 	'default' => false,
 	'testwiki' => true,
 ],
+
+// T406023
+'wgSVGNativeRendering' => [
+	'default' => false,
+],
 ];
