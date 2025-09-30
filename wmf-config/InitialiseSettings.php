@@ -12635,6 +12635,7 @@ return [
 	'commonswiki' => true,
 	'incubatorwiki' => true, // T401372
 	'metawiki' => true,
+	'sourceswiki' => true, // T406050
 	'wikidata' => true, // T405830
 ],
 
