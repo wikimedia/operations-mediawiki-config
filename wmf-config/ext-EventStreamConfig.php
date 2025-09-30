@@ -2127,12 +2127,12 @@ return [
 		'mediawiki.product_metrics.checkuser_ip_auto_reveal_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'eventgate' => [
-				'enrich_fields_from_http_headers' => [
-					'http.request_headers.user-agent' => false,
-				],
-			],
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'performer_id',
