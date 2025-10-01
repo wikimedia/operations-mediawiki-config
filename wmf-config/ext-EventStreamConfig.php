@@ -2585,6 +2585,30 @@ return [
 				],
 			],
 		],
+		// T401575: Stream to track Watchlist interactions
+		'mediawiki.product_metrics.WatchlistClickTracker' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'performer_name',
+						'performer_pageview_id',
+					],
+				],
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						// Don't collect the HTTP user agent.
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [

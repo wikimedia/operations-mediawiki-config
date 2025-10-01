@@ -94,6 +94,7 @@ return [
 		'mediawiki.product_metrics.ext_massdelete',
 		'mediawiki.product_metrics.special_create_account',
 		'mediawiki.product_metrics.user_info_card_interaction',
+		'mediawiki.product_metrics.WatchlistClickTracker',
 		'mediawiki.accountcreation.account_conversion',
 		'mediawiki.accountcreation.login',
 		'product_metrics.app_base',
