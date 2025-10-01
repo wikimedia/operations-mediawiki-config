@@ -12974,6 +12974,7 @@ return [
 
 'wgCommunityRequestsEnable' => [
 	'default' => false,
+	'metawiki' => true,
 ],
 
 'wgWikimediaMessagesAnonDonateLink' => [
