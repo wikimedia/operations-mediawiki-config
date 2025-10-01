@@ -13022,6 +13022,7 @@ return [
 'wgUseSessionCookieJwt' => [
 	'default' => false,
 	'group0' => true,
+	'group1' => true,
 ],
 
 // T377975 / T391064
