@@ -378,10 +378,6 @@ return [
 	'zuwiki' => true,
 ],
 
-'wgGENewcomerTasksStarterDifficultyEnabled' => [
-	'default' => true,
-],
-
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
