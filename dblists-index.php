@@ -442,7 +442,7 @@ return [
 'iswikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'iswikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'iswiktionary' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'itwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations' ],
+'itwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations', 'automoderator-revertrisk-multilingual' ],
 'itwikibooks' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'itwikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'itwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul', 'wikilove' ],
