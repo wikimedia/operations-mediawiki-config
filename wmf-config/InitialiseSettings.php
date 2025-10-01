@@ -13360,7 +13360,12 @@ return [
 	// T391248
 	'eswiki' => 'Automoderador',
 ],
-
+// T400727
+'wgAutoModeratorMultiLingualRevertRisk' => [
+	'default' => false,
+	'testwiki' => true,
+	'automoderator-revertrisk-multilingual' => true,
+],
 // T341000
 'wgExternalLinksDomainGaps' => [
 	'enwiki' => [
