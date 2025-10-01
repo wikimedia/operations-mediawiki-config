@@ -1849,6 +1849,7 @@ return [
 			'autopatrol' => true, // T142123
 			'banner-protect' => true,
 			'editcontentmodel' => true, // T311587
+			'manually-edit-wishlist' => true, // T402967
 		],
 		'uploader' => [ // T52287
 			'upload' => true,
@@ -4388,8 +4389,12 @@ return [
 	'+metawiki' => [
 		'bureaucrat' => [
 			'centralnoticeadmin',
+			'community-wishlist-manager', // T402967
 			'flood', // T48639
 			'uploader',
+		],
+		'community-wishlist-manager' => [
+			'community-wishlist-manager', // T402967
 		],
 		'sysop' => [
 			'autopatrolled',
@@ -5795,7 +5800,12 @@ return [
 		],
 	],
 	'+metawiki' => [
-		'bureaucrat' => [ 'flood', 'centralnoticeadmin', 'uploader' ], // T39198, T52287, T110674
+		'bureaucrat' => [
+			'flood', // T39198
+			'centralnoticeadmin', // T52287
+			'community-wishlist-manager', // T402967
+			'uploader', // T110674
+		],
 		'sysop' => [ 'autopatrolled', 'massmessage-sender', 'patroller' ], // T59611, T176079
 	],
 	'+mkwiki' => [
