@@ -1188,16 +1188,12 @@ return [
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
-		 * These streams disable canary event production.
-		 * We'd like to enable canary events for these, but the logging cluster consumers
-		 * would need to know to filter out the canary events first.
 		 * eventgate-logging-external only requests its stream configs on service startup,
 		 * so if you modify something here, eventgate-logging-external will need a restart.
 		 */
 		'mediawiki.client.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
-			'canary_events_enabled' => false,
 			'producers' => [
 				'eventgate' => [
 					// Override the default so we collect user-agent
@@ -1215,18 +1211,12 @@ return [
 						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
 						'http.request_headers.x-ja3n' => 'x-ja3n',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
 				],
 			],
 		],
 		'kaios_app.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
-			'canary_events_enabled' => false,
 			'producers' => [
 				'eventgate' => [
 					// Override the default so we collect user-agent
@@ -1244,18 +1234,12 @@ return [
 						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
 						'http.request_headers.x-ja3n' => 'x-ja3n',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
 				],
 			],
 		],
 		'w3c.reportingapi.network_error' => [
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
-			'canary_events_enabled' => false,
 			'producers' => [
 				'eventgate' => [
 					// Override the default so we collect user-agent
@@ -1273,11 +1257,6 @@ return [
 						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
 						'http.request_headers.x-ja3n' => 'x-ja3n',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
 				],
 			],
 		],
