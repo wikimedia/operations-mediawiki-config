@@ -12153,11 +12153,6 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
-// T299951
-'wgCategoryLinksSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_11,
 ],

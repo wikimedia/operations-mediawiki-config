@@ -1289,10 +1289,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
-		'-wgCategoryLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_NEW,
-		],
-
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
 			'default' => true,
 		],
