@@ -4764,6 +4764,10 @@ if ( $wmgUsePageNotice ) {
 
 if ( $wmgUseCommunityRequests ) {
 	wfLoadExtension( 'CommunityRequests' );
+	$wgVirtualDomainsMapping['virtual-communityrequests'] = [
+		'cluster' => 'extension1',
+		'db' => false,
+	];
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
