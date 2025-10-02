@@ -1274,14 +1274,5 @@ return [
 ],
 'wgCirrusSearchAlternativeIndices' => [
 	'default' => [],
-	'simplewiki' => [
-		'completion' => [ [
-			'index_id' => 0,
-			'use' => true,
-			'config_overrides' => [
-				'CirrusSearchCompletionSuggesterUseDefaultSort' => true,
-			]
-		] ],
-	],
 ],
 ];
