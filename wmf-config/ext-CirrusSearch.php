@@ -1278,4 +1278,15 @@ return [
 'wgCirrusSearchPhraseSuggestUseOpeningText' => [
 	'default' => true,
 ],
+'wgCirrusSearchAlternativeIndices' => [
+	'default' => [],
+	'simplewiki' => [
+		'completion' => [ [
+			'index_id' => 0,
+			'config_overrides' => [
+				'CirrusSearchCompletionSuggesterUseDefaultSort' => true,
+			]
+		] ],
+	],
+],
 ];
