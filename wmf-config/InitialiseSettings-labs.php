@@ -372,6 +372,7 @@ function wmfGetOverrideSettings() {
 				'Cognate' => 'debug', // WMDE & Addshore
 				'collection' => 'debug', // -cscott for T73675
 				'CommunityConfiguration' => 'info',
+				'communityrequests' => 'debug',
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
@@ -479,7 +480,6 @@ function wmfGetOverrideSettings() {
 				// Additional logging for labs
 				'CentralAuthVerbose' => 'debug',
 				'CirrusSearch' => 'info',
-				'CommunityRequests' => 'debug',
 				'csp' => 'info',
 				'csp-report-only' => 'info',
 				'dnsblacklist' => 'debug',
