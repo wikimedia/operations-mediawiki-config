@@ -11441,7 +11441,7 @@ return [
 			'name' => 'reader-foundational-ce',
 			'type' => 'internal',
 			'enabled' => true,
-			'coverage' => 0, // 0.04,
+			'coverage' => 0.04,
 			'privacyPolicy' => 'reader-foundational-ce-survey-privacy-policy',
 			'audience' => [
 				'anons' => true,
