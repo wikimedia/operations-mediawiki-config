@@ -1977,7 +1977,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaDirectoryLevels = 3;
 	$wgCaptchaStorageClass = CaptchaCacheStore::class;
 	$wgCaptchaClass = 'FancyCaptcha';
-	$wgCaptchaWhitelist =
+	$wgCaptchaIgnoredUrls =
 		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
 
