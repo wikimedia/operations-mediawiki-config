@@ -10628,6 +10628,11 @@ return [
 	'default' => '/evt-103e/v2/events?hasty=true',
 ],
 
+'wgMetricsPlatformAuthPreserveQueryParamsExperiments' => [
+	'default' => [],
+	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
