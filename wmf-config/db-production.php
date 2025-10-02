@@ -131,6 +131,8 @@ $wgLBFactoryConf = [
 	'ssl' => $wmgDatacenter !== $wmgMasterDatacenter
 ],
 
+'shuffleSharding' => true,
+
 'externalTemplateOverrides' => [
 	// No transactions
 	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0,
