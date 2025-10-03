@@ -2603,6 +2603,31 @@ return [
 				'rate' => 1,
 			],
 		],
+		// T397532 Stream for ReadingList web Experiment
+		'mediawiki.product_metrics.reading_list' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_edit_count_bucket',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+			],
+		]
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [
