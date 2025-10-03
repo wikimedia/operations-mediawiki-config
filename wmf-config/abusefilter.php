@@ -273,6 +273,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		$wgAbuseFilterNotifications = false;
 		break;
+	case 'ganwiki':
+		$wgAbuseFilterActions['block'] = true; // T406220
+		break;
 	case 'hewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
@@ -552,7 +555,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		break;
-// Please add new wikis in their correct place in alphabetical order!
+	// Please add new wikis in their correct place in alphabetical order!
 }
 
 if ( $wmgRealm === 'labs' ) {
