@@ -4089,6 +4089,9 @@ if ( $wmgUseOATHAuth ) {
 
 	$wgOATHRolloutPercent = 40; // T400579
 
+	$wgOATHAllowMultipleModules = true; // T399644
+	$wgOATHAuthNewUI = true; // T399644
+
 	$wgOATHRequiredForGroups = [
 		'interface-admin',
 		'centralnoticeadmin',
