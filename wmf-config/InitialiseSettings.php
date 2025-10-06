@@ -12661,4 +12661,12 @@ return [
 	// T406907
 	'enwiki' => true,
 ],
+
+// T397258
+'wmgEnableWikidataIconsInClientWatchlist' => [
+	'default' => false,
+	'hewiki' => true,
+	'cawiki' => true,
+	'ukwiki' => true,
+]
 ];

@@ -393,6 +393,10 @@ if ( $wmgUseWikibaseClient ) {
 	if ( isset( $wmgWikibaseEnableMulLanguageCode ) ) {
 		$wgWBClientSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
+
+	// T397258
+	$wgWBClientSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
+	$wgWBRepoSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
 }
 
 unset( $wmgWBSharedCacheKey );

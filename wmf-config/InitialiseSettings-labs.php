@@ -2500,5 +2500,9 @@ function wmfGetOverrideSettings() {
 		'wmgUseReaderExperiments' => [
 			'default' => true,
 		],
+		// T397258
+		'wmgEnableWikidataIconsInClientWatchlist' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
