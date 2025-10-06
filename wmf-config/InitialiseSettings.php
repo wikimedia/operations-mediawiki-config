@@ -11495,14 +11495,11 @@ return [
 			'name' => 'design-research-participant-recruitment-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0.06,
+			'coverage' => 0.2,
 			'privacyPolicy' => 'design-research-participant-recruitment-survey-privacy-policy',
 			'platforms' => [
 					'desktop' => [ 'stable' ],
 					'mobile' => [ 'stable' ]
-			],
-			'audience' => [
-					'anons' => true,
 			],
 			'questions' => [
 					[
