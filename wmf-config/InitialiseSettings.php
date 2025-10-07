@@ -7166,6 +7166,7 @@ return [
 	'nostalgiawiki' => false, // T400855
 	'thankyouwiki' => false, // T259002#6364656, T152882, T400855
 	'wikifunctionswiki' => false, // T349408
+	'donatewiki' => false, // T406638
 
 	// T152882
 	'advisorswiki' => false,
