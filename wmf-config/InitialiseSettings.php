@@ -12730,7 +12730,9 @@ return [
 ],
 
 'wmgUseNetworkSession' => [
-	'default' => true,
+	// enabled only on private wikis to save resources (T373826#11244781)
+	'default' => false,
+	'private' => true,
 	'loginwiki' => false,
 ],
 
