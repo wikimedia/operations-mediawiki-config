@@ -838,6 +838,7 @@ function wmfGetOverrideSettings() {
 					// Can be added programatically.
 					'embedElementId' => '-',
 					'coverage' => 1,
+					'namespaces' => [ 0, -1 ],
 					"privacyPolicy" => "ext-quicksurveys-empty-search-experiment-privacy-policy",
 					'platforms' => [
 						'desktop' => [ 'stable' ],
