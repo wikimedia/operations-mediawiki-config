@@ -11380,21 +11380,8 @@ return [
 ],
 
 'wmgUseQuickSurveys' => [
-	// TODO: Move patch forward in T317841 which proposes to make
-	// the extension default enabled everywhere.
-	'default' => false,
-	'cawiki' => true,
-	'enwiki' => true, // T110661
-	'enwikivoyage' => true,
-	'eswiki' => true,
-	'frwiktionary' => true,
-	'nowiki' => true,
-	'ruwiki' => true,
-	'vecwiki' => true, // T390023, T381886
-	'tnwiki' => true, // T390023, T381886
-	'astwiki' => true, // T390023, T381886
-	'lmowiki' => true, // T390023, T381886
-	'commonswiki' => true,
+	'default' => true,
+	'lockeddown' => false,
 ],
 
 'wgQuickSurveysConfig' => [
