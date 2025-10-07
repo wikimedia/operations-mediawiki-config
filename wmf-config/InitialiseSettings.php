@@ -7089,7 +7089,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'azwiki' => true,
-	'dewiki' => true,
+	'dewiki' => false,
 	'frwiki' => true,
 	'hewiki' => true,
 	'itwiki' => true,
