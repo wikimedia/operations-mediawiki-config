@@ -2453,6 +2453,7 @@ return [
 		// Web base stream configuration to support Experiment Platform's monotable.
 		//
 		// See T373967 for context.
+		// NOTE: consider updating web_base_with_ip below when updating this
 		'product_metrics.web_base' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -2477,10 +2478,47 @@ return [
 						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
 						'performer_active_browsing_session_token',
 
-						// Temporary: The first everyone experiment run by Web will use this stream. Make skin and
-						// database (DBname) available as dimensions during analysis for the duration of that
-						// experiment. See https://phabricator.wikimedia.org/T394457 and
-						// https://phabricator.wikimedia.org/T394093 for detail.
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						// Don't collect the user agent
+						'http.request_headers.user-agent' => false,
+					],
+					'use_edge_uniques' => true,
+				],
+			],
+		],
+		// Same as Web base stream above, but collects client IP information.
+		// When using this stream, please pay doubly close attention to the collection guidelines:
+		//
+		// https://foundation.wikimedia.org/wiki/Legal:Data_Collection_Guidelines
+		'product_metrics.web_base_with_ip' => [
+			'schema_title' => 'analytics/product_metrics/web/base_with_ip',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+
+						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
+						'agent_client_platform',
+						'agent_client_platform_family',
+
+						// Make user authentication status available as a dimension during analysis.
+						'performer_is_logged_in',
+						'performer_is_temp',
+
+						// Enable the calculation of the "click-through per page visit" generic metric.
+						'performer_pageview_id',
+
+						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
+						// session ID" contextual attribute so that analysts can calculate all three flavors of
+						// click-through rate (see
+						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
+						'performer_active_browsing_session_token',
+
 						'mediawiki_skin',
 						'mediawiki_database',
 					],
