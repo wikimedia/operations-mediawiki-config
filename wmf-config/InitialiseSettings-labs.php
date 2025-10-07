@@ -835,16 +835,15 @@ function wmfGetOverrideSettings() {
 					"name" => "Empty search experiment survey",
 					"type" => "external",
 					'enabled' => true,
+					// Can be added programatically.
+					'embedElementId' => '-',
 					'coverage' => 1,
 					"privacyPolicy" => "ext-quicksurveys-empty-search-experiment-privacy-policy",
 					'platforms' => [
-						'desktop' => [ 'stable' ]
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
 					],
-					'audience' => [
-						"userAgent" => [
-							"Chrome",
-						]
-					],
+					'audience' => [],
 					"questions" => [
 						[
 							"name" => "Empty search experiment question",
