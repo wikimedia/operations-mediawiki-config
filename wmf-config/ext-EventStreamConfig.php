@@ -2118,11 +2118,6 @@ return [
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => true,
 		],
-
-		'inuka.wiki_highlights_experiment' => [
-			'schema_title' => 'analytics/external/wiki_highlights_experiment',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
 		// Instrument for IP auto-reveal (T387600)
 		'mediawiki.product_metrics.checkuser_ip_auto_reveal_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
