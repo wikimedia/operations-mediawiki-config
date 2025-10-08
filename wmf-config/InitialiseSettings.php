@@ -11853,13 +11853,13 @@ return [
 	'default' => 'k8s-mwdebug',
 ],
 
-// Configure cookie-based enrollment in PHP 8.3 (T403657).
+// Configure cookie-based enrollment in PHP 8.3 (T405955).
 'wgWMENewPHPVersion' => [
 	'default' => '8.3',
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 0, // turned off
+	'default' => 100, // T405955: Enroll 1 in 100 sessions (1%)
 ],
 
 'wmgUsePageViewInfo' => [
