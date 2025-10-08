@@ -8134,10 +8134,7 @@ return [
 	'svwikisource' => true, // 404687
 	'wikimania2010wiki' => true, // 404687
 ],
-'wgFlowCacheVersion' => [
-	// Force cache invalidation while investigating T405080
-	'enwiktionary' => '4.9b'
-],
+
 'wmgFlowNamespaces' => [
 	'default' => [],
 ],
