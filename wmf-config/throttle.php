@@ -37,40 +37,6 @@ $wmgThrottlingExceptions = [];
 
 // T405069 - Training events at Nottingham Central Library
 $wmgThrottlingExceptions[] = [
-	'from' => '2025-09-24T15:30 +0:00',
-	'to' => '2025-09-24T18:30 +0:00',
-	'range' => '194.61.233.64/29',
-	'dbname' => [ 'enwiki' ],
-	'value' => 22,
-];
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-09-24T15:30 +0:00',
-	'to' => '2025-09-24T18:30 +0:00',
-	'range' => '194.61.207.64/29',
-	'dbname' => [ 'enwiki' ],
-	'value' => 22,
-];
-
-// T404592 - Edit-a-thon by Wikimedistas en Cruce
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-09-26T11:30 -3:00',
-	'to' => '2025-09-26T21:00 -3:00',
-	'IP' => '186.0.208.20',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 65,
-];
-
-// T404218 - Workshop at University of Pretoria
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-09-29T08:01 +2:00',
-	'to' => '2025-09-30T18:00 +2:00',
-	'IP' => '137.215.181.178',
-	'dbname' => [ 'enwiki', 'nrwiki', 'sswiki', 'vewiki', 'tnwiki', 'tswiki', 'zuwiki', 'xhwiki', 'nsowiki', 'afwiki', 'stwiki' ],
-	'value' => 160,
-];
-
-// T405069 - Training events at Nottingham Central Library
-$wmgThrottlingExceptions[] = [
 	'from' => '2025-10-18T08:30 +0:00',
 	'to' => '2025-10-18T15:30 +0:00',
 	'range' => '194.61.233.64/29',
@@ -87,20 +53,6 @@ $wmgThrottlingExceptions[] = [
 
 // T405095 - Edit-a-thon by Wikimedistas de la Universidad Nacional de La Plata and the Bachillerato de Bellas Artes of the Universidad Nacional de La Plata
 $wmgThrottlingExceptions[] = [
-	'from' => '2025-09-29T10:00 -3:00',
-	'to' => '2025-09-29T12:00 -3:00',
-	'IP' => '163.10.250.98',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 65,
-];
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-10-06T10:00 -3:00',
-	'to' => '2025-10-06T12:00 -3:00',
-	'IP' => '163.10.250.98',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 65,
-];
-$wmgThrottlingExceptions[] = [
 	'from' => '2025-10-13T10:00 -3:00',
 	'to' => '2025-10-13T12:00 -3:00',
 	'IP' => '163.10.250.98',
@@ -112,6 +64,15 @@ $wmgThrottlingExceptions[] = [
 	'to' => '2025-10-20T12:00 -3:00',
 	'IP' => '163.10.250.98',
 	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
+	'value' => 65,
+];
+
+// T406655
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-20T12:01 -3:00',
+	'to' => '2025-10-21T19:00 -3:00',
+	'IP' => '45.239.119.68',
+	'dbname' => [ 'commonswiki', 'eswiki' ],
 	'value' => 65,
 ];
 
