@@ -3488,6 +3488,21 @@ return [
 			// for show only
 		],
 	],
+
+	'+small' => [
+		'autoconfirmed' => [
+			'campaignevents-enable-registration' => true, // T401445
+			'campaignevents-organize-events' => true, // T401445
+			'campaignevents-email-participants' => true // T401445
+		]
+	],
+	'+medium' => [
+		'autoconfirmed' => [
+			'campaignevents-enable-registration' => true, // T401445
+			'campaignevents-organize-events' => true, // T401445
+			'campaignevents-email-participants' => true // T401445
+		]
+	],
 ],
 # @} end of wgGroupOverrides2
 
