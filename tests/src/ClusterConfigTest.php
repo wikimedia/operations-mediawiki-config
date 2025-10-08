@@ -78,7 +78,6 @@ class ClusterConfigTest extends PHPUnit\Framework\TestCase {
 		$clusterConfig = ClusterConfig::getInstance();
 		$mockClusterConfig = new ReflectionClass( $clusterConfig );
 		$property = $mockClusterConfig->getProperty( 'hostname' );
-		$property->setAccessible( true );
 		$property->setValue( $clusterConfig, $hostname );
 
 		$this->assertSame( $expected, $clusterConfig->isDebug() );
