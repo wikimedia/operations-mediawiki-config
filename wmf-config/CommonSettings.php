@@ -2057,11 +2057,23 @@ if ( $wmgEnableCaptcha ) {
 	}
 
 	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname, $wmgUseMetricsPlatform ) {
+		// T404204 - Automatic failover in event of hCaptcha service being unavailable
+		$services = MediaWikiServices::getInstance();
+		if ( $className === 'HCaptcha' && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
+			$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
+			if ( !$healthChecker->isAvailable() ) {
+				LoggerFactory::getInstance( 'captcha' )->warning(
+					'hCaptcha is unavailable, falling back to FancyCaptcha'
+				);
+				$className = 'FancyCaptcha';
+				return;
+			}
+		}
 		// T405239 - A/B test on frwiki
 		// The $wmgUseMetricsPlatform and $wgDBname checks aren't strictly necessary, but reduce the scope of
 		// problems in the event of exceptions in ExperimentManager
 		if ( $wmgUseMetricsPlatform && $wgDBname === 'frwiki' && $action === 'createaccount' ) {
-			$experimentManager = MediaWikiServices::getInstance()->getService( 'MetricsPlatform.XLab.ExperimentManager' );
+			$experimentManager = $services->getService( 'MetricsPlatform.XLab.ExperimentManager' );
 			$experiment = $experimentManager->getExperiment( 'hcaptcha-on-french-wikipedia' );
 			if ( $experiment->isAssignedGroup( 'control', 'user-viewing-fancy-captcha' ) ) {
 				$className = 'FancyCaptcha';
