@@ -3249,6 +3249,13 @@ return [
 			'editor' => [ 100, 60 ], // T268849
 		],
 	],
+	'+kowiki' => [
+		'move' => [
+			// T406849
+			'user' => [ 2, 120 ], // 2 moves per 2 minutes
+			'extendedconfirmed' => [ 10, 60 ], // 10 moves per minute
+		],
+	],
 	'+plwiki' => [
 		// Limit to 3 per day for new users (T169268)
 		'thanks-notification' => [
