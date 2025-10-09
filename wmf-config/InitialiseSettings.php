@@ -4327,6 +4327,7 @@ return [
 	'arbcom_dewiki' => '/static/favicon/arbcom_dewiki.ico', // T166947
 	'arbcom_enwiki' => '/static/favicon/arbcom_enwiki.ico', // T272920
 	'arbcom_itwiki' => '/static/favicon/arbcom_itwiki.ico', // T368532
+	'arbcom_plwiki' => '/static/favicon/arbcom_plwiki.ico', // T406883
 	'arbcom_ruwiki' => '/static/favicon/arbcom_ruwiki.ico', // T264430
 	'chapcomwiki' => '/static/favicon/wmf.ico', // T41482
 	'checkuserwiki' => '/static/favicon/checkuser.ico', // T393246
