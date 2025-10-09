@@ -12563,6 +12563,8 @@ return [
 	'enwiki' => false,
 	'officewiki' => false, // T387943
 	'wikimaniawiki' => false, // T397369
+	'medium' => false, // T401445
+	'small' => false, // T401445
 ],
 
 'wgCampaignEventsEnableEventInvitation' => [
