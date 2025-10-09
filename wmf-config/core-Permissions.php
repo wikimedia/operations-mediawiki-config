@@ -774,7 +774,8 @@ return [
 			'noratelimit' => true, // T193075
 			'campaignevents-enable-registration' => true, // T386290
 			'campaignevents-organize-events' => true, // T386290
-			'campaignevents-email-participants' => true // T386290
+			'campaignevents-email-participants' => true, // T386290
+			'campaignevents-generate-invitation-lists' => true, // T401445, for consistency with T386290
 		],
 		'researcher' => [
 			'browsearchive' => true,
@@ -1220,7 +1221,8 @@ return [
 			'editextendedsemiprotected' => true, // T131109
 			'campaignevents-enable-registration' => true, // T386622
 			'campaignevents-organize-events' => true, // T386622
-			'campaignevents-email-participants' => true // T386622
+			'campaignevents-email-participants' => true, // T386622
+			'campaignevents-generate-invitation-lists' => true, // T401445, for consistency with T386622
 		],
 		'rollbacker' => [
 			'rollback' => true, // T170780
@@ -2087,6 +2089,7 @@ return [
 			'campaignevents-enable-registration' => true, // T387943
 			'campaignevents-organize-events' => true, // T387943
 			'campaignevents-email-participants' => true, // T387943
+			'campaignevents-generate-invitation-lists' => true, // T401445, for consistency with T387943
 		],
 		'sysop' => [ 'importupload' => true, ], // T101663
 		'securepoll' => [
@@ -2699,6 +2702,7 @@ return [
 			'campaignevents-enable-registration' => true,
 			'campaignevents-organize-events' => true,
 			'campaignevents-email-participants' => true,
+			'campaignevents-generate-invitation-lists' => true,
 		],
 		'templateeditor' => [
 			'templateeditor' => true, // T61084
@@ -2740,6 +2744,7 @@ return [
 			'campaignevents-enable-registration' => true,
 			'campaignevents-organize-events' => true,
 			'campaignevents-email-participants' => true,
+			'campaignevents-generate-invitation-lists' => true,
 		],
 		'qa_automation' => [ // For browser tests, T60375 and T63799
 			'block' => true,
@@ -3214,7 +3219,8 @@ return [
 		'autoconfirmed' => [
 			'campaignevents-enable-registration' => true, // T397369
 			'campaignevents-organize-events' => true, // T397369
-			'campaignevents-email-participants' => true // T397369
+			'campaignevents-email-participants' => true, // T397369
+			'campaignevents-generate-invitation-lists' => true, // T401445, for consistency with T397369
 		],
 	],
 	'+wuuwiki' => [

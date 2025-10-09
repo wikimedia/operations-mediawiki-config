@@ -433,6 +433,7 @@ if ( $wmgRealm == 'labs' ) {
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
 		$wgGroupPermissions['user']['campaignevents-email-participants'] = true;
+		$wgGroupPermissions['user']['campaignevents-generate-invitation-lists'] = true;
 	}
 
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
