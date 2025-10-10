@@ -2242,7 +2242,7 @@ return [
 		'CampaignEvents' => 'debug',
 		'CentralAuth' => 'info', // Don't log personal names by default T312704
 		'CentralNotice' => 'debug',
-		'CheckUser' => 'warning',
+		'CheckUser' => 'info',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchDeprecation' => 'debug',
 		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug' ],
