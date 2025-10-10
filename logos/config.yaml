@@ -3207,7 +3207,11 @@ Wikibooks:
         comment_2x: T150618
     angwikibooks: null
     arwikibooks:
-        local_wordmark:
+        commons: 'File:Wikibooks-logo-v2-ar.svg'
+        comment_1_5x: T406358
+        comment_2x: T406358
+        commons_wordmark: File:Wikibooks-wordmark-v2-ar.svg
+        comment_wordmark: T406358
         local_tagline: true
     astwikibooks:
         comment: T150618

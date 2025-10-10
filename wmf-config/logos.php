@@ -1444,7 +1444,7 @@ return [
 	'afwikibooks' => '/static/images/project-logos/afwikibooks-1.5x.png', // T150618
 	'akwikibooks' => '/static/images/project-logos/akwikibooks-1.5x.png', // T150618
 	'angwikibooks' => '/static/images/project-logos/angwikibooks-1.5x.png',
-	'arwikibooks' => '/static/images/project-logos/arwikibooks-1.5x.png',
+	'arwikibooks' => '/static/images/project-logos/arwikibooks-1.5x.png', // T406358
 	'astwikibooks' => '/static/images/project-logos/astwikibooks-1.5x.png', // T150618
 	'aswikibooks' => '/static/images/project-logos/aswikibooks-1.5x.png', // T150618
 	'aywikibooks' => '/static/images/project-logos/aywikibooks-1.5x.png', // T150618
@@ -2119,7 +2119,7 @@ return [
 	'afwikibooks' => '/static/images/project-logos/afwikibooks-2x.png', // T150618
 	'akwikibooks' => '/static/images/project-logos/akwikibooks-2x.png', // T150618
 	'angwikibooks' => '/static/images/project-logos/angwikibooks-2x.png',
-	'arwikibooks' => '/static/images/project-logos/arwikibooks-2x.png',
+	'arwikibooks' => '/static/images/project-logos/arwikibooks-2x.png', // T406358
 	'astwikibooks' => '/static/images/project-logos/astwikibooks-2x.png', // T150618
 	'aswikibooks' => '/static/images/project-logos/aswikibooks-2x.png', // T150618
 	'aywikibooks' => '/static/images/project-logos/aywikibooks-2x.png', // T150618
@@ -4421,10 +4421,10 @@ return [
 	],
 
 	// Wikibooks
-	'arwikibooks' => [
+	'arwikibooks' => [ // T406358
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-ar.svg',
-		'width' => 120,
-		'height' => 24,
+		'width' => 124,
+		'height' => 32,
 	],
 	'azwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-az.svg',
