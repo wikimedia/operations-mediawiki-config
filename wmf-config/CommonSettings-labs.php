@@ -35,10 +35,6 @@ if ( $wmgRealm == 'labs' ) {
 	# Use a different site name (T181908)
 	$wgSitename = "Beta $wgSitename";
 
-	// T399644 - Temporarily set config vars for testing purposes
-	$wgOATHAuthNewUI = true;
-	$wgOATHAllowMultipleModules = true;
-
 	// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 	$wmgPrivilegedPolicy = [
 		'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
