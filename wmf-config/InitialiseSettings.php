@@ -3787,6 +3787,7 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'idwiki' => true,
+	'enwiki' => true,
 	'fawiki' => true,
 	'frwiki' => true, // A/B test, see T405239
 	'jawiki' => true,
