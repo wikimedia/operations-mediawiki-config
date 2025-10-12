@@ -3783,6 +3783,7 @@ return [
 
 'wmgEnableHCaptcha' => [
 	'default' => false,
+	'testwiki' => true,
 	'test2wiki' => true,
 	'idwiki' => true,
 	'fawiki' => true,
