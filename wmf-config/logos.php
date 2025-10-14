@@ -3155,7 +3155,7 @@ return [
 	],
 	'quwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-qu.svg',
-		'width' => 120,
+		'width' => 123,
 		'height' => 18,
 	],
 	'rkiwiki' => [ // T392499
