@@ -656,98 +656,11 @@ return [
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		// wikis without special configuration
-		'T390858_dym' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					'globals' => [
-						// inherits per-wiki value
-						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest',
-					],
-				],
-				'default_1' => [
-					'trigger' => 'd1',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1',
-					],
-				],
-				'default_1v' => [
-					'trigger' => 'd1v',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1v',
-					],
-				],
-			],
-		],
-		// wikis with language detection enabled
-		'T390858_dym_ld' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					'globals' => [
-						// inherits per-wiki value
-						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
-					],
-				],
-				'default_1' => [
-					'trigger' => 'd1',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1_and_language_detection',
-					],
-				],
-				'default_1v' => [
-					'trigger' => 'd1v',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1v_and_language_detection',
-					],
-				],
-			],
-		],
-		// wikis with glent and language detection enabled
-		'T390858_dym_g_ld' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					'globals' => [
-					// inherits per-wiki value
-					// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
-					],
-				],
-				'default_1' => [
-					'trigger' => 'd1',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1_glentM01_and_langdetect',
-					],
-				],
-				'default_1v' => [
-					'trigger' => 'd1v',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1v_glentM01_and_langdetect',
-					],
-				],
-			],
-		],
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchActiveTest' => [
-	'default' => 'T390858_dym',
-	// wikidata has dym disabled
-	'wikidatawiki' => null,
-	'testwikidatawiki' => null,
-	// wikis with language detection enabled
-	'eswiki' => 'T390858_dym_ld',
-	'itwiki' => 'T390858_dym_ld',
-	'jawiki' => 'T390858_dym_ld',
-	'nlwiki' => 'T390858_dym_ld',
-	'ptwiki' => 'T390858_dym_ld',
-	'ruwiki' => 'T390858_dym_ld',
-	// wikis with language detection and glent
-	'dewiki' => 'T390858_dym_g_ld',
-	'enwiki' => 'T390858_dym_g_ld',
-	'frwiki' => 'T390858_dym_g_ld',
+	'default' => null,
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
