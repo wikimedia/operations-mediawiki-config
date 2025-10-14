@@ -99,6 +99,7 @@ return [
 		'mediawiki.accountcreation.login',
 		'product_metrics.app_base',
 		'product_metrics.web_base',
+		'product_metrics.web_base_with_ip',
 		'wikibase.client.interaction',
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 	],
