@@ -4286,6 +4286,10 @@ return [
 ],
 # @} end of wgDisableQueryPageUpdate
 
+'wgExternalQuerySources' => [
+	'default' => [],
+],
+
 'wgShowHostnames' => [
 	'default' => true,
 ],

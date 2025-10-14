@@ -2504,5 +2504,17 @@ function wmfGetOverrideSettings() {
 		'wmgUseReaderExperiments' => [
 			'default' => true,
 		],
+
+		// T309738
+		'-wgExternalQuerySources' => [
+			'default' => [],
+			'enwiki' => [
+				'Mostlinkedtemplates' => [
+					'enabled' => true,
+					'url' => 'https://analytics.wikimedia.org/published/datasets/querypage/MostTranscludedPages/enwiki.json',
+					'timeout' => 10,
+				],
+			],
+		],
 	];
 } # wmfGetOverrideSettings()
