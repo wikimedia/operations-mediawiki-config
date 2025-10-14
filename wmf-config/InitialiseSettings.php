@@ -4963,6 +4963,7 @@ return [
 	'hiwikiquote' => true, // T133775
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
+	'kawiki' => true, // T407076
 	'kkwiki' => true, // T149563
 	'knwiki' => true, // T172894
 	'knwikisource' => true, // T204405
@@ -5026,6 +5027,7 @@ return [
 	'hiwikiversity' => true, // T177690
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
+	'kawiki' => true, // T407076
 	'kkwiki' => true, // T149563
 	'lvwiki' => true,
 	'maiwiki' => true, // T99488
@@ -5055,6 +5057,11 @@ return [
 	'kkwiki' => false, // T149563
 	'plwiki' => false, // T138169
 	'incubatorwiki' => false,
+],
+
+'wmgNewUserSuppressRC' => [
+	'default' => true,
+	'kawiki' => false, // T407076
 ],
 
 'wmgApplyGlobalBlocks' => [
