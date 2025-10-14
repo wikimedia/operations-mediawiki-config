@@ -12807,5 +12807,10 @@ return [
 // T404398
 'wmgUseReaderExperiments' => [
 	'default' => false,
+	'arwiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
+	'frwiki' => true,
+	'idwiki' => true,
 ],
 ];
