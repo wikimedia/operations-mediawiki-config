@@ -4288,8 +4288,9 @@ return [
 ],
 # @} end of wgDisableQueryPageUpdate
 
-'wgExternalQuerySources' => [
+'wmgExternalQuerySources' => [
 	'default' => [],
+	'testwiki' => [ 'Mostlinkedtemplates' ],
 ],
 
 'wgShowHostnames' => [

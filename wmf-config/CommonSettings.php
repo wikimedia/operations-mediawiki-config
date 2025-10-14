@@ -498,6 +498,18 @@ if ( PHP_SAPI === 'cli' ) {
 	}
 }
 
+// Use Hadoop for QueryPages computation (T309738)
+$wgExternalQuerySources = [
+	'Mostlinkedtemplates' => [
+		'enabled' => false,
+		'url' => "{$wmgLocalServices['analytics-web']}/published/datasets/querypage/MostTranscludedPages/{$wgDBname}.json",
+		'timeout' => 10,
+	],
+];
+foreach ( $wmgExternalQuerySources as $source ) {
+	$wgExternalQuerySources[$source]['enabled'] = true;
+}
+
 # ######################################################################
 # Account- and notifications-related settings
 # ######################################################################
