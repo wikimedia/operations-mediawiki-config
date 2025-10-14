@@ -4848,6 +4848,11 @@ if ( $wmgEnableSitemapApi ) {
 	$wgSitemapApiConfig['enabled'] = true;
 }
 
+// ReaderExperiments (T406916)
+if ( $wmgUseReaderExperiments ) {
+	wfLoadExtension( 'ReaderExperiments' );
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 	/**

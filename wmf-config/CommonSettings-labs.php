@@ -602,10 +602,5 @@ if ( $wmgRealm == 'labs' ) {
 		$wgUploadWizardUseCodeEditor = false;
 		$wgUploadWizardUseCodeMirror = true;
 	}
-
-	// ReaderExperiments (T404398)
-	if ( $wmgUseReaderExperiments ) {
-		wfLoadExtension( 'ReaderExperiments' );
-	}
 }
 // end safeguard
