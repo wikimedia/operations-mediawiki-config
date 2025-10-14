@@ -1187,5 +1187,32 @@ return [
 ],
 'wgCirrusSearchAlternativeIndices' => [
 	'default' => [],
+	'enwiki' => [
+		'completion' => [ [
+			'index_id' => 0,
+			'use' => false,
+			'config_overrides' => [
+				'CirrusSearchCompletionSuggesterUseDefaultSort' => true
+			]
+		] ]
+	],
+	'frwiki' => [
+		'completion' => [ [
+			'index_id' => 0,
+			'use' => false,
+			'config_overrides' => [
+				'CirrusSearchCompletionSuggesterUseDefaultSort' => true
+			]
+		] ]
+	],
+	'hewiki' => [
+		'completion' => [ [
+			'index_id' => 0,
+			'use' => false,
+			'config_overrides' => [
+				'CirrusSearchCompletionSuggesterUseDefaultSort' => true
+			]
+		] ]
+	],
 ],
 ];
