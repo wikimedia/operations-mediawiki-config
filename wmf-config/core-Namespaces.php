@@ -3985,6 +3985,8 @@ return [
 	'eswiktionary' => [
 		100 => 'Apéndice',
 		101 => 'Apéndice_Discusión',
+		110 => 'Tesauro', // T407150, Thesaurus
+		111 => 'Tesauro_discusión', // T407150, Thesaurus talk
 	],
 	'fawiktionary' => [
 		100 => "پیوست",
