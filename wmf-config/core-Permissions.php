@@ -676,6 +676,9 @@ return [
 	'+dawikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T88591
 	],
+	'+dawikisource' => [
+		'autopatrolled' => [ 'autopatrol' => true, ], // T407281
+	],
 	'+dewiki' => [
 		'*' => [ 'patrolmarks' => true, ], // T100682
 		'bot' => [
@@ -3879,6 +3882,9 @@ return [
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
 	],
+	'+dawikisource' => [
+		'sysop' => [ 'autopatrolled' ], // T407281
+	],
 	'+dawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T86062
 	],
@@ -5437,6 +5443,9 @@ return [
 	],
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
+	],
+	'+dawikisource' => [
+		'sysop' => [ 'autopatrolled' ], // T407281
 	],
 	'+dawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T86062
