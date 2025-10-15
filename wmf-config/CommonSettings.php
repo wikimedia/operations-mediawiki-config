@@ -4008,15 +4008,16 @@ if ( $wmgHideGraphTags ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
+	$wgVirtualDomainsMapping['virtual-oauth'] = [ 'db' => 'metawiki' ];
+	// TODO: Remove the below configuration setting once references have been removed.
 	$wgMWOAuthCentralWiki = 'metawiki';
 	$wgMWOAuthSharedUserSource = 'CentralAuth';
 	$wgMWOAuthSecureTokenTransfer = true;
 	$wgOAuth2GrantExpirationInterval = 'PT4H';
 	$wgOAuth2RefreshTokenTTL = 'P365D';
 
-	if ( $wgMWOAuthCentralWiki === $wgDBname || $wgMWOAuthCentralWiki === false ) {
-		// Management interfaces are available on the central wiki or wikis
-		// that are using local OAuth tables
+	if ( $wgDBname === 'metawiki' ) {
+		// Management interfaces are available on the central wiki.
 		$wgGroupPermissions['user']['mwoauthproposeconsumer'] = true;
 		$wgGroupPermissions['user']['mwoauthupdateownconsumer'] = true;
 		$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
