@@ -76,4 +76,13 @@ $wmgThrottlingExceptions[] = [
 	'value' => 65,
 ];
 
+// T407422 - Editing workshop at National Library of Singapore, library@habourfront branch
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-10-18T13:00 +8:00',
+	'to' => '2025-10-18T18:00 +8:00',
+	'IP' => '118.189.131.194',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value' => 30,
+];
+
 ## Add throttling definitions above.
