@@ -1199,6 +1199,7 @@ return [
 	'azwikimedia' => 'Azərbaycan vikimediaçıları istifadəçi qrupu',
 	'azwikiquote' => 'Vikisitat',
 	'azwikisource' => 'Vikimənbə', // T114002
+	'azwiktionary' => 'Vikilüğət', // T407358
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bawikibooks' => 'Викидәреслек', // T173471
