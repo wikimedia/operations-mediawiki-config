@@ -12096,35 +12096,13 @@ return [
 ],
 
 'wgRestAPIAdditionalRouteFiles' => [
-	'default' => [],
+	'default' => [
+		'includes/Rest/specs.v0.json',
+	],
 	'testwiki' => [
 		'includes/Rest/coreDevelopmentRoutes.json',
 		'includes/Rest/specs.v0.json',
 		'includes/Rest/content.v1.json'
-	],
-	'arwiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'dewiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'frwiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'hewiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'iawiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'nlwiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'zhwiki' => [
-		'includes/Rest/specs.v0.json',
-	],
-	'enwiktionary' => [
-		'includes/Rest/specs.v0.json',
 	],
 ],
 
@@ -12135,9 +12113,7 @@ return [
 ],
 
 'wgRestSandboxSpecs' => [
-	'default' => [],
-	// Enable for testing (T362006)
-	'testwiki' => [
+	'default' => [
 		'mw-extra' => [
 			'url' => '/w/rest.php/specs/v0/module/-',
 			'name' => 'MediaWiki REST API (routes not in modules)',
@@ -12146,123 +12122,6 @@ return [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
 		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	// Enable a small set of wikis for initial public rollout (T389407)
-	'arwiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'dewiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'frwiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'hewiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'iawiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'nlwiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'zhwiki' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
-	],
-	'enwiktionary' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
-		'wmf-restbase' => [
-			'url' => 'https://meta.wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
-		]
 	],
 ],
 

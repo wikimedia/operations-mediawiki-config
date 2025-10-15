@@ -2090,7 +2090,7 @@ function wmfGetOverrideSettings() {
 				],
 				'specs.v0' => [
 					'url' => '/w/rest.php/specs/v0/module/specs/v0',
-					'name' => 'Content API',
+					'name' => 'Specs API',
 				],
 				'content.v1' => [
 					'url' => '/w/rest.php/specs/v0/module/content/v1',
