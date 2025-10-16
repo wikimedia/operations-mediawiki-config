@@ -88,6 +88,9 @@ $common = [
 	'mwapi' => 'http://localhost:6501',
 	'mpic' => 'http://localhost:6037',
 
+	// an-web only exists in eqiad
+	'analytics-web' => 'http://localhost:6206',
+
 	// cloudelastic only exists in eqiad.
 
 	'cloudelastic-chi' => [
