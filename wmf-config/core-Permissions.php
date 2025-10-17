@@ -1484,6 +1484,16 @@ return [
 		'interface-editor' => [ 'extendedconfirmed' => true ], // T402755
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T402755
 	],
+	'+igwiki' => [
+		'autopatrolled' => [ 'autopatrol' => true, ], // T407439
+		'rollbacker' => [
+			'autopatrol' => true, // T407439
+			'markbotedits' => true, // T407439
+			'patrol' => true, // T407439
+			'rollback' => true, // T407439
+			'suppressredirect' => true, // T407439
+		],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'upload' => true ],
 		'sysop' => [ 'upload' => false ],
@@ -4264,6 +4274,12 @@ return [
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
 	],
+	'+igwiki' => [
+		'sysop' => [
+			'autopatrolled', // T407439
+			'rollbacker', // T407439
+		],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [
 			'import',
@@ -5724,6 +5740,12 @@ return [
 	],
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
+	],
+	'+igwiki' => [
+		'sysop' => [
+			'autopatrolled', // T407439
+			'rollbacker', // T407439
+		],
 	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
