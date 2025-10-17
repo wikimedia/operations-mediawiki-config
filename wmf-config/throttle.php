@@ -35,38 +35,6 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T405069 - Training events at Nottingham Central Library
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-10-18T08:30 +0:00',
-	'to' => '2025-10-18T15:30 +0:00',
-	'range' => '194.61.233.64/29',
-	'dbname' => [ 'enwiki' ],
-	'value' => 22,
-];
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-10-18T08:30 +0:00',
-	'to' => '2025-10-18T15:30 +0:00',
-	'range' => '194.61.207.64/29',
-	'dbname' => [ 'enwiki' ],
-	'value' => 22,
-];
-
-// T405095 - Edit-a-thon by Wikimedistas de la Universidad Nacional de La Plata and the Bachillerato de Bellas Artes of the Universidad Nacional de La Plata
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-10-13T10:00 -3:00',
-	'to' => '2025-10-13T12:00 -3:00',
-	'IP' => '163.10.250.98',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 65,
-];
-$wmgThrottlingExceptions[] = [
-	'from' => '2025-10-20T10:00 -3:00',
-	'to' => '2025-10-20T12:00 -3:00',
-	'IP' => '163.10.250.98',
-	'dbname' => [ 'commonswiki', 'eswiki', 'wikidatawiki' ],
-	'value' => 65,
-];
-
 // T406655
 $wmgThrottlingExceptions[] = [
 	'from' => '2025-10-20T12:01 -3:00',
@@ -76,13 +44,20 @@ $wmgThrottlingExceptions[] = [
 	'value' => 65,
 ];
 
-// T407422 - Editing workshop at National Library of Singapore, library@habourfront branch
+// T407630 - Edit-a-thon by Wikimedistas en Cruce and the Escuela Media N° 27
 $wmgThrottlingExceptions[] = [
-	'from' => '2025-10-18T13:00 +8:00',
-	'to' => '2025-10-18T18:00 +8:00',
-	'IP' => '118.189.131.194',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 30,
+	'from' => '2025-11-06T12:30 -3:00',
+	'to' => '2025-11-06T18:30 -3:00',
+	'IP' => '45.239.119.68',
+	'dbname' => [ 'commonswiki', 'eswiki' ],
+	'value' => 65,
+];
+$wmgThrottlingExceptions[] = [
+	'from' => '2025-11-07T12:30 -3:00',
+	'to' => '2025-11-07T18:30 -3:00',
+	'IP' => '45.239.119.68',
+	'dbname' => [ 'commonswiki', 'eswiki' ],
+	'value' => 65,
 ];
 
 ## Add throttling definitions above.
