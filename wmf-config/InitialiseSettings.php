@@ -10654,6 +10654,15 @@ return [
 	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239
 ],
 
+'wgMetricsPlatformExperimentStreamNames' => [
+	'default' => [
+		'product_metrics.web_base',
+		'mediawiki.product_metrics.translation_mint_for_readers.experiments',
+		'mediawiki.product_metrics.reading_list',
+		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
+	],
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
