@@ -4294,6 +4294,9 @@ if ( $wmgUseCheckUser ) {
 	// Link to the central Special:CentralAuth page if available (T397690)
 	if ( $wmgUseCentralAuth ) {
 		$wgCheckUserUserInfoCardCentralWikiId = 'metawiki';
+
+		// All SUL wikis should support searches by XTools
+		$wgCheckUserUserInfoCardShowXToolsLink = true;
 	}
 
 	$wgVirtualDomainsMapping['virtual-checkuser'] = [ 'cluster' => 'extension1', 'db' => false ];
