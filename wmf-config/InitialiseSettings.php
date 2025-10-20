@@ -10664,6 +10664,24 @@ return [
 	],
 ],
 
+// T401705 Send image beacon and xLab sdk load event
+'wgMetricsPlatformEnableHeadPixel' => [
+	'default' => false,
+	'fawiki' => true,
+	'afwiki' => true,
+	'arwiki' => true,
+	'hywiki' => true,
+	'bgwiki' => true,
+	'mywiki' => true,
+	'hewiki' => true,
+	'jawiki' => true,
+	'itwiki' => true,
+	'azwiki' => true,
+	'ptwiki' => true,
+	'newiki' => true,
+	'viwiki' => true
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
