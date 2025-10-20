@@ -2139,6 +2139,28 @@ return [
 				],
 			],
 		],
+		// Instrument for the CheckUser Suggested Investigations feature (T404177)
+		'mediawiki.product_metrics.suggested_investigations_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'performer_id',
+						'performer_name',
+						'performer_pageview_id',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_registration_dt',
+					],
+				],
+			],
+		],
 		// Instrument for the Incident Reporting System (T372823)
 		'mediawiki.product_metrics.incident_reporting_system_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
