@@ -3537,7 +3537,7 @@ return [
 	'hifwiki' => [ 'incubator', 'commons', 'meta', 'species', 'bh', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'el', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pa', 'pl', 'pt', 'simple', 'te', 'ta', 'ur' ], // T99826
 	'hrwikibooks' => [ 'w' ], // T176320
 	'hsbwiki' => [ 'w', 'de', 'dsb', 'en', 'cs', 'pl', 'ru', 'hr', 'sr', 'sh' ], // T152382
-	'hsbwiktionary' => [ 'incubator', 'w' ],
+	'hsbwiktionary' => [ 'incubator', 'wikt:en' ], // T407713
 	'huwikibooks' => [ 'w' ], // T395397
 	'idwiki' => [ 'ms' ], // T18033
 	'idwikibooks' => [ 'w' ],
