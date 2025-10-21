@@ -2968,6 +2968,7 @@ return [
 	'cswiki' => true, // T193242
 	'dawiki' => true, // wegge asked in #wikimedia-tech 2006-03-01
 	'dawikiquote' => true, // T15246
+	'dawikisource' => true, // T407790
 	'dewikibooks' => true, // T9041
 	'dewikiquote' => true, // T12290
 	'dewikiversity' => true,
