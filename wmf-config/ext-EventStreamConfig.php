@@ -1941,31 +1941,6 @@ return [
 			],
 		],
 
-		// See https://phabricator.wikimedia.org/T353798
-		'mediawiki.reference_previews' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-				'metrics_platform_client' => [
-					'events' => [
-						'ext.cite.baseline'
-					],
-					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_namespace',
-						'performer_edit_count_bucket',
-						'performer_is_logged_in',
-					],
-				],
-			],
-		],
-
 		// See https://phabricator.wikimedia.org/T370045
 		'wikibase.client.interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
