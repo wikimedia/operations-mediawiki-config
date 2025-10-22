@@ -2144,6 +2144,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
 				'mediawiki_eventbus' => [
 					'event_service_name' => 'eventgate-analytics-external',
 				],
