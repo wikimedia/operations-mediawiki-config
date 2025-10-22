@@ -2005,6 +2005,11 @@ if ( $wmgEnableCaptcha ) {
 		// Use the 'config' property in wgCaptchaTriggers to different SiteKeys for
 		// specific actions.
 		$wgHCaptchaSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
+		// SiteKey dedicated to Special:CreateAccount. Identical to the default wgHCaptchaSiteKey,
+		// but named differently here for clarity when used further below.
+		$wgHCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
+		// SiteKey dedicated to form and API edits. Mobile apps will use a different SiteKey.
+		$wgHCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
@@ -2016,6 +2021,9 @@ if ( $wmgEnableCaptcha ) {
 			'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
 				'FancyCaptcha' :
 				'HCaptcha',
+			'config' => [
+				'HCaptchaSiteKey' => $wgHCaptchaAccountCreationSiteKey,
+			],
 		];
 		if ( $wgDBname === 'test2wiki' ) {
 			// Unconditionally enable hCaptcha on test2wiki web and API requests to support
@@ -2023,7 +2031,44 @@ if ( $wmgEnableCaptcha ) {
 			$wgCaptchaTriggers['createaccount'] = [
 				'trigger' => true,
 				'class' => 'HCaptcha',
+				'config' => [
+					'HCaptchaSiteKey' => $wgHCaptchaAccountCreationSiteKey,
+				],
 			];
+		}
+
+		// T405586 - Editing trial
+		if ( $wmgEnableHCaptchaEditing ) {
+			$wgCaptchaTriggers['edit'] = [
+				'trigger' => true,
+				'class' => 'HCaptcha',
+				'config' => [
+					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
+				],
+			];
+			$wgCaptchaTriggers['create'] = [
+				'trigger' => true,
+				'class' => 'HCaptcha',
+				'config' => [
+					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
+				],
+			];
+			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) {
+				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+					if ( \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action )
+						instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha ) {
+						// For API edits, only enable hCaptcha for editing interfaces that support it.
+						// TODO: Use Hooks::isSupportedInterface() when this is available, to enable support
+						// for VisualEditor, DiscussionTools, MobileFrontend, etc
+						$result = false;
+					}
+					// Make sure that the wmgEmergencyCaptcha settings is still respected. Note that this will
+					// mean API edits from interfaces without hCaptcha support will not go through.
+					if ( $wmgEmergencyCaptcha ) {
+						$result = true;
+					}
+				}
+			};
 		}
 
 		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php

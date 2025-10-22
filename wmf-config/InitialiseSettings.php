@@ -3799,6 +3799,11 @@ return [
 	'zhwiki' => true,
 ],
 
+'wmgEnableHCaptchaEditing' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgEmergencyCaptcha' => [
 	'default' => false,
 ],
