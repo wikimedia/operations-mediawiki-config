@@ -748,7 +748,8 @@ function wmfGetOverrideSettings() {
 		// https://www.mediawiki.org/wiki/Edit_check
 		'wgVisualEditorEditCheck' => [
 			'default' => false,
-			// T345658
+			// T345658, T405176
+			'arwiki' => true,
 			'enwiki' => true,
 			'frwiki' => true,
 		],
@@ -1404,6 +1405,20 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
+		],
+		'wgGEReviseToneSuggestedEditEnabled' => [
+			'default' => false,
+			// T405176
+			'arwiki' => true,
+			'enwiki' => true,
+			'frwiki' => true,
+		],
+		'wgGEReviseToneOverrideSearchTerm' => [
+			'default' => '',
+			// T405176, T407353
+			'arwiki' => 'hastemplate:peacock_inline',
+			'enwiki' => 'hastemplate:peacock_inline',
+			'frwiki' => 'hastemplate:peacock_inline',
 		],
 		'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
 			'default' => 300,
