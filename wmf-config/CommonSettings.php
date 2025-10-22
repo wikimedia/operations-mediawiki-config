@@ -4089,6 +4089,9 @@ if ( $wmgUseOATHAuth ) {
 
 	$wgOATHRolloutPercent = 40; // T400579
 
+	// T407167 - Restore old number of recovery codes. Should be removed when changed in the extension
+	$wgOATHRecoveryCodesCount = 10;
+
 	$wgOATHAllowMultipleModules = true; // T399644
 	$wgOATHAuthNewUI = true; // T399644
 
