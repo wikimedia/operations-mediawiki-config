@@ -4854,7 +4854,7 @@ if ( $wmgEnableSitemapApi ) {
 	$wgSitemapApiConfig['enabled'] = true;
 }
 
-// ReaderExperiments (T406916)
+// ReaderExperiments (T406916, T406907)
 if ( $wmgUseReaderExperiments ) {
 	wfLoadExtension( 'ReaderExperiments' );
 }

@@ -12672,13 +12672,15 @@ return [
 	'default' => true,
 ],
 
-// T404398
 'wmgUseReaderExperiments' => [
 	'default' => false,
+	// T406916
 	'arwiki' => true,
 	'viwiki' => true,
 	'zhwiki' => true,
 	'frwiki' => true,
 	'idwiki' => true,
+	// T406907
+	'enwiki' => true,
 ],
 ];
