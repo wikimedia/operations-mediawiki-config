@@ -1639,6 +1639,7 @@ return [
 	'+jawiki' => [
 		'user' => [ 'changetags' => false ], // T344150
 		'abusefilter' => [ 'changetags' => true ], // T344150
+		'accountcreator' => [ 'ipblock-exempt' => true ], // T407855
 		'autoconfirmed' => [ 'patrol' => true ], // T15055
 		'rollbacker' => [ 'rollback' => true ], // T258339
 		'eliminator' => [
