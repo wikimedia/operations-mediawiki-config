@@ -3506,10 +3506,10 @@ return [
 		'width' => 120,
 		'height' => 18,
 	],
-	'azwiktionary' => [
+	'azwiktionary' => [ // T408147
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-az.svg',
-		'width' => 120,
-		'height' => 27,
+		'width' => 85,
+		'height' => 22,
 	],
 	'bclwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-bcl.svg',
@@ -7541,10 +7541,10 @@ return [
 		'width' => 120,
 		'height' => 13,
 	],
-	'azwiktionary' => [
+	'azwiktionary' => [ // T408147
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-az.svg',
-		'width' => 93,
-		'height' => 18,
+		'width' => 72,
+		'height' => 16,
 	],
 	'bewwiktionary' => [ // T402134
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-bew.svg',

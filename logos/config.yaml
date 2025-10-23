@@ -2055,8 +2055,10 @@ Wiktionary:
         comment: T45240
         comment_1_5x: T150618
         comment_2x: T150618
-        local_tagline: true
-        local_wordmark: true
+        commons_tagline: 'File:Wiktionary-tagline-az.svg'
+        comment_tagline: T408147
+        commons_wordmark: 'File:Wiktionary-wordmark-az.svg'
+        comment_wordmark: T408147
     bclwiktionary:
         local_wordmark: true
     bewiktionary:
