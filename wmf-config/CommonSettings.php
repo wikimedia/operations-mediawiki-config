@@ -2180,12 +2180,6 @@ if ( $wmgUseCentralAuth ) {
 			global $wmgCentralAuthWebResponseSetCookieRecurse;
 
 			$realName = ( $options['prefix'] ?? '' ) . $name;
-			if ( $oldCookieDomain
-				&& class_exists( MobileContext::class )
-				&& MobileContext::singleton()->usingMobileDomain()
-			) {
-				$oldCookieDomain = wmfMobileUrlCallback( $oldCookieDomain );
-			}
 
 			if ( in_array( $realName, $cookies, true )
 				&& ( $options['domain'] ?? '' ) !== $oldCookieDomain
@@ -3019,31 +3013,7 @@ $wgMinervaTypeahead = $wgVectorTypeahead;
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
-	require_once 'MobileUrlCallback.php';
-
 	$wgMFMobileHeader = 'X-Subdomain';
-
-	if ( $wmgUseMdotRouting ) {
-		$wgMobileUrlCallback = 'wmfMobileUrlCallback';
-	} else {
-		$wgMobileUrlCallback = null;
-
-		// https://www.mediawiki.org/wiki/Manual:Hooks/TitleSquidURLs
-		$wgHooks['TitleSquidURLs'][] = static function ( $title, &$urls ): void {
-			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-			foreach ( $urls as $url ) {
-				$normUrl = $urlUtils->expand( $url, PROTO_CURRENT );
-				$bits = $urlUtils->parse( $normUrl );
-				if ( $bits ) {
-					$bits['host'] = wmfMobileUrlCallback( $bits['host'] );
-					$newUrl = MediaWiki\Utils\UrlUtils::assemble( $bits );
-					if ( $newUrl !== $normUrl ) {
-						$urls[] = $newUrl;
-					}
-				}
-			}
-		};
-	}
 
 } else {
 	// For sites without MobileFrontend, instead enable Vector's "responsive" state.

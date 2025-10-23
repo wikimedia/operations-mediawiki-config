@@ -44,7 +44,6 @@ function wmfLoadRoutes() {
 		'wmf-config/interwiki.php',
 		'wmf-config/interwiki-labs.php',
 		'wmf-config/MetaContactPages.php',
-		'wmf-config/MobileUrlCallback.php',
 		'wmf-config/LabsServices.php',
 		'wmf-config/liquidthreads.php',
 		'wmf-config/logging.php',

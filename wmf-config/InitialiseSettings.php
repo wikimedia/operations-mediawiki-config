@@ -7239,41 +7239,6 @@ return [
 	'wg_enwiki' => false,
 ],
 
-// Temporary variable during roll-out of T214998
-//
-// Legacy m-dot routing, via redirect to m-dot domain.
-// * MobileContext::hasMobileDomain returns true (via $wgMobileUrlCallback)
-// * MobileContext::usingMobileDomain is true for mobile views (via wgMFMobileHeader)
-// * MobileFrontendHooks::onTitleSquidURLs purges m-dot URLs
-//   (via MobileContext::getMobileUrl via $wgMobileUrlCallback)
-// * "Desktop view" footer points to mobileaction=toggle_view_desktop on canonical,
-//   and sets a stopMobileRedirect=true cookie to opt-out from UA-based Varnish redirect.
-// * "Mobile view" footer link points to mobileaction=toggle_view_mobile on m-dot
-//   (via MobileContext::getMobileUrl), which redirects to strip the no-op query param).
-//
-// New mobile routing, via varied response:
-// * [CHANGED] MobileContext::hasMobileDomain returns false
-// * MobileContext::usingMobileDomain is true for mobile views (via wgMFMobileHeader)
-// * We still purge URLs, via a temporary TitleSquidURLs hook in COmmonSettings.php.
-// * "Desktop view" footer points to mobileaction=toggle_view_desktop,
-//   and sets a stopMobileRedirect=true cookie to opt-out from UA-based Varnish logic.
-// * [CHANGED] "Mobile view" footer points to mobileaction=toggle_view_mobile,
-//   and sets a mf_useformat=true cookie to opt-in to UA-based Varnish logic.
-//
-// To enable on wikis:
-//
-// 1. Add domain name to list of pilot wikis in Varnish that disable mobile_redirect.
-//
-//    At this point, canonical responses will still advertise m-dot URLs
-//    via <link rel=alternate> and "Mobile view" opt-in footer link, which work fine.
-//
-// 2. Add wiki below and set it to false.
-//
-'wmgUseMdotRouting' => [
-	// Mobile redirect disabled (T401595, T403510)
-	'default' => false,
-],
-
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
