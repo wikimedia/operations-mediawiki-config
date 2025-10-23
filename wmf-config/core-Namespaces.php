@@ -2393,7 +2393,7 @@ return [
 	'+plwikinews' => [ 8 => 0, 14 => 1 ],
 
 	// Wiktionary
-	'+cswiktionary' => [ 0 => 1, 14 => 1 ],
+	'+cswiktionary' => [ 14 => 1 ], // 0 => 1 removed per T406728
 	'+iswiktionary' => [ 0 => 1, 8 => 0, 14 => 1 ],
 	'+ltwiktionary' => [ 8 => 0, 14 => 1 ],
 	'+plwiktionary' => [ 8 => 0, 14 => 1 ],
