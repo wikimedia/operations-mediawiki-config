@@ -10633,6 +10633,7 @@ return [
 // T401705 Send image beacon and xLab sdk load event
 'wgMetricsPlatformEnableHeadPixel' => [
 	'default' => false,
+	'enwiki' => true,
 	'fawiki' => true,
 	'afwiki' => true,
 	'arwiki' => true,
