@@ -2792,6 +2792,10 @@ return [
 		118 => 'ڕەشنووس', // T332470
 		119 => 'لێدوانی_ڕەشنووس', // T332470
 	],
+	'crhwiki' => [
+		104 => 'R', // T408284
+		105 => 'R_talk', // T408284
+	],
 	'cswiki' => [
 		NS_USER => 'Wikipedista', # language default set back in wgNamespaceAliases
 		NS_USER_TALK => 'Diskuse_s_wikipedistou', # language default set back in wgNamespaceAliases
@@ -5493,6 +5497,7 @@ return [
 	'+bnwikibooks' => [ 104 ], // T236840
 	'+brwikisource' => [ 104 ],
 	'+cawikisource' => [ 106 ],
+	'+crhwiki' => [ 104 ],
 	'+cswikiquote' => [ 100 ],
 	'+cswikisource' => [ 100 ],
 	'+dawikisource' => [ 102 ],
