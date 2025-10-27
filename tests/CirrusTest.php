@@ -226,9 +226,8 @@ class CirrusTest extends WgConfTestCase {
 
 		$triggers = [];
 		foreach ( $config['buckets'] as $name => $bucketConf ) {
-			$this->assertArrayKeys( [ 'trigger' ], [ 'globals' ], $bucketConf );
-			$this->assertIsString( $bucketConf['trigger'] );
-			$triggers[] = $bucketConf['trigger'];
+			$this->assertIsString( $name );
+			$this->assertArrayKeys( [], [ 'globals' ], $bucketConf );
 		}
 		$this->assertSameSize( $triggers, array_unique( $triggers ) );
 	}

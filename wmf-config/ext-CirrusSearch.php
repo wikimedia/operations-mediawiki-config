@@ -656,11 +656,21 @@ return [
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [],
+	'default' => [
+		'T408154_nearmatch' => [
+			'buckets' => [
+				'control' => [],
+				'2x' => [
+					'globals' => [ 'wgCirrusSearchNearMatchWeight' => 20 ],
+				],
+			],
+		],
+	],
 ],
 
 'wgCirrusSearchActiveTest' => [
 	'default' => null,
+	'commonswiki' => 'T408154_nearmatch',
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
