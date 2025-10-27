@@ -7130,6 +7130,8 @@ return [
 	// T405109, T405556
 	'enwiki' => true,
 	'frwiki' => true,
+	'loginwiki' => true,
+	'metawiki' => true,
 ],
 
 'wmgUseUserInfoCard' => [
