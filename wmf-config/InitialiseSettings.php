@@ -2473,7 +2473,7 @@ return [
 		"include" => [
 			"Special:Preferences",
 			// T306834
-			"Special:UserLogin",
+			"Special:Userlogin", // must use lowercase 'l': T408447
 			"Special:CreateAccount",
 		],
 	],
