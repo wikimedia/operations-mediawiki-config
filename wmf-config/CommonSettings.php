@@ -2001,6 +2001,10 @@ if ( $wmgEnableCaptcha ) {
 
 	if ( $wmgEnableHCaptcha ) {
 		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
+		// Default SiteKey, intended for use with Special:CreateAccount.
+		// Use the 'config' property in wgCaptchaTriggers to different SiteKeys for
+		// specific actions.
+		$wgHCaptchaSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
