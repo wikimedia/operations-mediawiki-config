@@ -105,6 +105,9 @@ if ( $wmgRealm == 'labs' ) {
 		'auth.wikimedia.beta.wmcloud.org',
 	];
 
+	// T309738
+	$wgExternalQuerySources = [];
+
 	if ( $wmgUseGlobalPreferences ) {
 		// Allow global preferences for email-blacklist to be auto-set where it is overridden
 		// T231577
