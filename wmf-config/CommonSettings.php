@@ -3793,8 +3793,8 @@ if ( $wmgUseContentTranslation ) {
 			],
 			'coverage' => 0,
 			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
+				'desktop',
+				'mobile'
 			],
 			'questions' => [
 				[

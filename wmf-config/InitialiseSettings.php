@@ -11397,7 +11397,7 @@ return [
 			'enabled' => false,
 			'coverage' => 0,
 			'privacyPolicy' => 'ext-quicksurveys-simple-summaries-survey-privacy-policy',
-			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'platforms' => [ 'desktop' ],
 			'audience' => [
 				'anons' => false,
 			],
@@ -11420,7 +11420,7 @@ return [
 			'enabled' => false,
 			'coverage' => 0.06,
 			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
-			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'platforms' => [ 'desktop' ],
 			'audience' => [
 				'anons' => true,
 				'userAgent' => [ 'Chrome' ],
@@ -11443,7 +11443,7 @@ return [
 			'enabled' => false,
 			'coverage' => 0.05,
 			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
-			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'platforms' => [ 'desktop' ],
 			'audience' => [
 				'anons' => true,
 			],
@@ -11467,7 +11467,7 @@ return [
 			'enabled' => false,
 			'coverage' => 0.1,
 			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
-			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'platforms' => [ 'desktop' ],
 			'audience' => [
 				'anons' => true,
 				'userAgent' => [ 'Chrome' ],
@@ -11490,7 +11490,7 @@ return [
 			'enabled' => false,
 			'coverage' => 0.1,
 			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
-			'platforms' => [ 'desktop' => [ 'stable' ] ],
+			'platforms' => [ 'desktop' ],
 			'audience' => [
 				'anons' => true,
 			],

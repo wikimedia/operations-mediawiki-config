@@ -823,8 +823,8 @@ function wmfGetOverrideSettings() {
 					'coverage' => 1,
 					"privacyPolicy" => "ext-quicksurveys-empty-search-experiment-privacy-policy",
 					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
+						'desktop',
+						'mobile'
 					],
 					'audience' => [
 						'namespaces' => [ 0, -1 ],
