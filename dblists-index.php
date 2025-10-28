@@ -586,6 +586,7 @@ return [
 'mhwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
 'minwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'minwikibooks' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
+'minwikisource' => [ 'preinstall', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
 'minwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'miwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'miwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
