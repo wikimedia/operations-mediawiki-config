@@ -708,7 +708,7 @@ return [
 'pawiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'pcdwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'skin-themes', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'pcmwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'parsoidrendered', 'sul' ],
-'pcmwikiquote' => [ 'preinstall', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
+'pcmwikiquote' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
 'pdcwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'pflwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'pihwiki' => [ 'wikipedia', 'closed', 'small', 'specialcontribute', 'skin-themes', 'wikidataclient', 'group0', 'growthexperiments', 'parsoidrendered', 'sul' ],
