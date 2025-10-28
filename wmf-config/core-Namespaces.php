@@ -3682,6 +3682,10 @@ return [
 		104 => 'Œuvia', // T257672
 		105 => 'Discuscion_œuvia', // T257672
 	],
+	'minwikisource' => [ // T408343
+		100 => 'Portal',
+		101 => "Rundiang_Portal",
+	],
 	'mkwikisource' => [
 		102 => 'Автор',
 		103 => 'Разговор_за_автор',
@@ -5998,6 +6002,7 @@ return [
 	'metawiki' => 'Meta',
 	'mhrwiki' => 'Википедий',
 	'minwikibooks' => 'Wikibuku', // T395499
+	'minwikisource' => 'Wikibasurek', // T408343
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
 	'mkwikibooks' => 'Викикниги', // T400644
@@ -6314,6 +6319,7 @@ return [
 	'lvwiki' => 'Vikipēdijas_diskusija',
 	'lvwiktionary' => 'Vikivārdnīcas_diskusija', // T170065
 	'minwikibooks' => 'Rundiang_Wikibuku', // T395452
+	'minwikisource' => 'Rundiang_Wikibasurek', // T395452
 	'madwikisource' => 'Parembhâghân_Wikigherbhung', // T391767
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',
 	'mrwikibooks' => 'विकिबुक्स_चर्चा', // T73774
