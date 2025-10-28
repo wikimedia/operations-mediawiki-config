@@ -4295,6 +4295,7 @@ return [
 'wmgExternalQuerySources' => [
 	'default' => [],
 	'testwiki' => [ 'Mostlinkedtemplates' ],
+	'enwiki' => [ 'Mostlinkedtemplates' ],
 ],
 
 'wgShowHostnames' => [
