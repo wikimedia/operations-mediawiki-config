@@ -91,13 +91,6 @@ $wmgCaptchaSecret = null;
 $wmgCaptchaPassword = null;
 
 /**
- * Site key for HCaptcha. Used if $wmgUseHCaptcha is true.
- *
- * @see mediawiki/extensions/ConfirmEdit (hCaptcha)
- */
-$wgHCaptchaSiteKey = null;
-
-/**
  * Secret key for HCaptcha. Used if $wmgUseHCaptcha is true.
  *
  * @see mediawiki/extensions/ConfirmEdit (hCaptcha)
