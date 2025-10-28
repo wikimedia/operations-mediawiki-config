@@ -565,6 +565,7 @@ return [
 	'orwikisource' => 'Asia/Kolkata', // T73875
 	'pawikisource' => 'Asia/Kolkata', // T149522
 	'pcmwiki' => 'Africa/Lagos',
+	'pcmwikiquote' => 'Africa/Lagos', // T408351
 	'pdcwiki' => 'America/New_York',
 	'pflwiki' => 'Europe/Berlin',
 	'plwiki' => 'Europe/Warsaw',
@@ -1570,6 +1571,7 @@ return [
 	'pa_uswikimedia' => 'Wikimedia Pennsylvania',
 	'pawiki' => 'ਵਿਕੀਪੀਡੀਆ',
 	'pawikisource' => 'ਵਿਕੀਸਰੋਤ', // T149522
+	'pcmwikiquote' => 'Wikitok', // T408351
 	'plwikiquote' => 'Wikicytaty',
 	'plwikisource' => 'Wikiźródła',
 	'plwikivoyage' => 'Wikipodróże',

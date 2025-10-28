@@ -6069,6 +6069,7 @@ return [
 	'pa_uswikimedia' => 'Project',
 	'pawiki' => 'ਵਿਕੀਪੀਡੀਆ',
 	'pawikisource' => 'ਵਿਕੀਸਰੋਤ', // T149522
+	'pcmwikiquote' => 'Wikitok', // T408351
 	'plwikiquote' => 'Wikicytaty',
 	'plwikisource' => 'Wikiźródła',
 	'plwikivoyage' => 'Wikipodróże',
