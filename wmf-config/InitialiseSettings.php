@@ -3793,6 +3793,7 @@ return [
 	'fawiki' => true,
 	'frwiki' => true, // A/B test, see T405239
 	'jawiki' => true,
+	'loginwiki' => true, // T408428
 	'trwiki' => true,
 	'ptwiki' => true,
 	'zhwiki' => true,
