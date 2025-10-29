@@ -2053,7 +2053,7 @@ if ( $wmgEnableCaptcha ) {
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
 				],
 			];
-			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) {
+			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use ( $wmgEmergencyCaptcha ) {
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 					if ( \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action )
 						instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha ) {
