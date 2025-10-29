@@ -2157,6 +2157,7 @@ return [
 						'agent_client_platform_family',
 						'mediawiki_database',
 						'performer_id',
+						'performer_groups',
 						'performer_name',
 						'performer_pageview_id',
 						'performer_edit_count',
