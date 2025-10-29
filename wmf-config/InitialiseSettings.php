@@ -11845,7 +11845,7 @@ return [
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 4, // T405955: Enroll 1 in 4 sessions (25%)
+	'default' => 2, // T405955: Enroll 1 in 2 sessions (50%)
 ],
 
 'wmgUsePageViewInfo' => [
