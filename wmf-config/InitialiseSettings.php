@@ -837,6 +837,7 @@ return [
 	'hewikinews' => false,
 	'hiwiki' => '//hi.wikipedia.org/wiki/विकिपीडिया:अपलोड',
 	'hrwiki' => '//hr.wikipedia.org/wiki/Wikipedija:Upload',
+	'huwiki' => '//hu.wikipedia.org/wiki/Wikipédia:Fájl_feltöltése', // T408298
 	'huwikibooks' => false, // T74231
 	'incubatorwiki' => '//incubator.wikimedia.org/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiki' => '//is.wikipedia.org/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
