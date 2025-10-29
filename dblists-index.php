@@ -769,7 +769,7 @@ return [
 'rskwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'sul' ],
 'rswikimedia' => [ 'fishbowl', 'small', 'visualeditor-nondefault', 'group1' ],
 'ruewiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
-'ruwiki' => [ 'wikipedia', 'flaggedrevs', 'legacy-vector', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'tempaccounts_disabled' ],
+'ruwiki' => [ 'wikipedia', 'flaggedrevs', 'legacy-vector', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'wikilove', 'tempaccounts_disabled' ],
 'ruwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'ruwikimedia' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'translate', 'sul' ],
 'ruwikinews' => [ 'flaggedrevs', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
