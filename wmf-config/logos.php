@@ -582,6 +582,7 @@ return [
 	'mswikiquote' => '/static/images/project-logos/mswikiquote.png', // T404700
 	'nlwikiquote' => '/static/images/project-logos/nlwikiquote.png',
 	'nnwikiquote' => '/static/images/project-logos/nnwikiquote.png', // T29555
+	'pcmwikiquote' => '/static/images/project-logos/pcmwikiquote.png', // T408351
 	'plwikiquote' => '/static/images/project-logos/plwikiquote.png',
 	'rowikiquote' => '/static/images/project-logos/rowikiquote.png',
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote.png',
@@ -1417,6 +1418,7 @@ return [
 	'kowikiquote' => '/static/images/project-logos/kowikiquote-1.5x.png', // T389631
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-1.5x.png', // T150618
 	'mswikiquote' => '/static/images/project-logos/mswikiquote-1.5x.png', // T404700
+	'pcmwikiquote' => '/static/images/project-logos/pcmwikiquote-1.5x.png', // T408351
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-1.5x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-1.5x.png', // T197508
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote-1.5x.png', // T222065
@@ -2086,6 +2088,7 @@ return [
 	'kowikiquote' => '/static/images/project-logos/kowikiquote-2x.png', // T389631
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-2x.png', // T150618
 	'mswikiquote' => '/static/images/project-logos/mswikiquote-2x.png', // T404700
+	'pcmwikiquote' => '/static/images/project-logos/pcmwikiquote-2x.png', // T408351
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-2x.png', // T150618
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote-2x.png', // T197508
 	'sahwikiquote' => '/static/images/project-logos/sahwikiquote-2x.png', // T222065
@@ -4292,6 +4295,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-nn.svg',
 		'width' => 146,
 		'height' => 44,
+	],
+	'pcmwikiquote' => [ // T408351
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-pcm.svg',
+		'width' => 75,
+		'height' => 40,
 	],
 	'plwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-pl.svg',
