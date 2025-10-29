@@ -3800,6 +3800,13 @@ Wikisource:
         comment_2x: T391767
         commons_wordmark: 'File:Wikisource-wordmark-mad.svg'
         comment_wordmark: T391767
+    minwikisource:
+        commons: 'File:Wikisource-logo-min.svg'
+        comment: T408343
+        comment_1_5x: T408343
+        comment_2x: T408343
+        commons_wordmark: 'File:Wikisource-wordmark-min.svg'
+        comment_wordmark: T408343
     mkwikisource:
         comment: T54019
         no_1_5x: true

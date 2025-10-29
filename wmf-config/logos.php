@@ -751,6 +751,7 @@ return [
 	'liwikisource' => '/static/images/project-logos/liwikisource.png', // T54019
 	'ltwikisource' => '/static/images/project-logos/ltwikisource.png', // T54019
 	'madwikisource' => '/static/images/project-logos/madwikisource.png', // T391767
+	'minwikisource' => '/static/images/project-logos/minwikisource.png', // T408343
 	'mkwikisource' => '/static/images/project-logos/mkwikisource.png', // T54019
 	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
 	'mrwikisource' => '/static/images/project-logos/mrwikisource.png', // T103655
@@ -1501,6 +1502,7 @@ return [
 	'kawikisource' => '/static/images/project-logos/kawikisource-1.5x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-1.5x.png', // T382802
 	'madwikisource' => '/static/images/project-logos/madwikisource-1.5x.png', // T391767
+	'minwikisource' => '/static/images/project-logos/minwikisource-1.5x.png', // T408343
 	'mswikisource' => '/static/images/project-logos/mswikisource-1.5x.png',
 	'mywikisource' => '/static/images/project-logos/mywikisource-1.5x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
@@ -2171,6 +2173,7 @@ return [
 	'kawikisource' => '/static/images/project-logos/kawikisource-2x.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource-2x.png', // T382802
 	'madwikisource' => '/static/images/project-logos/madwikisource-2x.png', // T391767
+	'minwikisource' => '/static/images/project-logos/minwikisource-2x.png', // T408343
 	'mswikisource' => '/static/images/project-logos/mswikisource-2x.png',
 	'mywikisource' => '/static/images/project-logos/mywikisource-2x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
@@ -5005,6 +5008,11 @@ return [
 	'madwikisource' => [ // T391767
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-mad.svg',
 		'width' => 130,
+		'height' => 20,
+	],
+	'minwikisource' => [ // T408343
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-min.svg',
+		'width' => 124,
 		'height' => 20,
 	],
 	'mkwikisource' => [
