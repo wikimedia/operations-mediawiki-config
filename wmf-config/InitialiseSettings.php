@@ -9075,16 +9075,6 @@ return [
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
 	'wikifunctionswiki' => 'interlanguage',
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => 'interlanguage',
-	'arbcom_dewiki' => 'interlanguage',
-	'arbcom_enwiki' => 'interlanguage',
-	'arbcom_fiwiki' => 'interlanguage',
-	'arbcom_nlwiki' => 'interlanguage',
-	'arbcom_ruwiki' => 'interlanguage',
-	'sysop_itwiki' => 'interlanguage',
-	'wg_enwiki' => 'interlanguage',
 ],
 
 // Whether ime is enabled *by default*
