@@ -598,14 +598,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgMFAmcOutreach' => [
-			'default' => true
-		],
-
-		'wgMFAmcOutreachMinEditCount' => [
-			'default' => 0
-		],
-
 		'wgMFFallbackEditor' => [
 			'default' => 'visual',
 		],

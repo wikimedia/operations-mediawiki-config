@@ -7430,10 +7430,6 @@ return [
 	'default' => true,
 ],
 
-'wgMFAmcOutreach' => [
-	// Temporarily disabled in T351669 until T351362 is addressed.
-	'default' => false,
-],
 'wgMFEnableWikidataDescriptions' => [
 	'default' => [
 		'base' => true,
