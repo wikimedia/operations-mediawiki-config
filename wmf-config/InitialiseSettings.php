@@ -12666,10 +12666,7 @@ return [
 
 // T403798
 'wgEnableChangesListQueryPartitioning' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-	'enwiki' => true,
-	'commonswiki' => true,
+	'default' => true,
 ],
 
 // T390236
