@@ -12663,6 +12663,11 @@ return [
 	'enwiki' => true,
 ],
 
+// T390236
+'wgGeoCrumbsUseParserOutputFallback' => [
+	'default' => false,
+],
+
 // T397258
 'wmgEnableWikidataIconsInClientWatchlist' => [
 	'default' => false,
