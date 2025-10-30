@@ -11547,7 +11547,7 @@ return [
 	'default' => 'TYPE_ALL',
 	'wikitech' => 'TYPE_ALL', // T192361 T371537
 	'private' => 'TYPE_JOB|TYPE_EVENT',
-	'loginwiki' => 'TYPE_JOB|TYPE_PURGE',
+	'loginwiki' => 'TYPE_JOB|TYPE_PURGE|TYPE_EVENT',
 	'votewiki' => 'TYPE_JOB|TYPE_PURGE',
 ],
 
