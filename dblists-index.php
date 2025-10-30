@@ -243,7 +243,7 @@ return [
 'elwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
 'elwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'emlwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'growthexperiments', 'sul' ],
-'enwiki' => [ 'wikipedia', 'flaggedrevs', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'wikilove', 'tempaccounts_disabled', 'checkuser-suggested-investigations' ],
+'enwiki' => [ 'wikipedia', 'flaggedrevs', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'enwikibooks' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'enwikinews' => [ 'flow', 'flaggedrevs', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul', 'tempaccounts_disabled' ],
 'enwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul' ],
