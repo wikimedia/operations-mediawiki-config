@@ -12664,6 +12664,12 @@ return [
 	'enwiki' => true,
 ],
 
+// T403798
+'wgEnableChangesListQueryPartitioning' => [
+	'default' => false,
+	'mediawikiwiki' => true,
+],
+
 // T390236
 'wgGeoCrumbsUseParserOutputFallback' => [
 	'default' => false,
