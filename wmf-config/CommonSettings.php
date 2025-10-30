@@ -2009,8 +2009,10 @@ if ( $wmgEnableCaptcha ) {
 		// SiteKey dedicated to Special:CreateAccount. Identical to the default wgHCaptchaSiteKey,
 		// but named differently here for clarity when used further below.
 		$wgHCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
-		// SiteKey dedicated to form and API edits. Mobile apps will use a different SiteKey.
+		// SiteKey dedicated to form and API edits in 99.9% passive mode. Mobile apps will use a different SiteKey.
 		$wgHCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
+		// SiteKey dedicated to form and API edits in 100% passive mode.
+		$wgHCaptchaEdit100PercentPassiveSiteKey = 'ccd26dec-6c86-4034-a704-e402435cd53c';
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
@@ -2040,6 +2042,10 @@ if ( $wmgEnableCaptcha ) {
 
 		// T405586 - Editing trial
 		if ( $wmgEnableHCaptchaEditing ) {
+			if ( $wgDBname === 'test2wiki' ) {
+				// For test2wiki use the 100% passive mode SiteKey
+				$wgHCaptchaEditSiteKey = $wgHCaptchaEdit100PercentPassiveSiteKey;
+			}
 			$wgCaptchaTriggers['edit'] = [
 				'trigger' => true,
 				'class' => 'HCaptcha',

@@ -3801,6 +3801,7 @@ return [
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
