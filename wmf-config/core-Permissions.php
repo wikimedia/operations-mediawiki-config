@@ -3333,6 +3333,11 @@ return [
 			'securepoll-edit-poll' => true,
 			'securepoll-view-voter-pii' => true,
 		],
+		'checkuser' => [
+			'securepoll-create-poll' => true, // T408902
+			'securepoll-edit-poll' => true, // T408902
+			'securepoll-view-voter-pii' => true, // T408902
+		],
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
