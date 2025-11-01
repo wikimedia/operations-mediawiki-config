@@ -147,6 +147,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T231750
 		break;
+	case 'enwikivoyage':
+		$wgAbuseFilterActions['block'] = true; // T408885
+		break;
 	case 'eswiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		$wgGroupPermissions['user']['abusefilter-log'] = true;
