@@ -12105,7 +12105,11 @@ return [
 		],
 		'wmf-restbase' => [
 			'url' => '/api/rest_v1/?spec',
-			'name' => 'Wikimedia RESTbase APIs'
+			'name' => 'Wikimedia RESTbase APIs (local)'
+		],
+		'wmf-restbase-global' => [
+			'url' => 'https://www.wikimedia.org/api/rest_v1/?spec',
+			'name' => 'Wikimedia RESTbase APIs (global)'
 		]
 	]
 ],
