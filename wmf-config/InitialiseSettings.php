@@ -1974,7 +1974,6 @@ return [
 'wgAutoConfirmAge' => [
 	'default' => 4 * 3600 * 24, // 4 days to pass isNewbie()
 	'fishbowl' => 0, // No need
-
 	'cawiki' => 5 * 86400, // T354425
 	# http://de.wikibooks.org/wiki/Wikibooks:Meinungsbilder/_Verschiebefunktion_f%C3%BCr_neue_Nutzer
 	# TS 2007-02-06
@@ -1990,6 +1989,16 @@ return [
 	'zhwikinews' => 7 * 3600 * 24, // T259869
 	'zhwikiquote' => 7 * 86400, // T189289
 	'zhwiktionary' => 7 * 86400, // T187018
+],
+
+'wgTorAutoConfirmAge' => [
+	'default' => 90 * 86400,
+	'enwiki' => 4 * 86400 // T409022
+],
+
+'wgTorAutoConfirmCount' => [
+	'default' => 100,
+	'enwiki' => 10  // T409022
 ],
 
 'wgAutoConfirmCount' => [
