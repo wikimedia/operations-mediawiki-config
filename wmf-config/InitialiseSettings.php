@@ -5369,10 +5369,12 @@ return [
 	// Preserve access to LQT namespaces after removing the extension
 	'default' => false,
 	'fiwikimedia' => true,
+	'huwiki' => true, // T406026
 	'mediawikiwiki' => true,
 	'officewiki' => true, // replaced with Flow 2014-11-25
 	'sewikimedia' => true, // T106302, T114277
 	'strategywiki' => true,
+	'svwikisource' => true, // T406227
 	'testwiki' => true,
 	'test2wiki' => true,
 	'wikimania2010wiki' => true,
