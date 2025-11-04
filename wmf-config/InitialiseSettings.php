@@ -8269,10 +8269,6 @@ return [
 	'enwiki' => 'default',
 ],
 
-'wgDiscussionToolsAutoTopicSubEditor' => [
-	'default' => 'discussiontoolsapi', // T284836
-],
-
 'wgDiscussionToolsShowFeedbackLinks' => [
 	'default' => true, // T322494
 ],
