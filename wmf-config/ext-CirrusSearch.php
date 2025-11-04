@@ -656,24 +656,11 @@ return [
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		'T404858_default_sort' => [
-			'buckets' => [
-				'control' => [ 'trigger' => 'control' ],
-				'default_sort' => [
-					'trigger' => 'dsort',
-					'globals' => [ 'wgCirrusSearchCompletionSuggesterUseAltIndexId' => 0 ]
-				]
-			]
-		]
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchActiveTest' => [
 	'default' => null,
-	'enwiki' => 'T404858_default_sort',
-	'hewiki' => 'T404858_default_sort',
-	'frwiki' => 'T404858_default_sort',
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
@@ -1200,32 +1187,5 @@ return [
 ],
 'wgCirrusSearchAlternativeIndices' => [
 	'default' => [],
-	'enwiki' => [
-		'completion' => [ [
-			'index_id' => 0,
-			'use' => true,
-			'config_overrides' => [
-				'CirrusSearchCompletionSuggesterUseDefaultSort' => true
-			]
-		] ]
-	],
-	'frwiki' => [
-		'completion' => [ [
-			'index_id' => 0,
-			'use' => true,
-			'config_overrides' => [
-				'CirrusSearchCompletionSuggesterUseDefaultSort' => true
-			]
-		] ]
-	],
-	'hewiki' => [
-		'completion' => [ [
-			'index_id' => 0,
-			'use' => true,
-			'config_overrides' => [
-				'CirrusSearchCompletionSuggesterUseDefaultSort' => true
-			]
-		] ]
-	],
 ],
 ];
