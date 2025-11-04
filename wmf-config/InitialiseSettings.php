@@ -12359,11 +12359,6 @@ return [
 	'wikifunctionswiki' => false, // T409760
 ],
 
-// T397476
-'wgCampaignEventsCountrySchemaMigrationStage' => [
-	'default' => MIGRATION_NEW,
-],
-
 'wgCampaignEventsEnableContributionTracking' => [
 	'default' => true, // T404904
 ],
