@@ -2631,19 +2631,10 @@ return [
 
 'wgVectorPromoteAddTopic' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except 12 wikis (T392121)
+	// Everywhere except enwiki, svwiki and ruwiki (T379264)
 	'default' => true,
-	'cawiki' => false,
-	'dawiki' => false,
-	'elwiki' => false,
 	'enwiki' => false,
-	'euwiki' => false,
-	'fiwiki' => false,
-	'lvwiki' => false,
-	'nowiki' => false,
-	'plwiki' => false,
 	'ruwiki' => false,
-	'simplewiki' => false,
 	'svwiki' => false,
 ],
 
@@ -8225,55 +8216,28 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	// Sync with sub-features below and wgVectorPromoteAddTopic
-	// Everywhere except 12 wikis (T392121)
+	// Everywhere except enwiki, svwiki and ruwiki (T379264)
 	'default' => 'available',
-	'cawiki' => 'default',
-	'dawiki' => 'default',
-	'elwiki' => 'default',
 	'enwiki' => 'default',
-	'euwiki' => 'default',
-	'fiwiki' => 'default',
-	'lvwiki' => 'default',
-	'nowiki' => 'default',
-	'plwiki' => 'default',
 	'ruwiki' => 'default',
-	'simplewiki' => 'default',
 	'svwiki' => 'default',
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except 12 wikis (T392121)
+	// Everywhere except enwiki, svwiki and ruwiki (T379264)
 	'default' => 'available',
-	'cawiki' => 'default',
-	'dawiki' => 'default',
-	'elwiki' => 'default',
 	'enwiki' => 'default',
-	'euwiki' => 'default',
-	'fiwiki' => 'default',
-	'lvwiki' => 'default',
-	'nowiki' => 'default',
-	'plwiki' => 'default',
 	'ruwiki' => 'default',
-	'simplewiki' => 'default',
 	'svwiki' => 'default',
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except 12 wikis (T392121)
+	// Everywhere except enwiki, svwiki and ruwiki (T379264)
 	'default' => 'available',
-	'cawiki' => 'default',
-	'dawiki' => 'default',
-	'elwiki' => 'default',
 	'enwiki' => 'default',
-	'euwiki' => 'default',
-	'fiwiki' => 'default',
-	'lvwiki' => 'default',
-	'nowiki' => 'default',
-	'plwiki' => 'default',
 	'ruwiki' => 'default',
-	'simplewiki' => 'default',
 	'svwiki' => 'default',
 ],
 
