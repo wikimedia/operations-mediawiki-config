@@ -526,7 +526,7 @@ return [
 'kywikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'kywikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'kywiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'labswiki' => [ 'special', 'medium', 'group1', 'wikitech', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul', 'wikilove' ],
+'labswiki' => [ 'special', 'vector-2022-language-links', 'medium', 'group1', 'wikitech', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul', 'wikilove' ],
 'ladwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'lawiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'modern-mainpage', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul' ],
 'lawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
