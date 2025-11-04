@@ -13,9 +13,7 @@ $page = MediaWikiServices::getInstance()
 
 header( 'Content-Type: text/plain; charset=utf-8' );
 header( 'X-Article-ID: ' . $page->getId() );
-header( 'X-Language: ' . $lang );
-header( 'X-Site: ' . $site );
-header( 'Vary: X-Subdomain' );
+header( 'X-Wiki-ID: ' . $wgDBname );
 
 $robotsfile = MEDIAWIKI_DEPLOYMENT_DIR . '/robots.txt';
 $robots = fopen( $robotsfile, 'rb' );
@@ -25,15 +23,13 @@ $extratext = '';
 
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 
-$dontIndex = "User-agent: *\nDisallow: /\n";
-
 if ( $page->exists() ) {
 	$content = $page->getContent();
 	$extratext = ( $content instanceof TextContent ) ? $content->getText() : '';
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
 } elseif ( $wmgRealm == 'labs' ) {
-	echo $dontIndex;
+	echo "User-agent: *\nDisallow: /\n";
 }
 
 $lastmod = gmdate( 'D, j M Y H:i:s', $mtime ) . ' GMT';
