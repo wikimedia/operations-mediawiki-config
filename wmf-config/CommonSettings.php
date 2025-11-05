@@ -2729,6 +2729,7 @@ if ( $wmgUseEmailAuth ) {
 
 	// Zendesk configuration for account recovery
 	$wgEmailAuthZendeskUrl = 'https://wikimediats.zendesk.com';
+	$wgEmailAuthZendeskHTTPProxy = $wmgLocalServices['urldownloader'];
 	$wgEmailAuthZendeskSubjectLine = 'Request to recover my Wikimedia account access';
 	$wgEmailAuthZendeskTicketFormId = 5731866037911;
 	// $wgEmailAuthZendeskToken and $wgEmailAuthZendeskEmail set in PrivateSettings.php
