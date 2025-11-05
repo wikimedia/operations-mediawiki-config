@@ -483,6 +483,10 @@ return [
 // Inject defaultsort in autocomplete suggestions served by the completion suggester
 'wgCirrusSearchCompletionSuggesterUseDefaultSort' => [
 	'default' => false,
+	// T404858
+	'enwiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
 	'mnwiki' => true, // T327878
 ],
 
