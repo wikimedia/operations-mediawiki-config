@@ -6,6 +6,18 @@
 
 use CirrusSearch\LanguageDetector\TextCat;
 
+// set a var here to avoid having to duplicate these settings on many wikis
+// (should be temporary the time needed to run an A/B test)
+$wmgCirrusSearchAlternativeIndices = [
+	'completion' => [ [
+		'index_id' => 0,
+		'use' => false,
+		'config_overrides' => [
+			'CirrusSearchCompletionSuggesterUseDefaultSort' => true
+		]
+	] ]
+];
+
 return [
 
 'wgCirrusSearchDefaultCluster' => [
@@ -1201,5 +1213,25 @@ return [
 ],
 'wgCirrusSearchAlternativeIndices' => [
 	'default' => [],
+	'dewiki' => $wmgCirrusSearchAlternativeIndices,
+	'eswiki' => $wmgCirrusSearchAlternativeIndices,
+	'plwiki' => $wmgCirrusSearchAlternativeIndices,
+	'fiwiki' => $wmgCirrusSearchAlternativeIndices,
+	'nowiki' => $wmgCirrusSearchAlternativeIndices,
+	'cswiki' => $wmgCirrusSearchAlternativeIndices,
+	'dawiki' => $wmgCirrusSearchAlternativeIndices,
+	'simplewiki' => $wmgCirrusSearchAlternativeIndices,
+	'bgwiki' => $wmgCirrusSearchAlternativeIndices,
+	'etwiki' => $wmgCirrusSearchAlternativeIndices,
+	'glwiki' => $wmgCirrusSearchAlternativeIndices,
+	'afwiki' => $wmgCirrusSearchAlternativeIndices,
+	'slwiki' => $wmgCirrusSearchAlternativeIndices,
+	'lvwiki' => $wmgCirrusSearchAlternativeIndices,
+	'vowiki' => $wmgCirrusSearchAlternativeIndices,
+	'fywiki' => $wmgCirrusSearchAlternativeIndices,
+	'gvwiki' => $wmgCirrusSearchAlternativeIndices,
+	'mtwiki' => $wmgCirrusSearchAlternativeIndices,
+	'biwiki' => $wmgCirrusSearchAlternativeIndices,
+	'iglwiki' => $wmgCirrusSearchAlternativeIndices,
 ],
 ];
