@@ -260,11 +260,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpMobileEditingUI ) ) {
 		$wgWBRepoSettings['tmpMobileEditingUI'] = $wmgWikibaseTmpMobileEditingUI;
 	}
-
-	// Enable MEX / wbui2025 beta feature if set in config T407737 (T394704)
-	if ( isset( $wmgWikibaseTmpMobileEditingUIBetaFeature ) ) {
-		$wgWBRepoSettings['tmpEnableMobileEditingUIBetaFeature'] = $wmgWikibaseTmpMobileEditingUIBetaFeature;
-	}
 }
 
 if ( $wmgUseWikibaseClient ) {
