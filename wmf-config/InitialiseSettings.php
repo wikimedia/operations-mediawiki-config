@@ -5724,7 +5724,7 @@ return [
 // date of the last major change, **6 months after which** is the nominal
 // cut-off, when the feature should be un-deployed.
 //
-// DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
+// DO NOT add entries here without OK from James Forrester.
 'wgBetaFeaturesAllowList' => [
 	'default' => [
 		'beta-feature-flow-user-talk-page', // [Growth_] On-going (special permission) – Flow opt-in
