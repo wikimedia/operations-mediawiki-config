@@ -6586,7 +6586,6 @@ return [
 	// T366381 added hiwiki, bnwiki, idwiki
 	// T385205 added dewiki
 	'wikipedia' => true,
-	'enwiki' => false,
 
 	// TODO: consider cleaning up (T183549)
 	'arbcom_cswiki' => true,
@@ -6605,6 +6604,10 @@ return [
 
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
+	// T406134 addReference check a/b test
+	// Note: to disable this test without enabling addReference for
+	// everyone would require disabling EditCheck for enwiki above.
+	'enwiki' => 'addReference',
 	// T389231 tone check a/b test
 	'frwiki' => 'tone',
 	'jawiki' => 'tone',
