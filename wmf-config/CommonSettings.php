@@ -2726,6 +2726,38 @@ if ( $wmgUseElectronPdfService ) {
 
 if ( $wmgUseEmailAuth ) {
 	wfLoadExtension( 'EmailAuth' );
+
+	// Zendesk configuration for account recovery
+	$wgEmailAuthZendeskUrl = 'https://wikimediats.zendesk.com';
+	$wgEmailAuthZendeskSubjectLine = 'Request to recover my Wikimedia account access';
+	$wgEmailAuthZendeskTicketFormId = 5731866037911;
+	// $wgEmailAuthZendeskToken and $wgEmailAuthZendeskEmail set in PrivateSettings.php
+
+	// Zendesk custom fields for account recovery tickets
+	$wgEmailAuthZendeskCustomFields = [
+		// CS - Report type field (required for this form)
+		[
+			'id' => 33505728550551,
+			'value' => 'regain_access_to_a_wikimedia_account_'
+		],
+		// Report type field (always set for account recovery)
+		[
+			'id' => 360056885773,
+			'value' => 'community_support_compromised'
+		],
+		// Email registered with account field (will be populated dynamically)
+		[
+			'id' => 33506524672919,
+			'value' => '{registered_email}'
+		],
+		// Username field (will be populated dynamically if provided)
+		[
+			'id' => 21616048881047,
+			'value' => '{username}'
+		]
+	];
+
+	$wgEmailAuthZendeskTags = [ 'incident_mar_2025' ];
 }
 
 wfLoadExtension( 'AdvancedSearch' );

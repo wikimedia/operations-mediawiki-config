@@ -4924,6 +4924,11 @@ return [
 	'default' => true, // T390437
 ],
 
+'wgEmailAuthEnableAccountRecovery' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgWikimediaEventsEmailAuthEnforce' => [
 	'default' => true,
 ],
