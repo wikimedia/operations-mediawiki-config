@@ -2507,5 +2507,8 @@ function wmfGetOverrideSettings() {
 		'wmgEnableWikidataIconsInClientWatchlist' => [
 			'default' => true,
 		],
+		'wgOAuth2UsePrefixedSub' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()

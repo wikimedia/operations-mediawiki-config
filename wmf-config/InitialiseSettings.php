@@ -4805,6 +4805,10 @@ return [
 	'private' => [],
 ],
 
+'wgOAuth2UsePrefixedSub' => [
+	'default' => false,
+],
+
 'wmgUseOAuthRateLimiter' => [
 	'metawiki' => true,
 	'default' => false,
