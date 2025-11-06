@@ -143,11 +143,11 @@ EOT
 	$wikilessScripts = [
 		'maintenance/purgeList.php',
 		'maintenance/purgeMessageBlobStore.php',
-		'extensions/WikimediaMaintenance/dumpInterwiki.php',
-		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
-		'extensions/WikimediaMaintenance/rebuildInterwiki.php',
-		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
-		'extensions/WikimediaMaintenance/purgeUrls.php',
+		'extensions/WikimediaMaintenance/maintenance/dumpInterwiki.php',
+		'extensions/WikimediaMaintenance/maintenance/getJobQueueLengths.php',
+		'extensions/WikimediaMaintenance/maintenance/rebuildInterwiki.php',
+		'extensions/WikimediaMaintenance/maintenance/filebackend/setZoneAccess.php',
+		'extensions/WikimediaMaintenance/maintenance/purgeUrls.php',
 		'maintenance/mctest.php',
 		'maintenance/mcc.php',
 	];
@@ -161,9 +161,9 @@ EOT
 		'maintenance/storage/recompressTracked.php',
 		'maintenance/storage/testCompression.php',
 		'maintenance/storage/trackBlobs.php',
-		'extensions/WikimediaMaintenance/listDatabases.php',
-		'extensions/WikimediaMaintenance/sanityCheck.php',
-		'extensions/WikimediaMaintenance/storage/testRctComplete.php',
+		'extensions/WikimediaMaintenance/maintenance/listDatabases.php',
+		'extensions/WikimediaMaintenance/maintenance/sanityCheck.php',
+		'extensions/WikimediaMaintenance/maintenance/storage/testRctComplete.php',
 	];
 
 	$scriptArgs = array_slice( $argv, 2 );

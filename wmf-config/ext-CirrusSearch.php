@@ -170,7 +170,7 @@ return [
 ],
 
 // Define overridden interwiki prefixes
-// Mostly to match what's done in WikimediaMaintenance/dumpInterwiki.php ( see $prefixRewrites )
+// Mostly to match what's done in WikimediaMaintenance/maintenance/dumpInterwiki.php ( see $prefixRewrites )
 'wgCirrusSearchInterwikiPrefixOverrides' => [
 	'default' => [],
 	'svwiki' => [ 's' => 'src' ],
