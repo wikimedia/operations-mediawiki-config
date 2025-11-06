@@ -4813,7 +4813,7 @@ return [
 ],
 
 'wgOAuth2UsePrefixedSub' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wmgUseOAuthRateLimiter' => [
