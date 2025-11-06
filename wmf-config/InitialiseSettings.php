@@ -4925,8 +4925,7 @@ return [
 ],
 
 'wgEmailAuthEnableAccountRecovery' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgWikimediaEventsEmailAuthEnforce' => [
