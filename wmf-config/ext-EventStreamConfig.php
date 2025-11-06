@@ -1961,30 +1961,6 @@ return [
 			],
 		],
 
-		// Wikistories streams
-		'mediawiki.wikistories_consumption_event' => [
-			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-		],
-		'mediawiki.wikistories_contribution_event' => [
-			'schema_title' => 'analytics/mediawiki/wikistories_contribution_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-		],
-
 		// GeoIP mapping experiments (T332024)
 		'development.network.probe' => [
 			'schema_title' => 'development/network/probe',

@@ -73,8 +73,6 @@ return [
 		'mediawiki.ipinfo_interaction',
 		'mediawiki.ip_reputation.score',
 		'mediawiki.editgrowthconfig',
-		'mediawiki.wikistories_consumption_event',
-		'mediawiki.wikistories_contribution_event',
 		'mediawiki.accountcreation_block',
 		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
