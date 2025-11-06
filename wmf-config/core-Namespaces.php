@@ -1700,6 +1700,12 @@ return [
 		'Author' => 102, // T165813
 		'Author_talk' => 103, // T165813
 	],
+	'+tcywiki' => [
+		'Portal' => 100, // T409329
+		'Portal_talk' => 101, // T409329
+		'Draft' => 118, // T409329
+		'Draft_talk' => 119, // T409329
+	],
 	'+tcywikisource' => [ // T378555
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -3321,6 +3327,12 @@ return [
 		101 => 'வலைவாசல்_பேச்சு',
 		118 => 'வரைவு', // T329248
 		119 => 'வரைவு_பேச்சு', // T329248
+	],
+	'tcywiki' => [
+		100 => 'ತಡ್ಯ', // portal, T409329
+		101 => 'ತಡ್ಯ_ಪಾತೆರ', // portal_talk, T409329
+		118 => 'ಕರಡು', // draft, T409329
+		119 => 'ಕರಡು_ಪಾತೆರ', // draft_talk, T409329
 	],
 	'tewiki' => [ 100 => 'వేదిక', 101 => 'వేదిక_చర్చ', ],
 	'tgwiki' => [
@@ -5158,6 +5170,10 @@ return [
 		118 => 'noindex,nofollow', // T329248
 		119 => 'noindex,nofollow', // T329248
 	],
+	'tcywiki' => [
+		118 => 'noindex,nofollow', // draft, T409329
+		119 => 'noindex,nofollow', // draft_talk, T409329
+	],
 	'thwiki' => [
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow',
@@ -5636,6 +5652,7 @@ return [
 	'kywiki' => [ 118, 119 ], // draft and draft talk - T385593
 	'mlwiki' => [ 118, 119 ], // draft and draft talk - T362653
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
+	'tcywiki' => [ 118, 119 ], // draft and draft talk - T409329
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
 ],
