@@ -4976,6 +4976,10 @@ return [
 		NS_USER => 'noindex,nofollow', // T371470
 		NS_USER_TALK => 'noindex,nofollow', // T371470
 	],
+	'arywiki' => [
+		118 => 'noindex,nofollow', // Draft
+		119 => 'noindex,nofollow', // Draft talk
+	],
 	'azwiki' => [
 		118 => 'noindex,nofollow', // Draft - T299332
 		119 => 'noindex,nofollow',
@@ -5036,6 +5040,11 @@ return [
 	],
 	'enwikiquote' => [
 		118 => 'noindex,nofollow', // draft, T355195
+		119 => 'noindex,nofollow',
+	],
+	'enwikiversity' => [
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
 	],
 	'eswiki' => [ // T233562
 		NS_TALK => 'noindex,follow',
@@ -5051,6 +5060,10 @@ return [
 		103 => 'noindex,follow',
 		105 => 'noindex,follow',
 		829 => 'noindex,follow',
+	],
+	'etwiki' => [
+		102 => 'noindex,nofollow',
+		103 => 'noindex,nofollow',
 	],
 	'fawiki' => [
 		NS_USER => 'noindex,nofollow', // T299363
@@ -5091,6 +5104,10 @@ return [
 		113 => 'noindex,nofollow', // שיחת_מפתח
 		116 => 'noindex,nofollow', // מקור
 		117 => 'noindex,nofollow', // שיחת_מקור
+	],
+	'hiwikiversity' => [
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
 	],
 	'hrwiki' => [
 		NS_USER => 'noindex,follow', // T284384
@@ -5154,6 +5171,10 @@ return [
 		118 => 'noindex,nofollow', // Draft
 		119 => 'noindex,nofollow', // Draft_talk
 	],
+	'newiki' => [
+		118 => 'noindex,nofollow', // Draft
+		119 => 'noindex,nofollow', // Draft_talk
+	],
 	'nlwiki' => [
 		NS_USER => 'noindex,follow', // T245787
 		NS_USER_TALK => 'noindex,follow', // T245787
@@ -5175,6 +5196,10 @@ return [
 		118 => 'noindex,nofollow', // draft, T346589
 		119 => 'noindex,nofollow', // draft talk, T346589
 	],
+	'slwiki' => [
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
+	],
 	'srwiki' => [
 		NS_USER => 'noindex,follow', // T248860
 		NS_USER_TALK => 'noindex,follow', // T248860
@@ -5184,6 +5209,10 @@ return [
 	'tawiki' => [
 		118 => 'noindex,nofollow', // T329248
 		119 => 'noindex,nofollow', // T329248
+	],
+	'testwiki' => [
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
 	],
 	'tcywiki' => [
 		118 => 'noindex,nofollow', // draft, T409329
@@ -5278,6 +5307,10 @@ return [
 	],
 	'ukwiki' => [
 		NS_USER => 'noindex,follow', // T98926
+	],
+	'urwiki' => [
+		118 => 'noindex,nofollow',
+		119 => 'noindex,nofollow',
 	],
 	'wikidatawiki' => [ // T181525
 		NS_USER => 'noindex,follow',
