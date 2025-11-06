@@ -318,9 +318,9 @@ function wmfGetOverrideSettings() {
 						'rate' => 0.5,
 					],
 				],
-				// T401308
+				// T402707
 				[
-					'name' => 'growthexperiments-get-started-notification',
+					'name' => 'growthexperiments-revise-tone',
 					'groups' => [
 						'control',
 						'treatment',
