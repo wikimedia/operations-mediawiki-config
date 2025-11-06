@@ -2669,9 +2669,9 @@ if ( $wgDBname === 'enwiki' ) {
 if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 	// T59569, T105118
 	//
-	// If it's an anonymous user creating a page in the English and Persian Wikipedia
+	// If it's an anonymous or temporary account user creating a page in the English and Persian Wikipedia
 	// Draft namespace, tell TitleQuickPermissions to abort the normal
-	// checkQuickPermissions checks.  This lets anonymous users create a page in this
+	// checkQuickPermissions checks. This lets anonymous/temp account users create a page in this
 	// namespace, even though they don't have the general 'createpage' right.
 	//
 	// It does not affect other checks from getUserPermissionsErrorsInternal
@@ -2679,7 +2679,7 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 	//
 	// Returning true tells it to proceed as normal in other cases.
 	$wgHooks['TitleQuickPermissions'][] = static function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
-		return ( $action !== 'create' || $title->getNamespace() !== 118 || !$user->isAnon() );
+		return ( $action !== 'create' || $title->getNamespace() !== 118 || $user->isNamed() );
 	};
 }
 
