@@ -2782,24 +2782,26 @@ return [
 		101 => 'Razgovor_o_portalu', // T39226
 	],
 	'cawiki' => [
-		100 => 'Portal', 101 => 'Portal_Discussió',
-		102 => 'Viquiprojecte', 103 => 'Viquiprojecte_Discussió',
+		100 => 'Portal',
+		101 => 'Portal_Discussió',
+		102 => 'Viquiprojecte', // Wikiproject
+		103 => 'Viquiprojecte_Discussió',
 	],
 	'cewiki' => [
 		NS_PROJECT_TALK => 'Википедин_дийцаре', // T49574
-		100 => 'Ков',
+		100 => 'Ков', // Portal
 		101 => 'Ков_дийцаре',
 	],
 	'ckbwiki' => [
-		100 => 'دەروازە',
+		100 => 'دەروازە', // Portal
 		101 => 'لێدوانی_دەروازە',
-		102 => 'ویکیپرۆژە', // T54665
+		102 => 'ویکیپرۆژە', // Wikiproject - T54665
 		103 => 'لێدوانی_ویکیپرۆژە', // T54665
-		118 => 'ڕەشنووس', // T332470
+		118 => 'ڕەشنووس', // Draft - T332470
 		119 => 'لێدوانی_ڕەشنووس', // T332470
 	],
 	'crhwiki' => [
-		104 => 'R', // T408284
+		104 => 'R', // Romanian variant - T408284
 		105 => 'R_talk', // T408284
 	],
 	'cswiki' => [
@@ -2807,11 +2809,11 @@ return [
 		NS_USER_TALK => 'Diskuse_s_wikipedistou', # language default set back in wgNamespaceAliases
 		100 => 'Portál',
 		101 => 'Diskuse_k_portálu',
-		102 => 'Rejstřík',
+		102 => 'Rejstřík', // Index
 		103 => 'Diskuse_k_rejstříku',
 	],
 	'cywiki' => [
-		100 => 'Porth', // T29684
+		100 => 'Porth', // Portal - T29684
 		101 => 'Sgwrs_Porth', // T29684
 	],
 	'dawiki' => [
@@ -2824,9 +2826,9 @@ return [
 		103 => 'Artikeldatadiskussion'
 	],
 	'+dagwiki' => [
-		104 => 'Salima', // T289911
+		104 => 'Salima', // traditional stories - T289911
 		105 => 'Salima_yɛltɔɣa',
-		126 => 'MOS', // T363538
+		126 => 'MOS', // Manual of style - T363538
 		127 => 'MOS_yɛltɔɣa', // T363538
 	],
 	'dewiki' => [
@@ -2839,11 +2841,11 @@ return [
 	],
 	'dvwiki' => [
 		NS_PROJECT_TALK => 'ވިކިޕީޑިއާ_ޚިޔާލު', // T50075
-		100 => 'ނެރު',
+		100 => 'ނެރު', // Portal
 		101 => 'ނެރު_ޚިޔާލު',
 	],
 	'elwiki' => [
-		100 => 'Πύλη',
+		100 => 'Πύλη', // Portal
 		101 => 'Συζήτηση_πύλης'
 	],
 	'enwiki' => [
@@ -2868,7 +2870,7 @@ return [
 		101 => 'Portal_discusión',
 		102 => 'Wikiproyecto',
 		103 => 'Wikiproyecto_discusión',
-		104 => 'Anexo', // T11304
+		104 => 'Anexo', // Appendix - T11304
 		105 => 'Anexo_discusión',
 	],
 	'etwiki' => [
@@ -2882,53 +2884,57 @@ return [
 		101 => 'Atari_eztabaida',
 		102 => 'Wikiproiektu',
 		103 => 'Wikiproiektu_eztabaida',
-		104 => 'Txikipedia', // T191396
+		104 => 'Txikipedia', // for children - T191396
 		105 => 'Txikipedia_eztabaida', // T191396
 		106 => 'Zerrenda', // T209834 - List
 		107 => 'Zerrenda_eztabaida', // T209834 - List talk
 	],
 	'fawiki' => [
-		100 => 'درگاه',
+		100 => 'درگاه', // Portal
 		101 => 'بحث_درگاه',
 		# 102 => 'کتاب', // Book - T302957
 		# 103 => 'بحث_کتاب', // Book talk - T302957
-		118 => 'پیش‌نویس', // T92760
+		118 => 'پیش‌نویس', // Draft - T92760
 		119 => 'بحث_پیش‌نویس', // T92760
 	],
 	'fiwiki' => [
-		100 => 'Teemasivu',
+		100 => 'Teemasivu', // Portal
 		101 => 'Keskustelu_teemasivusta',
 		102 => 'Metasivu',
 		103 => 'Keskustelu_metasivusta',
-		104 => 'Kirja',
+		104 => 'Kirja', // Book
 		105 => 'Keskustelu_kirjasta',
 		106 => 'Wikiprojekti', // T156621
 		107 => 'Keskustelu_wikiprojektista', // T156621
 	],
 	'frrwiki' => [ // Per T40023
-		102 => 'Seite',
+		102 => 'Seite', // Page (ProofreadPage)
 		103 => 'Seite_Diskussion',
-		104 => 'Index',
+		104 => 'Index', // Index (ProofreadPage)
 		105 => 'Index_Diskussion',
-		106 => 'Text',
+		106 => 'Text', // Text (ProofreadPage)
 		107 => 'Text_Diskussion',
 	],
 	'frwiki' => [
-		100 => 'Portail',
+		100 => 'Portail', // Portal
 		101 => 'Discussion_Portail',
-		102 => 'Projet',
+		102 => 'Projet', // Project
 		103 => 'Discussion_Projet',
-		104 => 'Référence',
+		104 => 'Référence', // Reference
 		105 => 'Discussion_Référence',
+	],
+	'fywiki' => [
+		100 => 'Tema', // Portal - T334807
+		101 => 'Tema_oerlis', // T334807
 	],
 	'glwiki' => [
 		100 => 'Portal',
 		101 => 'Conversa_portal', // T43213
-		102 => 'Libro',
+		102 => 'Libro', // Book
 		103 => 'Conversa_libro',
 	],
 	'hewiki' => [
-		100 => 'פורטל',
+		100 => 'פורטל', // Portal
 		101 => 'שיחת_פורטל',
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
@@ -2936,13 +2942,13 @@ return [
 		119 => 'שיחת_טיוטה',
 	],
 	'hiwiki' => [
-		100 => 'प्रवेशद्वार',
+		100 => 'प्रवेशद्वार', // Portal
 		101 => 'प्रवेशद्वार_वार्ता',
 	],
 	'hrwiki' => [
 		100 => 'Portal',
 		101 => 'Razgovor_o_portalu',
-		102 => 'Dodatak',
+		102 => 'Dodatak', // Appendix
 		103 => 'Razgovor_o_dodatku',
 		118 => 'Nacrt', // T268740 - Draft
 		119 => 'Razgovor_o_nacrtu', // T268740 - Draft_talk
@@ -2950,15 +2956,15 @@ return [
 	'huwiki' => [
 		100 => 'Portál',
 		101 => 'Portálvita',
-		118 => 'Cikkjelölt', // T333083
+		118 => 'Cikkjelölt', // Draft - T333083
 		119 => 'Cikkjelöltvita', // T333083
 	],
 	'hywiki' => [
-		100 => 'Պորտալ',
+		100 => 'Պորտալ', // Portal
 		101 => 'Պորտալի_քննարկում',
-		102 => 'Վիքինախագիծ', // T259987
+		102 => 'Վիքինախագիծ', // Wikiproject - T259987
 		103 => 'Վիքինախագծի_քննարկում',
-		118 => 'Սևագիր', // T259987
+		118 => 'Սևագիր', // Draft - T259987
 		119 => 'Սևագրի_քննարկում',
 	],
 	'iawiki' => [
@@ -2974,19 +2980,19 @@ return [
 		127 => 'Pembicaraan_MOS', // T363538
 	],
 	'inhwiki' => [
-		100 => 'Моартал',
+		100 => 'Моартал', // Portal
 		101 => 'Моарталах_къамаьл'
 	], // T326089
 	'iswiki' => [
-		100 => 'Gátt',
+		100 => 'Gátt', // Portal
 		101 => 'Gáttaspjall'
 	],
 	'itwiki' => [
-		100 => 'Portale',
+		100 => 'Portale', // Portal
 		101 => 'Discussioni_portale',
-		102 => 'Progetto',
+		102 => 'Progetto', // Project
 		103 => 'Discussioni_progetto',
-		118 => 'Bozza', // T280289
+		118 => 'Bozza', // Draft - T280289
 		119 => 'Discussioni_bozza' // T280289
 	],
 	'jawiki' => [
@@ -3003,14 +3009,14 @@ return [
 		NS_CATEGORY_TALK => "Category‐ノート",
 		100 => 'Portal',
 		101 => 'Portal‐ノート',
-		102 => 'プロジェクト',
+		102 => 'プロジェクト', // Project
 		103 => 'プロジェクト‐ノート',
 		126 => 'MOS', // T363538
 		127 => 'MOS‐ノート', // T363538
-		829 => 'モジュール‐ノート', // T49933
+		829 => 'モジュール‐ノート', // Module talk - T49933
 	],
 	'jamwiki' => [
-		100 => 'Puotal', // T135479
+		100 => 'Puotal', // Portal - T135479
 		101 => 'Puotal_diskoshan',
 	],
 	'jvwiki' => [
@@ -3028,7 +3034,7 @@ return [
 		103 => 'Amyannan_usenfaṛ',
 	],
 	'kawiki' => [
-		100 => 'პორტალი',
+		100 => 'პორტალი', // Portal
 		101 => 'პორტალი_განხილვა',
 	],
 	'kkwiki' => [
@@ -3044,11 +3050,11 @@ return [
 		119 => 'ಕರಡು_ಚರ್ಚೆಪುಟ', // T129052, T255337
 	],
 	'kowiki' => [
-		100 => '포털', // T87528
+		100 => '포털', // Portal - T87528
 		101 => '포털토론', // T87528
-		102 => '위키프로젝트', // T29651
+		102 => '위키프로젝트', // Wikiproject - T29651
 		103 => '위키프로젝트토론', // T29651
-		118 => '초안', // T92798
+		118 => '초안', // Draft - T92798
 		119 => '초안토론', // T92798
 	],
 	'kuwiki' => [
@@ -3057,7 +3063,7 @@ return [
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpediyayê', // T39521
 	],
 	'kwwiki' => [
-		100 => 'Porth',
+		100 => 'Porth', // Portal
 		101 => 'Keskows_Porth',
 	],
 	'kywiki' => [
@@ -3069,11 +3075,11 @@ return [
 		101 => 'Diskusyón_de_Portal', // T161843
 	],
 	'lawiki' => [
-		100 => 'Porta',
+		100 => 'Porta', // Portal
 		101 => 'Disputatio_Portae',
 	],
 	'liwiki' => [
-		100 => 'Portaol',
+		100 => 'Portaol', // Portal
 		101 => 'Euverlèk_portaol',
 	],
 	'lmowiki' => [
@@ -3081,29 +3087,29 @@ return [
 		101 => 'Ciciarada_Portal', // T8920, T338621
 	],
 	'lrcwiki' => [
-		100 => 'پورتال', // T102026
+		100 => 'پورتال', // Portal - T102026
 		101 => 'چأک_چئنە_پورتال', // T102026
 	],
 	'ltwiki' => [
-		100 => 'Vikisritis',
+		100 => 'Vikisritis', // Portal (lit. WikiArea)
 		101 => 'Vikisrities_aptarimas',
-		102 => 'Vikiprojektas',
+		102 => 'Vikiprojektas', // Wikiproject
 		103 => 'Vikiprojekto_aptarimas',
-		104 => 'Sąrašas',
+		104 => 'Sąrašas', // List
 		105 => 'Sąrašo_aptarimas',
 	],
 	'lvwiki' => [
-		100 => 'Portāls',
+		100 => 'Portāls', // Portal
 		101 => 'Portāla_diskusija',
-		102 => 'Vikiprojekts',
+		102 => 'Vikiprojekts', // Wikiproject
 		103 => 'Vikiprojekta_diskusija',
 	],
 	'mkwiki' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Разговор_за_Портал',
 	],
 	'mlwiki' => [
-		100 => 'കവാടം',
+		100 => 'കവാടം', // Portal
 		101 => 'കവാടത്തിന്റെ_സംവാദം',
 		118 => 'കരട്', // Draft - T362653
 		119 => 'കരട്_സംവാദം', // Draft - T362653
@@ -3117,7 +3123,7 @@ return [
 		101 => 'ပါင်မုက်_ဓရီုကျာ', // Portal talk
 	],
 	'mrwiki' => [
-		100 => 'दालन',
+		100 => 'दालन', // Portal
 		101 => 'दालन_चर्चा',
 		118 => 'मसुदा', // T396551, T398792 - Draft
 		119 => 'मसुदा_चर्चा', // Draft talk
@@ -3127,7 +3133,7 @@ return [
 		101 => 'Diskussjoni_portal',
 	],
 	'mswiki' => [
-		100 => 'Gerbang', // T394603
+		100 => 'Gerbang', // Portal - T394603
 		101 => 'Perbincangan_gerbang', // T394603
 		126 => 'MOS', // T363538
 		127 => 'Perbincangan_MOS', // T363538
@@ -3145,7 +3151,7 @@ return [
 	'mznwiki' => [
 		100 => 'پورتال', # Portal
 		101 => 'پورتال_گپ', # Portal talk
-		102 => 'پروژه', // T350397
+		102 => 'پروژه', // Project - T350397
 		103 => 'پروژه_گپ',
 	],
 	'ndswiki' => [
@@ -3153,13 +3159,13 @@ return [
 		101 => 'Portal_Diskuschoon'
 	],
 	'newiki' => [
-		100 => 'पोर्टल', // T130108
+		100 => 'पोर्टल', // Portal - T130108
 		101 => 'पोर्टल_वार्ता',
-		118 => 'मस्यौदा', // T184157
+		118 => 'मस्यौदा', // Draft - T184157
 		119 => 'मस्यौदा_वार्ता',
 	],
 	'newwiki' => [
-		100 => 'दबू',
+		100 => 'दबू', // Portal (lit. theatre)
 		101 => 'दबू_खँलाबँला',
 	],
 	'niawiki' => [ // T277671
@@ -3171,7 +3177,7 @@ return [
 		101 => 'Overleg_portaal'
 	],
 	'nnwiki' => [
-		100 => 'Tema',
+		100 => 'Tema', // Portal (lit. theme)
 		101 => 'Temadiskusjon',
 	],
 	'nowiki' => [
@@ -3185,25 +3191,26 @@ return [
 		103 => 'Discussion_Projècte',
 	],
 	'orwiki' => [ // T60453
-		100 => 'ପୋର୍ଟାଲ',
+		100 => 'ପୋର୍ଟାଲ', // Portal
 		101 => 'ପୋର୍ଟାଲ_ଆଲୋଚନା',
 	],
 	'pawiki' => [
-		100 => 'ਫਾਟਕ', // T120936
+		100 => 'ਫਾਟਕ', // Portal - T120936
 		101 => 'ਫਾਟਕ_ਗੱਲ-ਬਾਤ',
 	],
 	'pflwiki' => [
 		100 => 'Portal', // T44990
 		101 => 'Portal_Diskussion',
-		102 => 'Buch', // 102-111: T54671
+		// 102-111: T54671
+		102 => 'Buch', // Wikibooks
 		103 => 'Buch_Dischbediere',
-		104 => 'Wort',
+		104 => 'Wort', // Wiktionary
 		105 => 'Wort_Dischbediere',
-		106 => 'Text',
+		106 => 'Text', // Wikisource
 		107 => 'Text_Dischbediere',
-		108 => 'Spruch',
+		108 => 'Spruch', // Wikiquote
 		109 => 'Spruch_Dischbediere',
-		110 => 'Nochricht',
+		110 => 'Nochricht', // Wikinews
 		111 => 'Nochricht_Dischbediere',
 	],
 	'plwiki' => [
@@ -3217,7 +3224,7 @@ return [
 		103 => 'Dyskusja_wikiprojektu',
 	],
 	'pswiki' => [
-		100 => 'تانبه',
+		100 => 'تانبه', // Portal
 		101 => 'د_تانبې_خبرې_اترې', // T119510
 	],
 	'ptwiki' => [
@@ -3225,11 +3232,11 @@ return [
 		NS_USER_TALK => 'Usuário(a)_Discussão',
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
-		104 => 'Livro',
+		104 => 'Livro', // Book
 		105 => 'Livro_Discussão',
 	],
 	'roa_tarawiki' => [
-		100 => 'Portale',
+		100 => 'Portale', // Portal
 		101 => "'Ngazzaminde_d'u_Portale",
 	],
 	'rowiki' => [
@@ -3237,13 +3244,13 @@ return [
 		101 => 'Discuție_Portal', // T350739
 		102 => 'Proiect', // T127607
 		103 => 'Discuție_Proiect', // T127607, T350739
-		108 => 'Cod', // T44690 - Code, T127607
+		108 => 'Cod', // Code, for redirects from codes to articles T44690, T127607
 		109 => 'Discuție_Cod', // T127607
-		110 => 'Carte', // T68530, T127607
+		110 => 'Carte', // Book - T68530, T127607
 		111 => 'Discuție_Carte', // T127607, T350739
 	],
 	'ruwiki' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Обсуждение_портала',
 		102 => 'Инкубатор', // Incubator
 		103 => 'Обсуждение_Инкубатора', // Incubator talk
@@ -3257,9 +3264,9 @@ return [
 		101 => 'प्रवेशद्वारसम्भाषणम्', // T78394, T101634
 	],
 	'scnwiki' => [
-		100 => 'Purtali',
+		100 => 'Purtali', // Portal
 		101 => 'Discussioni_purtali',
-		102 => 'Pruggettu',
+		102 => 'Pruggettu', // Project
 		103 => 'Discussioni_pruggettu',
 	],
 	'scowiki' => [
@@ -3279,19 +3286,25 @@ return [
 	'shwiki' => [
 		100 => 'Portal', // T32928
 		101 => 'Razgovor_o_portalu', // T32928
-		118 => 'Nacrt', // T327864
+		118 => 'Nacrt', // Draft - T327864
 		119 => 'Razgovor_o_nacrtu', // T327864
 	],
 	'shiwiki' => [
 		100 => 'Aggur', // T288909 - Portal
 		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
 	],
-	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
+	'shnwiki' => [
+		100 => 'ၵိူၼ်ႇတူ', // Portal - T212992
+		101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ'
+	],
 	'simplewiki' => [
 		126 => 'MOS', // T363538
 		127 => 'MOS_talk', // T363538
 	],
-	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
+	'siwiki' => [
+		100 => 'ද්වාරය', // Portal - T8435, T26936
+		101 => 'ද්වාරය_සාකච්ඡාව'
+	],
 	'skwiki' => [
 		NS_USER => 'Redaktor', // T143472
 		NS_USER_TALK => 'Diskusia_s_redaktorom',
@@ -3309,23 +3322,23 @@ return [
 	'sowiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ], // T51600
 	'sqwiki' => [ 100 => 'Portal', 101 => 'Portal_diskutim' ],
 	'srwiki' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Разговор_о_порталу',
-		118 => 'Нацрт', // T214428
+		118 => 'Нацрт', // Draft - T214428
 		119 => 'Разговор_о_нацрту', // T214428
 	],
 	'suwiki' => [ 100 => 'Portal', 101 => 'Obrolan_portal' ], // T10156
 	'svwiki' => [ 100 => 'Portal', 101 => 'Portaldiskussion' ],
 	'swwiki' => [
-		100 => 'Lango',
+		100 => 'Lango', // Portal
 		101 => 'Majadiliano_ya_lango',
-		102 => 'Wikichanzo', // T158041
+		102 => 'Wikichanzo', // wikisource - T158041
 		103 => 'Majadiliano_ya_Wikichanzo',
 	],
 	'tawiki' => [
-		100 => 'வலைவாசல்',
+		100 => 'வலைவாசல்', // Portal
 		101 => 'வலைவாசல்_பேச்சு',
-		118 => 'வரைவு', // T329248
+		118 => 'வரைவு', // Draft - T329248
 		119 => 'வரைவு_பேச்சு', // T329248
 	],
 	'tcywiki' => [
@@ -3334,15 +3347,18 @@ return [
 		118 => 'ಕರಡು', // draft, T409329
 		119 => 'ಕರಡು_ಪಾತೆರ', // draft_talk, T409329
 	],
-	'tewiki' => [ 100 => 'వేదిక', 101 => 'వేదిక_చర్చ', ],
+	'tewiki' => [
+		100 => 'వేదిక', // Portal
+		101 => 'వేదిక_చర్చ',
+	],
 	'tgwiki' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Баҳси_портал',
 		102 => 'Лоиҳа', // T137200 - Project
 		103 => 'Баҳси_Лоиҳа',
 	],
 	'thwiki' => [
-		100 => 'สถานีย่อย',
+		100 => 'สถานีย่อย', // Portal - T13846
 		101 => 'คุยเรื่องสถานีย่อย',
 		108 => 'หนังสือ', // T216322, Book
 		109 => 'คุยเรื่องหนังสือ', // Book talk
@@ -3366,13 +3382,16 @@ return [
 		103 => 'Vikiproje_tartışma', // Wikiproject talk
 	],
 	'ttwiki' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Портал_бәхәсе',
 	],
 	'udmwiki' => [
 		NS_PROJECT_TALK => 'Википедия_сярысь_вераськон', // T49820
 	],
-	'ukwiki' => [ 100 => 'Портал', 101 => 'Обговорення_порталу' ],
+	'ukwiki' => [
+		100 => 'Портал', // Portal
+		101 => 'Обговорення_порталу'
+	],
 	'urwiki' => [
 		100 => 'باب', // Portal - T21569
 		101 => 'تبادلۂ_خیال_باب', // Portal talk - T21569
@@ -3394,7 +3413,7 @@ return [
 		103 => 'Discussion_projeto',
 	],
 	'viwiki' => [
-		100 => 'Cổng_thông_tin',
+		100 => 'Cổng_thông_tin', // Portal
 		101 => 'Thảo_luận_Cổng_thông_tin'
 	],
 	'wuuwiki' => [
@@ -3421,13 +3440,13 @@ return [
 		101 => 'Portal_talk',
 	],
 	'yiwiki' => [
-		100 => 'פארטאל',
+		100 => 'פארטאל', // Portal
 		101 => 'פארטאל_רעדן',
 	],
 	'yowiki' => [
-		100 => 'Èbúté',
+		100 => 'Èbúté', // Portal - T26732
 		101 => 'Ọ̀rọ̀_èbúté',
-		108 => 'Ìwé',
+		108 => 'Ìwé', // Book - T26732
 		109 => 'Ọ̀rọ̀_ìwé',
 	],
 	'zhwiki' => [
@@ -3441,7 +3460,7 @@ return [
 		127 => 'MOS_talk', // T363538
 	],
 	'zh_classicalwiki' => [
-		100 => '門',
+		100 => '門', // Portal
 		101 => '議',
 		106 => '稿', // Draft, T163655
 		107 => '酌稿', // Draft talk, T163655
@@ -3484,9 +3503,9 @@ return [
 		103 => 'Müəllif_müzakirəsi', // Author talk
 	],
 	'arwikisource' => [
-		100 => 'بوابة',
+		100 => 'بوابة', // Portal
 		101 => 'نقاش_البوابة',
-		102 => 'مؤلف',
+		102 => 'مؤلف', // Author
 		103 => 'نقاش_المؤلف',
 	],
 	'aswikisource' => [
@@ -3508,7 +3527,7 @@ return [
 		103 => 'Размовы_пра_аўтара',
 	],
 	'bgwikisource' => [
-		100 => 'Автор',
+		100 => 'Автор', // Author
 		101 => 'Автор_беседа',
 	],
 	'bnwikisource' => [
@@ -3524,7 +3543,7 @@ return [
 		115 => 'অনুবাদ_আলোচনা',
 	],
 	'brwikisource' => [
-		104 => 'Oberour',
+		104 => 'Oberour', // Author
 		105 => 'Kaozeadenn_oberour',
 	],
 	'cawikisource' => [
@@ -3583,14 +3602,10 @@ return [
 	'frwikisource' => [
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
-		102 => 'Auteur',
+		102 => 'Auteur', // Author
 		103 => 'Discussion_Auteur',
-		106 => 'Portail',
+		106 => 'Portail', // Portal
 		107 => 'Discussion_Portail',
-	],
-	'fywiki' => [
-		100 => 'Tema', // T334807
-		101 => 'Tema_oerlis', // T334807
 	],
 	'glwikisource' => [
 		102 => 'Autor', // T134041
@@ -3611,31 +3626,31 @@ return [
 	'hewikisource' => [
 		# 100 => 'קטע', // Removed per T298430
 		# 101 => 'שיחת_קטע',
-		106 => 'ביאור',
+		106 => 'ביאור', // Annotation - T12345
 		107 => 'שיחת_ביאור',
-		108 => 'מחבר',
+		108 => 'מחבר', // Author - T15091
 		109 => 'שיחת_מחבר',
-		110 => 'תרגום',
+		110 => 'תרגום', // Translation - T15091
 		111 => 'שיחת_תרגום',
-		116 => 'מקור', // T66353
+		116 => 'מקור', // Source - T66353
 		117 => 'שיחת_מקור', // T66353
 	],
 	'hrwikisource' => [
-		100 => 'Autor',
+		100 => 'Autor', // Author
 		101 => 'Razgovor_o_autoru',
 	],
 	'huwikisource' => [
-		100 => 'Szerző',
+		100 => 'Szerző', // Author
 		101 => 'Szerző_vita',
 	],
 	'hywikisource' => [
-		100 => 'Հեղինակ',
+		100 => 'Հեղինակ', // Author
 		101 => 'Հեղինակի_քննարկում',
-		102 => 'Պորտալ',
+		102 => 'Պորտալ', // Portal
 		103 => 'Պորտալի_քննարկում',
 	],
 	'idwikisource' => [
-		100 => 'Pengarang',
+		100 => 'Pengarang', // Author
 		101 => 'Pembicaraan_Pengarang',
 		106 => 'Portal',
 		107 => 'Pembicaraan_Portal',
@@ -3647,13 +3662,13 @@ return [
 		103 => 'Höfundarspjall', // T46164
 	],
 	'itwikisource' => [
-		102 => 'Autore',
+		102 => 'Autore', // Author
 		103 => 'Discussioni_autore',
-		104 => 'Progetto',
+		104 => 'Progetto', // Project
 		105 => 'Discussioni_progetto',
-		106 => 'Portale',
+		106 => 'Portale', // Portal
 		107 => 'Discussioni_portale',
-		112 => 'Opera', // T93870
+		112 => 'Opera', // Work - T93870
 		113 => 'Discussioni_opera',
 	],
 	'jawikisource' => [
@@ -3665,7 +3680,7 @@ return [
 		103 => 'Parembugan_Panganggit', // T286241 - Author talk
 	],
 	'kawikisource' => [ // T363243
-		102 => 'ავტორი',
+		102 => 'ავტორი', // Author
 		103 => 'ავტორის_განხილვა',
 	],
 	'knwikisource' => [ // T39676
@@ -3677,9 +3692,9 @@ return [
 		115 => 'ಅನುವಾದ_ಚರ್ಚೆ',
 	],
 	'kowikisource' => [
-		100 => '저자',
+		100 => '저자', // Author
 		101 => '저자토론',
-		102 => '포털', // T71522
+		102 => '포털', // T71522, Portal
 		103 => '포털토론',
 		114 => '번역', // T183836, Translation
 		115 => '번역토론', // T183836, Traslation talk
@@ -3689,13 +3704,13 @@ return [
 		119 => '초안토론', // T385162, Draft talk
 	],
 	'lawikisource' => [
-		102 => 'Scriptor',
+		102 => 'Scriptor', // Author
 		103 => 'Disputatio_Scriptoris',
 	],
 	'lijwikisource' => [
-		102 => 'Aotô', // T257672
+		102 => 'Aotô', // Author - T257672
 		103 => 'Discuscion_aotô', // T257672
-		104 => 'Œuvia', // T257672
+		104 => 'Œuvia', // Work - T257672
 		105 => 'Discuscion_œuvia', // T257672
 	],
 	'minwikisource' => [ // T408343
@@ -3703,13 +3718,13 @@ return [
 		101 => "Rundiang_Portal",
 	],
 	'mkwikisource' => [
-		102 => 'Автор',
+		102 => 'Автор', // Author
 		103 => 'Разговор_за_автор',
 	],
 	'mlwikisource' => [
-		100 => 'രചയിതാവ്',
+		100 => 'രചയിതാവ്', // Author
 		101 => 'രചയിതാവിന്റെ_സംവാദം',
-		102 => 'കവാടം',
+		102 => 'കവാടം', // Portal
 		103 => 'കവാടത്തിന്റെ_സംവാദം',
 		114 => 'പരിഭാഷ', // T154087 - Translate
 		115 => 'പരിഭാഷയുടെ_സംവാദം',
@@ -3747,13 +3762,13 @@ return [
 		115 => 'Traduzzione_chiàcchiera', // Translation talk
 	],
 	'nlwikisource' => [
-		100 => 'Hoofdportaal',
+		100 => 'Hoofdportaal', // Portal
 		101 => 'Overleg_hoofdportaal',
-		102 => 'Auteur',
+		102 => 'Auteur', // Author
 		103 => 'Overleg_auteur',
 	],
 	'nowikisource' => [
-		102 => 'Forfatter',
+		102 => 'Forfatter', // Author
 		103 => 'Forfatterdiskusjon',
 	],
 	'pawikisource' => [
@@ -3776,7 +3791,7 @@ return [
 		NS_PROJECT_TALK => 'Dyskusja_Wikiźródeł',
 		104 => 'Autor',
 		105 => 'Dyskusja_autora',
-		124 => 'Kolekcja', // T154711
+		124 => 'Kolekcja', // Collection - T154711
 		125 => 'Dyskusja_kolekcji', // T154711
 	],
 	'pmswikisource' => [
@@ -3788,15 +3803,15 @@ return [
 	'ptwikisource' => [
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
-		102 => 'Autor',
+		102 => 'Autor', // Author
 		103 => 'Autor_Discussão',
-		108 => 'Em_Tradução',
+		108 => 'Em_Tradução', // Translations
 		109 => 'Discussão_Em_Tradução',
-		110 => 'Anexo',
+		110 => 'Anexo', // Appendix
 		111 => 'Anexo_Discussão',
 	],
 	'rowikisource' => [
-		102 => 'Autor',
+		102 => 'Autor', // Author
 		103 => 'Discuție_Autor',
 	],
 	'ruwikisource' => [
@@ -3812,21 +3827,21 @@ return [
 		109 => 'श्रव्यसम्भाषणम्', // T282970 - Audio talk
 	],
 	'skwikisource' => [
-		102 => 'Autor', // T122175
+		102 => 'Autor', // Author - T122175
 		103 => 'Diskusia_k_autorovi',
 	],
 	'srwikisource' => [
-		100 => 'Аутор',
+		100 => 'Аутор', // Author
 		101 => 'Разговор_о_аутору',
-		102 => 'Додатак', // T39742
+		102 => 'Додатак', // Appendix - T39742
 		103 => 'Разговор_о_додатку', // T39742
 	],
 	'suwikisource' => [ // T344314
-		102 => 'Pangarang',
+		102 => 'Pangarang', // Author
 		103 => 'Obrolan_Pangarang',
 	],
 	'svwikisource' => [
-		106 => 'Författare',
+		106 => 'Författare', // Author
 		107 => 'Författardiskussion',
 	],
 	'tawikisource' => [
@@ -3860,7 +3875,7 @@ return [
 		103 => 'Usapan_sa_manunulat', // T388654 - Author talk
 	],
 	'trwikisource' => [
-		100 => 'Kişi',
+		100 => 'Kişi', // Author
 		101 => 'Kişi_tartışma',
 		200 => 'Portal',
 		201 => 'Portal_tartışma',
@@ -3873,13 +3888,13 @@ return [
 		117 => 'Обговорення_архіву', // T270627 - Archive talk
 	],
 	'vecwikisource' => [
-		100 => 'Autor',
+		100 => 'Autor', // Author
 		101 => 'Discussion_autor',
 	],
 	'viwikisource' => [
-		100 => 'Chủ_đề',
+		100 => 'Chủ_đề', // Subject
 		101 => 'Thảo_luận_Chủ_đề',
-		102 => 'Tác_gia',
+		102 => 'Tác_gia', // Author
 		103 => 'Thảo_luận_Tác_gia',
 		114 => 'Biên_dịch', // T290691 - Translate
 		115 => 'Thảo_luận_Biên_dịch',
@@ -3902,7 +3917,7 @@ return [
 
 	// Wiktionary @{
 	'angwiktionary' => [ // T58634
-		100 => 'Ætēaca',
+		100 => 'Ætēaca', // Appendix
 		101 => 'Ætēacmōtung',
 	],
 	'azwiktionary' => [
@@ -3914,11 +3929,11 @@ return [
 		101 => 'Kongko_tèmplokan',
 	],
 	'bgwiktionary' => [
-		100 => 'Словоформи',
+		100 => 'Словоформи', // Word forms - T3902
 		101 => 'Словоформи_беседа'
 	],
 	'blkwiktionary' => [
-		100 => 'သွုပ်ဆုဲင်ꩻ',
+		100 => 'သွုပ်ဆုဲင်ꩻ', // Appendix
 		101 => 'သွုပ်ဆုဲင်ꩻ_အိုင်ကိုမ်ဒေါ့ꩻရီ',
 	],
 	'brwiktionary' => [
@@ -3938,40 +3953,40 @@ return [
 	'bswiktionary' => [
 		100 => 'Portal',
 		101 => 'Razgovor_o_Portalu',
-		102 => 'Indeks',
+		102 => 'Indeks', // Index
 		103 => 'Razgovor_o_Indeksu',
-		104 => 'Dodatak',
+		104 => 'Dodatak', // Appendix
 		105 => 'Razgovor_o_Dodatku',
 	],
 	'cswiktionary' => [
-		100 => 'Příloha',
+		100 => 'Příloha', // Appendix
 		101 => 'Diskuse_k_příloze',
 	],
 	'cywiktionary' => [
-		100 => 'Atodiad',
+		100 => 'Atodiad', // Appendix
 		101 => 'Sgwrs_Atodiad',
-		102 => 'Odliadur',
+		102 => 'Odliadur', // Rhyme
 		103 => 'Sgwrs_Odliadur',
-		104 => 'WiciSawrws',
+		104 => 'WiciSawrws', // Thesaurus
 		105 => 'Sgwrs_WiciSawrws',
 	],
 	'dewiktionary' => [
-		102 => 'Verzeichnis',
+		102 => 'Verzeichnis', // Index - T6463
 		103 => 'Verzeichnis_Diskussion',
 		104 => 'Thesaurus',
 		105 => 'Thesaurus_Diskussion',
-		106 => 'Reim', // T45830
+		106 => 'Reim', // Rhyme - T45830
 		107 => 'Reim_Diskussion',
-		108 => 'Flexion', // T76357
+		108 => 'Flexion', // Inflection - T76357
 		109 => 'Flexion_Diskussion',
-		110 => 'Rekonstruktion', // T256242
+		110 => 'Rekonstruktion', // Reconstruction - T256242
 		111 => 'Rekonstruktion_Diskussion', // T256242
 	],
 	'dvwiktionary' => [
 		NS_PROJECT_TALK => 'ވިކިރަދީފު_ޚިޔާލު', // T48846
 	],
 	'elwiktionary' => [
-		100 => 'Παράρτημα',
+		100 => 'Παράρτημα', // Appendix
 		101 => 'Συζήτηση_παραρτήματος',
 	],
 	'enwiktionary' => [
@@ -3999,73 +4014,73 @@ return [
 	'eowiktionary' => [
 		NS_USER => 'Uzanto', // T24426
 		NS_USER_TALK => 'Uzanta_diskuto',
-		102 => 'Aldono', // T221525
+		102 => 'Aldono', // Appendix - T221525
 		103 => 'Aldono-Diskuto',
 	],
 	'eswiktionary' => [
-		100 => 'Apéndice',
+		100 => 'Apéndice', // Appendix
 		101 => 'Apéndice_Discusión',
 		110 => 'Tesauro', // T407150, Thesaurus
 		111 => 'Tesauro_discusión', // T407150, Thesaurus talk
 	],
 	'fawiktionary' => [
-		100 => "پیوست",
+		100 => "پیوست", // Appendix - T17097
 		101 => "بحث_پیوست",
 	],
 	'fiwiktionary' => [
-		100 => 'Liite', // T13672
+		100 => 'Liite', // Appendix - T13672
 		101 => 'Keskustelu_liitteestä',
 	],
 	'frwiktionary' => [
-		100 => 'Annexe',
+		100 => 'Annexe', // Appendix
 		101 => 'Discussion_Annexe',
 		102 => 'Transwiki',
 		103 => 'Discussion_Transwiki',
-		104 => 'Portail',
+		104 => 'Portail', // Portal
 		105 => 'Discussion_Portail',
 		106 => 'Thésaurus',
 		107 => 'Discussion_Thésaurus',
-		108 => 'Projet',
+		108 => 'Projet', // Project
 		109 => 'Discussion_Projet',
-		110 => 'Reconstruction', // T199631
+		110 => 'Reconstruction', // Reconstruction - T199631
 		111 => 'Discussion_Reconstruction',
-		112 => 'Tutoriel', // T242102
+		112 => 'Tutoriel', // Tutorial - T242102
 		113 => 'Discussion_Tutoriel',
-		114 => 'Rime', // T262398
+		114 => 'Rime', // Rhyme - T262398
 		115 => 'Discussion_Rime', // T262398
-		116 => 'Conjugaison', // T262298
+		116 => 'Conjugaison', // Conjugation - T262298
 		117 => 'Discussion_Conjugaison', // T262298
-		118 => 'Racine', // T263525
+		118 => 'Racine', // Root - T263525
 		119 => 'Discussion_Racine', // T263525
-		120 => 'Convention', // T360989
+		120 => 'Convention', // Convention (policy) - T360989
 		121 => 'Discussion_Convention', // T360989
 	],
 	'gawiktionary' => [
-		100 => 'Aguisín',
+		100 => 'Aguisín', // Appendix
 		101 => 'Plé_aguisín',
 	],
 	'glwiktionary' => [
-		100 => 'Apéndice',
+		100 => 'Apéndice', // Appendix
 		101 => 'Conversa_apéndice',
 	],
 	'gorwiktionary' => [
-		100 => 'Indeks', // T326253
+		100 => 'Indeks', // Index - T326253
 		101 => 'Lo\'iya_indeks', // T326253
 	],
 	'hewiktionary' => [
-		100 => 'נספח',
+		100 => 'נספח', // Appendix - T12984
 		101 => 'שיחת_נספח'
 	],
 	'hsbwiktionary' => [
-		100 => 'Přidawk', // T373634
+		100 => 'Přidawk', // Appendix - T373634
 		101 => 'Diskusija_k_přidawkej', // T373634
-		106 => 'Rymy', // T373634
+		106 => 'Rymy', // Rhyme - T373634
 		107 => 'Diskusija_k_rymam', // T373634
-		110 => 'Tezawrus', // T373634
+		110 => 'Tezawrus', // Thesaurus - T373634
 		111 => 'Diskusija_k_tezawrusej', // T373634
-		114 => 'Citaty', // T373634
+		114 => 'Citaty', // Citation - T373634
 		115 => 'Diskusija_k_citatam', // T373634
-		118 => 'Rekonstrukcija', // T373634
+		118 => 'Rekonstrukcija', // Reconstruction - T373634
 		119 => 'Diskusija_k_rekonstrukciji' // T373634
 	],
 	'huwiktionary' => [
@@ -4075,23 +4090,23 @@ return [
 		103 => 'Indexvita',
 	],
 	'iawiktionary' => [
-		102 => 'Appendice',
+		102 => 'Appendice', // Appendix
 		103 => 'Discussion_Appendice',
 	],
 	'idwiktionary' => [
-		100 => 'Indeks',
+		100 => 'Indeks', // Index
 		101 => 'Pembicaraan_Indeks',
-		102 => 'Lampiran',
+		102 => 'Lampiran', // Appendix
 		103 => 'Pembicaraan_Lampiran',
 	],
 	'iswiktionary' => [
-		106 => 'Viðauki',
+		106 => 'Viðauki', // Appendix
 		107 => 'Viðaukaspjall',
-		110 => 'Samheitasafn',
+		110 => 'Samheitasafn', // Synonym
 		111 => 'Samheitasafnsspjall',
 	],
 	'itwiktionary' => [
-		100 => 'Appendice',
+		100 => 'Appendice', // Appendix
 		101 => 'Discussioni_appendice',
 	],
 	'jawiktionary' => [
@@ -4099,7 +4114,7 @@ return [
 		101 => '付録・トーク', // Appendix talk
 	],
 	'kawiktionary' => [
-		100 => 'ფორმაწარმოება', // T212956
+		100 => 'ფორმაწარმოება', // Inflection - T212956
 		101 => 'ფორმაწარმოების_განხილვა', // T212956
 	],
 	'kbdwiktionary' => [
@@ -4109,42 +4124,42 @@ return [
 		103 => 'Индексым_тепсэлъыхьын', // Index talk
 	],
 	'kowiktionary' => [
-		100 => '부록',
+		100 => '부록', // Appendix
 		101 => '부록_토론',
 	],
 	'kuwiktionary' => [
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîferhengê', // T39524
-		100 => 'Pêvek', // T30398
+		100 => 'Pêvek', // Appendix - T30398
 		101 => 'Gotûbêja_pêvekê', // T39524
-		102 => 'Nimînok', // T30398
+		102 => 'Nimînok', // Index - T30398
 		103 => 'Gotûbêja_nimînokê', // T39524
 		104 => 'Portal', // T30398
 		105 => 'Gotûbêja_portalê', // T39524
-		106 => 'Tewandin', // T224327
+		106 => 'Tewandin', // Conjugation - T224327
 		107 => 'Gotûbêja_tewandinê',
 		108 => 'Jinûvesazî', // T262046 - Reconstruction
 		109 => 'Gotûbêja_jinûvesaziyê', // T262046 - Reconstruction talk
 	],
 	'lbwiktionary' => [
-		100 => 'Annexen',
+		100 => 'Annexen', // Appendix
 		101 => 'Annexen_Diskussioun',
 	],
 	'lmowiktionary' => [
-		100 => 'Apendice',
+		100 => 'Apendice', // Appendix
 		101 => 'Ciciarada_Apendice',
 	],
 	'ltwiktionary' => [
-		100 => 'Sąrašas',
+		100 => 'Sąrašas', // List
 		101 => 'Sąrašo_aptarimas',
-		102 => 'Priedas',
+		102 => 'Priedas', // Appendix - T26306
 		103 => 'Priedo_aptarimas',
 	],
 	'lvwiktionary' => [
-		100 => 'Pielikums',
+		100 => 'Pielikums', // Appendix
 		101 => 'Pielikuma_diskusija',
 	],
 	'mgwiktionary' => [
-		100 => 'Rakibolana', # Portal
+		100 => 'Rakibolana', // Portal
 		101 => "Dinika_amin'ny_rakibolana",
 	],
 	'mnwwiktionary' => [
@@ -4158,7 +4173,7 @@ return [
 		111 => 'အဘိဓာန်_ဓရီုကျာ', // T356620 - Thesaurus_talk
 	],
 	'mrwiktionary' => [
-		104 => 'सूची',
+		104 => 'सूची', // List
 		105 => 'सूची_चर्चा',
 	],
 	'mswiktionary' => [
@@ -4193,18 +4208,18 @@ return [
 		116 => 'ဝေါဟာရစာရင်း', // T342516 ,Concordance
 		117 => 'ဝေါဟာရစာရင်း_ဆွေးနွေးချက်', // T342516 ,Concordance_talk
 	],
-	'ndswiktionary' => [ // T85122
-		100 => 'Anhang',
+	'ndswiktionary' => [
+		100 => 'Anhang', // Appendix - T85122
 		101 => 'Anhang_Diskuschoon',
-		114 => 'Zitaten',
+		114 => 'Zitaten', // Citations - T85122
 		115 => 'Zitaten_Diskuschoon',
 	],
 	'nowiktionary' => [
-		100 => 'Tillegg',
+		100 => 'Tillegg', // Appendix
 		101 => 'Tilleggdiskusjon',
 	],
 	'ocwiktionary' => [
-		100 => 'Annèxa',
+		100 => 'Annèxa', // Appendix
 		101 => 'Discussion_Annèxa',
 	],
 	'orwiktionary' => [
@@ -4217,23 +4232,23 @@ return [
 		NS_PROJECT_TALK => 'Wikidyskusja',
 		NS_USER => 'Wikisłownikarz',
 		NS_USER_TALK => 'Dyskusja_wikisłownikarza',
-		100 => 'Aneks',
+		100 => 'Aneks', // Appendix
 		101 => 'Dyskusja_aneksu',
-		102 => 'Indeks',
+		102 => 'Indeks', // Index
 		103 => 'Dyskusja_indeksu',
 		104 => 'Portal',
 		105 => 'Dyskusja_portalu',
 	],
 	'ptwiktionary' => [
-		100 => 'Apêndice',
+		100 => 'Apêndice', // Appendix
 		101 => 'Apêndice_Discussão',
-		102 => 'Vocabulário',
+		102 => 'Vocabulário', // Index
 		103 => 'Vocabulário_Discussão',
-		104 => 'Rimas',
+		104 => 'Rimas', // Rhymes
 		105 => 'Rimas_Discussão',
 		106 => 'Portal',
 		107 => 'Portal_Discussão',
-		108 => 'Citações',
+		108 => 'Citações', // Citations
 		109 => 'Citações_Discussão',
 		110 => 'Wikisaurus', // T391299
 		111 => 'Wikisaurus_Discussão', // T391299
@@ -4241,43 +4256,43 @@ return [
 	'rowiktionary' => [
 		100 => 'Portal',
 		101 => 'Discuție_Portal',
-		102 => 'Apendice',
+		102 => 'Apendice', // Appendix
 		103 => 'Discuție_Apendice',
 	],
 	'ruwiktionary' => [
-		100 => 'Приложение',
+		100 => 'Приложение', // Appendix
 		101 => 'Обсуждение_приложения',
-		102 => 'Конкорданс',
+		102 => 'Конкорданс', // Concordance
 		103 => 'Обсуждение_конкорданса',
-		104 => 'Индекс',
+		104 => 'Индекс', // Index
 		105 => 'Обсуждение_индекса',
-		106 => 'Рифмы',
+		106 => 'Рифмы', // Rhymes
 		107 => 'Обсуждение_рифм',
 	],
 	'shnwiktionary' => [
-		100 => 'ၵိူၼ်ႇတူ', // T330376
-		101 => 'ဢုပ်ႇၵုမ်_ၵိူၼ်ႇတူ', // T330376
-		102 => 'တွၼ်ႈၸပ်းႁၢင်', // T330376
-		103 => 'ဢုပ်ႇၵုမ်_တွၼ်ႈၸပ်းႁၢင်', // T330376
-		106 => 'တူၼ်းၸၢပ်ႈလႅပ်ႈ', // T330376
-		107 => 'ဢုပ်ႇၵုမ်_တူၼ်းၸၢပ်ႈလႅပ်ႈ', // T330376
-		110 => 'ၶိုၼ်းၵေႃႇသၢင်ႈ', // T330376
-		111 => 'ဢုပ်ႇၵုမ်_ၶိုၼ်းၵေႃႇသၢင်ႈ', // T330376
+		100 => 'ၵိူၼ်ႇတူ', // Portal - T330376
+		101 => 'ဢုပ်ႇၵုမ်_ၵိူၼ်ႇတူ',
+		102 => 'တွၼ်ႈၸပ်းႁၢင်', // Appendix - T330376
+		103 => 'ဢုပ်ႇၵုမ်_တွၼ်ႈၸပ်းႁၢင်',
+		106 => 'တူၼ်းၸၢပ်ႈလႅပ်ႈ', // Rhymes - T330376
+		107 => 'ဢုပ်ႇၵုမ်_တူၼ်းၸၢပ်ႈလႅပ်ႈ',
+		110 => 'ၶိုၼ်းၵေႃႇသၢင်ႈ', // Reconstruction - T330376
+		111 => 'ဢုပ်ႇၵုမ်_ၶိုၼ်းၵေႃႇသၢင်ႈ',
 	],
 	'skwiktionary' => [
-		100 => 'Príloha', // T148563
+		100 => 'Príloha', // Appendix - T148563
 		101 => 'Diskusia_k_prílohe', // T148563
 	],
 	'srwiktionary' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Разговор_о_порталу',
-		102 => 'Додатак', // T216343
+		102 => 'Додатак', // Appendix - T216343
 		103 => 'Разговор_о_додатку', // T216343
 	],
 	'svwiktionary' => [ // T9933
 		102 => 'Appendix',
 		103 => 'Appendixdiskussion',
-		104 => 'Rimord',
+		104 => 'Rimord', // Rhymes
 		105 => 'Rimordsdiskussion',
 		106 => 'Transwiki',
 		107 => 'Transwikidiskussion',
@@ -4314,11 +4329,11 @@ return [
 		101 => 'Thảo_luận_Phụ_lục', // Appendix talk
 	],
 	'wawiktionary' => [
-		100 => 'Rawete', // T185289
+		100 => 'Rawete', // Appendix - T185289
 		101 => 'Rawete_copene', // T185289
-		102 => 'Sourdant', // T185289
+		102 => 'Sourdant', // Citations - T185289
 		103 => 'Sourdant_copene', // T185289
-		104 => 'Motyince', // T185289
+		104 => 'Motyince', // Thesaurus - T185289
 		105 => 'Motyince_copene', // T185289
 	],
 	'urwiktionary' => [
@@ -4373,9 +4388,9 @@ return [
 		111 => 'Vikiuşaq_müzakirəsi',
 	],
 	'bnwikibooks' => [
-		100 => 'উইকিশৈশব',
+		100 => 'উইকিশৈশব', // Wikijunior
 		101 => 'উইকিশৈশব_আলাপ',
-		102 => 'বিষয়',
+		102 => 'বিষয়', // Subject - T28817
 		103 => 'বিষয়_আলাপ',
 		104 => 'রন্ধনপ্রণালী', // Cookbook, T203534
 		105 => 'রন্ধনপ্রণালী_আলোচনা', // Cookbooks talk, T203534
@@ -4383,15 +4398,15 @@ return [
 	'cawikibooks' => [
 		100 => 'Portal', // T93811
 		101 => 'Portal_Discussió', // T93811
-		102 => 'Viquiprojecte',
+		102 => 'Viquiprojecte', // Wikiproject
 		103 => 'Viquiprojecte_Discussió',
 	],
 	'cywikibooks' => [
-		102 => 'Silff_lyfrau',
+		102 => 'Silff_lyfrau', // Bookshelf
 		103 => 'Sgwrs_Silff_lyfrau'
 	],
 	'dewikibooks' => [
-		102 => 'Regal',
+		102 => 'Regal', // Shelf
 		103 => 'Regal_Diskussion'
 	],
 	'enwikibooks' => [
@@ -4411,11 +4426,11 @@ return [
 	],
 	*/
 	'fawikibooks' => [
-		102 => 'کتاب‌آشپزی',
+		102 => 'کتاب‌آشپزی', // Cookbook
 		103 => 'بحث_کتاب‌آشپزی',
-		110 => 'ویکی‌کودک',
+		110 => 'ویکی‌کودک', // Wikijunior
 		111 => 'بحث_ویکی‌کودک',
-		112 => 'موضوع',
+		112 => 'موضوع', // Subject
 		113 => 'بحث_موضوع',
 	],
 	'frwikibooks' => [
@@ -4444,9 +4459,9 @@ return [
 		111 => 'Վիքիփոքրիկի_քննարկում', // wikijunior talk
 	],
 	'idwikibooks' => [
-		100 => 'Resep', // T9124
+		100 => 'Resep', // Recipe - T9124
 		101 => 'Pembicaraan_Resep',
-		102 => 'Wisata',
+		102 => 'Wisata', // Tour
 		103 => 'Pembicaraan_Wisata',
 	],
 	'itwikibooks' => [
@@ -4476,7 +4491,7 @@ return [
 		103 => 'വിഷയസം‌വാദം',
 	],
 	'mswikibooks' => [
-		100 => 'Resipi',
+		100 => 'Resipi', // Recipe
 		101 => 'Perbincangan_resipi',
 	],
 	'newikibooks' => [
@@ -4505,7 +4520,7 @@ return [
 		105 => 'Dyskusja_Wikijuniora',
 	],
 	'rowikibooks' => [
-		100 => 'Raft',
+		100 => 'Raft', // Shelf
 		101 => 'Discuţie_Raft',
 		102 => 'Wikijunior',
 		103 => 'Discuţie_Wikijunior',
@@ -4513,13 +4528,13 @@ return [
 		105 => 'Discuţie_Carte_de_bucate',
 	],
 	'ruwikibooks' => [
-		100 => 'Полка',
+		100 => 'Полка', // Shelf
 		101 => 'Обсуждение_полки',
-		102 => 'Импортировано',
+		102 => 'Импортировано', // Imported
 		103 => 'Обсуждение_импортированного',
-		104 => 'Рецепт',
+		104 => 'Рецепт', // Recipe
 		105 => 'Обсуждение_рецепта',
-		106 => 'Задача',
+		106 => 'Задача', // Task or problem
 		107 => 'Обсуждение_задачи',
 	],
 	'shnwikibooks' => [
@@ -4533,17 +4548,17 @@ return [
 		113 => 'ဢုပ်ႇၵုမ်_ပၢႆး', // T327850, Subject talk
 	],
 	'siwikibooks' => [
-		112 => 'විෂයය',
+		112 => 'විෂයය', // Subject
 		113 => 'විෂයය_සාකච්ඡාව',
-		114 => 'කණිෂ්ඨ_විකි',
+		114 => 'කණිෂ්ඨ_විකි', // Wikijunior
 		115 => 'කණිෂ්ඨ_විකි_සාකච්ඡාව',
 	],
 	'srwikibooks' => [
-		102 => 'Кувар',
+		102 => 'Кувар', // Cookbook
 		103 => 'Разговор_о_кувару'
 	],
 	'thwikibooks' => [
-		102 => 'หัวเรื่อง', // T48153
+		102 => 'หัวเรื่อง', // Subject - T48153
 		103 => 'คุยเรื่องหัวเรื่อง', // T48153
 		104 => 'ตำราอาหาร', // Cookbook, T216322
 		105 => 'คุยเรื่องตำราอาหาร', // Cookbook talk, T216322
@@ -4551,23 +4566,23 @@ return [
 		107 => 'คุยเรื่องวิกิเยาวชน', // Wikijunior talk, T216322
 	],
 	'tlwikibooks' => [
-		100 => 'Pagluluto',
+		100 => 'Pagluluto', // Cookbook
 		101 => 'Usapang_pagluluto',
 		102 => 'Wikijunior', // Wikijunior - T274976
 		103 => 'Usapang_Wikijunior', // Wikijunior talk - T274976
 	],
 	'trwikibooks' => [
-		100 => 'Yemek',
+		100 => 'Yemek', // Cookbook
 		101 => 'Yemek_tartışma',
-		110 => 'Vikiçocuk',
+		110 => 'Vikiçocuk', // Wikijunior
 		111 => 'Vikiçocuk_tartışma',
-		112 => 'Kitaplık',
+		112 => 'Kitaplık', // Bookshelf
 		113 => 'Kitaplık_tartışma',
 	],
 	'ukwikibooks' => [
-		100 => 'Полиця',
+		100 => 'Полиця', // Bookshelf
 		101 => 'Обговорення_полиці',
-		102 => 'Рецепт',
+		102 => 'Рецепт', // Recipe
 		103 => 'Обговорення_рецепта',
 	],
 	'viwikibooks' => [
@@ -4590,19 +4605,19 @@ return [
 
 	// Wikinews @{
 	'arwikinews' => [
-		100 => 'بوابة',
+		100 => 'بوابة', // Portal
 		101 => 'نقاش_البوابة',
-		102 => 'تعليقات',
+		102 => 'تعليقات', // Comments
 		103 => 'نقاش_التعليقات',
 	],
 	'bgwikinews' => [
-		102 => 'Мнения',
+		102 => 'Мнения', // Comments
 		103 => 'Мнения_беседа',
 	],
 	'cawikinews' => [
 		100 => 'Transwiki',
 		101 => 'Transwiki_talk',
-		102 => 'Secció',
+		102 => 'Secció', // Section
 		103 => 'Secció_Discussió',
 	],
 	'cswikinews' => [
@@ -4612,7 +4627,7 @@ return [
 	'dewikinews' => [
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
-		102 => 'Meinungen',
+		102 => 'Meinungen', // Comments
 		103 => 'Meinungen_Diskussion'
 	],
 	'elwikinews' => [
@@ -4626,13 +4641,13 @@ return [
 		103 => 'Comments_talk'
 	],
 	'eswikinews' => [
-		100 => 'Comentarios',
+		100 => 'Comentarios', // Comments
 		101 => 'Comentarios_Discusión',
 	],
 	'fawikinews' => [
-		100 => 'درگاه',
+		100 => 'درگاه', // Portal
 		101 => 'بحث_درگاه',
-		102 => 'نظرها',
+		102 => 'نظرها', // Comments
 		103 => 'بحث_نظرها',
 	],
 	'frwikinews' => [
@@ -4660,13 +4675,13 @@ return [
 		101 => 'Discussioni_portale',
 	],
 	'jawikinews' => [
-		100 => "ポータル",
+		100 => "ポータル", // Portal
 		101 => "ポータル・トーク",
-		108 => '短信',
+		108 => '短信', // Brief note
 		109 => '短信‐ノート',
 	],
 	'nowikinews' => [
-		100 => 'Kommentarer',
+		100 => 'Kommentarer', // Comments
 		101 => 'Kommentarer-diskusjon',
 		106 => 'Portal',
 		107 => 'Portal-diskusjon',
@@ -4684,23 +4699,23 @@ return [
 		101 => 'Portal_Discussão',
 		104 => 'Transwiki',
 		105 => 'Transwiki_Discussão',
-		110 => 'Colaboração', // T94894
+		110 => 'Colaboração', // Collaboration (discussion) - T94894
 		111 => 'Colaboração_Discussão',
 	],
 	'ruwikinews' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Обсуждение_портала',
-		102 => 'Комментарии',
+		102 => 'Комментарии', // Comments
 		103 => 'Обсуждение_комментариев',
 	],
 	'sqwikinews' => [
 		100 => 'Portal',
 		101 => 'Portal_diskutim',
-		102 => 'Komentet',
+		102 => 'Komentet', // Comments
 		103 => 'Komentet_diskutim',
 	],
 	'srwikinews' => [
-		100 => 'Портал',
+		100 => 'Портал', // Portal
 		101 => 'Разговор_о_порталу',
 	],
 	'svwikinews' => [
@@ -4708,13 +4723,13 @@ return [
 		101 => 'Portaldiskussion',
 	],
 	'tawikinews' => [
-		100 => 'வலைவாசல்', // PPortal
+		100 => 'வலைவாசல்', // Portal
 		101 => 'வலைவாசல்_பேச்சு',
 	],
 	'trwikinews' => [
 		100 => 'Portal',
 		101 => 'Portal_tartışma',
-		106 => 'Yorum',
+		106 => 'Yorum', // Comment
 		107 => 'Yorum_tartışma',
 	],
 	'ukwikinews' => [
@@ -4731,7 +4746,7 @@ return [
 
 	// Wikiquote @{
 	'cswikiquote' => [
-		100 => 'Dílo',
+		100 => 'Dílo', // Work
 		101 => 'Diskuse_k_dílu',
 	],
 	'dewikiquote' => [
@@ -4743,17 +4758,17 @@ return [
 		119 => 'Draft_talk', // T355195
 	],
 	'frwikiquote' => [
-		100 => 'Portail',
+		100 => 'Portail', // Portal
 		101 => 'Discussion_Portail',
-		102 => 'Projet',
+		102 => 'Projet', // Project
 		103 => 'Discussion_Projet',
-		104 => 'Référence',
+		104 => 'Référence', // Reference
 		105 => 'Discussion_Référence',
 		108 => 'Transwiki',
 		109 => 'Discussion_Transwiki',
 	],
 	'hewikiquote' => [
-		100 => 'פורטל',
+		100 => 'פורטל', // Portal
 		101 => 'שיחת_פורטל'
 	],
 	'itwikiquote' => [
@@ -4764,14 +4779,14 @@ return [
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // T39523
 	],
 	'liwikiquote' => [ // T14240
-		100 => 'Portaol',
+		100 => 'Portaol', // Portal
 		101 => 'Euverlèk_portaol'
 	],
 	'plwikiquote' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikicytatów',
 	],
 	'skwikiquote' => [
-		100 => 'Deň', // T46052
+		100 => 'Deň', // Day - T46052
 		101 => 'Diskusia_ku_dňu',
 	],
 	'zhwikiquote' => [ // T42474
@@ -4782,29 +4797,29 @@ return [
 
 	// Wikiversity @{
 	'arwikiversity' => [
-		100 => 'مدرسة',
+		100 => 'مدرسة', // School - T31796
 		101 => 'نقاش_المدرسة',
-		102 => 'بوابة',
+		102 => 'بوابة', // Portal - T31796
 		103 => 'نقاش_البوابة',
-		104 => 'موضوع',
+		104 => 'موضوع', // Topic - T31796
 		105 => 'نقاش_الموضوع',
-		106 => 'مجموعة',
+		106 => 'مجموعة', // Collection - T31796
 		107 => 'نقاش_المجموعة',
 	],
 	'cswikiversity' => [
-		100 => 'Fórum',
+		100 => 'Fórum', // Forum
 		101 => 'Diskuse_k_fóru',
 	],
 	'dewikiversity' => [
-		106 => 'Kurs',
+		106 => 'Kurs', // Course
 		107 => 'Kurs_Diskussion',
-		108 => 'Projekt',
+		108 => 'Projekt', // Project
 		109 => 'Projekt_Diskussion',
 	],
 	'elwikiversity' => [
-		100 => 'Σχολή',
+		100 => 'Σχολή', // School - T15007
 		101 => 'Συζήτηση_Σχολής',
-		102 => 'Τμήμα',
+		102 => 'Τμήμα', // Department - T15007
 		103 => 'Συζήτηση_Τμήματος',
 	],
 	'enwikiversity' => [
@@ -4822,11 +4837,11 @@ return [
 	'frwikiversity' => [
 		102 => 'Projet',
 		103 => 'Discussion_Projet',
-		104 => 'Recherche', // T31015
+		104 => 'Recherche', // Research - T31015
 		105 => 'Discussion_Recherche',
-		106 => 'Faculté',
+		106 => 'Faculté', // Faculty
 		107 => 'Discussion_Faculté',
-		108 => 'Département',
+		108 => 'Département', // Department
 		109 => 'Discussion_Département',
 		110 => 'Transwiki',
 		111 => 'Discussion_Transwiki',
@@ -4844,13 +4859,13 @@ return [
 		119 => 'निर्माणाधीन_वार्ता', // T187535, Draft talk
 	],
 	'itwikiversity' => [
-		100 => 'Area',
+		100 => 'Area', // Area
 		101 => 'Discussioni_area',
-		102 => 'Corso',
+		102 => 'Corso', // Course
 		103 => 'Discussioni_corso',
-		104 => 'Materia',
+		104 => 'Materia', // Subject
 		105 => 'Discussioni_materia',
-		106 => 'Dipartimento',
+		106 => 'Dipartimento', // Department
 		107 => 'Discussioni_dipartimento',
 	],
 	'jawikiversity' => [
@@ -4865,7 +4880,7 @@ return [
 	],
 	'kowikiversity' => [
 		NS_PROJECT_TALK => '위키배움터토론', // T46899
-		102 => '포털', // T46899
+		102 => '포털', // Portal - T46899
 		103 => '포털토론', // T46899
 	],
 	'ruwikiversity' => [
@@ -4898,11 +4913,11 @@ return [
 	'dewikivoyage' => [
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
-		102 => 'Wahl',
+		102 => 'Wahl', // Election
 		103 => 'Wahl_Diskussion',
-		104 => 'Thema',
+		104 => 'Thema', // Theme
 		105 => 'Thema_Diskussion',
-		106 => 'Nachrichten',
+		106 => 'Nachrichten', // News
 		107 => 'Nachrichten_Diskussion',
 	],
 	'fawikivoyage' => [
