@@ -11,7 +11,7 @@ use CirrusSearch\LanguageDetector\TextCat;
 $wmgCirrusSearchAlternativeIndices = [
 	'completion' => [ [
 		'index_id' => 0,
-		'use' => false,
+		'use' => true,
 		'config_overrides' => [
 			'CirrusSearchCompletionSuggesterUseDefaultSort' => true
 		]
@@ -681,12 +681,40 @@ return [
 				],
 			],
 		],
+		'T404858_default_sort_2' => [
+			'buckets' => [
+				'control' => [],
+				'default_sort' => [
+					'globals' => [ 'wgCirrusSearchCompletionSuggesterUseAltIndexId' => 0 ]
+				]
+			]
+		]
 	],
 ],
 
 'wgCirrusSearchActiveTest' => [
 	'default' => null,
 	'commonswiki' => 'T408154_nearmatch',
+	'dewiki' => 'T404858_default_sort_2',
+	'eswiki' => 'T404858_default_sort_2',
+	'plwiki' => 'T404858_default_sort_2',
+	'fiwiki' => 'T404858_default_sort_2',
+	'nowiki' => 'T404858_default_sort_2',
+	'cswiki' => 'T404858_default_sort_2',
+	'dawiki' => 'T404858_default_sort_2',
+	'simplewiki' => 'T404858_default_sort_2',
+	'bgwiki' => 'T404858_default_sort_2',
+	'etwiki' => 'T404858_default_sort_2',
+	'glwiki' => 'T404858_default_sort_2',
+	'afwiki' => 'T404858_default_sort_2',
+	'slwiki' => 'T404858_default_sort_2',
+	'lvwiki' => 'T404858_default_sort_2',
+	'vowiki' => 'T404858_default_sort_2',
+	'fywiki' => 'T404858_default_sort_2',
+	'gvwiki' => 'T404858_default_sort_2',
+	'mtwiki' => 'T404858_default_sort_2',
+	'biwiki' => 'T404858_default_sort_2',
+	'iglwiki' => 'T404858_default_sort_2',
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
