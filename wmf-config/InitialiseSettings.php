@@ -5375,6 +5375,7 @@ return [
 'wmgLiquidThreadsFrozen' => [
 	// Preserve access to LQT namespaces after removing the extension
 	'default' => false,
+	'enwiktionary' => true, // T405080
 	'fiwikimedia' => true,
 	'huwiki' => true, // T406026
 	'mediawikiwiki' => true,
