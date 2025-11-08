@@ -2188,6 +2188,14 @@ return [
 	],
 	// T11024, T12362
 	'+ptwiki' => [
+		'abusefilter' => [ // T409578
+			'abusefilter-access-protected-vars' => true,
+			'abusefilter-modify' => true,
+			'abusefilter-modify-restricted' => true,
+			'changetags' => true,
+			'managechangetags' => true,
+			'oathauth-enable' => true,
+		],
 		'autoconfirmed' => [
 			'patrol' => true,
 			'abusefilter-log-detail' => true,
@@ -4611,6 +4619,7 @@ return [
 			'accountcreator', // T65750
 			'flood', // T228521
 			'extendedconfirmed', // T281926
+			'abusefilter', // T409578
 		],
 	],
 	'+ptwikinews' => [
@@ -5976,7 +5985,7 @@ return [
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood' ], // T41905, T65750, T107661, T212735, T228521
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed' ], // T65750, T228521, T281926
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed', 'abusefilter' ], // T65750, T228521, T281926, T409578
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
