@@ -2123,6 +2123,11 @@ if ( $wmgEnableCaptcha ) {
 	}
 
 	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname, $wmgUseMetricsPlatform ) {
+		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+			// For API edits, don't use hCaptcha yet.
+			$className = 'FancyCaptcha';
+			return;
+		}
 		// T404204 - Automatic failover in event of hCaptcha service being unavailable
 		$services = MediaWikiServices::getInstance();
 		if ( $className === 'HCaptcha' && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
