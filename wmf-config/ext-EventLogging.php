@@ -72,6 +72,7 @@ return [
 		'mediawiki.mentor_dashboard.interaction',
 		'mediawiki.ipinfo_interaction',
 		'mediawiki.ip_reputation.score',
+		'mediawiki.hcaptcha.risk_score',
 		'mediawiki.editgrowthconfig',
 		'mediawiki.accountcreation_block',
 		'mediawiki.editattempt_block',

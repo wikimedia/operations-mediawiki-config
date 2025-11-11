@@ -1785,6 +1785,17 @@ return [
 				],
 			],
 		],
+		'mediawiki.hcaptcha.risk_score' => [
+			'schema_title' => 'analytics/mediawiki/hcaptcha/risk_score',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			]
+		],
 		'mediawiki.ip_reputation.score' => [
 			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
 			'destination_event_service' => 'eventgate-analytics-external',
