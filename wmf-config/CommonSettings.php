@@ -2058,6 +2058,14 @@ if ( $wmgEnableCaptcha ) {
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
 				],
 			];
+			$wgCaptchaTriggers['addurl'] = [
+				// Disable 'addurl', as it should not be needed given 'edit' and 'create' are enabled
+				'trigger' => false,
+				'class' => 'HCaptcha',
+				'config' => [
+					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
+				],
+			];
 			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use ( $wmgEmergencyCaptcha ) {
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 					if ( \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action )
