@@ -2067,19 +2067,32 @@ if ( $wmgEnableCaptcha ) {
 				],
 			];
 			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use ( $wmgEmergencyCaptcha ) {
+				$services = MediaWikiServices::getInstance();
+				$simpleCaptcha = \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action );
+				if ( $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
+					$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
+					if ( !$healthChecker->isAvailable() ) {
+						LoggerFactory::getInstance( 'captcha' )->warning(
+							'hCaptcha is unavailable, setting ConfirmEditTriggersCaptcha to false'
+						);
+						$result = false;
+					}
+				}
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-					if ( \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action )
-						instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha ) {
+					if ( $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha ) {
 						// For API edits, only enable hCaptcha for editing interfaces that support it.
 						// TODO: Use Hooks::isSupportedInterface() when this is available, to enable support
 						// for VisualEditor, DiscussionTools, MobileFrontend, etc
 						$result = false;
 					}
-					// Make sure that the wmgEmergencyCaptcha settings is still respected. Note that this will
-					// mean API edits from interfaces without hCaptcha support will not go through.
-					if ( $wmgEmergencyCaptcha ) {
-						$result = true;
-					}
+				}
+				// Make sure that the wmgEmergencyCaptcha settings is still respected.
+				// Note that if $wmgEmergencyCaptcha is set, and hCaptcha is enabled, API edits from interfaces
+				// without hCaptcha support will not go through.
+				// Note also that the CaptchaClass will be flipped back to FancyCaptcha via the
+				// ConfirmEditCaptchaClass hook if hCaptcha is offline.
+				if ( $wmgEmergencyCaptcha ) {
+					$result = true;
 				}
 			};
 		}
