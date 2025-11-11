@@ -3500,6 +3500,39 @@ return [
 					],
 				],
 			],
+		],
+		// T407802 Stream for Growth's Revise Tone recommendations experiment
+		'mediawiki.product_metrics.contributors.experiments' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						// START of default provide_values from mediawiki.product_metrics.web_base. Keep
+						// them to make sure automated analysis can be performed
+
+						// Make user authentication status available as a dimension during analysis.
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_is_bot',
+
+						// Enable the calculation of the "click-through per page visit" generic metric.
+						'performer_pageview_id',
+						'performer_active_browsing_session_token',
+
+						'mediawiki_skin',
+						'mediawiki_database',
+						// END of default provide_values from mediawiki.product_metrics.web_base. Keep
+						// them to make sure automated analysis can be performed
+
+						// Specific to Constructive edit activation and constructive edit rates
+						'performer_id',
+						'page_namespace_id',
+						'page_revision_id',
+						'performer_edit_count',
+					],
+				],
+			],
 		]
 	],
 	'+legacy-vector' => [
