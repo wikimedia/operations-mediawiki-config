@@ -119,6 +119,9 @@ return [
 		'وب' => NS_PROJECT,
 		'نو' => NS_PROJECT_TALK,
 	],
+	'arwikibooks' => [
+		'وك' => NS_PROJECT, // T409789
+	],
 	'+arwikinews' => [
 		'وخ' => NS_PROJECT,
 		'نو' => NS_PROJECT_TALK,
