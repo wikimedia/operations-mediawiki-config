@@ -4432,9 +4432,21 @@ if ( $wmgUseCheckUser ) {
 
 	// UserInfoCard
 	if ( $wmgUseUserInfoCard ) {
-		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
-			[ '1', [ CUDCOND_NAMED ] ]
-		];
+		// Special-case handling for enwiki, where we want to enable for some privileged groups
+		// and not all named users
+		if ( $wgDBname === 'enwiki' ) {
+			$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
+				[ '1', [ CUDCOND_USERGROUP, 'sysop' ] ],
+				[ '1', [ CUDCOND_USERGROUP, 'checkuser' ] ],
+				[ '1', [ CUDCOND_USERGROUP, 'rollbacker' ] ],
+				[ '1', [ CUDCOND_USERGROUP, 'temporary-account-viewer' ] ],
+			];
+		} else {
+			// For other wikis, enable for all named users
+			$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
+				[ '1', [ CUDCOND_NAMED ] ],
+			];
+		}
 	}
 
 	// Link to the central Special:CentralAuth page if available (T397690)

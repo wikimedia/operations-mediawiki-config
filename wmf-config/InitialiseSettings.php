@@ -7176,6 +7176,7 @@ return [
 	'testwiki' => true,
 	'azwiki' => true,
 	'dewiki' => false,
+	'enwiki' => true,
 	'frwiki' => true,
 	'hewiki' => true,
 	'itwiki' => true,
