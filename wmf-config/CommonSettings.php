@@ -2011,6 +2011,8 @@ if ( $wmgEnableCaptcha ) {
 		$wgHCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
 		// SiteKey dedicated to form and API edits in 100% passive mode.
 		$wgHCaptchaEdit100PercentPassiveSiteKey = 'ccd26dec-6c86-4034-a704-e402435cd53c';
+		// SiteKey that always results in a challenge, for use in AbuseFilter.
+		$wgHCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
@@ -2049,6 +2051,7 @@ if ( $wmgEnableCaptcha ) {
 				'class' => 'HCaptcha',
 				'config' => [
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
+					'HCaptchaAlwaysChallengeSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
 				],
 			];
 			$wgCaptchaTriggers['create'] = [
@@ -2056,6 +2059,7 @@ if ( $wmgEnableCaptcha ) {
 				'class' => 'HCaptcha',
 				'config' => [
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
+					'HCaptchaAlwaysChallengeSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
 				],
 			];
 			$wgCaptchaTriggers['addurl'] = [
