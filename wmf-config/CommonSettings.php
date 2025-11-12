@@ -4370,6 +4370,12 @@ if ( $wmgAllowLabsAnonEdits ) {
 	$wgAutoblockExemptions[] = '172.16.0.0/16';
 	$wgAutoblockExemptions[] = '185.15.56.0/24';
 	$wgAutoblockExemptions[] = '2a02:ec80:a000::/48';
+
+	// Also exempt Cloud VPS from global autoblocks.
+	$wgGlobalBlockingAutoblockExemptions = array_merge(
+		$wgGlobalBlockingAutoblockExemptions,
+		$wgAutoblockExemptions,
+	);
 }
 
 // On Special:Version, link to useful release notes
