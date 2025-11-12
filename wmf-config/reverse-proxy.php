@@ -12,7 +12,8 @@ $wgCdnServersNoPurge = [
 	// TODO: generate this from Puppet's network module or Netbox
 	// directly.
 	//
-	// Only add private ranges here.
+	// To update this data, use contrib/generate-reverse-proxy.py
+	// with an up-to-date Puppet clone.
 
 	## eqiad
 	'10.64.0.0/22', # private1-a-eqiad
