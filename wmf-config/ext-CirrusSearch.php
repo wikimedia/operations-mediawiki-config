@@ -1262,4 +1262,9 @@ return [
 	'biwiki' => $wmgCirrusSearchAlternativeIndices,
 	'iglwiki' => $wmgCirrusSearchAlternativeIndices,
 ],
+'wgCirrusSearchCompletionUseSecondTryProfile' => [
+	'default' => 'default',
+	'hewiki' => 'language_converter_and_hebrew_wrong_keyboard',
+	'ruwiki' => 'language_converter_and_russian_wrong_keyboard',
+],
 ];

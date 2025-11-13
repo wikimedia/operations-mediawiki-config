@@ -82,6 +82,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		$knownToBeBad = [
 			'wgCirrusSearchUseCompletionSuggester',
 			'wgCirrusSearchUseIcuFolding',
+			'wgCirrusSearchCompletionUseSecondTryProfile',
 			"wgMFUseDesktopSpecialEditWatchlistPage",
 			'wmgUseCognate',
 			'wmgUseFileExporter',
