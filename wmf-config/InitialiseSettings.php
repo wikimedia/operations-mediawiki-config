@@ -12071,11 +12071,6 @@ return [
 	'default' => 500, // T288070
 ],
 
-'wgWBCitoidFullRestbaseURL' => [
-	'default' => false,
-	'testwikidatawiki' => 'https://en.wikipedia.org/api/rest_', // T228412
-],
-
 'wgFundraiserLandingPageELSampleRate' => [
 	'default' => 0,
 	'donatewiki' => 1

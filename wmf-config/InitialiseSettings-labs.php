@@ -1993,9 +1993,6 @@ function wmfGetOverrideSettings() {
 		'wgTwlRegistrationDays' => [
 			'default' => 1,
 		],
-		'wgWBCitoidFullRestbaseURL' => [
-			'wikidatawiki' => 'https://en.wikipedia.beta.wmcloud.org/api/rest_',
-		],
 
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
