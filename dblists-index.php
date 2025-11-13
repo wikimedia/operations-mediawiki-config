@@ -1022,7 +1022,7 @@ return [
 'wikimania2017wiki' => [ 'special', 'closed', 'medium', 'wikimania', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'sul' ],
 'wikimania2018wiki' => [ 'special', 'closed', 'small', 'wikimania', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'sul' ],
 'wikimaniateamwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
-'wikimaniawiki' => [ 'special', 'small', 'wikimania', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'translate', 'parsoidrendered', 'sul' ],
+'wikimaniawiki' => [ 'special', 'small', 'wikimania', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'translate', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'wowiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'wowikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'sul' ],
 'wowiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
