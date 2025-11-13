@@ -2063,14 +2063,20 @@ if ( $wmgEnableCaptcha ) {
 				],
 			];
 			$wgCaptchaTriggers['addurl'] = [
-				// Disable 'addurl' for non-API edits, as it should not be needed, given that
-				// 'edit' and 'create' triggers are enabled for non-API edits
-				'trigger' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ),
+				// Disable 'addurl' if:
+				// * the context is non-API edits, because 'edit' and 'create' triggers are enabled for
+				//   non-API edits
+				// * But, if in 100% passive mode, enable 'addurl' with the "always challenge" SiteKey,
+				//   because there needs to be some form of challenge enabled
+				'trigger' => ( $wgHCaptchaEditSiteKey === $wgHCaptchaEdit100PercentPassiveSiteKey ) ||
+					( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ),
 				'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
 					'FancyCaptcha' :
 					'HCaptcha',
 				'config' => [
-					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
+					// If the trigger is set to true, it means we're in 100% passive mode, and therefore
+					// we do want a visible challenge to be presented
+					'HCaptchaSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
 				],
 			];
 			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use ( $wmgEmergencyCaptcha ) {
