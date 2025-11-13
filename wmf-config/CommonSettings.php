@@ -2083,12 +2083,10 @@ if ( $wmgEnableCaptcha ) {
 					}
 				}
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-					if ( $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha ) {
-						// For API edits, only enable hCaptcha for editing interfaces that support it.
-						// TODO: Use Hooks::isSupportedInterface() when this is available, to enable support
-						// for VisualEditor, DiscussionTools, MobileFrontend, etc
-						$result = false;
-					}
+					// API edits aren't yet supported with hCaptcha. Set the result to false. This can still be
+					// overridden bye AbuseFilter's "showcaptcha" consequence, but that will use FancyCaptcha as
+					// the class.
+					$result = false;
 				}
 				// Make sure that the wmgEmergencyCaptcha settings is still respected.
 				// Note that if $wmgEmergencyCaptcha is set, and hCaptcha is enabled, API edits from interfaces
