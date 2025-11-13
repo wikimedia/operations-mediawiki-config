@@ -906,6 +906,10 @@ function wmfGetOverrideSettings() {
 			'default' => false, // T69651
 		],
 
+		'wgMediaViewerThumbnailBucketSizes' => [
+			'default' => [ 400, 960, 1280, 2560 ], // T372165
+		],
+
 		'wmgUseArticlePlaceholder' => [
 			'default' => false,
 			'wikidataclient' => true,
