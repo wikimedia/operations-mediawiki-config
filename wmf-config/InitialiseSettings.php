@@ -10597,11 +10597,6 @@ return [
 	'default' => true,
 ],
 
-// See T402369.
-'wgMetricsPlatformEnableExperimentOverrides' => [
-	'default' => true,
-],
-
 // See T391411 and T393918.
 'wgMetricsPlatformExperimentEventIntakeServiceUrl' => [
 	'default' => '/evt-103e/v2/events?hasty=true',
