@@ -5368,8 +5368,6 @@ return [
 
 'wmgLiquidThreadsOptIn' => [
 	'default' => true, // New wikis by default are opt-in per-page LiquidThreads
-	// ---------
-	'ptwikibooks' => false, // T50578
 ],
 
 'wmgLiquidThreadsFrozen' => [
