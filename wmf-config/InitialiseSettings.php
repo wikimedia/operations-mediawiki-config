@@ -3800,6 +3800,9 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'idwiki' => true,
+	'jawiki' => true,
+	'ptwiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
