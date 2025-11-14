@@ -1267,4 +1267,10 @@ return [
 	'hewiki' => 'language_converter_and_hebrew_wrong_keyboard',
 	'ruwiki' => 'language_converter_and_russian_wrong_keyboard',
 ],
+'wgCirrusSearchNaturalTitleSort' => [
+	'default' => [
+		'build' => true,
+		'use' => false,
+	]
+],
 ];
