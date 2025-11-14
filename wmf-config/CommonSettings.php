@@ -2063,9 +2063,12 @@ if ( $wmgEnableCaptcha ) {
 				],
 			];
 			$wgCaptchaTriggers['addurl'] = [
-				// Disable 'addurl', as it should not be needed given 'edit' and 'create' are enabled
-				'trigger' => false,
-				'class' => 'HCaptcha',
+				// Disable 'addurl' for non-API edits, as it should not be needed, given that
+				// 'edit' and 'create' triggers are enabled for non-API edits
+				'trigger' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ),
+				'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
+					'FancyCaptcha' :
+					'HCaptcha',
 				'config' => [
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
 				],
@@ -2084,7 +2087,7 @@ if ( $wmgEnableCaptcha ) {
 				}
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 					// API edits aren't yet supported with hCaptcha. Set the result to false. This can still be
-					// overridden bye AbuseFilter's "showcaptcha" consequence, but that will use FancyCaptcha as
+					// overridden by AbuseFilter's "showcaptcha" consequence, but that will use FancyCaptcha as
 					// the class.
 					$result = false;
 				}
@@ -2146,7 +2149,7 @@ if ( $wmgEnableCaptcha ) {
 	}
 
 	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname, $wmgUseMetricsPlatform ) {
-		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+		if ( in_array( $action, [ 'edit', 'create', 'addurl' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 			// For API edits, don't use hCaptcha yet.
 			$className = 'FancyCaptcha';
 			return;
