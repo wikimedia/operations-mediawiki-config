@@ -726,6 +726,7 @@ return [
 	'zhwikinews' => false,
 
 	// Other individual wikis
+	'arwikimedia' => false, // T353218
 	'azwikimedia' => false,
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
 	'eswiki' => false, // T8408
