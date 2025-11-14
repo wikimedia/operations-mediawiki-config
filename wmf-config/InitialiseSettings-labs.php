@@ -868,6 +868,7 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseCapiunto' => [
 			'default' => true,
+			'lockeddown' => false,
 		],
 
 		'wmgUseCheckUser' => [
