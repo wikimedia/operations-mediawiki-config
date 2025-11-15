@@ -5495,6 +5495,7 @@ return [
 	'cswiki' => true, // T100513
 	'cywiki' => true, // T173054
 	'dawiki' => true,
+	'dewiki' => true, // T410199
 	'dtywiki' => true, // T168038
 	'elwiki' => true,
 	'elwikivoyage' => true,
