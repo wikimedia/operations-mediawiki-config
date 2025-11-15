@@ -1721,6 +1721,10 @@ return [
 			'reupload-shared' => true,
 		],
 	],
+	'+kywiki' => [
+		'eliminator' => [ 'delete' => true ], // T410121
+		'rollbacker' => [ 'rollback' => true ], // T410121
+	],
 	'+labswiki' => [
 		'*' => [
 			'autocreateaccount' => false,
@@ -4394,6 +4398,12 @@ return [
 	'+kswiki' => [
 		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
 	],
+	'+kywiki' => [
+		'sysop' => [
+			'eliminator', // T410121
+			'rollbacker', // T410121
+		],
+	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
 		'bureaucrat' => [ 'flood' ], // T131527
@@ -5829,6 +5839,12 @@ return [
 	],
 	'+kswiki' => [
 		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
+	],
+	'+kywiki' => [
+		'sysop' => [
+			'eliminator', // T410121
+			'rollbacker', // T410121
+		],
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
