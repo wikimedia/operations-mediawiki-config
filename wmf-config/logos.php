@@ -827,7 +827,7 @@ return [
 	// Chapter and local user group wikis
 	'aewikimedia' => '/static/images/project-logos/aewikimedia.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
-	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
+	'arwikimedia' => '/static/images/project-logos/arwikimedia.png', // T353218
 	'azwikimedia' => '/static/images/project-logos/azwikimedia.png',
 	'bdwikimedia' => '/static/images/project-logos/bdwikimedia.png',
 	'bewikimedia' => '/static/images/project-logos/bewikimedia.png',
@@ -1562,6 +1562,7 @@ return [
 	// Chapter and local user group wikis
 	'aewikimedia' => '/static/images/project-logos/aewikimedia-1.5x.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
+	'arwikimedia' => '/static/images/project-logos/arwikimedia-1.5x.png', // T353218
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-1.5x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-1.5x.png',
@@ -2233,6 +2234,7 @@ return [
 	// Chapter and local user group wikis
 	'aewikimedia' => '/static/images/project-logos/aewikimedia-2x.png',
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
+	'arwikimedia' => '/static/images/project-logos/arwikimedia-2x.png', // T353218
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-2x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-2x.png',
@@ -5336,7 +5338,7 @@ return [
 		'width' => 100,
 		'height' => 12,
 	],
-	'arwikimedia' => [
+	'arwikimedia' => [ // T353218
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-ar.svg',
 		'width' => 120,
 		'height' => 27,
@@ -8480,7 +8482,6 @@ return [
 	// Wikivoyage
 
 	// Chapter and local user group wikis
-	'arwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'bdwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'bewikimedia' => '/static/images/icons/outreachwiki.svg',
 	'brwikimedia' => '/static/images/icons/brwikimedia.svg',
