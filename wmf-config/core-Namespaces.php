@@ -1775,6 +1775,15 @@ return [
 		'Author' => 102, // T388654
 		'Author_talk' => 103,
 	],
+	'+tokwiki' => [ // T404457
+		'lipu_Wikipesija' => NS_PROJECT,
+		'lipu_Wikipesija_la_toki' => NS_PROJECT_TALK,
+		'Wikipesija' => NS_PROJECT,
+		'Wikipesija_la_toki' => NS_PROJECT_TALK,
+		'toki_nimi' => 101,
+		'Word' => 100,
+		'Word_talk' => 101,
+	],
 	'+trwiki' => [
 		'T' => NS_TALK, // T265336
 		'K' => NS_USER, // T265336
@@ -2296,6 +2305,7 @@ return [
 	'+rmwiki' => [ 0 => 1 ],
 	'+slwiki' => [ 8 => 0, 14 => 1 ],
 	'+tenwiki' => [ 0 => 1 ],
+	'+tokwiki' => [ 100 => 0 ], // T404457
 	'+zh_yuewiki' => [ 8 => 0, 14 => 1 ],
 	'+zh_min_nanwiki' => [ 8 => 0 ],
 	// @}
@@ -3377,6 +3387,10 @@ return [
 	'tlwiki' => [
 		100 => 'Portada', // Portal
 		101 => 'Usapang_Portada', // Portal talk
+	],
+	'tokwiki' => [
+		100 => 'nimi', // Word
+		101 => 'nimi_la_toki', // Word talk
 	],
 	'trwiki' => [
 		100 => 'Portal',
@@ -5610,6 +5624,7 @@ return [
 	'+tewikisource' => [ 102 ],
 	'+thwikibooks' => [ 104, 106 ], // T308376
 	'+thwikisource' => [ 102, 114 ], // T275282
+	'+tokwiki' => [ 100 ], // T404457
 	'+trwikibooks' => [ 100, 110, ],
 	'+trwikisource' => [ 100 ],
 	'+ukwikibooks' => [ 102 ], // T310940
@@ -6261,6 +6276,7 @@ return [
 	'tkwiktionary' => 'Wikisözlük',
 	'tlwiktionary' => 'Wiksiyonaryo', // T402725
 	'tlywiki' => 'Vikipedija', // T367009
+	'tokwiki' => 'pali', // T404457
 	'transitionteamwiki' => 'Project',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',
@@ -6446,6 +6462,7 @@ return [
 	'thwikimedia' => 'พูดคุยเรื่องวิกิมีเดียประเทศไทย', // T400001
 	'thwiktionary' => 'คุยเรื่องวิกิพจนานุกรม', // T42717
 	'tlwikiquote' => 'Wikikawikaan',
+	'tokwiki' => 'pali_la_toki', // T404457
 	'tyvwiki' => 'Википедия_дугайында_сүмелел', // T51328
 	'uawikimedia' => 'Обговорення_Вікімедіа',
 	'ukwiktionary' => 'Обговорення_Вікісловника',
