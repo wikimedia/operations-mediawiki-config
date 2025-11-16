@@ -61,6 +61,7 @@ return [
 	'pwnwiki' => false, // T292415
 	'szywiki' => false, // T237369
 	'taywiki' => false, // T275803
+	'tokwiki' => false, // T404457
 	'wiktionary' => false,
 ],
 

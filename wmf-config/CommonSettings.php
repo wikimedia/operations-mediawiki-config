@@ -5049,7 +5049,9 @@ class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 }
 
 if (
-	in_array( $wgDBname, WmfConfig::readDbListFile( 'closed' ) ) &&
+	// HACK: Prevent tokwiki account creations that could interfere with
+	// the import+user rename process. -taavi
+	( in_array( $wgDBname, WmfConfig::readDbListFile( 'closed' ) ) || $wgDBname === 'tokwiki' ) &&
 	$wmgUseCentralAuth
 ) {
 	$wgAuthManagerAutoConfig['preauth'][ClosedWikiProvider::class] = [
