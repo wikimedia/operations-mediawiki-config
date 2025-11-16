@@ -932,7 +932,7 @@ return [
 'tlywiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'sul' ],
 'tnwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'tnwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'tokwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'parsoidrendered', 'sul' ],
+'tokwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'parsoidrendered', 'sul' ],
 'towiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'towiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
 'tpiwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
