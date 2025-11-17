@@ -3803,6 +3803,8 @@ return [
 	'idwiki' => true,
 	'jawiki' => false, // Temporarily disabled, while we debug FancyCaptcha appearing on anonymous edits
 	'ptwiki' => true,
+	'trwiki' => true,
+	'fawiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
