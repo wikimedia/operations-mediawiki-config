@@ -12377,6 +12377,14 @@ return [
 	'wikimaniawiki' => true, // T397369
 	'wikisource' => true, // T402329
 	'commonswiki' => true, // T403667
+	'wikivoyage' => true, // T409760
+	'wiktionary' => true, // T409760
+	'wikinews' => true, // T409760
+	'wikiversity' => true, // T409760
+	'wikiquote' => true, // T409760
+	'mediawikiwiki' => true, // T409760
+	'specieswiki' => true, // T409760
+	'wikifunctionswiki' => true, // T409760
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
@@ -12403,6 +12411,8 @@ return [
 	'zhwiki' => false,
 	'brwikimedia' => false,
 	'uawikimedia' => false,
+	'mediawikiwiki' => false, // T409760
+	'wikifunctionswiki' => false, // T409760
 ],
 
 // T397476
