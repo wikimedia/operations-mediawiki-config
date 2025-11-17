@@ -3801,7 +3801,7 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'idwiki' => true,
-	'jawiki' => true,
+	'jawiki' => false, // Temporarily disabled, while we debug FancyCaptcha appearing on anonymous edits
 	'ptwiki' => true,
 ],
 
