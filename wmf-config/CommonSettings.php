@@ -4475,14 +4475,14 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	}
 }
 
-// T393615
-$wgCheckUserGroupRequirements = [
-	'temporary-account-viewer' => [
-		'edits' => 300,
-		'age' => 86400 * 30 * 6,
-		'exemptGroups' => [ 'steward' ],
-		'reason' => 'checkuser-group-requirements-temporary-account-viewer',
+// T393615, T409717
+$wgRestrictedGroups['temporary-account-viewer'] = [
+	'memberConditions' => [
+		'&',
+		[ APCOND_EDITCOUNT, 300 ],
+		[ APCOND_AGE, 86400 * 30 * 6 ],
 	],
+	'canBeIgnored' => true,
 ];
 
 // Ensure no users can be crated that match temporary account names (T361021).
