@@ -11566,11 +11566,6 @@ return [
 	],
 ],
 
-'wmgUseCapiunto' => [
-	'default' => false,
-	'wikidataclient-test' => true,
-],
-
 'wmgUseKartographer' => [
 	'default' => true,
 	'wikifunctionswiki' => false,

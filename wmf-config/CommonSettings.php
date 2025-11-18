@@ -4604,10 +4604,6 @@ $wgJobTypeConf['default'] = [
 
 $wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
 
-if ( $wmgUseCapiunto ) {
-	wfLoadExtension( 'Capiunto' );
-}
-
 if ( $wmgUseKartographer && $wmgUseJsonConfig ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
