@@ -1404,6 +1404,9 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 'hastemplate:peacock_inline',
 			'frwiki' => 'hastemplate:peacock_inline',
 		],
+		'wgGEReviseToneRecommendationProvider' => [
+			'default' => 'subpage',
+		],
 		'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
 			'default' => 300,
 		],
