@@ -210,6 +210,7 @@ return [
 	'iswiki' => true,
 	'itwiki' => true,
 	'iuwiki' => true,
+	'jawiki' => true,
 	'jamwiki' => true,
 	'jbowiki' => true,
 	'jvwiki' => true,
@@ -357,6 +358,7 @@ return [
 	'udmwiki' => true,
 	'ugwiki' => true,
 	'ukwiki' => true,
+	'urwiki' => true,
 	'uzwiki' => true,
 	'vewiki' => true,
 	'vecwiki' => true,
@@ -375,6 +377,7 @@ return [
 	'zawiki' => true,
 	'zeawiki' => true,
 	'zh_min_nanwiki' => true,
+	'zhwiki' => true,
 	'zuwiki' => true,
 ],
 
