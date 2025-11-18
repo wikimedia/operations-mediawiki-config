@@ -5385,6 +5385,7 @@ return [
 	'huwiki' => true, // T406026
 	'mediawikiwiki' => true,
 	'officewiki' => true, // replaced with Flow 2014-11-25
+	'ptwikibooks' => true, // T402532
 	'sewikimedia' => true, // T106302, T114277
 	'strategywiki' => true,
 	'svwikisource' => true, // T406227
