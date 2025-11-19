@@ -109,6 +109,9 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 				$toCheck[] = [ $end, "end of range $range" ];
 			}
 		}
+		if ( $toCheck === [] ) {
+			$this->markTestSkipped( 'No IP address/range in this rule' );
+		}
 
 		foreach ( $toCheck as [ $ip, $description ] ) {
 			$this->assertTrue( IPUtils::isPublic( $ip ),

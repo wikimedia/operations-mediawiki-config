@@ -2429,7 +2429,6 @@ return [
 	'hewikiquote' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 	'hewikisource' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 	'hewiktionary' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
-	'tcywikisource' => [ [ 'count' => 75, 'seconds' => 86400 ] ], // T410507
 ],
 
 'wgDefaultSkin' => [
