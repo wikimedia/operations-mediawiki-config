@@ -427,15 +427,6 @@ return [
 	],
 ],
 
-'wgGELevelingUpNewNotificationsEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-],
-
 'wgGEUseMetricsPlatformExtension' => [
 	'default' => false,
 	'testwiki' => true,
