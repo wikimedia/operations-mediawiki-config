@@ -216,6 +216,11 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
 	],
+	'thwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
 	'tlwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
@@ -893,6 +898,11 @@ return [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.367, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
+	],
+	'thwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.708, 'max' => 1 ] // based on desired false positive rate of < 15% T408607
+		],
 	],
 	'tlwiki' => [
 		'revertrisklanguageagnostic' => [
