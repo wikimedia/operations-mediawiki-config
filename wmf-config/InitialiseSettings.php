@@ -8805,7 +8805,14 @@ return [
 'wmgUseReportIncident' => [
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 	'ptwiki' => true,
+],
+
+'wgReportIncidentUseV2NonEmergencyFlow' => [
+	'default' => true,
+	'ptwiki' => false,
+	'testwiki' => false,
 ],
 
 'wgReportIncidentEnableInstrumentation' => [
