@@ -484,10 +484,30 @@ return [
 'wgCirrusSearchCompletionSuggesterUseDefaultSort' => [
 	'default' => false,
 	// T404858
+	'afwiki' => true,
+	'bgwiki' => true,
+	'biwiki' => true,
+	'cswiki' => true,
+	'dawiki' => true,
+	'dewiki' => true,
 	'enwiki' => true,
+	'eswiki' => true,
+	'etwiki' => true,
+	'fiwiki' => true,
 	'frwiki' => true,
+	'fywiki' => true,
+	'glwiki' => true,
+	'gvwiki' => true,
 	'hewiki' => true,
+	'iglwiki' => true,
+	'lvwiki' => true,
 	'mnwiki' => true, // T327878
+	'mtwiki' => true,
+	'nowiki' => true,
+	'plwiki' => true,
+	'simplewiki' => true,
+	'slwiki' => true,
+	'vowiki' => true,
 ],
 
 // @} end of wgCirrusSearchCompletionSuggesterSubphrases
