@@ -4828,10 +4828,6 @@ if ( $wmgShowRollbackConfirmationDefaultUserOptions ) {
 	$wgDefaultUserOptions['showrollbackconfirmation'] = 1;
 }
 
-if ( $wmgUseWikimediaEditorTasks ) {
-	wfLoadExtension( 'WikimediaEditorTasks' );
-}
-
 // T283003: TheWikipediaLibrary requires GlobalPreferences and CentralAuth to be installed
 if ( $wmgUseTheWikipediaLibrary && $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );

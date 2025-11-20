@@ -38,9 +38,6 @@
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
 use MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer;
-use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppCaptionEditCounter;
-use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppDescriptionEditCounter;
-use MediaWiki\Extension\WikimediaEditorTasks\WikipediaAppImageDepictsEditCounter;
 
 # ############### Basic settings ###############
 return [
@@ -11968,44 +11965,6 @@ return [
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true,
-],
-
-'wmgUseWikimediaEditorTasks' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-	'testcommonswiki' => true,
-	'commonswiki' => true,
-],
-'wgWikimediaEditorTasksUserCountsCluster' => [
-	'default' => 'extension1',
-],
-'wgWikimediaEditorTasksUserCountsDatabase' => [
-	'default' => 'wikishared',
-],
-'wgWikimediaEditorTasksEnabledCounters' => [
-	'default' => [
-		[
-			'class' => WikipediaAppDescriptionEditCounter::class,
-			'counter_key' => 'app_description_edits',
-		],
-		[
-			'class' => WikipediaAppCaptionEditCounter::class,
-			'counter_key' => 'app_caption_edits',
-		],
-		[
-			'class' => WikipediaAppImageDepictsEditCounter::class,
-			'counter_key' => 'app_depicts_edits',
-		],
-	],
-],
-
-'wgWikimediaEditorTasksEnableEditStreaks' => [
-	'default' => true,
-],
-
-'wgWikimediaEditorTasksEnableRevertCounts' => [
-	'default' => true,
 ],
 
 'wgSpecialSearchFormOptions' => [
