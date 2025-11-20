@@ -3527,8 +3527,6 @@ return [
 
 						// Specific to Constructive edit activation and constructive edit rates
 						'performer_id',
-						'page_namespace_id',
-						'page_revision_id',
 						'performer_edit_count',
 					],
 				],
