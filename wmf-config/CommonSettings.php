@@ -4688,6 +4688,7 @@ if ( $wmgUseGrowthExperiments ) {
 
 	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['data-gateway'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
+	$wgGEReviseToneServiceUrl = $wmgLocalServices['data-gateway'];
 
 	// put if conditions for $wmgGEActiveExperiment here
 }

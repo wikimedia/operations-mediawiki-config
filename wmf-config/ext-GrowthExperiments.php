@@ -838,4 +838,16 @@ return [
 	'wikidata' => false,
 ],
 
+'wgGEReviseToneSuggestedEditEnabled' => [
+	'default' => false,
+	// T407029
+	'testwiki' => true,
+],
+
+'wgGEReviseToneOverrideSearchTerm' => [
+	'default' => '',
+	// T407029
+	'testwiki' => 'hasrecommendation:tone>=0.8 lasteditdate:<now',
+],
+
 ];
