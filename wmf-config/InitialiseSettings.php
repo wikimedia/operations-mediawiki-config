@@ -5937,7 +5937,7 @@ return [
 ],
 
 'wgMediaViewerThumbnailBucketSizes' => [
-	'default' => [ 400, 960, 1280, 2560 ], // T372165
+	'default' => [ 500, 960, 1280, 2560 ], // T372165, T410556
 ],
 
 'wmgUseLinter' => [
