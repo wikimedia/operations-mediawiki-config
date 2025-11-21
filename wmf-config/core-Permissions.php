@@ -3577,6 +3577,24 @@ return [
 			'temporary-account-viewer',
 		],
 	],
+	'jawiki' => [
+		'bureaucrat' => [
+			'accountcreator',
+			'sysop',
+			'interface-admin',
+			'bureaucrat',
+			'bot',
+			'confirmed',
+			'eliminator', // T258339
+			'temporary-account-viewer', // T409687
+		],
+		'sysop' => [
+			'ipblock-exempt',
+			'abusefilter',
+			'extendedconfirmed', // T249820
+			'rollbacker', // T258339
+		],
+	],
 	'ukwiki' => [
 		'sysop' => [
 			'ipblock-exempt',
@@ -4356,14 +4374,6 @@ return [
 			'patroller',
 			'autopatrolled',
 		],
-	],
-	'+jawiki' => [
-		'sysop' => [
-			'abusefilter',
-			'extendedconfirmed', // T249820
-			'rollbacker', // T258339
-		],
-		'bureaucrat' => [ 'eliminator' ], // T258339
 	],
 	'+jawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T63366
