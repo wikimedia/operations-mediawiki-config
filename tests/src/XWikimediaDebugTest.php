@@ -66,7 +66,7 @@ class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	public function provideCookie() {
+	public static function provideCookie(): Generator {
 		$now = 1700000000;
 
 		// expiry must be in the future and within the acceptable range

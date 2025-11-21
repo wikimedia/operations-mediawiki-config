@@ -17,7 +17,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 		$this->conf = new ConfigFile( $txtFiles, $plainFiles, $dirs );
 	}
 
-	public function provideDiskPathByUrl() {
+	public static function provideDiskPathByUrl(): array {
 		return [
 			[ '/conf/CommonSettings.php.txt', 'wmf-config/CommonSettings.php' ],
 			[ '/conf/README.md.txt', 'docroot/noc/README.md' ],
@@ -39,7 +39,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	public function provideDiskPathByLabel() {
+	public static function provideDiskPathByLabel(): array {
 		return [
 			[ 'CommonSettings.php', 'wmf-config/CommonSettings.php' ],
 			[ 'README.md', 'docroot/noc/README.md' ],
@@ -61,7 +61,7 @@ class ConfigFileTest extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	public function provideRouteFromLabel() {
+	public static function provideRouteFromLabel(): array {
 		return [
 			[ 'CommonSettings.php', '/conf/CommonSettings.php.txt' ],
 			[ 'README.md', '/conf/README.md.txt' ],

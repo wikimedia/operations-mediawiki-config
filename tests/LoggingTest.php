@@ -26,7 +26,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		require_once __DIR__ . '/../wmf-config/logging.php';
 	}
 
-	public function provideHandlerSetup() {
+	public static function provideHandlerSetup(): array {
 		return [
 			'Setting only a level sends to udp2log and logstash' => [
 				// configuration for 'test' channel in wmgMonologChannels
@@ -96,7 +96,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	public function provideConfiguredProductionChannels() {
+	public static function provideConfiguredProductionChannels(): array {
 		$settings = WmfConfig::getStaticConfig();
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
@@ -106,7 +106,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		return $tests;
 	}
 
-	public function provideConfiguredBetaClusterChannels() {
+	public static function provideConfiguredBetaClusterChannels(): array {
 		$settings = WmfConfig::getStaticConfig( 'labs' );
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {

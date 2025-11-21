@@ -155,7 +155,7 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 		];
 	}
 
-	public function provideRules() {
+	public static function provideRules(): array {
 		require __DIR__ . '/../wmf-config/throttle.php';
 
 		$rules = [];

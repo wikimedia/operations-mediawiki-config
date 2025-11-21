@@ -19,9 +19,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 		$this->assertEquals( $expectedDB, $version->getDatabase() );
 	}
 
-	public function provideServerNameAndDocRoot() {
-		$root = '/srv/mediawiki/docroot';
-
+	public static function provideServerNameAndDocRoot(): array {
 		return [
 			// (expected DB, server name [, message]]
 			[ 'enwiki', 'en.wikipedia.org' ],
@@ -162,7 +160,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	public function provideInitializeFromServerData() {
+	public static function provideInitializeFromServerData(): array {
 		return [
 			[ 'en.wikipedia.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
 			[ 'en.wikipedia.beta.wmcloud.org', '/w/index.php', '', '/wiki/Main_Page', 'enwiki' ],
