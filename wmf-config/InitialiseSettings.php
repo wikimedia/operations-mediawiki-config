@@ -11425,6 +11425,31 @@ return [
 				],
 			],
 		],
+		[
+			// T410696
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'reader-demographics-2025-en',
+			'coverage' => 0, // 0.02,
+			'audience' => [
+				'anons' => true
+			],
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-demographics-2025-en-survey-policy',
+			'questions' => [
+				[
+					'name' => 'Survey single external question',
+					'question' => 'reader-demographics-2-survey-question',
+					'description' => 'reader-demographics-2025-en-survey-description',
+					'link' => 'reader-demographics-2025-en-survey-link',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
 	],
 	'eswiki' => [
 		[
