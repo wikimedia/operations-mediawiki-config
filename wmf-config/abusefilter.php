@@ -421,13 +421,24 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T134779
 		$wgAbuseFilterAnonBlockDuration = '3 days'; // T134779
 		break;
-	case 'rowiki':
-		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
-		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
-		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
-		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
-		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+	case 'rowiki': // T407978
+		$wgGroupPermissions['*']['abusefilter-view'] = false;
+		$wgGroupPermissions['*']['abusefilter-log'] = false;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
+		$wgGroupPermissions['extendedconfirmed']['abusefilter-log'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-view'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-log'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-view'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-view'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 		break;
 	case 'ruwiki':
 		## Scaled back from sysop to autoconfirmed -- T19998 -- Andrew 2009-03-16
