@@ -2629,11 +2629,9 @@ return [
 
 'wgVectorPromoteAddTopic' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except enwiki, svwiki and ruwiki (T379264)
+	// Everywhere except enwiki (T379264)
 	'default' => true,
 	'enwiki' => false,
-	'ruwiki' => false,
-	'svwiki' => false,
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -8228,29 +8226,23 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	// Sync with sub-features below and wgVectorPromoteAddTopic
-	// Everywhere except enwiki, svwiki and ruwiki (T379264)
+	// Everywhere except enwiki (T379264)
 	'default' => 'available',
 	'enwiki' => 'default',
-	'ruwiki' => 'default',
-	'svwiki' => 'default',
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except enwiki, svwiki and ruwiki (T379264)
+	// Everywhere except enwiki (T379264)
 	'default' => 'available',
 	'enwiki' => 'default',
-	'ruwiki' => 'default',
-	'svwiki' => 'default',
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except enwiki, svwiki and ruwiki (T379264)
+	// Everywhere except enwiki (T379264)
 	'default' => 'available',
 	'enwiki' => 'default',
-	'ruwiki' => 'default',
-	'svwiki' => 'default',
 ],
 
 'wgDiscussionToolsAutoTopicSubEditor' => [
