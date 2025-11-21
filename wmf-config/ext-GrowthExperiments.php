@@ -416,6 +416,7 @@ return [
 	'enwiki' => true,
 	'eswiki' => true,
 	'frwiki' => true,
+	'ptwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
@@ -843,8 +844,11 @@ return [
 
 'wgGEReviseToneSuggestedEditEnabled' => [
 	'default' => false,
-	// T407029
-	'testwiki' => true,
+	'testwiki' => true, // T407029
+	'arwiki' => true, // T409606
+	'enwiki' => true, // T409606
+	'frwiki' => true, // T409606
+	'ptwiki' => true, // T409606
 ],
 
 'wgGEReviseToneOverrideSearchTerm' => [
