@@ -2405,5 +2405,10 @@ function wmfGetOverrideSettings() {
 		'wgUserEmailConfirmationUseHTML' => [
 			'default' => true,
 		],
+
+		// T410163
+		'wmgUseFooterLegalContactLink' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()

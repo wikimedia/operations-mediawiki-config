@@ -5353,6 +5353,11 @@ return [
 	'frwiki' => true, // T202014
 ],
 
+'wmgUseFooterLegalContactLink' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseFooterCodeOfConductLink' => [
 	'default' => true,
 	'mediawikiwiki' => false,

@@ -1842,7 +1842,7 @@ if ( $wgDBname === 'enwiki' ) {
 }
 
 $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
-	use ( $wmgUseFooterContactLink, $wmgUseFooterCodeOfConductLink, $wmgUseFooterTechCodeOfConductLink )
+	use ( $wmgUseFooterContactLink, $wmgUseFooterCodeOfConductLink, $wmgUseFooterTechCodeOfConductLink, $wmgUseFooterLegalContactLink )
 {
 	if ( $key !== 'places' ) {
 		return;
@@ -1853,6 +1853,14 @@ $wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 			'a',
 			[ 'href' => Skin::makeInternalOrExternalUrl( $sk->msg( 'contact-url' )->escaped() ) ],
 			$sk->msg( 'contact' )->text()
+		);
+	}
+
+	if ( $wmgUseFooterLegalContactLink ) {
+		$footerlinks['legal-safety-contacts'] = Html::element(
+			'a',
+			[ 'href' => Skin::makeInternalOrExternalUrl( $sk->msg( 'wikimedia-legal-safety-contacts-url' )->escaped() ) ],
+			$sk->msg( 'wikimedia-legal-safety-contacts' )->text()
 		);
 	}
 
