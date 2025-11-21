@@ -2266,7 +2266,7 @@ return [
 		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
 		'CommunityConfiguration' => 'info',
-		'communityrequests' => 'debug', // T402967
+		'communityrequests' => 'info', // T402967
 		'ContentTranslation' => 'info',
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
@@ -12580,6 +12580,7 @@ return [
 'wmgUseCommunityRequests' => [
 	'default' => false,
 	'metawiki' => true,
+	'mediawikiwiki' => true, // T405694
 ],
 
 'wgCommunityRequestsEnable' => [
