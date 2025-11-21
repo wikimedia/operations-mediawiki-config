@@ -190,7 +190,11 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			],
 		],
 		'hostsByName' => null,
-		'sectionLoads' => [],
+		'sectionLoads' => [
+			'DEFAULT' => [
+				'WMF_MAINTENANCE_OFFLINE_placeholder' => 0
+			],
+		],
 		'externalLoads' => [],
 	];
 	$wmgRemoteMasterDbConfig = null;
