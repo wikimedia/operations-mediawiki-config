@@ -6556,6 +6556,7 @@ return [
 // Should the citation button be moved from the primary toolbar into the "other" group
 'wgCiteVisualEditorOtherGroup' => [
 	'default' => true,
+	'arwiktionary' => false, // T410840
 	'enwiktionary' => false, // T267504
 	'wikipedia' => false,
 	'wikibooks' => false,
