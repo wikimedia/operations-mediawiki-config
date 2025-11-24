@@ -2485,6 +2485,10 @@ return [
 			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
 		],
+		'maps.tiles_change_staging.v1' => [
+			'schema_title' => 'maps/tiles_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		// mediawiki.page_change stream.
 		// This stream is using major API versioning.
