@@ -2190,7 +2190,7 @@ if ( $wmgEnableCaptcha ) {
 		// T410354 - A/B test on zhwiki and jawiki
 		// The $wmgUseMetricsPlatform and $wgDBname checks aren't strictly necessary, but reduce the scope of
 		// problems in the event of exceptions in ExperimentManager
-		if ( $wmgUseMetricsPlatform && in_array( $wgDBname, [ 'zhwiki', 'jawiki' ] ) && in_array( $action, [ 'edit', 'create' ] ) ) {
+		if ( $wmgUseMetricsPlatform && in_array( $wgDBname, [ 'zhwiki', 'jawiki' ] ) && in_array( $action, [ 'edit', 'create', 'addurl' ] ) ) {
 			$experimentManager = $services->getService( 'MetricsPlatform.XLab.ExperimentManager' );
 			$experiment = $experimentManager->getExperiment( 'fy25-26-we-4-2-hcaptcha-editing' );
 			if ( $experiment->isAssignedGroup( 'control', 'control-2' ) ) {
