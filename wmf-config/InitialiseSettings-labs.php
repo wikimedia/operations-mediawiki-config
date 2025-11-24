@@ -395,7 +395,7 @@ function wmfGetOverrideSettings() {
 				'GlobalWatchlist' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ], // T268181
 				'goodpass' => 'debug',
 				'goodpass-priv' => 'debug',
-				'GrowthExperiments' => 'info',
+				'GrowthExperiments' => 'debug', // sgimeno for T405177
 				'headers-sent' => 'debug',
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
 				'ldap' => 'warning',
