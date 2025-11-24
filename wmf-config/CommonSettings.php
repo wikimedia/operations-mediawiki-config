@@ -192,7 +192,8 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'hostsByName' => null,
 		'sectionLoads' => [
 			'DEFAULT' => [
-				'WMF_MAINTENANCE_OFFLINE_placeholder' => 0
+				[ 'WMF_MAINTENANCE_OFFLINE_placeholder' => 0 ],
+				[ 'WMF_MAINTENANCE_OFFLINE_placeholder' => 0 ]
 			],
 		],
 		'externalLoads' => [],
