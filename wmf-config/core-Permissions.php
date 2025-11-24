@@ -1854,6 +1854,7 @@ return [
 			'userrights-interwiki' => true,
 			'globalgroupmembership' => true, // T207531
 			'globalgrouppermissions' => true, // T207531
+			'ignore-restricted-groups' => true, // T409717
 			'centralauth-lock' => true, // T208035
 			'centralauth-suppress' => true, // T302675
 			'globalblock' => true, // T208035
