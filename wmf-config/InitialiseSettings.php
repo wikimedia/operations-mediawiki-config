@@ -2375,6 +2375,7 @@ return [
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning' ],
 		'WikibaseQualityConstraints' => 'debug',
+		'WikiEditor' => 'info',
 		'WikiLambda' => 'warning',
 		'WikiLambdaClient' => 'info',
 		'Wikisource' => 'info',
