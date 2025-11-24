@@ -3802,6 +3802,7 @@ return [
 	'fawiki' => true,
 	'jawiki' => true, // A/B test T410354
 	'zhwiki' => true, // A/B test T410354
+	'frwiki' => true,
 ],
 
 'wmgEmergencyCaptcha' => [
