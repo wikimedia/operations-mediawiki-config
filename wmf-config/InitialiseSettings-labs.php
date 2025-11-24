@@ -829,6 +829,61 @@ function wmfGetOverrideSettings() {
 						],
 					],
 				],
+				[
+					// T410696
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'temp-user-experiment-anons-true',
+					'coverage' => 1,
+					'audience' => [
+						'anons' => true,
+						'userInGroup' => [ 'temp' ],
+						'pageIds' => [ 6197 ],
+					],
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+					'questions' => [
+						[
+							'name' => 'Survey single external question',
+							'question' => 'ext-quicksurveys-example-external-survey-question',
+							'description' => 'ext-quicksurveys-example-external-survey-description',
+							'link' => 'ext-quicksurveys-example-external-survey-link',
+							'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+							'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+						],
+					],
+					'instanceTokenParameterName' => 'QS',
+				],
+				[
+					// T410696
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'temp-user-experiment-anons-null',
+					'coverage' => 1,
+					'audience' => [
+						'userInGroup' => [ 'temp' ],
+						'pageIds' => [ 26348 ],
+					],
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+					'questions' => [
+						[
+							'name' => 'Survey single external question',
+							'question' => 'ext-quicksurveys-example-external-survey-question',
+							'description' => 'ext-quicksurveys-example-external-survey-description',
+							'link' => 'ext-quicksurveys-example-external-survey-link',
+							'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+							'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+						],
+					],
+					'instanceTokenParameterName' => 'QS',
+				]
 			],
 		],
 
