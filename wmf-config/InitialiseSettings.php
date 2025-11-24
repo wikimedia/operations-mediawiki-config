@@ -12391,10 +12391,6 @@ return [
 	'wikifunctionswiki' => false, // T409760
 ],
 
-'wgCampaignEventsEnableContributionTracking' => [
-	'default' => true, // T404904
-],
-
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
