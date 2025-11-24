@@ -2018,6 +2018,10 @@ if ( $wmgEnableCaptcha ) {
 		$wgHCaptchaEdit100PercentPassiveSiteKey = 'ccd26dec-6c86-4034-a704-e402435cd53c';
 		// SiteKey that always results in a challenge, for use in AbuseFilter.
 		$wgHCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
+		// SiteKey for the Wikipedia iOS App
+		$wgHCaptchaWikipediaIOSSiteKey = '083c7bd2-eef0-423a-98ca-db1e0d4cbbae';
+		// SiteKey for the Wikipedia Android App
+		$wgHCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
@@ -2031,6 +2035,10 @@ if ( $wmgEnableCaptcha ) {
 				'HCaptcha',
 			'config' => [
 				'HCaptchaSiteKey' => $wgHCaptchaAccountCreationSiteKey,
+				'HCaptchaAdditionalValidSiteKeys' => [
+					$wgHCaptchaWikipediaIOSSiteKey,
+					$wgHCaptchaWikipediaAndroidSiteKey,
+				],
 			],
 		];
 		if ( $wgDBname === 'test2wiki' ) {
@@ -2041,6 +2049,10 @@ if ( $wmgEnableCaptcha ) {
 				'class' => 'HCaptcha',
 				'config' => [
 					'HCaptchaSiteKey' => $wgHCaptchaAccountCreationSiteKey,
+					'HCaptchaAdditionalValidSiteKeys' => [
+						$wgHCaptchaWikipediaIOSSiteKey,
+						$wgHCaptchaWikipediaAndroidSiteKey,
+					],
 				],
 			];
 		}
@@ -2057,6 +2069,10 @@ if ( $wmgEnableCaptcha ) {
 				'config' => [
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
 					'HCaptchaAlwaysChallengeSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
+					'HCaptchaAdditionalValidSiteKeys' => [
+						$wgHCaptchaWikipediaIOSSiteKey,
+						$wgHCaptchaWikipediaAndroidSiteKey,
+					],
 				],
 			];
 			$wgCaptchaTriggers['create'] = [
@@ -2065,6 +2081,10 @@ if ( $wmgEnableCaptcha ) {
 				'config' => [
 					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
 					'HCaptchaAlwaysChallengeSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
+					'HCaptchaAdditionalValidSiteKeys' => [
+						$wgHCaptchaWikipediaIOSSiteKey,
+						$wgHCaptchaWikipediaAndroidSiteKey,
+					],
 				],
 			];
 			$wgCaptchaTriggers['addurl'] = [
