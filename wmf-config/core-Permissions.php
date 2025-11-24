@@ -2858,6 +2858,9 @@ return [
 			'deletedhistory' => true,
 		], // T122710
 	],
+	'+trwikisource' => [
+		'rollbacker' => [ 'rollback' => true ], // T410931
+	],
 	'+trwikivoyage' => [
 		'rollbacker' => [ 'rollback' => true ], // T314678
 	],
@@ -4913,6 +4916,9 @@ return [
 		],
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
+	'+trwikisource' => [
+		'sysop' => [ 'rollbacker' ], // T410931
+	],
 	'+trwikivoyage' => [
 		'sysop' => [ 'rollbacker' ], // T314678
 	],
@@ -6196,6 +6202,9 @@ return [
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender', 'translator' ], // bureaucrat -> sysop, T40690, T147740, T356440
 		'bureaucrat' => [ 'interface-editor' ], // T41690
+	],
+	'+trwikisource' => [
+		'sysop' => [ 'rollbacker' ], // T410931
 	],
 	'+trwikivoyage' => [
 		'sysop' => [ 'rollbacker' ], // T314678
