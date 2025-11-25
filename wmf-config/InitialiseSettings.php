@@ -11976,8 +11976,6 @@ return [
 	],
 	'donatewiki' => [
 		'*.wikimedia.org', // Needed to load some images
-		'*.fundraiseup.com', // T345379
-		'fndrsp.net',
 	]
 ],
 
