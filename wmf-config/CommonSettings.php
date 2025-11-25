@@ -4918,7 +4918,6 @@ if ( $wmgUseCommunityRequests ) {
 			'db' => false,
 		];
 	}
-	$wgCommunityRequestsStatuses['under-review']['voting'] = true; // T409613
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
