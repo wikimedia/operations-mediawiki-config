@@ -687,7 +687,7 @@ return [
 'ocwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'sul' ],
 'ocwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'ocwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'officewiki' => [ 'special', 'private', 'flow', 'medium', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'wikilove' ],
+'officewiki' => [ 'special', 'private', 'flow', 'vector-2022-language-links', 'medium', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'wikilove' ],
 'olowiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'ombudsmenwiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'omwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
