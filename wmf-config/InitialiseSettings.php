@@ -11430,7 +11430,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-en',
-			'coverage' => 0, // 0.02,
+			'coverage' => 0.02,
 			'audience' => [
 				'anons' => true
 			],
@@ -11445,6 +11445,7 @@ return [
 					'question' => 'reader-demographics-2-survey-question',
 					'description' => 'reader-demographics-2025-en-survey-description',
 					'link' => 'reader-demographics-2025-en-survey-link',
+					'instanceTokenParameterName' => 'QS',
 					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
 					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 				],
