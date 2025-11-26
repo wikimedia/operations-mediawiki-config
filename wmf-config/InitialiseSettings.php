@@ -3162,6 +3162,12 @@ return [
 			// the limit needs to be higher than any human can conceivably do.
 			'user' => [ 30, 60 ],
 		],
+		'wikimediaevents-hcaptcha-diff-logging' => [ // Bug T406865
+			// Mainly to evaluate if the edit attempt was likely spam or a false positive
+			'ip' => [ 8, 60 ], // 8 API call per min. since an hCaptcha is involved
+			'newbie' => [ 8, 60 ],
+			'user' => [ 8, 60 ],
+		],
 		'mailpassword' => [
 			// 5 password reminders per hour per IP
 			'ip' => [ 5, 3600 ],
