@@ -2413,5 +2413,8 @@ function wmfGetOverrideSettings() {
 		'wmgEnableWikidataIconsInClientWatchlist' => [
 			'default' => true,
 		],
+		'wgUserEmailConfirmationUseHTML' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()

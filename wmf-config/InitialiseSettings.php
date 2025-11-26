@@ -12655,5 +12655,9 @@ return [
 	'hewiki' => true,
 	'cawiki' => true,
 	'ukwiki' => true,
-]
+],
+
+'wgUserEmailConfirmationUseHTML' => [
+	'default' => false,
+],
 ];
