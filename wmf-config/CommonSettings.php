@@ -4374,7 +4374,7 @@ if ( $wmgAllowLabsAnonEdits ) {
 	// Also exempt Cloud VPS from global autoblocks.
 	if ( $wmgUseGlobalBlocking ) {
 		$wgGlobalBlockingAutoblockExemptions = array_merge(
-			$wgGlobalBlockingAutoblockExemptions,
+			$wgGlobalBlockingAutoblockExemptions ?? [],
 			$wgAutoblockExemptions,
 		);
 	}
