@@ -2061,8 +2061,8 @@ if ( $wmgEnableCaptcha ) {
 
 		// T405586 - Editing trial
 		if ( $wmgEnableHCaptchaEditing ) {
-			if ( in_array( $wgDBname, [ 'test2wiki', 'enwiki' ] ) ) {
-				// For test2wiki and enwiki, use the 100% passive mode SiteKey
+			if ( in_array( $wgDBname, [ 'test2wiki' ] ) ) {
+				// For test2wiki, use the 100% passive mode SiteKey
 				$wgHCaptchaEditSiteKey = $wgHCaptchaEdit100PercentPassiveSiteKey;
 			}
 			$wgCaptchaTriggers['edit'] = [
