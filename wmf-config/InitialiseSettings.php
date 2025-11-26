@@ -12659,5 +12659,6 @@ return [
 
 'wgUserEmailConfirmationUseHTML' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 ];
