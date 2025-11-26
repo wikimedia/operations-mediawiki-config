@@ -1205,7 +1205,20 @@ return [
 'wgCirrusSearchCompletionUseSecondTryProfile' => [
 	'default' => 'default',
 	'hewiki' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewiktionary' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikibooks' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikinews' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikiquote' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikisource' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikivoyage' => 'language_converter_and_hebrew_wrong_keyboard',
 	'ruwiki' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwiktionary' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikibooks' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikinews' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikiquote' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikisource' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikiversity' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikivoyage' => 'language_converter_and_russian_wrong_keyboard',
 ],
 'wgCirrusSearchNaturalTitleSort' => [
 	'default' => [
