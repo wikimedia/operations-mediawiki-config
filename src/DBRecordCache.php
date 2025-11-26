@@ -80,11 +80,6 @@ class DBRecordCache {
 			// Now, let's swap all the non-master servers in the sectionLoads array
 			$master = array_key_first( $lbFactoryConf['sectionLoads'][$sectionLabel] );
 			$lbFactoryConf['sectionLoads'][$sectionLabel] = [ $master => 0 ] + $serverLoads;
-
-			// Finally let's repopulate the groupLoadsBySection array with dbstores only
-			foreach ( $lbFactoryConf['groupLoadsBySection'][$sectionLabel] as $label => $load ) {
-				$lbFactoryConf['groupLoadsBySection'][$sectionLabel][$label] = $serverLoads;
-			}
 		}
 	}
 

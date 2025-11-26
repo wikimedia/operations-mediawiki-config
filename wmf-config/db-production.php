@@ -108,13 +108,6 @@ $wgLBFactoryConf = [
 	],
 ],
 
-# LOOKING FOR GROUP LOADS?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
-# and https://noc.wikimedia.org/dbconfig/codfw.json
-# For more info see also https://wikitech.wikimedia.org/wiki/dbctl
-
-'groupLoadsByDB' => [],
-
 # LOOKING FOR HOSTS BY NAME?  They no longer live in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
 # and https://noc.wikimedia.org/dbconfig/codfw.json

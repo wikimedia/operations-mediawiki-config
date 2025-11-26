@@ -84,12 +84,6 @@ class DBRecordCacheTest extends TestCase {
 					'replica' => 12
 				]
 			],
-			'groupLoadsBySection' => [
-				'DEFAULT' => [
-					'group1' => [ 'db1' => 0 ],
-					'group2' => [ 'db2' => 0, 'db3' => 0 ]
-				]
-			],
 			'hostsByName' => []
 		];
 		$this->cacheRepopulate->setDefaultSectionName( 'test-section' );

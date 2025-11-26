@@ -52,7 +52,6 @@ class DbconfigTest extends TestCase {
 					'DEFAULT' => [ [ 'db0001' => 0 ], [ 'db0002' => 20, 'db0003' => 10 ] ],
 					's1' => [ [ 'db0015' => 0 ], [ 'db0016' => 20 ] ],
 				],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'es4' => [ [ 'es0042' => 0 ], [ 'es0043' => 100, 'es0045' => 100 ] ],
 					'es6' => [ [ 'es0061' => 100 ], [ 'es0064' => 100 ] ],
@@ -65,7 +64,6 @@ class DbconfigTest extends TestCase {
 					'DEFAULT' => [ 'db0001' => 0, 'db0002' => 20, 'db0003' => 10 ],
 					's1' => [ 'db0015' => 0, 'db0016' => 20 ],
 				],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'cluster26' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
 					'cluster28' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
@@ -78,7 +76,6 @@ class DbconfigTest extends TestCase {
 			[
 				'hostsByName' => [],
 				'sectionLoads' => [],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'pc1' => [ [ 'pc0010' => 1 ], [] ],
 					'pc2' => [ [ 'pc0020' => 1 ], [] ],
@@ -89,7 +86,6 @@ class DbconfigTest extends TestCase {
 			],
 			[
 				'hostsByName' => [],
-				'groupLoadsBySection' => [],
 				'readOnlyBySection' => [],
 			],
 			[
@@ -107,7 +103,6 @@ class DbconfigTest extends TestCase {
 			[
 				'hostsByName' => [],
 				'sectionLoads' => [],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'es4' => [ [ 'es0042' => 0 ], [ 'es0043' => 100, 'es0045' => 100 ] ],
 					'es6' => [ [ 'es0061' => 100 ], [ 'es0064' => 100 ] ],
@@ -118,7 +113,6 @@ class DbconfigTest extends TestCase {
 			],
 			[
 				'hostsByName' => [],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'cluster26' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
 					'cluster28' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
@@ -139,7 +133,6 @@ class DbconfigTest extends TestCase {
 			[
 				'hostsByName' => [],
 				'sectionLoads' => [],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'es6' => [ [ 'es0061' => 100 ], [ 'es0064' => 100 ] ],
 				],
@@ -149,7 +142,6 @@ class DbconfigTest extends TestCase {
 			],
 			[
 				'hostsByName' => [],
-				'groupLoadsBySection' => [],
 				'externalLoads' => [
 					'cluster30' => [ 'es0061' => 100, 'es0064' => 100 ],
 				],

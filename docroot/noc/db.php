@@ -59,7 +59,6 @@ require_once __DIR__ . '/../../wmf-config/db-sections.php';
 
 global $wgLBFactoryConf;
 $wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
-$wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
 foreach ( $dbconfig['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
@@ -76,7 +75,6 @@ if ( $format === 'json' ) {
 		$data[$name] = [
 			'hosts' => $dbConf->getHosts( $name ),
 			'loads' => $dbConf->getLoads( $name ),
-			'groupLoads' => $dbConf->getGroupLoads( $name ),
 			'dbs' => $dbConf->getDBs( $name ),
 			'readOnly' => $dbConf->getReadOnly( $name ),
 		];

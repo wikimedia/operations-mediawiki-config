@@ -57,7 +57,6 @@ function wmfSetupEtcd( $etcdHost ) {
 function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 	global $wmgRemoteMasterDbConfig, $wmgPCServers, $wmgMainStashServers, $wgDefaultExternalStore;
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
-	$lbFactoryConf['groupLoadsBySection'] = $localDbConfig['groupLoadsBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
 	foreach ( $localDbConfig['sectionLoads'] as $section => $dbctlLoads ) {
 		// For each section, MediaWiki treats the first host as the master.
