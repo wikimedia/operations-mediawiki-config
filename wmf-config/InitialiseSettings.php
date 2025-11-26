@@ -12675,7 +12675,11 @@ return [
 'wgUserEmailConfirmationUseHTML' => [
 	'default' => false,
 	'testwiki' => true,
+	'testwikidatawiki' => true,
+
+	'commonswiki' => true,
 	'enwiki' => true,
+	'wikidatawiki' => true,
 ],
 
 // T406023
