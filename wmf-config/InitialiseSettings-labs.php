@@ -851,11 +851,11 @@ function wmfGetOverrideSettings() {
 							'question' => 'ext-quicksurveys-example-external-survey-question',
 							'description' => 'ext-quicksurveys-example-external-survey-description',
 							'link' => 'ext-quicksurveys-example-external-survey-link',
+							'instanceTokenParameterName' => 'QS',
 							'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
 							'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 						],
 					],
-					'instanceTokenParameterName' => 'QS',
 				],
 				[
 					// T410696
@@ -878,11 +878,11 @@ function wmfGetOverrideSettings() {
 							'question' => 'ext-quicksurveys-example-external-survey-question',
 							'description' => 'ext-quicksurveys-example-external-survey-description',
 							'link' => 'ext-quicksurveys-example-external-survey-link',
+							'instanceTokenParameterName' => 'QS',
 							'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
 							'noMsg' => 'ext-quicksurveys-external-survey-no-button',
 						],
 					],
-					'instanceTokenParameterName' => 'QS',
 				]
 			],
 		],
