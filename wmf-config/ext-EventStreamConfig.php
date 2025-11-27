@@ -3467,6 +3467,32 @@ return [
 				],
 			],
 		],
+		// (T409324, T410533) Sticky headers experiment by Reader Growth.
+		'mediawiki.product_metrics.readerexperiments_stickyheaders' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_active_browsing_session_token',
+						'performer_edit_count_bucket',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+			],
+		],
 		// T401575: Stream to track Watchlist interactions
 		'mediawiki.product_metrics.WatchlistClickTracker' => [
 			'schema_title' => 'analytics/product_metrics/web/base',

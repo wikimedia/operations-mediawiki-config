@@ -101,6 +101,7 @@ return [
 		'product_metrics.web_base_with_ip',
 		'wikibase.client.interaction',
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
+		'mediawiki.product_metrics.readerexperiments_stickyheaders',
 		'mediawiki.product_metrics.reading_list',
 		'mediawiki.product_metrics.contributors.experiments',
 	],
