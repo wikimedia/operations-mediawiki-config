@@ -1691,6 +1691,7 @@ return [
 	'tkwiktionary' => 'Wikisözlük',
 	'tlwiktionary' => 'Wiksiyonaryo', // T402725
 	'tlywiki' => 'Vikipedija', // T367009
+	'tokwiki' => 'lipu Wikipesija', // T411119
 	'transitionteamwiki' => 'Transition Team Wiki',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',

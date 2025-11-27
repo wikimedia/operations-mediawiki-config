@@ -357,6 +357,7 @@ return [
 	'tlywiki' => '/static/images/project-logos/tlywiki.png', // T345316, T366431
 	'tnwiki' => '/static/images/project-logos/tnwiki.png', // T42285
 	'towiki' => '/static/images/project-logos/towiki.png', // T51125
+	'tokwiki' => '/static/images/project-logos/tokwiki.png', // T411119
 	'tpiwiki' => '/static/images/project-logos/tpiwiki.png', // T29240
 	'trvwiki' => '/static/images/project-logos/trvwiki.png',
 	'trwiki' => '/static/images/project-logos/trwiki.png',
@@ -1248,6 +1249,7 @@ return [
 	'tlywiki' => '/static/images/project-logos/tlywiki-1.5x.png', // T345316, T366431
 	'tnwiki' => '/static/images/project-logos/tnwiki-1.5x.png', // T150618
 	'towiki' => '/static/images/project-logos/towiki-1.5x.png', // T150618
+	'tokwiki' => '/static/images/project-logos/tokwiki-1.5x.png', // T411119
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-1.5x.png',
 	'trwiki' => '/static/images/project-logos/trwiki-1.5x.png',
@@ -1920,6 +1922,7 @@ return [
 	'tlywiki' => '/static/images/project-logos/tlywiki-2x.png', // T345316, T366431
 	'tnwiki' => '/static/images/project-logos/tnwiki-2x.png', // T150618
 	'towiki' => '/static/images/project-logos/towiki-2x.png', // T150618
+	'tokwiki' => '/static/images/project-logos/tokwiki-2x.png', // T411119
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-2x.png',
 	'trwiki' => '/static/images/project-logos/trwiki-2x.png',
@@ -3360,6 +3363,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tly.svg',
 		'width' => 119,
 		'height' => 21,
+	],
+	'tokwiki' => [ // T411119
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tok.svg',
+		'width' => 115,
+		'height' => 28,
 	],
 	'trvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-trv.svg',
@@ -7345,6 +7353,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-to.svg',
 		'width' => 120,
 		'height' => 9,
+	],
+	'tokwiki' => [ // T411119
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tok.svg',
+		'width' => 115,
+		'height' => 12,
 	],
 	'tpiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tpi.svg',

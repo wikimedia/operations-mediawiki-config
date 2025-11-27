@@ -1790,6 +1790,15 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    tokwiki:
+        commons: 'File:Wikipedia-logo-v2-tok.svg'
+        comment: 'T411119'
+        comment_1_5x: 'T411119'
+        comment_2x: 'T411119'
+        commons_wordmark: 'File:Wikipedia-wordmark-tok.svg'
+        comment_wordmark: 'T411119'
+        commons_tagline: 'File:Wikipedia-tagline-tok.svg'
+        comment_tagline: 'T411119'
     tpiwiki:
         comment: T29240
         comment_1_5x: T150618
