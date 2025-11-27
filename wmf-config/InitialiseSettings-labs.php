@@ -2084,18 +2084,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
-		'-wgDiscussionToolsEnableThanks' => [
-			'default' => true,
-		],
-
-		'-wgDiscussionToolsEnablePermalinksBackend' => [
-			'default' => true,
-		],
-
-		'-wgDiscussionToolsEnablePermalinksFrontend' => [
-			'default' => true,
-		],
-
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
