@@ -2628,10 +2628,8 @@ return [
 ],
 
 'wgVectorPromoteAddTopic' => [
-	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except enwiki (T379264)
+	// Sync with wgDiscussionTools_visualenhancements config
 	'default' => true,
-	'enwiki' => false,
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -9240,10 +9238,8 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements' => [
-	// Sync with sub-features below and wgVectorPromoteAddTopic
-	// Everywhere except enwiki (T379264)
+	// Sync with wgVectorPromoteAddTopic
 	'default' => 'available',
-	'enwiki' => 'default',
 ],
 
 'wgDiscussionToolsShowFeedbackLinks' => [
