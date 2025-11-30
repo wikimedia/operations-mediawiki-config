@@ -5162,6 +5162,7 @@ return [
 	'bnwiki' => 0,
 	'ckbwiki' => 0,
 	'enwiki' => 0,
+	'enwikibooks' => 0, // T410330
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
