@@ -12119,7 +12119,6 @@ return [
 
 'wmgOATHAuthDisableRight' => [
 	'default' => false,
-	'sul' => true,
 ],
 
 'wmgUseWebAuthn' => [
