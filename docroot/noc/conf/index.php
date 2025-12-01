@@ -58,8 +58,8 @@ function wmfOutputFiles( $routesByLabel ) {
 	Each of these files is also available in public version control in one of the following repositories:
 </p>
 <ul>
-	<li><a href="https://phabricator.wikimedia.org/diffusion/OMWC/">operations/mediawiki-config.git</a></li>
-	<li><a href="https://phabricator.wikimedia.org/diffusion/OPUP/">operations/puppet.git</a></li>
+	<li><a href="https://gerrit.wikimedia.org/r/plugins/gitiles/operations/mediawiki-config/">operations/mediawiki-config.git</a></li>
+	<li><a href="https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet">operations/puppet.git</a></li>
 </ul>
 
 <hr>
