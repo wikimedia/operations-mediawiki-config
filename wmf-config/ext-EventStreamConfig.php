@@ -1785,6 +1785,17 @@ return [
 				],
 			],
 		],
+		'mediawiki.hcaptcha.edit' => [
+			'schema_title' => 'analytics/mediawiki/hcaptcha/edit',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			]
+		],
 		'mediawiki.hcaptcha.risk_score' => [
 			'schema_title' => 'analytics/mediawiki/hcaptcha/risk_score',
 			'destination_event_service' => 'eventgate-analytics-external',
