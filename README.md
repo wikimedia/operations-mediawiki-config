@@ -1,0 +1,61 @@
+operations/mediawiki-config.git
+-------------------------------
+
+Files in this repository are almost a mirror of Wikimedia Foundation's
+production configuration of MediaWiki. Omitted files include passwords and security measures.
+
+dblists/
+: List of wiki databases. \
+  For labs-only dblists, add "-labs" suffix before the file extension.
+
+errorpages/
+: Central management of error pages used by app servers at the PHP or Apache level.
+
+wikiversions.json, wikiversions.php
+wikiversions-labs.json, wikiversions-labs.php
+: Let us associate a database with a specific copy of MediaWiki (generally a
+  branch). The `.php` file is updated by editing `wikiversions.json` first and then
+  running `multiversion/updateWikiversions`.
+
+debug.json
+: Configuration for [X-Wikimedia-Debug]. The browser extensions use this to
+  determine which app servers are available to use as debug backends.
+
+docroot/
+: The Apache document roots for most of our VirtualHosts.
+
+static/
+: Static files available under all docroots as `/static`. \
+  Contains icons and images used by MediaWiki, such as project logos,
+  favicons, CentralAuth SUL icons and more.
+
+images/
+: Deprecated aliases for a subset of files in `/static/images`.
+
+w/
+: The `w/` directory in the docroot of any MediaWiki-serving VirtualHost.
+
+tests/
+: Holds some PHPUnit tests.
+
+wmf-config/
+: The MediaWiki configuration for all database. \
+  Think of it like a huge `LocalSettings.php`.
+
+wmf-config/CommonSettings.php
+: Generic configuration such as including extensions or calling over piece
+  of configuration. This is mostly shared among all wikis.
+
+wmf-config/InitialiseSettings.php
+: Per-wiki configuration.
+
+wmf-config/db-*.php
+: Databases related configuration.
+
+wmf-config/mc.php
+: Memcached configuration.
+
+wmf-config/*-labs.php
+: Files used by the Beta Cluster to override production settings.
+
+[X-Wikimedia-Debug]: https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
