@@ -560,6 +560,7 @@ return [
 
 'wgCirrusSearchNearMatchWeight' => [
 	'default' => 10, // T257922
+	'commonswiki' => 20, // T408154
 ],
 
 'wgCirrusSearchNamespaceWeights' => [
@@ -660,21 +661,11 @@ return [
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		'T408154_nearmatch' => [
-			'buckets' => [
-				'control' => [],
-				'2x' => [
-					'globals' => [ 'wgCirrusSearchNearMatchWeight' => 20 ],
-				],
-			],
-		],
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchActiveTest' => [
 	'default' => null,
-	'commonswiki' => 'T408154_nearmatch',
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
