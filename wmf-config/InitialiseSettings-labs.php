@@ -2036,6 +2036,7 @@ function wmfGetOverrideSettings() {
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
 				'includes/Rest/coreDevelopmentRoutes.json',
+				'includes/Rest/site.v1.json',
 				'includes/Rest/specs.v0.json',
 				'includes/Rest/content.v1.json'
 			],
