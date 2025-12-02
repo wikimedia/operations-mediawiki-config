@@ -92,32 +92,25 @@ Disallow: /
 User-agent: Download Ninja
 Disallow: /
 
-# Misbehaving: requests much too fast:
+# Misbehaving, requests much too fast
 User-agent: fast
 Disallow: /
 
-#
 # Sorry, wget in its recursive mode is a frequent problem.
 # Please read the man page and use it properly; there is a
 # --wait option you can use to set the delay between hits,
 # for instance.
-#
 User-agent: wget
 Disallow: /
 
-#
 # The 'grub' distributed client has been *very* poorly behaved.
-#
 User-agent: grub-client
 Disallow: /
 
-#
 # Doesn't follow robots.txt anyway, but...
-#
 User-agent: k2spider
 Disallow: /
 
-#
 # Hits many times per second, not acceptable
 # http://www.nameprotect.com/botinfo.html
 User-agent: NPBot
@@ -130,7 +123,7 @@ Disallow: /
 
 # Per their statement, semrushbot respects crawl-delay directives
 # We want them to overall stay within reasonable request rates to
-# the backend (20 rps); keeping in mind that the crawl-delay will 
+# the backend (20 rps); keeping in mind that the crawl-delay will
 # be applied by site and not globally by the bot, 5 seconds seem
 # like a reasonable approximation
 User-agent: SemrushBot
@@ -147,7 +140,7 @@ Crawl-delay: 5
 # There is a special exception for API mobileview to allow dynamic
 # mobile web & app views to load section content.
 # These views aren't HTTP-cached but use parser cache aggressively
-# and don't expose special: pages etc.
+# and don't expose Special-pages and other uncached content.
 #
 # Another exception is for REST API documentation, located at
 # /api/rest_v1/?doc.
@@ -426,6 +419,6 @@ Disallow: /wiki/Wikiquote_talk%3AVotes_for_deletion_archive/
 # enwikibooks
 Disallow: /wiki/Wikibooks:Votes_for_deletion
 #
-# working...
+# metawiki:
 Disallow: /wiki/Fundraising_2007/comments
 #
