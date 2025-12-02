@@ -486,7 +486,7 @@ return [
 'kkwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'kkwikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'sul' ],
 'kkwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'klwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
+'klwiki' => [ 'wikipedia', 'closed', 'small', 'specialcontribute', 'wikidataclient', 'group0', 'parsoidrendered', 'sul' ],
 'klwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'kmwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'sul' ],
 'kmwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],

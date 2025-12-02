@@ -221,7 +221,6 @@ return [
 	'kgwiki' => true,
 	'kiwiki' => true,
 	'kkwiki' => true,
-	'klwiki' => true,
 	'kmwiki' => true,
 	'knwiki' => true,
 	'kowiki' => true,
@@ -542,7 +541,6 @@ return [
 	'kgwiki' => false, // T308135#9047447
 	'kiwiki' => true,
 	'kkwiki' => true,
-	'klwiki' => false, // T308135#9047447
 	'kmwiki' => true,
 	'knwiki' => true,
 	'kowiki' => true,
