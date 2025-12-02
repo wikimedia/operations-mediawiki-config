@@ -143,7 +143,6 @@ return [
 	'chywiki' => true,
 	'ckbwiki' => true,
 	'cowiki' => true,
-	'crwiki' => true,
 	'crhwiki' => true,
 	'cswiki' => true,
 	'csbwiki' => true,
@@ -467,7 +466,6 @@ return [
 	'chywiki' => true,
 	'ckbwiki' => true,
 	'cowiki' => true,
-	'crwiki' => false, // T304550
 	'crhwiki' => true,
 	'cswiki' => true,
 	'csbwiki' => true,
