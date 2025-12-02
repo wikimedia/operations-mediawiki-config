@@ -164,6 +164,14 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 			$rules[] = [ $rule ];
 		}
 
+		if ( empty( $rules ) ) {
+			$rules[] = [ [
+				'from' => '2000-01-01T00:00:00+00:00',
+				'to' => '2100-01-01T00:00:00+00:00',
+				'value' => 50
+			] ];
+		}
+
 		return $rules;
 	}
 

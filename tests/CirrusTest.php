@@ -197,11 +197,17 @@ class CirrusTest extends WgConfTestCase {
 
 	public function provideUserTestingBuckets() {
 		$allConfig = $this->loadWgConf( 'production' );
-		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'];
+		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'] ?? [];
 		$tests = [];
+
 		foreach ( $conf as $name => $testConfig ) {
 			$tests[$name] = [ $testConfig ];
 		}
+
+		if ( empty( $conf ) ) {
+			$tests['default'] = [ [ 'buckets' => [] ] ];
+		}
+
 		return $tests;
 	}
 

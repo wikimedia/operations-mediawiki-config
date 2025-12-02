@@ -97,20 +97,22 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public static function provideConfiguredProductionChannels(): array {
+		$tests = [];
 		$settings = WmfConfig::getStaticConfig();
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
-				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
+				$tests["prod:\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
 			}
 		}
 		return $tests;
 	}
 
 	public static function provideConfiguredBetaClusterChannels(): array {
+		$tests = [];
 		$settings = WmfConfig::getStaticConfig( 'labs' );
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
-				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
+				$tests["labs:\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
 			}
 		}
 		return $tests;
