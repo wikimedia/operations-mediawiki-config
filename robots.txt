@@ -419,6 +419,3 @@ Disallow: /wiki/Wikiquote_talk%3AVotes_for_deletion_archive/
 # enwikibooks
 Disallow: /wiki/Wikibooks:Votes_for_deletion
 #
-# metawiki:
-Disallow: /wiki/Fundraising_2007/comments
-#
