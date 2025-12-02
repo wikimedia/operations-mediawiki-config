@@ -2017,7 +2017,9 @@ return [
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
 	'fawikivoyage' => 10, // T73709
+	'frwiki' => 10, // T411263
 	'ganwiki' => 15, // T355126
+	'idwiki' => 10, // T411263
 	'iswiki' => 10, // T306305
 	'itwiki' => 50, // T72128, T262738
 	'itwiktionary' => 10, // T24274
@@ -2029,6 +2031,7 @@ return [
 	'ptwiki' => 10, // T29954
 	'rowiki' => 10, // T355990
 	'ruwiki' => 15, // T43831
+	'trwiki' => 10, // T411263
 	'simplewiki' => 10,
 	'ukwiki' => 10, // T355972
 	'viwiki' => 10, // T322105
