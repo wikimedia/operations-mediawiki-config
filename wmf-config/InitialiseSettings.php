@@ -12117,10 +12117,6 @@ return [
 	'default' => true,
 ],
 
-'wmgOATHAuthDisableRight' => [
-	'default' => false,
-],
-
 'wmgUseWebAuthn' => [
 	'default' => true,
 ],

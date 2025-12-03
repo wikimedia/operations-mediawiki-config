@@ -4220,15 +4220,6 @@ if ( $wmgUseJosa ) {
 if ( $wmgUseOATHAuth ) {
 	wfLoadExtension( 'OATHAuth' );
 
-	if ( $wmgOATHAuthDisableRight ) {
-		$wgGroupPermissions['user']['oathauth-enable'] = false;
-		foreach ( $wmgPrivilegedGroups as $group ) {
-			if ( isset( $wgGroupPermissions[$group] ) ) {
-				$wgGroupPermissions[$group]['oathauth-enable'] = true;
-			}
-		}
-	}
-
 	$wgOATHRequiredForGroups = [
 		'interface-admin',
 		'centralnoticeadmin',

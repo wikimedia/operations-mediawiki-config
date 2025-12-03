@@ -2372,9 +2372,6 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
-		'-wmgOATHAuthDisableRight' => [
-			'default' => false,
-		],
 		'wgGEUserImpactMaxEdits' => [
 			'default' => 1000,
 			'eswiki' => 10000,
