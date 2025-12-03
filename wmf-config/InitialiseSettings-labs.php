@@ -2107,10 +2107,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgEditWatchlistPaginate' => [
-			'default' => true,
-		],
-
 		'wgAbuseFilterEmergencyDisableThreshold' => [
 			'default' => [ 'default' => 0.05 ],
 			'zhwiki' => [ 'default' => 0.25 ], // T230305

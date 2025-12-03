@@ -12137,10 +12137,6 @@ return [
 	'default' => true,
 ],
 
-'wgEditWatchlistPaginate' => [
-	'default' => true,
-],
-
 'wmgWikimediaIcon' => [
 	'default' => '/static/images/footer/wikimedia-button.svg',
 ],
