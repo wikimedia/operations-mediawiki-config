@@ -11442,7 +11442,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-es-anons',
-			'coverage' => 0, // 0.06,
+			'coverage' => 0.06,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11468,7 +11468,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-es-temp-users',
-			'coverage' => 0, // 0.06,
+			'coverage' => 0.06,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11496,7 +11496,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ar-anons',
-			'coverage' => 0, // 0.12,
+			'coverage' => 0.12,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11522,7 +11522,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ar-temp-users',
-			'coverage' => 0, // 0.12,
+			'coverage' => 0.12,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11550,7 +11550,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-de-anons',
-			'coverage' => 0, // 0.03,
+			'coverage' => 0.03,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11576,7 +11576,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-de-temp-users',
-			'coverage' => 0, // 0.03,
+			'coverage' => 0.03,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11604,7 +11604,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-fr-anons',
-			'coverage' => 0, // 0.10,
+			'coverage' => 0.10,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11630,7 +11630,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-fr-temp-users',
-			'coverage' => 0, // 0.10,
+			'coverage' => 0.10,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11658,7 +11658,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-id-anons',
-			'coverage' => 0, // 0.30,
+			'coverage' => 0.30,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11684,7 +11684,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-id-temp-users',
-			'coverage' => 0, // 0.30,
+			'coverage' => 0.30,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11712,7 +11712,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ja-anons',
-			'coverage' => 0, // 0.05,
+			'coverage' => 0.05,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11738,7 +11738,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ja-temp-users',
-			'coverage' => 0, // 0.05,
+			'coverage' => 0.05,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11766,7 +11766,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ko-anons',
-			'coverage' => 0, // 0.33,
+			'coverage' => 0.33,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11792,7 +11792,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ko-temp-users',
-			'coverage' => 0, // 0.33,
+			'coverage' => 0.33,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11820,7 +11820,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-pt-anons',
-			'coverage' => 0, // 0.15,
+			'coverage' => 0.15,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11846,7 +11846,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-pt-temp-users',
-			'coverage' => 0, // 0.15,
+			'coverage' => 0.15,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11874,7 +11874,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ru-anons',
-			'coverage' => 0, // 0.02,
+			'coverage' => 0.02,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11900,7 +11900,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-ru-temp-users',
-			'coverage' => 0, // 0.02,
+			'coverage' => 0.02,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
@@ -11928,7 +11928,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-zh-anons',
-			'coverage' => 0, // 0.08,
+			'coverage' => 0.08,
 			'audience' => [
 				'anons' => true,
 			],
@@ -11954,7 +11954,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-demographics-2025-zh-temp-users',
-			'coverage' => 0, // 0.08,
+			'coverage' => 0.08,
 			'audience' => [
 				'userInGroup' => [ 'temp' ],
 			],
