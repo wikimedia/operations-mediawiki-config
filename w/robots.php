@@ -37,7 +37,7 @@ header( "Last-modified: $lastmod" );
 
 fpassthru( $robots );
 
-if ( $wgSitemapApiConfig['enabled'] ) {
+if ( $wgSitemapApiConfig['enabled'] ?? false ) {
 	echo "\n\n";
 	echo "Sitemap: $wgCanonicalServer/w/rest.php/site/v1/sitemap/0";
 	echo "\n\n";
