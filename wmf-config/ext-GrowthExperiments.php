@@ -152,9 +152,7 @@ return [
 	'dawiki' => true,
 	'dewiki' => true,
 	'dinwiki' => true,
-	'diqwiki' => false, // T304551
 	'dsbwiki' => true,
-	'dvwiki' => false, // T304551
 	'eewiki' => true,
 	'emlwiki' => true,
 	'enwiki' => true, // T308144
@@ -176,7 +174,6 @@ return [
 	'furwiki' => true,
 	'gawiki' => true,
 	'gagwiki' => true,
-	'ganwiki' => false, // T344319
 	'gcrwiki' => true,
 	'gdwiki' => true,
 	'glwiki' => true,
@@ -225,7 +222,6 @@ return [
 	'knwiki' => true,
 	'kowiki' => true,
 	'koiwiki' => true,
-	'krcwiki' => false, // T344319
 	'kswiki' => true,
 	'kshwiki' => true,
 	'kuwiki' => true,
@@ -377,6 +373,41 @@ return [
 	'zh_min_nanwiki' => true,
 	'zhwiki' => true,
 	'zuwiki' => true,
+
+	// December 2025 batch, T410469
+	'altwiki' => true,
+	'avkwiki' => true,
+	'awawiki' => true,
+	'blkwiki' => true,
+	'bowiki' => true,
+	'dagwiki' => true,
+	'diqwiki' => true,
+	'dtywiki' => true,
+	'dvwiki' => true,
+	'fywiki' => true,
+	'ganwiki' => true,
+	'gucwiki' => true,
+	'gurwiki' => true,
+	'guwwiki' => true,
+	'hywwiki' => true,
+	'kcgwiki' => true,
+	'krcwiki' => true,
+	'lldwiki' => true,
+	'madwiki' => true,
+	'mniwiki' => true,
+	'mnwwiki' => true,
+	'mywiki' => true,
+	'niawiki' => true,
+	'pcmwiki' => true,
+	'pwnwiki' => true,
+	'shiwiki' => true,
+	'shnwiki' => true,
+	'skrwiki' => true,
+	'smnwiki' => true,
+	'szywiki' => true,
+	'taywiki' => true,
+	'tiwiki' => true,
+	'wuuwiki' => true,
 ],
 
 'wgGEImageRecommendationServiceUseTitles' => [
