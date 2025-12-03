@@ -37,9 +37,11 @@ header( "Last-modified: $lastmod" );
 
 fpassthru( $robots );
 
-echo "\n\n";
-echo "Sitemap: $wgCanonicalServer/w/rest.php/site/v1/sitemap/0";
-echo "\n\n";
+if ( $wgSitemapApiConfig['enabled'] ) {
+	echo "\n\n";
+	echo "Sitemap: $wgCanonicalServer/w/rest.php/site/v1/sitemap/0";
+	echo "\n\n";
+}
 
 echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n";
 echo $extratext;
