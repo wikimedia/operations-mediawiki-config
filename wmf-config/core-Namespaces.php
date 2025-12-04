@@ -137,6 +137,12 @@ return [
 	'+arwikiversity' => [
 		'وج' => NS_PROJECT
 	],
+	'arwiktionary' => [
+		'Appendix' => 100, // T411819
+		'Appendix_talk' => 101, // T411819
+		'Thesaurus' => 110, // T411819
+		'Thesaurus_talk' => 111, // T411819
+	],
 	'+arzwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -3943,6 +3949,12 @@ return [
 		100 => 'Ætēaca', // Appendix
 		101 => 'Ætēacmōtung',
 	],
+	'arwiktionary' => [
+		100 => 'ملحق', // Appendix - T411819
+		101 => 'نقاش_الملحق', // Appendix_talk - T411819
+		110 => 'مكنز', // Thesaurus - T411819
+		111 => 'نقاش_المكنز', // Thesaurus_talk - T411819
+	],
 	'azwiktionary' => [
 		100 => 'Əlavə', // Appendix - T143851
 		101 => 'Əlavə_müzakirəsi',
@@ -5476,6 +5488,7 @@ return [
 'wgNamespacesToBeSearchedDefault' => [
 	'default' => [ 0 => 1 ], // T230797
 	'+arwikisource' => [ 102 => 1 ],
+	'+arwiktionary' => [ 100 => 1, 110 => 1, ], // T411819
 	'+aswikisource' => [ 104 => 1, 106 => 1 ], // T45129
 	'+bgwiki' => [ 100 => 1 ],
 	'+bgwikisource' => [ 100 => 1 ],
@@ -5578,6 +5591,7 @@ return [
 'wgContentNamespaces' => [
 	'default' => [ NS_MAIN ],
 	'+arwikisource' => [ 102 ],
+	'+arwiktionary' => [ 100, 110 ], // T411819
 	'+aswikisource' => [ 102 ], // T45129, T72464
 	'+bgwikisource' => [ 100 ],
 	'+bnwikisource' => [ 100 ],
