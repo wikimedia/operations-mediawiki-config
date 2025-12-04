@@ -5943,6 +5943,7 @@ return [
 
 'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
 	'testwikidatawiki' => true, // T407737 (T394704)
+	'wikidatawiki' => true, // T403015 (T394704)
 ],
 
 // ------------ BetaFeatures end -----------

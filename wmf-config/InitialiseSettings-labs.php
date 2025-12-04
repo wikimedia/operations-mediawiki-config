@@ -2386,6 +2386,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
+		// T403015 - no point in the beta feature if `wmgWikibaseTmpMobileEditingUI` is set.
+		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
+			'wikidatawiki' => false,
+		],
 		// T391064
 		'-wgTemplateDataEnableFeaturedTemplates' => [
 			'default' => false,
