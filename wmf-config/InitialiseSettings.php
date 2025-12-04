@@ -3282,6 +3282,9 @@ return [
 		'move' => [
 			'extendedmover' => [ 16, 60 ], // T395285
 		],
+		'thanks-notification' => [
+			'newbie' => [ 3, 3600 ], // 3 thanks per hour, T411588
+		],
 	],
 ],
 # @} end of wgRateLimits
