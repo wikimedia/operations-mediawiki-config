@@ -7021,6 +7021,15 @@ return [
 	],
 ],
 
+// Whether the postproc cache is activated or not.
+// Note: it also need to be configured in wgParserCacheFilterConfig below.
+'wgUsePostprocCache' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'officewiki' => true,
+],
+
 // The parser cache can be configured to only cache pages that take a certain amount
 // of resources to parse.
 // For the minCpuTime filter, 0 means no threshold (cache all), and PHP_INT_MAX can
@@ -7035,6 +7044,16 @@ return [
 		'parsoid-pcache' => [ // parsoid output cache
 			'default' => [ // all namespaces
 				'minCpuTime' => 0 // cache all
+			],
+		],
+		'postproc-pcache' => [ // postproc cache for legacy output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
 			],
 		],
 	],
@@ -7064,6 +7083,42 @@ return [
 			],
 			146 => [ // Lexeme namespace
 				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+	],
+	'+testwiki' => [
+		'postproc-pcache' => [
+			'default' => [
+				'minCpuTime' => 0,
+			],
+		],
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0,
+			],
+		],
+	],
+	'+test2wiki' => [
+		'postproc-pcache' => [
+			'default' => [
+				'minCpuTime' => 0,
+			],
+		],
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+officewiki' => [
+		'postproc-pcache' => [
+			'default' => [
+				'minCpuTime' => 0,
+			],
+		],
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
 			],
 		],
 	],
