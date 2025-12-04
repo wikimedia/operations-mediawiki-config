@@ -4899,6 +4899,9 @@ return [
 			'confirmed', // T386781
 		],
 	],
+	'+tokwiki' => [
+		'sysop' => [ 'confirmed', ], // T411683
+	],
 	'+trwiki' => [
 		'sysop' => [
 			'patroller', // T40690
@@ -6183,6 +6186,9 @@ return [
 		'sysop' => [
 			'confirmed', // T386781
 		],
+	],
+	'+tokwiki' => [
+		'sysop' => [ 'confirmed', ], // T411683
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender', 'translator' ], // bureaucrat -> sysop, T40690, T147740, T356440
