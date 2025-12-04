@@ -1677,6 +1677,8 @@ return [
 		'Vikipedija' => NS_PROJECT,
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
+		'Nacrt' => 118, // T411750
+		'Razgovor_o_nacrtu' => 119, // T411750
 	],
 	'+svwikisource' => [
 		'Author' => 106,
