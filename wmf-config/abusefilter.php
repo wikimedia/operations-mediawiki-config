@@ -134,6 +134,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T383332
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T411828
 		$wgAbuseFilterActions['block'] = true; // T273864
 		break;
 	case 'enwikinews':

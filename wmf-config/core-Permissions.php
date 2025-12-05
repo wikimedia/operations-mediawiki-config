@@ -3988,10 +3988,12 @@ return [
 	],
 	'+enwikibooks' => [
 		'sysop' => [
+			'accountcreator', // T411828
+			'confirmed', // T411828
+			'flood', // T285594
 			'import', // T278683
 			'transwiki',
 			'uploader',
-			'flood', // T285594
 		],
 	],
 	'+enwikinews' => [
@@ -5560,7 +5562,7 @@ return [
 		],
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
+		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood', 'accountcreator', 'confirmed' ], // T278683, T285594, T411828
 	],
 	'+enwikinews' => [
 		'bureaucrat' => [ 'flood', 'sysop' ],
