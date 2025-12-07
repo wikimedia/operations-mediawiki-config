@@ -2436,7 +2436,8 @@ Wiktionary:
         local_tagline: true
         local_wordmark: true
     niawiktionary:
-        local_wordmark: true
+        commons_wordmark: 'File:Wiktionary-wordmark-id.svg'
+        comment_wordmark: T411850
         local_tagline: true
         local_icon: true
     madwiktionary:

@@ -3827,10 +3827,10 @@ return [
 		'width' => 121,
 		'height' => 16,
 	],
-	'niawiktionary' => [
+	'niawiktionary' => [ // T411850
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-nia.svg',
-		'width' => 120,
-		'height' => 23,
+		'width' => 129,
+		'height' => 19,
 	],
 	'madwiktionary' => [ // T391318
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mad.svg',
@@ -7743,8 +7743,8 @@ return [
 	],
 	'niawiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-nia.svg',
-		'width' => 120,
-		'height' => 15,
+		'width' => 110,
+		'height' => 16,
 	],
 	'madwiktionary' => [ // T391318
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-mad.svg',

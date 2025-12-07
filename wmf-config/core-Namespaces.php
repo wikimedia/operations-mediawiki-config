@@ -6134,6 +6134,7 @@ return [
 	'newwiki' => 'विकिपिडिया',
 	'newiktionary' => 'विक्सनरी', // T129768
 	'ngwikimedia' => 'Project', // T240771
+	'niawiktionary' => 'Wikikamus', // T411850
 	'nlwiktionary' => 'WikiWoordenboek',
 	'nlwikinews' => 'Wikinieuws', // T172211
 	'nostalgiawiki' => 'Wikipedia',
@@ -6420,6 +6421,7 @@ return [
 	'newiki' => 'विकिपिडिया_वार्ता', // T184865
 	'newwiki' => 'विकिपिडिया_खँलाबँला',
 	'ngwikimedia' => 'Project_talk', // T240771
+	'niawiktionary' => 'Huhuo_wikikamus',
 	'noboard_chapterswikimedia' => 'Wikimedia-diskusjon',
 	'nsowiki' => 'Dipolelo_tša_Wikipedia',
 	'olowiki' => 'Wikipedien_paginat', // T146612

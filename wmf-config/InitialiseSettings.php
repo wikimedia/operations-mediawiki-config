@@ -1545,6 +1545,7 @@ return [
 	'newiki' => 'विकिपिडिया', // T186952
 	'newikibooks' => 'विकिपुस्तक', // T124881
 	'ngwikimedia' => 'Wikimedia Nigeria', // T240771
+	'niawiktionary' => 'Wikikamus', // T411850
 	'nlwiktionary' => 'WikiWoordenboek',
 	'nlwikinews' => 'Wikinieuws', // T172594
 	'noboard_chapterswikimedia' => 'Wikimedia Norway Internal Board',
