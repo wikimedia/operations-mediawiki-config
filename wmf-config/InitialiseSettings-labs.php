@@ -755,6 +755,13 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// Enable IRS non-emergency v2 for testing; v1 will be available on dewiki to
+		// test legacy support of the v1 flow while v2 is being deployed
+		'wgReportIncidentUseV2NonEmergencyFlow' => [
+			'default' => true,
+			'dewiki' => false,
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
