@@ -12252,7 +12252,7 @@ return [
 'wmgUseCSPReportOnly' => [
 	'default' => false,
 	'group0' => true,
-	'outreachwiki' => true,
+	'group1' => true,
 	'small' => true,
 ],
 
