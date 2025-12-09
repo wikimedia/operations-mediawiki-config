@@ -56,6 +56,7 @@ return [
 	'test2wiki' => true, // T200412
 	'testwiki' => true, // T199913
 	'tewiki' => true, // T395824
+	'thwiki' => true, // T409438
 	'tlwiki' => true, // T395824
 	'trwiki' => true, // T139992
 	'ukwiki' => true, // T256887
