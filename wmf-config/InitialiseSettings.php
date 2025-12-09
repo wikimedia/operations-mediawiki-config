@@ -5360,7 +5360,7 @@ return [
 
 'wmgUseFooterLegalContactLink' => [
 	'default' => false,
-	'testwiki' => true,
+	'footer-legal-contact-link' => true,
 ],
 
 'wmgUseFooterCodeOfConductLink' => [
