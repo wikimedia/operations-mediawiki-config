@@ -3001,7 +3001,7 @@ return [
 				],
 			],
 		],
-		// Instrument for the CheckUser Suggested Investigations feature (T404177)
+		// Old instrumentation for the CheckUser Suggested Investigations feature (T404177)
 		'mediawiki.product_metrics.suggested_investigations_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3020,6 +3020,23 @@ return [
 						'performer_edit_count',
 						'performer_edit_count_bucket',
 						'performer_registration_dt',
+					],
+				],
+			],
+		],
+		// New instrumentation for the CheckUser Suggested Investigations feature (T409260, T404177)
+		'mediawiki.product_metrics.suggested_investigations_interaction.v2' => [
+			'schema_title' => 'analytics/mediawiki/suggested_investigations/interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
 					],
 				],
 			],
