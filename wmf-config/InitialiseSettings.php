@@ -6625,6 +6625,7 @@ return [
 	'hewikivoyage' => true, // T222017
 	'zhwikivoyage' => true, // T230624
 	'dewikivoyage' => true, // T264305
+	'viwikivoyage' => true, // T405724
 ],
 
 'wgPopupsVirtualPageViews' => [
@@ -6647,6 +6648,7 @@ return [
 	'enwikivoyage' => '1',
 	'dewikivoyage' => '1',
 	'hewikivoyage' => '1',
+	'viwikivoyage' => '1',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
@@ -6700,6 +6702,7 @@ return [
 	'udmwiki' => 'popups',
 	'vecwiki' => 'Popup',
 	'viwiki' => 'navpop',
+	'viwikivoyage' => 'popups',
 	'wowiki' => 'Popups',
 	'yiwiki' => 'NavigationPopups',
 ],
@@ -9777,6 +9780,7 @@ return [
 	'itwikivoyage' => true, // T297054
 	'bnwikivoyage' => true, // T307904
 	'zhwikivoyage' => true, // T361427
+	'viwikivoyage' => true, // T405724
 ],
 
 // T223824
