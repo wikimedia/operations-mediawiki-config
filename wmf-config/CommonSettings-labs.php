@@ -601,5 +601,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgUploadWizardUseCodeEditor = false;
 		$wgUploadWizardUseCodeMirror = true;
 	}
+
+	// Temporary testing of new passkey support -December 2025
+	$wgOATHNewPasskeyFeatures = true;
 }
 // end safeguard
