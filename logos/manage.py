@@ -111,6 +111,15 @@ def validate(data: dict):
                         raise RuntimeError(f"Error: {filename} doesn't exist!")
 
 
+def replace_thumb_size(url: str, old: str, new: str, *, old2=None):
+    url = url.replace(old, new)
+    if old2:
+        url = url.replace(old2, new)
+    if new not in url:
+        raise RuntimeError(f"url {url} does not have expected size {new}")
+    return url
+
+
 def download(commons: str, name: str):
     # Check dependencies first
     for dep in ["pngquant", "zopflipng"]:
@@ -141,10 +150,21 @@ def download(commons: str, name: str):
     info = req.json()["query"]["pages"][0]["imageinfo"][0]
     if info["thumbheight"] > 155:
         raise RuntimeError(f"{commons}: logo is taller than 155px, please resize it")
+    thumburl = info["thumburl"]
+    # Modify the URLs to have the pixel sizes we want even if they aren't in $wgThumbnailSizes
+    # since logos are generated once and downloaded many times the benefit of downloading a
+    # smaller file on every view forevermore exceeds the cost of generating a nonstanard
+    # thumbnail whenever a logo for a new wiki is changed.
     urls = {
-        f"{name}.png": info["thumburl"],
-        f"{name}-1.5x.png": info["responsiveUrls"]["1.5"].replace("203px", "202px"),
-        f"{name}-2x.png": info["responsiveUrls"]["2"],
+        f"{name}.png": replace_thumb_size(thumburl, "250px", "135px"),
+        f"{name}-1.5x.png": replace_thumb_size(
+            info["responsiveUrls"].get("1.5", thumburl),
+            "250px", "202px", old2="203px"
+        ),
+        f"{name}-2x.png": replace_thumb_size(
+            info["responsiveUrls"].get("2", thumburl),
+            "330px", "270px"
+        )
     }
     for filename, url in urls.items():
         req = s.get(url)
