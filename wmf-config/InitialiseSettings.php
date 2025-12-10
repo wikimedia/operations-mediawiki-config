@@ -12981,4 +12981,9 @@ return [
 'wgSVGNativeRendering' => [
 	'default' => false,
 ],
+
+// T411836
+'wgEnableWatchlistLabels' => [
+	'default' => false,
+],
 ];

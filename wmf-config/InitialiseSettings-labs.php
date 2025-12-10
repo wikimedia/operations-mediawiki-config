@@ -2409,5 +2409,10 @@ function wmfGetOverrideSettings() {
 		'wmgUseFooterLegalContactLink' => [
 			'default' => true,
 		],
+		// T411836
+		'-wgEnableWatchlistLabels' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
