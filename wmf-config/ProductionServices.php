@@ -86,7 +86,7 @@ $common = [
 	'chart-renderer' => 'http://localhost:6039',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
-	'mpic' => 'http://localhost:6037',
+	'test-kitchen' => 'http://localhost:6037',
 
 	// an-web only exists in eqiad
 	'analytics-web' => 'http://localhost:6206',
