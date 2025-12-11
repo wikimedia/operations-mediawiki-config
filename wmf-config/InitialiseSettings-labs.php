@@ -607,6 +607,11 @@ function wmfGetOverrideSettings() {
 		'wgVectorWrapTablesTemporary' => [
 			'default' => true,
 		],
+		'wgMinervaPersonalMenu' => [
+			'base' => false,
+			'loggedin' => true,
+			'amc' => true,
+		],
 		'wgMinervaDonateBanner' => [
 			'default' => [
 				'base' => true,
