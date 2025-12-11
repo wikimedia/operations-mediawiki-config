@@ -2436,6 +2436,10 @@ Wiktionary:
         local_tagline: true
         local_wordmark: true
     niawiktionary:
+        commons: 'File:Wiktionary-logo-nia.svg'
+        comment: T411850
+        comment_1_5x: T411850
+        comment_2x: T411850
         commons_wordmark: 'File:Wiktionary-wordmark-id.svg'
         comment_wordmark: T411850
         local_tagline: true
