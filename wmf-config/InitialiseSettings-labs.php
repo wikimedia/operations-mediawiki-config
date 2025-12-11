@@ -608,9 +608,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 		'wgMinervaPersonalMenu' => [
-			'base' => false,
-			'loggedin' => true,
-			'amc' => true,
+			'default' => [
+				'base' => false,
+				'loggedin' => true,
+				'amc' => true,
+			],
 		],
 		'wgMinervaDonateBanner' => [
 			'default' => [
