@@ -2435,6 +2435,16 @@ return [
 	'hewiktionary' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 ],
 
+'wgTempAccountCreationThrottle' => [
+	// T412222
+	'default' => [
+		[ 'count' => 1, 'seconds' => 600 ],
+		[ 'count' => 2, 'seconds' => 86400 ],
+		[ 'count' => 4, 'seconds' => 86400 * 7 ],
+		[ 'count' => 6, 'seconds' => 86400 * 30 ],
+	],
+],
+
 'wgDefaultSkin' => [
 	'default' => 'vector-2022',
 	'legacy-vector' => 'vector',
