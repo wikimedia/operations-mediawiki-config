@@ -11665,11 +11665,6 @@ return [
 	'sul' => true, // T378402
 ],
 
-// T392520
-'wmgUseArticleSummaries' => [
-	'default' => false,
-],
-
 // NearbyPages extension
 // T246493
 'wmgUseNearbyPages' => [

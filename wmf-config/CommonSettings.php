@@ -4907,10 +4907,6 @@ if ( $wmgUseGlobalWatchlist ) {
 	wfLoadExtension( 'GlobalWatchlist' );
 }
 
-if ( $wmgUseArticleSummaries ) {
-	wfLoadExtension( 'ArticleSummaries' );
-}
-
 if ( $wmgUseNearbyPages ) {
 	wfLoadExtension( 'NearbyPages' );
 }

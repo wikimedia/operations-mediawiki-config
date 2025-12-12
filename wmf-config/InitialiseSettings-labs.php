@@ -2125,10 +2125,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// T392520
-		'wmgUseArticleSummaries' => [
-			'default' => true,
-		],
 		// T246493
 		'wmgUseNearbyPages' => [
 			'default' => true,
