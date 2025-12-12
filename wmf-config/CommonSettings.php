@@ -2287,7 +2287,7 @@ if ( $wmgUseCentralAuth ) {
 		global $wgDBname, $wmgSharedDomainPathPrefix, $wgSessionName, $wgCookiePrefix, $wgHooks;
 		// $wgCookiePrefix may not be set yet when this runs. It defaults to $wgDBname.
 		$cookiePrefix = ( $wgCookiePrefix !== false && $wgCookiePrefix !== null ) ? $wgCookiePrefix : $wgDBname;
-		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token', 'centralauth_LoggedOut' ];
+		$centralAuthCookies = [ 'centralauth_Session', 'centralauth_User', 'centralauth_Token' ];
 		$localCookies = [ $wgSessionName, $cookiePrefix . 'UserID', $cookiePrefix . 'UserName' ];
 
 		if ( $wgDBname !== $wiki
