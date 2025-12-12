@@ -7043,6 +7043,7 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'officewiki' => true,
+	'idwiki' => true,
 ],
 
 // The parser cache can be configured to only cache pages that take a certain amount
@@ -7126,6 +7127,18 @@ return [
 		],
 	],
 	'+officewiki' => [
+		'postproc-pcache' => [
+			'default' => [
+				'minCpuTime' => 0,
+			],
+		],
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+idwiki' => [
 		'postproc-pcache' => [
 			'default' => [
 				'minCpuTime' => 0,
