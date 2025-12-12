@@ -440,6 +440,11 @@ if ( $wmgRealm == 'labs' ) {
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
 	$wgCdnMatchParameterOrder = false;
 
+	// T412528
+	if ( $wmgUsePersonalDashboard ) {
+		wfLoadExtension( 'PersonalDashboard' );
+	}
+
 	// T314294
 	if ( $wmgUsePhonos ) {
 		wfLoadExtension( 'Phonos' );
