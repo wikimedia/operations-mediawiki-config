@@ -4010,6 +4010,10 @@ return [
 	'testwikidatawiki' => 1500,
 ],
 
+'wmgUsePersonalDashboard' => [
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+],
+
 'wmgUsePhonos' => [
 	'default' => true, // T336763
 	'lockeddown' => false
