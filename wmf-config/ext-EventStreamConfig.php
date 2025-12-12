@@ -3564,6 +3564,9 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						// START of default provide_values from mediawiki.product_metrics.web_base. Keep
