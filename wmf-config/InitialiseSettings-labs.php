@@ -1063,6 +1063,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'wmgUsePersonalDashboard' => [ // T412528
+			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+			'enwiki' => true,
+		],
+
 		// The LOWER the value, the MORE requests will be logged.
 		// 100 = 1 of every 100 (1%), 1 = 1 of every 1 (100%).
 		'wgNavigationTimingSamplingFactor' => [
