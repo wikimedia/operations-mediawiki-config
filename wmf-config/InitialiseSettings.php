@@ -11148,10 +11148,6 @@ return [
 	'sul' => [ '185.15.56.0/24', '172.16.0.0/16', '2a02:ec80:a000::/48' ],
 ],
 
-'wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
-	'default' => true, // T377760
-],
-
 // Only allow local 'crats to rename on non-CentralAuth wikis
 'wmgAllowLocalRenameuser' => [
 	'default' => true,

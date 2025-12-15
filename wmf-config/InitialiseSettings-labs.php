@@ -2294,10 +2294,6 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 		],
 
-		'-wgGlobalBlockingHideAutoblocksInGlobalBlocksAPIResponse' => [
-			'default' => false, // T377737, T377760
-		],
-
 		'wmgUseCommunityConfiguration' => [
 			'default' => true,
 		],
