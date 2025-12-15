@@ -2034,6 +2034,7 @@ return [
 	'ruwiki' => 15, // T43831
 	'trwiki' => 10, // T411263
 	'simplewiki' => 10,
+	'svwiki' => 10, // T412713
 	'ukwiki' => 10, // T355972
 	'viwiki' => 10, // T322105
 	'wikidata' => 50, // T48461
