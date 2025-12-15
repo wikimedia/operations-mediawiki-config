@@ -572,36 +572,6 @@ if ( $wmgRealm == 'labs' ) {
 	// T385592
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
 
-	// CodeMirror (T373711)
-	if ( $wmgCodeMirrorReplaceCodeEditor ) {
-		// CodeMirror
-		// We don't set $wgCodeMirrorV6 as that's controlled by the beta feature.
-		$wgCodeMirrorEnabledModes['javascript'] = true;
-		$wgCodeMirrorEnabledModes['json'] = true;
-		$wgCodeMirrorEnabledModes['css'] = true;
-		$wgCodeMirrorEnabledModes['lua'] = true;
-		// CodeEditor
-		$wgCodeEditorEnabledModes['javascript'] = false;
-		$wgCodeEditorEnabledModes['json'] = false;
-		$wgCodeEditorEnabledModes['css'] = false;
-		$wgCodeEditorEnabledModes['lua'] = false;
-		// Gadgets
-		$wgGadgetsDefinitionsUseCodeEditor = false;
-		$wgGadgetsDefinitionsUseCodeMirror = true;
-		// JsonConfig
-		$wgJsonConfigUseCodeEditor = false;
-		$wgJsonConfigUseCodeMirror = true;
-		// Scribunto
-		$wgScribuntoUseCodeEditor = false;
-		$wgScribuntoUseCodeMirror = true;
-		// TemplateStyles
-		$wgTemplateStylesUseCodeEditor = false;
-		$wgTemplateStylesUseCodeMirror = true;
-		// UploadWizard
-		$wgUploadWizardUseCodeEditor = false;
-		$wgUploadWizardUseCodeMirror = true;
-	}
-
 	// Temporary testing of new passkey support -December 2025
 	$wgOATHNewPasskeyFeatures = true;
 }

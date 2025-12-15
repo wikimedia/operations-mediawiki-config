@@ -12219,6 +12219,11 @@ return [
 	'default' => true,
 ],
 
+// T373711
+'wmgCodeMirrorReplaceCodeEditor' => [
+	'default' => true,
+],
+
 'wgCodeMirrorV6' => [
 	'default' => false,
 	'officewiki' => true, // T357795

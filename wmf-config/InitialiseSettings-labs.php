@@ -2286,11 +2286,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T373711
-		'wmgCodeMirrorReplaceCodeEditor' => [
-			'default' => true,
-		],
-
-		// T373711
 		'-wgCodeMirrorV6' => [
 			'default' => false,
 		],

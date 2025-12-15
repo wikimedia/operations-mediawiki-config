@@ -2931,6 +2931,34 @@ $wgTemplateStylesAllowedUrls = [
 ];
 
 wfLoadExtension( 'CodeMirror' );
+if ( $wmgCodeMirrorReplaceCodeEditor ) {
+	// CodeMirror instead of CodeEditor (T373711)
+	// We don't set $wgCodeMirrorV6 as that's controlled by the beta feature.
+	$wgCodeMirrorEnabledModes['javascript'] = true;
+	$wgCodeMirrorEnabledModes['json'] = true;
+	$wgCodeMirrorEnabledModes['css'] = true;
+	$wgCodeMirrorEnabledModes['lua'] = true;
+	// CodeEditor
+	$wgCodeEditorEnabledModes['javascript'] = false;
+	$wgCodeEditorEnabledModes['json'] = false;
+	$wgCodeEditorEnabledModes['css'] = false;
+	$wgCodeEditorEnabledModes['lua'] = false;
+	// Gadgets
+	$wgGadgetsDefinitionsUseCodeEditor = false;
+	$wgGadgetsDefinitionsUseCodeMirror = true;
+	// JsonConfig
+	$wgJsonConfigUseCodeEditor = false;
+	$wgJsonConfigUseCodeMirror = true;
+	// Scribunto
+	$wgScribuntoUseCodeEditor = false;
+	$wgScribuntoUseCodeMirror = true;
+	// TemplateStyles
+	$wgTemplateStylesUseCodeEditor = false;
+	$wgTemplateStylesUseCodeMirror = true;
+	// UploadWizard
+	$wgUploadWizardUseCodeEditor = false;
+	$wgUploadWizardUseCodeMirror = true;
+}
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
