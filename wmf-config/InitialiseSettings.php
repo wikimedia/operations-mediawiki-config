@@ -12580,6 +12580,7 @@ return [
 	'labswiki' => true, // T409785
 	'officewiki' => true,
 	'srwiki' => true, // T407183
+	'zhwiki' => true, // T412710
 ],
 
 // T378127
