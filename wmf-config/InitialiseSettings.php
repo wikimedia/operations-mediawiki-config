@@ -12539,6 +12539,32 @@ return [
 	],
 ],
 
+// T405005
+'wgExternalLinksIgnoreDomains' => [
+	'default' => [
+		'wikipedia.org',
+		'wiktionary.org',
+		'wikibooks.org',
+		'wikinews.org',
+		'wikiquote.org',
+		'wikisource.org',
+		'wikiversity.org',
+		'wikivoyage.org',
+		'wikimedia.org',
+		'wikidata.org',
+		'wikifunctions.org',
+		'mediawiki.org',
+	],
+	'+commonswiki' => [
+		'wikimap.toolforge.org',
+		'geohack.toolforge.org',
+		'creativecommons.org',
+	],
+	'+ruwikinews' => [
+		'tools.wmflabs.org',
+	],
+],
+
 // T20110
 'wgConfirmEditEnabledAbuseFilterCustomActions' => [
 	'default' => [ 'showcaptcha' ],
