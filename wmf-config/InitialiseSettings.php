@@ -7045,6 +7045,21 @@ return [
 	'test2wiki' => true,
 	'officewiki' => true,
 	'idwiki' => true,
+	'thwiki' => true,
+	'simplewiki' => true,
+	'hiwiki' => true,
+	'elwiki' => true,
+	'bnwiki' => true,
+	'dawiki' => true,
+	'hrwiki' => true,
+	'skwiki' => true,
+	'etwiki' => true,
+	'slwiki' => true,
+	'lvwiki' => true,
+	'sqwiki' => true,
+	'bswiki' => true,
+	'mkwiki' => true,
+	'swwiki' => true,
 ],
 
 // The parser cache can be configured to only cache pages that take a certain amount
@@ -7145,6 +7160,111 @@ return [
 				'minCpuTime' => 0,
 			],
 		],
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+thwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+simplewiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+hiwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+elwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+bnwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+dawiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+hrwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+skwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+etwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+slwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+lvwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+sqwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+bswiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+mkwiki' => [
+		'postproc-parsoid-pcache' => [
+			'default' => [
+				'minCpuTime' => 0
+			],
+		],
+	],
+	'+swwiki' => [
 		'postproc-parsoid-pcache' => [
 			'default' => [
 				'minCpuTime' => 0
