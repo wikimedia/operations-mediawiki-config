@@ -36,3 +36,12 @@ $wmgThrottlingExceptions = [];
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
 ## Add throttling definitions above.
+
+// T412820 - Singapore Sing Lit Wikithon
+$wmgThrottlingExceptions[] = [
+	'from'   => '2025-12-27T12:00 +8:00',
+	'to'     => '2025-12-27T23:59 +8:00',
+	'IP'     => '203.117.231.89',
+	'dbname' => [ 'enwiki', 'zhwiki', 'tawiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 60,
+];
