@@ -3811,7 +3811,7 @@ return [
 	'idwiki' => true,
 	'enwiki' => true,
 	'fawiki' => true,
-	'frwiki' => true, // A/B test, see T405239
+	'frwiki' => true,
 	'jawiki' => true,
 	'loginwiki' => true, // T408428
 	'trwiki' => true,
@@ -10651,7 +10651,6 @@ return [
 
 'wgMetricsPlatformAuthPreserveQueryParamsExperiments' => [
 	'default' => [],
-	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239
 ],
 
 'wgMetricsPlatformExperimentStreamNames' => [
