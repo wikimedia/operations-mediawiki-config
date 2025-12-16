@@ -116,5 +116,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUseContentTranslation' => [
 			'default' => false,
 		],
+		'-wmgUseCommunityRequests' => [
+			'default' => false,
+		],
 	];
 }
