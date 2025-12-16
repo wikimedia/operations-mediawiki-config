@@ -1676,6 +1676,7 @@ return [
 			'changetags' => true, // T344150
 		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T249820
+		'temporary-account-viewer' => [ 'abusefilter-access-protected-vars' => true ], // T412791
 	],
 	'+jawiktionary' => [
 		'autopatrolled' => [
