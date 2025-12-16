@@ -7266,6 +7266,11 @@ return [
 	'metawiki' => true,
 ],
 
+// T361139
+'wgCheckUserUserAgentTableMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
+
 'wmgUseUserInfoCard' => [
 	// T405342
 	'default' => false,
