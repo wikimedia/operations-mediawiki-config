@@ -3084,6 +3084,7 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
+						'mediawiki_database',
 						'performer_language',
 						'performer_language_variant',
 						'performer_pageview_id',
