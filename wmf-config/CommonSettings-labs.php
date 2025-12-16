@@ -105,6 +105,9 @@ if ( $wmgRealm == 'labs' ) {
 		'auth.wikimedia.beta.wmcloud.org',
 	];
 
+	// T309738
+	$wgExternalQuerySources = [];
+
 	if ( $wmgUseGlobalPreferences ) {
 		// Allow global preferences for email-blacklist to be auto-set where it is overridden
 		// T231577
@@ -160,6 +163,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCiteSubReferencing = true;
 		// Temporary while developing feature, T378807
 		$wgCiteBacklinkCommunityConfiguration = true;
+		// Temporary while developing feature, T385666
+		$wgCiteSubRefMergeInDevelopment = true;
 	}
 
 	// Labs override for GlobalCssJs
@@ -305,27 +310,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Enabling article-reminder on beta for testing T166973. Still disabled in prod.
 	$wgAllowArticleReminderNotification = true;
 
-	if ( $wmgUseGraph ) {
-		// **** THIS LIST MUST MATCH puppet/blob/production/hieradata/cloud/eqiad1/deployment-prep/common.yaml ****
-		// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
-		$wgGraphAllowedDomains = [
-			'https' => [
-				'beta.wmcloud.org',
-			],
-			'wikirawupload' => [
-				'upload.wikimedia.org',
-				'upload.wikimedia.beta.wmcloud.org',
-			],
-			'wikidatasparql' => [
-				'wdqs-test.wmflabs.org',
-				'query.wikidata.org',
-			],
-			'geoshape' => [
-				'maps.wikimedia.org',
-			],
-		];
-	}
-
 	if ( $wmgUseMediaModeration ) {
 		$wgVirtualDomainsMapping['virtual-mediamoderation'] = [ 'db' => false ];
 	}
@@ -427,6 +411,8 @@ if ( $wmgRealm == 'labs' ) {
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
+	$wgMinervaTypeahead = $wgVectorTypeahead;
+
 	// T360098 - change Vector font-size for anons, existing named users or newly created users.
 	$wgDefaultUserOptions['vector-font-size'] = 1;
 	$wgConditionalUserOptions['vector-font-size'] = [
@@ -448,6 +434,7 @@ if ( $wmgRealm == 'labs' ) {
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
 		$wgGroupPermissions['user']['campaignevents-email-participants'] = true;
+		$wgGroupPermissions['user']['campaignevents-generate-invitation-lists'] = true;
 	}
 
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
@@ -470,6 +457,8 @@ if ( $wmgRealm == 'labs' ) {
 	// T372527
 	if ( $wmgUseCommunityRequests ) {
 		wfLoadExtension( 'CommunityRequests' );
+		// T401268
+		$wgCommunityRequestsEnable = true;
 	}
 
 	if ( !$wmgUseCheckUser ) {
@@ -583,34 +572,7 @@ if ( $wmgRealm == 'labs' ) {
 	// T385592
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
 
-	// CodeMirror (T373711)
-	if ( $wmgCodeMirrorReplaceCodeEditor ) {
-		// CodeMirror
-		// We don't set $wgCodeMirrorV6 as that's controlled by the beta feature.
-		$wgCodeMirrorEnabledModes['javascript'] = true;
-		$wgCodeMirrorEnabledModes['json'] = true;
-		$wgCodeMirrorEnabledModes['css'] = true;
-		$wgCodeMirrorEnabledModes['lua'] = true;
-		// CodeEditor
-		$wgCodeEditorEnabledModes['javascript'] = false;
-		$wgCodeEditorEnabledModes['json'] = false;
-		$wgCodeEditorEnabledModes['css'] = false;
-		$wgCodeEditorEnabledModes['lua'] = false;
-		// Gadgets
-		$wgGadgetsDefinitionsUseCodeEditor = false;
-		$wgGadgetsDefinitionsUseCodeMirror = true;
-		// JsonConfig
-		$wgJsonConfigUseCodeEditor = false;
-		$wgJsonConfigUseCodeMirror = true;
-		// Scribunto
-		$wgScribuntoUseCodeEditor = false;
-		$wgScribuntoUseCodeMirror = true;
-		// TemplateStyles
-		$wgTemplateStylesUseCodeEditor = false;
-		$wgTemplateStylesUseCodeMirror = true;
-		// UploadWizard
-		$wgUploadWizardUseCodeEditor = false;
-		$wgUploadWizardUseCodeMirror = true;
-	}
+	// Temporary testing of new passkey support -December 2025
+	$wgOATHNewPasskeyFeatures = true;
 }
 // end safeguard

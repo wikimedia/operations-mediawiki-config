@@ -56,6 +56,7 @@ return [
 	'test2wiki' => true, // T200412
 	'testwiki' => true, // T199913
 	'tewiki' => true, // T395824
+	'thwiki' => true, // T409438
 	'tlwiki' => true, // T395824
 	'trwiki' => true, // T139992
 	'ukwiki' => true, // T256887
@@ -76,7 +77,7 @@ return [
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
 	'afwiki' => [
 		'damaging' => [ 'enabled' => false ],
@@ -89,7 +90,7 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
 	'azwiki' => [
 		'damaging' => [ 'enabled' => false ],
@@ -116,14 +117,14 @@ return [
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true, 'keepForever' => true, ],
-		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'sources' => [ 'mw.new' ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
 	],
 	'euwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
 	'hawiki' => [
 		'damaging' => [ 'enabled' => false ],
@@ -186,7 +187,7 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
 	'swwiki' => [
 		'damaging' => [ 'enabled' => false ],
@@ -200,7 +201,7 @@ return [
 		// articlequality and draftquality are disabled until ORES is configured to allow these
 		// for test2wiki. See T198997
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'sources' => [ 'mw.new' ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'testwiki' => [
 		'revertrisk-language-agnostic' => [ 'enabled' => false ],
@@ -209,9 +210,14 @@ return [
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true, 'keepForever' => true, ],
-		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'sources' => [ 'mw.new' ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
 	],
 	'tewiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+	],
+	'thwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true ],
@@ -231,7 +237,7 @@ return [
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
 ],
 'wgOresExcludeBots' => [
@@ -893,6 +899,11 @@ return [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.367, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
+	],
+	'thwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.708, 'max' => 1 ] // based on desired false positive rate of < 15% T408607
+		],
 	],
 	'tlwiki' => [
 		'revertrisklanguageagnostic' => [

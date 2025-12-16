@@ -197,11 +197,17 @@ class CirrusTest extends WgConfTestCase {
 
 	public function provideUserTestingBuckets() {
 		$allConfig = $this->loadWgConf( 'production' );
-		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'];
+		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'] ?? [];
 		$tests = [];
+
 		foreach ( $conf as $name => $testConfig ) {
 			$tests[$name] = [ $testConfig ];
 		}
+
+		if ( empty( $conf ) ) {
+			$tests['default'] = [ [ 'buckets' => [] ] ];
+		}
+
 		return $tests;
 	}
 
@@ -226,9 +232,8 @@ class CirrusTest extends WgConfTestCase {
 
 		$triggers = [];
 		foreach ( $config['buckets'] as $name => $bucketConf ) {
-			$this->assertArrayKeys( [ 'trigger' ], [ 'globals' ], $bucketConf );
-			$this->assertIsString( $bucketConf['trigger'] );
-			$triggers[] = $bucketConf['trigger'];
+			$this->assertIsString( $name );
+			$this->assertArrayKeys( [], [ 'globals' ], $bucketConf );
 		}
 		$this->assertSameSize( $triggers, array_unique( $triggers ) );
 	}

@@ -13,7 +13,6 @@ $IP/extensions/BounceHandler/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/CampaignEvents/extension.json
 $IP/extensions/Campaigns/extension.json
-$IP/extensions/Capiunto/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
@@ -72,7 +71,6 @@ $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
 $IP/extensions/GlobalWatchlist/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
-$IP/extensions/Graph/extension.json
 $IP/extensions/GrowthExperiments/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/ImageMap/extension.json
@@ -126,6 +124,7 @@ $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/PropertySuggester/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
+$IP/extensions/ReaderExperiments/extension.json
 $IP/extensions/ReadingLists/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RealMe/extension.json
@@ -184,7 +183,6 @@ $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaApiPortalOAuth/extension.json
 $IP/extensions/WikimediaBadges/extension.json
 $IP/extensions/WikimediaCampaignEvents/extension.json
-$IP/extensions/WikimediaEditorTasks/extension.json
 $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json

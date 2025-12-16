@@ -97,7 +97,7 @@ function wmfApplyDebugLoggingHacks() {
 	];
 }
 
-function wmfGetLoggingConfig() {
+function wmfGetLoggingConfig(): array {
 	global $wmgExtraLogFile, $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUdp2logDest,
 		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 

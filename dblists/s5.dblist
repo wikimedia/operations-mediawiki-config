@@ -6,6 +6,7 @@ annwiki
 anpwiki
 apiportalwiki
 arbcom_itwiki
+arbcom_plwiki
 arbcom_ruwiki
 arbcom_zhwiki
 aswikiquote
@@ -70,10 +71,12 @@ madwiktionary
 mgwiktionary
 mhwiktionary
 minwikibooks
+minwikisource
 mniwiki
 mniwiktionary
 mnwwiktionary
 moswiki
+mswikiquote
 mswikisource
 muswiki
 mywikisource
@@ -82,6 +85,7 @@ niawiktionary
 nrwiki
 nupwiki
 pcmwiki
+pcmwikiquote
 pwnwiki
 rkiwiki
 rskwiki
@@ -103,10 +107,12 @@ tcywikisource
 tcywiktionary
 tddwiki
 thankyouwiki
+thwikimedia
 tigwiki
 tlwikiquote
 tlwikisource
 tlywiki
+tokwiki
 trvwiki
 trwikivoyage
 u4cwiki

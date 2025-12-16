@@ -55,8 +55,8 @@ return [
 					// See:
 					// - https://phabricator.wikimedia.org/T382173
 					// - https://schema.wikimedia.org/repositories//primary/jsonschema/fragment/http/current.yaml
-					// TODO: Disable default user-agent collection: https://phabricator.wikimedia.org/T384964
-					'http.request_headers.user-agent' => 'user-agent'
+					// User-agent collection is now disabled by default: https://phabricator.wikimedia.org/T384964
+					'http.request_headers.user-agent' => false
 				],
 			],
 		],
@@ -141,6 +141,13 @@ return [
 			'schema_title' => 'analytics/legacy/centralnoticebannerhistory',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -152,6 +159,13 @@ return [
 			'schema_title' => 'analytics/legacy/centralnoticeimpression',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -163,6 +177,13 @@ return [
 			'schema_title' => 'analytics/legacy/codemirrorusage',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -174,6 +195,13 @@ return [
 			'schema_title' => 'analytics/legacy/contenttranslationabusefilter',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -185,6 +213,13 @@ return [
 			'schema_title' => 'analytics/legacy/cpubenchmark',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -196,6 +231,13 @@ return [
 			'schema_title' => 'analytics/legacy/editattemptstep',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -211,6 +253,13 @@ return [
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -222,6 +271,13 @@ return [
 			'schema_title' => 'analytics/legacy/homepagemodule',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -233,6 +289,13 @@ return [
 			'schema_title' => 'analytics/legacy/homepagevisit',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -244,6 +307,13 @@ return [
 			'schema_title' => 'analytics/legacy/inukapageview',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -258,6 +328,13 @@ return [
 			'schema_title' => 'analytics/legacy/kaiosappfirstrun',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -272,6 +349,13 @@ return [
 			'schema_title' => 'analytics/legacy/kaiosappfeedback',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -286,6 +370,13 @@ return [
 			'schema_title' => 'analytics/legacy/landingpageimpression',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -297,6 +388,13 @@ return [
 			'schema_title' => 'analytics/legacy/mediawikipingback',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -311,6 +409,13 @@ return [
 			'schema_title' => 'analytics/legacy/navigationtiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -325,6 +430,13 @@ return [
 			'schema_title' => 'analytics/legacy/newcomertask',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -336,6 +448,13 @@ return [
 			'schema_title' => 'analytics/legacy/painttiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -347,6 +466,13 @@ return [
 			'schema_title' => 'analytics/legacy/prefupdate',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -358,6 +484,13 @@ return [
 			'schema_title' => 'analytics/legacy/wikipediaportal',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -369,6 +502,13 @@ return [
 			'schema_title' => 'analytics/legacy/quicksurveyinitiation',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -380,6 +520,13 @@ return [
 			'schema_title' => 'analytics/legacy/quicksurveysresponses',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -391,6 +538,13 @@ return [
 			'schema_title' => 'analytics/legacy/referencepreviewsbaseline',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -402,6 +556,13 @@ return [
 			'schema_title' => 'analytics/legacy/referencepreviewscite',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -413,6 +574,13 @@ return [
 			'schema_title' => 'analytics/legacy/referencepreviewspopups',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -428,6 +596,13 @@ return [
 			'schema_title' => 'analytics/legacy/savetiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -439,6 +614,13 @@ return [
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -454,6 +636,13 @@ return [
 			'schema_title' => 'analytics/legacy/serversideaccountcreation',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -465,6 +654,13 @@ return [
 			'schema_title' => 'analytics/legacy/specialinvestigate',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -476,6 +672,13 @@ return [
 			'schema_title' => 'analytics/legacy/templatedataapi',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -487,6 +690,13 @@ return [
 			'schema_title' => 'analytics/legacy/templatedataeditor',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -498,6 +708,13 @@ return [
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -509,6 +726,13 @@ return [
 			'schema_title' => 'analytics/legacy/test',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -520,6 +744,13 @@ return [
 			'schema_title' => 'analytics/legacy/translationrecommendationuseraction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -531,6 +762,13 @@ return [
 			'schema_title' => 'analytics/legacy/translationrecommendationuirequests',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -542,6 +780,13 @@ return [
 			'schema_title' => 'analytics/legacy/translationrecommendationapirequests',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -553,6 +798,13 @@ return [
 			'schema_title' => 'analytics/legacy/universallanguageselector',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -564,6 +816,13 @@ return [
 			'schema_title' => 'analytics/legacy/virtualpageview',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -579,6 +838,13 @@ return [
 			'schema_title' => 'analytics/legacy/visualeditorfeatureuse',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -590,6 +856,13 @@ return [
 			'schema_title' => 'analytics/legacy/visualeditortemplatedialoguse',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -601,6 +874,13 @@ return [
 			'schema_title' => 'analytics/legacy/wikibasetermboxinteraction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -612,6 +892,13 @@ return [
 			'schema_title' => 'analytics/legacy/wikidatacompletionsearchclicks',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -623,6 +910,13 @@ return [
 			'schema_title' => 'analytics/legacy/wmdebannerevents',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -634,6 +928,13 @@ return [
 			'schema_title' => 'analytics/legacy/wmdebannerinteractions',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -645,6 +946,13 @@ return [
 			'schema_title' => 'analytics/legacy/wmdebannersizeissue',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'eventlogging_legacy',
@@ -658,11 +966,25 @@ return [
 		'test.instrumentation' => [
 			'schema_title' => 'analytics/test',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		// For verifying sampling:
 		'test.instrumentation.sampled' => [
 			'schema_title' => 'analytics/test',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'sample' => [
 				'rate' => 0.5,
 				'unit' => 'session',
@@ -674,6 +996,13 @@ return [
 		'mediawiki.client.session_tick' => [
 			'schema_title' => 'analytics/session_tick',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'sample' => [
 				'unit' => 'session',
 				'rate' => 0.1,
@@ -688,62 +1017,167 @@ return [
 		'app_session' => [
 			'schema_title' => 'analytics/mobile_apps/app_session',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_donor_experience' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_patroller_experience' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_places_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_tabs_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_rabbit_holes' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_game_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'app_activity_tab' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.edit_history_compare' => [
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.notification_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/ios_notification_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.talk_page_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/ios_talk_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.setting_action' => [
 			'schema_title' => 'analytics/mobile_apps/ios_setting_action',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.sessions' => [
 			'schema_title' => 'analytics/mobile_apps/ios_sessions',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.login_action' => [
 			'schema_title' => 'analytics/mobile_apps/ios_login_action',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.search' => [
 			'schema_title' => 'analytics/mobile_apps/ios_search',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hadoop_ingestion' => [
 					'job_name' => 'event_default',
@@ -758,54 +1192,145 @@ return [
 		'ios.user_history' => [
 			'schema_title' => 'analytics/mobile_apps/ios_user_history',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.reading_lists' => [
 			'schema_title' => 'analytics/mobile_apps/ios_reading_lists',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.navigation_events' => [
 			'schema_title' => 'analytics/mobile_apps/ios_navigation_events',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.watchlists' => [
 			'schema_title' => 'analytics/mobile_apps/ios_watchlists',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.suggested_edits_alt_text_prototype' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.edit_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/app_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'ios.article_link_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/ios_article_link_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.notification_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_notification_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.image_recommendation_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.daily_stats' => [
 			'schema_title' => 'analytics/mobile_apps/android_daily_stats',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.customize_toolbar_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_customize_toolbar_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.article_toolbar_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_toolbar_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -816,22 +1341,57 @@ return [
 		'android.edit_history_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.app_session' => [
 			'schema_title' => 'analytics/mobile_apps/android_app_session',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.create_account_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_create_account_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.install_referrer_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_install_referrer_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.breadcrumbs_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -842,10 +1402,24 @@ return [
 		'android.app_appearance_settings_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_app_appearance_settings_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.article_link_preview_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_link_preview_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -856,27 +1430,67 @@ return [
 		'android.article_page_scroll_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_page_scroll_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.article_toc_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_article_toc_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.find_in_page_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_find_in_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.image_recommendation_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.reading_list_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_reading_list_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'android.product_metrics.article_link_preview_interaction' => [
 			'schema_title' => 'analytics/product_metrics/app/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -909,6 +1523,11 @@ return [
 			'schema_title' => 'analytics/mobile_apps/product_metrics/android_article_toc_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -934,6 +1553,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/app/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -965,6 +1589,11 @@ return [
 			'schema_title' => 'analytics/mobile_apps/product_metrics/android_find_in_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -989,39 +1618,100 @@ return [
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.searchpreview' => [
 			'schema_title' => 'analytics/mediawiki/searchpreview',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.structured_task.article.link_suggestion_interaction' => [
 			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.structured_task.article.image_suggestion_interaction' => [
 			'schema_title' => 'analytics/mediawiki/structured_task/article/image_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.pref_diff' => [
 			'schema_title' => 'analytics/pref_diff',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.skin_diff' => [
 			'schema_title' => 'analytics/pref_diff',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.content_translation_event' => [
 			'schema_title' => 'analytics/mediawiki/content_translation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.reading_depth' => [
 			'schema_title' => 'analytics/mediawiki/web_ui_reading_depth',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.web_ui_actions' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/web_ui_actions',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'page_namespace_id',
@@ -1050,11 +1740,23 @@ return [
 		'mediawiki.web_ui_scroll' => [
 			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.web_ui_scroll_migrated' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					// The following is derived from:
 					//
@@ -1075,80 +1777,187 @@ return [
 		'mediawiki.ipinfo_interaction' => [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
+		],
+		'mediawiki.hcaptcha.edit' => [
+			'schema_title' => 'analytics/mediawiki/hcaptcha/edit',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			]
+		],
+		'mediawiki.hcaptcha.risk_score' => [
+			'schema_title' => 'analytics/mediawiki/hcaptcha/risk_score',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			]
 		],
 		'mediawiki.ip_reputation.score' => [
 			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'wd_propertysuggester.server_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.mentor_dashboard.visit' => [
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.mentor_dashboard.personalized_praise' => [
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/personalized_praise',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.mentor_dashboard.interaction' => [
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.welcomesurvey.interaction' => [
 			'schema_title' => 'analytics/mediawiki/welcomesurvey/interaction',
-			'destination_event_service' => 'eventgate-analytics-external'
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.editgrowthconfig' => [
 			'schema_title' => 'analytics/mediawiki/editgrowthconfig',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.accountcreation.account_conversion' => [
 			'schema_title' => 'analytics/mediawiki/accountcreation/account_conversion',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.accountcreation_block' => [
 			'schema_title' => 'analytics/mediawiki/accountcreation/block',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.accountcreation.login' => [
 			'schema_title' => 'analytics/mediawiki/accountcreation/account_conversion',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.editattempt_block' => [
 			'schema_title' => 'analytics/mediawiki/editattemptsblocked',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		[
 			'stream' => 'mediawiki.talk_page_edit',
 			'schema_title' => 'analytics/mediawiki/talk_page_edit',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mwcli.command_execute' => [
 			'schema_title' => 'analytics/mwcli/command_execute',
 			'destination_event_service' => 'eventgate-analytics-external',
-		],
-
-		// See https://phabricator.wikimedia.org/T353798
-		'mediawiki.reference_previews' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
-			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'metrics_platform_client' => [
-					'events' => [
-						'ext.cite.baseline'
-					],
-					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_namespace',
-						'performer_edit_count_bucket',
-						'performer_is_logged_in',
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
 					],
 				],
 			],
@@ -1159,6 +1968,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -1169,35 +1983,28 @@ return [
 			],
 		],
 
-		// Wikistories streams
-		'mediawiki.wikistories_consumption_event' => [
-			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
-		'mediawiki.wikistories_contribution_event' => [
-			'schema_title' => 'analytics/mediawiki/wikistories_contribution_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
-
 		// GeoIP mapping experiments (T332024)
 		'development.network.probe' => [
 			'schema_title' => 'development/network/probe',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
-		 * These streams disable canary event production.
-		 * We'd like to enable canary events for these, but the logging cluster consumers
-		 * would need to know to filter out the canary events first.
 		 * eventgate-logging-external only requests its stream configs on service startup,
 		 * so if you modify something here, eventgate-logging-external will need a restart.
 		 */
 		'mediawiki.client.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
-			'canary_events_enabled' => false,
 			'producers' => [
 				'eventgate' => [
 					// Override the default so we collect user-agent
@@ -1213,19 +2020,15 @@ return [
 						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
 						'http.request_headers.x-geoip-country' => 'x-geoip-country',
 						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+						'http.request_headers.x-ja3n' => 'x-ja3n',
+						'http.request_headers.x-ja4h' => 'x-ja4h',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
 				],
 			],
 		],
 		'kaios_app.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
-			'canary_events_enabled' => false,
 			'producers' => [
 				'eventgate' => [
 					// Override the default so we collect user-agent
@@ -1241,19 +2044,15 @@ return [
 						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
 						'http.request_headers.x-geoip-country' => 'x-geoip-country',
 						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+						'http.request_headers.x-ja3n' => 'x-ja3n',
+						'http.request_headers.x-ja4h' => 'x-ja4h',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
 				],
 			],
 		],
 		'w3c.reportingapi.network_error' => [
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
-			'canary_events_enabled' => false,
 			'producers' => [
 				'eventgate' => [
 					// Override the default so we collect user-agent
@@ -1269,12 +2068,9 @@ return [
 						'http.request_headers.x-geoip-as-number' => 'x-geoip-as-number',
 						'http.request_headers.x-geoip-country' => 'x-geoip-country',
 						'http.request_headers.x-geoip-subdivision' => 'x-geoip-subdivision',
+						'http.request_headers.x-ja3n' => 'x-ja3n',
+						'http.request_headers.x-ja4h' => 'x-ja4h',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
 				],
 			],
 		],
@@ -1288,10 +2084,24 @@ return [
 		'api-gateway.request' => [
 			'schema_title' => 'api-gateway/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
 		'mediawiki.api-request' => [
 			'schema_title' => 'mediawiki/api/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -1302,6 +2112,13 @@ return [
 		'mediawiki.cirrussearch-request' => [
 			'schema_title' => 'mediawiki/cirrussearch/request',
 			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -1312,6 +2129,13 @@ return [
 		'wdqs-internal.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -1322,6 +2146,13 @@ return [
 		'wdqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -1332,6 +2163,13 @@ return [
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -1344,6 +2182,13 @@ return [
 			'destination_event_service' => 'eventgate-analytics',
 			// canary events will not work for regex streams.
 			'canary_events_enabled' => false,
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 			'consumers' => [
 				// Don't ingest regex streams into Hadoop.
 				'analytics_hadoop_ingestion' => [
@@ -1648,6 +2493,10 @@ return [
 		// needs to be re-created, from a brand new Postgres cluster
 		// (with a different version etc..).
 		'maps.tiles_change_bookworm.v1' => [
+			'schema_title' => 'maps/tiles_change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		'maps.tiles_change_staging.v1' => [
 			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
 		],
@@ -2136,20 +2985,10 @@ return [
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => true,
 		],
-
-		'inuka.wiki_highlights_experiment' => [
-			'schema_title' => 'analytics/external/wiki_highlights_experiment',
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
 		// Instrument for IP auto-reveal (T387600)
 		'mediawiki.product_metrics.checkuser_ip_auto_reveal_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'eventgate' => [
-				'enrich_fields_from_http_headers' => [
-					'http.request_headers.user-agent' => false,
-				],
-			],
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
@@ -2162,11 +3001,56 @@ return [
 				],
 			],
 		],
+		// Old instrumentation for the CheckUser Suggested Investigations feature (T404177)
+		'mediawiki.product_metrics.suggested_investigations_interaction' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'performer_id',
+						'performer_groups',
+						'performer_name',
+						'performer_pageview_id',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_registration_dt',
+					],
+				],
+			],
+		],
+		// New instrumentation for the CheckUser Suggested Investigations feature (T409260, T404177)
+		'mediawiki.product_metrics.suggested_investigations_interaction.v2' => [
+			'schema_title' => 'analytics/mediawiki/suggested_investigations/interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+					],
+				],
+			],
+		],
 		// Instrument for the Incident Reporting System (T372823)
 		'mediawiki.product_metrics.incident_reporting_system_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'mediawiki_eventbus' => [
 					'event_service_name' => 'eventgate-analytics-external',
 				],
@@ -2189,6 +3073,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'mediawiki_eventbus' => [
 					'event_service_name' => 'eventgate-analytics-external',
 				],
@@ -2210,6 +3099,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -2243,6 +3137,11 @@ return [
 			'schema_title' => 'analytics/mediawiki/product_metrics/ext_massdelete',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -2256,6 +3155,11 @@ return [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/ui_actions',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
@@ -2287,6 +3191,11 @@ return [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/api',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
@@ -2351,6 +3260,9 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/translation',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -2370,19 +3282,17 @@ return [
 					],
 				],
 			],
-			'eventgate' => [
-				'enrich_fields_from_http_headers' => [
-					// Don't collect the user agent
-					'http.request_headers.user-agent' => false,
-				],
-				'use_edge_uniques' => true,
-			],
 		],
 		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
 		'mediawiki.product_metrics.homepage_module_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -2415,24 +3325,12 @@ return [
 		'mediawiki.product_metrics.growth_product_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
-					],
-				],
-			]
 		],
 		// (T386440) Instrument for the User Info Card
 		'mediawiki.product_metrics.user_info_card_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
-					],
-				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
@@ -2457,6 +3355,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/app/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
 				'metrics_platform_client' => [
 					'provide_values' => [],
 				],
@@ -2466,6 +3369,7 @@ return [
 		// Web base stream configuration to support Experiment Platform's monotable.
 		//
 		// See T373967 for context.
+		// NOTE: consider updating web_base_with_ip below when updating this
 		'product_metrics.web_base' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -2490,19 +3394,48 @@ return [
 						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
 						'performer_active_browsing_session_token',
 
-						// Temporary: The first everyone experiment run by Web will use this stream. Make skin and
-						// database (DBname) available as dimensions during analysis for the duration of that
-						// experiment. See https://phabricator.wikimedia.org/T394457 and
-						// https://phabricator.wikimedia.org/T394093 for detail.
 						'mediawiki_skin',
 						'mediawiki_database',
 					],
 				],
 				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						// Don't collect the user agent
-						'http.request_headers.user-agent' => false,
+					'use_edge_uniques' => true,
+				],
+			],
+		],
+		// Same as Web base stream above, but collects client IP information.
+		// When using this stream, please pay doubly close attention to the collection guidelines:
+		//
+		// https://foundation.wikimedia.org/wiki/Legal:Data_Collection_Guidelines
+		'product_metrics.web_base_with_ip' => [
+			'schema_title' => 'analytics/product_metrics/web/base_with_ip',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+
+						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
+						'agent_client_platform',
+						'agent_client_platform_family',
+
+						// Make user authentication status available as a dimension during analysis.
+						'performer_is_logged_in',
+						'performer_is_temp',
+
+						// Enable the calculation of the "click-through per page visit" generic metric.
+						'performer_pageview_id',
+
+						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
+						// session ID" contextual attribute so that analysts can calculate all three flavors of
+						// click-through rate (see
+						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
+						'performer_active_browsing_session_token',
+
+						'mediawiki_skin',
+						'mediawiki_database',
 					],
+				],
+				'eventgate' => [
 					'use_edge_uniques' => true,
 				],
 			],
@@ -2511,27 +3444,93 @@ return [
 		'product_metrics.web_base.wikrun_game' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
 		],
-		// (T389097) Stream to track Article Summaries.
-		'product_metrics.web_base.article_summaries' => [
+		'analytics.haproxy_requestctl' => [
+			'schema_title' => 'analytics/haproxy_requestctl',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		// (T403255, T403259, T405489) Image browsing experiment by Reader Growth.
+		//
+		// We collect all events produced by this stream,
+		// so we leave the default analytics sampling rate of 1,
+		// thus not explicitly setting the `sample` key here.
+		//
+		// Experiment enrollment sampling (AKA bucketing) is instead set on the
+		// Metrics Platform Experimentation Lab (MPIC) at
+		// https://mpic.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
+		//
+		// See https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Analytics_sampling,
+		// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Experiment_enrolment_sampling
+		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						// Contextual attributes, see
+						// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Contextual_attributes
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+				'eventgate' => [
+					// Target non-logged readers through edge unique cookies, see
+					// https://wikitech.wikimedia.org/wiki/Edge_uniques
+					'use_edge_uniques' => true,
+				],
+			],
+		],
+		// (T409324, T410533) Sticky headers experiment by Reader Growth.
+		'mediawiki.product_metrics.readerexperiments_stickyheaders' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_active_browsing_session_token',
+						'performer_edit_count_bucket',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+			],
+		],
+		// T401575: Stream to track Watchlist interactions
+		'mediawiki.product_metrics.WatchlistClickTracker' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
-						'page_id',
-						'page_title',
-						'page_namespace_id',
-						'mediawiki_skin',
-						'page_content_language',
-						'agent_client_platform',
-						'agent_client_platform_family',
-						'performer_session_id',
 						'performer_name',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_is_temp',
+						'performer_pageview_id',
 					],
 				],
 			],
@@ -2540,10 +3539,60 @@ return [
 				'rate' => 1,
 			],
 		],
-		'analytics.haproxy_requestctl' => [
-			'schema_title' => 'analytics/haproxy_requestctl',
-			'destination_event_service' => 'eventgate-analytics',
+		// T397532 Stream for ReadingList web Experiment
+		'mediawiki.product_metrics.reading_list' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_edit_count_bucket',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+			],
 		],
+		// T407802 Stream for Growth's Revise Tone recommendations experiment
+		'mediawiki.product_metrics.contributors.experiments' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						// START of default provide_values from mediawiki.product_metrics.web_base. Keep
+						// them to make sure automated analysis can be performed
+
+						// Make user authentication status available as a dimension during analysis.
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_is_bot',
+
+						// Enable the calculation of the "click-through per page visit" generic metric.
+						'performer_pageview_id',
+						'performer_active_browsing_session_token',
+
+						'mediawiki_skin',
+						'mediawiki_database',
+						// END of default provide_values from mediawiki.product_metrics.web_base. Keep
+						// them to make sure automated analysis can be performed
+
+						// Specific to Constructive edit activation and constructive edit rates
+						'performer_id',
+						'performer_edit_count',
+					],
+				],
+			],
+		]
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [

@@ -260,6 +260,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpMobileEditingUI ) ) {
 		$wgWBRepoSettings['tmpMobileEditingUI'] = $wmgWikibaseTmpMobileEditingUI;
 	}
+
+	// Enable MEX / wbui2025 beta feature if set in config T407737 (T394704)
+	if ( isset( $wmgWikibaseTmpMobileEditingUIBetaFeature ) ) {
+		$wgWBRepoSettings['tmpEnableMobileEditingUIBetaFeature'] = $wmgWikibaseTmpMobileEditingUIBetaFeature;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -353,7 +358,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
-	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
+	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'A' => 10, 'L' => 10, 'C' => 33 ];
 	if ( isset( $wmgEntityUsageModifierLimitsStatement ) ) {
 		$wgWBClientSettings['entityUsageModifierLimits']['C'] = $wmgEntityUsageModifierLimitsStatement;
 	}
@@ -394,7 +399,9 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['enableMulLanguageCode'] = $wmgWikibaseEnableMulLanguageCode;
 	}
 
-	$wgWBClientSettings['resolveWikibaseLabels'] = $wmgWikibaseClientResolveWikibaseLabels;
+	// T397258
+	$wgWBClientSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
+	$wgWBRepoSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
 }
 
 unset( $wmgWBSharedCacheKey );

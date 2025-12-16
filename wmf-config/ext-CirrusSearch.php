@@ -158,7 +158,7 @@ return [
 ],
 
 // Define overridden interwiki prefixes
-// Mostly to match what's done in WikimediaMaintenance/dumpInterwiki.php ( see $prefixRewrites )
+// Mostly to match what's done in WikimediaMaintenance/maintenance/dumpInterwiki.php ( see $prefixRewrites )
 'wgCirrusSearchInterwikiPrefixOverrides' => [
 	'default' => [],
 	'svwiki' => [ 's' => 'src' ],
@@ -483,6 +483,10 @@ return [
 // Inject defaultsort in autocomplete suggestions served by the completion suggester
 'wgCirrusSearchCompletionSuggesterUseDefaultSort' => [
 	'default' => false,
+	// T404858
+	'enwiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
 	'mnwiki' => true, // T327878
 ],
 
@@ -556,6 +560,7 @@ return [
 
 'wgCirrusSearchNearMatchWeight' => [
 	'default' => 10, // T257922
+	'commonswiki' => 20, // T408154
 ],
 
 'wgCirrusSearchNamespaceWeights' => [
@@ -568,6 +573,9 @@ return [
 		106 => 0.9,
 	],
 	'commonswiki' => [
+		// T401590: Reduce weight of galleries
+		0 => 0.6,
+		// On most wikis NS_FILE is discounted, but not on commons
 		6 => 1.0,
 	],
 	'labswiki' => [
@@ -1176,16 +1184,42 @@ return [
 	'wikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
 	'testwikidatawiki' => [ 'lexeme_language.code', 'lexeme_language.entity' ], // T271776
 ],
-'wgCirrusSearchIndexWeightedTagsPrefixMap' => [
-	'default' => [
-		'classification.ores.articletopic' => 'classification.prediction.articletopic', // T389053
-		'classification.ores.drafttopic' => 'classification.prediction.drafttopic', // T389053
-	],
-],
 'wgCirrusSearchPhraseSuggestBuildVariant' => [
 	'default' => true,
 ],
 'wgCirrusSearchPhraseSuggestUseOpeningText' => [
 	'default' => true,
+],
+'wgCirrusSearchAlternativeIndices' => [
+	'default' => [],
+],
+'wgCirrusSearchCompletionUseSecondTryProfile' => [
+	'default' => 'default',
+	'hewiki' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewiktionary' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikibooks' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikinews' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikiquote' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikisource' => 'language_converter_and_hebrew_wrong_keyboard',
+	'hewikivoyage' => 'language_converter_and_hebrew_wrong_keyboard',
+	'kawiki' => 'language_converter_and_georgian_transliteration',
+	'kawiktionary' => 'language_converter_and_georgian_transliteration',
+	'kawikibooks' => 'language_converter_and_georgian_transliteration',
+	'kawikiquote' => 'language_converter_and_georgian_transliteration',
+	'kawikisource' => 'language_converter_and_georgian_transliteration',
+	'ruwiki' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwiktionary' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikibooks' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikinews' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikiquote' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikisource' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikiversity' => 'language_converter_and_russian_wrong_keyboard',
+	'ruwikivoyage' => 'language_converter_and_russian_wrong_keyboard',
+],
+'wgCirrusSearchNaturalTitleSort' => [
+	'default' => [
+		'build' => true,
+		'use' => false,
+	]
 ],
 ];

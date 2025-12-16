@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\MWConfig\ClusterConfig;
+
 if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
@@ -109,6 +111,20 @@ $wgPoolCounterConf = [
 		'slots' => 50,
 	],
 ];
+
+if ( !ClusterConfig::getInstance()->isInternalApi() ) {
+	// Enable cirrusbuilddoc poolcounter protection only on non internal
+	// API clusters (T401220).
+	// Once the NetworkSession extension (T373826) is stable enough without
+	// a risk to get disabled again this section can be added
+	// unconditionnaly and moved to the array declaration above.
+	$wgPoolCounterConf['CirrusSearch-QueryBuildDocument'] = [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 10,
+		'maxqueue' => 50,
+	];
+}
 
 $wgPoolCountClientConf = [
 	'servers' => $wmgLocalServices['poolcounter'],

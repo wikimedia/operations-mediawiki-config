@@ -51,9 +51,11 @@ class WmfConfig {
 		'fishbowl',
 		'closed',
 		'flow',
+		// T410164: Enable footer contact in tiers, starting with highest legal risk wikis, then progressively lower risk tiers.
+		'footer-legal-contact-link',
 		'flaggedrevs',
 		'small',
-		'skin-themes',
+		'specialcontribute',
 		'vector-2022-language-links',
 		'legacy-vector',
 		'medium',
@@ -83,7 +85,8 @@ class WmfConfig {
 		'ores',
 		'sul',
 		'wikilove',
-		'tempaccounts',
+		'tempaccounts_disabled',
+		'checkuser-suggested-investigations',
 	];
 
 	/** @var string[] */

@@ -109,6 +109,9 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 				$toCheck[] = [ $end, "end of range $range" ];
 			}
 		}
+		if ( $toCheck === [] ) {
+			$this->markTestSkipped( 'No IP address/range in this rule' );
+		}
 
 		foreach ( $toCheck as [ $ip, $description ] ) {
 			$this->assertTrue( IPUtils::isPublic( $ip ),
@@ -152,13 +155,21 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 		];
 	}
 
-	public function provideRules() {
+	public static function provideRules(): array {
 		require __DIR__ . '/../wmf-config/throttle.php';
 
 		$rules = [];
 
 		foreach ( $wmgThrottlingExceptions as $rule ) {
 			$rules[] = [ $rule ];
+		}
+
+		if ( empty( $rules ) ) {
+			$rules[] = [ [
+				'from' => '2000-01-01T00:00:00+00:00',
+				'to' => '2100-01-01T00:00:00+00:00',
+				'value' => 50
+			] ];
 		}
 
 		return $rules;

@@ -39,6 +39,7 @@ arbcom_enwiki
 arbcom_fiwiki
 arbcom_itwiki
 arbcom_nlwiki
+arbcom_plwiki
 arbcom_ruwiki
 arbcom_zhwiki
 arcwiki
@@ -582,6 +583,7 @@ mhwiki
 mhwiktionary
 minwiki
 minwikibooks
+minwikisource
 minwiktionary
 miwiki
 miwikibooks
@@ -613,6 +615,7 @@ mrwikisource
 mrwiktionary
 mswiki
 mswikibooks
+mswikiquote
 mswikisource
 mswiktionary
 mtwiki
@@ -702,6 +705,7 @@ pawikisource
 pawiktionary
 pcdwiki
 pcmwiki
+pcmwikiquote
 pdcwiki
 pflwiki
 pihwiki
@@ -905,6 +909,7 @@ tgwiktionary
 thankyouwiki
 thwiki
 thwikibooks
+thwikimedia
 thwikinews
 thwikiquote
 thwikisource
@@ -924,6 +929,7 @@ tlwiktionary
 tlywiki
 tnwiki
 tnwiktionary
+tokwiki
 towiki
 towiktionary
 tpiwiki

@@ -95,7 +95,6 @@ ckbwiki
 cowiki
 cowiktionary
 crhwiki
-crwiki
 csbwiki
 csbwiktionary
 cswiki
@@ -294,7 +293,6 @@ kgwiki
 kiwiki
 kkwikibooks
 kkwiktionary
-klwiki
 klwiktionary
 kmwiki
 kmwikibooks
@@ -370,6 +368,7 @@ mgwiktionary
 mhrwiki
 minwiki
 minwikibooks
+minwikisource
 minwiktionary
 miwiki
 miwiktionary
@@ -394,6 +393,7 @@ mrwikiquote
 mrwikisource
 mrwiktionary
 mswikibooks
+mswikiquote
 mswikisource
 mswiktionary
 mtwiki
@@ -451,6 +451,7 @@ pawikisource
 pawiktionary
 pcdwiki
 pcmwiki
+pcmwikiquote
 pdcwiki
 piwiki
 plwikibooks
@@ -579,6 +580,7 @@ tgwiki
 tgwikibooks
 tgwiktionary
 thwikibooks
+thwikimedia
 thwikiquote
 thwikisource
 thwiktionary
@@ -595,6 +597,7 @@ tlwiktionary
 tlywiki
 tnwiki
 tnwiktionary
+tokwiki
 towiki
 tpiwiki
 tpiwiktionary

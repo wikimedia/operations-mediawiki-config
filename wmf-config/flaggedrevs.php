@@ -346,9 +346,8 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		# Remove 'editor' and 'autoreview' (T91934) user groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'enwikibooks' ) {
-		// Cookbook, WikiJunior
-		$wgFlaggedRevsNamespaces[] = 102;
-		$wgFlaggedRevsNamespaces[] = 110;
+		// Limited to the main, Cookbook, and Wikijunior namespaces (T408110)
+		$wgFlaggedRevsNamespaces = [ NS_MAIN, 102, 110 ];
 		$wgFlaggedRevsTags = [ 'value' => [ 'levels' => 3 ] ];
 
 		$wgGroupPermissions['editor']['rollback'] = true;

@@ -58,15 +58,6 @@ class DbConfig {
 
 	/**
 	 * @param string $sectionName
-	 * @return string
-	 */
-	public function getGroupLoads( $sectionName ) {
-		global $wgLBFactoryConf;
-		return $wgLBFactoryConf['groupLoadsBySection'][$sectionName];
-	}
-
-	/**
-	 * @param string $sectionName
 	 * @return array
 	 */
 	public function getDBs( $sectionName ) {

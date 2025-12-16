@@ -120,6 +120,7 @@ switch ( $wgDBname ) {
 	case 'enwiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T405999
 		$wgGroupPermissions['abusefilter']['changetags'] = true; // T97013
 		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T141847
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -133,6 +134,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T383332
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T411828
 		$wgAbuseFilterActions['block'] = true; // T273864
 		break;
 	case 'enwikinews':
@@ -145,6 +147,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T231750
+		break;
+	case 'enwikivoyage':
+		$wgAbuseFilterActions['block'] = true; // T408885
 		break;
 	case 'eswiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
@@ -271,6 +276,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		$wgAbuseFilterNotifications = false;
+		break;
+	case 'ganwiki':
+		$wgAbuseFilterActions['block'] = true; // T406220
 		break;
 	case 'hewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -414,13 +422,24 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T134779
 		$wgAbuseFilterAnonBlockDuration = '3 days'; // T134779
 		break;
-	case 'rowiki':
-		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
-		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
-		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
-		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
-		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+	case 'rowiki': // T407978
+		$wgGroupPermissions['*']['abusefilter-view'] = false;
+		$wgGroupPermissions['*']['abusefilter-log'] = false;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
+		$wgGroupPermissions['extendedconfirmed']['abusefilter-log'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-view'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-log'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-view'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-view'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 		break;
 	case 'ruwiki':
 		## Scaled back from sysop to autoconfirmed -- T19998 -- Andrew 2009-03-16
@@ -551,7 +570,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		break;
-// Please add new wikis in their correct place in alphabetical order!
+	// Please add new wikis in their correct place in alphabetical order!
 }
 
 if ( $wmgRealm === 'labs' ) {

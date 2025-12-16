@@ -91,13 +91,6 @@ $wmgCaptchaSecret = null;
 $wmgCaptchaPassword = null;
 
 /**
- * Site key for HCaptcha. Used if $wmgUseHCaptcha is true.
- *
- * @see mediawiki/extensions/ConfirmEdit (hCaptcha)
- */
-$wgHCaptchaSiteKey = null;
-
-/**
  * Secret key for HCaptcha. Used if $wmgUseHCaptcha is true.
  *
  * @see mediawiki/extensions/ConfirmEdit (hCaptcha)
@@ -182,10 +175,9 @@ $wmgSessionStoreHMACKey = null;
 $wmgXhguiDBuser = null;
 $wmgXhguiDBpassword = null;
 
-// RSA keys so the OAuth 2.0 library can create self-encoded access tokens. Which we don't actually need,
-// but the library chosen doesn't make it configurable.
-$wgOAuth2PrivateKey = null;
-$wgOAuth2PublicKey = null;
+// RSA keys for verifiable sessions (OAuth 2 access tokens and JWT session cookies).
+$wgJwtPrivateKey = $wgOAuth2PrivateKey = null;
+$wgJwtPublicKey = $wgOAuth2PublicKey = null;
 
 /**
  * MediaModeration extension private API configuration details
