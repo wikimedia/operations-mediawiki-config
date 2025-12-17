@@ -12570,6 +12570,7 @@ return [
 	'frwiktionary' => true, // T413724
 	'labswiki' => true, // T409785
 	'officewiki' => true,
+	'ruwiki' => true, // T412582
 	'srwiki' => true, // T407183
 	'zhwiki' => true, // T412710
 ],
