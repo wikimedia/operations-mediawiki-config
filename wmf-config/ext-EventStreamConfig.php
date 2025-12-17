@@ -3438,6 +3438,11 @@ return [
 				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.x-ja3n' => 'x-ja3n',
+						'http.request_headers.x-ja4h' => 'x-ja4h',
+						'http.request_headers.x-is-browser' => 'x-is-browser',
+					],
 				],
 			],
 		],
