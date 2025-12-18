@@ -7202,6 +7202,15 @@ return [
 	'loginwiki' => false,
 ],
 
+// Hide checks unless searched for which have a very large CIDR (T320769)
+// Should match the definition of $wgCheckUserCIDRLimit
+'wgCheckUserLogMaxRangeToShowInLog' => [
+	'default' => [
+		'IPv4' => 16,
+		'IPv6' => 19,
+	],
+],
+
 // T337944
 'wgCheckUserClientHintsEnabled' => [
 	'default' => true,
