@@ -2928,11 +2928,13 @@ if ( $wmgCodeMirrorReplaceCodeEditor ) {
 	$wgCodeMirrorEnabledModes['json'] = true;
 	$wgCodeMirrorEnabledModes['css'] = true;
 	$wgCodeMirrorEnabledModes['lua'] = true;
+	$wgCodeMirrorEnabledModes['vue'] = true;
 	// CodeEditor
 	$wgCodeEditorEnabledModes['javascript'] = false;
 	$wgCodeEditorEnabledModes['json'] = false;
 	$wgCodeEditorEnabledModes['css'] = false;
 	$wgCodeEditorEnabledModes['lua'] = false;
+	$wgCodeEditorEnabledModes['vue'] = false;
 	// Gadgets
 	$wgGadgetsDefinitionsUseCodeEditor = false;
 	$wgGadgetsDefinitionsUseCodeMirror = true;
