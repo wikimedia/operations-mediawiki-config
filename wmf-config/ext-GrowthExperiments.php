@@ -427,16 +427,6 @@ return [
 	],
 ],
 
-'wgGEUseMetricsPlatformExtension' => [
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-	'ptwiki' => true,
-],
-
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,

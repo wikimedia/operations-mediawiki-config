@@ -1434,9 +1434,6 @@ function wmfGetOverrideSettings() {
 		'wgGENotificationsTrackingEnabled' => [
 			'default' => true,
 		],
-		'wgGEUseMetricsPlatformExtension' => [
-			'default' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
