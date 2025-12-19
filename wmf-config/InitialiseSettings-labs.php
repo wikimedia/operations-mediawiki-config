@@ -510,7 +510,11 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 		],
 		'-wmgSiteLogoWordmark' => [
-			'default' => null,
+			'default' => [
+				'src' => '/static/images/mobile/copyright/beta-wordmark.svg',
+				'width' => 55,
+				'height' => 20,
+			],
 		],
 		'-wmgSiteLogoTagline' => [
 			'default' => null,
