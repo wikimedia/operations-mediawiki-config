@@ -216,8 +216,8 @@ if ( $wmgRealm == 'labs' ) {
 	// Labs override for BounceHandler
 	if ( $wmgUseBounceHandler ) {
 		unset( $wgVirtualDomainsMapping['virtual-bouncehandler'] );
-		// deployment-mx03.deployment-prep.eqiad1.wikimedia.cloud
-		$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.6.221' ];
+		// deployment-mx04.deployment-prep.eqiad1.wikimedia.cloud
+		$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.16.231' ];
 		$wgVERPdomainPart = 'beta.wmflabs.org';
 	}
 
