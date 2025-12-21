@@ -6782,6 +6782,7 @@ return [
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
 	'abwiki' => 'uppercase-ab', // T183430
+	'arwiktionary' => 'uca-ar', // T413338
 	'azwiki' => 'uca-az', // T201770
 	'azwikibooks' => 'uca-az', // T395896
 	'azwikimedia' => 'uca-az',
