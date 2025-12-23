@@ -2412,5 +2412,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+
+		// See T413100. WikimediaEvents shouldn't try to load the GeoIP database if it doesn't exist
+		'wgWMEGeoIP2Path' => [
+			'default' => null,
+		]
 	];
 } # wmfGetOverrideSettings()
