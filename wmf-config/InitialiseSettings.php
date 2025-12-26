@@ -11888,6 +11888,11 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
+// T299953
+'wgImageLinksSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
+
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_11,
 ],
