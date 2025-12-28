@@ -70,8 +70,6 @@ function wmfWaitForMesh() {
 			usleep( 10000 * $i * $i );
 	}
 
-	curl_close( $ch );
-
 	if ( !$meshAvailable ) {
 		fwrite( STDERR, <<<EOT
 The service mesh is unavailable, which can lead to unexpected results.
