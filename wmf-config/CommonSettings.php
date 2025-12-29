@@ -1653,7 +1653,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'REL1_45',
 		'REL1_44',
 		'REL1_43',
-		'REL1_39',
 	];
 
 	// Use Graphite for popular list
