@@ -17,6 +17,7 @@
 ## Testing
 /logs
 /.phpunit.result.cache
+/composer.lock
 /vendor
 /tests/data/config-cache/
 ## Editors
