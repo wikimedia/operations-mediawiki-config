@@ -878,7 +878,7 @@ return [
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
 	'arbcom_plwiki' => '/static/images/project-logos/arbcom_plwiki.png', // T391009
 	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki.png', // T262812
-	'arbcom_zhwiki' => '/static/images/project-logos/arbcom_zhwiki.png',
+	'arbcom_zhwiki' => '/static/images/project-logos/arbcom_zhwiki.png', // T413649
 	'auditcomwiki' => '/static/images/project-logos/auditcomwiki.png',
 	'boardwiki' => '/static/images/project-logos/boardwiki.png',
 	'boardgovcomwiki' => '/static/images/project-logos/boardgovcomwiki.png',
@@ -5544,6 +5544,11 @@ return [
 	'arbcom_nlwiki' => null,
 	'arbcom_plwiki' => null,
 	'arbcom_ruwiki' => null,
+	'arbcom_zhwiki' => [ // T413649
+		'src' => '/static/images/mobile/copyright/arbcom_zhwiki-wordmark.svg',
+		'width' => 105,
+		'height' => 23,
+	],
 	'boardwiki' => [
 		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
 		'width' => 100,
@@ -8536,6 +8541,7 @@ return [
 	'arbcom_nlwiki' => '/static/images/icons/arbcom_nlwiki.svg',
 	'arbcom_plwiki' => '/static/images/icons/arbcom_plwiki.svg', // T391009
 	'arbcom_ruwiki' => '/static/images/icons/arbcom_ruwiki.png',
+	'arbcom_zhwiki' => '/static/images/icons/arbcom_zhwiki.svg', // T413649
 	'auditcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'boardwiki' => '/static/images/icons/outreachwiki.svg',
 	'boardgovcomwiki' => '/static/images/icons/outreachwiki.svg',
