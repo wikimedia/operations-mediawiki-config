@@ -12567,6 +12567,7 @@ return [
 'wgEnableProtectionIndicators' => [
 	'default' => false,
 	'azwiki' => true, // T371440
+	'frwiktionary' => true, // T413724
 	'labswiki' => true, // T409785
 	'officewiki' => true,
 	'srwiki' => true, // T407183
