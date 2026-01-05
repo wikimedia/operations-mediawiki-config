@@ -140,6 +140,9 @@ switch ( $wgDBname ) {
 	case 'enwikinews':
 		$wgAbuseFilterActions['block'] = true; // T57868
 		break;
+	case 'enwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T413530
+		break;
 	case 'enwikisource':
 		$wgAbuseFilterActions['block'] = true; // T231750
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
