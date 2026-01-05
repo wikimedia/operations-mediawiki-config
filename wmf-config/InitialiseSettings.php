@@ -12708,4 +12708,10 @@ return [
 'wgEnableWatchlistLabels' => [
 	'default' => false,
 ],
+
+// T413737
+'wgCookieSetOnIpBlock' => [
+	'default' => true,
+	'ruwiki' => false,
+],
 ];
