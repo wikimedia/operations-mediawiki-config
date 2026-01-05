@@ -1530,6 +1530,10 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnabledTranscodeSet['1440p.vp9.webm'] = false;
 	$wgEnabledTranscodeSet['2160p.vp9.webm'] = false;
 
+	// Reduce resolution steps (T413031)
+	$wgEnabledTranscodeSet['360p.vp9.webm'] = false;
+	$wgEnabledTranscodeSet['720p.vp9.webm'] = false;
+
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
