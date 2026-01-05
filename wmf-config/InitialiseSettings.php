@@ -8785,12 +8785,16 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	// T412090
 	'ptwiki' => true,
+	'idwiki' => true,
+	'trwiki' => true,
+	'bnwiki' => true,
+	'azwiki' => true,
 ],
 
 'wgReportIncidentUseV2NonEmergencyFlow' => [
 	'default' => true,
-	'ptwiki' => false,
 	'testwiki' => false,
 ],
 
