@@ -73,6 +73,7 @@ return [
 		'data-gateway' => null,
 		// No public API.
 		'ipoid' => null,
+		'opensearch_ipoid' => null,
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',

@@ -75,6 +75,7 @@ $common = [
 	'push-notifications' => 'http://localhost:6012',
 	'data-gateway' => 'http://localhost:6038',
 	'ipoid' => 'http://localhost:6035',
+	'opensearch_ipoid' => 'https://opensearch-ipoid.discovery.wmnet:30443',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',
