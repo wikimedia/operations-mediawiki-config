@@ -3593,7 +3593,12 @@ return [
 					],
 				],
 			],
-		]
+		],
+		// T410719: Offline analytics summarizing the Cite references on each page.
+		'mediawiki.wmde_page_summary' => [
+			'schema_title' => 'analytics/mediawiki/wmde_page_summary',
+			'destination_event_service' => 'eventgate-analytics'
+		],
 	],
 	'+legacy-vector' => [
 		'mediawiki.web_ui_actions' => [
