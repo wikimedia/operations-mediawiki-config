@@ -1219,7 +1219,7 @@ return [
 'wgCirrusSearchNaturalTitleSort' => [
 	'default' => [
 		'build' => true,
-		'use' => false,
+		'use' => true,
 	]
 ],
 ];
