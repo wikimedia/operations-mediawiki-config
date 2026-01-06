@@ -4488,6 +4488,9 @@ if ( $wmgUseCheckUser ) {
 
 if ( $wmgUseIPReputation ) {
 	wfLoadExtension( 'IPReputation' );
+	$wgIPReputationDataProvider = 'nodejs_ipoid';
+	$wgIPReputationIPoidUrl = $wmgLocalServices['ipoid'];
+	$wgIPReputationDeveloperMode = false;
 	// Switch on in case of emergency. Non-sighted users
 	// will be prevented from logging in.
 	// Only re-enable if IPReputation's ConfirmEditHandler
