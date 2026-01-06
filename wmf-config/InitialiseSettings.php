@@ -6063,6 +6063,14 @@ return [
 	'labswiki' => false,
 ],
 
+'wgParserMigrationEnableParsoidPercentage' => [
+	'default' => 100,
+	# incremental roll out for top-50 wikis
+	'fawiki' => 10, # 12th largest
+	'kowiki' => 10, # 20th largest
+	'azwiki' => 10, # 45th largest
+],
+
 'wgParserMigrationUserNoticeVersion' => [
 	'default' => 1,
 ],
