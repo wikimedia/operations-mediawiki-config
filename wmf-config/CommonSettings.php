@@ -4637,6 +4637,14 @@ if ( $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'QuickSurveys' );
 
 	if ( in_array( $wgDBname, [ 'enwiki', 'eswiki', 'fawiki', 'frwiki', 'jawiki', 'ptwiki' ] ) ) {
+		$coveragePercentages = [
+			'enwiki' => 0.03,
+			'eswiki' => 0.15,
+			'fawiki' => 0.20,
+			'frwiki' => 0.15,
+			'jawiki' => 0.15,
+			'ptwiki' => 0.20,
+		];
 		$wgQuickSurveysConfig[] = [
 			'name' => 'T413022 Safety Survey',
 			'type' => 'internal',
@@ -4645,7 +4653,7 @@ if ( $wmgUseQuickSurveys ) {
 				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
 			"enabled" => true,
 			// T413022
-			"coverage" => 0, // increase to deploy
+			"coverage" => $coveragePercentages[$wgDBname],
 			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
 			"audience" => [
 				"anons" => false,
