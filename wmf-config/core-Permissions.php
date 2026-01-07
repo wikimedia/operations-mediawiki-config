@@ -871,6 +871,11 @@ return [
 	'+enwikiquote' => [
 		'rollbacker' => [ 'rollback' => true ], // T310950
 		'flood' => [ 'bot' => true ], // T351250
+		'autopatrolled' => [ 'autopatrol' => true ], // T413848
+		'patroller' => [ // T413848
+			'autopatrol' => true,
+			'patrol' => true,
+		],
 	],
 	'+enwikisource' => [
 		'autoconfirmed' => [
@@ -4008,6 +4013,8 @@ return [
 		'sysop' => [
 			'rollbacker', // T310950
 			'flood', // T351250
+			'autopatrolled', // T413848
+			'patroller', // T413848
 		],
 	],
 	'+enwikisource' => [
@@ -5579,6 +5586,8 @@ return [
 		'sysop' => [
 			'rollbacker', // T310950
 			'flood', // T351250
+			'autopatrolled', // T413848
+			'patroller', // T413848
 		],
 	],
 	'+enwikivoyage' => [
