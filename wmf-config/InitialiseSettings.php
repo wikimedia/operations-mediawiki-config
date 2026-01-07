@@ -5661,7 +5661,7 @@ return [
 'wmgMathDefaultUserOptions' => [
 	'default' => 'mathml',
 	'wikifunctionswiki' => 'native',
-	'group0' => 'native',
+	'group0' => 'mathjax',
 ],
 
 'wgMaxExecutionTimeForExpensiveQueries' => [
