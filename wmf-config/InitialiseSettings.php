@@ -11938,10 +11938,7 @@ return [
 // This is wikis that have it for all users
 // vs below where its only for users with sessions.
 'wmgUseCSPReportOnly' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
-	'small' => true,
+	'default' => true, // T291867
 ],
 
 'wmgUseCSPReportOnlyHasSession' => [
