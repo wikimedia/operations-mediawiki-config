@@ -11347,7 +11347,7 @@ return [
 
 // Thumbnail prerendering at upload time
 'wgUploadThumbnailRenderMap' => [
-	'default' => [ 320, 640, 800, 1280 ],
+	'default' => [ 120, 250 ],
 	'private' => [],
 ],
 
