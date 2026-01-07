@@ -2961,7 +2961,7 @@ if ( $wmgUseArticleCreationWorkflow ) {
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
-$wgThumbnailSteps = [ 20, 40, 60, 120, 250, 330, 500, 960 ];
+$wgThumbnailSteps = [ 20, 40, 60, 120, 250, 330, 500, 960, 1280, 1920, 3840 ];
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
 $wgDefaultUserOptions['watchcreations'] = true;
