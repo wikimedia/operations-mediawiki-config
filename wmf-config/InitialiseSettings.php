@@ -4345,6 +4345,11 @@ return [
 		'PMID' => false,
 		'RFC' => false,
 	],
+	'iawiki' => [ // T414019
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false,
+	],
 ],
 
 # wgFavicon @{
