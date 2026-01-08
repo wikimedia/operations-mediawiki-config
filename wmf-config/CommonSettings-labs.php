@@ -566,5 +566,10 @@ if ( $wmgRealm == 'labs' ) {
 
 	// T385592
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
+
+	// T404461
+	if ( $wmgUseMultiTitle ) {
+		wfLoadExtension( 'MultiTitle' );
+	}
 }
 // end safeguard
