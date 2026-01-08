@@ -4261,6 +4261,10 @@ return [
 	'lockeddown' => false,
 ],
 
+'wmgUseMultiTitle' => [
+	'default' => false,
+],
+
 # @} end of EXTENSIONS
 
 # wgVariantArticlePath @{
