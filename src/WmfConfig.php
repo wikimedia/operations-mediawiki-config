@@ -252,7 +252,7 @@ class WmfConfig {
 	 * TODO: Once InitialiseSettings is array-returning, this can be injected
 	 * by callers instead.
 	 *
-	 * @param array[] $settings wgConf-style settings array from IntialiseSettings.php
+	 * @param array[] $settings wgConf-style settings array from InitialiseSettings.php
 	 * @return array
 	 */
 	private static function applyOverrides( array $settings ): array {
