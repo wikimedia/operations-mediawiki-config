@@ -2441,5 +2441,11 @@ function wmfGetOverrideSettings() {
 		'wgWMCBadEmailDomainsFile' => [
 			'default' => false,
 		],
+
+		// T404461
+		'wmgUseMultiTitle' => [
+			'default' => false,
+			'testwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
