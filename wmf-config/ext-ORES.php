@@ -72,7 +72,7 @@ return [
 'wgOresModels' => [
 	'default' => [
 		'revertrisk-language-agnostic' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => false ],
+		'revertrisklanguageagnostic' => [ 'enabled' => false, 'namespaces' => [ 0 ] ],
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
@@ -82,7 +82,7 @@ return [
 	'afwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'arwiki' => [
 		'damaging' => [ 'enabled' => true ],
@@ -95,22 +95,22 @@ return [
 	'azwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'bewiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'bnwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'cywiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'enwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
@@ -129,57 +129,57 @@ return [
 	'hawiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'idwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'iswiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'kkwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'lawiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'mkwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'mlwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'mrwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'nnwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'pawiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'simplewiki' => [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
@@ -192,7 +192,7 @@ return [
 	'swwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'test2wiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
@@ -205,7 +205,7 @@ return [
 	],
 	'testwiki' => [
 		'revertrisk-language-agnostic' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
@@ -215,22 +215,22 @@ return [
 	'tewiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'thwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'tlwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'trwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
-		'revertrisklanguageagnostic' => [ 'enabled' => true ],
+		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
 	'zhwiki' => [
 		'damaging' => [ 'enabled' => true ],
