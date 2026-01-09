@@ -523,7 +523,7 @@ return [
 'kwwikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'sul' ],
 'kwwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'kywiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'sul' ],
-'kywikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'kywikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'kywikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'kywiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'labswiki' => [ 'special', 'vector-2022-language-links', 'medium', 'group1', 'wikitech', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul', 'wikilove' ],
