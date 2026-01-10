@@ -445,14 +445,6 @@ if ( $wmgRealm == 'labs' ) {
 		wfLoadExtension( 'PersonalDashboard' );
 	}
 
-	// T314294
-	if ( $wmgUsePhonos ) {
-		wfLoadExtension( 'Phonos' );
-		// $wgPhonosApiKeyGoogle in PrivateSettings
-		$wgPhonosEngine = 'google';
-		$wgPhonosFileBackend = 'global-multiwrite';
-	}
-
 	// T364034
 	if ( $wmgUseAutoModerator ) {
 		$wgAutoModeratorLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/v1/models/';
