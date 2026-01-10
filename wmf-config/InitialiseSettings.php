@@ -4319,6 +4319,7 @@ return [
 	'+commonswiki' => [
 		'Uncategorizedpages' => 'monthly',
 		'Mostlinkedtemplates' => 'monthly',
+		'GloballyUnusedFiles', // T414202
 	],
 ],
 # @} end of wgDisableQueryPageUpdate
