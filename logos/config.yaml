@@ -501,11 +501,19 @@ Wikipedia:
         local_tagline: true
     enwiki:
         commons: 'File:Wikipedia-logo-v2-en.svg'
-        comment: T309544
+        selected: enwiki-25
+        variants:
+            enwiki-25:
+                commons: 'File:Wikipedia-logo-v2-en-25-alt.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:WP25 Vector 2022 LINE.svg'
+                commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
+        comment: 'T309544, T414271'
         commons_wordmark: 'File:Wikipedia-wordmark-en.svg'
-        comment_wordmark: 'T157476, T249047'
+        comment_wordmark: 'T157476, T249047, T414271'
         commons_tagline: 'File:Wikipedia-tagline-en.svg'
-        comment_tagline: T249047
+        comment_tagline: 'T249047, T414271'
+        comment_icon: T414271
     eowiki:
         commons: 'File:Wikipedia-logo-v2-eo.svg'
         comment_1_5x: T150618
