@@ -545,9 +545,6 @@ if ( $wmgUseGlobalPreferences ) {
 	];
 }
 
-// T355034 new block_target schema
-$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
-
 # ######################################################################
 # Legal matters
 # ######################################################################
