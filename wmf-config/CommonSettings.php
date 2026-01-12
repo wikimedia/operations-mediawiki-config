@@ -4637,69 +4637,6 @@ if ( $wmgUseWikidataPageBanner ) {
 
 if ( $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'QuickSurveys' );
-
-	if ( in_array( $wgDBname, [ 'enwiki', 'eswiki', 'fawiki', 'frwiki', 'jawiki', 'ptwiki' ] ) ) {
-		$coveragePercentages = [
-			'enwiki' => 0.03,
-			'eswiki' => 0.15,
-			'fawiki' => 0.20,
-			'frwiki' => 0.15,
-			'jawiki' => 0.15,
-			'ptwiki' => 0.20,
-		];
-		$wgQuickSurveysConfig[] = [
-			'name' => 'T413022 Safety Survey',
-			'type' => 'internal',
-			"confirmMsg" => "ext-quicksurveys-internal-gdi-safety-survey-endmessage",
-			"privacyPolicy" =>
-				"ext-quicksurveys-internal-gdi-safety-survey-privacy-policy",
-			"enabled" => true,
-			// T413022
-			"coverage" => $coveragePercentages[$wgDBname],
-			"platforms" => [ "desktop" => [ "stable" ], "mobile" => [ "stable" ] ],
-			"audience" => [
-				"anons" => false,
-				"userInGroup" => [ 'user' ],
-				"minEdits" => 5
-			],
-			"questions" => [
-				[
-					"name" => "ext-quicksurveys-internal-gdi-safety-survey-question",
-					"layout" => "single-answer",
-					"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
-					"answers" => [
-						[ "label" => "ext-quicksurveys-example-internal-survey-answer-positive" ],
-						[ "label" => "ext-quicksurveys-example-internal-survey-answer-negative" ],
-						[ "label" => "ext-quicksurveys-example-internal-survey-answer-neutral" ],
-					],
-				],
-				[
-					"name" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
-					"dependsOn" => [
-						[
-							"question" => "ext-quicksurveys-internal-gdi-safety-survey-question",
-							"answerIsOneOf" => [ "ext-quicksurveys-example-internal-survey-answer-positive" ],
-						],
-					],
-					"layout" => "multiple-answer",
-					"question" => "ext-quicksurveys-internal-gdi-safety-survey-Q2",
-					"answers" => [
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A1" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A2" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A3" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A4" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A5" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A6" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A7" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2A8" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOther",
-							"freeformTextLabel" => "ext-quicksurveys-internal-gdi-safety-survey-Q2AOtherOpen" ],
-						[ "label" => "ext-quicksurveys-internal-gdi-safety-survey-Q2APNTS" ],
-					],
-				],
-			]
-		];
-	}
 }
 
 wfLoadExtension( 'EventBus' );
