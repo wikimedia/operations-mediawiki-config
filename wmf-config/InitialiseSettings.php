@@ -10695,6 +10695,40 @@ return [
 	'viwiki' => true
 ],
 
+// Test Kitchen is replacing Metrics Platform T407806
+'wmgUseTestKitchen' => [
+	'default' => false,
+],
+
+'wgTestKitchenEnableExperiments' => [
+	'default' => false,
+],
+
+// See T391411 and T393918.
+'wgTestKitchenExperimentEventIntakeServiceUrl' => [
+	'default' => '/evt-103e/v2/events?hasty=true',
+],
+
+'wgTestKitchenAuthPreserveQueryParamsExperiments' => [
+	'default' => [],
+	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239
+],
+
+'wgTestKitchenExperimentStreamNames' => [
+	'default' => [
+		'product_metrics.web_base',
+		'mediawiki.product_metrics.translation_mint_for_readers.experiments',
+		'mediawiki.product_metrics.reading_list',
+		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
+		'mediawiki.product_metrics.readerexperiments_stickyheaders',
+	],
+],
+
+// T401705 Send image beacon and Test Kitchen SDK load event
+'wgTestKitchenEnableHeadPixel' => [
+	'default' => false
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,

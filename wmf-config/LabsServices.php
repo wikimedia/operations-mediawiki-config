@@ -83,6 +83,7 @@ return [
 		// No envoy in beta cluster?
 		'mwapi' => null,
 		'mpic' => 'https://mpic-next.wikimedia.org',
+		'test-kitchen' => 'https://test-kitchen-next.wikimedia.org',
 
 		### Logstash
 		'logstash' => [
