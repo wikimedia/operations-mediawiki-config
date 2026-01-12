@@ -4316,7 +4316,12 @@ return [
 		'Unwatchedpages',
 		'Withoutinterwiki',
 	],
-	'+commonswiki' => [
+	'commonswiki' => [
+		'Ancientpages' => 'half-monthly',
+		'Fewestrevisions' => 'half-monthly',
+		'Mostlinked' => 'half-monthly',
+		'Mostrevisions' => 'half-monthly',
+		'Wantedpages' => 'half-monthly',
 		'Uncategorizedpages' => 'monthly',
 		'Mostlinkedtemplates' => 'monthly',
 		'GloballyUnusedFiles', // T414202
