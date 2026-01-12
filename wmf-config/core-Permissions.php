@@ -2898,6 +2898,25 @@ return [
 			'abusefilter-view-private' => true,
 			'browsearchive' => true,
 		], // T396668
+		'user' => [
+			'changetags' => false,
+			'move-categorypages' => false,
+		], // T414277
+		'bot' => [
+			'changetags' => true,
+			'move-categorypages' => true,
+			'movestable' => true,
+		], // T414277
+		'autoreview' => [
+			'move-categorypages' => true,
+			'movestable' => true,
+		], // T414277
+		'editor' => [
+			'move-categorypages' => true,
+			'movestable' => true,
+		], // T414277
+		'autoconfirmed' => [ 'movestable' => false ], // T414277
+		'confirmed' => [ 'movestable' => false ], // T414277
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
