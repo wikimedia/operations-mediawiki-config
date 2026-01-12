@@ -12384,6 +12384,16 @@ return [
 	'wikifunctionsclient' => true,
 ],
 
+// This will be used (only) on Abstract Wikipedia
+'wgWikiLambdaEnableAbstractMode' => [
+	'default' => false,
+],
+
+// This will be used (only) on Abstract Wikipedia
+'wgWikiLambdaAbstractNamespaces' => [
+	'default' => [],
+],
+
 ### Wikistories-related configuration
 
 'wmgUseWikistories' => [
