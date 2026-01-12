@@ -328,15 +328,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// Test Kitchen is replacing Metrics Platform T407806
-		'wmgUseTestKitchen' => [
-			'default' => true,
-		],
-
-		'wgTestKitchenEnableExperiments' => [
-			'default' => true,
-		],
-
 		// Log channels for beta cluster
 		// See detailed comments on 'wmgMonologChannels' in InitialiseSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified

@@ -5069,11 +5069,6 @@ if ( $wmgUseMetricsPlatform ) {
 	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['mpic'];
 }
 
-if ( $wmgUseTestKitchen ) {
-	wfLoadExtension( 'TestKitchen' );
-	$wgTestKitchenInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
-}
-
 if ( $wmgUseNetworkSession ) {
 	// Note: users are defined in private repos
 	wfLoadExtension( 'NetworkSession' );
