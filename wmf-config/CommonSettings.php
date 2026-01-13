@@ -2695,17 +2695,10 @@ if ( $wmgUseCentralNotice ) {
 	// retroactively as the cookie value now has a create date and reason.
 	// 'close' duration is used for the banner X button
 	// 'donate' duration is used for cookie set on Thank You page
-	if ( $wgDBname == 'enwiki' ) {
-		$wgNoticeCookieDurations = [
-			'close' => 4320, // 12 hours, to be increased again on 2025-12-05
-			'donate' => 21600000, // 250 days
-		];
-	} else {
-		$wgNoticeCookieDurations = [
-			'close' => 604800, // 1 week
-			'donate' => 21600000, // 250 days
-		];
-	}
+	$wgNoticeCookieDurations = [
+		'close' => 604800, // 1 week
+		'donate' => 21600000, // 250 days
+	];
 
 	// T18821
 	// Updates made here also need to be reflected in
