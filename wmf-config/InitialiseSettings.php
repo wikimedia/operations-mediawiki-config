@@ -2333,6 +2333,7 @@ return [
 		'PageTriage' => 'debug',
 		'PageViewInfo' => 'info',
 		'ParserCache' => 'warning',
+		'ParserOptions' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ],
 		'Parsoid' => 'warning',
 		'poolcounter' => 'debug',
 		'preferences' => 'info',
@@ -7069,6 +7070,12 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'parsoidrendered' => true,
+],
+
+// Sampling rate for debugging of unsafe cache keys in wgUsePostprocCache
+'wgParserOptionsLogUnsafeSampleRate' => [
+	'default' => 0,
+	'parsoidrendered' => 500, // sample at 0.2% of unsafe-to-cache pages
 ],
 
 // The parser cache can be configured to only cache pages that take a certain amount
