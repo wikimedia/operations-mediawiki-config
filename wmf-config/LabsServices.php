@@ -82,7 +82,8 @@ return [
 		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
 		// No envoy in beta cluster?
 		'mwapi' => null,
-		'mpic' => 'https://mpic-next.wikimedia.org',
+		// mpic will be removed in favor of test-kitchen
+		'mpic' => 'https://test-kitchen-next.wikimedia.org',
 		'test-kitchen' => 'https://test-kitchen-next.wikimedia.org',
 
 		### Logstash
