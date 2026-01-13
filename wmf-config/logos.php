@@ -8497,6 +8497,7 @@ return [
 
 	// Wikiquote
 	'arwikiquote' => '/static/images/icons/arwikiquote.svg',
+	'urwikiquote' => '/static/images/icons/arwikiquote.svg',
 
 	// Wikibooks
 

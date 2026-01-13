@@ -3146,6 +3146,7 @@ Wikiquote:
         commons_wordmark: 'File:Wikiquote-wordmark-ur.svg'
         comment_wordmark: T413592
         comment: T413592
+        selected_icon: arwikiquote # Use the flipped icon for RTL sites
     uzwikiquote:
         commons: 'File:Wikiquote-logo-uz-v2.svg'
         commons_wordmark: 'File:Wikiquote-wordmark-uz.svg'
