@@ -3094,11 +3094,10 @@ Wikiquote:
         no_2x: true
         local_wordmark: true
     urwikiquote:
-        comment: T97510
-        no_1_5x: true
-        no_2x: true
-        local_wordmark: true
-        selected_icon: arwikiquote
+        commons: 'File:Wikiquote-logo-ur.svg'
+        commons_wordmark: 'File:Wikiquote-wordmark-ur.svg'
+        comment_wordmark: T413592
+        comment: T413592
     uzwikiquote:
         commons: 'File:Wikiquote-logo-uz-v2.svg'
         commons_wordmark: 'File:Wikiquote-wordmark-uz.svg'
