@@ -12674,6 +12674,16 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCommunityRequestsStatuses' => [
+	'metawiki' => [
+		'under-review' => [
+			'id' => 0,
+			'voting' => true, // T409613
+			'default' => true,
+		],
+	],
+],
+
 'wgWikimediaMessagesAnonDonateLink' => [
 	'default' => true,
 ],
