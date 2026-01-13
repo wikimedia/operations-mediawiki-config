@@ -1667,6 +1667,10 @@ return [
 		'Reconstruction' => 110,
 		'Reconstruction_talk' => 111,
 	],
+	'+shnwikinews' => [
+		'Comments' => 102,
+		'Comments_talk' => 103,
+	],
 	'+siwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -4753,6 +4757,10 @@ return [
 		101 => 'Обсуждение_портала',
 		102 => 'Комментарии', // Comments
 		103 => 'Обсуждение_комментариев',
+	],
+	'shnwikinews' => [
+		102 => 'ၶွမ်းမႅၼ်ႉ', // T414403
+		103 => 'ဢုပ်ႇၵုမ်_ၶွမ်းမႅၼ်',
 	],
 	'sqwikinews' => [
 		100 => 'Portal',
