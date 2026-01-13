@@ -3442,7 +3442,6 @@ return [
 	'commonswiki' => [ 'meta', 'w:en', 'w:de', 'w:fr', 'w:he', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata' ], // T13126, T56001
 	'testcommonswiki' => [ 'meta', 'w:en', 'w:de', 'w:fr', 'w:he', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata', 'commonswiki' ], // T13126, T56001
 	'crhwiki' => [ 'incubator' ],
-	'crwiki' => [ 'en', 'fr' ], // T24089
 	'cswiki' => [ 'b', 'meta', 'n', 'q', 's', 'v', 'wikt' ], // T18688
 	'cswikibooks' => [ 'n', 'q', 's', 'v', 'w', 'wikt' ], // T18688
 	'cswikinews' => [ 'b', 'q', 's', 'v', 'w', 'wikt', 'incubator' ], // T18688
