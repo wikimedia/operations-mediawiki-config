@@ -943,8 +943,20 @@ Wikipedia:
         no_2x: true
         selected_tagline: enwiki
     kkwiki:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: kkwiki-temp25
+        commons: 'File:Wikipedia-logo-v2-kk.svg'
+        variants:
+            kkwiki-temp25:
+                commons: 'File:Wikipedia-logo-vector2010-wikipedia25-kz.svg'
+                commons_icon: 'File:WP25 Lockup (cropped).svg'
+                commons_wordmark: 'File:Wikipedia-wordmark-kk-25.svg'
+                commons_tagline: 'File:Wikipedia-tagline-kk-25.svg'
+        comment: T414267
+        comment_1_5x: 'T150618, T414267'
+        comment_2x: 'T150618, T414267'
+        comment_icon: T414267
+        comment_wordmark: T414267
+        comment_tagline: T414267
         local_tagline: true
         local_wordmark: true
     klwiki:

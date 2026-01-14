@@ -201,7 +201,7 @@ return [
 	'kgewiki' => '/static/images/project-logos/kgewiki.png', // T377075
 	'kiwiki' => '/static/images/project-logos/kiwiki.png', // T50397
 	'kjwiki' => '/static/images/project-logos/kjwiki.png',
-	'kkwiki' => '/static/images/project-logos/kkwiki.png',
+	'kkwiki' => '/static/images/project-logos/kkwiki-temp25.png', // T414267
 	'klwiki' => '/static/images/project-logos/klwiki.png',
 	'kmwiki' => '/static/images/project-logos/kmwiki.png',
 	'knwiki' => '/static/images/project-logos/knwiki.png', // T382802
@@ -1100,7 +1100,7 @@ return [
 	'kgwiki' => '/static/images/project-logos/kgwiki-1.5x.png', // T189586
 	'kgewiki' => '/static/images/project-logos/kgewiki-1.5x.png', // T377075
 	'kiwiki' => '/static/images/project-logos/kiwiki-1.5x.png', // T150618
-	'kkwiki' => '/static/images/project-logos/kkwiki-1.5x.png', // T150618
+	'kkwiki' => '/static/images/project-logos/kkwiki-temp25-1.5x.png', // T150618, T414267
 	'klwiki' => '/static/images/project-logos/klwiki-1.5x.png', // T150618
 	'kmwiki' => '/static/images/project-logos/kmwiki-1.5x.png', // T150618
 	'knwiki' => '/static/images/project-logos/knwiki-1.5x.png', // T382802
@@ -1774,7 +1774,7 @@ return [
 	'kgwiki' => '/static/images/project-logos/kgwiki-2x.png', // T189586
 	'kgewiki' => '/static/images/project-logos/kgewiki-2x.png', // T377075
 	'kiwiki' => '/static/images/project-logos/kiwiki-2x.png', // T150618
-	'kkwiki' => '/static/images/project-logos/kkwiki-2x.png', // T150618
+	'kkwiki' => '/static/images/project-logos/kkwiki-temp25-2x.png', // T150618, T414267
 	'klwiki' => '/static/images/project-logos/klwiki-2x.png', // T150618
 	'kmwiki' => '/static/images/project-logos/kmwiki-2x.png', // T150618
 	'knwiki' => '/static/images/project-logos/knwiki-2x.png', // T382802
@@ -2851,10 +2851,10 @@ return [
 		'width' => 110,
 		'height' => 23,
 	],
-	'kkwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kk.svg',
-		'width' => 119,
-		'height' => 19,
+	'kkwiki' => [ // T414267
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kk-temp25.svg',
+		'width' => 140,
+		'height' => 22,
 	],
 	'kmwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-km.svg',
@@ -6591,9 +6591,9 @@ return [
 		'width' => 117,
 		'height' => 13,
 	],
-	'kkwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kk.svg',
-		'width' => 117,
+	'kkwiki' => [ // T414267
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kk-temp25.svg',
+		'width' => 140,
 		'height' => 11,
 	],
 	'klwiki' => [
@@ -8478,6 +8478,7 @@ return [
 	// Wikipedia
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
 	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
+	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
 	'slwiki' => '/static/images/icons/slwiki-temp25.svg', // T414265
 	'zhwiki' => '/static/images/icons/zhwiki-25.svg',
 
