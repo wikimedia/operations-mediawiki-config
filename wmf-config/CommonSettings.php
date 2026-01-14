@@ -2509,8 +2509,19 @@ $wgHooks['GetSecurityLogContext'][] = static function ( array $info, array &$con
 		$context[$header] = (string)$request->getHeader( $header );
 	}
 
+	// https://wikitech.wikimedia.org/wiki/X-Provenance
+	$provenance = [];
+	$provenanceString = $request->getHeader( 'X-Provenance' ) ?: '';
+	foreach ( explode( ';', $provenanceString ) as $item ) {
+		[ $label, $value ] = explode( '=', $item, 2 ) + [ 1 => '' ];
+		if ( $label !== '' ) {
+			$provenance[$label] = $value;
+		}
+	}
+
 	$context += [
 		'geocookie' => $request->getCookie( 'GeoIP', '' ),
+		'x-provenance' => $provenance,
 	];
 	if ( $user ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user );
