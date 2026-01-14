@@ -11958,7 +11958,8 @@ return [
 // T299953
 'wgImageLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
-	'group0' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'small' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'medium' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wgXmlDumpSchemaVersion' => [
