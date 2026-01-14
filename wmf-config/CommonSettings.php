@@ -2494,6 +2494,21 @@ $wgHooks['GetSecurityLogContext'][] = static function ( array $info, array &$con
 	/** @var ?UserIdentity $user */
 	$user = $info['user'] ?? null;
 
+	$headers = [
+		// https://wikitech.wikimedia.org/wiki/CDN/Backend_api
+		'x-trusted-request',
+		'x-is-browser',
+		'x-ua-contact',
+		// https://gerrit.wikimedia.org/g/operations/puppet/+/production/modules/profile/files/cache/ja3n.lua
+		'x-ja3n',
+		// https://gerrit.wikimedia.org/g/operations/puppet/+/production/modules/profile/files/cache/ja4h.lua
+		'x-ja4h',
+	];
+
+	foreach ( $headers as $header ) {
+		$context[$header] = (string)$request->getHeader( $header );
+	}
+
 	$context += [
 		'geocookie' => $request->getCookie( 'GeoIP', '' ),
 	];
