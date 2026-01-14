@@ -185,7 +185,7 @@ return [
 	'inhwiki' => '/static/images/project-logos/inhwiki.png', // T184374
 	'iowiki' => '/static/images/project-logos/iowiki.png', // T48589
 	'iswiki' => '/static/images/project-logos/iswiki.png', // T42285
-	'itwiki' => '/static/images/project-logos/itwiki.png',
+	'itwiki' => '/static/images/project-logos/itwiki-temp25.png', // T414320
 	'iuwiki' => '/static/images/project-logos/iuwiki.png', // T42285
 	'jamwiki' => '/static/images/project-logos/jamwiki.png', // T134017
 	'jawiki' => '/static/images/project-logos/jawiki.png',
@@ -1085,7 +1085,7 @@ return [
 	'ilowiki' => '/static/images/project-logos/ilowiki-1.5x.png',
 	'iowiki' => '/static/images/project-logos/iowiki-1.5x.png', // T150618
 	'iswiki' => '/static/images/project-logos/iswiki-1.5x.png', // T150618
-	'itwiki' => '/static/images/project-logos/itwiki-1.5x.png',
+	'itwiki' => '/static/images/project-logos/itwiki-temp25-1.5x.png', // T414320
 	'iuwiki' => '/static/images/project-logos/iuwiki-1.5x.png', // T150618
 	'jamwiki' => '/static/images/project-logos/jamwiki-1.5x.png', // T134017
 	'jawiki' => '/static/images/project-logos/jawiki-1.5x.png', // T150618
@@ -1759,7 +1759,7 @@ return [
 	'ilowiki' => '/static/images/project-logos/ilowiki-2x.png',
 	'iowiki' => '/static/images/project-logos/iowiki-2x.png', // T150618
 	'iswiki' => '/static/images/project-logos/iswiki-2x.png', // T150618
-	'itwiki' => '/static/images/project-logos/itwiki-2x.png',
+	'itwiki' => '/static/images/project-logos/itwiki-temp25-2x.png', // T414320
 	'iuwiki' => '/static/images/project-logos/iuwiki-2x.png', // T150618
 	'jamwiki' => '/static/images/project-logos/jamwiki-2x.png', // T134017
 	'jawiki' => '/static/images/project-logos/jawiki-2x.png', // T150618
@@ -2805,6 +2805,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-io.svg',
 		'width' => 120,
 		'height' => 19,
+	],
+	'itwiki' => [ // T414320
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-it-temp25.svg',
+		'width' => 140,
+		'height' => 22,
 	],
 	'iuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-iu.svg',
@@ -6506,8 +6511,8 @@ return [
 		'width' => 118,
 		'height' => 12,
 	],
-	'itwiki' => [ // T258552
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-it.svg',
+	'itwiki' => [ // T258552, T414320
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-it-temp25.svg',
 		'width' => 120,
 		'height' => 13,
 	],
@@ -8472,6 +8477,7 @@ return [
 
 	// Wikipedia
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
+	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'zhwiki' => '/static/images/icons/zhwiki-25.svg',
 
 	// Wiktionary

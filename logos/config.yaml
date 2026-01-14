@@ -841,9 +841,20 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
     itwiki:
+        selected: itwiki-temp25
         commons: 'File:Wikipedia-logo-v2-it.svg'
         commons_tagline: 'File:Wikipedia-tagline-it.svg'
-        comment_tagline: T258552
+        variants:
+            itwiki-temp25:
+                commons: 'File:WP25 Vector Legacy Logo IT.svg'
+                commons_icon: 'File:WP25 Lockup (cropped).svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:Wikipedia-tagline-it-25.svg'
+        comment: T414320
+        comment_1_5x: T414320
+        comment_2x: T414320
+        comment_wordmark: T414320
+        comment_tagline: 'T258552, T414320'
     iuwiki:
         comment: T42285
         comment_1_5x: T150618
