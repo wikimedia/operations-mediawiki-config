@@ -4013,6 +4013,7 @@ return [
 
 'wmgUsePersonalDashboard' => [
 	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+	'testwiki' => true, // T403982
 ],
 
 'wmgUsePhonos' => [
