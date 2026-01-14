@@ -4330,7 +4330,6 @@ return [
 		'Wantedpages' => 'half-monthly',
 		'Uncategorizedpages' => 'monthly',
 		'Mostlinkedtemplates' => 'monthly',
-		'GloballyUnusedFiles', // T414202
 		'Deadendpages', // T371662
 		'Lonelypages', // T371662
 	],
