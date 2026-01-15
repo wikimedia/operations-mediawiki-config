@@ -3278,7 +3278,7 @@ return [
 	],
 	'slwiki' => [ // T414265
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sl-temp25.svg',
-		'width' => 140,
+		'width' => 136,
 		'height' => 22,
 	],
 	'snwiki' => [
@@ -8479,7 +8479,6 @@ return [
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
 	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
-	'slwiki' => '/static/images/icons/slwiki-temp25.svg', // T414265
 	'zhwiki' => '/static/images/icons/zhwiki-25.svg',
 
 	// Wiktionary
