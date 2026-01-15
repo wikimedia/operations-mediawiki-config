@@ -10710,13 +10710,11 @@ return [
 
 // Test Kitchen is replacing Metrics Platform T407806
 'wmgUseTestKitchen' => [
-	'default' => false,
-	'testwiki' => true
+	'default' => true,
 ],
 
 'wgTestKitchenEnableExperiments' => [
-	'default' => false,
-	'testwiki' => true
+	'default' => true,
 ],
 
 // See T391411 and T393918.
