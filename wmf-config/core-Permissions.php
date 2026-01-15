@@ -2917,6 +2917,7 @@ return [
 		], // T414277
 		'autoconfirmed' => [ 'movestable' => false ], // T414277
 		'confirmed' => [ 'movestable' => false ], // T414277
+		'sysop' => [ 'changetags' => true ], // T414277
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
