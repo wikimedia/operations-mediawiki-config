@@ -4940,6 +4940,11 @@ if ( $wmgUseStopForumSpam ) {
 	$wgSFSProxy = $wgCopyUploadProxy;
 }
 
+// T403982
+if ( $wmgUsePersonalDashboard ) {
+	wfLoadExtension( 'PersonalDashboard' );
+}
+
 if ( $wmgUsePhonos ) {
 	wfLoadExtension( 'Phonos' );
 	// $wgPhonosApiKeyGoogle in PrivateSettings
