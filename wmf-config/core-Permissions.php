@@ -2905,18 +2905,13 @@ return [
 		'bot' => [
 			'changetags' => true,
 			'move-categorypages' => true,
-			'movestable' => true,
 		], // T414277
 		'autoreview' => [
 			'move-categorypages' => true,
-			'movestable' => true,
 		], // T414277
 		'editor' => [
 			'move-categorypages' => true,
-			'movestable' => true,
 		], // T414277
-		'autoconfirmed' => [ 'movestable' => false ], // T414277
-		'confirmed' => [ 'movestable' => false ], // T414277
 		'sysop' => [ 'changetags' => true ], // T414277
 	],
 	'+ukwikivoyage' => [

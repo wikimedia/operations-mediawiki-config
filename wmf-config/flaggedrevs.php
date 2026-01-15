@@ -600,6 +600,12 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 ];
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
+
+		// T414277
+		$wgGroupPermissions['bot']['movestable'] = true;
+		$wgGroupPermissions['autoreview']['movestable'] = true;
+		$wgGroupPermissions['editor']['movestable'] = true;
+		$wgGroupPermissions['autoconfirmed']['movestable'] = false;
 	} elseif ( $wgDBname == 'plwikisource' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = NS_HELP;
