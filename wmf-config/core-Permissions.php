@@ -3183,6 +3183,9 @@ return [
 			"wikilambda-edit-generic-enum-id" => false,
 			"wikilambda-edit-object-type" => false,
 			"wikilambda-edit-unit" => false,
+			// (T399934) Allow sysops to fix up broken things, not just maintainers
+			"wikilambda-edit-function-attached-implementation" => true,
+			"wikilambda-edit-function-attached-tester" => true,
 		],
 		'wikifunctions-staff' => [
 			// Special staff-only user group for helping the community with Christmas-tree rights.
