@@ -871,11 +871,16 @@ return [
 	'+enwikiquote' => [
 		'rollbacker' => [ 'rollback' => true ], // T310950
 		'flood' => [ 'bot' => true ], // T351250
-		'autopatrolled' => [ 'autopatrol' => true ], // T413848
+		'autopatrolled' => [
+			'autopatrol' => true, // T413848
+			'editautopatrolprotected' => true, // T414711
+		],
 		'patroller' => [ // T413848
 			'autopatrol' => true,
 			'patrol' => true,
+			'editautopatrolprotected' => true, // T414711
 		],
+		'sysop' => [ 'editautopatrolprotected' => true, ], // T414711
 	],
 	'+enwikisource' => [
 		'autoconfirmed' => [
