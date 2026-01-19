@@ -2733,7 +2733,8 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
 }
 
-// Load our site-specific l10n extension
+// Load custom configuration and overrides used by Wikimedia sites
+wfLoadExtension( 'WikimediaCustomizations' );
 wfLoadExtension( 'WikimediaMessages' );
 
 if ( $wgDBname === 'enwiki' ) {
