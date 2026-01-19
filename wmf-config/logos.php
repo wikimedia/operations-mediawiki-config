@@ -6513,8 +6513,8 @@ return [
 	],
 	'itwiki' => [ // T258552, T414320
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-it-temp25.svg',
-		'width' => 120,
-		'height' => 13,
+		'width' => 140,
+		'height' => 12,
 	],
 	'iuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iu.svg',
