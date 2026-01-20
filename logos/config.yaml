@@ -700,11 +700,19 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
     hawiki:
+        selected: hawiki-temp25
         commons: 'File:Wikipedia-logo-v2-ha.svg'
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        variants:
+            hawiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-ha.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:Wikipedia-tagline-ha-25.svg'
+        comment: 'T48589, T414736'
+        comment_1_5x: 'T150618, T414736'
+        comment_2x: 'T150618, T414736'
         local_tagline: true
+        comment_wordmark: T414736
+        comment_tagline: T414736
     hawwiki:
         comment: T42285
         comment_1_5x: T150618

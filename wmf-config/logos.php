@@ -160,7 +160,7 @@ return [
 	'guwwiki' => '/static/images/project-logos/guwwiki.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki.png', // T48589
 	'hakwiki' => '/static/images/project-logos/hakwiki.png', // T48589
-	'hawiki' => '/static/images/project-logos/hawiki.png', // T48589
+	'hawiki' => '/static/images/project-logos/hawiki-temp25.png', // T48589, T414736
 	'hawwiki' => '/static/images/project-logos/hawwiki.png', // T42285
 	'hewiki' => '/static/images/project-logos/hewiki.png',
 	'hifwiki' => '/static/images/project-logos/hifwiki.png', // T29361
@@ -1064,7 +1064,7 @@ return [
 	'guwwiki' => '/static/images/project-logos/guwwiki-1.5x.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki-1.5x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-1.5x.png', // T150618
-	'hawiki' => '/static/images/project-logos/hawiki-1.5x.png', // T150618
+	'hawiki' => '/static/images/project-logos/hawiki-temp25-1.5x.png', // T150618, T414736
 	'hawwiki' => '/static/images/project-logos/hawwiki-1.5x.png', // T150618
 	'hewiki' => '/static/images/project-logos/hewiki-1.5x.png', // T145017
 	'hifwiki' => '/static/images/project-logos/hifwiki-1.5x.png', // T150618
@@ -1738,7 +1738,7 @@ return [
 	'guwwiki' => '/static/images/project-logos/guwwiki-2x.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki-2x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-2x.png', // T150618
-	'hawiki' => '/static/images/project-logos/hawiki-2x.png', // T150618
+	'hawiki' => '/static/images/project-logos/hawiki-temp25-2x.png', // T150618, T414736
 	'hawwiki' => '/static/images/project-logos/hawwiki-2x.png', // T150618
 	'hewiki' => '/static/images/project-logos/hewiki-2x.png', // T145017
 	'hifwiki' => '/static/images/project-logos/hifwiki-2x.png', // T150618
@@ -2735,6 +2735,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-gu.svg',
 		'width' => 120,
 		'height' => 21,
+	],
+	'hawiki' => [ // T414736
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ha-temp25.svg',
+		'width' => 140,
+		'height' => 22,
 	],
 	'hawwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-haw.svg',
@@ -6386,10 +6391,10 @@ return [
 		'width' => 120,
 		'height' => 12,
 	],
-	'hawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ha.svg',
-		'width' => 119,
-		'height' => 12,
+	'hawiki' => [ // T414736
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ha-temp25.svg',
+		'width' => 140,
+		'height' => 10,
 	],
 	'hawwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-haw.svg',
