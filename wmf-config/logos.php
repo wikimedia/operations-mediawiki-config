@@ -6514,7 +6514,7 @@ return [
 	'itwiki' => [ // T258552, T414320
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-it-temp25.svg',
 		'width' => 140,
-		'height' => 12,
+		'height' => 10,
 	],
 	'iuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iu.svg',
