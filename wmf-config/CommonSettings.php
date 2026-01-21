@@ -4286,6 +4286,7 @@ if ( $wmgUseOATHAuth ) {
 		wfLoadExtension( 'WebAuthn' );
 
 		$wgWebAuthnLimitPasskeysToRoaming = true;
+		$wgOATHNewPasskeyFeatures = true;
 	}
 }
 

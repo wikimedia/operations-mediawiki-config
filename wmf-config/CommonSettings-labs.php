@@ -566,8 +566,5 @@ if ( $wmgRealm == 'labs' ) {
 
 	// T385592
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
-
-	// Temporary testing of new passkey support -December 2025
-	$wgOATHNewPasskeyFeatures = true;
 }
 // end safeguard
