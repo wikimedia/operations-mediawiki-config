@@ -3501,8 +3501,6 @@ if ( $wmgUseEcho ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 	$wgLoginNotifyAttemptsNewIP = 3;
-	$wgLoginNotifyUseSeenTable = true;
-	$wgLoginNotifyUseCheckUser = false;
 	// Less than 90 days per data retention guidelines, minus one bucket for rounding.
 	$wgLoginNotifySeenExpiry = 80 * 86400;
 	$wgLoginNotifySeenBucketSize = 8 * 86400;
