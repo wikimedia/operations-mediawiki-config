@@ -1780,11 +1780,20 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     tgwiki:
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: tgwiki-temp25
+        commons: 'File:Wikipedia-logo-v2-tg.svg'
+        variants:
+            tgwiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-tg-25-alt.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO tg.svg'
+                commons_tagline: 'File:Wikipedia-tagline-tg-25.svg'
+        comment: 'T48589, T415307'
+        comment_1_5x: 'T150618, T415307'
+        comment_2x: 'T150618, T415307'
         local_tagline: true
         local_wordmark: true
+        comment_wordmark: T415307
+        comment_tagline: T415307
     thwiki:
         commons: 'File:Wikipedia-logo-v2-th.svg'
         comment: T341407
