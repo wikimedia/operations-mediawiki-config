@@ -12812,9 +12812,10 @@ return [
 	'default' => false,
 ],
 
-// T411836
+// T413967
 'wgEnableWatchlistLabels' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 // T413737
