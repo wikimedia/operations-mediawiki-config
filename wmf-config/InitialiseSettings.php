@@ -7302,6 +7302,7 @@ return [
 
 // T361139
 'wgCheckUserUserAgentTableMigrationStage' => [
+	'group0' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
 	'default' => SCHEMA_COMPAT_OLD | SCHEMA_COMPAT_WRITE_BOTH,
 ],
 
