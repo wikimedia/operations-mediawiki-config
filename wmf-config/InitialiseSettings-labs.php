@@ -2429,5 +2429,9 @@ function wmfGetOverrideSettings() {
 		'wmgUseWP25EasterEggs' => [
 			'default' => true,
 		],
+
+		'wgWMCBadEmailDomainsFile' => [
+			'default' => false,
+		],
 	];
 } # wmfGetOverrideSettings()

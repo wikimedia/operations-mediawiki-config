@@ -12792,4 +12792,8 @@ return [
 'wmgUseWP25EasterEggs' => [
 	'default' => false,
 ],
+
+'wgWMCBadEmailDomainsFile' => [
+	'default' => '/srv/mediawiki/private/disposable-email-domains',
+],
 ];
