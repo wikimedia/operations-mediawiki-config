@@ -5223,6 +5223,10 @@ return [
 	'ptwiki' => [
 		NS_USER => 'noindex,follow', // T185660
 	],
+	'rowiki' => [
+		NS_USER => 'noindex,nofollow', // T414992
+		NS_USER_TALK => 'noindex,nofollow', // T414992
+	],
 	'ruwiki' => [
 		102 => 'noindex,follow',
 		103 => 'noindex,follow',
