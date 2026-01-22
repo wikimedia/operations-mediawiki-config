@@ -7071,6 +7071,8 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'parsoidrendered' => true,
+	'wikidatawiki' => false,
+	'commonswiki' => false,
 ],
 
 // Sampling rate for debugging of unsafe cache keys in wgUsePostprocCache
@@ -7116,6 +7118,16 @@ return [
 				'minCpuTime' => PHP_INT_MAX // cache none
 			],
 		],
+		'postproc-pcache' => [ // postproc cache for legacy output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
 	],
 	'+wikidatawiki' => [ // Wikidata
 		'parsoid-pcache' => [ // parsoid output cache
@@ -7131,6 +7143,16 @@ return [
 				'minCpuTime' => PHP_INT_MAX // cache none
 			],
 			146 => [ // Lexeme namespace
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+		'postproc-pcache' => [ // postproc cache for legacy output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
+			'default' => [ // all namespaces
 				'minCpuTime' => PHP_INT_MAX // cache none
 			],
 		],
