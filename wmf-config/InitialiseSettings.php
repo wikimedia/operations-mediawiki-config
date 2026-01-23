@@ -6084,10 +6084,6 @@ return [
 
 'wgParserMigrationEnableParsoidPercentage' => [
 	'default' => 100,
-	# incremental roll out for top-50 wikis
-	'fawiki' => 50, # 12th largest
-	'kowiki' => 50, # 20th largest
-	'azwiki' => 50, # 45th largest
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
