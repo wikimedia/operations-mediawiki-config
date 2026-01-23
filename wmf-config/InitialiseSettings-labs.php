@@ -2423,6 +2423,10 @@ function wmfGetOverrideSettings() {
 		// See T413100. WikimediaEvents shouldn't try to load the GeoIP database if it doesn't exist
 		'wgWMEGeoIP2Path' => [
 			'default' => null,
-		]
+		],
+		// T415372 - Wikipedia 25th Birthday easter eggs extension.
+		'wmgUseWP25EasterEggs' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
