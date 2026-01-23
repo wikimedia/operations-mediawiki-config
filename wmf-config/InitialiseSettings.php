@@ -1995,12 +1995,14 @@ return [
 
 'wgTorAutoConfirmAge' => [
 	'default' => 90 * 86400,
-	'enwiki' => 4 * 86400 // T409022
+	'enwiki' => 4 * 86400, // T409022
+	'zhwiki' => 7 * 86400, // T415335
 ],
 
 'wgTorAutoConfirmCount' => [
 	'default' => 100,
-	'enwiki' => 10  // T409022
+	'enwiki' => 10, // T409022
+	'zhwiki' => 50, // T415335
 ],
 
 'wgAutoConfirmCount' => [
