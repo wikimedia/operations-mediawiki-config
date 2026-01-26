@@ -461,6 +461,7 @@ return [
 	'itwikisource' => 'Europe/Berlin',
 	'itwiktionary' => 'Europe/Berlin',
 	'jamwiki' => 'America/Jamaica',
+	'kajwiki' => 'Africa/Lagos',
 	'kawikisource' => 'Asia/Tbilisi',
 	'kaawiktionary' => 'Asia/Tashkent',
 	'kbdwiki' => 'Europe/Moscow',

@@ -193,6 +193,7 @@ return [
 	'jvwiki' => '/static/images/project-logos/jvwiki.png', // T251050
 	'kaawiki' => '/static/images/project-logos/kaawiki.png', // T48589, T337641
 	'kabwiki' => '/static/images/project-logos/kabwiki.png', // T46974
+	'kajwiki' => '/static/images/project-logos/kajwiki.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki.png',
 	'kbdwiki' => '/static/images/project-logos/kbdwiki.png',
 	'kbpwiki' => '/static/images/project-logos/kbpwiki.png', // T160868
@@ -1093,6 +1094,7 @@ return [
 	'jvwiki' => '/static/images/project-logos/jvwiki-1.5x.png', // T251050
 	'kaawiki' => '/static/images/project-logos/kaawiki-1.5x.png', // T150618, T337641
 	'kabwiki' => '/static/images/project-logos/kabwiki-1.5x.png', // T150618
+	'kajwiki' => '/static/images/project-logos/kajwiki-1.5x.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki-1.5x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-1.5x.png', // T150618
 	'kbpwiki' => '/static/images/project-logos/kbpwiki-1.5x.png', // T160868
@@ -1767,6 +1769,7 @@ return [
 	'jvwiki' => '/static/images/project-logos/jvwiki-2x.png', // T251050
 	'kaawiki' => '/static/images/project-logos/kaawiki-2x.png', // T150618, T337641
 	'kabwiki' => '/static/images/project-logos/kabwiki-2x.png', // T150618
+	'kajwiki' => '/static/images/project-logos/kajwiki-2x.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki-2x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-2x.png', // T150618
 	'kbpwiki' => '/static/images/project-logos/kbpwiki-2x.png', // T160868
