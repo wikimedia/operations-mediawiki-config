@@ -10745,6 +10745,11 @@ return [
 	'default' => '/evt-103e/v2/events?hasty=true',
 ],
 
+// See T412863
+'wgTestKitchenInstrumentEventIntakeServiceUrl' => [
+	'default' => '/ins-502b/v2/events?hasty=true',
+],
+
 'wgTestKitchenAuthPreserveQueryParamsExperiments' => [
 	'default' => [],
 	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239

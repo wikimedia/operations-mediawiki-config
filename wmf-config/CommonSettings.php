@@ -5040,7 +5040,14 @@ if ( $wmgUseMetricsPlatform ) {
 
 if ( $wmgUseTestKitchen ) {
 	wfLoadExtension( 'TestKitchen' );
+
 	$wgTestKitchenInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
+
+	// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/TestKitchen/+/1230385 introduces
+	// independent URLs to to send events originating from instruments and logged-in experiments
+	// to. For now, set the former to to $wgEventLoggingServiceUri, to maintain backwards
+	// compatibility.
+	$wgTestKitchenLoggedInExperimentEventIntakeServiceUrl = $wgEventLoggingServiceUri;
 }
 
 if ( $wmgUseNetworkSession ) {
