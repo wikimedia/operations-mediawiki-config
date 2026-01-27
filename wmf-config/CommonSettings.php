@@ -5035,7 +5035,7 @@ if ( $wmgUseCommunityConfiguration ) {
 
 if ( $wmgUseMetricsPlatform ) {
 	wfLoadExtension( 'MetricsPlatform' );
-	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['mpic'];
+	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
 }
 
 if ( $wmgUseTestKitchen ) {

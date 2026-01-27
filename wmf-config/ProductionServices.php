@@ -87,8 +87,6 @@ $common = [
 	'chart-renderer' => 'http://localhost:6039',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
-	// mpic will be removed in favor of test-kitchen
-	'mpic' => 'http://localhost:6037',
 	'test-kitchen' => 'http://localhost:6037',
 
 	// an-web only exists in eqiad
