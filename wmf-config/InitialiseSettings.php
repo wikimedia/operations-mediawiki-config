@@ -6444,6 +6444,10 @@ return [
 	'+bnwikibooks' => [
 		'উইকিশৈশব' => true, // T241893
 	],
+	'+enwikibooks' => [
+		'Project' => true, // T415595
+		'Transwiki' => true, // T415595
+	],
 	'+ruwikibooks' => [
 		'Рецепт' => true, // T392803
 	],
