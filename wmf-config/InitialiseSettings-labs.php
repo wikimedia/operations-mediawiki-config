@@ -2407,10 +2407,9 @@ function wmfGetOverrideSettings() {
 		'wmgUseFooterLegalContactLink' => [
 			'default' => true,
 		],
-		// T411836
+		// T411836 T413967
 		'-wgEnableWatchlistLabels' => [
-			'default' => false,
-			'enwiki' => true,
+			'default' => true,
 		],
 
 		// See T413100. WikimediaEvents shouldn't try to load the GeoIP database if it doesn't exist
