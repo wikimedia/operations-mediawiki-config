@@ -4283,13 +4283,6 @@ if ( $wmgUseOATHAuth ) {
 		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
 	}
-
-	if ( $wmgUseWebAuthn ) {
-		wfLoadExtension( 'WebAuthn' );
-
-		$wgWebAuthnLimitPasskeysToRoaming = true;
-		$wgOATHNewPasskeyFeatures = true;
-	}
 }
 
 if ( $wmgUseMediaModeration ) {
