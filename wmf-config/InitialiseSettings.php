@@ -11762,10 +11762,6 @@ return [
 	'default' => true,
 ],
 
-'wmgUseWebAuthn' => [
-	'default' => true,
-],
-
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
 	'sul' => true, // T378402
