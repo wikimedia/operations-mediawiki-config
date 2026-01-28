@@ -4567,6 +4567,10 @@ if ( $wmgUseCentralAuth ) {
 		'global-sysop' => [ 'global-temporary-account-viewer' ],
 	];
 
+	$wgWMCGlobalGroupToRateLimitClass = [
+		'global-bot' => 'approved-bot',
+	];
+
 	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
 	// uses a unique serial number across all wikis. This will have no effect if
 	// `$wgAutoCreateTempUser['enabled']` is false.
