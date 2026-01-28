@@ -6434,6 +6434,9 @@ return [
 		'Thésaurus' => true, // T127819
 		'Projet' => true, // T156660
 	],
+	'+mswiktionary' => [
+		'Project' => true, // T415823
+	],
 
 	// Wikiquotes
 	'+enwikiquote' => [
