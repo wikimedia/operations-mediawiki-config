@@ -7301,6 +7301,11 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCheckUserSuggestedInvestigationsUseGlobalContributionsLink' => [
+	'default' => false,
+	'loginwiki' => true,
+],
+
 // T361139
 'wgCheckUserUserAgentTableMigrationStage' => [
 	'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
