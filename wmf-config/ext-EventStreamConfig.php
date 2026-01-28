@@ -2447,7 +2447,7 @@ return [
 		'resource_change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
