@@ -77,7 +77,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgSitename' => [
-			'wikivoyage'     => 'Wikivoyage',
+			'wikivoyage' => 'Wikivoyage',
 		],
 
 		// NOTE: Same as prod, but without protocol-relative URL (T118413)
@@ -1281,7 +1281,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgImageLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+			'default' => SCHEMA_COMPAT_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
