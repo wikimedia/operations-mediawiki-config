@@ -191,7 +191,7 @@ return [
 	'jawiki' => '/static/images/project-logos/jawiki.png',
 	'jbowiki' => '/static/images/project-logos/jbowiki.png', // T48589
 	'jvwiki' => '/static/images/project-logos/jvwiki.png', // T251050
-	'kaawiki' => '/static/images/project-logos/kaawiki.png', // T48589, T337641
+	'kaawiki' => '/static/images/project-logos/kaawiki-temp25.png', // T48589, T337641, T415457
 	'kabwiki' => '/static/images/project-logos/kabwiki.png', // T46974
 	'kajwiki' => '/static/images/project-logos/kajwiki.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki.png',
@@ -1092,7 +1092,7 @@ return [
 	'jawiki' => '/static/images/project-logos/jawiki-1.5x.png', // T150618
 	'jbowiki' => '/static/images/project-logos/jbowiki-1.5x.png', // T150618
 	'jvwiki' => '/static/images/project-logos/jvwiki-1.5x.png', // T251050
-	'kaawiki' => '/static/images/project-logos/kaawiki-1.5x.png', // T150618, T337641
+	'kaawiki' => '/static/images/project-logos/kaawiki-temp25-1.5x.png', // T150618, T337641, T415457
 	'kabwiki' => '/static/images/project-logos/kabwiki-1.5x.png', // T150618
 	'kajwiki' => '/static/images/project-logos/kajwiki-1.5x.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki-1.5x.png', // T150618
@@ -1767,7 +1767,7 @@ return [
 	'jawiki' => '/static/images/project-logos/jawiki-2x.png', // T150618
 	'jbowiki' => '/static/images/project-logos/jbowiki-2x.png', // T150618
 	'jvwiki' => '/static/images/project-logos/jvwiki-2x.png', // T251050
-	'kaawiki' => '/static/images/project-logos/kaawiki-2x.png', // T150618, T337641
+	'kaawiki' => '/static/images/project-logos/kaawiki-temp25-2x.png', // T150618, T337641, T415457
 	'kabwiki' => '/static/images/project-logos/kabwiki-2x.png', // T150618
 	'kajwiki' => '/static/images/project-logos/kajwiki-2x.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki-2x.png', // T150618
@@ -2833,6 +2833,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
 		'width' => 119,
 		'height' => 18,
+	],
+	'kaawiki' => [ // T415457
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kaa-temp25.svg',
+		'width' => 140,
+		'height' => 22,
 	],
 	'kawiki' => [ // T267776
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ka.svg',
@@ -6549,10 +6554,10 @@ return [
 		'width' => 120,
 		'height' => 11,
 	],
-	'kaawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kaa.svg',
-		'width' => 103,
-		'height' => 12,
+	'kaawiki' => [ // T415457
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kaa-temp25.svg',
+		'width' => 140,
+		'height' => 11,
 	],
 	'kabwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kab.svg',
