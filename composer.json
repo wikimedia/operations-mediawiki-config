@@ -10,15 +10,15 @@
 		}
 	},
 	"require-dev": {
-		"mediawiki/mediawiki-codesniffer": "48.0.0",
-		"mediawiki/minus-x": "1.1.3",
+		"mediawiki/mediawiki-codesniffer": "49.0.0",
+		"mediawiki/minus-x": "2.0.1",
 		"php-parallel-lint/php-parallel-lint": "1.4.0",
 		"phpunit/php-code-coverage": "10.1.16",
-		"phpunit/phpunit": "10.5.62",
+		"phpunit/phpunit": "10.5.63",
 		"seld/jsonlint": "1.11.0",
 		"symfony/yaml": "7.4.0",
-		"wikimedia/ip-utils": "6.0.0",
-		"mediawiki/mediawiki-phan-config": "0.17.0"
+		"wikimedia/ip-utils": "6.0.1",
+		"mediawiki/mediawiki-phan-config": "0.18.0"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
