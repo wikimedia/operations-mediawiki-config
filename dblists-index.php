@@ -728,6 +728,7 @@ return [
 'pnbwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'sul' ],
 'pnbwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'pntwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
+'pplwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'parsoidrendered', 'sul' ],
 'projectcomwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'pswiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'rtl', 'growthexperiments', 'sul' ],
 'pswikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
