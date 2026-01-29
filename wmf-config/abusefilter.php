@@ -462,6 +462,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '1 day'; // T345513
 		$wgAbuseFilterAnonBlockDuration = '1 day'; // T345513
 		break;
+	case 'specieswiki':
+		$wgAbuseFilterActions['block'] = true; // T415802
+		break;
 	case 'srwiki':
 		$wgAbuseFilterActions['block'] = true; // T349727
 		break;
