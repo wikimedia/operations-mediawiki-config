@@ -6690,10 +6690,6 @@ return [
 	// Note: to disable this test without enabling addReference for
 	// everyone would require disabling EditCheck for enwiki above.
 	'enwiki' => 'addReference',
-	// T389231 tone check a/b test
-	'frwiki' => 'tone',
-	'jawiki' => 'tone',
-	'ptwiki' => 'tone',
 	// T405422 paste check a/b test
 	'arwiki' => 'paste',
 	'bnwiki' => 'paste',
