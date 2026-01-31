@@ -2150,9 +2150,6 @@ function wmfGetOverrideSettings() {
 		'wgGlobalWatchlistDevMode' => [
 			'default' => true,
 		],
-		'wgGlobalWatchlistWikibaseSite' => [
-			'default' => 'www.wikidata.beta.wmcloud.org',
-		],
 
 		// T253271 Don't deploy Cirrus AB tests to beta
 		'wgCirrusSearchUserTesting' => [

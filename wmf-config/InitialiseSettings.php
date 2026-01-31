@@ -11808,9 +11808,6 @@ return [
 'wgGlobalWatchlistDevMode' => [
 	'default' => false,
 ],
-'wgGlobalWatchlistWikibaseSite' => [
-	'default' => 'www.wikidata.org',
-],
 'wgGlobalWatchlistSiteLimit' => [
 	'default' => 50, // T276195
 ],
