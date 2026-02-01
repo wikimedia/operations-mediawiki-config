@@ -5662,10 +5662,6 @@ return [
 	'default' => true,
 ],
 
-'wgWikimediaEventsEmailAuthEnforce' => [
-	'default' => true,
-],
-
 'wgWMCEmailAuthEnforce' => [
 	'default' => true,
 ],
