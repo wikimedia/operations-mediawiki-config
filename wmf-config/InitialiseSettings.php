@@ -4988,6 +4988,10 @@ return [
 	'default' => true,
 ],
 
+'wgWMCEmailAuthEnforce' => [
+	'default' => true,
+],
+
 'wgWikimediaEventsCreateAccountInstrumentation' => [
 	'default' => true, // T394744
 ],
