@@ -3351,7 +3351,7 @@ return [
 				],
 			],
 		],
-		// (T373967) App base stream configuration to support Metrics Platform's monotable
+		// (T373967) App base stream configuration to support Test Kitchen's monotable
 		'product_metrics.app_base' => [
 			'schema_title' => 'analytics/product_metrics/app/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3367,7 +3367,7 @@ return [
 			],
 		],
 
-		// Web base stream configuration to support Experiment Platform's monotable.
+		// Web base stream configuration to support Test Kitchen's monotable.
 		//
 		// See T373967 for context.
 		// NOTE: consider updating web_base_with_ip below when updating this
@@ -3480,12 +3480,11 @@ return [
 		// so we leave the default analytics sampling rate of 1,
 		// thus not explicitly setting the `sample` key here.
 		//
-		// Experiment enrollment sampling (AKA bucketing) is instead set on the
-		// Metrics Platform Experimentation Lab (MPIC) at
-		// https://mpic.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
+		// Experiment enrollment sampling (AKA bucketing) is instead set on Test Kitchen UI at
+		// https://test-kitchen.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
 		//
-		// See https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Analytics_sampling,
-		// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Experiment_enrolment_sampling
+		// See https://wikitech.wikimedia.org/wiki/Test_Kitchen/Glossary#Analytics_sampling,
+		// https://wikitech.wikimedia.org/wiki/Test_Kitchen/Glossary#Experiment_enrolment_sampling
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3493,7 +3492,7 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						// Contextual attributes, see
-						// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Contextual_attributes
+						// https://wikitech.wikimedia.org/wiki/Test_Kitchen/Contextual_attributes
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'mediawiki_database',
