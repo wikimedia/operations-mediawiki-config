@@ -12252,6 +12252,11 @@ return [
 
 // for wmgWikibaseTmpMobileEditingUIBetaFeature, see the BetaFeatures section above
 
+// T415516 temporary feature flag
+'wmgWikibaseTmpGraphQL' => [
+	'default' => false,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,

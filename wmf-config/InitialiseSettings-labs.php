@@ -2385,6 +2385,11 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
 			'wikidatawiki' => false,
 		],
+		// T415516 temporary feature flag
+		'wmgWikibaseTmpGraphQL' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
 		// T391064
 		'-wgTemplateDataEnableFeaturedTemplates' => [
 			'default' => false,
