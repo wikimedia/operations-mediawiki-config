@@ -13616,6 +13616,11 @@ return [
 		'geohack.toolforge.org',
 		'creativecommons.org',
 	],
+	'+ruwiki' => [
+		'geohack.toolforge.org', // T416174
+		'maps.google.com', // T416174
+		'openstreetmap.org', // T416174
+	],
 	'+ruwikinews' => [
 		'tools.wmflabs.org',
 	],
