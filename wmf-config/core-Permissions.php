@@ -2166,14 +2166,13 @@ return [
 	// T8303
 	'+plwiki' => [
 		'editor' => [
-			'rollback' => true,
+			'rollback' => true, // T22154
 			'patrolmarks' => true,
-			'editor' => true,
-			'editeditorprotected' => true,
-		], // T22154 and T48990
+			'editeditorprotected' => true, // added in T48990, renamed in T230103
+		],
 		'flood' => [ 'bot' => true ], // T22155
-		'sysop' => [ 'editor' => true ], // T48990
-		'bot' => [ 'editor' => true ], // T48990
+		'sysop' => [ 'editeditorprotected' => true ], // added in T48990, renamed in T230103
+		'bot' => [ 'editeditorprotected' => true ], // added in T48990, renamed in T230103
 		'arbcom' => [ // T256572
 			'abusefilter-log-detail' => true,
 			'abusefilter-view-private' => true,
