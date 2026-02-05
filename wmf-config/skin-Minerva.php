@@ -151,6 +151,7 @@ return [
 		'bnwikibooks' => true, // T319317
 		'bnwikiquote' => true, // T337683
 		'bnwiktionary' => true, // T328630
+		'enwiki' => true, // T416644
 		'kowiki' => true, // T172630
 		'labswiki' => true, // T410702
 		'ptwikinews' => true, // T332813
