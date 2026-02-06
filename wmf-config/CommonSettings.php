@@ -497,10 +497,16 @@ if ( PHP_SAPI === 'cli' ) {
 }
 
 // Use Hadoop for QueryPages computation (T309738)
+$wmgExternalQuerySourcesBaseUrl = "{$wmgLocalServices['analytics-web']}/published/datasets/querypage";
 $wgExternalQuerySources = [
+	'Mostcategories' => [
+		'enabled' => false,
+		'url' => "{$wmgExternalQuerySourcesBaseUrl}/MostCategories/{$wgDBname}.json",
+		'timeout' => 10,
+	],
 	'Mostlinkedtemplates' => [
 		'enabled' => false,
-		'url' => "{$wmgLocalServices['analytics-web']}/published/datasets/querypage/MostTranscludedPages/{$wgDBname}.json",
+		'url' => "{$wmgExternalQuerySourcesBaseUrl}/MostTranscludedPages/{$wgDBname}.json",
 		'timeout' => 10,
 	],
 ];
