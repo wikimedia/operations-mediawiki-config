@@ -4339,9 +4339,13 @@ return [
 ],
 # @} end of wgDisableQueryPageUpdate
 
+// Use Hadoop for QueryPages computation (T309738)
 'wmgExternalQuerySources' => [
 	'default' => [],
-	'testwiki' => [ 'Mostlinkedtemplates' ],
+	'testwiki' => [
+		'Mostcategories',
+		'Mostlinkedtemplates',
+	],
 	'enwiki' => [ 'Mostlinkedtemplates' ],
 ],
 
