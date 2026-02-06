@@ -4370,6 +4370,11 @@ return [
 		'PMID' => false,
 		'RFC' => false,
 	],
+	'nlwiki' => [ // T145604#11542373
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false,
+	],
 ],
 
 # wgFavicon @{
