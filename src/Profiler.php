@@ -225,20 +225,20 @@ class Profiler {
 		$cpuProf->setMaxDepth( 250 );
 		$realProf->setMaxDepth( 250 );
 
-		$redisChannel = 'excimer';
-
-		// The period is 60s, so there's no point waiting for more samples to arrive
-		// before the end of the request, they probably won't.
+		// The period is 60s, so flush directly instead of waiting for more samples to arrive,
+		// because there probably won't be another sample before the end of the request.
+		//
+		// NOTE: Specify the redisChannel in full for greppability.
 		$cpuProf->setFlushCallback(
-			static function ( $log ) use ( $options, $redisChannel ) {
+			static function ( $log ) use ( $options ) {
 				$logLines = explode( "\n", $log->formatCollapsed() );
-				self::excimerFlushToArclamp( $logLines, $options, $redisChannel );
+				self::excimerFlushToArclamp( $logLines, $options, redisChannel: 'excimer' );
 			},
 			/* $maxSamples = */ 1 );
 		$realProf->setFlushCallback(
-			static function ( $log ) use ( $options, $redisChannel ) {
+			static function ( $log ) use ( $options ) {
 				$logLines = explode( "\n", $log->formatCollapsed() );
-				self::excimerFlushToArclamp( $logLines, $options, $redisChannel . '-wall' );
+				self::excimerFlushToArclamp( $logLines, $options, redisChannel: 'excimer-wall' );
 				register_shutdown_function(
 					[ self::class, 'excimerFlushToStatsd' ],
 					$logLines,
