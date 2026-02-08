@@ -11051,6 +11051,7 @@ return [
 	'wikisource' => false, // T68455
 	'wikitech' => false,
 	'lockeddown' => false,
+	'hewikisource' => true, // T362851
 ],
 'wgPageImagesNamespaces' => [
 	'default' => [ NS_MAIN ],
