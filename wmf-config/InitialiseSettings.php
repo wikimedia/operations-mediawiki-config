@@ -4318,9 +4318,6 @@ return [
 		'Uncategorizedcategories' => 'monthly',
 		'Wantedtemplates' => 'monthly',
 	],
-	'+frwiki' => [
-		'Mostcategories',
-	],
 	'+wikidata' => [
 		'Lonelypages',
 		'Mostlinked',
@@ -4351,6 +4348,7 @@ return [
 		'Mostlinkedtemplates',
 	],
 	'enwiki' => [ 'Mostlinkedtemplates' ],
+	'frwiki' => [ 'Mostcategories' ],
 ],
 
 'wgShowHostnames' => [
