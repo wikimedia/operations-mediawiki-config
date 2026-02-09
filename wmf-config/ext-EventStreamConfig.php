@@ -3403,12 +3403,6 @@ return [
 					'use_edge_uniques' => true,
 				],
 			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'large',
-				],
-			],
 		],
 		// Same as Web base stream above, but collects client IP information.
 		// When using this stream, please pay doubly close attention to the collection guidelines:
@@ -3449,12 +3443,6 @@ return [
 						'http.request_headers.x-ja4h' => 'x-ja4h',
 						'http.request_headers.x-is-browser' => 'x-is-browser',
 					],
-				],
-			],
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'large',
 				],
 			],
 		],
