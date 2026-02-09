@@ -121,6 +121,7 @@ return [
 	],
 	'arwikibooks' => [
 		'وك' => NS_PROJECT, // T409789
+		'ويكي_الكتب' => NS_PROJECT, // T416779
 	],
 	'+arwikinews' => [
 		'وخ' => NS_PROJECT,
