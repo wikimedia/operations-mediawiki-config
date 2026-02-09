@@ -2280,11 +2280,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgParserMigrationEnableParsoidDiscussionTools' => [
+		'wgParserMigrationEnableParsoidDiscussionTools' => [
 			'default' => true, // T357054
 		],
 
-		'wmgParserMigrationEnableParsoidArticlePages' => [
+		'wgParserMigrationEnableParsoidArticlePages' => [
 			'default' => true, // T357054
 		],
 
