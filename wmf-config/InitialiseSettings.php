@@ -1181,7 +1181,7 @@ return [
 	'arbcom_zhwiki' => '中文维基百科仲裁委员会',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا',
-	'arwikibooks' => 'ويكي الكتب', // T337725
+	'arwikibooks' => 'ويكي كتب', // T416779
 	'arwikimedia' => 'Wikimedia Argentina',
 	'arwikinews' => 'ويكي الأخبار', // T337725
 	'arwikiquote' => 'ويكي الاقتباس', // T337725

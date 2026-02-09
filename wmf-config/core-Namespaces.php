@@ -5793,7 +5793,7 @@ return [
 	'arbcom_zhwiki' => '仲裁',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا', // T6672
-	'arwikibooks' => 'ويكي_الكتب',
+	'arwikibooks' => 'ويكي_كتب', // T416779
 	'arwikinews' => 'ويكي_الأخبار',
 	'arwikiquote' => 'ويكي_الاقتباس',
 	'arwikisource' => 'ويكي_مصدر',
