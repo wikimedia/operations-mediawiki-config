@@ -6720,6 +6720,11 @@ return [
 	'zhwiki' => 'paste',
 ],
 
+'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
+	'default' => false,
+	'enwiki' => true, // T399611
+],
+
 'wgVisualEditorEnableCollabBeta' => [
 	'default' => false,
 	'officewiki' => true,
