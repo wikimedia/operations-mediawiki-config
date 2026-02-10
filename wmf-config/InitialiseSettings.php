@@ -5819,7 +5819,8 @@ return [
 		'vector-2022-beta-feature', // [WebTeam] 2023-12-06 - Accessibility for Reading (Vector 2022)
 		'visualeditor-collab', // [Editing] 2024-06-18 - Collaborative editing
 		'codemirror-beta-feature-enable', // [Community_Tech] 2024-11-26 - Improved Syntax Highlighting
-		'readinglistsbeta' // [Reading] 2025-05-20 - Reading List feature
+		'readinglistsbeta', // [Reading] 2025-05-20 - Reading List feature
+		'visualeditor-editcheck-suggestions', // [Editing] 2026-02-10 - Visual Editor edit check suggestions mode
 	],
 	'+wikisource' => [
 		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links
