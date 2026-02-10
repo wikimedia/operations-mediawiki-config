@@ -2188,7 +2188,7 @@ if ( $wmgEnableCaptcha ) {
 		$wgCaptchaTriggers['contactpage'] = true;
 	}
 
-	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname, $wmgUseMetricsPlatform ) {
+	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname ) {
 		if ( in_array( $action, [ 'edit', 'create', 'addurl' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 			// For API edits, don't use hCaptcha yet.
 			$className = 'FancyCaptcha';
@@ -2204,16 +2204,6 @@ if ( $wmgEnableCaptcha ) {
 				);
 				$className = 'FancyCaptcha';
 				return;
-			}
-		}
-		// T410354 - A/B test on zhwiki and jawiki
-		// The $wmgUseMetricsPlatform and $wgDBname checks aren't strictly necessary, but reduce the scope of
-		// problems in the event of exceptions in ExperimentManager
-		if ( $wmgUseMetricsPlatform && in_array( $wgDBname, [ 'zhwiki', 'jawiki' ] ) && in_array( $action, [ 'edit', 'create', 'addurl' ] ) ) {
-			$experimentManager = $services->getService( 'MetricsPlatform.XLab.ExperimentManager' );
-			$experiment = $experimentManager->getExperiment( 'fy25-26-we-4-2-hcaptcha-editing' );
-			if ( $experiment->isAssignedGroup( 'control', 'control-2' ) ) {
-				$className = 'FancyCaptcha';
 			}
 		}
 	};
