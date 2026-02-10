@@ -4545,10 +4545,14 @@ if ( $wmgUseCentralAuth ) {
 		'checkuser' => [ 'global-temporary-account-viewer' ], // local checkuser group
 		'suppress' => [ 'global-temporary-account-viewer' ], // local suppress group
 		'global-sysop' => [ 'global-temporary-account-viewer' ],
+		// Add bot accounts on any wiki to a global group called 'local-bot',
+		// so that we can give them higher rate limits on every wiki. (T415588)
+		'bot' => [ 'local-bot' ],
 	];
 
 	$wgWMCGlobalGroupToRateLimitClass = [
-		'global-bot' => 'approved-bot',
+		'local-bot' => 'approved-bot', // T415588
+		'global-bot' => 'approved-bot', // T399632
 	];
 
 	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
