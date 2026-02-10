@@ -6680,12 +6680,6 @@ return [
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
-	// T361843 phase 1: all wikis but the following 8 Wikipedias: bn, de, en, hi, id, nl, pl, ru
-	// T373079 added plwiki
-	// T373022 added ruwiki
-	// T377551 added nlwiki
-	// T366381 added hiwiki, bnwiki, idwiki
-	// T385205 added dewiki
 	'wikipedia' => true,
 
 	// TODO: consider cleaning up (T183549)
@@ -6701,10 +6695,6 @@ return [
 
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
-	// T406134 addReference check a/b test
-	// Note: to disable this test without enabling addReference for
-	// everyone would require disabling EditCheck for enwiki above.
-	'enwiki' => 'addReference',
 	// T405422 paste check a/b test
 	'arwiki' => 'paste',
 	'bnwiki' => 'paste',
