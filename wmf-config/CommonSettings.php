@@ -1607,6 +1607,9 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikidata\.org',
 		'(.*\.)?wikifunctions\.org',
 		'(.*\.)?mediawiki\.org',
+		# well-known operational third-level domains - T413211
+		'(prometheus|prometheus-alerts|grafana)\.wmcloud\.org',
+		'.*\.svc\.toolforge\.org',
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.org',
