@@ -4508,6 +4508,7 @@ if ( $wmgUseIPReputation ) {
 	$wgIPReputationDeveloperMode = false;
 	$wgIPReputationDataProvider = 'opensearch_ipoid';
 	$wgIPReputationIPoidUrl = $wmgLocalServices['opensearch_ipoid'];
+	$wgIPReputationIPoidRequestTimeoutSeconds = 2;
 	// Switch on in case of emergency. Non-sighted users
 	// will be prevented from logging in.
 	// Only re-enable if IPReputation's ConfirmEditHandler
