@@ -13141,11 +13141,6 @@ return [
 	'wikifunctionsclient' => false,
 ],
 
-// (T397403) Temporary deployment feature flag
-'wgWikifunctionsEnableWikidataInputTypes' => [
-	'wikifunctionsclient' => true,
-],
-
 // This will be used (only) on Abstract Wikipedia
 'wgWikiLambdaEnableAbstractMode' => [
 	'default' => false,
