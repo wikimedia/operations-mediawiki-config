@@ -13146,11 +13146,6 @@ return [
 	'wikifunctionsclient' => true,
 ],
 
-// (T397402) Temporary deployment feature flag
-'wgWikifunctionsEnableHTMLOutput' => [
-	'wikifunctionsclient' => true,
-],
-
 // This will be used (only) on Abstract Wikipedia
 'wgWikiLambdaEnableAbstractMode' => [
 	'default' => false,
