@@ -6080,6 +6080,17 @@ return [
 	'commonswiki' => false, // T364228; should hopefully be resolved by T351113
 ],
 
+'wgParserMigrationEnableQuickSurvey' => [
+	'default' => false,
+	# only on selected English-language wikis
+	'enwiki' => true,
+	'enwiktionary' => true,
+	'enwikivoyage' => true,
+	'metawiki' => true,
+	'simplewiki' => true,
+	'simplewiktionary' => true,
+],
+
 'wgParserMigrationEnableIndicator' => [
 	'default' => false, // T373472
 ],
