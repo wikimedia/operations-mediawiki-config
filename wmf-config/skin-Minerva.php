@@ -162,6 +162,7 @@ return [
 		'testwiki' => true,
 		'test2wiki' => true,
 		'wikivoyage' => true,
+		'wikipedia' => true, // T416644
 		'ruwikimedia' => true,
 		'cawiki' => true,
 		'euwiki' => true,
