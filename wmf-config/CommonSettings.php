@@ -5072,7 +5072,6 @@ if ( $wmgUseReaderExperiments ) {
 // WP25EasterEggs (T415372)
 if ( $wmgUseWP25EasterEggs ) {
 	wfLoadExtension( 'WP25EasterEggs' );
-	$wgWp25EasterEggsEnable = true;
 }
 
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch

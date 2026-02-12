@@ -2435,6 +2435,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T415372 - Enable WP25EasterEggs visual interventions.
+		'wgWp25EasterEggsEnable' => [
+			'default' => true,
+		],
+
 		'wgWMCBadEmailDomainsFile' => [
 			'default' => false,
 		],
