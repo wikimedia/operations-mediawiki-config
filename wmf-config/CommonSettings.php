@@ -4276,6 +4276,9 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 
+	// T416544 - Temporary
+	$wgOATHUserHandlesTable = true;
+
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
