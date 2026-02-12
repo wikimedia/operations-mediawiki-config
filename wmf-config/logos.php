@@ -6574,8 +6574,8 @@ return [
 	],
 	'kajwiki' => [ // T415038
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kaj.svg',
-		'width' => 117,
-		'height' => 13,
+		'width' => 100,
+		'height' => 14,
 	],
 	'kawiki' => [ // T267776
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ka.svg',
