@@ -6198,6 +6198,7 @@ return [
 	'pnbwiki' => 'وکیپیڈیا',
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki' => 'Βικιπαίδεια',
+	'pplwiki' => 'Wikiamachti', // T415046
 	'pswiki' => 'ويکيپېډيا',
 	'pswikibooks' => 'ويکيتابونه',
 	'pswikivoyage' => 'ويکيسفر',

@@ -579,6 +579,7 @@ return [
 	'pmswikisource' => 'Europe/Rome', // T196763
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
+	'pplwiki' => 'America/El_Salvador', // T415046
 	'punjabiwikimedia' => 'Asia/Kolkata',
 	'pwnwiki' => 'Asia/Taipei',
 	'rkiwiki' => 'Asia/Yangon', // T392499
@@ -1581,6 +1582,7 @@ return [
 	'pnbwiki' => 'وکیپیڈیا',
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki' => 'Βικιπαίδεια',
+	'pplwiki' => 'Wikiamachti', // T415046
 	'projectcomwiki' => 'Project Grants Committee',
 	'pswiki' => 'ويکيپېډيا',
 	'pswikibooks' => 'ويکيتابونه',
