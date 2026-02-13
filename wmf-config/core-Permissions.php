@@ -4845,7 +4845,6 @@ return [
 		],
 	],
 	'+sqwiki' => [
-		'bureaucrat' => [ 'editor' ],
 		'sysop' => [ 'reviewer' ],
 	],
 	'+srwiki' => [
@@ -6169,7 +6168,6 @@ return [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T89147
 	],
 	'+sqwiki' => [
-		'bureaucrat' => [ 'editor' ],
 		'sysop' => [ 'reviewer' ],
 	],
 	'+srwiki' => [

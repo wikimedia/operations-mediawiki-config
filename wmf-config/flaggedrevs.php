@@ -145,23 +145,7 @@ call_user_func( static function () {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'sqwiki' ) {
-		// T44782
-		//
-		// - Auto-promotion for registered users. When they reach 300 edits in 10 or more
-		// unique articles with a maximum of 5% reverted edits in 60 days or more since
-		// registration they must be auto-promoted to reviewer group.
-		// - Auto-promotion for registered users. When they reach 100 edits in 10 or more
-		// unique pages with a maximum of 5% reverted edits in 30 days or more since
-		// registration they must be auto-promoted to autoreviewer (or autopatrolled)
-		// group.
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
-		$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
-		$wgFlaggedRevsAutopromote['spacing'] = 3; # spacing of edit intervals
-		$wgFlaggedRevsAutopromote['benchmarks'] = 15; # how many edit intervals are needed?
-		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10; # $wgContentNamespaces unique pages edited
-		$wgFlaggedRevsAutopromote['neverBlocked'] = false; # user must be emailconfirmed?
-
+		$wgFlaggedRevsAutopromote = false; // T415196
 		$wgFlaggedRevsAutoconfirm = [
 			'days'                => 30, # days since registration
 			'edits'               => 100, # total edit count
@@ -587,6 +571,8 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'sqwiki' ) {
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
+		# Remove 'editor' group T415196
+		unset( $wgGroupPermissions['editor'] );
 	} elseif ( $wgDBname == 'trwiki' ) {
 		unset( $wgGroupPermissions['reviewer'] ); // T40690
 		unset( $wgGroupPermissions['editor'] ); // T40690
