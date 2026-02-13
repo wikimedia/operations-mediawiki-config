@@ -12811,7 +12811,7 @@ return [
 'wgWp25EasterEggsEnable' => [
 	'default' => false,
 	'testwiki' => true,
-	'wikipedia' => false, // This will be enabled Monday Feb 16, 2026.
+	'wikipedia' => true, // T417110 This will be enabled Monday Feb 16, 2026.
 ],
 
 'wgWMCBadEmailDomainsFile' => [
