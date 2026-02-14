@@ -2086,7 +2086,7 @@ Wikipedia:
         local_tagline: true
     zhwiki:
         commons: 'File:Wikipedia-logo-v2-zh.svg'
-        selected: zhwiki-25
+        selected: zhwiki-cny2026
         variants:
             zhwiki-25:
                 commons: 'File:Wikipedia-logo-v2-zh_hant-25-alt.svg'
@@ -2098,24 +2098,33 @@ Wikipedia:
                 commons_wordmark: 'File:WP25_Primary_lockup_zh-hans.svg'
                 commons_tagline: 'File:Wikipedia_25-tagline-zh-hans.svg'
                 commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
+            zhwiki-cny2026:
+                commons: 'File:丙午新年标志 hant.svg'
+                commons_icon: 'File:丙午新年标志.svg'
+            zhwiki-cny2026-hans:
+                commons: 'File:丙午新年标志 hans.svg'
+                commons_wordmark: 'File:Wikipedia-wordmark-zh-hans.svg'
+                commons_tagline: 'File:Wikipedia-tagline-zh-hans.svg'
+                commons_icon: 'File:丙午新年标志.svg'
         lang_variants:
             zh-hans:
-                selected_logo: zhwiki-25-hans
-                selected_wordmark: zhwiki-25-hans
-                selected_tagline: zhwiki-25-hans
+                selected_logo: zhwiki-cny2026-hans
+                selected_wordmark: zhwiki-cny2026-hans
+                selected_tagline: zhwiki-cny2026-hans
+                selected_icon: zhwiki-cny2026-hans
             zh-cn:
                 selected_lang: zh-hans
             zh-my:
                 selected_lang: zh-hans
             zh-sg:
                 selected_lang: zh-hans
-        comment: 'T276694, T414299'
+        comment: 'T276694, T414299, T417240'
         comment_1_5x: 'T276694'
         comment_2x: 'T276694'
         commons_wordmark: 'File:Wikipedia-wordmark-zh.svg'
-        comment_wordmark: 'T258552, T260908, T414299'
+        comment_wordmark: 'T258552, T260908'
         commons_tagline: 'File:Wikipedia-tagline-zh.svg'
-        comment_tagline: 'T258552, T260908, T414299'
+        comment_tagline: 'T258552, T260908'
         comment_lang_variants: 'T261153, T273578, T308620'
     zuwiki:
         comment: T233424
