@@ -11060,6 +11060,7 @@ return [
 	'wikisource' => false, // T68455
 	'wikitech' => false,
 	'lockeddown' => false,
+	'bnwikisource' => true, // T416800
 	'hewikisource' => true, // T362851
 ],
 'wgPageImagesNamespaces' => [
