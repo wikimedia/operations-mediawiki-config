@@ -4985,9 +4985,13 @@ $wgParsoidSettings = [
 ];
 
 if ( ClusterConfig::getInstance()->isParsoid() ) {
-	// Parsoid testing special case
-	if ( ClusterConfig::getInstance()->getHostname() === 'parsoidtest1001' ) {
-		// parsoidtest1001 has its own special check out of parsoid for testing.
+	// Parsoid testing special case:
+	// parsoidtest1001 and parsoid testing env on k8s
+	// These envs have their own special check out of parsoid for testing.
+	$isParsoidTestHost = ClusterConfig::getInstance()->getHostname() === 'parsoidtest1001';
+	$isParsoidCluster = ClusterConfig::getInstance()->getCluster() === 'kube-mw-parsoid';
+
+	if ( $isParsoidTestHost || $isParsoidCluster ) {
 		$parsoidDir = __DIR__ . "/../../parsoid-testing";
 		// Override settings specific to round-trip testing on parsoidtest1001
 		require_once "$parsoidDir/tests/RTTestSettings.php";
