@@ -10788,6 +10788,10 @@ return [
 	'default' => false
 ],
 
+'wgTestKitchenEventIntakeServiceName' => [
+	'default' => 'eventgate-analytics-external',
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
