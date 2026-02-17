@@ -9208,43 +9208,6 @@ return [
 	'wiktionary' => 'wiktionary', // T150182
 ],
 
-'wmgUseInterwikiSorting' => [
-	'default' => false,
-],
-
-'wgInterwikiSortingSort' => [
-	'default' => 'code',
-	'enwiki' => 'alphabetic',
-	'enwiktionary' => 'alphabetic',
-	'be_x_oldwiki' => 'alphabetic',
-	'dawiktionary' => 'alphabetic',
-	'etwiktionary' => 'alphabetic',
-	'fiwiktionary' => 'alphabetic',
-	'fywiktionary' => 'alphabetic',
-	'ilowiki' => 'alphabetic',
-	'lbwiki' => 'alphabetic',
-	'mkwiki' => 'alphabetic',
-	'mswiktionary' => 'alphabetic_revised',
-	'nnwiki' => 'alphabetic',
-	'nowiki' => 'alphabetic',
-	'nvwiki' => 'alphabetic',
-	'plwiki' => 'alphabetic',
-	'plwiktionary' => 'alphabetic_revised',
-	'simplewiki' => 'alphabetic',
-	'simplewiktionary' => 'alphabetic',
-	'svwiki' => 'alphabetic',
-	'urwiki' => 'alphabetic',
-	'etwiki' => 'alphabetic_revised',
-	'fiwiki' => 'alphabetic_revised',
-	'fiu_vrowiki' => 'alphabetic_revised',
-	'mswiki' => 'alphabetic_revised',
-	'viwiki' => 'alphabetic_revised',
-	'fywiki' => 'alphabetic_fy',
-	'fywikibooks' => 'alphabetic_fy', // T103207
-	'srwiki' => 'alphabetic_sr',
-	'svwiktionary' => 'alphabetic_svwiktionary',
-],
-
 'wgInterwikiSortingSortPrepend' => [
 	'default' => [],
 	'hewiki' => [ 'en' ],
