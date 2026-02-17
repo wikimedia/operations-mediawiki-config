@@ -3985,11 +3985,6 @@ if ( $wmgUseCognate ) {
 	$wgCognateNamespaces = [ 0 ];
 }
 
-if ( $wmgUseInterwikiSorting ) {
-	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
-	wfLoadExtension( 'InterwikiSorting' );
-}
-
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) {
 	include __DIR__ . '/Wikibase.php';
 }
