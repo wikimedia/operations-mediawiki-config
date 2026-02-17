@@ -415,16 +415,12 @@ return [
 
 'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
 	'default' => 48 * 3600,
-	'testwiki' => [
-		'default' => 300,
-	],
+	'testwiki' => 300,
 ],
 
 'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 	'default' => 48 * 3600,
-	'testwiki' => [
-		'default' => 300,
-	],
+	'testwiki' => 300,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
