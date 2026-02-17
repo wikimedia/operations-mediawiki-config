@@ -9210,8 +9210,6 @@ return [
 
 'wmgUseInterwikiSorting' => [
 	'default' => false,
-	'wikidataclient' => true, // T150183, T162253
-	'wikidataclient-test' => true, // T150183, T162253
 ],
 
 'wgInterwikiSortingSort' => [
