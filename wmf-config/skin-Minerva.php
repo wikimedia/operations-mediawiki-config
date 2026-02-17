@@ -70,7 +70,7 @@ return [
 			'base' => false,
 			'beta' => false,
 			'loggedin' => false,
-			'amc' => true,
+			'amc' => false,
 		],
 		// T290812
 		'ptwikinews' => [
@@ -84,7 +84,7 @@ return [
 		'default' => [
 			'base' => false,
 			'beta' => false,
-			'loggedin' => false,
+			'loggedin' => true,
 			'amc' => true,
 		],
 		// T290812
