@@ -37,11 +37,11 @@ $wmgThrottlingExceptions = [];
 
 ## Add throttling definitions above.
 
-// T412820 - Singapore Sing Lit Wikithon
+// T417578 - Event at Tshwane University of Technology
 $wmgThrottlingExceptions[] = [
-	'from'   => '2025-12-27T12:00 +8:00',
-	'to'     => '2025-12-27T23:59 +8:00',
-	'IP'     => '203.117.231.89',
-	'dbname' => [ 'enwiki', 'zhwiki', 'tawiki', 'commonswiki', 'wikidatawiki' ],
-	'value'  => 60,
+	'from'   => '2026-02-23T08:00 +2:00',
+	'to'     => '2026-02-28T18:00 +2:00',
+	'range'     => '168.172.120.64/28',
+	'dbname' => [ 'enwiki', 'nrwiki', 'sswiki', 'vewiki', 'tnwiki', 'tswiki', 'zuwiki', 'xhwiki', 'nsowiki', 'afwiki', 'stwiki' ],
+	'value'  => 100,
 ];
