@@ -4494,11 +4494,6 @@ if ( $wmgUseIPReputation ) {
 	$wgIPReputationIPoidUrl = $wmgLocalServices['opensearch_ipoid'];
 	$wgIPReputationIPoidRequestTimeoutSeconds = 0.5;
 	$wgIPReputationIPoidConnectTimeoutSeconds = 0.2;
-	// Switch on in case of emergency. Non-sighted users
-	// will be prevented from logging in.
-	// Only re-enable if IPReputation's ConfirmEditHandler
-	// does a more nuanced check of reputation data.
-	$wgIPReputationEnableLoginCaptchaIfIPKnown = false;
 }
 
 // IP Masking / Temporary accounts
