@@ -10686,6 +10686,7 @@ return [
 		'mediawiki.product_metrics.reading_list',
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 		'mediawiki.product_metrics.readerexperiments_stickyheaders',
+		'mediawiki.product_metrics.reader_experiments',
 		'mediawiki.product_metrics.contributors.experiments',
 	],
 ],
@@ -10740,6 +10741,7 @@ return [
 		'mediawiki.product_metrics.reading_list',
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 		'mediawiki.product_metrics.readerexperiments_stickyheaders',
+		'mediawiki.product_metrics.reader_experiments',
 		'mediawiki.product_metrics.contributors.experiments'
 	],
 ],

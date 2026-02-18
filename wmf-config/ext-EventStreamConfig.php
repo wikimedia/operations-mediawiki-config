@@ -3575,6 +3575,43 @@ return [
 				],
 			],
 		],
+		// Shared stream for reader experiments.
+		//
+		// Readers teams can use it until completion of T408186.
+		// After that, all experiments can send events to the default `product_metrics.web_base` stream.
+		// See https://wikimedia.slack.com/archives/C01DFMX6QLB/p1769640744768119?thread_ts=1764971982.545049&cid=C01DFMX6QLB
+		//
+		// This stream defines a superset of contextual attributes.
+		// Experiments can safely ignore unnecessary ones.
+		//
+		// This stream is used by:
+		// - (T415611) Mobile table of contents experiment by Reader Growth
+		'mediawiki.product_metrics.reader_experiments' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						// Contextual attributes: add new ones as needed.
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_active_browsing_session_token',
+						'performer_edit_count_bucket',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+			],
+		],
 		// T401575: Stream to track Watchlist interactions
 		'mediawiki.product_metrics.WatchlistClickTracker' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
