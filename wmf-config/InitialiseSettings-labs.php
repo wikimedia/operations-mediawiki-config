@@ -2408,6 +2408,10 @@ function wmfGetOverrideSettings() {
 		// T404398
 		'wmgUseReaderExperiments' => [
 			'default' => true,
+
+			// Currently fails without ParserMigration, which is
+			// disabled on Commons where we have no experiments.
+			'commonswiki' => false,
 		],
 		// T397258
 		'wmgEnableWikidataIconsInClientWatchlist' => [
