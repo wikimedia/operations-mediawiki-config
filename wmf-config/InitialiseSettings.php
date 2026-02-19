@@ -6724,29 +6724,6 @@ return [
 
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
-	// T405422 paste check a/b test
-	'arwiki' => 'paste',
-	'bnwiki' => 'paste',
-	'cawiki' => 'paste',
-	'cswiki' => 'paste',
-	'dagwiki' => 'paste',
-	'dewiki' => 'paste',
-	'euwiki' => 'paste',
-	'fawiki' => 'paste',
-	'fonwiki' => 'paste',
-	'glwiki' => 'paste',
-	'hiwiki' => 'paste',
-	'idwiki' => 'paste',
-	'itwiki' => 'paste',
-	'nlwiki' => 'paste',
-	'plwiki' => 'paste',
-	'ruwiki' => 'paste',
-	'simplewiki' => 'paste',
-	'swwiki' => 'paste',
-	'twwiki' => 'paste',
-	'ukwiki' => 'paste',
-	'viwiki' => 'paste',
-	'zhwiki' => 'paste',
 ],
 
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
