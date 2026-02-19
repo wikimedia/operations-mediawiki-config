@@ -3,7 +3,18 @@
 // Inline comments are often used for noting the task(s) associated with specific configuration
 // and requiring comments to be on their own line would reduce readability for this file
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
-
+$defaultRevertRiskThreshold = [
+	// T411485
+	'revertrisklanguageagnostic' => [
+		'revertrisk' => [ 'min' => 0.85, 'max' => 1 ]
+	],
+];
+$defaultRevertRiskOnlyModelConfig = [
+	// T411485
+	'damaging' => [ 'enabled' => false ],
+	'goodfaith' => [ 'enabled' => false ],
+	'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ]
+];
 return [
 'wgOresWikiId' => [
 	'default' => null,
@@ -79,11 +90,17 @@ return [
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
+	'acewiki' => $defaultRevertRiskOnlyModelConfig,
+	'adywiki' => $defaultRevertRiskOnlyModelConfig,
 	'afwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'akwiki' => $defaultRevertRiskOnlyModelConfig,
+	'amwiki' => $defaultRevertRiskOnlyModelConfig,
+	'angwiki' => $defaultRevertRiskOnlyModelConfig,
+	'arcwiki' => $defaultRevertRiskOnlyModelConfig,
 	'arwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for arwiki (T192498, T193905)
@@ -92,26 +109,53 @@ return [
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
+	'atjwiki' => $defaultRevertRiskOnlyModelConfig,
+	'avwiki' => $defaultRevertRiskOnlyModelConfig,
+	'aywiki' => $defaultRevertRiskOnlyModelConfig,
 	'azwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'bat_smgwiki' => $defaultRevertRiskOnlyModelConfig,
 	'bewiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'biwiki' => $defaultRevertRiskOnlyModelConfig,
+	'bjnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'bmwiki' => $defaultRevertRiskOnlyModelConfig,
 	'bnwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'bowiki' => $defaultRevertRiskOnlyModelConfig,
+	'bpywiki' => $defaultRevertRiskOnlyModelConfig,
+	'bugwiki' => $defaultRevertRiskOnlyModelConfig,
+	'bxrwiki' => $defaultRevertRiskOnlyModelConfig,
+	'cbk_zamwiki' => $defaultRevertRiskOnlyModelConfig,
+	'cdowiki' => $defaultRevertRiskOnlyModelConfig,
+	'chrwiki' => $defaultRevertRiskOnlyModelConfig,
+	'chwiki' => $defaultRevertRiskOnlyModelConfig,
+	'chywiki' => $defaultRevertRiskOnlyModelConfig,
+	'cowiki' => $defaultRevertRiskOnlyModelConfig,
+	'crhwiki' => $defaultRevertRiskOnlyModelConfig,
+	'crwiki' => $defaultRevertRiskOnlyModelConfig,
+	'csbwiki' => $defaultRevertRiskOnlyModelConfig,
+	'cuwiki' => $defaultRevertRiskOnlyModelConfig,
 	'cywiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'dinwiki' => $defaultRevertRiskOnlyModelConfig,
+	'dsbwiki' => $defaultRevertRiskOnlyModelConfig,
+	'dvwiki' => $defaultRevertRiskOnlyModelConfig,
+	'dzwiki' => $defaultRevertRiskOnlyModelConfig,
+	'eewiki' => $defaultRevertRiskOnlyModelConfig,
+	'emlwiki' => $defaultRevertRiskOnlyModelConfig,
 	'enwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
@@ -126,31 +170,87 @@ return [
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
+	'extwiki' => $defaultRevertRiskOnlyModelConfig,
+	'ffwiki' => $defaultRevertRiskOnlyModelConfig,
+	'fiu_vrowiki' => $defaultRevertRiskOnlyModelConfig,
+	'fjwiki' => $defaultRevertRiskOnlyModelConfig,
+	'fowiki' => $defaultRevertRiskOnlyModelConfig,
+	'frpwiki' => $defaultRevertRiskOnlyModelConfig,
+	'furwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gagwiki' => $defaultRevertRiskOnlyModelConfig,
+	'ganwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gcrwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gdwiki' => $defaultRevertRiskOnlyModelConfig,
+	'glkwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gomwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gotwiki' => $defaultRevertRiskOnlyModelConfig,
+	'gvwiki' => $defaultRevertRiskOnlyModelConfig,
+	'hakwiki' => $defaultRevertRiskOnlyModelConfig,
 	'hawiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'hawwiki' => $defaultRevertRiskOnlyModelConfig,
+	'hifwiki' => $defaultRevertRiskOnlyModelConfig,
+	'hsbwiki' => $defaultRevertRiskOnlyModelConfig,
 	'idwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'iewiki' => $defaultRevertRiskOnlyModelConfig,
+	'igwiki' => $defaultRevertRiskOnlyModelConfig,
+	'ikwiki' => $defaultRevertRiskOnlyModelConfig,
+	'inhwiki' => $defaultRevertRiskOnlyModelConfig,
+	'iowiki' => $defaultRevertRiskOnlyModelConfig,
 	'iswiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'iuwiki' => $defaultRevertRiskOnlyModelConfig,
+	'jamwiki' => $defaultRevertRiskOnlyModelConfig,
+	'jbowiki' => $defaultRevertRiskOnlyModelConfig,
+	'kaawiki' => $defaultRevertRiskOnlyModelConfig,
+	'kabwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kbdwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kbpwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kgwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kiwiki' => $defaultRevertRiskOnlyModelConfig,
 	'kkwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'klwiki' => $defaultRevertRiskOnlyModelConfig,
+	'koiwiki' => $defaultRevertRiskOnlyModelConfig,
+	'krcwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kshwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kswiki' => $defaultRevertRiskOnlyModelConfig,
+	'kvwiki' => $defaultRevertRiskOnlyModelConfig,
+	'kwwiki' => $defaultRevertRiskOnlyModelConfig,
+	'ladwiki' => $defaultRevertRiskOnlyModelConfig,
 	'lawiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'lbewiki' => $defaultRevertRiskOnlyModelConfig,
+	'lezwiki' => $defaultRevertRiskOnlyModelConfig,
+	'lfnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'lgwiki' => $defaultRevertRiskOnlyModelConfig,
+	'liwiki' => $defaultRevertRiskOnlyModelConfig,
+	'lldwiki' => $defaultRevertRiskOnlyModelConfig,
+	'lnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'lowiki' => $defaultRevertRiskOnlyModelConfig,
+	'ltgwiki' => $defaultRevertRiskOnlyModelConfig,
+	'maiwiki' => $defaultRevertRiskOnlyModelConfig,
+	'map_bmswiki' => $defaultRevertRiskOnlyModelConfig,
+	'mdfwiki' => $defaultRevertRiskOnlyModelConfig,
+	'mhrwiki' => $defaultRevertRiskOnlyModelConfig,
+	'miwiki' => $defaultRevertRiskOnlyModelConfig,
 	'mkwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
@@ -161,26 +261,72 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'mnwwiki' => $defaultRevertRiskOnlyModelConfig,
+	'mrjwiki' => $defaultRevertRiskOnlyModelConfig,
 	'mrwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'mtwiki' => $defaultRevertRiskOnlyModelConfig,
+	'mwlwiki' => $defaultRevertRiskOnlyModelConfig,
+	'myvwiki' => $defaultRevertRiskOnlyModelConfig,
+	'mznwiki' => $defaultRevertRiskOnlyModelConfig,
+	'nahwiki' => $defaultRevertRiskOnlyModelConfig,
+	'napwiki' => $defaultRevertRiskOnlyModelConfig,
+	'nawiki' => $defaultRevertRiskOnlyModelConfig,
+	'nds_nlwiki' => $defaultRevertRiskOnlyModelConfig,
+	'newwiki' => $defaultRevertRiskOnlyModelConfig,
 	'nnwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'novwiki' => $defaultRevertRiskOnlyModelConfig,
+	'nqowiki' => $defaultRevertRiskOnlyModelConfig,
+	'nrmwiki' => $defaultRevertRiskOnlyModelConfig,
+	'nsowiki' => $defaultRevertRiskOnlyModelConfig,
+	'nywiki' => $defaultRevertRiskOnlyModelConfig,
+	'olowiki' => $defaultRevertRiskOnlyModelConfig,
+	'omwiki' => $defaultRevertRiskOnlyModelConfig,
+	'oswiki' => $defaultRevertRiskOnlyModelConfig,
+	'pagwiki' => $defaultRevertRiskOnlyModelConfig,
+	'pamwiki' => $defaultRevertRiskOnlyModelConfig,
+	'papwiki' => $defaultRevertRiskOnlyModelConfig,
 	'pawiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'pcdwiki' => $defaultRevertRiskOnlyModelConfig,
+	'pdcwiki' => $defaultRevertRiskOnlyModelConfig,
+	'pflwiki' => $defaultRevertRiskOnlyModelConfig,
+	'pihwiki' => $defaultRevertRiskOnlyModelConfig,
+	'piwiki' => $defaultRevertRiskOnlyModelConfig,
+	'pmswiki' => $defaultRevertRiskOnlyModelConfig,
+	'pntwiki' => $defaultRevertRiskOnlyModelConfig,
+	'quwiki' => $defaultRevertRiskOnlyModelConfig,
+	'rmwiki' => $defaultRevertRiskOnlyModelConfig,
+	'rmywiki' => $defaultRevertRiskOnlyModelConfig,
+	'rnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'roa_rupwiki' => $defaultRevertRiskOnlyModelConfig,
+	'roa_tarawiki' => $defaultRevertRiskOnlyModelConfig,
+	'ruewiki' => $defaultRevertRiskOnlyModelConfig,
+	'rwwiki' => $defaultRevertRiskOnlyModelConfig,
+	'sawiki' => $defaultRevertRiskOnlyModelConfig,
+	'scnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'scwiki' => $defaultRevertRiskOnlyModelConfig,
+	'sewiki' => $defaultRevertRiskOnlyModelConfig,
+	'sgwiki' => $defaultRevertRiskOnlyModelConfig,
+	'shnwiki' => $defaultRevertRiskOnlyModelConfig,
 	'simplewiki' => [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'smwiki' => $defaultRevertRiskOnlyModelConfig,
+	'sowiki' => $defaultRevertRiskOnlyModelConfig,
+	'srnwiki' => $defaultRevertRiskOnlyModelConfig,
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for srwiki (T197012)
@@ -189,11 +335,18 @@ return [
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
+	'sswiki' => $defaultRevertRiskOnlyModelConfig,
+	'stqwiki' => $defaultRevertRiskOnlyModelConfig,
+	'stwiki' => $defaultRevertRiskOnlyModelConfig,
+	'suwiki' => $defaultRevertRiskOnlyModelConfig,
 	'swwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'szlwiki' => $defaultRevertRiskOnlyModelConfig,
+	'szywiki' => $defaultRevertRiskOnlyModelConfig,
+	'tcywiki' => $defaultRevertRiskOnlyModelConfig,
 	'test2wiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
@@ -212,6 +365,7 @@ return [
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true, 'keepForever' => true, ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'sources' => [ 'mw.new' ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
 	],
+	'tetwiki' => $defaultRevertRiskOnlyModelConfig,
 	'tewiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
@@ -222,16 +376,38 @@ return [
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'tiwiki' => $defaultRevertRiskOnlyModelConfig,
+	'tkwiki' => $defaultRevertRiskOnlyModelConfig,
 	'tlwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'tnwiki' => $defaultRevertRiskOnlyModelConfig,
+	'towiki' => $defaultRevertRiskOnlyModelConfig,
+	'tpiwiki' => $defaultRevertRiskOnlyModelConfig,
 	'trwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'revertrisklanguageagnostic' => [ 'enabled' => true, 'namespaces' => [ 0 ] ],
 	],
+	'tswiki' => $defaultRevertRiskOnlyModelConfig,
+	'tumwiki' => $defaultRevertRiskOnlyModelConfig,
+	'twwiki' => $defaultRevertRiskOnlyModelConfig,
+	'tyvwiki' => $defaultRevertRiskOnlyModelConfig,
+	'tywiki' => $defaultRevertRiskOnlyModelConfig,
+	'udmwiki' => $defaultRevertRiskOnlyModelConfig,
+	'ugwiki' => $defaultRevertRiskOnlyModelConfig,
+	'vewiki' => $defaultRevertRiskOnlyModelConfig,
+	'vlswiki' => $defaultRevertRiskOnlyModelConfig,
+	'wowiki' => $defaultRevertRiskOnlyModelConfig,
+	'xalwiki' => $defaultRevertRiskOnlyModelConfig,
+	'xhwiki' => $defaultRevertRiskOnlyModelConfig,
+	'xmfwiki' => $defaultRevertRiskOnlyModelConfig,
+	'yowiki' => $defaultRevertRiskOnlyModelConfig,
+	'zawiki' => $defaultRevertRiskOnlyModelConfig,
+	'zeawiki' => $defaultRevertRiskOnlyModelConfig,
+	'zh_min_nanwiki' => $defaultRevertRiskOnlyModelConfig,
 	'zhwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
@@ -239,6 +415,7 @@ return [
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'sources' => [ 'mw.new' ] ],
 	],
+	'zuwiki' => $defaultRevertRiskOnlyModelConfig,
 ],
 'wgOresExcludeBots' => [
 	'default' => true,
@@ -247,6 +424,12 @@ return [
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
+	'acewiki' => $defaultRevertRiskThreshold,
+	'adywiki' => $defaultRevertRiskThreshold,
+	'akwiki' => $defaultRevertRiskThreshold,
+	'amwiki' => $defaultRevertRiskThreshold,
+	'angwiki' => $defaultRevertRiskThreshold,
+	'arcwiki' => $defaultRevertRiskThreshold,
 	'arwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/arwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.997''"
@@ -264,21 +447,30 @@ return [
 			'revertrisk' => [ 'min' => 0.736, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'atjwiki' => $defaultRevertRiskThreshold,
+	'avwiki' => $defaultRevertRiskThreshold,
+	'aywiki' => $defaultRevertRiskThreshold,
 	'azwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.536, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'bat_smgwiki' => $defaultRevertRiskThreshold,
 	'bewiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.572, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'biwiki' => $defaultRevertRiskThreshold,
+	'bjnwiki' => $defaultRevertRiskThreshold,
+	'bmwiki' => $defaultRevertRiskThreshold,
 	'bnwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.647, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 		],
 	],
+	'bowiki' => $defaultRevertRiskThreshold,
+	'bpywiki' => $defaultRevertRiskThreshold,
 	'bswiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/bswiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -301,6 +493,8 @@ return [
 			'verylikelybad' => false, // 'maximum recall @ precision >= 0.80'
 		],
 	],
+	'bugwiki' => $defaultRevertRiskThreshold,
+	'bxrwiki' => $defaultRevertRiskThreshold,
 	'cawiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/cawiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -323,6 +517,15 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.081 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'cbk_zamwiki' => $defaultRevertRiskThreshold,
+	'cdowiki' => $defaultRevertRiskThreshold,
+	'chrwiki' => $defaultRevertRiskThreshold,
+	'chwiki' => $defaultRevertRiskThreshold,
+	'chywiki' => $defaultRevertRiskThreshold,
+	'cowiki' => $defaultRevertRiskThreshold,
+	'crhwiki' => $defaultRevertRiskThreshold,
+	'crwiki' => $defaultRevertRiskThreshold,
+	'csbwiki' => $defaultRevertRiskThreshold,
 	'cswiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/cswiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -345,11 +548,18 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.118 ], // 'maximum recall @ precision >= 0.98'
 		],
 	],
+	'cuwiki' => $defaultRevertRiskThreshold,
 	'cywiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.111, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'dinwiki' => $defaultRevertRiskThreshold,
+	'dsbwiki' => $defaultRevertRiskThreshold,
+	'dvwiki' => $defaultRevertRiskThreshold,
+	'dzwiki' => $defaultRevertRiskThreshold,
+	'eewiki' => $defaultRevertRiskThreshold,
+	'emlwiki' => $defaultRevertRiskThreshold,
 	'enwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/enwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -459,6 +669,7 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.258 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'extwiki' => $defaultRevertRiskThreshold,
 	'fawiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/fawiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -480,6 +691,8 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.102 ], // 'maximum recall @ precision >= 0.75'
 		],
 	],
+	'ffwiki' => $defaultRevertRiskThreshold,
+	'fiu_vrowiki' => $defaultRevertRiskThreshold,
 	'fiwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/fiwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -502,6 +715,9 @@ return [
 			'verylikelybad' => false, // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'fjwiki' => $defaultRevertRiskThreshold,
+	'fowiki' => $defaultRevertRiskThreshold,
+	'frpwiki' => $defaultRevertRiskThreshold,
 	'frwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/frwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -524,11 +740,23 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.112 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'furwiki' => $defaultRevertRiskThreshold,
+	'gagwiki' => $defaultRevertRiskThreshold,
+	'ganwiki' => $defaultRevertRiskThreshold,
+	'gcrwiki' => $defaultRevertRiskThreshold,
+	'gdwiki' => $defaultRevertRiskThreshold,
+	'glkwiki' => $defaultRevertRiskThreshold,
+	'gnwiki' => $defaultRevertRiskThreshold,
+	'gomwiki' => $defaultRevertRiskThreshold,
+	'gotwiki' => $defaultRevertRiskThreshold,
+	'gvwiki' => $defaultRevertRiskThreshold,
+	'hakwiki' => $defaultRevertRiskThreshold,
 	'hawiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.736, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 		],
 	],
+	'hawwiki' => $defaultRevertRiskThreshold,
 	'hewiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/hewiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -549,6 +777,8 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.001 ], // 'maximum recall @ precision >= 0.99'
 		],
 	],
+	'hifwiki' => $defaultRevertRiskThreshold,
+	'hsbwiki' => $defaultRevertRiskThreshold,
 	'huwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/huwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.999''"
@@ -576,6 +806,11 @@ return [
 			'revertrisk' => [ 'min' => 0.845, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'iewiki' => $defaultRevertRiskThreshold,
+	'igwiki' => $defaultRevertRiskThreshold,
+	'ikwiki' => $defaultRevertRiskThreshold,
+	'inhwiki' => $defaultRevertRiskThreshold,
+	'iowiki' => $defaultRevertRiskThreshold,
 	'iswiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.889, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
@@ -603,11 +838,22 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.163 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'iuwiki' => $defaultRevertRiskThreshold,
+	'jamwiki' => $defaultRevertRiskThreshold,
+	'jbowiki' => $defaultRevertRiskThreshold,
+	'kaawiki' => $defaultRevertRiskThreshold,
+	'kabwiki' => $defaultRevertRiskThreshold,
+	'kbdwiki' => $defaultRevertRiskThreshold,
+	'kbpwiki' => $defaultRevertRiskThreshold,
+	'kgwiki' => $defaultRevertRiskThreshold,
+	'kiwiki' => $defaultRevertRiskThreshold,
 	'kkwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.605, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'klwiki' => $defaultRevertRiskThreshold,
+	'koiwiki' => $defaultRevertRiskThreshold,
 	'kowiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/kowiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -629,11 +875,26 @@ return [
 			'verylikelybad' => false,
 		],
 	],
+	'krcwiki' => $defaultRevertRiskThreshold,
+	'kshwiki' => $defaultRevertRiskThreshold,
+	'kswiki' => $defaultRevertRiskThreshold,
+	'kvwiki' => $defaultRevertRiskThreshold,
+	'kwwiki' => $defaultRevertRiskThreshold,
+	'ladwiki' => $defaultRevertRiskThreshold,
 	'lawiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.634, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'lbewiki' => $defaultRevertRiskThreshold,
+	'lezwiki' => $defaultRevertRiskThreshold,
+	'lfnwiki' => $defaultRevertRiskThreshold,
+	'lgwiki' => $defaultRevertRiskThreshold,
+	'liwiki' => $defaultRevertRiskThreshold,
+	'lldwiki' => $defaultRevertRiskThreshold,
+	'lnwiki' => $defaultRevertRiskThreshold,
+	'lowiki' => $defaultRevertRiskThreshold,
+	'ltgwiki' => $defaultRevertRiskThreshold,
 	'lvwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/lvwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -656,6 +917,11 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.007 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'maiwiki' => $defaultRevertRiskThreshold,
+	'map_bmswiki' => $defaultRevertRiskThreshold,
+	'mdfwiki' => $defaultRevertRiskThreshold,
+	'mhrwiki' => $defaultRevertRiskThreshold,
+	'miwiki' => $defaultRevertRiskThreshold,
 	'mkwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.505, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
@@ -666,16 +932,22 @@ return [
 			'revertrisk' => [ 'min' => 0.936, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'mnwwiki' => $defaultRevertRiskThreshold,
+	'mrjwiki' => $defaultRevertRiskThreshold,
 	'mrwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.867, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
-	'nnwiki' => [
-		'revertrisklanguageagnostic' => [
-			'revertrisk' => [ 'min' => 0.416, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
-			],
-	],
+	'mtwiki' => $defaultRevertRiskThreshold,
+	'mwlwiki' => $defaultRevertRiskThreshold,
+	'myvwiki' => $defaultRevertRiskThreshold,
+	'mznwiki' => $defaultRevertRiskThreshold,
+	'nahwiki' => $defaultRevertRiskThreshold,
+	'napwiki' => $defaultRevertRiskThreshold,
+	'nawiki' => $defaultRevertRiskThreshold,
+	'nds_nlwiki' => $defaultRevertRiskThreshold,
+	'newwiki' => $defaultRevertRiskThreshold,
 	'nlwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/nlwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -698,11 +970,32 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'nnwiki' => [
+		'revertrisklanguageagnostic' => [
+			'revertrisk' => [ 'min' => 0.416, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
+			],
+	],
+	'novwiki' => $defaultRevertRiskThreshold,
+	'nqowiki' => $defaultRevertRiskThreshold,
+	'nrmwiki' => $defaultRevertRiskThreshold,
+	'nsowiki' => $defaultRevertRiskThreshold,
+	'nywiki' => $defaultRevertRiskThreshold,
+	'olowiki' => $defaultRevertRiskThreshold,
+	'omwiki' => $defaultRevertRiskThreshold,
+	'oswiki' => $defaultRevertRiskThreshold,
+	'pagwiki' => $defaultRevertRiskThreshold,
+	'pamwiki' => $defaultRevertRiskThreshold,
+	'papwiki' => $defaultRevertRiskThreshold,
 	'pawiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.545, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'pcdwiki' => $defaultRevertRiskThreshold,
+	'pdcwiki' => $defaultRevertRiskThreshold,
+	'pflwiki' => $defaultRevertRiskThreshold,
+	'pihwiki' => $defaultRevertRiskThreshold,
+	'piwiki' => $defaultRevertRiskThreshold,
 	'plwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/plwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -723,6 +1016,8 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.228 ], // 'maximum recall @ precision >= 0.98'
 		],
 	],
+	'pmswiki' => $defaultRevertRiskThreshold,
+	'pntwiki' => $defaultRevertRiskThreshold,
 	'ptwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/ptwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -745,6 +1040,9 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.071 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'quwiki' => $defaultRevertRiskThreshold,
+	'rmwiki' => $defaultRevertRiskThreshold,
+	'rmywiki' => $defaultRevertRiskThreshold,
 	'rowiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/rowiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -768,6 +1066,10 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.07 ], // 'maximum recall @ precision >= 0.75'
 		],
 	],
+	'rnwiki' => $defaultRevertRiskThreshold,
+	'roa_rupwiki' => $defaultRevertRiskThreshold,
+	'roa_tarawiki' => $defaultRevertRiskThreshold,
+	'ruewiki' => $defaultRevertRiskThreshold,
 	'ruwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/ruwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -790,6 +1092,13 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.018 ], // 'maximum recall @ precision >= 0.75'
 		],
 	],
+	'rwwiki' => $defaultRevertRiskThreshold,
+	'sawiki' => $defaultRevertRiskThreshold,
+	'scnwiki' => $defaultRevertRiskThreshold,
+	'scwiki' => $defaultRevertRiskThreshold,
+	'sewiki' => $defaultRevertRiskThreshold,
+	'sgwiki' => $defaultRevertRiskThreshold,
+	'shnwiki' => $defaultRevertRiskThreshold,
 	'simplewiki' => [
 		// Same as enwiki
 		'damaging' => [
@@ -816,6 +1125,8 @@ return [
 			'revertrisk' => [ 'min' => 0.906, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 		],
 	],
+	'smwiki' => $defaultRevertRiskThreshold,
+	'sowiki' => $defaultRevertRiskThreshold,
 	'sqwiki' => [
 		'damaging' => [
 			// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
@@ -840,6 +1151,7 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.104 ], // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'srnwiki' => $defaultRevertRiskThreshold,
 	'srwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/srwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.999''"
@@ -853,6 +1165,10 @@ return [
 		],
 		// goodfaith is disabled for srwiki (T197012)
 	],
+	'sswiki' => $defaultRevertRiskThreshold,
+	'stqwiki' => $defaultRevertRiskThreshold,
+	'stwiki' => $defaultRevertRiskThreshold,
+	'suwiki' => $defaultRevertRiskThreshold,
 	'svwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/svwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -880,6 +1196,9 @@ return [
 			'revertrisk' => [ 'min' => 0.748, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'szlwiki' => $defaultRevertRiskThreshold,
+	'szywiki' => $defaultRevertRiskThreshold,
+	'tcywiki' => $defaultRevertRiskThreshold,
 	'testwiki' => [
 		// Same as enwiki
 		'damaging' => [
@@ -895,6 +1214,7 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.065 ],
 		],
 	],
+	'tetwiki' => $defaultRevertRiskThreshold,
 	'tewiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.367, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
@@ -905,11 +1225,16 @@ return [
 			'revertrisk' => [ 'min' => 0.708, 'max' => 1 ] // based on desired false positive rate of < 15% T408607
 		],
 	],
+	'tiwiki' => $defaultRevertRiskThreshold,
+	'tkwiki' => $defaultRevertRiskThreshold,
 	'tlwiki' => [
 		'revertrisklanguageagnostic' => [
 			'revertrisk' => [ 'min' => 0.607, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 			],
 	],
+	'tnwiki' => $defaultRevertRiskThreshold,
+	'towiki' => $defaultRevertRiskThreshold,
+	'tpiwiki' => $defaultRevertRiskThreshold,
 	'trwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/trwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -935,6 +1260,13 @@ return [
 			'revertrisk' => [ 'min' => 0.608, 'max' => 1 ] // based on desired false positive rate of < 15% T392148
 		],
 	],
+	'tswiki' => $defaultRevertRiskThreshold,
+	'tumwiki' => $defaultRevertRiskThreshold,
+	'twwiki' => $defaultRevertRiskThreshold,
+	'tyvwiki' => $defaultRevertRiskThreshold,
+	'tywiki' => $defaultRevertRiskThreshold,
+	'udmwiki' => $defaultRevertRiskThreshold,
+	'ugwiki' => $defaultRevertRiskThreshold,
 	'ukwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/ukwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.997''"
@@ -955,6 +1287,8 @@ return [
 			'verylikelybad' => false,
 		],
 	],
+	'vewiki' => $defaultRevertRiskThreshold,
+	'vlswiki' => $defaultRevertRiskThreshold,
 	'wikidatawiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/wikidatawiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.995''"
@@ -975,6 +1309,14 @@ return [
 			'verylikelybad' => false, // 'maximum recall @ precision >= 0.9'
 		],
 	],
+	'wowiki' => $defaultRevertRiskThreshold,
+	'xalwiki' => $defaultRevertRiskThreshold,
+	'xhwiki' => $defaultRevertRiskThreshold,
+	'xmfwiki' => $defaultRevertRiskThreshold,
+	'yowiki' => $defaultRevertRiskThreshold,
+	'zawiki' => $defaultRevertRiskThreshold,
+	'zeawiki' => $defaultRevertRiskThreshold,
+	'zh_min_nanwiki' => $defaultRevertRiskThreshold,
 	'zhwiki' => [
 		'damaging' => [
 			// https://ores.wikimedia.org/v3/scores/zhwiki?models=damaging&model_info=statistics.thresholds.false."''maximum recall @ precision >= 0.99''"
@@ -996,6 +1338,7 @@ return [
 			'verylikelybad' => [ 'min' => 0, 'max' => 0.382 ], // 'maximum recall @ precision >= 0.75'
 		],
 	],
+	'zuwiki' => $defaultRevertRiskThreshold,
 ],
 'wmgOresDefaultSensitivityLevel' => [
 	'default' => 'soft', // likelybad
