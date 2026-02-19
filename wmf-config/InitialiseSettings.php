@@ -6673,16 +6673,6 @@ return [
 	'wikipedia' => false,
 	'wikibooks' => false,
 	'wikiversity' => false,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => false,
-	'arbcom_dewiki' => false,
-	'arbcom_enwiki' => false,
-	'arbcom_fiwiki' => false,
-	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false,
-	'sysop_itwiki' => false,
-	'wg_enwiki' => false,
 ],
 
 // ExternalGuidance extension initiated edit tags in VE (T216123)
@@ -6695,31 +6685,11 @@ return [
 'wgVisualEditorEditCheckTagging' => [
 	'default' => false,
 	'wikipedia' => true,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'sysop_itwiki' => true,
-	'wg_enwiki' => true,
 ],
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
 	'wikipedia' => true,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'sysop_itwiki' => true,
-	'wg_enwiki' => true,
 ],
 
 'wgVisualEditorEditCheckABTest' => [
