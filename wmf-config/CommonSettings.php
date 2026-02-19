@@ -1454,8 +1454,7 @@ if ( $wmgUseProofreadPage ) {
 	// as well as T352162
 	$wgVectorMaxWidthOptions['exclude']['namespaces'][] = $wgProofreadPageNamespaceIds['index'];
 	// Allow proofread page extension to use parsoid when parsoid render is requested
-	// TODO: Temporarily disabling this until T406088 gets resolved
-	$wgProofreadPageUseParsoid = false;
+	$wgProofreadPageUseParsoid = true;
 }
 
 if ( $wmgUseLabeledSectionTransclusion ) {
