@@ -4267,6 +4267,7 @@ if ( $wmgUseOATHAuth ) {
 	];
 
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
+	$wgGroupPermissions['sysop']['oathauth-recover-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 
