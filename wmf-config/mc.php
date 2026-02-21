@@ -5,7 +5,7 @@
 #
 # Effective load order:
 # - multiversion
-# - mediawiki/DefaultSettings.php
+# - mediawiki/config-schema.php
 # - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/mc.php [THIS FILE]

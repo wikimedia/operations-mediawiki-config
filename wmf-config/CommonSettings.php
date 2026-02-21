@@ -9,7 +9,7 @@
 #
 # Effective load order:
 # - multiversion
-# - mediawiki/DefaultSettings.php
+# - mediawiki/config-schema.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/CommonSettings.php [THIS FILE]
 #
@@ -18,7 +18,7 @@
 # - mediawiki/index.php (or other entry point)
 # - mediawiki/WebStart.php
 # - mediawiki/Setup.php
-# - mediawiki/DefaultSettings.php
+# - mediawiki/config-schema.php
 # - mediawiki/LocalSettings.php
 #   `-- wmf-config/CommonSettings.php [THIS FILE]
 #       |-- wmf-config/*Services.php
