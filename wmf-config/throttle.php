@@ -45,3 +45,12 @@ $wmgThrottlingExceptions[] = [
 	'dbname' => [ 'enwiki', 'nrwiki', 'sswiki', 'vewiki', 'tnwiki', 'tswiki', 'zuwiki', 'xhwiki', 'nsowiki', 'afwiki', 'stwiki' ],
 	'value'  => 100,
 ];
+
+// T417830 - eswiki, commonswiki, wikidata editathon
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-02-25T08:00 -3:00',
+	'to'     => '2026-02-27T17:00 -3:00',
+	'IP'     => '170.210.70.20',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 100,
+];
