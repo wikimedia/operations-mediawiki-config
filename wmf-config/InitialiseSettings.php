@@ -11551,6 +11551,32 @@ return [
 				],
 			],
 		],
+		[
+			// T417829
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'reader-comparative-2-en',
+			'coverage' => 0, # 0.02,
+			'audience' => [
+				'anons' => true,
+			],
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'reader-comparative-2-en-survey-privacy-policy',
+			'questions' => [
+				[
+					'name' => 'Survey single external question',
+					'question' => 'reader-comparative-2-en-survey-question',
+					'description' => 'reader-comparative-2-en-survey-description',
+					'link' => 'reader-comparative-2-en-survey-link',
+					'instanceTokenParameterName' => 'QS',
+					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
+					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+				],
+			],
+		],
 	],
 	'eswiki' => [
 		[
