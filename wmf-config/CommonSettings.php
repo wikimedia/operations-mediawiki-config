@@ -4643,6 +4643,7 @@ if ( $wmgUseIPInfo ) {
 		$wgGroupPermissions['checkuser']['ipinfo'] = true;
 		$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
 		$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
+		$wgGroupPermissions['checkuser']['ipinfo-view-arbitrary-ip'] = true;
 	}
 
 	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
