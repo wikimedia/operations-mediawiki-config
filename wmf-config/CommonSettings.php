@@ -4780,16 +4780,20 @@ if ( $wmgUseGrowthExperiments ) {
 				'extraTags' => [ 'mentor list change' ],
 			],
 		],
-		'validator' => $wmgGEMentorListJsonSchemaEnabled ? [
-			'type' => 'jsonschema',
-			'args' => [ 'GrowthExperiments\Config\Schemas\MentorListSchema' ],
-		] : [
+		'validator' => [
 			'type' => 'GrowthMentorship',
 		],
 		'options' => [
 			'excludeFromUI' => true,
 		],
 	];
+	if ( $wmgGEMentorListJsonSchemaEnabled ) {
+		$wgCommunityConfigurationProviders['GrowthMentorList']['validator'] = [
+			'type' => 'jsonschema',
+			'args' => [ 'GrowthExperiments\Config\Schemas\MentorListSchema' ],
+		];
+		$wgCommunityConfigurationProviders['GrowthMentorList']['options']['readValidationLogLevel'] = 'warning';
+	}
 
 	// put if conditions for $wmgGEActiveExperiment here
 }
