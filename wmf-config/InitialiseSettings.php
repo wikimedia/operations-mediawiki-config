@@ -6752,7 +6752,16 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 
+	'alswiki' => true, // T418209
 	'dewiki' => true, // T398669
+	'dewikivoyage' => true, // T418209
+	'fiu_vrowiki' => true, // T418209
+	'frrwiki' => true, // T418209
+	'gpewiki' => true, // T418209
+	'kncwiki' => true, // T418209
+	'plwiki' => true, // T418209
+	'rmwiki' => true, // T418209
+	'svwiki' => true, // T418209
 ],
 
 'wgCiteResponsiveReferences' => [
