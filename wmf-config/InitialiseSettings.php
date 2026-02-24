@@ -12169,7 +12169,7 @@ return [
 			'name' => 'Wikimedia REST APIs'
 		],
 		'wmf-restbase-global' => [
-			'url' => 'https://www.wikimedia.org/api/rest_v1/?spec',
+			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Math API'
 		]
 	]
