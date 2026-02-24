@@ -21,6 +21,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 import argparse
 import subprocess
 import sys
+import tempfile
 import textwrap
 import os
 from math import ceil
@@ -111,18 +112,9 @@ def validate(data: dict):
                         raise RuntimeError(f"Error: {filename} doesn't exist!")
 
 
-def replace_thumb_size(url: str, old: str, new: str, *, old2=None):
-    url = url.replace(old, new)
-    if old2:
-        url = url.replace(old2, new)
-    if new not in url:
-        raise RuntimeError(f"url {url} does not have expected size {new}")
-    return url
-
-
 def download(commons: str, name: str):
     # Check dependencies first
-    for dep in ["pngquant", "zopflipng"]:
+    for dep in ["pngquant", "zopflipng", "rsvg-convert"]:
         try:
             subprocess.check_output([dep, "--help"])
         except subprocess.CalledProcessError:
@@ -139,63 +131,71 @@ def download(commons: str, name: str):
             "action": "query",
             "prop": "imageinfo",
             "titles": commons,
-            "iiprop": "url",
+            "iiprop": "url|dimensions",
             "iilimit": "1",
-            "iiurlwidth": "135",
             "format": "json",
             "formatversion": "2",
         }
     )
     req.raise_for_status()
     info = req.json()["query"]["pages"][0]["imageinfo"][0]
-    if info["thumbheight"] > 155:
-        raise RuntimeError(f"{commons}: logo is taller than 155px, please resize it")
-    thumburl = info["thumburl"]
-    # Modify the URLs to have the pixel sizes we want even if they aren't in $wgThumbnailSizes
-    # since logos are generated once and downloaded many times the benefit of downloading a
-    # smaller file on every view forevermore exceeds the cost of generating a nonstanard
-    # thumbnail whenever a logo for a new wiki is changed.
-    urls = {
-        f"{name}.png": replace_thumb_size(thumburl, "250px", "135px"),
-        f"{name}-1.5x.png": replace_thumb_size(
-            info["responsiveUrls"].get("1.5", thumburl),
-            "250px", "202px", old2="203px"
-        ),
-        f"{name}-2x.png": replace_thumb_size(
-            info["responsiveUrls"].get("2", thumburl),
-            "330px", "270px"
-        )
-    }
-    for filename, url in urls.items():
-        req = s.get(url)
+    target_width = 135
+    height = info["height"] * target_width / info['width']
+    if height > 155:
+        raise RuntimeError(f"{commons}: logo aspect ratio is too skewed. It should be"
+                           f" less than 155px tall when resized to {target_width} px wide, "
+                           f"but is {height}px tall.")
+    with tempfile.NamedTemporaryFile() as svg_file:
+        req = s.get(info["url"])
         req.raise_for_status()
-        (project_logos / filename).write_bytes(req.content)
-        print(f"Saved {filename}")
-        try:
-            subprocess.check_call(
+        svg_file.write(req.content)
+        svg_file.flush()
+        paths = {
+            f"{name}.png": "135",
+            f"{name}-1.5x.png": "202",
+            f"{name}-2x.png": "270"
+        }
+        for filename, width in paths.items():
+            # Make a PNG file with rsvg
+            subprocess.run(
                 [
-                    "pngquant",
-                    "--skip-if-larger",
-                    "--speed",
-                    "3",
-                    "--quality",
-                    "80-100",
+                    "rsvg-convert",
+                    "-a",
+                    "-w",
+                    width,
+                    "-o",
                     filename,
-                    "--ext",
-                    ".png",
-                    "--force",
+                    svg_file.name
                 ],
+                check=True,
+                cwd=project_logos
+            )
+            print(f"Saved {filename}")
+            try:
+                subprocess.check_call(
+                    [
+                        "pngquant",
+                        "--skip-if-larger",
+                        "--speed",
+                        "3",
+                        "--quality",
+                        "80-100",
+                        filename,
+                        "--ext",
+                        ".png",
+                        "--force",
+                    ],
+                    cwd=project_logos,
+                )
+            except subprocess.CalledProcessError as e:
+                if e.returncode == 98:
+                    print("pngquant: result was larger than original, skipping")
+                else:
+                    raise e
+            subprocess.check_call(
+                ["zopflipng", "--lossy_transparent", "-m", "-y", filename, filename],
                 cwd=project_logos,
             )
-        except subprocess.CalledProcessError as e:
-            if e.returncode == 98:
-                print("pngquant: result was larger than original, skipping")
-            else:
-                raise e
-        subprocess.check_call(
-            ["zopflipng", "--lossy_transparent", "-m", "-y", filename, filename],
-            cwd=project_logos,
-        )
 
 
 def download_svg(commons: str, name: str, svg_type: str, data: dict, variant=None):
