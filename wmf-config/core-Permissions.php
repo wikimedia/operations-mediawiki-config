@@ -5076,12 +5076,11 @@ return [
 		]
 	],
 	'+zhwiki' => [
-		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [
 			'flood',
 			'arbcom', // T374455
 		],
-		'event-organizer' => [ 'confirmed' ], // T403350
+		'event-organizer' => [ 'confirmed', 'eventparticipant' ], // T403350, T418089
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt' ], // T357991
 		'sysop' => [
 			'abusefilter-helper', // T344398
