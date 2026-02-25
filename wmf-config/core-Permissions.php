@@ -6349,7 +6349,7 @@ return [
 		'sysop' => [ 'accountcreator', 'rollbacker', ], // T249487
 	],
 	'+zhwiki' => [
-		'accountcreator' => [ 'eventparticipant' ], // T198167
+		'event-organizer' => [ 'eventparticipant' ], // T418089
 		'bureaucrat' => [
 			'flood',
 			'arbcom', // T374455
@@ -6510,14 +6510,13 @@ return [
 		'rollbacker' => [ 'rollbacker' ], // T137532
 		'autoreviewer' => [ 'autoreviewer' ], // T137532
 		'flood' => [ 'flood' ], // T171379
-		'accountcreator' => [ 'accountcreator' ], // T194871
 		'filemover' => [ 'filemover' ], // T195247
 		'transwiki' => [ 'transwiki' ], // T250972
 		'ipblock-exempt-grantor' => [ 'ipblock-exempt-grantor' ], // T357991
 		'templateeditor' => [ 'templateeditor' ], // T379500
 		'confirmed' => [ 'confirmed' ], // T379500
 		'abusefilter-helper' => [ 'abusefilter-helper' ], // T379500
-		'event-organizer' => [ 'event-organizer' ], // T376061
+		'event-organizer' => [ 'event-organizer', 'eventparticipant' ], // T376061, T418089
 		'abusefilter' => [ 'abusefilter' ], // T386879
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
