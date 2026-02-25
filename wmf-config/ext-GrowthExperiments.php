@@ -785,6 +785,7 @@ return [
 
 'wmgGEMentorListJsonSchemaEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGEHomepageDefaultVariant' => [
