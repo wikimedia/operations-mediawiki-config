@@ -8888,11 +8888,6 @@ return [
 	'azwiki' => true,
 ],
 
-'wgReportIncidentUseV2NonEmergencyFlow' => [
-	'default' => true,
-	'testwiki' => false,
-],
-
 'wgReportIncidentEnableInstrumentation' => [
 	'default' => true,
 ],
