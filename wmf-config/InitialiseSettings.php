@@ -11575,7 +11575,7 @@ return [
 			'enabled' => true,
 			'type' => 'external',
 			'name' => 'reader-comparative-2-en',
-			'coverage' => 0, # 0.02,
+			'coverage' => 0.02,
 			'audience' => [
 				'anons' => true,
 			],
