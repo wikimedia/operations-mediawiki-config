@@ -4020,6 +4020,21 @@ return [
 'wmgUsePersonalDashboard' => [
 	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
 	'testwiki' => true, // T403982
+	// T417665
+	'idwiki' => true,
+	'trwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
+],
+
+'wgPersonalDashboardBlueDot' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgPersonalDashboardUserMenu' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wmgUsePhonos' => [
