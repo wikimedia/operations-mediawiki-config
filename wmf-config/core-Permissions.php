@@ -6515,7 +6515,7 @@ return [
 		'templateeditor' => [ 'templateeditor' ], // T379500
 		'confirmed' => [ 'confirmed' ], // T379500
 		'abusefilter-helper' => [ 'abusefilter-helper' ], // T379500
-		'event-organizer' => [ 'event-organizer', 'eventparticipant' ], // T376061, T418089
+		'event-organizer' => [ 'event-organizer' ], // T376061
 		'abusefilter' => [ 'abusefilter' ], // T386879
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
