@@ -780,7 +780,7 @@ return [
 ],
 
 'wgGEMentorshipReassignMenteesBatchSize' => [
-	'default' => 5000,
+	'default' => 2000,
 ],
 
 'wmgGEMentorListJsonSchemaEnabled' => [
