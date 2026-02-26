@@ -9,5 +9,6 @@ wikmedia
 [^4][[:digit:]]{3}\.ulsfo\.wmnet
 [^5][[:digit:]]{3}\.eqsin\.wmnet
 [^6][[:digit:]]{3}\.drmrs\.wmnet
+[^7][[:digit:]]{3}\.magru\.wmnet
 enlgish
 wnmet
