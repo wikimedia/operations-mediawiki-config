@@ -12778,6 +12778,12 @@ return [
 	'default' => true,
 ],
 
+// T415007
+'wgJwtSessionCookieIssuer' => [
+	'default' => null,
+	'sul' => 'https://meta.wikimedia.org/',
+],
+
 // T377975 / T391064
 'wgTemplateDataEnableDiscovery' => [
 	'default' => true,
