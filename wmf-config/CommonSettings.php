@@ -2735,6 +2735,15 @@ if ( $wmgUseCentralNotice ) {
 wfLoadExtension( 'WikimediaCustomizations' );
 wfLoadExtension( 'WikimediaMessages' );
 
+if ( $wgDBname === 'testwiki' ) {
+	// TODO: remove this once audience/visibility designation work is done (T409517)
+	if ( is_file( "$wgExtensionDirectory/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json" ) ) {
+		$wgRestSandboxSpecs['attribution.v0-beta'] = [
+			'file' => "$wgExtensionDirectory/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json"
+		];
+	}
+}
+
 if ( $wgDBname === 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
