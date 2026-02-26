@@ -132,22 +132,6 @@ function wmfGetOverrideSettings() {
 			'testwiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/test',
 		],
 
-		'-wgThumbnailBuckets' => [
-			'default' => [ 256, 512, 1024, 2048, 4096 ],
-		],
-
-		'-wgThumbnailMinimumBucketDistance' => [
-			'default' => 32,
-		],
-
-		'-wgThumbnailStepsRatio' => [
-			'default' => 0.5,
-		],
-
-		'-wgThumbnailSteps' => [
-			'default' => [ 20, 40, 60, 120, 250, 330, 500, 960 ],
-		],
-
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
@@ -2157,11 +2141,6 @@ function wmfGetOverrideSettings() {
 		// T253271 Don't deploy Cirrus AB tests to beta
 		'wgCirrusSearchUserTesting' => [
 			'default' => [],
-		],
-
-		// T123582
-		'wgImagePreconnect' => [
-			'default' => true,
 		],
 
 		'wmgUseStopForumSpam' => [
