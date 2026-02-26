@@ -3309,6 +3309,8 @@ return [
 			'oathauth-enable' => true,
 			'abusefilter-access-protected-vars' => true, // T397788
 		],
+		// HACK for T14518: Entire group should be removed after solving global UserRights issue
+		'accountcreator' => [ 'noratelimit' => false ], // T418089
 		'autoconfirmed' => [
 			'flow-hide' => true, // T264489
 			'upload_by_url' => true, // T142991
