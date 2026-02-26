@@ -13,7 +13,9 @@ return [
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	'default' => [
+		'semantic' => 'semanticsearch-test',
+	],
 ],
 
 'wgCirrusSearchWriteClusters' => [

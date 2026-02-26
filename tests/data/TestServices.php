@@ -23,6 +23,7 @@ $wmgAllServices['unittest'] = [
 	'cloudelastic-chi' => [ [ 'host' => 'localhost' ] ],
 	'cloudelastic-psi' => [ [ 'host' => 'localhost' ] ],
 	'cloudelastic-omega' => [ [ 'host' => 'localhost' ] ],
+	'semanticsearch-test' => [ [ 'host' => 'localhost' ] ],
 	'ocg' => 'localhost',
 	'urldownloader' => 'localhost',
 	'parsoidcache' => 'localhost',

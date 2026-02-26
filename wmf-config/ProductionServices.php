@@ -136,6 +136,13 @@ $common = [
 			'port' => 6304,
 		]
 	],
+	'semanticsearch-test' => [
+		[ // WE3.1 test cluster only exists in eqiad.
+			'host' => 'opensearch-semantic-search.svc.eqiad.wmnet',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 30443,
+		]
+	],
 ];
 
 $services = [

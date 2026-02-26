@@ -12,8 +12,8 @@ class CirrusTest extends WgConfTestCase {
 		// This is transformed from 'local' to 'unittest', but if it was set
 		// to a specific cluster and not 'local' this fails.
 		// $this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
-		// (2 DCs + 1 cloudelastic + 1 dnsdisc) * 3 ES clusters per
-		$this->assertCount( 4 * 3, $config['wgCirrusSearchClusters'] );
+		// (2 DCs + 1 cloudelastic + 1 dnsdisc) * 3 ES clusters per + 1 semanticsearch-test
+		$this->assertCount( 4 * 3 + 1, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes only via SUP, cirrus must not send writes.
 		$this->assertCount( 0, $config['wgCirrusSearchWriteClusters']['default'] );
@@ -50,8 +50,8 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		// (2 DCs + 1 cloudelastic + 1 dnsdisc) * 3 ES clusters per
-		$this->assertCount( 4 * 3, $config['wgCirrusSearchClusters'] );
+		// (2 DCs + 1 cloudelastic + 1 dnsdisc) * 3 ES clusters per + semanticsearch-test
+		$this->assertCount( 4 * 3 + 1, $config['wgCirrusSearchClusters'] );
 		// dnsdisc is read only, only writable clusters should be listed
 		$this->assertCount( 3, $config['wgCirrusSearchShardCount'] );
 		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );

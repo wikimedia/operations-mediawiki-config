@@ -29,6 +29,8 @@ $wgCirrusSearchClusters = [
 	'eqiad-omega' => $wmgAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
 	'codfw-omega' => $wmgAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
 	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
+
+	'eqiad-semanticsearch' => $wmgLocalServices['semanticsearch-test'] + [ 'group' => 'semanticsearch', 'replica' => 'semanticsearch' ],
 ];
 
 if ( $wmgPrivateWiki ) {
@@ -55,3 +57,17 @@ $wgCirrusSearchShardCount = [
 // CirrusSearch internal user allowed to bypass cirrusbuilddoc PoolCounter protection (T401220)
 // (This user is declared in the private settings)
 $wgCirrusSearchStreamingUpdaterUsername = 'CirrusSearch Streaming Updater';
+
+$wgCirrusSearchDefaultSemanticProfile = 'default_semantic';
+$wgCirrusSearchFullTextQueryBuilderProfiles['default_semantic'] = [
+	'builder_class' => \CirrusSearch\Query\SemanticSearchQueryBuilder::class,
+	// prevent from being selected from api parameters like srqdprofile
+	'undocumented' => true,
+	'nested_field' => 'passage_chunk_embedding',
+	'vector_field' => 'knn',
+	'source_fields' => [ 'section', 'text' ],
+	'anchor_field' => 'section',
+	'snippet_field' => 'text',
+	'k' => 21,
+	'score_mode' => 'max',
+];
