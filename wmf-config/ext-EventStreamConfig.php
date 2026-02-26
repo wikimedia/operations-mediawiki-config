@@ -2599,14 +2599,13 @@ return [
 		],
 
 		// Declare version dev0 (staging testing) of
-		// mediawiki.page_html_content_change stream.
-		// This stream uses the mediawiki/page/change schema
-		// but includes HTML in the main content slot.
+		// mediawiki.page_html_content_change stream for now.
+		// It will be changed for a new schema when it's ready.
 		// It is produced by a streaming enrichment pipeline,
 		// (not via MediaWiki EventBus).
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'mediawiki.page_html_content_change.dev0' => [
-			'schema_title' => 'mediawiki/page/change',
+		'mediawiki.page_html_content_change.dev1' => [
+			'schema_title' => 'development/html_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
