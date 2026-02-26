@@ -783,10 +783,6 @@ return [
 	'default' => 2000,
 ],
 
-'wmgGEMentorListJsonSchemaEnabled' => [
-	'default' => true,
-],
-
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
 ],

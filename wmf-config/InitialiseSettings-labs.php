@@ -1402,9 +1402,6 @@ function wmfGetOverrideSettings() {
 		'-wgGEMentorshipReassignMenteesBatchSize' => [
 			'default' => 500,
 		],
-		'wmgGEMentorListJsonSchemaEnabled' => [
-			'default' => true,
-		],
 		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
 			'default' => true,
 			'enwiki' => false,

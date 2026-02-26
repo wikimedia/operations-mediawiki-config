@@ -4777,34 +4777,6 @@ if ( $wmgUseGrowthExperiments ) {
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 	$wgGEReviseToneServiceUrl = $wmgLocalServices['data-gateway'];
 
-	// Temporary code for T417422; can be removed once the task is completed
-	// NOTE: The only variable is the validator; however, CommunityConfiguration
-	// only merges wgCommunityConfigurationProviders with extension registration
-	// at the top level.
-	$wgCommunityConfigurationProviders['GrowthMentorList'] = [
-		'type' => 'GrowthMentorList',
-		'store' => [
-			'type' => 'wikipage',
-			'args' => [ 'MediaWiki:GrowthMentors.json' ],
-			'options' => [
-				'extraTags' => [ 'mentor list change' ],
-			],
-		],
-		'validator' => [
-			'type' => 'GrowthMentorship',
-		],
-		'options' => [
-			'excludeFromUI' => true,
-		],
-	];
-	if ( $wmgGEMentorListJsonSchemaEnabled ) {
-		$wgCommunityConfigurationProviders['GrowthMentorList']['validator'] = [
-			'type' => 'jsonschema',
-			'args' => [ 'GrowthExperiments\Config\Schemas\MentorListSchema' ],
-		];
-		$wgCommunityConfigurationProviders['GrowthMentorList']['options']['readValidationLogLevel'] = 'warning';
-	}
-
 	// TODO: remove this once audience/visibility designation work is done (T409517)
 	if ( is_file( "$wgExtensionDirectory/GrowthExperiments/includes/Rest/growthexperiments.v0.json" ) ) {
 		$wgRestSandboxSpecs['growthexperiments.v0'] = [
