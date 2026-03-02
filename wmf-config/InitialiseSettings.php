@@ -6744,15 +6744,28 @@ return [
 	'commonswiki' => false, // T364228; should hopefully be resolved by T351113
 ],
 
+# T414852
 'wgParserMigrationEnableQuickSurvey' => [
 	'default' => false,
-	# only on selected English-language wikis
+	# on selected English-language wikis (#1, 2, 9 & 14 in opt-outs)
 	'enwiki' => true,
 	'enwiktionary' => true,
 	'enwikivoyage' => true,
 	'metawiki' => true,
 	'simplewiki' => true,
 	'simplewiktionary' => true,
+	# on German wikis (#3 in opt-outs)
+	'dewiki' => true,
+	'dewiktionary' => true,
+	'dewikivoyage' => true,
+	# on French wikis (#5 in opt-outs)
+	'frwiki' => true,
+	'frwiktionary' => true,
+	'frwikivoyage' => true,
+	# on Polish wikis (#16 in opt-outs)
+	'plwiki' => true,
+	'plwiktionary' => true,
+	'plwikivoyage' => true,
 ],
 
 'wgParserMigrationEnableIndicator' => [
