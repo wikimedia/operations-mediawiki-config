@@ -2315,7 +2315,7 @@ return [
 		'HtmlOutputRendererHelper' => 'debug', // T356157
 		'ImageSuggestions' => 'info',
 		'IpReputation' => 'debug',
-		'IPInfo' => 'warning',
+		'IPInfo' => 'info',
 		'IPReputation' => 'warning',
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'Kartographer' => 'debug', // Temporary monitoring for T304813.
