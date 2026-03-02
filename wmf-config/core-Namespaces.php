@@ -1089,6 +1089,8 @@ return [
 	],
 	'+lawiki' => [
 		'Disputatio_Wikipedia' => NS_PROJECT_TALK,
+		'Draft' => 118, // T418706
+		'Draft_talk' => 119, // T418706
 	],
 	'+lawikisource' => [
 		'Author' => 102,
@@ -3105,6 +3107,8 @@ return [
 	'lawiki' => [
 		100 => 'Porta', // Portal
 		101 => 'Disputatio_Portae',
+		118 => 'Adumbratio', // T418706-Draft
+		119 => 'Disputatio_Adumbrationis', // T418706-Draft_talk
 	],
 	'liwiki' => [
 		100 => 'Portaol', // Portal
@@ -5200,6 +5204,10 @@ return [
 	'kywiki' => [
 		118 => 'noindex,nofollow', // draft - T385593
 		119 => 'noindex,nofollow', // draft talk - T385593
+	],
+	'lawiki' => [
+		118 => 'noindex,nofollow', // Draft - T418706
+		119 => 'noindex,nofollow', // Draft_talk - T418706
 	],
 	'mlwiki' => [ // Draft - T362653
 		118 => 'noindex,nofollow',
