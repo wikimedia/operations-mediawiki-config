@@ -8539,10 +8539,8 @@ return [
 // n.b. If setting this to `false` for a wiki, please also update the
 // relevant wiki entry to `true` in `wmgDisableIPMasking`
 'wmgEnableIPMasking' => [
-	// T348895 T371116 T378334 T378336 T396464 T396465 T397940 T400672 T402181
+	// T348895 T371116 T378334 T378336 T396464 T396465 T397940 T400672 T402181 T413771
 	'default' => true,
-	// T402181#11102928
-	'tempaccounts_disabled' => false,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.

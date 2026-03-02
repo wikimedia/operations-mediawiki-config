@@ -84,7 +84,6 @@ class WmfConfig {
 		'ores',
 		'sul',
 		'wikilove',
-		'tempaccounts_disabled',
 		'checkuser-suggested-investigations',
 		'automoderator-revertrisk-multilingual',
 		'abusefilter-disabled',
