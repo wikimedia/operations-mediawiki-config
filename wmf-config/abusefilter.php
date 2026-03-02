@@ -113,6 +113,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
 		break;
+	case 'dewiki':
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T418815
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T418815
+		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T418815
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;

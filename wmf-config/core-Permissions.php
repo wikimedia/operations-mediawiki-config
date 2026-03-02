@@ -703,6 +703,7 @@ return [
 			'autoreview' => true,
 			'noratelimit' => true,
 		],
+		'abusefilter' => [ 'abusefilter-access-protected-vars' => true ], // T418815
 		'sysop' => [ 'editeditorprotected' => true, ], // T94368
 	],
 	'+dewikiquote' => [
@@ -4006,6 +4007,7 @@ return [
 		'bureaucrat' => [
 			'noratelimit', // T59819
 			'import', // T331921
+			'abusefilter', // T418815
 		],
 	],
 	'+dewikivoyage' => [
@@ -5591,6 +5593,7 @@ return [
 			'noratelimit', // T59819
 			'import', // T331921
 			'sysop', // T331921
+			'abusefilter', // T418815
 		],
 	],
 	'+dewikivoyage' => [
