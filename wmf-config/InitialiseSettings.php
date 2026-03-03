@@ -2280,6 +2280,7 @@ return [
 		'collection' => 'debug', // -cscott for T73675
 		'CommunityConfiguration' => 'info',
 		'communityrequests' => 'info', // T402967
+		'confirmemail' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'ContentTranslation' => 'info',
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],

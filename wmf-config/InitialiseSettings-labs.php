@@ -353,6 +353,7 @@ function wmfGetOverrideSettings() {
 				'collection' => 'debug', // -cscott for T73675
 				'CommunityConfiguration' => 'info',
 				'communityrequests' => 'debug',
+				'confirmemail' => [ 'udp2log' => false, 'logstash' => 'info' ],
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
