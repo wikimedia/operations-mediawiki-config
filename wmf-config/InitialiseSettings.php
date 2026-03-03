@@ -12883,14 +12883,9 @@ return [
 	'ukwiki' => true,
 ],
 
+// T416748
 'wgUserEmailConfirmationUseHTML' => [
-	'default' => false,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-
-	'commonswiki' => true,
-	'enwiki' => true,
-	'wikidatawiki' => true,
+	'default' => true,
 ],
 
 // T406023
