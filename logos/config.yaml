@@ -4466,6 +4466,11 @@ Wikivoyage:
         selected_icon: outreachwiki
         local_wordmark: true
 'Special wikis':
+    abstractwiki:
+        comment: 'T411723'
+        commons: 'File:Wikipedia-logo-v2-en.svg'
+        comment_wordmark: 'T411723'
+        commons_wordmark: 'File:Abstract-Wikipedia-wordmark.svg'
     advisorswiki:
         comment: T202844
         comment_1_5x: T202844

@@ -185,6 +185,7 @@ return [
 
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
+	'abstractwiki' => 'en',
 	'advisorywiki' => 'en',
 	'apiportalwiki' => 'en',
 	'arbcom_cswiki' => 'cs', // T151731
@@ -727,6 +728,7 @@ return [
 	'zhwikinews' => false,
 
 	// Other individual wikis
+	'abstractwiki' => false,
 	'arwikimedia' => false, // T353218
 	'azwikimedia' => false,
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
@@ -812,6 +814,7 @@ return [
 
 	// Individual wikis
 	// NOTE: Use full URLs even for same-wiki links (T383916)
+	'abstractwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'arwiki' => '//ar.wikipedia.org/wiki/ويكيبيديا:رفع', // T142450
 	'aswiki' => '//as.wikipedia.org/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azwiki' => '//az.wikipedia.org/wiki/Vikipediya:Yükləmə_sehrbazı', // T364674
@@ -921,6 +924,7 @@ return [
 	'wiktionary' => '//$lang.wiktionary.org',
 
 	// Individual wikis
+	'abstractwiki' => '//abstract.wikipedia.org',
 	'advisorswiki' => '//advisors.wikimedia.org',
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'amwikimedia' => '//am.wikimedia.org',
@@ -1037,6 +1041,7 @@ return [
 	'wiktionary' => 'https://$lang.wiktionary.org',
 
 	// Individual wikis
+	'abstractwiki' => 'https://abstract.wikipedia.org',
 	'advisorswiki' => 'https://advisors.wikimedia.org',
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'aewikimedia' => 'https://ae.wikimedia.org',
@@ -1160,6 +1165,7 @@ return [
 
 	// Individual wikis, alphabetically by DB name
 	'abwiki' => 'Авикипедиа',
+	'abstractwiki' => 'Abstract Wikipedia',
 	'advisorswiki' => 'Advisors',
 	'advisorywiki' => 'Advisory Board',
 	'adywiki' => 'Википедие', // T125501
@@ -2179,6 +2185,7 @@ return [
 
 // For CentralNotice project pickers
 'wgNoticeProject' => [
+	'abstractwiki' => 'wikimedia',
 	'advisorywiki' => 'wikimedia',
 	'apiportalwiki' => 'wikimedia',
 	'default' => '$site',
@@ -2994,6 +3001,7 @@ return [
 	'wikivoyage' => true, // requested by Erik
 
 	// Individual wikis
+	'abstractwiki' => true,
 	'alswiki' => true, // T6543
 	'arwikisource' => true,
 	'azbwiki' => true, // T109755
@@ -3446,6 +3454,7 @@ return [
 	'vewikimedia' => [ 'w', 'meta' ],
 
 	// content wikis
+	'abstractwiki' => [ 'meta', 'wikifunctions' ],
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
 	'arwiki' => [ 'en', 'meta' ], // T347563
 	'arwikibooks' => [ 'w' ],
@@ -4470,6 +4479,7 @@ return [
 	'urwikibooks' => '/static/favicon/wikibooks-rtl.ico', // T185919
 
 	# Special wikis
+	'abstractwiki' => '/static/favicon/abstractwiki.ico',
 	'advisorywiki' => '/static/favicon/wmf.ico',
 	'arbcom_dewiki' => '/static/favicon/arbcom_dewiki.ico', // T166947
 	'arbcom_enwiki' => '/static/favicon/arbcom_enwiki.ico', // T272920
@@ -5623,6 +5633,8 @@ return [
 	'default' => true,
 	'wikisource' => false, // T358437
 	'lockeddown' => false,
+
+	'abstractwiki' => false,
 	'apiportalwiki' => false, // T260309
 	'ganwiki' => false,
 	'iuwiki' => false,
@@ -6663,6 +6675,7 @@ return [
 
 'wgArticleCountMethod' => [
 	'default' => 'link',
+	'abstractwiki' => 'any',
 	'bgwikinews' => 'any', // T222044
 	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
@@ -7341,6 +7354,7 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true, // T121421
 
+	'abstractwiki' => true, // Starting from SET
 	'arcwiki' => true, // Starting from SET
 	'arwiki' => true, // Starting from SET
 	'arzwiki' => true, // Starting from SET
@@ -7731,6 +7745,9 @@ return [
 	],
 
 	// Other wikis (e.g. Commons, Meta)
+	'+abstractwiki' => [
+		'Project' => true,
+	],
 	'+commonswiki' => [
 		'Creator' => true, // T67067
 		'Institution' => true, // T67067
@@ -8566,6 +8583,7 @@ return [
 	'donatewiki' => false, // T406638
 
 	// T152882
+	'abstractwiki' => false, // T349408
 	'advisorswiki' => false,
 	'apiportalwiki' => false,
 	'auditcomwiki' => false,
@@ -9332,6 +9350,7 @@ return [
 	'specieswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikispecies-logo.svg.png',
 	'wikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 	'wikifunctionswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikifunctions-logo.svg.png',
+	'abstractwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 
 	// These use the Wikipedia logo for historical reasons in lieu of a nicer or more specific alternative (T400070)
@@ -10468,6 +10487,7 @@ return [
 	'special' => 'personal',
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
+	'abstractwiki' => 'interlanguage',
 	'wikifunctionswiki' => 'interlanguage',
 ],
 
@@ -13758,11 +13778,13 @@ return [
 // This will be used (only) on Abstract Wikipedia
 'wgWikiLambdaEnableAbstractMode' => [
 	'default' => false,
+	'abstractwiki' => true,
 ],
 
 // This will be used (only) on Abstract Wikipedia
 'wgWikiLambdaAbstractNamespaces' => [
 	'default' => [],
+	'abstractwiki' => [ NS_MAIN => [ '', 'Q50081413' ] ],
 ],
 
 ### Wikistories-related configuration
