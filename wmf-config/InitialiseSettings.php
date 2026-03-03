@@ -11446,7 +11446,6 @@ return [
 
 'wgThumbnailStepsRatio' => [
 	'default' => 1,
-	'private' => 0,
 ],
 
 // Virtual media views endpoint used by Media Viewer
