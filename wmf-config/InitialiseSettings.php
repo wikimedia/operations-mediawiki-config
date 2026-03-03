@@ -11317,54 +11317,6 @@ return [
 	'ptwikinews' => [ 'page', 'image', 'video', 'audio', 'other' ], // T299872, show cat first
 ],
 
-'wmgUseMetricsPlatform' => [
-	'default' => false,
-],
-
-'wgMetricsPlatformEnableExperiments' => [
-	'default' => true,
-],
-
-// See T391411 and T393918.
-'wgMetricsPlatformExperimentEventIntakeServiceUrl' => [
-	'default' => '/evt-103e/v2/events?hasty=true',
-],
-
-'wgMetricsPlatformAuthPreserveQueryParamsExperiments' => [
-	'default' => [],
-],
-
-'wgMetricsPlatformExperimentStreamNames' => [
-	'default' => [
-		'product_metrics.web_base',
-		'mediawiki.product_metrics.translation_mint_for_readers.experiments',
-		'mediawiki.product_metrics.reading_list',
-		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
-		'mediawiki.product_metrics.readerexperiments_stickyheaders',
-		'mediawiki.product_metrics.reader_experiments',
-		'mediawiki.product_metrics.contributors.experiments',
-	],
-],
-
-// T401705 Send image beacon and xLab sdk load event
-'wgMetricsPlatformEnableHeadPixel' => [
-	'default' => false,
-	'enwiki' => true,
-	'fawiki' => true,
-	'afwiki' => true,
-	'arwiki' => true,
-	'hywiki' => true,
-	'bgwiki' => true,
-	'mywiki' => true,
-	'hewiki' => true,
-	'jawiki' => true,
-	'itwiki' => true,
-	'azwiki' => true,
-	'ptwiki' => true,
-	'newiki' => true,
-	'viwiki' => true
-],
-
 // Test Kitchen is replacing Metrics Platform T407806
 'wmgUseTestKitchen' => [
 	'default' => true,

@@ -5084,11 +5084,6 @@ if ( $wmgUseCommunityConfiguration ) {
 	$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.org/w/api.php';
 }
 
-if ( $wmgUseMetricsPlatform ) {
-	wfLoadExtension( 'MetricsPlatform' );
-	$wgMetricsPlatformInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
-}
-
 if ( $wmgUseTestKitchen ) {
 	wfLoadExtension( 'TestKitchen' );
 

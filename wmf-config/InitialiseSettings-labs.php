@@ -270,48 +270,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// See T393918 and T395342.
-		//
-		// This configures a temporary logged-in A/B experiment to test T393918 and T395342 end to
-		// end. The test matches the configuration for T395342 but with a higher sample rate to
-		// make it more likely that a user is enrolled in the experiment.
-		'wgMetricsPlatformExperiments' => [
-			'default' => [
-				[
-					'name' => 'sds2-4-11-synth-aa-test',
-					'groups' => [
-						'control',
-						'control-2',
-					],
-					'sample' => [
-						'rate' => 0.5,
-					],
-				],
-				// T397728
-				[
-					'name' => 'fy24-25-we-1-7-rc-grouping-toggle',
-					'groups' => [
-						'control',
-						'toggle-shown',
-					],
-					'sample' => [
-						'rate' => 0.5,
-					],
-				],
-				// T402707
-				[
-					'name' => 'growthexperiments-revise-tone',
-					'groups' => [
-						'control',
-						'treatment',
-					],
-					'sample' => [
-						'rate' => 0.5,
-					],
-				],
-			],
-		],
-
 		// Log channels for beta cluster
 		// See detailed comments on 'wmgMonologChannels' in InitialiseSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
