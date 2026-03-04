@@ -4728,6 +4728,41 @@ return [
 	'ptwiki' => [ 'autoextendedconfirmed' ], // T292915
 ],
 
+'wgRestrictedGroups' => [
+	'default' => [
+		// T418580
+		'centralnoticeadmin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		// T393615, T409717
+		'temporary-account-viewer' => [
+			'memberConditions' => [
+				'&',
+				[ APCOND_EDITCOUNT, 300 ],
+				[ APCOND_AGE, 86400 * 30 * 6 ],
+			],
+			'canBeIgnored' => true,
+		],
+		// T418580
+		'wmf-supportsafety' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+	],
+],
+
+// T417880
+'wgOATH2FARequiredGroupRemovalPages' => [
+	'default' => [
+		'*' => 'm:Steward requests/Permissions',
+	],
+	'metawiki' => [
+		'centralnoticeadmin' => 'Meta:Requests for help from a sysop or bureaucrat',
+	],
+	'testwiki' => [
+		'centralnoticeadmin' => 'Wikipedia:Requests/Help desk',
+	],
+],
+
 'wgDeleteRevisionsLimit' => [
 	'default' => 5000,
 ],

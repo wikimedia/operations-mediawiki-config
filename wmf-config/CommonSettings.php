@@ -4534,16 +4534,6 @@ if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
 	}
 }
 
-// T393615, T409717
-$wgRestrictedGroups['temporary-account-viewer'] = [
-	'memberConditions' => [
-		'&',
-		[ APCOND_EDITCOUNT, 300 ],
-		[ APCOND_AGE, 86400 * 30 * 6 ],
-	],
-	'canBeIgnored' => true,
-];
-
 // Ensure no users can be crated that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
