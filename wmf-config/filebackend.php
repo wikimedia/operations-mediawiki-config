@@ -306,7 +306,6 @@ if ( $wgDBname === 'test2wiki' ) {
 }
 if ( $wgDBname != 'commonswiki' ) {
 	// Commons is local to commonswiki :)
-	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'shared',
