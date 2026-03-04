@@ -12086,6 +12086,7 @@ return [
 'wgImageLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	'testwiki' => SCHEMA_COMPAT_NEW,
+	'small' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
