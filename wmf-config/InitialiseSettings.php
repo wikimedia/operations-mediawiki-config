@@ -12828,11 +12828,6 @@ return [
 ],
 
 // T415007
-'wgUseSessionCookieForBotPasswords' => [
-	'default' => true,
-],
-
-// T415007
 'wgJwtSessionCookieIssuer' => [
 	'default' => null,
 	'sul' => 'https://meta.wikimedia.org/',
