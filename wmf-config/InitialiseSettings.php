@@ -12849,7 +12849,7 @@ return [
 // T415007
 'wgJwtSessionCookieIssuer' => [
 	'default' => null,
-	'sul' => 'https://meta.wikimedia.org/',
+	'sul' => 'https://meta.wikimedia.org',
 ],
 
 // T377975 / T391064

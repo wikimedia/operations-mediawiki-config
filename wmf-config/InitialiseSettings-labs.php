@@ -2342,8 +2342,9 @@ function wmfGetOverrideSettings() {
 			'enwikisource' => false,
 			'enwikivoyage' => false,
 		],
-		'-wgUseSessionCookieJwt' => [
-			'default' => true,
+		'-wgJwtSessionCookieIssuer' => [
+			'default' => null,
+			'sul' => 'https://meta.wikimedia.beta.wmcloud.org',
 		],
 		// T377975
 		'-wgTemplateDataEnableDiscovery' => [
