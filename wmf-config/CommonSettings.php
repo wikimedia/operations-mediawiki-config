@@ -4272,7 +4272,6 @@ if ( $wmgUseOATHAuth ) {
 
 	$wgOATHRequiredForGroups = [
 		'interface-admin',
-		'centralnoticeadmin',
 		'checkuser', // T150898
 		'suppress' // T150898
 	];
