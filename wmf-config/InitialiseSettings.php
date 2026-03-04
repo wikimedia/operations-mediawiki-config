@@ -5514,6 +5514,25 @@ return [
 	'wikimania2010wiki' => true,
 ],
 
+// Should be true if a wiki has any LiquidThreads logs. If true, then WikimediaMessages will define the log type
+// for these logs if the extension is undeployed from that wiki (T417425).
+'wgWikimediaMessagesHasLiquidThreadsLogs' => [
+	'default' => false,
+	'enwikinews' => true,
+	'enwiktionary' => true,
+	'fiwikimedia' => true,
+	'huwiki' => true,
+	'mediawikiwiki' => true,
+	'officewiki' => true,
+	'ptwikibooks' => true,
+	'sewikimedia' => true,
+	'strategywiki' => true,
+	'svwikisource' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'wikimania2010wiki' => true,
+],
+
 'wmgLQTUserControlNamespaces' => [
 	'default' => null,
 	'enwikinews' => [ 102 ], // Comments namespace
