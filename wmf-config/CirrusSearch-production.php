@@ -30,7 +30,7 @@ $wgCirrusSearchClusters = [
 	'codfw-omega' => $wmgAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
 	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 
-	'eqiad-semanticsearch' => $wmgLocalServices['semanticsearch-test'] + [ 'group' => 'semanticsearch', 'replica' => 'semanticsearch' ],
+	'eqiad-semanticsearch' => $wmgLocalServices['semanticsearch-test'] + [ 'group' => 'semanticsearch-test', 'replica' => 'semanticsearch-test' ],
 ];
 
 if ( $wmgPrivateWiki ) {
