@@ -5175,6 +5175,3 @@ $wgLogRestrictions = array_merge( $wgLogRestrictions, $wmgLogRestrictions );
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require __DIR__ . "/ExtensionMessages-$wmgVersionNumber.php";
 }
-
-$wgAllowUserJs = false;
-$wgUseSiteJs = false;

@@ -11308,7 +11308,7 @@ return [
 ### End (roughly) of general extensions ########################
 
 'wgAllowUserJs' => [
-	'default' => true,
+	'default' => false, // EMERGENCY T419138
 	'lockeddown' => false,
 ],
 
@@ -11318,7 +11318,8 @@ return [
 ],
 
 'wgUseSiteJs' => [
-	'default' => true,
+	'default' => false, // EMERGENCY T419138
+	'donatewiki' => true,
 	'lockeddown' => false,
 ],
 
