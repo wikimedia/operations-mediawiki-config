@@ -4824,7 +4824,7 @@ if ( $wmgUseWikistories ) {
 }
 
 if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
-	// Temporary global whitelist for origins used by trusted
+	// Temporary global allowlist for origins used by trusted
 	// opt-in scripts, until a per-user ability for this exists.
 	// T207900#4846582
 	$wgCSPFalsePositiveUrls['https://cvn.wmflabs.org'] = true;

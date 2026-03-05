@@ -11308,7 +11308,7 @@ return [
 ### End (roughly) of general extensions ########################
 
 'wgAllowUserJs' => [
-	'default' => false, // EMERGENCY T419138
+	'default' => false, // EMERGENCY T419137
 	'lockeddown' => false,
 ],
 
@@ -12162,6 +12162,14 @@ return [
 		'*.wikifunctions.org',
 		'*.wikivoyage.org',
 		'*.mediawiki.org',
+
+		// T419137: While wmgUseCSP is enforced, allow these.
+		//
+		// TODO: Once scripts move on-wiki, limit thse to default-src without script-src (T135963)
+		// (allowing JSON APIs/images/iframes but not scripts).
+		'*.toolforge.org',
+		'*.wmcloud.org',
+		'*.wmflabs.org',
 	],
 	'donatewiki' => [
 		'*.wikimedia.org', // Needed to load some images
