@@ -12138,7 +12138,7 @@ return [
 ],
 
 'wmgUseCSP' => [
-	'default' => false,
+	'default' => true,
 ],
 
 // Domains that go in script-src and default-src for CSP. Not to be varied by wiki.
