@@ -4824,12 +4824,26 @@ if ( $wmgUseWikistories ) {
 }
 
 if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
-	// Temporary global allowlist for origins used by trusted
-	// opt-in scripts, until a per-user ability for this exists.
-	// T207900#4846582
-	$wgCSPFalsePositiveUrls['https://cvn.wmflabs.org'] = true;
-	$wgCSPFalsePositiveUrls['https://tools.wmflabs.org/intuition/'] = true;
-	$wgCSPFalsePositiveUrls['https://intuition.toolforge.org/'] = true;
+	$wgCSPFalsePositiveUrls += [
+		// List of known blocked domains that cause lot of log noise.
+		// Most of these are caused by browser extensions
+		'https://static.shopback.com' => true,
+		'https://appdown.pstatic.net' => true,
+		'https://migaku-public-data.migaku.com' => true,
+		'https://cdn.scite.ai' => true,
+		'https://gjtrack.ucweb.com' => true,
+		'https://joko-mobile-app-media.s3.eu-west-1.amazonaws.com' => true,
+		'https://connect.facebook.net' => true,
+		'https://cdn.honey.io' => true,
+		'https://cdn.megabonus.com' => true,
+		'https://infird.com' => true,
+
+		// List of false positive domains (allowlisted by the CSP but somehow reported anyway)
+		'https://upload.wikimedia.org' => true,
+		'https://en.wikipedia.org' => true,
+		$wgCanonicalServer => true,
+
+	];
 
 	$wgExtensionFunctions[] = static function () {
 		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly,
