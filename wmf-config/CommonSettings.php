@@ -3998,6 +3998,8 @@ if ( $wmgUseCognate ) {
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) {
 	include __DIR__ . '/Wikibase.php';
 }
+// Temp
+$wgResourceLoaderStorageVersion = 2;
 
 // Turn off exact search match redirects
 if ( $wmgDoNotRedirectOnSearchMatch ) {
