@@ -11309,7 +11309,7 @@ return [
 ### End (roughly) of general extensions ########################
 
 'wgAllowUserJs' => [
-	'default' => false, // EMERGENCY T419137
+	'default' => true,
 	'lockeddown' => false,
 ],
 
