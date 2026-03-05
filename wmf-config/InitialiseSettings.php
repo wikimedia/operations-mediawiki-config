@@ -11318,8 +11318,7 @@ return [
 ],
 
 'wgUseSiteJs' => [
-	'default' => false, // EMERGENCY T419138
-	'donatewiki' => true,
+	'default' => true,
 	'lockeddown' => false,
 ],
 
