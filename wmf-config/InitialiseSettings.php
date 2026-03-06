@@ -4756,11 +4756,604 @@ return [
 	'default' => [
 		'*' => 'm:Steward requests/Permissions',
 	],
-	'metawiki' => [
-		'centralnoticeadmin' => 'Meta:Requests for help from a sysop or bureaucrat',
+	'+afwiki' => [
+		'interface-admin' => 'Wikipedia:Geselshoekie',
 	],
-	'testwiki' => [
+	'+alswiki' => [
+		'interface-admin' => 'Wikipedia:Stammtisch',
+	],
+	'+amwikimedia' => [
+		'interface-admin' => 'Քննարկում:Վիքիմեդիա_Հայաստան',
+	],
+	'+apiportalwiki' => [
+		'interface-admin' => 'Talk:Main Page',
+	],
+	'+arwiki' => [
+		'interface-admin' => 'ويكيبيديا:إخطار البيروقراطيين',
+	],
+	'+arwikimedia' => [
+		'interface-admin' => 'Discusión:Página principal',
+	],
+	'+arwikisource' => [
+		'interface-admin' => 'ويكي مصدر:بيروقراطيون/طلبات',
+	],
+	'+astwiki' => [
+		'interface-admin' => 'Wikipedia:Chigre',
+	],
+	'+azwiki' => [
+		'interface-admin' => 'Vikipediya:Bürokratlara müraciət',
+	],
+	'+azwikimedia' => [
+		'interface-admin' => 'Müzakirə:Ana səhifə',
+	],
+	'+bat_smgwiki' => [
+		'interface-admin' => 'Vikipedėjė:Aptarėmā',
+	],
+	'+bawiki' => [
+		'interface-admin' => 'Википедия:Хакимдарға һорауҙар',
+	],
+	'+bdwikimedia' => [
+		'interface-admin' => 'আলাপ:প্রধান পাতা',
+	],
+	'+be_x_oldwiki' => [
+		'interface-admin' => 'Вікіпэдыя:Запыты да адміністратараў',
+	],
+	'+bewiki' => [
+		'interface-admin' => 'Вікіпедыя:Запыты да адміністратараў',
+	],
+	'+bewikimedia' => [
+		'interface-admin' => 'Talk:Wikimedia Belgium',
+	],
+	'+bgwiki' => [
+		'interface-admin' => 'Уикипедия:Заявки към бюрократите',
+	],
+	'+bgwikiquote' => [
+		'interface-admin' => 'Уикицитат:Разговори',
+	],
+	'+bnwiki' => [
+		'interface-admin' => 'উইকিপিডিয়া:ব্যুরোক্র্যাটদের আলোচনাসভা',
+	],
+	'+bswiki' => [
+		'interface-admin' => 'Wikipedia:Pitanja za administratore',
+	],
+	'+cawiki' => [
+		'interface-admin' => 'Viquipèdia:Sala dels administradors',
+	],
+	'+cawikimedia' => [
+		'interface-admin' => 'Talk:Main Page',
+	],
+	'+cawikinews' => [
+		'interface-admin' => 'Viquinotícies:Petició als administradors',
+	],
+	'+cawikisource' => [
+		'interface-admin' => 'Viquitexts:La taverna',
+	],
+	'+cawiktionary' => [
+		'interface-admin' => 'Viccionari:La taverna',
+	],
+	'+commonswiki' => [
+		'interface-admin' => 'Commons:Bureaucrats\' noticeboard',
+	],
+	'+cowikimedia' => [
+		'interface-admin' => 'Wikimedia:Portal de la comunidad',
+	],
+	'+csbwiki' => [
+		'interface-admin' => 'Wiki:Karczma',
+	],
+	'+cswiki' => [
+		'interface-admin' => 'Wikipedie:Nástěnka byrokratů',
+	],
+	'+cswikibooks' => [
+		'interface-admin' => 'Wikiknihy:Nástěnka správců',
+	],
+	'+cswikiquote' => [
+		'interface-admin' => 'Wikicitáty:Pod lípou',
+	],
+	'+cswikisource' => [
+		'interface-admin' => 'Wikizdroje:Nástěnka správců',
+	],
+	'+cywiki' => [
+		'interface-admin' => 'Wicipedia:Negesfwrdd gweinyddiaeth',
+	],
+	'+dawiki' => [
+		'interface-admin' => 'Wikipedia:Anmodning om administratorassistance',
+	],
+	'+dewiki' => [
+		'interface-admin' => 'Wikipedia:Administratoren/Notizen',
+	],
+	'+dewikisource' => [
+		'interface-admin' => 'Wikisource:Skriptorium',
+	],
+	'+dewikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Lounge',
+	],
+	'+dewiktionary' => [
+		'interface-admin' => 'Wiktionary:Administratoren/Anfragen',
+	],
+	'+dvwiki' => [
+		'interface-admin' => 'ވިކިޕީޑިއާ:ވިލެޖް ޕަމްޕް',
+	],
+	'+elwiki' => [
+		'interface-admin' => 'Βικιπαίδεια:Σημειωματάριο γραφειοκρατών',
+	],
+	'+elwikisource' => [
+		'interface-admin' => 'Βικιθήκη:Σημειωματάριο διαχειριστών',
+	],
+	'+elwiktionary' => [
+		'interface-admin' => 'Συζήτηση βικιλεξικού:Κύρια Σελίδα',
+	],
+	'+enwiki' => [
+		'interface-admin' => 'Wikipedia:Bureaucrats\' noticeboard',
+	],
+	'+enwikinews' => [
+		'interface-admin' => 'Wikinews:Admin action alerts',
+	],
+	'+enwikiquote' => [
+		'interface-admin' => 'Wikiquote:Administrators\' noticeboard',
+	],
+	'+enwikisource' => [
+		'interface-admin' => 'Wikisource:Administrators\' noticeboard',
+	],
+	'+enwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Travellers\' pub',
+	],
+	'+enwiktionary' => [
+		'interface-admin' => 'Wiktionary:Beer parlour',
+	],
+	'+eowiki' => [
+		'interface-admin' => 'Vikipedio:Diskutejo/Administrejo',
+	],
+	'+eswiki' => [
+		'interface-admin' => 'Wikipedia:Tablón de anuncios de los bibliotecarios/Portal/Archivo/Miscelánea/Actual',
+	],
+	'+eswikinews' => [
+		'interface-admin' => 'Wikinoticias:Solicitudes a burócratas',
+	],
+	'+eswikisource' => [
+		'interface-admin' => 'Wikisource:Café',
+	],
+	'+eswiktionary' => [
+		'interface-admin' => 'Wikcionario:Café',
+	],
+	'+etwiki' => [
+		'interface-admin' => 'Vikipeedia:Administraatorid/teatetahvel',
+	],
+	'+etwiktionary' => [
+		'interface-admin' => 'Vikisõnastik:Üldine arutelu',
+	],
+	'+euwiki' => [
+		'interface-admin' => 'Wikipedia:Txokoa',
+	],
+	'+fawiki' => [
+		'interface-admin' => 'ویکی‌پدیا:تابلوی اعلانات دیوان‌سالاران',
+	],
+	'+fiu_vrowiki' => [
+		'interface-admin' => 'Wikipedia:Arotusõtarõ',
+	],
+	'+fiwiki' => [
+		'interface-admin' => 'Wikipedia:Ylläpitäjien ilmoitustaulu',
+	],
+	'+fiwikisource' => [
+		'interface-admin' => 'Wikiaineisto:Ylläpitäjien ilmoitustaulu',
+	],
+	'+foundationwiki' => [
+		'interface-admin' => 'Talk:Home',
+	],
+	'+frpwiki' => [
+		'interface-admin' => 'Vouiquipèdia:Requéta ux administrators',
+	],
+	'+frrwiki' => [
+		'interface-admin' => 'Wikipedia Diskussion:Administratoore',
+	],
+	'+frwiki' => [
+		'interface-admin' => 'Wikipédia:Bulletin des bureaucrates',
+	],
+	'+frwikibooks' => [
+		'interface-admin' => 'Wikilivres:Requêtes aux bureaucrates',
+	],
+	'+frwikinews' => [
+		'interface-admin' => 'Wikinews:Requête aux bureaucrates',
+	],
+	'+frwikiquote' => [
+		'interface-admin' => 'Wikiquote:Requête aux bureaucrates',
+	],
+	'+frwikisource' => [
+		'interface-admin' => 'Wikisource:Requêtes aux administrateurs',
+	],
+	'+frwikiversity' => [
+		'interface-admin' => 'Wikiversité:Requêtes aux bureaucrates',
+	],
+	'+frwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Requêtes aux bureaucrates',
+	],
+	'+frwiktionary' => [
+		'interface-admin' => 'Wiktionnaire:Demandes aux bureaucrates',
+	],
+	'+gawiki' => [
+		'interface-admin' => 'Vicipéid:Halla baile',
+	],
+	'+gewikimedia' => [
+		'interface-admin' => 'განხილვა:მთავარი გვერდი',
+	],
+	'+glwiki' => [
+		'interface-admin' => 'Wikipedia:Taboleiro dos administradores',
+	],
+	'+grwikimedia' => [
+		'interface-admin' => 'Συζήτηση:Αρχική σελίδα',
+	],
+	'+hewiki' => [
+		'interface-admin' => 'ויקיפדיה:בקשות מבירוקרטים',
+	],
+	'+hewikibooks' => [
+		'interface-admin' => 'ויקיספר:בקשות ממפעילים',
+	],
+	'+hewikiquote' => [
+		'interface-admin' => 'ויקיציטוט:בקשות ממפעילים',
+	],
+	'+hewikisource' => [
+		'interface-admin' => 'ויקיטקסט:בקשות מבעלי הרשאות',
+	],
+	'+hewiktionary' => [
+		'interface-admin' => 'ויקימילון:מזנון',
+	],
+	'+hiwikimedia' => [
+		'interface-admin' => 'वार्ता:मुखपृष्ठ',
+	],
+	'+hrwiki' => [
+		'interface-admin' => 'Wikipedija:Na pažnju administratorima',
+	],
+	'+huwiki' => [
+		'interface-admin' => 'Wikipédia:Bürokraták üzenőfala',
+	],
+	'+huwikibooks' => [
+		'interface-admin' => 'Wikikönyvek:Adminisztrátorok üzenőfala',
+	],
+	'+iawiki' => [
+		'interface-admin' => 'Wikipedia:Taverna',
+	],
+	'+idwiki' => [
+		'interface-admin' => 'Wikipedia:Permintaan perhatian birokrat dan pemeriksa',
+	],
+	'+idwikimedia' => [
+		'interface-admin' => 'Pembicaraan:Halaman Utama',
+	],
+	'+idwikisource' => [
+		'interface-admin' => 'Wikisumber:Warung kopi',
+	],
+	'+idwiktionary' => [
+		'interface-admin' => 'Wikikamus:Warung Kopi',
+	],
+	'+incubatorwiki' => [
+		'interface-admin' => 'Incubator:Administrators\' noticeboard',
+	],
+	'+iswiki' => [
+		'interface-admin' => 'Wikipedia:Potturinn',
+	],
+	'+iswiktionary' => [
+		'interface-admin' => 'Wikiorðabók:Potturinn',
+	],
+	'+itwiki' => [
+		'interface-admin' => 'Wikipedia:Richieste agli amministratori',
+	],
+	'+itwikinews' => [
+		'interface-admin' => 'Wikinotizie:Richieste agli amministratori',
+	],
+	'+itwikisource' => [
+		'interface-admin' => 'Wikisource:Richieste agli amministratori',
+	],
+	'+itwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Richieste agli amministratori',
+	],
+	'+itwiktionary' => [
+		'interface-admin' => 'Wikizionario:Richieste agli amministratori',
+	],
+	'+jawiki' => [
+		'interface-admin' => 'Wikipedia:管理者伝言板',
+	],
+	'+jawikisource' => [
+		'interface-admin' => 'Wikisource:管理者伝言板',
+	],
+	'+jvwiki' => [
+		'interface-admin' => 'Wikipédia:Panyuwunan kawigatèn panata',
+	],
+	'+kawiki' => [
+		'interface-admin' => 'ვიკიპედია:ადმინისტრატორები/მიმართვა',
+	],
+	'+kkwiki' => [
+		'interface-admin' => 'Уикипедия:Форум/Администраторлар форумы',
+	],
+	'+knwiki' => [
+		'interface-admin' => 'ವಿಕಿಪೀಡಿಯ:ಅರಳಿ ಕಟ್ಟೆ',
+	],
+	'+kowiki' => [
+		'interface-admin' => '위키백과:관리자 알림판',
+	],
+	'+kshwiki' => [
+		'interface-admin' => 'Wikipedia:Wiki-Köbes/Klaaf',
+	],
+	'+labswiki' => [
+		'interface-admin' => 'Wikitech:Interface_administrators',
+	],
+	'+lawiki' => [
+		'interface-admin' => 'Vicipaedia:Taberna',
+	],
+	'+lawikisource' => [
+		'interface-admin' => 'Vicifons:Scriptorium',
+	],
+	'+lbwiki' => [
+		'interface-admin' => 'Wikipedia:De Stamminee',
+	],
+	'+liwiktionary' => [
+		'interface-admin' => 'Euverlèk Wiktionary:Veurblaad',
+	],
+	'+ltwiki' => [
+		'interface-admin' => 'Vikipedija:Forumas',
+	],
+	'+lvwiki' => [
+		'interface-admin' => 'Vikipēdija:Administratoru ziņojumu dēlis',
+	],
+	'+mediawikiwiki' => [
+		'interface-admin' => 'Project:Administrators\' noticeboard',
+	],
+	'+metawiki' => [
+		'centralnoticeadmin' => 'Meta:Requests for help from a sysop or bureaucrat',
+		'interface-admin' => 'Meta:Requests for help from a sysop or bureaucrat',
+	],
+	'+mkwiki' => [
+		'interface-admin' => 'Википедија:Огласна табла за администратори',
+	],
+	'+mlwiki' => [
+		'interface-admin' => 'വിക്കിപീഡിയ:കാര്യനിർവാഹകർക്കുള്ള നോട്ടീസ് ബോർഡ്',
+	],
+	'+mrwiki' => [
+		'interface-admin' => 'विकिपीडिया:चावडी/प्रचालकांना निवेदन',
+	],
+	'+mswiki' => [
+		'interface-admin' => 'Wikipedia:Birokrat/Papan kenyataan',
+	],
+	'+mtwiki' => [
+		'interface-admin' => 'Wikipedija:Pjazza',
+	],
+	'+mxwikimedia' => [
+		'interface-admin' => 'Discusión:Página principal',
+	],
+	'+mywiki' => [
+		'interface-admin' => 'ဝီကီပီးဒီးယား:စီမံခန့်ခွဲသူများ သင်ပုန်း',
+	],
+	'+nds_nlwiki' => [
+		'interface-admin' => 'Wikipedia:Praothoek',
+	],
+	'+ndswiki' => [
+		'interface-admin' => 'Wikipedia:Ik bruuk Hülp',
+	],
+	'+newiki' => [
+		'interface-admin' => 'विकिपिडिया:प्रशासक सूचनापाटी',
+	],
+	'+nlwiki' => [
+		'interface-admin' => 'Wikipedia:Verzoekpagina voor moderatoren',
+	],
+	'+nlwikibooks' => [
+		'interface-admin' => 'Wikibooks:Verzoekpagina voor moderatoren',
+	],
+	'+nlwikimedia' => [
+		'interface-admin' => 'Overleg:Home',
+	],
+	'+nlwikiquote' => [
+		'interface-admin' => 'Wikiquote:De kantine',
+	],
+	'+nlwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Reizigerscafé',
+	],
+	'+nlwiktionary' => [
+		'interface-admin' => 'WikiWoordenboek:De Kroeg',
+	],
+	'+nnwiki' => [
+		'interface-admin' => 'Wikipedia:Vaktmeistertenester',
+	],
+	'+nnwiktionary' => [
+		'interface-admin' => 'Wiktionary:Samfunnshuset',
+	],
+	'+nowiki' => [
+		'interface-admin' => 'Wikipedia:Administratorenes oppslagstavle',
+	],
+	'+nowikimedia' => [
+		'interface-admin' => 'Diskusjon:Hovedside',
+	],
+	'+nowiktionary' => [
+		'interface-admin' => 'Wiktionary:Tinget',
+	],
+	'+outreachwiki' => [
+		'interface-admin' => 'Wikimedia:Village pump',
+	],
+	'+pawikisource' => [
+		'interface-admin' => 'ਵਿਕੀਸਰੋਤ:ਸੱਥ',
+	],
+	'+plwiki' => [
+		'interface-admin' => 'Wikipedia:Prośby do administratorów',
+	],
+	'+plwikimedia' => [
+		'interface-admin' => 'Dyskusja:Strona główna',
+	],
+	'+plwikiquote' => [
+		'interface-admin' => 'Wikicytaty:Prośby do administratorów',
+	],
+	'+plwikisource' => [
+		'interface-admin' => 'Wikiźródła:Prośby do administratorów',
+	],
+	'+plwiktionary' => [
+		'interface-admin' => 'Wikisłownik:Prośby do administratorów',
+	],
+	'+ptwiki' => [
+		'interface-admin' => 'Wikipédia:Pedidos a burocratas',
+	],
+	'+ptwikibooks' => [
+		'interface-admin' => 'Wikilivros Discussão:Portal comunitário',
+	],
+	'+ptwikimedia' => [
+		'interface-admin' => 'Discussão:Wikimedia Portugal',
+	],
+	'+ptwiktionary' => [
+		'interface-admin' => 'Wikcionário:Pedidos a administradores',
+	],
+	'+rowikinews' => [
+		'interface-admin' => 'Wikiștiri:Cafenea',
+	],
+	'+rswikimedia' => [
+		'interface-admin' => 'Разговор:Главна страна',
+	],
+	'+ruwiki' => [
+		'interface-admin' => 'Википедия:Запросы к бюрократам',
+	],
+	'+ruwikimedia' => [
+		'interface-admin' => 'Обсуждение:Заглавная страница',
+	],
+	'+ruwikinews' => [
+		'interface-admin' => 'Викиновости:Форум администраторов',
+	],
+	'+ruwikiquote' => [
+		'interface-admin' => 'Викицитатник:Запросы к администраторам',
+	],
+	'+ruwikisource' => [
+		'interface-admin' => 'Викитека:Администрирование',
+	],
+	'+ruwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Пивная путешественников',
+	],
+	'+ruwiktionary' => [
+		'interface-admin' => 'Викисловарь:Запросы к администраторам',
+	],
+	'+sahwiki' => [
+		'interface-admin' => 'Бикипиэдьийэ:Бүрэкирээттэргэ көрдөбүллэр',
+	],
+	'+sewiki' => [
+		'interface-admin' => 'Wikipedia:Gáffestohpu',
+	],
+	'+sewikimedia' => [
+		'interface-admin' => 'Diskussion:Huvudsida',
+	],
+	'+shwiki' => [
+		'interface-admin' => 'Wikipedija:Birokratska tabla',
+	],
+	'+skwiki' => [
+		'interface-admin' => 'Wikipédia:Nástenka správcov',
+	],
+	'+slwiki' => [
+		'interface-admin' => 'Wikipedija:Prošnje za administratorsko pomoč',
+	],
+	'+slwikisource' => [
+		'interface-admin' => 'Wikivir:Pod lipo',
+	],
+	'+sourceswiki' => [
+		'interface-admin' => 'Wikisource:Scriptorium',
+	],
+	'+specieswiki' => [
+		'interface-admin' => 'Wikispecies:Administrators\' Noticeboard',
+	],
+	'+sqwiki' => [
+		'interface-admin' => 'Wikipedia:Kuvendi',
+	],
+	'+srwiki' => [
+		'interface-admin' => 'Википедија:Бирократска табла',
+	],
+	'+srwikibooks' => [
+		'interface-admin' => 'Викикњиге:Трг',
+	],
+	'+srwikinews' => [
+		'interface-admin' => 'Викиновости:Форум',
+	],
+	'+srwikiquote' => [
+		'interface-admin' => 'Викицитат:Трг',
+	],
+	'+srwikisource' => [
+		'interface-admin' => 'Викизворник:Писарница',
+	],
+	'+srwiktionary' => [
+		'interface-admin' => 'Викиречник:Трг',
+	],
+	'+svwiki' => [
+		'interface-admin' => 'Wikipedia:Kommentarer om administrationen av Wikipedia',
+	],
+	'+svwiktionary' => [
+		'interface-admin' => 'Wiktionary:Bybrunnen',
+	],
+	'+swwiki' => [
+		'interface-admin' => 'Wikipedia:Jumuiya',
+	],
+	'+tawiki' => [
+		'interface-admin' => 'விக்கிப்பீடியா:அதிகாரிகளுக்கான அறிவிப்புப்பலகை',
+	],
+	'+tawiktionary' => [
+		'interface-admin' => 'விக்சனரி:ஆலமரத்தடி',
+	],
+	'+test2wiki' => [
+		'interface-admin' => 'Wikipedia:Requests',
+	],
+	'+testwiki' => [
 		'centralnoticeadmin' => 'Wikipedia:Requests/Help desk',
+		'interface-admin' => 'Wikipedia:Requests/Help desk',
+	],
+	'+testwikidatawiki' => [
+		'interface-admin' => 'Wikidata:Requests for permissions',
+	],
+	'+tewiki' => [
+		'interface-admin' => 'వికీపీడియా:అధికారుల నోటీసు బోర్డు',
+	],
+	'+thwiki' => [
+		'interface-admin' => 'วิกิพีเดีย:แจ้งผู้ดูแลระบบ',
+	],
+	'+thwikimedia' => [
+		'interface-admin' => 'พูดคุย:หน้าหลัก',
+	],
+	'+tlwiki' => [
+		'interface-admin' => 'Wikipedia:Kapihan',
+	],
+	'+trwiki' => [
+		'interface-admin' => 'Vikipedi:Bürokrat duyuru panosu',
+	],
+	'+trwikimedia' => [
+		'interface-admin' => 'Tartışma:Anasayfa',
+	],
+	'+uawikimedia' => [
+		'interface-admin' => 'Обговорення:Вікімедіа Україна',
+	],
+	'+ukwiki' => [
+		'interface-admin' => 'Вікіпедія:Запити до бюрократів',
+	],
+	'+ukwikiquote' => [
+		'interface-admin' => 'Вікіцитати:Запити до адміністраторів',
+	],
+	'+ukwiktionary' => [
+		'interface-admin' => 'Вікісловник:Запити до адміністраторів',
+	],
+	'+urwiki' => [
+		'interface-admin' => 'ویکیپیڈیا:دیوان خاص',
+	],
+	'+uzwiki' => [
+		'interface-admin' => 'Vikipediya:Administratorlar forumi',
+	],
+	'+vecwiki' => [
+		'interface-admin' => 'Wikipedia:Aministradori/Domande par i aministradori',
+	],
+	'+vecwikisource' => [
+		'interface-admin' => 'Wikisource:Ciacole',
+	],
+	'+viwiki' => [
+		'interface-admin' => 'Wikipedia:Tin nhắn cho bảo quản viên',
+	],
+	'+viwiktionary' => [
+		'interface-admin' => 'Wiktionary:Tin nhắn cho bảo quản viên',
+	],
+	'+wawiki' => [
+		'interface-admin' => 'Wikipedia:Cåbaret',
+	],
+	'+wikidatawiki' => [
+		'interface-admin' => 'Wikidata:Bureaucrats\' noticeboard',
+	],
+	'+wikimaniawiki' => [
+		'interface-admin' => 'Wikimania:Requests_for_rights',
+	],
+	'+zhwiki' => [
+		'interface-admin' => 'Wikipedia:行政員布告板',
 	],
 ],
 
