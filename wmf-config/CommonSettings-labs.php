@@ -571,8 +571,5 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseMultiTitle ) {
 		wfLoadExtension( 'MultiTitle' );
 	}
-
-	// Temporary (T419198)
-	$wgOATHPasswordlessLogin = true;
 }
 // end safeguard
