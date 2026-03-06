@@ -4381,7 +4381,10 @@ return [
 		'Mostcategories',
 		'Mostlinkedtemplates',
 	],
-	'commonswiki' => [ 'Mostlinkedtemplates' ],
+	'commonswiki' => [
+		'Mostcategories',
+		'Mostlinkedtemplates'
+	],
 	'enwiki' => [ 'Mostlinkedtemplates' ],
 	'frwiki' => [ 'Mostcategories' ],
 ],
