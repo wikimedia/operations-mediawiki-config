@@ -146,6 +146,7 @@ $wgLBFactoryConf['sectionsByDB'] = [
 	'trvwiki'           => 's5',
 	'trwikivoyage'      => 's5',
 	'u4cwiki'           => 's5',
+	'urwikisource'      => 's5',
 	'vewikimedia'       => 's5',
 	'wawikisource'      => 's5',
 	'wikifunctionswiki' => 's5',
