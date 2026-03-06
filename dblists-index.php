@@ -978,7 +978,7 @@ return [
 'urwiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'sul', 'wikilove' ],
 'urwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'urwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'rtl', 'sul' ],
-'urwikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
+'urwikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'rtl', 'sul' ],
 'urwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'usabilitywiki' => [ 'special', 'closed', 'small', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'uzwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul', 'wikilove' ],
