@@ -4838,6 +4838,19 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 		'https://cdn.megabonus.com' => true,
 		'https://infird.com' => true,
 
+		// TODO: Remove once CSP Report-Only is updated to exclude toolforge/wmcloud/wmflabs
+		'https://cvn.wmcloud.org' => true,
+		'https://cvn.wmflabs.org' => true,
+		'https://gitlab-content.toolforge.org' => true,
+		'https://intuition.toolforge.org' => true,
+		'https://recoin.toolforge.org' => true,
+		'https://redwarn.toolforge.org' => true,
+		'https://tools-static.wmflabs.org' => true,
+		'https://tools.wmflabs.org' => true,
+		'https://view-it.toolforge.org' => true,
+		'https://wma.wmcloud.org' => true,
+		'https://xtools.wmcloud.org' => true,
+
 		// List of false positive domains (allowlisted by the CSP but somehow reported anyway)
 		'https://upload.wikimedia.org' => true,
 		'https://en.wikipedia.org' => true,
