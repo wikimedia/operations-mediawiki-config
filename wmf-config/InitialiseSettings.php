@@ -464,6 +464,7 @@ return [
 	'kajwiki' => 'Africa/Lagos',
 	'kawikisource' => 'Asia/Tbilisi',
 	'kaawiktionary' => 'Asia/Tashkent',
+	'kaiwiki' => 'Africa/Lagos', // T414237
 	'kbdwiki' => 'Europe/Moscow',
 	'kbdwiktionary' => 'Europe/Moscow',
 	'kbpwiki' => 'Africa/Lome', // T160868
@@ -1445,6 +1446,7 @@ return [
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kaawiktionary' => 'Wikisózlik',
+	'kaiwiki' => 'Wikipèdiya', // T414237
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868

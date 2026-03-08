@@ -6070,6 +6070,7 @@ return [
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kaawiktionary' => 'Wikisózlik',
+	'kaiwiki' => 'Wikipèdiya', // T414237
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
@@ -6437,6 +6438,7 @@ return [
 	'iswiktionary' => 'Wikiorðabókarspjall',
 	'jamwiki' => 'Wikipidia_diskoshan',
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
+	'kaiwiki' => 'Màatu_mà_Wikipèdiya', // T414237
 	'kbdwiki' => 'Уикипедиэм_и_тепсэлъыхьыгъуэ',
 	'kbdwiktionary' => 'Википсалъалъэм_тепсэлъыхьын',
 	'kbpwiki' => 'Wikipediya_ndɔnjɔɔlɩyɛ', // T160868

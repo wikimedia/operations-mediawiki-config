@@ -193,6 +193,7 @@ return [
 	'jvwiki' => '/static/images/project-logos/jvwiki.png', // T251050
 	'kaawiki' => '/static/images/project-logos/kaawiki-temp25.png', // T48589, T337641, T415457
 	'kabwiki' => '/static/images/project-logos/kabwiki.png', // T46974
+	'kaiwiki' => '/static/images/project-logos/kaiwiki.png', // T414237
 	'kajwiki' => '/static/images/project-logos/kajwiki.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki.png',
 	'kbdwiki' => '/static/images/project-logos/kbdwiki.png',
@@ -1095,6 +1096,7 @@ return [
 	'jvwiki' => '/static/images/project-logos/jvwiki-1.5x.png', // T251050
 	'kaawiki' => '/static/images/project-logos/kaawiki-temp25-1.5x.png', // T150618, T337641, T415457
 	'kabwiki' => '/static/images/project-logos/kabwiki-1.5x.png', // T150618
+	'kaiwiki' => '/static/images/project-logos/kaiwiki-1.5x.png', // T414237
 	'kajwiki' => '/static/images/project-logos/kajwiki-1.5x.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki-1.5x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-1.5x.png', // T150618
@@ -1771,6 +1773,7 @@ return [
 	'jvwiki' => '/static/images/project-logos/jvwiki-2x.png', // T251050
 	'kaawiki' => '/static/images/project-logos/kaawiki-temp25-2x.png', // T150618, T337641, T415457
 	'kabwiki' => '/static/images/project-logos/kabwiki-2x.png', // T150618
+	'kaiwiki' => '/static/images/project-logos/kaiwiki-2x.png', // T414237
 	'kajwiki' => '/static/images/project-logos/kajwiki-2x.png', // T413283
 	'kawiki' => '/static/images/project-logos/kawiki-2x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-2x.png', // T150618
@@ -2841,6 +2844,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kaa-temp25.svg',
 		'width' => 140,
 		'height' => 22,
+	],
+	'kaiwiki' => [ // T414237
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kai.svg',
+		'width' => 120,
+		'height' => 25,
 	],
 	'kawiki' => [ // T267776
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ka.svg',
@@ -6571,6 +6579,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kab.svg',
 		'width' => 110,
 		'height' => 17,
+	],
+	'kaiwiki' => [ // T414237
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kai.svg',
+		'width' => 105,
+		'height' => 15,
 	],
 	'kajwiki' => [ // T415038
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kaj.svg',
