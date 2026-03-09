@@ -37,20 +37,11 @@ $wmgThrottlingExceptions = [];
 
 ## Add throttling definitions above.
 
-// T417578 - Event at Tshwane University of Technology
+// T419109 - Women's History Month Edit-a-thon Cambridgeshire Central Library, 14 March 2026
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-02-23T08:00 +2:00',
-	'to'     => '2026-02-28T18:00 +2:00',
-	'range'     => '168.172.120.64/28',
-	'dbname' => [ 'enwiki', 'nrwiki', 'sswiki', 'vewiki', 'tnwiki', 'tswiki', 'zuwiki', 'xhwiki', 'nsowiki', 'afwiki', 'stwiki' ],
-	'value'  => 100,
-];
-
-// T417830 - eswiki, commonswiki, wikidata editathon
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-02-25T08:00 -3:00',
-	'to'     => '2026-02-27T17:00 -3:00',
-	'IP'     => '170.210.70.20',
-	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
-	'value'  => 100,
+	'from'   => '2026-03-14T13:00 +0:00',
+	'to'     => '2026-03-14T18:00 +0:00',
+	'range'     => [ '185.111.131.206/31' ],
+	'dbname' => 'enwiki',
+	'value'  => 40,
 ];
