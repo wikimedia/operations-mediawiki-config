@@ -2604,7 +2604,7 @@ return [
 		// It is produced by a streaming enrichment pipeline,
 		// (not via MediaWiki EventBus).
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'mediawiki.page_html_content_change.dev1' => [
+		'mediawiki.page_html_content_change.dev4' => [
 			'schema_title' => 'development/html_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
