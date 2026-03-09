@@ -10,7 +10,7 @@
 		}
 	},
 	"require-dev": {
-		"mediawiki/mediawiki-codesniffer": "49.0.0",
+		"mediawiki/mediawiki-codesniffer": "50.0.0",
 		"mediawiki/minus-x": "2.0.1",
 		"php-parallel-lint/php-parallel-lint": "1.4.0",
 		"phpunit/php-code-coverage": "10.1.16",
