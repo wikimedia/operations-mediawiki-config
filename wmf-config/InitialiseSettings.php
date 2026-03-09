@@ -11289,7 +11289,7 @@ return [
 ],
 
 'wmgUseMetricsPlatform' => [
-	'default' => true,
+	'default' => false,
 ],
 
 'wgMetricsPlatformEnableExperiments' => [
