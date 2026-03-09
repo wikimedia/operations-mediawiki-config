@@ -2634,6 +2634,36 @@ return [
 			'canary_events_enabled' => false,
 		],
 
+		// Declare version dev0 (staging testing) of
+		// mediawiki.page_edit_type_simple stream for now.
+		// It will be changed for a new schema when it's ready.
+		// It is produced by a streaming enrichment pipeline,
+		// (not via MediaWiki EventBus).
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		'mediawiki.page_edit_type_simple.dev0' => [
+			'schema_title' => 'development/html_edit_type_simple',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// page_html_edit_type_simple is produced directly to Kafka jumbo-eqiad,
+			// so we need to use an eventgate that also produces to jumbo-eqiad.
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
+		// This stream will be used by the streaming enrichment pipeline
+		// These events can be used if backfilling of the failed enrichment
+		// is desired later.
+		// This follows the naming convention of <job_name>.error
+		'mw_page_edit_type_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+
 		// This stream uses the mediawiki/page/change schema.
 		// It is produced by a PySpark job (T368755) that checks for
 		// inconsistencies on a datalake table that consumes stream
