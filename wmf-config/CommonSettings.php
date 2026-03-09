@@ -5008,6 +5008,7 @@ if ( $wmgUseStopForumSpam ) {
 // T403982
 if ( $wmgUsePersonalDashboard ) {
 	wfLoadExtension( 'PersonalDashboard' );
+	$wgPersonalDashboardSurveyLink = 'https://wikimedia.qualtrics.com/jfe/form/SV_6F3woGrgMSnvRgG?Q_lang=';
 }
 
 if ( $wmgUsePhonos ) {

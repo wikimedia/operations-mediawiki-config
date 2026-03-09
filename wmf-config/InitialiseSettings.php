@@ -4034,11 +4034,21 @@ return [
 'wgPersonalDashboardBlueDot' => [
 	'default' => false,
 	'testwiki' => true,
+	// T418613
+	'idwiki' => true,
+	'trwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
 ],
 
 'wgPersonalDashboardUserMenu' => [
 	'default' => false,
 	'testwiki' => true,
+	// T418613
+	'idwiki' => true,
+	'trwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
 ],
 
 'wmgUsePhonos' => [
