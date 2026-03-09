@@ -18,7 +18,7 @@
 		"seld/jsonlint": "1.11.0",
 		"symfony/yaml": "7.4.0",
 		"wikimedia/ip-utils": "6.0.1",
-		"mediawiki/mediawiki-phan-config": "0.18.0"
+		"mediawiki/mediawiki-phan-config": "0.20.0"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
