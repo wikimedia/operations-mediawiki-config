@@ -151,7 +151,7 @@ $services = [
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
 
 		// logs are mirrored from eqiad -> codfw by mwlog hosts
-		'udp2log' => '10.64.32.141:8420', # mwlog1002.eqiad.wmnet
+		'udp2log' => '10.64.185.2:8420', # mwlog1003.eqiad.wmnet
 
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
@@ -206,7 +206,7 @@ $services = [
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 
 		// logs are mirrored from codfw -> eqiad by mwlog hosts
-		'udp2log' => '10.192.32.9:8420', # mwlog2002.codfw.wmnet
+		'udp2log' => '10.192.52.2:8420', # mwlog2003.codfw.wmnet
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
