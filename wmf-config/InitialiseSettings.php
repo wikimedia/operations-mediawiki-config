@@ -13506,6 +13506,11 @@ return [
 			'name' => 'Math API'
 		]
 	],
+	'+testwiki' => [
+		'attribution.v0-beta' => [
+			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
+		],
+	],
 	'+wikifunctionswiki' => [
 		'wikifunctions.v0' => [
 			'file' => "./extensions/WikiLambda/includes/RESTAPI/wikifunctions.v0.json",
