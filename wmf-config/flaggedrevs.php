@@ -351,8 +351,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'enwikinews' ) {
-		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsNamespaces[] = 100;
+		$wgFlaggedRevsNamespaces = [ NS_MAIN ];
 		$wgGroupPermissions['editor']['rollback'] = true; // T21815
 		$wgGroupPermissions['editor']['autoreview'] = false; // T25948
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
