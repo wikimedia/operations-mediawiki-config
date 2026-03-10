@@ -4736,6 +4736,15 @@ return [
 		'centralnoticeadmin' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 		],
+		'checkuser' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'interface-admin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'suppress' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
 		// T393615, T409717
 		'temporary-account-viewer' => [
 			'memberConditions' => [
@@ -4746,6 +4755,15 @@ return [
 			'canBeIgnored' => true,
 		],
 		// T418580
+		'wikidata-staff' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'wikifunctions-staff' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'wmf-officeit' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
 		'wmf-supportsafety' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 		],
