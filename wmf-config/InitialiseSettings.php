@@ -13567,7 +13567,12 @@ return [
 			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Math API'
 		]
-	]
+	],
+	'+wikifunctionswiki' => [
+		'wikifunctions.v0' => [
+			'file' => "./extensions/WikiLambda/includes/RESTAPI/wikifunctions.v0.json",
+		],
+	],
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
