@@ -12252,7 +12252,7 @@ return [
 			'name' => 'design-research-participant-recruitment-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0,
+			'coverage' => 0.07,
 			'privacyPolicy' => 'design-research-participant-recruitment-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
@@ -12276,7 +12276,7 @@ return [
 			'name' => 'design-research-participant-recruitment-survey',
 			'type' => 'external',
 			'enabled' => true,
-			'coverage' => 0,
+			'coverage' => 0.1,
 			'privacyPolicy' => 'design-research-participant-recruitment-survey-privacy-policy',
 			'platforms' => [
 				'desktop' => [ 'stable' ],
