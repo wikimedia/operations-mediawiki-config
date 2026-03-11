@@ -4041,6 +4041,13 @@ Wikisource:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    urwikisource:
+        commons: 'File:Wikisource-logo-ur.svg'
+        comment: T415974
+        comment_1_5x: T415974
+        comment_2x: T415974
+        commons_wordmark: 'File:Wikisource-wordmark-ur.svg'
+        comment_wordmark: T415974
     vecwikisource:
         comment: T132157
         no_1_5x: true

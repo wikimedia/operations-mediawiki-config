@@ -780,6 +780,7 @@ return [
 	'thwikisource' => '/static/images/project-logos/thwikisource.png', // T54019
 	'trwikisource' => '/static/images/project-logos/trwikisource.png', // T54019
 	'ukwikisource' => '/static/images/project-logos/ukwikisource.png', // T56491
+	'urwikisource' => '/static/images/project-logos/urwikisource.png', // T415974
 	'vecwikisource' => '/static/images/project-logos/vecwikisource.png', // T132157
 	'viwikisource' => '/static/images/project-logos/enwikisource.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource.png',
@@ -1523,6 +1524,7 @@ return [
 	'suwikisource' => '/static/images/project-logos/suwikisource-1.5x.png', // T344314
 	'tcywikisource' => '/static/images/project-logos/tcywikisource-1.5x.png', // T378555
 	'tewikisource' => '/static/images/project-logos/tewikisource-1.5x.png',
+	'urwikisource' => '/static/images/project-logos/urwikisource-1.5x.png', // T415974
 	'viwikisource' => '/static/images/project-logos/enwikisource-1.5x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-1.5x.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource-1.5x.png', // T193562
@@ -2200,6 +2202,7 @@ return [
 	'suwikisource' => '/static/images/project-logos/suwikisource-2x.png', // T344314
 	'tcywikisource' => '/static/images/project-logos/tcywikisource-2x.png', // T378555
 	'tewikisource' => '/static/images/project-logos/tewikisource-2x.png',
+	'urwikisource' => '/static/images/project-logos/urwikisource-2x.png', // T415974
 	'viwikisource' => '/static/images/project-logos/enwikisource-2x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-2x.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource-2x.png', // T193562
@@ -5175,6 +5178,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-uk.svg',
 		'width' => 122,
 		'height' => 18,
+	],
+	'urwikisource' => [ // T415974
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ur.svg',
+		'width' => 125,
+		'height' => 35,
 	],
 	'wawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-wa.svg',

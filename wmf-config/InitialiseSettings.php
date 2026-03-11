@@ -1722,6 +1722,7 @@ return [
 	'urwiki' => 'ویکیپیڈیا', // T44155
 	'urwikibooks' => 'ویکی کتب', // T214290
 	'urwikiquote' => 'ویکی اقتباس', // T214290
+	'urwikisource' => 'ویکی ماخذ', // T415974
 	'urwiktionary' => 'ویکی لغت', // T214290
 	'usabilitywiki' => 'Wikimedia Usability Initiative',
 	'uzwiki' => 'Vikipediya',
