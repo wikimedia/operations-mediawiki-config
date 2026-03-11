@@ -3536,6 +3536,25 @@ return [
 				],
 			],
 		],
+		// Stream configuration for (T417050) WE 5.3.4 Attribution Research
+		'product_metrics.web_base.attribution_research' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+			],
+			// This stream has a custom job to import from kafka -> hadoop
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
