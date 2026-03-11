@@ -5093,7 +5093,7 @@ return [
 		'interface-admin' => 'Wikipedia:Wiki-Köbes/Klaaf',
 	],
 	'+labswiki' => [
-		'interface-admin' => 'Wikitech:Interface_administrators',
+		'interface-admin' => 'Wikitech:Interface administrators',
 	],
 	'+lawiki' => [
 		'interface-admin' => 'Vicipaedia:Taberna',
@@ -5371,7 +5371,7 @@ return [
 		'interface-admin' => 'Wikidata:Bureaucrats\' noticeboard',
 	],
 	'+wikimaniawiki' => [
-		'interface-admin' => 'Wikimania:Requests_for_rights',
+		'interface-admin' => 'Wikimania:Requests for rights',
 	],
 	'+zhwiki' => [
 		'interface-admin' => 'Wikipedia:行政員布告板',
