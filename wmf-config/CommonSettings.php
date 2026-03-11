@@ -41,6 +41,7 @@ use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Auth\PasswordAuthenticationRequest;
 use MediaWiki\Content\FallbackContentHandler;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\RCFeed\IRCColourfulCARCFeedFormatter;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
@@ -2125,23 +2126,33 @@ if ( $wmgEnableCaptcha ) {
 					'HCaptchaSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
 				],
 			];
-			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use ( $wmgEmergencyCaptcha ) {
+			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result )
+				use ( $wmgEmergencyCaptcha, $wgHCaptchaEnabledInMobileFrontend ) {
 				$services = MediaWikiServices::getInstance();
 				$simpleCaptcha = \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action );
-				if ( $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
-					$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
-					if ( !$healthChecker->isAvailable() ) {
-						LoggerFactory::getInstance( 'captcha' )->warning(
-							'hCaptcha is unavailable, setting ConfirmEditTriggersCaptcha to false'
-						);
-						$result = false;
-					}
+				// T404204 - Check hCaptcha availability once, reuse below.
+				$isHCaptcha = $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
+				$hCaptchaAvailable = $isHCaptcha
+					&& $services->getService( 'HCaptchaEnterpriseHealthChecker' )->isAvailable();
+				if ( $isHCaptcha && !$hCaptchaAvailable ) {
+					LoggerFactory::getInstance( 'captcha' )->warning(
+						'hCaptcha is unavailable, setting ConfirmEditTriggersCaptcha to false'
+					);
+					$result = false;
 				}
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-					// API edits aren't yet supported with hCaptcha. Set the result to false. This can still be
-					// overridden by AbuseFilter's "showcaptcha" consequence, but that will use FancyCaptcha as
-					// the class.
-					$result = false;
+					// Check if this is an approved interface that supports
+					// hCaptcha (T419572).
+					$editorInterface = RequestContext::getMain()->getRequest()->getRawVal( 'editorinterface' );
+					$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
+						&& $editorInterface === 'MobileFrontend-SourceEditor';
+
+					if ( !$isApprovedInterface || !$hCaptchaAvailable ) {
+						// Most API edit interfaces don't support hCaptcha yet.
+						// AbuseFilter's "showcaptcha" consequence can still
+						// override this, but will use FancyCaptcha.
+						$result = false;
+					}
 				}
 				// Make sure that the wmgEmergencyCaptcha settings is still respected.
 				// Note that if $wmgEmergencyCaptcha is set, and hCaptcha is enabled, API edits from interfaces
@@ -2200,11 +2211,20 @@ if ( $wmgEnableCaptcha ) {
 		$wgCaptchaTriggers['contactpage'] = true;
 	}
 
-	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgDBname ) {
+	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( $wgHCaptchaEnabledInMobileFrontend ) {
 		if ( in_array( $action, [ 'edit', 'create', 'addurl' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-			// For API edits, don't use hCaptcha yet.
+			// Default to FancyCaptcha for API edits, since most API edit
+			// interfaces don't support hCaptcha yet (T419572).
 			$className = 'FancyCaptcha';
-			return;
+
+			// Allow hCaptcha for approved interfaces. Don't return early
+			// so the T404204 failover check below can still run.
+			$editorInterface = RequestContext::getMain()->getRequest()->getRawVal( 'editorinterface' );
+			if ( $wgHCaptchaEnabledInMobileFrontend && $editorInterface === 'MobileFrontend-SourceEditor' ) {
+				$className = 'HCaptcha';
+			} else {
+				return;
+			}
 		}
 		// T404204 - Automatic failover in event of hCaptcha service being unavailable
 		$services = MediaWikiServices::getInstance();
