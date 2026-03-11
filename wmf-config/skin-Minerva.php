@@ -68,9 +68,8 @@ return [
 	'wgMinervaAdvancedMainMenu' => [
 		'default' => [
 			'base' => false,
-			'beta' => false,
 			'loggedin' => false,
-			'amc' => false,
+			'amc' => true,
 		],
 		// T290812
 		'ptwikinews' => [
