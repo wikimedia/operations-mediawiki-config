@@ -6799,6 +6799,22 @@ return [
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'frwikivoyage' => true,
+	# on Russian wikis (#8 in opt-outs)
+	'ruwiki' => true,
+	'ruwiktionary' => true,
+	'ruwikivoyage' => true,
+	# on Portuguese wikis (#10 in opt-outs)
+	'ptwiki' => true,
+	'ptwiktionary' => true,
+	'ptwikivoyage' => true,
+	# on Japanese wikis (#13 in opt-outs)
+	'jawiki' => true,
+	'jawiktionary' => true,
+	'jawikivoyage' => true,
+	# on Indonesian wikis (#15 in opt-outs)
+	'idwiki' => true,
+	'idwiktionary' => true,
+	'idwikivoyage' => true,
 	# on Polish wikis (#16 in opt-outs)
 	'plwiki' => true,
 	'plwiktionary' => true,
