@@ -144,6 +144,9 @@ return [
 		'Thesaurus' => 110, // T411819
 		'Thesaurus_talk' => 111, // T411819
 	],
+	'+arwikiquote' => [
+		'وق' => NS_PROJECT, // T419828
+	],
 	'+arzwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
