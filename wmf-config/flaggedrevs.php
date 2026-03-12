@@ -488,6 +488,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'idwiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autoreview', 'sysop' ];
+		unset( $wgGroupPermissions['editor'] ); // T419105
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;

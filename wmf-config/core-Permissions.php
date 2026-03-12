@@ -1491,7 +1491,6 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T35508
 		'sysop' => [ 'extendedconfirmed' => true ], // T402755
 		'bot' => [ 'extendedconfirmed' => true ], // T402755
-		'interface-editor' => [ 'extendedconfirmed' => true ], // T402755
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T402755
 	],
 	'+igwiki' => [
