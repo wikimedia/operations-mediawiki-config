@@ -4051,6 +4051,16 @@ return [
 	'thwiki' => true,
 ],
 
+'wgPersonalDashboardMinimumEdits' => [
+	'default' => 100,
+	'testwiki' => 10,
+],
+
+'wgPersonalDashboardMaximumEdits' => [
+	'default' => 0,
+	'testwiki' => 25,
+],
+
 'wmgUsePhonos' => [
 	'default' => true, // T336763
 	'lockeddown' => false
