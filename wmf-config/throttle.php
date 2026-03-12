@@ -45,3 +45,11 @@ $wmgThrottlingExceptions[] = [
 	'dbname' => 'enwiki',
 	'value'  => 40,
 ];
+// T419899 - CEE Women Campaign 2026 editathon for azwiki, 14 March 2026
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-03-14T10:00 +0:00',
+	'to'     => '2026-03-14T16:00 +0:00',
+	'IP'     => '185.233.35.68',
+	'dbname' => 'azwiki',
+	'value'  => 30,
+];
