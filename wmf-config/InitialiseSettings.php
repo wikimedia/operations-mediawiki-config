@@ -2583,6 +2583,23 @@ return [
 	],
 ],
 
+// @unstable
+// IMPORTANT: This is a temporary setting is unstable.
+// It should not be enabled for any project other than ruwiki.
+// Updates to this configuration should not be made without
+// consulting #Reader-Experience-Team on Phabricator.
+'wgVectorLanguageInMainMenu' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// T375046
+	'ruwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+],
+
 'wgVectorTypeahead' => [
 	'default' => [
 		'recommendationApiUrl' => null,
