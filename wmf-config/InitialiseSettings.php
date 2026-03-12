@@ -7377,7 +7377,7 @@ return [
 
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
 	'default' => false,
-	'enwiki' => true, // T399611
+	'wikipedia' => true, // T415320
 ],
 
 'wgVisualEditorEnableCollabBeta' => [
