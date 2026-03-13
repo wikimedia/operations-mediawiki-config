@@ -1368,7 +1368,9 @@ $wgSiteMatrixSites = [
 	],
 ];
 
-$wgSiteMatrixClosedSites = WmfConfig::readDbListFile( 'closed' );
+$closedWikis = WmfConfig::readDbListFile( 'closed' );
+
+$wgSiteMatrixClosedSites = $closedWikis;
 $wgSiteMatrixPrivateSites = WmfConfig::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = WmfConfig::readDbListFile( 'fishbowl' );
 $wgSiteMatrixNonGlobalSites = [];
@@ -1668,6 +1670,13 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 
 	// Use Graphite for popular list
 	$wgExtDistGraphiteRenderApi = 'https://graphite.wikimedia.org/render';
+}
+
+// Needed because some closed wikis are SUL wikis and we enable GlobalBlocking
+// for SUL wikis, so we can't define both sul and closed in InitaliseSettings.php
+// We don't want GlobalBlocking on closed wikis as no editing can happen there (T420062)
+if ( in_array( $wgDBname, $closedWikis ) ) {
+	$wmgUseGlobalBlocking = false;
 }
 
 // CentralAuth needed so that user CentralIds match
