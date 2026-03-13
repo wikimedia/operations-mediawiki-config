@@ -13398,6 +13398,10 @@ return [
 	'default' => false,
 	'testwiki' => true,
 ],
+// T419163
+'wgReadingListsBetaDefaultForNewAccountsAfter' => [
+	'default' => null,
+],
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
 'wmgUseGlobalPreferences' => [
