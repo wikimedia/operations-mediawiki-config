@@ -5929,6 +5929,43 @@ return [
 ],
 
 # abuse filter @{
+'wmgUseAbuseFilter' => [
+	'default' => true,
+	// T420063: Disable AbuseFilter on wikis where there were never any entries
+	'closed' => false,
+	// These wikis are closed but have had historical AbuseFilter log entries
+	'advisorywiki' => true,
+	'akwiki' => true,
+	'angwikibooks' => true,
+	'bgwikinews' => true,
+	'crwiki' => true,
+	'hzwiki' => true,
+	'iewikibooks' => true,
+	'iiwiki' => true,
+	'klwiki' => true,
+	'krwiki' => true,
+	'kywikibooks' => true,
+	'lrcwiki' => true,
+	'mhwiki' => true,
+	'muswiki' => true,
+	'nawiki' => true,
+	'ngwiki' => true,
+	'pa_uswikimedia' => true,
+	'pihwiki' => true,
+	'simplewikibooks' => true,
+	'strategywiki' => true,
+	'trwikinews' => true,
+	'usabilitywiki' => true,
+	'wikimania2012wiki' => true,
+	'wikimania2013wiki' => true,
+	'wikimania2014wiki' => true,
+	'wikimania2015wiki' => true,
+	'wikimania2016wiki' => true,
+	'wikimania2017wiki' => true,
+	'wikimania2018wiki' => true,
+	'wowikiquote' => true,
+],
+
 'wmgAbuseFilterCentralDB' => [
 	'default' => 'metawiki',
 ],

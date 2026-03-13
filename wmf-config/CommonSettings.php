@@ -2873,11 +2873,13 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 # AbuseFilter
-wfLoadExtension( 'AbuseFilter' );
-include __DIR__ . '/abusefilter.php';
-if ( $wmgUseGlobalAbuseFilters ) {
-	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
-	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
+if ( $wmgUseAbuseFilter ) {
+	wfLoadExtension( 'AbuseFilter' );
+	include __DIR__ . '/abusefilter.php';
+	if ( $wmgUseGlobalAbuseFilters ) {
+		$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
+		$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
+	}
 }
 
 # PdfHandler
