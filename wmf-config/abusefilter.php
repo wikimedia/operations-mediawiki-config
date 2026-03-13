@@ -419,6 +419,11 @@ switch ( $wgDBname ) {
 	case 'plwikiquote':
 		$wgAbuseFilterActions['block'] = true; // T398137
 		break;
+	case 'ptwiki':
+		$wgAbuseFilterActions['block'] = true; // T419312
+		$wgAbuseFilterBlockDuration = '3 days'; // T419312
+		$wgAbuseFilterAnonBlockDuration = '3 days'; // T419312
+		break;
 	case 'ptwiktionary':
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
