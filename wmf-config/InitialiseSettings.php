@@ -8266,15 +8266,13 @@ return [
 
 // Whether the postproc cache is activated or not.
 // Note: it also need to be configured in wgParserCacheFilterConfig below.
-'wgUsePostprocCache' => [
-	'default' => false,
-	'testwiki' => true,
-	'parsoidrendered' => true,
+'wgUsePostprocCacheParsoid' => [
+	'default' => true,
 	'wikidatawiki' => false,
 	'commonswiki' => false,
 ],
 
-// Sampling rate for debugging of unsafe cache keys in wgUsePostprocCache
+// Sampling rate for debugging of unsafe cache keys in wgUsePostprocCache*
 'wgParserOptionsLogUnsafeSampleRate' => [
 	'default' => 0,
 	'parsoidrendered' => 500, // sample at 0.2% of unsafe-to-cache pages
