@@ -12305,6 +12305,7 @@ return [
 	'default' => true,
 	'wikitech' => false,
 	'loginwiki' => false,
+	'closed' => false, // T420062
 ],
 
 'wgSecurePollUseNamespace' => [
