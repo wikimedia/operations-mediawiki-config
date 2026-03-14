@@ -2243,6 +2243,7 @@ if ( $wmgUseCentralAuth ) {
 
 	foreach ( $wmgLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
+			'class' => UDPRCFeedEngine::class,
 			'formatter' => IRCColourfulCARCFeedFormatter::class,
 			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
 		];
