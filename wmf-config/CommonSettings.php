@@ -54,6 +54,7 @@ use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\RCFeed\UDPRCFeedEngine;
 use MediaWiki\Session\SessionManager;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
@@ -4595,6 +4596,7 @@ if ( $wmgUseRC2UDP ) {
 
 	foreach ( $wmgLocalServices['irc'] as $i => $address ) {
 		$wgRCFeeds["irc$i"] = [
+			'class' => UDPRCFeedEngine::class,
 			'formatter' => 'IRCColourfulRCFeedFormatter',
 			'uri' => "udp://$address:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
 			'add_interwiki_prefix' => false,
