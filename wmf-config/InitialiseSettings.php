@@ -4439,6 +4439,11 @@ return [
 		'PMID' => true,
 		'RFC' => true,
 	],
+	'afwiki' => [ // T420142
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false
+	],
 	'enwiki' => [ // T275951
 		'ISBN' => false,
 		'PMID' => false,
