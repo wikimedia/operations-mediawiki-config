@@ -4278,6 +4278,7 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-recover-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
+	$wgUserRequirementsPrivateConditions[] = 'oath.has_2fa'; // APCOND_OATH_HAS2FA
 
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
