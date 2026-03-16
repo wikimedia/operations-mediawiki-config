@@ -14017,6 +14017,11 @@ return [
 	'sul' => 'https://meta.wikimedia.org',
 ],
 
+// T418957
+'wgApiClientErrorSampleRate' => [
+	'default' => 0.01,
+],
+
 // T377975 / T391064
 'wgTemplateDataEnableDiscovery' => [
 	'default' => true,

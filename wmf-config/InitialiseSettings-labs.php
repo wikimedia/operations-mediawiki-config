@@ -2306,6 +2306,10 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 			'sul' => 'https://meta.wikimedia.beta.wmcloud.org',
 		],
+		// T418957
+		'-wgApiClientErrorSampleRate' => [
+			'default' => 1.0,
+		],
 		// T377975
 		'-wgTemplateDataEnableDiscovery' => [
 			'default' => false,
