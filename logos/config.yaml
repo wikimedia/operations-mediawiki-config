@@ -294,11 +294,14 @@ Wikipedia:
         commons_tagline: 'File:Wikipedia-tagline-bn.svg'
         comment_tagline: T273085
     bowiki:
-        comment: T50397
-        comment_1_5x: T150618
-        comment_2x: T150618
-        local_tagline: true
-        local_wordmark: true
+        commons: 'File:Wikipedia-logo-v2-bo.svg'
+        comment: T419268
+        comment_1_5x: T419268
+        comment_2x: T419268
+        commons_wordmark: 'File:Wikipedia-wordmark-bo.svg'
+        comment_wordmark: T419268
+        commons_tagline: 'File:Wikipedia-tagline-bo.svg'
+        comment_tagline: T419268
     bpywiki:
         comment: T42285
         comment_1_5x: T150618

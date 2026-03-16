@@ -85,7 +85,7 @@ return [
 	'blkwiki' => '/static/images/project-logos/blkwiki.png',
 	'bmwiki' => '/static/images/project-logos/bmwiki.png', // T42285
 	'bnwiki' => '/static/images/project-logos/bnwiki.png',
-	'bowiki' => '/static/images/project-logos/bowiki.png', // T50397
+	'bowiki' => '/static/images/project-logos/bowiki.png', // T419268
 	'bpywiki' => '/static/images/project-logos/bpywiki.png', // T42285
 	'brwiki' => '/static/images/project-logos/brwiki.png',
 	'bswiki' => '/static/images/project-logos/bswiki.png',
@@ -997,7 +997,7 @@ return [
 	'blkwiki' => '/static/images/project-logos/blkwiki-1.5x.png',
 	'bmwiki' => '/static/images/project-logos/bmwiki-1.5x.png', // T150618
 	'bnwiki' => '/static/images/project-logos/bnwiki-1.5x.png',
-	'bowiki' => '/static/images/project-logos/bowiki-1.5x.png', // T150618
+	'bowiki' => '/static/images/project-logos/bowiki-1.5x.png', // T419268
 	'bpywiki' => '/static/images/project-logos/bpywiki-1.5x.png', // T150618
 	'brwiki' => '/static/images/project-logos/brwiki-1.5x.png', // T150618
 	'bswiki' => '/static/images/project-logos/bswiki-1.5x.png', // T158815
@@ -1675,7 +1675,7 @@ return [
 	'blkwiki' => '/static/images/project-logos/blkwiki-2x.png',
 	'bmwiki' => '/static/images/project-logos/bmwiki-2x.png', // T150618
 	'bnwiki' => '/static/images/project-logos/bnwiki-2x.png',
-	'bowiki' => '/static/images/project-logos/bowiki-2x.png', // T150618
+	'bowiki' => '/static/images/project-logos/bowiki-2x.png', // T419268
 	'bpywiki' => '/static/images/project-logos/bpywiki-2x.png', // T150618
 	'brwiki' => '/static/images/project-logos/brwiki-2x.png', // T150618
 	'bswiki' => '/static/images/project-logos/bswiki-2x.png', // T158815
@@ -2518,10 +2518,10 @@ return [
 		'width' => 120,
 		'height' => 27,
 	],
-	'bowiki' => [
+	'bowiki' => [ // T419268
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bo.svg',
-		'width' => 109,
-		'height' => 32,
+		'width' => 120,
+		'height' => 30,
 	],
 	'bpywiki' => [ // T273085
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
@@ -6073,7 +6073,7 @@ return [
 		'width' => 120,
 		'height' => 17,
 	],
-	'bowiki' => [
+	'bowiki' => [ // T419268
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bo.svg',
 		'width' => 92,
 		'height' => 18,
