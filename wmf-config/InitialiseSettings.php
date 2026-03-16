@@ -12555,6 +12555,13 @@ return [
 	'default' => 1,
 ],
 
+// T414338
+'wgTrackMediaRequestProvenance' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 // Virtual media views endpoint used by Media Viewer
 'wgMediaViewerRecordVirtualViewBeaconURI' => [
 	'default' => '/beacon/media',
