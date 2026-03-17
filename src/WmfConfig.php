@@ -87,7 +87,9 @@ class WmfConfig {
 		'wikilove',
 		'tempaccounts_disabled',
 		'checkuser-suggested-investigations',
-		'automoderator-revertrisk-multilingual'
+		'automoderator-revertrisk-multilingual',
+		'abusefilter-disabled',
+		'checkuser-disabled',
 	];
 
 	/** @var string[] */
