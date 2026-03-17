@@ -10498,6 +10498,7 @@ return [
 		'sources',
 		'outreach', // T171140
 		'wikifunctions', // T342857
+		'abstract', // T420420
 	],
 	'commonswiki' => [
 		'commons',
@@ -10510,6 +10511,7 @@ return [
 		'sources',
 		'outreach', // T171140
 		'wikifunctions', // T342857
+		'abstract', // T420420
 	],
 	'testwikidatawiki' => [
 		'commons',
@@ -10536,6 +10538,7 @@ return [
 		'sources',
 		'outreach', // T171140
 		'wikifunctions', // T342857
+		'abstract', // T420420
 	],
 	'wikidataclient-test' => [
 		'commons',
@@ -10690,6 +10693,7 @@ return [
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
 	'wikifunctionswiki' => 'wikifunctions', // T342857
+	'abstractwiki' => 'abstract', // T420420
 	'wikimaniawiki' => 'wikimania',
 	'outreachwiki' => 'outreach',
 ],
