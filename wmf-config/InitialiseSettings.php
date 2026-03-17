@@ -3845,10 +3845,7 @@ return [
 	'ptwiki' => true,
 	'zhwiki' => true,
 ],
-'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
-	'default' => false,
-	'testwiki' => true,
-],
+
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
 	'testwiki' => true,
