@@ -1518,9 +1518,6 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// The default $wgEnabledTranscodeSet will include WebM VP9 flat file
 	// transcodes from 240p to 2160p. Leave them enabled site-wide.
-	//
-	// Also enable a single WebM VP8 flat file for backwards compatibility.
-	$wgEnabledTranscodeSet['360p.webm'] = true;
 
 	// [T363966] pre-iOS 17.4 compat tracks: QuickTime files with old but
 	// supported free codecs (MJPEG + MP3 and/or MPEG-4 Visual + MP3).
