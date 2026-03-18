@@ -4058,6 +4058,12 @@ return [
 	'trwiki' => true,
 	'simplewiki' => true,
 	'thwiki' => true,
+	'enwiki' => true, // T418367
+],
+
+'wgPersonalDashboardRiskyArticleEditsMlModel' => [
+	'default' => "revertrisklanguageagnostic",
+	'enwiki' => "damaging"
 ],
 
 'wgPersonalDashboardBlueDot' => [
