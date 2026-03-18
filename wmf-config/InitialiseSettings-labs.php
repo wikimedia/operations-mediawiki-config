@@ -578,9 +578,6 @@ function wmfGetOverrideSettings() {
 		'wgDefaultSkin' => [
 			'default' => 'vector-2022',
 		],
-		'wgSkipSkins' => [
-			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
-		],
 
 		'-wmgCentralAuthCookieDomain' => [
 			'default' => '',
