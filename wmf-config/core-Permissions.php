@@ -1909,7 +1909,6 @@ return [
 			'massmessage' => true,
 			'userrights' => true,
 			'userrights-interwiki' => true,
-			'oathauth-disable-for-user' => true,
 			'oathauth-recover-for-user' => true,
 			'oathauth-verify-user' => true,
 			'oathauth-view-log' => true,

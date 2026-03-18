@@ -4775,6 +4775,7 @@ return [
 		// T418580
 		'centralnoticeadmin' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
 		],
 		'checkuser' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
@@ -4806,6 +4807,7 @@ return [
 		],
 		'wmf-supportsafety' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
 		],
 	],
 ],
