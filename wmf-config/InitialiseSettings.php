@@ -12890,30 +12890,6 @@ return [
 			],
 		],
 	],
-	'ptwiki' => [
-		// T419275
-		[
-			'name' => 'design-research-participant-recruitment-survey',
-			'type' => 'external',
-			'enabled' => true,
-			'coverage' => 0.07,
-			'privacyPolicy' => 'design-research-participant-recruitment-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'questions' => [
-				[
-					'name' => 'Survey single external question',
-					'question' => 'design-research-participant-recruitment-survey-question',
-					'description' => 'design-research-participant-recruitment-survey-description',
-					'link' => 'design-research-participant-recruitment-survey-link',
-					'yesMsg' => 'design-research-participant-recruitment-survey-yes-button',
-					'noMsg' => 'design-research-participant-recruitment-survey-no-button',
-				],
-			],
-		],
-	],
 	'trwiki' => [
 		// T419275
 		[
