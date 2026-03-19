@@ -51,6 +51,9 @@ return [
 		'Wikivoyage_talk' => NS_PROJECT_TALK,
 		'WV' => NS_PROJECT,
 	],
+	'+abstractwiki' => [
+		'Abstract' => NS_PROJECT,
+	],
 	'+altwiki' => [
 		'ВП' => NS_PROJECT,
 	],
