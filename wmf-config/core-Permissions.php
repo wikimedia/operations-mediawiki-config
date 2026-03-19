@@ -2769,6 +2769,13 @@ return [
 			'securepoll-edit-poll' => true,
 			'editinterface' => true,
 		],
+		// Temporary group for testing
+		'securitytester' => [
+			'read' => true
+		],
+		'securitytester2' => [
+			'read' => true
+		]
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
@@ -3682,6 +3689,12 @@ return [
 			'patroller', // T354063
 			'upwizcampeditors', // T378067
 		],
+		'securitytester' => [
+			'securitytester2'
+		],
+		'securitytester2' => [
+			'securitytester'
+		]
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [
@@ -5246,6 +5259,12 @@ return [
 			'patroller', // T354063
 			'upwizcampeditors', // T378067
 		],
+		'securitytester' => [
+			'securitytester2'
+		],
+		'securitytester2' => [
+			'securitytester'
+		]
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [

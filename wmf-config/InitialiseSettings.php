@@ -4829,6 +4829,11 @@ return [
 			'demote' => true,
 		],
 	],
+	'+testwiki' => [
+		'securitytester2' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		]
+	]
 ],
 
 // T417880
