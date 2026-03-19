@@ -2466,7 +2466,8 @@ return [
 
 'wgDefaultSkin' => [
 	'default' => 'vector-2022',
-	'legacy-vector' => 'vector',
+	'donatewiki' => 'vector',
+	'thankyouwiki' => 'vector',
 	// Special cases for wikis that use skins older than Vector.
 	'nostalgiawiki' => 'nostalgia',
 	// Special cases for wikis that use custom skins.
@@ -2477,8 +2478,6 @@ return [
 	'default' => false,
 	// T366314
 	'group0' => true,
-	// T366314
-	'legacy-vector' => true,
 ],
 
 // Note:
@@ -2530,13 +2529,9 @@ return [
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '2',
-	// T254227, T347444
-	'legacy-vector' => '1',
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
 	'default' => '2',
-	// T254227, T347444
-	'legacy-vector' => '1',
 ],
 
 'wgVectorNightMode' => [
@@ -13142,7 +13137,6 @@ return [
 
 'wgWMEReadingDepthSamplingRate' => [
 	'default' => 0.01, // T306606#7881912
-	'legacy-vector' => 0, // T294777
 	'enwiki' => 0.001, // T294777
 ],
 

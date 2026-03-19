@@ -3763,13 +3763,6 @@ return [
 			'destination_event_service' => 'eventgate-analytics'
 		],
 	],
-	'+legacy-vector' => [
-		'mediawiki.web_ui_actions' => [
-			'sample' => [
-				'rate' => 0,
-			],
-		],
-	],
 	'+officewiki' => [
 		'mediawiki.web_ui_actions' => [
 			'sample' => [
