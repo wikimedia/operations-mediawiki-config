@@ -13783,7 +13783,7 @@ return [
 // This will be used (only) on Abstract Wikipedia
 'wgWikiLambdaEnableAbstractMode' => [
 	'default' => false,
-	'abstractwiki' => true,
+	'abstractwiki' => false,
 ],
 
 // This will be used (only) on Abstract Wikipedia
