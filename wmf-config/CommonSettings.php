@@ -325,7 +325,6 @@ $wgLocalVirtualHosts = [
 	'wikipedia-zh-arbcom.wikimedia.org',
 	'wikitech.wikimedia.org',
 	'www.wikifunctions.org',
-	'm.wikifunctions.org',
 ];
 
 $globals = WmfConfig::getConfigGlobals(
@@ -1018,7 +1017,6 @@ if ( $wmgUseCORS ) {
 		'www.mediawiki.org',
 		'm.mediawiki.org',
 		'www.wikifunctions.org',
-		'm.wikifunctions.org',
 		'advisory.wikimedia.org',
 		'advisory.m.wikimedia.org',
 		'affcom.wikimedia.org',
