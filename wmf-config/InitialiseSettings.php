@@ -4091,6 +4091,41 @@ return [
 	'testwiki' => 25,
 ],
 
+'wgPersonalDashboardActiveDiscussionsPages' => [
+	'default' => [],
+	// T420785
+	'testwiki' => [ 'Wikipedia:Village Pump' ],
+	'idwiki' => [
+		'Wikipedia:Warung Kopi (Kebijakan)',
+		'Wikipedia:Warung Kopi (Usulan)',
+		'Wikipedia:Warung Kopi (Bahasa)',
+		'Wikipedia:Warung Kopi (Lain-lain)'
+	],
+	'trwiki' => [
+		'Vikipedi:Köy çeşmesi (ilginize)',
+		'Vikipedi:Köy çeşmesi (teklifler)',
+		'Vikipedi:Köy çeşmesi (politika)',
+		'Vikipedi:Danışma masası'
+	],
+	'simplewiki' => [
+		'Wikipedia:Simple talk',
+		'Wikipedia:Administrators\' noticeboard'
+	],
+	'thwiki' => [
+		'วิกิพีเดีย:แผนกช่วยเหลือ',
+		'วิกิพีเดีย:สถานทูตวิกิมีเดีย',
+		'วิกิพีเดีย:แจ้งผู้ดูแลระบบ'
+	],
+	'enwiki' => [
+		'Wikipedia:Help desk',
+		'Wikipedia:Village pump (miscellaneous)',
+		'Wikipedia:Village pump (technical)',
+		'Wikipedia:Village pump (idea_lab)',
+		'Wikipedia:Village pump (policy)',
+		'Wikipedia:Village pump (proposals)'
+	]
+],
+
 'wmgUsePhonos' => [
 	'default' => true, // T336763
 	'lockeddown' => false
