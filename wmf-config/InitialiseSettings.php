@@ -14274,4 +14274,12 @@ return [
 'wgWMCBadEmailDomainsFile' => [
 	'default' => '/srv/mediawiki/private/disposable-email-domains',
 ],
+
+// T419605 - Reduce reauth timeout for editing site JS.
+'wgReauthenticateTime' => [
+	'default' => [
+		'default' => 3600, // 1 hour.
+		'editsitejs' => 600, // 10 minutes.
+	],
+]
 ];
