@@ -83,6 +83,8 @@ $common = [
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
 	'shellbox-video' => 'http://localhost:6036',
+	// Temporary for T419049 -- ICU 72 upgrade.
+	'shellbox-icu' => 'https://shellbox-icu72-tls-service.shellbox.svc.cluster.local:4081',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	'chart-renderer' => 'http://localhost:6039',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
