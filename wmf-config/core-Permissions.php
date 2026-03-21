@@ -2226,6 +2226,7 @@ return [
 			'movefile' => true, // T161532
 			'extendedconfirmed' => true, // T292912
 			'move' => true, // T313802
+			'suppressredirect' => true, // T420704
 		],
 		'eliminator' => [
 			'browsearchive' => true,
@@ -2246,6 +2247,7 @@ return [
 			'unwatchedpages' => true,
 			'block' => true, // T37261
 			'abusefilter-log-private' => true, // T237830
+			'suppressredirect' => true, // T420704
 		], // T29563
 		'user' => [
 			'move-rootuserpages' => false,
