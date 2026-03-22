@@ -195,8 +195,8 @@ class CirrusTest extends WgConfTestCase {
 		return $config[$clusterName] ?? $config;
 	}
 
-	public function provideUserTestingBuckets() {
-		$allConfig = $this->loadWgConf( 'production' );
+	public static function provideUserTestingBuckets() {
+		$allConfig = self::loadWgConf( 'production' );
 		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'] ?? [];
 		$tests = [];
 
@@ -238,8 +238,8 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertSameSize( $triggers, array_unique( $triggers ) );
 	}
 
-	public function providePerClusterShardsAndReplicas() {
-		$allConfig = $this->loadWgConf( 'production' );
+	public static function providePerClusterShardsAndReplicas() {
+		$allConfig = self::loadWgConf( 'production' );
 		$shards = $allConfig->settings['wmgCirrusSearchShardCount'];
 		$replicas = $allConfig->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $allConfig->settings['wgCirrusSearchMaxShardsPerNode'];
