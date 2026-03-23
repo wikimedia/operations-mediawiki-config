@@ -3103,6 +3103,8 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
+						// Do not set performer attributes here, that is done
+						// via server-side code
 					],
 				],
 			],
