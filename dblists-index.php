@@ -5,7 +5,7 @@ return [
 'aawiki' => [ 'wikipedia', 'closed', 'small', 'specialcontribute', 'wikidataclient', 'sul', 'abusefilter-disabled' ],
 'aawikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul', 'abusefilter-disabled', 'checkuser-disabled' ],
 'aawiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul', 'abusefilter-disabled' ],
-'abstractwiki' => [ 'special', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
+'abstractwiki' => [ 'special', 'small', 'wikidataclient', 'commonsuploads', 'group1', 'translate', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'abwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'sul' ],
 'abwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul', 'abusefilter-disabled', 'checkuser-disabled' ],
 'acewiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
