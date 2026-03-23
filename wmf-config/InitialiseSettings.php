@@ -13397,6 +13397,30 @@ return [
 		'wmf-restbase-global' => [
 			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Math API'
+		],
+		'wmf-analytics-editors' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
+			'name' => 'Wikimedia Editor Analytics API',
+		],
+		'wmf-analytics-editors-by-country' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
+			'name' => 'Wikimedia Geo Analytics API',
+		],
+		'wmf-analytics-edits' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
+			'name' => 'Wikimedia Edit Analytics API',
+		],
+		'wmf-analytics-media-requests' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
+			'name' => 'Wikimedia Media Analytics API',
+		],
+		'wmf-analytics-page-views' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
+			'name' => 'Wikimedia Page Analytics API',
+		],
+		'wmf-analytics-unique-devices' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
+			'name' => 'Wikimedia Device Analytics API',
 		]
 	],
 	'+growthexperiments' => [
@@ -13407,6 +13431,12 @@ return [
 	'+testwiki' => [
 		'attribution.v0-beta' => [
 			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
+		]
+	],
+	'+commonswiki' => [
+		'wmf-analytics-commons' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
+			'name' => 'Wikimedia Commons Impact Metrics API',
 		],
 	],
 	'+wikifunctionswiki' => [
