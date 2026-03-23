@@ -4800,13 +4800,6 @@ if ( $wmgUseGrowthExperiments ) {
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 	$wgGEReviseToneServiceUrl = $wmgLocalServices['data-gateway'];
 
-	// TODO: remove this once audience/visibility designation work is done (T409517)
-	if ( is_file( "$wgExtensionDirectory/GrowthExperiments/includes/Rest/growthexperiments.v0.json" ) ) {
-		$wgRestSandboxSpecs['growthexperiments.v0'] = [
-			'file' => "$wgExtensionDirectory/GrowthExperiments/includes/Rest/growthexperiments.v0.json"
-		];
-	}
-
 	// put if conditions for $wmgGEActiveExperiment here
 }
 

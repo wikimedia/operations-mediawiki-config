@@ -13516,6 +13516,11 @@ return [
 			'name' => 'Math API'
 		]
 	],
+	'+growthexperiments' => [
+		'growthexperiments.v0' => [
+			'file' => "./extensions/GrowthExperiments/includes/Rest/growthexperiments.v0.json",
+		],
+	],
 	'+testwiki' => [
 		'attribution.v0-beta' => [
 			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
