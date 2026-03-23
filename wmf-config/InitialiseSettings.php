@@ -13846,6 +13846,10 @@ return [
 	'wikifunctionswiki' => false, // T409760
 ],
 
+'wgCampaignEventsEnableEventGoals' => [
+	'default' => true,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
