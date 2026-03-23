@@ -43,12 +43,24 @@ return [
 'wgGEUserImpactMaxEdits' => [
 	'default' => 1000,
 	'testwiki' => 10000,
+	'arwiki' => 10000,
+	'dewiki' => 10000,
 	'enwiki' => 10000,
+	'eswiki' => 10000,
+	'frwiki' => 10000,
+	'ptwiki' => 10000,
+	'zhwiki' => 10000,
 ],
 'wgGEUserImpactMaxThanks' => [
 	'default' => 1000,
 	'testwiki' => 10000,
+	'arwiki' => 10000,
+	'dewiki' => 10000,
 	'enwiki' => 10000,
+	'eswiki' => 10000,
+	'frwiki' => 10000,
+	'ptwiki' => 10000,
+	'zhwiki' => 10000,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
