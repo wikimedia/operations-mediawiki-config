@@ -13815,6 +13815,7 @@ return [
 	'mediawikiwiki' => true, // T409760
 	'specieswiki' => true, // T409760
 	'wikifunctionswiki' => true, // T409760
+	'wikibooks' => true, // T419597
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
