@@ -14092,6 +14092,11 @@ return [
 	'default' => true,
 ],
 
+// T417833
+'wgOAuthUseJwtCookie' => [
+	'default' => true,
+],
+
 // T415007
 'wgUseSessionCookieForBotPasswords' => [
 	'default' => true,
