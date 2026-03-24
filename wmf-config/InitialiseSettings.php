@@ -12743,6 +12743,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'group0' => true,
 ],
 
 // Virtual media views endpoint used by Media Viewer
