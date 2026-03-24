@@ -14122,11 +14122,6 @@ return [
 	'ukwiki' => true,
 ],
 
-// T416748
-'wgUserEmailConfirmationUseHTML' => [
-	'default' => true,
-],
-
 // T406023
 'wgSVGNativeRendering' => [
 	'default' => false,

@@ -2365,9 +2365,6 @@ function wmfGetOverrideSettings() {
 		'wmgEnableWikidataIconsInClientWatchlist' => [
 			'default' => true,
 		],
-		'wgUserEmailConfirmationUseHTML' => [
-			'default' => true,
-		],
 
 		// T410163
 		'wmgUseFooterLegalContactLink' => [
