@@ -2598,7 +2598,7 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare version dev0 (staging testing) of
+		// Declare version dev (staging testing) of
 		// mediawiki.page_html_content_change stream for now.
 		// It will be changed for a new schema when it's ready.
 		// It is produced by a streaming enrichment pipeline,
@@ -2632,6 +2632,19 @@ return [
 		'mw_page_html_content_change_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					// error events with html in them can be large.
+					// We might have html in these error events, because
+					// the mediawiki-event-enrichment Flink job
+					// first fetches latest revision html and adds it to the event,
+					// and then fetch parent revision html (to diff it and add diff to event).
+					// If the parent revision html fetch fails, the error event raw_event field
+					// will have the serialized JSON of the event with the html in it.
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 
 		// Declare version dev0 (staging testing) of
@@ -2662,6 +2675,16 @@ return [
 		'mw_page_edit_type_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					// Error stream contains the raw_event that caused the error.
+					// In this case, the raw_event source stream is the
+					// mediawiki.page_html_content_change, which can have large events in it.
+					// Bump the spark_job_ingestion_scale to medium to account for this.
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			]
 		],
 
 		// This stream uses the mediawiki/page/change schema.
