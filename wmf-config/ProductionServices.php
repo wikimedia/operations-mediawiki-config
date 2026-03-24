@@ -137,8 +137,8 @@ $common = [
 		]
 	],
 	'semanticsearch-test' => [
-		[ // WE3.1 test cluster only exists in eqiad.
-			'host' => 'opensearch-semantic-search.svc.eqiad.wmnet',
+		[ // semanticsearch cluster (WE3.1 android app semantic search MVP)
+			'host' => 'opensearch-semantic-search.discovery.wmnet',
 			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
 			'port' => 30443,
 		]
