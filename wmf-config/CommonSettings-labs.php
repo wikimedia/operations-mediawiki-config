@@ -165,6 +165,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCiteBacklinkCommunityConfiguration = true;
 		// Temporary while developing feature, T385666
 		$wgCiteSubRefMergeInDevelopment = true;
+		// Temporary while developing feature, T421055
+		$wgCiteRemoveSyntheticRefsUnsafe = true;
 	}
 
 	// Labs override for GlobalCssJs
