@@ -37,19 +37,11 @@ $wmgThrottlingExceptions = [];
 
 ## Add throttling definitions above.
 
-// T419109 - Women's History Month Edit-a-thon Cambridgeshire Central Library, 14 March 2026
+// T421305
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-03-14T13:00 +0:00',
-	'to'     => '2026-03-14T18:00 +0:00',
-	'range'     => [ '185.111.131.206/31' ],
-	'dbname' => 'enwiki',
+	'from'   => '2026-03-27T07:00 +1:00',
+	'to'     => '2026-03-27T12:00 +1:00',
+	'IP'     => '213.155.243.7',
+	'dbname' => 'cswiki',
 	'value'  => 40,
-];
-// T419899 - CEE Women Campaign 2026 editathon for azwiki, 14 March 2026
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-03-14T10:00 +0:00',
-	'to'     => '2026-03-14T16:00 +0:00',
-	'IP'     => '185.233.35.68',
-	'dbname' => 'azwiki',
-	'value'  => 30,
 ];
