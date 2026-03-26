@@ -407,8 +407,8 @@ if ( $wmgRealm == 'labs' ) {
 		}
 	}
 
-	// Point to the deployment-prep kartotherian server, see T310150.
-	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
+	// Point to the production kartotherian server, see T420299.
+	$wgKartographerMapServer = 'https://maps.wikimedia.org';
 
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
