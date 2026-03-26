@@ -5591,7 +5591,6 @@ return [
 		'.wiktionary.org' => 'enwiktionary',
 		'.mediawiki.org' => 'mediawikiwiki',
 		// wikimedia.org wikis can't use the parent domain because it's shared with non-MediaWiki sites
-		'api.wikimedia.org' => 'apiportalwiki',
 		'commons.wikimedia.org' => 'commonswiki',
 		'foundation.wikimedia.org' => 'foundationwiki',
 		'incubator.wikimedia.org' => 'incubatorwiki',
