@@ -3580,6 +3580,20 @@ return [
 				],
 			],
 		],
+		// Stream configuration for (T420621) WE 3.* Active Reader Baseline
+		'product_metrics.web_base.active_reader_baseline' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			// This stream has a custom job to import from kafka -> hadoop
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',

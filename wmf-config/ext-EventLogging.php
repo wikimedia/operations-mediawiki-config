@@ -101,6 +101,8 @@ return [
 		'product_metrics.app_base',
 		'product_metrics.web_base',
 		'product_metrics.web_base_with_ip',
+		'product_metrics.web_base.attribution_research',
+		'product_metrics.web_base.active_reader_baseline',
 		'wikibase.client.interaction',
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 		'mediawiki.product_metrics.readerexperiments_stickyheaders',
