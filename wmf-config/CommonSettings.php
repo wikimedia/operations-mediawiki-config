@@ -898,6 +898,26 @@ if ( ClusterConfig::getInstance()->isK8s() ) {
 	$wgShellboxUrls['icu-collation'] = $wmgLocalServices['shellbox-icu'];
 }
 
+// Temporary: set up $wgTempCategoryCollations for ICU upgrade -- T419049.
+// Only for s3 wikis minus ruwikinews, the rest use the old process.
+if (
+	ClusterConfig::getInstance()->isK8s() &&
+	isset( $wgLBFactoryConf['sectionsByDB'] ) &&
+	isset( $wgDBname ) &&
+	$wgDBname !== 'ruwikinews' &&
+	// s3 is the default section, so if it's not set, we're on s3
+	!isset( $wgLBFactoryConf['sectionsByDB'][$wgDBname] ) &&
+	str_starts_with( $wgCategoryCollation, 'uca-' ) // only for ICU collations
+) {
+	$wgTempCategoryCollations = [
+		[
+			'table' => 'categorylinks_icu72',
+			'collation' => 'remote-' . $wgCategoryCollation,
+			'fakeCollation' => $wgCategoryCollation,
+		]
+	];
+}
+
 // Disable $wgMaxImageArea checks, Thumbor uses a timeout instead
 // of a size limit (T291014#7367570)
 $wgMaxImageArea = false;
