@@ -2647,14 +2647,14 @@ return [
 			],
 		],
 
-		// Declare version dev0 (staging testing) of
+		// Declare version dev (staging testing) of
 		// mediawiki.page_edit_type_simple stream for now.
 		// It will be changed for a new schema when it's ready.
 		// It is produced by a streaming enrichment pipeline,
 		// (not via MediaWiki EventBus).
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'mediawiki.page_edit_type_simple.dev0' => [
-			'schema_title' => 'development/html_edit_type_simple',
+		'mediawiki.page_edit_type_simple.dev1' => [
+			'schema_title' => 'development/rendering_feature_counts_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
