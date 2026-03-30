@@ -12056,7 +12056,8 @@ return [
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 		'mediawiki.product_metrics.readerexperiments_stickyheaders',
 		'mediawiki.product_metrics.reader_experiments',
-		'mediawiki.product_metrics.contributors.experiments'
+		'mediawiki.product_metrics.contributors.experiments',
+		'mediawiki.product_metrics.reader_retention_logged_in',
 	],
 ],
 

@@ -3776,6 +3776,27 @@ return [
 			'schema_title' => 'analytics/mediawiki/wmde_page_summary',
 			'destination_event_service' => 'eventgate-analytics'
 		],
+		// T420490 Stream for logged-in reader retention A/A test by Reader Experience team.
+		'mediawiki.product_metrics.reader_retention_logged_in' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform',
+						'agent_client_platform_family',
+						// Following 3 used to determine if user is logged-in to a regular account.
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_is_bot',
+						// Used to determine if user is a "reader" as opposed to contributor.
+						'performer_edit_count_bucket',
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
+			],
+		],
 	],
 	'+officewiki' => [
 		'mediawiki.web_ui_actions' => [
