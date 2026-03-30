@@ -627,6 +627,7 @@ return [
 		'filemover' => [
 			'movefile' => true,
 			'suppressredirect' => true, // T236348
+			'delete-redirect' => true, // T421373
 		],
 		'image-reviewer' => [
 			'autopatrol' => true,
