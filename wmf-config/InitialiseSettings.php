@@ -12069,6 +12069,10 @@ return [
 	'default' => 'eventgate-analytics-external',
 ],
 
+'wgTestKitchenExposureResetEpoch' => [
+	'default' => 0,
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
