@@ -3710,23 +3710,24 @@ Wikinews:
         local_wordmark: true
     zhwikinews:
         commons: 'File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg'
+        selected: zhwikinews-20
         variants:
-            zhwikinews-hans:
-                commons: 'File:Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg'
+            zhwikinews-20:
+                commons: 'File:中文維基新聞20週年徽標.svg'
+                commons_icon: 'File:中文維基新聞20週年徽標纯Logo Globe.svg'
+            zhwikinews-20-hans:
+                commons: 'File:中文维基新闻20周年徽标.svg'
+                commons_icon: 'File:中文維基新聞20週年徽標纯Logo Globe.svg'
         lang_variants:
             zh-hans:
-                selected_logo: zhwikinews-hans
-                commons_wordmark: 'File:Wikinews-wordmark-zh-2023.svg'
+                selected_logo: zhwikinews-20-hans
             zh-cn:
                 selected_lang: zh-hans
-                selected_wordmark: zh-hans
             zh-my:
                 selected_lang: zh-hans
-                selected_wordmark: zh-hans
             zh-sg:
                 selected_lang: zh-hans
-                selected_wordmark: zh-hans
-        comment: T298550
+        comment: 'T298550, T420165'
         comment_1_5x: T298550
         comment_2x: T298550
         comment_lang_variants: T308620
