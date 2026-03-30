@@ -3353,6 +3353,11 @@ return [
 	'sul' => true,
 ],
 
+'wgEmailConfirmationBanner' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgBlockDisablesLogin' => [
 	'default' => false,
 	'private' => true, // T55871
