@@ -4075,6 +4075,8 @@ return [
 	'trwiki' => true,
 	'simplewiki' => true,
 	'thwiki' => true,
+	// T421415
+	'enwiki' => true,
 ],
 
 'wgPersonalDashboardUserMenu' => [
@@ -4085,16 +4087,22 @@ return [
 	'trwiki' => true,
 	'simplewiki' => true,
 	'thwiki' => true,
+	// T421415
+	'enwiki' => true,
 ],
 
 'wgPersonalDashboardMinimumEdits' => [
 	'default' => 100,
 	'testwiki' => 10,
+	// T421415
+	'enwiki' => 100,
 ],
 
 'wgPersonalDashboardMaximumEdits' => [
 	'default' => 0,
 	'testwiki' => 25,
+	// T421415
+	'enwiki' => 500,
 ],
 
 'wgPersonalDashboardActiveDiscussionsPages' => [
