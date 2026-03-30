@@ -10580,7 +10580,7 @@ return [
 	'wiktionary' => 'wiktionary', // T150182
 ],
 
-'wgInterwikiSortingSortPrepend' => [
+'wgULSCompactLinksPrepend' => [
 	'default' => [],
 	'hewiki' => [ 'en' ],
 	'hewikivoyage' => [ 'en' ],
