@@ -7889,6 +7889,9 @@ return [
 // Note: it also need to be configured in wgParserCacheFilterConfig below.
 'wgUsePostprocCacheParsoid' => [
 	'default' => true,
+	// let's be conservative here and deploy to enwiki last
+	'enwiki' => false,
+	// do NOT deploy postproc caching on wikidata or commonswiki
 	'wikidatawiki' => false,
 	'commonswiki' => false,
 ],
@@ -7931,7 +7934,7 @@ return [
 		],
 		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
 			'default' => [ // all namespaces
-				'minCpuTime' => PHP_INT_MAX // cache none
+				'minCpuTime' => 0 // cache all
 			],
 		],
 	],
@@ -7981,25 +7984,6 @@ return [
 		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
 			'default' => [ // all namespaces
 				'minCpuTime' => PHP_INT_MAX // cache none
-			],
-		],
-	],
-	'+testwiki' => [
-		'postproc-pcache' => [
-			'default' => [
-				'minCpuTime' => 0,
-			],
-		],
-		'postproc-parsoid-pcache' => [
-			'default' => [
-				'minCpuTime' => 0,
-			],
-		],
-	],
-	'+parsoidrendered' => [
-		'postproc-parsoid-pcache' => [
-			'default' => [
-				'minCpuTime' => 0,
 			],
 		],
 	],
