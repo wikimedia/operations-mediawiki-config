@@ -7892,6 +7892,15 @@ return [
 	'wikidatawiki' => false,
 	'commonswiki' => false,
 ],
+// Whether to use the legacy postprocessing cache. Only used for DiscussionTools.
+'wgUsePostprocCacheLegacy' => [
+	'default' => true,
+	// let's be conservative here and deploy to enwiki last
+	'enwiki' => false,
+	// do NOT deploy postproc caching on wikidata or commonswiki
+	'wikidatawiki' => false,
+	'commonswiki' => false,
+],
 
 // Sampling rate for debugging of unsafe cache keys in wgUsePostprocCache*
 'wgParserOptionsLogUnsafeSampleRate' => [
@@ -7917,7 +7926,7 @@ return [
 		],
 		'postproc-pcache' => [ // postproc cache for legacy output
 			'default' => [ // all namespaces
-				'minCpuTime' => PHP_INT_MAX // cache none
+				'minCpuTime' => 0 // cache all
 			],
 		],
 		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
