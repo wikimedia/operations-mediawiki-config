@@ -8135,12 +8135,6 @@ return [
 		'wbetterms' => 'label'
 	]
 ],
-// If set to "false": No alternate links will be added to desktop pages,
-// and MobileFrontend won't add a canonical tag
-// If set to "true": Alternate link will be added, MF will add a canonical tag
-'wgMFNoindexPages' => [
-	'default' => true, // T255458
-],
 // Whether to oversample EditAttemptStep logging on MobileFrontend
 // 'visualeditor' or 'all'
 'wgMFSchemaEditAttemptStepOversample' => [

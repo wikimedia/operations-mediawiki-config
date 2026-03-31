@@ -1635,13 +1635,6 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'Data Bridge' ],
 		],
 
-		// If set to "false": No alternate links will be added to desktop pages,
-		// and MobileFrontend won't add a canonical tag
-		// If set to "true": Alternate link will be added, MF will add a canonical tag
-		'wgMFNoindexPages' => [
-			'default' => true
-		],
-
 		// Needed by browser tests for Minerva otherwise those will fail
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [
