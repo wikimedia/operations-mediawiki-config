@@ -13055,6 +13055,11 @@ return [
 			'file' => "./extensions/WikiLambda/includes/RESTAPI/wikifunctions.v0.json",
 		],
 	],
+	'+metawiki' => [
+		'readinglists.v0' => [
+			'file' => "./extensions/ReadingLists/src/Rest/ReadingListsRoutes.v0.json",
+		],
+	],
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
