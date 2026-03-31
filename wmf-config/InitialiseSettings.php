@@ -8218,6 +8218,18 @@ return [
 	'wbwikimedia' => 'numeric', // T162510
 ],
 
+// Temporary for ICU upgrade -- T419049
+'wgTempCategoryCollations' => [
+	// Only testwiki for now, the rest will be added in a follow-up patch
+	'testwiki' => [
+		[
+			'table' => 'categorylinks_icu72',
+			'collation' => 'remote-uca-default-u-kn',
+			'fakeCollation' => 'uca-default-u-kn',
+		]
+	],
+],
+
 'wgPageCreationLog' => [
 	'default' => true,
 	'commonswiki' => false,
