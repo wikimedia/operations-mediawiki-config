@@ -3356,6 +3356,7 @@ return [
 'wgEmailConfirmationBanner' => [
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 'wgBlockDisablesLogin' => [
