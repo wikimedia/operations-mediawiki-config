@@ -12080,6 +12080,7 @@ return [
 	'default' => false,
 	'enwiki' => true, // T398080
 	'zhwiki' => true, // T380020
+	'arbcom_zhwiki' => true, // T419309
 ],
 
 // Enable SecurePoll logging
@@ -12090,6 +12091,7 @@ return [
 	'enwiki' => true, // T378287
 	'zhwiki' => true, // T380020
 	'fawiki' => true, // T396347
+	'arbcom_zhwiki' => true, // T419309
 ],
 
 'wgSecurePollEditOtherWikis' => [

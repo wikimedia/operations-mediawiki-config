@@ -181,6 +181,15 @@ return [
 			'rollback' => true,
 		],
 	],
+	'arbcom_zhwiki' => [
+		'electionadmin' => [ // T419309
+			'securepoll-create-poll' => true,
+			'securepoll-edit-poll' => true,
+		],
+		'checkuser' => [ // T419309
+			'securepoll-view-voter-pii' => true,
+		],
+	],
 	'+arwiki' => [
 		'*' => [ 'patrolmarks' => true ], // T257106
 		'editor' => [
@@ -3718,6 +3727,9 @@ return [
 	'+arbcom_ruwiki' => [
 		'bureaucrat' => [ 'arbcom' ]
 	],
+	'+arbcom_zhwiki' => [
+		'bureaucrat' => [ 'electionadmin' ] // T419309
+	],
 	'+arwiki' => [
 		'bureaucrat' => [
 			'import',
@@ -5288,6 +5300,9 @@ return [
 	],
 	'+arbcom_ruwiki' => [
 		'bureaucrat' => [ 'arbcom' ]
+	],
+	'+arbcom_zhwiki' => [
+		'bureaucrat' => [ 'electionadmin' ] // T419309
 	],
 	'+arwiki' => [
 		'bureaucrat' => [
