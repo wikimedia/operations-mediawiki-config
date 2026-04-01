@@ -36,12 +36,6 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 	$wgObjectCaches['mcrouter'],
 	[ 'routingPrefix' => "/$wmgMasterDatacenter/mw/" ]
 );
-// Wikifunctions dedicated caching cluster. It's dc-local with no replication.
-// See T297815.
-$wgObjectCaches['mcrouter-wikifunctions'] = array_merge(
-	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => '/local/wf/' ]
-);
 
 $wgWANObjectCache = [
 	// Specify the route prefix that mcrouter listens for and broadcasts.
@@ -49,5 +43,20 @@ $wgWANObjectCache = [
 	'broadcastRoutingPrefix' => '/*/mw-wan/',
 ];
 $wgMainCacheType = 'mcrouter';
+
+// (T297815) Configure Wikifunctions's special Memcache cluster, directly-accessed
+$eqiadDCWFMC = [
+	'eqiad' => [ 'host' => '127.0.0.1', 'port' => '11213', 'prefix' => '/eqiad/wf-wan/' ]
+];
+$codfwDCWFMC = [
+	'codfw' => [ 'host' => '127.0.0.1', 'port' => '11213', 'prefix' => '/codfw/wf-wan/' ]
+];
+
+// This sets the order; the local datacenter (cheapest to read) is listed first.
+$wgWikiLambdaObjectCaches = ( $wmgDatacenter === 'eqiad' )
+	? $eqiadDCWFMC + $codfwDCWFMC
+	: $codfwDCWFMC + $eqiadDCWFMC;
+
+$wgWikiLambdaObjectCacheBroadcast = '/*/wf-wan/';
 
 # vim: set sts=4 sw=4 et :

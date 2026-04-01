@@ -4822,8 +4822,6 @@ if ( $wmgUseGrowthExperiments ) {
 if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
-	$wgWikiLambdaObjectCache = 'mcrouter-wikifunctions';
-
 	if ( $wgWikiLambdaEnableRepoMode ) {
 		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
