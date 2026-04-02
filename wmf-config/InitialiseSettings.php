@@ -3361,6 +3361,15 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
+	'enwiki' => true,
+	'frwiki' => true,
+	'dewiki' => true,
+	'plwiki' => true,
+	'jawiki' => true,
+	'hewiki' => true,
+	'wikidatawiki' => true,
+	'commonswiki' => true,
+	'metawiki' => true,
 ],
 
 'wgBlockDisablesLogin' => [
