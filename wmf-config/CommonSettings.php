@@ -1228,9 +1228,6 @@ if ( in_array( 'editpatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['bot']['editpatrolprotected'] = true;
 }
 
-// Extension:StopForumSpam rights, so they can be assigned to global groups (T334856)
-$wgAvailableRights[] = 'sfsblock-bypass';
-
 # ######################################################################
 # Logo settings
 # ######################################################################
@@ -5027,13 +5024,6 @@ if ( $wmgUseImageSuggestions ) {
 
 if ( $wmgUseSearchVue ) {
 	wfLoadExtension( 'SearchVue' );
-}
-
-if ( $wmgUseStopForumSpam ) {
-	wfLoadExtension( 'StopForumSpam' );
-	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
-	$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
-	$wgSFSProxy = $wgCopyUploadProxy;
 }
 
 // T403982

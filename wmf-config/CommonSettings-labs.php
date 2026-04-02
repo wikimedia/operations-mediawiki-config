@@ -352,12 +352,6 @@ if ( $wmgRealm == 'labs' ) {
 
 	$wgEventBusEnableRunJobAPI = true;
 
-	if ( $wmgUseStopForumSpam ) {
-		wfLoadExtension( 'StopForumSpam' );
-		$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
-		$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
-	}
-
 	$wgMessageCacheType = CACHE_ACCEL;
 
 	// This will work for most wikis, which is considered good enough.

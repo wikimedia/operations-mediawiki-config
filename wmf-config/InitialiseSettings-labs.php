@@ -388,7 +388,6 @@ function wmfGetOverrideSettings() {
 				'SpamRegex' => 'debug',
 				'SQLBagOStuff' => 'debug',
 				'StashEdit' => 'debug',
-				'StopForumSpam' => 'debug',
 				'SwiftBackend' => 'debug', // -aaron 5/15/12
 				'texvc' => 'debug',
 				'throttler' => 'info',
@@ -2106,12 +2105,6 @@ function wmfGetOverrideSettings() {
 			'default' => [],
 		],
 
-		'wmgUseStopForumSpam' => [
-			'default' => true,
-		],
-		'wgSFSReportOnly' => [
-			'default' => false,
-		],
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],

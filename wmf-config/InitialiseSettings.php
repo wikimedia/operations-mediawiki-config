@@ -2379,7 +2379,6 @@ return [
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
 		'StashEdit' => 'debug',
-		'StopForumSpam' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
 		'texvc' => 'debug',
 		'throttler' => 'info',
@@ -13384,27 +13383,6 @@ return [
 
 'wgCampaignEventsEnableEventGoals' => [
 	'default' => true,
-],
-
-// T309900
-'wmgUseStopForumSpam' => [
-	'default' => false,
-	'azwikibooks' => true,
-	'dkwikimedia' => true,
-	'eswikinews' => true,
-	'eswikiversity' => true,
-	'frwikinews' => true,
-	'jawiktionary' => true,
-	'plwikiquote' => true,
-	'ptwikibooks' => true,
-	'ptwikiversity' => true,
-	'svwikiquote' => true,
-	'testwiki' => true,
-],
-
-'wgSFSReportOnly' => [
-	'default' => true,
-	'eswikiversity' => false, // T331182
 ],
 
 'wgCdnMatchParameterOrder' => [
