@@ -4449,6 +4449,9 @@ return [
 		'Deadendpages', // T371662
 		'Lonelypages', // T371662
 	],
+	'+testcommonswiki' => [
+		'Unusedtemplates',
+	],
 ],
 # @} end of wgDisableQueryPageUpdate
 
