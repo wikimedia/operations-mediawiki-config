@@ -6903,6 +6903,7 @@ return [
 	'default' => false, // T363484
 ],
 
+// Old configuration variable, will remove after migration
 'wgParserMigrationEnableParsoidDiscussionTools' => [
 	'default' => false,
 	'parsoidrendered' => true,
@@ -6915,6 +6916,22 @@ return [
 	// In general, the dblist should suffice, but if a wiki needs to have different config between
 	// talk and article pages, it can be over-ridden here.
 	'labswiki' => false,
+],
+
+'wgParserMigrationEnableParsoidMobileArticlePages' => [
+	'default' => false,
+	'parsoidrendered' => true,
+	'labswiki' => false,
+],
+
+'wgParserMigrationEnableParsoidTalkPages' => [
+	'default' => false,
+	'parsoidrendered' => true,
+],
+
+'wgParserMigrationEnableParsoidMobileTalkPages' => [
+	'default' => false,
+	'parsoidrendered' => true,
 ],
 
 'wgParserMigrationEnableParsoidPercentage' => [
