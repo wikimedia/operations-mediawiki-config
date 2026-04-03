@@ -12848,6 +12848,10 @@ return [
 	'default' => false,
 	'testwiki' => true,
 ],
+// T422275
+'wgReadingListsEnableBetaQuickSurvey' => [
+	'default' => false,
+],
 // T419163
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 	'default' => null,
