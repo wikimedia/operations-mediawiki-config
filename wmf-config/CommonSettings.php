@@ -3227,9 +3227,10 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
 		$wgVisualEditorFeedbackTitle = 'VisualEditor/Feedback';
 		$wgVisualEditorSourceFeedbackTitle = '2017 wikitext editor/Feedback';
-		$wgVisualEditorSuggestionFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
-		$wgVisualEditorSuggestionFeedbackTitle = 'VisualEditor/Suggestion_Mode/Feedback';
 	}
+	// Suggestion feedback is always consolidated:
+	$wgVisualEditorSuggestionFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
+	$wgVisualEditorSuggestionFeedbackTitle = 'Talk:VisualEditor/Suggestion_Mode/Feedback';
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
