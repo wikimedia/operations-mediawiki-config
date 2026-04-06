@@ -3495,7 +3495,7 @@ return [
 			'move' => false, // T14071
 			'move-subpages' => false, // for now...
 			'movefile' => false, // r93871 CR
-			'editcontentmodel' => false, // temp, pending T85847
+			'createwithcontentmodel' => false, // T248294
 		],
 		'autoconfirmed' => [
 			'reupload' => true,
@@ -3503,6 +3503,7 @@ return [
 			'move' => true,
 			'collectionsaveasuserpage' => true,
 			'collectionsaveascommunitypage' => true,
+			'createwithcontentmodel' => true,
 		],
 		// Deployed to all wikis by Andrew, 2009-04-28
 		'ipblock-exempt' => [
