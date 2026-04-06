@@ -8,7 +8,7 @@
 #
 # Effective load order:
 # - multiversion
-# - mediawiki/DefaultSettings.php
+# - mediawiki/config-schema.php
 # - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/InitialiseSettings-labs.php
@@ -165,6 +165,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCiteBacklinkCommunityConfiguration = true;
 		// Temporary while developing feature, T385666
 		$wgCiteSubRefMergeInDevelopment = true;
+		// Temporary while developing feature, T421055
+		$wgCiteRemoveSyntheticRefsUnsafe = true;
 	}
 
 	// Labs override for GlobalCssJs
@@ -216,8 +218,8 @@ if ( $wmgRealm == 'labs' ) {
 	// Labs override for BounceHandler
 	if ( $wmgUseBounceHandler ) {
 		unset( $wgVirtualDomainsMapping['virtual-bouncehandler'] );
-		// deployment-mx03.deployment-prep.eqiad1.wikimedia.cloud
-		$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.6.221' ];
+		// deployment-mx04.deployment-prep.eqiad1.wikimedia.cloud
+		$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.16.231' ];
 		$wgVERPdomainPart = 'beta.wmflabs.org';
 	}
 
@@ -405,8 +407,8 @@ if ( $wmgRealm == 'labs' ) {
 		}
 	}
 
-	// Point to the deployment-prep kartotherian server, see T310150.
-	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
+	// Point to the production kartotherian server, see T420299.
+	$wgKartographerMapServer = 'https://maps.wikimedia.org';
 
 	// Enable max-width for editing. T307725.
 	$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
@@ -440,12 +442,9 @@ if ( $wmgRealm == 'labs' ) {
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
 	$wgCdnMatchParameterOrder = false;
 
-	// T314294
-	if ( $wmgUsePhonos ) {
-		wfLoadExtension( 'Phonos' );
-		// $wgPhonosApiKeyGoogle in PrivateSettings
-		$wgPhonosEngine = 'google';
-		$wgPhonosFileBackend = 'global-multiwrite';
+	// T412528
+	if ( $wmgUsePersonalDashboard ) {
+		wfLoadExtension( 'PersonalDashboard' );
 	}
 
 	// T364034
@@ -490,8 +489,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = FallbackContentHandler::class;
 	$wgContentHandlers['JadeJudgment'] = FallbackContentHandler::class;
-
-	$wgBlockTargetMigrationStage = SCHEMA_COMPAT_NEW;
 
 	// No restrictions in test environment to facilitate testing.
 	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
@@ -572,7 +569,9 @@ if ( $wmgRealm == 'labs' ) {
 	// T385592
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki' ];
 
-	// Temporary testing of new passkey support -December 2025
-	$wgOATHNewPasskeyFeatures = true;
+	// T404461
+	if ( $wmgUseMultiTitle ) {
+		wfLoadExtension( 'MultiTitle' );
+	}
 }
 // end safeguard

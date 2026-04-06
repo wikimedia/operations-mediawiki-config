@@ -21,6 +21,13 @@ $wgPoolCounterConf = [
 		'workers' => 200,
 		'maxqueue' => 200,
 	],
+	// Limits access to dedicated semantic search cluster (T413969)
+	'CirrusSearch-Semantic' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 10,
+		'maxqueue' => 30,
+	],
 	// Software tries to recognize sources of external automation, such as GAE,
 	// AWS, browser automation, etc. and give them a separate pool so they
 	// can cap out without interfering with interactive users.

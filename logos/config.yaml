@@ -294,11 +294,14 @@ Wikipedia:
         commons_tagline: 'File:Wikipedia-tagline-bn.svg'
         comment_tagline: T273085
     bowiki:
-        comment: T50397
-        comment_1_5x: T150618
-        comment_2x: T150618
-        local_tagline: true
-        local_wordmark: true
+        commons: 'File:Wikipedia-logo-v2-bo.svg'
+        comment: T419268
+        comment_1_5x: T419268
+        comment_2x: T419268
+        commons_wordmark: 'File:Wikipedia-wordmark-bo.svg'
+        comment_wordmark: T419268
+        commons_tagline: 'File:Wikipedia-tagline-bo.svg'
+        comment_tagline: T419268
     bpywiki:
         comment: T42285
         comment_1_5x: T150618
@@ -501,11 +504,19 @@ Wikipedia:
         local_tagline: true
     enwiki:
         commons: 'File:Wikipedia-logo-v2-en.svg'
-        comment: T309544
+        selected: enwiki-25
+        variants:
+            enwiki-25:
+                commons: 'File:Wikipedia-logo-v2-en-25-alt.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:WP25 Vector 2022 LINE.svg'
+                commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
+        comment: 'T309544, T414271'
         commons_wordmark: 'File:Wikipedia-wordmark-en.svg'
-        comment_wordmark: 'T157476, T249047'
+        comment_wordmark: 'T157476, T249047, T414271'
         commons_tagline: 'File:Wikipedia-tagline-en.svg'
-        comment_tagline: T249047
+        comment_tagline: 'T249047, T414271'
+        comment_icon: T414271
     eowiki:
         commons: 'File:Wikipedia-logo-v2-eo.svg'
         comment_1_5x: T150618
@@ -692,11 +703,19 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
     hawiki:
+        selected: hawiki-temp25
         commons: 'File:Wikipedia-logo-v2-ha.svg'
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        variants:
+            hawiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-ha.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:Wikipedia-tagline-ha-25.svg'
+        comment: 'T48589, T414736'
+        comment_1_5x: 'T150618, T414736'
+        comment_2x: 'T150618, T414736'
         local_tagline: true
+        comment_wordmark: T414736
+        comment_tagline: T414736
     hawwiki:
         comment: T42285
         comment_1_5x: T150618
@@ -833,9 +852,20 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
     itwiki:
+        selected: itwiki-temp25
         commons: 'File:Wikipedia-logo-v2-it.svg'
         commons_tagline: 'File:Wikipedia-tagline-it.svg'
-        comment_tagline: T258552
+        variants:
+            itwiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-it-25-alt3.svg'
+                commons_icon: 'File:WP25 Lockup (cropped).svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:Wikipedia-tagline-it-25.svg'
+        comment: T414320
+        comment_1_5x: T414320
+        comment_2x: T414320
+        comment_wordmark: T414320
+        comment_tagline: 'T258552, T414320'
     iuwiki:
         comment: T42285
         comment_1_5x: T150618
@@ -868,16 +898,40 @@ Wikipedia:
         comment_tagline: T311104
         local_wordmark: true
     kaawiki:
+        selected: kaawiki-temp25
         commons: 'File:Wikipedia-logo-v2-kaa.svg'
-        comment: 'T48589, T337641'
-        comment_1_5x: 'T150618, T337641'
-        comment_2x: 'T150618, T337641'
+        variants:
+            kaawiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-kaa-25-alt.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:Wikipedia-tagline-kaa-25.svg'
+        comment: 'T48589, T337641, T415457'
+        comment_1_5x: 'T150618, T337641, T415457'
+        comment_2x: 'T150618, T337641, T415457'
         commons_tagline: 'File:Wikipedia-tagline-kaa.svg'
+        comment_wordmark: T415457
+        comment_tagline: T415457
     kabwiki:
         comment: T46974
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+    kaiwiki:
+        commons: 'File:Wikipedia-logo-v2-kai.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-kai.svg'
+        commons_tagline: 'File:Wikipedia-tagline-kai.svg'
+        comment_tagline: 'T414237'
+        comment: 'T414237'
+        comment_1_5x: 'T414237'
+        comment_2x: 'T414237'
+        comment_wordmark: 'T414237'
+    kajwiki:
+        commons: 'File:Wikipedia-logo-v2-kaj.svg'
+        comment: T413283
+        comment_1_5x: T413283
+        comment_2x: T413283
+        commons_tagline: 'File:Wikipedia-tagline-kaj.svg'
+        comment_tagline: T415038
     kawiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -924,8 +978,20 @@ Wikipedia:
         no_2x: true
         selected_tagline: enwiki
     kkwiki:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: kkwiki-temp25
+        commons: 'File:Wikipedia-logo-v2-kk.svg'
+        variants:
+            kkwiki-temp25:
+                commons: 'File:Wikipedia-logo-vector2010-wikipedia25-kz.svg'
+                commons_icon: 'File:WP25 Lockup (cropped).svg'
+                commons_wordmark: 'File:Wikipedia-wordmark-kk-25.svg'
+                commons_tagline: 'File:Wikipedia-tagline-kk-25.svg'
+        comment: T414267
+        comment_1_5x: 'T150618, T414267'
+        comment_2x: 'T150618, T414267'
+        comment_icon: T414267
+        comment_wordmark: T414267
+        comment_tagline: T414267
         local_tagline: true
         local_wordmark: true
     klwiki:
@@ -1422,6 +1488,15 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    pplwiki:
+        commons: 'File:Wikipedia-logo-v2-ppl.svg'
+        comment: T415046
+        comment_1_5x: T415046
+        comment_2x: T415046
+        commons_wordmark: 'File:Wikipedia-wordmark-ppl.svg'
+        comment_wordmark: T415046
+        commons_tagline: 'File:Wikipedia-tagline-ppl.svg'
+        comment_tagline: T415046
     pswiki:
         commons: 'File:Wikipedia-logo-v2-ps3.svg'
         comment: 'T50397, T360851'
@@ -1604,8 +1679,18 @@ Wikipedia:
         local_wordmark: true
         local_tagline: true
     slwiki:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: slwiki-temp25
+        commons: 'File:Wikipedia-logo-v2-sl.svg'
+        variants:
+            slwiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-wikipedia25-sl.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO sl.svg'
+                commons_tagline: 'File:Wikipedia-tagline-sl-25.svg'
+        comment: T414265
+        comment_1_5x: 'T150618, T414265'
+        comment_2x: 'T150618, T414265'
+        comment_wordmark: T414265
+        comment_tagline: T414265
         local_tagline: true
         local_wordmark: true
     smwiki:
@@ -1731,11 +1816,20 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     tgwiki:
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: tgwiki-temp25
+        commons: 'File:Wikipedia-logo-v2-tg.svg'
+        variants:
+            tgwiki-temp25:
+                commons: 'File:Wikipedia-logo-v2-tg-25-alt.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO tg.svg'
+                commons_tagline: 'File:Wikipedia-tagline-tg-25.svg'
+        comment: 'T48589, T415307'
+        comment_1_5x: 'T150618, T415307'
+        comment_2x: 'T150618, T415307'
         local_tagline: true
         local_wordmark: true
+        comment_wordmark: T415307
+        comment_tagline: T415307
     thwiki:
         commons: 'File:Wikipedia-logo-v2-th.svg'
         comment: T341407
@@ -2004,29 +2098,36 @@ Wikipedia:
         local_tagline: true
     zhwiki:
         commons: 'File:Wikipedia-logo-v2-zh.svg'
+        selected: zhwiki-25
         variants:
-            zhwiki-hans:
-                commons: 'File:Wikipedia-logo-v2-zh-hans.svg'
-                commons_wordmark: 'File:Wikipedia-wordmark-zh-hans.svg'
-                commons_tagline: 'File:Wikipedia-tagline-zh-hans.svg'
+            zhwiki-25:
+                commons: 'File:Wikipedia-logo-v2-zh_hant-25-alt.svg'
+                commons_wordmark: 'File:WP25_Primary_lockup_zh-hant.svg'
+                commons_tagline: 'File:Wikipedia_25-tagline-zh-hant.svg'
+                commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
+            zhwiki-25-hans:
+                commons: 'File:Wikipedia-logo-v2-zh_hans-25-alt.svg'
+                commons_wordmark: 'File:WP25_Primary_lockup_zh-hans.svg'
+                commons_tagline: 'File:Wikipedia_25-tagline-zh-hans.svg'
+                commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
         lang_variants:
             zh-hans:
-                selected_logo: zhwiki-hans
-                selected_wordmark: zhwiki-hans
-                selected_tagline: zhwiki-hans
+                selected_logo: zhwiki-25-hans
+                selected_wordmark: zhwiki-25-hans
+                selected_tagline: zhwiki-25-hans
             zh-cn:
                 selected_lang: zh-hans
             zh-my:
                 selected_lang: zh-hans
             zh-sg:
                 selected_lang: zh-hans
-        comment: 'T276694'
+        comment: 'T276694, T414299'
         comment_1_5x: 'T276694'
         comment_2x: 'T276694'
         commons_wordmark: 'File:Wikipedia-wordmark-zh.svg'
-        comment_wordmark: 'T258552, T260908'
+        comment_wordmark: 'T258552, T260908, T414299'
         commons_tagline: 'File:Wikipedia-tagline-zh.svg'
-        comment_tagline: 'T258552, T260908'
+        comment_tagline: 'T258552, T260908, T414299'
         comment_lang_variants: 'T261153, T273578, T308620'
     zuwiki:
         comment: T233424
@@ -3094,11 +3195,11 @@ Wikiquote:
         no_2x: true
         local_wordmark: true
     urwikiquote:
-        comment: T97510
-        no_1_5x: true
-        no_2x: true
-        local_wordmark: true
-        selected_icon: arwikiquote
+        commons: 'File:Wikiquote-logo-ur.svg'
+        commons_wordmark: 'File:Wikiquote-wordmark-ur.svg'
+        comment_wordmark: T413592
+        comment: T413592
+        selected_icon: arwikiquote # Use the flipped icon for RTL sites
     uzwikiquote:
         commons: 'File:Wikiquote-logo-uz-v2.svg'
         commons_wordmark: 'File:Wikiquote-wordmark-uz.svg'
@@ -3137,7 +3238,11 @@ Wikibooks:
         comment_2x: T150618
     angwikibooks: null
     arwikibooks:
-        local_wordmark:
+        commons: 'File:Wikibooks-logo-v2-ar.svg'
+        comment_1_5x: T406358
+        comment_2x: T406358
+        commons_wordmark: File:Wikibooks-wordmark-v2-ar.svg
+        comment_wordmark: T406358
         local_tagline: true
     astwikibooks:
         comment: T150618
@@ -3605,23 +3710,24 @@ Wikinews:
         local_wordmark: true
     zhwikinews:
         commons: 'File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg'
+        selected: zhwikinews-20
         variants:
-            zhwikinews-hans:
-                commons: 'File:Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg'
+            zhwikinews-20:
+                commons: 'File:中文維基新聞20週年徽標.svg'
+                commons_icon: 'File:中文維基新聞20週年徽標纯Logo Globe.svg'
+            zhwikinews-20-hans:
+                commons: 'File:中文维基新闻20周年徽标.svg'
+                commons_icon: 'File:中文維基新聞20週年徽標纯Logo Globe.svg'
         lang_variants:
             zh-hans:
-                selected_logo: zhwikinews-hans
-                commons_wordmark: 'File:Wikinews-wordmark-zh-2023.svg'
+                selected_logo: zhwikinews-20-hans
             zh-cn:
                 selected_lang: zh-hans
-                selected_wordmark: zh-hans
             zh-my:
                 selected_lang: zh-hans
-                selected_wordmark: zh-hans
             zh-sg:
                 selected_lang: zh-hans
-                selected_wordmark: zh-hans
-        comment: T298550
+        comment: 'T298550, T420165'
         comment_1_5x: T298550
         comment_2x: T298550
         comment_lang_variants: T308620
@@ -3939,6 +4045,13 @@ Wikisource:
         no_1_5x: true
         no_2x: true
         local_wordmark: true
+    urwikisource:
+        commons: 'File:Wikisource-logo-ur.svg'
+        comment: T415974
+        comment_1_5x: T415974
+        comment_2x: T415974
+        commons_wordmark: 'File:Wikisource-wordmark-ur.svg'
+        comment_wordmark: T415974
     vecwikisource:
         comment: T132157
         no_1_5x: true
@@ -4354,6 +4467,11 @@ Wikivoyage:
         selected_icon: outreachwiki
         local_wordmark: true
 'Special wikis':
+    abstractwiki:
+        comment: 'T411723'
+        commons: 'File:Wikipedia-logo-v2-en.svg'
+        comment_wordmark: 'T411723'
+        commons_wordmark: 'File:Abstract-Wikipedia-wordmark.svg'
     advisorswiki:
         comment: T202844
         comment_1_5x: T202844
@@ -4428,7 +4546,12 @@ Wikivoyage:
         no_svg_icon: true
         local_icon: true
     arbcom_zhwiki:
-        commons: 'File:Wikimedia_logo_blue.svg'
+        commons: 'File:Chinese Wikipedia Arbitration Committee Wiki.svg'
+        comment: T413649
+        commons_icon: 'File:Wikipedia Arbitrator.svg'
+        comment_icon: T413649
+        commons_wordmark: 'File:Chinese Wikipedia Arbitration Committee Wordmark.svg'
+        comment_wordmark: T413649
     auditcomwiki:
         no_1_5x: true
         no_2x: true

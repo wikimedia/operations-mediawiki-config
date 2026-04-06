@@ -21,7 +21,7 @@
 #
 # Effective load order:
 # - multiversion
-# - mediawiki/DefaultSettings.php
+# - mediawiki/config-schema.php
 # - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/InitialiseSettings-labs.php [THIS FILE]
@@ -77,7 +77,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgSitename' => [
-			'wikivoyage'     => 'Wikivoyage',
+			'wikivoyage' => 'Wikivoyage',
 		],
 
 		// NOTE: Same as prod, but without protocol-relative URL (T118413)
@@ -130,22 +130,6 @@ function wmfGetOverrideSettings() {
 			'commonswiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/commons',
 			'metawiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/meta',
 			'testwiki' => 'https://upload.wikimedia.beta.wmcloud.org/wikipedia/test',
-		],
-
-		'-wgThumbnailBuckets' => [
-			'default' => [ 256, 512, 1024, 2048, 4096 ],
-		],
-
-		'-wgThumbnailMinimumBucketDistance' => [
-			'default' => 32,
-		],
-
-		'-wgThumbnailStepsRatio' => [
-			'default' => 0.5,
-		],
-
-		'-wgThumbnailSteps' => [
-			'default' => [ 20, 40, 60, 120, 250, 330, 500, 960 ],
 		],
 
 		// Stream config default settings.
@@ -286,48 +270,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// See T393918 and T395342.
-		//
-		// This configures a temporary logged-in A/B experiment to test T393918 and T395342 end to
-		// end. The test matches the configuration for T395342 but with a higher sample rate to
-		// make it more likely that a user is enrolled in the experiment.
-		'wgMetricsPlatformExperiments' => [
-			'default' => [
-				[
-					'name' => 'sds2-4-11-synth-aa-test',
-					'groups' => [
-						'control',
-						'control-2',
-					],
-					'sample' => [
-						'rate' => 0.5,
-					],
-				],
-				// T397728
-				[
-					'name' => 'fy24-25-we-1-7-rc-grouping-toggle',
-					'groups' => [
-						'control',
-						'toggle-shown',
-					],
-					'sample' => [
-						'rate' => 0.5,
-					],
-				],
-				// T402707
-				[
-					'name' => 'growthexperiments-revise-tone',
-					'groups' => [
-						'control',
-						'treatment',
-					],
-					'sample' => [
-						'rate' => 0.5,
-					],
-				],
-			],
-		],
-
 		// Log channels for beta cluster
 		// See detailed comments on 'wmgMonologChannels' in InitialiseSettings.php
 		// Note: logstash won't go below info level, unless logstash=>debug is specified
@@ -369,6 +311,7 @@ function wmfGetOverrideSettings() {
 				'collection' => 'debug', // -cscott for T73675
 				'CommunityConfiguration' => 'info',
 				'communityrequests' => 'debug',
+				'confirmemail' => [ 'udp2log' => false, 'logstash' => 'info' ],
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
@@ -510,7 +453,11 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 		],
 		'-wmgSiteLogoWordmark' => [
-			'default' => null,
+			'default' => [
+				'src' => '/static/images/mobile/copyright/beta-wordmark.svg',
+				'width' => 55,
+				'height' => 20,
+			],
 		],
 		'-wmgSiteLogoTagline' => [
 			'default' => null,
@@ -743,6 +690,10 @@ function wmfGetOverrideSettings() {
 			'frwiki' => true,
 		],
 
+		'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
+			'wikipedia' => true
+		],
+
 		// Whether to enable true section editing. false, true, 'mobile', or 'mobile-ab'
 		'wmgVisualEditorEnableVisualSectionEditing' => [
 			'default' => 'mobile',
@@ -811,6 +762,11 @@ function wmfGetOverrideSettings() {
 				'smn' => 'anarâškielâ', // T222309
 				'sms' => 'sääʹmǩiõll', // T222309
 			],
+		],
+
+		// T414338
+		'-wgTrackMediaRequestProvenance' => [
+			'default' => true,
 		],
 
 		'wgQuickSurveysConfig' => [
@@ -1050,6 +1006,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'wmgUsePersonalDashboard' => [ // T412528
+			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+			'enwiki' => true,
+		],
+
 		// The LOWER the value, the MORE requests will be logged.
 		// 100 = 1 of every 100 (1%), 1 = 1 of every 1 (100%).
 		'wgNavigationTimingSamplingFactor' => [
@@ -1161,6 +1122,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T419163
+		'wgReadingListsBetaDefaultForNewAccountsAfter' => [
+			'default' => '20260313000000',
+		],
+
 		'wgReadingListsDeveloperMode' => [
 			'default' => true,
 		],
@@ -1268,7 +1234,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgFileSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
@@ -1419,9 +1385,6 @@ function wmfGetOverrideSettings() {
 			'default' => 300,
 		],
 		'wgGENotificationsTrackingEnabled' => [
-			'default' => true,
-		],
-		'wgGEUseMetricsPlatformExtension' => [
 			'default' => true,
 		],
 		'wgGEHelpPanelSearchForeignAPI' => [
@@ -1983,9 +1946,6 @@ function wmfGetOverrideSettings() {
 		'wgTwlRegistrationDays' => [
 			'default' => 1,
 		],
-		'wgWBCitoidFullRestbaseURL' => [
-			'wikidatawiki' => 'https://en.wikipedia.beta.wmcloud.org/api/rest_',
-		],
 
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
@@ -1998,10 +1958,6 @@ function wmfGetOverrideSettings() {
 
 		'wgRestSandboxSpecs' => [
 			'default' => [
-				'mw-extra' => [
-					'url' => '/w/rest.php/specs/v0/module/-',
-					'name' => 'MediaWiki REST API (routes not in modules)',
-				],
 				'specs.v0' => [
 					'url' => '/w/rest.php/specs/v0/module/specs/v0',
 					'name' => 'Specs API',
@@ -2097,10 +2053,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wgEditWatchlistPaginate' => [
-			'default' => true,
-		],
-
 		'wgAbuseFilterEmergencyDisableThreshold' => [
 			'default' => [ 'default' => 0.05 ],
 			'zhwiki' => [ 'default' => 0.25 ], // T230305
@@ -2125,10 +2077,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		// T392520
-		'wmgUseArticleSummaries' => [
-			'default' => true,
-		],
 		// T246493
 		'wmgUseNearbyPages' => [
 			'default' => true,
@@ -2147,18 +2095,10 @@ function wmfGetOverrideSettings() {
 		'wgGlobalWatchlistDevMode' => [
 			'default' => true,
 		],
-		'wgGlobalWatchlistWikibaseSite' => [
-			'default' => 'www.wikidata.beta.wmcloud.org',
-		],
 
 		// T253271 Don't deploy Cirrus AB tests to beta
 		'wgCirrusSearchUserTesting' => [
 			'default' => [],
-		],
-
-		// T123582
-		'wgImagePreconnect' => [
-			'default' => true,
 		],
 
 		'wmgUseStopForumSpam' => [
@@ -2227,7 +2167,7 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],
-		'wgCampaignEventsEnableContributionTracking' => [
+		'wgCampaignEventsEnableEventGoals' => [
 			'default' => true,
 		],
 		// T314294
@@ -2278,6 +2218,14 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseParserMigration' => [
 			'default' => true,
+		],
+
+		'wgParserMigrationEnableParsoidDiscussionTools' => [
+			'default' => true, // T357054
+		],
+
+		'wgParserMigrationEnableParsoidArticlePages' => [
+			'default' => true, // T357054
 		],
 
 		// T348487
@@ -2359,8 +2307,13 @@ function wmfGetOverrideSettings() {
 			'enwikisource' => false,
 			'enwikivoyage' => false,
 		],
-		'-wgUseSessionCookieJwt' => [
-			'default' => true,
+		'-wgJwtSessionCookieIssuer' => [
+			'default' => null,
+			'sul' => 'https://meta.wikimedia.beta.wmcloud.org',
+		],
+		// T418957
+		'-wgApiClientErrorSampleRate' => [
+			'default' => 1.0,
 		],
 		// T377975
 		'-wgTemplateDataEnableDiscovery' => [
@@ -2385,6 +2338,15 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
+		// T403015 - no point in the beta feature if `wmgWikibaseTmpMobileEditingUI` is set.
+		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
+			'wikidatawiki' => false,
+		],
+		// T415516 temporary feature flag
+		'wmgWikibaseTmpGraphQL' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
 		// T391064
 		'-wgTemplateDataEnableFeaturedTemplates' => [
 			'default' => false,
@@ -2394,12 +2356,13 @@ function wmfGetOverrideSettings() {
 		// T404398
 		'wmgUseReaderExperiments' => [
 			'default' => true,
+
+			// Currently fails without ParserMigration, which is
+			// disabled on Commons where we have no experiments.
+			'commonswiki' => false,
 		],
 		// T397258
 		'wmgEnableWikidataIconsInClientWatchlist' => [
-			'default' => true,
-		],
-		'wgUserEmailConfirmationUseHTML' => [
 			'default' => true,
 		],
 
@@ -2407,10 +2370,33 @@ function wmfGetOverrideSettings() {
 		'wmgUseFooterLegalContactLink' => [
 			'default' => true,
 		],
-		// T411836
+		// T411836 T413967
 		'-wgEnableWatchlistLabels' => [
+			'default' => true,
+		],
+
+		// See T413100. WikimediaEvents shouldn't try to load the GeoIP database if it doesn't exist
+		'wgWMEGeoIP2Path' => [
+			'default' => null,
+		],
+		// T415372 - Wikipedia 25th Birthday easter eggs extension.
+		'wmgUseWP25EasterEggs' => [
+			'default' => true,
+		],
+
+		// T415372 - Enable WP25EasterEggs visual interventions.
+		'wgWp25EasterEggsEnable' => [
+			'default' => true,
+		],
+
+		'wgWMCBadEmailDomainsFile' => [
 			'default' => false,
-			'enwiki' => true,
+		],
+
+		// T404461
+		'wmgUseMultiTitle' => [
+			'default' => false,
+			'testwiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()

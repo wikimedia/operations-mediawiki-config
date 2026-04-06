@@ -13,37 +13,34 @@ use Wikimedia\MWConfig\WmfConfig;
 abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 	/** @var array mapping string name to original value */
-	protected $globals = [];
+	protected static array $globals = [];
 
 	/** @var bool[] mapping string name of the setting to the value true */
-	protected $globalsToUnset = [];
+	protected static array $globalsToUnset = [];
 
-	protected function restoreGlobals() {
-		foreach ( $this->globals as $key => $value ) {
+	protected static function restoreGlobals() {
+		foreach ( self::$globals as $key => $value ) {
 			$GLOBALS[$key] = $value;
 		}
-		$this->globals = [];
+		self::$globals = [];
 
-		foreach ( $this->globalsToUnset as $key => $_ ) {
+		foreach ( self::$globalsToUnset as $key => $_ ) {
 			unset( $GLOBALS[$key] );
 		}
-		$this->globalsToUnset = [];
+		self::$globalsToUnset = [];
 	}
 
-	/**
-	 * @param array $pairs
-	 */
-	protected function setGlobals( array $pairs ) {
+	private static function setGlobals( array $pairs ) {
 		foreach ( $pairs as $key => $value ) {
 			// only store original value on first call within a test
 			if (
-				!array_key_exists( $key, $this->globals ) &&
-				!array_key_exists( $key, $this->globalsToUnset )
+				!array_key_exists( $key, self::$globals ) &&
+				!array_key_exists( $key, self::$globalsToUnset )
 			) {
 				if ( !array_key_exists( $key, $GLOBALS ) ) {
-					$this->globalsToUnset[$key] = true;
+					self::$globalsToUnset[$key] = true;
 				} else {
-					$this->globals[$key] = $GLOBALS[$key];
+					self::$globals[$key] = $GLOBALS[$key];
 				}
 			}
 			$GLOBALS[$key] = $value;
@@ -62,11 +59,11 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 * the only way to achieve that is when leaving the data provider scope.
 	 */
 	public function __destruct() {
-		if ( !empty( $this->globals ) || !empty( $this->globalsToUnset ) ) {
+		if ( !empty( self::$globals ) || !empty( self::$globalsToUnset ) ) {
 			throw new Exception(
 				__CLASS__ . ": setGlobals() used without restoreGlobals().\n" .
-				"Mangled globals:\n" . var_export( $this->globals, true ) .
-				"Created globals:\n" . var_export( $this->globalsToUnset, true )
+				"Mangled globals:\n" . var_export( self::$globals, true ) .
+				"Created globals:\n" . var_export( self::$globalsToUnset, true )
 			);
 		}
 	}
@@ -81,16 +78,16 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 * @param string $realm Realm to use for example: 'labs' or 'production'
 	 * @return SiteConfiguration
 	 */
-	final protected function loadWgConf( string $realm = 'production' ): SiteConfiguration {
+	final protected static function loadWgConf( string $realm = 'production' ): SiteConfiguration {
 		// Needed for InitialiseSettings.php
-		$this->setGlobals( [
+		self::setGlobals( [
 			'wmgUdp2logDest' => 'localhost',
 			'wmgDatacenter' => 'unittest',
 			'wmgMasterDatacenter' => 'unittest',
 		] );
 
 		// Needed for TestServices.php
-		$this->setGlobals( [
+		self::setGlobals( [
 			'wmgHostnames' => null,
 			'wmgAllServices' => null,
 			'wmgLocalServices' => null,
@@ -105,7 +102,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 		// Make sure globals are restored, else they will be serialized on each
 		// test run which slow the test run dramatically.
-		$this->restoreGlobals();
+		self::restoreGlobals();
 		return $conf;
 	}
 

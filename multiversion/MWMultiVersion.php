@@ -349,6 +349,7 @@ class MWMultiVersion {
 			'wikipedia-it-arbcom.wikimedia.org' => 'arbcom_it',
 			'wikipedia-pl-arbcom.wikimedia.org' => 'arbcom_pl',
 			'wikipedia-zh-arbcom.wikimedia.org' => 'arbcom_zh',
+			'abstract.wikipedia.org' => 'abstract',
 		];
 
 		// http://en.wikipedia.beta.wmcloud.org > http://en.wikipedia.org/

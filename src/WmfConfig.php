@@ -57,7 +57,6 @@ class WmfConfig {
 		'small',
 		'specialcontribute',
 		'vector-2022-language-links',
-		'legacy-vector',
 		'medium',
 		'wikimania',
 		'wikidata',
@@ -85,8 +84,10 @@ class WmfConfig {
 		'ores',
 		'sul',
 		'wikilove',
-		'tempaccounts_disabled',
 		'checkuser-suggested-investigations',
+		'automoderator-revertrisk-multilingual',
+		'abusefilter-disabled',
+		'checkuser-disabled',
 	];
 
 	/** @var string[] */
@@ -252,7 +253,7 @@ class WmfConfig {
 	 * TODO: Once InitialiseSettings is array-returning, this can be injected
 	 * by callers instead.
 	 *
-	 * @param array[] $settings wgConf-style settings array from IntialiseSettings.php
+	 * @param array[] $settings wgConf-style settings array from InitialiseSettings.php
 	 * @return array
 	 */
 	private static function applyOverrides( array $settings ): array {

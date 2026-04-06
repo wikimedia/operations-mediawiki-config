@@ -1,5 +1,7 @@
 #!/usr/bin/env php
-<?php declare( strict_types=1 );
+<?php
+declare( strict_types = 1 );
+
 /**
  * Helper script for locally making patches to dblists/ files.
  *
@@ -22,6 +24,7 @@ use Wikimedia\MWConfig\WmfConfig;
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 final class WmfManageDblistCli {
 	private string $command;
+	/** @var string[] */
 	private array $params;
 
 	/**
@@ -85,40 +88,18 @@ final class WmfManageDblistCli {
 
 	public function run(): void {
 		try {
-			switch ( $this->command ) {
-				case 'add':
-					$this->doAdd( ...$this->params );
-					return;
-				case 'list':
-					$this->doList( ...$this->params );
-					return;
-				case 'del':
-				case 'remove':
-					$this->doDel( ...$this->params );
-					return;
-				case 'update':
-					$this->doUpdate( ...$this->params );
-					return;
-				case 'prepare':
-					$this->doPrepare( ...$this->params );
-					return;
-				case 'activate':
-					$this->doActivate( ...$this->params );
-					return;
-				case 'init-labs':
-					$this->doInitLabs( ...$this->params );
-					return;
-				case 'close':
-					$this->doClose( ...$this->params );
-					return;
-				case '':
-				case 'help':
-					$this->help();
-					exit( 1 );
-				default:
-					$this->error( 'Unknown command' );
-					return;
-			}
+			match ( $this->command ) {
+				'add' => $this->doAdd( ...$this->params ),
+				'list' => $this->doList( ...$this->params ),
+				'del', 'remove' => $this->doDel( ...$this->params ),
+				'update' => $this->doUpdate( ...$this->params ),
+				'prepare' => $this->doPrepare( ...$this->params ),
+				'activate' => $this->doActivate( ...$this->params ),
+				'init-labs' => $this->doInitLabs( ...$this->params ),
+				'close' => $this->doClose( ...$this->params ),
+				'', 'help' => $this->help(),
+				default => $this->error( 'Unknown command' )
+			};
 		} catch ( Throwable $e ) {
 			$this->error( (string)$e );
 		}
@@ -127,9 +108,7 @@ final class WmfManageDblistCli {
 	private function doList( string $dbname ): void {
 		$dblists = array_keys( array_filter(
 			WmfConfig::getAllDbListsForCLI(),
-			static function ( array $list ) use ( $dbname ) {
-				return in_array( $dbname, $list );
-			}
+			static fn ( array $list ): bool => in_array( $dbname, $list, true )
 		) );
 		sort( $dblists );
 		foreach ( $dblists as $dblist ) {
@@ -138,13 +117,12 @@ final class WmfManageDblistCli {
 	}
 
 	private function doAdd( string $dbname, string $listname ): void {
-		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall' ] ) ) {
+		if ( !in_array( $listname, [ 'all', 'all-labs', 'preinstall' ], true ) ) {
 			$validDbnames = strpos( $listname, 'labs' ) !== false
 				? WmfConfig::readDbListFile( 'all-labs' )
 				: WmfConfig::evalDbExpressionForCli( 'all + preinstall' );
-			if ( !in_array( $dbname, $validDbnames ) ) {
+			if ( !in_array( $dbname, $validDbnames, true ) ) {
 				$this->error( "Unknown wiki: $dbname" );
-				return;
 			}
 		}
 
@@ -195,7 +173,7 @@ final class WmfManageDblistCli {
 			$validDbnames = in_array( $listname, $labsOnlyTags ) ? $labsOnlyWikis : $prodWikis;
 			if ( !in_array( $listname, $untracked ) ) {
 				foreach ( $content as $i => $dbname ) {
-					if ( !in_array( $dbname, $validDbnames ) ) {
+					if ( !in_array( $dbname, $validDbnames, true ) ) {
 						unset( $content[$i] );
 					}
 				}
@@ -205,65 +183,39 @@ final class WmfManageDblistCli {
 		}
 
 		$this->writeDblistsIndex( $knownDBLists );
-
 		$this->generateDbSectionMapping();
 	}
 
-	private function doPrepare( string $dbName, string $lang, string $family, string $visibility ) {
+	private function doPrepare( string $dbName, string $lang, string $family, string $visibility ): void {
 		$visibility = strtolower( $visibility );
 
-		if ( !in_array( $visibility, [ 'public', 'fishbowl', 'private' ] ) ) {
+		if ( !in_array( $visibility, [ 'public', 'fishbowl', 'private' ], true ) ) {
 			$this->error( 'Unknown visibility' );
-			exit( 1 );
 		}
 
-		// add wiki to wikiversion.json
+		// Add wiki to wikiversion.json
 		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions.json' );
-		switch ( $family ) {
-			case 'wikipedia':
-				$key = 'enwiki';
-				break;
-			case 'wikimania':
-				$key = 'wikimaniawiki';
-				break;
-			case 'wikimedia':
-				$key = 'vewikimedia';
-				break;
-			case 'wikibooks':
-				$key = 'enwikibooks';
-				break;
-			case 'wikinews':
-				$key = 'enwikinews';
-				break;
-			case 'wikiquote':
-				$key = 'enwikiquote';
-				break;
-			case 'wikisource':
-				$key = 'enwikisource';
-				break;
-			case 'wikiversity':
-				$key = 'enwikiversity';
-				break;
-			case 'wikivoyage':
-				$key = 'enwikivoyage';
-				break;
-			case 'wiktionary':
-				$key = 'enwiktionary';
-				break;
-			case 'special':
-				$key = 'apiportalwiki';
-				break;
-			default:
-				$this->error( 'Unknown family' );
-				exit( 1 );
-		}
+		$key = match ( $family ) {
+			'wikipedia' => 'enwiki',
+			'wikimania' => 'wikimaniawiki',
+			'wikimedia' => 'vewikimedia',
+			'wikibooks' => 'enwikibooks',
+			'wikinews' => 'enwikinews',
+			'wikiquote' => 'enwikiquote',
+			'wikisource' => 'enwikisource',
+			'wikiversity' => 'enwikiversity',
+			'wikivoyage' => 'enwikivoyage',
+			'wiktionary' => 'enwiktionary',
+			'special' => 'apiportalwiki',
+			default => $this->error( 'Unknown family' )
+		};
 		$versions[$dbName] = $versions[$key];
 		ksort( $versions );
 		MWWikiVersions::writeWikiVersionsFile( 'wikiversions.json', $versions );
 
 		$this->doAdd( $dbName, 'preinstall' );
 		$this->doAdd( $dbName, $family );
-		// all wikis are currently created in s5
+		// All wikis are currently created in s5
 		$this->doAdd( $dbName, 's5' );
 		$this->doAdd( $dbName, 'small' );
 
@@ -272,16 +224,16 @@ final class WmfManageDblistCli {
 			$this->doAdd( $dbName, 'parsoidrendered' );
 		}
 
-		$data = file( 'langlist' );
-		if ( !in_array( $lang . "\n", $data ) ) {
-			$data[] = $lang . "\n";
+		$data = file( 'langlist', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+		if ( !in_array( $lang, $data, true ) ) {
+			$data[] = $lang;
 			asort( $data );
-			file_put_contents( 'langlist', implode( '', $data ) );
+			file_put_contents( 'langlist', implode( "\n", $data ) . "\n" );
 		}
 
 		switch ( $visibility ) {
 			case 'public':
-				if ( $family != 'wikimedia' ) {
+				if ( $family !== 'wikimedia' ) {
 					$this->doAdd( $dbName, 'wikidataclient' );
 				}
 				$this->doAdd( $dbName, 'commonsuploads' );
@@ -300,44 +252,41 @@ final class WmfManageDblistCli {
 		$this->generateDbSectionMapping();
 	}
 
-	private function doActivate( string $dbName ) {
+	private function doActivate( string $dbName ): void {
 		$preinstallWikis = WmfConfig::readDbListFile( 'preinstall' );
-		if ( !in_array( $dbName, $preinstallWikis ) ) {
+		if ( !in_array( $dbName, $preinstallWikis, true ) ) {
 			$this->error( "Wiki not in preinstall.dblist: $dbName" );
-			return;
 		}
 		$this->doAdd( $dbName, 'all' );
 		$this->doDel( $dbName, 'preinstall' );
 	}
 
-	private function doInitLabs( string $dbName, string $lang ) {
+	private function doInitLabs( string $dbName, string $lang ): void {
 		// Bail if the wiki doesn't exist in production. Standard configuration structure
 		// assumes the wiki receives settings from production dblists such as the wiki family.
 		// Adding a wiki that doesn't exist in production to the Beta Cluster is possible but
 		// more complicated and not supported by this tool.
 		$validDbNames = WmfConfig::readDbListFile( 'all' );
-		if ( !in_array( $dbName, $validDbNames ) ) {
+		if ( !in_array( $dbName, $validDbNames, true ) ) {
 			$this->error( "Wiki not in production config: $dbName" );
-			return;
 		}
 
 		$this->doAdd( $dbName, 'all-labs' );
 
-		// add wiki to wikiversion-labs.json
+		// Add wiki to wikiversion-labs.json
 		$versions = MWWikiVersions::readWikiVersionsFile( 'wikiversions-labs.json' );
 		if ( isset( $versions[$dbName] ) ) {
 			$this->error( "Wiki already in Beta Cluster: $dbName" );
-			return;
 		}
 		$versions[$dbName] = 'php-master';
 		ksort( $versions );
 		MWWikiVersions::writeWikiVersionsFile( 'wikiversions-labs.json', $versions );
 
-		$data = file( 'langlist-labs' );
-		if ( !in_array( $lang . "\n", $data ) ) {
-			$data[] = $lang . "\n";
+		$data = file( 'langlist-labs', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+		if ( !in_array( $lang, $data, true ) ) {
+			$data[] = $lang;
 			asort( $data );
-			file_put_contents( 'langlist-labs', implode( '', $data ) );
+			file_put_contents( 'langlist-labs', implode( "\n", $data ) . "\n" );
 		}
 	}
 
@@ -353,7 +302,7 @@ final class WmfManageDblistCli {
 	 * @param string[] $listcontent The wikidbs for the dblist contents.
 	 * @param string|null $source One of "dbexpr" or null
 	 */
-	private function writeDblist( $listname, $listcontent, $source = null ) {
+	private function writeDblist( string $listname, array $listcontent, ?string $source = null ): void {
 		$path = __DIR__ . '/../../dblists/' . $listname . '.dblist';
 
 		// Alpha-sort the contents of the list by array value for consistency
@@ -361,45 +310,43 @@ final class WmfManageDblistCli {
 
 		$from = ( $source === 'dbexpr' ? " from {$listname}.dbexpr" : '' );
 
-		if ( !file_put_contents(
-			$path,
-			[
-				// Header warning about being a generated file
-				"# NOTE: This file is automatically generated{$from}."
-					. " Do not edit it directly, run 'composer manage-dblist' instead.\n",
-				// The contents of the list, written one per line, unique'd
-				implode( "\n", array_unique( $listcontent ) ),
-				// Trailing new line for consistency
-				"\n"
-			],
-			LOCK_EX
-		) ) {
-			print "Unable to write to $path.\n";
-			exit( 1 );
+		$content = "# NOTE: This file is automatically generated{$from}."
+			. " Do not edit it directly, run 'composer manage-dblist' instead.\n";
+
+		if ( $listcontent ) {
+			$content .= implode( "\n", array_unique( $listcontent ) ) . "\n";
+		}
+
+		if ( !file_put_contents( $path, $content, LOCK_EX ) ) {
+			$this->error( "Unable to write to $path." );
 		}
 	}
 
 	private function generateDbSectionMapping(): void {
-		$sections = var_export(
-			array_merge( ...array_map( static function ( string $s ) {
-				return array_fill_keys( WmfConfig::readDbListFile( $s ), $s );
-			}, [ 's1', 's2', 's4', 's5', 's6', 's7', 's8' ] ) ),
-			true
+		// Note: 's3' is intentionally omitted as it's the default section
+		// that databases will fall back to if they don't match any other section
+		$sections = [ 's1', 's2', 's4', 's5', 's6', 's7', 's8' ];
+		$sectionData = array_combine(
+			$sections,
+			array_map( [ WmfConfig::class, 'readDbListFile' ], $sections )
 		);
 
-		$sections = preg_replace( '/\s+/', '', $sections );
-		$sections = str_replace( 'array(', "[\n\t", $sections );
-		$sections = str_replace( ',', ",\n\t", $sections );
-		$sections = str_replace( '=>', ' => ', $sections );
-		$sections = str_replace( "\t)", "];\n", $sections );
+		$maxLength = max( array_map( 'strlen', array_merge( ...array_values( $sectionData ) ) ) );
+		$output = "<?php\n"
+			. "// NOTE: This file is automatically generated. Do not edit it directly.\n"
+			. "// Run 'composer manage-dblist' to add or remove wikis from sections.\n\n"
+			. "\$wgLBFactoryConf['sectionsByDB'] = [\n"
+			. implode( "\n", array_map(
+				static fn ( $section, $dbs ): string => implode( "", array_map(
+					static fn ( $db ): string => "\t" . str_pad( "'$db'", $maxLength + 2 ) . " => '$section',\n",
+					$dbs
+				) ),
+				$sections,
+				$sectionData
+			) )
+			. "];\n";
 
-		file_put_contents( 'wmf-config/db-sections.php',
-			"<?php\n"
-			. '# NOTE: This file is automatically generated. Do not edit it directly, run '
-			. "'composer manage-dblist' instead to add/remove wikis from sections.\n"
-			. '$wgLBFactoryConf[\'sectionsByDB\'] = '
-			. $sections
-		);
+		file_put_contents( __DIR__ . '/../../wmf-config/db-sections.php', $output );
 	}
 
 	/**
@@ -407,7 +354,7 @@ final class WmfManageDblistCli {
 	 * @param string $path Path to PHP-file to create or replace
 	 * @param array $data
 	 */
-	private function writeStaticArrayFile( string $head, string $path, array $data ) {
+	private function writeStaticArrayFile( string $head, string $path, array $data ): void {
 		$code = "<?php\n"
 			. "// " . implode( "\n// ", explode( "\n", $head ) ) . "\n"
 			. "return [\n";
@@ -421,8 +368,7 @@ final class WmfManageDblistCli {
 		$code .= "];\n";
 
 		if ( !file_put_contents( $path, $code, LOCK_EX ) ) {
-			print "Unable to write to $path.\n";
-			exit( 1 );
+			$this->error( "Unable to write to $path." );
 		}
 	}
 
@@ -448,9 +394,9 @@ final class WmfManageDblistCli {
 		);
 	}
 
-	private function error( string $msg ): void {
-		print "\n" . $msg . "\n\n";
-		$this->help();
+	private function error( string $msg ): never {
+		print "\n$msg\n\n";
+		print "Run 'composer manage-dblist help' for more information.\n";
 		exit( 1 );
 	}
 }

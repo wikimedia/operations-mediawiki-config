@@ -162,7 +162,7 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 
 	/** @{
 	 * Autopromote conditions (must be here, so that they're loaded for
-	 * DefaultSettings.php before AutoLoader.php)
+	 * config-schema.php before AutoLoader.php)
 	 */
 	define( 'APCOND_EDITCOUNT', 1 );
 	define( 'APCOND_AGE', 2 );

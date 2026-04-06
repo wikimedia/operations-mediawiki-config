@@ -75,6 +75,7 @@ $common = [
 	'push-notifications' => 'http://localhost:6012',
 	'data-gateway' => 'http://localhost:6038',
 	'ipoid' => 'http://localhost:6035',
+	'opensearch_ipoid' => 'https://opensearch-ipoid.discovery.wmnet:30443',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',
@@ -82,11 +83,13 @@ $common = [
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
 	'shellbox-video' => 'http://localhost:6036',
+	// Temporary for T419049 -- ICU 72 upgrade.
+	'shellbox-icu' => 'https://shellbox-icu72-tls-service.shellbox.svc.cluster.local:4081',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	'chart-renderer' => 'http://localhost:6039',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
-	'mpic' => 'http://localhost:6037',
+	'test-kitchen' => 'http://localhost:6037',
 
 	// an-web only exists in eqiad
 	'analytics-web' => 'http://localhost:6206',
@@ -135,6 +138,13 @@ $common = [
 			'port' => 6304,
 		]
 	],
+	'semanticsearch-test' => [
+		[ // semanticsearch cluster (WE3.1 android app semantic search MVP)
+			'host' => 'opensearch-semantic-search.discovery.wmnet',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+			'port' => 30443,
+		]
+	],
 ];
 
 $services = [
@@ -143,7 +153,7 @@ $services = [
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
 
 		// logs are mirrored from eqiad -> codfw by mwlog hosts
-		'udp2log' => '10.64.32.141:8420', # mwlog1002.eqiad.wmnet
+		'udp2log' => '10.64.185.2:8420', # mwlog1003.eqiad.wmnet
 
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
@@ -198,7 +208,7 @@ $services = [
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 
 		// logs are mirrored from codfw -> eqiad by mwlog hosts
-		'udp2log' => '10.192.32.9:8420', # mwlog2002.codfw.wmnet
+		'udp2log' => '10.192.52.2:8420', # mwlog2003.codfw.wmnet
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',

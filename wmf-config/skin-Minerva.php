@@ -68,7 +68,6 @@ return [
 	'wgMinervaAdvancedMainMenu' => [
 		'default' => [
 			'base' => false,
-			'beta' => false,
 			'loggedin' => false,
 			'amc' => true,
 		],
@@ -84,7 +83,7 @@ return [
 		'default' => [
 			'base' => false,
 			'beta' => false,
-			'loggedin' => false,
+			'loggedin' => true,
 			'amc' => true,
 		],
 		// T290812
@@ -151,6 +150,7 @@ return [
 		'bnwikibooks' => true, // T319317
 		'bnwikiquote' => true, // T337683
 		'bnwiktionary' => true, // T328630
+		'enwiki' => true, // T416644
 		'kowiki' => true, // T172630
 		'labswiki' => true, // T410702
 		'ptwikinews' => true, // T332813
@@ -161,6 +161,7 @@ return [
 		'testwiki' => true,
 		'test2wiki' => true,
 		'wikivoyage' => true,
+		'wikipedia' => true, // T416644
 		'ruwikimedia' => true,
 		'cawiki' => true,
 		'euwiki' => true,

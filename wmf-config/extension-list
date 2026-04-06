@@ -5,7 +5,6 @@ $IP/extensions/AntiSpoof/extension.json
 $IP/extensions/ApiFeatureUsage/extension.json
 $IP/extensions/ArticleCreationWorkflow/extension.json
 $IP/extensions/ArticlePlaceholder/extension.json
-$IP/extensions/ArticleSummaries/extension.json
 $IP/extensions/AutoModerator/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
@@ -78,7 +77,6 @@ $IP/extensions/ImageSuggestions/extension.json
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Insider/extension.json
 $IP/extensions/intersection/extension.json
-$IP/extensions/InterwikiSorting/extension.json
 $IP/extensions/IPInfo/extension.json
 $IP/extensions/IPReputation/extension.json
 $IP/extensions/Josa/extension.json
@@ -94,10 +92,10 @@ $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaModeration/extension.json
 $IP/extensions/MediaSearch/extension.json
-$IP/extensions/MetricsPlatform/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MultimediaViewer/extension.json
+$IP/extensions/MultiTitle/extension.json
 $IP/extensions/NavigationTiming/extension.json
 $IP/extensions/NearbyPages/extension.json
 $IP/extensions/NetworkSession/extension.json
@@ -117,6 +115,7 @@ $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/ParserMigration/extension.json
 $IP/extensions/PdfHandler/extension.json
+$IP/extensions/PersonalDashboard/extension.json
 $IP/extensions/Phonos/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/Popups/extension.json
@@ -149,6 +148,7 @@ $IP/extensions/TemplateData/extension.json
 $IP/extensions/TemplateSandbox/extension.json
 $IP/extensions/TemplateStyles/extension.json
 $IP/extensions/TemplateWizard/extension.json
+$IP/extensions/TestKitchen/extension.json
 $IP/extensions/TextExtracts/extension.json
 $IP/extensions/Thanks/extension.json
 $IP/extensions/TheWikipediaLibrary/extension.json
@@ -166,7 +166,6 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/VisualEditor/extension.json
-$IP/extensions/WebAuthn/extension.json
 $IP/extensions/Wikibase/extension-client.json
 $IP/extensions/Wikibase/extension-repo.json
 $IP/extensions/WikibaseCirrusSearch/extension.json
@@ -183,11 +182,13 @@ $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaApiPortalOAuth/extension.json
 $IP/extensions/WikimediaBadges/extension.json
 $IP/extensions/WikimediaCampaignEvents/extension.json
+$IP/extensions/WikimediaCustomizations/extension.json
 $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/Wikisource/extension.json
 $IP/extensions/Wikistories/extension.json
+$IP/extensions/WP25EasterEggs/extension.json
 $IP/extensions/XAnalytics/extension.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/MinervaNeue/skin.json

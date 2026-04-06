@@ -51,6 +51,9 @@ return [
 		'Wikivoyage_talk' => NS_PROJECT_TALK,
 		'WV' => NS_PROJECT,
 	],
+	'+abstractwiki' => [
+		'Abstract' => NS_PROJECT,
+	],
 	'+altwiki' => [
 		'ВП' => NS_PROJECT,
 	],
@@ -121,6 +124,7 @@ return [
 	],
 	'arwikibooks' => [
 		'وك' => NS_PROJECT, // T409789
+		'ويكي_الكتب' => NS_PROJECT, // T416779
 	],
 	'+arwikinews' => [
 		'وخ' => NS_PROJECT,
@@ -142,6 +146,9 @@ return [
 		'Appendix_talk' => 101, // T411819
 		'Thesaurus' => 110, // T411819
 		'Thesaurus_talk' => 111, // T411819
+	],
+	'+arwikiquote' => [
+		'وق' => NS_PROJECT, // T419828
 	],
 	'+arzwiki' => [
 		'Portal' => 100,
@@ -1088,6 +1095,8 @@ return [
 	],
 	'+lawiki' => [
 		'Disputatio_Wikipedia' => NS_PROJECT_TALK,
+		'Draft' => 118, // T418706
+		'Draft_talk' => 119, // T418706
 	],
 	'+lawikisource' => [
 		'Author' => 102,
@@ -1663,6 +1672,10 @@ return [
 		'Rhymes_talk' => 107,
 		'Reconstruction' => 110,
 		'Reconstruction_talk' => 111,
+	],
+	'+shnwikinews' => [
+		'Comments' => 102,
+		'Comments_talk' => 103,
 	],
 	'+siwiki' => [
 		'Portal' => 100,
@@ -3002,6 +3015,10 @@ return [
 		126 => 'MOS', // T363538
 		127 => 'Pembicaraan_MOS', // T363538
 	],
+	'igwiki' => [
+		118 => 'Édēchághị́', // Draft - T406178
+		119 => 'Ńkàtá_Édēchághị́'
+	],
 	'inhwiki' => [
 		100 => 'Моартал', // Portal
 		101 => 'Моарталах_къамаьл'
@@ -3100,6 +3117,8 @@ return [
 	'lawiki' => [
 		100 => 'Porta', // Portal
 		101 => 'Disputatio_Portae',
+		118 => 'Adumbratio', // T418706-Draft
+		119 => 'Disputatio_Adumbrationis', // T418706-Draft_talk
 	],
 	'liwiki' => [
 		100 => 'Portaol', // Portal
@@ -3328,7 +3347,9 @@ return [
 	],
 	'siwiki' => [
 		100 => 'ද්වාරය', // Portal - T8435, T26936
-		101 => 'ද්වාරය_සාකච්ඡාව'
+		101 => 'ද්වාරය_සාකච්ඡාව',
+		126 => 'MOS', // T363538
+		127 => 'MOS_talk', // T363538
 	],
 	'skwiki' => [
 		NS_USER => 'Redaktor', // T143472
@@ -4743,6 +4764,10 @@ return [
 		102 => 'Комментарии', // Comments
 		103 => 'Обсуждение_комментариев',
 	],
+	'shnwikinews' => [
+		102 => 'ၶွမ်းမႅၼ်ႉ', // T414403
+		103 => 'ဢုပ်ႇၵုမ်_ၶွမ်းမႅၼ်',
+	],
 	'sqwikinews' => [
 		100 => 'Portal',
 		101 => 'Portal_diskutim',
@@ -5194,6 +5219,10 @@ return [
 		118 => 'noindex,nofollow', // draft - T385593
 		119 => 'noindex,nofollow', // draft talk - T385593
 	],
+	'lawiki' => [
+		118 => 'noindex,nofollow', // Draft - T418706
+		119 => 'noindex,nofollow', // Draft_talk - T418706
+	],
 	'mlwiki' => [ // Draft - T362653
 		118 => 'noindex,nofollow',
 		119 => 'noindex,nofollow',
@@ -5216,6 +5245,10 @@ return [
 	],
 	'ptwiki' => [
 		NS_USER => 'noindex,follow', // T185660
+	],
+	'rowiki' => [
+		NS_USER => 'noindex,nofollow', // T414992
+		NS_USER_TALK => 'noindex,nofollow', // T414992
 	],
 	'ruwiki' => [
 		102 => 'noindex,follow',
@@ -5707,6 +5740,7 @@ return [
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
 	'+sewikimedia' => [ 100, NS_USER ], // T175363 - Projekt
 	'+trwiki' => [ 102 ], // T166522 - Vikiproje
+	'+u4cwiki' => [ 100 ], // T392286 - Case
 	'+wikimaniawiki' => [ 128 ], // T221062
 ],
 
@@ -5782,7 +5816,7 @@ return [
 	'arbcom_zhwiki' => '仲裁',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا', // T6672
-	'arwikibooks' => 'ويكي_الكتب',
+	'arwikibooks' => 'ويكي_كتب', // T416779
 	'arwikinews' => 'ويكي_الأخبار',
 	'arwikiquote' => 'ويكي_الاقتباس',
 	'arwikisource' => 'ويكي_مصدر',
@@ -6042,6 +6076,7 @@ return [
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kaawiktionary' => 'Wikisózlik',
+	'kaiwiki' => 'Wikipèdiya', // T414237
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
@@ -6186,6 +6221,7 @@ return [
 	'pnbwiki' => 'وکیپیڈیا',
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki' => 'Βικιπαίδεια',
+	'pplwiki' => 'Wikiamachti', // T415046
 	'pswiki' => 'ويکيپېډيا',
 	'pswikibooks' => 'ويکيتابونه',
 	'pswikivoyage' => 'ويکيسفر',
@@ -6322,6 +6358,7 @@ return [
 	'urwiki' => 'ویکیپیڈیا',
 	'urwikibooks' => 'ویکی_کتب', // T214290
 	'urwikiquote' => 'ویکی_اقتباس', // T214290
+	'urwikisource' => 'ویکی_ماخذ', // T415974
 	'urwiktionary' => 'ویکی_لغت', // T214290
 	'usabilitywiki' => 'Wikipedia',
 	'uzwiki' => 'Vikipediya',
@@ -6408,6 +6445,7 @@ return [
 	'iswiktionary' => 'Wikiorðabókarspjall',
 	'jamwiki' => 'Wikipidia_diskoshan',
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
+	'kaiwiki' => 'Màatu_mà_Wikipèdiya', // T414237
 	'kbdwiki' => 'Уикипедиэм_и_тепсэлъыхьыгъуэ',
 	'kbdwiktionary' => 'Википсалъалъэм_тепсэлъыхьын',
 	'kbpwiki' => 'Wikipediya_ndɔnjɔɔlɩyɛ', // T160868

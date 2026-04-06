@@ -140,6 +140,9 @@ switch ( $wgDBname ) {
 	case 'enwikinews':
 		$wgAbuseFilterActions['block'] = true; // T57868
 		break;
+	case 'enwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T413530
+		break;
 	case 'enwikisource':
 		$wgAbuseFilterActions['block'] = true; // T231750
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
@@ -416,6 +419,11 @@ switch ( $wgDBname ) {
 	case 'plwikiquote':
 		$wgAbuseFilterActions['block'] = true; // T398137
 		break;
+	case 'ptwiki':
+		$wgAbuseFilterActions['block'] = true; // T419312
+		$wgAbuseFilterBlockDuration = '3 days'; // T419312
+		$wgAbuseFilterAnonBlockDuration = '3 days'; // T419312
+		break;
 	case 'ptwiktionary':
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
@@ -458,6 +466,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T345513
 		$wgAbuseFilterBlockDuration = '1 day'; // T345513
 		$wgAbuseFilterAnonBlockDuration = '1 day'; // T345513
+		break;
+	case 'specieswiki':
+		$wgAbuseFilterActions['block'] = true; // T415802
 		break;
 	case 'srwiki':
 		$wgAbuseFilterActions['block'] = true; // T349727

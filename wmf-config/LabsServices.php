@@ -43,6 +43,8 @@ return [
 		'cloudelastic-chi' => null,
 		'cloudelastic-psi' => null,
 		'cloudelastic-omega' => null,
+		// semanticsearch doesn't exist in labs either
+		'semanticsearch-test' => null,
 		// We will not use analytics-web in beta
 		'analytics-web' => null,
 		// No parser cache DBs in beta yet
@@ -73,6 +75,7 @@ return [
 		'data-gateway' => null,
 		// No public API.
 		'ipoid' => null,
+		'opensearch_ipoid' => null,
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',
@@ -80,9 +83,11 @@ return [
 		'shellbox-syntaxhighlight' => null,
 		'shellbox-timeline' => null,
 		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
+		// Temporary for T419049 -- ICU 72 upgrade.
+		'shellbox-icu' => null,
 		// No envoy in beta cluster?
 		'mwapi' => null,
-		'mpic' => 'https://mpic-next.wikimedia.org',
+		'test-kitchen' => 'https://test-kitchen-next.wikimedia.org',
 
 		### Logstash
 		'logstash' => [

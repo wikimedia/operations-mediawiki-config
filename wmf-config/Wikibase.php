@@ -265,6 +265,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpMobileEditingUIBetaFeature ) ) {
 		$wgWBRepoSettings['tmpEnableMobileEditingUIBetaFeature'] = $wmgWikibaseTmpMobileEditingUIBetaFeature;
 	}
+
+	// Temporary, T415516
+	if ( isset( $wmgWikibaseTmpGraphQL ) ) {
+		$wgWBRepoSettings['tmpEnableGraphQL'] = $wmgWikibaseTmpGraphQL;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {

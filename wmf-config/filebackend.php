@@ -9,7 +9,7 @@
 //
 // Effective load order:
 // - multiversion
-// - mediawiki/DefaultSettings.php
+// - mediawiki/config-schema.php
 // - wmf-config/*Services.php
 // - wmf-config/InitialiseSettings.php
 // - wmf-config/logging.php
@@ -179,57 +179,48 @@ $localMultiWriteFileBackend = [
 	'name' => 'local-multiwrite',
 	'wikiId' => "{$site}-{$lang}",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted
+	'backends' => [
 		[ 'template' => "local-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
-	// (size & sha1)
-	'syncChecks' => ( 1 | 4 ),
-	'autoResync' => 'conservative',
 ];
 $sharedMultiwriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'shared-multiwrite',
 	'wikiId' => "wikipedia-commons",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted
+	'backends' => [
 		[ 'template' => "shared-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
-	// (size & sha1)
-	'syncChecks' => ( 1 | 4 ),
 ];
 $globalMultiWriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'global-multiwrite',
 	'wikiId' => "global-data",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted
+	'backends' => [
 		[ 'template' => "global-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
-	// (size & sha1)
-	'syncChecks' => ( 1 | 4 ),
 ];
 $sharedTestwikiMultiWriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'shared-testwiki-multiwrite',
 	'wikiId' => "wikipedia-test",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted
+	'backends' => [
 		[ 'template' => "shared-testwiki-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
-	// (size & sha1)
-	'syncChecks' => ( 1 | 4 ),
 ];
 
 if ( in_array( 'codfw', $wmgDatacenters ) ) {
@@ -315,7 +306,6 @@ if ( $wgDBname === 'test2wiki' ) {
 }
 if ( $wgDBname != 'commonswiki' ) {
 	// Commons is local to commonswiki :)
-	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'shared',

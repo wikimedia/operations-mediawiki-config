@@ -19,7 +19,7 @@
 #
 # Effective load order:
 # - multiversion
-# - mediawiki/DefaultSettings.php
+# - mediawiki/config-schema.php
 # - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php [THIS FILE]
 # - wmf-config/CommonSettings.php
@@ -185,6 +185,7 @@ return [
 
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
+	'abstractwiki' => 'en',
 	'advisorywiki' => 'en',
 	'apiportalwiki' => 'en',
 	'arbcom_cswiki' => 'cs', // T151731
@@ -461,8 +462,10 @@ return [
 	'itwikisource' => 'Europe/Berlin',
 	'itwiktionary' => 'Europe/Berlin',
 	'jamwiki' => 'America/Jamaica',
+	'kajwiki' => 'Africa/Lagos',
 	'kawikisource' => 'Asia/Tbilisi',
 	'kaawiktionary' => 'Asia/Tashkent',
+	'kaiwiki' => 'Africa/Lagos', // T414237
 	'kbdwiki' => 'Europe/Moscow',
 	'kbdwiktionary' => 'Europe/Moscow',
 	'kbpwiki' => 'Africa/Lome', // T160868
@@ -578,6 +581,7 @@ return [
 	'pmswikisource' => 'Europe/Rome', // T196763
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
+	'pplwiki' => 'America/El_Salvador', // T415046
 	'punjabiwikimedia' => 'Asia/Kolkata',
 	'pwnwiki' => 'Asia/Taipei',
 	'rkiwiki' => 'Asia/Yangon', // T392499
@@ -724,6 +728,7 @@ return [
 	'zhwikinews' => false,
 
 	// Other individual wikis
+	'abstractwiki' => false,
 	'arwikimedia' => false, // T353218
 	'azwikimedia' => false,
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
@@ -809,6 +814,7 @@ return [
 
 	// Individual wikis
 	// NOTE: Use full URLs even for same-wiki links (T383916)
+	'abstractwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'arwiki' => '//ar.wikipedia.org/wiki/ويكيبيديا:رفع', // T142450
 	'aswiki' => '//as.wikipedia.org/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azwiki' => '//az.wikipedia.org/wiki/Vikipediya:Yükləmə_sehrbazı', // T364674
@@ -918,6 +924,7 @@ return [
 	'wiktionary' => '//$lang.wiktionary.org',
 
 	// Individual wikis
+	'abstractwiki' => '//abstract.wikipedia.org',
 	'advisorswiki' => '//advisors.wikimedia.org',
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'amwikimedia' => '//am.wikimedia.org',
@@ -1034,6 +1041,7 @@ return [
 	'wiktionary' => 'https://$lang.wiktionary.org',
 
 	// Individual wikis
+	'abstractwiki' => 'https://abstract.wikipedia.org',
 	'advisorswiki' => 'https://advisors.wikimedia.org',
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'aewikimedia' => 'https://ae.wikimedia.org',
@@ -1157,6 +1165,7 @@ return [
 
 	// Individual wikis, alphabetically by DB name
 	'abwiki' => 'Авикипедиа',
+	'abstractwiki' => 'Abstract Wikipedia',
 	'advisorswiki' => 'Advisors',
 	'advisorywiki' => 'Advisory Board',
 	'adywiki' => 'Википедие', // T125501
@@ -1180,7 +1189,7 @@ return [
 	'arbcom_zhwiki' => '中文维基百科仲裁委员会',
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا',
-	'arwikibooks' => 'ويكي الكتب', // T337725
+	'arwikibooks' => 'ويكي كتب', // T416779
 	'arwikimedia' => 'Wikimedia Argentina',
 	'arwikinews' => 'ويكي الأخبار', // T337725
 	'arwikiquote' => 'ويكي الاقتباس', // T337725
@@ -1443,6 +1452,7 @@ return [
 	'kawikisource' => 'ვიკიწყარო', // T363243
 	'kawiktionary' => 'ვიქსიკონი',
 	'kaawiktionary' => 'Wikisózlik',
+	'kaiwiki' => 'Wikipèdiya', // T414237
 	'kbdwiki' => 'Уикипедиэ',
 	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
@@ -1580,6 +1590,7 @@ return [
 	'pnbwiki' => 'وکیپیڈیا',
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki' => 'Βικιπαίδεια',
+	'pplwiki' => 'Wikiamachti', // T415046
 	'projectcomwiki' => 'Project Grants Committee',
 	'pswiki' => 'ويکيپېډيا',
 	'pswikibooks' => 'ويکيتابونه',
@@ -1717,6 +1728,7 @@ return [
 	'urwiki' => 'ویکیپیڈیا', // T44155
 	'urwikibooks' => 'ویکی کتب', // T214290
 	'urwikiquote' => 'ویکی اقتباس', // T214290
+	'urwikisource' => 'ویکی ماخذ', // T415974
 	'urwiktionary' => 'ویکی لغت', // T214290
 	'usabilitywiki' => 'Wikimedia Usability Initiative',
 	'uzwiki' => 'Vikipediya',
@@ -1994,12 +2006,14 @@ return [
 
 'wgTorAutoConfirmAge' => [
 	'default' => 90 * 86400,
-	'enwiki' => 4 * 86400 // T409022
+	'enwiki' => 4 * 86400, // T409022
+	'zhwiki' => 7 * 86400, // T415335
 ],
 
 'wgTorAutoConfirmCount' => [
 	'default' => 100,
-	'enwiki' => 10  // T409022
+	'enwiki' => 10, // T409022
+	'zhwiki' => 50, // T415335
 ],
 
 'wgAutoConfirmCount' => [
@@ -2073,6 +2087,7 @@ return [
 	'elwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T306241
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
+	'enwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T414711
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
 	'eswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T330470
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
@@ -2170,6 +2185,7 @@ return [
 
 // For CentralNotice project pickers
 'wgNoticeProject' => [
+	'abstractwiki' => 'wikimedia',
 	'advisorywiki' => 'wikimedia',
 	'apiportalwiki' => 'wikimedia',
 	'default' => '$site',
@@ -2274,6 +2290,7 @@ return [
 		'collection' => 'debug', // -cscott for T73675
 		'CommunityConfiguration' => 'info',
 		'communityrequests' => 'info', // T402967
+		'confirmemail' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'ContentTranslation' => 'info',
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
@@ -2309,7 +2326,7 @@ return [
 		'HtmlOutputRendererHelper' => 'debug', // T356157
 		'ImageSuggestions' => 'info',
 		'IpReputation' => 'debug',
-		'IPInfo' => 'warning',
+		'IPInfo' => 'info',
 		'IPReputation' => 'warning',
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'Kartographer' => 'debug', // Temporary monitoring for T304813.
@@ -2333,8 +2350,9 @@ return [
 		'PageTriage' => 'debug',
 		'PageViewInfo' => 'info',
 		'ParserCache' => 'warning',
+		'ParserOptions' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ],
 		'Parsoid' => 'warning',
-		'poolcounter' => 'debug',
+		'poolcounter' => 'info',
 		'preferences' => 'info',
 		'purge' => 'debug',
 		'query' => 'debug',
@@ -2448,7 +2466,8 @@ return [
 
 'wgDefaultSkin' => [
 	'default' => 'vector-2022',
-	'legacy-vector' => 'vector',
+	'donatewiki' => 'vector',
+	'thankyouwiki' => 'vector',
 	// Special cases for wikis that use skins older than Vector.
 	'nostalgiawiki' => 'nostalgia',
 	// Special cases for wikis that use custom skins.
@@ -2459,8 +2478,6 @@ return [
 	'default' => false,
 	// T366314
 	'group0' => true,
-	// T366314
-	'legacy-vector' => true,
 ],
 
 // Note:
@@ -2512,13 +2529,9 @@ return [
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '2',
-	// T254227, T347444
-	'legacy-vector' => '1',
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
 	'default' => '2',
-	// T254227, T347444
-	'legacy-vector' => '1',
 ],
 
 'wgVectorNightMode' => [
@@ -2567,6 +2580,23 @@ return [
 	// T290480
 	// T325362
 	'modern-mainpage' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+],
+
+// @unstable
+// IMPORTANT: This is a temporary setting is unstable.
+// It should not be enabled for any project other than ruwiki.
+// Updates to this configuration should not be made without
+// consulting #Reader-Experience-Team on Phabricator.
+'wgVectorLanguageInMainMenu' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// T375046
+	'ruwiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
 	],
@@ -2966,6 +2996,7 @@ return [
 	'wikivoyage' => true, // requested by Erik
 
 	// Individual wikis
+	'abstractwiki' => true,
 	'alswiki' => true, // T6543
 	'arwikisource' => true,
 	'azbwiki' => true, // T109755
@@ -3322,6 +3353,12 @@ return [
 	'sul' => true,
 ],
 
+'wgEmailConfirmationBanner' => [
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true,
+],
+
 'wgBlockDisablesLogin' => [
 	'default' => false,
 	'private' => true, // T55871
@@ -3418,6 +3455,7 @@ return [
 	'vewikimedia' => [ 'w', 'meta' ],
 
 	// content wikis
+	'abstractwiki' => [ 'meta', 'wikifunctions' ],
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
 	'arwiki' => [ 'en', 'meta' ], // T347563
 	'arwikibooks' => [ 'w' ],
@@ -3442,7 +3480,6 @@ return [
 	'commonswiki' => [ 'meta', 'w:en', 'w:de', 'w:fr', 'w:he', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata' ], // T13126, T56001
 	'testcommonswiki' => [ 'meta', 'w:en', 'w:de', 'w:fr', 'w:he', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata', 'commonswiki' ], // T13126, T56001
 	'crhwiki' => [ 'incubator' ],
-	'crwiki' => [ 'en', 'fr' ], // T24089
 	'cswiki' => [ 'b', 'meta', 'n', 'q', 's', 'v', 'wikt' ], // T18688
 	'cswikibooks' => [ 'n', 'q', 's', 'v', 'w', 'wikt' ], // T18688
 	'cswikinews' => [ 'b', 'q', 's', 'v', 'w', 'wikt', 'incubator' ], // T18688
@@ -3818,7 +3855,10 @@ return [
 	'ptwiki' => true,
 	'zhwiki' => true,
 ],
-
+'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
+	'default' => false,
+	'testwiki' => true,
+],
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
 	'testwiki' => true,
@@ -4009,6 +4049,95 @@ return [
 	'default' => 400,
 	'wikidatawiki' => 1500,
 	'testwikidatawiki' => 1500,
+],
+
+'wmgUsePersonalDashboard' => [
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+	'testwiki' => true, // T403982
+	// T417665
+	'idwiki' => true,
+	'trwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
+	'enwiki' => true, // T418367
+],
+
+'wgPersonalDashboardRiskyArticleEditsMlModel' => [
+	'default' => "revertrisklanguageagnostic",
+	'enwiki' => "damaging"
+],
+
+'wgPersonalDashboardBlueDot' => [
+	'default' => false,
+	'testwiki' => true,
+	// T418613
+	'idwiki' => true,
+	'trwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
+	// T421415
+	'enwiki' => true,
+],
+
+'wgPersonalDashboardUserMenu' => [
+	'default' => false,
+	'testwiki' => true,
+	// T418613
+	'idwiki' => true,
+	'trwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
+	// T421415
+	'enwiki' => true,
+],
+
+'wgPersonalDashboardMinimumEdits' => [
+	'default' => 100,
+	'testwiki' => 10,
+	// T421415
+	'enwiki' => 100,
+],
+
+'wgPersonalDashboardMaximumEdits' => [
+	'default' => 0,
+	'testwiki' => 25,
+	// T421415
+	'enwiki' => 500,
+],
+
+'wgPersonalDashboardActiveDiscussionsPages' => [
+	'default' => [],
+	// T420785
+	'testwiki' => [ 'Wikipedia:Village Pump' ],
+	'idwiki' => [
+		'Wikipedia:Warung Kopi (Kebijakan)',
+		'Wikipedia:Warung Kopi (Usulan)',
+		'Wikipedia:Warung Kopi (Bahasa)',
+		'Wikipedia:Warung Kopi (Lain-lain)'
+	],
+	'trwiki' => [
+		'Vikipedi:Köy çeşmesi (ilginize)',
+		'Vikipedi:Köy çeşmesi (teklifler)',
+		'Vikipedi:Köy çeşmesi (politika)',
+		'Vikipedi:Danışma masası'
+	],
+	'simplewiki' => [
+		'Wikipedia:Simple talk',
+		'Wikipedia:Administrators\' noticeboard'
+	],
+	'thwiki' => [
+		'วิกิพีเดีย:แผนกช่วยเหลือ',
+		'วิกิพีเดีย:สถานทูตวิกิมีเดีย',
+		'วิกิพีเดีย:แจ้งผู้ดูแลระบบ'
+	],
+	'enwiki' => [
+		'Wikipedia:Help desk',
+		'Wikipedia:Village pump (miscellaneous)',
+		'Wikipedia:Village pump (technical)',
+		'Wikipedia:Village pump (idea_lab)',
+		'Wikipedia:Village pump (policy)',
+		'Wikipedia:Village pump (proposals)'
+	]
 ],
 
 'wmgUsePhonos' => [
@@ -4252,6 +4381,10 @@ return [
 	'lockeddown' => false,
 ],
 
+'wmgUseMultiTitle' => [
+	'default' => false,
+],
+
 # @} end of EXTENSIONS
 
 # wgVariantArticlePath @{
@@ -4305,9 +4438,6 @@ return [
 		'Uncategorizedcategories' => 'monthly',
 		'Wantedtemplates' => 'monthly',
 	],
-	'+frwiki' => [
-		'Mostcategories',
-	],
 	'+wikidata' => [
 		'Lonelypages',
 		'Mostlinked',
@@ -4316,17 +4446,33 @@ return [
 		'Unwatchedpages',
 		'Withoutinterwiki',
 	],
-	'+commonswiki' => [
+	'commonswiki' => [
+		'Ancientpages' => 'half-monthly',
+		'Fewestrevisions' => 'half-monthly',
+		'Mostlinked' => 'half-monthly',
+		'Mostrevisions' => 'half-monthly',
+		'Wantedpages' => 'half-monthly',
 		'Uncategorizedpages' => 'monthly',
 		'Mostlinkedtemplates' => 'monthly',
+		'Deadendpages', // T371662
+		'Lonelypages', // T371662
+	],
+	'+testcommonswiki' => [
+		'Unusedtemplates',
 	],
 ],
 # @} end of wgDisableQueryPageUpdate
 
+// Use Hadoop for QueryPages computation (T309738)
 'wmgExternalQuerySources' => [
 	'default' => [],
-	'testwiki' => [ 'Mostlinkedtemplates' ],
+	'testwiki' => [
+		'Mostcategories',
+		'Mostlinkedtemplates',
+	],
+	'commonswiki' => [ 'Mostlinkedtemplates' ],
 	'enwiki' => [ 'Mostlinkedtemplates' ],
+	'frwiki' => [ 'Mostcategories' ],
 ],
 
 'wgShowHostnames' => [
@@ -4340,7 +4486,22 @@ return [
 		'PMID' => true,
 		'RFC' => true,
 	],
+	'afwiki' => [ // T420142
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false
+	],
 	'enwiki' => [ // T275951
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false,
+	],
+	'iawiki' => [ // T414019
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false,
+	],
+	'nlwiki' => [ // T145604#11542373
 		'ISBN' => false,
 		'PMID' => false,
 		'RFC' => false,
@@ -4376,6 +4537,7 @@ return [
 	'urwikibooks' => '/static/favicon/wikibooks-rtl.ico', // T185919
 
 	# Special wikis
+	'abstractwiki' => '/static/favicon/abstractwiki.ico',
 	'advisorywiki' => '/static/favicon/wmf.ico',
 	'arbcom_dewiki' => '/static/favicon/arbcom_dewiki.ico', // T166947
 	'arbcom_enwiki' => '/static/favicon/arbcom_enwiki.ico', // T272920
@@ -4679,6 +4841,665 @@ return [
 	'ptwiki' => [ 'autoextendedconfirmed' ], // T292915
 ],
 
+'wgRestrictedGroups' => [
+	'default' => [
+		// T418580
+		'centralnoticeadmin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'checkuser' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'interface-admin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'suppress' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		// T393615, T409717
+		'temporary-account-viewer' => [
+			'memberConditions' => [
+				'&',
+				[ APCOND_EDITCOUNT, 300 ],
+				[ APCOND_AGE, 86400 * 30 * 6 ],
+			],
+			'canBeIgnored' => true,
+		],
+		// T418580
+		'wikidata-staff' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'wikifunctions-staff' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'wmf-officeit' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'wmf-supportsafety' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+	],
+	'+testwiki' => [
+		'securitytester2' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		]
+	]
+],
+
+// T417880
+'wgOATH2FARequiredGroupRemovalPages' => [
+	'default' => [
+		'*' => 'm:Steward requests/Permissions',
+	],
+	'+afwiki' => [
+		'interface-admin' => 'Wikipedia:Geselshoekie',
+	],
+	'+alswiki' => [
+		'interface-admin' => 'Wikipedia:Stammtisch',
+	],
+	'+amwikimedia' => [
+		'interface-admin' => 'Քննարկում:Վիքիմեդիա_Հայաստան',
+	],
+	'+apiportalwiki' => [
+		'interface-admin' => 'Talk:Main Page',
+	],
+	'+arwiki' => [
+		'interface-admin' => 'ويكيبيديا:إخطار البيروقراطيين',
+	],
+	'+arwikimedia' => [
+		'interface-admin' => 'Discusión:Página principal',
+	],
+	'+arwikisource' => [
+		'interface-admin' => 'ويكي مصدر:بيروقراطيون/طلبات',
+	],
+	'+astwiki' => [
+		'interface-admin' => 'Wikipedia:Chigre',
+	],
+	'+azwiki' => [
+		'interface-admin' => 'Vikipediya:Bürokratlara müraciət',
+	],
+	'+azwikimedia' => [
+		'interface-admin' => 'Müzakirə:Ana səhifə',
+	],
+	'+bat_smgwiki' => [
+		'interface-admin' => 'Vikipedėjė:Aptarėmā',
+	],
+	'+bawiki' => [
+		'interface-admin' => 'Википедия:Хакимдарға һорауҙар',
+	],
+	'+bdwikimedia' => [
+		'interface-admin' => 'আলাপ:প্রধান পাতা',
+	],
+	'+be_x_oldwiki' => [
+		'interface-admin' => 'Вікіпэдыя:Запыты да адміністратараў',
+	],
+	'+bewiki' => [
+		'interface-admin' => 'Вікіпедыя:Запыты да адміністратараў',
+	],
+	'+bewikimedia' => [
+		'interface-admin' => 'Talk:Wikimedia Belgium',
+	],
+	'+bgwiki' => [
+		'interface-admin' => 'Уикипедия:Заявки към бюрократите',
+	],
+	'+bgwikiquote' => [
+		'interface-admin' => 'Уикицитат:Разговори',
+	],
+	'+bnwiki' => [
+		'interface-admin' => 'উইকিপিডিয়া:ব্যুরোক্র্যাটদের আলোচনাসভা',
+	],
+	'+bswiki' => [
+		'interface-admin' => 'Wikipedia:Pitanja za administratore',
+	],
+	'+cawiki' => [
+		'interface-admin' => 'Viquipèdia:Sala dels administradors',
+	],
+	'+cawikimedia' => [
+		'interface-admin' => 'Talk:Main Page',
+	],
+	'+cawikinews' => [
+		'interface-admin' => 'Viquinotícies:Petició als administradors',
+	],
+	'+cawikisource' => [
+		'interface-admin' => 'Viquitexts:La taverna',
+	],
+	'+cawiktionary' => [
+		'interface-admin' => 'Viccionari:La taverna',
+	],
+	'+commonswiki' => [
+		'interface-admin' => 'Commons:Bureaucrats\' noticeboard',
+	],
+	'+cowikimedia' => [
+		'interface-admin' => 'Wikimedia:Portal de la comunidad',
+	],
+	'+csbwiki' => [
+		'interface-admin' => 'Wiki:Karczma',
+	],
+	'+cswiki' => [
+		'interface-admin' => 'Wikipedie:Nástěnka byrokratů',
+	],
+	'+cswikibooks' => [
+		'interface-admin' => 'Wikiknihy:Nástěnka správců',
+	],
+	'+cswikiquote' => [
+		'interface-admin' => 'Wikicitáty:Pod lípou',
+	],
+	'+cswikisource' => [
+		'interface-admin' => 'Wikizdroje:Nástěnka správců',
+	],
+	'+cywiki' => [
+		'interface-admin' => 'Wicipedia:Negesfwrdd gweinyddiaeth',
+	],
+	'+dawiki' => [
+		'interface-admin' => 'Wikipedia:Anmodning om administratorassistance',
+	],
+	'+dewiki' => [
+		'interface-admin' => 'Wikipedia:Administratoren/Notizen',
+	],
+	'+dewikisource' => [
+		'interface-admin' => 'Wikisource:Skriptorium',
+	],
+	'+dewikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Lounge',
+	],
+	'+dewiktionary' => [
+		'interface-admin' => 'Wiktionary:Administratoren/Anfragen',
+	],
+	'+dvwiki' => [
+		'interface-admin' => 'ވިކިޕީޑިއާ:ވިލެޖް ޕަމްޕް',
+	],
+	'+elwiki' => [
+		'interface-admin' => 'Βικιπαίδεια:Σημειωματάριο γραφειοκρατών',
+	],
+	'+elwikisource' => [
+		'interface-admin' => 'Βικιθήκη:Σημειωματάριο διαχειριστών',
+	],
+	'+elwiktionary' => [
+		'interface-admin' => 'Συζήτηση βικιλεξικού:Κύρια Σελίδα',
+	],
+	'+enwiki' => [
+		'interface-admin' => 'Wikipedia:Bureaucrats\' noticeboard',
+	],
+	'+enwikinews' => [
+		'interface-admin' => 'Wikinews:Admin action alerts',
+	],
+	'+enwikiquote' => [
+		'interface-admin' => 'Wikiquote:Administrators\' noticeboard',
+	],
+	'+enwikisource' => [
+		'interface-admin' => 'Wikisource:Administrators\' noticeboard',
+	],
+	'+enwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Travellers\' pub',
+	],
+	'+enwiktionary' => [
+		'interface-admin' => 'Wiktionary:Beer parlour',
+	],
+	'+eowiki' => [
+		'interface-admin' => 'Vikipedio:Diskutejo/Administrejo',
+	],
+	'+eswiki' => [
+		'interface-admin' => 'Wikipedia:Tablón de anuncios de los bibliotecarios/Portal/Archivo/Miscelánea/Actual',
+	],
+	'+eswikinews' => [
+		'interface-admin' => 'Wikinoticias:Solicitudes a burócratas',
+	],
+	'+eswikisource' => [
+		'interface-admin' => 'Wikisource:Café',
+	],
+	'+eswiktionary' => [
+		'interface-admin' => 'Wikcionario:Café',
+	],
+	'+etwiki' => [
+		'interface-admin' => 'Vikipeedia:Administraatorid/teatetahvel',
+	],
+	'+etwiktionary' => [
+		'interface-admin' => 'Vikisõnastik:Üldine arutelu',
+	],
+	'+euwiki' => [
+		'interface-admin' => 'Wikipedia:Txokoa',
+	],
+	'+fawiki' => [
+		'interface-admin' => 'ویکی‌پدیا:تابلوی اعلانات دیوان‌سالاران',
+	],
+	'+fiu_vrowiki' => [
+		'interface-admin' => 'Wikipedia:Arotusõtarõ',
+	],
+	'+fiwiki' => [
+		'interface-admin' => 'Wikipedia:Ylläpitäjien ilmoitustaulu',
+	],
+	'+fiwikisource' => [
+		'interface-admin' => 'Wikiaineisto:Ylläpitäjien ilmoitustaulu',
+	],
+	'+foundationwiki' => [
+		'interface-admin' => 'Talk:Home',
+	],
+	'+frpwiki' => [
+		'interface-admin' => 'Vouiquipèdia:Requéta ux administrators',
+	],
+	'+frrwiki' => [
+		'interface-admin' => 'Wikipedia Diskussion:Administratoore',
+	],
+	'+frwiki' => [
+		'interface-admin' => 'Wikipédia:Bulletin des bureaucrates',
+	],
+	'+frwikibooks' => [
+		'interface-admin' => 'Wikilivres:Requêtes aux bureaucrates',
+	],
+	'+frwikinews' => [
+		'interface-admin' => 'Wikinews:Requête aux bureaucrates',
+	],
+	'+frwikiquote' => [
+		'interface-admin' => 'Wikiquote:Requête aux bureaucrates',
+	],
+	'+frwikisource' => [
+		'interface-admin' => 'Wikisource:Requêtes aux administrateurs',
+	],
+	'+frwikiversity' => [
+		'interface-admin' => 'Wikiversité:Requêtes aux bureaucrates',
+	],
+	'+frwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Requêtes aux bureaucrates',
+	],
+	'+frwiktionary' => [
+		'interface-admin' => 'Wiktionnaire:Demandes aux bureaucrates',
+	],
+	'+gawiki' => [
+		'interface-admin' => 'Vicipéid:Halla baile',
+	],
+	'+gewikimedia' => [
+		'interface-admin' => 'განხილვა:მთავარი გვერდი',
+	],
+	'+glwiki' => [
+		'interface-admin' => 'Wikipedia:Taboleiro dos administradores',
+	],
+	'+grwikimedia' => [
+		'interface-admin' => 'Συζήτηση:Αρχική σελίδα',
+	],
+	'+hewiki' => [
+		'interface-admin' => 'ויקיפדיה:בקשות מבירוקרטים',
+	],
+	'+hewikibooks' => [
+		'interface-admin' => 'ויקיספר:בקשות ממפעילים',
+	],
+	'+hewikiquote' => [
+		'interface-admin' => 'ויקיציטוט:בקשות ממפעילים',
+	],
+	'+hewikisource' => [
+		'interface-admin' => 'ויקיטקסט:בקשות מבעלי הרשאות',
+	],
+	'+hewiktionary' => [
+		'interface-admin' => 'ויקימילון:מזנון',
+	],
+	'+hiwikimedia' => [
+		'interface-admin' => 'वार्ता:मुखपृष्ठ',
+	],
+	'+hrwiki' => [
+		'interface-admin' => 'Wikipedija:Na pažnju administratorima',
+	],
+	'+huwiki' => [
+		'interface-admin' => 'Wikipédia:Bürokraták üzenőfala',
+	],
+	'+huwikibooks' => [
+		'interface-admin' => 'Wikikönyvek:Adminisztrátorok üzenőfala',
+	],
+	'+iawiki' => [
+		'interface-admin' => 'Wikipedia:Taverna',
+	],
+	'+idwiki' => [
+		'interface-admin' => 'Wikipedia:Permintaan perhatian birokrat dan pemeriksa',
+	],
+	'+idwikimedia' => [
+		'interface-admin' => 'Pembicaraan:Halaman Utama',
+	],
+	'+idwikisource' => [
+		'interface-admin' => 'Wikisumber:Warung kopi',
+	],
+	'+idwiktionary' => [
+		'interface-admin' => 'Wikikamus:Warung Kopi',
+	],
+	'+incubatorwiki' => [
+		'interface-admin' => 'Incubator:Administrators\' noticeboard',
+	],
+	'+iswiki' => [
+		'interface-admin' => 'Wikipedia:Potturinn',
+	],
+	'+iswiktionary' => [
+		'interface-admin' => 'Wikiorðabók:Potturinn',
+	],
+	'+itwiki' => [
+		'interface-admin' => 'Wikipedia:Richieste agli amministratori',
+	],
+	'+itwikinews' => [
+		'interface-admin' => 'Wikinotizie:Richieste agli amministratori',
+	],
+	'+itwikisource' => [
+		'interface-admin' => 'Wikisource:Richieste agli amministratori',
+	],
+	'+itwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Richieste agli amministratori',
+	],
+	'+itwiktionary' => [
+		'interface-admin' => 'Wikizionario:Richieste agli amministratori',
+	],
+	'+jawiki' => [
+		'interface-admin' => 'Wikipedia:管理者伝言板',
+	],
+	'+jawikisource' => [
+		'interface-admin' => 'Wikisource:管理者伝言板',
+	],
+	'+jvwiki' => [
+		'interface-admin' => 'Wikipédia:Panyuwunan kawigatèn panata',
+	],
+	'+kawiki' => [
+		'interface-admin' => 'ვიკიპედია:ადმინისტრატორები/მიმართვა',
+	],
+	'+kkwiki' => [
+		'interface-admin' => 'Уикипедия:Форум/Администраторлар форумы',
+	],
+	'+knwiki' => [
+		'interface-admin' => 'ವಿಕಿಪೀಡಿಯ:ಅರಳಿ ಕಟ್ಟೆ',
+	],
+	'+kowiki' => [
+		'interface-admin' => '위키백과:관리자 알림판',
+	],
+	'+kshwiki' => [
+		'interface-admin' => 'Wikipedia:Wiki-Köbes/Klaaf',
+	],
+	'+labswiki' => [
+		'interface-admin' => 'Wikitech:Interface administrators',
+	],
+	'+lawiki' => [
+		'interface-admin' => 'Vicipaedia:Taberna',
+	],
+	'+lawikisource' => [
+		'interface-admin' => 'Vicifons:Scriptorium',
+	],
+	'+lbwiki' => [
+		'interface-admin' => 'Wikipedia:De Stamminee',
+	],
+	'+liwiktionary' => [
+		'interface-admin' => 'Euverlèk Wiktionary:Veurblaad',
+	],
+	'+ltwiki' => [
+		'interface-admin' => 'Vikipedija:Forumas',
+	],
+	'+lvwiki' => [
+		'interface-admin' => 'Vikipēdija:Administratoru ziņojumu dēlis',
+	],
+	'+mediawikiwiki' => [
+		'interface-admin' => 'Project:Administrators\' noticeboard',
+	],
+	'+metawiki' => [
+		'centralnoticeadmin' => 'Meta:Requests for help from a sysop or bureaucrat',
+		'interface-admin' => 'Meta:Requests for help from a sysop or bureaucrat',
+	],
+	'+mkwiki' => [
+		'interface-admin' => 'Википедија:Огласна табла за администратори',
+	],
+	'+mlwiki' => [
+		'interface-admin' => 'വിക്കിപീഡിയ:കാര്യനിർവാഹകർക്കുള്ള നോട്ടീസ് ബോർഡ്',
+	],
+	'+mrwiki' => [
+		'interface-admin' => 'विकिपीडिया:चावडी/प्रचालकांना निवेदन',
+	],
+	'+mswiki' => [
+		'interface-admin' => 'Wikipedia:Birokrat/Papan kenyataan',
+	],
+	'+mtwiki' => [
+		'interface-admin' => 'Wikipedija:Pjazza',
+	],
+	'+mxwikimedia' => [
+		'interface-admin' => 'Discusión:Página principal',
+	],
+	'+mywiki' => [
+		'interface-admin' => 'ဝီကီပီးဒီးယား:စီမံခန့်ခွဲသူများ သင်ပုန်း',
+	],
+	'+nds_nlwiki' => [
+		'interface-admin' => 'Wikipedia:Praothoek',
+	],
+	'+ndswiki' => [
+		'interface-admin' => 'Wikipedia:Ik bruuk Hülp',
+	],
+	'+newiki' => [
+		'interface-admin' => 'विकिपिडिया:प्रशासक सूचनापाटी',
+	],
+	'+nlwiki' => [
+		'interface-admin' => 'Wikipedia:Verzoekpagina voor moderatoren',
+	],
+	'+nlwikibooks' => [
+		'interface-admin' => 'Wikibooks:Verzoekpagina voor moderatoren',
+	],
+	'+nlwikimedia' => [
+		'interface-admin' => 'Overleg:Home',
+	],
+	'+nlwikiquote' => [
+		'interface-admin' => 'Wikiquote:De kantine',
+	],
+	'+nlwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Reizigerscafé',
+	],
+	'+nlwiktionary' => [
+		'interface-admin' => 'WikiWoordenboek:De Kroeg',
+	],
+	'+nnwiki' => [
+		'interface-admin' => 'Wikipedia:Vaktmeistertenester',
+	],
+	'+nnwiktionary' => [
+		'interface-admin' => 'Wiktionary:Samfunnshuset',
+	],
+	'+nowiki' => [
+		'interface-admin' => 'Wikipedia:Administratorenes oppslagstavle',
+	],
+	'+nowikimedia' => [
+		'interface-admin' => 'Diskusjon:Hovedside',
+	],
+	'+nowiktionary' => [
+		'interface-admin' => 'Wiktionary:Tinget',
+	],
+	'+outreachwiki' => [
+		'interface-admin' => 'Wikimedia:Village pump',
+	],
+	'+pawikisource' => [
+		'interface-admin' => 'ਵਿਕੀਸਰੋਤ:ਸੱਥ',
+	],
+	'+plwiki' => [
+		'interface-admin' => 'Wikipedia:Prośby do administratorów',
+	],
+	'+plwikimedia' => [
+		'interface-admin' => 'Dyskusja:Strona główna',
+	],
+	'+plwikiquote' => [
+		'interface-admin' => 'Wikicytaty:Prośby do administratorów',
+	],
+	'+plwikisource' => [
+		'interface-admin' => 'Wikiźródła:Prośby do administratorów',
+	],
+	'+plwiktionary' => [
+		'interface-admin' => 'Wikisłownik:Prośby do administratorów',
+	],
+	'+ptwiki' => [
+		'interface-admin' => 'Wikipédia:Pedidos a burocratas',
+	],
+	'+ptwikibooks' => [
+		'interface-admin' => 'Wikilivros Discussão:Portal comunitário',
+	],
+	'+ptwikimedia' => [
+		'interface-admin' => 'Discussão:Wikimedia Portugal',
+	],
+	'+ptwiktionary' => [
+		'interface-admin' => 'Wikcionário:Pedidos a administradores',
+	],
+	'+rowikinews' => [
+		'interface-admin' => 'Wikiștiri:Cafenea',
+	],
+	'+rswikimedia' => [
+		'interface-admin' => 'Разговор:Главна страна',
+	],
+	'+ruwiki' => [
+		'interface-admin' => 'Википедия:Запросы к бюрократам',
+	],
+	'+ruwikimedia' => [
+		'interface-admin' => 'Обсуждение:Заглавная страница',
+	],
+	'+ruwikinews' => [
+		'interface-admin' => 'Викиновости:Форум администраторов',
+	],
+	'+ruwikiquote' => [
+		'interface-admin' => 'Викицитатник:Запросы к администраторам',
+	],
+	'+ruwikisource' => [
+		'interface-admin' => 'Викитека:Администрирование',
+	],
+	'+ruwikivoyage' => [
+		'interface-admin' => 'Wikivoyage:Пивная путешественников',
+	],
+	'+ruwiktionary' => [
+		'interface-admin' => 'Викисловарь:Запросы к администраторам',
+	],
+	'+sahwiki' => [
+		'interface-admin' => 'Бикипиэдьийэ:Бүрэкирээттэргэ көрдөбүллэр',
+	],
+	'+sewiki' => [
+		'interface-admin' => 'Wikipedia:Gáffestohpu',
+	],
+	'+sewikimedia' => [
+		'interface-admin' => 'Diskussion:Huvudsida',
+	],
+	'+shwiki' => [
+		'interface-admin' => 'Wikipedija:Birokratska tabla',
+	],
+	'+skwiki' => [
+		'interface-admin' => 'Wikipédia:Nástenka správcov',
+	],
+	'+slwiki' => [
+		'interface-admin' => 'Wikipedija:Prošnje za administratorsko pomoč',
+	],
+	'+slwikisource' => [
+		'interface-admin' => 'Wikivir:Pod lipo',
+	],
+	'+sourceswiki' => [
+		'interface-admin' => 'Wikisource:Scriptorium',
+	],
+	'+specieswiki' => [
+		'interface-admin' => 'Wikispecies:Administrators\' Noticeboard',
+	],
+	'+sqwiki' => [
+		'interface-admin' => 'Wikipedia:Kuvendi',
+	],
+	'+srwiki' => [
+		'interface-admin' => 'Википедија:Бирократска табла',
+	],
+	'+srwikibooks' => [
+		'interface-admin' => 'Викикњиге:Трг',
+	],
+	'+srwikinews' => [
+		'interface-admin' => 'Викиновости:Форум',
+	],
+	'+srwikiquote' => [
+		'interface-admin' => 'Викицитат:Трг',
+	],
+	'+srwikisource' => [
+		'interface-admin' => 'Викизворник:Писарница',
+	],
+	'+srwiktionary' => [
+		'interface-admin' => 'Викиречник:Трг',
+	],
+	'+svwiki' => [
+		'interface-admin' => 'Wikipedia:Kommentarer om administrationen av Wikipedia',
+	],
+	'+svwiktionary' => [
+		'interface-admin' => 'Wiktionary:Bybrunnen',
+	],
+	'+swwiki' => [
+		'interface-admin' => 'Wikipedia:Jumuiya',
+	],
+	'+tawiki' => [
+		'interface-admin' => 'விக்கிப்பீடியா:அதிகாரிகளுக்கான அறிவிப்புப்பலகை',
+	],
+	'+tawiktionary' => [
+		'interface-admin' => 'விக்சனரி:ஆலமரத்தடி',
+	],
+	'+test2wiki' => [
+		'interface-admin' => 'Wikipedia:Requests',
+	],
+	'+testwiki' => [
+		'centralnoticeadmin' => 'Wikipedia:Requests/Help desk',
+		'interface-admin' => 'Wikipedia:Requests/Help desk',
+	],
+	'+testwikidatawiki' => [
+		'interface-admin' => 'Wikidata:Requests for permissions',
+	],
+	'+tewiki' => [
+		'interface-admin' => 'వికీపీడియా:అధికారుల నోటీసు బోర్డు',
+	],
+	'+thwiki' => [
+		'interface-admin' => 'วิกิพีเดีย:แจ้งผู้ดูแลระบบ',
+	],
+	'+thwikimedia' => [
+		'interface-admin' => 'พูดคุย:หน้าหลัก',
+	],
+	'+tlwiki' => [
+		'interface-admin' => 'Wikipedia:Kapihan',
+	],
+	'+trwiki' => [
+		'interface-admin' => 'Vikipedi:Bürokrat duyuru panosu',
+	],
+	'+trwikimedia' => [
+		'interface-admin' => 'Tartışma:Anasayfa',
+	],
+	'+uawikimedia' => [
+		'interface-admin' => 'Обговорення:Вікімедіа Україна',
+	],
+	'+ukwiki' => [
+		'interface-admin' => 'Вікіпедія:Запити до бюрократів',
+	],
+	'+ukwikiquote' => [
+		'interface-admin' => 'Вікіцитати:Запити до адміністраторів',
+	],
+	'+ukwiktionary' => [
+		'interface-admin' => 'Вікісловник:Запити до адміністраторів',
+	],
+	'+urwiki' => [
+		'interface-admin' => 'ویکیپیڈیا:دیوان خاص',
+	],
+	'+uzwiki' => [
+		'interface-admin' => 'Vikipediya:Administratorlar forumi',
+	],
+	'+vecwiki' => [
+		'interface-admin' => 'Wikipedia:Aministradori/Domande par i aministradori',
+	],
+	'+vecwikisource' => [
+		'interface-admin' => 'Wikisource:Ciacole',
+	],
+	'+viwiki' => [
+		'interface-admin' => 'Wikipedia:Tin nhắn cho bảo quản viên',
+	],
+	'+viwiktionary' => [
+		'interface-admin' => 'Wiktionary:Tin nhắn cho bảo quản viên',
+	],
+	'+wawiki' => [
+		'interface-admin' => 'Wikipedia:Cåbaret',
+	],
+	'+wikidatawiki' => [
+		'interface-admin' => 'Wikidata:Bureaucrats\' noticeboard',
+	],
+	'+wikimaniawiki' => [
+		'interface-admin' => 'Wikimania:Requests for rights',
+	],
+	'+zhwiki' => [
+		'interface-admin' => 'Wikipedia:行政員布告板',
+	],
+],
+
 'wgDeleteRevisionsLimit' => [
 	'default' => 5000,
 ],
@@ -4787,7 +5608,6 @@ return [
 		'.wiktionary.org' => 'enwiktionary',
 		'.mediawiki.org' => 'mediawikiwiki',
 		// wikimedia.org wikis can't use the parent domain because it's shared with non-MediaWiki sites
-		'api.wikimedia.org' => 'apiportalwiki',
 		'commons.wikimedia.org' => 'commonswiki',
 		'foundation.wikimedia.org' => 'foundationwiki',
 		'incubator.wikimedia.org' => 'incubatorwiki',
@@ -4881,6 +5701,8 @@ return [
 	'default' => true,
 	'wikisource' => false, // T358437
 	'lockeddown' => false,
+
+	'abstractwiki' => false,
 	'apiportalwiki' => false, // T260309
 	'ganwiki' => false,
 	'iuwiki' => false,
@@ -4963,7 +5785,7 @@ return [
 	'default' => true,
 ],
 
-'wgWikimediaEventsEmailAuthEnforce' => [
+'wgWMCEmailAuthEnforce' => [
 	'default' => true,
 ],
 
@@ -5209,6 +6031,12 @@ return [
 ],
 
 # abuse filter @{
+'wmgUseAbuseFilter' => [
+	'default' => true,
+	// T420063: Disable AbuseFilter on closed wikis where there were never any entries in Special:AbuseLog
+	'abusefilter-disabled' => false,
+],
+
 'wmgAbuseFilterCentralDB' => [
 	'default' => 'metawiki',
 ],
@@ -5426,6 +6254,25 @@ return [
 	'wikimania2010wiki' => true,
 ],
 
+// Should be true if a wiki has any LiquidThreads logs. If true, then WikimediaMessages will define the log type
+// for these logs if the extension is undeployed from that wiki (T417425).
+'wgWikimediaMessagesHasLiquidThreadsLogs' => [
+	'default' => false,
+	'enwikinews' => true,
+	'enwiktionary' => true,
+	'fiwikimedia' => true,
+	'huwiki' => true,
+	'mediawikiwiki' => true,
+	'officewiki' => true,
+	'ptwikibooks' => true,
+	'sewikimedia' => true,
+	'strategywiki' => true,
+	'svwikisource' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'wikimania2010wiki' => true,
+],
+
 'wmgLQTUserControlNamespaces' => [
 	'default' => null,
 	'enwikinews' => [ 102 ], // Comments namespace
@@ -5469,6 +6316,7 @@ return [
 
 'wgArticleCountMethod' => [
 	'default' => 'link',
+	'abstractwiki' => 'any',
 	'bgwikinews' => 'any', // T222044
 	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
@@ -5783,7 +6631,9 @@ return [
 		'vector-2022-beta-feature', // [WebTeam] 2023-12-06 - Accessibility for Reading (Vector 2022)
 		'visualeditor-collab', // [Editing] 2024-06-18 - Collaborative editing
 		'codemirror-beta-feature-enable', // [Community_Tech] 2024-11-26 - Improved Syntax Highlighting
-		'readinglistsbeta' // [Reading] 2025-05-20 - Reading List feature
+		'readinglistsbeta', // [Reading] 2025-05-20 - Reading List feature
+		'visualeditor-editcheck-suggestions', // [Editing] 2026-02-10 - Visual Editor edit check suggestions mode,
+		'uls-rewrite', // [Language and Product Localization] 2026-03-17 - Universal language selector rewrite.
 	],
 	'+wikisource' => [
 		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links
@@ -5943,6 +6793,7 @@ return [
 
 'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
 	'testwikidatawiki' => true, // T407737 (T394704)
+	'wikidatawiki' => true, // T403015 (T394704)
 ],
 
 // ------------ BetaFeatures end -----------
@@ -5971,7 +6822,7 @@ return [
 ],
 
 'wgMediaViewerThumbnailBucketSizes' => [
-	'default' => [ 500, 960, 1280, 2560 ], // T372165, T410556
+	'default' => [ 500, 960, 1280, 1920, 3840 ], // T372165, T410556, T412971
 ],
 
 'wmgUseLinter' => [
@@ -6040,6 +6891,11 @@ return [
 	'commonswiki' => false, // T364228; should hopefully be resolved by T351113
 ],
 
+# T414852
+'wgParserMigrationEnableQuickSurvey' => [
+	'default' => true,
+],
+
 'wgParserMigrationEnableIndicator' => [
 	'default' => false, // T373472
 ],
@@ -6060,6 +6916,12 @@ return [
 	// In general, the dblist should suffice, but if a wiki needs to have different config between
 	// talk and article pages, it can be over-ridden here.
 	'labswiki' => false,
+],
+
+'wgParserMigrationEnableParsoidPercentage' => [
+	'default' => 100,
+	# incremental roll out for top-10 wikis
+	'jawiki' => 10, # 2nd largest
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
@@ -6101,6 +6963,7 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true, // T121421
 
+	'abstractwiki' => true, // Starting from SET
 	'arcwiki' => true, // Starting from SET
 	'arwiki' => true, // Starting from SET
 	'arzwiki' => true, // Starting from SET
@@ -6410,6 +7273,9 @@ return [
 		'Thésaurus' => true, // T127819
 		'Projet' => true, // T156660
 	],
+	'+mswiktionary' => [
+		'Project' => true, // T415823
+	],
 
 	// Wikiquotes
 	'+enwikiquote' => [
@@ -6419,6 +7285,10 @@ return [
 	// Wikibookses
 	'+bnwikibooks' => [
 		'উইকিশৈশব' => true, // T241893
+	],
+	'+enwikibooks' => [
+		'Project' => true, // T415595
+		'Transwiki' => true, // T415595
 	],
 	'+ruwikibooks' => [
 		'Рецепт' => true, // T392803
@@ -6484,6 +7354,9 @@ return [
 	],
 
 	// Other wikis (e.g. Commons, Meta)
+	'+abstractwiki' => [
+		'Project' => true,
+	],
 	'+commonswiki' => [
 		'Creator' => true, // T67067
 		'Institution' => true, // T67067
@@ -6596,16 +7469,6 @@ return [
 	'wikipedia' => false,
 	'wikibooks' => false,
 	'wikiversity' => false,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => false,
-	'arbcom_dewiki' => false,
-	'arbcom_enwiki' => false,
-	'arbcom_fiwiki' => false,
-	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false,
-	'sysop_itwiki' => false,
-	'wg_enwiki' => false,
 ],
 
 // ExternalGuidance extension initiated edit tags in VE (T216123)
@@ -6618,72 +7481,20 @@ return [
 'wgVisualEditorEditCheckTagging' => [
 	'default' => false,
 	'wikipedia' => true,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'sysop_itwiki' => true,
-	'wg_enwiki' => true,
 ],
 
 'wgVisualEditorEditCheck' => [
 	'default' => false,
-	// T361843 phase 1: all wikis but the following 8 Wikipedias: bn, de, en, hi, id, nl, pl, ru
-	// T373079 added plwiki
-	// T373022 added ruwiki
-	// T377551 added nlwiki
-	// T366381 added hiwiki, bnwiki, idwiki
-	// T385205 added dewiki
 	'wikipedia' => true,
-
-	// TODO: consider cleaning up (T183549)
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_ruwiki' => true,
-	'sysop_itwiki' => true,
-	'wg_enwiki' => true,
 ],
 
 'wgVisualEditorEditCheckABTest' => [
 	'default' => false,
-	// T406134 addReference check a/b test
-	// Note: to disable this test without enabling addReference for
-	// everyone would require disabling EditCheck for enwiki above.
-	'enwiki' => 'addReference',
-	// T389231 tone check a/b test
-	'frwiki' => 'tone',
-	'jawiki' => 'tone',
-	'ptwiki' => 'tone',
-	// T405422 paste check a/b test
-	'arwiki' => 'paste',
-	'bnwiki' => 'paste',
-	'cawiki' => 'paste',
-	'cswiki' => 'paste',
-	'dagwiki' => 'paste',
-	'dewiki' => 'paste',
-	'euwiki' => 'paste',
-	'fawiki' => 'paste',
-	'fonwiki' => 'paste',
-	'glwiki' => 'paste',
-	'hiwiki' => 'paste',
-	'idwiki' => 'paste',
-	'itwiki' => 'paste',
-	'nlwiki' => 'paste',
-	'plwiki' => 'paste',
-	'ruwiki' => 'paste',
-	'simplewiki' => 'paste',
-	'swwiki' => 'paste',
-	'twwiki' => 'paste',
-	'ukwiki' => 'paste',
-	'viwiki' => 'paste',
-	'zhwiki' => 'paste',
+],
+
+'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
+	'default' => false,
+	'wikipedia' => true, // T415320
 ],
 
 'wgVisualEditorEnableCollabBeta' => [
@@ -6699,7 +7510,16 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 
+	'alswiki' => true, // T418209
 	'dewiki' => true, // T398669
+	'dewikivoyage' => true, // T418209
+	'fiu_vrowiki' => true, // T418209
+	'frrwiki' => true, // T418209
+	'gpewiki' => true, // T418209
+	'kncwiki' => true, // T418209
+	'plwiki' => true, // T418209
+	'rmwiki' => true, // T418209
+	'svwiki' => true, // T418209
 ],
 
 'wgCiteResponsiveReferences' => [
@@ -6782,6 +7602,7 @@ return [
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
 	'abwiki' => 'uppercase-ab', // T183430
+	'arwiktionary' => 'uca-ar', // T413338
 	'azwiki' => 'uca-az', // T201770
 	'azwikibooks' => 'uca-az', // T395896
 	'azwikimedia' => 'uca-az',
@@ -6947,6 +7768,18 @@ return [
 	'wbwikimedia' => 'numeric', // T162510
 ],
 
+// Temporary for ICU upgrade -- T419049
+'wgTempCategoryCollations' => [
+	// Only testwiki for now, the rest will be added in a follow-up patch
+	'testwiki' => [
+		[
+			'table' => 'categorylinks_icu72',
+			'collation' => 'remote-uca-default-u-kn',
+			'fakeCollation' => 'uca-default-u-kn',
+		]
+	],
+],
+
 'wgPageCreationLog' => [
 	'default' => true,
 	'commonswiki' => false,
@@ -7039,12 +7872,16 @@ return [
 
 // Whether the postproc cache is activated or not.
 // Note: it also need to be configured in wgParserCacheFilterConfig below.
-'wgUsePostprocCache' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'officewiki' => true,
-	'idwiki' => true,
+'wgUsePostprocCacheParsoid' => [
+	'default' => true,
+	'wikidatawiki' => false,
+	'commonswiki' => false,
+],
+
+// Sampling rate for debugging of unsafe cache keys in wgUsePostprocCache*
+'wgParserOptionsLogUnsafeSampleRate' => [
+	'default' => 0,
+	'parsoidrendered' => 500, // sample at 0.2% of unsafe-to-cache pages
 ],
 
 // The parser cache can be configured to only cache pages that take a certain amount
@@ -7084,6 +7921,16 @@ return [
 				'minCpuTime' => PHP_INT_MAX // cache none
 			],
 		],
+		'postproc-pcache' => [ // postproc cache for legacy output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
 	],
 	'+wikidatawiki' => [ // Wikidata
 		'parsoid-pcache' => [ // parsoid output cache
@@ -7102,6 +7949,16 @@ return [
 				'minCpuTime' => PHP_INT_MAX // cache none
 			],
 		],
+		'postproc-pcache' => [ // postproc cache for legacy output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
+		'postproc-parsoid-pcache' => [ // postproc cache for parsoid output
+			'default' => [ // all namespaces
+				'minCpuTime' => PHP_INT_MAX // cache none
+			],
+		],
 	],
 	'+testwiki' => [
 		'postproc-pcache' => [
@@ -7115,39 +7972,10 @@ return [
 			],
 		],
 	],
-	'+test2wiki' => [
-		'postproc-pcache' => [
-			'default' => [
-				'minCpuTime' => 0,
-			],
-		],
+	'+parsoidrendered' => [
 		'postproc-parsoid-pcache' => [
 			'default' => [
-				'minCpuTime' => 0
-			],
-		],
-	],
-	'+officewiki' => [
-		'postproc-pcache' => [
-			'default' => [
 				'minCpuTime' => 0,
-			],
-		],
-		'postproc-parsoid-pcache' => [
-			'default' => [
-				'minCpuTime' => 0
-			],
-		],
-	],
-	'+idwiki' => [
-		'postproc-pcache' => [
-			'default' => [
-				'minCpuTime' => 0,
-			],
-		],
-		'postproc-parsoid-pcache' => [
-			'default' => [
-				'minCpuTime' => 0
 			],
 		],
 	],
@@ -7202,9 +8030,14 @@ return [
 // ----------- CheckUser start ----------
 // Do not change these settings without Trust and Safety Product, Legal, T&S, and Security sign-off first.
 
-// On in all Production, disabled in all Labs; varied for Labs only.
+// Enabled on all Production wikis except old closed wikis. Not installed on the beta cluster.
+// Older closed wikis are excluded because:
+// * The CheckUser tables are empty or contain actions by stewards only, so there would be no need to run checks
+// * CheckUser adds several database tables, which contributes to the problems of too many tables in s3 (T420062)
+// Wikis which have any rows in cu_log should have CheckUser remain enabled.
 'wmgUseCheckUser' => [
 	'default' => true,
+	'checkuser-disabled' => false,
 ],
 
 'wgCheckUserForceSummary' => [
@@ -7233,6 +8066,15 @@ return [
 	'loginwiki' => false,
 ],
 
+// Hide checks unless searched for which have a very large CIDR (T320769)
+// Should match the definition of $wgCheckUserCIDRLimit
+'wgCheckUserLogMaxRangeToShowInLog' => [
+	'default' => [
+		'IPv4' => 16,
+		'IPv6' => 19,
+	],
+],
+
 // T337944
 'wgCheckUserClientHintsEnabled' => [
 	'default' => true,
@@ -7256,19 +8098,17 @@ return [
 // T402025
 'wgCheckUserSuggestedInvestigationsEnabled' => [
 	'default' => false,
-	'checkuser-suggested-investigations' => false, // T403471
-	'testwiki' => true,
-	'test2wiki' => true,
-	// T405109, T405556
-	'enwiki' => true,
-	'frwiki' => true,
+	'checkuser-suggested-investigations' => true,
+],
+
+'wgCheckUserSuggestedInvestigationsUseGlobalContributionsLink' => [
+	'default' => false,
 	'loginwiki' => true,
-	'metawiki' => true,
 ],
 
 // T361139
 'wgCheckUserUserAgentTableMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
+	'default' => SCHEMA_COMPAT_NEW,
 ],
 
 'wmgUseUserInfoCard' => [
@@ -7293,10 +8133,8 @@ return [
 // n.b. If setting this to `false` for a wiki, please also update the
 // relevant wiki entry to `true` in `wmgDisableIPMasking`
 'wmgEnableIPMasking' => [
-	// T348895 T371116 T378334 T378336 T396464 T396465 T397940 T400672 T402181
+	// T348895 T371116 T378334 T378336 T396464 T396465 T397940 T400672 T402181 T413771
 	'default' => true,
-	// T402181#11102928
-	'tempaccounts_disabled' => false,
 ],
 
 // Use this if temporary accounts were enabled on a wiki but need quick disabling.
@@ -7357,6 +8195,7 @@ return [
 	'donatewiki' => false, // T406638
 
 	// T152882
+	'abstractwiki' => false, // T349408
 	'advisorswiki' => false,
 	'apiportalwiki' => false,
 	'auditcomwiki' => false,
@@ -8123,6 +8962,7 @@ return [
 	'specieswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikispecies-logo.svg.png',
 	'wikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 	'wikifunctionswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikifunctions-logo.svg.png',
+	'abstractwiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png',
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 
 	// These use the Wikipedia logo for historical reasons in lieu of a nicer or more specific alternative (T400070)
@@ -8268,6 +9108,146 @@ return [
 	'default' => true, // T252264
 	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
 	'lockeddown' => false,
+	// Disable on wikis that were closed before DiscussionTools permalinks were deployed
+	// as the extension is no longer needed there. This reduces the number of database
+	// tables on s3 (T420052)
+	'aawiki' => false,
+	'aawikibooks' => false,
+	'aawiktionary' => false,
+	'abwiktionary' => false,
+	'advisorywiki' => false,
+	'akwiki' => false,
+	'akwikibooks' => false,
+	'akwiktionary' => false,
+	'amwikiquote' => false,
+	'angwikibooks' => false,
+	'angwikiquote' => false,
+	'angwikisource' => false,
+	'astwikibooks' => false,
+	'astwikiquote' => false,
+	'aswikibooks' => false,
+	'aswiktionary' => false,
+	'avwiktionary' => false,
+	'aywikibooks' => false,
+	'bgwikinews' => false,
+	'bhwiktionary' => false,
+	'biwikibooks' => false,
+	'biwiktionary' => false,
+	'bmwikibooks' => false,
+	'bmwikiquote' => false,
+	'bmwiktionary' => false,
+	'bowikibooks' => false,
+	'bowiktionary' => false,
+	'chowiki' => false,
+	'chwikibooks' => false,
+	'chwiktionary' => false,
+	'cnwikimedia' => false,
+	'cowikibooks' => false,
+	'cowikiquote' => false,
+	'crwikiquote' => false,
+	'crwiktionary' => false,
+	'dzwiktionary' => false,
+	'gawikibooks' => false,
+	'gawikiquote' => false,
+	'gnwikibooks' => false,
+	'gotwikibooks' => false,
+	'guwikibooks' => false,
+	'howiki' => false,
+	'htwikisource' => false,
+	'huwikinews' => false,
+	'hzwiki' => false,
+	'iewikibooks' => false,
+	'iiwiki' => false,
+	'ikwiktionary' => false,
+	'internalwiki' => false,
+	'kjwiki' => false,
+	'kkwikiquote' => false,
+	'knwikibooks' => false,
+	'krwiki' => false,
+	'krwikiquote' => false,
+	'kswikibooks' => false,
+	'kswikiquote' => false,
+	'kwwikiquote' => false,
+	'lbwikibooks' => false,
+	'lbwikiquote' => false,
+	'lnwikibooks' => false,
+	'lrcwiki' => false,
+	'lvwikibooks' => false,
+	'mhwiki' => false,
+	'mhwiktionary' => false,
+	'miwikibooks' => false,
+	'mnwikibooks' => false,
+	'muswiki' => false,
+	'mywikibooks' => false,
+	'nahwikibooks' => false,
+	'nawiki' => false,
+	'nawikibooks' => false,
+	'nawikiquote' => false,
+	'ndswikibooks' => false,
+	'ndswikiquote' => false,
+	'ngwiki' => false,
+	'nzwikimedia' => false,
+	'pa_uswikimedia' => false,
+	'piwiktionary' => false,
+	'pswikibooks' => false,
+	'qualitywiki' => false,
+	'quwikibooks' => false,
+	'quwikiquote' => false,
+	'rmwikibooks' => false,
+	'rmwiktionary' => false,
+	'rnwiktionary' => false,
+	'scwiktionary' => false,
+	'sdwikinews' => false,
+	'searchcomwiki' => false,
+	'sewikibooks' => false,
+	'simplewikibooks' => false,
+	'simplewikiquote' => false,
+	'snwiktionary' => false,
+	'spcomwiki' => false,
+	'strategywiki' => false,
+	'suwikibooks' => false,
+	'swwikibooks' => false,
+	'tenwiki' => false,
+	'thwikinews' => false,
+	'tkwikibooks' => false,
+	'tkwikiquote' => false,
+	'towiktionary' => false,
+	'transitionteamwiki' => false,
+	'trwikinews' => false,
+	'ttwikiquote' => false,
+	'twwiktionary' => false,
+	'ugwikibooks' => false,
+	'ugwikiquote' => false,
+	'usabilitywiki' => false,
+	'uzwikibooks' => false,
+	'vowikibooks' => false,
+	'vowikiquote' => false,
+	'wawikibooks' => false,
+	'wikimania2005wiki' => false,
+	'wikimania2006wiki' => false,
+	'wikimania2007wiki' => false,
+	'wikimania2008wiki' => false,
+	'wikimania2009wiki' => false,
+	'wikimania2010wiki' => false,
+	'wikimania2011wiki' => false,
+	'wikimania2012wiki' => false,
+	'wikimania2013wiki' => false,
+	'wikimania2014wiki' => false,
+	'wikimania2015wiki' => false,
+	'wikimania2016wiki' => false,
+	'wikimania2017wiki' => false,
+	'wikimania2018wiki' => false,
+	'wowikiquote' => false,
+	'xhwikibooks' => false,
+	'xhwiktionary' => false,
+	'yowikibooks' => false,
+	'yowiktionary' => false,
+	'zawikibooks' => false,
+	'zawikiquote' => false,
+	'zawiktionary' => false,
+	'zh_min_nanwikibooks' => false,
+	'zh_min_nanwikiquote' => false,
+	'zuwikibooks' => false,
 ],
 
 'wgDiscussionToolsBeta' => [
@@ -8805,7 +9785,13 @@ return [
 'wmgUseReportIncident' => [
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
+	// T412090
 	'ptwiki' => true,
+	'idwiki' => true,
+	'trwiki' => true,
+	'bnwiki' => true,
+	'azwiki' => true,
 ],
 
 'wgReportIncidentEnableInstrumentation' => [
@@ -9113,6 +10099,7 @@ return [
 	'special' => 'personal',
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
+	'abstractwiki' => 'interlanguage',
 	'wikifunctionswiki' => 'interlanguage',
 ],
 
@@ -9143,46 +10130,7 @@ return [
 	'wiktionary' => 'wiktionary', // T150182
 ],
 
-'wmgUseInterwikiSorting' => [
-	'default' => false,
-	'wikidataclient' => true, // T150183, T162253
-	'wikidataclient-test' => true, // T150183, T162253
-],
-
-'wgInterwikiSortingSort' => [
-	'default' => 'code',
-	'enwiki' => 'alphabetic',
-	'enwiktionary' => 'alphabetic',
-	'be_x_oldwiki' => 'alphabetic',
-	'dawiktionary' => 'alphabetic',
-	'etwiktionary' => 'alphabetic',
-	'fiwiktionary' => 'alphabetic',
-	'fywiktionary' => 'alphabetic',
-	'ilowiki' => 'alphabetic',
-	'lbwiki' => 'alphabetic',
-	'mkwiki' => 'alphabetic',
-	'mswiktionary' => 'alphabetic_revised',
-	'nnwiki' => 'alphabetic',
-	'nowiki' => 'alphabetic',
-	'nvwiki' => 'alphabetic',
-	'plwiki' => 'alphabetic',
-	'plwiktionary' => 'alphabetic_revised',
-	'simplewiki' => 'alphabetic',
-	'simplewiktionary' => 'alphabetic',
-	'svwiki' => 'alphabetic',
-	'urwiki' => 'alphabetic',
-	'etwiki' => 'alphabetic_revised',
-	'fiwiki' => 'alphabetic_revised',
-	'fiu_vrowiki' => 'alphabetic_revised',
-	'mswiki' => 'alphabetic_revised',
-	'viwiki' => 'alphabetic_revised',
-	'fywiki' => 'alphabetic_fy',
-	'fywikibooks' => 'alphabetic_fy', // T103207
-	'srwiki' => 'alphabetic_sr',
-	'svwiktionary' => 'alphabetic_svwiktionary',
-],
-
-'wgInterwikiSortingSortPrepend' => [
+'wgULSCompactLinksPrepend' => [
 	'default' => [],
 	'hewiki' => [ 'en' ],
 	'hewikivoyage' => [ 'en' ],
@@ -10636,51 +11584,56 @@ return [
 	'ptwikinews' => [ 'page', 'image', 'video', 'audio', 'other' ], // T299872, show cat first
 ],
 
-'wmgUseMetricsPlatform' => [
+// Test Kitchen is replacing Metrics Platform T407806
+'wmgUseTestKitchen' => [
 	'default' => true,
 ],
 
-'wgMetricsPlatformEnableExperiments' => [
+'wgTestKitchenEnableExperiments' => [
 	'default' => true,
 ],
 
 // See T391411 and T393918.
-'wgMetricsPlatformExperimentEventIntakeServiceUrl' => [
+'wgTestKitchenExperimentEventIntakeServiceUrl' => [
 	'default' => '/evt-103e/v2/events?hasty=true',
 ],
 
-'wgMetricsPlatformAuthPreserveQueryParamsExperiments' => [
-	'default' => [],
+// See T412863
+'wgTestKitchenInstrumentEventIntakeServiceUrl' => [
+	'default' => '/ins-502b/v2/events?hasty=true',
 ],
 
-'wgMetricsPlatformExperimentStreamNames' => [
+'wgTestKitchenAuthPreserveQueryParamsExperiments' => [
+	'default' => [],
+	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239
+],
+
+'wgTestKitchenExperimentStreamNames' => [
 	'default' => [
 		'product_metrics.web_base',
+		'product_metrics.web_base.attribution_research',
+		'product_metrics.web_base.active_reader_baseline',
 		'mediawiki.product_metrics.translation_mint_for_readers.experiments',
 		'mediawiki.product_metrics.reading_list',
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
 		'mediawiki.product_metrics.readerexperiments_stickyheaders',
+		'mediawiki.product_metrics.reader_experiments',
 		'mediawiki.product_metrics.contributors.experiments',
+		'mediawiki.product_metrics.reader_retention_logged_in',
 	],
 ],
 
-// T401705 Send image beacon and xLab sdk load event
-'wgMetricsPlatformEnableHeadPixel' => [
-	'default' => false,
-	'enwiki' => true,
-	'fawiki' => true,
-	'afwiki' => true,
-	'arwiki' => true,
-	'hywiki' => true,
-	'bgwiki' => true,
-	'mywiki' => true,
-	'hewiki' => true,
-	'jawiki' => true,
-	'itwiki' => true,
-	'azwiki' => true,
-	'ptwiki' => true,
-	'newiki' => true,
-	'viwiki' => true
+// T401705 Send image beacon and Test Kitchen SDK load event
+'wgTestKitchenEnableHeadPixel' => [
+	'default' => false
+],
+
+'wgTestKitchenEventIntakeServiceName' => [
+	'default' => 'eventgate-analytics-external',
+],
+
+'wgTestKitchenExposureResetEpoch' => [
+	'default' => 0,
 ],
 
 // Disable redirects for search inputs to exact matches by default
@@ -10955,6 +11908,8 @@ return [
 	'wikisource' => false, // T68455
 	'wikitech' => false,
 	'lockeddown' => false,
+	'bnwikisource' => true, // T416800
+	'hewikisource' => true, // T362851
 ],
 'wgPageImagesNamespaces' => [
 	'default' => [ NS_MAIN ],
@@ -11017,6 +11972,7 @@ return [
 	'default' => true,
 	'wikitech' => false,
 	'loginwiki' => false,
+	'closed' => false, // T420062
 ],
 
 'wgSecurePollUseNamespace' => [
@@ -11356,8 +12312,7 @@ return [
 
 // Thumbnail prerendering at upload time
 'wgUploadThumbnailRenderMap' => [
-	'default' => [ 320, 640, 800, 1280 ],
-	'private' => [],
+	'default' => [],
 ],
 
 'wgUploadThumbnailRenderMethod' => [
@@ -11366,7 +12321,14 @@ return [
 
 'wgThumbnailStepsRatio' => [
 	'default' => 1,
-	'private' => 0,
+],
+
+// T414338
+'wgTrackMediaRequestProvenance' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'group0' => true,
 ],
 
 // Virtual media views endpoint used by Media Viewer
@@ -11395,126 +12357,132 @@ return [
 	'lockeddown' => false,
 ],
 
+// Note: you can also register surveys using
+// https://www.mediawiki.org/wiki/Extension:QuickSurvey/Hooks/QuickSurveysEnabled
+// This gives you more control and additional flexibility.
 'wgQuickSurveysConfig' => [
 	'default' => [],
-	'enwiki' => [
+	'wikidatawiki' => [
 		[
-			// T389393
-			'name' => 'Web simple summaries survey',
-			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0,
-			'privacyPolicy' => 'ext-quicksurveys-simple-summaries-survey-privacy-policy',
-			'platforms' => [ 'desktop' ],
+			// T414476
+			'name' => 'wikidata-graphql-survey',
+			'privacyPolicy' => 'wd-graphql-quick-survey-privacy-policy',
+			'enabled' => true,
+			'coverage' => 1,
+			'platforms' => [
+				'desktop',
+				'mobile'
+			],
+			'embedElementId' => 'wd-graphql-quick-survey',
+			'type' => 'internal',
 			'audience' => [
-				'anons' => false,
+				'namespaces' => [ 2, 4 ]
 			],
 			'questions' => [
 				[
-					'name' => 'Web simple summaries survey question',
+					'name' => 'wd-graphql-survey-question-1',
+					'question' => 'wd-graphql-quick-survey-question-interested',
 					'layout' => 'single-answer',
-					'link' => 'ext-quicksurveys-simple-summaries-survey-link',
-					'question' => 'ext-quicksurveys-simple-summaries-survey-question',
-					'description' => null,
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
-					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
+					'answers' => [
+						[
+							'label' => 'wd-graphql-quick-survey-yes',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-later',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-no',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-other',
+							'freeformTextLabel' => 'wd-graphql-quick-survey-other-placeholder'
+						]
+					],
+					'shuffleAnswersDisplay' => false,
 				],
 			],
 		],
 		[
-			// T380778
-			'name' => 'Web experimental browser extension survey',
-			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0.06,
-			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
-			'platforms' => [ 'desktop' ],
+			// T414476
+			'name' => 'wikidata-graphql-survey-test',
+			'privacyPolicy' => 'wd-graphql-quick-survey-privacy-policy',
+			'enabled' => true,
+			'coverage' => 1,
+			'platforms' => [
+				'desktop',
+				'mobile'
+			],
+			'embedElementId' => 'wd-graphql-quick-survey-test',
+			'type' => 'internal',
 			'audience' => [
-				'anons' => true,
-				'userAgent' => [ 'Chrome' ],
+				'namespaces' => [ 2, 4 ]
 			],
 			'questions' => [
 				[
-					'name' => 'Web experimental browser extension question',
+					'name' => 'wd-graphql-survey-question-1',
+					'question' => 'wd-graphql-quick-survey-question-interested',
 					'layout' => 'single-answer',
-					'link' => 'ext-quicksurveys-empty-search-experiment-link',
-					'question' => 'ext-quicksurveys-empty-search-experiment-question',
-					'description' => null,
-					'yesMsg' => 'ext-quicksurveys-empty-search-experiment-yes',
-					'noMsg' => 'ext-quicksurveys-empty-search-experiment-no',
-				],
-			],
-		],
-		[
-			'name' => 'Web non-UI experiment survey',
-			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0.05,
-			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
-			'platforms' => [ 'desktop' ],
-			'audience' => [
-				'anons' => true,
-			],
-			'questions' => [
-				[
-					'name' => 'Empty search experiment question',
-					'layout' => 'single-answer',
-					'link' => 'ext-quicksurveys-non-ui-experiment-link',
-					'question' => 'ext-quicksurveys-non-ui-experiment-question',
-					'description' => null,
-					'yesMsg' => 'ext-quicksurveys-external-survey-yes-button',
-					'noMsg' => 'ext-quicksurveys-external-survey-no-button',
-				],
-			],
-		],
-	],
-	'eswiki' => [
-		[
-			'name' => 'Empty search experiment survey',
-			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0.1,
-			'privacyPolicy' => 'ext-quicksurveys-empty-search-experiment-privacy-policy',
-			'platforms' => [ 'desktop' ],
-			'audience' => [
-				'anons' => true,
-				'userAgent' => [ 'Chrome' ],
-			],
-			'questions' => [
-				[
-					'name' => 'Empty search experiment question',
-					'layout' => 'single-answer',
-					'link' => 'ext-quicksurveys-empty-search-experiment-link',
-					'question' => 'ext-quicksurveys-empty-search-experiment-question',
-					'description' => null,
-					'yesMsg' => 'ext-quicksurveys-empty-search-experiment-yes',
-					'noMsg' => 'ext-quicksurveys-empty-search-experiment-no',
-				],
-			],
-		],
-		[
-			'name' => 'Web non-UI experiment survey',
-			'type' => 'external',
-			'enabled' => false,
-			'coverage' => 0.1,
-			'privacyPolicy' => 'ext-quicksurveys-non-ui-experiment-privacy-policy',
-			'platforms' => [ 'desktop' ],
-			'audience' => [
-				'anons' => true,
-			],
-			'questions' => [
-				[
-					'name' => 'Empty search experiment question',
-					'layout' => 'single-answer',
-					'link' => 'ext-quicksurveys-non-ui-experiment-link',
-					'question' => 'ext-quicksurveys-non-ui-experiment-question',
-					'description' => null,
-					'yesMsg' => 'ext-quicksurveys-non-ui-experiment-yes',
-					'noMsg' => 'ext-quicksurveys-non-ui-experiment-no',
+					'answers' => [
+						[
+							'label' => 'wd-graphql-quick-survey-yes',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-later',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-no',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-other',
+							'freeformTextLabel' => 'wd-graphql-quick-survey-other-placeholder'
+						]
+					],
+					'shuffleAnswersDisplay' => false,
 				],
 			],
 		],
 	],
+	'testwikidatawiki' => [
+		[
+			// T414476
+			'name' => 'wikidata-graphql-survey-test',
+			'privacyPolicy' => 'wd-graphql-quick-survey-privacy-policy',
+			'enabled' => true,
+			'coverage' => 1,
+			'platforms' => [
+				'desktop',
+				'mobile'
+			],
+			'embedElementId' => 'wd-graphql-quick-survey-test',
+			'type' => 'internal',
+			'audience' => [
+				'namespaces' => [ 2, 4 ]
+			],
+			'questions' => [
+				[
+					'name' => 'wd-graphql-survey-question-1',
+					'question' => 'wd-graphql-quick-survey-question-interested',
+					'layout' => 'single-answer',
+					'answers' => [
+						[
+							'label' => 'wd-graphql-quick-survey-yes',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-later',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-no',
+						],
+						[
+							'label' => 'wd-graphql-quick-survey-other',
+							'freeformTextLabel' => 'wd-graphql-quick-survey-other-placeholder'
+						]
+					],
+					'shuffleAnswersDisplay' => false,
+				],
+			],
+		]
+	]
 ],
 
 // WikidataPageBanner extension (T98029)
@@ -11656,18 +12624,9 @@ return [
 	'default' => true,
 ],
 
-'wmgUseWebAuthn' => [
-	'default' => true,
-],
-
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
 	'sul' => true, // T378402
-],
-
-// T392520
-'wmgUseArticleSummaries' => [
-	'default' => false,
 ],
 
 // NearbyPages extension
@@ -11709,9 +12668,6 @@ return [
 ],
 'wgGlobalWatchlistDevMode' => [
 	'default' => false,
-],
-'wgGlobalWatchlistWikibaseSite' => [
-	'default' => 'www.wikidata.org',
 ],
 'wgGlobalWatchlistSiteLimit' => [
 	'default' => 50, // T276195
@@ -11780,7 +12736,6 @@ return [
 
 'wgWMEReadingDepthSamplingRate' => [
 	'default' => 0.01, // T306606#7881912
-	'legacy-vector' => 0, // T294777
 	'enwiki' => 0.001, // T294777
 ],
 
@@ -11798,50 +12753,6 @@ return [
 
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
-	'wikidata' => [
-		'enabled' => false,
-		'buckets' => [
-			'control' => [
-				'samplingRate' => 1,
-			],
-			'T306644-en' => [
-				'samplingRate' => 1,
-				'context' => 'item',
-				'language' => 'en',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-en',
-					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-202203-en',
-				],
-			],
-			'T306644-de' => [
-				'samplingRate' => 1,
-				'context' => 'item',
-				'language' => 'de',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-de',
-					'cirrusRescoreProfile' => 'wikibase_config_detity_weight-202203-de',
-				],
-			],
-			'T306644-es' => [
-				'samplingRate' => 1,
-				'context' => 'item',
-				'language' => 'es',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-es',
-					'cirrusRescoreProfile' => 'wikibase_config_estity_weight-202203-es',
-				],
-			],
-			'T306644-fr' => [
-				'samplingRate' => 1,
-				'context' => 'item',
-				'language' => 'fr',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-fr',
-					'cirrusRescoreProfile' => 'wikibase_config_frtity_weight-202203-fr',
-				],
-			],
-		],
-	],
 ],
 
 'wgWMEWikimediaDebugBackend' => [
@@ -11904,8 +12815,14 @@ return [
 ],
 
 // T28741
+// Note that due to ForeignDBViaLBRepo changing this on any wiki
+// will also effect traffic going to commonswiki.
 'wgFileSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'small' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'medium' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'fawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'dewiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
@@ -11931,6 +12848,10 @@ return [
 	'default' => false,
 	'testwiki' => true,
 ],
+// T419163
+'wgReadingListsBetaDefaultForNewAccountsAfter' => [
+	'default' => null,
+],
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
 'wmgUseGlobalPreferences' => [
@@ -11947,10 +12868,7 @@ return [
 // This is wikis that have it for all users
 // vs below where its only for users with sessions.
 'wmgUseCSPReportOnly' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
-	'small' => true,
+	'default' => true, // T291867
 ],
 
 'wmgUseCSPReportOnlyHasSession' => [
@@ -11958,7 +12876,7 @@ return [
 ],
 
 'wmgUseCSP' => [
-	'default' => false,
+	'default' => true,
 ],
 
 // Domains that go in script-src and default-src for CSP. Not to be varied by wiki.
@@ -11982,6 +12900,14 @@ return [
 		'*.wikifunctions.org',
 		'*.wikivoyage.org',
 		'*.mediawiki.org',
+
+		// T419137: While wmgUseCSP is enforced, allow these.
+		//
+		// TODO: Once scripts move on-wiki, limit thse to default-src without script-src (T135963)
+		// (allowing JSON APIs/images/iframes but not scripts).
+		'*.toolforge.org',
+		'*.wmcloud.org',
+		'*.wmflabs.org',
 	],
 	'donatewiki' => [
 		'*.wikimedia.org', // Needed to load some images
@@ -12028,11 +12954,6 @@ return [
 	'default' => 500, // T288070
 ],
 
-'wgWBCitoidFullRestbaseURL' => [
-	'default' => false,
-	'testwikidatawiki' => 'https://en.wikipedia.org/api/rest_', // T228412
-],
-
 'wgFundraiserLandingPageELSampleRate' => [
 	'default' => 0,
 	'donatewiki' => 1
@@ -12065,10 +12986,6 @@ return [
 
 'wgRestSandboxSpecs' => [
 	'default' => [
-		'mw-extra' => [
-			'url' => '/w/rest.php/specs/v0/module/-',
-			'name' => 'MediaWiki REST API (routes not in modules)',
-		],
 		'specs.v0' => [
 			'url' => '/w/rest.php/specs/v0/module/specs/v0',
 			'name' => 'Specs API',
@@ -12078,10 +12995,53 @@ return [
 			'name' => 'Wikimedia REST APIs'
 		],
 		'wmf-restbase-global' => [
-			'url' => 'https://www.wikimedia.org/api/rest_v1/?spec',
+			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Math API'
+		],
+	],
+	'+growthexperiments' => [
+		'growthexperiments.v0' => [
+			'file' => "./extensions/GrowthExperiments/includes/Rest/growthexperiments.v0.json",
+		],
+	],
+	'+testwiki' => [
+		'attribution.v0-beta' => [
+			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
+		],
+		'wmf-analytics-commons' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
+			'name' => 'Wikimedia Commons Impact Metrics API',
+		],
+		'wmf-analytics-editors' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
+			'name' => 'Wikimedia Editor Analytics API',
+		],
+		'wmf-analytics-editors-by-country' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
+			'name' => 'Wikimedia Geo Analytics API',
+		],
+		'wmf-analytics-edits' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
+			'name' => 'Wikimedia Edit Analytics API',
+		],
+		'wmf-analytics-media-requests' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
+			'name' => 'Wikimedia Media Analytics API',
+		],
+		'wmf-analytics-page-views' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
+			'name' => 'Wikimedia Page Analytics API',
+		],
+		'wmf-analytics-unique-devices' => [
+			'url' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
+			'name' => 'Wikimedia Device Analytics API',
 		]
-	]
+	],
+	'+wikifunctionswiki' => [
+		'wikifunctions.v0' => [
+			'file' => "./extensions/WikiLambda/includes/RESTAPI/wikifunctions.v0.json",
+		],
+	],
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
@@ -12101,10 +13061,6 @@ return [
 ],
 
 'wgWatchlistExpiry' => [
-	'default' => true,
-],
-
-'wgEditWatchlistPaginate' => [
 	'default' => true,
 ],
 
@@ -12211,6 +13167,13 @@ return [
 
 // for wmgWikibaseTmpMobileEditingUIBetaFeature, see the BetaFeatures section above
 
+// T415516 temporary feature flag
+'wmgWikibaseTmpGraphQL' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
@@ -12286,14 +13249,16 @@ return [
 	'wikifunctionsclient' => false,
 ],
 
-// (T397403) Temporary deployment feature flag
-'wgWikifunctionsEnableWikidataInputTypes' => [
-	'wikifunctionsclient' => true,
+// This will be used (only) on Abstract Wikipedia
+'wgWikiLambdaEnableAbstractMode' => [
+	'default' => false,
+	'abstractwiki' => true,
 ],
 
-// (T397402) Temporary deployment feature flag
-'wgWikifunctionsEnableHTMLOutput' => [
-	'wikifunctionsclient' => true,
+// This will be used (only) on Abstract Wikipedia
+'wgWikiLambdaAbstractNamespaces' => [
+	'default' => [],
+	'abstractwiki' => [ NS_MAIN => [ '', 'Q50081413' ] ],
 ],
 
 ### Wikistories-related configuration
@@ -12371,6 +13336,7 @@ return [
 	'mediawikiwiki' => true, // T409760
 	'specieswiki' => true, // T409760
 	'wikifunctionswiki' => true, // T409760
+	'wikibooks' => true, // T419597
 ],
 
 // This setting determines whether the CampaignEvents extension shall store
@@ -12401,8 +13367,8 @@ return [
 	'wikifunctionswiki' => false, // T409760
 ],
 
-'wgCampaignEventsEnableContributionTracking' => [
-	'default' => true, // T404904
+'wgCampaignEventsEnableEventGoals' => [
+	'default' => true,
 ],
 
 // T309900
@@ -12518,7 +13484,12 @@ return [
 	// T391248
 	'eswiki' => 'Automoderador',
 ],
-
+// T400727
+'wgAutoModeratorMultiLingualRevertRisk' => [
+	'default' => false,
+	'testwiki' => true,
+	'automoderator-revertrisk-multilingual' => true,
+],
 // T341000
 'wgExternalLinksDomainGaps' => [
 	'enwiki' => [
@@ -12582,8 +13553,11 @@ return [
 'wgEnableProtectionIndicators' => [
 	'default' => false,
 	'azwiki' => true, // T371440
+	'frwiktionary' => true, // T413724
 	'labswiki' => true, // T409785
 	'officewiki' => true,
+	'ruwiki' => true, // T412582,
+	'ruwikisource' => true, // T417590
 	'srwiki' => true, // T407183
 	'zhwiki' => true, // T412710
 ],
@@ -12632,6 +13606,16 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCommunityRequestsStatuses' => [
+	'metawiki' => [
+		'under-review' => [
+			'id' => 0,
+			'voting' => true, // T409613
+			'default' => true,
+		],
+	],
+],
+
 'wgWikimediaMessagesAnonDonateLink' => [
 	'default' => true,
 ],
@@ -12654,6 +13638,27 @@ return [
 // T399631
 'wgUseSessionCookieJwt' => [
 	'default' => true,
+],
+
+// T417833
+'wgOAuthUseJwtCookie' => [
+	'default' => true,
+],
+
+// T415007
+'wgUseSessionCookieForBotPasswords' => [
+	'default' => true,
+],
+
+// T415007
+'wgJwtSessionCookieIssuer' => [
+	'default' => null,
+	'sul' => 'https://meta.wikimedia.org',
+],
+
+// T418957
+'wgApiClientErrorSampleRate' => [
+	'default' => 0.01,
 ],
 
 // T377975 / T391064
@@ -12701,23 +13706,45 @@ return [
 	'ukwiki' => true,
 ],
 
-'wgUserEmailConfirmationUseHTML' => [
-	'default' => false,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-
-	'commonswiki' => true,
-	'enwiki' => true,
-	'wikidatawiki' => true,
-],
-
 // T406023
 'wgSVGNativeRendering' => [
 	'default' => false,
 ],
 
-// T411836
+// T413967
 'wgEnableWatchlistLabels' => [
-	'default' => false,
+	'default' => true,
 ],
+
+// T413737
+'wgCookieSetOnIpBlock' => [
+	'default' => true,
+	'ruwiki' => false,
+],
+
+// T415372 - Wikipedia 25th Birthday easter eggs extension.
+'wmgUseWP25EasterEggs' => [
+	'default' => false,
+	'testwiki' => true,
+	'wikipedia' => true,
+],
+
+// T415372 - Enable WP25EasterEggs baby globe companion.
+'wgWp25EasterEggsEnable' => [
+	'default' => false,
+	'testwiki' => true,
+	'wikipedia' => true, // T417110 This will be enabled Monday Feb 16, 2026.
+],
+
+'wgWMCBadEmailDomainsFile' => [
+	'default' => '/srv/mediawiki/private/disposable-email-domains',
+],
+
+// T419605 - Reduce reauth timeout for editing site JS.
+'wgReauthenticateTime' => [
+	'default' => [
+		'default' => 3600, // 1 hour.
+		'editsitejs' => 600, // 10 minutes.
+	],
+]
 ];

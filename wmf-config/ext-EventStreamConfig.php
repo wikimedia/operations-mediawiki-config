@@ -2423,6 +2423,10 @@ return [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
 		],
+		'mediawiki.page_revert_risk_multilingual_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
@@ -2447,7 +2451,7 @@ return [
 		'resource_change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
@@ -2596,6 +2600,95 @@ return [
 		'mw_page_content_change_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
+		],
+
+		// Declare version dev (staging testing) of
+		// mediawiki.page_html_content_change stream for now.
+		// It will be changed for a new schema when it's ready.
+		// It is produced by a streaming enrichment pipeline,
+		// (not via MediaWiki EventBus).
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		'mediawiki.page_html_content_change.dev5' => [
+			'schema_title' => 'development/rendering_content_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// page_html_content_change is produced directly to Kafka jumbo-eqiad,
+			// so we need to use an eventgate that also produces to jumbo-eqiad.
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
+		],
+
+		// This stream will be used by the streaming enrichment pipeline
+		// These events can be used if backfilling of the failed enrichment
+		// is desired later.
+		// This follows the naming convention of <job_name>.error
+		'mw_page_html_content_change_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					// error events with html in them can be large.
+					// We might have html in these error events, because
+					// the mediawiki-event-enrichment Flink job
+					// first fetches latest revision html and adds it to the event,
+					// and then fetch parent revision html (to diff it and add diff to event).
+					// If the parent revision html fetch fails, the error event raw_event field
+					// will have the serialized JSON of the event with the html in it.
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
+
+		// Declare version dev (staging testing) of
+		// mediawiki.page_edit_type_simple stream for now.
+		// It will be changed for a new schema when it's ready.
+		// It is produced by a streaming enrichment pipeline,
+		// (not via MediaWiki EventBus).
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		'mediawiki.page_edit_type_simple.dev1' => [
+			'schema_title' => 'development/rendering_feature_counts_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// page_html_edit_type_simple is produced directly to Kafka jumbo-eqiad,
+			// so we need to use an eventgate that also produces to jumbo-eqiad.
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
+		// This stream will be used by the streaming enrichment pipeline
+		// These events can be used if backfilling of the failed enrichment
+		// is desired later.
+		// This follows the naming convention of <job_name>.error
+		'mw_page_edit_type_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					// Error stream contains the raw_event that caused the error.
+					// In this case, the raw_event source stream is the
+					// mediawiki.page_html_content_change, which can have large events in it.
+					// Bump the spark_job_ingestion_scale to medium to account for this.
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			]
 		],
 
 		// This stream uses the mediawiki/page/change schema.
@@ -3037,6 +3130,8 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
+						// Do not set performer attributes here, that is done
+						// via server-side code
 					],
 				],
 			],
@@ -3084,6 +3179,7 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
+						'mediawiki_database',
 						'performer_language',
 						'performer_language_variant',
 						'performer_pageview_id',
@@ -3350,7 +3446,7 @@ return [
 				],
 			],
 		],
-		// (T373967) App base stream configuration to support Metrics Platform's monotable
+		// (T373967) App base stream configuration to support Test Kitchen's monotable
 		'product_metrics.app_base' => [
 			'schema_title' => 'analytics/product_metrics/app/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3366,7 +3462,7 @@ return [
 			],
 		],
 
-		// Web base stream configuration to support Experiment Platform's monotable.
+		// Web base stream configuration to support Test Kitchen's monotable.
 		//
 		// See T373967 for context.
 		// NOTE: consider updating web_base_with_ip below when updating this
@@ -3400,6 +3496,12 @@ return [
 				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
 				],
 			],
 		],
@@ -3437,6 +3539,17 @@ return [
 				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.x-ja3n' => 'x-ja3n',
+						'http.request_headers.x-ja4h' => 'x-ja4h',
+						'http.request_headers.x-is-browser' => 'x-is-browser',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
 				],
 			],
 		],
@@ -3452,6 +3565,39 @@ return [
 				],
 			],
 		],
+		// Stream configuration for (T417050) WE 5.3.4 Attribution Research
+		'product_metrics.web_base.attribution_research' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+			],
+			// This stream has a custom job to import from kafka -> hadoop
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+		// Stream configuration for (T420621) WE 3.* Active Reader Baseline
+		'product_metrics.web_base.active_reader_baseline' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			// This stream has a custom job to import from kafka -> hadoop
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
@@ -3462,12 +3608,11 @@ return [
 		// so we leave the default analytics sampling rate of 1,
 		// thus not explicitly setting the `sample` key here.
 		//
-		// Experiment enrollment sampling (AKA bucketing) is instead set on the
-		// Metrics Platform Experimentation Lab (MPIC) at
-		// https://mpic.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
+		// Experiment enrollment sampling (AKA bucketing) is instead set on Test Kitchen UI at
+		// https://test-kitchen.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
 		//
-		// See https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Analytics_sampling,
-		// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Glossary#Experiment_enrolment_sampling
+		// See https://wikitech.wikimedia.org/wiki/Test_Kitchen/Glossary#Analytics_sampling,
+		// https://wikitech.wikimedia.org/wiki/Test_Kitchen/Glossary#Experiment_enrolment_sampling
 		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3475,7 +3620,7 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						// Contextual attributes, see
-						// https://wikitech.wikimedia.org/wiki/Experimentation_Lab/Contextual_attributes
+						// https://wikitech.wikimedia.org/wiki/Test_Kitchen/Contextual_attributes
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'mediawiki_database',
@@ -3502,6 +3647,43 @@ return [
 			'producers' => [
 				'metrics_platform_client' => [
 					'provide_values' => [
+						'agent_client_platform',
+						'agent_client_platform_family',
+						'mediawiki_database',
+						'mediawiki_skin',
+						'page_content_language',
+						'page_namespace_id',
+						'performer_active_browsing_session_token',
+						'performer_edit_count_bucket',
+						'performer_is_bot',
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_session_id',
+					],
+				],
+				'eventgate' => [
+					'use_edge_uniques' => true,
+				],
+			],
+		],
+		// Shared stream for reader experiments.
+		//
+		// Readers teams can use it until completion of T408186.
+		// After that, all experiments can send events to the default `product_metrics.web_base` stream.
+		// See https://wikimedia.slack.com/archives/C01DFMX6QLB/p1769640744768119?thread_ts=1764971982.545049&cid=C01DFMX6QLB
+		//
+		// This stream defines a superset of contextual attributes.
+		// Experiments can safely ignore unnecessary ones.
+		//
+		// This stream is used by:
+		// - (T415611) Mobile table of contents experiment by Reader Growth
+		'mediawiki.product_metrics.reader_experiments' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						// Contextual attributes: add new ones as needed.
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'mediawiki_database',
@@ -3592,12 +3774,31 @@ return [
 					],
 				],
 			],
-		]
-	],
-	'+legacy-vector' => [
-		'mediawiki.web_ui_actions' => [
-			'sample' => [
-				'rate' => 0,
+		],
+		// T410719: Offline analytics summarizing the Cite references on each page.
+		'mediawiki.wmde_page_summary' => [
+			'schema_title' => 'analytics/mediawiki/wmde_page_summary',
+			'destination_event_service' => 'eventgate-analytics'
+		],
+		// T420490 Stream for logged-in reader retention A/A test by Reader Experience team.
+		'mediawiki.product_metrics.reader_retention_logged_in' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'agent_client_platform',
+						'agent_client_platform_family',
+						// Following 3 used to determine if user is logged-in to a regular account.
+						'performer_is_logged_in',
+						'performer_is_temp',
+						'performer_is_bot',
+						// Used to determine if user is a "reader" as opposed to contributor.
+						'performer_edit_count_bucket',
+						'mediawiki_skin',
+						'mediawiki_database',
+					],
+				],
 			],
 		],
 	],

@@ -99,7 +99,6 @@ class DbConfig {
 			$suffixes = [
 				'wiki' => 'wikipedia',
 				'wiktionary' => 'wiktionary',
-				'wikiquote' => 'wikiquote',
 				'wikibooks' => 'wikibooks',
 				'wikiquote' => 'wikiquote',
 				'wikinews' => 'wikinews',

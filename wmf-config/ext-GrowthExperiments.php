@@ -42,7 +42,6 @@ return [
 // T341599
 'wgGEUserImpactMaxEdits' => [
 	'default' => 1000,
-	'testwiki' => 10000,
 ],
 'wgGEUserImpactMaxThanks' => [
 	'default' => 1000,
@@ -415,26 +414,12 @@ return [
 
 'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
 	'default' => 48 * 3600,
-	'testwiki' => [
-		'default' => 300,
-	],
+	'testwiki' => 300,
 ],
 
 'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 	'default' => 48 * 3600,
-	'testwiki' => [
-		'default' => 300,
-	],
-],
-
-'wgGEUseMetricsPlatformExtension' => [
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-	'ptwiki' => true,
+	'testwiki' => 300,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
@@ -794,7 +779,7 @@ return [
 ],
 
 'wgGEMentorshipReassignMenteesBatchSize' => [
-	'default' => 5000,
+	'default' => 2000,
 ],
 
 'wgGEHomepageDefaultVariant' => [
