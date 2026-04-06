@@ -3230,7 +3230,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 	// Suggestion feedback is always consolidated:
 	$wgVisualEditorSuggestionFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
-	$wgVisualEditorSuggestionFeedbackTitle = 'Talk:VisualEditor/Suggestion_Mode/Feedback';
+	$wgVisualEditorSuggestionFeedbackTitle = 'VisualEditor/Suggestion_Mode/Feedback';
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
