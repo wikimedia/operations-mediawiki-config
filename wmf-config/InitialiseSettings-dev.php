@@ -119,5 +119,11 @@ function wmfGetOverrideSettings() {
 		'-wmgUseCommunityRequests' => [
 			'default' => false,
 		],
+		'-wmgUseIPReputation' => [
+			'default' => false,
+		],
+		'-wmgUseTestKitchen' => [
+			'default' => false,
+		],
 	];
 }
