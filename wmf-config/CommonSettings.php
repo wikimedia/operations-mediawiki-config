@@ -3032,6 +3032,9 @@ if ( $wmgCodeMirrorReplaceCodeEditor ) {
 	$wgCodeEditorEnabledModes['css'] = false;
 	$wgCodeEditorEnabledModes['lua'] = false;
 	$wgCodeEditorEnabledModes['vue'] = false;
+	// AbuseFilter
+	$wgAbuseFilterUseCodeEditor = false;
+	$wgAbuseFilterUseCodeMirror = true;
 	// Gadgets
 	$wgGadgetsDefinitionsUseCodeEditor = false;
 	$wgGadgetsDefinitionsUseCodeMirror = true;
