@@ -7526,11 +7526,13 @@ return [
 	'test2wiki' => true,
 
 	'alswiki' => true, // T418209
+	'cswiki' => true, // T420938
 	'dewiki' => true, // T398669
 	'dewikivoyage' => true, // T418209
 	'fiu_vrowiki' => true, // T418209
 	'frrwiki' => true, // T418209
 	'gpewiki' => true, // T418209
+	'itwiki' => true, // T420938
 	'kncwiki' => true, // T418209
 	'plwiki' => true, // T418209
 	'rmwiki' => true, // T418209
