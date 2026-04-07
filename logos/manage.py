@@ -78,7 +78,7 @@ def validate(data: dict):
                                            "start with {site}, connected with a dash")
                     for variant_type, variant_commons in variant_info.items():
                         validate_commons(f"{site} (variant: {variant_name})", variant_commons)
-            for size in ["1x", "1_5x", "2x"]:
+            for size in ["1x", "2x"]:
                 if size != "1x" and info.get(f"no_{size}"):
                     # Skip, doesn't have this size
                     continue
@@ -152,7 +152,6 @@ def download(commons: str, name: str):
         svg_file.flush()
         paths = {
             f"{name}.png": "135",
-            f"{name}-1.5x.png": "202",
             f"{name}-2x.png": "270"
         }
         for filename, width in paths.items():
@@ -425,7 +424,7 @@ def make_block_lang_single(site: str, lang: Optional[str], lang_info: dict, data
     text = ""
     if "selected_logo" in lang_info:
         selected = lang_info["selected_logo"]
-        for size in ["1x", "1.5x", "2x"]:
+        for size in ["1x", "2x"]:
             size1 = "" if size == "1x" else f"-{size}"
             filename = f"{selected}{size1}.png"
             if not (project_logos / filename).exists():
@@ -500,7 +499,7 @@ def generate(data: dict):
 
     return [
     """)
-    for size in ["1x", "1_5x", "2x"]:
+    for size in ["1x", "2x"]:
         text += make_block(size, data)
     for svg_type in ["wordmark", "tagline", "icon"]:
         text += make_block2(svg_type, data)

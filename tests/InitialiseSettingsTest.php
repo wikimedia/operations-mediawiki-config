@@ -159,27 +159,16 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testLogos() {
 		$scalarLogoKeys = [
 			'1x' => 'wmgSiteLogo1x',
-			'1.5x' => 'wmgSiteLogo1_5x',
 			'2x' => 'wmgSiteLogo2x',
 			'icon' => 'wmgSiteLogoIcon',
 		];
-
-		$pairedSizes = [ '1.5x', '2x' ];
 
 		// Test if all scalar logos exist
 		foreach ( $scalarLogoKeys as $size => $key ) {
 			foreach ( $this->settings[ $key ] as $db => $entry ) {
 				$this->assertFileExists( __DIR__ . '/..' . $entry, "$db has non-existent $size logo in $key" );
 
-				if ( in_array( $size, $pairedSizes ) ) {
-					$otherSize = array_values( array_diff( $pairedSizes, [ $size ] ) )[ 0 ];
-					$otherKey = $scalarLogoKeys[ $otherSize ];
-
-					$this->assertArrayHasKey(
-						$db,
-						$this->settings[ $otherKey ],
-						"$db has a logo set for $size in $key but not for $otherSize in $otherKey"
-					);
+				if ( $size === '2x' ) {
 
 					$baseKey = $scalarLogoKeys['1x'];
 
@@ -192,21 +181,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 					// Test if 2x and 1.5x is really of correct size
 					// Tolerate up to 5 px difference
 					$imagesizeOne = getimagesize( __DIR__ . '/..' . $this->settings[ $scalarLogoKeys[ '1x' ] ][ $db ] )[0];
-					$imagesizeOneAndHalf = getimagesize( __DIR__ . '/..' . $this->settings[ $scalarLogoKeys[ '1.5x' ] ][ $db ] )[0];
 					$imagesizeTwo = getimagesize( __DIR__ . '/..' . $this->settings[ $scalarLogoKeys[ '2x' ] ][ $db ] )[0];
-
-					// Remove this exception as soon as the logos are updated to meet the condition
-					if ( !in_array( $db, [
-						'hiwiki',
-						'cawikiquote', 'enwikiquote', 'eowikiquote', 'eswikiquote', 'hrwikiquote', 'hywikiquote', 'knwikiquote', 'slwikiquote', 'srwikiquote',
-						'zhwikinews',
-						'ruwikivoyage', 'zhwikivoyage'
-					] ) ) {
-						$this->assertTrue(
-							$imagesizeOneAndHalf >= (int)( $imagesizeOne * 1.5 - 5 ),
-							"$db has 1.5x HD logo of $imagesizeOneAndHalf width, at least " . (int)( $imagesizeOne * 1.5 ) . " expected"
-						);
-					}
 
 					// Remove this exception as soon as the logo is updated to meet the condition
 					if ( $db !== 'zhwikivoyage' ) {
