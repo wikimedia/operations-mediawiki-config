@@ -68,6 +68,7 @@ class DbconfigTest extends TestCase {
 					'cluster26' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
 					'cluster28' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
 					'cluster30' => [ 'es0061' => 100, 'es0064' => 100 ],
+					'cluster32' => [ 'es0061' => 100, 'es0064' => 100 ],
 				],
 				'readOnlyBySection' => [],
 			],
@@ -98,7 +99,7 @@ class DbconfigTest extends TestCase {
 			]
 		];
 
-		// This example depends on /src/etcd.php mapping cluster30 to es6
+		// This example depends on /src/etcd.php mapping cluster32 to es6
 		yield 'automatically depool read-only ES cluster' => [
 			[
 				'hostsByName' => [],
@@ -117,6 +118,7 @@ class DbconfigTest extends TestCase {
 					'cluster26' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
 					'cluster28' => [ 'es0042' => 0, 'es0043' => 100, 'es0045' => 100 ],
 					'cluster30' => [ 'es0061' => 100, 'es0064' => 100 ],
+					'cluster32' => [ 'es0061' => 100, 'es0064' => 100 ],
 				],
 				'readOnlyBySection' => [
 					'es6' => 'T395696',
@@ -125,7 +127,7 @@ class DbconfigTest extends TestCase {
 			[],
 			[],
 			[
-				'set' => [ 'DB://clusterTEST1', 'DB://cluster30' ],
+				'set' => [ 'DB://clusterTEST1', 'DB://cluster32' ],
 				'expect' => [ 'DB://clusterTEST1' ],
 			]
 		];
@@ -144,6 +146,7 @@ class DbconfigTest extends TestCase {
 				'hostsByName' => [],
 				'externalLoads' => [
 					'cluster30' => [ 'es0061' => 100, 'es0064' => 100 ],
+					'cluster32' => [ 'es0061' => 100, 'es0064' => 100 ],
 				],
 				'readOnlyBySection' => [
 					'es6' => 'T395696',
@@ -152,8 +155,8 @@ class DbconfigTest extends TestCase {
 			[],
 			[],
 			[
-				'set' => [ 'DB://cluster30' ],
-				'expect' => [ 'DB://cluster30' ],
+				'set' => [ 'DB://cluster32' ],
+				'expect' => [ 'DB://cluster32' ],
 			]
 		];
 	}
