@@ -1373,10 +1373,12 @@ $wgSiteMatrixSites = [
 ];
 
 $closedWikis = WmfConfig::readDbListFile( 'closed' );
+$privateWikis = WmfConfig::readDbListFile( 'private' );
+$fishbowlWikis = WmfConfig::readDbListFile( 'fishbowl' );
 
 $wgSiteMatrixClosedSites = $closedWikis;
-$wgSiteMatrixPrivateSites = WmfConfig::readDbListFile( 'private' );
-$wgSiteMatrixFishbowlSites = WmfConfig::readDbListFile( 'fishbowl' );
+$wgSiteMatrixPrivateSites = $privateWikis;
+$wgSiteMatrixFishbowlSites = $fishbowlWikis;
 $wgSiteMatrixNonGlobalSites = [];
 
 // list of codex icons to use for interwiki (based on SiteMatrix) search results widget
@@ -1687,6 +1689,15 @@ if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
 	$wgGlobalBlockingCentralWiki = 'metawiki';
+
+	// Should contain all wikis where GlobalBlocking is not installed
+	// or $wmgApplyGlobalBlocks is false
+	$wgGlobalBlockingWikisWhereGlobalBlocksDoNotApply = array_merge(
+		$closedWikis,
+		$privateWikis,
+		$fishbowlWikis,
+		[ 'metawiki' ],
+	);
 }
 
 wfLoadExtension( 'TrustedXFF' );
