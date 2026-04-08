@@ -12875,9 +12875,15 @@ return [
 	'metawiki' => true,
 	'testwiki' => true,
 ],
+// T420878
 'wgReadingListBetaFeature' => [
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'frwiki' => true,
+	'zhwiki' => true,
+	'idwiki' => true,
+	'viwiki' => true,
 ],
 // T422275
 'wgReadingListsEnableBetaQuickSurvey' => [
