@@ -13756,15 +13756,11 @@ return [
 // T415372 - Wikipedia 25th Birthday easter eggs extension.
 'wmgUseWP25EasterEggs' => [
 	'default' => false,
-	'testwiki' => true,
-	'wikipedia' => true,
 ],
 
 // T415372 - Enable WP25EasterEggs baby globe companion.
 'wgWp25EasterEggsEnable' => [
 	'default' => false,
-	'testwiki' => true,
-	'wikipedia' => true, // T417110 This will be enabled Monday Feb 16, 2026.
 ],
 
 'wgWMCBadEmailDomainsFile' => [

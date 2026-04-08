@@ -2379,12 +2379,12 @@ function wmfGetOverrideSettings() {
 		],
 		// T415372 - Wikipedia 25th Birthday easter eggs extension.
 		'wmgUseWP25EasterEggs' => [
-			'default' => true,
+			'default' => false,
 		],
 
 		// T415372 - Enable WP25EasterEggs visual interventions.
 		'wgWp25EasterEggsEnable' => [
-			'default' => true,
+			'default' => false,
 		],
 
 		'wgWMCBadEmailDomainsFile' => [
