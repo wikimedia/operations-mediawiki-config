@@ -152,6 +152,7 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 			'range',
 			'dbname',
 			'value',
+			'tempaccountvalue',
 		];
 	}
 
