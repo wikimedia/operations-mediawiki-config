@@ -3759,10 +3759,6 @@ return [
 						'performer_is_temp',
 						'performer_is_bot',
 
-						// Enable the calculation of the "click-through per page visit" generic metric.
-						'performer_pageview_id',
-						'performer_active_browsing_session_token',
-
 						'mediawiki_skin',
 						'mediawiki_database',
 						// END of default provide_values from mediawiki.product_metrics.web_base. Keep
