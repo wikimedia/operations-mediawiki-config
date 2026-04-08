@@ -3278,6 +3278,7 @@ return [
 		],
 		'extendedconfirmed' => [
 			'extendedconfirmed' => true, // T389729
+			'editsemiprotected' => true, // T421770
 		],
 		'translationadmin' => [
 			'editprotected' => true,
