@@ -12260,29 +12260,6 @@ return [
 // T414338
 'wgTrackMediaRequestProvenance' => [
 	'default' => true,
-
-	'wikipedia' => false,
-
-	// wikipedia (group0)
-	'akwiki' => true,
-	'chowiki' => true,
-	'crwiki' => true,
-	'howiki' => true,
-	'hzwiki' => true,
-	'iiwiki' => true,
-	'kjwiki' => true,
-	'klwiki' => true,
-	'krwiki' => true,
-	'lrcwiki' => true,
-	'mhwiki' => true,
-	'muswiki' => true,
-	'nawiki' => true,
-	'ngwiki' => true,
-	'pihwiki' => true,
-	'tenwiki' => true,
-	'testwiki' => true,
-	// wikipedia (group1)
-	'test2wiki' => true,
 ],
 
 // Virtual media views endpoint used by Media Viewer
