@@ -1307,7 +1307,7 @@ return [
 				"config_overrides" => [
 					'CirrusSearchCompletionPlainTokenizer' => 'keyword',
 				],
-				"use" => false
+				"use" => true
 			]
 		]
 	],
@@ -1318,7 +1318,7 @@ return [
 				"config_overrides" => [
 					'CirrusSearchCompletionPlainTokenizer' => 'keyword',
 				],
-				"use" => false
+				"use" => true
 			]
 		]
 	],
