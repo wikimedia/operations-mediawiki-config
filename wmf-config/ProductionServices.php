@@ -156,8 +156,8 @@ $services = [
 		'udp2log' => '10.64.185.2:8420', # mwlog1003.eqiad.wmnet
 
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
-		'mediaSwiftAuth' => 'http://localhost:6101/auth',
-		'mediaSwiftStore' => 'http://localhost:6101/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
+		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 
 		'etcd' => [
 			'host' => '_etcd-client-ssl._tcp.eqiad.wmnet',
@@ -211,8 +211,8 @@ $services = [
 		'udp2log' => '10.192.52.2:8420', # mwlog2003.codfw.wmnet
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
-		'mediaSwiftAuth' => 'http://localhost:6201/auth',
-		'mediaSwiftStore' => 'http://localhost:6201/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
+		'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
 
 		'etcd' => [
 			'host' => '_etcd._tcp.codfw.wmnet',
