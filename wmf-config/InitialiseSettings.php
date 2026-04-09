@@ -4458,8 +4458,19 @@ return [
 		'Deadendpages', // T371662
 		'Lonelypages', // T371662
 	],
+
+	// T421914
 	'+testcommonswiki' => [
+		'Lonelypages',
+		'Mostcategories',
+		'Mostlinkedtemplates',
+		'Uncategorizedimages',
+		'Unusedimages',
+		'Unusedcategories',
 		'Unusedtemplates',
+		'Wantedcategories',
+		'Wantedfiles',
+		'DisambiguationPageLinks',
 	],
 ],
 # @} end of wgDisableQueryPageUpdate
