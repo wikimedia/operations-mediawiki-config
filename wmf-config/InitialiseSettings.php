@@ -12423,7 +12423,6 @@ return [
 'wgTrackMediaRequestProvenance' => [
 	'default' => true,
 
-	'wikidatawiki' => false,
 	'commonswiki' => false,
 	'wikipedia' => false,
 
