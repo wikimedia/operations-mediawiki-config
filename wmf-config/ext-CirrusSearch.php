@@ -1292,7 +1292,30 @@ return [
 	'default' => true,
 ],
 'wgCirrusSearchAlternativeIndices' => [
-	'default' => [],
+	'default' => [
+		'enwiki' => [
+			"completion" => [
+				[
+					"index_id" => 1,
+					"config_overrides" => [
+						'CirrusSearchCompletionPlainTokenizer' => 'keyword',
+					],
+					"use" => false
+				]
+			]
+		],
+		'enwiktionary' => [
+			"completion" => [
+				[
+					"index_id" => 1,
+					"config_overrides" => [
+						'CirrusSearchCompletionPlainTokenizer' => 'keyword',
+					],
+					"use" => false
+				]
+			]
+		],
+	],
 ],
 'wgCirrusSearchCompletionUseSecondTryProfile' => [
 	'default' => 'default',
