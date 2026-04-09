@@ -12889,9 +12889,10 @@ return [
 'wgReadingListsEnableBetaQuickSurvey' => [
 	'default' => false,
 ],
-// T419163
+// T422833
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 	'default' => null,
+	'testwiki' => '20260409200000',
 ],
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
