@@ -12904,6 +12904,11 @@ return [
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 	'default' => null,
 	'testwiki' => '20260409200000',
+	'arwiki' => '20260413130000',
+	'frwiki' => '20260413130000',
+	'idwiki' => '20260413130000',
+	'viwiki' => '20260413130000',
+	'zhwiki' => '20260413130000',
 ],
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
