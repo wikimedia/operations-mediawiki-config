@@ -1921,6 +1921,10 @@ return [
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
 	],
+	'+urwikisource' => [
+		'Author' => 102, // T422824
+		'Author_talk' => 103,
+	],
 	'+urwiktionary' => [
 		'ول' => NS_PROJECT, // T186393
 		'تبادلۂ_خیال_ول' => NS_PROJECT_TALK, // T186393
@@ -3936,6 +3940,10 @@ return [
 		103 => 'Обговорення_автора',
 		116 => 'Архів', // T270627 - Archive
 		117 => 'Обговорення_архіву', // T270627 - Archive talk
+	],
+	'urwikisource' => [
+		102 => 'مصنف', // T422824 Author
+		103 => 'تبادلۂ_خیال_مصنف', // T422824 Author talk
 	],
 	'vecwikisource' => [
 		100 => 'Autor', // Author
