@@ -4468,6 +4468,7 @@ return [
 
 	// T421914
 	'+testcommonswiki' => [
+		'GloballyWantedFiles',
 		'Lonelypages',
 		'Mostcategories',
 		'Mostlinkedtemplates',
