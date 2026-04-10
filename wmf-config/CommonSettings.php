@@ -2997,6 +2997,7 @@ if ( $wmgUseGlobalUsage ) {
 if ( $wgDBname === 'testcommonswiki' ) {
 	$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension1', 'db' => false ];
 	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension1', 'db' => false ];
+	$wgGlobalUsageSharedRepoWiki = 'testcommonswiki';
 }
 
 wfLoadExtension( 'TemplateStyles' );
