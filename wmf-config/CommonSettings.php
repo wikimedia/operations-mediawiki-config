@@ -2977,18 +2977,10 @@ if ( $wmgUseGlobalUsage ) {
 	$wgGlobalUsagePurgeBacklinks = true;
 }
 
+// T421914
 if ( $wgDBname === 'testcommonswiki' ) {
-	$wgVirtualDomainsMapping['virtual-externallinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-templatelinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-imagelinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-existencelinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-interwikilinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-pagelinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-categorylinks'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension1', 'db' => false ];
-
-	// Most of the above config will be removed in favor of this
 	$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension1', 'db' => false ];
+	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension1', 'db' => false ];
 }
 
 wfLoadExtension( 'TemplateStyles' );
