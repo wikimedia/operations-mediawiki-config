@@ -893,11 +893,6 @@ if ( $wmgUseTimedMediaHandlerShellbox && $wmgLocalServices['shellbox-video'] ) {
 	$wgShellboxUrls['timedmediahandler'] = $wmgLocalServices['shellbox-video'];
 }
 
-// Use shellbox on k8s for remote ICU collation. Temporary for T419049 -- ICU 72 upgrade.
-if ( ClusterConfig::getInstance()->isK8s() ) {
-	$wgShellboxUrls['icu-collation'] = $wmgLocalServices['shellbox-icu'];
-}
-
 // Disable $wgMaxImageArea checks, Thumbor uses a timeout instead
 // of a size limit (T291014#7367570)
 $wgMaxImageArea = false;

@@ -83,8 +83,6 @@ return [
 		'shellbox-syntaxhighlight' => null,
 		'shellbox-timeline' => null,
 		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
-		// Temporary for T419049 -- ICU 72 upgrade.
-		'shellbox-icu' => null,
 		// No envoy in beta cluster?
 		'mwapi' => null,
 		'test-kitchen' => 'https://test-kitchen-next.wikimedia.org',
