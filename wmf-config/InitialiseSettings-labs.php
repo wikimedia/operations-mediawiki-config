@@ -2388,6 +2388,18 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
 			'wikidatawiki' => false,
 		],
+		// T421850 - prototype displaying links to WikiProjects on Item pages
+		'wmgWikibaseTmpWikiProjectsLinking' => [
+			'wikidatawiki' => [
+				[
+					'propertyIds' => [
+						'P235781', 'P253125', 'P62013'
+					],
+					'href' => 'https://www.wikidata.org/wiki/Wikidata:WikiProject_Music',
+					'text' => 'WikiProject Music',
+				],
+			],
+		],
 		// T415516 temporary feature flag
 		'wmgWikibaseTmpGraphQL' => [
 			'default' => false,

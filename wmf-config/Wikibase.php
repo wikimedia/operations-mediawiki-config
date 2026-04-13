@@ -270,6 +270,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpGraphQL ) ) {
 		$wgWBRepoSettings['tmpEnableGraphQL'] = $wmgWikibaseTmpGraphQL;
 	}
+
+	// T421850 prototype displaying links to WikiProjects on item pages
+	if ( isset( $wmgWikibaseTmpWikiProjectsLinking ) ) {
+		$wgWBRepoSettings[ 'tmpWikiProjectsLinking' ] = $wmgWikibaseTmpWikiProjectsLinking;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
