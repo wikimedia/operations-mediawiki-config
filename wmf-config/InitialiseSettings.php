@@ -11975,6 +11975,14 @@ return [
 		NS_CATEGORY,
 		102, /* Extension */
 		106 /*Skin:*/
+	],
+	'bnwikisource' => [
+		NS_MAIN, // T416800
+		4, /* Project */ // T423198
+		100, /* Author */ // T423198
+		104, /* Page */ // T423198
+		106, /* Portal */ // T423198
+		114 /* Translation */ // T423198
 	]
 ],
 'wgPageImagesLeadSectionOnly' => [
