@@ -13748,6 +13748,9 @@ return [
 	'idwiki' => true,
 	// T406907
 	'enwiki' => true,
+	// T423173
+	'itwiki' => true,
+	'plwiki' => true,
 ],
 
 // T403798
