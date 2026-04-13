@@ -3063,7 +3063,6 @@ return [
 					'provide_values' => [
 						'performer_id',
 						'performer_name',
-						'performer_active_browsing_session_token',
 						'performer_session_id',
 						'agent_client_platform_family',
 					],
@@ -3133,7 +3132,6 @@ return [
 						'performer_language',
 						'performer_language_variant',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 					],
 				],
@@ -3160,7 +3158,6 @@ return [
 						'performer_language_variant',
 						'performer_pageview_id',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 					],
 				],
 			],
@@ -3185,7 +3182,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 						'performer_is_bot',
 						'performer_is_logged_in',
@@ -3242,7 +3238,6 @@ return [
 						'performer_id',
 						'performer_name',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_pageview_id',
 						'performer_language',
 						'performer_language_variant',
@@ -3274,7 +3269,6 @@ return [
 						'page_id',
 						'page_revision_id',
 						'page_title',
-						'performer_active_browsing_session_token',
 						'performer_edit_count',
 						'performer_edit_count_bucket',
 						'performer_groups',
@@ -3308,7 +3302,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 						'performer_is_bot',
 						'performer_is_logged_in',
@@ -3345,7 +3338,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_is_logged_in',
 						'performer_is_temp',
 						'performer_language',
@@ -3374,7 +3366,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 						'performer_is_bot',
 						'performer_is_logged_in',
@@ -3408,7 +3399,7 @@ return [
 						'agent_client_platform_family',
 						'page_namespace',
 						'page_namespace_id',
-						'performer_active_browsing_session_token',
+						'performer_session_id',
 						'performer_edit_count_bucket',
 						'performer_groups',
 						'performer_language',
@@ -3446,30 +3437,6 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-
-						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
-						'agent_client_platform',
-						'agent_client_platform_family',
-
-						// Make user authentication status available as a dimension during analysis.
-						'performer_is_logged_in',
-						'performer_is_temp',
-
-						// Enable the calculation of the "click-through per page visit" generic metric.
-						'performer_pageview_id',
-
-						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
-						// session ID" contextual attribute so that analysts can calculate all three flavors of
-						// click-through rate (see
-						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
-						'performer_active_browsing_session_token',
-
-						'mediawiki_skin',
-						'mediawiki_database',
-					],
-				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
 				],
@@ -3489,30 +3456,6 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base_with_ip',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-
-						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
-						'agent_client_platform',
-						'agent_client_platform_family',
-
-						// Make user authentication status available as a dimension during analysis.
-						'performer_is_logged_in',
-						'performer_is_temp',
-
-						// Enable the calculation of the "click-through per page visit" generic metric.
-						'performer_pageview_id',
-
-						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
-						// session ID" contextual attribute so that analysts can calculate all three flavors of
-						// click-through rate (see
-						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
-						'performer_active_browsing_session_token',
-
-						'mediawiki_skin',
-						'mediawiki_database',
-					],
-				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
 					'enrich_fields_from_http_headers' => [
@@ -3629,7 +3572,6 @@ return [
 						'mediawiki_skin',
 						'page_content_language',
 						'page_namespace_id',
-						'performer_active_browsing_session_token',
 						'performer_edit_count_bucket',
 						'performer_is_bot',
 						'performer_is_logged_in',
@@ -3666,7 +3608,6 @@ return [
 						'mediawiki_skin',
 						'page_content_language',
 						'page_namespace_id',
-						'performer_active_browsing_session_token',
 						'performer_edit_count_bucket',
 						'performer_is_bot',
 						'performer_is_logged_in',
