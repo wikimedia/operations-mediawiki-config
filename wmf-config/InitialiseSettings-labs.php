@@ -2165,9 +2165,6 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],
-		'wgCampaignEventsEnableEventGoals' => [
-			'default' => true,
-		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763

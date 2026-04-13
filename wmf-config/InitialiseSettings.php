@@ -13433,10 +13433,6 @@ return [
 	'wikifunctionswiki' => false, // T409760
 ],
 
-'wgCampaignEventsEnableEventGoals' => [
-	'default' => true,
-],
-
 'wgCdnMatchParameterOrder' => [
 	'default' => false, // T314868
 ],
