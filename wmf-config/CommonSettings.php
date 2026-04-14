@@ -2134,8 +2134,16 @@ if ( $wmgEnableCaptcha ) {
 					'HCaptchaSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
 				],
 			];
-			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result )
-				use ( $wmgEmergencyCaptcha, &$wgHCaptchaEnabledInMobileFrontend ) {
+
+			if ( $wmgEnableHCaptchaVisualEditorIntegration ) {
+				$wgHCaptchaVisualEditorOnLoadIntegrationEnabled = true;
+			}
+
+			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
+				$wmgEmergencyCaptcha,
+				&$wgHCaptchaEnabledInMobileFrontend,
+				$wmgEnableHCaptchaVisualEditorIntegration
+			) {
 				$services = MediaWikiServices::getInstance();
 				$simpleCaptcha = \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action );
 				// T404204 - Check hCaptcha availability once, reuse below.
@@ -2149,11 +2157,14 @@ if ( $wmgEnableCaptcha ) {
 					$result = false;
 				}
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-					// Check if this is an approved interface that supports
-					// hCaptcha (T419572).
-					$editorInterface = RequestContext::getMain()->getRequest()->getRawVal( 'editorinterface' );
-					$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
-						&& $editorInterface === 'MobileFrontend-SourceEditor';
+					$request = RequestContext::getMain()->getRequest();
+					if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
+						$isApprovedInterface = $wmgEnableHCaptchaVisualEditorIntegration;
+					} else {
+						$editorInterface = $request->getRawVal( 'editorinterface' );
+						$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
+							&& $editorInterface === 'MobileFrontend-SourceEditor';
+					}
 
 					if ( !$isApprovedInterface || !$hCaptchaAvailable ) {
 						// Most API edit interfaces don't support hCaptcha yet.
@@ -2161,10 +2172,12 @@ if ( $wmgEnableCaptcha ) {
 						// override this, but will use FancyCaptcha.
 						$result = false;
 
-						// Reset the flag, so that the frontend code does not
-						// try to load hCaptcha support while the healthcheck
-						// causes it to be disabled in the backend.
-						$wgHCaptchaEnabledInMobileFrontend = false;
+						if ( !$hCaptchaAvailable ) {
+							// Reset the flag, so that the frontend code does not
+							// try to load hCaptcha support while the healthcheck
+							// causes it to be disabled in the backend.
+							$wgHCaptchaEnabledInMobileFrontend = false;
+						}
 					}
 				}
 				// Make sure that the wmgEmergencyCaptcha settings is still respected.
@@ -2224,7 +2237,10 @@ if ( $wmgEnableCaptcha ) {
 		$wgCaptchaTriggers['contactpage'] = true;
 	}
 
-	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use ( &$wgHCaptchaEnabledInMobileFrontend ) {
+	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
+		&$wgHCaptchaEnabledInMobileFrontend,
+		$wmgEnableHCaptchaVisualEditorIntegration
+	) {
 		if ( in_array( $action, [ 'edit', 'create', 'addurl' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 			// Default to FancyCaptcha for API edits, since most API edit
 			// interfaces don't support hCaptcha yet (T419572).
@@ -2232,9 +2248,14 @@ if ( $wmgEnableCaptcha ) {
 
 			// Allow hCaptcha for approved interfaces. Don't return early
 			// so the T404204 failover check below can still run.
-			$editorInterface = RequestContext::getMain()->getRequest()->getRawVal( 'editorinterface' );
-			$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
-				&& $editorInterface === 'MobileFrontend-SourceEditor';
+			$request = RequestContext::getMain()->getRequest();
+			if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
+				$isApprovedInterface = $wmgEnableHCaptchaVisualEditorIntegration;
+			} else {
+				$editorInterface = $request->getRawVal( 'editorinterface' );
+				$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
+					&& $editorInterface === 'MobileFrontend-SourceEditor';
+			}
 
 			if ( $isApprovedInterface ) {
 				// Enable HCaptcha on edits if they come from the MobileFrontend

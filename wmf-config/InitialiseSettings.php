@@ -3860,6 +3860,10 @@ return [
 	'default' => false,
 	'testwiki' => true,
 ],
+'wmgEnableHCaptchaVisualEditorIntegration' => [
+	'default' => false,
+	'testwiki' => true,
+],
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
 	'testwiki' => true,
