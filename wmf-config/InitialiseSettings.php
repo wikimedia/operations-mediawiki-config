@@ -9837,6 +9837,8 @@ return [
 	'trwiki' => true,
 	'bnwiki' => true,
 	'azwiki' => true,
+	// T423042
+	'enwiki' => true,
 ],
 
 'wgReportIncidentEnableInstrumentation' => [
@@ -9875,6 +9877,10 @@ return [
 		// Portuguese Wikipedia has DiscussionTools enabled in the Project namespace (T382061)
 		NS_PROJECT,
 	],
+	'enwiki' => [
+		// Only deploy to Event talk on enwiki (T423042)
+		1729, // NS_EVENT_TALK
+	]
 ],
 
 'wgReportIncidentDeveloperMode' => [
