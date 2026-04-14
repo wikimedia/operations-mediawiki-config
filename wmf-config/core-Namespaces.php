@@ -5617,8 +5617,8 @@ return [
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikimaniawiki' => [
-		138 => 1, // 2024, T332782
-		140 => 1, // 2025, T389729
+		142 => 1, // 2026, T423278
+		144 => 1, // 2027, T423278
 	],
 	'+zhwikisource' => [
 		100 => 1, // T308393, Portal
