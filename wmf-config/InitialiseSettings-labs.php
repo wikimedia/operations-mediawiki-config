@@ -2393,5 +2393,9 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'testwiki' => true,
 		],
+
+		'wmgUseArticleGuidance' => [
+			'default' => true, // T423295
+		],
 	];
 } # wmfGetOverrideSettings()

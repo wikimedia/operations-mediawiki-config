@@ -13807,5 +13807,9 @@ return [
 		'default' => 3600, // 1 hour.
 		'editsitejs' => 600, // 10 minutes.
 	],
-]
+],
+
+'wmgUseArticleGuidance' => [
+	'default' => false,
+],
 ];

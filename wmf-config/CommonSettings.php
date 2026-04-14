@@ -3058,6 +3058,11 @@ if ( $wmgUseArticleCreationWorkflow ) {
 	wfLoadExtension( 'ArticleCreationWorkflow' );
 }
 
+// ArticleGuidance (T423295, T417200)
+if ( $wmgUseArticleGuidance ) {
+	wfLoadExtension( 'ArticleGuidance' );
+}
+
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgThumbnailSteps = [ 20, 40, 60, 120, 250, 330, 500, 960, 1280, 1920, 3840 ];
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
