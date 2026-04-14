@@ -4904,6 +4904,21 @@ return [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 			'demote' => true,
 		],
+		// T423118
+		'oauthadmin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'steward' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+	],
+	'+foundationwiki' => [
+		'editor' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'translationadmin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
 	],
 	'+testwiki' => [
 		'securitytester2' => [
