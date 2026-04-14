@@ -4193,8 +4193,10 @@ Wikivoyage:
     wikimaniawiki:
         comment_2x: T194340, T337044
         no_icon: true
-        local_wordmark: true
-        comment_wordmark: T286405
+        commons_wordmark: 'File:Wikimania 2026 simple wordmark in black.svg'
+        comment_wordmark: T286405, T413331
+        width_wordmark: 127
+        height_wordmark: 50
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
         commons_icon: 'File:Wikitech-logo-vector2022.svg'
