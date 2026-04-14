@@ -5092,7 +5092,9 @@ return [
 		'interface-admin' => 'Wikiaineisto:Ylläpitäjien ilmoitustaulu',
 	],
 	'+foundationwiki' => [
-		'interface-admin' => 'Talk:Home',
+		'editor' => 'Wikimedia:Accounts policy',
+		'interface-admin' => 'Wikimedia:Accounts policy',
+		'translationadmin' => 'Wikimedia:Accounts policy',
 	],
 	'+frpwiki' => [
 		'interface-admin' => 'Vouiquipèdia:Requéta ux administrators',
