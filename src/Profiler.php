@@ -143,7 +143,7 @@ class Profiler {
 				$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
 
 				// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
-				// appropiate for exposing publicly to the web.
+				// appropriate for exposing publicly to the web.
 				// This intentionally omits 'REQUEST_URI' (added later)
 				$serverKeys = array_flip( [
 					'HTTP_X_REQUEST_ID', 'UNIQUE_ID',
@@ -332,7 +332,7 @@ class Profiler {
 			//   When a socket read takes longer than $timeout, php-redis throws.
 			//   We catch these to avoid impacting the web response.
 			//   As of Feb 2024, these is rare (a few per day) which is an acceptable
-			//   loss for the milions of daily samples for flame graphs.
+			//   loss for the millions of daily samples for flame graphs.
 			$error = 'exception';
 			if ( $e->getMessage() !== 'Connection timed out' ) {
 				trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_WARNING );

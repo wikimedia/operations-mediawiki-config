@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# etcd.php provides wmfSetupEtcd() which CommonSettings.php usees
+# etcd.php provides wmfSetupEtcd() which CommonSettings.php uses
 # to load certain configuration variables from Etcd.
 #
 # This for PRODUCTION.

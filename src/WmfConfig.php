@@ -260,7 +260,7 @@ class WmfConfig {
 		$overrides = wmfGetOverrideSettings();
 		foreach ( $overrides as $key => $value ) {
 			if ( substr( $key, 0, 1 ) == '-' ) {
-				// Settings prefixed with - are completely overriden
+				// Settings prefixed with - are completely overridden
 				$settings[substr( $key, 1 )] = $value;
 			} elseif ( isset( $settings[$key] ) ) {
 				$settings[$key] = array_merge( $settings[$key], $value );
