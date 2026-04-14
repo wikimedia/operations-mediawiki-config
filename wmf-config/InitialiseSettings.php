@@ -2403,7 +2403,9 @@ return [
 		'WikibaseQualityConstraints' => 'debug',
 		'WikiEditor' => 'info',
 		'WikiLambda' => 'warning',
-		'WikiLambdaClient' => 'info',
+		'WikiLambdaCache' => 'debug',
+		'WikiLambdaClient' => 'debug',
+		'WikiLambdaAbstract' => 'debug',
 		'Wikisource' => 'info',
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'xff' => [ 'logstash' => false ],
