@@ -2040,7 +2040,6 @@ return [
 	'itwiktionary' => 10, // T24274
 	'jawiki' => 10, // T42270
 	'kowiki' => 10, // T46894
-	'lbwiki' => 10, // T423102
 	'metawiki' => 5, // T211188
 	'nowiki' => 20, // T71302
 	'plwiki' => 10,
