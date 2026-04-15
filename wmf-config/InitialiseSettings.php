@@ -9490,6 +9490,9 @@ return [
 	'cswiki' => [ // T353049
 		'userGroups' => [ 'autopatrolled', 'sysop' ]
 	],
+	'lbwiki' => [ // T423100
+		'userGroups' => [ 'autoconfirmed', 'confirmed', 'sysop' ]
+	],
 	'plwiki' => [ // T362756
 		'userGroups' => [ 'editor', 'sysop' ]
 	],
