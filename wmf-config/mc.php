@@ -45,12 +45,9 @@ $wgWANObjectCache = [
 $wgMainCacheType = 'mcrouter';
 
 // (T297815) Configure Wikifunctions's special Memcache cluster, directly-accessed
-$eqiadDCWFMC = [
-	'eqiad' => [ 'host' => '127.0.0.1', 'port' => '11213', 'prefix' => '/eqiad/wf-wan/' ]
-];
-$codfwDCWFMC = [
-	'codfw' => [ 'host' => '127.0.0.1', 'port' => '11213', 'prefix' => '/codfw/wf-wan/' ]
-];
+[ $wfMCHost, $wfMCPort ] = explode( ':', $_SERVER['MCROUTER_SERVER'] ?? '127.0.0.1:11213' );
+$eqiadDCWFMC = [ 'eqiad' => [ 'host' => $wfMCHost, 'port' => $wfMCPort, 'prefix' => '/eqiad/wf-wan/' ] ];
+$codfwDCWFMC = [ 'codfw' => [ 'host' => $wfMCHost, 'port' => $wfMCPort, 'prefix' => '/codfw/wf-wan/' ] ];
 
 // This sets the order; the local datacenter (cheapest to read) is listed first.
 $wgWikiLambdaObjectCaches = ( $wmgDatacenter === 'eqiad' )
