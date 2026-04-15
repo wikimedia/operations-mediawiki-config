@@ -36,46 +36,24 @@ if ( $wmgRealm == 'labs' ) {
 	$wgSitename = "Beta $wgSitename";
 
 	// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
-	$wmgPrivilegedPolicy = [
+	$wgWMCPrivilegedPasswordPolicy = [
 		'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 		'MinimumPasswordLengthToLogin' => [ 'value' => 1, 'suggestChangeOnLogin' => true ],
 		'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 	];
-	foreach ( $wmgPrivilegedGroups as $group ) {
-		// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
-		// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
-		if ( $group === 'user' ) {
-			// For e.g. private and fishbowl wikis; covers 'user' in password policies
-			$group = 'default';
-		}
-		$wgPasswordPolicy['policies'][$group] = array_merge(
-			$wgPasswordPolicy['policies'][$group] ?? [],
-			$wmgPrivilegedPolicy
-		);
-	}
 
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 		'value' => 8,
 		'suggestChangeOnLogin' => false,
 	];
 
-	if ( $wmgUseCentralAuth ) {
-		// Enforce password policy when users login on other wikis; also for sensitive global groups
-		// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
-		$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-			$privilegedGroups = wmfGetPrivilegedGroups( $user );
-			if ( $privilegedGroups ) {
-				$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
-				if ( in_array( 'staff', $privilegedGroups, true ) ) {
-					$effectivePolicy['MinimumPasswordLengthToLogin'] = [
-						'value' => 10,
-						'suggestChangeOnLogin' => true,
-					];
-				}
-			}
-			return true;
-		};
+	// Require 10 byte password for staff.
+	$wgCentralAuthGlobalPasswordPolicies['staff']['MinimumPasswordLengthToLogin'] = [
+		'value' => 10,
+		'suggestChangeOnLogin' => true,
+	];
 
+	if ( $wmgUseCentralAuth ) {
 		// Allows automatic account vanishing (for qualifying users)
 		$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
 		$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';

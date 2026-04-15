@@ -59,7 +59,6 @@ use MediaWiki\RCFeed\UDPRCFeedEngine;
 use MediaWiki\Session\SessionManager;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
-use MediaWiki\User\UserIdentity;
 use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\DBRecordCache;
 use Wikimedia\MWConfig\ServiceConfig;
@@ -798,9 +797,10 @@ $wgPasswordConfig['pbkdf2'] = [
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
-//
-// For global policies, see $wgCentralAuthGlobalPasswordPolicies below
-$wmgPrivilegedPolicy = [
+
+// See T104371 and [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
+// See also wgWMCPrivilegedGroups, wgWMCPrivilegedGlobalGroups.
+$wgWMCPrivilegedPasswordPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 	// With MinimumPasswordLengthToLogin, if the length of the password is <= the value
 	// of the policy, the user will be forced to use Special:PasswordReset or similar
@@ -808,15 +808,6 @@ $wmgPrivilegedPolicy = [
 	'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 	'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
-foreach ( $wmgPrivilegedGroups as $group ) {
-	// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
-	// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
-	if ( $group === 'user' ) {
-		$group = 'default'; // For e.g. private and fishbowl wikis; covers 'user' in password policies
-	}
-	$wgPasswordPolicy['policies'][$group] = array_merge( $wgPasswordPolicy['policies'][$group] ?? [],
-		$wmgPrivilegedPolicy );
-}
 
 $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 	'value' => 8,
@@ -828,22 +819,10 @@ $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList'] = [
 	'suggestChangeOnLogin' => true,
 ];
 
-// Enforce password policy when users login on other wikis; also for sensitive global groups
-// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
-if ( $wmgUseCentralAuth ) {
-	$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-		$privilegedGroups = wmfGetPrivilegedGroups( $user );
-		if ( $privilegedGroups ) {
-			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
-
-			if ( in_array( 'staff', $privilegedGroups, true ) ) {
-				$effectivePolicy['MinimumPasswordLengthToLogin'] = [
-					'value' => 10,
-				];
-			}
-		}
-	};
-}
+// Require 10 byte password for staff.
+$wgCentralAuthGlobalPasswordPolicies['staff']['MinimumPasswordLengthToLogin'] = [
+	'value' => 10,
+];
 
 if ( $wmgDisableAccountCreation ) {
 	$wgGroupPermissions['*']['createaccount'] = false;
@@ -2453,15 +2432,6 @@ if ( $wmgUseCentralAuth ) {
 	// Link global block blockers to user pages on Meta
 	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
 
-	// See T104371 and [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
-	foreach ( $wmgPrivilegedGlobalGroups as $group ) {
-		$wgCentralAuthGlobalPasswordPolicies[$group] = $wmgPrivilegedPolicy;
-		if ( $group === 'staff' ) {
-			// Require 10 byte password for staff.
-			$wgCentralAuthGlobalPasswordPolicies[$group]['MinimumPasswordLengthToLogin'] = 10;
-		}
-	}
-
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
 	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => 'metawiki' ];
@@ -2525,55 +2495,9 @@ wfLoadExtension( 'DismissableSiteNotice' );
 $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
-/**
- * Get a list of "privileged" groups and global groups the user is part of.
- * Typically this means groups with powers comparable to admins and above
- * (block, delete, edit i18n messages etc).
- * On SUL wikis, this will take into account group memberships on any wiki,
- * not just the current one.
- *
- * @param UserIdentity $user
- * @return string[] Any elevated/privileged groups the user is a member of
- *
- * @note This method is also used in WikimediaEvents.
- */
-function wmfGetPrivilegedGroups( $user ) {
-	global $wmgUseCentralAuth, $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups;
-
-	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $user->getName() )->exists() ) {
-		$centralUser = CentralAuthUser::getInstanceByName( $user->getName() );
-		try {
-			$groups = array_intersect(
-				array_merge( $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups ),
-				array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
-			);
-		} catch ( Exception $e ) {
-			// Don't block login if we can't query attached (T119736)
-			MWExceptionHandler::logException( $e );
-			$groups = array_merge(
-				MediaWikiServices::getInstance()
-					->getUserGroupManager()
-					->getUserGroups( $user ),
-				$centralUser->getGlobalGroups()
-			);
-		}
-	} else {
-		// use effective groups, as we set 'user' as privileged for private/fishbowl wikis
-		$groups = array_intersect(
-			$wmgPrivilegedGroups,
-			MediaWikiServices::getInstance()
-				->getUserGroupManager()
-				->getUserEffectiveGroups( $user )
-			);
-	}
-	return $groups;
-}
-
 $wgHooks['GetSecurityLogContext'][] = static function ( array $info, array &$context ) {
 	/** @var WebRequest $request */
 	$request = $info['request'];
-	/** @var ?UserIdentity $user */
-	$user = $info['user'] ?? null;
 
 	$headers = [
 		// https://wikitech.wikimedia.org/wiki/CDN/Backend_api
@@ -2604,13 +2528,6 @@ $wgHooks['GetSecurityLogContext'][] = static function ( array $info, array &$con
 		'geocookie' => $request->getCookie( 'GeoIP', '' ),
 		'x-provenance' => $provenance,
 	];
-	if ( $user ) {
-		$privilegedGroups = wmfGetPrivilegedGroups( $user );
-		$context += [
-			'user_is_privileged' => (bool)$privilegedGroups,
-			'user_privileged_groups' => implode( ', ', $privilegedGroups ),
-		];
-	}
 };
 
 // log suspicious or sensitive login attempts

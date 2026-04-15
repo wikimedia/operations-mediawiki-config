@@ -3381,8 +3381,8 @@ return [
 	],
 ],
 
-'wmgPrivilegedGroups' => [
-	// Default should include any privileged group on any SUL wiki. Ideally we'd check for all wikis memberships on that wiki vs. wmgPrivilegedGroups for that wiki, but
+'wgWMCPrivilegedGroups' => [
+	// Default should include any privileged group on any SUL wiki. Ideally we'd check for all wikis memberships on that wiki vs. wgWMCPrivilegedGroups for that wiki, but
 	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
 	'default' => [
 		// core or extension groups
@@ -3398,7 +3398,7 @@ return [
 	'+private' => [ 'user' ],
 ],
 
-'wmgPrivilegedGlobalGroups' => [
+'wgWMCPrivilegedGlobalGroups' => [
 	'default' => [
 		'abusefilter-helper',
 		'abusefilter-maintainer',
