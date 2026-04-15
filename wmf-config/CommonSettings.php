@@ -3018,39 +3018,35 @@ $wgTemplateStylesAllowedUrls = [
 ];
 
 wfLoadExtension( 'CodeMirror' );
-if ( $wmgCodeMirrorReplaceCodeEditor ) {
-	// CodeMirror instead of CodeEditor (T373711)
-	// We don't set $wgCodeMirrorV6 as that's controlled by the beta feature.
-	$wgCodeMirrorEnabledModes['javascript'] = true;
-	$wgCodeMirrorEnabledModes['json'] = true;
-	$wgCodeMirrorEnabledModes['css'] = true;
-	$wgCodeMirrorEnabledModes['lua'] = true;
-	$wgCodeMirrorEnabledModes['vue'] = true;
-	// CodeEditor
-	$wgCodeEditorEnabledModes['javascript'] = false;
-	$wgCodeEditorEnabledModes['json'] = false;
-	$wgCodeEditorEnabledModes['css'] = false;
-	$wgCodeEditorEnabledModes['lua'] = false;
-	$wgCodeEditorEnabledModes['vue'] = false;
-	// AbuseFilter
-	$wgAbuseFilterUseCodeEditor = false;
-	$wgAbuseFilterUseCodeMirror = true;
-	// Gadgets
-	$wgGadgetsDefinitionsUseCodeEditor = false;
-	$wgGadgetsDefinitionsUseCodeMirror = true;
-	// JsonConfig
-	$wgJsonConfigUseCodeEditor = false;
-	$wgJsonConfigUseCodeMirror = true;
-	// Scribunto
-	$wgScribuntoUseCodeEditor = false;
-	$wgScribuntoUseCodeMirror = true;
-	// TemplateStyles
-	$wgTemplateStylesUseCodeEditor = false;
-	$wgTemplateStylesUseCodeMirror = true;
-	// UploadWizard
-	$wgUploadWizardUseCodeEditor = false;
-	$wgUploadWizardUseCodeMirror = true;
-}
+// CodeMirror instead of CodeEditor (T419332)
+$wgCodeMirrorEnabledModes['javascript'] = true;
+$wgCodeMirrorEnabledModes['json'] = true;
+$wgCodeMirrorEnabledModes['css'] = true;
+$wgCodeMirrorEnabledModes['lua'] = true;
+$wgCodeMirrorEnabledModes['vue'] = true;
+$wgCodeEditorEnabledModes['javascript'] = false;
+$wgCodeEditorEnabledModes['json'] = false;
+$wgCodeEditorEnabledModes['css'] = false;
+$wgCodeEditorEnabledModes['lua'] = false;
+$wgCodeEditorEnabledModes['vue'] = false;
+// AbuseFilter
+$wgAbuseFilterUseCodeEditor = false;
+$wgAbuseFilterUseCodeMirror = true;
+// Gadgets
+$wgGadgetsDefinitionsUseCodeEditor = false;
+$wgGadgetsDefinitionsUseCodeMirror = true;
+// JsonConfig
+$wgJsonConfigUseCodeEditor = false;
+$wgJsonConfigUseCodeMirror = true;
+// Scribunto
+$wgScribuntoUseCodeEditor = false;
+$wgScribuntoUseCodeMirror = true;
+// TemplateStyles
+$wgTemplateStylesUseCodeEditor = false;
+$wgTemplateStylesUseCodeMirror = true;
+// UploadWizard
+$wgUploadWizardUseCodeEditor = false;
+$wgUploadWizardUseCodeMirror = true;
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
@@ -3789,7 +3785,6 @@ wfLoadExtension( 'CodeEditor' );
 if ( $wmgUseScribunto ) {
 	wfLoadExtension( 'Scribunto' );
 	$wgScribuntoUseGeSHi = true;
-	$wgScribuntoUseCodeEditor = true;
 	$wgScribuntoGatherFunctionStats = true;  // ori, 29-Oct-2015
 	$wgScribuntoSlowFunctionThreshold = 0.99;
 
@@ -3900,8 +3895,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
-	// For CodeEditor and Scribunto:
-	$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
 		$wgTranslatePageTranslationULS = true;
 	}

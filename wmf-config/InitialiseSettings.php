@@ -6677,7 +6677,6 @@ return [
 		'proofreadpage-editinsequence', // [ProofRP] 2023-08-29 - Edit in sequence
 		'vector-2022-beta-feature', // [WebTeam] 2023-12-06 - Accessibility for Reading (Vector 2022)
 		'visualeditor-collab', // [Editing] 2024-06-18 - Collaborative editing
-		'codemirror-beta-feature-enable', // [Community_Tech] 2024-11-26 - Improved Syntax Highlighting
 		'readinglistsbeta', // [Reading] 2025-05-20 - Reading List feature
 		'visualeditor-editcheck-suggestions', // [Editing] 2026-02-10 - Visual Editor edit check suggestions mode,
 		'uls-rewrite', // [Language and Product Localization] 2026-03-17 - Universal language selector rewrite.
@@ -13293,31 +13292,6 @@ return [
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
-],
-
-// T373711
-'wmgCodeMirrorReplaceCodeEditor' => [
-	'default' => true,
-],
-
-'wgCodeMirrorV6' => [
-	'default' => false,
-	'officewiki' => true, // T357795
-	'testwiki' => true, // T357795
-	'mediawikiwiki' => true, // T357795#9715433
-	'hewiki' => true, // T357795, T347211#9737653
-],
-
-'wgCodeMirrorLineNumberingNamespaces' => [
-	'default' => [ NS_TEMPLATE ],
-	// T280027: Enable line numbering on all namespaces, for pilot wikis.
-	'cawiki' => null, // T280027
-	'dewiki' => null, // T280027
-	'hewiki' => null, // T347211#9737653
-	'group0' => null, // T280027
-	'wikitech' => null, // T280027
-	// T302852: Enable on all namespaces, by request.
-	'twwiki' => null, // T302852
 ],
 
 'wgParserEnableUserLanguage' => [

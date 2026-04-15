@@ -2288,15 +2288,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T373711
-		'-wgCodeMirrorV6' => [
-			'default' => false,
-		],
-
-		'wgCodeMirrorLineNumberingNamespaces' => [
-			'default' => null,
-		],
-
 		'wmgUseCommunityConfiguration' => [
 			'default' => true,
 		],
