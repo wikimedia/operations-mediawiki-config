@@ -11961,12 +11961,9 @@ return [
 
 'wmgUsePageImages' => [
 	'default' => true,
-	'wikibooks' => false, // T68455
-	'wikisource' => false, // T68455
+	// T417538
 	'wikitech' => false,
 	'lockeddown' => false,
-	'bnwikisource' => true, // T416800
-	'hewikisource' => true, // T362851
 ],
 'wgPageImagesNamespaces' => [
 	'default' => [ NS_MAIN ],
