@@ -13088,6 +13088,9 @@ return [
 			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Math API'
 		],
+		'attribution.v0-beta' => [
+			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
+		],
 	],
 	'+growthexperiments' => [
 		'growthexperiments.v0' => [
@@ -13095,9 +13098,6 @@ return [
 		],
 	],
 	'+testwiki' => [
-		'attribution.v0-beta' => [
-			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
-		],
 		'wmf-analytics-commons' => [
 			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
 			'name' => 'Wikimedia Commons Impact Metrics API',
