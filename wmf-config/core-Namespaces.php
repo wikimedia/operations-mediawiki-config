@@ -1535,6 +1535,10 @@ return [
 		'К' => NS_CATEGORY, // T197565
 		'М' => 828, // T197565
 	],
+	'+sahwikisource' => [
+		'Author' => 102, // T423374
+		'Author_talk' => 103,
+	],
 	'+sawiki' => [
 		'WT' => NS_PROJECT_TALK,
 		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
@@ -3871,6 +3875,10 @@ return [
 	'ruwikisource' => [
 		102 => 'Автор', // T395193 - Author
 		103 => 'Обсуждение_автора',
+	],
+	'sahwikisource' => [
+		102 => 'Ааптар', // T423374 Author
+		103 => 'Ааптар_ырытыыта', // T423374 Author talk
 	],
 	'sawikisource' => [
 		100 => 'प्रवेशद्वारम्', // T235343 - Portal
