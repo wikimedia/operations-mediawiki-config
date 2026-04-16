@@ -2317,8 +2317,13 @@ Wiktionary:
         comment: T343084
         comment_2x: T343084
     siwiktionary:
+        commons: 'File:WiktionarySi.svg'
         comment_2x: T150618
+        commons_icon: 'File:Wiktionary-icon-si.svg'
+        comment_icon: T342173
         local_wordmark: true
+        commons_tagline: 'File:Wiktionary-tagline-si.svg'
+        comment_tagline: T342173
     skwiktionary:
         comment: T45240
         comment_2x: T150618

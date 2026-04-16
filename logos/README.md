@@ -9,14 +9,16 @@ You need to install:
 * [pngquant](https://github.com/kornelski/pngquant) (usually packaged)
 * [zopflipng](https://github.com/google/zopfli) (usually packaged)
 * [svgo](https://github.com/svg/svgo)
-* [rsvg-convert](https://wiki.gnome.org/Projects/LibRsvg) (part of the `librsvg` package)
+* [rsvg-convert](https://gitlab.gnome.org/GNOME/librsvg) (part of the `librsvg` package)
 
 Note that you need the pngquant and zopflipng OS packages, not the Python packages.
 
 ### Adding a new logo
 Add or update the existing section in config.yaml for that wiki. Ensure a
 `commons` setting is present that points to the SVG on Wikimedia Commons. The
-thumbnails will be downloaded from there. Run:
+SVG file should be in the ratio of **no more than 1:1.15**. i.e. At 135px width,
+the SVG file should not be more than 155px in height. The thumbnails will be
+downloaded from there. Run:
 
 `tox -e logos -- update {wikiname}`
 
@@ -24,7 +26,7 @@ This will download new PNGs from Commons, compress them and update logos.php.
 
 When adding or modifying logos, it is highly recommended to add a `comment`
 setting (normally Phabricator task ID) in config.yaml to explain the change.
-You can also add it in `comment_1_5x` and `comment_2x` fields if necessary.
+You can also add it in the `comment_2x` field if necessary.
 
 ### Adding a new wordmark/tagline
 Similar to adding a new logo, but you need to add a `commons_wordmark`
@@ -121,16 +123,15 @@ If you just need to update logos.php after tweaking config.yaml, run:
 `tox -e logos -- generate && composer buildLogoHTML`.
 
 ### Schema
-config.yaml contains the definitions for the 1x, 1.5x, and 2x versions of wiki
-logos (`$wgLogos`), and the wordmark/tagline definitions. It contains a Python
-script to generate the PHP MediaWiki configuration in `../wmf-config/logos.php`.
+config.yaml contains the definitions for the 1x and 2x versions of wiki logos
+(`$wgLogos`), and the wordmark/tagline definitions. It contains a Python script
+to generate the PHP MediaWiki configuration in `../wmf-config/logos.php`.
 
 By default, the name of the logos is expected to follow the format of:
 * `{name}.png`
-* `{name}-1.5x.png`
 * `{name}-2x.png`
 
-If no 1.5x or 2x versions are available, set the `no_1_5x` and `no_2x` keys.
+If no 2x version is available, set the `no_2x` key.
 
 For special occasions, a different logo can be specified with the `selected` key.
 
