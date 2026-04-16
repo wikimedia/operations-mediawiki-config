@@ -567,5 +567,16 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseMultiTitle ) {
 		wfLoadExtension( 'MultiTitle' );
 	}
+
+	// T420604 - test enforcing CSP
+	if ( $wmgUseCSP ) {
+		$cspConfig = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => $wmgApprovedContentSecurityPolicyDomains['default'],
+			'object-src' => 'none',
+			];
+		$wgCSPHeader = $cspConfig;
+	}
 }
 // end safeguard

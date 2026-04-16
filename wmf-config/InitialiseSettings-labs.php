@@ -312,8 +312,6 @@ function wmfGetOverrideSettings() {
 				'CommunityConfiguration' => 'info',
 				'communityrequests' => 'debug',
 				'confirmemail' => [ 'udp2log' => false, 'logstash' => 'info' ],
-				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
-				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
@@ -1973,22 +1971,24 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wmgUseCSP' => [
-			'default' => true,
-		],
-
 		'-wgForceHTTPS' => [
 			'default' => true,
 		],
 
-		// Same as production InitialiseSettings.php, and extended (not replaced)
-		// with Beta Cluster domains.
-		//
-		// This includes the prod domains for the purpose of easier testing of gadgets.
-		// The MediaWiki software itself should never call prod from Beta.
+		'wmgUseCSP' => [
+			'default' => true,
+		],
+
+		// T420607
+		'wmgUseCSPReportOnly' => [
+			'default' => false,
+		],
+
+		// T420604 - test enforcing config on beta cluster first, with current allow-listed domains
+		// Note: MediaWiki itself should never call prod from Beta.
 		'wmgApprovedContentSecurityPolicyDomains' => [
 			'default' => [
-				// Prod domains, to allow easier gadget testing
+				// Prod domains and current allow-listed external domains (see: T419265)
 				'*.wikimedia.org',
 				'*.wikipedia.org',
 				'*.wikinews.org',
@@ -2002,6 +2002,66 @@ function wmfGetOverrideSettings() {
 				'*.wikifunctions.org',
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
+				'mediawiki.org',
+				'wikimedia.org',
+				'*.wmflabs.org',
+				'*.wmcloud.org',
+				'*.toolforge.org',
+				'wss://*.toolforge.org',
+				'*.jsdelivr.net',
+				'unpkg.com',
+				'cdnjs.cloudflare.com',
+				'raw.githubusercontent.com',
+				'*.github.com',
+				'code.jquery.com',
+				'cdn.mathjax.org',
+				'use.typekit.net',
+				'fonts.cdnfonts.com',
+				'use.fontawesome.com',
+				'i.ytimg.com',
+				'rsms.me',
+				'doi.org',
+				'localhost',
+				'https://localhost:*',
+				'http://localhost:*',
+				'wss://localhost:*',
+				'ws://localhost:*',
+				'*.google.com',
+				'*.gstatic.com',
+				'*.googleapis.com',
+				'*.translate.yandex.net',
+				'yastatic.net',
+				'ya.ru',
+				'radically.github.io',
+				'cdn.sammdot.ca',
+				'cdn.fontshare.com',
+				'viaf.org',
+				'publicai-proxy.alaexis.workers.dev',
+				'iiif.archive.org',
+				'api.flickr.com',
+				'live.staticflickr.com',
+				'api.anthropic.com',
+				'api.openai.com',
+				'api.publicai.co',
+				'catalogo.pusc.it',
+				'parsifal.urbe.it',
+				'opac.sbn.it',
+				'overpass-api.de',
+				'api.openrouteservice.org',
+				'archive.org',
+				'*.openstreetmap.org',
+				'*.waymarkedtrails.org',
+				'*.thunderforest.com',
+				'registry.ipe.wiki',
+				'analytics.ipe.wiki',
+				'qlever.dev',
+				'app.goacoustic.com',
+				'wikipedia-archive.ourworldindata.org',
+				'api.inaturalist.org',
+				'inaturalist-open-data.s3.amazonaws.com',
+				'validator.w3.org',
+				'db.onlinewebfonts.com',
+				'fontlibrary.org',
 
 				// Beta Cluster equivalants
 				'*.wikimedia.beta.wmcloud.org',
