@@ -6045,6 +6045,7 @@ return [
 	'ckbwiki' => 0,
 	'enwiki' => 0,
 	'enwikibooks' => 0, // T410330
+	'enwikinews' => 0, // T423512
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
