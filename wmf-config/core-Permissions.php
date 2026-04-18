@@ -2896,10 +2896,6 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T314678
 	],
 	'+ukwiki' => [
-		'patroller' => [
-			'patrol' => true,
-			'autopatrol' => true,
-		],
 		'rollbacker' => [ 'rollback' => true ],
 		'filemover' => [
 			'movefile' => true,
@@ -2929,16 +2925,21 @@ return [
 			'move-categorypages' => false,
 		], // T414277
 		'bot' => [
-			'changetags' => true,
-			'move-categorypages' => true,
-		], // T414277
+			'changetags' => true, // T414277
+			'move-categorypages' => true, // T414277
+			'autopatrol' => false, // T423461
+		],
 		'autoreview' => [
 			'move-categorypages' => true,
 		], // T414277
 		'editor' => [
 			'move-categorypages' => true,
 		], // T414277
-		'sysop' => [ 'changetags' => true ], // T414277
+		'sysop' => [
+			'changetags' => true, // T414277
+			'autopatrol' => false, // T423461
+			'patrol' => false // T423461
+		],
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
@@ -3656,7 +3657,6 @@ return [
 	'ukwiki' => [
 		'sysop' => [
 			'ipblock-exempt',
-			'patroller',
 			'rollbacker',
 			'accountcreator', // T104034
 			'extendedmover', // T395285
@@ -5212,7 +5212,6 @@ return [
 	'ukwiki' => [
 		'sysop' => [
 			'ipblock-exempt',
-			'patroller',
 			'rollbacker',
 			'accountcreator', // T104034
 			'extendedmover', // T395285
