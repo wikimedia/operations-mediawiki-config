@@ -5937,6 +5937,7 @@ return [
 	'cywiktionary' => 'Wiciadur',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
+	'diqwiki' => 'Wikipediya', // T328207
 	'diqwiktionary' => 'Wikiqısebend',
 	'dtywiki' => 'विकिपिडिया', // T161529
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
