@@ -4631,6 +4631,7 @@ if ( $wmgUseCentralAuth ) {
 		'steward' => 'highlimits-user',
 		'global-rollbacker' => 'highlimits-user',
 		'global-sysop' => 'highlimits-user',
+		'apihighlimits-requestor' => 'highlimits-user',
 	];
 
 	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
