@@ -570,13 +570,12 @@ if ( $wmgRealm == 'labs' ) {
 
 	// T420604 - test enforcing CSP
 	if ( $wmgUseCSP ) {
-		$cspConfig = [
+		$wgCSPHeader = [
 			'useNonces' => false,
 			'includeCORS' => false,
-			'default-src' => $wmgApprovedContentSecurityPolicyDomains['default'],
+			'default-src' => $wmgApprovedContentSecurityPolicyDomains,
 			'object-src' => 'none',
-			];
-		$wgCSPHeader = $cspConfig;
+		];
 	}
 }
 // end safeguard
