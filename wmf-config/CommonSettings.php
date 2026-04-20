@@ -2213,7 +2213,8 @@ if ( $wmgEnableCaptcha ) {
 				'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
 				'reportapi' => 'https://report-hcaptcha.wikimedia.org',
 				'render' => 'explicit',
-				'sentry' => false,
+				'sentry' => 'false',
+				'allowpopups' => 'true',
 			]
 		);
 
