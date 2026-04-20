@@ -13691,8 +13691,10 @@ return [
 	],
 ],
 
+// T423876
 'wgWikimediaMessagesAnonDonateLink' => [
 	'default' => true,
+	'wikimedia' => false,
 ],
 
 // T377121
