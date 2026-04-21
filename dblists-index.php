@@ -177,7 +177,7 @@ return [
 'ckbwiktionary' => [ 'small', 'wikidataclient', 'group1', 'rtl', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'cnwikimedia' => [ 'fishbowl', 'closed', 'small', 'visualeditor-nondefault', 'group0', 'abusefilter-disabled', 'checkuser-disabled' ],
 'collabwiki' => [ 'special', 'private', 'medium', 'group1', 'nowikidatadescriptiontaglines', 'translate' ],
-'commonswiki' => [ 'special', 'flow', 'vector-2022-language-links', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'translate', 'sul', 'wikilove' ],
+'commonswiki' => [ 'special', 'flow', 'vector-2022-language-links', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'translate', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'cowiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'cowikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul', 'abusefilter-disabled' ],
 'cowikimedia' => [ 'small', 'visualeditor-nondefault', 'group1', 'sul' ],
