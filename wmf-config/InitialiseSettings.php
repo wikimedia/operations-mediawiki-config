@@ -12950,9 +12950,10 @@ return [
 'wgReadingListsEnableBetaQuickSurvey' => [
 	'default' => false,
 ],
-// T422833
+// T422833, T420881
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 	'default' => null,
+	'wikipedia' => '20260423130000',
 	'testwiki' => '20260409200000',
 	'arwiki' => '20260413130000',
 	'enwiki' => '20260421130000',
