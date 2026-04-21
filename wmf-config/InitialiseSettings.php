@@ -9843,6 +9843,30 @@ return [
 	'enwiki' => true,
 ],
 
+'wgReportIncidentEnabledNonEmergencyCategories' => [
+	'default' => [
+		'INTIMIDATION',
+		'SEXUAL_HARASSMENT',
+		'DOXING',
+		'TROLLING',
+		'HATE_SPEECH',
+		'SPAM',
+		'SOMETHING_ELSE'
+	],
+	'enwiki' => [
+		'INTIMIDATION',
+		'SEXUAL_HARASSMENT',
+		'DOXING',
+		'TROLLING',
+		'HATE_SPEECH',
+		'SOCKPUPPETRY',
+		'VANDALISM',
+		'DISRUPTIVE_EDITING',
+		'USER_DISPUTE',
+		'OTHER'
+	]
+],
+
 'wgReportIncidentEnableInstrumentation' => [
 	'default' => true,
 ],
