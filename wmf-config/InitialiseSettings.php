@@ -8153,11 +8153,6 @@ return [
 	'loginwiki' => true,
 ],
 
-// T361139
-'wgCheckUserUserAgentTableMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 'wmgUseUserInfoCard' => [
 	// T405342
 	'default' => false,
