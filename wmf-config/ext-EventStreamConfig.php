@@ -2602,14 +2602,17 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare version dev (staging testing) of
-		// mediawiki.page_html_content_change stream for now.
-		// It will be changed for a new schema when it's ready.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
+		// page_html_content_change is the mediawiki.page_change stream
+		// enriched with with latest revision rendering HTML and
+		// diff to parent revision rendering HTML.
+		//
+		// NOTE: This stream only contains revisions that have a
+		// main content slot with a wikitext content model.
+		//
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'mediawiki.page_html_content_change.dev5' => [
-			'schema_title' => 'development/rendering_content_change',
+		// https://phabricator.wikimedia.org/T360794
+		'mediawiki.page_html_content_change.rc0' => [
+			'schema_title' => 'mediawiki/page/rendering_content_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
@@ -2629,6 +2632,29 @@ return [
 			],
 		],
 
+		// TODO: Delete this once no longer used.
+		// https://phabricator.wikimedia.org/T423920
+		'mediawiki.page_html_content_change.dev5' => [
+			'schema_title' => 'development/rendering_content_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// This stream is is produced directly to Kafka jumbo-eqiad,
+			// so we need to use an eventgate that also produces to jumbo-eqiad.
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
+		],
+
 		// This stream will be used by the streaming enrichment pipeline
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
@@ -2636,27 +2662,56 @@ return [
 		'mw_page_html_content_change_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
+		],
+
+		// page_html_feature_counts_change events are page_change events
+		// enriched with differences in 'rendering feature counts' between
+		// the latest revision HTML rendering and the parent
+		// revision HTML rendering.
+		// The computation is done by the research/edit-types library.
+		// https://gitlab.wikimedia.org/repos/research/edit-types
+		//
+		// NOTE: This stream only contains revisions that have a
+		// main content slot with a wikitext content model.
+		//
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		// https://phabricator.wikimedia.org/T351225
+		'mediawiki.page_html_feature_counts_change.rc0' => [
+			'schema_title' => 'mediawiki/page/rendering_feature_counts_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// this stream is is produced directly to Kafka jumbo-eqiad,
+			// so we need to use an eventgate that also produces to jumbo-eqiad.
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
+		// This stream will be used by the streaming enrichment pipeline
+		// These events can be used if backfilling of the failed enrichment
+		// is desired later.
+		// This follows the naming convention of <job_name>.error
+		'mw_page_html_feature_counts_change_enrich.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
 			'consumers' => [
 				'analytics_hive_ingestion' => [
 					'enabled' => true,
-					// error events with html in them can be large.
-					// We might have html in these error events, because
-					// the mediawiki-event-enrichment Flink job
-					// first fetches latest revision html and adds it to the event,
-					// and then fetch parent revision html (to diff it and add diff to event).
-					// If the parent revision html fetch fails, the error event raw_event field
-					// will have the serialized JSON of the event with the html in it.
+					// Error stream contains the raw_event that caused the error.
+					// In this case, the raw_event source stream is the
+					// mediawiki.page_html_content_change, which can have large events in it.
+					// Bump the spark_job_ingestion_scale to medium to account for this.
 					'spark_job_ingestion_scale' => 'medium',
 				],
-			],
+			]
 		],
 
-		// Declare version dev (staging testing) of
-		// mediawiki.page_edit_type_simple stream for now.
-		// It will be changed for a new schema when it's ready.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
-		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		// TODO: Delete this once no longer used.
+		// https://phabricator.wikimedia.org/T423920
 		'mediawiki.page_edit_type_simple.dev1' => [
 			'schema_title' => 'development/rendering_feature_counts_change',
 			'message_key_fields' => [
@@ -2672,10 +2727,8 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
-		// This stream will be used by the streaming enrichment pipeline
-		// These events can be used if backfilling of the failed enrichment
-		// is desired later.
-		// This follows the naming convention of <job_name>.error
+		// TODO: Delete this once no longer used.
+		// https://phabricator.wikimedia.org/T423920
 		'mw_page_edit_type_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
