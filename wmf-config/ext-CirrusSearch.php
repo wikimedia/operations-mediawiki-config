@@ -850,10 +850,17 @@ return [
 // within queries:
 // elastic: lookup against elastic (default)
 // utr30: uses PHP Transliterator with UTR30 rule
-// naise: uses PHP Transliterator with naive folding rules (unicode diacritics
+// naive: uses PHP Transliterator with naive folding rules (unicode diacritics
 // removal)
 'wgCirrusSearchNamespaceResolutionMethod' => [
 	'default' => 'utr30',
+	'hewiki' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewiktionary' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikibooks' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikinews' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikiquote' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikisource' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikivoyage' => 'utr30_with_hebrew_wrong_keyboard',
 ],
 
 // List of languages detected by the short-text
