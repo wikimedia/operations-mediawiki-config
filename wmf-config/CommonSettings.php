@@ -4011,6 +4011,14 @@ if ( $wmgUseCognate ) {
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) {
 	include __DIR__ . '/Wikibase.php';
 }
+
+// TODO: move this to InitialiseSetings.php once the module file is on all wikis and stable
+if ( $wmgUseWikibaseRepo && is_file( "$wgExtensionDirectory/Wikibase/repo/rest-api/wikibase.v1.json" ) ) {
+	$wgRestSandboxSpecs['wikibase.v1'] = [
+		'file' => "$wgExtensionDirectory/Wikibase/repo/rest-api/wikibase.v1.json"
+	];
+}
+
 // Temp
 $wgResourceLoaderStorageVersion = 2;
 
