@@ -2215,6 +2215,9 @@ if ( $wmgEnableCaptcha ) {
 				'render' => 'explicit',
 				'sentry' => 'false',
 				'allowpopups' => 'true',
+				// Disable Private Access Tokens, since the pstissuer host
+				// (pst-issuer.hcaptcha.com) can't be proxied
+				'pat' => 'off',
 			]
 		);
 
