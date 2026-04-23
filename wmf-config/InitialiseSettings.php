@@ -6984,7 +6984,6 @@ return [
 'wgParserMigrationEnableParsoidPercentage' => [
 	'default' => 100,
 	# incremental roll out for top-10 wikis
-	'ruwiki' => 55, # 3rd largest
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
