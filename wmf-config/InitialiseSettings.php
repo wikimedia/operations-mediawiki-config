@@ -10092,6 +10092,7 @@ return [
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
 		'srq' => 'mbia cheë', // T113408
+		'sva' => 'ლუშნუ', // T407106
 		'thq' => 'काेचिला थारु', // T383785 - Kochila Tharu Language
 		'tpv' => 'Tanapag', // T308062
 		'tvu' => 'Tunen', // T263946
@@ -10157,6 +10158,7 @@ return [
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T230480
 		'srq' => 'mbia cheë', // T230480
+		'sva' => 'ლუშნუ', // T407106
 		'thq' => 'काेचिला थारु', // T383785 - Kochila Tharu Language
 		'tpv' => 'Tanapag', // T308062
 		'tvu' => 'Tunen', // T263946
