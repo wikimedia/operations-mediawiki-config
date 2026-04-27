@@ -3394,7 +3394,7 @@ return [
 	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
 	'default' => [
 		// core or extension groups
-		'bureaucrat', 'checkuser', 'interface-admin', 'oauthadmin', 'suppress', 'sysop',
+		'bureaucrat', 'checkuser', 'interface-admin', 'oauthadmin', 'temporary-account-viewer', 'suppress', 'sysop',
 		// custom groups used on several wikis
 		'arbcom', 'botadmin', 'eliminator', 'import', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
@@ -3413,6 +3413,7 @@ return [
 		'founder',
 		'global-deleter',
 		'global-interface-editor',
+		'global-temporary-account-viewer',
 		'global-sysop',
 		'new-wikis-importer',
 		'ombuds',
