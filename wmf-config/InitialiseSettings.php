@@ -4919,17 +4919,21 @@ return [
 		// T423118
 		'oauthadmin' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
 		],
 		'steward' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
 		],
 	],
 	'+foundationwiki' => [
 		'editor' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
 		],
 		'translationadmin' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
 		],
 	],
 	'+testwiki' => [
