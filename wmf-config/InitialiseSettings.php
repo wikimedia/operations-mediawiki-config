@@ -12952,9 +12952,10 @@ return [
 	'default' => false,
 	'wikipedia' => true,
 ],
-// T422275
+// T421776
 'wgReadingListsEnableBetaQuickSurvey' => [
 	'default' => false,
+	'wikipedia' => true,
 ],
 // T422833, T420881
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
