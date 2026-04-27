@@ -8502,6 +8502,12 @@ return [
 	'enwiki' => 'source',
 ],
 
+'wgMFEnableAbandonSurvey' => [
+	'default' => false,
+	// T422931
+	'enwiki' => true,
+],
+
 'wgExtraGenderNamespaces' => [
 	'default' => [],
 	'cswiki' => [
