@@ -2066,8 +2066,8 @@ if ( $wmgEnableCaptcha ) {
 				],
 			],
 		];
-		if ( $wgDBname === 'test2wiki' ) {
-			// Unconditionally enable hCaptcha on test2wiki web and API requests to support
+		if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki' ] ) ) {
+			// Unconditionally enable hCaptcha on web and API requests to support
 			// mobile apps integration testing (T405107)
 			$wgCaptchaTriggers['createaccount'] = [
 				'trigger' => true,
