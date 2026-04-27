@@ -683,11 +683,90 @@ return [
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [],
+	'default' => [
+		// wikis without special configuration
+		'T407432_dym' => [
+			'buckets' => [
+				'control' => [
+					'globals' => [
+						// inherits per-wiki value
+						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest',
+					],
+				],
+				'd1' => [
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1',
+					],
+				],
+				'd1v' => [
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1v',
+					],
+				],
+			],
+		],
+		// wikis with language detection enabled
+		'T407432_dym_ld' => [
+			'buckets' => [
+				'control' => [
+					'globals' => [
+						// inherits per-wiki value
+						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
+					],
+				],
+				'd1' => [
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1_and_language_detection',
+					],
+				],
+				'd1v' => [
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1v_and_language_detection',
+					],
+				],
+			],
+		],
+		// wikis with glent and language detection enabled
+		'T407432_dym_g_ld' => [
+			'buckets' => [
+				'control' => [
+					'globals' => [
+					// inherits per-wiki value
+					// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
+					],
+				],
+				'd1' => [
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1_glentM01_and_langdetect',
+					],
+				],
+				'd1v' => [
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_default_1v_glentM01_and_langdetect',
+					],
+				],
+			],
+		],
+	],
 ],
 
 'wgCirrusSearchActiveTest' => [
-	'default' => null,
+	'default' => 'T407432_dym',
+	// wikidata has dym disabled
+	'wikidatawiki' => null,
+	'testwikidatawiki' => null,
+	// wikis with language detection enabled
+	'eswiki' => 'T407432_dym_ld',
+	'itwiki' => 'T407432_dym_ld',
+	'jawiki' => 'T407432_dym_ld',
+	'nlwiki' => 'T407432_dym_ld',
+	'ptwiki' => 'T407432_dym_ld',
+	'ruwiki' => 'T407432_dym_ld',
+	// wikis with language detection and glent
+	'dewiki' => 'T407432_dym_g_ld',
+	'enwiki' => 'T407432_dym_g_ld',
+	'frwiki' => 'T407432_dym_g_ld',
+
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
