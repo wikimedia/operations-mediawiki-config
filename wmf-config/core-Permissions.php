@@ -2755,7 +2755,6 @@ return [
 			'deleterevision' => true,
 			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
-			'securepoll-create-poll' => true,
 		],
 		'researcher' => [
 			'browsearchive' => true,
@@ -3687,13 +3686,14 @@ return [
 			'transwiki',
 		],
 		'sysop' => [
-			'filemover',
-			'rollbacker',
 			'accountcreator',
 			'confirmed',
-			'templateeditor',
+			'electionadmin', // T423962
 			'extendedconfirmed', // T302860
+			'filemover',
 			'patroller', // T354063
+			'rollbacker',
+			'templateeditor',
 			'upwizcampeditors', // T378067
 		],
 		'securitytester' => [
@@ -5257,13 +5257,14 @@ return [
 			'transwiki',
 		],
 		'sysop' => [
-			'filemover',
-			'rollbacker',
 			'accountcreator',
 			'confirmed',
-			'templateeditor',
+			'electionadmin', // T423962
 			'extendedconfirmed', // T302860
+			'filemover',
 			'patroller', // T354063
+			'rollbacker',
+			'templateeditor',
 			'upwizcampeditors', // T378067
 		],
 		'securitytester' => [
