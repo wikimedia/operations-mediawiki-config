@@ -3259,6 +3259,7 @@ return [
 			],
 		],
 		// (T356228, T360369) Stream to track the API of WikiLambda (the Wikifunctions extension)
+		// Instrument configuration is at https://test-kitchen.wikimedia.org/instrument/WikiLambdaApi
 		'mediawiki.product_metrics.wikilambda_api' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/api',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3269,28 +3270,8 @@ return [
 					],
 				],
 				'metrics_platform_client' => [
-					'provide_values' => [
-						'agent_client_platform_family',
-						'page_id',
-						'page_revision_id',
-						'page_title',
-						'performer_edit_count',
-						'performer_edit_count_bucket',
-						'performer_groups',
-						'performer_id',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_language',
-						'performer_language_variant',
-						'performer_name',
-						'performer_pageview_id',
-						'performer_session_id',
-					],
+					'provide_values' => [],
 				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
 			],
 		],
 		// (T363685, T368028, T378565) MinT for Wikipedia Readers stream (Language & Product Localization)

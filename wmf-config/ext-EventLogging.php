@@ -85,7 +85,6 @@ return [
 		'mediawiki.product_metrics.suggested_investigations_interaction',
 		'mediawiki.product_metrics.incident_reporting_system_interaction',
 		'mediawiki.product_metrics.wikifunctions_ui',
-		'mediawiki.product_metrics.wikilambda_api',
 		'mediawiki.product_metrics.suggested_investigations_interaction.v2',
 		'mediawiki.product_metrics.translate_extension',
 		'mediawiki.product_metrics.translation_mint_for_readers',
