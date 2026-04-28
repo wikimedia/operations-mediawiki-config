@@ -13818,5 +13818,6 @@ return [
 
 'wmgUseArticleGuidance' => [
 	'default' => false,
+	'testwiki' => true, // T417200
 ],
 ];
