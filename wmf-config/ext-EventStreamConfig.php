@@ -2609,9 +2609,9 @@ return [
 		// NOTE: This stream only contains revisions that have a
 		// main content slot with a wikitext content model.
 		//
-		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment/HTML_Enrichment
 		// https://phabricator.wikimedia.org/T360794
-		'mediawiki.page_html_content_change.rc0' => [
+		'mediawiki.page_html_content_change.v1' => [
 			'schema_title' => 'mediawiki/page/rendering_content_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
@@ -2620,7 +2620,7 @@ return [
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
-			// page_html_content_change is produced directly to Kafka jumbo-eqiad,
+			// This stream is produced directly to Kafka jumbo-eqiad,
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -2632,20 +2632,14 @@ return [
 			],
 		],
 
-		// TODO: Delete this once no longer used.
-		// https://phabricator.wikimedia.org/T423920
-		'mediawiki.page_html_content_change.dev5' => [
-			'schema_title' => 'development/rendering_content_change',
+		// TODO: delete .rc0 stream once .v1 is fully released.
+		//       https://phabricator.wikimedia.org/T423920
+		'mediawiki.page_html_content_change.rc0' => [
+			'schema_title' => 'mediawiki/page/rendering_content_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
 			],
-			// Even though this stream will not be produced via EventGate,
-			// we need to set an event service, so that the ProduceCanaryEvents
-			// monitoring job can produce events through EventGate.
-			// This stream is is produced directly to Kafka jumbo-eqiad,
-			// so we need to use an eventgate that also produces to jumbo-eqiad.
-			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
 				'analytics_hive_ingestion' => [
@@ -2676,7 +2670,7 @@ return [
 		//
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
 		// https://phabricator.wikimedia.org/T351225
-		'mediawiki.page_html_feature_counts_change.rc0' => [
+		'mediawiki.page_html_feature_counts_change.v1' => [
 			'schema_title' => 'mediawiki/page/rendering_feature_counts_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
@@ -2691,45 +2685,22 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
+		// TODO: delete .rc0 stream once .v1 is fully released.
+		//       https://phabricator.wikimedia.org/T423920
+		'mediawiki.page_html_feature_counts_change.rc0' => [
+			'schema_title' => 'mediawiki/page/rendering_feature_counts_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		// This stream will be used by the streaming enrichment pipeline
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
 		// This follows the naming convention of <job_name>.error
 		'mw_page_html_feature_counts_change_enrich.error' => [
-			'schema_title' => 'error',
-			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					// Error stream contains the raw_event that caused the error.
-					// In this case, the raw_event source stream is the
-					// mediawiki.page_html_content_change, which can have large events in it.
-					// Bump the spark_job_ingestion_scale to medium to account for this.
-					'spark_job_ingestion_scale' => 'medium',
-				],
-			]
-		],
-
-		// TODO: Delete this once no longer used.
-		// https://phabricator.wikimedia.org/T423920
-		'mediawiki.page_edit_type_simple.dev1' => [
-			'schema_title' => 'development/rendering_feature_counts_change',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			// Even though this stream will not be produced via EventGate,
-			// we need to set an event service, so that the ProduceCanaryEvents
-			// monitoring job can produce events through EventGate.
-			// page_html_edit_type_simple is produced directly to Kafka jumbo-eqiad,
-			// so we need to use an eventgate that also produces to jumbo-eqiad.
-			// We use eventgate-analytics-external.
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
-
-		// TODO: Delete this once no longer used.
-		// https://phabricator.wikimedia.org/T423920
-		'mw_page_edit_type_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 			'consumers' => [
