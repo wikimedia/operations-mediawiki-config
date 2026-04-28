@@ -919,6 +919,8 @@ return [
 			'rollback' => true,
 			'suppressredirect' => true,
 			'upload' => true,
+			'patrol' => true, // T424445
+			'autopatrol' => true, // T424445
 		],
 	],
 	'+enwikivoyage' => [
