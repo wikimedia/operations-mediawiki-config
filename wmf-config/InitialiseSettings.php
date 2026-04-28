@@ -13823,4 +13823,20 @@ return [
 	'default' => false,
 	'testwiki' => true, // T417200
 ],
+
+'wgArticleGuidanceExperimentName' => [
+	'default' => '',
+	'testwiki' => 'we-1-10-articleguidance-v1',
+],
+
+'wgArticleGuidanceExperimentRefererTitles' => [
+	'default' => [],
+	'testwiki' => [ 'Wikipedia:ArticleGuidance' ],
+],
+
+'wgArticleGuidanceExperimentEntryPointTitles' => [
+	'default' => [],
+	'testwiki' => [ 'Wikipedia:ArticleWizard' ],
+],
+
 ];
