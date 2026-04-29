@@ -2042,6 +2042,7 @@ return [
 	'kowiki' => 10, // T46894
 	'lbwiki' => 10, // T423102
 	'metawiki' => 5, // T211188
+	'nlwiki' => 10, // T424898
 	'nowiki' => 20, // T71302
 	'plwiki' => 10,
 	'ptwiki' => 10, // T29954
