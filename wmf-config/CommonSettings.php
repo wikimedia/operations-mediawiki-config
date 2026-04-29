@@ -2805,6 +2805,18 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline'; connect-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net app.goacoustic.com;";
 }
 
+if ( $wmgUseTestKitchen ) {
+	wfLoadExtension( 'TestKitchen' );
+
+	$wgTestKitchenInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
+
+	// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/TestKitchen/+/1230385 introduces
+	// independent URLs to to send events originating from instruments and logged-in experiments
+	// to. For now, set the former to to $wgEventLoggingServiceUri, to maintain backwards
+	// compatibility.
+	$wgTestKitchenLoggedInExperimentEventIntakeServiceUrl = $wgEventLoggingServiceUri;
+}
+
 // Load custom configuration and overrides used by Wikimedia sites
 wfLoadExtension( 'WikimediaCustomizations' );
 wfLoadExtension( 'WikimediaMessages' );
@@ -5132,18 +5144,6 @@ if ( $wmgUseCommunityConfiguration ) {
 	wfLoadExtension( 'CommunityConfiguration' );
 	$wgCommunityConfigurationFeedbackURL = 'https://www.mediawiki.org/wiki/Extension_talk:CommunityConfiguration';
 	$wgCommunityConfigurationCommonsApiURL = 'https://commons.wikimedia.org/w/api.php';
-}
-
-if ( $wmgUseTestKitchen ) {
-	wfLoadExtension( 'TestKitchen' );
-
-	$wgTestKitchenInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
-
-	// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/TestKitchen/+/1230385 introduces
-	// independent URLs to to send events originating from instruments and logged-in experiments
-	// to. For now, set the former to to $wgEventLoggingServiceUri, to maintain backwards
-	// compatibility.
-	$wgTestKitchenLoggedInExperimentEventIntakeServiceUrl = $wgEventLoggingServiceUri;
 }
 
 if ( $wmgUseNetworkSession ) {
