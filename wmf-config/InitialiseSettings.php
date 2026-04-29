@@ -6956,12 +6956,6 @@ return [
 	'default' => false, // T363484
 ],
 
-// Old configuration variable, will remove after migration
-'wgParserMigrationEnableParsoidDiscussionTools' => [
-	'default' => false,
-	'parsoidrendered' => true,
-],
-
 'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
 	'parsoidrendered' => true,
@@ -6975,6 +6969,7 @@ return [
 	'default' => false,
 	'parsoidrendered' => true,
 	'labswiki' => false,
+	'enwiki' => true,
 ],
 
 'wgParserMigrationEnableParsoidTalkPages' => [
@@ -6985,11 +6980,13 @@ return [
 'wgParserMigrationEnableParsoidMobileTalkPages' => [
 	'default' => false,
 	'parsoidrendered' => true,
+	'enwiki' => true,
 ],
 
 'wgParserMigrationEnableParsoidPercentage' => [
 	'default' => 100,
 	# incremental roll out for top-10 wikis
+	'enwiki' => 20,
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
