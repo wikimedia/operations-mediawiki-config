@@ -6986,7 +6986,7 @@ return [
 'wgParserMigrationEnableParsoidPercentage' => [
 	'default' => 100,
 	# incremental roll out for top-10 wikis
-	'enwiki' => 20,
+	'enwiki' => 60,
 ],
 
 'wgParserMigrationUserNoticeVersion' => [
