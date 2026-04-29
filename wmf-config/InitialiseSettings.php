@@ -6434,6 +6434,7 @@ return [
 	'elwikivoyage' => true,
 	'enwiki' => true,
 	'enwikibooks' => true,
+	'enwikiquote' => true, // T424863
 	'enwikiversity' => true,
 	'eowiki' => true,
 	'eswiki' => true,
