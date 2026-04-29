@@ -9844,6 +9844,12 @@ return [
 	'enwiki' => true,
 ],
 
+'wgReportIncidentIsStaggeredRollout' => [
+	'default' => false,
+	// T424075
+	'testwiki' => true,
+],
+
 'wgReportIncidentEnabledNonEmergencyCategories' => [
 	'default' => [
 		'INTIMIDATION',
