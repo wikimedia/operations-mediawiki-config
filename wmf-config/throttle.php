@@ -37,11 +37,11 @@ $wmgThrottlingExceptions = [];
 
 ## Add throttling definitions above.
 
-// T422520
+// T424843
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-04-13T06:00 +2:00',
-	'to'     => '2026-04-13T15:00 +2:00',
-	'IP'     => '93.157.128.162',
+	'from'   => '2026-05-14T08:00 +2:00',
+	'to'     => '2026-05-14T21:00 +2:00',
+	'IP'     => '147.231.11.254',
 	'dbname' => 'cswiki',
 	'value'  => 50,
 	'tempaccountvalue'  => 50,
