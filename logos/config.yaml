@@ -3785,9 +3785,12 @@ Wikivoyage:
         no_wordmark: true
         local_icon: true
     arbcom_enwiki:
-        comment_2x: T150618
+        comment: 'T424555'
+        comment_2x: 'T424555'
+        commons: 'File:Scale_of_justice_2.svg'
+        comment_icon: 'T424555'
+        commons_icon: 'File:Scale_of_justice_2.svg'
         no_wordmark: true
-        local_icon: true
     arbcom_fiwiki:
         comment_2x: T150618
         selected_icon: wikipedia

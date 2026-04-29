@@ -877,7 +877,7 @@ return [
 	'apiportalwiki' => '/static/images/project-logos/apiportalwiki.png',
 	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
-	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
+	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png', // T424555
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
 	'arbcom_itwiki' => '/static/images/project-logos/arbcom_itwiki.png', // T368532
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
@@ -1599,7 +1599,7 @@ return [
 	'advisorswiki' => '/static/images/project-logos/advisorswiki-2x.png', // T202844
 	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki-2x.png', // T151731
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki-2x.png', // T166947
-	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki-2x.png', // T150618
+	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki-2x.png', // T424555
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki-2x.png', // T150618
 	'arbcom_itwiki' => '/static/images/project-logos/arbcom_itwiki-2x.png', // T368532
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki-2x.png', // T150618
@@ -7933,7 +7933,7 @@ return [
 	'apiportalwiki' => '/static/images/icons/outreachwiki.svg',
 	'arbcom_cswiki' => '/static/images/icons/arbcom_cswiki.svg',
 	'arbcom_dewiki' => '/static/images/icons/arbcom_dewiki.svg',
-	'arbcom_enwiki' => '/static/images/icons/arbcom_enwiki.svg',
+	'arbcom_enwiki' => '/static/images/icons/arbcom_enwiki.svg', // T424555
 	'arbcom_fiwiki' => '/static/images/icons/wikipedia.png', // TODO: consider cleaning up (T183549)
 	'arbcom_itwiki' => '/static/images/icons/arbcom_itwiki.svg', // T368532
 	'arbcom_nlwiki' => '/static/images/icons/arbcom_nlwiki.svg',
