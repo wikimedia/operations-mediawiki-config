@@ -4004,6 +4004,7 @@ return [
 	'default' => 'new', // T248632
 	'enwiki' => 'disallow', // T355462
 	'plwiki' => 'disallow', // T364769
+	'eswiktionary' => 'disallow', // T424983
 ],
 
 'wgSignatureAllowedLintErrors' => [ // T360796
