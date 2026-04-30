@@ -7929,8 +7929,6 @@ return [
 // Note: it also need to be configured in wgParserCacheFilterConfig below.
 'wgUsePostprocCacheParsoid' => [
 	'default' => true,
-	// let's be conservative here and deploy to enwiki last
-	'enwiki' => false,
 	// do NOT deploy postproc caching on wikidata or commonswiki
 	'wikidatawiki' => false,
 	'commonswiki' => false,
@@ -7938,8 +7936,6 @@ return [
 // Whether to use the legacy postprocessing cache. Only used for DiscussionTools.
 'wgUsePostprocCacheLegacy' => [
 	'default' => true,
-	// let's be conservative here and deploy to enwiki last
-	'enwiki' => false,
 	// do NOT deploy postproc caching on wikidata or commonswiki
 	'wikidatawiki' => false,
 	'commonswiki' => false,
