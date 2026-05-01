@@ -2402,13 +2402,6 @@ return [
 ],
 # @} end of wmgMonologChannels
 
-'wgOverrideSiteFeed' => [
-	'enwikinews' => [
-		'atom' => 'http://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom&categories='
-			. 'Published&notcategories=No%20publish%7CArchived%7CAutoArchived%7Cdisputed&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only',
-	],
-],
-
 'wgAccountCreationThrottle' => [
 	'default' => [ [ 'count' => 0, 'seconds' => 86400 ] ],
 	'sul' => [ [ 'count' => 6, 'seconds' => 86400 ] ],
@@ -2983,7 +2976,6 @@ return [
 	'eswiktionary' => true, // T9953
 	'fawiki' => true, // T56596
 	'fawikibooks' => true, // T111024
-	'fawikinews' => true,
 	'fawiktionary' => true, // T85381
 	'fawikisource' => true, // T187662
 	'fiwiki' => true, // T144817
@@ -3428,7 +3420,6 @@ return [
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
 	'arwiki' => [ 'en', 'meta' ], // T347563
 	'arwikibooks' => [ 'w' ],
-	'arwikinews' => [ 'w' ],
 	'arwikisource' => [ 'w', 'mul' ],
 	'arwikiversity' => [ 'w', 'b', 'n', 'q', 's', 'wikt' ],
 	'arzwiki' => [ 'incubator', 'en', 'ar', 'es', 'fr', ],
@@ -3440,7 +3431,6 @@ return [
 	'bnwikibooks' => [ 'b:en', 'w' ], // T295051, T314820
 	'bnwikisource' => [ 'mul', 'w', 'en' ],
 	'cawikibooks' => [ 'w', 's', 'q', 'n', 'wikt', 'en', 'es', 'fr', 'it', 'de', 'pt', 'meta', 'w:en', 'w:es', 'w:fr', 'w:it', 'w:de', 'w:pt' ], // T93750
-	'cawikinews' => [ 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo', 'pl', 'ja', 'ru', 'sr', 'tr', 'uk', 'zh' ], // T93203
 	'cawikiquote' => [ 'w' ],
 	'cawikisource' => [ 'w', 'b', 'mul' ],
 	'cawiktionary' => [ 'w', ],
@@ -3451,7 +3441,6 @@ return [
 	'crhwiki' => [ 'incubator' ],
 	'cswiki' => [ 'b', 'meta', 'n', 'q', 's', 'v', 'wikt' ], // T18688
 	'cswikibooks' => [ 'n', 'q', 's', 'v', 'w', 'wikt' ], // T18688
-	'cswikinews' => [ 'b', 'q', 's', 'v', 'w', 'wikt', 'incubator' ], // T18688
 	'cswikiquote' => [ 'b', 'n', 's', 'v', 'w', 'wikt' ], // T18688
 	'cswikisource' => [ 'b', 'n', 'q', 'v', 'w', 'wikt', 'mul' ], // T18688
 	'cswikiversity' => [ 'b', 'n', 'q', 's', 'w', 'wikt', 'betawikiversity' ], // T18688
@@ -3487,7 +3476,6 @@ return [
 	'eowikisource' => [ 'meta', 'commons', 'b:eo', 'mul' ], // T45659
 	'eswiki' => [ 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ],
 	'eswikibooks' => [ 'w', 'w:en', 'en', 'meta' ], // T20612, T43011
-	'eswikinews' => [ 'w', 'en', 'pt', 'ca', 'fr', 'de', 'it' ], // T72414
 	'eswikiquote' => [ 'en', 'b', 'm', 'mw', 'n', 's', 'v', 'voy', 'w', 'wikt' ], // T64912
 	'eswikiversity' => [ 'w:es', 'b', 'meta' ], // T9513, T36715
 	'eswikivoyage' => [ 'w', 'meta', 'commons', 'en', 'de', 'fr', 'it', 'nl', 'pt', 'ru', 'sv' ], // T45863
@@ -3519,7 +3507,6 @@ return [
 		'hy', 'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple',
 		'sk', 'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
 	], // T30024 and T24663 --pdhanda
-	'frwikinews' => [ 'w', 'en', 'de', 'es', 'it', 'b', 'wikt', 'v', 's', 'q', 'ca', 'pt', 'species', 'commons', 'meta', 'w:pl', 'pl' ], // T11135
 	'frwikiquote' => [ 'w', 'wikt', 's', 'b', 'n', 'v', 'meta', 'en' ],
 	'frwikiversity' => [
 		'meta', 'commons', 'species', 'q', 'af', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
@@ -3550,7 +3537,6 @@ return [
 	'hakwiki' => [ 'incubator' ],
 	'hewiki' => [ 'wikt', 'q', 'b', 's', 'n', 'commons', 'meta', 'en', 'de', 'fr', 'es', 'ar', 'ru', 'it' ], // T137074
 	'hewikibooks' => [ 'w', 'wikt', 'q', 's', 'n' ],
-	'hewikinews' => [ 'w', 'wikt', 'q', 'b', 's' ],
 	'hewikiquote' => [ 'w', 'wikt', 'b', 's', 'n' ],
 	'hewiktionary' => [ 'w', 'q', 'b', 's', 'n' ],
 	'hewikisource' => [ 'w', 'wikt', 'q', 'b', 'n', 'mul' ],
@@ -3576,7 +3562,6 @@ return [
 	'iswiktionary' => [ 'w' ],
 	'itwiki' => [ 'b', 'q', 's', 'wikt', 'n', 'v', 'de', 'es', 'en', 'fr', 'meta' ], // T16844
 	'itwikibooks' => [ 'w', 'wikt', 's', 'q', 'n', 'v', 'en' ],
-	'itwikinews' => [ 'w', 'wikt', 'b', 's', 'q', 'v', 'w:en', 'commons', 'en' ],
 	'itwikiquote' => [ 'w', 'wikt', 's', 'b', 'n', 'v' ],
 	'itwikisource' => [ 'w', 'b', 'wikt', 'q', 'n', 'v', 'mul' ],
 	'itwikiversity' => [ 'w', 'b', 'wikt', 's', 'q', 'n' ],
@@ -3647,11 +3632,9 @@ return [
 	'plwiktionary' => [ 'w' ], // T12374
 	'pntwiki' => [ 'en', 'el', 'elwikiversity', 'incubator' ],
 	'ptwikibooks' => [ 'w', 'wikt', 's', 'q', 'n', 'v', 'en', 'es', 'fr', 'it', 'de', 'ru', 'w:en' ], // T22552
-	'ptwikinews' => [ 'w', 'wikt', 's', 'v', 'b', 'q', 'meta', 'commons', 'ca', 'de', 'en', 'eo', 'es', 'fr', 'it', 'ja', 'pl', 'ru', 'sr', 'tr', 'uk', 'zh', 'ar', 'bg', 'bs', 'cs', 'el', 'fa', 'fi', 'he', 'ko', 'no', 'ro', 'sq', 'sv', 'ta' ], // T93218
 	'ptwikiversity' => [ 'incubator', 'w', 'b', ], // T16516
 	'rowikibooks' => [ 'w', 's' ],
 	'ruwikibooks' => [ 'w', 's', ],
-	'ruwikinews' => [ 'w', 'meta', 'ruwikimedia' ], // T199045
 	'ruwikisource' => [ 'b', 'mul' ], // T123837
 	'ruwikiversity' => [ 'w', 'wikt', 'q', 'b', 's', 'n', 'betawikiversity' ],
 	'sahwiki' => [ 'incubator' ],
@@ -3682,7 +3665,6 @@ return [
 	'srnwiki' => [ 'incubator' ],
 	'srwiki' => [ 'wikt', 'meta', 'incubator' ], // T64533, T384069
 	'srwiktionary' => [ 'w' ],
-	'srwikinews' => [ 'w:sr' ], // T214562
 	'srwikisource' => [ 'w', 'mul' ],
 	'srwikiquote' => [ 'w' ], // T235419
 	'sswiki' => [ 've', 'st', 'zu', 'xh', 'af', 'en', 'es' ],
@@ -3703,7 +3685,7 @@ return [
 	'tewikibooks' => [ 'w:te', 's:te' ], // T260107, T286978
 	'tewikisource' => [ 'w', 'b', 'en', 'mul' ], // T94531
 	'tewikiquote' => [ 'w', 'en' ], // T91635
-	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'wikinews:en', 'wikinews:es', 'mediawikiwiki' ], // T154879
+	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'mediawikiwiki' ], // T154879
 	'test2wiki' => [ 'en', 'cs', 'n', 'n:es', 'n:fr', 'mediawikiwiki' ], // T155906
 	'testwikidatawiki' => [ 'meta', 'commons', 'd', 'en', 'de', 'fr', 'es' ], // T315211
 	'tetwiki' => [ 'en', 'de', 'pt' ],
@@ -3734,7 +3716,6 @@ return [
 	'zhwiktionary' => [ 'w', 'b', 'q', 's', 'meta', 'commons' ],
 	'zhwikibooks' => [ 'w', 'wikt', 'q', 's', 'meta', 'commons' ],
 	'zhwikisource' => [ 'w', 'b', 'q', 'wikt', 'meta', 'commons', 'en', 'mul' ], // T240814
-	'zhwikinews' => [ 'de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'pt', 'ru' ], // T266388
 	'zh_yuewiki' => [ 'en', 'wiktionary:yue', 'incubator' ], // T274597
 	'zuwiki' => [ 'en' ], // T53327
 
@@ -6255,7 +6236,6 @@ return [
 'wgArticleCountMethod' => [
 	'default' => 'link',
 	'abstractwiki' => 'any',
-	'bgwikinews' => 'any', // T222044
 	'enwikibooks' => 'any', // T29256, T188472
 	'frwikiquote' => 'any', // T236212
 	'guwikisource' => 'any', // T42173
@@ -7244,8 +7224,6 @@ return [
 	'+kowikisource' => [
 		'초안' /* Draft */ => true, // T385162
 	],
-
-	// Wikinewses
 
 	// Wikiversities
 	'+enwikiversity' => [
