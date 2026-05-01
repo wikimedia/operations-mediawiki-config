@@ -475,9 +475,6 @@ return [
 		'user' => [ 'edit' => false ],
 		'autoconfirmed' => [ 'edit' => true ],
 	], // T396178
-	'+cawikinews' => [
-		'flood' => [ 'bot' => true ], // T98576
-	],
 	'+cewiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T128205
 		'suppressredirect' => [ // T128205
@@ -594,9 +591,6 @@ return [
 			'changetags' => true, // T330383
 		],
 		'user' => [ 'changetags' => false ], // T330383
-	],
-	'+cswikinews' => [
-		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
 	'+cswikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -2372,15 +2366,6 @@ return [
 			'editautoreviewprotected' => true, // T337430
 		],
 	],
-	'+ruwikinews' => [
-		'autoconfirmed' => [ 'movestable' => false, ], // T201265
-		'autoreview' => [
-			'move-categorypages' => true,
-			'movestable' => true, // T201265
-		],
-		'user' => [ 'move-categorypages' => false, ], // T201265
-		'rollbacker' => [ 'rollback' => true ], // T201265
-	],
 	'+ruwikiquote' => [
 		'autoeditor' => [
 			'autoreview' => true,
@@ -3818,12 +3803,6 @@ return [
 			'templateeditor', // T384145
 		],
 	],
-	'+cawikinews' => [
-		'sysop' => [
-			'flood', // T98576
-			'confirmed', // T138069
-		],
-	],
 	'+cewiki' => [
 		'sysop' => [
 			'rollbacker', // T128205
@@ -3890,9 +3869,6 @@ return [
 			'confirmed',
 			'extendedconfirmed', // T316283
 		],
-	],
-	'+cswikinews' => [
-		'bureaucrat' => [ 'autopatrolled' ],
 	],
 	'+cswikiquote' => [
 		'bureaucrat' => [ 'autopatrolled' ],
@@ -4645,9 +4621,6 @@ return [
 			'engineer', // T144599
 		],
 	],
-	'+ruwikinews' => [
-		'sysop' => [ 'rollbacker' ], // T201265
-	],
 	'+ruwikiquote' => [
 		'sysop' => [
 			'autoeditor',
@@ -5344,12 +5317,6 @@ return [
 			'templateeditor', // T384145
 		],
 	],
-	'+cawikinews' => [
-		'sysop' => [
-			'flood', // T98576
-			'confirmed', // T138069
-		],
-	],
 	'+cewiki' => [
 		'sysop' => [
 			'rollbacker', // T128205
@@ -5416,9 +5383,6 @@ return [
 			'confirmed', // T163206
 			'extendedconfirmed', // T316283
 		],
-	],
-	'+cswikinews' => [
-		'bureaucrat' => [ 'autopatrolled' ],
 	],
 	'+cswikiquote' => [
 		'bureaucrat' => [ 'autopatrolled' ],
@@ -5981,9 +5945,6 @@ return [
 			'suppressredirect',
 			'confirmed', // T334780
 		],
-	],
-	'+ruwikinews' => [
-		'sysop' => [ 'rollbacker' ], // T201265
 	],
 	'+ruwikiquote' => [
 		'sysop' => [ 'autoeditor', 'rollbacker' ], // T200201
