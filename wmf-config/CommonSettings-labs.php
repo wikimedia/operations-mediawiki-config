@@ -577,5 +577,8 @@ if ( $wmgRealm == 'labs' ) {
 			'object-src' => 'none',
 		];
 	}
+
+	// T99740 - test on Beta cluster before going live on prod wikis
+	$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
 }
 // end safeguard
