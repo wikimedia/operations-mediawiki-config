@@ -13,7 +13,7 @@ $wmgThrottlingExceptions = [];
 #  'value'  => new value for $wgAccountCreationThrottle (default: 50 per day)
 #  'tempaccountvalue' => new value for $wgTempAccountCreationThrottle
 #    (default: 6 per day)
-#  'IP'     => client IP as given by $wgRequest->getIP() or array (default: any IP)
+#  'IP'     => client IP as given by WebRequest::getIP() or array (default: any IP)
 #  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)

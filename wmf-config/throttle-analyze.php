@@ -6,10 +6,11 @@
  * See throttle.php for the format of $wmgThrottlingExceptions.
  */
 
+use MediaWiki\Context\RequestContext;
 use Wikimedia\IPUtils;
 
 $wgExtensionFunctions[] = static function () {
-	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
+	global $wmgThrottlingExceptions, $wgDBname;
 
 	foreach ( $wmgThrottlingExceptions as $options ) {
 		# Validate entry, skip when it does not apply to our case
@@ -29,7 +30,7 @@ $wgExtensionFunctions[] = static function () {
 		}
 
 		# 3) skip when throttle does not apply to the client IP
-		$ip = $wgRequest->getIP();
+		$ip = RequestContext::getMain()->getRequest()->getIP();
 		if ( isset( $options['IP'] ) && !in_array( $ip, (array)$options['IP'] ) ) {
 			continue;
 		}

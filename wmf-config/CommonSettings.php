@@ -2544,8 +2544,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $
 		return;
 	}
 
-	global $wgRequest;
-	$context = $wgRequest->getSecurityLogContext( $user );
+	$context = RequestContext::getMain()->getRequest()->getSecurityLogContext( $user );
 	$privileged = $context['user_is_privileged'];
 	$successful = $response->status === AuthenticationResponse::PASS;
 
@@ -2571,13 +2570,12 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $
 
 // log sysop password changes
 $wgHooks['ChangeAuthenticationDataAudit'][] = static function ( $req, $status ) {
-	global $wgRequest;
 	$user = MediaWikiServices::getInstance()
 		->getUserIdentityLookup()
 		->getUserIdentityByName( $req->username );
 	$status = Status::wrap( $status );
 	if ( $req instanceof PasswordAuthenticationRequest ) {
-		$context = $wgRequest->getSecurityLogContext( $user );
+		$context = RequestContext::getMain()->getRequest()->getSecurityLogContext( $user );
 		$privileged = $context['user_is_privileged'];
 		if ( $privileged ) {
 			$logger = LoggerFactory::getInstance( 'badpass' );
