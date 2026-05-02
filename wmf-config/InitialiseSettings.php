@@ -4255,7 +4255,6 @@ return [
 	'huwikibooks' => true,
 	'itwikibooks' => true,
 	'kmwikibooks' => true,
-	'lvwikibooks' => true,
 	'mlwikibooks' => true,
 	'newikibooks' => true,
 	'nlwikibooks' => true,
@@ -4290,7 +4289,6 @@ return [
 	'hewikinews' => true,
 	'itwikinews' => true,
 	'jawikinews' => true,
-	'kowikinews' => true,
 	'liwikinews' => true,
 	'nlwikinews' => true,
 	'nowikinews' => true,
@@ -4339,8 +4337,6 @@ return [
 	'eswikiversity' => true,
 	'frwikiversity' => true,
 	'ptwikiversity' => true,
-
-	'nowikimedia' => true,
 ],
 
 'wgDLPQueryCacheTime' => [
