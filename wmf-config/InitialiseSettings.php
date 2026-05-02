@@ -4229,7 +4229,6 @@ return [
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true, // T71974
 	'metawiki' => true,
-	'officewiki' => true,
 	'otrs_wikiwiki' => true,
 	'outreachwiki' => true, // T58245
 	'ptwiki' => true, // T37308
