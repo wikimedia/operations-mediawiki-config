@@ -1262,7 +1262,6 @@ $wgInstallerInitialPages = [ [
 [//www.wikipedia.org Wikipedia] |
 [//www.wiktionary.org Wiktionary] |
 [//www.wikibooks.org Wikibooks] |
-[//www.wikinews.org Wikinews] |
 [//www.wikiquote.org Wikiquote] |
 [//www.wikisource.org Wikisource] |
 [//www.wikiversity.org Wikiversity] |
