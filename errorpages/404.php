@@ -17,15 +17,16 @@ header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Not Found</title>
 <link rel="shortcut icon" href="/favicon.ico">
 <style>
 * { margin: 0; padding: 0; }
 body { background: #fff; color: #202122; font: 0.938em/1.6 sans-serif; }
-.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; }
+.content { margin: 7% auto 0; padding: 2em; max-width: 640px; }
 .footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
-img { float: left; margin: 0 2em 2em 0; }
-a img { border: 0; }
+#logo { float: left; margin: 0 2em 2em 0; }
+a #logo { border: 0; }
 h1 { margin-top: 1em; font-size: 1.2em; }
 p { margin: 0.7em 0 1em 0; }
 a { color: #36c; text-decoration: none; }
@@ -37,10 +38,15 @@ em { color: #72777d; font-style: normal; }
   em { color: #8d8882; }
   #logo { filter: invert(1) hue-rotate(180deg); }
 }
+@media (max-width: 420px) {
+  #logoContainer { display: block }
+  #logo { display: block; margin: 0 auto; float: none; }
+  .content { text-align: center; }
+}
 </style>
 <meta name="color-scheme" content="light dark">
 <div class="content" role="main">
-<a href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
+<a id="logoContainer" href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
 <h1>Page not found</h1>
 <?php
 $path = $_SERVER['REQUEST_URI'];
