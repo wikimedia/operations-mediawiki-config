@@ -714,7 +714,7 @@ return [
 	'thwikinews' => '/static/images/project-logos/thwikinews.png',
 	'trwikinews' => '/static/images/project-logos/trwikinews.png',
 	'ukwikinews' => '/static/images/project-logos/ukwikinews.png', // T124778
-	'zhwikinews' => '/static/images/project-logos/zhwikinews-20.png', // T298550, T420165
+	'zhwikinews' => '/static/images/project-logos/zhwikinews.png', // T298550
 
 	// Wikisource
 	'arwikisource' => '/static/images/project-logos/arwikisource.png', // T336193
@@ -1495,7 +1495,7 @@ return [
 	'srwikinews' => '/static/images/project-logos/srwikinews-2x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-2x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-2x.png',
-	'zhwikinews' => '/static/images/project-logos/zhwikinews-20-2x.png', // T298550
+	'zhwikinews' => '/static/images/project-logos/zhwikinews-2x.png', // T298550
 
 	// Wikisource
 	'arwikisource' => '/static/images/project-logos/arwikisource-2x.png', // T336193
@@ -7888,7 +7888,6 @@ return [
 	// Wikibooks
 
 	// Wikinews
-	'zhwikinews' => '/static/images/icons/zhwikinews-20.svg',
 
 	// Wikisource
 	'sourceswiki' => '/static/images/icons/wikisource.svg',
@@ -8125,20 +8124,20 @@ return [
 	// Wikinews
 	'zhwikinews' => [
 		'zh-hans' => [ // T308620
-			'1x' => '/static/images/project-logos/zhwikinews-20-hans.png',
-			'2x' => '/static/images/project-logos/zhwikinews-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
 		],
 		'zh-cn' => [ // T308620
-			'1x' => '/static/images/project-logos/zhwikinews-20-hans.png',
-			'2x' => '/static/images/project-logos/zhwikinews-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
 		],
 		'zh-my' => [ // T308620
-			'1x' => '/static/images/project-logos/zhwikinews-20-hans.png',
-			'2x' => '/static/images/project-logos/zhwikinews-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
 		],
 		'zh-sg' => [ // T308620
-			'1x' => '/static/images/project-logos/zhwikinews-20-hans.png',
-			'2x' => '/static/images/project-logos/zhwikinews-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
 		],
 	],
 
