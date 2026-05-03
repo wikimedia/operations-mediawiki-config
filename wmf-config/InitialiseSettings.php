@@ -757,6 +757,7 @@ return [
 	'ptwikivoyage' => false, // T44933
 	'ptwiktionary' => false, // T16193
 	'ruwikiquote' => false,
+	'scnwiki' => false, // T425278
 	'specieswiki' => false,
 	'svwiki' => false, // T13954
 	'svwikiversity' => false, // T28037
