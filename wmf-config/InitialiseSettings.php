@@ -8605,6 +8605,8 @@ return [
 'wgTranslateDisabledTargetLanguages' => [
 	'default' => [
 		'*' => [
+			'ak' => 'Translate in tw or fat please.', // T333765
+
 			'gan-hans' => 'Translate in gan please.',
 			'gan-hant' => 'Translate in gan please.',
 
@@ -8646,6 +8648,8 @@ return [
 		// Allow translations to Chinese variants for message bundles.
 		// See: T387230
 		'*' => [
+			'ak' => 'Translate in tw or fat please.', // T333765
+
 			'gan-hans' => 'Translate in gan please.',
 			'gan-hant' => 'Translate in gan please.',
 
@@ -8688,6 +8692,7 @@ return [
 	],
 	'wikifunctionswiki' => [
 		'*' => [
+			'ak' => 'This language code should remain unused. Localise in tw or fat please.', // T333765
 			'cdo' => 'This language code should remain unused. Localise in cdo-hant, cdo-hans or cdo-latn please.',
 			'cdo-hani' => 'This language code should remain unused. Localise in cdo-hant or cdo-hans please.',
 			'cpx' => 'This language code should remain unused. Localise in cpx-hans, cpx-hant or cpx-latn please.',
@@ -9999,7 +10004,9 @@ return [
 ],
 
 'wmgExtraLanguageNames' => [
-	'default' => [],
+	'default' => [
+		'ak' => 'Akan', // T333765, T425256
+	],
 
 	// Some languages aren't currently supported by MediaWiki
 	// but available to encode information on Wikidata.
@@ -10013,7 +10020,7 @@ return [
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
 		'agq' => 'Aghem', // T288335
-		'ak' => 'Akan', // T333765
+		'ak' => 'Akan', // T333765, T425256
 		'bag' => 'Tuki', // T263946
 		'bas' => 'Basaa', // T263946
 		'bax' => 'Bamum', // T263946
@@ -10079,7 +10086,7 @@ return [
 	],
 	'commonswiki' => [
 		'agq' => 'Aghem', // T288335
-		'ak' => 'Akan', // T333765
+		'ak' => 'Akan', // T333765, T425256
 		'bag' => 'Tuki', // T263946
 		'bas' => 'Basaa', // T263946
 		'bax' => 'Bamum', // T263946
