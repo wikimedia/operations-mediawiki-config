@@ -707,7 +707,6 @@ return [
 	'fawikinews' => true, // T28565
 	'fiwikinews' => false,
 	'frwikinews' => false,
-	'hewikinews' => true, // T74060
 	'huwikinews' => false,
 	'jawikinews' => false,
 	'kowikinews' => true, // T26877
@@ -837,7 +836,6 @@ return [
 	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Importer_un_fichier',
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
 	'guwiki' => false,
-	'hewikinews' => false,
 	'hiwiki' => '//hi.wikipedia.org/wiki/विकिपीडिया:अपलोड',
 	'hrwiki' => '//hr.wikipedia.org/wiki/Wikipedija:Upload',
 	'huwiki' => '//hu.wikipedia.org/wiki/Wikipédia:Fájl_feltöltése', // T408298
@@ -2451,7 +2449,6 @@ return [
 	'sul' => [ [ 'count' => 6, 'seconds' => 86400 ] ],
 	'eswikiquote' => [ [ 'count' => 1, 'seconds' => 86400 ] ], // T230796
 	'hewikibooks' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
-	'hewikinews' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 	'hewikiquote' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 	'hewikisource' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 	'hewiktionary' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
@@ -3038,7 +3035,6 @@ return [
 	'hewikibooks' => true, // T29918
 	'hewikiquote' => true,
 	'hewiktionary' => true, // T75197
-	'hewikinews' => true, // T140544
 	'hiwiki' => true,
 	'hiwikiversity' => true, // T192427
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
@@ -4283,7 +4279,6 @@ return [
 	'fawikinews' => true,
 	'fiwikinews' => true,
 	'frwikinews' => true,
-	'hewikinews' => true,
 	'itwikinews' => true,
 	'jawikinews' => true,
 	'nlwikinews' => true,
@@ -6441,7 +6436,6 @@ return [
 	'gdwiki' => true, // T156281
 	'hewiki' => true,
 	'hewikibooks' => true,
-	'hewikinews' => true,
 	'hewikivoyage' => true,
 	'hifwiki' => true,
 	'hiwiki' => true,
@@ -7865,7 +7859,6 @@ return [
 	'fawikinews' => 'منتشرشده',
 	'fiwikinews' => 'Julkaistut artikkelit', // T172875
 	'frwikinews' => 'Article publié', // T172875
-	'hewikinews' => 'פורסמו', // T172875
 	'itwikinews' => 'Pubblicati', // T172875
 	'jawikinews' => '公開中', // T172875
 	'kowikinews' => '발행됨', // T172875

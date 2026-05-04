@@ -1427,15 +1427,6 @@ return [
 			'unwatchedpages' => true,
 		], // T75197
 	],
-	'+hewikinews' => [ // T140544
-		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [
-			'patrol' => true,
-			'autopatrol' => true,
-			'rollback' => true,
-			'unwatchedpages' => true,
-		],
-	],
 	'+hiwiki' => [
 		'rollbacker' => [
 			'rollback' => true, // T56589
@@ -4316,12 +4307,6 @@ return [
 			'autopatrolled',
 		],
 	],
-	'+hewikinews' => [
-		'sysop' => [
-			'patroller', // T140544
-			'autopatrolled', // T140544
-		],
-	],
 	'+hewikiquote' => [
 		'sysop' => [ 'autopatrolled' ],
 	],
@@ -5831,9 +5816,6 @@ return [
 	],
 	'+hewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T52377
-	],
-	'+hewikinews' => [
-		'sysop' => [ 'patroller', 'autopatrolled' ], // T140544
 	],
 	'+hewikisource' => [
 		'bureaucrat' => [ 'import', 'transwiki' ], // T274796

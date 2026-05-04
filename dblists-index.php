@@ -369,7 +369,7 @@ return [
 'hawwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'hewiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
 'hewikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
-'hewikinews' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
+'hewikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'hewikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'rtl', 'sul', 'wikilove' ],
 'hewikisource' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'rtl', 'sul', 'wikilove' ],
 'hewikivoyage' => [ 'medium', 'wikidataclient', 'group1', 'rtl', 'parsoidrendered', 'sul' ],
