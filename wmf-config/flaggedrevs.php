@@ -341,15 +341,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 		unset( $wgGroupPermissions['reviewer'] );
 
-	} elseif ( $wgDBname == 'elwikinews' ) {
-		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsNamespaces[] = 100;
-		$wgGroupPermissions['editor']['rollback'] = true;
-		$wgGroupPermissions['editor']['autoreview'] = false;
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['autoreview'] = false;
-
-		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'enwikinews' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN ];
 		$wgGroupPermissions['editor']['rollback'] = true; // T21815

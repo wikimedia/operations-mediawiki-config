@@ -702,7 +702,6 @@ return [
 	'bgwikinews' => false,
 	'bswikinews' => false,
 	'cawikinews' => false,
-	'elwikinews' => false,
 	'eowikinews' => false,
 	'eswikinews' => false,
 	'fawikinews' => true, // T28565
@@ -4280,7 +4279,6 @@ return [
 	'cawikinews' => true,
 	'cswikinews' => true,
 	'dewikinews' => true,
-	'elwikinews' => true,
 	'enwikinews' => true,
 	'eowikinews' => true,
 	'eswikinews' => true,
@@ -6057,7 +6055,6 @@ return [
 
 'wgFlaggedRevsAutoReview' => [
 	'default' => 3,
-	'elwikinews' => 1,
 	'enwikinews' => 1,
 	'fawikinews' => 1,
 	'hewikisource' => 1,
