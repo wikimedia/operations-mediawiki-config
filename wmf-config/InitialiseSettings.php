@@ -700,7 +700,6 @@ return [
 
 	// Wikinews
 	'bgwikinews' => false,
-	'cawikinews' => false,
 	'eowikinews' => false,
 	'eswikinews' => false,
 	'fawikinews' => true, // T28565
@@ -3803,7 +3802,6 @@ return [
 
 'wgImportTargetNamespace' => [
 	'default' => null,
-	'cawikinews' => 100, // Transwiki T93203
 	'enwiktionary' => 108,
 	'enwikibooks' => 108,
 	'frwiktionary' => 102,
@@ -4268,7 +4266,6 @@ return [
 	// Wikinews
 	'arwikinews' => true,
 	'bgwikinews' => true,
-	'cawikinews' => true,
 	'cswikinews' => true,
 	'dewikinews' => true,
 	'enwikinews' => true,

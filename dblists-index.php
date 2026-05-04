@@ -155,7 +155,7 @@ return [
 'cawiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul' ],
 'cawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'cawikimedia' => [ 'small', 'visualeditor-nondefault', 'group1', 'translate', 'sul' ],
-'cawikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'cawikinews' => [ 'closed', 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'cawikiquote' => [ 'flow', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
 'cawikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'cawiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
