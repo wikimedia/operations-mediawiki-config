@@ -711,7 +711,6 @@ return [
 	'huwikinews' => false,
 	'jawikinews' => false,
 	'kowikinews' => true, // T26877
-	'liwikinews' => false,
 	'nlwikinews' => false,
 	'ptwikinews' => true, // T300466
 	'rowikinews' => false,
@@ -4287,7 +4286,6 @@ return [
 	'hewikinews' => true,
 	'itwikinews' => true,
 	'jawikinews' => true,
-	'liwikinews' => true,
 	'nlwikinews' => true,
 	'nowikinews' => true,
 	'plwikinews' => true,

@@ -549,7 +549,7 @@ return [
 'lijwikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'liwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'liwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
-'liwikinews' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'liwikinews' => [ 'closed', 'small', 'wikidataclient', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'liwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'liwikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'liwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
