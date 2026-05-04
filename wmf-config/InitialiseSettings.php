@@ -13832,6 +13832,7 @@ return [
 'wmgUseArticleGuidance' => [
 	'default' => false,
 	'testwiki' => true, // T417200
+	'simplewiki' => true, // T425351
 ],
 
 'wgArticleGuidanceExperimentName' => [
