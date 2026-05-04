@@ -717,7 +717,6 @@ return [
 	'rowikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
-	'sqwikinews' => false,
 	'srwikinews' => false,
 	'svwikinews' => false,
 	'tawikinews' => false,
@@ -4297,7 +4296,6 @@ return [
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
 	'sdwikinews' => true,
-	'sqwikinews' => true,
 	'srwikinews' => true,
 	'svwikinews' => true,
 	'tawikinews' => true,
