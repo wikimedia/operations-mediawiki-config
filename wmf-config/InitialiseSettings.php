@@ -3669,7 +3669,6 @@ return [
 	'nnwiki' => [ 's:no', 'q', 'no', 'da', 'sv', 'nl', 'en', 'de' ], // T231761
 	'nowiki' => [ 's', 'q', 'nn', 'da', 'sv', 'nl', 'en', 'de' ],
 	'nowikibooks' => [ 'sv', 'da', 'en', 'w', 'w:nn', 'w:sv', 'w:da', 'w:en' ],
-	'nowikinews' => [ 'sv' ],
 	'nowikiquote' => [ 'w', 'en', 'nn' ],
 	'nowikisource' => [ 'w', 'mul' ],
 	'nowiktionary' => [ 'w' ],
@@ -4277,7 +4276,6 @@ return [
 	'itwikinews' => true,
 	'jawikinews' => true,
 	'nlwikinews' => true,
-	'nowikinews' => true,
 	'plwikinews' => true,
 	'ptwikinews' => true,
 	'rowikinews' => true,
