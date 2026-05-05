@@ -374,15 +374,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 		# Remove editor and autoreview user groups (T249643)
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
-	} elseif ( $wgDBname == 'fawikinews' ) {
-		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsNamespaces[] = 100;
-		$wgGroupPermissions['editor']['rollback'] = true;
-		$wgGroupPermissions['editor']['autoreview'] = false;
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['autoreview'] = false;
-
-		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'fiwiki' ) {
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;

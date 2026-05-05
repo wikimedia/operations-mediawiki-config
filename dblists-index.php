@@ -283,7 +283,7 @@ return [
 'fatwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'fawiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'flaggedrevs', 'specialcontribute', 'wikidataclient', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
 'fawikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
-'fawikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
+'fawikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'fawikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'rtl', 'sul' ],
 'fawikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'rtl', 'sul' ],
 'fawikivoyage' => [ 'medium', 'wikidataclient', 'group1', 'rtl', 'parsoidrendered', 'sul' ],

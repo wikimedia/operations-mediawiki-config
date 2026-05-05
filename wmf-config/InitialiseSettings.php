@@ -701,7 +701,6 @@ return [
 	// Wikinews
 	'bgwikinews' => false,
 	'eswikinews' => false,
-	'fawikinews' => true, // T28565
 	'frwikinews' => false,
 	'huwikinews' => false,
 	'nlwikinews' => false,
@@ -2420,14 +2419,6 @@ return [
 	'enwikinews' => [
 		'atom' => 'http://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom&categories='
 			. 'Published&notcategories=No%20publish%7CArchived%7CAutoArchived%7Cdisputed&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only',
-	],
-	'fawikinews' => [
-		'atom' => 'http://fa.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom&categories='
-			. '%D9%85%D9%86%D8%AA%D8%B4%D8%B1%D8%B4%D8%AF%D9%87&notcategories=%D9%85%D8%B1%D9%88%D8%B1|%D9%85%D8%B1%D9%88%D8%B1_%D9%81%D9%88%D8%B1%DB%8C|%D8%B5%D9%81%D8%AD%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%86%D8%A7%D9%85%D8%B2%D8%AF_%D8%AD%D8%B0%D9%81_%D8%B3%D8%B1%DB%8C%D8%B9'
-			. '&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only',
-		'rss' => 'http://fa.wikinews.org/w/index.php?title=Special:NewsFeed&feed=rss&categories='
-			. '%D9%85%D9%86%D8%AA%D8%B4%D8%B1%D8%B4%D8%AF%D9%87&notcategories=%D9%85%D8%B1%D9%88%D8%B1|%D9%85%D8%B1%D9%88%D8%B1_%D9%81%D9%88%D8%B1%DB%8C|%D8%B5%D9%81%D8%AD%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%86%D8%A7%D9%85%D8%B2%D8%AF_%D8%AD%D8%B0%D9%81_%D8%B3%D8%B1%DB%8C%D8%B9'
-			. '&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only'
 	],
 ],
 
@@ -4256,7 +4247,6 @@ return [
 	'dewikinews' => true,
 	'enwikinews' => true,
 	'eswikinews' => true,
-	'fawikinews' => true,
 	'frwikinews' => true,
 	'itwikinews' => true,
 	'nlwikinews' => true,
@@ -5831,7 +5821,6 @@ return [
 	'enwikinews' => true,
 	'fawiki' => true, // T55981
 	'fawikibooks' => true, // T91861
-	'fawikinews' => true,
 	'fawikiquote' => true, // T179442
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
@@ -5896,7 +5885,6 @@ return [
 	'dtywiki' => true, // T177688
 	'enwikinews' => true,
 	'fawikibooks' => true, // T91861
-	'fawikinews' => true,
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
 	'gomwiki' => true, // T106169
@@ -6015,7 +6003,6 @@ return [
 'wgFlaggedRevsAutoReview' => [
 	'default' => 3,
 	'enwikinews' => 1,
-	'fawikinews' => 1,
 	'hewikisource' => 1,
 ],
 

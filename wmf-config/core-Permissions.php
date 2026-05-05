@@ -1138,10 +1138,6 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ], // T156163
 		'rollbacker' => [ 'rollback' => true ], // T156163
 	],
-	'+fawikinews' => [
-		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ 'patrol' => true ],
-	],
 	'+fawikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T73760
 		'flood' => [ 'bot' => true ], // T73760
@@ -4176,12 +4172,6 @@ return [
 			'rollbacker', // T111024
 		],
 	],
-	'+fawikinews' => [
-		'sysop' => [
-			'rollbacker',
-			'patroller',
-		],
-	],
 	'+fawikiquote' => [
 		'sysop' => [
 			'autopatrolled', // T56951
@@ -5709,9 +5699,6 @@ return [
 			'autopatrolled', // T56951
 			'rollbacker', // T56951
 		],
-	],
-	'+fawikinews' => [
-		'sysop' => [ 'rollbacker', 'patroller', ],
 	],
 	'+fawikivoyage' => [
 		'sysop' => [
