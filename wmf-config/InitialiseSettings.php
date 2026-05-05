@@ -705,7 +705,6 @@ return [
 	'frwikinews' => false,
 	'huwikinews' => false,
 	'jawikinews' => false,
-	'kowikinews' => true, // T26877
 	'nlwikinews' => false,
 	'rowikinews' => false,
 	'ruwikinews' => false,
