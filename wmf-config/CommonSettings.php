@@ -1977,12 +1977,22 @@ if ( $wgDBname === 'loginwiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
-$wgAutopromote = [
-	'autoconfirmed' => [ '&',
-		[ APCOND_EDITCOUNT, $wgAutoConfirmCount ],
-		[ APCOND_AGE, $wgAutoConfirmAge ],
-	],
-];
+// T418484
+if ( $wgAutoConfirmCount > 0 ) {
+	$wgAutopromote = [
+		'autoconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, $wgAutoConfirmCount ],
+			[ APCOND_AGE_FROM_EDIT, $wgAutoConfirmAge ],
+		],
+	];
+} else {
+	$wgAutopromote = [
+		'autoconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, $wgAutoConfirmCount ],
+			[ APCOND_AGE, $wgAutoConfirmAge ],
+		],
+	];
+}
 
 if ( is_array( $wmgAutopromoteExtraGroups ) ) {
 	$wgAutopromote += $wmgAutopromoteExtraGroups;
