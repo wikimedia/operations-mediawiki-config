@@ -2585,28 +2585,6 @@ return [
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
-	'+srwikinews' => [ // T209251, T213679, T213680, T213681 and T213682
-		'user' => [ 'move-categorypages' => false ],
-		'patroller' => [
-			'patrol' => true,
-			'move-categorypages' => true,
-			'movefile' => true,
-			'suppressredirect' => true,
-		],
-		'autopatrolled' => [
-			'autopatrol' => true,
-			'move-categorypages' => true,
-			'movefile' => true,
-			'editautopatrolprotected' => true,
-		],
-		'rollbacker' => [
-			'rollback' => true,
-			'move-categorypages' => true,
-			'movefile' => true,
-			'suppressredirect' => true,
-		],
-		'bot' => [ 'move-subpages' => true ],
-	],
 	'+srwikisource' => [ // T206935, T213055, T213059, T213063, T213065
 		'user' => [ 'move-categorypages' => false ],
 		'patroller' => [
@@ -4865,14 +4843,6 @@ return [
 		],
 		'sysop' => [ 'rollbacker' ], // T209250
 	],
-	'+srwikinews' => [
-		'bureaucrat' => [
-			'patroller', // T209251
-			'autopatrolled', // T209251
-			'rollbacker', // T209251
-		],
-		'sysop' => [ 'rollbacker' ], // T209251
-	],
 	'+srwikiquote' => [
 		'bureaucrat' => [
 			'patroller', // T206936
@@ -6177,10 +6147,6 @@ return [
 	],
 	'+srwikibooks' => [ // T209250
 		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled' ],
-		'sysop' => [ 'rollbacker' ],
-	],
-	'+srwikinews' => [ // T209251
-		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikisource' => [

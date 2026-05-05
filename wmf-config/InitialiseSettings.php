@@ -707,7 +707,6 @@ return [
 	'rowikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
-	'srwikinews' => false,
 	'thwikinews' => false,
 	'trwikinews' => true, // T22215
 	'ukwikinews' => false,
@@ -2101,7 +2100,6 @@ return [
 	'shwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'editpatrolprotected', 'sysop' ], // T344306
 	'srwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
-	'srwikinews' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikisource' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
@@ -3052,7 +3050,6 @@ return [
 	'specieswiki' => true, // T89147
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikibooks' => true, // T209250
-	'srwikinews' => true, // T209251
 	'srwikisource' => true, // #25963
 	'srwikiquote' => true, // T207732
 	'srwiktionary' => true, // T209252
@@ -4255,7 +4252,6 @@ return [
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
 	'sdwikinews' => true,
-	'srwikinews' => true,
 	'trwikinews' => true,
 	'ukwikinews' => true,
 	'zhwikinews' => true,
@@ -5402,9 +5398,6 @@ return [
 	],
 	'+srwikibooks' => [
 		'interface-admin' => 'Викикњиге:Трг',
-	],
-	'+srwikinews' => [
-		'interface-admin' => 'Викиновости:Форум',
 	],
 	'+srwikiquote' => [
 		'interface-admin' => 'Викицитат:Трг',
