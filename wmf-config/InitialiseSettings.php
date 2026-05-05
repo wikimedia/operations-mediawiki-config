@@ -7505,10 +7505,15 @@ return [
 	'mediawikiwiki' => true,
 	'metawiki' => true, // T155830
 	'uawikimedia' => true,
+	'cowikimedia' => true, // T425440
 ],
 'wmgRSSUrlWhitelist' => [
 	'default' => [], // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => [ 'https://wikimediaukraine.wordpress.com/feed/' ],
+	'cowikimedia' => [ // T425440
+		'https://wikimediacolombia.org/feed/',
+		'https://wikimedia.org.co/feed/',
+	],
 	'foundationwiki' => [
 		'https://wikimediafoundation.org/news/feed/',
 		'https://wikimediafoundation.org/category/communications/picture-of-the-day/feed/',
