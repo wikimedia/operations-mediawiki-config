@@ -2282,12 +2282,6 @@ return [
 			'move' => true, // T313802
 		],
 	],
-	'+ptwikinews' => [
-		'editprotected' => [
-			'editprotected' => true,
-			'editsemiprotected' => true,
-		], // T162577
-	],
 	'+ptwikisource' => [ // T331762
 		'user' => [ 'move-categorypages' => false ],
 		'patroller' => [
@@ -4701,12 +4695,6 @@ return [
 			'abusefilter', // T409578
 		],
 	],
-	'+ptwikinews' => [
-		'sysop' => [
-			'reviewer',
-			'editprotected', // T162577
-		],
-	],
 	'+ptwikisource' => [
 		'sysop' => [ // T331762
 			'patroller',
@@ -6084,9 +6072,6 @@ return [
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood' ], // T41905, T65750, T107661, T212735, T228521
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed', 'abusefilter' ], // T65750, T228521, T281926, T409578
-	],
-	'+ptwikinews' => [
-		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+ptwikisource' => [ // T331762
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],

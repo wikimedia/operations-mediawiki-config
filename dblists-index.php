@@ -739,7 +739,7 @@ return [
 'ptwiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
 'ptwikibooks' => [ 'flow', 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'ptwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1', 'sul' ],
-'ptwikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'group1', 'mobile-anon-categories', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'sul', 'wikilove' ],
+'ptwikinews' => [ 'closed', 'medium', 'wikidataclient', 'group0', 'mobile-anon-categories', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'sul', 'wikilove' ],
 'ptwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'ptwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'translate', 'sul' ],
 'ptwikiversity' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],

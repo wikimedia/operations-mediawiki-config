@@ -708,7 +708,6 @@ return [
 	'jawikinews' => false,
 	'kowikinews' => true, // T26877
 	'nlwikinews' => false,
-	'ptwikinews' => true, // T300466
 	'rowikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
@@ -859,7 +858,6 @@ return [
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // T70191
 	'ptwiki' => '//pt.wikipedia.org/wiki/Wikipedia:Carregar_ficheiro',
-	'ptwikinews' => '//pt.wikinews.org/wiki/Wikinotícias:Carregar_ficheiro', // T300466
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // T44934
 	'rowiki' => '//ro.wikipedia.org/wiki/Wikipedia:Trimite_fișier', // T85665
 	'ruwiki' => false, // T14334
@@ -2436,9 +2434,6 @@ return [
 			. '%D9%85%D9%86%D8%AA%D8%B4%D8%B1%D8%B4%D8%AF%D9%87&notcategories=%D9%85%D8%B1%D9%88%D8%B1|%D9%85%D8%B1%D9%88%D8%B1_%D9%81%D9%88%D8%B1%DB%8C|%D8%B5%D9%81%D8%AD%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%86%D8%A7%D9%85%D8%B2%D8%AF_%D8%AD%D8%B0%D9%81_%D8%B3%D8%B1%DB%8C%D8%B9'
 			. '&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only'
 	],
-	'ptwikinews' => [
-		'atom' => 'https://pt.wikinews.org/w/index.php?categories=Publicado&feed=atom&hideredirs=1&limit=75&namespace=0&title=Special:NewsFeed'
-	]
 ],
 
 'wgAccountCreationThrottle' => [
@@ -3809,7 +3804,6 @@ return [
 	'frwikinews' => 102, // Transwiki
 	'frwikiversity' => 110, // Transwiki
 	'frwikiquote' => 108, // transwiki
-	'ptwikinews' => 104, // Transwiki - T93218
 	// Added zh wikis per T42474
 	'zhwiktionary' => 102, // Transwiki
 	'zhwikibooks' => 100, // Transwiki
@@ -4275,7 +4269,6 @@ return [
 	'jawikinews' => true,
 	'nlwikinews' => true,
 	'plwikinews' => true,
-	'ptwikinews' => true,
 	'rowikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
@@ -5648,7 +5641,6 @@ return [
 	],
 	'+ptwiki' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikibooks' => [ 'br.wikimedia.org' => 'brwikimedia' ],
-	'+ptwikinews' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikiquote' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikisource' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikiversity' => [ 'br.wikimedia.org' => 'brwikimedia' ],
@@ -5879,7 +5871,6 @@ return [
 	'plwiki' => true, // T138169
 	'pswiki' => true, // T121132
 	'ptwiki' => true, // T269290
-	'ptwikinews' => true, // T282845
 	'ptwikivoyage' => true, // T290820
 	'ptwiktionary' => true, // T46412
 	'rowiki' => true,
@@ -6462,7 +6453,6 @@ return [
 	'plwiktionary' => true,
 	'pswiki' => true,
 	'ptwiki' => true,
-	'ptwikinews' => true, // T278634
 	'ptwikiquote' => true, // T361447
 	'rowiki' => true, // T219855
 	'ruwiki' => true, // T153855
@@ -8038,7 +8028,6 @@ return [
 	'enwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 	'eswikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 	'frwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
-	'ptwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
 // ----------- CheckUser start ----------
@@ -11620,7 +11609,6 @@ return [
 	'testcommonswiki' => true,
 	'testwiki' => true,
 	'commonswiki' => true,
-	'ptwikinews' => true, // T299872
 ],
 
 'wgMediaSearchExternalEntitySearchBaseUri' => [
@@ -11645,10 +11633,6 @@ return [
 		'valued-image' => 'P6731=Q63348040',
 		'picture-of-the-day' => 'P6731=Q6998859',
 	],
-],
-
-'wgMediaSearchTabOrder' => [
-	'ptwikinews' => [ 'page', 'image', 'video', 'audio', 'other' ], // T299872, show cat first
 ],
 
 // Test Kitchen is replacing Metrics Platform T407806

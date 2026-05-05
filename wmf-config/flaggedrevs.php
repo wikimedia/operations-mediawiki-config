@@ -136,11 +136,6 @@ call_user_func( static function () {
 			'email' => true, # user must be emailconfirmed?
 			'neverBlocked' => true, # Can users that were blocked be promoted?
 		] + $wmgStandardAutoPromote;
-
-	} elseif ( $wgDBname == 'ptwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['days'] = 30;
-
 	} elseif ( $wgDBname == 'ruwikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
