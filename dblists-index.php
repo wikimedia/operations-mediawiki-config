@@ -814,7 +814,7 @@ return [
 'shnwikinews' => [ 'closed', 'small', 'wikidataclient', 'group0', 'sul' ],
 'shnwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
 'shnwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'shwiki' => [ 'wikipedia', 'specialcontribute', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul' ],
+'shwiki' => [ 'wikipedia', 'specialcontribute', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'sul', 'wikilove' ],
 'shwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'shywiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'simplewiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations' ],
