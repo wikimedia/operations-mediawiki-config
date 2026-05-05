@@ -50,7 +50,7 @@ return [
 'arwiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'flaggedrevs', 'specialcontribute', 'wikidataclient', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'ores', 'sul', 'wikilove' ],
 'arwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'arwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1', 'sul' ],
-'arwikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
+'arwikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'arwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'rtl', 'sul' ],
 'arwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'rtl', 'sul', 'wikilove' ],
 'arwikiversity' => [ 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],

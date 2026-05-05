@@ -284,9 +284,6 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
-	'+arwikinews' => [
-		'rollbacker' => [ 'rollback' => true ], // T189206
-	],
 	'+arzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T258100
 		'autopatrolled' => [ 'autopatrol' => true ], // T260761
@@ -3711,9 +3708,6 @@ return [
 	'+arwikibooks' => [
 		'sysop' => [ 'rollbacker', ], // T185720
 	],
-	'+arwikinews' => [
-		'sysop' => [ 'rollbacker', ], // T189206
-	],
 	'+arwikiquote' => [
 		'sysop' => [ 'rollbacker', ], // T189732
 	],
@@ -5260,9 +5254,6 @@ return [
 	],
 	'+arwikibooks' => [
 		'sysop' => [ 'rollbacker', ], // T185720
-	],
-	'+arwikinews' => [
-		'sysop' => [ 'rollbacker', ], // T189206
 	],
 	'+arwikiquote' => [
 		'sysop' => [ 'rollbacker', ], // T189732

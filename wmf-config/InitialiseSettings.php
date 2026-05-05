@@ -4237,7 +4237,6 @@ return [
 	'zhwikibooks' => true,
 
 	// Wikinews
-	'arwikinews' => true,
 	'bgwikinews' => true,
 	'dewikinews' => true,
 	'enwikinews' => true,
