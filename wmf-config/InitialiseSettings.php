@@ -703,7 +703,6 @@ return [
 	'eswikinews' => false,
 	'frwikinews' => false,
 	'huwikinews' => false,
-	'nlwikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
 	'thwikinews' => false,
@@ -4241,7 +4240,6 @@ return [
 	'enwikinews' => true,
 	'eswikinews' => true,
 	'frwikinews' => true,
-	'nlwikinews' => true,
 	'plwikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
@@ -6393,7 +6391,6 @@ return [
 	'mwlwiki' => true, // T180052
 	'newiki' => true,
 	'nlwiki' => true,
-	'nlwikinews' => true, // T177170
 	'nlwikiquote' => true, // T124167
 	'nnwiki' => true, // T359788
 	'nowiki' => true, // T210325

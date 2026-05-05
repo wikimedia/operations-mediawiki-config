@@ -660,7 +660,7 @@ return [
 'nlwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
 'nlwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'nlwikimedia' => [ 'small', 'group1', 'sul' ],
-'nlwikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'nlwikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'nlwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'nlwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'nlwikivoyage' => [ 'medium', 'wikidataclient', 'group1', 'parsoidrendered', 'sul' ],
