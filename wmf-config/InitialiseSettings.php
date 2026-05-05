@@ -704,7 +704,6 @@ return [
 	'frwikinews' => false,
 	'huwikinews' => false,
 	'nlwikinews' => false,
-	'rowikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
 	'thwikinews' => false,
@@ -4248,7 +4247,6 @@ return [
 	'itwikinews' => true,
 	'nlwikinews' => true,
 	'plwikinews' => true,
-	'rowikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
 	'sdwikinews' => true,
@@ -5336,9 +5334,6 @@ return [
 	'+ptwiktionary' => [
 		'interface-admin' => 'Wikcionário:Pedidos a administradores',
 	],
-	'+rowikinews' => [
-		'interface-admin' => 'Wikiștiri:Cafenea',
-	],
 	'+rswikimedia' => [
 		'interface-admin' => 'Разговор:Главна страна',
 	],
@@ -5846,7 +5841,6 @@ return [
 	'ptwikivoyage' => true, // T290820
 	'ptwiktionary' => true, // T46412
 	'rowiki' => true,
-	'rowikinews' => true,
 	'rowikisource' => true, // T30307
 	'ruwikiversity' => true,
 	'sawiki' => true, // T99879
