@@ -12942,14 +12942,8 @@ return [
 	'default' => false,
 ],
 
-// This is wikis that have it for all users
-// vs below where its only for users with sessions.
 'wmgUseCSPReportOnly' => [
-	'default' => true, // T291867
-],
-
-'wmgUseCSPReportOnlyHasSession' => [
-	'default' => true,
+	'default' => false,
 ],
 
 'wmgUseCSP' => [
@@ -12957,7 +12951,6 @@ return [
 ],
 
 // Domains that go in script-src and default-src for CSP. Not to be varied by wiki.
-// Note: Special case of wikimedia.org (no *) for math is defined in CommonSettings.php
 // Do not add any domains to this list without talking to Security first.
 'wmgApprovedContentSecurityPolicyDomains' => [
 	'default' => [
@@ -12977,14 +12970,66 @@ return [
 		'*.wikifunctions.org',
 		'*.wikivoyage.org',
 		'*.mediawiki.org',
-
-		// T419137: While wmgUseCSP is enforced, allow these.
-		//
-		// TODO: Once scripts move on-wiki, limit thse to default-src without script-src (T135963)
-		// (allowing JSON APIs/images/iframes but not scripts).
-		'*.toolforge.org',
-		'*.wmcloud.org',
+		'mediawiki.org',
+		'wikimedia.org',
 		'*.wmflabs.org',
+		'*.wmcloud.org',
+		'*.toolforge.org',
+		'wss://*.toolforge.org',
+		'*.jsdelivr.net',
+		'unpkg.com',
+		'cdnjs.cloudflare.com',
+		'raw.githubusercontent.com',
+		'*.github.com',
+		'code.jquery.com',
+		'cdn.mathjax.org',
+		'use.typekit.net',
+		'fonts.cdnfonts.com',
+		'use.fontawesome.com',
+		'i.ytimg.com',
+		'rsms.me',
+		'doi.org',
+		'localhost',
+		'https://localhost:*',
+		'http://localhost:*',
+		'wss://localhost:*',
+		'ws://localhost:*',
+		'*.google.com',
+		'*.gstatic.com',
+		'*.googleapis.com',
+		'*.translate.yandex.net',
+		'yastatic.net',
+		'ya.ru',
+		'radically.github.io',
+		'cdn.sammdot.ca',
+		'cdn.fontshare.com',
+		'viaf.org',
+		'publicai-proxy.alaexis.workers.dev',
+		'iiif.archive.org',
+		'api.flickr.com',
+		'live.staticflickr.com',
+		'api.anthropic.com',
+		'api.openai.com',
+		'api.publicai.co',
+		'catalogo.pusc.it',
+		'parsifal.urbe.it',
+		'opac.sbn.it',
+		'overpass-api.de',
+		'api.openrouteservice.org',
+		'archive.org',
+		'*.openstreetmap.org',
+		'*.waymarkedtrails.org',
+		'*.thunderforest.com',
+		'registry.ipe.wiki',
+		'analytics.ipe.wiki',
+		'qlever.dev',
+		'app.goacoustic.com',
+		'wikipedia-archive.ourworldindata.org',
+		'api.inaturalist.org',
+		'inaturalist-open-data.s3.amazonaws.com',
+		'validator.w3.org',
+		'db.onlinewebfonts.com',
+		'fontlibrary.org',
 	],
 	'donatewiki' => [
 		'*.wikimedia.org', // Needed to load some images

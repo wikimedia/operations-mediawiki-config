@@ -56,7 +56,6 @@ use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\RCFeed\UDPRCFeedEngine;
-use MediaWiki\Session\SessionManager;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
 use Wikimedia\MWConfig\ClusterConfig;
@@ -4842,47 +4841,23 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 
 	];
 
-	$wgExtensionFunctions[] = static function () {
-		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly,
-			$wmgApprovedContentSecurityPolicyDomains, $wmgUseCSP, $wgCSPHeader;
-		if ( !$wmgUseCSPReportOnly && !$wmgUseCSP ) {
-			// This means that $wmgUseCSPReportOnlyHasSession
-			// is set, so only logged in users should trigger this.
-			if (
-				defined( 'MW_NO_SESSION' ) ||
-				MW_ENTRY_POINT === 'cli' ||
-				!SessionManager::getGlobalSession()->isPersistent()
-			) {
-				// There is no session, so don't set CSP, as we care more
-				// about actual users, and this allows quick revert since
-				// not cached in varnish
-				return;
-			}
-		}
+	// build CSP config
+	$cspConfig = [
+		'useNonces' => false,
+		'includeCORS' => false,
+		'default-src' => $wmgApprovedContentSecurityPolicyDomains,
+		'script-src' => $wmgApprovedContentSecurityPolicyDomains,
+	];
 
-		$cspConfig = [
-			'useNonces' => false,
-			'includeCORS' => false,
-			'default-src' => array_merge(
-				$wmgApprovedContentSecurityPolicyDomains,
-				[
-					// Needed for Math. Remove when/if math is fixed.
-					'wikimedia.org',
-				]
-			),
-			'script-src' => $wmgApprovedContentSecurityPolicyDomains,
-		];
+	if ( $wmgUseCSPReportOnly ) {
+		// $wgCSPReportOnlyHeader defaults to false, so setup an array for config
+		$wgCSPReportOnlyHeader = $cspConfig;
+	}
 
-		if ( $wmgUseCSPReportOnly ) {
-			// $wgCSPReportOnlyHeader defaults to false, so setup an array for config
-			$wgCSPReportOnlyHeader = $cspConfig;
-		}
-
-		if ( $wmgUseCSP ) {
-			// $wgCSPHeader defaults to false, so setup an array for config
-			$wgCSPHeader = $cspConfig;
-		}
-	};
+	if ( $wmgUseCSP ) {
+		// $wgCSPHeader defaults to false, so setup an array for config
+		$wgCSPHeader = $cspConfig;
+	}
 }
 
 if ( $wmgUseCampaignEvents ) {
