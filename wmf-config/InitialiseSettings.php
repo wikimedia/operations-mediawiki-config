@@ -702,7 +702,6 @@ return [
 	'bgwikinews' => false,
 	'eswikinews' => false,
 	'fawikinews' => true, // T28565
-	'fiwikinews' => false,
 	'frwikinews' => false,
 	'huwikinews' => false,
 	'jawikinews' => false,
@@ -4261,7 +4260,6 @@ return [
 	'enwikinews' => true,
 	'eswikinews' => true,
 	'fawikinews' => true,
-	'fiwikinews' => true,
 	'frwikinews' => true,
 	'itwikinews' => true,
 	'jawikinews' => true,
@@ -6332,7 +6330,6 @@ return [
 	'abstractwiki' => 'any',
 	'bgwikinews' => 'any', // T222044
 	'enwikibooks' => 'any', // T29256, T188472
-	'fiwikinews' => 'any', // T216333
 	'frwikiquote' => 'any', // T236212
 	'guwikisource' => 'any', // T42173
 	'jawikinews' => 'any', // T364189

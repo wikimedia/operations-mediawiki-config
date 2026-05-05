@@ -294,7 +294,7 @@ return [
 'fiwiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'flaggedrevs', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul' ],
 'fiwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'fiwikimedia' => [ 'flow', 'small', 'visualeditor-nondefault', 'group1', 'sul' ],
-'fiwikinews' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'fiwikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'fiwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'fiwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'fiwikiversity' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
