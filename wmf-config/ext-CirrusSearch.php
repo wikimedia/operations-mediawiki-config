@@ -1325,6 +1325,7 @@ return [
 ],
 'wgCirrusSearchCompletionUseSecondTryProfile' => [
 	'default' => 'default',
+
 	'hewiki' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewiktionary' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewikibooks' => 'language_converter_and_hebrew_wrong_keyboard',
@@ -1332,11 +1333,21 @@ return [
 	'hewikiquote' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewikisource' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewikivoyage' => 'language_converter_and_hebrew_wrong_keyboard',
+
+	'hiwiki' => 'language_converter_and_hindi_transliteration',
+	'hiwiktionary' => 'language_converter_and_hindi_transliteration',
+	'hiwikibooks' => 'language_converter_and_hindi_transliteration',
+	'hiwikiquote' => 'language_converter_and_hindi_transliteration',
+	'hiwikisource' => 'language_converter_and_hindi_transliteration',
+	'hiwikiversity' => 'language_converter_and_hindi_transliteration',
+	'hiwikivoyage' => 'language_converter_and_hindi_transliteration',
+
 	'kawiki' => 'language_converter_and_georgian_transliteration',
 	'kawiktionary' => 'language_converter_and_georgian_transliteration',
 	'kawikibooks' => 'language_converter_and_georgian_transliteration',
 	'kawikiquote' => 'language_converter_and_georgian_transliteration',
 	'kawikisource' => 'language_converter_and_georgian_transliteration',
+
 	'ruwiki' => 'language_converter_and_russian_wrong_keyboard',
 	'ruwiktionary' => 'language_converter_and_russian_wrong_keyboard',
 	'ruwikibooks' => 'language_converter_and_russian_wrong_keyboard',
