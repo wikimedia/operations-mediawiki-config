@@ -970,7 +970,6 @@ return [
 			'editsemiprotected' => true, // T342484
 			'abusefilter-bypass-blocked-external-domains' => true, // T342484
 			'sboverride' => true, // T342484
-			'writeapi' => true, // T342484
 			'autopatrol' => true, // T342484
 			'nominornewtalk' => true, // T342484
 			'noratelimit' => true, // T342484
@@ -1308,7 +1307,6 @@ return [
 			'skipcaptcha' => true,
 			'suppressredirect' => true,
 			'undelete' => true,
-			'writeapi' => true,
 		],
 	],
 	'+gawiki' => [
@@ -1538,7 +1536,6 @@ return [
 			'skipcaptcha' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
-			'writeapi' => true,
 			'editautopatrolprotected' => true, // T308917
 			'changetags' => true, // T331051
 			'abusefilter-bypass-blocked-external-domains' => true, // T355694
