@@ -713,7 +713,6 @@ return [
 	'sdwikinews' => false,
 	'srwikinews' => false,
 	'svwikinews' => false,
-	'tawikinews' => false,
 	'thwikinews' => false,
 	'trwikinews' => true, // T22215
 	'ukwikinews' => false,
@@ -4275,7 +4274,6 @@ return [
 	'sdwikinews' => true,
 	'srwikinews' => true,
 	'svwikinews' => true,
-	'tawikinews' => true,
 	'trwikinews' => true,
 	'ukwikinews' => true,
 	'zhwikinews' => true,
