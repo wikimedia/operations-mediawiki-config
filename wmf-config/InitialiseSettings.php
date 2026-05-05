@@ -708,7 +708,6 @@ return [
 	'sdwikinews' => false,
 	'thwikinews' => false,
 	'trwikinews' => true, // T22215
-	'ukwikinews' => false,
 	'zhwikinews' => false,
 
 	// Other individual wikis
@@ -4251,7 +4250,6 @@ return [
 	'ruwikinews' => false,
 	'sdwikinews' => true,
 	'trwikinews' => true,
-	'ukwikinews' => true,
 	'zhwikinews' => true,
 
 	// Wikiquote

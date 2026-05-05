@@ -971,7 +971,7 @@ return [
 'ugwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'ukwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'flaggedrevs', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'wikilove', 'automoderator-revertrisk-multilingual' ],
 'ukwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
-'ukwikinews' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'ukwikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'ukwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'ukwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'ukwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],
