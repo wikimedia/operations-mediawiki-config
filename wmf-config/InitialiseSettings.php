@@ -13779,7 +13779,7 @@ return [
 'wgReauthenticateTime' => [
 	'default' => [
 		'default' => 3600, // 1 hour.
-		'editsitejs' => 600, // 10 minutes.
+		'editsitejs' => 3600, // 1 hour.
 	],
 ],
 
