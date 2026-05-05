@@ -700,7 +700,6 @@ return [
 
 	// Wikinews
 	'bgwikinews' => false,
-	'eowikinews' => false,
 	'eswikinews' => false,
 	'fawikinews' => true, // T28565
 	'fiwikinews' => false,
@@ -4268,7 +4267,6 @@ return [
 	'cswikinews' => true,
 	'dewikinews' => true,
 	'enwikinews' => true,
-	'eowikinews' => true,
 	'eswikinews' => true,
 	'fawikinews' => true,
 	'fiwikinews' => true,
