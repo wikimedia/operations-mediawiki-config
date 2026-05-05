@@ -4806,7 +4806,7 @@ if ( $wmgUseWikistories ) {
 	wfLoadExtension( 'Wikistories' );
 }
 
-if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
+if ( $wmgUseCSPReportOnly || $wmgUseCSP ) {
 	$wgCSPFalsePositiveUrls += [
 		// List of known blocked domains that cause lot of log noise.
 		// Most of these are caused by browser extensions
