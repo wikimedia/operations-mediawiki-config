@@ -1299,29 +1299,28 @@ return [
 	'default' => true,
 ],
 'wgCirrusSearchAlternativeIndices' => [
-	'default' => [
-		'enwiki' => [
-			"completion" => [
-				[
-					"index_id" => 1,
-					"config_overrides" => [
-						'CirrusSearchCompletionPlainTokenizer' => 'keyword',
-					],
-					"use" => false
-				]
+	'default' => [],
+	'enwiki' => [
+		"completion" => [
+			[
+				"index_id" => 1,
+				"config_overrides" => [
+					'CirrusSearchCompletionPlainTokenizer' => 'keyword',
+				],
+				"use" => false
 			]
-		],
-		'enwiktionary' => [
-			"completion" => [
-				[
-					"index_id" => 1,
-					"config_overrides" => [
-						'CirrusSearchCompletionPlainTokenizer' => 'keyword',
-					],
-					"use" => false
-				]
+		]
+	],
+	'enwiktionary' => [
+		"completion" => [
+			[
+				"index_id" => 1,
+				"config_overrides" => [
+					'CirrusSearchCompletionPlainTokenizer' => 'keyword',
+				],
+				"use" => false
 			]
-		],
+		]
 	],
 ],
 'wgCirrusSearchCompletionUseSecondTryProfile' => [
