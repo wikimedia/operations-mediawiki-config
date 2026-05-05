@@ -4257,7 +4257,6 @@ return [
 	// Wikinews
 	'arwikinews' => true,
 	'bgwikinews' => true,
-	'cswikinews' => true,
 	'dewikinews' => true,
 	'enwikinews' => true,
 	'eswikinews' => true,
@@ -6332,7 +6331,6 @@ return [
 	'default' => 'link',
 	'abstractwiki' => 'any',
 	'bgwikinews' => 'any', // T222044
-	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
 	'fiwikinews' => 'any', // T216333
 	'frwikiquote' => 'any', // T236212
