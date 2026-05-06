@@ -12801,6 +12801,10 @@ return [
 	'default' => true,
 ],
 
+'wmgCSPUseReportURIDirective' => [
+	'default' => true,
+],
+
 // Domains that go in script-src and default-src for CSP. Not to be varied by wiki.
 // Do not add any domains to this list without talking to Security first.
 'wmgApprovedContentSecurityPolicyDomains' => [

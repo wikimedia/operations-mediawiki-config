@@ -1984,6 +1984,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgCSPUseReportURIDirective' => [
+			'default' => true,
+		],
+
 		// T420604 - test enforcing config on beta cluster first, with current allow-listed domains
 		// Note: MediaWiki itself should never call prod from Beta.
 		'wmgApprovedContentSecurityPolicyDomains' => [
