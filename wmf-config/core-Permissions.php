@@ -1605,15 +1605,6 @@ return [
 		],
 		'flood' => [ 'bot' => true, ], // T41569
 	],
-	'+itwikinews' => [
-		'autoconfirmed' => [ 'patrol' => true ],
-		'rollbacker' => [
-			'rollback' => true,
-			'autopatrol' => true,
-		], // T142571
-		'autopatrolled' => [ 'autopatrol' => true ], // T142571
-		'closer' => [ 'protect' => true, 'editprotected' => true ], // T257927
-	],
 	'itwikiquote' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T64200
@@ -4360,13 +4351,6 @@ return [
 		],
 		'accountcreator' => [ 'confirmed' ], // T206447
 	],
-	'+itwikinews' => [
-		'sysop' => [
-			'autopatrolled', // T142571
-			'rollbacker', // T142571
-		],
-		'bureaucrat' => [ 'closer' ], // T257927
-	],
 	'+itwikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T64200
 	],
@@ -5803,10 +5787,6 @@ return [
 	'+itwikibooks' => [
 		'sysop' => [ 'autopatrolled', 'accountcreator', 'confirmed', 'patroller', 'flood' ], // flood added per T41569
 		'accountcreator' => [ 'confirmed' ], // T206447
-	],
-	'+itwikinews' => [
-		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
-		'bureaucrat' => [ 'closer' ], // T257927
 	],
 	'+itwikiquote' => [
 		'bureaucrat' => [ 'autopatrolled' ], // T64200

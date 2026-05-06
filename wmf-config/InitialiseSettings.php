@@ -3014,7 +3014,6 @@ return [
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
 	'idwiki' => true, // T8042
 	'itwiki' => true,
-	'itwikinews' => true,
 	'itwikiversity' => true,
 	'itwikibooks' => true, // T11159
 	'itwikiquote' => true, // T14826
@@ -4242,7 +4241,6 @@ return [
 	'enwikinews' => true,
 	'eswikinews' => true,
 	'frwikinews' => true,
-	'itwikinews' => true,
 	'nlwikinews' => true,
 	'plwikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
@@ -5170,9 +5168,6 @@ return [
 	],
 	'+itwiki' => [
 		'interface-admin' => 'Wikipedia:Richieste agli amministratori',
-	],
-	'+itwikinews' => [
-		'interface-admin' => 'Wikinotizie:Richieste agli amministratori',
 	],
 	'+itwikisource' => [
 		'interface-admin' => 'Wikisource:Richieste agli amministratori',

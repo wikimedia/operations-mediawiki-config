@@ -444,7 +444,7 @@ return [
 'iswiktionary' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'itwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations' ],
 'itwikibooks' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
-'itwikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'itwikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'itwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul', 'wikilove' ],
 'itwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'itwikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
