@@ -1265,20 +1265,6 @@ return [
 			'autopatrol' => true,
 		],
 	],
-	'+frwikinews' => [
-		'flood' => [ 'bot' => true ],
-		'trusteduser' => [
-			'autoreview' => true,
-			'unreviewedpages' => true,
-		], // T90979
-		'facilitator' => [ // T90979
-			'autoreview' => true,
-			'review' => true,
-			'validate' => true,
-			'unreviewedpages' => true,
-			'import' => true,
-		],
-	],
 	'frwikisource' => [
 		'patroller' => [
 			'patrol' => true,
@@ -4196,12 +4182,6 @@ return [
 		'bureaucrat' => [ 'abusefilter' ],
 		'sysop' => [ 'patroller' ],
 	],
-	'+frwikinews' => [
-		'sysop' => [
-			'trusteduser', // T90979
-			'facilitator', // T90979
-		],
-	],
 	'+frwikisource' => [
 		'sysop' => [
 			'patroller',
@@ -5694,9 +5674,6 @@ return [
 		'bureaucrat' => [ 'abusefilter' ],
 		'sysop' => [ 'patroller' ],
 	],
-	'+frwikinews' => [
-		'sysop' => [ 'trusteduser', 'facilitator' ], // T90979
-	],
 	'+frwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
@@ -6371,7 +6348,6 @@ return [
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
-	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'itwikibooks' => [ 'sysop' => [ 'flood' ] ], // T41569
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
 	'itwiktionary' => [ 'sysop' => [ 'flood' ] ], // T41306
@@ -6409,7 +6385,6 @@ return [
 	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
-	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'frwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
 	'hrwiki' => [ 'flood' => [ 'flood' ] ], // T276560
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600

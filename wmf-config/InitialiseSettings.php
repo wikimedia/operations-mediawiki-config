@@ -701,7 +701,6 @@ return [
 	// Wikinews
 	'bgwikinews' => false,
 	'eswikinews' => false,
-	'frwikinews' => false,
 	'huwikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
@@ -3779,7 +3778,6 @@ return [
 	'frwikisource' => 100,
 	'frwikibooks' => 100, // Transwiki
 	'nlwikibooks' => 102,
-	'frwikinews' => 102, // Transwiki
 	'frwikiversity' => 110, // Transwiki
 	'frwikiquote' => 108, // transwiki
 	// Added zh wikis per T42474
@@ -4238,7 +4236,6 @@ return [
 	'dewikinews' => true,
 	'enwikinews' => true,
 	'eswikinews' => true,
-	'frwikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
 	'sdwikinews' => true,
@@ -5080,9 +5077,6 @@ return [
 	],
 	'+frwikibooks' => [
 		'interface-admin' => 'Wikilivres:Requêtes aux bureaucrates',
-	],
-	'+frwikinews' => [
-		'interface-admin' => 'Wikinews:Requête aux bureaucrates',
 	],
 	'+frwikiquote' => [
 		'interface-admin' => 'Wikiquote:Requête aux bureaucrates',
@@ -7975,7 +7969,6 @@ return [
 	'private' => false, // Private wikis are not public
 	'enwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 	'eswikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
-	'frwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
 // ----------- CheckUser start ----------
@@ -9738,7 +9731,6 @@ return [
 	'wikipedia' => true,
 	'wikivoyage' => true,
 	'eswikinews' => true, // T230660
-	'frwikinews' => true, // T143480
 	'zhwikinews' => true, // T266933
 ],
 
@@ -9857,7 +9849,6 @@ return [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
 	'dewiki' => [ 'minerva' ], // T278611
 	'eswikinews' => [], // T230660
-	'frwikinews' => [], // T341105
 	'htwiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T126826, T298916
 	'hewiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T191573, T298916
 	'wikivoyage' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T298916

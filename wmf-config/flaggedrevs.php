@@ -106,10 +106,6 @@ call_user_func( static function () {
 			'uniqueContentPages' => 10,
 			'editComments' => 50,
 		] + $wmgStandardAutoPromote;
-
-	} elseif ( $wgDBname == 'frwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
-
 	} elseif ( $wgDBname == 'hewikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
@@ -383,17 +379,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
 		];
-	} elseif ( $wgDBname == 'frwikinews' ) {
-		$wgFlaggedRevsNamespaces[] = 104;
-		$wgFlaggedRevsNamespaces[] = 106;
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-
-		// Removed legacy groups, per T90979
-		unset(
-			$wgGroupPermissions['autoreview'],
-			$wgGroupPermissions['editor'],
-			$wgGroupPermissions['reviewer']
-		);
 	} elseif ( $wgDBname == 'hewikisource' ) {
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgFlaggedRevsNamespaces[] = 106;

@@ -311,7 +311,7 @@ return [
 'frrwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'frwiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'modern-mainpage', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'checkuser-suggested-investigations' ],
 'frwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
-'frwikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
+'frwikinews' => [ 'closed', 'medium', 'wikidataclient', 'group0', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'frwikiquote' => [ 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'modern-mainpage', 'sul' ],
 'frwikisource' => [ 'flow', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'frwikiversity' => [ 'flow', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
