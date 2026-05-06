@@ -991,14 +991,6 @@ return [
 			'autopatrol' => true,
 		], // T93371
 	],
-	'+eswikinews' => [
-		'bot' => [ 'editprotected' => true ],
-		'editprotected' => [
-			'editprotected' => true,
-			'editsemiprotected' => true,
-		],
-		'flood' => [ 'bot' => true ],
-	],
 	'+eswikiquote' => [ // T64911
 		'rollbacker' => [ 'rollback' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -4046,12 +4038,6 @@ return [
 			'autopatrolled', // T93371
 		],
 	],
-	'+eswikinews' => [
-		'bureaucrat' => [
-			'editprotected',
-			'flood',
-		],
-	],
 	'+eswikiquote' => [
 		'sysop' => [
 			'autopatrolled',
@@ -5543,9 +5529,6 @@ return [
 	'+eswikibooks' => [
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [ 'rollbacker', 'patroller', 'autopatrolled' ], // T111455
-	],
-	'+eswikinews' => [
-		'bureaucrat' => [ 'editprotected', 'flood', ],
 	],
 	'+eswikiquote' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'rollbacker' ], // T64911

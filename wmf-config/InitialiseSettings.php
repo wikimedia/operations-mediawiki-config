@@ -700,7 +700,6 @@ return [
 
 	// Wikinews
 	'bgwikinews' => false,
-	'eswikinews' => false,
 	'huwikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
@@ -4225,7 +4224,6 @@ return [
 
 	// Wikinews
 	'bgwikinews' => true,
-	'eswikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
 	'sdwikinews' => true,
@@ -5015,9 +5013,6 @@ return [
 	],
 	'+eswiki' => [
 		'interface-admin' => 'Wikipedia:Tablón de anuncios de los bibliotecarios/Portal/Archivo/Miscelánea/Actual',
-	],
-	'+eswikinews' => [
-		'interface-admin' => 'Wikinoticias:Solicitudes a burócratas',
 	],
 	'+eswikisource' => [
 		'interface-admin' => 'Wikisource:Café',
@@ -7948,7 +7943,6 @@ return [
 'wgEditSubmitButtonLabelPublish' => [
 	'default' => true, // T131132 from 2017-03-15
 	'private' => false, // Private wikis are not public
-	'eswikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
 // ----------- CheckUser start ----------
@@ -9710,7 +9704,6 @@ return [
 	'default' => false,
 	'wikipedia' => true,
 	'wikivoyage' => true,
-	'eswikinews' => true, // T230660
 ],
 
 'wmgUseReportIncident' => [
@@ -9826,7 +9819,6 @@ return [
 'wgRelatedArticlesFooterAllowedSkins' => [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
 	'dewiki' => [ 'minerva' ], // T278611
-	'eswikinews' => [], // T230660
 	'htwiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T126826, T298916
 	'hewiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T191573, T298916
 	'wikivoyage' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T298916

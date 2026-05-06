@@ -261,7 +261,7 @@ return [
 'eowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'eswiki' => [ 'wikipedia', 'footer-legal-contact-link', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'automoderator-revertrisk-multilingual' ],
 'eswikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'ores', 'sul' ],
-'eswikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'eswikinews' => [ 'closed', 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'eswikiquote' => [ 'medium', 'wikidataclient', 'group1', 'ores', 'sul' ],
 'eswikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'eswikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
