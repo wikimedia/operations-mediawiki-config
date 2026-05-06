@@ -869,13 +869,6 @@ return [
 		'import' => [ 'mergehistory' => true ], // T382785
 		'transwiki' => [ 'mergehistory' => true ], // T382785
 	],
-	'+enwikinews' => [
-		'flood' => [ 'bot' => true ],
-		'editor' => [ // T382887
-			'suppressredirect' => true,
-			'delete-redirect' => true,
-		],
-	],
 	'+enwikiquote' => [
 		'rollbacker' => [ 'rollback' => true ], // T310950
 		'flood' => [ 'bot' => true ], // T351250
@@ -3990,10 +3983,6 @@ return [
 			'uploader',
 		],
 	],
-	'+enwikinews' => [
-		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'flood' ],
-	],
 	'+enwikiquote' => [
 		'sysop' => [
 			'rollbacker', // T310950
@@ -5522,10 +5511,6 @@ return [
 	'+enwikibooks' => [
 		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood', 'accountcreator', 'confirmed' ], // T278683, T285594, T411828
 	],
-	'+enwikinews' => [
-		'bureaucrat' => [ 'flood', 'sysop' ],
-		'sysop' => [ 'flood' ],
-	],
 	'+enwikiquote' => [
 		'sysop' => [
 			'rollbacker', // T310950
@@ -6326,7 +6311,6 @@ return [
 	'officewiki' => [ 'sysop' => [ 'flood' ] ], // T86237
 	'sourceswiki' => [ 'sysop' => [ 'flood' ] ], // T193350
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
-	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
 	'itwikibooks' => [ 'sysop' => [ 'flood' ] ], // T41569
@@ -6360,7 +6344,6 @@ return [
 		'botadmin' => [ 'botadmin' ], // T53803
 	],
 	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
-	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikiquote' => [ 'flood' => [ 'flood' ] ], // T351250
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
 	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967

@@ -331,15 +331,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['validate'] = true;
 
 		unset( $wgGroupPermissions['reviewer'] );
-
-	} elseif ( $wgDBname == 'enwikinews' ) {
-		$wgFlaggedRevsNamespaces = [ NS_MAIN ];
-		$wgGroupPermissions['editor']['rollback'] = true; // T21815
-		$wgGroupPermissions['editor']['autoreview'] = false; // T25948
-		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-		$wgGroupPermissions['sysop']['autoreview'] = false; // T25948
-
-		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'eowiki' ) {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'fawiki' ) {

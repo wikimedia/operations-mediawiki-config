@@ -246,7 +246,7 @@ return [
 'emlwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'enwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'flaggedrevs', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'enwikibooks' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
-'enwikinews' => [ 'flow', 'flaggedrevs', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
+'enwikinews' => [ 'closed', 'flow', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'enwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul' ],
 'enwikisource' => [ 'wikidataclient', 'visualeditor-nondefault', 'group1', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'enwikiversity' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],

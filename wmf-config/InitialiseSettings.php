@@ -806,7 +806,6 @@ return [
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
 	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard', // T44263
-	'enwikinews' => false,
 	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikivoyage' => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
 	'eowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eo', // T71055
@@ -4226,7 +4225,6 @@ return [
 
 	// Wikinews
 	'bgwikinews' => true,
-	'enwikinews' => true,
 	'eswikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
@@ -4296,7 +4294,6 @@ return [
 	'cawikibooks' => true, // T88208
 	'dewikibooks' => true,
 	'enwikibooks' => true,
-	'enwikinews' => true,
 	'eswikibooks' => true, // T157513
 	'fawikibooks' => true, // T289381
 	'frwikibooks' => true, // T103263
@@ -5000,9 +4997,6 @@ return [
 	],
 	'+enwiki' => [
 		'interface-admin' => 'Wikipedia:Bureaucrats\' noticeboard',
-	],
-	'+enwikinews' => [
-		'interface-admin' => 'Wikinews:Admin action alerts',
 	],
 	'+enwikiquote' => [
 		'interface-admin' => 'Wikiquote:Administrators\' noticeboard',
@@ -5779,7 +5773,6 @@ return [
 	'commonswiki' => true,
 	'dewikiversity' => true, // T51449
 	'dtywiki' => true, // T166121
-	'enwikinews' => true,
 	'fawiki' => true, // T55981
 	'fawikibooks' => true, // T91861
 	'fawikiquote' => true, // T179442
@@ -5843,7 +5836,6 @@ return [
 	'bhwiki' => true, // T97920
 	'commonswiki' => true,
 	'dtywiki' => true, // T177688
-	'enwikinews' => true,
 	'fawikibooks' => true, // T91861
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
@@ -5953,7 +5945,6 @@ return [
 	'ckbwiki' => 0,
 	'enwiki' => 0,
 	'enwikibooks' => 0, // T410330
-	'enwikinews' => 0, // T423512
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
@@ -5962,7 +5953,6 @@ return [
 
 'wgFlaggedRevsAutoReview' => [
 	'default' => 3,
-	'enwikinews' => 1,
 	'hewikisource' => 1,
 ],
 
@@ -7958,7 +7948,6 @@ return [
 'wgEditSubmitButtonLabelPublish' => [
 	'default' => true, // T131132 from 2017-03-15
 	'private' => false, // Private wikis are not public
-	'enwikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 	'eswikinews' => false, // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
