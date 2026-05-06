@@ -1061,7 +1061,7 @@ return [
 'zh_yuewiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'sul', 'wikilove' ],
 'zhwiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'specialcontribute', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'wikilove', 'automoderator-revertrisk-multilingual' ],
 'zhwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
-'zhwikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'zhwikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'zhwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'sul' ],
 'zhwikisource' => [ 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'zhwikiversity' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],

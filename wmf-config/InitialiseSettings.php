@@ -706,7 +706,6 @@ return [
 	'sdwikinews' => false,
 	'thwikinews' => false,
 	'trwikinews' => true, // T22215
-	'zhwikinews' => false,
 
 	// Other individual wikis
 	'abstractwiki' => false,
@@ -860,7 +859,6 @@ return [
 	'tewiki' => '//te.wikipedia.org/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
 	'thwiki' => '//th.wikipedia.org/wiki/วิกิพีเดีย:อัปโหลด',
 	'zhwiki' => '//zh.wikipedia.org/wiki/Project:上传',
-	'zhwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=zh-hans',
 	'zh_yuewiki' => '//zh-yue.wikipedia.org/wiki/Project:上載',
 ],
 # @} end of wgUploadNavigationUrl
@@ -1978,7 +1976,6 @@ return [
 	'zhwiki' => 7 * 3600 * 24, // T16624
 	'zh_classicalwiki' => 5 * 86400, // T228141
 	'zhwikibooks' => 7 * 3600 * 24, // T185182
-	'zhwikinews' => 7 * 3600 * 24, // T259869
 	'zhwikiquote' => 7 * 86400, // T189289
 	'zhwiktionary' => 7 * 86400, // T187018
 ],
@@ -2038,7 +2035,6 @@ return [
 	'zhwiki' => 50, // T16624
 	'zh_classicalwiki' => 25, // T228141
 	'zhwikibooks' => 10, // T185182
-	'zhwikinews' => 20, // T259869
 	'zhwikiquote' => 10, // T189289
 	'zhwikiversity' => 10, // T202599
 	'zhwikivoyage' => 10, // T198006
@@ -2934,9 +2930,6 @@ return [
 		'pagetitle-view-mainpage',
 	],
 	'+zhwikibooks' => [ // T256521
-		'pagetitle-view-mainpage',
-	],
-	'+zhwikinews' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
 	'+zhwikiquote' => [ // T256521
@@ -4239,7 +4232,6 @@ return [
 	'ruwikinews' => false,
 	'sdwikinews' => true,
 	'trwikinews' => true,
-	'zhwikinews' => true,
 
 	// Wikiquote
 	'enwikiquote' => true,
@@ -6293,7 +6285,6 @@ return [
 	'viwikibooks' => 'any', // T314239
 	'wikidatawiki' => 'any', // T144687
 	'wikifunctionswiki' => 'any',
-	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
 ],
 
@@ -9730,7 +9721,6 @@ return [
 	'wikipedia' => true,
 	'wikivoyage' => true,
 	'eswikinews' => true, // T230660
-	'zhwikinews' => true, // T266933
 ],
 
 'wmgUseReportIncident' => [
@@ -9826,7 +9816,6 @@ return [
 'wgRelatedArticlesCardLimit' => [
 	'default' => 3,
 	'wikivoyage' => 9,
-	'zhwikinews' => 9, // T374323
 ],
 
 'wgRelatedArticlesUseCirrusSearch' => [
@@ -9851,7 +9840,6 @@ return [
 	'htwiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T126826, T298916
 	'hewiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T191573, T298916
 	'wikivoyage' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T298916
-	'zhwikinews' => [], // T299856
 ],
 
 'wmgUseRevisionSlider' => [

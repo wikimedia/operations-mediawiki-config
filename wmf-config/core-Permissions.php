@@ -3350,11 +3350,6 @@ return [
 		'autoconfirmed' => [ 'suppressredirect' => true ], // T185182
 		'flood' => [ 'bot' => true ], // T185182
 	],
-	'+zhwikinews' => [
-		'autoconfirmed' => [ 'suppressredirect' => true, ], // T270023
-		'rollbacker' => [ 'rollback' => true ], // T29268
-		'flood' => [ 'bot' => true ], // T54546
-	],
 	'+zhwikiquote' => [ // T189289
 		'autoconfirmed' => [ 'suppressredirect' => true ],
 		'flood' => [ 'bot' => true ],
@@ -5032,13 +5027,6 @@ return [
 			'transwiki', // T313657
 		],
 	],
-	'+zhwikinews' => [
-		'sysop' => [
-			'rollbacker',
-			'flood', // T54546
-			'transwiki', // T273405
-		],
-	],
 	'+zhwikiquote' => [
 		'sysop' => [
 			'flood', // T189289
@@ -6292,13 +6280,6 @@ return [
 			'transwiki', // T313657
 		],
 	],
-	'+zhwikinews' => [
-		'sysop' => [
-			'rollbacker',
-			'flood', // T54546
-			'transwiki', // T273405
-		],
-	],
 	'+zhwikiquote' => [
 		'sysop' => [
 			'flood', // T189289
@@ -6432,7 +6413,6 @@ return [
 		'abusefilter' => [ 'abusefilter' ], // T386879
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
-	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
 	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289
 	'zhwikiversity' => [
 		'flood' => [ 'flood' ],
