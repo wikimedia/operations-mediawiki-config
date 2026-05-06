@@ -7756,6 +7756,7 @@ return [
 	'default' => false,
 	'wikinews' => true, // Following T39608 discussion
 	'testwiki' => true,
+	'dewikinews' => false,
 ],
 'wmgGNSMfallbackCategory' => [
 	'default' => 'Published',
