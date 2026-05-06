@@ -4233,7 +4233,6 @@ return [
 
 	// Wikinews
 	'bgwikinews' => true,
-	'dewikinews' => true,
 	'enwikinews' => true,
 	'eswikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
