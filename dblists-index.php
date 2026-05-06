@@ -720,7 +720,7 @@ return [
 'plwiki' => [ 'wikipedia', 'flow', 'footer-legal-contact-link', 'flaggedrevs', 'specialcontribute', 'wikidataclient', 'modern-mainpage', 'cirrussearch-big-indices', 'growthexperiments', 'ores', 'sul', 'checkuser-suggested-investigations' ],
 'plwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'plwikimedia' => [ 'small', 'group1', 'translate', 'sul' ],
-'plwikinews' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
+'plwikinews' => [ 'closed', 'medium', 'wikidataclient', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'plwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul' ],
 'plwikisource' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'plwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'parsoidrendered', 'sul' ],

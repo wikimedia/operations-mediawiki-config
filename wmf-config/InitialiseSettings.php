@@ -844,7 +844,6 @@ return [
 	'nlwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl', // T73403
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // T44579
-	'plwikinews' => false,
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // T70191
 	'ptwiki' => '//pt.wikipedia.org/wiki/Wikipedia:Carregar_ficheiro',
@@ -4240,7 +4239,6 @@ return [
 	'enwikinews' => true,
 	'eswikinews' => true,
 	'frwikinews' => true,
-	'plwikinews' => true,
 	// Explicitly disabled, see T262391 and T287362
 	'ruwikinews' => false,
 	'sdwikinews' => true,
