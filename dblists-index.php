@@ -776,7 +776,7 @@ return [
 'ruwiki' => [ 'wikipedia', 'footer-legal-contact-link', 'flaggedrevs', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
 'ruwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'ruwikimedia' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'translate', 'sul' ],
-'ruwikinews' => [ 'flaggedrevs', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
+'ruwikinews' => [ 'closed', 'flaggedrevs', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'ruwikiquote' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'sul' ],
 'ruwikisource' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'ruwikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],

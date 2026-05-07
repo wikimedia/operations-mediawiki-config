@@ -499,11 +499,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
 		# Remove reviewer group
 		unset( $wgGroupPermissions['reviewer'] );
-	} elseif ( $wgDBname == 'ruwikinews' ) {
-		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['review'] = true;
-		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ruwiktionary' ) {
 		$wgFlaggedRevsNamespaces[] = NS_PROJECT;
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;

@@ -701,7 +701,6 @@ return [
 	// Wikinews
 	'bgwikinews' => false,
 	'huwikinews' => false,
-	'ruwikinews' => false,
 	'sdwikinews' => false,
 	'thwikinews' => false,
 	'trwikinews' => true, // T22215
@@ -846,7 +845,6 @@ return [
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // T44934
 	'rowiki' => '//ro.wikipedia.org/wiki/Wikipedia:Trimite_fișier', // T85665
 	'ruwiki' => false, // T14334
-	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'sewikimedia' => false, // T63947
 	'srwiki' => '//sr.wikipedia.org/wiki/Википедија:Водич_за_отпремање', // T165901
 	'svwikisource' => false,
@@ -5286,9 +5284,6 @@ return [
 	'+ruwikimedia' => [
 		'interface-admin' => 'Обсуждение:Заглавная страница',
 	],
-	'+ruwikinews' => [
-		'interface-admin' => 'Викиновости:Форум администраторов',
-	],
 	'+ruwikiquote' => [
 		'interface-admin' => 'Викицитатник:Запросы к администраторам',
 	],
@@ -8778,7 +8773,6 @@ return [
 	'default' => false,
 	'wikipedia' => true,
 	'cawikibooks' => true, // T93637
-	'ruwikinews' => true, // T239000
 	'zhwikinews' => true, // T287807
 	'wikivoyage' => true,
 	'commonswiki' => true,
