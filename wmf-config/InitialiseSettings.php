@@ -3032,6 +3032,7 @@ return [
 'wgUseNPPatrol' => [
 	'default' => false, // T74239
 	'sul' => true,
+	'dewiki' => false, // T316393
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T33650
 	'sqwiki' => false, // T27822
@@ -3041,6 +3042,7 @@ return [
 
 'wgUseFilePatrol' => [
 	'default' => true,
+	'dewiki' => false, // T316393
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T154285
 	'bswiki' => false, // T158662

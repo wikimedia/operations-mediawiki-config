@@ -682,8 +682,8 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T407281
 	],
 	'+dewiki' => [
-		'*' => [ 'patrolmarks' => true, ], // T100682
 		'bot' => [
+			'autopatrol' => false, // T316393
 			'editeditorprotected' => true, // T94368
 			'ipblock-exempt' => true, // T332759
 		],
@@ -696,7 +696,11 @@ return [
 			'noratelimit' => true,
 		],
 		'abusefilter' => [ 'abusefilter-access-protected-vars' => true ], // T418815
-		'sysop' => [ 'editeditorprotected' => true, ], // T94368
+		'sysop' => [
+			'autopatrol' => false, // T316393
+			'patrol' => false, // T316393
+			'editeditorprotected' => true, // T94368
+		],
 	],
 	'+dewikiquote' => [
 		'sysop' => [ 'importupload' => true, ],
