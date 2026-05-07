@@ -3157,6 +3157,27 @@ return [
 			],
 		],
 
+		// Instrument for Special:UserLogin no-JS detection (T425631)
+		'mediawiki.product_metrics.special_user_login' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+					],
+				],
+			],
+		],
+
 		// Instrument for Special:Translate (T364460)
 		'mediawiki.product_metrics.translate_extension' => [
 			'schema_title' => 'analytics/product_metrics/web/translation',
