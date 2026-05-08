@@ -11524,21 +11524,6 @@ return [
 	'frwiki' => [ 'hcaptcha-on-french-wikipedia' ], // T405239
 ],
 
-'wgTestKitchenExperimentStreamNames' => [
-	'default' => [
-		'product_metrics.web_base',
-		'product_metrics.web_base.attribution_research',
-		'product_metrics.web_base.active_reader_baseline',
-		'mediawiki.product_metrics.translation_mint_for_readers.experiments',
-		'mediawiki.product_metrics.reading_list',
-		'mediawiki.product_metrics.readerexperiments_imagebrowsing',
-		'mediawiki.product_metrics.readerexperiments_stickyheaders',
-		'mediawiki.product_metrics.reader_experiments',
-		'mediawiki.product_metrics.contributors.experiments',
-		'mediawiki.product_metrics.reader_retention_logged_in',
-	],
-],
-
 // T401705 Send image beacon and Test Kitchen SDK load event
 'wgTestKitchenEnableHeadPixel' => [
 	'default' => false
