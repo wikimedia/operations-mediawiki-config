@@ -564,6 +564,7 @@ return [
 		'accountcreator' => [ // T254927
 			'tboverride-account' => true,
 			'override-antispoof' => true,
+			'createpreviouslyrenamedaccount' => true,
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
@@ -778,6 +779,7 @@ return [
 		'accountcreator' => [
 			'override-antispoof' => true,
 			'tboverride-account' => true,
+			'createpreviouslyrenamedaccount' => true,
 			// also in some exemption lists'
 		],
 		'autoreviewer' => [ 'autopatrol' => true ],
@@ -1519,6 +1521,7 @@ return [
 			'autopatrol' => true,
 			'bot' => true,
 			'browsearchive' => true,
+			'createpreviouslyrenamedaccount' => true,
 			'delete' => true,
 			'deleterevision' => true,
 			'editprotected' => true,
@@ -1892,6 +1895,7 @@ return [
 			'protect' => true,
 			'editprotected' => true,
 			'createaccount' => true,
+			'createpreviouslyrenamedaccount' => true,
 			'deleterevision' => true,
 			'delete' => true,
 			'globalblock-whitelist' => true,
@@ -2663,6 +2667,7 @@ return [
 		'accountcreator' => [
 			'override-antispoof' => true,
 			'tboverride' => true,
+			'createpreviouslyrenamedaccount' => true,
 		],
 		'bot' => [ 'extendedconfirmed' => true ], // T302860
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T302860
@@ -2886,6 +2891,7 @@ return [
 		'accountcreator' => [
 			'tboverride-account' => true,
 			'override-antispoof' => true,
+			'createpreviouslyrenamedaccount' => true,
 		], // T137888
 		'filemover' => [ 'movefile' => true ], // T137888
 		'interface-editor' => [
@@ -3045,6 +3051,7 @@ return [
 			'block' => true,
 			'blockemail' => true,
 			'browsearchive' => true,
+			'createpreviouslyrenamedaccount' => true,
 			'delete' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
