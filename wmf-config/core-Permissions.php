@@ -6037,6 +6037,7 @@ return [
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+svwiki' => [
+		'bureaucrat' => [ 'sysop' ], // T425806
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'extendedconfirmed' ], // T161210, T279836
 	],
 	'+svwikisource' => [
