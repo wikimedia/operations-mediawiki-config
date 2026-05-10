@@ -2543,27 +2543,6 @@ return [
 			],
 		],
 
-		// Staging version of the mediawiki.page_change stream.
-		// This stream is used for validation of https://phabricator.wikimedia.org/T391254
-		'mediawiki.page_change.staging.v1' => [
-			'schema_title' => 'mediawiki/page/change',
-			# When producing this stream to kafka, use a message key
-			# like { wiki_id: X, page_id: Y }.  X and Y will be
-			# obtained from the message value at wiki_id and page.page_id.
-			# See also: https://phabricator.wikimedia.org/T318846
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-analytics',
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'medium',
-				],
-			],
-		],
-
 		// Declare version 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
@@ -2765,6 +2744,32 @@ return [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Status:
+		// 	2026-05 - in development
+		//
+		// mediawiki.user_change stream.
+		// https://phabricator.wikimedia.org/T423952
+		'mediawiki.user_change.dev0' => [
+			// TODO: this will be finalized at mediawiki/user/change
+			'schema_title' => 'development/mediawiki_user_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'user_id' => 'user.user_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+			// While in development, disable canary events,
+			// and Data Lake ingestion.
+			'canary_events_enabled' => false,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
 				'analytics_hive_ingestion' => [
 					'enabled' => false,
 				],
