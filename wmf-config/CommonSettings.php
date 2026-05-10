@@ -3256,14 +3256,6 @@ if ( $wmgUseMobileApp ) {
 
 wfLoadSkin( 'MinervaNeue' );
 
-if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
-	$wmgMinervaNightModeExcludeNamespaces[] = 90;
-	$wmgMinervaNightModeExcludeNamespaces[] = 92;
-}
-$wgMinervaNightModeOptions['exclude']['querystring'] = $wmgMinervaNightModeQueryString;
-$wgMinervaNightModeOptions['exclude']['namespaces'] = $wmgMinervaNightModeExcludeNamespaces;
-$wgMinervaNightModeOptions['exclude']['pagetitles'] = $wmgMinervaNightModeExcludeTitles;
-$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 $wgMinervaTypeahead = $wgVectorTypeahead;
 
 # Mobile-related configuration

@@ -572,9 +572,6 @@ function wmfGetOverrideSettings() {
 				'amc' => true,
 			],
 		],
-		'wmgMinervaNightModeExcludeTitles' => [
-			'default' => [ 'Banana' ],
-		],
 
 		//
 		//

@@ -462,12 +462,6 @@ if ( $wmgRealm == 'labs' ) {
 	$wgContentHandlers['JadeEntity'] = FallbackContentHandler::class;
 	$wgContentHandlers['JadeJudgment'] = FallbackContentHandler::class;
 
-	// No restrictions in test environment to facilitate testing.
-	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
-	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
-	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
-	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
-
 	// show new donate link in beta for QA and testing
 	$wgWikimediaMessagesAnonDonateLink = true;
 
