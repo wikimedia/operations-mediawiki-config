@@ -852,6 +852,11 @@ return [
 			],
 			'pattern' => '/^(typage|fundraising)-\w+-\w+-\d+$/',
 		],
+		// See T422169.
+		'account-creation-reading-list-cta' => [
+			'pattern' => '/^account-creation-reading-list-cta$/',
+			'skipWelcomeSurvey' => true
+		]
 	],
 ],
 
