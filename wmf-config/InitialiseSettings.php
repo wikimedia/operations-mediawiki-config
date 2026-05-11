@@ -3787,7 +3787,7 @@ return [
 
 'wmgEnableHCaptcha' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true, // T425354
 	'test2wiki' => true,
 	'idwiki' => true,
 	'enwiki' => true,
