@@ -270,22 +270,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-	} elseif ( $wgDBname == 'cawikinews' ) {
-		$wgFlaggedRevsNamespaces[] = 102; // T36135
-
-		$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
-
-		$wgGroupPermissions['reviewer'] = array_merge( $wgGroupPermissions['reviewer'], [
-			'autopatrol' => true, // T95085
-			'patrol' => true, // T95085
-		] );
-
-		$wgGroupPermissions['sysop'] = array_merge( $wgGroupPermissions['sysop'], [
-			'stablesettings' => true, // T36135
-			'review' => true, // T95085
-			'validate' => true, // T95085
-			'unreviewedpages' => true, // T95085
-		] );
 	} elseif ( $wgDBname == 'dewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -487,8 +471,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
-	} elseif ( $wgDBname == 'ptwikinews' ) {
-		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'ruwiki' ) {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
