@@ -4822,6 +4822,22 @@ return [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 			'demote' => true,
 		],
+		// T423119
+		'arbcom' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+	],
+	// T423119
+	'+fishbowl' => [
+		'bureaucrat' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+	],
+	// T423119
+	'+private' => [
+		'bureaucrat' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
 	],
 	'+foundationwiki' => [
 		'editor' => [
