@@ -143,6 +143,13 @@ $common = [
 			'port' => 30443,
 		]
 	],
+	'ttmserver-test' => [
+		[
+			'host' => 'opensearch-ttmserver-test.discovery.wmnet',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+			'port' => 30443,
+		]
+	],
 ];
 
 $services = [
