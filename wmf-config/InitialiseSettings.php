@@ -698,13 +698,6 @@ return [
 	'commonsuploads' => true,
 	'wikidata' => false,
 
-	// Wikinews
-	'bgwikinews' => false,
-	'huwikinews' => false,
-	'sdwikinews' => false,
-	'thwikinews' => false,
-	'trwikinews' => true, // T22215
-
 	// Other individual wikis
 	'abstractwiki' => false,
 	'arwikimedia' => false, // T353218
@@ -4917,9 +4910,6 @@ return [
 	],
 	'+cawikimedia' => [
 		'interface-admin' => 'Talk:Main Page',
-	],
-	'+cawikinews' => [
-		'interface-admin' => 'Viquinotícies:Petició als administradors',
 	],
 	'+cawikisource' => [
 		'interface-admin' => 'Viquitexts:La taverna',
