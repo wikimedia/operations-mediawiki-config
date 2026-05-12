@@ -3397,12 +3397,6 @@ if ( $wmgUseTranslate ) {
 				'service' => $wmgAllServices['codfw']['search-chi'] ?? null,
 				'writable' => true,
 			],
-			'test' => [
-				// ttmserver-test is set to dns-discovery and deployed in both codfw and eqiad
-				'service' => $wmgLocalServices['ttmserver-test'] ?? null,
-				// sending updates is disabled for now so we can re-populate index first
-				'writable' => false,
-			],
 		];
 		foreach ( $translateServices as $service => $conf ) {
 			if ( $conf['service'] === null ) {
@@ -3419,20 +3413,17 @@ if ( $wmgUseTranslate ) {
 				'writable' => $conf['writable'],
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( static function ( $hostConfig ) use ( $service, $wgOpensearchCredentials ) {
-						if ( !is_array( $hostConfig ) ) {
-							// only for deployment-prep
-							// production services has this defined as an array like below
-							$hostConfig = [
-								'host' => $hostConfig,
-								'port' => 9243,
-								'transport' => 'Https',
-							];
+					'servers' => array_map( static function ( $hostConfig ) {
+						if ( is_array( $hostConfig ) ) {
+							// production services
+							return $hostConfig;
 						}
-						if ( array_key_exists( $service, $wgOpensearchCredentials ) ) {
-							$hostConfig += $wgOpensearchCredentials[$service];
-						}
-						return $hostConfig;
+						// deployment-prep
+						return [
+							'host' => $hostConfig,
+							'port' => 9243,
+							'transport' => 'Https',
+						];
 					}, $conf['service'] ),
 				],
 			];

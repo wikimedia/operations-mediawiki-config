@@ -239,10 +239,3 @@ $wgReportIncidentZendeskSubjectLine = null;
  * @see https://phabricator.wikimedia.org/T341332
  */
 $wgNetworkSessionProviderUsers = [];
-
-/**
- * Configuration for accessing Opensearch on K8S.
- *
- * @see https://phabricator.wikimedia.org/T425377
- */
-$wgOpensearchCredentials = [];

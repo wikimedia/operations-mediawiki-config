@@ -45,8 +45,6 @@ return [
 		'cloudelastic-omega' => null,
 		// semanticsearch doesn't exist in labs either
 		'semanticsearch-test' => null,
-		// ttmserver doesn't exist in labs
-		'ttmserver-test' => null,
 		// We will not use analytics-web in beta
 		'analytics-web' => null,
 		// No parser cache DBs in beta yet
