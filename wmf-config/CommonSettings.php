@@ -2122,10 +2122,15 @@ if ( $wmgEnableCaptcha ) {
 				$wgHCaptchaVisualEditorOnLoadIntegrationEnabled = true;
 			}
 
+			if ( $wmgEnableHCaptchaForDiscussionTools ) {
+				$wgDiscussionToolsHCaptchaRequiredForAllEdits = true;
+			}
+
 			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
 				$wmgEmergencyCaptcha,
 				&$wgHCaptchaEnabledInMobileFrontend,
-				$wmgEnableHCaptchaVisualEditorIntegration
+				$wmgEnableHCaptchaVisualEditorIntegration,
+				$wmgEnableHCaptchaForDiscussionTools
 			) {
 				$services = MediaWikiServices::getInstance();
 				$simpleCaptcha = \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action );
@@ -2143,6 +2148,8 @@ if ( $wmgEnableCaptcha ) {
 					$request = RequestContext::getMain()->getRequest();
 					if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
 						$isApprovedInterface = $wmgEnableHCaptchaVisualEditorIntegration;
+					} elseif ( $request->getRawVal( 'action' ) === 'discussiontoolsedit' ) {
+						$isApprovedInterface = $wmgEnableHCaptchaForDiscussionTools;
 					} else {
 						$editorInterface = $request->getRawVal( 'editorinterface' );
 						$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
@@ -2226,7 +2233,8 @@ if ( $wmgEnableCaptcha ) {
 
 	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
 		&$wgHCaptchaEnabledInMobileFrontend,
-		$wmgEnableHCaptchaVisualEditorIntegration
+		$wmgEnableHCaptchaVisualEditorIntegration,
+		$wmgEnableHCaptchaForDiscussionTools
 	) {
 		if ( in_array( $action, [ 'edit', 'create', 'addurl' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 			// Default to FancyCaptcha for API edits, since most API edit
@@ -2238,6 +2246,8 @@ if ( $wmgEnableCaptcha ) {
 			$request = RequestContext::getMain()->getRequest();
 			if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
 				$isApprovedInterface = $wmgEnableHCaptchaVisualEditorIntegration;
+			} elseif ( $request->getRawVal( 'action' ) === 'discussiontoolsedit' ) {
+				$isApprovedInterface = $wmgEnableHCaptchaForDiscussionTools;
 			} else {
 				$editorInterface = $request->getRawVal( 'editorinterface' );
 				$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend

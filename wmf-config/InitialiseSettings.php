@@ -3809,6 +3809,10 @@ return [
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 ],
+'wmgEnableHCaptchaForDiscussionTools' => [
+	'default' => false,
+	'testwiki' => true,
+],
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
 	'group0' => true, // T425354
