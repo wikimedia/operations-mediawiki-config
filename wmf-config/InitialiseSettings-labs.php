@@ -2464,5 +2464,9 @@ function wmfGetOverrideSettings() {
 		'wmgUseArticleGuidance' => [
 			'default' => true, // T423295
 		],
+
+		'wgArticleGuidanceSparqlEndpoint' => [
+			'default' => 'https://query.wikidata.org/sparql',
+		]
 	];
 } # wmfGetOverrideSettings()

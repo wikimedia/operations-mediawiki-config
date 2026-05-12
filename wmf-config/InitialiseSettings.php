@@ -13710,4 +13710,8 @@ return [
 	'testwiki' => [ 'Wikipedia:ArticleWizard' ],
 ],
 
+'wgArticleGuidanceSparqlEndpoint' => [
+	'default' => 'http://localhost:6041/sparql',
+],
+
 ];
