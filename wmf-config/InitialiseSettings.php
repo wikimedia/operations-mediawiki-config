@@ -3939,6 +3939,7 @@ return [
 	'default' => [ 'obsolete-tag', 'night-mode-unaware-background-color' ],
 	'enwiki' => [ 'night-mode-unaware-background-color' ], // T354013
 	'plwiki' => [ 'night-mode-unaware-background-color' ], // T362414
+	'eswiktionary' => [], // T425332
 ],
 
 # below seems to be for extensions
