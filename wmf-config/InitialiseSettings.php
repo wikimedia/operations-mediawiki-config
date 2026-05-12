@@ -3802,10 +3802,12 @@ return [
 'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
 ],
 'wmgEnableHCaptchaVisualEditorIntegration' => [
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
 ],
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
