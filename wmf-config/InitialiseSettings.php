@@ -7464,6 +7464,14 @@ return [
 	'svwiki' => true, // T418209
 ],
 
+// Temporary while developing feature, T421055
+'wgCiteRemoveSyntheticRefsUnsafe' => [
+	'default' => false,
+	// T425967
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 
