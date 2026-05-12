@@ -2763,17 +2763,6 @@ return [
 				'user_id' => 'user.user_id',
 			],
 			'destination_event_service' => 'eventgate-main',
-			// While in development, disable canary events,
-			// and Data Lake ingestion.
-			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'enabled' => false,
-				],
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
-				],
-			],
 		],
 
 		/*
