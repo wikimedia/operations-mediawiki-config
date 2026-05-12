@@ -4943,6 +4943,7 @@ return [
 		'interface-admin' => 'Wiki:Karczma',
 	],
 	'+cswiki' => [
+		'arbcom' => 'Wikipedie:Nástěnka byrokratů',
 		'interface-admin' => 'Wikipedie:Nástěnka byrokratů',
 	],
 	'+cswikibooks' => [
@@ -5027,6 +5028,8 @@ return [
 		'interface-admin' => 'Wikipedia:Arotusõtarõ',
 	],
 	'+fiwiki' => [
+		'arbcom' => 'Wikipedia:Ylläpitäjien ilmoitustaulu',
+		'bureaucrat' => 'Wikipedia:Ylläpitäjien ilmoitustaulu',
 		'interface-admin' => 'Wikipedia:Ylläpitäjien ilmoitustaulu',
 	],
 	'+fiwikisource' => [
@@ -5098,6 +5101,7 @@ return [
 		'interface-admin' => 'Wikipedija:Na pažnju administratorima',
 	],
 	'+huwiki' => [
+		'bureaucrat' => 'Wikipédia:Bürokraták üzenőfala',
 		'interface-admin' => 'Wikipédia:Bürokraták üzenőfala',
 	],
 	'+huwikibooks' => [
@@ -5128,6 +5132,7 @@ return [
 		'interface-admin' => 'Wikiorðabók:Potturinn',
 	],
 	'+itwiki' => [
+		'arbcom' => 'Wikipedia:Richieste agli amministratori',
 		'interface-admin' => 'Wikipedia:Richieste agli amministratori',
 	],
 	'+itwikisource' => [
@@ -5222,6 +5227,7 @@ return [
 		'interface-admin' => 'विकिपिडिया:प्रशासक सूचनापाटी',
 	],
 	'+nlwiki' => [
+		'arbcom' => 'Wikipedia:Verzoekpagina voor moderatoren',
 		'interface-admin' => 'Wikipedia:Verzoekpagina voor moderatoren',
 	],
 	'+nlwikibooks' => [
@@ -5261,6 +5267,7 @@ return [
 		'interface-admin' => 'ਵਿਕੀਸਰੋਤ:ਸੱਥ',
 	],
 	'+plwiki' => [
+		'arbcom' => 'Wikipedia:Prośby do administratorów',
 		'interface-admin' => 'Wikipedia:Prośby do administratorów',
 	],
 	'+plwikimedia' => [
@@ -5276,6 +5283,7 @@ return [
 		'interface-admin' => 'Wikisłownik:Prośby do administratorów',
 	],
 	'+ptwiki' => [
+		'bureaucrat' => 'Wikipédia:Pedidos a burocratas',
 		'interface-admin' => 'Wikipédia:Pedidos a burocratas',
 	],
 	'+ptwikibooks' => [
@@ -5291,6 +5299,7 @@ return [
 		'interface-admin' => 'Разговор:Главна страна',
 	],
 	'+ruwiki' => [
+		'arbcom' => 'Википедия:Запросы к бюрократам',
 		'interface-admin' => 'Википедия:Запросы к бюрократам',
 	],
 	'+ruwikimedia' => [
@@ -5400,6 +5409,7 @@ return [
 		'interface-admin' => 'Обговорення:Вікімедіа Україна',
 	],
 	'+ukwiki' => [
+		'arbcom' => 'Вікіпедія:Запити до бюрократів',
 		'interface-admin' => 'Вікіпедія:Запити до бюрократів',
 	],
 	'+ukwikiquote' => [
@@ -5436,6 +5446,7 @@ return [
 		'interface-admin' => 'Wikimania:Requests for rights',
 	],
 	'+zhwiki' => [
+		'arbcom' => 'Wikipedia:行政員布告板',
 		'interface-admin' => 'Wikipedia:行政員布告板',
 	],
 ],
