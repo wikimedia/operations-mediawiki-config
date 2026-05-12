@@ -436,10 +436,6 @@ return [
 	'default' => 'yes',
 	'wikidatawiki' => 'no',
 ],
-// Tune the tokenizer for tha plain field on completion suggester
-'wgCirrusSearchCompletionPlainTokenizer' => [
-	'default' => 'keyword', // T420427
-],
 
 // wgCirrusSearchCompletionSuggesterSubphrases @{
 // Please verify mem usage on the cluster before adding new wiki here.
@@ -1302,7 +1298,31 @@ return [
 'wgCirrusSearchPhraseSuggestUseOpeningText' => [
 	'default' => true,
 ],
-'wgCirrusSearchAlternativeIndices' => [],
+'wgCirrusSearchAlternativeIndices' => [
+	'default' => [],
+	'enwiki' => [
+		"completion" => [
+			[
+				"index_id" => 1,
+				"config_overrides" => [
+					'CirrusSearchCompletionPlainTokenizer' => 'keyword',
+				],
+				"use" => true
+			]
+		]
+	],
+	'enwiktionary' => [
+		"completion" => [
+			[
+				"index_id" => 1,
+				"config_overrides" => [
+					'CirrusSearchCompletionPlainTokenizer' => 'keyword',
+				],
+				"use" => true
+			]
+		]
+	],
+],
 'wgCirrusSearchCompletionUseSecondTryProfile' => [
 	'default' => 'default',
 
