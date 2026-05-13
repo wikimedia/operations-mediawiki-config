@@ -5831,43 +5831,7 @@ return [
 ],
 
 'wmgNewUserMessageOnAutoCreate' => [
-	'default' => false,
-	'arwiki' => true,
-	'arwikisource' => true,
-	'bhwiki' => true, // T97920
-	'commonswiki' => true,
-	'dtywiki' => true, // T177688
-	'fawikibooks' => true, // T91861
-	'fawikivoyage' => true, // T76716
-	'fawiktionary' => true, // T90831
-	'gomwiki' => true, // T106169
-	'guwiki' => true, // T42872
-	'guwikiquote' => true, // T134253
-	'guwikisource' => true, // T42872
-	'hiwikiquote' => true, // T133775
-	'hiwikiversity' => true, // T177690
-	'hifwiki' => true, // T99824
-	'incubatorwiki' => true,
-	'kawiki' => true, // T407076
-	'kkwiki' => true, // T149563
-	'lvwiki' => true,
-	'maiwiki' => true, // T99488
-	'mlwiki' => true,
-	'ndswiki' => true,
-	'pawiki' => true, // T99331
-	'pswiki' => true, // T121132
-	'rowiki' => true,
-	'sawiki' => true, // T99879
-	'tawiki' => true, // T100431
-	'tcywiki' => true, // T209432
-	'thwiki' => true,
-	'thwiktionary' => true, // T33600
-	'thwikisource' => true, // T33600
-	'thwikibooks' => true, // T33600
-	'thwikiquote' => true, // T33600
-	'ukwiki' => true, // T67125
-	'zh_classicalwiki' => true, // T243509
-	'zhwikivoyage' => true, // T360175
+	'default' => false, // T426206
 ],
 
 'wmgNewUserMinorEdit' => [
