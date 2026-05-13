@@ -5740,6 +5740,10 @@ return [
 	'default' => true, // T394744
 ],
 
+'wgWikimediaEventsUserLoginInstrumentation' => [
+	'default' => true, // T425631
+],
+
 'wmgUseElectronPdfService' => [
 	'default' => true, // T165954
 	'apiportalwiki' => false, // T264043
