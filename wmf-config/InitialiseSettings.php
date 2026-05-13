@@ -13422,6 +13422,8 @@ return [
 	'itwiki' => true,
 	// T420450
 	'sqwiki' => true,
+	// T425509
+	'nlwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -13448,6 +13450,8 @@ return [
 	'itwiki' => 'Moderatore Automatico',
 	// T420450
 	'sqwiki' => 'Automoderatori',
+	// T425509
+	'nlwiki' => 'BijdragenScanner',
 ],
 // T400727
 'wgAutoModeratorMultiLingualRevertRisk' => [
