@@ -13419,7 +13419,9 @@ return [
 	// T391248
 	'eswiki' => true,
 	// T405152
-	'itwiki' => true
+	'itwiki' => true,
+	// T420450
+	'sqwiki' => true,
 ],
 'wgAutoModeratorUsername' => [
 	// T361643
@@ -13443,7 +13445,9 @@ return [
 	// T391248
 	'eswiki' => 'Automoderador',
 	// T405152
-	'itwiki' => 'Moderatore Automatico'
+	'itwiki' => 'Moderatore Automatico',
+	// T420450
+	'sqwiki' => 'Automoderatori',
 ],
 // T400727
 'wgAutoModeratorMultiLingualRevertRisk' => [
