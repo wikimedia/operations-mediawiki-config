@@ -13261,6 +13261,11 @@ return [
 	'abstractwiki' => [ NS_MAIN => [ '', 'Q50081413' ] ],
 ],
 
+// Whether wikis can have abstract articles displayed on them
+'wgWikiLambdaEnableAbstractClientMode' => [
+	'default' => false,
+],
+
 ### Wikistories-related configuration
 
 'wmgUseWikistories' => [
