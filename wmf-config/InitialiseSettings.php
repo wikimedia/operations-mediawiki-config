@@ -13738,6 +13738,7 @@ return [
 'wgArticleGuidanceExperimentName' => [
 	'default' => '',
 	'testwiki' => 'we-1-10-articleguidance-v1',
+	'simplewiki' => 'we-1-10-articleguidance-v1', // T426278
 ],
 
 'wgArticleGuidanceExperimentRefererTitles' => [
