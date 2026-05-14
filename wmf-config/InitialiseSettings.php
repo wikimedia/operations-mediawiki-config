@@ -4161,7 +4161,6 @@ return [
 	'enwiktionary' => true,
 	'frrwiki' => true, // T40023
 	'incubatorwiki' => true,
-	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true, // T71974
 	'metawiki' => true,
 	'otrs_wikiwiki' => true,
