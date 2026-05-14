@@ -3821,7 +3821,11 @@ return [
 	'frwiki' => true,
 	'enwiki' => true,
 ],
-
+'wmgEnableHCaptchaAccountCreationAPI' => [
+	'default' => false,
+	'group0' => true,
+	'test2wiki' => true,
+],
 'wmgEmergencyCaptcha' => [
 	'default' => false,
 ],
