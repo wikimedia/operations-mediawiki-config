@@ -5999,8 +5999,16 @@ return [
 // Do not add more exceptions.
 // Thumbnails must be shared between wikis.
 'wgThumbLimits' => [
-	'default' => [ 120, 150, 180, 200, 220, 250, 300, 400 ],
-	'svwiki' => [ 180, 200, 250, 300, 400 ],
+	'default' => [
+		2 => 180,
+		5 => 250,
+		7 => 400
+	],
+	'svwiki' => [
+		0 => 180,
+		2 => 250,
+		4 => 400
+	],
 ],
 // Do not add more exceptions. Default should stay the same between wikis.
 'wmgThumbsizeIndex' => [
