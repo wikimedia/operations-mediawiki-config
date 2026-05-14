@@ -1774,7 +1774,10 @@ return [
 			'flow-edit-title' => true, // T328097
 			'unfuzzy' => true, // T366994
 		],
-		'user' => [ 'flow-create-board' => true, ],
+		'user' => [
+			'changetags' => false, // T355445
+			'flow-create-board' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'uploader' => [ // T217523
 			'upload' => true,
@@ -1784,11 +1787,13 @@ return [
 		],
 		'translationadmin' => [
 			'autopatrol' => true,
-			'translate-empty-category' => true // T401878
-		 ],
-		 'sysop' => [
-			'translate-empty-category' => true // T401878
-		 ]
+			'translate-empty-category' => true, // T401878
+		],
+		'sysop' => [
+			'translate-empty-category' => true, // T401878
+			'changetags' => true, // T355445
+		],
+		'bot' => [ 'changetags' => true, ], // T355445
 	],
 	'+metawiki' => [
 		'*' => [
