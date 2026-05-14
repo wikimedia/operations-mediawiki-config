@@ -2611,23 +2611,6 @@ return [
 			],
 		],
 
-		// TODO: delete .rc0 stream once .v1 is fully released.
-		//       https://phabricator.wikimedia.org/T423920
-		'mediawiki.page_html_content_change.rc0' => [
-			'schema_title' => 'mediawiki/page/rendering_content_change',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'large',
-				],
-			],
-		],
-
 		// This stream will be used by the streaming enrichment pipeline
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
@@ -2661,17 +2644,6 @@ return [
 			// this stream is is produced directly to Kafka jumbo-eqiad,
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
 			// We use eventgate-analytics-external.
-			'destination_event_service' => 'eventgate-analytics-external',
-		],
-
-		// TODO: delete .rc0 stream once .v1 is fully released.
-		//       https://phabricator.wikimedia.org/T423920
-		'mediawiki.page_html_feature_counts_change.rc0' => [
-			'schema_title' => 'mediawiki/page/rendering_feature_counts_change',
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
