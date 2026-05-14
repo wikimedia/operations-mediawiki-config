@@ -46,3 +46,37 @@ $wmgThrottlingExceptions[] = [
 	'value'  => 50,
 	'tempaccountvalue'  => 50,
 ];
+
+// T426295
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-05-15T08:00 +8:00',
+	'to'     => '2026-05-16T17:00 +8:00',
+	'IP'     => '61.222.238.3',
+	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
+	'value'  => 75,
+	'tempaccountvalue'  => 75,
+];
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-05-15T08:00 +8:00',
+	'to'     => '2026-05-16T17:00 +8:00',
+	'IP'     => '61.222.238.4',
+	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
+	'value'  => 75,
+	'tempaccountvalue'  => 75,
+];
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-05-15T08:00 +8:00',
+	'to'     => '2026-05-16T17:00 +8:00',
+	'IP'     => '211.22.209.77',
+	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
+	'value'  => 75,
+	'tempaccountvalue'  => 75,
+];
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-05-15T08:00 +8:00',
+	'to'     => '2026-05-16T17:00 +8:00',
+	'IP'     => '211.22.209.78',
+	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
+	'value'  => 75,
+	'tempaccountvalue'  => 75,
+];
