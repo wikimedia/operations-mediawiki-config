@@ -13702,6 +13702,7 @@ return [
 'wgArticleGuidanceExperimentEntryPointTitles' => [
 	'default' => [],
 	'testwiki' => [ 'Wikipedia:ArticleWizard' ],
+	'simplewiki' => [ 'Wikipedia:Article_wizard' ], // T426278
 ],
 
 'wgArticleGuidanceSparqlEndpoint' => [
