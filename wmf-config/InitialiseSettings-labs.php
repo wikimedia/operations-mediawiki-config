@@ -2467,6 +2467,10 @@ function wmfGetOverrideSettings() {
 
 		'wgArticleGuidanceSparqlEndpoint' => [
 			'default' => 'https://query.wikidata.org/sparql',
+		],
+
+		'wgULSLanguageSelectorV2Enabled' => [
+			'default' => true
 		]
 	];
 } # wmfGetOverrideSettings()
