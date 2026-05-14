@@ -3436,6 +3436,9 @@ return [
 				'eventgate' => [
 					'use_edge_uniques' => true,
 				],
+				'metrics_platform_client' => [
+					'provide_values' => [],
+				],
 			],
 			'consumers' => [
 				'analytics_hive_ingestion' => [
