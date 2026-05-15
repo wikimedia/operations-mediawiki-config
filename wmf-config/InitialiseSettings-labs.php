@@ -761,6 +761,11 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		// T414338
+		'-wgTrackMediaRequestProvenance' => [
+			'default' => true,
+		],
+
 		'wgQuickSurveysConfig' => [
 			'default' => [],
 			'enwiki' => [
