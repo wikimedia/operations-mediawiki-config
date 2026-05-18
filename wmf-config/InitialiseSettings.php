@@ -12221,10 +12221,6 @@ return [
 	'default' => 'http',
 ],
 
-'wgThumbnailStepsRatio' => [
-	'default' => 1,
-],
-
 // T414338
 'wgTrackMediaRequestProvenance' => [
 	'default' => true,
