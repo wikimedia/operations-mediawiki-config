@@ -1427,10 +1427,6 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
 		],
-		'wgEnableSpecialMute' => [
-			'default' => true,
-			'eswiki' => false,
-		],
 		'wgEnablePartialActionBlocks' => [
 			'default' => true, // T353496
 		],

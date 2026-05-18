@@ -3318,10 +3318,6 @@ return [
 	'votewiki' => true, // T74589
 ],
 
-'wgEnableSpecialMute' => [
-	'default' => true,
-],
-
 'wgGroupInheritsPermissions' => [
 	'default' => [
 		// Confirmed can do anything autoconfirmed can.
