@@ -2506,6 +2506,17 @@ return [
 		],
 		"include" => []
 	],
+	'enwiktionary' => [ // Don't exclude 100 per T423766
+		"exclude" => [
+			"mainpage" => false,
+			"pagetitles" => [],
+			"namespaces" => [ -1, 6, 14, 710 ],
+			"querystring" => [
+				"action" => "info|protect|delete|undelete|action|history",
+			],
+		],
+		"include" => []
+	]
 ],
 
 'wgVectorLanguageInHeader' => [
