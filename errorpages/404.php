@@ -45,6 +45,17 @@ em { color: #72777d; font-style: normal; }
 }
 </style>
 <meta name="color-scheme" content="light dark">
+<?php
+$path = substr( $_SERVER['REQUEST_URI'], 1 );
+// There is no . neither / in the path. Also check the encoded version of slash
+if (
+	strpbrk( $path, './' ) === false &&
+	!preg_match( '/(%2f)/i', $path )
+) {
+	$encUrl = htmlspecialchars( $path );
+	echo "<meta http-equiv=\"refresh\" content=\"2;url=/wiki/$encUrl\" />";
+}
+?>
 <div class="content" role="main">
 <a id="logoContainer" href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
 <h1>Page not found</h1>
@@ -65,7 +76,7 @@ if ( preg_match( '/(%2f)/i', $path, $matches )
 	$target = '/wiki' . $path;
 }
 $encTarget = htmlspecialchars( $target );
-echo "<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a></b></p>\n";
+echo "<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a>\n</p>";
 ?>
 <p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="https://en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
 </div>
