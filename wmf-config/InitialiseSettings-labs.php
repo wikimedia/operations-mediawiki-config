@@ -1980,7 +1980,7 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgCSPUseReportURIDirective' => [
+		'wgCSPUseReportURIDirective' => [
 			'default' => true,
 		],
 

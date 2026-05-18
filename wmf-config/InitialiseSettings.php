@@ -12779,7 +12779,7 @@ return [
 	'default' => true,
 ],
 
-'wmgCSPUseReportURIDirective' => [
+'wgCSPUseReportURIDirective' => [
 	'default' => true,
 ],
 
