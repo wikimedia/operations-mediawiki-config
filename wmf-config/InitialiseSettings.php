@@ -12229,6 +12229,7 @@ return [
 'wgTrackMediaRequestProvenance' => [
 	'default' => true,
 
+	'commonswiki' => false,
 	'wikipedia' => false,
 
 	// wikipedia (group0)
