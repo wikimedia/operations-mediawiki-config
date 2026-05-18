@@ -9121,20 +9121,6 @@ return [
 	'enwiki' => 'default',
 ],
 
-'wgDiscussionTools_visualenhancements_reply' => [
-	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except enwiki (T379264)
-	'default' => 'available',
-	'enwiki' => 'default',
-],
-
-'wgDiscussionTools_visualenhancements_pageframe' => [
-	// Duplicates wgDiscussionTools_visualenhancements config
-	// Everywhere except enwiki (T379264)
-	'default' => 'available',
-	'enwiki' => 'default',
-],
-
 'wgDiscussionToolsShowFeedbackLinks' => [
 	'default' => true, // T322494
 ],
