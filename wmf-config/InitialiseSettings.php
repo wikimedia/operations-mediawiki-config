@@ -8193,10 +8193,6 @@ return [
 	'default' => true,
 ],
 
-'wgGraphDefaultVegaVer' => [
-	'default' => 2,
-],
-
 'wmgUseSubPageList3' => [
 	'default' => false,
 	'testwiki' => true,
