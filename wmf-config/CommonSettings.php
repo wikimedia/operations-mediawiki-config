@@ -2025,10 +2025,8 @@ if ( $wmgEnableCaptcha ) {
 		// SiteKey dedicated to Special:CreateAccount. Identical to the default wgHCaptchaSiteKey,
 		// but named differently here for clarity when used further below.
 		$wgHCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
-		// SiteKey dedicated to form and API edits in 99.9% passive mode. Mobile apps will use a different SiteKey.
+		// SiteKey dedicated to form and API edits. Mobile apps will use a different SiteKey.
 		$wgHCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
-		// SiteKey dedicated to form and API edits in 100% passive mode.
-		$wgHCaptchaEdit100PercentPassiveSiteKey = 'ccd26dec-6c86-4034-a704-e402435cd53c';
 		// SiteKey that always results in a challenge, for use in AbuseFilter.
 		$wgHCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
 		// SiteKey for the Wikipedia iOS App
@@ -2072,10 +2070,6 @@ if ( $wmgEnableCaptcha ) {
 
 		// T405586 - Editing trial
 		if ( $wmgEnableHCaptchaEditing ) {
-			if ( in_array( $wgDBname, [ 'test2wiki' ] ) ) {
-				// For test2wiki, use the 100% passive mode SiteKey
-				$wgHCaptchaEditSiteKey = $wgHCaptchaEdit100PercentPassiveSiteKey;
-			}
 			$wgCaptchaTriggers['edit'] = [
 				'trigger' => true,
 				'class' => 'HCaptcha',
@@ -2100,23 +2094,10 @@ if ( $wmgEnableCaptcha ) {
 					],
 				],
 			];
-			$wgCaptchaTriggers['addurl'] = [
-				// Disable 'addurl' if:
-				// * the context is non-API edits, because 'edit' and 'create' triggers are enabled for
-				//   non-API edits
-				// * But, if in 100% passive mode, enable 'addurl' with the "always challenge" SiteKey,
-				//   because there needs to be some form of challenge enabled
-				'trigger' => ( $wgHCaptchaEditSiteKey === $wgHCaptchaEdit100PercentPassiveSiteKey ) ||
-					( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ),
-				'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
-					'FancyCaptcha' :
-					'HCaptcha',
-				'config' => [
-					// If the trigger is set to true, it means we're in 100% passive mode, and therefore
-					// we do want a visible challenge to be presented
-					'HCaptchaSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
-				],
-			];
+			// Disable the 'addurl' trigger: the 'edit' and 'create' triggers above already cover
+			// every edit with the passive SiteKey, and hCaptcha's risk model decides whether to
+			// issue a visible challenge.
+			$wgCaptchaTriggers['addurl'] = false;
 
 			if ( $wmgEnableHCaptchaVisualEditorIntegration ) {
 				$wgHCaptchaVisualEditorOnLoadIntegrationEnabled = true;
@@ -2236,7 +2217,7 @@ if ( $wmgEnableCaptcha ) {
 		$wmgEnableHCaptchaVisualEditorIntegration,
 		$wmgEnableHCaptchaForDiscussionTools
 	) {
-		if ( in_array( $action, [ 'edit', 'create', 'addurl' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 			// Default to FancyCaptcha for API edits, since most API edit
 			// interfaces don't support hCaptcha yet (T419572).
 			$className = 'FancyCaptcha';
