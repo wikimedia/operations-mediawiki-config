@@ -4654,8 +4654,6 @@ if ( $wmgUseIPInfo ) {
 		$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
 		$wgGroupPermissions['checkuser']['ipinfo-view-arbitrary-ip'] = true;
 	}
-
-	$wgIPInfoIpoidUrl = $wmgLocalServices['ipoid'];
 }
 
 if ( $wmgUseWikidataPageBanner ) {
