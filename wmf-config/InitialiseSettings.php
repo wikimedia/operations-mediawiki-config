@@ -3808,7 +3808,9 @@ return [
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
 	'group0' => true, // T425354
-	'test2wiki' => true,
+	'group1' => true, // T425354
+	'itwiki' => false, // T425354 (May 27)
+	'metawiki' => false, // T425354 (May 27)
 	'idwiki' => true,
 	'ptwiki' => true,
 	'trwiki' => true,
