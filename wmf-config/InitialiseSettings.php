@@ -6778,10 +6778,6 @@ return [
 	'private' => true,
 ],
 
-'wgParsoidFragmentInput' => [
-	'default' => true, // T268144
-],
-
 'wgParsoidSelectiveUpdateSampleRate' => [
 	'default' => 1000, // T371713: sample 1 in 1000 parses
 ],
@@ -13502,7 +13498,6 @@ return [
 
 // T378127
 'wmgUseChart' => [
-	// Note: requires wgParsoidFragmentSupport on
 	'default' => true,
 
 	// disabled due to wmgEnableJsonConfigDataMode

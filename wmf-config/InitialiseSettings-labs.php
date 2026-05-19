@@ -2318,9 +2318,6 @@ function wmfGetOverrideSettings() {
 		'wgChartTransformsEnabled' => [
 			'default' => true,
 		],
-		'wgParsoidFragmentSupport' => [
-			'default' => true,
-		],
 		// T378206
 		'wgChartProgressiveEnhancement' => [
 			'default' => true,
