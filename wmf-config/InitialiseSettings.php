@@ -3779,13 +3779,14 @@ return [
 'wmgEnableHCaptcha' => [
 	'default' => false,
 	'group0' => true, // T425354
-	'test2wiki' => true,
+	'group1' => true, // T425354
+	'itwiki' => false, // T425354 (May 27)
+	'metawiki' => false, // T425354 (May 27)
 	'idwiki' => true,
 	'enwiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
 	'jawiki' => true,
-	'loginwiki' => true, // T408428
 	'trwiki' => true,
 	'ptwiki' => true,
 	'zhwiki' => true,
