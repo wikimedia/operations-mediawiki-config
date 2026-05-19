@@ -7940,11 +7940,6 @@ return [
 	'default' => true,
 ],
 
-// T337942
-'wgCheckUserDisplayClientHints' => [
-	'default' => true,
-],
-
 // T344797
 'wgCheckUserClientHintsRestApiMaxTimeLag' => [
 	'default' => 1800,
