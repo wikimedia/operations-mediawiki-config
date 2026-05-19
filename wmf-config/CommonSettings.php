@@ -539,8 +539,6 @@ $wgObjectCacheSessionExpiry = 86400;
 # Anti-abuse settings
 # ######################################################################
 
-$wgEnableUserEmailMuteList = true;
-
 if ( $wmgUseGlobalPreferences ) {
 	// Allow global preferences for email-blacklist and echo-notifications
 	// to be auto-set where it is overridden
