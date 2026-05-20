@@ -76,7 +76,7 @@ if ( preg_match( '/(%2f)/i', $path, $matches )
 	$target = '/wiki' . $path;
 }
 $encTarget = htmlspecialchars( $target );
-echo "<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a>\n</p>";
+echo "<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a></b></p>\n";
 ?>
 <p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="https://en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
 </div>
