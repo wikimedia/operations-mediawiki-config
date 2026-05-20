@@ -89,6 +89,22 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
 		$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
 
+		// T426829: Wikibase entity editors (Special:NewItem, on-page JS UI,
+		// wbeditentity API) and the EntitySchema editor don't render an
+		// hCaptcha widget, so any captcha triggered via
+		// EditFilterMergedContent is unsolvable. Disable the edit/create
+		// triggers on the affected namespaces. NS_ENTITYSCHEMA_JSON (640)
+		// is defined by the EntitySchema extension's namespace registration
+		// and isn't available yet at config-load time, so use the literal id.
+		if ( $wmgEnableHCaptchaEditing ) {
+			$wmgWikibaseCaptchaExemptNamespaces = [ NS_MAIN, WB_NS_PROPERTY, WB_NS_LEXEME, 640 ];
+			foreach ( $wmgWikibaseCaptchaExemptNamespaces as $wmgWikibaseCaptchaExemptNs ) {
+				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['edit'] = false;
+				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['create'] = false;
+			}
+			unset( $wmgWikibaseCaptchaExemptNamespaces, $wmgWikibaseCaptchaExemptNs );
+		}
+
 		// T53637 and T48953
 		$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 	}
