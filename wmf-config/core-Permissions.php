@@ -913,6 +913,7 @@ return [
 			'patrol' => true, // T424445
 			'autopatrol' => true, // T424445
 		],
+		'flood' => [ 'bot' => true ], // T426882
 	],
 	'+enwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -3987,7 +3988,10 @@ return [
 		],
 	],
 	'+enwikiversity' => [
-		'sysop' => [ 'curator' ], // T113109
+		'sysop' => [
+			'curator', // T113109
+			'flood', // T426882
+		],
 		'bureaucrat' => [ 'import' ], // T294930
 	],
 	'+enwikivoyage' => [
@@ -5495,7 +5499,10 @@ return [
 		'bureaucrat' => [ 'sysop', 'patroller' ],
 	],
 	'+enwikiversity' => [
-		'sysop' => [ 'curator' ], // T113109
+		'sysop' => [
+			'curator', // T113109
+			'flood', // T426882
+		],
 		'bureaucrat' => [ 'import' ], // T294930
 	],
 	'+enwikisource' => [
@@ -6307,7 +6314,10 @@ return [
 	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
 	'enwikiquote' => [ 'flood' => [ 'flood' ] ], // T351250
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
-	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
+	'enwikiversity' => [
+		'interface-admin' => [ 'interface-admin' ], // T238967
+		'flood' => [ 'flood' ], // T426882
+	],
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'frwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
