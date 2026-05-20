@@ -1607,6 +1607,17 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$';
 
 	$wgUrlShortenerEnableQrCode = true; // T348487
+
+	// T107188
+	if ( $wmgUseUrlShortenerLegacy ) {
+		$wgUrlShortenerLegacyTemplate = "/s/$1";
+	}
+}
+
+// T107188
+if ( $wmgUseShortUrl && !$wmgUseUrlShortenerLegacy ) {
+	wfLoadExtension( 'ShortUrl' );
+	$wgShortUrlTemplate = "/s/$1";
 }
 
 if ( $wmgPFEnableStringFunctions ) {
@@ -3460,11 +3471,6 @@ if ( $wmgUseTranslationNotifications ) {
 
 if ( $wmgUseFundraisingTranslateWorkflow ) {
 	wfLoadExtension( 'FundraisingTranslateWorkflow' );
-}
-
-if ( $wmgUseShortUrl ) {
-	wfLoadExtension( 'ShortUrl' );
-	$wgShortUrlTemplate = "/s/$1";
 }
 
 if ( $wmgUseFeaturedFeeds ) {

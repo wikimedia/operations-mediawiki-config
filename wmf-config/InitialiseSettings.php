@@ -8753,6 +8753,26 @@ return [
 	'urwiki' => true, // T138507
 ],
 
+// T107188: Preserve redirects on wikis that formerly used the ShortUrl extension
+//
+// Cool URIs don't change! https://www.w3.org/Provider/Style/URI
+//
+// This should only be enabled on wikis that previously used Extension:ShortUrl.
+// Enabling it anywhere else would be a no-op except for defining an unused
+// Special:ShortUrl page, and an unreachable /s/ PathRouter.
+//
+// See also the corresponding Apache configuration:
+//
+// * https://gerrit.wikimedia.org/g/operations/puppet/+/927dcdcfa3/modules/mediawiki/templates/apache/mediawiki-vhost.conf.erb#79
+// * https://gerrit.wikimedia.org/g/operations/deployment-charts/+/a42810639a/charts/mediawiki/templates/lamp/_site_helpers.tpl#87
+//
+// NOTE: This is mutually exclusive with $wmgUseShortUrl, and requires that
+// $wmgUseUrlShortener be enabled too (both enforced via no-op in CommonSettings.php).
+'wmgUseUrlShortenerLegacy' => [
+	'default' => false,
+	'test2wiki' => true,
+],
+
 'wmgUseFeaturedFeeds' => [
 	'default' => true,
 	'lockeddown' => false,
