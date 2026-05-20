@@ -1640,7 +1640,6 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseEntityDataFormats' => [
 			'default' => [
 				'json',
-				'php',
 				'rdfxml',
 				'n3',
 				'turtle',
