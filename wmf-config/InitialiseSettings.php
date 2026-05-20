@@ -3042,10 +3042,11 @@ return [
 
 'wgUseFilePatrol' => [
 	'default' => true,
+	'bswiki' => false, // T158662
 	'dewiki' => false, // T316393
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T154285
-	'bswiki' => false, // T158662
+	'ukwiki' => false, // T426905
 ],
 
 # wgNoFollow... @{
