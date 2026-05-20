@@ -20,7 +20,7 @@
 		"phpunit/php-code-coverage": "10.1.16",
 		"phpunit/phpunit": "10.5.63",
 		"seld/jsonlint": "1.11.0",
-		"symfony/yaml": "7.4.6",
+		"symfony/yaml": "7.4.12",
 		"wikimedia/ip-utils": "6.0.1"
 	},
 	"scripts": {
