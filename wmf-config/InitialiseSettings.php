@@ -10557,17 +10557,7 @@ return [
 ],
 
 'wmgWikibaseEntityDataFormats' => [
-	'default' => [
-		'json',
-		'php',
-		'rdfxml',
-		'n3',
-		'turtle',
-		'ntriples',
-		'html',
-		'jsonld',
-	],
-	'testwikidatawiki' => [
+	'wikibaserepo' => [
 		'json',
 		'rdfxml',
 		'n3',
