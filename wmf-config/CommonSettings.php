@@ -4450,21 +4450,25 @@ if ( $wmgUseCheckUser ) {
 
 	// UserInfoCard
 	if ( $wmgUseUserInfoCard ) {
-		// Special-case handling for enwiki, where we want to enable for some privileged groups
-		// and not all named users
-		if ( $wgDBname === 'enwiki' ) {
-			$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
-				[ '1', [ CUDCOND_USERGROUP, 'sysop' ] ],
-				[ '1', [ CUDCOND_USERGROUP, 'checkuser' ] ],
-				[ '1', [ CUDCOND_USERGROUP, 'rollbacker' ] ],
-				[ '1', [ CUDCOND_USERGROUP, 'temporary-account-viewer' ] ],
-			];
-		} else {
-			// For other wikis, enable for all named users
-			$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
-				[ '1', [ CUDCOND_NAMED ] ],
-			];
-		}
+		// Enable UIC by default only for certain patrolling-related user groups (T426021)
+		$wgConditionalUserOptions['checkuser-userinfocard-enable'] = [
+			[ '1', [ CUDCOND_USERGROUP, 'abusefilter' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'abusefilter-helper' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'arbcom' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'bureaucrat' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'checkuser' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'editor' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'eliminator' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'event-organizer' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'eventcoordinator' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'patroller' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'reviewer' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'rollbacker' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'steward' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'suppress' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'sysop' ] ],
+			[ '1', [ CUDCOND_USERGROUP, 'temporary-account-viewer' ] ],
+		];
 	}
 
 	// Link to the central Special:CentralAuth page if available (T397690)
