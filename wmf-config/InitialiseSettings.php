@@ -6004,13 +6004,6 @@ return [
 		5 => 250,
 		7 => 400
 	],
-	'svwiki' => [
-		0 => 180,
-		2 => 249,
-		4 => 380,
-		5 => 250,
-		7 => 400,
-	],
 ],
 // Do not add more exceptions. Default should stay the same between wikis.
 'wmgThumbsizeIndex' => [
