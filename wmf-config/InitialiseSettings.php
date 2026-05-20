@@ -3799,7 +3799,6 @@ return [
 ],
 'wmgEnableHCaptchaEditing' => [
 	'default' => true, // T425354
-	'metawiki' => false, // T425354 (May 27)
 ],
 'wmgEnableHCaptchaAccountCreationAPI' => [
 	'default' => false,
