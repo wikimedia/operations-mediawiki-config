@@ -6006,14 +6006,15 @@ return [
 	],
 	'svwiki' => [
 		0 => 180,
-		2 => 250,
-		4 => 400
+		2 => 249,
+		4 => 380,
+		5 => 250,
+		7 => 400,
 	],
 ],
 // Do not add more exceptions. Default should stay the same between wikis.
 'wmgThumbsizeIndex' => [
 	'default' => 5,
-	'svwiki' => 2, // T18739
 ],
 
 'wgTorTagChanges' => [
