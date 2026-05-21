@@ -13680,19 +13680,32 @@ return [
 
 'wgArticleGuidanceExperimentName' => [
 	'default' => '',
+	// phase 0
 	'testwiki' => 'we-1-10-articleguidance-v1',
+	// phase 1
 	'simplewiki' => 'we-1-10-articleguidance-v1', // T426278
+	// phase 2
+	'frwiki' => 'we-1-10-articleguidance-v1', // T426871
+	'ptwiki' => 'we-1-10-articleguidance-v1', // T426871
+	'trwiki' => 'we-1-10-articleguidance-v1', // T426871
 ],
 
 'wgArticleGuidanceExperimentRefererTitles' => [
 	'default' => [],
+	// phase 0
 	'testwiki' => [ 'Wikipedia:ArticleGuidance' ],
 ],
 
 'wgArticleGuidanceExperimentEntryPointTitles' => [
 	'default' => [],
+	// phase 0
 	'testwiki' => [ 'Wikipedia:ArticleWizard' ],
+	// phase 1
 	'simplewiki' => [ 'Wikipedia:Article_wizard' ], // T426278
+	// phase 2
+	'frwiki' => [ 'Aide:Comment_créer_un_article' ], // T426871
+	'ptwiki' => [ 'Wikipédia:Guia_de_criação_de_artigos' ], // T426871
+	'trwiki' => [ 'Vikipedi:Madde_sihirbazı' ], // T426871
 ],
 
 'wgArticleGuidanceSparqlEndpoint' => [
