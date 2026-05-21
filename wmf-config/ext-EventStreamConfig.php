@@ -2581,6 +2581,36 @@ return [
 			'canary_events_enabled' => false,
 		],
 
+		// Stream produced by Flink in Kafka Jumbo
+		'webrequest.page_view.dev0' => [
+			'schema_title' => 'development/webrequest_page_view',
+			'canary_events_enabled' => false,
+		],
+
+		// Error (DLQ) topic for the application producing webrequest.page_view
+		'webrequest_page_view.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+
+		// The producer of webrequest_frontend_text is not using this stream
+		// but we want to define a stream with schema so we can consume the
+		// topic from Flink in Kafka Jumbo.
+		'webrequest.dev0' => [
+			'schema_title' => 'development/webrequest',
+			'canary_events_enabled' => false,
+			'topic_prefixes' => null,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// webrequest is ingested into Hadoop through another process
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
 		// page_html_content_change is the mediawiki.page_change stream
 		// enriched with with latest revision rendering HTML and
 		// diff to parent revision rendering HTML.
