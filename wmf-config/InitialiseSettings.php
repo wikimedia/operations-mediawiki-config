@@ -3780,8 +3780,6 @@ return [
 	'default' => false,
 	'group0' => true, // T425354
 	'group1' => true, // T425354
-	'itwiki' => false, // T425354 (May 27)
-	'metawiki' => false, // T425354 (May 27)
 	'idwiki' => true,
 	'enwiki' => true,
 	'fawiki' => true,
@@ -3824,6 +3822,8 @@ return [
 	'default' => false,
 	'group0' => true,
 	'test2wiki' => true,
+	'hewiki' => true, // T426045
+	'itwiki' => true, // T426045
 ],
 'wmgEmergencyCaptcha' => [
 	'default' => false,
