@@ -1386,9 +1386,6 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 			'default' => 300,
 		],
-		'wgGENotificationsTrackingEnabled' => [
-			'default' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
