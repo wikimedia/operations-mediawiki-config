@@ -3802,7 +3802,7 @@ return [
 ],
 'wmgEnableHCaptchaForDiscussionTools' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true, // T426039
 ],
 'wmgEnableHCaptchaEditing' => [
 	'default' => false,
