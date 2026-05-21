@@ -1427,9 +1427,6 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
 		],
-		'wgEnablePartialActionBlocks' => [
-			'default' => true, // T353496
-		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
 		],
