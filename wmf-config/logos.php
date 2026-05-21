@@ -2840,8 +2840,8 @@ return [
 	],
 	'zghwiki' => [ // T350241
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zgh.svg',
-		'width' => 119,
-		'height' => 23,
+		'width' => 164,
+		'height' => 22,
 	],
 	'zh_classicalwiki' => [ // T174192, T261110
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh_classical.svg',
@@ -6910,8 +6910,8 @@ return [
 	],
 	'zghwiki' => [ // T350241
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zgh.svg',
-		'width' => 99,
-		'height' => 10,
+		'width' => 82,
+		'height' => 9,
 	],
 	'zh_classicalwiki' => [ // T258552, T261110
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh_classical.svg',
