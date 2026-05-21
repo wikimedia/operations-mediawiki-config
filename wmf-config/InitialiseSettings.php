@@ -9659,23 +9659,6 @@ return [
 	'default' => true,
 ],
 
-'wgReportIncidentLocalLinks' => [
-	// NOTE: The defaults are merely placeholder values.
-	// This variable should be customized with pages appropriate to the local wiki
-	// for each wiki the ReportIncident extension is enabled on.
-	// Eventually, this will be replaced with community configuration (T374113).
-	'default' => [
-		'disputeResolution' => 'Project:Dispute resolution',
-		'askTheCommunity' => 'Project:Village pump',
-		'localIncidentReport' => 'Project:ANI',
-	],
-	'ptwiki' => [
-		'disputeResolution' => 'Project:Como resolver disputas',
-		'askTheCommunity' => 'Project:Pedidos',
-		'localIncidentReport' => 'Project:Pedidos/Notificação de incidentes',
-	],
-],
-
 'wgReportIncidentEnabledNamespaces' => [
 	'default' => [
 		NS_TALK,
