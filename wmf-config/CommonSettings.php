@@ -4123,9 +4123,6 @@ if ( $wmgHideGraphTags ) {
 	$wgTrackingCategories[] = 'wikimedia-graph-tracking-category';
 	$wgTrackingCategories[] = 'wikimedia-graph-disabled-category';
 
-	// Don't show "Insert graph" tool in VE
-	$wgGraphShowInToolbar = false;
-
 	function wmfAddGraphTagToHideRawUsage( Parser $parser ) {
 		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
 	}
