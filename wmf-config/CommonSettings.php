@@ -1808,8 +1808,6 @@ include __DIR__ . '/CirrusSearch-common.php';
 
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-$wgAllowRawHtmlCopyrightMessages = false; // T375789
-
 $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
