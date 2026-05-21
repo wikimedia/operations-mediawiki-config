@@ -2022,15 +2022,15 @@ if ( $wmgEnableCaptcha ) {
 		$wgHCaptchaSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
 		// SiteKey dedicated to Special:CreateAccount. Identical to the default wgHCaptchaSiteKey,
 		// but named differently here for clarity when used further below.
-		$wgHCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
+		$hCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
 		// SiteKey dedicated to form and API edits. Mobile apps will use a different SiteKey.
-		$wgHCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
+		$hCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
 		// SiteKey that always results in a challenge, for use in AbuseFilter.
-		$wgHCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
+		$hCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
 		// SiteKey for the Wikipedia iOS App
-		$wgHCaptchaWikipediaIOSSiteKey = '083c7bd2-eef0-423a-98ca-db1e0d4cbbae';
+		$hCaptchaWikipediaIOSSiteKey = '083c7bd2-eef0-423a-98ca-db1e0d4cbbae';
 		// SiteKey for the Wikipedia Android App
-		$wgHCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
+		$hCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
 
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
@@ -2043,10 +2043,10 @@ if ( $wmgEnableCaptcha ) {
 				'FancyCaptcha' :
 				'HCaptcha',
 			'config' => [
-				'HCaptchaSiteKey' => $wgHCaptchaAccountCreationSiteKey,
+				'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
 				'HCaptchaAdditionalValidSiteKeys' => [
-					$wgHCaptchaWikipediaIOSSiteKey,
-					$wgHCaptchaWikipediaAndroidSiteKey,
+					$hCaptchaWikipediaIOSSiteKey,
+					$hCaptchaWikipediaAndroidSiteKey,
 				],
 			],
 		];
@@ -2057,26 +2057,26 @@ if ( $wmgEnableCaptcha ) {
 				'trigger' => true,
 				'class' => 'HCaptcha',
 				'config' => [
-					'HCaptchaSiteKey' => $wgHCaptchaAccountCreationSiteKey,
+					'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
 					'HCaptchaAdditionalValidSiteKeys' => [
-						$wgHCaptchaWikipediaIOSSiteKey,
-						$wgHCaptchaWikipediaAndroidSiteKey,
+						$hCaptchaWikipediaIOSSiteKey,
+						$hCaptchaWikipediaAndroidSiteKey,
 					],
 				],
 			];
 		}
 
-		// T405586 - Editing trial
+		// T405586 - Enable for the `edit` and `create` ConfirmEdit triggers
 		if ( $wmgEnableHCaptchaEditing ) {
 			$wgCaptchaTriggers['edit'] = [
 				'trigger' => true,
 				'class' => 'HCaptcha',
 				'config' => [
-					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
-					'HCaptchaAlwaysChallengeSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
+					'HCaptchaSiteKey' => $hCaptchaEditSiteKey,
+					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
 					'HCaptchaAdditionalValidSiteKeys' => [
-						$wgHCaptchaWikipediaIOSSiteKey,
-						$wgHCaptchaWikipediaAndroidSiteKey,
+						$hCaptchaWikipediaIOSSiteKey,
+						$hCaptchaWikipediaAndroidSiteKey,
 					],
 				],
 			];
@@ -2084,11 +2084,11 @@ if ( $wmgEnableCaptcha ) {
 				'trigger' => true,
 				'class' => 'HCaptcha',
 				'config' => [
-					'HCaptchaSiteKey' => $wgHCaptchaEditSiteKey,
-					'HCaptchaAlwaysChallengeSiteKey' => $wgHCaptchaAlwaysChallengeSiteKey,
+					'HCaptchaSiteKey' => $hCaptchaEditSiteKey,
+					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
 					'HCaptchaAdditionalValidSiteKeys' => [
-						$wgHCaptchaWikipediaIOSSiteKey,
-						$wgHCaptchaWikipediaAndroidSiteKey,
+						$hCaptchaWikipediaIOSSiteKey,
+						$hCaptchaWikipediaAndroidSiteKey,
 					],
 				],
 			];
@@ -2197,6 +2197,15 @@ if ( $wmgEnableCaptcha ) {
 
 		// Remove default hcaptcha.com rules
 		$wgHCaptchaCSPRules = [];
+
+		// Remove sitekey variables only used to populate $wgCaptchaTriggers
+		unset(
+			$hCaptchaAccountCreationSiteKey,
+			$hCaptchaAlwaysChallengeSiteKey,
+			$hCaptchaEditSiteKey,
+			$hCaptchaWikipediaAndroidSiteKey,
+			$hCaptchaWikipediaIOSSiteKey
+		);
 	}
 
 	// For emergencies
