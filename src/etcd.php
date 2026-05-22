@@ -59,6 +59,10 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
 	foreach ( $localDbConfig['sectionLoads'] as $section => $dbctlLoads ) {
+		// The section test-s4 is for DBAs to test dbctl
+		if ( $section === 'test-s4' ) {
+			continue;
+		}
 		// For each section, MediaWiki treats the first host as the master.
 		// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
 		// dictionaries, one containing the master and one containing all the replicas.
