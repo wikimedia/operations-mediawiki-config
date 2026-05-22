@@ -3033,6 +3033,7 @@ return [
 	'default' => false, // T74239
 	'sul' => true,
 	'dewiki' => false, // T316393
+	'enwikibooks' => false, // T426992
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T33650
 	'sqwiki' => false, // T27822
@@ -3044,6 +3045,7 @@ return [
 	'default' => true,
 	'bswiki' => false, // T158662
 	'dewiki' => false, // T316393
+	'enwikibooks' => false, // T426992
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T154285
 	'ukwiki' => false, // T426905

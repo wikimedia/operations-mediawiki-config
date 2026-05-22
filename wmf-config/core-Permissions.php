@@ -855,13 +855,17 @@ return [
 		'import' => [ 'mergehistory' => true ], // T380753
 	],
 	'+enwikibooks' => [
-		'autoreview' => [ 'autopatrol' => true ], // T278300
+		'bot' => [ 'autopatrol' => false ], // T426992
 		'editor' => [
-			'autopatrol' => true, // T172561
+			'rollback' => true, // T426992
 			'suppressredirect' => true, // T268849
 		],
 		'flood' => [ 'bot' => true ],
-		'sysop' => [ 'importupload' => true ], // T278683
+		'sysop' => [
+			'autopatrol' => false, // T426992
+			'patrol' => false, // T426992
+			'importupload' => true, // T278683
+		],
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,

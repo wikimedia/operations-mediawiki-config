@@ -132,12 +132,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T175684
 		break;
 	case 'enwikibooks':
-		$wgGroupPermissions['*']['abusefilter-view'] = false;
-		$wgGroupPermissions['*']['abusefilter-log'] = false;
-		$wgAbuseFilterNotifications = false;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T383332
+		$wgGroupPermissions['*']['abusefilter-log-detail'] = true; // T426992
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T411828
 		$wgAbuseFilterActions['block'] = true; // T273864
 		break;

@@ -307,12 +307,9 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'enwikibooks' ) {
 		// Limited to the main, Cookbook, and Wikijunior namespaces (T408110)
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, 102, 110 ];
-		$wgFlaggedRevsTags = [ 'value' => [ 'levels' => 3 ] ];
+		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 3 ] ]; // T426992
 
-		$wgGroupPermissions['editor']['rollback'] = true;
-		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['validate'] = true;
 
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'eowiki' ) {
