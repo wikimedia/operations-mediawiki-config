@@ -13115,6 +13115,19 @@ return [
 
 // for wmgWikibaseTmpMobileEditingUIBetaFeature, see the BetaFeatures section above
 
+// T421850 - prototype displaying links to WikiProjects on Item pages
+'wmgWikibaseTmpWikiProjectsLinking' => [
+	'testwikidatawiki' => [
+		[
+			'propertyIds' => [
+				'P176', 'P150', 'P79511',
+			],
+			'href' => 'https://www.wikidata.org/wiki/Wikidata:WikiProject_Music',
+			'text' => 'WikiProject Music',
+		],
+	],
+],
+
 // T415516 temporary feature flag
 'wmgWikibaseTmpGraphQL' => [
 	'default' => false,
