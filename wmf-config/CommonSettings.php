@@ -2112,7 +2112,7 @@ if ( $wmgEnableCaptcha ) {
 				$wmgEnableHCaptchaForDiscussionTools
 			) {
 				$services = MediaWikiServices::getInstance();
-				$simpleCaptcha = \MediaWiki\Extension\ConfirmEdit\Hooks::getInstance( $action );
+				$simpleCaptcha = $services->get( 'ConfirmEditCaptchaFactory' )->getGlobalInstance( $action );
 				// T404204 - Check hCaptcha availability once, reuse below.
 				$isHCaptcha = $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
 				$hCaptchaAvailable = $isHCaptcha
