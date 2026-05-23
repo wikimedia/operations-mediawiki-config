@@ -2041,16 +2041,17 @@ if ( $wmgEnableCaptcha ) {
 			$wgHCaptchaEnabledInMobileFrontend
 		): bool {
 			$request = RequestContext::getMain()->getRequest();
-			if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
+			$action = $_REQUEST['action'] ?? '';
+			if ( $action === 'visualeditoredit' ) {
 				return $wmgEnableHCaptchaVisualEditorIntegration;
 			} elseif (
-				$request->getRawVal( 'action' ) === 'discussiontoolsedit' &&
+				$action === 'discussiontoolsedit' &&
 				strpos( $request->getHeader( 'User-Agent' ), "WikipediaApp/" ) !== 0
 			) {
 				// Skipped for mobile apps while they do not support hCaptcha for DiscussionTools
 				return $wmgEnableHCaptchaForDiscussionTools;
 			} else {
-				$editorInterface = $request->getRawVal( 'editorinterface' );
+				$editorInterface = $_REQUEST['editorinterface'] ?? '';
 				return $wgHCaptchaEnabledInMobileFrontend
 					&& $editorInterface === 'MobileFrontend-SourceEditor';
 			}
