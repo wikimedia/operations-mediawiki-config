@@ -4811,6 +4811,47 @@ return [
 		'arbcom' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 		],
+		// T423120
+		'bureaucrat' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'abusefilter-helper' => [
+			'scope' => [ 'centralauth' ],
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'abusefilter-maintainer' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'founder' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'global-interface-editor' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'global-sysop' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'new-wikis-importer' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'ombuds' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'staff' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'sysadmin' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'u4c-member' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'wmf-email-block-override' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
+		'wmf-researcher' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+		],
 	],
 	// T423119
 	'+fishbowl' => [
