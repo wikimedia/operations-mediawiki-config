@@ -3781,17 +3781,7 @@ return [
 ],
 
 'wmgEnableHCaptcha' => [
-	'default' => false,
-	'group0' => true, // T425354
-	'group1' => true, // T425354
-	'idwiki' => true,
-	'enwiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'jawiki' => true,
-	'trwiki' => true,
-	'ptwiki' => true,
-	'zhwiki' => true,
+	'default' => true, // T425354
 ],
 'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
 	'default' => false,
@@ -3808,19 +3798,8 @@ return [
 	'group0' => true, // T426039
 ],
 'wmgEnableHCaptchaEditing' => [
-	'default' => false,
-	'group0' => true, // T425354
-	'group1' => true, // T425354
-	'itwiki' => false, // T425354 (May 27)
+	'default' => true, // T425354
 	'metawiki' => false, // T425354 (May 27)
-	'idwiki' => true,
-	'ptwiki' => true,
-	'trwiki' => true,
-	'fawiki' => true,
-	'jawiki' => true, // A/B test T410354
-	'zhwiki' => true, // A/B test T410354
-	'frwiki' => true,
-	'enwiki' => true,
 ],
 'wmgEnableHCaptchaAccountCreationAPI' => [
 	'default' => false,
