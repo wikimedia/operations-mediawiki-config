@@ -2010,6 +2010,7 @@ return [
 	'nlwiki' => 10, // T424898
 	'nowiki' => 20, // T71302
 	'plwiki' => 10,
+	'plwiktionary' => 25, // T427177
 	'ptwiki' => 10, // T29954
 	'rowiki' => 10, // T355990
 	'ruwiki' => 15, // T43831
