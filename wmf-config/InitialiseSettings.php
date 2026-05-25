@@ -5667,8 +5667,12 @@ return [
 
 'wgOAuthAutoApprove' => [
 	'default' => [
-		// T67750 do not require manual approval for readonly grants
-		[ 'grants' => [ 'mwoauth-authonly', 'mwoauth-authonlyprivate', 'basic' ] ],
+		[
+			// T67750 do not require manual approval for readonly grants
+			'grants' => [ 'mwoauth-authonly', 'mwoauth-authonlyprivate', 'basic' ],
+			// T412542 require manual approval for apps and other unusual protocols
+			'protocols' => [ 'http', 'https' ],
+		],
 	],
 	'private' => [],
 ],
