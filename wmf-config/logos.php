@@ -858,7 +858,7 @@ return [
 	'nycwikimedia' => '/static/images/project-logos/nycwikimedia.png',
 	'nzwikimedia' => '/static/images/project-logos/nzwikimedia.png',
 	'pa_uswikimedia' => '/static/images/project-logos/pa_uswikimedia.png',
-	'plwikimedia' => '/static/images/project-logos/plwikimedia.png',
+	'plwikimedia' => '/static/images/project-logos/plwikimedia.png', // T427193
 	'ptwikimedia' => '/static/images/project-logos/ptwikimedia.png', // T126832
 	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png', // T187184
@@ -1588,6 +1588,7 @@ return [
 	'idwikimedia' => '/static/images/project-logos/idwikimedia-2x.png', // T192726
 	'maiwikimedia' => '/static/images/project-logos/maiwikimedia-2x.png',
 	'ngwikimedia' => '/static/images/project-logos/ngwikimedia-2x.png', // T242416
+	'plwikimedia' => '/static/images/project-logos/plwikimedia-2x.png', // T427193
 	'ptwikimedia' => '/static/images/project-logos/ptwikimedia-2x.png', // T126832
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia-2x.png', // T187184
 	'trwikimedia' => '/static/images/project-logos/trwikimedia-2x.png', // T323850
@@ -4839,10 +4840,10 @@ return [
 		'width' => 100,
 		'height' => 12,
 	],
-	'plwikimedia' => [
-		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
-		'width' => 100,
-		'height' => 12,
+	'plwikimedia' => [ // T427193
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-pl.svg',
+		'width' => 128,
+		'height' => 40,
 	],
 	'ptwikimedia' => [
 		'src' => '/static/images/mobile/copyright/usabilitywiki-wordmark.svg',
@@ -7703,11 +7704,6 @@ return [
 		'width' => 146,
 		'height' => 10,
 	],
-	'plwikimedia' => [
-		'src' => '/static/images/mobile/copyright/wikimedia-tagline-pl.svg',
-		'width' => 106,
-		'height' => 18,
-	],
 	'ptwikimedia' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-tagline-pt.svg',
 		'width' => 106,
@@ -7916,7 +7912,7 @@ return [
 	'nycwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'nzwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'pa_uswikimedia' => '/static/images/icons/outreachwiki.svg',
-	'plwikimedia' => '/static/images/icons/outreachwiki.svg',
+	'plwikimedia' => '/static/images/icons/wikimedia.svg',
 	'ptwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'punjabiwikimedia' => '/static/images/icons/outreachwiki.svg',
 	'romdwikimedia' => '/static/images/icons/romdwikimedia.svg',

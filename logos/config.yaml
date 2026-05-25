@@ -3702,10 +3702,12 @@ Wikivoyage:
         selected_icon: outreachwiki
         local_tagline: true
     plwikimedia:
-        no_2x: true
-        selected_icon: outreachwiki
-        selected_wordmark: usabilitywiki
-        local_tagline: true
+        selected_icon: wikimedia
+        commons: 'File:Wikimedia Polska logo all black.svg'
+        comment: T427193
+        comment_2x: T427193
+        commons_wordmark: 'File:Wikimedia Polska wordmark.svg'
+        comment_wordmark: T427193
     ptwikimedia:
         comment: T126832
         comment_2x: T126832
