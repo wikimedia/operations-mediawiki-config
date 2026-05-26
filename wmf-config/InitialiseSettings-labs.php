@@ -1114,7 +1114,7 @@ function wmfGetOverrideSettings() {
 
 		// T422275
 		'wgReadingListsEnableBetaQuickSurvey' => [
-			'default' => true,
+			'wikipedia' => true,
 		],
 
 		// T419163
