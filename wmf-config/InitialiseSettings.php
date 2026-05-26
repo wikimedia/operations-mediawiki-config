@@ -9617,6 +9617,11 @@ return [
 	'enwiki' => true,
 ],
 
+'wgReportIncidentEnableDirectReporting' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgReportIncidentEnabledNonEmergencyCategories' => [
 	'default' => [
 		'INTIMIDATION',
