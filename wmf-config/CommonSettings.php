@@ -935,7 +935,7 @@ if ( $wmgPrivateWikiUploads ) {
 	);
 }
 
-$wgUrlProtocols[] = 'CommonsFinder://';
+$wgUrlProtocols[] = 'commonsfinder://';
 
 # ######################################################################
 # SVG renderer settings
