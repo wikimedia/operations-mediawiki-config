@@ -8426,6 +8426,8 @@ return [
 			'ku-latn' => 'Translate in ku please.',
 			'ku-arab' => 'Translate in ku please.',
 
+			'no' => 'Translate in nb or nn please.', // T424613
+
 			'sh-cyrl' => 'Translate in sh please.', // T397913
 			'sh-latn' => 'Translate in sh please.', // T397913
 
@@ -8469,6 +8471,8 @@ return [
 			'ku-latn' => 'Translate in ku please.',
 			'ku-arab' => 'Translate in ku please.',
 
+			'no' => 'Translate in nb or nn please.', // T424613
+
 			'sh-cyrl' => 'Translate in sh please.', // T397913
 			'sh-latn' => 'Translate in sh please.', // T397913
 
@@ -8505,6 +8509,7 @@ return [
 			'nan' => 'This language code should remain unused. Localise in nan-hans, nan-hant, nan-latn-pehoeji or nan-latn-tailo please.',
 			'nan-hani' => 'This language code should remain unused. Localise in nan-hans or nan-hant please.',
 			'nan-latn' => 'This language code should remain unused. Localise in nan-latn-pehoeji or nan-latn-tailo please.',
+			'no' => 'This language code should remain unused. Localise in nb or nn please.', // T424613
 			'wuu' => 'This language code should remain unused. Localise in wuu-hans or wuu-hant please.',
 			'yue' => 'This language code should remain unused. Localise in yue-hans or yue-hant please.',
 			'zh' => 'This language code should remain unused. Localise in zh-hans, zh-hant or zh-hk please.',
