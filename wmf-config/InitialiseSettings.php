@@ -3785,13 +3785,11 @@ return [
 ],
 'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
 	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
+	'group0' => true, // T425940
 ],
 'wmgEnableHCaptchaVisualEditorIntegration' => [
 	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
+	'group0' => true, // T425940
 ],
 'wmgEnableHCaptchaForDiscussionTools' => [
 	'default' => false,
