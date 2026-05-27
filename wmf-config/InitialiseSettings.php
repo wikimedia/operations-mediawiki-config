@@ -203,6 +203,7 @@ return [
 	'chapcomwiki' => 'en',
 	'checkuserwiki' => 'en',
 	'collabwiki' => 'en',
+	'conductwiki' => 'en',
 	'donatewiki' => 'en',
 	'execwiki' => 'en',
 	'fdcwiki' => 'en',
@@ -916,6 +917,7 @@ return [
 	'checkuserwiki' => '//checkuser.wikimedia.org',
 	'cnwikimedia' => '//cn.wikimedia.org',
 	'collabwiki' => '//collab.wikimedia.org',
+	'conductwiki' => '//conduct.wikimedia.org',
 	'commonswiki' => '//commons.wikimedia.org',
 	'testcommonswiki' => '//test-commons.wikimedia.org',
 	'donatewiki' => '//donate.wikimedia.org',
@@ -1034,6 +1036,7 @@ return [
 	'checkuserwiki' => 'https://checkuser.wikimedia.org',
 	'cnwikimedia' => 'https://cn.wikimedia.org', // T98676
 	'collabwiki' => 'https://collab.wikimedia.org',
+	'conductwiki' => 'https://conduct.wikimedia.org',
 	'commonswiki' => 'https://commons.wikimedia.org',
 	'testcommonswiki' => 'https://test-commons.wikimedia.org',
 	'donatewiki' => 'https://donate.wikimedia.org',
@@ -4470,6 +4473,7 @@ return [
 	'chapcomwiki' => '/static/favicon/wmf.ico', // T41482
 	'checkuserwiki' => '/static/favicon/checkuser.ico', // T393246
 	'commonswiki' => '/static/favicon/commons.ico',
+	'conductwiki' => '/static/favicon/community.ico',
 	'testcommonswiki' => '/static/favicon/commons.ico',
 	'donatewiki' => '/static/favicon/wmf.ico',
 	'fdcwiki' => '/static/favicon/wmf.ico', // T50404

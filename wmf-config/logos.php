@@ -892,6 +892,7 @@ return [
 	'checkuserwiki' => '/static/images/project-logos/checkuserwiki.png', // T30785
 	'collabwiki' => '/static/images/project-logos/collabwiki.png',
 	'commonswiki' => '/static/images/project-logos/commonswiki.png',
+	'conductwiki' => '/static/images/project-logos/conductwiki.png',
 	'donatewiki' => '/static/images/project-logos/donatewiki.png',
 	'electcomwiki' => '/static/images/project-logos/electcomwiki.png',
 	'execwiki' => '/static/images/project-logos/execwiki.png',
@@ -7943,6 +7944,7 @@ return [
 	'checkuserwiki' => '/static/images/icons/checkuserwiki.svg',
 	'collabwiki' => '/static/images/icons/collabwiki.svg',
 	'commonswiki' => '/static/images/icons/commonswiki.svg',
+	'conductwiki' => '/static/images/icons/metawiki.svg',
 	'donatewiki' => '/static/images/icons/wikimedia.svg',
 	'electcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'fdcwiki' => '/static/images/icons/outreachwiki.svg',

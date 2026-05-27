@@ -45,6 +45,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'chapcomwiki', 'chapcom.wikimedia.org' ],
 			[ 'checkuserwiki', 'checkuser.wikimedia.org' ],
 			[ 'collabwiki', 'collab.wikimedia.org' ],
+			[ 'conductwiki', 'conduct.wikimedia.org' ],
 			[ 'commonswiki', 'commons.wikimedia.org' ],
 			[ 'donatewiki', 'donate.wikimedia.org' ],
 			[ 'execwiki', 'exec.wikimedia.org' ],

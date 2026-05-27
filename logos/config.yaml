@@ -3869,6 +3869,9 @@ Wikivoyage:
         commons_wordmark: 'File:Commons-wordmark-en.svg'
         comment_wordmark: T157476
         local_icon: true
+    conductwiki:
+        no_2x: true
+        selected_icon: metawiki
     donatewiki:
         selected_icon: wikimedia
         selected_wordmark: votewiki
