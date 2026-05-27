@@ -3822,6 +3822,11 @@ return [
 'wmgEmergencyCaptcha' => [
 	'default' => false,
 ],
+
+'wgSkipCaptchaMinimumEditCount' => [
+	'default' => 10,
+	'private' => 0,
+],
 # @} end of Captcha
 
 'wgWantedPagesThreshold' => [
