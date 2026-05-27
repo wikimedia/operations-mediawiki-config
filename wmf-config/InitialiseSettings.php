@@ -9700,6 +9700,7 @@ return [
 'wgReportIncidentEnableDirectReporting' => [
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true, // T427369
 ],
 
 'wgReportIncidentEnabledNonEmergencyCategories' => [
