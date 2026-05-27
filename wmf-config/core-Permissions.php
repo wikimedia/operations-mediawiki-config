@@ -2095,11 +2095,24 @@ return [
 			'campaignevents-email-participants' => true, // T387943
 			'campaignevents-generate-invitation-lists' => true, // T401445, for consistency with T387943
 		],
-		'sysop' => [ 'importupload' => true, ], // T101663
+		'sysop' => [
+			'createaccount' => false,
+			'createpreviouslyrenamedaccount' => false,
+			'importupload' => true, // T101663
+		],
+		'bureaucrat' => [
+			'renameuser' => false,
+		],
 		'securepoll' => [
 			'securepoll-create-poll' => true,
 			'editinterface' => true,
 		],
+		'wmf-officeit' => [
+			'createaccount' => true,
+			'createpreviouslyrenamedaccount' => true,
+			'renameuser' => true,
+			'oathauth-recover-for-user' => true,
+		]
 	],
 	'+sourceswiki' => [
 		'flood' => [ 'bot' => true ], // T193350
@@ -4548,6 +4561,9 @@ return [
 			'flood',
 			'securepoll',
 		],
+		'wmf-officeit' => [
+			'wmf-officeit'
+		]
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -5896,6 +5912,7 @@ return [
 	],
 	'+officewiki' => [
 		'bureaucrat' => [ 'flood', 'securepoll' ],
+		'wmf-officeit' => [ 'wmf-officeit' ]
 	],
 	'+sourceswiki' => [
 		'bureaucrat' => [ 'flood' ], // T193350
