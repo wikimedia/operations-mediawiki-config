@@ -13751,6 +13751,11 @@ return [
 	'trwiki' => 'we-1-10-articleguidance-v1', // T426871
 ],
 
+'wgArticleGuidanceExperimentJuniorEditorsOnly' => [
+	'default' => false,
+	'frwiki' => true, // T426871
+],
+
 'wgArticleGuidanceExperimentRefererTitles' => [
 	'default' => [],
 	// phase 0
