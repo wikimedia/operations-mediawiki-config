@@ -46,6 +46,7 @@ return [
 		// semanticsearch doesn't exist in labs either
 		'semanticsearch-test' => null,
 		// ttmserver doesn't exist in labs
+		'ttmserver-test-dnsdisc' => null,
 		'ttmserver-test' => null,
 		// We will not use analytics-web in beta
 		'analytics-web' => null,
