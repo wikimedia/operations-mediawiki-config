@@ -1700,11 +1700,6 @@ return [
 		'eliminator' => [ 'delete' => true ], // T410121
 		'rollbacker' => [ 'rollback' => true ], // T410121
 	],
-	'+labswiki' => [
-		'*' => [
-			'autocreateaccount' => false,
-		],
-	],
 	'+ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
 	],
