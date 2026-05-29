@@ -7500,10 +7500,8 @@ return [
 
 // Temporary while developing feature, T421055
 'wgCiteRemoveSyntheticRefsUnsafe' => [
-	'default' => false,
-	// T425967
-	'testwiki' => true,
-	'test2wiki' => true,
+	// T427484
+	'default' => true,
 ],
 
 'wgCiteResponsiveReferences' => [
