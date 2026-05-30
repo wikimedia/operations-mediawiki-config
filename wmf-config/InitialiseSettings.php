@@ -7222,6 +7222,9 @@ return [
 		'Project' => true, // T144688
 		'Portal' => true, // T144688
 	],
+	'+swwiki' => [
+		'Project' => true, // T427117
+	],
 	'+tawiki' => [
 		'வரைவு' => true, // Draft - T329248
 	],
