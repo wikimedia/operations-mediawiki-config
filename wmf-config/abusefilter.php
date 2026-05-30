@@ -399,6 +399,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
 		$wgGroupPermissions['checkuser']['abusefilter-log-private'] = true; // T370605
+		$wgAbuseFilterActions['block'] = true; // T427384
 		break;
 	case 'nowiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
