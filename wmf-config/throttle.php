@@ -37,46 +37,12 @@ $wmgThrottlingExceptions = [];
 
 ## Add throttling definitions above.
 
-// T424843
+// T427678
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-05-14T08:00 +2:00',
-	'to'     => '2026-05-14T21:00 +2:00',
-	'IP'     => '147.231.11.254',
+	'from'   => '2026-06-08T06:00 +2:00',
+	'to'     => '2026-06-08T17:00 +2:00',
+	'IP'     => '84.19.71.121',
 	'dbname' => 'cswiki',
 	'value'  => 50,
 	'tempaccountvalue'  => 50,
-];
-
-// T426295
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-05-15T08:00 +8:00',
-	'to'     => '2026-05-16T17:00 +8:00',
-	'IP'     => '61.222.238.3',
-	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
-	'value'  => 75,
-	'tempaccountvalue'  => 75,
-];
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-05-15T08:00 +8:00',
-	'to'     => '2026-05-16T17:00 +8:00',
-	'IP'     => '61.222.238.4',
-	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
-	'value'  => 75,
-	'tempaccountvalue'  => 75,
-];
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-05-15T08:00 +8:00',
-	'to'     => '2026-05-16T17:00 +8:00',
-	'IP'     => '211.22.209.77',
-	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
-	'value'  => 75,
-	'tempaccountvalue'  => 75,
-];
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-05-15T08:00 +8:00',
-	'to'     => '2026-05-16T17:00 +8:00',
-	'IP'     => '211.22.209.78',
-	'dbname' => [ 'enwiki', 'zhwiki', 'commonswiki', 'metawiki' ],
-	'value'  => 75,
-	'tempaccountvalue'  => 75,
 ];
