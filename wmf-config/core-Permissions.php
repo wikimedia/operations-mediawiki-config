@@ -3459,7 +3459,6 @@ return [
 		'ipblock-exempt' => [
 			'ipblock-exempt' => true,
 			'torunblocked' => true,
-			'sfsblock-bypass' => true,
 		],
 
 		# To allow for inline log suppression -- 2009-01-29 -- BV
