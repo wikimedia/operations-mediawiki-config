@@ -3802,9 +3802,7 @@ return [
 	'group0' => true, // T425940
 ],
 'wmgEnableHCaptchaVisualEditorIntegration' => [
-	'default' => false,
-	'group0' => true, // T425940
-	'group1' => true, // T425940
+	'default' => true, // T425940
 ],
 'wmgEnableHCaptchaForDiscussionTools' => [
 	'default' => false,
