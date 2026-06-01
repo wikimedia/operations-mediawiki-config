@@ -2355,8 +2355,9 @@ function wmfGetOverrideSettings() {
 					'propertyIds' => [
 						'P235781', 'P253125', 'P62013'
 					],
-					'href' => 'https://www.wikidata.org/wiki/Wikidata:WikiProject_Music',
+					'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_Music',
 					'text' => 'WikiProject Music',
+					'msg' => 'wikiprojects-sidebar-wikiproject-music',
 				],
 			],
 		],
