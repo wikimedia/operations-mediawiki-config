@@ -6780,14 +6780,14 @@ return [
 'wgMediaViewerMobileCarousel' => [
 	'default' => false,
 	'testwiki' => true,
-	'wikipedia' => false,
+	'wikipedia' => true,
 ],
 
 // T426799
 'wgMediaViewerBetaFeature' => [
 	'default' => false,
 	'testwiki' => true,
-	'wikipedia' => false,
+	'wikipedia' => true,
 ],
 
 'wmgUseLinter' => [
