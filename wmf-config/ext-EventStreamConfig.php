@@ -2761,7 +2761,12 @@ return [
 			// TODO: this will be finalized at mediawiki/user/change
 			'schema_title' => 'development/mediawiki_user_change',
 			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
+				// NOTE: user change events might be emitted
+				// on wikis other than where the user's account
+				// lives. Key by the user's wiki, not the
+				// event's wiki.
+				// TODO: should we key by user_central_id?
+				'wiki_id' => 'user.wiki_id',
 				'user_id' => 'user.user_id',
 			],
 			'destination_event_service' => 'eventgate-main',
