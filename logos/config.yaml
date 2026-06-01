@@ -1140,8 +1140,17 @@ Wikipedia:
         local_tagline: true
     nlwiki:
         commons: 'File:Wikipedia-logo-v2-nl.svg'
+        comment: T424519
+        comment_wordmark: T424519
         commons_tagline: 'File:Wikipedia-tagline-nl.svg'
-        comment_tagline: T258552
+        comment_tagline: T258552, T424519
+        selected: nlwiki-25
+        variants:
+            nlwiki-25:
+                commons: 'File:Wikipedia-logo-v2-nl-25-alt.svg'
+                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
+                commons_tagline: 'File:Wikipedia 25-tagline-nl.svg'
+                commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
     nnwiki:
         comment_2x: T150618
         local_tagline: true
