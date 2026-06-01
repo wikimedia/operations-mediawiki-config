@@ -2198,6 +2198,10 @@ if ( $wmgEnableCaptcha ) {
 		// Same as default, but be explicit incase default changed in extension
 		$wgHCaptchaSendRemoteIP = false;
 
+		// Threshold of failed SiteVerify calls within a 1 minute period before
+		// hCaptcha is considered unhealthy and failover to FancyCaptcha kicks in.
+		$wgHCaptchaEnterpriseHealthCheckSiteVerifyErrorThreshold = 100;
+
 		// Set the integrity property of the secure-api.js script, for subresource integrity
 		$wgHCaptchaApiUrlIntegrityHash = 'sha384-Y5Jmja9okpbjr6EsoyuMWaiF9PbehV8SVrk0tl5ep5qXAd/CejV9HzfFTU3Xk60l';
 		// Route requests to hCaptcha on the client-side through our proxy.
