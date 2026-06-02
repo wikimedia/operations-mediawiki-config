@@ -3790,10 +3790,6 @@ return [
 'wmgEnableHCaptcha' => [
 	'default' => true, // T425354
 ],
-'wmgHCaptchaSelfHostedApiUrl' => [
-	'default' => false,
-	'group0' => true, // T403829
-],
 'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
 	'default' => false,
 	'group0' => true, // T425940

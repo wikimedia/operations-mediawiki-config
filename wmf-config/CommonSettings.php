@@ -2217,14 +2217,11 @@ if ( $wmgEnableCaptcha ) {
 		$wgHCaptchaEnterpriseHealthCheckSiteVerifyErrorThreshold = 100;
 
 		// Set the integrity property of the secure-api.js script, for subresource integrity
-		$wgHCaptchaApiUrlIntegrityHash = 'sha384-bdcXEeufpeVbxXnuZzmqvsX4fMar0sPzBVUtq1EjzD8CfZGHh4iBIiISiHcxz/nY';
-		// Pin the secure-api.js version to be2fb915d274e0153a2483e68ec5703d502b9d3d
-		$hCaptchaApiUrlBase = $wmgHCaptchaSelfHostedApiUrl
-			? '/static/hcaptcha/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js'
-			: 'https://assets-hcaptcha.wikimedia.org/captcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js';
+		$wgHCaptchaApiUrlIntegrityHash = 'sha384-Y5Jmja9okpbjr6EsoyuMWaiF9PbehV8SVrk0tl5ep5qXAd/CejV9HzfFTU3Xk60l';
 		// Route requests to hCaptcha on the client-side through our proxy.
 		$wgHCaptchaApiUrl = wfAppendQuery(
-			$hCaptchaApiUrlBase,
+			// Pin the secure-api.js version to 73f27c192b38c05ce2ebce596a0e28f88a2a56bf
+			'https://assets-hcaptcha.wikimedia.org/captcha/1/73f27c192b38c05ce2ebce596a0e28f88a2a56bf/secure-api.js',
 			[
 				'endpoint' => 'https://hcaptcha.wikimedia.org',
 				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
