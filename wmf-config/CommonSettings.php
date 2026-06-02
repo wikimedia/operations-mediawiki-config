@@ -2207,7 +2207,7 @@ if ( $wmgEnableCaptcha ) {
 			];
 		}
 
-		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php
+		// $wgHCaptchaSecretKey is set in PrivateSettings.php
 
 		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
 		$wgHCaptchaEnterprise = true;
