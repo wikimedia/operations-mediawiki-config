@@ -3833,11 +3833,8 @@ return [
 	'default' => true, // T425354
 ],
 'wmgEnableHCaptchaAccountCreationAPI' => [
-	'default' => false,
-	'group0' => true,
-	'test2wiki' => true,
-	'hewiki' => true, // T426045
-	'itwiki' => true, // T426045
+	'default' => true,
+	'enwiki' => false, // T426048
 ],
 'wmgEnableHCaptchaForBadLogin' => [
 	'default' => false,
