@@ -2045,7 +2045,11 @@ if ( $wmgEnableCaptcha ) {
 			$request = RequestContext::getMain()->getRequest();
 			if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
 				return $wmgEnableHCaptchaVisualEditorIntegration;
-			} elseif ( $request->getRawVal( 'action' ) === 'discussiontoolsedit' ) {
+			} elseif (
+				$request->getRawVal( 'action' ) === 'discussiontoolsedit' &&
+				strpos( $request->getHeader( 'User-Agent' ), "WikipediaApp/" ) !== 0
+			) {
+				// Skipped for mobile apps while they do not support hCaptcha for DiscussionTools
 				return $wmgEnableHCaptchaForDiscussionTools;
 			} else {
 				$editorInterface = $request->getRawVal( 'editorinterface' );
