@@ -3436,7 +3436,7 @@ if ( $wmgUseTranslate ) {
 				'writable' => $conf['writable'],
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( static function ( $hostConfig ) use ( $wgOpensearchCredentials ) {
+					'servers' => array_map( static function ( $hostConfig ) use ( $conf, $wgOpensearchCredentials ) {
 						if ( !is_array( $hostConfig ) ) {
 							// only for deployment-prep
 							// production services has this defined as an array like below
