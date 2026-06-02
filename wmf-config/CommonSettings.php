@@ -3363,10 +3363,16 @@ if ( $wmgUseTranslate ) {
 				'writable' => true,
 			],
 			'test' => [
-				// ttmserver-test is set to dns-discovery and deployed in both codfw and eqiad
-				'service' => $wmgLocalServices['ttmserver-test'] ?? null,
-				// sending updates is disabled for now so we can re-populate index first
+				'service' => $wmgLocalServices['ttmserver-test-dnsdisc'] ?? null,
 				'writable' => false,
+			],
+			'eqiad-test' => [
+				'service' => $wmgAllServices['eqiad']['ttmserver-test'] ?? null,
+				'writable' => true,
+				],
+			'codfw-test' => [
+				'service' => $wmgAllServices['codfw']['ttmserver-test'] ?? null,
+				'writable' => true,
 			],
 		];
 		foreach ( $translateServices as $service => $conf ) {
@@ -3378,13 +3384,14 @@ if ( $wmgUseTranslate ) {
 				'type' => 'ttmserver',
 				'class' => 'ElasticSearchTTMServer',
 				'shards' => 1,
-				'replicas' => 1,
+				// default value is '0-2', used only for index creation
+				// 'replicas' => '0-2',
 				'index' => $wmgTranslateESIndex,
 				'cutoff' => 0.65,
 				'writable' => $conf['writable'],
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( static function ( $hostConfig ) use ( $service, $wgOpensearchCredentials ) {
+					'servers' => array_map( static function ( $hostConfig ) {
 						if ( !is_array( $hostConfig ) ) {
 							// only for deployment-prep
 							// production services has this defined as an array like below
@@ -3393,9 +3400,6 @@ if ( $wmgUseTranslate ) {
 								'port' => 9243,
 								'transport' => 'Https',
 							];
-						}
-						if ( array_key_exists( $service, $wgOpensearchCredentials ) ) {
-							$hostConfig += $wgOpensearchCredentials[$service];
 						}
 						return $hostConfig;
 					}, $conf['service'] ),
