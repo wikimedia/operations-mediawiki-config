@@ -2320,6 +2320,9 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => 'centralauth' ];
 
+	// Share bot passwords across all SUL wikis, like normal passwords and other auth methods
+	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => 'metawiki' ];
+
 	// Enable cross-origin session cookies (T252236).
 	$wgCookieSameSite = 'None';
 
@@ -2459,7 +2462,6 @@ if ( $wmgUseCentralAuth ) {
 
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
-	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => 'metawiki' ];
 
 	// Allows automatic account vanishing (for qualifying users)
 	$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';

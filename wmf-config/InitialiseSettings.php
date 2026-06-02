@@ -98,13 +98,6 @@ return [
 'wgEnableBotPasswords' => [
 	'default' => true,
 ],
-'wgBotPasswordsCluster' => [
-	'default' => false,
-],
-'wgBotPasswordsDatabase' => [
-	'default' => false,
-	'sul' => 'metawiki',
-],
 
 # wgLanguageCode @{
 'wgLanguageCode' => [
