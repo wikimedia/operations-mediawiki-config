@@ -2032,6 +2032,28 @@ if ( $wmgEnableCaptcha ) {
 		// SiteKey for the Wikipedia Android App
 		$hCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
 
+		/**
+		 * If the main request is an API request that edits a page, returns whether
+		 * that interface supports hCaptcha and therefore should require a hCaptcha
+		 * token
+		 */
+		$doesEditApiInterfaceSupportHCaptcha = static function () use (
+			$wmgEnableHCaptchaVisualEditorIntegration,
+			$wmgEnableHCaptchaForDiscussionTools,
+			$wgHCaptchaEnabledInMobileFrontend
+		): bool {
+			$request = RequestContext::getMain()->getRequest();
+			if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
+				return $wmgEnableHCaptchaVisualEditorIntegration;
+			} elseif ( $request->getRawVal( 'action' ) === 'discussiontoolsedit' ) {
+				return $wmgEnableHCaptchaForDiscussionTools;
+			} else {
+				$editorInterface = $request->getRawVal( 'editorinterface' );
+				return $wgHCaptchaEnabledInMobileFrontend
+					&& $editorInterface === 'MobileFrontend-SourceEditor';
+			}
+		};
+
 		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
 		// mode which challenges only a very few users, it should not disrupt the account creation flow for
 		// nearly all new users.
@@ -2108,8 +2130,7 @@ if ( $wmgEnableCaptcha ) {
 			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
 				$wmgEmergencyCaptcha,
 				&$wgHCaptchaEnabledInMobileFrontend,
-				$wmgEnableHCaptchaVisualEditorIntegration,
-				$wmgEnableHCaptchaForDiscussionTools
+				$doesEditApiInterfaceSupportHCaptcha
 			) {
 				$services = MediaWikiServices::getInstance();
 				$simpleCaptcha = $services->get( 'ConfirmEditCaptchaFactory' )->getGlobalInstance( $action );
@@ -2124,16 +2145,7 @@ if ( $wmgEnableCaptcha ) {
 					$result = false;
 				}
 				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-					$request = RequestContext::getMain()->getRequest();
-					if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
-						$isApprovedInterface = $wmgEnableHCaptchaVisualEditorIntegration;
-					} elseif ( $request->getRawVal( 'action' ) === 'discussiontoolsedit' ) {
-						$isApprovedInterface = $wmgEnableHCaptchaForDiscussionTools;
-					} else {
-						$editorInterface = $request->getRawVal( 'editorinterface' );
-						$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
-							&& $editorInterface === 'MobileFrontend-SourceEditor';
-					}
+					$isApprovedInterface = $doesEditApiInterfaceSupportHCaptcha();
 
 					if ( !$isApprovedInterface || !$hCaptchaAvailable ) {
 						// Most API edit interfaces don't support hCaptcha yet.
@@ -2248,29 +2260,16 @@ if ( $wmgEnableCaptcha ) {
 
 	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
 		&$wgHCaptchaEnabledInMobileFrontend,
-		$wmgEnableHCaptchaVisualEditorIntegration,
-		$wmgEnableHCaptchaForDiscussionTools
+		$doesEditApiInterfaceSupportHCaptcha
 	) {
 		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
 			// Default to FancyCaptcha for API edits, since most API edit
 			// interfaces don't support hCaptcha yet (T419572).
 			$className = 'FancyCaptcha';
 
-			// Allow hCaptcha for approved interfaces. Don't return early
+			// Allow hCaptcha for interfaces which support it. Don't return early
 			// so the T404204 failover check below can still run.
-			$request = RequestContext::getMain()->getRequest();
-			if ( $request->getRawVal( 'action' ) === 'visualeditoredit' ) {
-				$isApprovedInterface = $wmgEnableHCaptchaVisualEditorIntegration;
-			} elseif ( $request->getRawVal( 'action' ) === 'discussiontoolsedit' ) {
-				$isApprovedInterface = $wmgEnableHCaptchaForDiscussionTools;
-			} else {
-				$editorInterface = $request->getRawVal( 'editorinterface' );
-				$isApprovedInterface = $wgHCaptchaEnabledInMobileFrontend
-					&& $editorInterface === 'MobileFrontend-SourceEditor';
-			}
-
-			if ( $isApprovedInterface ) {
-				// Enable HCaptcha on edits if they come from the MobileFrontend
+			if ( $doesEditApiInterfaceSupportHCaptcha() ) {
 				$className = 'HCaptcha';
 			}
 
