@@ -2197,6 +2197,16 @@ if ( $wmgEnableCaptcha ) {
 			}
 		}
 
+		if ( $wmgEnableHCaptchaForBadLogin ) {
+			$wgCaptchaTriggers['badlogin'] = [
+				'trigger' => true,
+				'class' => 'HCaptcha',
+				'config' => [
+					'HCaptchaSiteKey' => '716e319a-3794-4c7a-a11e-180c2f481cb2',
+				],
+			];
+		}
+
 		// $wgHCaptchaSiteKey and $wgHCaptchaSecretKey are set in PrivateSettings.php
 
 		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).

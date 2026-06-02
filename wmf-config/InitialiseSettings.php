@@ -3811,6 +3811,10 @@ return [
 	'hewiki' => true, // T426045
 	'itwiki' => true, // T426045
 ],
+'wmgEnableHCaptchaForBadLogin' => [
+	'default' => false,
+	'group0' => true,
+],
 'wmgEmergencyCaptcha' => [
 	'default' => false,
 ],
