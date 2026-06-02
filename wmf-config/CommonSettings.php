@@ -2061,6 +2061,8 @@ if ( $wmgEnableCaptcha ) {
 			$wgHCaptchaEnabledInMobileFrontend
 		): bool {
 			$request = RequestContext::getMain()->getRequest();
+			// $_REQUEST used intentionally as this is used in places where the
+			// main request will have had the action updated to 'edit'
 			$action = $_REQUEST['action'] ?? '';
 			if ( $action === 'visualeditoredit' ) {
 				return $wmgEnableHCaptchaVisualEditorIntegration;
@@ -2326,6 +2328,18 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCaptchaTriggers['contactpage'] = true;
 	}
+
+	// Prevent the AbuseFilter CAPTCHA from appearing for edit API requests where the interface has no
+	// support for any CAPTCHAs
+	$wgHooks['ConfirmEditBeforeForceShowCaptcha'][] = static function ( $userIdentity, string $action ) {
+		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+			$action = RequestContext::getMain()->getRequest()->getRawVal( 'action' );
+			if ( $action === 'wbsetclaim' ) {
+				return false;
+			}
+		}
+		return true;
+	};
 }
 
 if ( extension_loaded( 'wikidiff2' ) ) {
