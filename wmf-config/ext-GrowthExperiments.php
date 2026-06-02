@@ -782,6 +782,10 @@ return [
 	'default' => 2000,
 ],
 
+'wgGEMentorshipCleanupEnabled' => [
+	'default' => false,
+],
+
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
 ],
