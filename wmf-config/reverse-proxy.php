@@ -7,7 +7,7 @@
 
 # Accept XFF from these proxies
 $wgCdnServersNoPurge = [
-	// This list includes all hosts which are trusted by MediaWiki in
+	// This list includes hosts which are trusted by MediaWiki in
 	// X-Forwarded-For headers, including the caches and appservers.
 	// TODO: generate this from Puppet's network module or Netbox
 	// directly.
@@ -18,8 +18,40 @@ $wgCdnServersNoPurge = [
 	## eqiad
 	'10.64.0.0/22', # private1-a-eqiad
 	'2620:0:861:101::/64', # private1-a-eqiad
+	'10.64.191.0/24', # private1-a1-eqiad
+	'2620:0:861:147::/64', # private1-a1-eqiad
+	'10.64.192.0/24', # private1-a2-eqiad
+	'2620:0:861:148::/64', # private1-a2-eqiad
+	'10.64.193.0/24', # private1-a3-eqiad
+	'2620:0:861:149::/64', # private1-a3-eqiad
+	'10.64.194.0/24', # private1-a4-eqiad
+	'2620:0:861:14a::/64', # private1-a4-eqiad
+	'10.64.195.0/24', # private1-a5-eqiad
+	'2620:0:861:14b::/64', # private1-a5-eqiad
+	'10.64.196.0/24', # private1-a6-eqiad
+	'2620:0:861:14c::/64', # private1-a6-eqiad
+	'10.64.197.0/24', # private1-a7-eqiad
+	'2620:0:861:14d::/64', # private1-a7-eqiad
+	'10.64.198.0/24', # private1-a8-eqiad
+	'2620:0:861:14e::/64', # private1-a8-eqiad
 	'10.64.16.0/22', # private1-b-eqiad
 	'2620:0:861:102::/64', # private1-b-eqiad
+	'10.64.199.0/24', # private1-b1-eqiad
+	'2620:0:861:14f::/64', # private1-b1-eqiad
+	'10.64.200.0/24', # private1-b2-eqiad
+	'2620:0:861:150::/64', # private1-b2-eqiad
+	'10.64.201.0/24', # private1-b3-eqiad
+	'2620:0:861:151::/64', # private1-b3-eqiad
+	'10.64.202.0/24', # private1-b4-eqiad
+	'2620:0:861:152::/64', # private1-b4-eqiad
+	'10.64.203.0/24', # private1-b5-eqiad
+	'2620:0:861:153::/64', # private1-b5-eqiad
+	'10.64.204.0/24', # private1-b6-eqiad
+	'2620:0:861:154::/64', # private1-b6-eqiad
+	'10.64.205.0/24', # private1-b7-eqiad
+	'2620:0:861:155::/64', # private1-b7-eqiad
+	'10.64.206.0/24', # private1-b8-eqiad
+	'2620:0:861:156::/64', # private1-b8-eqiad
 	'10.64.32.0/22', # private1-c-eqiad
 	'2620:0:861:103::/64', # private1-c-eqiad
 	'10.64.133.0/24', # private1-c2-eqiad
@@ -172,12 +204,16 @@ $wgCdnServersNoPurge = [
 	'2a02:ec80:300:102::/64', # private1-by27-esams
 
 	## ulsfo
-	'10.128.0.0/24', # private1-ulsfo
-	'2620:0:863:101::/64', # private1-ulsfo
+	'10.128.0.0/24', # private1-22-ulsfo
+	'2620:0:863:101::/64', # private1-22-ulsfo
+	'10.128.1.0/24', # private1-23-ulsfo
+	'2620:0:863:102::/64', # private1-23-ulsfo
 
 	## eqsin
-	'10.132.0.0/24', # private1-eqsin
-	'2001:df2:e500:101::/64', # private1-eqsin
+	'10.132.0.0/24', # private1-603-eqsin
+	'2001:df2:e500:101::/64', # private1-603-eqsin
+	'10.132.1.0/24', # private1-604-eqsin
+	'2001:df2:e500:102::/64', # private1-604-eqsin
 
 	## drmrs
 	'10.136.0.0/24', # private1-b12-drmrs
