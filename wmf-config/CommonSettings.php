@@ -2229,13 +2229,10 @@ if ( $wmgEnableCaptcha ) {
 
 		// Set the integrity property of the secure-api.js script, for subresource integrity
 		$wgHCaptchaApiUrlIntegrityHash = 'sha384-bdcXEeufpeVbxXnuZzmqvsX4fMar0sPzBVUtq1EjzD8CfZGHh4iBIiISiHcxz/nY';
-		// Pin the secure-api.js version to be2fb915d274e0153a2483e68ec5703d502b9d3d
-		$hCaptchaApiUrlBase = $wmgHCaptchaSelfHostedApiUrl
-			? '/static/hcaptcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js'
-			: 'https://assets-hcaptcha.wikimedia.org/captcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js';
 		// Route requests to hCaptcha on the client-side through our proxy.
 		$wgHCaptchaApiUrl = wfAppendQuery(
-			$hCaptchaApiUrlBase,
+			// Pin the secure-api.js version to be2fb915d274e0153a2483e68ec5703d502b9d3d
+			'/static/hcaptcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js',
 			[
 				'endpoint' => 'https://hcaptcha.wikimedia.org',
 				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
