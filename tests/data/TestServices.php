@@ -24,7 +24,6 @@ $wmgAllServices['unittest'] = [
 	'cloudelastic-psi' => [ [ 'host' => 'localhost' ] ],
 	'cloudelastic-omega' => [ [ 'host' => 'localhost' ] ],
 	'semanticsearch-test' => [ [ 'host' => 'localhost' ] ],
-	'ttmserver-test-dnsdisc' => [ [ 'host' => 'localhost' ] ],
 	'ttmserver-test' => [ [ 'host' => 'localhost' ] ],
 	'ocg' => 'localhost',
 	'urldownloader' => 'localhost',
