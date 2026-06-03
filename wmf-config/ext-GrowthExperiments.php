@@ -50,7 +50,6 @@ return [
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
-	// Only effective for Beta rn, cf. T400937
 	'wikidata' => false,
 ],
 
@@ -884,7 +883,6 @@ return [
 
 'wgWelcomeSurveyEnabled' => [
 	'default' => true,
-	// Only effective for Beta rn, cf. T400937
 	'wikidata' => false,
 ],
 
