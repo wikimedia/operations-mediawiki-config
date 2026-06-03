@@ -2029,6 +2029,9 @@ if ( $wmgEnableCaptcha ) {
 		$hCaptchaWikipediaIOSSiteKey = '083c7bd2-eef0-423a-98ca-db1e0d4cbbae';
 		// SiteKey for the Wikipedia Android App
 		$hCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
+		// SiteKey for collecting risk scores on block notices (100% passive mode SiteKey).
+		// Commenting out or setting its value to null or to an empty string disables this feature.
+		$wgHCaptchaBlockedIpEditingScoreCollectionSiteKey = '20484466-6d76-4c7a-9648-f730aa6a47ba';
 
 		/**
 		 * If the main request is an API request that edits a page, returns whether
