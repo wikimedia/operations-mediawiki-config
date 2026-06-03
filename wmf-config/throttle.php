@@ -46,3 +46,43 @@ $wmgThrottlingExceptions[] = [
 	'value'  => 50,
 	'tempaccountvalue'  => 50,
 ];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-06-15T15:00 +9:00',
+	'to'     => '2026-06-15T17:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 50,
+	'tempaccountvalue'  => 50,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-06-22T15:00 +9:00',
+	'to'     => '2026-06-22T17:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 50,
+	'tempaccountvalue'  => 50,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-07-09T10:00 +9:00',
+	'to'     => '2026-07-09T13:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 30,
+	'tempaccountvalue'  => 30,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-07-16T10:00 +9:00',
+	'to'     => '2026-07-16T13:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 30,
+	'tempaccountvalue'  => 30,
+];
