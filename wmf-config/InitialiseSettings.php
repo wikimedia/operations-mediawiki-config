@@ -1238,6 +1238,7 @@ return [
 	'commonswiki' => 'Wikimedia Commons',
 	'cswikivoyage' => 'Wikicesty',
 	'testcommonswiki' => 'Test Wikimedia Commons',
+	'conductwiki' => 'Conductwiki', // T426984
 	'cowikimedia' => 'Wikimedia Colombia',
 	'crhwiki' => 'Vikipediya',
 	'cswiki' => 'Wikipedie',
@@ -1263,6 +1264,7 @@ return [
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
 	'dvwiktionary' => 'ވިކިރަދީފު',
 	'ecwikimedia' => 'Wikimedistas de Ecuador', // T135521
+	'electcomwiki' => 'Wikimedia Elections Committee', // T427541
 	'elwiki' => 'Βικιπαίδεια',
 	'elwikibooks' => 'Βικιβιβλία',
 	'elwikinews' => 'Βικινέα',
@@ -13536,7 +13538,7 @@ return [
 	'frwiktionary' => true, // T413724
 	'labswiki' => true, // T409785
 	'officewiki' => true,
-	'ruwiki' => true, // T412582,
+	'ruwiki' => true, // T412582
 	'ruwikisource' => true, // T417590
 	'srwiki' => true, // T407183
 	'zhwiki' => true, // T412710

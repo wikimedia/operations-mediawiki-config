@@ -892,7 +892,7 @@ return [
 	'checkuserwiki' => '/static/images/project-logos/checkuserwiki.png', // T30785
 	'collabwiki' => '/static/images/project-logos/collabwiki.png',
 	'commonswiki' => '/static/images/project-logos/commonswiki.png',
-	'conductwiki' => '/static/images/project-logos/conductwiki.png',
+	'conductwiki' => '/static/images/project-logos/conductwiki.png', // T426984
 	'donatewiki' => '/static/images/project-logos/donatewiki.png',
 	'electcomwiki' => '/static/images/project-logos/electcomwiki.png',
 	'execwiki' => '/static/images/project-logos/execwiki.png',
@@ -1610,6 +1610,7 @@ return [
 	'arbcom_zhwiki' => '/static/images/project-logos/arbcom_zhwiki-2x.png',
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki-2x.png', // T193024
 	'commonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
+	'conductwiki' => '/static/images/project-logos/conductwiki-2x.png', // T426984
 	'donatewiki' => '/static/images/project-logos/donatewiki-2x.png',
 	'foundationwiki' => '/static/images/project-logos/foundationwiki-2x.png',
 	'incubatorwiki' => '/static/images/project-logos/incubatorwiki-2x.png', // T230122
@@ -4959,6 +4960,11 @@ return [
 		'width' => 115,
 		'height' => 32,
 	],
+	'conductwiki' => [ // T426984
+		'src' => '/static/images/mobile/copyright/conductwiki-wordmark.svg',
+		'width' => 125,
+		'height' => 25,
+	],
 	'donatewiki' => [
 		'src' => '/static/images/mobile/copyright/votewiki-wordmark.svg',
 		'width' => 142,
@@ -7950,7 +7956,7 @@ return [
 	'checkuserwiki' => '/static/images/icons/checkuserwiki.svg',
 	'collabwiki' => '/static/images/icons/collabwiki.svg',
 	'commonswiki' => '/static/images/icons/commonswiki.svg',
-	'conductwiki' => '/static/images/icons/metawiki.svg',
+	'conductwiki' => '/static/images/icons/conductwiki.svg', // T426984
 	'donatewiki' => '/static/images/icons/wikimedia.svg',
 	'electcomwiki' => '/static/images/icons/outreachwiki.svg',
 	'fdcwiki' => '/static/images/icons/outreachwiki.svg',

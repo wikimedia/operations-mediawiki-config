@@ -3137,7 +3137,6 @@ Wikinews:
                 selected_lang: zh-hans
                 selected_wordmark: zh-hans
         comment: T298550
-        comment_1_5x: T298550
         comment_2x: T298550
         comment_lang_variants: T308620
         commons_wordmark: 'File:Wikinews-wordmark-zh-2023.svg'
@@ -3879,8 +3878,13 @@ Wikivoyage:
         comment_wordmark: T157476
         local_icon: true
     conductwiki:
-        no_2x: true
-        selected_icon: metawiki
+        commons: 'File:Conductwiki-logo-en.svg'
+        comment: T426984
+        comment_2x: T426984
+        commons_wordmark: 'File:Conductwiki-wordmark-en.svg'
+        comment_wordmark: T426984
+        commons_icon: 'File:Conductwiki-icon.svg'
+        comment_icon: T426984
     donatewiki:
         selected_icon: wikimedia
         selected_wordmark: votewiki
