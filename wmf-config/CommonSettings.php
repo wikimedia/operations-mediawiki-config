@@ -2078,6 +2078,7 @@ if ( $wmgEnableCaptcha ) {
 				'HCaptcha',
 			'config' => [
 				'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
+				'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
 				'HCaptchaAdditionalValidSiteKeys' => [
 					$hCaptchaWikipediaIOSSiteKey,
 					$hCaptchaWikipediaAndroidSiteKey,
@@ -2092,6 +2093,7 @@ if ( $wmgEnableCaptcha ) {
 				'class' => 'HCaptcha',
 				'config' => [
 					'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
+					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
 					'HCaptchaAdditionalValidSiteKeys' => [
 						$hCaptchaWikipediaIOSSiteKey,
 						$hCaptchaWikipediaAndroidSiteKey,
