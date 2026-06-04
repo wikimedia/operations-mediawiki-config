@@ -2259,6 +2259,42 @@ if ( $wmgEnableCaptcha ) {
 		// Remove default hcaptcha.com rules
 		$wgHCaptchaCSPRules = [];
 
+		$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
+			&$wgHCaptchaEnabledInMobileFrontend,
+			$doesEditApiInterfaceSupportHCaptcha
+		) {
+			if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+				// Default to FancyCaptcha for API edits, since most API edit
+				// interfaces don't support hCaptcha yet (T419572).
+				$className = 'FancyCaptcha';
+
+				// Allow hCaptcha for interfaces which support it. Don't return early
+				// so the T404204 failover check below can still run.
+				if ( $doesEditApiInterfaceSupportHCaptcha() ) {
+					$className = 'HCaptcha';
+				}
+
+				// Let this fall though to the HCaptchaEnterpriseHealthChecker block,
+				// so that we can fall back to FancyCaptcha if HCaptcha is not available.
+			}
+
+			// T404204 - Automatic failover in event of hCaptcha service being unavailable
+			$services = MediaWikiServices::getInstance();
+			if ( $className === 'HCaptcha' && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
+				$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
+				if ( !$healthChecker->isAvailable() ) {
+					LoggerFactory::getInstance( 'captcha' )->warning(
+						'hCaptcha is unavailable, falling back to FancyCaptcha'
+					);
+
+					// Reset the flag, so that the frontend code does not try to load hCaptcha
+					// support while the healthcheck causes it to be disabled in the backend.
+					$wgHCaptchaEnabledInMobileFrontend = false;
+					$className = 'FancyCaptcha';
+				}
+			}
+		};
+
 		// Remove sitekey variables only used to populate $wgCaptchaTriggers
 		unset(
 			$hCaptchaAccountCreationSiteKey,
@@ -2279,42 +2315,6 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCaptchaTriggers['contactpage'] = true;
 	}
-
-	$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
-		&$wgHCaptchaEnabledInMobileFrontend,
-		$doesEditApiInterfaceSupportHCaptcha
-	) {
-		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-			// Default to FancyCaptcha for API edits, since most API edit
-			// interfaces don't support hCaptcha yet (T419572).
-			$className = 'FancyCaptcha';
-
-			// Allow hCaptcha for interfaces which support it. Don't return early
-			// so the T404204 failover check below can still run.
-			if ( $doesEditApiInterfaceSupportHCaptcha() ) {
-				$className = 'HCaptcha';
-			}
-
-			// Let this fall though to the HCaptchaEnterpriseHealthChecker block,
-			// so that we can fall back to FancyCaptcha if HCaptcha is not available.
-		}
-
-		// T404204 - Automatic failover in event of hCaptcha service being unavailable
-		$services = MediaWikiServices::getInstance();
-		if ( $className === 'HCaptcha' && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
-			$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
-			if ( !$healthChecker->isAvailable() ) {
-				LoggerFactory::getInstance( 'captcha' )->warning(
-					'hCaptcha is unavailable, falling back to FancyCaptcha'
-				);
-
-				// Reset the flag, so that the frontend code does not try to load hCaptcha
-				// support while the healthcheck causes it to be disabled in the backend.
-				$wgHCaptchaEnabledInMobileFrontend = false;
-				$className = 'FancyCaptcha';
-			}
-		}
-	};
 }
 
 if ( extension_loaded( 'wikidiff2' ) ) {
