@@ -13352,7 +13352,6 @@ return [
 				'P176', 'P150', 'P79511',
 			],
 			'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_Music',
-			'text' => 'WikiProject Music',
 			'msg' => 'wikiprojects-sidebar-wikiproject-music',
 		],
 	],
