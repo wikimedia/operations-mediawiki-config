@@ -6,7 +6,7 @@
  *
  * - Uncomment MISSING_PHP_TEST
  * - Run `php -S localhost:9412` from this directory.
- * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
+ * - <http://localhost:9412/missing.php?host=aa.wikivoyage.org> (Incubator redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404 Subdomain)
  * - <http://localhost:9412/missing.php?host=foo.example.org> (404 Generic)
  * - <http://localhost:9412/missing.php?host=auth.wikimedia.org> (404 Auth)
@@ -17,13 +17,16 @@
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=w:foo> ("w:" redirect to Wikipedia is special-cased)
  * - <http://localhost:9412/missing.php?host=als.wikibooks.org (redirect to namespace in Wikipedia)
  * - <http://localhost:9412/missing.php?host=als.wikivoyage.org (redirect to subpage in Wikipedia)
+ * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Wikinews redirect)
  *
  * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
- * Wikibooks, and Wikinews to the Wikimedia Incubator.
+ * Wikibooks to the Wikimedia Incubator.
  *
  * Non-existing languages of Wikisource get redirected to Multilingual Wikisource.
  *
  * Non-existing languages of Wikiversity show an error page.
+ *
+ * Non-existing languages of Wikinews get redirected to the wikinews.org portal
  *
  * Certain special cases where another project is hosted by the language's Wikipedia
  * get redirected to that Wikipedia.
@@ -258,6 +261,10 @@ function wmfHandleMissingWiki() {
 				. '<p>Unfortunately, Wikiversity in "' . $escLanguage . '" does not exist on its own domain yet. You may like to visit <a href="https://beta.wikiversity.org">Beta Wikiversity</a> and start or improve "' . $escLanguage . '" pages there.</p>'
 				. '<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">Requests&nbsp;for new languages</a> on Meta-Wiki.</p>',
 		] );
+	} elseif ( $project === 'wikinews' ) {
+		// wikinews is closed, redirect any straggler languages to the portal which contains a closure notice
+		// rather than to a page on Incubator will likely just say "this page is unprefixed. This page does not exist"
+		wmfShowRedirect( $protocol . '://wikinews.org' );
 	} else {
 		if ( $language === 'zh-min-nan' ) {
 			// T86915
