@@ -13793,7 +13793,6 @@ return [
 	'simplewiki' => 'we-1-10-articleguidance-v1', // T426278
 	// phase 2
 	'frwiki' => 'we-1-10-articleguidance-v1', // T426871
-	'ptwiki' => 'we-1-10-articleguidance-v1', // T426871
 	'trwiki' => 'we-1-10-articleguidance-v1', // T426871
 ],
 
