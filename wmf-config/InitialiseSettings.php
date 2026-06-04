@@ -3793,9 +3793,7 @@ return [
 	'default' => true, // T425354
 ],
 'wgHCaptchaEnabledInMobileFrontend' => [ // T419125
-	'default' => false,
-	'group0' => true, // T425940
-	'group1' => true, // T425940
+	'default' => true, // T425940
 	// Exclude all group1 wikis which use the AbuseFilter CAPTCHA consequence (T425929)
 	'cawiki' => false,
 	'commonswiki' => false,
@@ -3817,6 +3815,34 @@ return [
 	'viwikivoyage' => false,
 	'zhwikiquote' => false,
 	'zhwikisource' => false,
+	// Exclude all group2 wikis which use the AbuseFilter CAPTCHA consequence (T425929)
+	'afwiki' => false,
+	'arwiki' => false,
+	'bewwiki' => false,
+	'cebwiki' => false,
+	'dewiki' => false,
+	'enwiki' => false,
+	'eswiki' => false,
+	'euwiki' => false,
+	'fiwiki' => false,
+	'frwiki' => false,
+	'hiwiki' => false,
+	'hrwiki' => false,
+	'idwiki' => false,
+	'jawiki' => false,
+	'knwiki' => false,
+	'kowiki' => false,
+	'nlwiki' => false,
+	'nowiki' => false,
+	'plwiki' => false,
+	'rmywiki' => false,
+	'ruwiki' => false,
+	'simplewiki' => false,
+	'srwiki' => false,
+	'svwiki' => false,
+	'thwiki' => false,
+	'ukwiki' => false,
+	'zhwiki' => false,
 ],
 'wmgEnableHCaptchaVisualEditorIntegration' => [
 	'default' => true, // T425940
