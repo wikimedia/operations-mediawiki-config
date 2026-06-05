@@ -899,6 +899,7 @@ return [
 		],
 	],
 	'+enwikiversity' => [ // T360977
+		'autopatrolled' => [ 'autopatrol' => true ], // T428269
 		'curator' => [ // T113109
 			'createaccount' => true,
 			'delete' => true,
@@ -3997,6 +3998,7 @@ return [
 	],
 	'+enwikiversity' => [
 		'sysop' => [
+			'autopatrolled', // T428269
 			'curator', // T113109
 			'flood', // T426882
 		],
@@ -5511,6 +5513,7 @@ return [
 	],
 	'+enwikiversity' => [
 		'sysop' => [
+			'autopatrolled', // T428269
 			'curator', // T113109
 			'flood', // T426882
 		],
