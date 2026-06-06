@@ -307,7 +307,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'enwikibooks' ) {
 		// Limited to the main, Cookbook, and Wikijunior namespaces (T408110)
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, 102, 110 ];
-		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 3 ] ]; // T426992
+		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 1 ] ]; // T428329
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
