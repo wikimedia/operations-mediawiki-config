@@ -1750,7 +1750,7 @@ if ( $wmgUseSecureLinkFixer ) {
 
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
-	$wgScoreSafeMode = true;
+	$wgScoreSafeMode = false;
 
 	if ( $wmgUseScoreShellbox && $wmgLocalServices['shellbox'] ) {
 		// Route score to the Shellbox named "shellbox".
