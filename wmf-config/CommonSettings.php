@@ -2230,6 +2230,18 @@ if ( $wmgEnableCaptcha ) {
 			];
 		}
 
+		// Enable hCaptcha for the UploadWizard publish phase.
+		if ( $wmgEnableHCaptchaUploadWizard ) {
+			$wgCaptchaTriggers['uploadwizard-publish'] = [
+				'trigger' => true,
+				'class' => 'HCaptcha',
+				'config' => [
+					'HCaptchaSiteKey' => '18bcb68a-96d8-455c-a9cc-1db244a05056',
+					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
+				],
+			];
+		}
+
 		// $wgHCaptchaSecretKey is set in PrivateSettings.php
 
 		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).

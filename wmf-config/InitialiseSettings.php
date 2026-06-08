@@ -3854,6 +3854,10 @@ return [
 'wmgEnableHCaptchaEditing' => [
 	'default' => true, // T425354
 ],
+'wmgEnableHCaptchaUploadWizard' => [
+	'default' => false,
+	'testwiki' => true, // T426126
+],
 'wmgEnableHCaptchaAccountCreationAPI' => [
 	'default' => true,
 	'enwiki' => false, // T426048
