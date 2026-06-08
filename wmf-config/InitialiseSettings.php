@@ -5929,6 +5929,7 @@ return [
 'wgNewUserMessageOnFirstEdit' => [ // T426206
 	'default' => false,
 	'incubatorwiki' => true,
+	'commonswiki' => true,
 ],
 
 'wgNewUserMinorEdit' => [
