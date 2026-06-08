@@ -5919,11 +5919,16 @@ return [
 	'zhwikivoyage' => true, // T360175
 ],
 
-'wmgNewUserMessageOnAutoCreate' => [
+'wgNewUserMessageOnAutoCreate' => [
 	'default' => false, // T426206
 ],
 
-'wmgNewUserMinorEdit' => [
+'wgNewUserMessageOnFirstEdit' => [ // T426206
+	'default' => false,
+	'incubatorwiki' => true,
+],
+
+'wgNewUserMinorEdit' => [
 	'default' => true,
 	'arwiki' => false,
 	'fawiki' => false,
@@ -5933,7 +5938,7 @@ return [
 	'incubatorwiki' => false,
 ],
 
-'wmgNewUserSuppressRC' => [
+'wgNewUserSuppressRC' => [
 	'default' => true,
 	'kawiki' => false, // T407076
 ],

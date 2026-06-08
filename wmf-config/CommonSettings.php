@@ -2868,9 +2868,6 @@ require __DIR__ . '/throttle-analyze.php';
 
 if ( $wmgUseNewUserMessage ) {
 	wfLoadExtension( 'NewUserMessage' );
-	$wgNewUserSuppressRC = $wmgNewUserSuppressRC;
-	$wgNewUserMinorEdit = $wmgNewUserMinorEdit;
-	$wgNewUserMessageOnAutoCreate = $wmgNewUserMessageOnAutoCreate;
 }
 
 # AbuseFilter
