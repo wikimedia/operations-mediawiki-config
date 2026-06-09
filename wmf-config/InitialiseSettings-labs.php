@@ -1934,7 +1934,11 @@ function wmfGetOverrideSettings() {
 				'content.v1' => [
 					'url' => '/w/rest.php/specs/v0/module/content/v1',
 					'name' => 'Content API',
-				]
+				],
+				'lift-wing' => [
+					'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
+					'name' => 'Lift Wing API',
+				],
 			],
 		],
 

@@ -13200,7 +13200,11 @@ return [
 		'wmf-analytics-unique-devices' => [
 			'url' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
 			'name' => 'Wikimedia Device Analytics API',
-		]
+		],
+		'lift-wing' => [
+			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
+			'name' => 'Lift Wing API',
+		],
 	],
 	'+wikifunctionswiki' => [
 		'wikifunctions.v0' => [
