@@ -13848,11 +13848,42 @@ return [
 			'msg' => 'wikiprojects-sidebar-wikiproject-sum-of-all-paintings',
 		],
 		[
+			'statements' => [
+				'P31' => [
+					'Q3305213',
+					'Q18761202',
+					'Q219423',
+					'Q12043905',
+					'Q22669139',
+					'Q1181933',
+					'Q97072190',
+					'Q132137',
+					'Q21281546',
+					'Q282129',
+					'Q99516640',
+				],
+			],
+			'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_sum_of_all_paintings',
+			'msg' => 'wikiprojects-sidebar-wikiproject-sum-of-all-paintings',
+		],
+		[
 			# WikiProject elections
 			'propertyIds' => [
 				'P541',
 				'P726',
 				'P3602',
+			],
+			'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_elections',
+			'msg' => 'wikiprojects-sidebar-wikiproject-elections',
+		],
+		[
+			'statements' => [
+				'P31' => [
+					'Q858439',
+					'Q15261477',
+					'Q15280243',
+					'Q2618461',
+				],
 			],
 			'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_elections',
 			'msg' => 'wikiprojects-sidebar-wikiproject-elections',
