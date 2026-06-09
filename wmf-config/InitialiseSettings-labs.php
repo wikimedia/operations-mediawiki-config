@@ -2422,7 +2422,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUseArticleGuidance' => [
-			'default' => true, // T423295
+			'default' => false,
+			'enwiki' => true, // T423295
 		],
 
 		'wgArticleGuidanceSparqlEndpoint' => [
