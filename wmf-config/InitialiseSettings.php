@@ -3859,8 +3859,7 @@ return [
 	'testwiki' => true, // T426126
 ],
 'wmgEnableHCaptchaAccountCreationAPI' => [
-	'default' => true,
-	'enwiki' => false, // T426048
+	'default' => true, // T426050
 ],
 'wmgEnableHCaptchaForBadLogin' => [
 	'default' => false,
