@@ -2362,6 +2362,13 @@ function wmfGetOverrideSettings() {
 					'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_Music',
 					'msg' => 'wikiprojects-sidebar-wikiproject-music',
 				],
+				[
+					'statements' => [
+						'P694' => [ 'Q500792' ],
+					],
+					'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_Astronomy',
+					'msg' => 'wikiprojects-sidebar-wikiproject-astronomy',
+				],
 			],
 		],
 		// T415516 temporary feature flag
