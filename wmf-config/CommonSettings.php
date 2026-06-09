@@ -4305,6 +4305,11 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 	$wgUserRequirementsPrivateConditions[] = 'oath.has_2fa'; // APCOND_OATH_HAS2FA
 
+	if ( $wmgOATHAuthRequire2FAForAll ) {
+		$wgRestrictedGroups['user'] = [ 'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ] ];
+		// TODO: Probably set $wgOATH2FARequiredGroupRemovalPages
+	}
+
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];

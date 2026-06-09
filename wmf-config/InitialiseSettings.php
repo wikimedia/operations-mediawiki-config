@@ -12728,7 +12728,9 @@ return [
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
-
+'wmgOATHAuthRequire2FAForAll' => [
+	'default' => false,
+],
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
 	'sul' => true, // T378402
