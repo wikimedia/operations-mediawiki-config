@@ -143,11 +143,11 @@ $common = [
 			'port' => 30443,
 		]
 	],
-	'ttmserver-test' => [
-		[
-			'host' => 'opensearch-ttmserver-test.discovery.wmnet',
-			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
-			'port' => 30443,
+	'ttmserver-test-dnsdisc' => [
+		[ // forwarded to https://opensearch-ttmserver-test.discovery.wmnet:30443
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6516,
 		]
 	],
 ];
@@ -208,6 +208,13 @@ $services = [
 				'port' => 6104,
 			]
 		],
+		'ttmserver-test' => [
+			[
+				'host' => 'opensearch-ttmserver-test.svc.eqiad.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
+			]
+		],
 	],
 	'codfw' => $common + [
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
@@ -259,6 +266,13 @@ $services = [
 				'host' => 'localhost',
 				'transport' => 'Http',
 				'port' => 6204,
+			]
+		],
+		'ttmserver-test' => [
+			[
+				'host' => 'opensearch-ttmserver-test.svc.codfw.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
 			]
 		],
 	],
