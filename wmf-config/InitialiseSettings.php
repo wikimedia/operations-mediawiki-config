@@ -13222,22 +13222,6 @@ return [
 		'readinglists.v0' => [
 			'file' => "./extensions/ReadingLists/src/Rest/ReadingListsRoutes.v0.json",
 		],
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
-		],
-	],
-	'+mediawikiwiki' => [
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
-		],
-	],
-	'+labswiki' => [
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
-		],
 	],
 ],
 
