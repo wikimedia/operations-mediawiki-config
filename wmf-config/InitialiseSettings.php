@@ -10244,6 +10244,11 @@ return [
 	'yiwiki' => [ 'en', 'he', 'de' ],
 ],
 
+'wgULSLanguageSelectorV2Enabled' => [
+	'default' => false,
+	'group0' => true
+],
+
 'wgInterlanguageLinkCodeMap' => [
 	'default' => [
 		'als' => 'gsw', // T25215
