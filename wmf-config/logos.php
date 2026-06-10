@@ -1736,9 +1736,9 @@ return [
 		'height' => 35,
 	],
 	'arzwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
-		'width' => 114,
-		'height' => 32,
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-arz.svg',
+		'width' => 107,
+		'height' => 30,
 	],
 	'astwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',

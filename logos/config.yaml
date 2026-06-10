@@ -124,11 +124,8 @@ Wikipedia:
         comment_tagline: T290091
     arzwiki:
         comment_2x: T150618
-        selected_wordmark: arwiki
         local_tagline: true
         local_wordmark: true
-        width_wordmark: '114'
-        height_wordmark: '32'
     astwiki:
         comment: 'T42285, T131247'
         comment_2x: 'T150618, T292742'
