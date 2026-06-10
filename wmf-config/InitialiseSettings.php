@@ -8831,12 +8831,6 @@ return [
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
 'wmgUseShortUrl' => [
 	'default' => false,
-	'bdwikimedia' => true, // T146014
-	'bhwiki' => true, // T113348
-	'bnwiki' => true, // T62956
-	'bnwikisource' => true, // T127968
-	'eswikibooks' => true, // T96668
-	'gomwiki' => true, // T206741
 	'hiwiki' => true,
 	'hiwikiversity' => true, // T177187
 	'knwiki' => true, // T97218
@@ -8880,6 +8874,13 @@ return [
 // $wmgUseUrlShortener be enabled too (both enforced via no-op in CommonSettings.php).
 'wmgUseUrlShortenerLegacy' => [
 	'default' => false,
+
+	'bdwikimedia' => true, // T146014
+	'bhwiki' => true, // T113348
+	'bnwiki' => true, // T62956
+	'bnwikisource' => true, // T127968
+	'eswikibooks' => true, // T96668
+	'gomwiki' => true, // T206741
 	'test2wiki' => true,
 ],
 
