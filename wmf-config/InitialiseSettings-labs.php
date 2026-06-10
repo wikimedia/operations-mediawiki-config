@@ -1918,10 +1918,8 @@ function wmfGetOverrideSettings() {
 
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
-				'includes/Rest/coreDevelopmentRoutes.json',
 				'includes/Rest/site.v1.json',
 				'includes/Rest/specs.v0.json',
-				'includes/Rest/content.v1.json'
 			],
 		],
 
@@ -1930,10 +1928,6 @@ function wmfGetOverrideSettings() {
 				'specs.v0' => [
 					'url' => '/w/rest.php/specs/v0/module/specs/v0',
 					'name' => 'Specs API',
-				],
-				'content.v1' => [
-					'url' => '/w/rest.php/specs/v0/module/content/v1',
-					'name' => 'Content API',
 				],
 				'lift-wing' => [
 					'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
