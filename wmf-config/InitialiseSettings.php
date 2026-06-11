@@ -2646,6 +2646,11 @@ return [
 	'default' => [
 		'mainpage-title-loggedin', // T361171
 	],
+	'+abstractwiki' => [
+		// Sidebar, T427730
+		'wikilambda-abstractwiki-sidebar-projectchat',
+		'wikilambda-abstractwiki-sidebar-createarticle',
+	],
 	'+arwiki' => [
 		'licenses',
 		'uploadtext',
