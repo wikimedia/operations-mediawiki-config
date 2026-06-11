@@ -392,6 +392,8 @@ return [
 		'Portal_talk' => 101,
 		'Portál_diskuse' => 101,
 		'Rejstřík_diskuse' => 103,
+		'Šab' => NS_TEMPLATE, // T428619
+		'Kat' => NS_CATEGORY, // T428619
 	],
 	'+cswikibooks' => [
 		'WK' => NS_PROJECT,
