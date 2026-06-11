@@ -1595,14 +1595,10 @@ return [
 			'deletedtext' => true,
 			'deletelogentry' => true, // T42521
 			'deleterevision' => true,
-			'ipblock-exempt' => true,
 			'mergehistory' => true, // T131751
 			'movefile' => true, // T72007
-			'noratelimit' => true,
-			'nuke' => true,
 			'suppressredirect' => true,
 			'undelete' => true,
-			'unwatchedpages' => true,
 		],
 		'interface-admin' => [ // T222018
 			'delete' => true,
