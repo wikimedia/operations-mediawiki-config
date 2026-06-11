@@ -3831,6 +3831,7 @@ return [
 'wmgEnableHCaptchaForBadLogin' => [
 	'default' => false,
 	'group0' => true,
+	'small' => true,
 ],
 'wmgEmergencyCaptcha' => [
 	'default' => false,
