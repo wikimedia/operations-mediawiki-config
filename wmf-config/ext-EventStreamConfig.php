@@ -3375,44 +3375,6 @@ return [
 				],
 			],
 		],
-		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
-		'mediawiki.product_metrics.homepage_module_interaction' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_site_content_language',
-						'mediawiki_site_content_language_variant',
-						'page_content_language',
-						'agent_client_platform',
-						'agent_client_platform_family',
-						'performer_session_id',
-						'performer_name',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_edit_count_bucket',
-						'performer_groups',
-						'performer_registration_dt',
-						'performer_is_temp',
-						'performer_language',
-						'performer_language_variant',
-						'performer_pageview_id',
-						'performer_id',
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
-			],
-		],
 		'mediawiki.product_metrics.growth_product_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
