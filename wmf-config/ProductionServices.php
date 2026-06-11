@@ -85,6 +85,8 @@ $common = [
 	'shellbox-video' => 'http://localhost:6036',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	'chart-renderer' => 'http://localhost:6039',
+	'page-analytics' => 'http://localhost:6073',
+	'device-analytics' => 'http://localhost:6032',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
 	'test-kitchen' => 'http://localhost:6037',

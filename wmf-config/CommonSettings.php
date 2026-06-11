@@ -4731,6 +4731,8 @@ if ( $wmgUseKartographer && $wmgUseJsonConfig ) {
 if ( $wmgUsePageViewInfo ) {
 	wfLoadExtension( 'PageViewInfo' );
 	$wgPageViewInfoWikimediaEndpoint = $wmgLocalServices['rest-gateway'] . '/wikimedia.org/v1';
+	$wgPageViewInfoWikimediaPageAnalyticsEndpoint = $wmgLocalServices['page-analytics'];
+	$wgPageViewInfoWikimediaDeviceAnalyticsEndpoint = $wmgLocalServices['device-analytics'];
 }
 
 if ( $wgDBname === 'foundationwiki' ) {
