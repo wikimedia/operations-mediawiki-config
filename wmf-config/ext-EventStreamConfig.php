@@ -2587,6 +2587,19 @@ return [
 			'canary_events_enabled' => false,
 		],
 
+		// Page view baseline statistics (per-page hourly mean/stddev),
+		// computed in batch and loaded into a log-compacted topic in Kafka
+		// Jumbo. Used by the page trending pipeline. The topic has compaction
+		// enabled, so only one event per key is retained.
+		'webrequest.page_view_stats.dev0' => [
+			'schema_title' => 'development/page_view_stats',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => false,
+		],
+
 		// Error (DLQ) topic for the application producing webrequest.page_view
 		'webrequest_page_view.error' => [
 			'schema_title' => 'error',
