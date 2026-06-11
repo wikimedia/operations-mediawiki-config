@@ -3837,9 +3837,7 @@ return [
 	'default' => true, // T425940
 ],
 'wmgEnableHCaptchaForDiscussionTools' => [
-	'default' => false,
-	'group0' => true, // T426039
-	'group1' => true, // T426039
+	'default' => true, // T426039
 ],
 'wmgEnableHCaptchaEditing' => [
 	'default' => true, // T425354
