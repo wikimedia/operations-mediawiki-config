@@ -1226,7 +1226,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgFileSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+			'default' => SCHEMA_COMPAT_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
