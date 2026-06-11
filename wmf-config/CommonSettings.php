@@ -4819,6 +4819,10 @@ if ( $wmgUseWikiLambda ) {
 		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
 		$wgWikiLambdaPersistBackendCache = true;
 	}
+
+	// Temporary config for the automatic Abstract Article generation script
+	$wgWikiLambdaAbstractWikiArticleStoreTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];
+	$wgWikiLambdaAbstractWikiArticleStoreLangs = [ 'en', 'fr', 'de', 'es' ];
 }
 
 if ( $wmgUseWikistories ) {
