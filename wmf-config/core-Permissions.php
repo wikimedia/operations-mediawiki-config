@@ -141,32 +141,6 @@ return [
 		'*' => [ 'edit' => false, ]
 	],
 
-	'+apiportalwiki' => [
-		'*' => [ // T259657
-			'edit-docs' => false,
-			'move' => false,
-			'move-subpages' => false,
-			'createpage' => false,
-			'edit' => false,
-			'createtalk' => false,
-		],
-		'user' => [
-			'edit' => true, // limited by $wgNamespaceProtection
-		],
-		'docseditor' => [
-			'edit-docs' => true,
-			'move' => true,
-			'move-subpages' => true,
-			'createpage' => true,
-			'createtalk' => true,
-		],
-		'sysop' => [
-			'edit-docs' => true,
-			'move' => true,
-			'move-subpages' => true,
-			'createpage' => true,
-		],
-	],
 	'+arbcom_ruwiki' => [
 		'arbcom' => [ // T274844
 			'block' => true,

@@ -36,7 +36,7 @@ return [
 'anpwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'anwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'anwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'apiportalwiki' => [ 'special', 'small', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
+'apiportalwiki' => [ 'special', 'closed', 'small', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'arbcom_cswiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'arbcom_dewiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'arbcom_enwiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
