@@ -22,7 +22,6 @@ return [
 		'eventlogging_CpuBenchmark',
 		'eventlogging_EditAttemptStep',
 		'eventlogging_HelpPanel',
-		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
 		'eventlogging_LandingPageImpression',
 		'eventlogging_NavigationTiming',
