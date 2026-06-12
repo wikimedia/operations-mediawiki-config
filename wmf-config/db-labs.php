@@ -20,6 +20,7 @@ if ( $wmgRealm == 'labs' ) {
 			'DEFAULT' => [
 				'deployment-db11' => 0,
 				'deployment-db14' => 400,
+				'deployment-db15' => 0,
 			],
 		],
 
@@ -39,6 +40,8 @@ if ( $wmgRealm == 'labs' ) {
 			'deployment-db11' => '172.16.5.150:3306',
 			// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
 			'deployment-db14' => '172.16.5.170:3306',
+			// deployment-db15.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db15' => '172.16.20.82:3306',
 		],
 
 		'externalLoads' => [
@@ -47,6 +50,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.5.170:3306' => 3,
+				// deployment-db15.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.20.82:3306' => 0,
 			],
 
 			'flow_cluster1' => [
@@ -54,6 +59,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.5.170:3306' => 3,
+				// deployment-db15.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.20.82:3306' => 0,
 			],
 
 			'extension1' => [
@@ -61,6 +68,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db14.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.5.170:3306' => 3,
+				// deployment-db15.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.20.82:3306' => 0,
 			],
 		],
 
