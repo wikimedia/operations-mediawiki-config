@@ -143,6 +143,13 @@ $common = [
 			'port' => 30443,
 		]
 	],
+	'ttmserver-dnsdisc' => [
+		[ // forwarded to https://opensearch-ttmserver.discovery.wmnet:30443
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6518,
+		]
+	],
 	'ttmserver-test-dnsdisc' => [
 		[ // forwarded to https://opensearch-ttmserver-test.discovery.wmnet:30443
 			'host' => 'localhost',
@@ -208,6 +215,13 @@ $services = [
 				'port' => 6104,
 			]
 		],
+		'ttmserver' => [
+			[
+				'host' => 'opensearch-ttmserver.svc.eqiad.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
+			]
+		],
 		'ttmserver-test' => [
 			[
 				'host' => 'opensearch-ttmserver-test.svc.eqiad.wmnet',
@@ -266,6 +280,13 @@ $services = [
 				'host' => 'localhost',
 				'transport' => 'Http',
 				'port' => 6204,
+			]
+		],
+		'ttmserver' => [
+			[
+				'host' => 'opensearch-ttmserver.svc.codfw.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
 			]
 		],
 		'ttmserver-test' => [

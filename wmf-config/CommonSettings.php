@@ -3405,16 +3405,16 @@ if ( $wmgUseTranslate ) {
 				'service' => $wmgAllServices['codfw']['search-chi'] ?? null,
 				'writable' => true,
 			],
-			'test' => [
-				'service' => $wmgLocalServices['ttmserver-test-dnsdisc'] ?? null,
+			'k8s' => [
+				'service' => $wmgLocalServices[$wmgTranslateK8SBackend . '-dnsdisc'] ?? null,
 				'writable' => false,
 			],
-			'eqiad-test' => [
-				'service' => $wmgAllServices['eqiad']['ttmserver-test'] ?? null,
+			'eqiad-k8s' => [
+				'service' => $wmgAllServices['eqiad'][$wmgTranslateK8SBackend] ?? null,
 				'writable' => true,
 				],
-			'codfw-test' => [
-				'service' => $wmgAllServices['codfw']['ttmserver-test'] ?? null,
+			'codfw-k8s' => [
+				'service' => $wmgAllServices['codfw'][$wmgTranslateK8SBackend] ?? null,
 				'writable' => true,
 			],
 		];

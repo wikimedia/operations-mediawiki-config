@@ -8740,6 +8740,10 @@ return [
 	'default' => 'ttmserver',
 	'testwiki' => 'ttmserver-test',
 ],
+'wmgTranslateK8SBackend' => [
+	'default' => 'ttmserver',
+	'testwiki' => 'ttmserver-test',
+],
 'wmgUseTranslationNotifications' => [
 	'default' => false,
 	'testwiki' => true,
