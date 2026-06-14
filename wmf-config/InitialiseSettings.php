@@ -9382,6 +9382,7 @@ return [
 'wmgUseCalendar' => [
 	'default' => false,
 	'wikivoyage' => true,
+	'dewikivoyage' => false, // T429095
 ],
 
 'wmgUseContentTranslation' => [
