@@ -8497,6 +8497,22 @@ return [
 	'enwiki' => 'source',
 ],
 
+'wgMFEnableAbandonSurvey' => [
+	'default' => false,
+	// T422931, T426132
+	'frwiki' => true,
+	'dewiki' => true,
+	'jawiki' => true,
+	'eswiki' => true,
+	'ruwiki' => true,
+	'zhwiki' => true,
+	'plwiki' => true,
+	'hewiki' => true,
+	'arwiki' => true,
+	'kowiki' => true,
+	'viwiki' => true,
+],
+
 'wgExtraGenderNamespaces' => [
 	'default' => [],
 	'cswiki' => [
