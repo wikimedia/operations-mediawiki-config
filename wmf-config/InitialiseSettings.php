@@ -8843,11 +8843,6 @@ return [
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
 'wmgUseShortUrl' => [
 	'default' => false,
-	'hiwiki' => true,
-	'hiwikiversity' => true, // T177187
-	'knwiki' => true, // T97218
-	'knwikisource' => true, // T189287
-	'maiwiki' => true, // T125802
 	'mrwiki' => true, // T103646
 	'newiki' => true, // T92820
 	'orwiki' => true,
@@ -8865,7 +8860,6 @@ return [
 	'tawikiquote' => true,
 	'tawikisource' => true,
 	'tawiktionary' => true,
-	'tcywiki' => true, // T150166
 	'urwiki' => true, // T138507
 ],
 
@@ -8893,6 +8887,12 @@ return [
 	'bnwikisource' => true, // T127968
 	'eswikibooks' => true, // T96668
 	'gomwiki' => true, // T206741
+	'hiwiki' => true,
+	'hiwikiversity' => true, // T177187
+	'knwiki' => true, // T97218
+	'knwikisource' => true, // T189287
+	'maiwiki' => true, // T125802
+	'tcywiki' => true, // T150166
 	'test2wiki' => true,
 ],
 
