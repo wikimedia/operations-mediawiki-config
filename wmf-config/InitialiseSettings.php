@@ -6867,7 +6867,7 @@ return [
 
 # T414852
 'wgParserMigrationEnableQuickSurvey' => [
-	'default' => true,
+	'default' => false,
 ],
 
 'wgParserMigrationEnableIndicator' => [
