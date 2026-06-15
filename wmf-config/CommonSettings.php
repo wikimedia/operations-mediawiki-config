@@ -686,8 +686,8 @@ foreach ( $wmgPCServers as $tag => $host ) {
 if ( $wmgRealm === 'labs' ) {
 	$wmgMainStashServers = [
 		// T401227: make sure this list only includes writable primaries.
-		// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
-		'ms1' => '172.16.5.150',
+		// deployment-db15.deployment-prep.eqiad1.wikimedia.cloud
+		'ms1' => '172.16.20.82',
 	];
 }
 $mainStashServers = [];
