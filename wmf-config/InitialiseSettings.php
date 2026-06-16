@@ -3799,8 +3799,7 @@ return [
 	'default' => true, // T425354
 ],
 'wmgEnableHCaptchaUploadWizard' => [
-	'default' => false,
-	'testwiki' => true, // T426126
+	'default' => true, // T426126
 ],
 'wmgEnableHCaptchaAccountCreationAPI' => [
 	'default' => true, // T426050
