@@ -3390,6 +3390,20 @@ if ( $wmgUseTranslate ) {
 		$wgTranslateTranslationDefaultService = 'default';
 		$translateServices = [
 			'default' => [
+				// dnsdisc doesn't exist in the deployment-prep cluster
+				'service' => $wmgLocalServices['search-chi-dnsdisc'] ?? $wmgAllServices['eqiad']['search-chi'],
+				'writable' => false,
+			],
+			'eqiad' => [
+				'service' => $wmgAllServices['eqiad']['search-chi'],
+				'writable' => true,
+			],
+			'codfw' => [
+				// codfw doesn't exist in the deployment-prep cluster
+				'service' => $wmgAllServices['codfw']['search-chi'] ?? null,
+				'writable' => true,
+			],
+			'k8s' => [
 				'service' => $wmgLocalServices[$wmgTranslateK8SBackend . '-dnsdisc'] ?? null,
 				'writable' => false,
 			],
