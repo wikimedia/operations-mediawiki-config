@@ -2160,6 +2160,44 @@ return [
 				],
 			],
 		],
+		// The streams wdqs_[internal|external].sparql_query.v2 are used by WDQS V2
+		// to log each incoming SPARQL query along with data about the HTTP request
+		// and response.
+		// WDQS V2's Event Platform integration is tracked in T421200.
+		'wdqs_internal.sparql_query.v2' => [
+			'schema_title' => 'development/sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
+		'wdqs_external.sparql_query.v2' => [
+			'schema_title' => 'development/sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
