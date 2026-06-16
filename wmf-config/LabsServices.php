@@ -17,22 +17,16 @@ return [
 		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
-			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
 			// These MUST match the installed SSL certs
-			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-omega' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		// deployment-prep doesn't have dns discovery
 		'search-chi-dnsdisc' => null,
