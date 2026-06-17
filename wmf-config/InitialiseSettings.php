@@ -10254,7 +10254,8 @@ return [
 
 'wgULSLanguageSelectorV2Enabled' => [
 	'default' => false,
-	'group0' => true
+	'group0' => true,
+	'group1' => true,
 ],
 
 'wgInterlanguageLinkCodeMap' => [
