@@ -12481,11 +12481,23 @@ return [
 	'lockeddown' => false,
 ],
 
+//
+// This applies to all surveys without embedElementId set and allows
+// surveys to automatically be added to any page permitted by the survey audience.
+//
+'wgQuickSurveysDefaultSelector' => [
+	'default' => false,
+	'wikipedia' => '.infobox,> div > div > .thumb,> div > .thumb,> .thumb,.mw-heading',
+],
+
 // Note: you can also register surveys using
 // https://www.mediawiki.org/wiki/Extension:QuickSurvey/Hooks/QuickSurveysEnabled
 // This gives you more control and additional flexibility.
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	//
+	// Wikipedia surveys
+	//
 	'enwiki' => [
 		[
 			// T428876
@@ -12815,6 +12827,11 @@ return [
 			],
 		],
 	],
+	//
+	// Non-Wikipedias
+	// Note if you are enabling for a non-Wikipedia please add embedElementId.
+	// wgQuickSurveysDefaultSelector is currently not configured for these projects.
+	//
 	'wikidatawiki' => [
 		[
 			// T414476
