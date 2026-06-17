@@ -6805,6 +6805,13 @@ return [
 	'default' => [ 500, 960, 1280, 1920, 3840 ], // T372165, T410556, T412971
 ],
 
+// T426775
+'wgMediaViewerMobileBeta' => [
+	'default' => false,
+	'testwiki' => true,
+	'wikipedia' => true,
+],
+
 // T426799
 'wgMediaViewerMobileCarousel' => [
 	'default' => false,
