@@ -13558,7 +13558,7 @@ return [
 		],
 	],
 	'+metawiki' => [
-		'readinglists.v0' => [
+		'ReadingListsRoutes.v0' => [
 			'file' => "./extensions/ReadingLists/src/Rest/ReadingListsRoutes.v0.json",
 		],
 		'lift-wing' => [
