@@ -8846,24 +8846,6 @@ return [
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
 'wmgUseShortUrl' => [
 	'default' => false,
-	'mrwiki' => true, // T103646
-	'newiki' => true, // T92820
-	'orwiki' => true,
-	'orwikisource' => true, // T124429
-	'orwiktionary' => true, // T103644
-	'pawiki' => true, // T178919
-	'sawiki' => true, // T94660
-	'sawikibooks' => true, // T94660
-	'sawikiquote' => true, // T94660
-	'sawikisource' => true, // T94660
-	'sawiktionary' => true, // T94660
-	'tawiki' => true,
-	'tawikibooks' => true,
-	'tawikinews' => true,
-	'tawikiquote' => true,
-	'tawikisource' => true,
-	'tawiktionary' => true,
-	'urwiki' => true, // T138507
 ],
 
 // T107188: Preserve redirects on wikis that formerly used the ShortUrl extension
@@ -8895,8 +8877,26 @@ return [
 	'knwiki' => true, // T97218
 	'knwikisource' => true, // T189287
 	'maiwiki' => true, // T125802
+	'mrwiki' => true, // T103646
+	'newiki' => true, // T92820
+	'orwiki' => true,
+	'orwikisource' => true, // T124429
+	'orwiktionary' => true, // T103644
+	'pawiki' => true, // T178919
+	'sawiki' => true, // T94660
+	'sawikibooks' => true, // T94660
+	'sawikiquote' => true, // T94660
+	'sawikisource' => true, // T94660
+	'sawiktionary' => true, // T94660
+	'tawiki' => true,
+	'tawikibooks' => true,
+	'tawikinews' => true,
+	'tawikiquote' => true,
+	'tawikisource' => true,
+	'tawiktionary' => true,
 	'tcywiki' => true, // T150166
 	'test2wiki' => true,
+	'urwiki' => true, // T138507
 ],
 
 'wmgUseFeaturedFeeds' => [
