@@ -2054,8 +2054,6 @@ if ( $wmgEnableCaptcha ) {
 		 * token
 		 */
 		$doesEditApiInterfaceSupportHCaptcha = static function () use (
-			$wmgEnableHCaptchaVisualEditorIntegration,
-			$wmgEnableHCaptchaForDiscussionTools,
 			$wgHCaptchaEnabledInMobileFrontend
 		): bool {
 			$request = RequestContext::getMain()->getRequest();
@@ -2063,13 +2061,13 @@ if ( $wmgEnableCaptcha ) {
 			// main request will have had the action updated to 'edit'
 			$action = $_REQUEST['action'] ?? '';
 			if ( $action === 'visualeditoredit' ) {
-				return $wmgEnableHCaptchaVisualEditorIntegration;
+				return true;
 			} elseif (
 				$action === 'discussiontoolsedit' &&
 				strpos( $request->getHeader( 'User-Agent' ), "WikipediaApp/" ) !== 0
 			) {
 				// Skipped for mobile apps while they do not support hCaptcha for DiscussionTools
-				return $wmgEnableHCaptchaForDiscussionTools;
+				return true;
 			} else {
 				$editorInterface = $_REQUEST['editorinterface'] ?? '';
 				return $wgHCaptchaEnabledInMobileFrontend
@@ -2141,14 +2139,6 @@ if ( $wmgEnableCaptcha ) {
 			// every edit with the passive SiteKey, and hCaptcha's risk model decides whether to
 			// issue a visible challenge.
 			$wgCaptchaTriggers['addurl'] = false;
-
-			if ( $wmgEnableHCaptchaVisualEditorIntegration ) {
-				$wgHCaptchaVisualEditorOnLoadIntegrationEnabled = true;
-			}
-
-			if ( $wmgEnableHCaptchaForDiscussionTools ) {
-				$wgDiscussionToolsHCaptchaRequiredForAllEdits = true;
-			}
 
 			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
 				$wmgEmergencyCaptcha,

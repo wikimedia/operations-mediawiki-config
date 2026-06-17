@@ -3789,12 +3789,6 @@ return [
 'wgHCaptchaEnabledInMobileFrontend' => [
 	'default' => true, // T425940
 ],
-'wmgEnableHCaptchaVisualEditorIntegration' => [
-	'default' => true, // T425940
-],
-'wmgEnableHCaptchaForDiscussionTools' => [
-	'default' => true, // T426039
-],
 'wmgEnableHCaptchaEditing' => [
 	'default' => true, // T425354
 ],
