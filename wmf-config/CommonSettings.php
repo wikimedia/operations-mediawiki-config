@@ -2001,12 +2001,6 @@ if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCa
 	$wmgEnableCaptcha = false;
 }
 
-// mcrundo cannot render a CAPTCHA widget, so skip CAPTCHA for this action
-// until mcrundo supports it.
-if ( ( $_REQUEST['action'] ?? null ) === 'mcrundo' ) {
-	$wmgEnableCaptcha = false;
-}
-
 if ( $wmgEnableCaptcha ) {
 	wfLoadExtension( 'ConfirmEdit' );
 	wfLoadExtension( 'ConfirmEdit/FancyCaptcha' );
