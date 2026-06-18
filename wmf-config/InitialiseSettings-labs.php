@@ -2434,7 +2434,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgArticleGuidanceWikidataApiUrl' => [
-			'default' => 'https://test.wikidata.org/w/api.php',
+			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
 		],
 
 		'wgULSLanguageSelectorV2Enabled' => [
