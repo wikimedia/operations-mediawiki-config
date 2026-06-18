@@ -3318,7 +3318,7 @@ return [
 ],
 
 'wgEmailConfirmationBanner' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgBlockDisablesLogin' => [
