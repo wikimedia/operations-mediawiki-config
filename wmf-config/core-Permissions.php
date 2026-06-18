@@ -531,6 +531,21 @@ return [
 		'suppressredirect' => [ 'suppressredirect' => true ], // T360228
 		'rollbacker' => [ 'rollback' => true ], // T360228
 	],
+	'+collabwiki' => [
+		'sysop' => [
+			'createaccount' => false,
+			'createpreviouslyrenamedaccount' => false,
+		],
+		'bureaucrat' => [
+			'renameuser' => false,
+		],
+		'wmf-officeit' => [
+			'createaccount' => true,
+			'createpreviouslyrenamedaccount' => true,
+			'renameuser' => true,
+			'oathauth-recover-for-user' => true,
+		]
+	],
 	'+cswiki' => [
 		'accountcreator' => [ // T254927
 			'tboverride-account' => true,
@@ -3822,6 +3837,11 @@ return [
 			'rollbacker', // T360228
 			'suppressredirect', // T360228
 		],
+	],
+	'+collabwiki' => [
+		'wmf-officeit' => [
+			'wmf-officeit'
+		]
 	],
 	'+commonswiki' => [
 		'bureaucrat' => [
