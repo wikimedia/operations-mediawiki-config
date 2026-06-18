@@ -2424,8 +2424,17 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true, // T423295
 		],
 
+		'wgArticleGuidanceWikidataConnectEnabled' => [
+			'default' => false,
+			'enwiki' => true,
+		],
+
 		'wgArticleGuidanceSparqlEndpoint' => [
 			'default' => 'https://query.wikidata.org/sparql',
+		],
+
+		'wgArticleGuidanceWikidataApiUrl' => [
+			'default' => 'https://test.wikidata.org/w/api.php',
 		],
 
 		'wgULSLanguageSelectorV2Enabled' => [
