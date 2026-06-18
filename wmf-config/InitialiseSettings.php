@@ -12495,7 +12495,7 @@ return [
 			'name' => 'mobile-app-awareness-2026-en-survey',
 			'type' => 'internal',
 			'enabled' => true,
-			'coverage' => 0, // 0.005,
+			'coverage' => 0.005,
 			'privacyPolicy' => 'mobile-app-awareness-2026-en-survey-privacy-policy',
 			'audience' => [
 				'anons' => true,
@@ -12639,7 +12639,7 @@ return [
 					'layout' => 'multiple-answer',
 					'question' => 'mobile-app-awareness-2026-en-survey-q06',
 					'description' => 'mobile-app-awareness-2026-en-survey-q06-description',
-					'shuffleAnswersDisplay' => true,
+					'shuffleAnswersDisplay' => false,
 					'answers' => [
 						[ 'label' => 'mobile-app-awareness-2026-en-survey-q06-a1' ],
 						[ 'label' => 'mobile-app-awareness-2026-en-survey-q06-a2' ],
@@ -12691,7 +12691,7 @@ return [
 					'name' => 'mobile-app-awareness-2026-en-survey-q08',
 					'layout' => 'single-answer',
 					'question' => 'mobile-app-awareness-2026-en-survey-q08',
-					'shuffleAnswersDisplay' => true,
+					'shuffleAnswersDisplay' => false,
 					'answers' => [
 						[ 'label' => 'mobile-app-awareness-2026-en-survey-q08-a1' ],
 						[ 'label' => 'mobile-app-awareness-2026-en-survey-q08-a2' ],
@@ -12723,7 +12723,7 @@ return [
 					'layout' => 'multiple-answer',
 					'question' => 'mobile-app-awareness-2026-en-survey-q09',
 					'description' => 'mobile-app-awareness-2026-en-survey-q09-description',
-					'shuffleAnswersDisplay' => true,
+					'shuffleAnswersDisplay' => false,
 					'answers' => [
 						[ 'label' => 'mobile-app-awareness-2026-en-survey-q09-a1' ],
 						[ 'label' => 'mobile-app-awareness-2026-en-survey-q09-a2' ],
