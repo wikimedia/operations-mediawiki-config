@@ -13062,13 +13062,6 @@ return [
 	'default' => 'CirrusSearch'
 ],
 
-'wgRestAPIAdditionalRouteFiles' => [
-	'default' => [
-		'includes/Rest/site.v1.json',
-		'includes/Rest/specs.v0.json',
-	],
-],
-
 'wgRestAllowCrossOriginCookieAuth' => [
 	// FIXME: Is this still needed?
 	// This was added for api.wikimedia.org because the WikimediaApiPortalOAuth extension
@@ -13079,10 +13072,6 @@ return [
 
 'wgRestSandboxSpecs' => [
 	'default' => [
-		'specs.v0' => [
-			'url' => '/w/rest.php/specs/v0/module/specs/v0',
-			'name' => 'Specs API',
-		],
 		'wmf-restbase' => [
 			'url' => '/api/rest_v1/?spec',
 			'name' => 'Wikimedia REST APIs'
@@ -13090,14 +13079,6 @@ return [
 		'wmf-restbase-global' => [
 			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
 			'name' => 'Math API'
-		],
-		'attribution.v0-beta' => [
-			'file' => "./extensions/WikimediaCustomizations/src/Attribution/attribution.v0-beta.json",
-		],
-	],
-	'+growthexperiments' => [
-		'growthexperiments.v0' => [
-			'file' => "./extensions/GrowthExperiments/includes/Rest/growthexperiments.v0.json",
 		],
 	],
 	'+testwiki' => [
@@ -13134,15 +13115,7 @@ return [
 			'name' => 'Lift Wing API',
 		],
 	],
-	'+wikifunctionswiki' => [
-		'wikifunctions.v0' => [
-			'file' => "./extensions/WikiLambda/includes/RESTAPI/wikifunctions.v0.json",
-		],
-	],
 	'+metawiki' => [
-		'ReadingListsRoutes.v0' => [
-			'file' => "./extensions/ReadingLists/src/Rest/ReadingListsRoutes.v0.json",
-		],
 		'wmf-analytics-commons' => [
 			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
 			'name' => 'Wikimedia Commons Impact Metrics API',

@@ -1910,19 +1910,8 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
-		'wgRestAPIAdditionalRouteFiles' => [
-			'default' => [
-				'includes/Rest/site.v1.json',
-				'includes/Rest/specs.v0.json',
-			],
-		],
-
 		'wgRestSandboxSpecs' => [
 			'default' => [
-				'specs.v0' => [
-					'url' => '/w/rest.php/specs/v0/module/specs/v0',
-					'name' => 'Specs API',
-				],
 				'lift-wing' => [
 					'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 					'name' => 'Lift Wing API',
