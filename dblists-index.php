@@ -576,6 +576,7 @@ return [
 'madwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'madwikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'sul' ],
 'madwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
+'magwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'maiwiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'maiwikimedia' => [ 'fishbowl', 'small', 'group1', 'translate' ],
 'map_bmswiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
