@@ -2638,6 +2638,15 @@ return [
 			'canary_events_enabled' => false,
 		],
 
+		// Relative-trending signal per page, produced by the page trending Flink job.
+		'webrequest.page_trending.dev0' => [
+			'schema_title' => 'development/page_trending',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+		],
+
 		// Error (DLQ) topic for the application producing webrequest.page_view
 		'webrequest_page_view.error' => [
 			'schema_title' => 'error',
