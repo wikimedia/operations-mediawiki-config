@@ -6158,6 +6158,7 @@ return [
 	'madwiki' => 'Wikipèḍia',
 	'madwikisource' => 'Wikigherbhung', // T391767
 	'madwiktionary' => 'Wikikamus',
+	'magwiki' => 'विकिपीडिया', // T428279
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'Project',

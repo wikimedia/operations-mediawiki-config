@@ -993,6 +993,10 @@ Wikipedia:
         comment_2x: T270693
         local_tagline: true
         local_wordmark: true
+    magwiki:
+        commons_wordmark: 'File:Wikipedia-wordmark-hi.svg'
+        comment_wordmark: T428279
+        selected: hiwiki
     maiwiki:
         comment: T74346
         comment_2x: T149790
