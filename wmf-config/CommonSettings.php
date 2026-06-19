@@ -1615,12 +1615,6 @@ if ( $wmgUseUrlShortener ) {
 	}
 }
 
-// T107188
-if ( $wmgUseShortUrl && !$wmgUseUrlShortenerLegacy ) {
-	wfLoadExtension( 'ShortUrl' );
-	$wgShortUrlTemplate = "/s/$1";
-}
-
 if ( $wmgPFEnableStringFunctions ) {
 	$wgPFEnableStringFunctions = true;
 }

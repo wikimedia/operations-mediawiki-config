@@ -8719,11 +8719,6 @@ return [
 	'testwiki' => [ NS_MAIN, NS_HELP, NS_USER ]
 ],
 
-// NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
-'wmgUseShortUrl' => [
-	'default' => false,
-],
-
 // T107188: Preserve redirects on wikis that formerly used the ShortUrl extension
 //
 // Cool URIs don't change! https://www.w3.org/Provider/Style/URI
@@ -8737,8 +8732,6 @@ return [
 // * https://gerrit.wikimedia.org/g/operations/puppet/+/927dcdcfa3/modules/mediawiki/templates/apache/mediawiki-vhost.conf.erb#79
 // * https://gerrit.wikimedia.org/g/operations/deployment-charts/+/a42810639a/charts/mediawiki/templates/lamp/_site_helpers.tpl#87
 //
-// NOTE: This is mutually exclusive with $wmgUseShortUrl, and requires that
-// $wmgUseUrlShortener be enabled too (both enforced via no-op in CommonSettings.php).
 'wmgUseUrlShortenerLegacy' => [
 	'default' => false,
 
