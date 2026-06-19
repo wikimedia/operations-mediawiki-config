@@ -4122,6 +4122,7 @@ return [
 	'bnwikisource' => [ NS_MAIN, 114 ], // T53980
 	'enwikisource' => [ NS_MAIN, 114 ], // T53980
 	'thwikisource' => [ NS_MAIN, 114 ], // T53980
+	'ukwikisource' => [ NS_MAIN, 116 ], // T53980
 ],
 
 // DO NOT enable on any other wikis
