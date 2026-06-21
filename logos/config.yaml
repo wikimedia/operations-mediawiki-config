@@ -2319,8 +2319,22 @@ Wiktionary:
         no_2x: true
         selected_wordmark: lbwiktionary
     shwiktionary:
-        no_2x: true
-        local_wordmark: true
+        commons: 'File:Wiktionary-logo-sh-v2.svg'
+        comment: T414868
+        comment_2x: T414868
+        commons_wordmark: 'File:Wiktionary-wordmark-sh.svg'
+        comment_wordmark: T414868
+        commons_tagline: 'File:Wiktionary-tagline-sh.svg'
+        comment_tagline: T414868
+        variants:
+            shwiktionary-cyrl:
+                commons_wordmark: 'File:Wiktionary-wordmark-sh-cyrl.svg'
+                commons_tagline: 'File:Wiktionary-tagline-sh-cyrl.svg'
+        lang_variants:
+            sh-cyrl:
+                selected_wordmark: shwiktionary-cyrl
+                selected_tagline: shwiktionary-cyrl
+        comment_lang_variants: T414868
     shnwiktionary:
         local_tagline: true
         local_wordmark: true

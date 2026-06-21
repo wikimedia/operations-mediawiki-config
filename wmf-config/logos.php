@@ -511,7 +511,7 @@ return [
 	'scnwiktionary' => '/static/images/project-logos/scnwiktionary.png', // T45240
 	'sdwiktionary' => '/static/images/project-logos/sdwiktionary.png', // T45240
 	'sgwiktionary' => '/static/images/project-logos/sgwiktionary.png',
-	'shwiktionary' => '/static/images/project-logos/shwiktionary.png',
+	'shwiktionary' => '/static/images/project-logos/shwiktionary.png', // T414868
 	'shnwiktionary' => '/static/images/project-logos/shnwiktionary.png',
 	'shywiktionary' => '/static/images/project-logos/shywiktionary.png', // T238105
 	'simplewiktionary' => '/static/images/project-logos/simplewiktionary.png', // T343084
@@ -1376,6 +1376,7 @@ return [
 	'sawiktionary' => '/static/images/project-logos/sawiktionary-2x.png', // T150618
 	'scnwiktionary' => '/static/images/project-logos/scnwiktionary-2x.png', // T150618
 	'sdwiktionary' => '/static/images/project-logos/sdwiktionary-2x.png', // T150618
+	'shwiktionary' => '/static/images/project-logos/shwiktionary-2x.png', // T414868
 	'shnwiktionary' => '/static/images/project-logos/shnwiktionary-2x.png',
 	'shywiktionary' => '/static/images/project-logos/shywiktionary-2x.png', // T238105
 	'simplewiktionary' => '/static/images/project-logos/simplewiktionary-2x.png', // T343084
@@ -3360,10 +3361,10 @@ return [
 		'width' => 120,
 		'height' => 17,
 	],
-	'shwiktionary' => [
+	'shwiktionary' => [ // T414868
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-sh.svg',
 		'width' => 120,
-		'height' => 25,
+		'height' => 23,
 	],
 	'shnwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-shn.svg',
@@ -7274,6 +7275,11 @@ return [
 		'width' => 120,
 		'height' => 14,
 	],
+	'shwiktionary' => [ // T414868
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-sh.svg',
+		'width' => 120,
+		'height' => 18,
+	],
 	'shnwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-shn.svg',
 		'width' => 120,
@@ -8115,6 +8121,20 @@ return [
 	],
 
 	// Wiktionary
+	'shwiktionary' => [
+		'sh-cyrl' => [ // T414868
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wiktionary-wordmark-sh-cyrl.svg',
+				'width' => 120,
+				'height' => 20,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wiktionary-tagline-sh-cyrl.svg',
+				'width' => 120,
+				'height' => 16,
+			],
+		],
+	],
 
 	// Wikiquote
 	'zhwikiquote' => [
