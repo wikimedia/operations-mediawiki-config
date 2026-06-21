@@ -104,7 +104,7 @@ return [
 	'cowiki' => '/static/images/project-logos/cowiki.png', // T42285
 	'crhwiki' => '/static/images/project-logos/crhwiki.png',
 	'crwiki' => '/static/images/project-logos/crwiki.png',
-	'csbwiki' => '/static/images/project-logos/csbwiki.png', // T42285
+	'csbwiki' => '/static/images/project-logos/csbwiki.png', // T429126
 	'cswiki' => '/static/images/project-logos/cswiki.png',
 	'cuwiki' => '/static/images/project-logos/cuwiki.png',
 	'cvwiki' => '/static/images/project-logos/cvwiki.png',
@@ -1017,7 +1017,7 @@ return [
 	'cowiki' => '/static/images/project-logos/cowiki-2x.png', // T150618
 	'crhwiki' => '/static/images/project-logos/crhwiki-2x.png', // T150618
 	'crwiki' => '/static/images/project-logos/crwiki-2x.png', // T150618
-	'csbwiki' => '/static/images/project-logos/csbwiki-2x.png', // T150618
+	'csbwiki' => '/static/images/project-logos/csbwiki-2x.png', // T429126
 	'cswiki' => '/static/images/project-logos/cswiki-2x.png', // T130392
 	'cuwiki' => '/static/images/project-logos/cuwiki-2x.png', // T150618
 	'cvwiki' => '/static/images/project-logos/cvwiki-2x.png', // T150618
@@ -1907,10 +1907,10 @@ return [
 		'width' => 120,
 		'height' => 21,
 	],
-	'csbwiki' => [
+	'csbwiki' => [ // T429126
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-csb.svg',
 		'width' => 120,
-		'height' => 26,
+		'height' => 25,
 	],
 	'cswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
@@ -5517,10 +5517,10 @@ return [
 		'width' => 120,
 		'height' => 10,
 	],
-	'csbwiki' => [
+	'csbwiki' => [ // T429126
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-csb.svg',
 		'width' => 120,
-		'height' => 13,
+		'height' => 15,
 	],
 	'cswiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-cs.svg',
