@@ -1399,12 +1399,21 @@ Wikipedia:
     shwiki:
         comment: T51125
         comment_2x: T150618
-        local_tagline: true
-        local_wordmark: true
+        commons_wordmark: 'File:Wikipedia-wordmark-sh.svg'
+        comment_wordmark: T414873
+        commons_tagline: 'File:Wikipedia-tagline-sh.svg'
+        comment_tagline: T414873
+        width_tagline: 120
+        height_tagline: 13
+        variants:
+            shwiki-cyrl:
+                commons_wordmark: 'File:Wikipedia-wordmark-sh-cyrl.svg'
+                commons_tagline: 'File:Wikipedia-tagline-sh-cyrl.svg'
         lang_variants:
-            sh-latn:
-                local_wordmark: true
-                local_tagline: true
+            sh-cyrl:
+                selected_wordmark: shwiki-cyrl
+                selected_tagline: shwiki-cyrl
+        comment_lang_variants: T414873
     shiwiki:
         commons: 'File:Wikipedia-logo-v2-shi.svg'
         local_tagline: true

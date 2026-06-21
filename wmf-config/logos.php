@@ -2622,10 +2622,10 @@ return [
 		'width' => 120,
 		'height' => 27,
 	],
-	'shwiki' => [
+	'shwiki' => [ // T414873
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sh.svg',
-		'width' => 124,
-		'height' => 20,
+		'width' => 120,
+		'height' => 21,
 	],
 	'shiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-shi.svg',
@@ -6577,10 +6577,10 @@ return [
 		'width' => 120,
 		'height' => 12,
 	],
-	'shwiki' => [
+	'shwiki' => [ // T414873
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-sh.svg',
-		'width' => 123,
-		'height' => 11,
+		'width' => 120,
+		'height' => 13,
 	],
 	'shiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-shi.svg',
@@ -8028,16 +8028,16 @@ return [
 
 	// Wikipedia
 	'shwiki' => [
-		'sh-latn' => [
+		'sh-cyrl' => [ // T414873
 			'wordmark' => [
-				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sh-latn.svg',
-				'width' => 120,
-				'height' => 32,
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sh-cyrl.svg',
+				'width' => 124,
+				'height' => 20,
 			],
 			'tagline' => [
-				'src' => '/static/images/mobile/copyright/wikipedia-tagline-sh-latn.svg',
-				'width' => 120,
-				'height' => 18,
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-sh-cyrl.svg',
+				'width' => 123,
+				'height' => 11,
 			],
 		],
 	],
