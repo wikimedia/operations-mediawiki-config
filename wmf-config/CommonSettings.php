@@ -2330,7 +2330,15 @@ if ( $wmgUseConfirmEdit ) {
 
 		# akosiaris 20180306. contact pages in metawiki are being abused by bots
 		if ( $wgDBname === 'metawiki' ) {
-			$wgCaptchaTriggers['contactpage'] = true;
+			$wgCaptchaTriggers['contactpage'] = [
+				'trigger' => true,
+			];
+			if ( $wmgEnableHCaptcha ) {
+				$wgCaptchaTriggers['contactpage']['class'] = 'HCaptcha';
+				$wgCaptchaTriggers['contactpage']['config'] = [
+					'HCaptchaSiteKey' => '4a46bcd0-5afc-4110-b100-56480bb0a326',
+				];
+			}
 		}
 
 		// Prevent the AbuseFilter CAPTCHA from appearing for edit API requests where the interface has no
