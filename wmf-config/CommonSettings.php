@@ -2007,6 +2007,48 @@ if ( $wmgUseConfirmEdit ) {
 	if ( $wmgEnableHCaptcha ) {
 		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
 
+		// $wgHCaptchaSecretKey is set in PrivateSettings.php
+
+		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
+		$wgHCaptchaEnterprise = true;
+		$wgHCaptchaSecureEnclave = true;
+		$wgHCaptchaInvisibleMode = true;
+
+		// Enable collection of risk scores
+		$wgHCaptchaUseRiskScore = true;
+
+		$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
+
+		// Same as default, but be explicit incase default changed in extension
+		$wgHCaptchaSendRemoteIP = false;
+
+		// Threshold of failed SiteVerify calls within a 1 minute period before
+		// hCaptcha is considered unhealthy and failover to FancyCaptcha kicks in.
+		$wgHCaptchaEnterpriseHealthCheckSiteVerifyErrorThreshold = 100;
+
+		// Set the integrity property of the secure-api.js script, for subresource integrity
+		$wgHCaptchaApiUrlIntegrityHash = 'sha384-bdcXEeufpeVbxXnuZzmqvsX4fMar0sPzBVUtq1EjzD8CfZGHh4iBIiISiHcxz/nY';
+		// Route requests to hCaptcha on the client-side through our proxy.
+		$wgHCaptchaApiUrl = wfAppendQuery(
+			// Pin the secure-api.js version to be2fb915d274e0153a2483e68ec5703d502b9d3d
+			'/static/hcaptcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js',
+			[
+				'endpoint' => 'https://hcaptcha.wikimedia.org',
+				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
+				'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
+				'reportapi' => 'https://report-hcaptcha.wikimedia.org',
+				'render' => 'explicit',
+				'sentry' => 'false',
+				'allowpopups' => 'true',
+				// Disable Private Access Tokens, since the pstissuer host
+				// (pst-issuer.hcaptcha.com) can't be proxied
+				'pat' => 'off',
+			]
+		);
+
+		// Remove default hcaptcha.com rules
+		$wgHCaptchaCSPRules = [];
+
 		// Badlogin trigger should be triggered even on non-SUL wikis
 		// where we don't have any CAPTCHAs for edits or account creations
 		if ( $wmgEnableHCaptchaForBadLogin ) {
@@ -2230,48 +2272,6 @@ if ( $wmgUseConfirmEdit ) {
 					],
 				];
 			}
-
-			// $wgHCaptchaSecretKey is set in PrivateSettings.php
-
-			// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
-			$wgHCaptchaEnterprise = true;
-			$wgHCaptchaSecureEnclave = true;
-			$wgHCaptchaInvisibleMode = true;
-
-			// Enable collection of risk scores
-			$wgHCaptchaUseRiskScore = true;
-
-			$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
-
-			// Same as default, but be explicit incase default changed in extension
-			$wgHCaptchaSendRemoteIP = false;
-
-			// Threshold of failed SiteVerify calls within a 1 minute period before
-			// hCaptcha is considered unhealthy and failover to FancyCaptcha kicks in.
-			$wgHCaptchaEnterpriseHealthCheckSiteVerifyErrorThreshold = 100;
-
-			// Set the integrity property of the secure-api.js script, for subresource integrity
-			$wgHCaptchaApiUrlIntegrityHash = 'sha384-bdcXEeufpeVbxXnuZzmqvsX4fMar0sPzBVUtq1EjzD8CfZGHh4iBIiISiHcxz/nY';
-			// Route requests to hCaptcha on the client-side through our proxy.
-			$wgHCaptchaApiUrl = wfAppendQuery(
-			// Pin the secure-api.js version to be2fb915d274e0153a2483e68ec5703d502b9d3d
-				'/static/hcaptcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js',
-				[
-					'endpoint' => 'https://hcaptcha.wikimedia.org',
-					'assethost' => 'https://assets-hcaptcha.wikimedia.org',
-					'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
-					'reportapi' => 'https://report-hcaptcha.wikimedia.org',
-					'render' => 'explicit',
-					'sentry' => 'false',
-					'allowpopups' => 'true',
-					// Disable Private Access Tokens, since the pstissuer host
-					// (pst-issuer.hcaptcha.com) can't be proxied
-					'pat' => 'off',
-				]
-			);
-
-			// Remove default hcaptcha.com rules
-			$wgHCaptchaCSPRules = [];
 
 			$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
 				&$wgHCaptchaEnabledInMobileFrontend,
