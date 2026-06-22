@@ -4901,6 +4901,26 @@ if ( $wmgUseCampaignEvents ) {
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
 }
 
+// T429090, T429244: lazily reject pre-fix parser-cache noreferrer/noopener entries
+// TODO: Remove on 2026-07-23
+$wgHooks['RejectParserCacheValue'][] = static function ( $parserOutput, $wikiPage, $parserOptions ) {
+	global $wgWMCNoReferrerDomains;
+
+	$fixDeploy = '20260622230000'; // deploy time, UTC (TS_MW)
+	if ( !$wgWMCNoReferrerDomains || $parserOutput->getCacheTime() >= $fixDeploy ) {
+		return true;
+	}
+
+	$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+	foreach ( $parserOutput->getExternalLinks() as $url => $unused ) {
+		if ( $urlUtils->matchesDomainList( strtolower( (string)$url ), $wgWMCNoReferrerDomains ) ) {
+			return false;
+		}
+	}
+
+	return true;
+};
+
 // T361643
 if ( $wmgUseAutoModerator ) {
 	wfLoadExtension( 'AutoModerator' );
