@@ -13925,10 +13925,17 @@ return [
 	'abstractwiki' => [ NS_MAIN => [ '', 'Q50081413' ] ],
 ],
 
-// Whether wikis can have abstract articles displayed on them
+// Whether wikis can have abstract articles' previews ddisplayed on them
 'wgWikiLambdaEnableAbstractClientMode' => [
 	'default' => false,
 	'abstractwiki' => true,
+	'testwiki' => true,
+],
+
+// Whether wikis can have abstract articles displayed on them
+'wgWikiLambdaEnableAbstractClientModeIntegration' => [
+	'default' => false,
+	'abstractwiki' => false,
 	'testwiki' => true,
 ],
 
