@@ -13992,6 +13992,8 @@ return [
 // Whether wikis can have abstract articles displayed on them
 'wgWikiLambdaEnableAbstractClientMode' => [
 	'default' => false,
+	'abstractwiki' => true,
+	'testwiki' => true,
 ],
 
 ### Wikistories-related configuration
