@@ -3779,8 +3779,11 @@ return [
 ],
 
 # Captcha ...
-# Cleaned up old commented out wikis. -- hashar 20110930
 # @{
+'wmgUseConfirmEdit' => [
+	'default' => true,
+],
+
 'wmgEnableCaptcha' => [
 	'default' => false,
 	'sul' => true,

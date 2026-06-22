@@ -1998,210 +1998,17 @@ if ( $wgRequestTimeLimit ) {
 }
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
-	$wmgEnableCaptcha = false;
+	$wmgUseConfirmEdit = false;
 }
 
-if ( $wmgEnableCaptcha ) {
+if ( $wmgUseConfirmEdit ) {
 	wfLoadExtension( 'ConfirmEdit' );
-	wfLoadExtension( 'ConfirmEdit/FancyCaptcha' );
-	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
-	$wgCaptchaFileBackend = 'global-multiwrite';
-	$wgCaptchaSecret = $wmgCaptchaSecret;
-	$wgCaptchaDirectoryLevels = 3;
-	$wgCaptchaStorageClass = CaptchaCacheStore::class;
-	$wgCaptchaClass = 'FancyCaptcha';
-	$wgCaptchaIgnoredUrls =
-		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
-		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
-
-	// 'XRumer' spambot
-	// adds non-real links
-	// http://meta.wikimedia.org/wiki/User:Cometstyles/XRumer
-	// http://meta.wikimedia.org/wiki/User:Jorunn/tracks
-	// (added 2008-05-08 -- brion)
-	$wgCaptchaRegexes[] = '/<a +href/i';
 
 	if ( $wmgEnableHCaptcha ) {
 		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
-		// Default SiteKey, intended for use with Special:CreateAccount.
-		// Use the 'config' property in wgCaptchaTriggers to different SiteKeys for
-		// specific actions.
-		$wgHCaptchaSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
-		// SiteKey dedicated to Special:CreateAccount. Identical to the default wgHCaptchaSiteKey,
-		// but named differently here for clarity when used further below.
-		$hCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
-		// SiteKey dedicated to form and API edits. Mobile apps will use a different SiteKey.
-		$hCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
-		// SiteKey that always results in a challenge, for use in AbuseFilter.
-		$hCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
-		// SiteKey for the Wikipedia iOS App
-		$hCaptchaWikipediaIOSSiteKey = '083c7bd2-eef0-423a-98ca-db1e0d4cbbae';
-		// SiteKey for the Wikipedia Android App
-		$hCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
-		// SiteKey for collecting risk scores on block notices (100% passive mode SiteKey).
-		// Commenting out or setting its value to null or to an empty string disables this feature.
-		$wgHCaptchaBlockedIpEditingScoreCollectionSiteKey = '20484466-6d76-4c7a-9648-f730aa6a47ba';
 
-		/**
-		 * If the main request is an API request that edits a page, returns whether
-		 * that interface supports hCaptcha and therefore should require a hCaptcha
-		 * token
-		 */
-		$doesEditApiInterfaceSupportHCaptcha = static function () use (
-			$wgHCaptchaEnabledInMobileFrontend
-		): bool {
-			$request = RequestContext::getMain()->getRequest();
-			// $_REQUEST used intentionally as this is used in places where the
-			// main request will have had the action updated to 'edit'
-			$action = $_REQUEST['action'] ?? '';
-			if ( $action === 'visualeditoredit' ) {
-				return true;
-			} elseif (
-				$action === 'discussiontoolsedit' &&
-				strpos( $request->getHeader( 'User-Agent' ), "WikipediaApp/" ) !== 0
-			) {
-				// Skipped for mobile apps while they do not support hCaptcha for DiscussionTools
-				return true;
-			} else {
-				$editorInterface = $_REQUEST['editorinterface'] ?? '';
-				return $wgHCaptchaEnabledInMobileFrontend
-					&& $editorInterface === 'MobileFrontend-SourceEditor';
-			}
-		};
-
-		// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
-		// mode which challenges only a very few users, it should not disrupt the account creation flow for
-		// nearly all new users.
-		$wgCaptchaTriggers['createaccount'] = [
-			'trigger' => true,
-			// If this is an API context, use the FancyCaptcha class for now, as mobile apps
-			// do not yet support hCaptcha (T379190)
-			'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
-				'FancyCaptcha' :
-				'HCaptcha',
-			'config' => [
-				'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
-				'HCaptchaAdditionalValidSiteKeys' => [
-					$hCaptchaWikipediaIOSSiteKey,
-					$hCaptchaWikipediaAndroidSiteKey,
-				],
-			],
-		];
-		if ( $wmgEnableHCaptchaAccountCreationAPI ) {
-			// Unconditionally enable hCaptcha on web and API requests to support
-			// mobile apps integration testing (T405107)
-			$wgCaptchaTriggers['createaccount'] = [
-				'trigger' => true,
-				'class' => 'HCaptcha',
-				'config' => [
-					'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
-					'HCaptchaAdditionalValidSiteKeys' => [
-						$hCaptchaWikipediaIOSSiteKey,
-						$hCaptchaWikipediaAndroidSiteKey,
-					],
-				],
-			];
-		}
-
-		// T405586 - Enable for the `edit` and `create` ConfirmEdit triggers
-		if ( $wmgEnableHCaptchaEditing ) {
-			$wgCaptchaTriggers['edit'] = [
-				'trigger' => true,
-				'class' => 'HCaptcha',
-				'config' => [
-					'HCaptchaSiteKey' => $hCaptchaEditSiteKey,
-					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
-					'HCaptchaAdditionalValidSiteKeys' => [
-						$hCaptchaWikipediaIOSSiteKey,
-						$hCaptchaWikipediaAndroidSiteKey,
-					],
-				],
-			];
-			$wgCaptchaTriggers['create'] = [
-				'trigger' => true,
-				'class' => 'HCaptcha',
-				'config' => [
-					'HCaptchaSiteKey' => $hCaptchaEditSiteKey,
-					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
-					'HCaptchaAdditionalValidSiteKeys' => [
-						$hCaptchaWikipediaIOSSiteKey,
-						$hCaptchaWikipediaAndroidSiteKey,
-					],
-				],
-			];
-			// Disable the 'addurl' trigger: the 'edit' and 'create' triggers above already cover
-			// every edit with the passive SiteKey, and hCaptcha's risk model decides whether to
-			// issue a visible challenge.
-			$wgCaptchaTriggers['addurl'] = false;
-
-			$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
-				$wmgEmergencyCaptcha,
-				&$wgHCaptchaEnabledInMobileFrontend,
-				$doesEditApiInterfaceSupportHCaptcha
-			) {
-				$services = MediaWikiServices::getInstance();
-				$simpleCaptcha = $services->get( 'ConfirmEditCaptchaFactory' )->getGlobalInstance( $action );
-				// T404204 - Check hCaptcha availability once, reuse below.
-				$isHCaptcha = $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
-				$hCaptchaAvailable = $isHCaptcha
-					&& $services->getService( 'HCaptchaEnterpriseHealthChecker' )->isAvailable();
-				if ( $isHCaptcha && !$hCaptchaAvailable ) {
-					LoggerFactory::getInstance( 'captcha' )->warning(
-						'hCaptcha is unavailable, setting ConfirmEditTriggersCaptcha to false'
-					);
-					$result = false;
-				}
-				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-					$isApprovedInterface = $doesEditApiInterfaceSupportHCaptcha();
-
-					if ( !$isApprovedInterface || !$hCaptchaAvailable ) {
-						// Most API edit interfaces don't support hCaptcha yet.
-						// AbuseFilter's "showcaptcha" consequence can still
-						// override this, but will use FancyCaptcha.
-						$result = false;
-
-						if ( !$hCaptchaAvailable ) {
-							// Reset the flag, so that the frontend code does not
-							// try to load hCaptcha support while the healthcheck
-							// causes it to be disabled in the backend.
-							$wgHCaptchaEnabledInMobileFrontend = false;
-						}
-					}
-				}
-				// Make sure that the wmgEmergencyCaptcha settings is still respected.
-				// Note that if $wmgEmergencyCaptcha is set, and hCaptcha is enabled, API edits from interfaces
-				// without hCaptcha support will not go through.
-				// Note also that the CaptchaClass will be flipped back to FancyCaptcha via the
-				// ConfirmEditCaptchaClass hook if hCaptcha is offline.
-				if ( $wmgEmergencyCaptcha ) {
-					$result = true;
-				}
-			};
-
-			// CommunityRequests intake dispatches an inner action=edit via
-			// DerivativeRequest but does not yet render a captcha widget,
-			// so any triggered captcha is unsolvable. T426897
-			if ( $wmgUseCommunityRequests ) {
-				$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) {
-					if ( !$title || !in_array( $action, [ 'edit', 'create' ], true ) ) {
-						return;
-					}
-					$config = MediaWikiServices::getInstance()->getMainConfig();
-					$titleText = $title->getPrefixedText();
-					$prefixes = [
-						$config->get( 'CommunityRequestsWishPagePrefix' ),
-						$config->get( 'CommunityRequestsFocusAreaPagePrefix' ),
-					];
-					foreach ( $prefixes as $prefix ) {
-						if ( $prefix !== '' && str_starts_with( $titleText, $prefix ) ) {
-							$result = false;
-							return;
-						}
-					}
-				};
-			}
-		}
-
+		// Badlogin trigger should be triggered even on non-SUL wikis
+		// where we don't have any CAPTCHAs for edits or account creations
 		if ( $wmgEnableHCaptchaForBadLogin ) {
 			$wgCaptchaTriggers['badlogin'] = [
 				'trigger' => true,
@@ -2211,129 +2018,330 @@ if ( $wmgEnableCaptcha ) {
 				],
 			];
 		}
+	}
 
-		// Enable hCaptcha for the UploadWizard publish phase.
-		if ( $wmgEnableHCaptchaUploadWizard ) {
-			$wgCaptchaTriggers['uploadwizard-publish'] = [
+	if ( $wmgEnableCaptcha ) {
+		wfLoadExtension( 'ConfirmEdit/FancyCaptcha' );
+		$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
+		$wgCaptchaFileBackend = 'global-multiwrite';
+		$wgCaptchaSecret = $wmgCaptchaSecret;
+		$wgCaptchaDirectoryLevels = 3;
+		$wgCaptchaStorageClass = CaptchaCacheStore::class;
+		$wgCaptchaClass = 'FancyCaptcha';
+		$wgCaptchaIgnoredUrls =
+			'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
+			. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
+
+		// 'XRumer' spambot
+		// adds non-real links
+		// http://meta.wikimedia.org/wiki/User:Cometstyles/XRumer
+		// http://meta.wikimedia.org/wiki/User:Jorunn/tracks
+		// (added 2008-05-08 -- brion)
+		$wgCaptchaRegexes[] = '/<a +href/i';
+
+		if ( $wmgEnableHCaptcha ) {
+			// Default SiteKey, intended for use with Special:CreateAccount.
+			// Use the 'config' property in wgCaptchaTriggers to different SiteKeys for
+			// specific actions.
+			$wgHCaptchaSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
+			// SiteKey dedicated to Special:CreateAccount. Identical to the default wgHCaptchaSiteKey,
+			// but named differently here for clarity when used further below.
+			$hCaptchaAccountCreationSiteKey = 'f1f21d64-6384-4114-b7d0-d9d23e203b4a';
+			// SiteKey dedicated to form and API edits. Mobile apps will use a different SiteKey.
+			$hCaptchaEditSiteKey = '5d0c670e-a5f4-4258-ad16-1f42792c9c62';
+			// SiteKey that always results in a challenge, for use in AbuseFilter.
+			$hCaptchaAlwaysChallengeSiteKey = 'c0343ab6-480e-4d5c-abc0-f86255586384';
+			// SiteKey for the Wikipedia iOS App
+			$hCaptchaWikipediaIOSSiteKey = '083c7bd2-eef0-423a-98ca-db1e0d4cbbae';
+			// SiteKey for the Wikipedia Android App
+			$hCaptchaWikipediaAndroidSiteKey = 'e11698d6-51ca-4980-875c-72309c6678cc';
+			// SiteKey for collecting risk scores on block notices (100% passive mode SiteKey).
+			// Commenting out or setting its value to null or to an empty string disables this feature.
+			$wgHCaptchaBlockedIpEditingScoreCollectionSiteKey = '20484466-6d76-4c7a-9648-f730aa6a47ba';
+
+			/**
+			 * If the main request is an API request that edits a page, returns whether
+			 * that interface supports hCaptcha and therefore should require a hCaptcha
+			 * token
+			 */
+			$doesEditApiInterfaceSupportHCaptcha = static function () use (
+				$wgHCaptchaEnabledInMobileFrontend
+			): bool {
+				$request = RequestContext::getMain()->getRequest();
+				// $_REQUEST used intentionally as this is used in places where the
+				// main request will have had the action updated to 'edit'
+				$action = $_REQUEST['action'] ?? '';
+				if ( $action === 'visualeditoredit' ) {
+					return true;
+				} elseif (
+					$action === 'discussiontoolsedit' &&
+					strpos( $request->getHeader( 'User-Agent' ), "WikipediaApp/" ) !== 0
+				) {
+					// Skipped for mobile apps while they do not support hCaptcha for DiscussionTools
+					return true;
+				} else {
+					$editorInterface = $_REQUEST['editorinterface'] ?? '';
+					return $wgHCaptchaEnabledInMobileFrontend
+						&& $editorInterface === 'MobileFrontend-SourceEditor';
+				}
+			};
+
+			// Explicitly always use hCaptcha for account creation when the hCaptcha is enabled. Because we use a
+			// mode which challenges only a very few users, it should not disrupt the account creation flow for
+			// nearly all new users.
+			$wgCaptchaTriggers['createaccount'] = [
 				'trigger' => true,
-				'class' => 'HCaptcha',
+				// If this is an API context, use the FancyCaptcha class for now, as mobile apps
+				// do not yet support hCaptcha (T379190)
+				'class' => ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ?
+					'FancyCaptcha' :
+					'HCaptcha',
 				'config' => [
-					'HCaptchaSiteKey' => '18bcb68a-96d8-455c-a9cc-1db244a05056',
-					'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
+					'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
+					'HCaptchaAdditionalValidSiteKeys' => [
+						$hCaptchaWikipediaIOSSiteKey,
+						$hCaptchaWikipediaAndroidSiteKey,
+					],
 				],
 			];
-		}
+			if ( $wmgEnableHCaptchaAccountCreationAPI ) {
+				// Unconditionally enable hCaptcha on web and API requests to support
+				// mobile apps integration testing (T405107)
+				$wgCaptchaTriggers['createaccount'] = [
+					'trigger' => true,
+					'class' => 'HCaptcha',
+					'config' => [
+						'HCaptchaSiteKey' => $hCaptchaAccountCreationSiteKey,
+						'HCaptchaAdditionalValidSiteKeys' => [
+							$hCaptchaWikipediaIOSSiteKey,
+							$hCaptchaWikipediaAndroidSiteKey,
+						],
+					],
+				];
+			}
 
-		// $wgHCaptchaSecretKey is set in PrivateSettings.php
+			// T405586 - Enable for the `edit` and `create` ConfirmEdit triggers
+			if ( $wmgEnableHCaptchaEditing ) {
+				$wgCaptchaTriggers['edit'] = [
+					'trigger' => true,
+					'class' => 'HCaptcha',
+					'config' => [
+						'HCaptchaSiteKey' => $hCaptchaEditSiteKey,
+						'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
+						'HCaptchaAdditionalValidSiteKeys' => [
+							$hCaptchaWikipediaIOSSiteKey,
+							$hCaptchaWikipediaAndroidSiteKey,
+						],
+					],
+				];
+				$wgCaptchaTriggers['create'] = [
+					'trigger' => true,
+					'class' => 'HCaptcha',
+					'config' => [
+						'HCaptchaSiteKey' => $hCaptchaEditSiteKey,
+						'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
+						'HCaptchaAdditionalValidSiteKeys' => [
+							$hCaptchaWikipediaIOSSiteKey,
+							$hCaptchaWikipediaAndroidSiteKey,
+						],
+					],
+				];
+				// Disable the 'addurl' trigger: the 'edit' and 'create' triggers above already cover
+				// every edit with the passive SiteKey, and hCaptcha's risk model decides whether to
+				// issue a visible challenge.
+				$wgCaptchaTriggers['addurl'] = false;
 
-		// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
-		$wgHCaptchaEnterprise = true;
-		$wgHCaptchaSecureEnclave = true;
-		$wgHCaptchaInvisibleMode = true;
+				$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
+					$wmgEmergencyCaptcha,
+					&$wgHCaptchaEnabledInMobileFrontend,
+					$doesEditApiInterfaceSupportHCaptcha
+				) {
+					$services = MediaWikiServices::getInstance();
+					$simpleCaptcha = $services->get( 'ConfirmEditCaptchaFactory' )->getGlobalInstance( $action );
+					// T404204 - Check hCaptcha availability once, reuse below.
+					$isHCaptcha = $simpleCaptcha instanceof \MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
+					$hCaptchaAvailable = $isHCaptcha
+						&& $services->getService( 'HCaptchaEnterpriseHealthChecker' )->isAvailable();
+					if ( $isHCaptcha && !$hCaptchaAvailable ) {
+						LoggerFactory::getInstance( 'captcha' )->warning(
+							'hCaptcha is unavailable, setting ConfirmEditTriggersCaptcha to false'
+						);
+						$result = false;
+					}
+					if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+						$isApprovedInterface = $doesEditApiInterfaceSupportHCaptcha();
 
-		// Enable collection of risk scores
-		$wgHCaptchaUseRiskScore = true;
+						if ( !$isApprovedInterface || !$hCaptchaAvailable ) {
+							// Most API edit interfaces don't support hCaptcha yet.
+							// AbuseFilter's "showcaptcha" consequence can still
+							// override this, but will use FancyCaptcha.
+							$result = false;
 
-		$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
+							if ( !$hCaptchaAvailable ) {
+								// Reset the flag, so that the frontend code does not
+								// try to load hCaptcha support while the healthcheck
+								// causes it to be disabled in the backend.
+								$wgHCaptchaEnabledInMobileFrontend = false;
+							}
+						}
+					}
+					// Make sure that the wmgEmergencyCaptcha settings is still respected.
+					// Note that if $wmgEmergencyCaptcha is set, and hCaptcha is enabled, API edits from interfaces
+					// without hCaptcha support will not go through.
+					// Note also that the CaptchaClass will be flipped back to FancyCaptcha via the
+					// ConfirmEditCaptchaClass hook if hCaptcha is offline.
+					if ( $wmgEmergencyCaptcha ) {
+						$result = true;
+					}
+				};
 
-		// Same as default, but be explicit incase default changed in extension
-		$wgHCaptchaSendRemoteIP = false;
+				// CommunityRequests intake dispatches an inner action=edit via
+				// DerivativeRequest but does not yet render a captcha widget,
+				// so any triggered captcha is unsolvable. T426897
+				if ( $wmgUseCommunityRequests ) {
+					$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) {
+						if ( !$title || !in_array( $action, [ 'edit', 'create' ], true ) ) {
+							return;
+						}
+						$config = MediaWikiServices::getInstance()->getMainConfig();
+						$titleText = $title->getPrefixedText();
+						$prefixes = [
+							$config->get( 'CommunityRequestsWishPagePrefix' ),
+							$config->get( 'CommunityRequestsFocusAreaPagePrefix' ),
+						];
+						foreach ( $prefixes as $prefix ) {
+							if ( $prefix !== '' && str_starts_with( $titleText, $prefix ) ) {
+								$result = false;
+								return;
+							}
+						}
+					};
+				}
+			}
 
-		// Threshold of failed SiteVerify calls within a 1 minute period before
-		// hCaptcha is considered unhealthy and failover to FancyCaptcha kicks in.
-		$wgHCaptchaEnterpriseHealthCheckSiteVerifyErrorThreshold = 100;
+			// Enable hCaptcha for the UploadWizard publish phase.
+			if ( $wmgEnableHCaptchaUploadWizard ) {
+				$wgCaptchaTriggers['uploadwizard-publish'] = [
+					'trigger' => true,
+					'class' => 'HCaptcha',
+					'config' => [
+						'HCaptchaSiteKey' => '18bcb68a-96d8-455c-a9cc-1db244a05056',
+						'HCaptchaAlwaysChallengeSiteKey' => $hCaptchaAlwaysChallengeSiteKey,
+					],
+				];
+			}
 
-		// Set the integrity property of the secure-api.js script, for subresource integrity
-		$wgHCaptchaApiUrlIntegrityHash = 'sha384-bdcXEeufpeVbxXnuZzmqvsX4fMar0sPzBVUtq1EjzD8CfZGHh4iBIiISiHcxz/nY';
-		// Route requests to hCaptcha on the client-side through our proxy.
-		$wgHCaptchaApiUrl = wfAppendQuery(
+			// $wgHCaptchaSecretKey is set in PrivateSettings.php
+
+			// Make the hCaptcha invisible and use secure enclave mode (which is an enterprise feature).
+			$wgHCaptchaEnterprise = true;
+			$wgHCaptchaSecureEnclave = true;
+			$wgHCaptchaInvisibleMode = true;
+
+			// Enable collection of risk scores
+			$wgHCaptchaUseRiskScore = true;
+
+			$wgHCaptchaProxy = $wmgLocalServices['urldownloader'];
+
+			// Same as default, but be explicit incase default changed in extension
+			$wgHCaptchaSendRemoteIP = false;
+
+			// Threshold of failed SiteVerify calls within a 1 minute period before
+			// hCaptcha is considered unhealthy and failover to FancyCaptcha kicks in.
+			$wgHCaptchaEnterpriseHealthCheckSiteVerifyErrorThreshold = 100;
+
+			// Set the integrity property of the secure-api.js script, for subresource integrity
+			$wgHCaptchaApiUrlIntegrityHash = 'sha384-bdcXEeufpeVbxXnuZzmqvsX4fMar0sPzBVUtq1EjzD8CfZGHh4iBIiISiHcxz/nY';
+			// Route requests to hCaptcha on the client-side through our proxy.
+			$wgHCaptchaApiUrl = wfAppendQuery(
 			// Pin the secure-api.js version to be2fb915d274e0153a2483e68ec5703d502b9d3d
-			'/static/hcaptcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js',
-			[
-				'endpoint' => 'https://hcaptcha.wikimedia.org',
-				'assethost' => 'https://assets-hcaptcha.wikimedia.org',
-				'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
-				'reportapi' => 'https://report-hcaptcha.wikimedia.org',
-				'render' => 'explicit',
-				'sentry' => 'false',
-				'allowpopups' => 'true',
-				// Disable Private Access Tokens, since the pstissuer host
-				// (pst-issuer.hcaptcha.com) can't be proxied
-				'pat' => 'off',
-			]
-		);
+				'/static/hcaptcha/1/be2fb915d274e0153a2483e68ec5703d502b9d3d/secure-api.js',
+				[
+					'endpoint' => 'https://hcaptcha.wikimedia.org',
+					'assethost' => 'https://assets-hcaptcha.wikimedia.org',
+					'imghost' => 'https://imgs-hcaptcha.wikimedia.org',
+					'reportapi' => 'https://report-hcaptcha.wikimedia.org',
+					'render' => 'explicit',
+					'sentry' => 'false',
+					'allowpopups' => 'true',
+					// Disable Private Access Tokens, since the pstissuer host
+					// (pst-issuer.hcaptcha.com) can't be proxied
+					'pat' => 'off',
+				]
+			);
 
-		// Remove default hcaptcha.com rules
-		$wgHCaptchaCSPRules = [];
+			// Remove default hcaptcha.com rules
+			$wgHCaptchaCSPRules = [];
 
-		$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
-			&$wgHCaptchaEnabledInMobileFrontend,
-			$doesEditApiInterfaceSupportHCaptcha
-		) {
-			if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-				// Default to FancyCaptcha for API edits, since most API edit
-				// interfaces don't support hCaptcha yet (T419572).
-				$className = 'FancyCaptcha';
-
-				// Allow hCaptcha for interfaces which support it. Don't return early
-				// so the T404204 failover check below can still run.
-				if ( $doesEditApiInterfaceSupportHCaptcha() ) {
-					$className = 'HCaptcha';
-				}
-
-				// Let this fall though to the HCaptchaEnterpriseHealthChecker block,
-				// so that we can fall back to FancyCaptcha if HCaptcha is not available.
-			}
-
-			// T404204 - Automatic failover in event of hCaptcha service being unavailable
-			$services = MediaWikiServices::getInstance();
-			if ( $className === 'HCaptcha' && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
-				$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
-				if ( !$healthChecker->isAvailable() ) {
-					LoggerFactory::getInstance( 'captcha' )->warning(
-						'hCaptcha is unavailable, falling back to FancyCaptcha'
-					);
-
-					// Reset the flag, so that the frontend code does not try to load hCaptcha
-					// support while the healthcheck causes it to be disabled in the backend.
-					$wgHCaptchaEnabledInMobileFrontend = false;
+			$wgHooks['ConfirmEditCaptchaClass'][] = static function ( $action, &$className ) use (
+				&$wgHCaptchaEnabledInMobileFrontend,
+				$doesEditApiInterfaceSupportHCaptcha
+			) {
+				if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+					// Default to FancyCaptcha for API edits, since most API edit
+					// interfaces don't support hCaptcha yet (T419572).
 					$className = 'FancyCaptcha';
+
+					// Allow hCaptcha for interfaces which support it. Don't return early
+					// so the T404204 failover check below can still run.
+					if ( $doesEditApiInterfaceSupportHCaptcha() ) {
+						$className = 'HCaptcha';
+					}
+
+					// Let this fall though to the HCaptchaEnterpriseHealthChecker block,
+					// so that we can fall back to FancyCaptcha if HCaptcha is not available.
+				}
+
+				// T404204 - Automatic failover in event of hCaptcha service being unavailable
+				$services = MediaWikiServices::getInstance();
+				if ( $className === 'HCaptcha' && $services->hasService( 'HCaptchaEnterpriseHealthChecker' ) ) {
+					$healthChecker = $services->getService( 'HCaptchaEnterpriseHealthChecker' );
+					if ( !$healthChecker->isAvailable() ) {
+						LoggerFactory::getInstance( 'captcha' )->warning(
+							'hCaptcha is unavailable, falling back to FancyCaptcha'
+						);
+
+						// Reset the flag, so that the frontend code does not try to load hCaptcha
+						// support while the healthcheck causes it to be disabled in the backend.
+						$wgHCaptchaEnabledInMobileFrontend = false;
+						$className = 'FancyCaptcha';
+					}
+				}
+			};
+
+			// Remove sitekey variables only used to populate $wgCaptchaTriggers
+			unset(
+				$hCaptchaAccountCreationSiteKey,
+				$hCaptchaAlwaysChallengeSiteKey,
+				$hCaptchaEditSiteKey,
+				$hCaptchaWikipediaAndroidSiteKey,
+				$hCaptchaWikipediaIOSSiteKey
+			);
+		}
+
+		// For emergencies
+		if ( $wmgEmergencyCaptcha ) {
+			$wgCaptchaTriggers['edit'] = true;
+			$wgCaptchaTriggers['create'] = true;
+		}
+
+		# akosiaris 20180306. contact pages in metawiki are being abused by bots
+		if ( $wgDBname === 'metawiki' ) {
+			$wgCaptchaTriggers['contactpage'] = true;
+		}
+
+		// Prevent the AbuseFilter CAPTCHA from appearing for edit API requests where the interface has no
+		// support for any CAPTCHAs
+		$wgHooks['ConfirmEditBeforeForceShowCaptcha'][] = static function ( $userIdentity, string $action ) {
+			if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+				$action = RequestContext::getMain()->getRequest()->getRawVal( 'action' );
+				if ( $action === 'wbsetclaim' ) {
+					return false;
 				}
 			}
+			return true;
 		};
-
-		// Remove sitekey variables only used to populate $wgCaptchaTriggers
-		unset(
-			$hCaptchaAccountCreationSiteKey,
-			$hCaptchaAlwaysChallengeSiteKey,
-			$hCaptchaEditSiteKey,
-			$hCaptchaWikipediaAndroidSiteKey,
-			$hCaptchaWikipediaIOSSiteKey
-		);
 	}
-
-	// For emergencies
-	if ( $wmgEmergencyCaptcha ) {
-		$wgCaptchaTriggers['edit'] = true;
-		$wgCaptchaTriggers['create'] = true;
-	}
-
-	# akosiaris 20180306. contact pages in metawiki are being abused by bots
-	if ( $wgDBname === 'metawiki' ) {
-		$wgCaptchaTriggers['contactpage'] = true;
-	}
-
-	// Prevent the AbuseFilter CAPTCHA from appearing for edit API requests where the interface has no
-	// support for any CAPTCHAs
-	$wgHooks['ConfirmEditBeforeForceShowCaptcha'][] = static function ( $userIdentity, string $action ) {
-		if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
-			$action = RequestContext::getMain()->getRequest()->getRawVal( 'action' );
-			if ( $action === 'wbsetclaim' ) {
-				return false;
-			}
-		}
-		return true;
-	};
 }
 
 if ( extension_loaded( 'wikidiff2' ) ) {
