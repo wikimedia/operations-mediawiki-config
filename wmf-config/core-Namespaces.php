@@ -2344,7 +2344,6 @@ return [
 	// @}
 
 	// Specials wiki @{
-	'+apiportalwiki' => [ NS_MAIN => true ], // to enable subpage navigation
 	'+arbcom_cswiki' => [ 0 => 1 ],
 	'+arbcom_enwiki' => [ 0 => 1, 8 => 0 ],
 	'+arbcom_nlwiki' => [ 0 => 1 ], // T147186
@@ -5423,16 +5422,6 @@ return [
 'wgNamespaceProtection' => [
 	'default' => [
 		NS_MEDIAWIKI => [ 'editinterface' ],
-	],
-	'+apiportalwiki' => [
-		NS_MAIN	  => [ 'edit-docs' ],
-		NS_PROJECT   => [ 'edit-docs' ],
-		// Local uploads are disabled...
-		NS_FILE	  => [ 'edit-docs' ],
-		NS_TEMPLATE  => [ 'edit-docs' ],
-		NS_HELP	  => [ 'edit-docs' ],
-		NS_CATEGORY  => [ 'edit-docs' ],
-		NS_USER	  => [ 'edit-docs' ], // T259568
 	],
 	'+cswiki' => [
 		NS_FILE      => [ 'editinterface' ],

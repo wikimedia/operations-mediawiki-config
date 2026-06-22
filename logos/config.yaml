@@ -3805,9 +3805,6 @@ Wikivoyage:
         selected_icon: wikimedia
         selected_wordmark: usabilitywiki
         selected_tagline: boardwiki
-    apiportalwiki:
-        no_2x: true
-        selected_icon: outreachwiki
     arbcom_cswiki:
         comment: T151731
         comment_2x: T151731

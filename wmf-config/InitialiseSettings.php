@@ -180,7 +180,6 @@ return [
 	'special' => 'en', # default - overridden below by some wikis
 	'abstractwiki' => 'en',
 	'advisorywiki' => 'en',
-	'apiportalwiki' => 'en',
 	'arbcom_cswiki' => 'cs', // T151731
 	'arbcom_dewiki' => 'de',
 	'arbcom_enwiki' => 'en',
@@ -889,7 +888,6 @@ return [
 	'advisorswiki' => '//advisors.wikimedia.org',
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'amwikimedia' => '//am.wikimedia.org',
-	'apiportalwiki' => '//api.wikimedia.org',
 	'arbcom_cswiki' => '//arbcom-cs.wikipedia.org',
 	'arbcom_dewiki' => '//arbcom-de.wikipedia.org',
 	'arbcom_enwiki' => '//arbcom-en.wikipedia.org',
@@ -1008,7 +1006,6 @@ return [
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'aewikimedia' => 'https://ae.wikimedia.org',
 	'amwikimedia' => 'https://am.wikimedia.org',
-	'apiportalwiki' => 'https://api.wikimedia.org',
 	'arbcom_cswiki' => 'https://arbcom-cs.wikipedia.org',
 	'arbcom_dewiki' => 'https://arbcom-de.wikipedia.org',
 	'arbcom_enwiki' => 'https://arbcom-en.wikipedia.org',
@@ -1141,7 +1138,6 @@ return [
 	'anpwiki' => 'विकिपीडिया',
 	'amwiki' => 'ውክፔዲያ',
 	'altwiki' => 'Википедия',
-	'apiportalwiki' => 'API Portal',
 	'arbcom_cswiki' => 'Arbitrážní výbor', // T151731
 	'arbcom_dewiki' => 'Arbitration Committee',
 	'arbcom_enwiki' => 'Arbitration Committee',
@@ -2155,7 +2151,6 @@ return [
 'wgNoticeProject' => [
 	'abstractwiki' => 'wikimedia',
 	'advisorywiki' => 'wikimedia',
-	'apiportalwiki' => 'wikimedia',
 	'default' => '$site',
 	'commonswiki' => 'commons',
 	'testcommonswiki' => 'commons',
@@ -2421,8 +2416,6 @@ return [
 	'thankyouwiki' => 'vector',
 	// Special cases for wikis that use skins older than Vector.
 	'nostalgiawiki' => 'nostalgia',
-	// Special cases for wikis that use custom skins.
-	'apiportalwiki' => 'wikimediaapiportal', // T259661
 ],
 
 'wgVectorWrapTablesTemporary' => [
@@ -4906,9 +4899,6 @@ return [
 	'+amwikimedia' => [
 		'interface-admin' => 'Քննարկում:Վիքիմեդիա_Հայաստան',
 	],
-	'+apiportalwiki' => [
-		'interface-admin' => 'Talk:Main Page',
-	],
 	'+arwiki' => [
 		'interface-admin' => 'ويكيبيديا:إخطار البيروقراطيين',
 	],
@@ -5558,7 +5548,6 @@ return [
 	'wikivoyage' => '/srv/mediawiki/static/images/sul/wikivoyage.png',
 	'loginwiki' => '/srv/mediawiki/static/images/sul/foundation.png',
 	'brwikimedia' => '/srv/mediawiki/static/images/sul/foundation.png',
-	'apiportalwiki' => '/srv/mediawiki/static/images/sul/foundation-black.png',
 	'wikimaniawiki' => '/srv/mediawiki/static/images/sul/wikimania.png',
 ],
 
@@ -5689,7 +5678,6 @@ return [
 	'lockeddown' => false,
 
 	'abstractwiki' => false,
-	'apiportalwiki' => false, // T260309
 	'ganwiki' => false,
 	'iuwiki' => false,
 	'iuwiktionary' => false,
@@ -5785,7 +5773,6 @@ return [
 
 'wmgUseElectronPdfService' => [
 	'default' => true, // T165954
-	'apiportalwiki' => false, // T264043
 ],
 
 'wmgUseSpamBlacklist' => [
@@ -8136,7 +8123,6 @@ return [
 	// T152882
 	'abstractwiki' => false, // T349408
 	'advisorswiki' => false,
-	'apiportalwiki' => false,
 	'auditcomwiki' => false,
 	'boardgovcomwiki' => false,
 	'boardwiki' => false,
@@ -9838,7 +9824,6 @@ return [
 // T223824
 'wgSkipSkins' => [
 	'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616
-	'apiportalwiki' => [ 'vector', 'vector-2022', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
 'wgRelatedArticlesFooterAllowedSkins' => [
@@ -13567,32 +13552,6 @@ return [
 
 'wmgWikimediaIcon' => [
 	'default' => '/static/images/footer/wikimedia-button.svg',
-],
-
-'wmgUseWikimediaApiPortal' => [
-	'default' => false,
-	'apiportalwiki' => true,
-],
-
-'wgWMAPIPExtraUserMenuSpecialPages' => [
-	// no default, fallback on extension default if extension is
-	// installed, unnecessary otherwise
-	'apiportalwiki' => [ 'AppManagement' ],
-],
-
-'wgWMAPIPSidebarSpecialPages' => [
-	// no default, fallback on extension default if extension is
-	// installed, unnecessary otherwise
-	'apiportalwiki' => [
-		'AppManagement',
-		'Notifications',
-		'Preferences'
-	],
-],
-
-'wmgUseWikimediaApiPortalOAuth' => [
-	'apiportalwiki' => true,
-	'default' => false,
 ],
 
 // T324999

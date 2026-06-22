@@ -4967,14 +4967,6 @@ if ( $wmgUseTheWikipediaLibrary && $wmgUseGlobalPreferences && $wmgUseCentralAut
 	wfLoadExtension( 'TheWikipediaLibrary' );
 }
 
-if ( $wmgUseWikimediaApiPortal ) {
-	wfLoadSkin( 'WikimediaApiPortal' );
-}
-
-if ( $wmgUseWikimediaApiPortalOAuth ) {
-	wfLoadExtension( 'WikimediaApiPortalOAuth' );
-}
-
 if ( $wmgUseGlobalWatchlist ) {
 	wfLoadExtension( 'GlobalWatchlist' );
 }

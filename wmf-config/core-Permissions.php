@@ -3633,9 +3633,6 @@ return [
 		'qa_automation' => [ 'qa_automation' ], // For browser tests, T60375
 	],
 	// ******************************************************************
-	'+apiportalwiki' => [ // T259569
-		'bureaucrat' => [ 'docseditor' ],
-	],
 	'+arbcom_ruwiki' => [
 		'bureaucrat' => [ 'arbcom' ]
 	],
@@ -5148,9 +5145,6 @@ return [
 		],
 	],
 	// ******************************************************************
-	'+apiportalwiki' => [
-		'bureaucrat' => [ 'docseditor' ], // T259569
-	],
 	'+arbcom_ruwiki' => [
 		'bureaucrat' => [ 'arbcom' ]
 	],

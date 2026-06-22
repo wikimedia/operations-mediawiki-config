@@ -875,7 +875,6 @@ return [
 	'abstractwiki' => '/static/images/project-logos/abstractwiki.png', // T411723
 	'advisorswiki' => '/static/images/project-logos/advisorswiki.png', // T202844
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
-	'apiportalwiki' => '/static/images/project-logos/apiportalwiki.png',
 	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png', // T424555
@@ -7951,7 +7950,6 @@ return [
 	// Special wikis
 	'advisorswiki' => '/static/images/icons/advisorswiki.svg',
 	'advisorywiki' => '/static/images/icons/wikimedia.svg',
-	'apiportalwiki' => '/static/images/icons/outreachwiki.svg',
 	'arbcom_cswiki' => '/static/images/icons/arbcom_cswiki.svg',
 	'arbcom_dewiki' => '/static/images/icons/arbcom_dewiki.svg',
 	'arbcom_enwiki' => '/static/images/icons/arbcom_enwiki.svg', // T424555

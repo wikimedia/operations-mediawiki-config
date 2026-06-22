@@ -353,11 +353,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgDefaultUserOptions['search-match-redirect'] = false;
 	}
 
-	if ( $wmgUseWikimediaApiPortalOAuth ) {
-		$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmcloud.org/w/api.php';
-		$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmcloud.org/w/rest.php';
-	}
-
 	// Test of new import source configuration on labs cluster
 	$wgImportSources = [];
 	require_once __DIR__ . '/import.php';

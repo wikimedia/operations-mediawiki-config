@@ -206,7 +206,7 @@ final class WmfManageDblistCli {
 			'wikiversity' => 'enwikiversity',
 			'wikivoyage' => 'enwikivoyage',
 			'wiktionary' => 'enwiktionary',
-			'special' => 'apiportalwiki',
+			'special' => 'metawiki',
 			default => $this->error( 'Unknown family' )
 		};
 		$versions[$dbName] = $versions[$key];

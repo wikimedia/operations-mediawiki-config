@@ -93,7 +93,6 @@ function wmfGetOverrideSettings() {
 			'wiktionary' => 'https://$lang.wiktionary.beta.wmcloud.org',
 
 			// Individual wikis
-			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
 			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
 			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmcloud.org',
@@ -115,7 +114,6 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => 'https://$lang.wikivoyage.beta.wmcloud.org',
 
 			// Individual wikis
-			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
 			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
 			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
@@ -608,7 +606,6 @@ function wmfGetOverrideSettings() {
 				'.wikiversity.beta.wmcloud.org' => 'enwikiversity',
 				'.wikivoyage.beta.wmcloud.org' => 'enwikivoyage',
 				'.wiktionary.beta.wmcloud.org' => 'enwiktionary',
-				'api.wikimedia.beta.wmcloud.org' => 'apiportalwiki',
 				'commons.wikimedia.beta.wmcloud.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmcloud.org' => 'metawiki',
 				'www.wikidata.beta.wmcloud.org' => 'wikidatawiki',
