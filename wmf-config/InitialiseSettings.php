@@ -6625,12 +6625,6 @@ return [
 	'+wikidata' => [
 		'wikibase-mobile-editing-ui', // [Wikidata Omega] 2025-11-12 – MEX / wbui2025
 	],
-	'+testwiki' => [
-		'multimediaviewer-beta', // [Reader Growth] 2026-05-22 - Image carousel (T426799)
-	],
-	'+wikipedia' => [
-		'multimediaviewer-beta', // [Reader Growth] 2026-05-22 - Image carousel (T426799)
-	]
 ],
 
 'wmgUseFileImporter' => [
@@ -6823,14 +6817,7 @@ return [
 'wgMediaViewerMobileCarousel' => [
 	'default' => false,
 	'testwiki' => true,
-	'wikipedia' => true,
-],
-
-// T426799
-'wgMediaViewerBetaFeature' => [
-	'default' => false,
-	'testwiki' => true,
-	'wikipedia' => true,
+	'group1-wikipedia' => true,
 ],
 
 'wmgUseLinter' => [
