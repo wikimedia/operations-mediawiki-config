@@ -438,7 +438,7 @@ return [
 'internalwiki' => [ 'special', 'private', 'closed', 'small', 'group0', 'nowikidatadescriptiontaglines', 'abusefilter-disabled', 'checkuser-disabled' ],
 'iowiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'iowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'isvwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
+'isvwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'iswiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
 'iswikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'iswikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
