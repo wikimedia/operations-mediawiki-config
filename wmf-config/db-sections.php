@@ -82,6 +82,7 @@ $wgLBFactoryConf['sectionsByDB'] = [
 	'iglwiki'           => 's5',
 	'igwikiquote'       => 's5',
 	'igwiktionary'      => 's5',
+	'isvwiki'           => 's5',
 	'jawikivoyage'      => 's5',
 	'jvwikisource'      => 's5',
 	'kaawiktionary'     => 's5',
