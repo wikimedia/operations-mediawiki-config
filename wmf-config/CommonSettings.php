@@ -1187,6 +1187,9 @@ $wgHooks['TitleQuickPermissions'][] = static function ( Title $title, User $user
 	return ( !in_array( $action, [ 'deletedhistory', 'deletedtext' ] ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
 };
 
+// Extension:WikiLambda, so that the opt-in right is assignable to global groups (T422698)
+$wgAvailableRights[] = 'wikilambda-abstract-optin';
+
 // Assign "editautopatrolprotected" to sysops and bots, if autopatroller restriction level is enabled
 if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['sysop']['editautopatrolprotected'] = true;
