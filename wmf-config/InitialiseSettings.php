@@ -3805,10 +3805,7 @@ return [
 	'default' => true, // T426050
 ],
 'wmgEnableHCaptchaForBadLogin' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
-	'small' => true,
+	'default' => true,
 ],
 'wmgEmergencyCaptcha' => [
 	'default' => false,
