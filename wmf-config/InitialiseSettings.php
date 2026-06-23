@@ -6813,8 +6813,8 @@ return [
 // T426799
 'wgMediaViewerMobileCarousel' => [
 	'default' => false,
-	'testwiki' => true,
-	'group1-wikipedia' => true,
+	'wikipedia' => true,
+	'enwiki' => false,
 ],
 
 'wmgUseLinter' => [
