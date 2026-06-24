@@ -12962,6 +12962,16 @@ return [
 ],
 'wmgOATHAuthRequire2FAForAll' => [
 	'default' => false,
+	'arbcom_cswiki' => true,
+	'arbcom_dewiki' => true,
+	'arbcom_enwiki' => true,
+	'arbcom_fiwiki' => true,
+	'arbcom_itwiki' => true,
+	'arbcom_nlwiki' => true,
+	'arbcom_plwiki' => true,
+	'arbcom_ruwiki' => true,
+	'arbcom_zhwiki' => true,
+	'conductwiki' => true,
 ],
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
