@@ -447,6 +447,7 @@ return [
 	'idwikivoyage' => 'Asia/Jakarta', // T381080
 	'id_internalwikimedia' => 'Asia/Jakarta',
 	'iglwiki' => 'Africa/Lagos',
+	'isvwiki' => 'Europe/Prague', // T429935
 	'itwiki' => 'Europe/Berlin',
 	'itwikinews' => 'Europe/Berlin',
 	'itwikiversity' => 'Europe/Berlin',
@@ -1396,6 +1397,7 @@ return [
 	'iswikiquote' => 'Wikivitnun',
 	'iswikisource' => 'Wikiheimild',
 	'iswiktionary' => 'Wikiorðabók',
+	'isvwiki' => 'Vikipedija', // T429935
 	'itwikinews' => 'Wikinotizie',
 	'itwikiversity' => 'Wikiversità',
 	'itwiktionary' => 'Wikizionario',

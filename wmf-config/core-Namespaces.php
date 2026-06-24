@@ -6068,6 +6068,7 @@ return [
 	'iswikiquote' => 'Wikivitnun',
 	'iswikisource' => 'Wikiheimild',
 	'iswiktionary' => 'Wikiorðabók',
+	'isvwiki' => 'Vikipedija', // T429935
 	'itwikinews' => 'Wikinotizie',
 	'itwikiversity' => 'Wikiversità',
 	'itwiktionary' => 'Wikizionario',
@@ -6452,6 +6453,7 @@ return [
 	'hsbwiktionary' => 'Diskusija_k_Wikisłownikej', // T43328
 	'huwikinews' => 'Wikihírek-vita',
 	'iswiktionary' => 'Wikiorðabókarspjall',
+	'isvwiki' => 'Besěda_Vikipedije', // T429935
 	'jamwiki' => 'Wikipidia_diskoshan',
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
 	'kaiwiki' => 'Màatu_mà_Wikipèdiya', // T414237
