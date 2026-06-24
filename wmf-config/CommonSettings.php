@@ -2197,7 +2197,6 @@ if ( $wmgUseConfirmEdit ) {
 				$wgCaptchaTriggers['addurl'] = false;
 
 				$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) use (
-					$wmgEmergencyCaptcha,
 					&$wgHCaptchaEnabledInMobileFrontend,
 					$doesEditApiInterfaceSupportHCaptcha
 				) {
@@ -2229,14 +2228,6 @@ if ( $wmgUseConfirmEdit ) {
 								$wgHCaptchaEnabledInMobileFrontend = false;
 							}
 						}
-					}
-					// Make sure that the wmgEmergencyCaptcha settings is still respected.
-					// Note that if $wmgEmergencyCaptcha is set, and hCaptcha is enabled, API edits from interfaces
-					// without hCaptcha support will not go through.
-					// Note also that the CaptchaClass will be flipped back to FancyCaptcha via the
-					// ConfirmEditCaptchaClass hook if hCaptcha is offline.
-					if ( $wmgEmergencyCaptcha ) {
-						$result = true;
 					}
 				};
 
@@ -2320,12 +2311,6 @@ if ( $wmgUseConfirmEdit ) {
 				$hCaptchaWikipediaAndroidSiteKey,
 				$hCaptchaWikipediaIOSSiteKey
 			);
-		}
-
-		// For emergencies
-		if ( $wmgEmergencyCaptcha ) {
-			$wgCaptchaTriggers['edit'] = true;
-			$wgCaptchaTriggers['create'] = true;
 		}
 
 		# akosiaris 20180306. contact pages in metawiki are being abused by bots

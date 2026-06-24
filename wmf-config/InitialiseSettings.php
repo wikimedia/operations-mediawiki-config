@@ -3800,9 +3800,6 @@ return [
 'wmgEnableHCaptchaForBadLogin' => [
 	'default' => true,
 ],
-'wmgEmergencyCaptcha' => [
-	'default' => false,
-],
 
 'wgSkipCaptchaMinimumEditCount' => [
 	'default' => 10,
