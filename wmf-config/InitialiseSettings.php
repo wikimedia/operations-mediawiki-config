@@ -6814,7 +6814,6 @@ return [
 'wgMediaViewerMobileCarousel' => [
 	'default' => false,
 	'wikipedia' => true,
-	'enwiki' => false,
 ],
 
 'wmgUseLinter' => [
