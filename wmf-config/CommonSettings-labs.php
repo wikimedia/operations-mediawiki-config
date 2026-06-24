@@ -76,7 +76,6 @@ if ( $wmgRealm == 'labs' ) {
 		'wikiversity.beta.wmcloud.org',
 		'wikivoyage.beta.wmcloud.org',
 		'www.wikidata.beta.wmcloud.org',
-		'api.wikimedia.beta.wmcloud.org',
 		'commons.wikimedia.beta.wmcloud.org',
 		'login.wikimedia.beta.wmcloud.org',
 		'meta.wikimedia.beta.wmcloud.org',
