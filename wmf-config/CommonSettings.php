@@ -3178,6 +3178,14 @@ if ( $wmgUseParsoid ) {
 	];
 }
 
+if ( method_exists( \Wikimedia\Parsoid\Parsoid::class, 'version' ) ) {
+	if ( \Composer\Semver\Semver::satisfies(
+		\Wikimedia\Parsoid\Parsoid::version(), "^0.24.0-a12"
+	) ) {
+		$wgReturnExperimentalPFragmentTypes = [ 'HeadingPFragment', 'ExtTagPFragment' ];
+	}
+}
+
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
