@@ -7520,12 +7520,6 @@ return [
 	'enwiki' => false,
 ],
 
-// Temporary while developing feature, T421055
-'wgCiteRemoveSyntheticRefsUnsafe' => [
-	// T427484
-	'default' => true,
-],
-
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 
