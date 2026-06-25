@@ -6930,13 +6930,6 @@ return [
 	'default' => 'Parsoid/Feedback',
 ],
 
-# This depends on Parsoid 0.24.0-a12, which is part of MW core 1.47.0-wmf.8,
-# and the configuration should be removed if either of these is
-# rolled back. (T429822)
-'wgReturnExperimentalPFragmentTypes' => [
-	'default' => [ 'HeadingPFragment', 'ExtTagPFragment' ],
-],
-
 // -------------- Shared Parsoid end --------------
 
 // -------------- VisualEditor start --------------
