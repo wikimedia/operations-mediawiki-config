@@ -6891,6 +6891,23 @@ return [
 	'default' => false, // T363484
 ],
 
+// New more-configurable override mechanism; currently only used for enwiki
+'wgParserMigrationEnableParsoid' => [
+	// By default use the settings below, not this new mechanism.
+	'default' => null,
+	// T430194
+	'enwiki' => [
+		// All mobile views use Parsoid
+		'mobile' => true,
+		'default' => [
+			// Percentage of titles in main article namespace which use Parsoid
+			NS_MAIN => 5,
+			// All other non-mobile views
+			'default' => false,
+		],
+	],
+],
+
 'wgParserMigrationEnableParsoidArticlePages' => [
 	'default' => false,
 	'parsoidrendered' => true,
