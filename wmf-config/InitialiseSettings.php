@@ -6176,6 +6176,8 @@ return [
 'wmgUseFooterLegalContactLink' => [
 	'default' => false,
 	'footer-legal-contact-link' => true,
+	'specieswiki' => true,
+	'wikiversity' => true,
 ],
 
 'wmgUseFooterCodeOfConductLink' => [
