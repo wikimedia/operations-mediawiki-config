@@ -7548,6 +7548,7 @@ return [
 	'etwiki' => true, // T318530
 	'frwiki' => true, // T160609
 	'hewiki' => true, // T161804
+	'hrwiki' => true, // T430182
 	'ilowiki' => true, // T164230
 	'itwiki' => true, // T160932
 	'kowiki' => true, // T193491
