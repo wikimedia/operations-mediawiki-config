@@ -13052,7 +13052,9 @@ return [
 ],
 
 'wgRestAllowCrossOriginCookieAuth' => [
-	// WikimediaApiPortalOAuth makes cross-origin cookie-authenticated requests to meta
+	// FIXME: Is this still needed?
+	// This was added for api.wikimedia.org because the WikimediaApiPortalOAuth extension
+	// made cross-origin cookie-authenticated requests to Meta-Wiki.
 	'metawiki' => true,
 	'default' => false,
 ],
