@@ -12500,7 +12500,6 @@ return [
 ],
 
 // WikidataPageBanner extension (T98029)
-// Please be sure to update wgMinervaEnableSiteNotice when changing.
 'wmgUseWikidataPageBanner' => [
 	'default' => false,
 	'testwiki' => true, // T173388

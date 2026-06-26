@@ -122,39 +122,6 @@ return [
 		],
 	],
 
-	'wgMinervaEnableSiteNotice' => [
-		'default' => false,
-		'closed' => true, // T261357
-		'arwiki' => true,
-		'arywiki' => true, // T391316
-		'arwikisource' => true, // T356460
-		'azwiki' => true, // T352621
-		'bnwiki' => true, // T299529
-		'bnwikibooks' => true, // T319317
-		'bnwikiquote' => true, // T337683
-		'bnwiktionary' => true, // T328630
-		'enwiki' => true, // T416644
-		'kowiki' => true, // T172630
-		'labswiki' => true, // T410702
-		'ptwikinews' => true, // T332813
-		'pawiki' => true, // T366434
-		'shwiki' => true, // T392334
-		// WikidataPageBanner extensions must enable for Minerva support.
-		// (T254391)
-		'testwiki' => true,
-		'test2wiki' => true,
-		'wikivoyage' => true,
-		'wikipedia' => true, // T416644
-		'ruwikimedia' => true,
-		'cawiki' => true,
-		'euwiki' => true,
-		'glwiki' => true,
-		'knwiki' => true, // T346582
-		'trwiki' => true,
-		'wikifunctionswiki' => true, // T345463
-		'newiki' => true, // T347814
-	],
-
 	// T183665
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'default' => true,
