@@ -3986,10 +3986,12 @@ return [
 	'+enwikiversity' => [
 		'sysop' => [
 			'autopatrolled', // T428269
-			'curator', // T113109
 			'flood', // T426882
 		],
-		'bureaucrat' => [ 'import' ], // T294930
+		'bureaucrat' => [
+			'import', // T294930
+			'curator', // T430416
+			],
 	],
 	'+enwikivoyage' => [
 		'sysop' => [
@@ -5498,10 +5500,12 @@ return [
 	'+enwikiversity' => [
 		'sysop' => [
 			'autopatrolled', // T428269
-			'curator', // T113109
 			'flood', // T426882
 		],
-		'bureaucrat' => [ 'import' ], // T294930
+		'bureaucrat' => [
+			'import', // T294930
+			'curator', // T430416
+			],
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
@@ -6313,10 +6317,7 @@ return [
 	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
 	'enwikiquote' => [ 'flood' => [ 'flood' ] ], // T351250
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
-	'enwikiversity' => [
-		'interface-admin' => [ 'interface-admin' ], // T238967
-		'flood' => [ 'flood' ], // T426882
-	],
+	'enwikiversity' => [ 'flood' => [ 'flood' ], ], // T426882
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'frwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
