@@ -1264,6 +1264,11 @@ Wikipedia:
         comment_2x: T150618
         commons_tagline: 'File:Wikipedia-tagline-pl.svg'
         comment_tagline: T258552
+        selected: plwiki-1700000
+        variants:
+            plwiki-1700000: # T430512
+                commons: 'File:Wikipedia-logo-v2-pl.svg'
+                commons_tagline: 'File:Wikipedia-tagline-pl-1700000.svg'
     pmswiki:
         comment_2x: T150618
         local_tagline: true
