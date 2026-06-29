@@ -2056,6 +2056,10 @@ if ( $wmgUseConfirmEdit ) {
 					'HCaptchaSiteKey' => '716e319a-3794-4c7a-a11e-180c2f481cb2',
 				],
 			];
+			// Required for the badlogin hCaptcha to verify correctly on Special:UserLogin:
+			// loginattempt must resolve to the same CAPTCHA class and SiteKey as badlogin.
+			// trigger:false keeps the loginattempt trigger itself disabled.
+			$wgCaptchaTriggers['loginattempt'] = [ 'trigger' => false ] + $wgCaptchaTriggers['badlogin'];
 		}
 	}
 
