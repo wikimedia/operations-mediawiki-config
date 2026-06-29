@@ -3991,7 +3991,7 @@ return [
 		'bureaucrat' => [
 			'import', // T294930
 			'curator', // T430416
-			],
+		],
 	],
 	'+enwikivoyage' => [
 		'sysop' => [
@@ -5505,7 +5505,7 @@ return [
 		'bureaucrat' => [
 			'import', // T294930
 			'curator', // T430416
-			],
+		],
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
