@@ -512,11 +512,18 @@ Wikipedia:
     frwiki:
         commons: 'File:Wikipedia-logo-v2-fr.svg'
         local_wordmark: true
-        comment_wordmark: T249047
+        comment_wordmark: T249047, T430409
         local_tagline: true
-        comment_tagline: T249047
-        comment: T359741
-        comment_2x: T359741
+        comment_tagline: T249047, T430409
+        comment: T359741, T430409
+        comment_2x: T359741, T430409
+        selected: frwiki-25
+        variants:
+            frwiki-25:
+                commons: 'File:WP25 Vector Logo-fr.svg'
+                commons_wordmark: 'File:WP25-wordmark-fr.svg'
+                commons_tagline: 'File:WP25-tagline-fr.svg'
+                commons_icon: 'File:Wikipedia-logo-v2-25-alt.svg'
     furwiki:
         comment: T48589
         comment_2x: T150618

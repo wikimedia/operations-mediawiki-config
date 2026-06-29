@@ -139,7 +139,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki.png',
 	'frrwiki' => '/static/images/project-logos/frrwiki.png',
-	'frwiki' => '/static/images/project-logos/frwiki.png', // T359741
+	'frwiki' => '/static/images/project-logos/frwiki-25.png', // T359741, T430409
 	'furwiki' => '/static/images/project-logos/furwiki.png', // T48589
 	'fywiki' => '/static/images/project-logos/fywiki.png', // T42285
 	'gagwiki' => '/static/images/project-logos/gagwiki.png',
@@ -1052,7 +1052,7 @@ return [
 	'fonwiki' => '/static/images/project-logos/fonwiki-2x.png', // T347939
 	'frpwiki' => '/static/images/project-logos/frpwiki-2x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-2x.png', // T150618
-	'frwiki' => '/static/images/project-logos/frwiki-2x.png', // T359741
+	'frwiki' => '/static/images/project-logos/frwiki-25-2x.png', // T359741, T430409
 	'furwiki' => '/static/images/project-logos/furwiki-2x.png', // T150618
 	'fywiki' => '/static/images/project-logos/fywiki-2x.png', // T150618
 	'gagwiki' => '/static/images/project-logos/gagwiki-2x.png', // T150618
@@ -2014,10 +2014,10 @@ return [
 		'width' => 120,
 		'height' => 18,
 	],
-	'frwiki' => [ // T249047
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
+	'frwiki' => [ // T249047, T430409
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr-25.svg',
 		'width' => 119,
-		'height' => 18,
+		'height' => 19,
 	],
 	'furwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fur.svg',
@@ -5689,10 +5689,10 @@ return [
 		'width' => 101,
 		'height' => 14,
 	],
-	'frwiki' => [ // T249047
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr.svg',
-		'width' => 120,
-		'height' => 13,
+	'frwiki' => [ // T249047, T430409
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr-25.svg',
+		'width' => 126,
+		'height' => 10,
 	],
 	'furwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fur.svg',
@@ -7890,6 +7890,7 @@ return [
 
 	// Wikipedia
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
+	'frwiki' => '/static/images/icons/frwiki-25.svg',
 	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
 
