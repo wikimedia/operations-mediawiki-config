@@ -270,7 +270,7 @@ return [
 	'newwiki' => '/static/images/project-logos/newwiki.png', // T42285
 	'ngwiki' => '/static/images/project-logos/ngwiki.png',
 	'niawiki' => '/static/images/project-logos/niawiki.png',
-	'nlwiki' => '/static/images/project-logos/nlwiki-25.png', // T424519
+	'nlwiki' => '/static/images/project-logos/nlwiki.png',
 	'nnwiki' => '/static/images/project-logos/nnwiki.png',
 	'novwiki' => '/static/images/project-logos/novwiki.png', // T46974
 	'nowiki' => '/static/images/project-logos/nowiki.png',
@@ -1172,7 +1172,7 @@ return [
 	'newiki' => '/static/images/project-logos/newiki-2x.png', // T139240
 	'newwiki' => '/static/images/project-logos/newwiki-2x.png', // T150618
 	'niawiki' => '/static/images/project-logos/niawiki-2x.png',
-	'nlwiki' => '/static/images/project-logos/nlwiki-25-2x.png',
+	'nlwiki' => '/static/images/project-logos/nlwiki-2x.png',
 	'nnwiki' => '/static/images/project-logos/nnwiki-2x.png', // T150618
 	'novwiki' => '/static/images/project-logos/novwiki-2x.png', // T150618
 	'nowiki' => '/static/images/project-logos/nowiki-2x.png', // T150618
@@ -2448,11 +2448,6 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-new.svg',
 		'width' => 120,
 		'height' => 28,
-	],
-	'nlwiki' => [ // T424519
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-nl-25.svg',
-		'width' => 140,
-		'height' => 22,
 	],
 	'novwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-nov.svg',
@@ -6319,10 +6314,10 @@ return [
 		'width' => 110,
 		'height' => 14,
 	],
-	'nlwiki' => [ // T258552, T424519
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nl-25.svg',
-		'width' => 139,
-		'height' => 12,
+	'nlwiki' => [ // T258552
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nl.svg',
+		'width' => 120,
+		'height' => 13,
 	],
 	'nnwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nn.svg',
@@ -7897,7 +7892,6 @@ return [
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
 	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
-	'nlwiki' => '/static/images/icons/nlwiki-25.svg',
 
 	// Wiktionary
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
