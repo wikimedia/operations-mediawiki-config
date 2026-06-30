@@ -783,7 +783,6 @@ return [
 
 'wgGEMentorshipCleanupEnabled' => [
 	'default' => false,
-	'frwiki' => true,
 ],
 
 'wgGEHomepageDefaultVariant' => [
