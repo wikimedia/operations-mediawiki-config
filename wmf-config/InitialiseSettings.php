@@ -3471,6 +3471,7 @@ return [
 	'eswiki' => [ 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ],
 	'eswikibooks' => [ 'w', 'w:en', 'en', 'meta' ], // T20612, T43011
 	'eswikiquote' => [ 'en', 'b', 'm', 'mw', 'n', 's', 'v', 'voy', 'w', 'wikt' ], // T64912
+	'eswikisource' => [ 'w', 'en', 'meta', 'commons', 'mul', 'b' ], // T430537
 	'eswikiversity' => [ 'w:es', 'b', 'meta' ], // T9513, T36715
 	'eswikivoyage' => [ 'w', 'meta', 'commons', 'en', 'de', 'fr', 'it', 'nl', 'pt', 'ru', 'sv' ], // T45863
 	'eswiktionary' => [ 'w', 'w:en', 'w:fr', 'w:de', 'en', 'fr', 'de', ], // T10202
