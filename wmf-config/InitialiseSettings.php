@@ -2480,15 +2480,6 @@ return [
 	'default' => '2',
 ],
 
-'wgVectorNightMode' => [
-	'default' => [
-		'logged_out' => true,
-		'logged_in' => true,
-		// Important to disable this to disable the beta feature
-		'beta' => false,
-	],
-],
-
 // T366334
 'wgVectorFontSizeConfigurableOptions' => [
 	'default' => [
