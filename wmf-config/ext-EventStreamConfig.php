@@ -2604,6 +2604,10 @@ return [
 		// Stream produced by Flink in Kafka Jumbo
 		'webrequest.page_view.dev0' => [
 			'schema_title' => 'development/webrequest_page_view',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
 			'canary_events_enabled' => false,
 		],
 
