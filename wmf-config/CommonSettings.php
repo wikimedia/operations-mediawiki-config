@@ -2658,6 +2658,26 @@ if ( $wmgUseTestKitchen ) {
 wfLoadExtension( 'WikimediaCustomizations' );
 wfLoadExtension( 'WikimediaMessages' );
 
+if ( $wmgUseCentralAuth ) {
+	// Assign REST gateway rate limit classes based on global groups.
+	// The WikimediaCustomization extension adds these to the JWT payload.
+	// Rate limit classes are defined in configuration of the rest-gateway service,
+	// see <https://wikitech.wikimedia.org/wiki/REST_Gateway/Rate_limiting>.
+	// NOTE: Unknown classes will result in restrictive limits!
+	$wgWMCGlobalGroupToRateLimitClass = [
+		// community-approved bots
+		'local-bot' => 'approved-bot', // T415588
+		'global-bot' => 'approved-bot', // T399632
+
+		// trusted users (T419796)
+		'steward' => 'highlimits-user',
+		'global-rollbacker' => 'highlimits-user',
+		'global-sysop' => 'highlimits-user',
+		'apihighlimits-requestor' => 'highlimits-user',
+		'ombuds' => 'highlimits-user', // T430641
+	];
+}
+
 if ( $wgDBname === 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
@@ -4451,24 +4471,6 @@ if ( $wmgUseCentralAuth ) {
 		'bot' => [ 'local-bot' ],
 	];
 
-	// Assign REST gateway rate limit classes based on global groups.
-	// The WikimediaCustomization extension adds these to the JWT payload.
-	// Rate limit classes are defined in configuration of the rest-gateway service,
-	// see <https://wikitech.wikimedia.org/wiki/REST_Gateway/Rate_limiting>.
-	// NOTE: Unknown classes will result in restrictive limits!
-	$wgWMCGlobalGroupToRateLimitClass = [
-		// community-approved bots
-		'local-bot' => 'approved-bot', // T415588
-		'global-bot' => 'approved-bot', // T399632
-
-		// trusted users (T419796)
-		'steward' => 'highlimits-user',
-		'global-rollbacker' => 'highlimits-user',
-		'global-sysop' => 'highlimits-user',
-		'apihighlimits-requestor' => 'highlimits-user',
-		'ombuds' => 'highlimits-user', // T430641
-	];
-
 	// If CentralAuth is installed, then use the centralauth provider to ensure that a new temporary account
 	// uses a unique serial number across all wikis. This will have no effect if
 	// `$wgAutoCreateTempUser['enabled']` is false.
@@ -4502,6 +4504,8 @@ $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'readable-numeric', 'offset
 if ( in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) ) {
 	$wgDefaultUserOptions['checkuser-temporary-accounts-onboarding-dialog-seen'] = true;
 }
+
+// End IP Masking / Temporary accounts
 
 // T39211
 $wgUseCombinedLoginLink = false;
