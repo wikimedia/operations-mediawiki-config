@@ -4508,22 +4508,25 @@ $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'readable-numeric', 'offset
 if ( in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) ) {
 	$wgDefaultUserOptions['checkuser-temporary-accounts-onboarding-dialog-seen'] = true;
 
-	unset( $wgGroupPermissions['temporary-account-viewer'] );
+	$wgHooks['MediaWikiServices'][] = static function () {
+		global $wgGroupPermissions;
+		unset( $wgGroupPermissions['temporary-account-viewer'] );
 
-	// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
-	// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
-	$rightsToRemove = [
-		'checkuser-temporary-account',
-		'checkuser-temporary-account-no-preference',
-		'checkuser-temporary-account-auto-reveal',
-	];
-	foreach ( $wgGroupPermissions as $group => $permissions ) {
-		foreach ( $rightsToRemove as $rightToCheck ) {
-			if ( array_key_exists( $rightToCheck, $permissions ) ) {
-				$wgGroupPermissions[$group][$rightToCheck] = false;
+		// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
+		// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
+		$rightsToRemove = [
+			'checkuser-temporary-account',
+			'checkuser-temporary-account-no-preference',
+			'checkuser-temporary-account-auto-reveal',
+		];
+		foreach ( $wgGroupPermissions as $group => $permissions ) {
+			foreach ( $rightsToRemove as $rightToCheck ) {
+				if ( array_key_exists( $rightToCheck, $permissions ) ) {
+					$wgGroupPermissions[$group][$rightToCheck] = false;
+				}
 			}
 		}
-	}
+	};
 }
 
 // End IP Masking / Temporary accounts
