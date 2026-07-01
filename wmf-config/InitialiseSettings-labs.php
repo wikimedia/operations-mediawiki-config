@@ -1924,11 +1924,16 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
-		'wgRestSandboxSpecs' => [
+		'wgRestExternalModules' => [
 			'default' => [
-				'lift-wing' => [
-					'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-					'name' => 'Lift Wing API',
+				'lift-wing/v1' => [
+					'info' => [
+						'title' => 'Lift Wing API',
+						'description' => "Lift Wing provides production-grade machine learning model inference services for Wikimedia projects. Each model is exposed as a separate endpoint under the common `/service/lw/inference/v1/models/` prefix.\n\nAll endpoints use the KServe v1 REST protocol (`POST` with JSON request/response bodies). See individual model specs for detailed schemas and examples.\n\nFor more information:\n- [Lift Wing API on Wikitech](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/API)\n- [Source code](https://gerrit.wikimedia.org/r/q/project:machinelearning/liftwing/inference-services)\n",
+						'version' => '1.0.0',
+					],
+					'base' => 'https://api.wikimedia.org',
+					'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 				],
 			],
 		],

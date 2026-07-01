@@ -13083,123 +13083,258 @@ return [
 	'default' => false,
 ],
 
-'wgRestSandboxSpecs' => [
+'wgRestExternalModules' => [
 	'default' => [
-		'wmf-restbase' => [
-			'url' => '/api/rest_v1/?spec',
-			'name' => 'Wikimedia REST APIs'
+		'wmf-rest/v1' => [
+			'info' => [
+				'title' => 'Wikimedia REST APIs',
+				'description' => "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint's documentation may detail more specific usage limits.\n- Set a unique `User-Agent` or `Api-User-Agent` header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia's [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint's documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+				'version' => '1.0.0',
+			],
+			'base' => '/api/rest_v1',
+			'spec' => '/api/rest_v1/?spec',
 		],
-		'wmf-restbase-global' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/?spec',
-			'name' => 'Math API'
+		'wmf-math/v1' => [
+			'info' => [
+				'title' => 'Math API',
+				'description' => "This API provides support for rendering mathematical formulae. It allows callers to convert various forms of math input into MathML + SVG or PNG outputs, which can be used across Wikimedia projects.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint's documentation may detail more specific usage limits.\n- Set a unique `User-Agent` or `Api-User-Agent` header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia's [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint's documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1',
+			'spec' => 'https://wikimedia.org/api/rest_v1/?spec',
 		],
 	],
 	'+testwiki' => [
-		'wmf-analytics-commons' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
-			'name' => 'Wikimedia Commons Impact Metrics API',
+		'wmf-analytics-commons/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Commons Impact Metrics API',
+				'description' => "Commons Impact Metrics provides analytical data on the impact of community\ncontributions to Wikimedia Commons, focused on contributions from galleries,\nlibraries, archives, and museums. Data provided by this API is available\nunder the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
 		],
-		'wmf-analytics-editors' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
-			'name' => 'Wikimedia Editor Analytics API',
+		'wmf-analytics-editors/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Editor Analytics API',
+				'description' => "Editor Analytics provides data about the number of editors and newly registered users of Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
 		],
-		'wmf-analytics-editors-by-country' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
-			'name' => 'Wikimedia Geo Analytics API',
+		'wmf-analytics-editors-by-country/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Geo Analytics API',
+				'description' => "Geo Analytics provides data about editors of Wikimedia projects by country.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
 		],
-		'wmf-analytics-edits' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
-			'name' => 'Wikimedia Edit Analytics API',
+		'wmf-analytics-edits/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Edit Analytics API',
+				'description' => "Edit Analytics provides data about the number of edits and edited pages on Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
 		],
-		'wmf-analytics-media-requests' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
-			'name' => 'Wikimedia Media Analytics API',
+		'wmf-analytics-media-requests/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Media Analytics API',
+				'description' => "Media Analytics provides data about requests for media files on Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
 		],
-		'wmf-analytics-page-views' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
-			'name' => 'Wikimedia Page Analytics API',
+		'wmf-analytics-page-views/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Page Analytics API',
+				'description' => "Page Analytics provides data about page views for Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
 		],
-		'wmf-analytics-unique-devices' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
-			'name' => 'Wikimedia Device Analytics API',
+		'wmf-analytics-unique-devices/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Device Analytics API',
+				'description' => "Device Analytics provides data about the number of unique devices that access Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
 		],
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
+		'lift-wing/v1' => [
+			'info' => [
+				'title' => 'Lift Wing API',
+				'description' => "Lift Wing provides production-grade machine learning model inference services for Wikimedia projects. Each model is exposed as a separate endpoint under the common `/service/lw/inference/v1/models/` prefix.\n\nAll endpoints use the KServe v1 REST protocol (`POST` with JSON request/response bodies). See individual model specs for detailed schemas and examples.\n\nFor more information:\n- [Lift Wing API on Wikitech](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/API)\n- [Source code](https://gerrit.wikimedia.org/r/q/project:machinelearning/liftwing/inference-services)\n",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://api.wikimedia.org',
+			'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 		],
 	],
 	'+metawiki' => [
-		'wmf-analytics-commons' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
-			'name' => 'Wikimedia Commons Impact Metrics API',
+		'wmf-analytics-commons/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Commons Impact Metrics API',
+				'description' => "Commons Impact Metrics provides analytical data on the impact of community\ncontributions to Wikimedia Commons, focused on contributions from galleries,\nlibraries, archives, and museums. Data provided by this API is available\nunder the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
 		],
-		'wmf-analytics-editors' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
-			'name' => 'Wikimedia Editor Analytics API',
+		'wmf-analytics-editors/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Editor Analytics API',
+				'description' => "Editor Analytics provides data about the number of editors and newly registered users of Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
 		],
-		'wmf-analytics-editors-by-country' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
-			'name' => 'Wikimedia Geo Analytics API',
+		'wmf-analytics-editors-by-country/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Geo Analytics API',
+				'description' => "Geo Analytics provides data about editors of Wikimedia projects by country.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
 		],
-		'wmf-analytics-edits' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
-			'name' => 'Wikimedia Edit Analytics API',
+		'wmf-analytics-edits/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Edit Analytics API',
+				'description' => "Edit Analytics provides data about the number of edits and edited pages on Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
 		],
-		'wmf-analytics-media-requests' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
-			'name' => 'Wikimedia Media Analytics API',
+		'wmf-analytics-media-requests/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Media Analytics API',
+				'description' => "Media Analytics provides data about requests for media files on Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
 		],
-		'wmf-analytics-page-views' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
-			'name' => 'Wikimedia Page Analytics API',
+		'wmf-analytics-page-views/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Page Analytics API',
+				'description' => "Page Analytics provides data about page views for Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
 		],
-		'wmf-analytics-unique-devices' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
-			'name' => 'Wikimedia Device Analytics API',
+		'wmf-analytics-unique-devices/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Device Analytics API',
+				'description' => "Device Analytics provides data about the number of unique devices that access Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
 		],
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
+		'lift-wing/v1' => [
+			'info' => [
+				'title' => 'Lift Wing API',
+				'description' => "Lift Wing provides production-grade machine learning model inference services for Wikimedia projects. Each model is exposed as a separate endpoint under the common `/service/lw/inference/v1/models/` prefix.\n\nAll endpoints use the KServe v1 REST protocol (`POST` with JSON request/response bodies). See individual model specs for detailed schemas and examples.\n\nFor more information:\n- [Lift Wing API on Wikitech](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/API)\n- [Source code](https://gerrit.wikimedia.org/r/q/project:machinelearning/liftwing/inference-services)\n",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://api.wikimedia.org',
+			'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 		],
 	],
 	'+mediawikiwiki' => [
-		'wmf-analytics-commons' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
-			'name' => 'Wikimedia Commons Impact Metrics API',
+		'wmf-analytics-commons/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Commons Impact Metrics API',
+				'description' => "Commons Impact Metrics provides analytical data on the impact of community\ncontributions to Wikimedia Commons, focused on contributions from galleries,\nlibraries, archives, and museums. Data provided by this API is available\nunder the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
 		],
-		'wmf-analytics-editors' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
-			'name' => 'Wikimedia Editor Analytics API',
+		'wmf-analytics-editors/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Editor Analytics API',
+				'description' => "Editor Analytics provides data about the number of editors and newly registered users of Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/editors/api-spec.json',
 		],
-		'wmf-analytics-editors-by-country' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
-			'name' => 'Wikimedia Geo Analytics API',
+		'wmf-analytics-editors-by-country/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Geo Analytics API',
+				'description' => "Geo Analytics provides data about editors of Wikimedia projects by country.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/editors/by-country/api-spec.json',
 		],
-		'wmf-analytics-edits' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
-			'name' => 'Wikimedia Edit Analytics API',
+		'wmf-analytics-edits/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Edit Analytics API',
+				'description' => "Edit Analytics provides data about the number of edits and edited pages on Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/edits/api-spec.json',
 		],
-		'wmf-analytics-media-requests' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
-			'name' => 'Wikimedia Media Analytics API',
+		'wmf-analytics-media-requests/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Media Analytics API',
+				'description' => "Media Analytics provides data about requests for media files on Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/mediarequests/api-spec.json',
 		],
-		'wmf-analytics-page-views' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
-			'name' => 'Wikimedia Page Analytics API',
+		'wmf-analytics-page-views/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Page Analytics API',
+				'description' => "Page Analytics provides data about page views for Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/pageviews/api-spec.json',
 		],
-		'wmf-analytics-unique-devices' => [
-			'url' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
-			'name' => 'Wikimedia Device Analytics API',
+		'wmf-analytics-unique-devices/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Device Analytics API',
+				'description' => "Device Analytics provides data about the number of unique devices that access Wikimedia projects.\nData provided by this API is available under the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/unique-devices/api-spec.json',
 		],
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
+		'lift-wing/v1' => [
+			'info' => [
+				'title' => 'Lift Wing API',
+				'description' => "Lift Wing provides production-grade machine learning model inference services for Wikimedia projects. Each model is exposed as a separate endpoint under the common `/service/lw/inference/v1/models/` prefix.\n\nAll endpoints use the KServe v1 REST protocol (`POST` with JSON request/response bodies). See individual model specs for detailed schemas and examples.\n\nFor more information:\n- [Lift Wing API on Wikitech](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/API)\n- [Source code](https://gerrit.wikimedia.org/r/q/project:machinelearning/liftwing/inference-services)\n",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://api.wikimedia.org',
+			'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 		],
 	],
 	'+labswiki' => [
-		'lift-wing' => [
-			'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-			'name' => 'Lift Wing API',
+		'lift-wing/v1' => [
+			'info' => [
+				'title' => 'Lift Wing API',
+				'description' => "Lift Wing provides production-grade machine learning model inference services for Wikimedia projects. Each model is exposed as a separate endpoint under the common `/service/lw/inference/v1/models/` prefix.\n\nAll endpoints use the KServe v1 REST protocol (`POST` with JSON request/response bodies). See individual model specs for detailed schemas and examples.\n\nFor more information:\n- [Lift Wing API on Wikitech](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/API)\n- [Source code](https://gerrit.wikimedia.org/r/q/project:machinelearning/liftwing/inference-services)\n",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://api.wikimedia.org',
+			'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 		],
 	],
 ],
