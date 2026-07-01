@@ -2472,14 +2472,6 @@ return [
 	],
 ],
 
-// Skin versions are strings not numbers. See skins/Vector/skin.json.
-'wgVectorDefaultSkinVersionForExistingAccounts' => [
-	'default' => '2',
-],
-'wgVectorDefaultSkinVersionForNewAccounts' => [
-	'default' => '2',
-],
-
 // T366334
 'wgVectorFontSizeConfigurableOptions' => [
 	'default' => [
