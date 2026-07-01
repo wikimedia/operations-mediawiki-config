@@ -4403,8 +4403,12 @@ if ( $wmgUseCheckUser ) {
 			[ '1', [ CUDCOND_USERGROUP, 'steward' ] ],
 			[ '1', [ CUDCOND_USERGROUP, 'suppress' ] ],
 			[ '1', [ CUDCOND_USERGROUP, 'sysop' ] ],
-			[ '1', [ CUDCOND_USERGROUP, 'temporary-account-viewer' ] ],
 		];
+		if ( !in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) ) {
+			$wgConditionalUserOptions['checkuser-userinfocard-enable'][] = [
+				'1', [ CUDCOND_USERGROUP, 'temporary-account-viewer' ],
+			];
+		}
 	}
 
 	// Link to the central Special:CentralAuth page if available (T397690)
@@ -4500,9 +4504,26 @@ $wgAutoCreateTempUser['matchPattern'] = '~2$1';
 // This will have no effect if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['serialMapping'] = [ 'type' => 'readable-numeric', 'offset' => 1500 ];
 
-// Disable temp accounts onboarding dialog for wikis where temporary accounts won't exist
+// Disable temp account patrolling features for wikis where temporary accounts do not exist
 if ( in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) ) {
 	$wgDefaultUserOptions['checkuser-temporary-accounts-onboarding-dialog-seen'] = true;
+
+	unset( $wgGroupPermissions['temporary-account-viewer'] );
+
+	// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
+	// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
+	$rightsToRemove = [
+		'checkuser-temporary-account',
+		'checkuser-temporary-account-no-preference',
+		'checkuser-temporary-account-auto-reveal',
+	];
+	foreach ( $wgGroupPermissions as $group => $permissions ) {
+		foreach ( $rightsToRemove as $rightToCheck ) {
+			if ( array_key_exists( $rightToCheck, $permissions ) ) {
+				$wgGroupPermissions[$group][$rightToCheck] = false;
+			}
+		}
+	}
 }
 
 // End IP Masking / Temporary accounts
@@ -4545,11 +4566,13 @@ if ( $wmgUseIPInfo ) {
 	// admin-only.
 	// Keep full access for autoconfirmed users on wikis where temporary accounts are not known
 	// to avoid disruption.
-	if ( $wgAutoCreateTempUser['known'] ) {
-		if ( $wmgUseCheckUser ) {
-			$wgGroupPermissions['temporary-account-viewer']['ipinfo'] = true;
-			$wgGroupPermissions['temporary-account-viewer']['ipinfo-view-full'] = true;
-		}
+	if (
+		!in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites ) ) &&
+		$wgAutoCreateTempUser['known'] &&
+		$wmgUseCheckUser
+	) {
+		$wgGroupPermissions['temporary-account-viewer']['ipinfo'] = true;
+		$wgGroupPermissions['temporary-account-viewer']['ipinfo-view-full'] = true;
 	} else {
 		$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
 		$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;

@@ -440,7 +440,12 @@ if ( $wmgRealm == 'labs' ) {
 
 		// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
 		// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
-		$rightsToRemoveOnBeta = [ 'checkuser-temporary-account', 'checkuser-temporary-account-no-preference' ];
+		$rightsToRemoveOnBeta = [
+			'checkuser-temporary-account',
+			'checkuser-temporary-account-no-preference',
+			'checkuser-temporary-account-auto-reveal',
+			'checkuser-temporary-account-log',
+		];
 		foreach ( $wgGroupPermissions as $group => $permissions ) {
 			foreach ( $rightsToRemoveOnBeta as $rightToCheck ) {
 				if ( array_key_exists( $rightToCheck, $permissions ) ) {
