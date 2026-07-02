@@ -6965,7 +6965,7 @@ return [
 # and the configuration should be removed if either of these is
 # rolled back. (T429822)
 'wgReturnExperimentalPFragmentTypes' => [
-	'default' => [ 'HeadingPFragment' ],
+	'default' => [ 'HeadingPFragment', 'ExtTagPFragment' ],
 ],
 
 // -------------- Shared Parsoid end --------------
