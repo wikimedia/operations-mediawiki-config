@@ -115,14 +115,14 @@ function wmfGetLoggingConfig(): array {
 		// messages.
 		'wmfconfig' => [
 			'factory' => static function () {
-				return static function ( array $record ) {
+				return static function ( \Monolog\LogRecord $record ): \Monolog\LogRecord {
 					// Like Monolog\Processor\WebProcessor, but without 'unique_id' (per T253677).
 					// And without 'ip' (per T114700).
 					//
 					// Ref <https://github.com/Seldaek/monolog/issues/1470>
 					// Ref <https://github.com/Seldaek/monolog/blob/1.5.0/src/Monolog/Processor/WebProcessor.php>
 					if ( isset( $_SERVER['REQUEST_URI'] ) ) {
-						$record['extra'] += [
+						$record->extra += [
 							'url' => $_SERVER['REQUEST_URI'] ?? null,
 							'http_method' => $_SERVER['REQUEST_METHOD'] ?? null,
 							'server' => $_SERVER['SERVER_NAME'] ?? null,
@@ -131,7 +131,7 @@ function wmfGetLoggingConfig(): array {
 					}
 
 					// T215350: add PHP version information
-					$record['extra']['phpversion'] = phpversion();
+					$record->extra['phpversion'] = phpversion();
 
 					// T255627: add label for the server group the current server belongs to.
 					// This is exposed by Apache configuration defined in Puppet profile::mediawiki::httpd.
@@ -143,7 +143,7 @@ function wmfGetLoggingConfig(): array {
 					// This is not set on CLI (e.g. deploy, maint, snapshot).
 					//
 					// Ref <https://wikitech.wikimedia.org/wiki/MediaWiki_at_WMF#App_servers>
-					$record['extra']['servergroup'] = $_SERVER['SERVERGROUP'] ?? 'other';
+					$record->extra['servergroup'] = $_SERVER['SERVERGROUP'] ?? 'other';
 
 					/**
 					 * Add a "normalized_message" field to log records.
@@ -158,7 +158,7 @@ function wmfGetLoggingConfig(): array {
 					 * We rely on the placeholders not being expanded to deduplicate
 					 * log messages (T349086).
 					 */
-					$nm = $record['message'];
+					$nm = $record->message;
 					if ( strpos( $nm, '<a href=' ) !== false ) {
 						// Remove documentation anchor tags
 						$nm = preg_replace(
@@ -168,11 +168,11 @@ function wmfGetLoggingConfig(): array {
 						);
 					}
 					// Trim to <= 255 chars
-					$record['extra']['normalized_message'] = substr( $nm, 0, 255 );
+					$record->extra['normalized_message'] = substr( $nm, 0, 255 );
 
 					// Adds the database shard name (e.g. s1, s2, ...)
 					global $wgLBFactoryConf, $wgDBname;
-					$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 's3';
+					$record->extra['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 's3';
 
 					return $record;
 				};
