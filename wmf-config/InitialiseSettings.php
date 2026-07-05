@@ -11911,7 +11911,11 @@ return [
 		104, /* Page */ // T423198
 		106, /* Portal */ // T423198
 		114 /* Translation */ // T423198
-	]
+	],
+	'ukwikisource' => [
+		NS_MAIN,
+		102, /* Author */ // T431202
+	],
 ],
 'wgPageImagesLeadSectionOnly' => [
 	// T166251 & T166493
