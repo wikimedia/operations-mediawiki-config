@@ -9880,7 +9880,7 @@ return [
 ],
 
 'wmgUseWikimediaAntiAbuse' => [
-	'default' => false, // T431023
+	'default' => true, // T431023
 ],
 
 'wmgUseWikimediaEvents' => [
