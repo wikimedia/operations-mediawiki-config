@@ -842,6 +842,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgUseWikimediaAntiAbuse' => [
+			'default' => true,
+		],
+
 		'wgIPInfoGeoLite2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
