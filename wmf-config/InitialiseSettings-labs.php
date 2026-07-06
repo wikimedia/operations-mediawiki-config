@@ -2433,5 +2433,10 @@ function wmfGetOverrideSettings() {
 		'wgTestKitchenOverriddenExperimentEventIntakeServiceUrl' => [
 			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
 		],
+
+		'-wgEnableWatchstarPopover' => [
+			'default' => false,
+			'enwiki' => true, // T431355
+		],
 	];
 } # wmfGetOverrideSettings()

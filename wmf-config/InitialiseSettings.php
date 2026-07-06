@@ -14326,4 +14326,8 @@ return [
 	'testwiki' => true,
 ],
 
+'wgEnableWatchstarPopover' => [
+	'default' => false,
+],
+
 ];
