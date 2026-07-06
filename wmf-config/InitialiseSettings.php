@@ -9868,6 +9868,10 @@ return [
 	'wikivoyage' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
+'wmgUseWikimediaAntiAbuse' => [
+	'default' => false, // T431023
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721

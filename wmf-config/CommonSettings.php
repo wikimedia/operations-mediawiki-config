@@ -4426,6 +4426,10 @@ if ( $wmgUseIPReputation ) {
 	$wgIPReputationIPoidConnectTimeoutSeconds = 0.2;
 }
 
+if ( $wmgUseWikimediaAntiAbuse ) {
+	wfLoadExtension( 'WikimediaAntiAbuse' );
+}
+
 // IP Masking / Temporary accounts
 
 // Unless otherwise specified, temporary accounts are disabled and not known about.
