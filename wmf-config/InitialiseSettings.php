@@ -12343,6 +12343,9 @@ return [
 	'tenwiki' => true,
 	'testwiki' => true,
 	// wikipedia (group1)
+	'cawiki' => true,
+	'hewiki' => true,
+	'itwiki' => true,
 	'test2wiki' => true,
 ],
 
