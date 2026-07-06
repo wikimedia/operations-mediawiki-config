@@ -1291,7 +1291,7 @@ return [
 	'etwiktionary' => 'Vikisõnastik',
 	'euwikisource' => 'Wikiteka',
 	'execwiki' => 'Wikimedia Executive',
-	'extwiki' => 'Güiquipeya',
+	'extwiki' => 'Güiquipedia', // T431334
 	'fawiki' => 'ویکی‌پدیا',
 	'fawikibooks' => 'ویکی‌کتاب', // T60655
 	'fawikinews' => 'ویکی‌خبر',
