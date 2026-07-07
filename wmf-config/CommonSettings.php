@@ -4944,6 +4944,9 @@ $parsoidDir = "$IP/vendor/wikimedia/parsoid";
 $wgParsoidSettings = [
 	'useSelser' => true,
 	'linting' => true,
+	'wt2htmlLimits' => [
+		'image' => 1250,
+	],
 ];
 
 if ( ClusterConfig::getInstance()->isParsoid() ) {
