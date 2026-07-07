@@ -11581,6 +11581,13 @@ return [
 	'default' => '/evt-103e/v2/events?hasty=true',
 ],
 
+// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/TestKitchen/+/1230385 introduces
+// independent URLs for instrument and logged-in experiment events. Route logged-in
+// experiment events to the ins-502b intake endpoint to mitigate event loss. Also T431257.
+'wgTestKitchenLoggedInExperimentEventIntakeServiceUrl' => [
+	'default' => '/ins-502b/v2/events?hasty=true',
+],
+
 // See T412863
 'wgTestKitchenInstrumentEventIntakeServiceUrl' => [
 	'default' => '/ins-502b/v2/events?hasty=true',

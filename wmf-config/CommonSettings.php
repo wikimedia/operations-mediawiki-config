@@ -2647,11 +2647,6 @@ if ( $wmgUseTestKitchen ) {
 	wfLoadExtension( 'TestKitchen' );
 
 	$wgTestKitchenInstrumentConfiguratorBaseUrl = $wmgLocalServices['test-kitchen'];
-
-	// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/TestKitchen/+/1230385 introduces
-	// independent URLs for instrument and logged-in experiment events. Route logged-in
-	// experiment events to the ins-502b intake endpoint to mitigate event loss.
-	$wgTestKitchenLoggedInExperimentEventIntakeServiceUrl = '/ins-502b/v2/events?hasty=true';
 }
 
 // Load custom configuration and overrides used by Wikimedia sites
