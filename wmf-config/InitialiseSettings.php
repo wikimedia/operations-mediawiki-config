@@ -9751,7 +9751,7 @@ return [
 	'trwiki' => true,
 	'bnwiki' => true,
 	'azwiki' => true,
-	// T423042
+	// T431316
 	'enwiki' => true,
 ],
 
@@ -9759,8 +9759,6 @@ return [
 	'default' => false,
 	// T424075
 	'testwiki' => true,
-	// T424008
-	'enwiki' => true,
 ],
 
 'wgReportIncidentEnableDirectReporting' => [
