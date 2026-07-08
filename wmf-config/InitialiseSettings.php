@@ -2472,6 +2472,15 @@ return [
 	],
 ],
 
+'wgEnableSectionShare' => [
+	'default' => false,
+	// IMPORTANT: Please do not enable any new exceptions until T431514 has been resolved.
+	// It is unclear how this feature impacts user retention and engagement and we would
+	// like more data before rolling out further.
+	// Please do not backport any changes until that ticket is resolved.
+	'fawiki' => true,
+],
+
 // T366334
 'wgVectorFontSizeConfigurableOptions' => [
 	'default' => [
