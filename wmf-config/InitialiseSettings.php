@@ -14050,6 +14050,8 @@ return [
 	'frwiki' => true, // T426871
 	'ptwiki' => true, // T426871
 	'trwiki' => true, // T426871
+	// phase 3
+	'itwiki' => true, // T431540
 ],
 
 'wgArticleGuidanceExperimentName' => [
