@@ -2669,6 +2669,80 @@ return [
 			],
 		],
 
+		// The streams below are the production replacements of the
+		// webrequest.*.dev0 streams above, using the traffic/* schemas.
+		// The dev0 streams will be removed once the replacement is
+		// completed in production.
+		// https://phabricator.wikimedia.org/T430675
+
+		// Webrequests served by the WMF frontend CDN (text traffic only).
+		// The webrequest_frontend_text topic is produced outside of the Event
+		// Platform, so canary events are disabled. We define this stream so
+		// the topic can be consumed from Flink in Kafka Jumbo.
+		'webrequest.frontend.text.v1' => [
+			'schema_title' => 'traffic/webrequest',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'webrequest_frontend_text',
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// webrequest is ingested into Hadoop through another process
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Page views refined from webrequest, produced by the
+		// webrequest-pageview Flink job in Kafka Jumbo.
+		'pageview.v1' => [
+			'schema_title' => 'traffic/pageview',
+			'destination_event_service' => 'eventgate-analytics',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+		],
+
+		// Page view baseline statistics (per-page hourly mean/stddev),
+		// computed in batch and loaded into a log-compacted topic in Kafka
+		// Jumbo. Used by the pageview-trending-relative pipeline. The topic
+		// has compaction enabled, so only one event per key is retained.
+		'pageview.stats.v1' => [
+			'schema_title' => 'traffic/pageview_stats',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => false,
+			'consumers' => [
+				// This data is batch-loaded from Hive into Kafka, so it must
+				// not be ingested back into Hadoop/Hive.
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Relative-trending signal per page, produced by the
+		// pageview-trending-relative Flink job.
+		'pageview.trending.relative.v1' => [
+			'schema_title' => 'traffic/pageview_trending_relative',
+			'destination_event_service' => 'eventgate-analytics',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+		],
+
 		// page_html_content_change is the mediawiki.page_change stream
 		// enriched with with latest revision rendering HTML and
 		// diff to parent revision rendering HTML.
