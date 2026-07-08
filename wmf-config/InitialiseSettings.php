@@ -511,6 +511,7 @@ return [
 	'mkwiktionary' => 'Europe/Berlin',
 	'minwiki' => 'Asia/Jakarta',
 	'minwikibooks' => 'Asia/Jakarta', // T395499
+	'minwikiquote' => 'Asia/Jakarta', // T429943
 	'minwikisource' => 'Asia/Jakarta', // T408343
 	'minwiktionary' => 'Asia/Jakarta',
 	'mniwiki' => 'Asia/Kolkata',
@@ -1479,6 +1480,7 @@ return [
 	'metawiki' => 'Meta-Wiki',
 	'mhrwiki' => 'Википедий',
 	'minwikibooks' => 'Wikibuku', // T395499
+	'minwikiquote' => 'Wikipituah', // T429943
 	'minwikisource' => 'Wikibasurek', // T408343
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',

@@ -6152,6 +6152,7 @@ return [
 	'metawiki' => 'Meta',
 	'mhrwiki' => 'Википедий',
 	'minwikibooks' => 'Wikibuku', // T395499
+	'minwikiquote' => 'Wikipituah', // T429943
 	'minwikisource' => 'Wikibasurek', // T408343
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
@@ -6476,6 +6477,7 @@ return [
 	'lvwiki' => 'Vikipēdijas_diskusija',
 	'lvwiktionary' => 'Vikivārdnīcas_diskusija', // T170065
 	'minwikibooks' => 'Rundiang_Wikibuku', // T395452
+	'minwikiquote' => 'Rundiang_Wikipituah', // T429943
 	'minwikisource' => 'Rundiang_Wikibasurek', // T395452
 	'madwikisource' => 'Parembhâghân_Wikigherbhung', // T391767
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',

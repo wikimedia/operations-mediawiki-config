@@ -2658,6 +2658,12 @@ Wikiquote:
     kuwikiquote:
         no_2x: true
         local_wordmark: true
+    minwikiquote:
+        commons: File:Wikiquote-logo-min.svg
+        commons_wordmark: File:Wikiquote-wordmark-min.svg
+        comment_wordmark: T429943
+        comment: T429943
+        comment_2x: T429943
     mlwikiquote:
         comment: T44771
         comment_2x: T150618
