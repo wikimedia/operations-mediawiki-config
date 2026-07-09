@@ -690,6 +690,12 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
+		// T18691
+		'wgEnableSectionShare' => [
+			'default' => false,
+			'fawiki' => true,
+		],
+
 		'wmgUseReportIncident' => [
 			'default' => true,
 			'loginwiki' => false,
