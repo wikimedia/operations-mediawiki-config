@@ -4719,6 +4719,11 @@ if ( $wmgUseWikiLambda ) {
 		$wgWikiLambdaPersistBackendCache = true;
 	}
 
+	if ( $wgWikiLambdaEnableAbstractMode ) {
+		// (T430898) Don't run our jobs too quickly, they'll collide and error
+		$wgJobBackoffThrottling['cacheAbstractContentFragment'] = 1;
+	}
+
 	// Temporary config for the automatic Abstract Article generation script
 	$wgWikiLambdaAbstractWikiArticleStoreTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];
 	$wgWikiLambdaAbstractWikiArticleStoreLangs = [ 'en', 'fr', 'de', 'es' ];
