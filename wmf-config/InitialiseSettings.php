@@ -13635,6 +13635,7 @@ return [
 	'officewiki' => true, // T318592
 	'metawiki' => true, // T322745
 	'brwikimedia' => true, // T376747
+	'cowikimedia' => true, // T431765
 	'uawikimedia' => true, // T376695
 	'wikidatawiki' => true, // T375411
 	'mswiktionary' => true, // T386538
