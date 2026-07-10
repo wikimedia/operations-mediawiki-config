@@ -8399,7 +8399,6 @@ return [
 	'default' => 'visual',
 	// T361134
 	'visualeditor-nondefault' => 'source',
-	'enwiki' => 'source',
 ],
 
 'wgExtraGenderNamespaces' => [
