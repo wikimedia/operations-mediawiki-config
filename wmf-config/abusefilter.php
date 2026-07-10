@@ -297,6 +297,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+		$wgAbuseFilterActions['block'] = true; // T431830
 		break;
 	case 'hrwiki':
 		$wgAbuseFilterActions['block'] = true; // T270997
