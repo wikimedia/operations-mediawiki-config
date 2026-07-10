@@ -74,7 +74,6 @@ $common = [
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
 	'data-gateway' => 'http://localhost:6038',
-	'ipoid' => 'http://localhost:6035',
 	'opensearch_ipoid' => 'http://localhost:6045',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
