@@ -2280,6 +2280,11 @@ function wmfGetOverrideSettings() {
 		'wgChartProgressiveEnhancement' => [
 			'default' => true,
 		],
+		// T431990
+		'wgChartWizardEnabled' => [
+			'default' => false,
+			'commonswiki' => true,
+		],
 		// T372527
 		'-wmgUseCommunityRequests' => [
 			'default' => false,

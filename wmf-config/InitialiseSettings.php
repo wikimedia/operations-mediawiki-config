@@ -13885,6 +13885,11 @@ return [
 	'default' => true,
 ],
 
+// T431990
+'wgChartWizardEnabled' => [
+	'default' => false,
+],
+
 // T388434 - low-level json transform support
 'wgJsonConfigTransformsEnabled' => [
 	'default' => true,
