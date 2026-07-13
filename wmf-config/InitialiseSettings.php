@@ -346,6 +346,7 @@ return [
 	'cawikinews' => 'Europe/Berlin',
 	'ckbwiktionary' => 'Asia/Baghdad',
 	'cnwikimedia' => 'Asia/Shanghai', // T98676
+	'cowikimedia' => 'America/Bogota', // T431965
 	'cswiki' => 'Europe/Prague', // T73902
 	'cswikinews' => 'Europe/Prague', // T73902
 	'cswikivoyage' => 'Europe/Prague',
