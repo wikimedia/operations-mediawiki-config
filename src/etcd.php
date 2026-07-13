@@ -94,6 +94,7 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'es7' => [ 'cluster31', 'cluster33' ],
 		'x1' => [ 'extension1' ],
 		'x3' => [ 'extension3' ],
+		'x4' => [ 'extension4' ],
 	];
 	$wmgPCServers = [];
 	$wmgMainStashServers = [];
