@@ -354,7 +354,7 @@ return [
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tgwiki' => '/static/images/project-logos/tgwiki-temp25.png', // T48589, T415307
-	'thwiki' => '/static/images/project-logos/thwiki.png', // T341407
+	'thwiki' => '/static/images/project-logos/thwiki-temp25.png', // T341407, T431094
 	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
 	'tigwiki' => '/static/images/project-logos/tigwiki.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
@@ -1254,7 +1254,7 @@ return [
 	'tetwiki' => '/static/images/project-logos/tetwiki-2x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-temp25-2x.png', // T150618, T415307
-	'thwiki' => '/static/images/project-logos/thwiki-2x.png', // T150618
+	'thwiki' => '/static/images/project-logos/thwiki-temp25-2x.png', // T150618
 	'tiwiki' => '/static/images/project-logos/tiwiki-2x.png', // T249451
 	'tigwiki' => '/static/images/project-logos/tigwiki-2x.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki-2x.png', // T150618
@@ -2721,10 +2721,10 @@ return [
 		'width' => 139,
 		'height' => 21,
 	],
-	'thwiki' => [ // T341407
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-th.svg',
-		'width' => 103,
-		'height' => 27,
+	'thwiki' => [ // T341407, T431094
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-th-temp25.svg',
+		'width' => 123,
+		'height' => 29,
 	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ti.svg',
@@ -6741,10 +6741,10 @@ return [
 		'width' => 135,
 		'height' => 9,
 	],
-	'thwiki' => [ // T341407
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-th.svg',
-		'width' => 100,
-		'height' => 18,
+	'thwiki' => [ // T341407, T431094
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-th-temp25.svg',
+		'width' => 123,
+		'height' => 14,
 	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ti.svg',
@@ -7900,6 +7900,7 @@ return [
 	'frwiki' => '/static/images/icons/frwiki-25.svg',
 	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
+	'thwiki' => '/static/images/icons/thwiki-temp25.svg',
 
 	// Wiktionary
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
