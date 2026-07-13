@@ -5902,7 +5902,7 @@ return [
 	],
 	'+outreachwiki' => [
 		'bureaucrat' => [
-			'sysop', 'autopatrolled', 'import',
+			'sysop', 'import',
 		],
 	],
 	'+pawiki' => [
