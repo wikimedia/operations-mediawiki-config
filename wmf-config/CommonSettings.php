@@ -4720,6 +4720,8 @@ if ( $wmgUseGrowthExperiments ) {
 if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
+	$wgVirtualDomainsMapping['virtual-wikifunctions-usage'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+
 	if ( $wgWikiLambdaEnableRepoMode ) {
 		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
