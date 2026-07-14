@@ -3402,6 +3402,9 @@ if ( $wmgEnablePageTriage ) {
 # Avoid excessive CPU due to cache misses from rapid invalidations
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50; // pages/sec per runner
 
+// (T430898) Don't run Abstract Wikipedia fragment re-generation jobs too quickly, they'll collide and error
+$wgJobBackoffThrottling['cacheAbstractContentFragment'] = 1;
+
 # Job types to exclude from the default queue processing. Aka the very long
 # one. That will exclude the types from any queries such as nextJobDB.php
 # We have to set this for any project cause we usually run PHP script against
@@ -4721,11 +4724,6 @@ if ( $wmgUseWikiLambda ) {
 		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 		$wgWikiLambdaClientWikis = WmfConfig::readDbListFile( 'wikifunctionsclient' );
 		$wgWikiLambdaPersistBackendCache = true;
-	}
-
-	if ( $wgWikiLambdaEnableAbstractMode ) {
-		// (T430898) Don't run our jobs too quickly, they'll collide and error
-		$wgJobBackoffThrottling['cacheAbstractContentFragment'] = 1;
 	}
 
 	// Temporary config for the automatic Abstract Article generation script
