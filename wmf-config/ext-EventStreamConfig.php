@@ -2710,6 +2710,12 @@ return [
 				'page_id' => 'page_id',
 			],
 			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
 		],
 
 		// Page view baseline statistics (per-page hourly mean/stddev),
