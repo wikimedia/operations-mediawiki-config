@@ -3226,11 +3226,14 @@ if ( $wmgUseMath ) {
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 	// so use a hook
 	$wgExtensionFunctions[] = static function () {
-		global $wgServerName, $wgMathFullRestbaseURL, $wmgRealm;
+		global $wgServerName, $wgMathFullRestbaseURL, $wmgRealm,
+			$wgMathInternalRestbaseURL;
 
 		$wgMathFullRestbaseURL = $wmgRealm === 'production'
 			? 'https://wikimedia.org/api/rest_'  // T136205
 			: "//$wgServerName/api/rest_";
+
+		$wgMathInternalRestbaseURL = $wmgLocalServices['restbase'] . "/$wgServerName/";
 	};
 }
 
