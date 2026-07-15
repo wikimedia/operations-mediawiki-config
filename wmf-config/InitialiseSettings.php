@@ -5689,9 +5689,9 @@ return [
 	// Phase 1: group0 (via math-legacy-mathoid.dbexpr) - DONE
 	// Phase 2: Everything else (via default) - DONE
 	// Phase 3: Wikibooks (via math-legacy-mathoid.dbexpr) - DONE
+	// Phase 4: Wikisource (via math-legacy-mathoid.dbexpr) - DONE
 	'default' => 'mathjax',
 
-	// Phase 4: Wikisource - TODO
 	// Phase 5: Wikipedia sans large - TODO
 	//
 	// Use a dblist to resolve ambiguity between group0 and wikipeida.
