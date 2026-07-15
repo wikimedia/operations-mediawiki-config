@@ -5719,8 +5719,7 @@ return [
 ],
 
 'wgMathValidModes' => [
-	'default' => [ 'source', 'mathml', 'native', 'mathjax' ],
-	'wikifunctionswiki' => [ 'source', 'native', 'mathjax' ],
+	'default' => [ 'source', 'native', 'mathjax' ],
 ],
 
 // T413973: Rollout new mathml+mathjax
