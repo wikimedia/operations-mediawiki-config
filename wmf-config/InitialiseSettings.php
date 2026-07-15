@@ -5735,40 +5735,8 @@ return [
 	// Phase 3: Wikibooks - DONE
 	// Phase 4: Wikisource - DONE
 	// Phase 5: most Wikipedias (small, medium, and canary) - DONE
+	// Phase 6: Wikipedia large - DONE
 	'default' => 'mathjax',
-	// group1 "canary" wikis that are in large.dblist
-	'cawiki' => 'mathjax',
-	'hewiki' => 'mathjax',
-	'itwiki' => 'mathjax',
-
-	// Phase 6: Wikipedia large (sans canary) - TODO
-	'arwiki' => 'mathml',
-	'cebwiki' => 'mathml',
-	'cswiki' => 'mathml',
-	'dewiki' => 'mathml',
-	'enwiki' => 'mathml',
-	'eswiki' => 'mathml',
-	'fawiki' => 'mathml',
-	'fiwiki' => 'mathml',
-	'frwiki' => 'mathml',
-	'huwiki' => 'mathml',
-	'idwiki' => 'mathml',
-	'jawiki' => 'mathml',
-	'kowiki' => 'mathml',
-	'nlwiki' => 'mathml',
-	'nowiki' => 'mathml',
-	'plwiki' => 'mathml',
-	'ptwiki' => 'mathml',
-	'rowiki' => 'mathml',
-	'ruwiki' => 'mathml',
-	'shwiki' => 'mathml',
-	'srwiki' => 'mathml',
-	'svwiki' => 'mathml',
-	'trwiki' => 'mathml',
-	'ukwiki' => 'mathml',
-	'viwiki' => 'mathml',
-	'warwiki' => 'mathml',
-	'zhwiki' => 'mathml',
 ],
 
 'wgMaxExecutionTimeForExpensiveQueries' => [
