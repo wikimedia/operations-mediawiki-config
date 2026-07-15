@@ -4698,7 +4698,11 @@ if ( $wmgUseGrowthExperiments ) {
 if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
+	// Configure the shared DB table so all wikis read and write to the same place.
 	$wgVirtualDomainsMapping['virtual-wikifunctions-usage'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+
+	// Configure the CentralAuth wiki to blame for RecentChanges edits, if no local account.
+	$wgWikiLambdaClientRepoSiteId = 'wikifunctionswiki';
 
 	if ( $wgWikiLambdaEnableRepoMode ) {
 		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
