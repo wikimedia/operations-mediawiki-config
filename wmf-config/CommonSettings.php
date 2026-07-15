@@ -3154,28 +3154,6 @@ if ( $wmgUseMath ) {
 	if ( $wmgMathDefaultUserOptions ) {
 		$wgDefaultUserOptions['math'] = $wmgMathDefaultUserOptions;
 	}
-
-	// This variable points to non-WMF servers by default.
-	// Prevent accidental use.
-	// Create LateXML database table before enabling LaTeXML T309686
-	$wgMathLaTeXMLUrl = null;
-	$wgMathMathMLUrl = $wmgLocalServices['mathoid'];
-	// Increase the number of concurrent connections made to RESTBase
-	$wgMathConcurrentReqs = 150;
-
-	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
-	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
-	// so use a hook
-	$wgExtensionFunctions[] = static function () use ( $wmgLocalServices ) {
-		global $wgServerName, $wgMathFullRestbaseURL, $wmgRealm,
-			$wgMathInternalRestbaseURL;
-
-		$wgMathFullRestbaseURL = $wmgRealm === 'production'
-			? 'https://wikimedia.org/api/rest_'  // T136205
-			: "//$wgServerName/api/rest_";
-
-		$wgMathInternalRestbaseURL = $wmgLocalServices['restbase'] . "/$wgServerName/";
-	};
 }
 
 if ( $wmgUseBabel ) {

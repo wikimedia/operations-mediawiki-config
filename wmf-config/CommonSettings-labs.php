@@ -229,9 +229,6 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseMath ) {
-		$wgMathValidModes = [ 'source', 'mathml', 'native', 'mathjax' ];
-		$wgDefaultUserOptions[ 'math' ] = 'native';
-		$wgMathEnableFormulaLinks = true;
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
 		$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 		$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';

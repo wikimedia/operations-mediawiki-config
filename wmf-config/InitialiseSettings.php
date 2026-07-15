@@ -5808,19 +5808,10 @@ return [
 	'default' => [ 'source', 'native', 'mathjax' ],
 ],
 
-// T413973: Rollout new mathml+mathjax
-//
-// * mathml: Convert LeTeX to MathML via Mathoid service which renders an SVG using server-side MathJax
-//           (called "mathml" for hysterical raisins).
 // * native: Convert LeTeX to MathML in PHP.
 // * mathjax: Convert LeTeX to MathML in PHP + client-side MathJax.
 'wmgMathDefaultUserOptions' => [
-	// Phase 1: group0 - DONE
-	// Phase 2: Everything else - DONE
-	// Phase 3: Wikibooks - DONE
-	// Phase 4: Wikisource - DONE
-	// Phase 5: most Wikipedias (small, medium, and canary) - DONE
-	// Phase 6: Wikipedia large - DONE
+	// T413973
 	'default' => 'mathjax',
 ],
 
