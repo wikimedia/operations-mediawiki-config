@@ -5661,10 +5661,54 @@ return [
 	'wikifunctionswiki' => [ 'source', 'native', 'mathjax' ],
 ],
 
+// T413973: Rollout new mathml+mathjax
+//
+// * mathml: Convert LeTeX to MathML via Mathoid service which renders an SVG using server-side MathJax
+//           (called "mathml" for hysterical raisins).
+// * native: Convert LeTeX to MathML in PHP.
+// * mathjax: Convert LeTeX to MathML in PHP + client-side MathJax.
 'wmgMathDefaultUserOptions' => [
-	'default' => 'mathml',
-	'wikifunctionswiki' => 'native',
-	'group0' => 'mathjax',
+	// Phase 1: group0 (via math-legacy-mathoid.dbexpr) - DONE
+	// Phase 2: Everything else (via default) - DONE
+	'default' => 'mathjax',
+
+	// Phase 3: Wikibooks - TODO
+	// Phase 4: Wikisource - TODO
+	// Phase 5: Wikipedia sans large - TODO
+	//
+	// Use a dblist to resolve ambiguity between group0 and wikipeida.
+	'math-legacy-mathoid' => 'mathml',
+	// Phase 6: Wikipedia large (top 30) - TODO
+	'arwiki' => 'mathml',
+	'cawiki' => 'mathml',
+	'cebwiki' => 'mathml',
+	'cswiki' => 'mathml',
+	'dewiki' => 'mathml',
+	'enwiki' => 'mathml',
+	'eswiki' => 'mathml',
+	'fawiki' => 'mathml',
+	'fiwiki' => 'mathml',
+	'frwiki' => 'mathml',
+	'hewiki' => 'mathml',
+	'huwiki' => 'mathml',
+	'idwiki' => 'mathml',
+	'itwiki' => 'mathml',
+	'jawiki' => 'mathml',
+	'kowiki' => 'mathml',
+	'nlwiki' => 'mathml',
+	'nowiki' => 'mathml',
+	'plwiki' => 'mathml',
+	'ptwiki' => 'mathml',
+	'rowiki' => 'mathml',
+	'ruwiki' => 'mathml',
+	'shwiki' => 'mathml',
+	'srwiki' => 'mathml',
+	'svwiki' => 'mathml',
+	'trwiki' => 'mathml',
+	'ukwiki' => 'mathml',
+	'viwiki' => 'mathml',
+	'warwiki' => 'mathml',
+	'zhwiki' => 'mathml',
 ],
 
 'wgMaxExecutionTimeForExpensiveQueries' => [
