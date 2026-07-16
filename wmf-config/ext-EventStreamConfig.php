@@ -3669,36 +3669,6 @@ return [
 				],
 			],
 		],
-		// T407802 Stream for Growth's Revise Tone recommendations experiment
-		'mediawiki.product_metrics.contributors.experiments' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'use_edge_uniques' => true,
-				],
-				'metrics_platform_client' => [
-					'provide_values' => [
-						// START of default provide_values from mediawiki.product_metrics.web_base. Keep
-						// them to make sure automated analysis can be performed
-
-						// Make user authentication status available as a dimension during analysis.
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_is_bot',
-
-						'mediawiki_skin',
-						'mediawiki_database',
-						// END of default provide_values from mediawiki.product_metrics.web_base. Keep
-						// them to make sure automated analysis can be performed
-
-						// Specific to Constructive edit activation and constructive edit rates
-						'performer_id',
-						'performer_edit_count',
-					],
-				],
-			],
-		],
 		// T410719: Offline analytics summarizing the Cite references on each page.
 		'mediawiki.wmde_page_summary' => [
 			'schema_title' => 'analytics/mediawiki/wmde_page_summary',

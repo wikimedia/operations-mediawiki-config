@@ -103,7 +103,6 @@ return [
 		'product_metrics.web_base.active_reader_baseline',
 		'wikibase.client.interaction',
 		'mediawiki.product_metrics.reading_list',
-		'mediawiki.product_metrics.contributors.experiments',
 	],
 ],
 
