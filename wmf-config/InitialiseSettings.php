@@ -14110,6 +14110,17 @@ return [
 	'default' => 'http://localhost:6041/sparql',
 ],
 
+// Shared Wikidata URLs (T421250). The client uses all three; the server reuses
+// api/view but overrides SPARQL via wgArticleGuidanceSparqlEndpoint above, which
+// points at the internal proxy in production.
+'wgArticleGuidanceWikidataUrls' => [
+	'default' => [
+		'api' => 'https://www.wikidata.org/w/api.php',
+		'view' => 'https://www.wikidata.org/wiki/$1',
+		'sparql' => 'https://query.wikidata.org/sparql',
+	],
+],
+
 'wgRestrictUserPageEditing' => [
 	'default' => false,
 	'jawiki' => true, // T392754
