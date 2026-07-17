@@ -782,8 +782,7 @@ return [
 ],
 
 'wgGEMentorshipCleanupEnabled' => [
-	'default' => false,
-	'frwiki' => true,
+	'default' => true,
 ],
 
 'wgGEHomepageDefaultVariant' => [
