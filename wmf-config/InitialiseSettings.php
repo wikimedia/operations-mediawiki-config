@@ -14101,4 +14101,9 @@ return [
 	'default' => 'http://localhost:6041/sparql',
 ],
 
+'wgRestrictUserPageEditing' => [
+	'default' => false,
+	'jawiki' => true, // T392754
+],
+
 ];

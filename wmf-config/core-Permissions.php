@@ -1601,7 +1601,11 @@ return [
 		'user' => [ 'changetags' => false ], // T344150
 		'abusefilter' => [ 'changetags' => true ], // T344150
 		'accountcreator' => [ 'ipblock-exempt' => true ], // T407855
-		'autoconfirmed' => [ 'patrol' => true ], // T15055
+		'autoconfirmed' => [
+			'patrol' => true, // T15055
+			'editalluserpages' => true, // T392754
+			],
+		'confirmed' => [ 'editalluserpages' => true ], // T392754
 		'rollbacker' => [ 'rollback' => true ], // T258339
 		'eliminator' => [
 			'browsearchive' => true,
@@ -3553,7 +3557,6 @@ return [
 			'interface-admin',
 			'bureaucrat',
 			'bot',
-			'confirmed',
 			'eliminator', // T258339
 			'temporary-account-viewer', // T409687
 		],
@@ -3562,6 +3565,10 @@ return [
 			'abusefilter',
 			'extendedconfirmed', // T249820
 			'rollbacker', // T258339
+			'confirmed', // T410655
+		],
+		'accountcreator' => [
+			'confirmed', // T410655
 		],
 	],
 	'ukwiki' => [
@@ -5727,9 +5734,11 @@ return [
 		'sysop' => [
 			'abusefilter',
 			'extendedconfirmed', // T249820
-			'rollbacker' // T258339
+			'rollbacker', // T258339
+			'confirmed' // T410655
 		],
 		'bureaucrat' => [ 'eliminator' ], // T258339
+		'accountcreator' => [ 'confirmed' ], // T410655
 	],
 	'+jawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T63366
