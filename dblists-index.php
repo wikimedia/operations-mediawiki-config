@@ -132,7 +132,7 @@ return [
 'bnwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'boardgovcomwiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'boardwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
-'bolwiki' => [ 'preinstall', 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
+'bolwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'bowiki' => [ 'wikipedia', 'specialcontribute', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'bowikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul', 'abusefilter-disabled' ],
 'bowiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul', 'abusefilter-disabled', 'checkuser-disabled' ],
