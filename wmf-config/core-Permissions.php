@@ -863,7 +863,6 @@ return [
 		'transwiki' => [ 'mergehistory' => true ], // T382785
 	],
 	'+enwikiquote' => [
-		'rollbacker' => [ 'rollback' => true ], // T310950
 		'flood' => [ 'bot' => true ], // T351250
 		'autopatrolled' => [
 			'autopatrol' => true, // T413848
@@ -873,6 +872,7 @@ return [
 			'autopatrol' => true,
 			'patrol' => true,
 			'editautopatrolprotected' => true, // T414711
+			'rollback' => true, // T432557
 		],
 		'sysop' => [ 'editautopatrolprotected' => true, ], // T414711
 	],
@@ -4038,7 +4038,6 @@ return [
 			'autopatrolled',
 			'confirmed', // T64911
 			'patroller', // T64911
-			'rollbacker', // T64911
 		],
 	],
 	'+eswikisource' => [
@@ -5482,7 +5481,6 @@ return [
 	],
 	'+enwikiquote' => [
 		'sysop' => [
-			'rollbacker', // T310950
 			'flood', // T351250
 			'autopatrolled', // T413848
 			'patroller', // T413848
