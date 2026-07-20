@@ -1492,11 +1492,10 @@ if ( $wmgUseTimedMediaHandler ) {
 	// [T363966] pre-iOS 17.4 compat tracks: QuickTime files with old but
 	// supported free codecs (MJPEG + MP3 and/or MPEG-4 Visual + MP3).
 	//
-	// As of October 2024 we don't yet have legal confirmation for MPEG-4
-	// part 2 Visual codec but if this arrives in future we can flip them
-	// on for higher quality.
-	$wgEnabledTranscodeSet['144p.mjpeg.mov'] = true;
-	$wgEnabledTranscodeSet['360p.mpeg4.mov'] = false;
+	// We got approval from legal to enable MPEG-4/Part II after July 19, 2026
+	// See T358266
+	$wgEnabledTranscodeSet['144p.mjpeg.mov'] = false;
+	$wgEnabledTranscodeSet['360p.mpeg4.mov'] = true;
 
 	// [T373546] HLS VP9 and JPEG experiments are being disabled in 2024
 	// as iOS 17.4 prefers the WebM tracks and iOS support of the JPEG
