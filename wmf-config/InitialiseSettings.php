@@ -6899,6 +6899,8 @@ return [
 		'default' => [
 			// Percentage of titles in main article namespace which use Parsoid
 			NS_MAIN => 100,
+			NS_TEMPLATE => 100,
+			'talk' => 100,
 			// All other non-mobile views
 			'default' => false,
 		],
