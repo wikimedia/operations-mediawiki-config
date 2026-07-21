@@ -9883,6 +9883,18 @@ return [
 	'default' => true, // T431023
 ],
 
+'wgWikimediaAntiAbuseEnableModelChecks' => [
+	'default' => false,
+	'testwiki' => true, // T431292
+	'enwiki' => false, // T431292: planned to enable on 2026-07-27
+],
+
+'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [
+	'default' => false,
+	'testwiki' => true, // T431292
+	'enwiki' => false, // T431292: planned to enable on 2026-07-27
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721

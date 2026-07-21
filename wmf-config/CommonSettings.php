@@ -4433,6 +4433,11 @@ if ( $wmgUseIPReputation ) {
 
 if ( $wmgUseWikimediaAntiAbuse ) {
 	wfLoadExtension( 'WikimediaAntiAbuse' );
+	$wgWikimediaAntiAbuseCoPEModelConfig = [
+		'url' => 'https://inference.discovery.wmnet:30443/v1/models/cope-b-a4b:predict',
+		'host' => 'cope-b-a4b.llm.wikimedia.org',
+		'timeout' => 10,
+	];
 }
 
 // IP Masking / Temporary accounts
