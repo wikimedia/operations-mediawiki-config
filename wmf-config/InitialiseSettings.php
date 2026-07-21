@@ -13337,6 +13337,17 @@ return [
 			'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 		],
 	],
+	'+wikidatawiki' => [
+		'wikibase-rest/v1' => [
+			'info' => [
+				'title' => 'Wikibase REST API',
+				'description' => "Wikibase provides access to machine-readable ontological data stored on Wikidata\nand used throughout various Wikimedia sister projects. ",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://www.wikidata.org/w/rest.php/wikibase/v1',
+			'spec' => 'https://www.wikidata.org/w/rest.php/wikibase/v1/openapi.json',
+		]
+	]
 ],
 
 'wgRestModuleOverrides' => [
@@ -13351,6 +13362,10 @@ return [
 	'+wikifunctionswiki' => [
 		'wikifunctions/v0' => [ 'mode' => 'published' ],
 	],
+	'+wikidatawiki' => [
+		'wikibase/v1' => [ 'mode' => 'discoverable' ],
+		'wikibase-rest/v1' => [ 'mode' => 'hidden' ],
+	]
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
