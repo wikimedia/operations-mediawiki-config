@@ -8058,6 +8058,15 @@ return [
 	'checkuser-suggested-investigations' => true,
 ],
 
+'wgCheckUserSuggestedInvestigationsHidden' => [
+	'default' => false,
+	// Enable without special page until comms have completed
+	'dewiki' => true,
+	'svwiki' => true,
+	'eswiki' => true,
+	'jawiki' => true,
+],
+
 'wgCheckUserSuggestedInvestigationsUseGlobalContributionsLink' => [
 	'default' => false,
 	'loginwiki' => true,
