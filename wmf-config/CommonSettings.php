@@ -3224,9 +3224,9 @@ if ( $wmgUseMath ) {
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 	// so use a hook
-	$wgExtensionFunctions[] = static function () {
+	$wgExtensionFunctions[] = static function () use ( $wmgLocalServices ) {
 		global $wgServerName, $wgMathFullRestbaseURL, $wmgRealm,
-			$wgMathInternalRestbaseURL, $wmgLocalServices;
+			$wgMathInternalRestbaseURL;
 
 		$wgMathFullRestbaseURL = $wmgRealm === 'production'
 			? 'https://wikimedia.org/api/rest_'  // T136205
