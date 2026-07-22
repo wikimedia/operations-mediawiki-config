@@ -1604,8 +1604,7 @@ return [
 		'autoconfirmed' => [
 			'patrol' => true, // T15055
 			'editalluserpages' => true, // T392754
-			],
-		'confirmed' => [ 'editalluserpages' => true ], // T392754
+		],
 		'rollbacker' => [ 'rollback' => true ], // T258339
 		'eliminator' => [
 			'browsearchive' => true,
