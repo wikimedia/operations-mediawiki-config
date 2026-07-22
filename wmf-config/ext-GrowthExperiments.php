@@ -896,6 +896,10 @@ return [
 	'ptwiki' => true, // T409606
 ],
 
+'wgGEReviseToneParagraphScoreThreshold' => [
+	'default' => 0.79, // T432790
+],
+
 'wgGEReviseToneOverrideSearchTerm' => [
 	'default' => '',
 	// T407029
