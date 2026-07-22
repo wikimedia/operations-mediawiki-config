@@ -86,6 +86,7 @@ return [
 	'bmwiki' => '/static/images/project-logos/bmwiki.png', // T42285
 	'bnwiki' => '/static/images/project-logos/bnwiki.png',
 	'bowiki' => '/static/images/project-logos/bowiki.png', // T419268
+	'bolwiki' => '/static/images/project-logos/bolwiki.png', // T429951
 	'bpywiki' => '/static/images/project-logos/bpywiki.png', // T42285
 	'brwiki' => '/static/images/project-logos/brwiki.png',
 	'bswiki' => '/static/images/project-logos/bswiki.png',
@@ -1002,6 +1003,7 @@ return [
 	'bmwiki' => '/static/images/project-logos/bmwiki-2x.png', // T150618
 	'bnwiki' => '/static/images/project-logos/bnwiki-2x.png',
 	'bowiki' => '/static/images/project-logos/bowiki-2x.png', // T419268
+	'bolwiki' => '/static/images/project-logos/bolwiki-2x.png',
 	'bpywiki' => '/static/images/project-logos/bpywiki-2x.png', // T150618
 	'brwiki' => '/static/images/project-logos/brwiki-2x.png', // T150618
 	'bswiki' => '/static/images/project-logos/bswiki-2x.png', // T158815
@@ -1855,6 +1857,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bo.svg',
 		'width' => 120,
 		'height' => 30,
+	],
+	'bolwiki' => [ // T429951
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bol.svg',
+		'width' => 120,
+		'height' => 22,
 	],
 	'bpywiki' => [ // T273085
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
@@ -5435,6 +5442,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bo.svg',
 		'width' => 92,
 		'height' => 18,
+	],
+	'bolwiki' => [ // T429951
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bol.svg',
+		'width' => 120,
+		'height' => 14,
 	],
 	'bpywiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bpy.svg',

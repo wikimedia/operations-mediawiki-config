@@ -334,6 +334,7 @@ return [
 	'bjnwiktionary' => 'Asia/Makassar',
 	'blkwiki' => 'Asia/Rangoon',
 	'blkwiktionary' => 'Asia/Yangon',
+	'bolwiki' => 'Africa/Lagos', // T429951
 	'brwikisource' => 'Europe/Paris',
 	'bswiki' => 'Europe/Berlin',
 	'btmwiki' => 'Asia/Jakarta',
@@ -1208,6 +1209,7 @@ return [
 	'bnwiktionary' => 'উইকিঅভিধান',
 	'boardgovcomwiki' => 'Board Governance Committee',
 	'boardwiki' => 'Board',
+	'bolwiki' => 'Wikipidiya', // T429951
 	'bpywiki' => 'উইকিপিডিয়া',
 	'brwikimedia' => 'Wikimedia Brasil',
 	'brwikiquote' => 'Wikiarroud',

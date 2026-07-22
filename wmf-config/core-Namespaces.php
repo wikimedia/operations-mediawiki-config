@@ -5880,6 +5880,7 @@ return [
 	'bnwiktionary' => 'উইকিঅভিধান',
 	'boardgovcomwiki' => 'Wikipedia', // This was set up incorrectly.
 	'boardwiki' => 'Project',
+	'bolwiki' => 'Wikipidiya', // T429951
 	'bpywiki' => 'উইকিপিডিয়া',
 	'brwikiquote' => 'Wikiarroud',
 	'brwikisource' => 'Wikimammenn',

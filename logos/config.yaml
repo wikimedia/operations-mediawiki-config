@@ -254,6 +254,13 @@ Wikipedia:
         comment_wordmark: T419268
         commons_tagline: 'File:Wikipedia-tagline-bo.svg'
         comment_tagline: T419268
+    bolwiki:
+        commons: 'File:Wikipedia-workmark-bol.svg'
+        comment: T429951
+        commons_tagline: 'File:Wikipedia-tagline-bol.svg'
+        comment_tagline: T429951
+        commons_wordmark: 'File:Wikipedia-workmark-bol.svg'
+        comment_wordmark: T429951
     bpywiki:
         comment: T42285
         comment_2x: T150618
