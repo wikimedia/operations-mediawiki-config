@@ -1719,43 +1719,6 @@ return [
 				],
 			],
 		],
-		'mediawiki.web_ui_scroll' => [
-			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-		],
-		'mediawiki.web_ui_scroll_migrated' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-				'metrics_platform_client' => [
-					// The following is derived from:
-					//
-					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webUIScroll.js#L29-L31
-					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webUIScroll.js#L33
-					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webCommon.js#L33-L38
-					'provide_values' => [
-						'performer_is_bot',
-						'mediawiki_database',
-						'mediawiki_skin',
-						'performer_session_id',
-						'page_id',
-						'performer_is_logged_in',
-					],
-				],
-			],
-		],
 		'mediawiki.ipinfo_interaction' => [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
