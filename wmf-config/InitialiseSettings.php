@@ -12400,7 +12400,7 @@ return [
 			'name' => 'referring-experiences-2026-en-survey',
 			'type' => 'internal',
 			'enabled' => true,
-			'coverage' => 0, // 0.005,
+			'coverage' => 0.005,
 			'privacyPolicy' => 'referring-experiences-2026-en-survey-privacy-policy',
 			'audience' => [
 				'anons' => true,
