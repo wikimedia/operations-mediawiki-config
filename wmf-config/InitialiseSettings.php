@@ -8065,6 +8065,8 @@ return [
 	'svwiki' => true,
 	'eswiki' => true,
 	'jawiki' => true,
+	'ukwiki' => true,
+	'enwikivoyage' => true,
 ],
 
 'wgCheckUserSuggestedInvestigationsUseGlobalContributionsLink' => [

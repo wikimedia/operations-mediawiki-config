@@ -826,6 +826,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'-wgCheckUserSuggestedInvestigationsEnabled' => [
+			'default' => false,
+		],
+
 		'wgSecurePollUseLogging' => [
 			'default' => true,
 		],
