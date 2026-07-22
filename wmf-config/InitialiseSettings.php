@@ -1994,6 +1994,7 @@ return [
 	'enwikibooks' => 5, // T407080
 	'enwikisource' => 10, // T284627
 	'enwikivoyage' => 3, // T371186
+	'enwikiquote' => 10, // T432895
 	'eswiki' => 50, // T15261
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
