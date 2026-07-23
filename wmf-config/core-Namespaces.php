@@ -392,6 +392,8 @@ return [
 		'Portal_talk' => 101,
 		'Portál_diskuse' => 101,
 		'Rejstřík_diskuse' => 103,
+		'Šab' => NS_TEMPLATE, // T428619
+		'Kat' => NS_CATEGORY, // T428619
 	],
 	'+cswikibooks' => [
 		'WK' => NS_PROJECT,
@@ -571,9 +573,6 @@ return [
 	'+euwikisource' => [ // T193225
 		'Author' => 106,
 		'Author_talk' => 107,
-	],
-	'+extwiki' => [
-		'Güiquipeya' => NS_PROJECT, // T337696
 	],
 	'+fawiki' => [
 		'كاربر' => NS_USER,
@@ -1535,6 +1534,10 @@ return [
 		'К' => NS_CATEGORY, // T197565
 		'М' => 828, // T197565
 	],
+	'+sahwikisource' => [
+		'Author' => 102, // T423374
+		'Author_talk' => 103,
+	],
 	'+sawiki' => [
 		'WT' => NS_PROJECT_TALK,
 		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
@@ -1920,6 +1923,10 @@ return [
 		'Portal_talk' => 101, // T21569
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
+	],
+	'+urwikisource' => [
+		'Author' => 102, // T422824
+		'Author_talk' => 103,
 	],
 	'+urwiktionary' => [
 		'ول' => NS_PROJECT, // T186393
@@ -2334,7 +2341,6 @@ return [
 	// @}
 
 	// Specials wiki @{
-	'+apiportalwiki' => [ NS_MAIN => true ], // to enable subpage navigation
 	'+arbcom_cswiki' => [ 0 => 1 ],
 	'+arbcom_enwiki' => [ 0 => 1, 8 => 0 ],
 	'+arbcom_nlwiki' => [ 0 => 1 ], // T147186
@@ -3868,6 +3874,10 @@ return [
 		102 => 'Автор', // T395193 - Author
 		103 => 'Обсуждение_автора',
 	],
+	'sahwikisource' => [
+		102 => 'Ааптар', // T423374 Author
+		103 => 'Ааптар_ырытыыта', // T423374 Author talk
+	],
 	'sawikisource' => [
 		100 => 'प्रवेशद्वारम्', // T235343 - Portal
 		101 => 'प्रवेशद्वारसम्भाषणम्', // T235343 - Portal talk
@@ -3936,6 +3946,10 @@ return [
 		103 => 'Обговорення_автора',
 		116 => 'Архів', // T270627 - Archive
 		117 => 'Обговорення_архіву', // T270627 - Archive talk
+	],
+	'urwikisource' => [
+		102 => 'مصنف', // T422824 Author
+		103 => 'تبادلۂ_خیال_مصنف', // T422824 Author talk
 	],
 	'vecwikisource' => [
 		100 => 'Autor', // Author
@@ -5406,16 +5420,6 @@ return [
 	'default' => [
 		NS_MEDIAWIKI => [ 'editinterface' ],
 	],
-	'+apiportalwiki' => [
-		NS_MAIN	  => [ 'edit-docs' ],
-		NS_PROJECT   => [ 'edit-docs' ],
-		// Local uploads are disabled...
-		NS_FILE	  => [ 'edit-docs' ],
-		NS_TEMPLATE  => [ 'edit-docs' ],
-		NS_HELP	  => [ 'edit-docs' ],
-		NS_CATEGORY  => [ 'edit-docs' ],
-		NS_USER	  => [ 'edit-docs' ], // T259568
-	],
 	'+cswiki' => [
 		NS_FILE      => [ 'editinterface' ],
 		NS_FILE_TALK => [ 'editinterface' ],
@@ -5609,8 +5613,8 @@ return [
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikimaniawiki' => [
-		138 => 1, // 2024, T332782
-		140 => 1, // 2025, T389729
+		142 => 1, // 2026, T423278
+		144 => 1, // 2027, T423278
 	],
 	'+zhwikisource' => [
 		100 => 1, // T308393, Portal
@@ -5921,6 +5925,7 @@ return [
 	'cywiktionary' => 'Wiciadur',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
+	'diqwiki' => 'Wikipediya', // T328207
 	'diqwiktionary' => 'Wikiqısebend',
 	'dtywiki' => 'विकिपिडिया', // T161529
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
@@ -6060,6 +6065,7 @@ return [
 	'iswikiquote' => 'Wikivitnun',
 	'iswikisource' => 'Wikiheimild',
 	'iswiktionary' => 'Wikiorðabók',
+	'isvwiki' => 'Vikipedija', // T429935
 	'itwikinews' => 'Wikinotizie',
 	'itwikiversity' => 'Wikiversità',
 	'itwiktionary' => 'Wikizionario',
@@ -6139,12 +6145,14 @@ return [
 	'madwiki' => 'Wikipèḍia',
 	'madwikisource' => 'Wikigherbhung', // T391767
 	'madwiktionary' => 'Wikikamus',
+	'magwiki' => 'विकिपीडिया', // T428279
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'Project',
 	'metawiki' => 'Meta',
 	'mhrwiki' => 'Википедий',
 	'minwikibooks' => 'Wikibuku', // T395499
+	'minwikiquote' => 'Wikipituah', // T429943
 	'minwikisource' => 'Wikibasurek', // T408343
 	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
@@ -6443,6 +6451,7 @@ return [
 	'hsbwiktionary' => 'Diskusija_k_Wikisłownikej', // T43328
 	'huwikinews' => 'Wikihírek-vita',
 	'iswiktionary' => 'Wikiorðabókarspjall',
+	'isvwiki' => 'Besěda_Vikipedije', // T429935
 	'jamwiki' => 'Wikipidia_diskoshan',
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
 	'kaiwiki' => 'Màatu_mà_Wikipèdiya', // T414237
@@ -6468,6 +6477,7 @@ return [
 	'lvwiki' => 'Vikipēdijas_diskusija',
 	'lvwiktionary' => 'Vikivārdnīcas_diskusija', // T170065
 	'minwikibooks' => 'Rundiang_Wikibuku', // T395452
+	'minwikiquote' => 'Rundiang_Wikipituah', // T429943
 	'minwikisource' => 'Rundiang_Wikibasurek', // T395452
 	'madwikisource' => 'Parembhâghân_Wikigherbhung', // T391767
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',

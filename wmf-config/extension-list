@@ -4,6 +4,7 @@ $IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/AntiSpoof/extension.json
 $IP/extensions/ApiFeatureUsage/extension.json
 $IP/extensions/ArticleCreationWorkflow/extension.json
+$IP/extensions/ArticleGuidance/extension.json
 $IP/extensions/ArticlePlaceholder/extension.json
 $IP/extensions/AutoModerator/extension.json
 $IP/extensions/Babel/extension.json
@@ -69,7 +70,6 @@ $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
 $IP/extensions/GlobalWatchlist/extension.json
-$IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/GrowthExperiments/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/ImageMap/extension.json
@@ -137,10 +137,8 @@ $IP/extensions/SearchExtraNS/extension.json
 $IP/extensions/SearchVue/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SecurePoll/extension.json
-$IP/extensions/ShortUrl/extension.json
 $IP/extensions/SiteMatrix/extension.json
 $IP/extensions/SpamBlacklist/extension.json
-$IP/extensions/StopForumSpam/extension.json
 $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageSortkey/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
@@ -179,7 +177,7 @@ $IP/extensions/WikiEditor/extension.json
 $IP/extensions/wikihiero/extension.json
 $IP/extensions/WikiLambda/extension.json
 $IP/extensions/WikiLove/extension.json
-$IP/extensions/WikimediaApiPortalOAuth/extension.json
+$IP/extensions/WikimediaAntiAbuse/extension.json
 $IP/extensions/WikimediaBadges/extension.json
 $IP/extensions/WikimediaCampaignEvents/extension.json
 $IP/extensions/WikimediaCustomizations/extension.json
@@ -197,4 +195,3 @@ $IP/skins/MonoBook/skin.json
 $IP/skins/Nostalgia/skin.json
 $IP/skins/Timeless/skin.json
 $IP/skins/Vector/skin.json
-$IP/skins/WikimediaApiPortal/skin.json

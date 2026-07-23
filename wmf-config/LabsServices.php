@@ -11,28 +11,22 @@ return [
 	'eqiad' => [
 		'udp2log' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud:8420',
 		'xenon' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud',
-		'xhgui-pdo' => 'mysql:host=deployment-db11.deployment-prep.eqiad1.wikimedia.cloud;dbname=xhgui',
+		'xhgui-pdo' => 'mysql:host=deployment-db15.deployment-prep.eqiad1.wikimedia.cloud;dbname=xhgui',
 		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmcloud.org/excimer/',
 		'excimer-ui-server' => 'https://deployment-webperf21.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
 		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
-			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
 			// These MUST match the installed SSL certs
-			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-omega' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-cirrussearch12.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch13.deployment-prep.eqiad1.wikimedia.cloud',
-			'deployment-cirrussearch14.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		// deployment-prep doesn't have dns discovery
 		'search-chi-dnsdisc' => null,
@@ -45,6 +39,22 @@ return [
 		'cloudelastic-omega' => null,
 		// semanticsearch doesn't exist in labs either
 		'semanticsearch-test' => null,
+		'ttmserver-dnsdisc' => [
+			// These MUST match the installed SSL certs
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
+		],
+		'ttmserver' => [
+			// These MUST match the installed SSL certs
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
+		],
+		'ttmserver-test-dnsdisc' => [
+			// These MUST match the installed SSL certs
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
+		],
+		'ttmserver-test' => [
+			// These MUST match the installed SSL certs
+			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
+		],
 		// We will not use analytics-web in beta
 		'analytics-web' => null,
 		// No parser cache DBs in beta yet
@@ -74,7 +84,6 @@ return [
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
 		'data-gateway' => null,
 		// No public API.
-		'ipoid' => null,
 		'opensearch_ipoid' => null,
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
@@ -83,8 +92,6 @@ return [
 		'shellbox-syntaxhighlight' => null,
 		'shellbox-timeline' => null,
 		'shellbox-video' => 'https://shellbox-video.svc.deployment-prep.eqiad1.wikimedia.cloud',
-		// Temporary for T419049 -- ICU 72 upgrade.
-		'shellbox-icu' => null,
 		// No envoy in beta cluster?
 		'mwapi' => null,
 		'test-kitchen' => 'https://test-kitchen-next.wikimedia.org',
@@ -110,5 +117,7 @@ return [
 		'echostore' => 'http://echostore.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 
 		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284',
+		'device-analytics' => null,
+		'page-analytics' => null,
 	],
 ];

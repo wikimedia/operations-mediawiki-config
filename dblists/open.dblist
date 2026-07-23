@@ -21,7 +21,6 @@ annwiki
 anpwiki
 anwiki
 anwiktionary
-apiportalwiki
 arbcom_cswiki
 arbcom_dewiki
 arbcom_enwiki
@@ -35,7 +34,6 @@ arcwiki
 arwiki
 arwikibooks
 arwikimedia
-arwikinews
 arwikiquote
 arwikisource
 arwikiversity
@@ -105,6 +103,7 @@ bnwikivoyage
 bnwiktionary
 boardgovcomwiki
 boardwiki
+bolwiki
 bowiki
 bpywiki
 brwiki
@@ -114,7 +113,6 @@ brwikisource
 brwiktionary
 bswiki
 bswikibooks
-bswikinews
 bswikiquote
 bswikisource
 bswiktionary
@@ -125,7 +123,6 @@ bxrwiki
 cawiki
 cawikibooks
 cawikimedia
-cawikinews
 cawikiquote
 cawikisource
 cawiktionary
@@ -144,6 +141,7 @@ ckbwiki
 ckbwiktionary
 collabwiki
 commonswiki
+conductwiki
 cowiki
 cowikimedia
 cowiktionary
@@ -152,7 +150,6 @@ csbwiki
 csbwiktionary
 cswiki
 cswikibooks
-cswikinews
 cswikiquote
 cswikisource
 cswikiversity
@@ -174,7 +171,6 @@ dawikisource
 dawiktionary
 dewiki
 dewikibooks
-dewikinews
 dewikiquote
 dewikisource
 dewikiversity
@@ -197,7 +193,6 @@ eewiki
 electcomwiki
 elwiki
 elwikibooks
-elwikinews
 elwikiquote
 elwikisource
 elwikiversity
@@ -206,7 +201,6 @@ elwiktionary
 emlwiki
 enwiki
 enwikibooks
-enwikinews
 enwikiquote
 enwikisource
 enwikiversity
@@ -214,14 +208,12 @@ enwikivoyage
 enwiktionary
 eowiki
 eowikibooks
-eowikinews
 eowikiquote
 eowikisource
 eowikivoyage
 eowiktionary
 eswiki
 eswikibooks
-eswikinews
 eswikiquote
 eswikisource
 eswikiversity
@@ -243,7 +235,6 @@ extwiki
 fatwiki
 fawiki
 fawikibooks
-fawikinews
 fawikiquote
 fawikisource
 fawikivoyage
@@ -254,7 +245,6 @@ fiu_vrowiki
 fiwiki
 fiwikibooks
 fiwikimedia
-fiwikinews
 fiwikiquote
 fiwikisource
 fiwikiversity
@@ -271,7 +261,6 @@ frpwiki
 frrwiki
 frwiki
 frwikibooks
-frwikinews
 frwikiquote
 frwikisource
 frwikiversity
@@ -313,7 +302,6 @@ guwikiquote
 guwikisource
 guwiktionary
 guwwiki
-guwwikinews
 guwwikiquote
 guwwiktionary
 gvwiki
@@ -324,7 +312,6 @@ hawiktionary
 hawwiki
 hewiki
 hewikibooks
-hewikinews
 hewikiquote
 hewikisource
 hewikivoyage
@@ -384,6 +371,7 @@ incubatorwiki
 inhwiki
 iowiki
 iowiktionary
+isvwiki
 iswiki
 iswikibooks
 iswikiquote
@@ -391,7 +379,6 @@ iswikisource
 iswiktionary
 itwiki
 itwikibooks
-itwikinews
 itwikiquote
 itwikisource
 itwikiversity
@@ -402,7 +389,6 @@ iuwiktionary
 jamwiki
 jawiki
 jawikibooks
-jawikinews
 jawikiquote
 jawikisource
 jawikiversity
@@ -446,7 +432,6 @@ knwiktionary
 koiwiki
 kowiki
 kowikibooks
-kowikinews
 kowikiquote
 kowikisource
 kowikiversity
@@ -484,7 +469,6 @@ lijwiki
 lijwikisource
 liwiki
 liwikibooks
-liwikinews
 liwikiquote
 liwikisource
 liwiktionary
@@ -507,6 +491,7 @@ lvwiktionary
 madwiki
 madwikisource
 madwiktionary
+magwiki
 maiwiki
 maiwikimedia
 map_bmswiki
@@ -519,6 +504,7 @@ mgwiktionary
 mhrwiki
 minwiki
 minwikibooks
+minwikiquote
 minwikisource
 minwiktionary
 miwiki
@@ -579,7 +565,6 @@ niawiktionary
 nlwiki
 nlwikibooks
 nlwikimedia
-nlwikinews
 nlwikiquote
 nlwikisource
 nlwikivoyage
@@ -593,7 +578,6 @@ novwiki
 nowiki
 nowikibooks
 nowikimedia
-nowikinews
 nowikiquote
 nowikisource
 nowiktionary
@@ -635,7 +619,6 @@ piwiki
 plwiki
 plwikibooks
 plwikimedia
-plwikinews
 plwikiquote
 plwikisource
 plwikivoyage
@@ -653,7 +636,6 @@ pswiktionary
 ptwiki
 ptwikibooks
 ptwikimedia
-ptwikinews
 ptwikiquote
 ptwikisource
 ptwikiversity
@@ -673,7 +655,6 @@ roa_tarawiki
 romdwikimedia
 rowiki
 rowikibooks
-rowikinews
 rowikiquote
 rowikisource
 rowikivoyage
@@ -684,7 +665,6 @@ ruewiki
 ruwiki
 ruwikibooks
 ruwikimedia
-ruwikinews
 ruwikiquote
 ruwikisource
 ruwikiversity
@@ -715,7 +695,6 @@ sgwiktionary
 shiwiki
 shnwiki
 shnwikibooks
-shnwikinews
 shnwikivoyage
 shnwiktionary
 shwiki
@@ -749,13 +728,11 @@ sowiktionary
 specieswiki
 sqwiki
 sqwikibooks
-sqwikinews
 sqwikiquote
 sqwiktionary
 srnwiki
 srwiki
 srwikibooks
-srwikinews
 srwikiquote
 srwikisource
 srwiktionary
@@ -771,7 +748,6 @@ suwikisource
 suwiktionary
 svwiki
 svwikibooks
-svwikinews
 svwikiquote
 svwikisource
 svwikiversity
@@ -786,7 +762,6 @@ szlwiki
 szywiki
 tawiki
 tawikibooks
-tawikinews
 tawikiquote
 tawikisource
 tawiktionary
@@ -857,7 +832,6 @@ ugwiki
 ugwiktionary
 ukwiki
 ukwikibooks
-ukwikinews
 ukwikiquote
 ukwikisource
 ukwikivoyage
@@ -918,7 +892,6 @@ zh_min_nanwiktionary
 zh_yuewiki
 zhwiki
 zhwikibooks
-zhwikinews
 zhwikiquote
 zhwikisource
 zhwikiversity

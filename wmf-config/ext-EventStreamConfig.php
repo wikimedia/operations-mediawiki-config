@@ -267,24 +267,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_HomepageModule' => [
-			'schema_title' => 'analytics/legacy/homepagemodule',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_HomepageVisit' => [
 			'schema_title' => 'analytics/legacy/homepagevisit',
 			'topic_prefixes' => null,
@@ -2160,6 +2142,44 @@ return [
 				],
 			],
 		],
+		// The streams wdqs_[internal|external].sparql_query.v2 are used by WDQS V2
+		// to log each incoming SPARQL query along with data about the HTTP request
+		// and response.
+		// WDQS V2's Event Platform integration is tracked in T421200.
+		'wdqs_internal.sparql_query.v2' => [
+			'schema_title' => 'development/sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
+		'wdqs_external.sparql_query.v2' => [
+			'schema_title' => 'development/sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
+		],
 		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
@@ -2427,6 +2447,10 @@ return [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
 		],
+		'mediawiki.page_revert_risk_wikidata_prediction_change.v1' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
@@ -2543,27 +2567,6 @@ return [
 			],
 		],
 
-		// Staging version of the mediawiki.page_change stream.
-		// This stream is used for validation of https://phabricator.wikimedia.org/T391254
-		'mediawiki.page_change.staging.v1' => [
-			'schema_title' => 'mediawiki/page/change',
-			# When producing this stream to kafka, use a message key
-			# like { wiki_id: X, page_id: Y }.  X and Y will be
-			# obtained from the message value at wiki_id and page.page_id.
-			# See also: https://phabricator.wikimedia.org/T318846
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-analytics',
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					'spark_job_ingestion_scale' => 'medium',
-				],
-			],
-		],
-
 		// Declare version 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
@@ -2602,14 +2605,165 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare version dev (staging testing) of
-		// mediawiki.page_html_content_change stream for now.
-		// It will be changed for a new schema when it's ready.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
-		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'mediawiki.page_html_content_change.dev5' => [
-			'schema_title' => 'development/rendering_content_change',
+		// Stream produced by Flink in Kafka Jumbo
+		'webrequest.page_view.dev0' => [
+			'schema_title' => 'development/webrequest_page_view',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => false,
+		],
+
+		// Page view baseline statistics (per-page hourly mean/stddev),
+		// computed in batch and loaded into a log-compacted topic in Kafka
+		// Jumbo. Used by the page trending pipeline. The topic has compaction
+		// enabled, so only one event per key is retained.
+		'webrequest.page_view_stats.dev0' => [
+			'schema_title' => 'development/page_view_stats',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => false,
+		],
+
+		// Relative-trending signal per page, produced by the page trending Flink job.
+		'webrequest.page_trending.dev0' => [
+			'schema_title' => 'development/page_trending',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+		],
+
+		// Error (DLQ) topic for the application producing webrequest.page_view
+		'webrequest_page_view.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+
+		// ECS-formatted access logs for dumps.wikimedia.org.
+		// Produced directly to the kafka-logging clusters by rsyslog (not via
+		// EventGate, so canary events are disabled) and mirrored to Kafka jumbo
+		// for ingestion. Inherits the default eqiad./codfw. topic_prefixes and the
+		// default analytics_hadoop_ingestion + analytics_hive_ingestion consumers.
+		// https://phabricator.wikimedia.org/T291645
+		// https://phabricator.wikimedia.org/T425087
+		'webrequest.dumps.dev0' => [
+			'schema_title' => 'development/elastic/ecs',
+			'canary_events_enabled' => false,
+		],
+
+		// The producer of webrequest_frontend_text is not using this stream
+		// but we want to define a stream with schema so we can consume the
+		// topic from Flink in Kafka Jumbo.
+		'webrequest.dev0' => [
+			'schema_title' => 'development/webrequest',
+			'canary_events_enabled' => false,
+			'topic_prefixes' => null,
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// webrequest is ingested into Hadoop through another process
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// The streams below are the production replacements of the
+		// webrequest.*.dev0 streams above, using the traffic/* schemas.
+		// The dev0 streams will be removed once the replacement is
+		// completed in production.
+		// https://phabricator.wikimedia.org/T430675
+
+		// Webrequests served by the WMF frontend CDN (text traffic only).
+		// The webrequest_frontend_text topic is produced outside of the Event
+		// Platform, so canary events are disabled. We define this stream so
+		// the topic can be consumed from Flink in Kafka Jumbo.
+		'webrequest.frontend.text.v1' => [
+			'schema_title' => 'traffic/webrequest',
+			'canary_events_enabled' => false,
+			'topics' => [
+				'webrequest_frontend_text',
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					// webrequest is ingested into Hadoop through another process
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Page views refined from webrequest, produced by the
+		// webrequest-pageview Flink job in Kafka Jumbo.
+		'pageview.v1' => [
+			'schema_title' => 'traffic/pageview',
+			'destination_event_service' => 'eventgate-analytics',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'large',
+				],
+			],
+		],
+
+		// Page view baseline statistics (per-page hourly mean/stddev),
+		// computed in batch and loaded into a log-compacted topic in Kafka
+		// Jumbo. Used by the pageview-trending-relative pipeline. The topic
+		// has compaction enabled, so only one event per key is retained.
+		'pageview.stats.v1' => [
+			'schema_title' => 'traffic/pageview_stats',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => false,
+			'consumers' => [
+				// This data is batch-loaded from Hive into Kafka, so it must
+				// not be ingested back into Hadoop/Hive.
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Relative-trending signal per page, produced by the
+		// pageview-trending-relative Flink job.
+		'pageview.trending.relative.v1' => [
+			'schema_title' => 'traffic/pageview_trending_relative',
+			'destination_event_service' => 'eventgate-analytics',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page_id',
+			],
+			'canary_events_enabled' => true,
+		],
+
+		// page_html_content_change is the mediawiki.page_change stream
+		// enriched with with latest revision rendering HTML and
+		// diff to parent revision rendering HTML.
+		//
+		// NOTE: This stream only contains revisions that have a
+		// main content slot with a wikitext content model.
+		//
+		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment/HTML_Enrichment
+		// https://phabricator.wikimedia.org/T360794
+		'mediawiki.page_html_content_change.v1' => [
+			'schema_title' => 'mediawiki/page/rendering_content_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
@@ -2617,7 +2771,7 @@ return [
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
-			// page_html_content_change is produced directly to Kafka jumbo-eqiad,
+			// This stream is produced directly to Kafka jumbo-eqiad,
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -2636,29 +2790,22 @@ return [
 		'mw_page_html_content_change_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => true,
-					// error events with html in them can be large.
-					// We might have html in these error events, because
-					// the mediawiki-event-enrichment Flink job
-					// first fetches latest revision html and adds it to the event,
-					// and then fetch parent revision html (to diff it and add diff to event).
-					// If the parent revision html fetch fails, the error event raw_event field
-					// will have the serialized JSON of the event with the html in it.
-					'spark_job_ingestion_scale' => 'medium',
-				],
-			],
 		],
 
-		// Declare version dev (staging testing) of
-		// mediawiki.page_edit_type_simple stream for now.
-		// It will be changed for a new schema when it's ready.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
+		// page_html_feature_counts_change events are page_change events
+		// enriched with differences in 'rendering feature counts' between
+		// the latest revision HTML rendering and the parent
+		// revision HTML rendering.
+		// The computation is done by the research/edit-types library.
+		// https://gitlab.wikimedia.org/repos/research/edit-types
+		//
+		// NOTE: This stream only contains revisions that have a
+		// main content slot with a wikitext content model.
+		//
 		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'mediawiki.page_edit_type_simple.dev1' => [
-			'schema_title' => 'development/rendering_feature_counts_change',
+		// https://phabricator.wikimedia.org/T351225
+		'mediawiki.page_html_feature_counts_change.v1' => [
+			'schema_title' => 'mediawiki/page/rendering_feature_counts_change',
 			'message_key_fields' => [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
@@ -2666,7 +2813,7 @@ return [
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
-			// page_html_edit_type_simple is produced directly to Kafka jumbo-eqiad,
+			// this stream is is produced directly to Kafka jumbo-eqiad,
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
 			// We use eventgate-analytics-external.
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -2676,7 +2823,7 @@ return [
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
 		// This follows the naming convention of <job_name>.error
-		'mw_page_edit_type_enrich.error' => [
+		'mw_page_html_feature_counts_change_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 			'consumers' => [
@@ -2689,54 +2836,6 @@ return [
 					'spark_job_ingestion_scale' => 'medium',
 				],
 			]
-		],
-
-		// This stream uses the mediawiki/page/change schema.
-		// It is produced by a PySpark job (T368755) that checks for
-		// inconsistencies on a datalake table that consumes stream
-		// 'mediawiki.page_content_change.v1'.
-		// It is meant to be enriched by a dowstrean Flink app.
-		// TODO: remove once mediawiki.content_history.reconcile.v1 streams
-		// 	are released.
-		'mediawiki.dump.revision_content_history.reconcile.rc0' => [
-			'schema_title' => 'mediawiki/page/change',
-			// https://phabricator.wikimedia.org/T338231
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-analytics',
-			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					// we don't need these non-enriched events in Hadoop
-					'enabled' => false,
-				],
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
-				],
-			],
-		],
-		// Enriched stream of the above produced by a Flink app (T368787)
-		'mediawiki.dump.revision_content_history.reconcile.enriched.rc0' => [
-			'schema_title' => 'mediawiki/page/change',
-			// https://phabricator.wikimedia.org/T338231
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-analytics',
-		],
-		// This stream will be used by the above streaming enrichment pipeline
-		// This follows the naming convention of <job_name>.error
-		'mw_dump_rev_content_reconcile_enrich.error' => [
-			'schema_title' => 'error',
-			'canary_events_enabled' => false,
-			'consumers' => [
-				'analytics_hive_ingestion' => [
-					'enabled' => false,
-				],
-			],
 		],
 
 		// This stream uses the mediawiki/page/change schema.
@@ -2793,6 +2892,26 @@ return [
 					'enabled' => false,
 				],
 			],
+		],
+
+		// Status:
+		// 	2026-05 - in development
+		//
+		// mediawiki.user_change stream.
+		// https://phabricator.wikimedia.org/T423952
+		'mediawiki.user_change.dev0' => [
+			// TODO: this will be finalized at mediawiki/user/change
+			'schema_title' => 'development/mediawiki_user_change',
+			'message_key_fields' => [
+				// NOTE: user change events might be emitted
+				// on wikis other than where the user's account
+				// lives. Key by the user's wiki, not the
+				// event's wiki.
+				// TODO: should we key by user_central_id?
+				'wiki_id' => 'user.wiki_id',
+				'user_id' => 'user.user_id',
+			],
+			'destination_event_service' => 'eventgate-main',
 		],
 
 		/*
@@ -3087,7 +3206,6 @@ return [
 					'provide_values' => [
 						'performer_id',
 						'performer_name',
-						'performer_active_browsing_session_token',
 						'performer_session_id',
 						'agent_client_platform_family',
 					],
@@ -3157,7 +3275,6 @@ return [
 						'performer_language',
 						'performer_language_variant',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 					],
 				],
@@ -3184,7 +3301,27 @@ return [
 						'performer_language_variant',
 						'performer_pageview_id',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
+					],
+				],
+			],
+		],
+
+		// Instrument for Special:UserLogin no-JS detection (T425631)
+		'mediawiki.product_metrics.special_user_login' => [
+			'schema_title' => 'analytics/product_metrics/web/base',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-analytics-external',
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
 					],
 				],
 			],
@@ -3209,7 +3346,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 						'performer_is_bot',
 						'performer_is_logged_in',
@@ -3266,7 +3402,6 @@ return [
 						'performer_id',
 						'performer_name',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_pageview_id',
 						'performer_language',
 						'performer_language_variant',
@@ -3283,6 +3418,7 @@ return [
 			],
 		],
 		// (T356228, T360369) Stream to track the API of WikiLambda (the Wikifunctions extension)
+		// Instrument configuration is at https://test-kitchen.wikimedia.org/instrument/WikiLambdaApi
 		'mediawiki.product_metrics.wikilambda_api' => [
 			'schema_title' => 'analytics/mediawiki/product_metrics/wikilambda/api',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3293,29 +3429,8 @@ return [
 					],
 				],
 				'metrics_platform_client' => [
-					'provide_values' => [
-						'agent_client_platform_family',
-						'page_id',
-						'page_revision_id',
-						'page_title',
-						'performer_active_browsing_session_token',
-						'performer_edit_count',
-						'performer_edit_count_bucket',
-						'performer_groups',
-						'performer_id',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_language',
-						'performer_language_variant',
-						'performer_name',
-						'performer_pageview_id',
-						'performer_session_id',
-					],
+					'provide_values' => [],
 				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
 			],
 		],
 		// (T363685, T368028, T378565) MinT for Wikipedia Readers stream (Language & Product Localization)
@@ -3332,7 +3447,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_name',
 						'performer_is_bot',
 						'performer_is_logged_in',
@@ -3369,7 +3483,6 @@ return [
 						'agent_client_platform',
 						'agent_client_platform_family',
 						'performer_session_id',
-						'performer_active_browsing_session_token',
 						'performer_is_logged_in',
 						'performer_is_temp',
 						'performer_language',
@@ -3377,45 +3490,6 @@ return [
 						'performer_pageview_id',
 					],
 				],
-			],
-		],
-		// (T365889) Stream to track Special:Homepage modules interactions (GrowthExperiments)
-		'mediawiki.product_metrics.homepage_module_interaction' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_site_content_language',
-						'mediawiki_site_content_language_variant',
-						'page_content_language',
-						'agent_client_platform',
-						'agent_client_platform_family',
-						'performer_session_id',
-						'performer_active_browsing_session_token',
-						'performer_name',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_edit_count_bucket',
-						'performer_groups',
-						'performer_registration_dt',
-						'performer_is_temp',
-						'performer_language',
-						'performer_language_variant',
-						'performer_pageview_id',
-						'performer_id',
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
 			],
 		],
 		'mediawiki.product_metrics.growth_product_interaction' => [
@@ -3432,7 +3506,7 @@ return [
 						'agent_client_platform_family',
 						'page_namespace',
 						'page_namespace_id',
-						'performer_active_browsing_session_token',
+						'performer_session_id',
 						'performer_edit_count_bucket',
 						'performer_groups',
 						'performer_language',
@@ -3470,32 +3544,11 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-
-						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
-						'agent_client_platform',
-						'agent_client_platform_family',
-
-						// Make user authentication status available as a dimension during analysis.
-						'performer_is_logged_in',
-						'performer_is_temp',
-
-						// Enable the calculation of the "click-through per page visit" generic metric.
-						'performer_pageview_id',
-
-						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
-						// session ID" contextual attribute so that analysts can calculate all three flavors of
-						// click-through rate (see
-						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
-						'performer_active_browsing_session_token',
-
-						'mediawiki_skin',
-						'mediawiki_database',
-					],
-				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
+				],
+				'metrics_platform_client' => [
+					'provide_values' => [],
 				],
 			],
 			'consumers' => [
@@ -3513,30 +3566,6 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base_with_ip',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-
-						// Make platform (e.g. desktop or mobile) available as a dimension during analysis.
-						'agent_client_platform',
-						'agent_client_platform_family',
-
-						// Make user authentication status available as a dimension during analysis.
-						'performer_is_logged_in',
-						'performer_is_temp',
-
-						// Enable the calculation of the "click-through per page visit" generic metric.
-						'performer_pageview_id',
-
-						// The ClickThroughRateInstrument instrument uses this stream by default. Capture the "smart
-						// session ID" contextual attribute so that analysts can calculate all three flavors of
-						// click-through rate (see
-						// https://meta.wikimedia.org/wiki/Research_and_Decision_Science/Data_glossary/Clickthrough_Rate#Metric_definitions).
-						'performer_active_browsing_session_token',
-
-						'mediawiki_skin',
-						'mediawiki_database',
-					],
-				],
 				'eventgate' => [
 					'use_edge_uniques' => true,
 					'enrich_fields_from_http_headers' => [
@@ -3602,107 +3631,6 @@ return [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		// (T403255, T403259, T405489) Image browsing experiment by Reader Growth.
-		//
-		// We collect all events produced by this stream,
-		// so we leave the default analytics sampling rate of 1,
-		// thus not explicitly setting the `sample` key here.
-		//
-		// Experiment enrollment sampling (AKA bucketing) is instead set on Test Kitchen UI at
-		// https://test-kitchen.wikimedia.org/experiment/fy2025-26-we3.1-image-browsing-ab-test
-		//
-		// See https://wikitech.wikimedia.org/wiki/Test_Kitchen/Glossary#Analytics_sampling,
-		// https://wikitech.wikimedia.org/wiki/Test_Kitchen/Glossary#Experiment_enrolment_sampling
-		'mediawiki.product_metrics.readerexperiments_imagebrowsing' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						// Contextual attributes, see
-						// https://wikitech.wikimedia.org/wiki/Test_Kitchen/Contextual_attributes
-						'agent_client_platform',
-						'agent_client_platform_family',
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_content_language',
-						'page_namespace_id',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_session_id',
-					],
-				],
-				'eventgate' => [
-					// Target non-logged readers through edge unique cookies, see
-					// https://wikitech.wikimedia.org/wiki/Edge_uniques
-					'use_edge_uniques' => true,
-				],
-			],
-		],
-		// (T409324, T410533) Sticky headers experiment by Reader Growth.
-		'mediawiki.product_metrics.readerexperiments_stickyheaders' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'agent_client_platform',
-						'agent_client_platform_family',
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_content_language',
-						'page_namespace_id',
-						'performer_active_browsing_session_token',
-						'performer_edit_count_bucket',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_session_id',
-					],
-				],
-				'eventgate' => [
-					'use_edge_uniques' => true,
-				],
-			],
-		],
-		// Shared stream for reader experiments.
-		//
-		// Readers teams can use it until completion of T408186.
-		// After that, all experiments can send events to the default `product_metrics.web_base` stream.
-		// See https://wikimedia.slack.com/archives/C01DFMX6QLB/p1769640744768119?thread_ts=1764971982.545049&cid=C01DFMX6QLB
-		//
-		// This stream defines a superset of contextual attributes.
-		// Experiments can safely ignore unnecessary ones.
-		//
-		// This stream is used by:
-		// - (T415611) Mobile table of contents experiment by Reader Growth
-		'mediawiki.product_metrics.reader_experiments' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						// Contextual attributes: add new ones as needed.
-						'agent_client_platform',
-						'agent_client_platform_family',
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_content_language',
-						'page_namespace_id',
-						'performer_active_browsing_session_token',
-						'performer_edit_count_bucket',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_session_id',
-					],
-				],
-				'eventgate' => [
-					'use_edge_uniques' => true,
-				],
-			],
-		],
 		// T401575: Stream to track Watchlist interactions
 		'mediawiki.product_metrics.WatchlistClickTracker' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
@@ -3737,40 +3665,6 @@ return [
 						'performer_is_logged_in',
 						'performer_is_temp',
 						'performer_session_id',
-					],
-				],
-			],
-		],
-		// T407802 Stream for Growth's Revise Tone recommendations experiment
-		'mediawiki.product_metrics.contributors.experiments' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'use_edge_uniques' => true,
-				],
-				'metrics_platform_client' => [
-					'provide_values' => [
-						// START of default provide_values from mediawiki.product_metrics.web_base. Keep
-						// them to make sure automated analysis can be performed
-
-						// Make user authentication status available as a dimension during analysis.
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_is_bot',
-
-						// Enable the calculation of the "click-through per page visit" generic metric.
-						'performer_pageview_id',
-						'performer_active_browsing_session_token',
-
-						'mediawiki_skin',
-						'mediawiki_database',
-						// END of default provide_values from mediawiki.product_metrics.web_base. Keep
-						// them to make sure automated analysis can be performed
-
-						// Specific to Constructive edit activation and constructive edit rates
-						'performer_id',
-						'performer_edit_count',
 					],
 				],
 			],

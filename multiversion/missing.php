@@ -6,7 +6,7 @@
  *
  * - Uncomment MISSING_PHP_TEST
  * - Run `php -S localhost:9412` from this directory.
- * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
+ * - <http://localhost:9412/missing.php?host=aa.wikivoyage.org> (Incubator redirect)
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404 Subdomain)
  * - <http://localhost:9412/missing.php?host=foo.example.org> (404 Generic)
  * - <http://localhost:9412/missing.php?host=auth.wikimedia.org> (404 Auth)
@@ -17,13 +17,16 @@
  * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=w:foo> ("w:" redirect to Wikipedia is special-cased)
  * - <http://localhost:9412/missing.php?host=als.wikibooks.org (redirect to namespace in Wikipedia)
  * - <http://localhost:9412/missing.php?host=als.wikivoyage.org (redirect to subpage in Wikipedia)
+ * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Wikinews redirect)
  *
  * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
- * Wikibooks, and Wikinews to the Wikimedia Incubator.
+ * Wikibooks to the Wikimedia Incubator.
  *
  * Non-existing languages of Wikisource get redirected to Multilingual Wikisource.
  *
  * Non-existing languages of Wikiversity show an error page.
+ *
+ * Non-existing languages of Wikinews get redirected to the wikinews.org portal
  *
  * Certain special cases where another project is hosted by the language's Wikipedia
  * get redirected to that Wikipedia.
@@ -250,7 +253,7 @@ function wmfHandleMissingWiki() {
 		// Wikiversity.
 		$escLanguage = htmlspecialchars( $language );
 		wmfShowErrorPage( [
-			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
+			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/330px-Wikiversity-logo.svg.png',
 			'favicon' => 'https://beta.wikiversity.org/favicon.ico',
 			'title' => 'This wiki does not exist',
 			'heading' => 'Welcome to Wikiversity',
@@ -258,6 +261,10 @@ function wmfHandleMissingWiki() {
 				. '<p>Unfortunately, Wikiversity in "' . $escLanguage . '" does not exist on its own domain yet. You may like to visit <a href="https://beta.wikiversity.org">Beta Wikiversity</a> and start or improve "' . $escLanguage . '" pages there.</p>'
 				. '<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">Requests&nbsp;for new languages</a> on Meta-Wiki.</p>',
 		] );
+	} elseif ( $project === 'wikinews' ) {
+		// wikinews is closed, redirect any straggler languages to the portal which contains a closure notice
+		// rather than to a page on Incubator will likely just say "this page is unprefixed. This page does not exist"
+		wmfShowRedirect( $protocol . '://wikinews.org' );
 	} else {
 		if ( $language === 'zh-min-nan' ) {
 			// T86915
@@ -319,7 +326,7 @@ function wmfShowErrorPage( array $info ) {
 * { margin: 0; padding: 0; }
 body { background: #fff; color: #202122; font: 0.938em/1.6 sans-serif; }
 .content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; }
-.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
+.footer { clear: both; margin-top: 14%; border-top: 1px solid #dadde3; background: #f8f9fa; padding: 2em 0; font-size: 0.8em; text-align: center; }
 img { float: left; margin: 0 2em 5em 0; }
 a img { border: 0; }
 h1 { margin-top: 1em; font-size: 1.2em; }
@@ -328,9 +335,9 @@ a { color: #36c; text-decoration: none; }
 a:hover { text-decoration: underline; }
 em { color: #72777d; font-style: normal; }
 @media (prefers-color-scheme: dark) {
-  body { background: transparent; color: #dfdedd; }
-  a { color: #9e9eff; }
-  em { color: #8d8882; }
+  body { background: #101418; color: #eaecf0; }
+  .footer { border-color: #404244; background: #202122; }
+  a { color: #88a3e8; }
   #logo { filter: invert(1) hue-rotate(180deg); }
 }
 </style>

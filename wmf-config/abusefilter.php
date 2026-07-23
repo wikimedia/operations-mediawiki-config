@@ -113,6 +113,11 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
 		break;
+	case 'dewiki':
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T418815
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T418815
+		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T418815
+		break;
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
@@ -128,12 +133,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T175684
 		break;
 	case 'enwikibooks':
-		$wgGroupPermissions['*']['abusefilter-view'] = false;
-		$wgGroupPermissions['*']['abusefilter-log'] = false;
-		$wgAbuseFilterNotifications = false;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T383332
+		$wgGroupPermissions['*']['abusefilter-log-detail'] = true; // T426992
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T411828
 		$wgAbuseFilterActions['block'] = true; // T273864
 		break;
@@ -150,6 +150,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T231750
+		break;
+	case 'enwikiversity':
+		$wgAbuseFilterActions['block'] = true; // T424053
 		break;
 	case 'enwikivoyage':
 		$wgAbuseFilterActions['block'] = true; // T408885
@@ -397,6 +400,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
 		$wgGroupPermissions['checkuser']['abusefilter-log-private'] = true; // T370605
+		$wgAbuseFilterActions['block'] = true; // T427384
 		break;
 	case 'nowiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;

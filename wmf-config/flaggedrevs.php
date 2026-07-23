@@ -106,10 +106,6 @@ call_user_func( static function () {
 			'uniqueContentPages' => 10,
 			'editComments' => 50,
 		] + $wmgStandardAutoPromote;
-
-	} elseif ( $wgDBname == 'frwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
-
 	} elseif ( $wgDBname == 'hewikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
@@ -136,11 +132,6 @@ call_user_func( static function () {
 			'email' => true, # user must be emailconfirmed?
 			'neverBlocked' => true, # Can users that were blocked be promoted?
 		] + $wmgStandardAutoPromote;
-
-	} elseif ( $wgDBname == 'ptwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['days'] = 30;
-
 	} elseif ( $wgDBname == 'ruwikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
@@ -279,22 +270,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-	} elseif ( $wgDBname == 'cawikinews' ) {
-		$wgFlaggedRevsNamespaces[] = 102; // T36135
-
-		$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
-
-		$wgGroupPermissions['reviewer'] = array_merge( $wgGroupPermissions['reviewer'], [
-			'autopatrol' => true, // T95085
-			'patrol' => true, // T95085
-		] );
-
-		$wgGroupPermissions['sysop'] = array_merge( $wgGroupPermissions['sysop'], [
-			'stablesettings' => true, // T36135
-			'review' => true, // T95085
-			'validate' => true, // T95085
-			'unreviewedpages' => true, // T95085
-		] );
 	} elseif ( $wgDBname == 'dewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -332,30 +307,9 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'enwikibooks' ) {
 		// Limited to the main, Cookbook, and Wikijunior namespaces (T408110)
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, 102, 110 ];
-		$wgFlaggedRevsTags = [ 'value' => [ 'levels' => 3 ] ];
+		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 1 ] ]; // T428329
 
-		$wgGroupPermissions['editor']['rollback'] = true;
-		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['validate'] = true;
-
-		unset( $wgGroupPermissions['reviewer'] );
-
-	} elseif ( $wgDBname == 'elwikinews' ) {
-		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsNamespaces[] = 100;
-		$wgGroupPermissions['editor']['rollback'] = true;
-		$wgGroupPermissions['editor']['autoreview'] = false;
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['autoreview'] = false;
-
-		unset( $wgGroupPermissions['reviewer'] );
-	} elseif ( $wgDBname == 'enwikinews' ) {
-		$wgFlaggedRevsNamespaces = [ NS_MAIN ];
-		$wgGroupPermissions['editor']['rollback'] = true; // T21815
-		$wgGroupPermissions['editor']['autoreview'] = false; // T25948
-		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-		$wgGroupPermissions['sysop']['autoreview'] = false; // T25948
 
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'eowiki' ) {
@@ -388,15 +342,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 		# Remove editor and autoreview user groups (T249643)
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
-	} elseif ( $wgDBname == 'fawikinews' ) {
-		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsNamespaces[] = 100;
-		$wgGroupPermissions['editor']['rollback'] = true;
-		$wgGroupPermissions['editor']['autoreview'] = false;
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['autoreview'] = false;
-
-		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'fiwiki' ) {
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -406,17 +351,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
 		];
-	} elseif ( $wgDBname == 'frwikinews' ) {
-		$wgFlaggedRevsNamespaces[] = 104;
-		$wgFlaggedRevsNamespaces[] = 106;
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-
-		// Removed legacy groups, per T90979
-		unset(
-			$wgGroupPermissions['autoreview'],
-			$wgGroupPermissions['editor'],
-			$wgGroupPermissions['reviewer']
-		);
 	} elseif ( $wgDBname == 'hewikisource' ) {
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgFlaggedRevsNamespaces[] = 106;
@@ -534,8 +468,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
-	} elseif ( $wgDBname == 'ptwikinews' ) {
-		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'ruwiki' ) {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
@@ -545,11 +477,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
 		# Remove reviewer group
-		unset( $wgGroupPermissions['reviewer'] );
-	} elseif ( $wgDBname == 'ruwikinews' ) {
-		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['sysop']['review'] = true;
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ruwiktionary' ) {
 		$wgFlaggedRevsNamespaces[] = NS_PROJECT;

@@ -36,46 +36,24 @@ if ( $wmgRealm == 'labs' ) {
 	$wgSitename = "Beta $wgSitename";
 
 	// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
-	$wmgPrivilegedPolicy = [
+	$wgWMCPrivilegedPasswordPolicy = [
 		'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 		'MinimumPasswordLengthToLogin' => [ 'value' => 1, 'suggestChangeOnLogin' => true ],
 		'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 	];
-	foreach ( $wmgPrivilegedGroups as $group ) {
-		// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
-		// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
-		if ( $group === 'user' ) {
-			// For e.g. private and fishbowl wikis; covers 'user' in password policies
-			$group = 'default';
-		}
-		$wgPasswordPolicy['policies'][$group] = array_merge(
-			$wgPasswordPolicy['policies'][$group] ?? [],
-			$wmgPrivilegedPolicy
-		);
-	}
 
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 		'value' => 8,
 		'suggestChangeOnLogin' => false,
 	];
 
-	if ( $wmgUseCentralAuth ) {
-		// Enforce password policy when users login on other wikis; also for sensitive global groups
-		// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
-		$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-			$privilegedGroups = wmfGetPrivilegedGroups( $user );
-			if ( $privilegedGroups ) {
-				$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
-				if ( in_array( 'staff', $privilegedGroups, true ) ) {
-					$effectivePolicy['MinimumPasswordLengthToLogin'] = [
-						'value' => 10,
-						'suggestChangeOnLogin' => true,
-					];
-				}
-			}
-			return true;
-		};
+	// Require 10 byte password for staff.
+	$wgCentralAuthGlobalPasswordPolicies['staff']['MinimumPasswordLengthToLogin'] = [
+		'value' => 10,
+		'suggestChangeOnLogin' => true,
+	];
 
+	if ( $wmgUseCentralAuth ) {
 		// Allows automatic account vanishing (for qualifying users)
 		$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
 		$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
@@ -98,7 +76,6 @@ if ( $wmgRealm == 'labs' ) {
 		'wikiversity.beta.wmcloud.org',
 		'wikivoyage.beta.wmcloud.org',
 		'www.wikidata.beta.wmcloud.org',
-		'api.wikimedia.beta.wmcloud.org',
 		'commons.wikimedia.beta.wmcloud.org',
 		'login.wikimedia.beta.wmcloud.org',
 		'meta.wikimedia.beta.wmcloud.org',
@@ -165,8 +142,6 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCiteBacklinkCommunityConfiguration = true;
 		// Temporary while developing feature, T385666
 		$wgCiteSubRefMergeInDevelopment = true;
-		// Temporary while developing feature, T421055
-		$wgCiteRemoveSyntheticRefsUnsafe = true;
 	}
 
 	// Labs override for GlobalCssJs
@@ -352,12 +327,6 @@ if ( $wmgRealm == 'labs' ) {
 
 	$wgEventBusEnableRunJobAPI = true;
 
-	if ( $wmgUseStopForumSpam ) {
-		wfLoadExtension( 'StopForumSpam' );
-		$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
-		$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
-	}
-
 	$wgMessageCacheType = CACHE_ACCEL;
 
 	// This will work for most wikis, which is considered good enough.
@@ -379,11 +348,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Turn off exact search match redirects on beta commons
 	if ( $wgDBname == 'commonswiki' ) {
 		$wgDefaultUserOptions['search-match-redirect'] = false;
-	}
-
-	if ( $wmgUseWikimediaApiPortalOAuth ) {
-		$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmcloud.org/w/api.php';
-		$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmcloud.org/w/rest.php';
 	}
 
 	// Test of new import source configuration on labs cluster
@@ -472,11 +436,19 @@ if ( $wmgRealm == 'labs' ) {
 		// Remove any references to the temporary-account-viewer group, as this group is only present when CheckUser is
 		// installed which it is not on the beta clusters. This means removing the group definition and the auto-promotion
 		// conditions for the group.
-		unset( $wgGroupPermissions['temporary-account-viewer'] );
+		$wgHooks['MediaWikiServices'][] = static function () {
+			global $wgGroupPermissions;
+			unset( $wgGroupPermissions['temporary-account-viewer'] );
+		};
 
 		// Remove assignment of the 'checkuser-temporary-account' and 'checkuser-temporary-account-no-preference' rights
 		// done in core-Permissions.php. This is because these rights do not exist on the beta clusters.
-		$rightsToRemoveOnBeta = [ 'checkuser-temporary-account', 'checkuser-temporary-account-no-preference' ];
+		$rightsToRemoveOnBeta = [
+			'checkuser-temporary-account',
+			'checkuser-temporary-account-no-preference',
+			'checkuser-temporary-account-auto-reveal',
+			'checkuser-temporary-account-log',
+		];
 		foreach ( $wgGroupPermissions as $group => $permissions ) {
 			foreach ( $rightsToRemoveOnBeta as $rightToCheck ) {
 				if ( array_key_exists( $rightToCheck, $permissions ) ) {
@@ -489,12 +461,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Jade was undeployed as part of T281430, and content is being cleaned up as part of T345874
 	$wgContentHandlers['JadeEntity'] = FallbackContentHandler::class;
 	$wgContentHandlers['JadeJudgment'] = FallbackContentHandler::class;
-
-	// No restrictions in test environment to facilitate testing.
-	$wgMinervaNightModeOptions['exclude']['querystring'] = [];
-	$wgMinervaNightModeOptions['exclude']['namespaces'] = [];
-	$wgMinervaNightModeOptions['exclude']['pagetitles'] = [];
-	$wgVectorNightModeOptions = $wgMinervaNightModeOptions;
 
 	// show new donate link in beta for QA and testing
 	$wgWikimediaMessagesAnonDonateLink = true;
@@ -573,5 +539,18 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseMultiTitle ) {
 		wfLoadExtension( 'MultiTitle' );
 	}
+
+	// T420604 - test enforcing CSP
+	if ( $wmgUseCSP ) {
+		$wgCSPHeader = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => $wmgApprovedContentSecurityPolicyDomains,
+			'object-src' => 'none',
+		];
+	}
+
+	// T99740 - test on Beta cluster before going live on prod wikis
+	$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
 }
 // end safeguard

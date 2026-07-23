@@ -16,7 +16,6 @@ anwiki
 anwiktionary
 arcwiki
 arwikibooks
-arwikinews
 arwikiquote
 arwikisource
 arwikiversity
@@ -68,6 +67,7 @@ bnwikibooks
 bnwikiquote
 bnwikivoyage
 bnwiktionary
+bolwiki
 bowiki
 bpywiki
 brwiki
@@ -100,7 +100,6 @@ csbwiki
 csbwiktionary
 cswiki
 cswikibooks
-cswikinews
 cswikiquote
 cswikisource
 cswikiversity
@@ -158,7 +157,6 @@ euwikisource
 euwiktionary
 extwiki
 fatwiki
-fawikinews
 fawikiquote
 fawikisource
 fawiktionary
@@ -207,7 +205,6 @@ guwikiquote
 guwikisource
 guwiktionary
 guwwiki
-guwwikinews
 guwwikiquote
 guwwiktionary
 gvwiki
@@ -257,11 +254,11 @@ ilowiki
 incubatorwiki
 iowiki
 iowiktionary
+isvwiki
 iswikibooks
 iswikiquote
 iswikisource
 iswiktionary
-itwikinews
 itwikisource
 itwikiversity
 itwikivoyage
@@ -306,7 +303,6 @@ knwiktionary
 koiwiki
 kowiki
 kowikibooks
-kowikinews
 kowikisource
 kowikiversity
 kowiktionary
@@ -339,7 +335,6 @@ lijwiki
 lijwikisource
 liwiki
 liwikibooks
-liwikinews
 liwikiquote
 liwikisource
 liwiktionary
@@ -359,6 +354,7 @@ lvwiktionary
 madwiki
 madwikisource
 madwiktionary
+magwiki
 maiwiki
 map_bmswiki
 mdfwiki
@@ -370,6 +366,7 @@ mgwiktionary
 mhrwiki
 minwiki
 minwikibooks
+minwikiquote
 minwikisource
 minwiktionary
 miwiki
@@ -426,7 +423,6 @@ nnwiktionary
 novwiki
 nowiki
 nowikibooks
-nowikinews
 nowikiquote
 nowikisource
 nowiktionary
@@ -513,7 +509,6 @@ sgwiktionary
 shiwiki
 shnwiki
 shnwikibooks
-shnwikinews
 shnwikivoyage
 shnwiktionary
 shwiktionary

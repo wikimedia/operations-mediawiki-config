@@ -25,7 +25,6 @@ angwiktionary
 annwiki
 anpwiki
 anwiktionary
-apiportalwiki
 arbcom_cswiki
 arbcom_dewiki
 arbcom_enwiki
@@ -91,6 +90,7 @@ bnwikiquote
 bnwikivoyage
 boardgovcomwiki
 boardwiki
+bolwiki
 bowikibooks
 bowiktionary
 brwikimedia
@@ -116,6 +116,7 @@ chwiktionary
 chywiki
 ckbwiktionary
 cnwikimedia
+conductwiki
 cowikibooks
 cowikimedia
 cowikiquote
@@ -255,6 +256,7 @@ ikwiktionary
 ilwikimedia
 inhwiki
 internalwiki
+isvwiki
 iswikibooks
 iswikiquote
 iswikisource
@@ -338,12 +340,14 @@ lvwikibooks
 madwiki
 madwikisource
 madwiktionary
+magwiki
 maiwikimedia
 mdfwiki
 mgwikibooks
 mhwiki
 mhwiktionary
 minwikibooks
+minwikiquote
 minwikisource
 minwiktionary
 miwikibooks

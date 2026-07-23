@@ -33,7 +33,6 @@ annwiki
 anpwiki
 anwiki
 anwiktionary
-apiportalwiki
 arbcom_cswiki
 arbcom_dewiki
 arbcom_enwiki
@@ -130,6 +129,7 @@ bnwikivoyage
 bnwiktionary
 boardgovcomwiki
 boardwiki
+bolwiki
 bowiki
 bowikibooks
 bowiktionary
@@ -175,6 +175,7 @@ ckbwiktionary
 cnwikimedia
 collabwiki
 commonswiki
+conductwiki
 cowiki
 cowikibooks
 cowikimedia
@@ -434,6 +435,7 @@ inhwiki
 internalwiki
 iowiki
 iowiktionary
+isvwiki
 iswiki
 iswikibooks
 iswikiquote
@@ -572,6 +574,7 @@ lvwiktionary
 madwiki
 madwikisource
 madwiktionary
+magwiki
 maiwiki
 maiwikimedia
 map_bmswiki
@@ -586,6 +589,7 @@ mhwiki
 mhwiktionary
 minwiki
 minwikibooks
+minwikiquote
 minwikisource
 minwiktionary
 miwiki

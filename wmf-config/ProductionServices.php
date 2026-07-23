@@ -74,8 +74,7 @@ $common = [
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
 	'data-gateway' => 'http://localhost:6038',
-	'ipoid' => 'http://localhost:6035',
-	'opensearch_ipoid' => 'https://opensearch-ipoid.discovery.wmnet:30443',
+	'opensearch_ipoid' => 'http://localhost:6045',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',
@@ -83,10 +82,10 @@ $common = [
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
 	'shellbox-video' => 'http://localhost:6036',
-	// Temporary for T419049 -- ICU 72 upgrade.
-	'shellbox-icu' => 'https://shellbox-icu72-tls-service.shellbox.svc.cluster.local:4081',
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	'chart-renderer' => 'http://localhost:6039',
+	'page-analytics' => 'http://localhost:6073',
+	'device-analytics' => 'http://localhost:6032',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
 	'test-kitchen' => 'http://localhost:6037',
@@ -145,6 +144,20 @@ $common = [
 			'port' => 30443,
 		]
 	],
+	'ttmserver-dnsdisc' => [
+		[ // forwarded to https://opensearch-ttmserver.discovery.wmnet:30443
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6518,
+		]
+	],
+	'ttmserver-test-dnsdisc' => [
+		[ // forwarded to https://opensearch-ttmserver-test.discovery.wmnet:30443
+			'host' => 'localhost',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+			'port' => 6516,
+		]
+	],
 ];
 
 $services = [
@@ -156,8 +169,8 @@ $services = [
 		'udp2log' => '10.64.185.2:8420', # mwlog1003.eqiad.wmnet
 
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
-		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
-		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'http://localhost:6101/auth',
+		'mediaSwiftStore' => 'http://localhost:6101/v1/AUTH_mw',
 
 		'etcd' => [
 			'host' => '_etcd-client-ssl._tcp.eqiad.wmnet',
@@ -180,7 +193,7 @@ $services = [
 		'redis_lock' => [
 			'rdb1' => '10.64.16.18:6381', # rdb1013 B6
 			'rdb2' => '10.64.16.18:6382', # rdb1013 B6
-			'rdb3' => '10.64.0.36:6381',  # rdb1011 A1
+			'rdb3' => '10.64.0.9:6381',  # rdb1015 A4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
@@ -203,6 +216,20 @@ $services = [
 				'port' => 6104,
 			]
 		],
+		'ttmserver' => [
+			[
+				'host' => 'opensearch-ttmserver.svc.eqiad.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
+			]
+		],
+		'ttmserver-test' => [
+			[
+				'host' => 'opensearch-ttmserver-test.svc.eqiad.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
+			]
+		],
 	],
 	'codfw' => $common + [
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
@@ -211,8 +238,8 @@ $services = [
 		'udp2log' => '10.192.52.2:8420', # mwlog2003.codfw.wmnet
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
-		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
-		'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'http://localhost:6201/auth',
+		'mediaSwiftStore' => 'http://localhost:6201/v1/AUTH_mw',
 
 		'etcd' => [
 			'host' => '_etcd._tcp.codfw.wmnet',
@@ -231,9 +258,9 @@ $services = [
 
 		// LockManager Redis codfw
 		'redis_lock' => [
-			'rdb1' => '10.192.0.198:6381', # rdb2007 A5
-			'rdb2' => '10.192.0.198:6382', # rdb2007 A5
-			'rdb3' => '10.192.32.8:6381',  # rdb2009 C3
+			'rdb1' => '10.192.57.4:6381',  # rdb2011 E3
+			'rdb2' => '10.192.57.4:6382',  # rdb2011 E3
+			'rdb3' => '10.192.13.25:6381', # rdb2013 B4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/
@@ -254,6 +281,20 @@ $services = [
 				'host' => 'localhost',
 				'transport' => 'Http',
 				'port' => 6204,
+			]
+		],
+		'ttmserver' => [
+			[
+				'host' => 'opensearch-ttmserver.svc.codfw.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
+			]
+		],
+		'ttmserver-test' => [
+			[
+				'host' => 'opensearch-ttmserver-test.svc.codfw.wmnet',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttps::class,
+				'port' => 30443,
 			]
 		],
 	],

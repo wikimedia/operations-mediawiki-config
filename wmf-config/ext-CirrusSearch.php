@@ -436,6 +436,10 @@ return [
 	'default' => 'yes',
 	'wikidatawiki' => 'no',
 ],
+// Tune the tokenizer for tha plain field on completion suggester
+'wgCirrusSearchCompletionPlainTokenizer' => [
+	'default' => 'keyword', // T420427
+],
 
 // wgCirrusSearchCompletionSuggesterSubphrases @{
 // Please verify mem usage on the cluster before adding new wiki here.
@@ -771,10 +775,17 @@ return [
 // within queries:
 // elastic: lookup against elastic (default)
 // utr30: uses PHP Transliterator with UTR30 rule
-// naise: uses PHP Transliterator with naive folding rules (unicode diacritics
+// naive: uses PHP Transliterator with naive folding rules (unicode diacritics
 // removal)
 'wgCirrusSearchNamespaceResolutionMethod' => [
 	'default' => 'utr30',
+	'hewiki' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewiktionary' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikibooks' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikinews' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikiquote' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikisource' => 'utr30_with_hebrew_wrong_keyboard',
+	'hewikivoyage' => 'utr30_with_hebrew_wrong_keyboard',
 ],
 
 // List of languages detected by the short-text
@@ -1212,11 +1223,10 @@ return [
 'wgCirrusSearchPhraseSuggestUseOpeningText' => [
 	'default' => true,
 ],
-'wgCirrusSearchAlternativeIndices' => [
-	'default' => [],
-],
+'wgCirrusSearchAlternativeIndices' => [],
 'wgCirrusSearchCompletionUseSecondTryProfile' => [
 	'default' => 'default',
+
 	'hewiki' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewiktionary' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewikibooks' => 'language_converter_and_hebrew_wrong_keyboard',
@@ -1224,11 +1234,21 @@ return [
 	'hewikiquote' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewikisource' => 'language_converter_and_hebrew_wrong_keyboard',
 	'hewikivoyage' => 'language_converter_and_hebrew_wrong_keyboard',
+
+	'hiwiki' => 'language_converter_and_hindi_transliteration',
+	'hiwiktionary' => 'language_converter_and_hindi_transliteration',
+	'hiwikibooks' => 'language_converter_and_hindi_transliteration',
+	'hiwikiquote' => 'language_converter_and_hindi_transliteration',
+	'hiwikisource' => 'language_converter_and_hindi_transliteration',
+	'hiwikiversity' => 'language_converter_and_hindi_transliteration',
+	'hiwikivoyage' => 'language_converter_and_hindi_transliteration',
+
 	'kawiki' => 'language_converter_and_georgian_transliteration',
 	'kawiktionary' => 'language_converter_and_georgian_transliteration',
 	'kawikibooks' => 'language_converter_and_georgian_transliteration',
 	'kawikiquote' => 'language_converter_and_georgian_transliteration',
 	'kawikisource' => 'language_converter_and_georgian_transliteration',
+
 	'ruwiki' => 'language_converter_and_russian_wrong_keyboard',
 	'ruwiktionary' => 'language_converter_and_russian_wrong_keyboard',
 	'ruwikibooks' => 'language_converter_and_russian_wrong_keyboard',

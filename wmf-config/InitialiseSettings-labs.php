@@ -93,7 +93,6 @@ function wmfGetOverrideSettings() {
 			'wiktionary' => 'https://$lang.wiktionary.beta.wmcloud.org',
 
 			// Individual wikis
-			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
 			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
 			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmcloud.org',
@@ -115,7 +114,6 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => 'https://$lang.wikivoyage.beta.wmcloud.org',
 
 			// Individual wikis
-			'apiportalwiki' => 'https://api.wikimedia.beta.wmcloud.org',
 			'metawiki' => 'https://meta.wikimedia.beta.wmcloud.org',
 			'commonswiki' => 'https://commons.wikimedia.beta.wmcloud.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmcloud.org',
@@ -312,8 +310,6 @@ function wmfGetOverrideSettings() {
 				'CommunityConfiguration' => 'info',
 				'communityrequests' => 'debug',
 				'confirmemail' => [ 'udp2log' => false, 'logstash' => 'info' ],
-				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
-				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
@@ -388,7 +384,6 @@ function wmfGetOverrideSettings() {
 				'SpamRegex' => 'debug',
 				'SQLBagOStuff' => 'debug',
 				'StashEdit' => 'debug',
-				'StopForumSpam' => 'debug',
 				'SwiftBackend' => 'debug', // -aaron 5/15/12
 				'texvc' => 'debug',
 				'throttler' => 'info',
@@ -575,9 +570,6 @@ function wmfGetOverrideSettings() {
 				'amc' => true,
 			],
 		],
-		'wmgMinervaNightModeExcludeTitles' => [
-			'default' => [ 'Banana' ],
-		],
 
 		//
 		//
@@ -614,7 +606,6 @@ function wmfGetOverrideSettings() {
 				'.wikiversity.beta.wmcloud.org' => 'enwikiversity',
 				'.wikivoyage.beta.wmcloud.org' => 'enwikivoyage',
 				'.wiktionary.beta.wmcloud.org' => 'enwiktionary',
-				'api.wikimedia.beta.wmcloud.org' => 'apiportalwiki',
 				'commons.wikimedia.beta.wmcloud.org' => 'commonswiki',
 				'meta.wikimedia.beta.wmcloud.org' => 'metawiki',
 				'www.wikidata.beta.wmcloud.org' => 'wikidatawiki',
@@ -699,6 +690,12 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
+		// T18691
+		'wgEnableSectionShare' => [
+			'default' => false,
+			'fawiki' => true,
+		],
+
 		'wmgUseReportIncident' => [
 			'default' => true,
 			'loginwiki' => false,
@@ -711,13 +708,6 @@ function wmfGetOverrideSettings() {
 
 		'wgReportIncidentEnableInstrumentation' => [
 			'default' => true,
-		],
-
-		// Enable IRS non-emergency v2 for testing; v1 will be available on dewiki to
-		// test legacy support of the v1 flow while v2 is being deployed
-		'wgReportIncidentUseV2NonEmergencyFlow' => [
-			'default' => true,
-			'dewiki' => false,
 		],
 
 		'wmgUseRSSExtension' => [
@@ -836,6 +826,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'-wgCheckUserSuggestedInvestigationsEnabled' => [
+			'default' => false,
+		],
+
 		'wgSecurePollUseLogging' => [
 			'default' => true,
 		],
@@ -850,6 +844,10 @@ function wmfGetOverrideSettings() {
 			// communicates with a production API (IPoid) that is available
 			// only via the internal network
 			'default' => false,
+		],
+
+		'wmgUseWikimediaAntiAbuse' => [
+			'default' => true,
 		],
 
 		'wgIPInfoGeoLite2Prefix' => [
@@ -1122,6 +1120,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T422275
+		'wgReadingListsEnableBetaQuickSurvey' => [
+			'wikipedia' => true,
+		],
+
 		// T419163
 		'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 			'default' => '20260313000000',
@@ -1234,7 +1237,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgFileSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+			'default' => SCHEMA_COMPAT_NEW,
 		],
 
 		'-wgAbuseFilterEnableBlockedExternalDomain' => [
@@ -1323,9 +1326,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wmgUseGrowthExperiments' => [
-			'wikidatawiki' => true,
-		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
@@ -1384,9 +1384,6 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
 			'default' => 300,
 		],
-		'wgGENotificationsTrackingEnabled' => [
-			'default' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
@@ -1424,13 +1421,6 @@ function wmfGetOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
-		],
-		'wgEnableSpecialMute' => [
-			'default' => true,
-			'eswiki' => false,
-		],
-		'wgEnablePartialActionBlocks' => [
-			'default' => true, // T353496
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
@@ -1637,19 +1627,6 @@ function wmfGetOverrideSettings() {
 		// T232582
 		'wmgWikibaseClientDataBridgeEditTags' => [
 			'default' => [ 'Data Bridge' ],
-		],
-
-		'wmgWikibaseEntityDataFormats' => [
-			'default' => [
-				'json',
-				'php',
-				'rdfxml',
-				'n3',
-				'turtle',
-				'ntriples',
-				'html',
-				'jsonld',
-			],
 		],
 
 		// If set to "false": No alternate links will be added to desktop pages,
@@ -1947,44 +1924,37 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
-		'wgRestAPIAdditionalRouteFiles' => [
-			'default' => [
-				'includes/Rest/coreDevelopmentRoutes.json',
-				'includes/Rest/site.v1.json',
-				'includes/Rest/specs.v0.json',
-				'includes/Rest/content.v1.json'
-			],
-		],
-
 		'wgRestSandboxSpecs' => [
 			'default' => [
-				'specs.v0' => [
-					'url' => '/w/rest.php/specs/v0/module/specs/v0',
-					'name' => 'Specs API',
+				'lift-wing' => [
+					'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
+					'name' => 'Lift Wing API',
 				],
-				'content.v1' => [
-					'url' => '/w/rest.php/specs/v0/module/content/v1',
-					'name' => 'Content API',
-				]
 			],
-		],
-
-		'wmgUseCSP' => [
-			'default' => true,
 		],
 
 		'-wgForceHTTPS' => [
 			'default' => true,
 		],
 
-		// Same as production InitialiseSettings.php, and extended (not replaced)
-		// with Beta Cluster domains.
-		//
-		// This includes the prod domains for the purpose of easier testing of gadgets.
-		// The MediaWiki software itself should never call prod from Beta.
+		'wmgUseCSP' => [
+			'default' => true,
+		],
+
+		// T420607
+		'wmgUseCSPReportOnly' => [
+			'default' => false,
+		],
+
+		'wgCSPUseReportURIDirective' => [
+			'default' => true,
+		],
+
+		// T420604 - test enforcing config on beta cluster first, with current allow-listed domains
+		// Note: MediaWiki itself should never call prod from Beta.
 		'wmgApprovedContentSecurityPolicyDomains' => [
 			'default' => [
-				// Prod domains, to allow easier gadget testing
+				// Prod domains and current allow-listed external domains (see: T419265)
 				'*.wikimedia.org',
 				'*.wikipedia.org',
 				'*.wikinews.org',
@@ -1998,6 +1968,66 @@ function wmfGetOverrideSettings() {
 				'*.wikifunctions.org',
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
+				'mediawiki.org',
+				'wikimedia.org',
+				'*.wmflabs.org',
+				'*.wmcloud.org',
+				'*.toolforge.org',
+				'wss://*.toolforge.org',
+				'*.jsdelivr.net',
+				'unpkg.com',
+				'cdnjs.cloudflare.com',
+				'raw.githubusercontent.com',
+				'*.github.com',
+				'code.jquery.com',
+				'cdn.mathjax.org',
+				'use.typekit.net',
+				'fonts.cdnfonts.com',
+				'use.fontawesome.com',
+				'i.ytimg.com',
+				'rsms.me',
+				'doi.org',
+				'localhost',
+				'https://localhost:*',
+				'http://localhost:*',
+				'wss://localhost:*',
+				'ws://localhost:*',
+				'*.google.com',
+				'*.gstatic.com',
+				'*.googleapis.com',
+				'*.translate.yandex.net',
+				'yastatic.net',
+				'ya.ru',
+				'radically.github.io',
+				'cdn.sammdot.ca',
+				'cdn.fontshare.com',
+				'viaf.org',
+				'publicai-proxy.alaexis.workers.dev',
+				'iiif.archive.org',
+				'api.flickr.com',
+				'live.staticflickr.com',
+				'api.anthropic.com',
+				'api.openai.com',
+				'api.publicai.co',
+				'catalogo.pusc.it',
+				'parsifal.urbe.it',
+				'opac.sbn.it',
+				'overpass-api.de',
+				'api.openrouteservice.org',
+				'archive.org',
+				'*.openstreetmap.org',
+				'*.waymarkedtrails.org',
+				'*.thunderforest.com',
+				'registry.ipe.wiki',
+				'analytics.ipe.wiki',
+				'qlever.dev',
+				'app.goacoustic.com',
+				'wikipedia-archive.ourworldindata.org',
+				'api.inaturalist.org',
+				'inaturalist-open-data.s3.amazonaws.com',
+				'validator.w3.org',
+				'db.onlinewebfonts.com',
+				'fontlibrary.org',
 
 				// Beta Cluster equivalants
 				'*.wikimedia.beta.wmcloud.org',
@@ -2038,14 +2068,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_visualenhancements' => [
-			'default' => 'default',
-		],
-
-		'-wgDiscussionTools_visualenhancements_reply' => [
-			'default' => 'default',
-		],
-
-		'-wgDiscussionTools_visualenhancements_pageframe' => [
 			'default' => 'default',
 		],
 
@@ -2101,12 +2123,6 @@ function wmfGetOverrideSettings() {
 			'default' => [],
 		],
 
-		'wmgUseStopForumSpam' => [
-			'default' => true,
-		],
-		'wgSFSReportOnly' => [
-			'default' => false,
-		],
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
@@ -2165,9 +2181,6 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 		'wgCampaignEventsEnableEventInvitation' => [
-			'default' => true,
-		],
-		'wgCampaignEventsEnableEventGoals' => [
 			'default' => true,
 		],
 		// T314294
@@ -2233,15 +2246,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T373711
-		'-wgCodeMirrorV6' => [
-			'default' => false,
-		],
-
-		'wgCodeMirrorLineNumberingNamespaces' => [
-			'default' => null,
-		],
-
 		'wmgUseCommunityConfiguration' => [
 			'default' => true,
 		],
@@ -2280,12 +2284,14 @@ function wmfGetOverrideSettings() {
 		'wgChartTransformsEnabled' => [
 			'default' => true,
 		],
-		'wgParsoidFragmentSupport' => [
-			'default' => true,
-		],
 		// T378206
 		'wgChartProgressiveEnhancement' => [
 			'default' => true,
+		],
+		// T431990
+		'wgChartWizardEnabled' => [
+			'default' => false,
+			'commonswiki' => true,
 		],
 		// T372527
 		'-wmgUseCommunityRequests' => [
@@ -2342,6 +2348,25 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
 			'wikidatawiki' => false,
 		],
+		// T421850 - prototype displaying links to WikiProjects on Item pages
+		'wmgWikibaseTmpWikiProjectsLinking' => [
+			'wikidatawiki' => [
+				[
+					'propertyIds' => [
+						'P235781', 'P253125', 'P62013'
+					],
+					'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_Music',
+					'msg' => 'wikiprojects-sidebar-wikiproject-music',
+				],
+				[
+					'statements' => [
+						'P694' => [ 'Q500792' ],
+					],
+					'href' => 'https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:WikiProject_Astronomy',
+					'msg' => 'wikiprojects-sidebar-wikiproject-astronomy',
+				],
+			],
+		],
 		// T415516 temporary feature flag
 		'wmgWikibaseTmpGraphQL' => [
 			'default' => false,
@@ -2381,12 +2406,12 @@ function wmfGetOverrideSettings() {
 		],
 		// T415372 - Wikipedia 25th Birthday easter eggs extension.
 		'wmgUseWP25EasterEggs' => [
-			'default' => true,
+			'default' => false,
 		],
 
 		// T415372 - Enable WP25EasterEggs visual interventions.
 		'wgWp25EasterEggsEnable' => [
-			'default' => true,
+			'default' => false,
 		],
 
 		'wgWMCBadEmailDomainsFile' => [
@@ -2398,5 +2423,37 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'testwiki' => true,
 		],
+
+		'wmgUseArticleGuidance' => [
+			'default' => false,
+			'enwiki' => true, // T423295
+		],
+
+		'wgArticleGuidanceWikidataConnectEnabled' => [
+			'default' => false,
+			'enwiki' => true,
+		],
+
+		'wgArticleGuidanceSparqlEndpoint' => [
+			'default' => 'https://query.wikidata.org/sparql',
+		],
+
+		'wgArticleGuidanceWikidataApiUrl' => [
+			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
+		],
+
+		// TODO: Remove wgArticleGuidanceWikidataApiUrl once patches 1310600 and 1313188
+		// are merged and deployed on group 2 (T421250).
+		'wgArticleGuidanceWikidataUrls' => [
+			'default' => [
+				'api' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
+				'view' => 'https://www.wikidata.beta.wmcloud.org/wiki/$1',
+				'sparql' => 'https://query.wikidata.org/sparql',
+			],
+		],
+
+		'wgULSLanguageSelectorV2Enabled' => [
+			'default' => true
+		]
 	];
 } # wmfGetOverrideSettings()

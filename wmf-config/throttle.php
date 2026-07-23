@@ -13,7 +13,7 @@ $wmgThrottlingExceptions = [];
 #  'value'  => new value for $wgAccountCreationThrottle (default: 50 per day)
 #  'tempaccountvalue' => new value for $wgTempAccountCreationThrottle
 #    (default: 6 per day)
-#  'IP'     => client IP as given by $wgRequest->getIP() or array (default: any IP)
+#  'IP'     => client IP as given by WebRequest::getIP() or array (default: any IP)
 #  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
@@ -37,11 +37,52 @@ $wmgThrottlingExceptions = [];
 
 ## Add throttling definitions above.
 
-// T421305
+// T427678
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-03-27T07:00 +1:00',
-	'to'     => '2026-03-27T12:00 +1:00',
-	'IP'     => '213.155.243.7',
+	'from'   => '2026-06-08T06:00 +2:00',
+	'to'     => '2026-06-08T17:00 +2:00',
+	'IP'     => '84.19.71.121',
 	'dbname' => 'cswiki',
-	'value'  => 40,
+	'value'  => 50,
+	'tempaccountvalue'  => 50,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-06-15T15:00 +9:00',
+	'to'     => '2026-06-15T17:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 50,
+	'tempaccountvalue'  => 50,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-06-22T15:00 +9:00',
+	'to'     => '2026-06-22T17:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 50,
+	'tempaccountvalue'  => 50,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-07-09T10:00 +9:00',
+	'to'     => '2026-07-09T13:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 30,
+	'tempaccountvalue'  => 30,
+];
+
+// T427912
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-07-16T10:00 +9:00',
+	'to'     => '2026-07-16T13:00 +9:00',
+	'IP'     => '202.25.155.253',
+	'dbname' => 'jawiki',
+	'value'  => 30,
+	'tempaccountvalue'  => 30,
 ];

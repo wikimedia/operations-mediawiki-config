@@ -38,27 +38,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://af.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://af.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://af.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://als.wikipedia.org"
 		}
 	},
@@ -87,21 +66,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://am.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ang.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ang.wiktionary.org"
 		}
 	},
 	{
@@ -129,13 +94,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://an.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://api.wikimedia.org"
 		}
 	},
@@ -157,49 +115,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ar.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ar.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ar.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ar.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ar.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ar.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ar.wiktionary.org"
 		}
 	},
 	{
@@ -227,28 +143,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ast.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://as.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://as.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://as.wikisource.org"
 		}
 	},
 	{
@@ -290,13 +185,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ay.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://azb.wikipedia.org"
 		}
 	},
@@ -311,42 +199,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://az.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://az.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://az.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://az.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ban.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ban.wikisource.org"
 		}
 	},
 	{
@@ -374,13 +227,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ba.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://bbc.wikipedia.org"
 		}
 	},
@@ -389,27 +235,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://bcl.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bcl.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bcl.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bcl.wiktionary.org"
 		}
 	},
 	{
@@ -437,13 +262,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://beta.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://be.wikipedia.org"
 		}
 	},
@@ -451,35 +269,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://be.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://be.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://be.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://be.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://be.wiktionary.org"
 		}
 	},
 	{
@@ -494,34 +284,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://bg.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bg.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bg.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bg.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bg.wiktionary.org"
 		}
 	},
 	{
@@ -549,28 +311,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://bjn.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bjn.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://blk.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://blk.wiktionary.org"
 		}
 	},
 	{
@@ -585,41 +326,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://bn.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bn.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bn.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bn.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bn.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bn.wiktionary.org"
 		}
 	},
 	{
@@ -654,27 +360,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://br.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://br.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://br.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://bs.wikipedia.org"
 		}
 	},
@@ -682,49 +367,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://bs.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bs.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bs.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bs.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://bs.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://btm.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://btm.wiktionary.org"
 		}
 	},
 	{
@@ -752,42 +395,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ca.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ca.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ca.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ca.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ca.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ca.wiktionary.org"
 		}
 	},
 	{
@@ -829,13 +437,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://chr.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ch.wikipedia.org"
 		}
 	},
@@ -851,13 +452,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://ckb.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ckb.wiktionary.org"
 		}
 	},
 	{
@@ -885,13 +479,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://co.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://crh.wikipedia.org"
 		}
 	},
@@ -913,63 +500,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://csb.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://cs.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cs.wiktionary.org"
 		}
 	},
 	{
@@ -990,42 +521,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://cv.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://cy.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cy.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cy.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cy.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://cy.wiktionary.org"
 		}
 	},
 	{
@@ -1046,84 +542,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://da.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://da.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://da.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://da.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://de.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://de.wiktionary.org"
 		}
 	},
 	{
@@ -1145,13 +564,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://diq.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://diq.wiktionary.org"
 		}
 	},
 	{
@@ -1193,13 +605,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://dv.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://dz.wikipedia.org"
 		}
 	},
@@ -1221,105 +626,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://el.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://el.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://el.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://el.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://el.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://el.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://el.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://eml.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://en.wiktionary.org"
 		}
 	},
 	{
@@ -1333,98 +640,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://eo.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eo.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eo.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eo.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eo.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eo.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://es.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://es.wiktionary.org"
 		}
 	},
 	{
@@ -1438,13 +654,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://et.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ee.wikimedia.org"
 		}
 	},
@@ -1452,56 +661,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://et.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://et.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://et.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://eu.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eu.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eu.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eu.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://eu.wiktionary.org"
 		}
 	},
 	{
@@ -1529,48 +689,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://fa.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fa.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fa.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fa.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fa.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fa.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ff.wikipedia.org"
 		}
 	},
@@ -1592,13 +710,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://fi.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://fi.wikimedia.org"
 		}
 	},
@@ -1606,56 +717,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://fi.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fi.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fi.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fi.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fi.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fi.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://fj.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fj.wiktionary.org"
 		}
 	},
 	{
@@ -1683,20 +745,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://fo.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fo.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://frp.wikipedia.org"
 		}
 	},
@@ -1718,55 +766,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://fr.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fr.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fr.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fr.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fr.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fr.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fr.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://fur.wikipedia.org"
 		}
 	},
@@ -1775,20 +774,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://fy.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fy.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://fy.wiktionary.org"
 		}
 	},
 	{
@@ -1816,13 +801,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ga.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://gcr.wikipedia.org"
 		}
 	},
@@ -1831,13 +809,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://gd.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gd.wiktionary.org"
 		}
 	},
 	{
@@ -1858,42 +829,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://gl.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gl.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gl.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gl.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://gn.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gn.wiktionary.org"
 		}
 	},
 	{
@@ -1907,28 +843,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://gom.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://gor.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gor.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gor.wiktionary.org"
 		}
 	},
 	{
@@ -1970,27 +885,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://gu.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gu.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gu.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://guw.wikipedia.org"
 		}
 	},
@@ -1998,35 +892,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://guw.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://guw.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://guw.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://gv.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://gv.wiktionary.org"
 		}
 	},
 	{
@@ -2047,13 +913,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ha.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://haw.wikipedia.org"
 		}
 	},
@@ -2068,56 +927,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://he.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://he.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://he.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://he.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://he.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://he.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://hif.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hif.wiktionary.org"
 		}
 	},
 	{
@@ -2131,48 +941,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://hi.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hi.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hi.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hi.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hi.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hi.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://hr.wikipedia.org"
 		}
 	},
@@ -2180,42 +948,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://hr.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hr.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hr.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hr.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://hsb.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hsb.wiktionary.org"
 		}
 	},
 	{
@@ -2236,63 +969,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://hu.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hu.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hu.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hu.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://hy.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hy.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hy.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hy.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://hy.wiktionary.org"
 		}
 	},
 	{
@@ -2313,20 +990,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ia.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ia.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://iba.wikipedia.org"
 		}
 	},
@@ -2341,49 +1004,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://id.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://id.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://id.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://id.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://id.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ie.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ie.wiktionary.org"
 		}
 	},
 	{
@@ -2398,20 +1019,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://ig.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ig.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ig.wiktionary.org"
 		}
 	},
 	{
@@ -2453,42 +1060,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://io.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://is.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://is.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://is.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://is.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://is.wiktionary.org"
 		}
 	},
 	{
@@ -2502,63 +1074,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://it.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://it.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://it.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://it.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://it.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://it.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://it.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://iu.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://iu.wiktionary.org"
 		}
 	},
 	{
@@ -2579,63 +1095,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ja.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ja.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ja.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ja.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ja.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ja.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ja.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://jbo.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://jbo.wiktionary.org"
 		}
 	},
 	{
@@ -2649,28 +1109,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://jv.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://jv.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://kaa.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://kaa.wiktionary.org"
 		}
 	},
 	{
@@ -2691,42 +1130,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ka.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ka.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ka.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ka.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://kbd.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://kbd.wiktionary.org"
 		}
 	},
 	{
@@ -2741,13 +1145,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://kcg.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://kcg.wiktionary.org"
 		}
 	},
 	{
@@ -2782,20 +1179,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://kk.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://kk.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://kl.wikipedia.org"
 		}
 	},
@@ -2803,28 +1186,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://kl.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://km.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://km.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://km.wiktionary.org"
 		}
 	},
 	{
@@ -2845,27 +1207,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://kn.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://kn.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://kn.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://koi.wikipedia.org"
 		}
 	},
@@ -2874,48 +1215,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://ko.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ko.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ko.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ko.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ko.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ko.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ko.wiktionary.org"
 		}
 	},
 	{
@@ -2943,13 +1242,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ks.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://kus.wikipedia.org"
 		}
 	},
@@ -2958,27 +1250,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://ku.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ku.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ku.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ku.wiktionary.org"
 		}
 	},
 	{
@@ -2999,35 +1270,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://kw.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ky.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ky.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ky.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ky.wiktionary.org"
 		}
 	},
 	{
@@ -3055,34 +1298,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://la.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://la.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://la.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://la.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://lbe.wikipedia.org"
 		}
 	},
@@ -3091,13 +1306,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://lb.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://lb.wiktionary.org"
 		}
 	},
 	{
@@ -3132,49 +1340,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://lij.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://li.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://li.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://li.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://li.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://li.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://li.wiktionary.org"
 		}
 	},
 	{
@@ -3195,21 +1361,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://lmo.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ln.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ln.wiktionary.org"
 		}
 	},
 	{
@@ -3230,13 +1382,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://lo.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ltg.wikipedia.org"
 		}
 	},
@@ -3251,34 +1396,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://lt.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://lt.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://lt.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://lt.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://lv.wikipedia.org"
 		}
 	},
@@ -3286,21 +1403,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://lv.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mad.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mad.wiktionary.org"
 		}
 	},
 	{
@@ -3349,20 +1452,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://mg.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mg.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mhr.wikipedia.org"
 		}
 	},
@@ -3377,21 +1466,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://min.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mi.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mi.wiktionary.org"
 		}
 	},
 	{
@@ -3405,28 +1480,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://mk.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mk.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mk.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mk.wiktionary.org"
 		}
 	},
 	{
@@ -3440,42 +1494,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ml.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ml.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ml.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ml.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mni.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mni.wiktionary.org"
 		}
 	},
 	{
@@ -3489,21 +1508,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://mn.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mnw.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mnw.wiktionary.org"
 		}
 	},
 	{
@@ -3531,34 +1536,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://mr.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mr.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mr.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mr.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ms.wikipedia.org"
 		}
 	},
@@ -3566,35 +1543,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ms.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ms.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ms.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mt.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://mt.wiktionary.org"
 		}
 	},
 	{
@@ -3629,20 +1578,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://my.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://my.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://mzn.wikipedia.org"
 		}
 	},
@@ -3657,28 +1592,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://nah.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://nap.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nap.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://na.wiktionary.org"
 		}
 	},
 	{
@@ -3699,28 +1613,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://nds.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ne.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ne.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ne.wiktionary.org"
 		}
 	},
 	{
@@ -3741,21 +1634,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://nia.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://nl.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nl.wikibooks.org"
 		}
 	},
 	{
@@ -3769,56 +1648,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://nl.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nl.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nl.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nl.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nl.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://nn.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nn.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://nn.wiktionary.org"
 		}
 	},
 	{
@@ -3839,42 +1669,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://no.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://no.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://no.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://no.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://no.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://no.wiktionary.org"
 		}
 	},
 	{
@@ -3937,20 +1732,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://oc.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://oc.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://olo.wikipedia.org"
 		}
 	},
@@ -3965,28 +1746,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://om.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://or.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://or.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://or.wiktionary.org"
 		}
 	},
 	{
@@ -4029,27 +1789,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://pa.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pa.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pa.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pa.wiktionary.org"
 		}
 	},
 	{
@@ -4105,49 +1844,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://pl.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://pl.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pl.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pl.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pl.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pl.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pl.wiktionary.org"
 		}
 	},
 	{
@@ -4161,21 +1858,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://pms.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://pnb.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pnb.wiktionary.org"
 		}
 	},
 	{
@@ -4196,20 +1879,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ps.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ps.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://pt.wikipedia.org"
 		}
 	},
@@ -4217,56 +1886,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://pt.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://pt.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pt.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pt.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pt.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pt.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pt.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://pt.wiktionary.org"
 		}
 	},
 	{
@@ -4281,13 +1901,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://qu.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://qu.wiktionary.org"
 		}
 	},
 	{
@@ -4322,13 +1935,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://roa-rup.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://roa-tara.wikipedia.org"
 		}
 	},
@@ -4337,48 +1943,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://ro.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ro.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ro.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ro.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ro.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ro.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ro.wiktionary.org"
 		}
 	},
 	{
@@ -4406,56 +1970,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ru.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ru.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ru.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ru.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ru.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ru.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ru.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ru.wiktionary.org"
 		}
 	},
 	{
@@ -4469,28 +1984,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://rw.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sah.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sah.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sah.wikisource.org"
 		}
 	},
 	{
@@ -4504,13 +1998,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sat.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sa.wikipedia.org"
 		}
 	},
@@ -4518,42 +2005,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sa.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sa.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sa.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sa.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://scn.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://scn.wiktionary.org"
 		}
 	},
 	{
@@ -4581,13 +2033,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sd.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://se.wikipedia.org"
 		}
 	},
@@ -4609,13 +2054,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sg.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://shi.wikipedia.org"
 		}
 	},
@@ -4630,49 +2068,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://shn.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://shn.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://shn.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://shn.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sh.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sh.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://shy.wiktionary.org"
 		}
 	},
 	{
@@ -4686,28 +2082,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://simple.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://si.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://si.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://si.wiktionary.org"
 		}
 	},
 	{
@@ -4721,13 +2096,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://skr.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sk.wikipedia.org"
 		}
 	},
@@ -4735,70 +2103,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sk.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sk.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sk.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sk.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sl.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sl.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sl.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sl.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sl.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sl.wiktionary.org"
 		}
 	},
 	{
@@ -4819,13 +2124,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sm.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sn.wikipedia.org"
 		}
 	},
@@ -4833,21 +2131,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://so.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://so.wiktionary.org"
 		}
 	},
 	{
@@ -4868,34 +2152,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sq.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sq.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sq.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sq.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://srn.wikipedia.org"
 		}
 	},
@@ -4910,49 +2166,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sr.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sr.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sr.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sr.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sr.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://ss.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ss.wiktionary.org"
 		}
 	},
 	{
@@ -4973,35 +2187,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://st.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://su.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://su.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://su.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://su.wiktionary.org"
 		}
 	},
 	{
@@ -5015,63 +2201,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://sv.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sv.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sv.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sv.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sv.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sv.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sv.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://sw.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://sw.wiktionary.org"
 		}
 	},
 	{
@@ -5106,41 +2236,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ta.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ta.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ta.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ta.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ta.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://tay.wikipedia.org"
 		}
 	},
@@ -5149,20 +2244,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://tcy.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tcy.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tcy.wiktionary.org"
 		}
 	},
 	{
@@ -5218,34 +2299,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://te.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://te.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://te.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://te.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://tg.wikipedia.org"
 		}
 	},
@@ -5253,49 +2306,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://tg.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tg.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://th.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://th.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://th.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://th.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://th.wiktionary.org"
 		}
 	},
 	{
@@ -5316,13 +2327,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ti.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://tk.wikipedia.org"
 		}
 	},
@@ -5330,35 +2334,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://tk.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://tl.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tl.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tl.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tl.wiktionary.org"
 		}
 	},
 	{
@@ -5379,13 +2355,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://tn.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://to.wikipedia.org"
 		}
 	},
@@ -5394,13 +2363,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://tpi.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tpi.wiktionary.org"
 		}
 	},
 	{
@@ -5421,42 +2383,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://tr.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://tr.wikimedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tr.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tr.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tr.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tr.wiktionary.org"
 		}
 	},
 	{
@@ -5470,28 +2397,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ts.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://tt.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tt.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://tt.wiktionary.org"
 		}
 	},
 	{
@@ -5547,56 +2453,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ug.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://uk.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uk.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uk.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uk.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uk.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uk.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uk.wiktionary.org"
 		}
 	},
 	{
@@ -5610,27 +2467,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://ur.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ur.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://ur.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://uz.wikipedia.org"
 		}
 	},
@@ -5638,35 +2474,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://uz.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://uz.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://vec.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://vec.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://vec.wiktionary.org"
 		}
 	},
 	{
@@ -5694,41 +2502,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://vi.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://vi.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://vi.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://vi.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://vi.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://vls.wikipedia.org"
 		}
 	},
@@ -5743,13 +2516,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://vo.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://war.wikipedia.org"
 		}
 	},
@@ -5758,20 +2524,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://wa.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://wa.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://wa.wiktionary.org"
 		}
 	},
 	{
@@ -5800,13 +2552,6 @@
 		"target": {
 			"namespace": "web",
 			"site": "https://wo.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://wo.wiktionary.org"
 		}
 	},
 	{
@@ -5848,28 +2593,7 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://yi.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://yi.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://yo.wikipedia.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://yue.wiktionary.org"
 		}
 	},
 	{
@@ -5911,20 +2635,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://zh-min-nan.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh-min-nan.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://zh-yue.wikipedia.org"
 		}
 	},
@@ -5939,55 +2649,6 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://zh.wikibooks.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh.wikinews.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh.wikiquote.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh.wikisource.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh.wikiversity.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh.wikivoyage.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
-			"site": "https://zh.wiktionary.org"
-		}
-	},
-	{
-		"relation": ["delegate_permission/common.get_login_creds"],
-		"target": {
-			"namespace": "web",
 			"site": "https://zu.wikipedia.org"
 		}
 	},
@@ -5995,14 +2656,25 @@
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
 			"namespace": "web",
-			"site": "https://zu.wiktionary.org"
+			"site": "https://auth.wikimedia.org"
 		}
 	},
 	{
 		"relation": ["delegate_permission/common.get_login_creds"],
 		"target": {
-			"namespace": "web",
-			"site": "https://auth.wikimedia.org"
+			"namespace": "android_app",
+			"package_name": "org.wikipedia",
+			"sha256_cert_fingerprints":
+			["F5:40:E9:37:41:9A:1F:E3:08:E3:35:31:35:9C:23:CE:19:DF:D8:4A:66:01:E2:EF:85:C2:17:C8:23:A7:08:7F"]
+		}
+	},
+	{
+		"relation": ["delegate_permission/common.get_login_creds"],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "org.wikipedia",
+			"sha256_cert_fingerprints":
+			["1C:3D:DB:0E:8F:32:58:B0:FF:3B:7B:6A:60:8D:19:E7:CD:EE:D3:8A:58:97:BB:DA:23:BA:C1:55:92:3B:12:67"]
 		}
 	}
 ]

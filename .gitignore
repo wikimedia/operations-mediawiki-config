@@ -1,5 +1,7 @@
 # MediaWiki checkouts created by "scap prep"
 /php-*/
+# Non-MediaWiki checkouts created by "scap prep"
+/static/hcaptcha/
 
 # Production files that are temporary or private
 /private

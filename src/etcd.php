@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# etcd.php provides wmfSetupEtcd() which CommonSettings.php usees
+# etcd.php provides wmfSetupEtcd() which CommonSettings.php uses
 # to load certain configuration variables from Etcd.
 #
 # This for PRODUCTION.
@@ -59,6 +59,10 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
 	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
 	foreach ( $localDbConfig['sectionLoads'] as $section => $dbctlLoads ) {
+		// The section test-s4 is for DBAs to test dbctl
+		if ( $section === 'test-s4' ) {
+			continue;
+		}
 		// For each section, MediaWiki treats the first host as the master.
 		// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
 		// dictionaries, one containing the master and one containing all the replicas.
@@ -86,10 +90,11 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		'es3' => [ 'cluster25' ],
 		'es4' => [ 'cluster26', 'cluster28' ],
 		'es5' => [ 'cluster27', 'cluster29' ],
-		'es6' => [ 'cluster30' ],
-		'es7' => [ 'cluster31' ],
+		'es6' => [ 'cluster30', 'cluster32' ],
+		'es7' => [ 'cluster31', 'cluster33' ],
 		'x1' => [ 'extension1' ],
 		'x3' => [ 'extension3' ],
+		'x4' => [ 'extension4' ],
 	];
 	$wmgPCServers = [];
 	$wmgMainStashServers = [];

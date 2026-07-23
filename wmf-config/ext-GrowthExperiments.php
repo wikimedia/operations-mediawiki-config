@@ -50,7 +50,6 @@ return [
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
-	// Only effective for Beta rn, cf. T400937
 	'wikidata' => false,
 ],
 
@@ -782,6 +781,11 @@ return [
 	'default' => 2000,
 ],
 
+'wgGEMentorshipCleanupEnabled' => [
+	'default' => false,
+	'frwiki' => true,
+],
+
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
 ],
@@ -852,6 +856,11 @@ return [
 			],
 			'pattern' => '/^(typage|fundraising)-\w+-\w+-\d+$/',
 		],
+		// See T422169.
+		'account-creation-reading-list-cta' => [
+			'pattern' => '/^account-creation-reading-list-cta$/',
+			'skipWelcomeSurvey' => true
+		]
 	],
 ],
 
@@ -875,7 +884,6 @@ return [
 
 'wgWelcomeSurveyEnabled' => [
 	'default' => true,
-	// Only effective for Beta rn, cf. T400937
 	'wikidata' => false,
 ],
 
@@ -886,6 +894,10 @@ return [
 	'enwiki' => true, // T409606
 	'frwiki' => true, // T409606
 	'ptwiki' => true, // T409606
+],
+
+'wgGEReviseToneParagraphScoreThreshold' => [
+	'default' => 0.79, // T432790
 ],
 
 'wgGEReviseToneOverrideSearchTerm' => [
