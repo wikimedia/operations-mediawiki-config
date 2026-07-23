@@ -2422,6 +2422,11 @@ function wmfGetOverrideSettings() {
 
 		'wgULSLanguageSelectorV2Enabled' => [
 			'default' => true
-		]
+		],
+
+		'wmgEnableWeb2CitJsonContentModel' => [
+			'default' => false,
+			'metawiki' => true, // T305571
+		],
 	];
 } # wmfGetOverrideSettings()
