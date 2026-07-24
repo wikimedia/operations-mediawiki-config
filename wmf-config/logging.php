@@ -102,7 +102,7 @@ function wmfGetLoggingConfig(): array {
 		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
 	// T124985: The Processors listed in $monologProcessors are applied to
-	// a message list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
+	// a message in list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
 	//
 	// The `wmfconfig` processor injects `normalized_message` which must be listed
 	// *before* the psr processor since we want to retain the log placeholders for
