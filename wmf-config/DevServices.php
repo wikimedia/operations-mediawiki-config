@@ -53,5 +53,6 @@ return [
 		'chart-renderer' => null,
 		'mpic' => null,
 		'analytics-web' => null,
+		'test-kitchen' => null,
 	]
 ];

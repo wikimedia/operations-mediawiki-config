@@ -122,8 +122,5 @@ function wmfGetOverrideSettings() {
 		'-wmgUseIPReputation' => [
 			'default' => false,
 		],
-		'-wmgUseTestKitchen' => [
-			'default' => false,
-		],
 	];
 }
