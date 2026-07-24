@@ -237,7 +237,7 @@ return [
 	'ltwiki' => '/static/images/project-logos/ltwiki.png', // T48589
 	'lvwiki' => '/static/images/project-logos/lvwiki.png',
 	'madwiki' => '/static/images/project-logos/madwiki.png', // T270693
-	'magwiki' => '/static/images/project-logos/hiwiki.png',
+	'magwiki' => '/static/images/project-logos/magwiki.png', // T433011
 	'maiwiki' => '/static/images/project-logos/maiwiki.png', // T74346
 	'map_bmswiki' => '/static/images/project-logos/idwiki.png', // T189155
 	'mdfwiki' => '/static/images/project-logos/mdfwiki.png', // T48589
@@ -1143,7 +1143,7 @@ return [
 	'ltwiki' => '/static/images/project-logos/ltwiki-2x.png', // T150618
 	'lvwiki' => '/static/images/project-logos/lvwiki-2x.png', // T150618
 	'madwiki' => '/static/images/project-logos/madwiki-2x.png', // T270693
-	'magwiki' => '/static/images/project-logos/hiwiki-2x.png',
+	'magwiki' => '/static/images/project-logos/magwiki-2x.png', // T433011
 	'maiwiki' => '/static/images/project-logos/maiwiki-2x.png', // T149790
 	'map_bmswiki' => '/static/images/project-logos/idwiki-2x.png', // T189155
 	'mdfwiki' => '/static/images/project-logos/mdfwiki-2x.png', // T150618
@@ -6160,6 +6160,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mad.svg',
 		'width' => 120,
 		'height' => 11,
+	],
+	'magwiki' => [ // T433011
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mag.svg',
+		'width' => 100,
+		'height' => 16,
 	],
 	'maiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mai.svg',
