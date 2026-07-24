@@ -14,7 +14,7 @@ return [
 		'udp2log' => 'logger:8420',
 		'redis_lock' => '',
 		'etcd' => [
-			'host' => 'db:2379',
+			'host' => 'etcd:2379',
 			'protocol' => 'https'
 		],
 		'mediaSwiftAuth' => '',
