@@ -212,6 +212,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.dev.json';
 	}
 
+	if ( isset( $wmgWikibaseLexemeRestApiDevelopmentEnabled ) && $wmgWikibaseLexemeRestApiDevelopmentEnabled ) {
+		$wgRestAPIAdditionalRouteFiles[] = 'extensions/WikibaseLexeme/src/MediaWiki/RestApi/routes.dev.json';
+	}
+
 	if ( isset( $wmgWikibaseStringLimits ) ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}

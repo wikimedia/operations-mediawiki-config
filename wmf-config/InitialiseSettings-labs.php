@@ -1591,6 +1591,12 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
+		// T430943
+		'wmgWikibaseLexemeRestApiDevelopmentEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
 		// T235033
 		'wmgWikibaseRepoDataBridgeEnabled' => [
 			'default' => false,
