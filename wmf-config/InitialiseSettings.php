@@ -13241,13 +13241,6 @@ return [
 	'default' => '/static/images/footer/wikimedia-button.svg',
 ],
 
-// T324999
-'wmgWikibaseRestApiEnabled' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 // Wikidata Bridge configuration
 
 'wmgWikibaseRepoDataBridgeEnabled' => [
