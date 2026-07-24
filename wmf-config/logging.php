@@ -100,6 +100,12 @@ function wmfGetLoggingConfig(): array {
 	global $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgLocalServices,
 		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
+	// WMF_MAINTENANCE_OFFLINE can be set in the environment as a hack to
+	// allow some MediaWiki maintenance scripts to be run in a situation where
+	// network access is disabled (such as when scap is rebuilding l10n
+	// files).  It is not a general production "offline" mode (e.g. site down).
+	$offlineMaintenance = (bool)getenv( 'WMF_MAINTENANCE_OFFLINE' );
+
 	// T124985: The Processors listed in $monologProcessors are applied to
 	// a message in list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
 	//
@@ -187,7 +193,8 @@ function wmfGetLoggingConfig(): array {
 	];
 
 	$monologHandlers = [];
-	if ( $wmgEnableExtraLogFile ) {
+	// Skip offline: its udp2log sink is unreachable.
+	if ( $wmgEnableExtraLogFile && !$offlineMaintenance ) {
 		$monologHandlers['extraLogFile'] = [
 			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 			'args'      => [ "udp://{$wmgLocalServices['udp2log']}/testwiki" ],
@@ -200,12 +207,26 @@ function wmfGetLoggingConfig(): array {
 		$monologHandlers[ "udp2log-$logLevel" ] = [
 			'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 			'args' => [
-				// NOTE: "{channel}" is a placeholder
-				// expanded by LegacyHandler.php in MediaWiki core.
-				"udp://{$wmgLocalServices['udp2log']}/{channel}",
+				// "{channel}" is a placeholder expanded by LegacyHandler.
+				// Offline: discard. These handlers carry every channel, so
+				// routing them to stderr would confuse scap with ordinary
+				// logging; real errors go to 'offline-stderr' below.
+				$offlineMaintenance ? '/dev/null' : "udp://{$wmgLocalServices['udp2log']}/{channel}",
 				false,
-				$logLevel
+				$logLevel,
 			],
+			'formatter' => 'line',
+		];
+	}
+
+	// Channels carrying genuine runtime errors (PHP errors, uncaught
+	// exceptions). Offline these go to stderr so a broken config aborts the
+	// build; see the loop below. Other channels are discarded (above).
+	$offlineStderrChannels = [ 'error', 'exception' ];
+	if ( $offlineMaintenance ) {
+		$monologHandlers['offline-stderr'] = [
+			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
+			'args'      => [ 'php://stderr' ],
 			'formatter' => 'line',
 		];
 	}
@@ -279,7 +300,7 @@ function wmfGetLoggingConfig(): array {
 
 		if ( $opts['udp2log'] ) {
 			$handlers[] = "udp2log-{$opts['udp2log']}";
-			if ( $wmgEnableExtraLogFile ) {
+			if ( $wmgEnableExtraLogFile && !$offlineMaintenance ) {
 				// T117019: Send messages to extra handler location as well
 				// This is for messages from regular traffic to testwikis.
 				$handlers[] = 'extraLogFile';
@@ -348,6 +369,11 @@ function wmfGetLoggingConfig(): array {
 			}
 		}
 
+		// After sample/buffer wrapping so these records are never dropped.
+		if ( $offlineMaintenance && in_array( $channel, $offlineStderrChannels, true ) ) {
+			$handlers[] = 'offline-stderr';
+		}
+
 		if ( $handlers ) {
 			// T118057: wrap the collection of handlers in a WhatFailureGroupHandler
 			// to swallow any exceptions that might leak out otherwise
@@ -373,7 +399,7 @@ function wmfGetLoggingConfig(): array {
 	}
 
 	// Ensure extra logging works even if @default channel is not configured
-	if ( $wmgEnableExtraLogFile ) {
+	if ( $wmgEnableExtraLogFile && !$offlineMaintenance ) {
 		$monologLoggers['@default'] ??= [
 			'handlers' => [ 'extraLogFile' ],
 			'processors' => array_keys( $monologProcessors ),
