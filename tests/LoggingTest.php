@@ -19,9 +19,13 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$GLOBALS['wmgEnableExtraLogFile'] = false;
 		$GLOBALS['wmgLogAuthmanagerMetrics'] = false;
 		$GLOBALS['wmgUseWikimediaEvents'] = false;
-		$GLOBALS['wmgUdp2logDest'] = 'localhost';
 		$GLOBALS['wmgEnableLogstash'] = true;
 		$GLOBALS['wmgMonologChannels'] = [];
+
+		// phpcs:ignore MediaWiki.VariableAnalysis.UnusedGlobalVariables
+		global $wmgLocalServices;
+		require __DIR__ . '/data/TestServices.php';
+
 		require_once __DIR__ . '/../wmf-config/logging.php';
 	}
 

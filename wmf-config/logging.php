@@ -50,7 +50,6 @@
 #   and ultimately stored there in text files under /srv/mw-log/
 #   See also https://wikitech.wikimedia.org/wiki/Logs
 #
-# - $wmgUdp2logDest: udp2log host and port.
 # - $wmgLogAuthmanagerMetrics: Controls additional authmanager logging.
 #
 
@@ -67,10 +66,10 @@ function wmfApplyDebugLoggingHacks() {
 		$logFile = '/tmp/wiki.log';
 		$handlers = [ 'debugLogging' ];
 	} elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
-		global $wmgUdp2logDest;
+		global $wmgLocalServices;
 		// Forward all log messages to logstash for debugging.
 		// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
-		$logFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
+		$logFile = "udp://{$wmgLocalServices['udp2log']}/XWikimediaDebug";
 		$handlers = [ 'debugLogging', 'logstash-debug' ];
 	} else {
 		// No changes to normal logging config
@@ -98,7 +97,7 @@ function wmfApplyDebugLoggingHacks() {
 }
 
 function wmfGetLoggingConfig(): array {
-	global $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUdp2logDest,
+	global $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgLocalServices,
 		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
 	// T124985: The Processors listed in $monologProcessors are applied to
@@ -191,7 +190,7 @@ function wmfGetLoggingConfig(): array {
 	if ( $wmgEnableExtraLogFile ) {
 		$monologHandlers['extraLogFile'] = [
 			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
-			'args'      => [ "udp://{$wmgUdp2logDest}/testwiki" ],
+			'args'      => [ "udp://{$wmgLocalServices['udp2log']}/testwiki" ],
 			'formatter' => 'line',
 		];
 	}
@@ -203,7 +202,7 @@ function wmfGetLoggingConfig(): array {
 			'args' => [
 				// NOTE: "{channel}" is a placeholder
 				// expanded by LegacyHandler.php in MediaWiki core.
-				"udp://{$wmgUdp2logDest}/{channel}",
+				"udp://{$wmgLocalServices['udp2log']}/{channel}",
 				false,
 				$logLevel
 			],
