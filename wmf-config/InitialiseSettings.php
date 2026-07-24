@@ -11885,6 +11885,11 @@ return [
 ],
 'wgPageImagesNamespaces' => [
 	'default' => [ NS_MAIN ],
+	'enwikibooks' => [
+		NS_MAIN,
+		// /* Cookbook */
+		102
+	],
 	'commonswiki' => [ NS_MAIN, NS_CATEGORY ],
 	'mediawikiwiki' => [
 		NS_MAIN,
