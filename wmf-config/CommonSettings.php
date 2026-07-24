@@ -248,12 +248,6 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 }
 
 $wmgUdp2logDest = $wmgLocalServices['udp2log'];
-if ( $wgDBname === 'testwiki' ) {
-	$wmgExtraLogFile = "udp://{$wmgUdp2logDest}/testwiki";
-} else {
-	$wmgExtraLogFile = '/dev/null';
-}
-
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = WmfConfig::SUFFIXES;
 $wgConf->wikis = WmfConfig::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );

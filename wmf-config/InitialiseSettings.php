@@ -2203,7 +2203,7 @@ return [
 ],
 # @} end of wgTranslateNumerals
 
-// Send a copy of ALL the logs to $wmgExtraLogFile
+// Send a copy of ALL the logs to udp2log in wmf-config/logging.php
 // (except channels set to `false` or `[ 'udp2log' => false ]` in $wmgMonologChannels below).
 'wmgEnableExtraLogFile' => [
 	'default' => false,
@@ -2220,7 +2220,7 @@ return [
 // Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'sample'=>false, 'buffer'=>false, 'eventbus' => 'debug' ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // The sample rate is a positive integer.
-// Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}
+// Note: Udp2log events are sent to udp://mwlog/{$channel}
 'wmgMonologChannels' => [
 	// When changing the default, please also update the -labs settings to ensure that the
 	// logging on the beta cluster includes at least the same data that production includes

@@ -18,8 +18,7 @@
 #
 # The following globals from InitialiseSettings are used:
 #
-# - $wmgExtraLogFile: udp2log destination for 'extraLogFile' handler.
-# - $wmgEnableExtraLogFile: whether to enable the above
+# - $wmgEnableExtraLogFile: whether to enable a udp2log destination for 'extraLogFile' handler.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
@@ -47,8 +46,9 @@
 #
 #   Note: Sampled logs will not be sent to Logstash!
 #
-#   Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}.
-#   Ultimately they end up in logfiles on mwlog1001.
+#   Note: Udp2log events are sent to udp://mwlog/{$channel},
+#   and ultimately stored there in text files under /srv/mw-log/
+#   See also https://wikitech.wikimedia.org/wiki/Logs
 #
 # - $wmgUdp2logDest: udp2log host and port.
 # - $wmgLogAuthmanagerMetrics: Controls additional authmanager logging.
@@ -98,7 +98,7 @@ function wmfApplyDebugLoggingHacks() {
 }
 
 function wmfGetLoggingConfig(): array {
-	global $wmgExtraLogFile, $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUdp2logDest,
+	global $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUdp2logDest,
 		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
 	// T124985: The Processors listed in $monologProcessors are applied to
@@ -191,7 +191,7 @@ function wmfGetLoggingConfig(): array {
 	if ( $wmgEnableExtraLogFile ) {
 		$monologHandlers['extraLogFile'] = [
 			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
-			'args'      => [ $wmgExtraLogFile ],
+			'args'      => [ "udp://{$wmgUdp2logDest}/testwiki" ],
 			'formatter' => 'line',
 		];
 	}
@@ -201,6 +201,8 @@ function wmfGetLoggingConfig(): array {
 		$monologHandlers[ "udp2log-$logLevel" ] = [
 			'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 			'args' => [
+				// NOTE: "{channel}" is a placeholder
+				// expanded by LegacyHandler.php in MediaWiki core.
 				"udp://{$wmgUdp2logDest}/{channel}",
 				false,
 				$logLevel
