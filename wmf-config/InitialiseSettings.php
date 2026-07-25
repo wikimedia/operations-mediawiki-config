@@ -7569,6 +7569,15 @@ return [
 	'testwiki' => true,
 ],
 
+// T432544: default a <ref> without an explicit dir attribute to dir="auto", so
+// mixed-direction reference lists take each footnote's direction from its own
+// content (e.g. an English citation in an otherwise Persian list reads LTR and
+// gets its number on the left). Explicit dir="ltr"/"rtl"/"auto" still win.
+'wgCiteDefaultRefDirAuto' => [
+	'default' => false,
+	'fawiki' => true, // T432544
+],
+
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 
