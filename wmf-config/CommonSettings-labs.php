@@ -428,7 +428,7 @@ if ( $wmgRealm == 'labs' ) {
 		unset( $wgGroupPermissions['checkuser'] );
 	}
 
-	// IP Masking / Temporary accounts
+	// Temporary accounts
 	// Revert the changes made by CommonSettings.php, as some temporary accounts on betawikis start with '*'.
 	$wgAutoCreateTempUser['matchPattern'] = [ '*$1', '~2$1' ];
 

@@ -2681,7 +2681,7 @@ if ( $wgDBname === 'enwiki' ) {
 if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 	// T59569, T105118
 	//
-	// If it's an anonymous or temporary account user creating a page in the English and Persian Wikipedia
+	// If it's a temporary account user creating a page in the English and Persian Wikipedia
 	// Draft namespace, tell TitleQuickPermissions to abort the normal
 	// checkQuickPermissions checks. This lets anonymous/temp account users create a page in this
 	// namespace, even though they don't have the general 'createpage' right.
@@ -4429,34 +4429,22 @@ if ( $wmgUseWikimediaAntiAbuse ) {
 	];
 }
 
-// IP Masking / Temporary accounts
+// Temporary accounts
 
-// Unless otherwise specified, temporary accounts are disabled and not known about.
-$wgAutoCreateTempUser['enabled'] = false;
-$wgAutoCreateTempUser['known'] = false;
+// Ensure temporary accounts behave the same on all wikis where they are enabled.
+$wgAutoCreateTempUser['enabled'] = true;
+$wgAutoCreateTempUser['known'] = true;
 
-if ( $wmgDisableIPMasking ) {
-	// Temporary accounts were previously enabled, then disabled as an emergency measure.
-	$wgAutoCreateTempUser['enabled'] = false;
-	$wgAutoCreateTempUser['known'] = true;
-} elseif ( $wmgEnableIPMasking ) {
-	// Ensure temporary accounts behave the same on all wikis where they are enabled.
-	$wgAutoCreateTempUser['enabled'] = true;
-	$wgAutoCreateTempUser['known'] = true;
+// T357586
+$wgImplicitGroups[] = 'temp';
 
-	// T357586
-	$wgImplicitGroups[] = 'temp';
+// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
+if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
+	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'GlobalBlockList';
+	$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'MassGlobalBlock';
 }
 
-if ( $wmgDisableIPMasking || $wmgEnableIPMasking ) {
-	// Hide IP reveal on special pages where it is not useful or currently confusing (T379583)
-	if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
-		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'GlobalBlockList';
-		$wgCheckUserSpecialPagesWithoutIPRevealButtons[] = 'MassGlobalBlock';
-	}
-}
-
-// Ensure no users can be crated that match temporary account names (T361021).
+// Ensure no users can be created that match temporary account names (T361021).
 // This is used even if `$wgAutoCreateTempUser['enabled']` is false.
 $wgAutoCreateTempUser['reservedPattern'] = '~2$1';
 
@@ -4527,7 +4515,7 @@ if ( in_array( $wgDBname, array_merge( $wgSiteMatrixPrivateSites, $wgSiteMatrixF
 	};
 }
 
-// End IP Masking / Temporary accounts
+// End Temporary accounts
 
 // T39211
 $wgUseCombinedLoginLink = false;
@@ -4561,10 +4549,10 @@ if ( $wmgUseIPInfo ) {
 	// for list of relevant sections of operations/puppet config.
 	$wgIPInfoGeoLite2Prefix = '/usr/share/GeoIPInfo/GeoLite2-';
 
-	// On wikis with temporary accounts, grant full access to members of the "temporary-account-viewer"
-	// group provided by CheckUser to ensure that access to IP information reflects our policy (T375086).
-	// On Beta Cluster wikis, which do not have CheckUser installed, this amounts to making the feature
-	// admin-only.
+	// We grant full access to members of the "temporary-account-viewer" group provided by
+	// CheckUser to ensure that access to IP information reflects our policy (T375086).
+	// On Beta Cluster wikis, which do not have CheckUser installed, this amounts to making
+	// the feature admin-only.
 	// Keep full access for autoconfirmed users on wikis where temporary accounts are not known
 	// to avoid disruption.
 	if (

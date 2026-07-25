@@ -2202,21 +2202,6 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => true, // T322325
 		],
 
-		'wmgEnableIPMasking' => [
-			'default' => true, // T377262
-			'en-rtl' => false,
-			'metawiki' => true, // T379108
-		],
-
-		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
-		// It allows existing temporary accounts to be recognized as temporary accounts,
-		// but will prevent new temporary account creations and re-allow anonymous IP editing
-		// until temporary accounts are enabled again.
-		'wmgDisableIPMasking' => [
-			'default' => false,
-			'metawiki' => false, // T379108
-		],
-
 		// T342858
 		'-wgEnableEditRecovery' => [
 			'default' => true,
