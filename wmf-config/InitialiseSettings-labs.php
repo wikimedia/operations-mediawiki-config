@@ -2429,12 +2429,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://query.wikidata.org/sparql',
 		],
 
-		'wgArticleGuidanceWikidataApiUrl' => [
-			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
-		],
-
-		// TODO: Remove wgArticleGuidanceWikidataApiUrl once patches 1310600 and 1313188
-		// are merged and deployed on group 2 (T421250).
 		'wgArticleGuidanceWikidataUrls' => [
 			'default' => [
 				'api' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
