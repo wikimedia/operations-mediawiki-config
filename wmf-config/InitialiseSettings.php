@@ -14101,6 +14101,10 @@ return [
 	'trwiki' => [ 'Vikipedi:Madde_sihirbazı' ], // T426871
 ],
 
+'wgArticleGuidanceWikidataConnectEnabled' => [
+	'default' => true,
+],
+
 'wgArticleGuidanceSparqlEndpoint' => [
 	'default' => 'http://localhost:6041/sparql',
 ],
