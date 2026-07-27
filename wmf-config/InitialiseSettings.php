@@ -14037,16 +14037,6 @@ return [
 	'ruwiki' => false,
 ],
 
-// T415372 - Wikipedia 25th Birthday easter eggs extension.
-'wmgUseWP25EasterEggs' => [
-	'default' => false,
-],
-
-// T415372 - Enable WP25EasterEggs baby globe companion.
-'wgWp25EasterEggsEnable' => [
-	'default' => false,
-],
-
 'wgWMCBadEmailDomainsFile' => [
 	'default' => '/srv/mediawiki/private/disposable-email-domains',
 ],
