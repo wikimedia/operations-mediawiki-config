@@ -8062,10 +8062,8 @@ return [
 'wgCheckUserSuggestedInvestigationsHidden' => [
 	'default' => false,
 	// Enable without special page until comms have completed
-	'dewiki' => true,
 	'eswiki' => true,
 	'jawiki' => true,
-	'ukwiki' => true,
 	'enwikivoyage' => true,
 ],
 
