@@ -18,8 +18,7 @@
 #
 # The following globals from InitialiseSettings are used:
 #
-# - $wmgExtraLogFile: udp2log destination for 'extraLogFile' handler.
-# - $wmgEnableExtraLogFile: whether to enable the above
+# - $wmgEnableExtraLogFile: whether to enable a udp2log destination for 'extraLogFile' handler.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
@@ -47,10 +46,10 @@
 #
 #   Note: Sampled logs will not be sent to Logstash!
 #
-#   Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}.
-#   Ultimately they end up in logfiles on mwlog1001.
+#   Note: Udp2log events are sent to udp://mwlog/{$channel},
+#   and ultimately stored there in text files under /srv/mw-log/
+#   See also https://wikitech.wikimedia.org/wiki/Logs
 #
-# - $wmgUdp2logDest: udp2log host and port.
 # - $wmgLogAuthmanagerMetrics: Controls additional authmanager logging.
 #
 
@@ -67,10 +66,10 @@ function wmfApplyDebugLoggingHacks() {
 		$logFile = '/tmp/wiki.log';
 		$handlers = [ 'debugLogging' ];
 	} elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
-		global $wmgUdp2logDest;
+		global $wmgLocalServices;
 		// Forward all log messages to logstash for debugging.
 		// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
-		$logFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
+		$logFile = "udp://{$wmgLocalServices['udp2log']}/XWikimediaDebug";
 		$handlers = [ 'debugLogging', 'logstash-debug' ];
 	} else {
 		// No changes to normal logging config
@@ -98,11 +97,11 @@ function wmfApplyDebugLoggingHacks() {
 }
 
 function wmfGetLoggingConfig(): array {
-	global $wmgExtraLogFile, $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgUdp2logDest,
+	global $wmgEnableExtraLogFile, $wmgMonologChannels, $wmgLocalServices,
 		$wmgLogAuthmanagerMetrics, $wmgUseWikimediaEvents, $wmgEnableLogstash;
 
 	// T124985: The Processors listed in $monologProcessors are applied to
-	// a message list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
+	// a message in list order (top to bottom) since 1.41.0-wmf.30 (19b97fd575).
 	//
 	// The `wmfconfig` processor injects `normalized_message` which must be listed
 	// *before* the psr processor since we want to retain the log placeholders for
@@ -191,7 +190,7 @@ function wmfGetLoggingConfig(): array {
 	if ( $wmgEnableExtraLogFile ) {
 		$monologHandlers['extraLogFile'] = [
 			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
-			'args'      => [ $wmgExtraLogFile ],
+			'args'      => [ "udp://{$wmgLocalServices['udp2log']}/testwiki" ],
 			'formatter' => 'line',
 		];
 	}
@@ -201,7 +200,9 @@ function wmfGetLoggingConfig(): array {
 		$monologHandlers[ "udp2log-$logLevel" ] = [
 			'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 			'args' => [
-				"udp://{$wmgUdp2logDest}/{channel}",
+				// NOTE: "{channel}" is a placeholder
+				// expanded by LegacyHandler.php in MediaWiki core.
+				"udp://{$wmgLocalServices['udp2log']}/{channel}",
 				false,
 				$logLevel
 			],

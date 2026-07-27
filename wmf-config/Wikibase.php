@@ -208,10 +208,12 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
 	}
 
-	if ( isset( $wmgWikibaseRestApiEnabled ) && $wmgWikibaseRestApiEnabled ) {
-		if ( isset( $wmgWikibaseRestApiDevelopmentEnabled ) && $wmgWikibaseRestApiDevelopmentEnabled ) {
-			$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.dev.json';
-		}
+	if ( isset( $wmgWikibaseRestApiDevelopmentEnabled ) && $wmgWikibaseRestApiDevelopmentEnabled ) {
+		$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.dev.json';
+	}
+
+	if ( isset( $wmgWikibaseLexemeRestApiDevelopmentEnabled ) && $wmgWikibaseLexemeRestApiDevelopmentEnabled ) {
+		$wgRestAPIAdditionalRouteFiles[] = 'extensions/WikibaseLexeme/src/MediaWiki/RestApi/routes.dev.json';
 	}
 
 	if ( isset( $wmgWikibaseStringLimits ) ) {

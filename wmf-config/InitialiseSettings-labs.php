@@ -1585,14 +1585,14 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		// T302959
-		'wmgWikibaseRestApiEnabled' => [
+		// T326313
+		'wmgWikibaseRestApiDevelopmentEnabled' => [
 			'default' => false,
 			'wikidatawiki' => true,
 		],
 
-		// T326313
-		'wmgWikibaseRestApiDevelopmentEnabled' => [
+		// T430943
+		'wmgWikibaseLexemeRestApiDevelopmentEnabled' => [
 			'default' => false,
 			'wikidatawiki' => true,
 		],
@@ -2403,15 +2403,6 @@ function wmfGetOverrideSettings() {
 		// See T413100. WikimediaEvents shouldn't try to load the GeoIP database if it doesn't exist
 		'wgWMEGeoIP2Path' => [
 			'default' => null,
-		],
-		// T415372 - Wikipedia 25th Birthday easter eggs extension.
-		'wmgUseWP25EasterEggs' => [
-			'default' => false,
-		],
-
-		// T415372 - Enable WP25EasterEggs visual interventions.
-		'wgWp25EasterEggsEnable' => [
-			'default' => false,
 		],
 
 		'wgWMCBadEmailDomainsFile' => [

@@ -2203,7 +2203,7 @@ return [
 ],
 # @} end of wgTranslateNumerals
 
-// Send a copy of ALL the logs to $wmgExtraLogFile
+// Send a copy of ALL the logs to udp2log in wmf-config/logging.php
 // (except channels set to `false` or `[ 'udp2log' => false ]` in $wmgMonologChannels below).
 'wmgEnableExtraLogFile' => [
 	'default' => false,
@@ -2220,7 +2220,7 @@ return [
 // Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'sample'=>false, 'buffer'=>false, 'eventbus' => 'debug' ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // The sample rate is a positive integer.
-// Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}
+// Note: Udp2log events are sent to udp://mwlog/{$channel}
 'wmgMonologChannels' => [
 	// When changing the default, please also update the -labs settings to ensure that the
 	// logging on the beta cluster includes at least the same data that production includes
@@ -8062,10 +8062,8 @@ return [
 'wgCheckUserSuggestedInvestigationsHidden' => [
 	'default' => false,
 	// Enable without special page until comms have completed
-	'dewiki' => true,
 	'eswiki' => true,
 	'jawiki' => true,
-	'ukwiki' => true,
 	'enwikivoyage' => true,
 ],
 
@@ -13243,13 +13241,6 @@ return [
 	'default' => '/static/images/footer/wikimedia-button.svg',
 ],
 
-// T324999
-'wmgWikibaseRestApiEnabled' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 // Wikidata Bridge configuration
 
 'wmgWikibaseRepoDataBridgeEnabled' => [
@@ -14044,16 +14035,6 @@ return [
 'wgCookieSetOnIpBlock' => [
 	'default' => true,
 	'ruwiki' => false,
-],
-
-// T415372 - Wikipedia 25th Birthday easter eggs extension.
-'wmgUseWP25EasterEggs' => [
-	'default' => false,
-],
-
-// T415372 - Enable WP25EasterEggs baby globe companion.
-'wgWp25EasterEggsEnable' => [
-	'default' => false,
 ],
 
 'wgWMCBadEmailDomainsFile' => [
