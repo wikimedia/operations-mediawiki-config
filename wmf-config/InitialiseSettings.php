@@ -755,7 +755,7 @@ return [
 ],
 
 // Raise stash time limit on Commons for UploadWizard
-'wmgUploadStashMaxAge' => [
+'wgUploadStashMaxAge' => [
 	'default' => 6 * 60 * 60, // 6 hours
 	'commonswiki' => 48 * 60 * 60, // 48 hours
 	'testcommonswiki' => 48 * 60 * 60, // 48 hours
