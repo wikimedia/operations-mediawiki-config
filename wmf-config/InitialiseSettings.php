@@ -13364,7 +13364,6 @@ return [
 	],
 	'+wikidatawiki' => [
 		'wikibase/v1' => [ 'mode' => 'discoverable' ],
-		'wikibase-rest/v1' => [ 'mode' => 'hidden' ],
 	]
 ],
 
