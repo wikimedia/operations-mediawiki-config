@@ -4417,6 +4417,10 @@ if ( $wmgUseIPReputation ) {
 }
 
 if ( $wmgUseWikimediaAntiAbuse ) {
+	// Must be loaded after Echo (loaded above) so WikimediaAntiAbuse's
+	// GetPreferences handler can hide the personal-info notification row from
+	// users who cannot view the tag; that row only exists once Echo has built
+	// the preference matrix.
 	wfLoadExtension( 'WikimediaAntiAbuse' );
 	$wgWikimediaAntiAbuseCoPEModelConfig = [
 		'url' => 'https://inference.discovery.wmnet:30443/v1/models/cope-b-a4b:predict',
