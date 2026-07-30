@@ -4945,7 +4945,7 @@ $wgParsoidSettings = [
 	'useSelser' => true,
 	'linting' => true,
 	'wt2htmlLimits' => [
-		'image' => 1250,
+		'image' => 5000,
 	],
 ];
 
