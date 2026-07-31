@@ -2281,7 +2281,6 @@ return [
 		'exec' => 'debug',
 		'export' => 'debug',
 		'ExternalStore' => 'warning', // T281048
-		'fatal' => 'debug',
 		'FileImporter' => 'debug',
 		'FileOperation' => 'debug',
 		'Flow' => 'debug', // -erikb 2014/03/08

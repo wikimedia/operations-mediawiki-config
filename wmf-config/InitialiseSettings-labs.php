@@ -323,7 +323,6 @@ function wmfGetOverrideSettings() {
 				'exec' => 'debug',
 				'export' => 'debug',
 				'ExternalStore' => 'debug',
-				'fatal' => 'debug',
 				'FileImporter' => 'debug',
 				'FileOperation' => 'debug',
 				'Flow' => 'debug', // -erikb 2014/03/08
