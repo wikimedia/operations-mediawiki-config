@@ -8237,8 +8237,19 @@ return [
 ],
 
 'wgMFCustomSiteModules' => [
+	// IMPORTANT: Please do not change default or add additional override
+	// without creating a subtask of T248416 and associated evaluation.
+	// When enabling please ensure an interface admin from the project
+	// AND staff member are available at time of deployment.
+	//
+	// Enabling without sufficient due-dilegence could impact SEO, page views since
+	// this has potential to add significant render blocking resources to mobile
+	// page views with potential to impact first paint and Google Web Vitals.
 	'default' => true,
+	// T375540
 	'mediawikiwiki' => false,
+	// T375538
+	'enwiki' => false,
 ],
 
 // T169001
