@@ -13824,6 +13824,9 @@ return [
 	'mediawikiwiki' => false, // T409760
 	'wikifunctionswiki' => false, // T409760
 ],
+'wgCampaignEventsEnableWorklists' => [
+	'default' => true, // T429508
+],
 
 'wgCdnMatchParameterOrder' => [
 	'default' => false, // T314868
