@@ -1,12 +1,12 @@
 {
   "backends": [
     "k8s-mwdebug",
-    "k8s-mwdebug-eqiad",
     "k8s-mwdebug-codfw",
+    "k8s-mwdebug-eqiad",
     "k8s-mwdebug-next",
-    "k8s-mwdebug-next-eqiad",
     "k8s-mwdebug-next-codfw",
-    "k8s-mw-experimental-eqiad",
-    "k8s-mw-experimental-codfw"
+    "k8s-mwdebug-next-eqiad",
+    "k8s-mw-experimental-codfw",
+    "k8s-mw-experimental-eqiad"
   ]
 }
