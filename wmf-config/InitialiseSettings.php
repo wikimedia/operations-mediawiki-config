@@ -49,6 +49,7 @@ return [
 	'wgServer',
 	'wgCanonicalServer',
 	'wgUploadPath',
+	'wmgThumbUrl',
 	'wgNoticeProject',
 	'wgRightsUrl',
 ],
@@ -1738,6 +1739,12 @@ return [
 	'labswiki' => '//upload.wikimedia.org/wikipedia/labs',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
+],
+
+'wmgThumbUrl' => [
+	'default' => null,
+	'private' => null,
+	'testwiki' => '//thumb.wikimedia.org/wikipedia/test/thumb',
 ],
 
 'wgUploadDirectory' => [

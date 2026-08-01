@@ -37,9 +37,11 @@ $wmgSwiftShardCommon = in_array( 'commonswiki', $wmgSwiftBigWikis ) ? 2 : 0; // 
 if ( $wmgRealm === 'labs' ) {
 	$commonsUrl = "https://commons.wikimedia.beta.wmcloud.org";
 	$uploadUrl = '//upload.wikimedia.beta.wmcloud.org';
+	$thumbUrl = '//upload.wikimedia.beta.wmcloud.org';
 } else {
 	$commonsUrl = "https://commons.wikimedia.org";
 	$uploadUrl = "//upload.wikimedia.org";
+	$thumbUrl = "//thumb.wikimedia.org";
 }
 
 /* DC-specific Swift backend config */
@@ -239,6 +241,7 @@ $wgLocalFileRepo = [
 	'name' => 'local',
 	'backend' => 'local-multiwrite',
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'thumbUrl' => $wmgThumbUrl ?? null,
 	'scriptDirUrl' => $wgScriptPath,
 	'hashLevels' => 2,
 	'disableLocalTransform' => ClusterConfig::getInstance()->isK8s(),
@@ -265,6 +268,7 @@ if ( $wgDBname === 'test2wiki' ) {
 		'name' => 'testwikirepo',
 		'backend' => 'shared-testwiki-multiwrite',
 		'url' => "{$uploadUrl}/wikipedia/test",
+		'thumbUrl' => $wmgThumbUrl ? "{$thumbUrl}/wikipedia/test/thumb" : null,
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
@@ -294,6 +298,7 @@ if ( $wgDBname != 'commonswiki' ) {
 		'name' => 'shared',
 		'backend' => 'shared-multiwrite',
 		'url' => "{$uploadUrl}/wikipedia/commons",
+		'thumbUrl' => $wmgThumbUrl ? "{$thumbUrl}/wikipedia/commons/thumb" : null,
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
