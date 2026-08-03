@@ -14025,9 +14025,10 @@ return [
 	'default' => true,
 ],
 
-// T431990
+// T433831
 'wgChartWizardEnabled' => [
 	'default' => false,
+	'commonswiki' => true,
 ],
 
 // T388434 - low-level json transform support
