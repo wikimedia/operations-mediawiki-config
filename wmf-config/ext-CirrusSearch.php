@@ -1264,4 +1264,10 @@ return [
 		'use' => true,
 	]
 ],
+'wgCirrusSearchRedirectDocuments' => [
+	'default' => [
+		'build' => true,
+		'use' => true,
+	],
+],
 ];
