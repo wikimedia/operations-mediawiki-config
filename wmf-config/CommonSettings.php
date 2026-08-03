@@ -644,6 +644,7 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) 
 };
 
 $wgEmergencyContact = 'noc@wikipedia.org';
+$wgRestTermsOfServiceUrl = 'https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use#12._API_Terms';
 
 # Default address gets rejected by some mail hosts.
 # This email is used for more than just sending password resets, also e.g. Echo notifications
