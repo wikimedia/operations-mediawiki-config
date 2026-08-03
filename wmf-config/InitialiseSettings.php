@@ -6549,7 +6549,7 @@ return [
 	'default' => true,
 ],
 
-'wmgMinimumVideoPlayerSize' => [
+'wgMinimumVideoPlayerSize' => [
 	'default' => 800,
 ],
 
@@ -7591,7 +7591,7 @@ return [
 	'uawikimedia' => true,
 	'cowikimedia' => true, // T425440
 ],
-'wmgRSSUrlWhitelist' => [
+'wgRSSUrlWhitelist' => [
 	'default' => [], // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => [ 'https://wikimediaukraine.wordpress.com/feed/' ],
 	'cowikimedia' => [ // T425440

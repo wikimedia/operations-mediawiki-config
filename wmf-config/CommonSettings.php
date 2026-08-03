@@ -1529,9 +1529,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	// Pad it back out so we don't waste that CPU time with a fail!
 	$wgTranscodeBackgroundTimeLimit *= $wgFFmpegThreads;
 
-	// Minimum size for an embed video player
-	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
-
 	// use new ffmpeg build w/ VP9 & Opus support
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 
@@ -1897,7 +1894,6 @@ if ( $wmgUseTorBlock ) {
 if ( $wmgUseRSSExtension ) {
 	wfLoadExtension( 'RSS' );
 	$wgRSSProxy = $wgCopyUploadProxy;
-	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
 }
 
 if ( $wgMaxCredits === 0 ) {

@@ -713,7 +713,7 @@ function wmfGetOverrideSettings() {
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
-		'wmgRSSUrlWhitelist' => [
+		'wgRSSUrlWhitelist' => [
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
 
