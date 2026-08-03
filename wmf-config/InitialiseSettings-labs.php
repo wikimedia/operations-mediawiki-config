@@ -323,7 +323,6 @@ function wmfGetOverrideSettings() {
 				'exec' => 'debug',
 				'export' => 'debug',
 				'ExternalStore' => 'debug',
-				'fatal' => 'debug',
 				'FileImporter' => 'debug',
 				'FileOperation' => 'debug',
 				'Flow' => 'debug', // -erikb 2014/03/08
@@ -713,7 +712,7 @@ function wmfGetOverrideSettings() {
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
-		'wmgRSSUrlWhitelist' => [
+		'wgRSSUrlWhitelist' => [
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
 
@@ -752,11 +751,6 @@ function wmfGetOverrideSettings() {
 				'smn' => 'anarâškielâ', // T222309
 				'sms' => 'sääʹmǩiõll', // T222309
 			],
-		],
-
-		// T414338
-		'-wgTrackMediaRequestProvenance' => [
-			'default' => true,
 		],
 
 		'wgQuickSurveysConfig' => [
@@ -1924,11 +1918,16 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
-		'wgRestSandboxSpecs' => [
+		'wgRestExternalModules' => [
 			'default' => [
-				'lift-wing' => [
-					'url' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
-					'name' => 'Lift Wing API',
+				'lift-wing/v1' => [
+					'info' => [
+						'title' => 'Lift Wing API',
+						'description' => "Lift Wing provides production-grade machine learning model inference services for Wikimedia projects. Each model is exposed as a separate endpoint under the common `/service/lw/inference/v1/models/` prefix.\n\nAll endpoints use the KServe v1 REST protocol (`POST` with JSON request/response bodies). See individual model specs for detailed schemas and examples.\n\nFor more information:\n- [Lift Wing API on Wikitech](https://wikitech.wikimedia.org/wiki/Machine_Learning/LiftWing/API)\n- [Source code](https://gerrit.wikimedia.org/r/q/project:machinelearning/liftwing/inference-services)\n",
+						'version' => '1.0.0',
+					],
+					'base' => 'https://api.wikimedia.org',
+					'spec' => 'https://api.wikimedia.org/service/lw/specs/openapi.yaml',
 				],
 			],
 		],
@@ -2183,6 +2182,10 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],
+		// T429507
+		'wgCampaignEventsEnableWorklists' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
@@ -2195,21 +2198,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseContentTranslation' => [
 			'wikivoyage' => true, // T322325
-		],
-
-		'wmgEnableIPMasking' => [
-			'default' => true, // T377262
-			'en-rtl' => false,
-			'metawiki' => true, // T379108
-		],
-
-		// Use this if temporary accounts were enabled on a wiki but need quick disabling.
-		// It allows existing temporary accounts to be recognized as temporary accounts,
-		// but will prevent new temporary account creations and re-allow anonymous IP editing
-		// until temporary accounts are enabled again.
-		'wmgDisableIPMasking' => [
-			'default' => false,
-			'metawiki' => false, // T379108
 		],
 
 		// T342858
@@ -2420,21 +2408,10 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true, // T423295
 		],
 
-		'wgArticleGuidanceWikidataConnectEnabled' => [
-			'default' => false,
-			'enwiki' => true,
-		],
-
 		'wgArticleGuidanceSparqlEndpoint' => [
 			'default' => 'https://query.wikidata.org/sparql',
 		],
 
-		'wgArticleGuidanceWikidataApiUrl' => [
-			'default' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',
-		],
-
-		// TODO: Remove wgArticleGuidanceWikidataApiUrl once patches 1310600 and 1313188
-		// are merged and deployed on group 2 (T421250).
 		'wgArticleGuidanceWikidataUrls' => [
 			'default' => [
 				'api' => 'https://www.wikidata.beta.wmcloud.org/w/api.php',

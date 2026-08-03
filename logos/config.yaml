@@ -254,6 +254,13 @@ Wikipedia:
         comment_wordmark: T419268
         commons_tagline: 'File:Wikipedia-tagline-bo.svg'
         comment_tagline: T419268
+    bolwiki:
+        commons: 'File:Wikipedia-logo-v2-bol.svg'
+        comment: T429951
+        commons_tagline: 'File:Wikipedia-tagline-bol.svg'
+        comment_tagline: T429951
+        commons_wordmark: 'File:Wikipedia-workmark-bol.svg'
+        comment_wordmark: T429951
     bpywiki:
         comment: T42285
         comment_2x: T150618
@@ -1014,7 +1021,11 @@ Wikipedia:
     magwiki:
         commons_wordmark: 'File:Wikipedia-wordmark-hi.svg'
         comment_wordmark: T428279
-        selected: hiwiki
+        commons: 'File:Wikipedia-logo-v2-mag.svg'
+        comment: T433011
+        comment_2x: T433011
+        commons_tagline: 'File:Wikipedia-tagline-mag.svg'
+        comment_tagline: T433011
     maiwiki:
         comment: T74346
         comment_2x: T149790
@@ -1264,10 +1275,6 @@ Wikipedia:
         comment_2x: T150618
         commons_tagline: 'File:Wikipedia-tagline-pl.svg'
         comment_tagline: T258552
-        variants:
-            plwiki-1700000: # T430512
-                commons: 'File:Wikipedia-logo-v2-pl.svg'
-                commons_tagline: 'File:Wikipedia-tagline-pl-1700000.svg'
     pmswiki:
         comment_2x: T150618
         local_tagline: true
