@@ -6939,19 +6939,6 @@ return [
 'wgParserMigrationEnableParsoid' => [
 	// By default use the settings below, not this new mechanism.
 	'default' => null,
-	// T430194
-	'enwiki' => [
-		// All mobile views use Parsoid
-		'mobile' => true,
-		'default' => [
-			// Percentage of titles in main article namespace which use Parsoid
-			NS_MAIN => 100,
-			NS_TEMPLATE => 100,
-			'talk' => 100,
-			// All other non-mobile views
-			'default' => false,
-		],
-	],
 ],
 
 'wgParserMigrationEnableParsoidArticlePages' => [
@@ -6967,7 +6954,6 @@ return [
 	'default' => false,
 	'parsoidrendered' => true,
 	'labswiki' => false,
-	'enwiki' => true,
 ],
 
 'wgParserMigrationEnableParsoidTalkPages' => [
@@ -6978,7 +6964,6 @@ return [
 'wgParserMigrationEnableParsoidMobileTalkPages' => [
 	'default' => false,
 	'parsoidrendered' => true,
-	'enwiki' => true,
 ],
 
 'wgParserMigrationEnableParsoidPercentage' => [
