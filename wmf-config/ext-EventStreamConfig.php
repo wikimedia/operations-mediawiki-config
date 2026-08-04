@@ -2751,6 +2751,12 @@ return [
 				'page_id' => 'page_id',
 			],
 			'canary_events_enabled' => true,
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 
 		// page_html_content_change is the mediawiki.page_change stream
