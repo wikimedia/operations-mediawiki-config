@@ -2819,10 +2819,10 @@ return [
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
-			// this stream is is produced directly to Kafka jumbo-eqiad,
-			// so we need to use an eventgate that also produces to jumbo-eqiad.
-			// We use eventgate-analytics-external.
-			'destination_event_service' => 'eventgate-analytics-external',
+			// this stream is is produced directly to Kafka main-eqiad,
+			// so we should use an eventgate that also produces to main-eqiad.
+			// We use eventgate-main.
+			'destination_event_service' => 'eventgate-main',
 		],
 
 		// This stream will be used by the streaming enrichment pipeline
