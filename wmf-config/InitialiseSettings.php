@@ -5730,19 +5730,19 @@ return [
 // * native: Convert LeTeX to MathML in PHP.
 // * mathjax: Convert LeTeX to MathML in PHP + client-side MathJax.
 'wmgMathDefaultUserOptions' => [
-	// Phase 1: group0 (via math-legacy-mathoid.dbexpr) - DONE
-	// Phase 2: Everything else (via default) - DONE
-	// Phase 3: Wikibooks (via math-legacy-mathoid.dbexpr) - DONE
-	// Phase 4: Wikisource (via math-legacy-mathoid.dbexpr) - DONE
+	// Phase 1: group0 - DONE
+	// Phase 2: Everything else - DONE
+	// Phase 3: Wikibooks - DONE
+	// Phase 4: Wikisource - DONE
+	// Phase 5: most Wikipedias (small, medium, and canary) - DONE
 	'default' => 'mathjax',
+	// group1 "canary" wikis that are in large.dblist
+	'cawiki' => 'mathjax',
+	'hewiki' => 'mathjax',
+	'itwiki' => 'mathjax',
 
-	// Phase 5: Wikipedia sans large - TODO
-	//
-	// Use a dblist to resolve ambiguity between group0 and wikipeida.
-	'math-legacy-mathoid' => 'mathml',
-	// Phase 6: Wikipedia large (top 30) - TODO
+	// Phase 6: Wikipedia large (sans canary) - TODO
 	'arwiki' => 'mathml',
-	'cawiki' => 'mathml',
 	'cebwiki' => 'mathml',
 	'cswiki' => 'mathml',
 	'dewiki' => 'mathml',
@@ -5751,10 +5751,8 @@ return [
 	'fawiki' => 'mathml',
 	'fiwiki' => 'mathml',
 	'frwiki' => 'mathml',
-	'hewiki' => 'mathml',
 	'huwiki' => 'mathml',
 	'idwiki' => 'mathml',
-	'itwiki' => 'mathml',
 	'jawiki' => 'mathml',
 	'kowiki' => 'mathml',
 	'nlwiki' => 'mathml',

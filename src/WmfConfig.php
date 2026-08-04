@@ -57,7 +57,6 @@ class WmfConfig {
 		'small',
 		'specialcontribute',
 		'vector-2022-language-links',
-		'math-legacy-mathoid',
 		'medium',
 		'wikimania',
 		'wikidata',
