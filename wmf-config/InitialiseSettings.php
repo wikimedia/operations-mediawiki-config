@@ -5688,9 +5688,9 @@ return [
 'wmgMathDefaultUserOptions' => [
 	// Phase 1: group0 (via math-legacy-mathoid.dbexpr) - DONE
 	// Phase 2: Everything else (via default) - DONE
+	// Phase 3: Wikibooks (via math-legacy-mathoid.dbexpr) - DONE
 	'default' => 'mathjax',
 
-	// Phase 3: Wikibooks - TODO
 	// Phase 4: Wikisource - TODO
 	// Phase 5: Wikipedia sans large - TODO
 	//
