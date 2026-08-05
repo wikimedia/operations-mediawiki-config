@@ -12651,7 +12651,10 @@ return [
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
-'wmgOATHAuthRequire2FAForAll' => [
+'wgOATHAuthRequire2FAForAll' => [
+	'default' => false,
+],
+'wgOATHAuth2FAForAllWarnings' => [
 	'default' => false,
 	'arbcom_cswiki' => true,
 	'arbcom_dewiki' => true,
@@ -12662,7 +12665,11 @@ return [
 	'arbcom_plwiki' => true,
 	'arbcom_ruwiki' => true,
 	'arbcom_zhwiki' => true,
+	'checkuserwiki' => true,
 	'conductwiki' => true,
+	'ombudsmenwiki' => true,
+	'stewardwiki' => true,
+	'u4cwiki' => true,
 ],
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
