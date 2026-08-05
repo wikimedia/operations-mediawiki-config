@@ -1763,6 +1763,17 @@ return [
 				],
 			],
 		],
+		'mediawiki.wikimedia_antiabuse.content_policy_score' => [
+			'schema_title' => 'analytics/mediawiki/wikimedia_antiabuse/content_policy_score',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'eventgate' => [
+					'enrich_fields_from_http_headers' => [
+						'http.request_headers.user-agent' => false,
+					],
+				],
+			],
+		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
