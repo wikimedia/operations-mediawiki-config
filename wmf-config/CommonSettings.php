@@ -4712,7 +4712,7 @@ if ( $wmgUseWikiLambda ) {
 
 	// Temporary config for the automatic Abstract Article generation script
 	$wgWikiLambdaAbstractWikiArticleStoreTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];
-	$wgWikiLambdaAbstractWikiArticleStoreLangs = [ 'en', 'fr', 'de', 'es' ];
+	$wgWikiLambdaAbstractWikiArticleStoreLangs = [ 'en', 'fr', 'de', 'es', 'dag', 'ml', 'ig', 'ha' ];
 
 	// Temporary config for the cross-wiki Abstract Article display controls
 	$wgWikiLambdaAbstractWikiAllowedTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];
