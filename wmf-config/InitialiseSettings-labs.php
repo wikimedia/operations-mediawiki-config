@@ -1114,6 +1114,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T434027
+		'wgReadingListsCustomLists' => [
+			'default' => true,
+		],
+
 		// T422275
 		'wgReadingListsEnableBetaQuickSurvey' => [
 			'wikipedia' => true,
