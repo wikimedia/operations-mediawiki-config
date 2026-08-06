@@ -1546,13 +1546,21 @@ Wikipedia:
         local_wordmark: true
         local_tagline: true
     tcywiki:
-        commons: 'File:Wikipedia-logo-v2-tcy-new.svg'
-        comment: T344557
-        comment_2x: T344557
+        selected: tcywiki-10-alt
+        commons: 'File:Wikipedia-logo-v2-tcy.svg'
+        variants:
+            tcywiki-10-alt:
+                commons: 'File:Wikipedia-logo-v2-tcy-10-alt.svg'
+                commons_wordmark: 'File:WP10_Vector_2022_LOGO-tcy.svg'
+                commons_tagline: 'File:WP10_Vector_2022_LINE-tcy.svg'
+                commons_icon: 'File:Wikipedia-icon-tcy-10-alt.svg'
+        comment_icon: T434176
+        comment: 'T344557, T434176'
+        comment_2x: 'T344557, T434176'
+        comment_wordmark: 'T344557, T434176'
+        comment_tagline: 'T344557, T434176'
         commons_wordmark: 'File:Wikipedia-wordmark-tcy.svg'
-        comment_wordmark: T344557
         commons_tagline: 'File:Wikipedia-tagline-tcy.svg'
-        comment_tagline: T344557
     tddwiki:
         commons: 'File:Wikipedia-logo-v2-tdd.svg'
         comment: T377537
