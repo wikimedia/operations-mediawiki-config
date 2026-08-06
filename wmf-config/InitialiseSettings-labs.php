@@ -1112,7 +1112,7 @@ function wmfGetOverrideSettings() {
 
 		// T434213 - disable ReadingLists beta feature in favor of
 		// general rollout to all logged-in users with $wgReadingListsEnabled.
-		'wgReadingListBetaFeature' => [
+		'-wgReadingListBetaFeature' => [
 			'default' => false,
 		],
 
