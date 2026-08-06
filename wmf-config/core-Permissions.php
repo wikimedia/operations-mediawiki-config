@@ -5907,9 +5907,7 @@ return [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+outreachwiki' => [
-		'bureaucrat' => [
-			'sysop', 'import',
-		],
+		'bureaucrat' => [ 'sysop' ],
 	],
 	'+pawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'transwiki' ], // T120369
