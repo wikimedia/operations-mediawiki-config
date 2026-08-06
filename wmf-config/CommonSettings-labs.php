@@ -20,6 +20,7 @@
 
 use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
+use MediaWiki\Title\Title;
 
 // safe guard
 if ( $wmgRealm == 'labs' ) {
