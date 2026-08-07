@@ -1454,17 +1454,7 @@ Wikipedia:
         local_wordmark: true
         local_tagline: true
     slwiki:
-        selected: slwiki-temp25
-        commons: 'File:Wikipedia-logo-v2-sl.svg'
-        variants:
-            slwiki-temp25:
-                commons: 'File:Wikipedia-logo-v2-wikipedia25-sl.svg'
-                commons_wordmark: 'File:WP25 Vector 2022 LOGO sl.svg'
-                commons_tagline: 'File:Wikipedia-tagline-sl-25.svg'
-        comment: T414265
-        comment_2x: 'T150618, T414265'
-        comment_wordmark: T414265
-        comment_tagline: T414265
+        comment_2x: T150618
         local_tagline: true
         local_wordmark: true
     smwiki:
