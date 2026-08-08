@@ -354,8 +354,7 @@ return [
 	'tddwiki' => '/static/images/project-logos/tddwiki.png', // T377537
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
-	'tgwiki' => '/static/images/project-logos/tgwiki-temp25.png', // T48589, T415307
-	'thwiki' => '/static/images/project-logos/thwiki-temp25.png', // T341407, T431094
+	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
 	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
 	'tigwiki' => '/static/images/project-logos/tigwiki.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
@@ -1255,8 +1254,7 @@ return [
 	'tddwiki' => '/static/images/project-logos/tddwiki-2x.png', // T377537
 	'tetwiki' => '/static/images/project-logos/tetwiki-2x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618
-	'tgwiki' => '/static/images/project-logos/tgwiki-temp25-2x.png', // T150618, T415307
-	'thwiki' => '/static/images/project-logos/thwiki-temp25-2x.png', // T150618
+	'tgwiki' => '/static/images/project-logos/tgwiki-2x.png', // T150618
 	'tiwiki' => '/static/images/project-logos/tiwiki-2x.png', // T249451
 	'tigwiki' => '/static/images/project-logos/tigwiki-2x.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki-2x.png', // T150618
@@ -2723,15 +2721,10 @@ return [
 		'width' => 121,
 		'height' => 25,
 	],
-	'tgwiki' => [ // T415307
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tg-temp25.svg',
-		'width' => 139,
-		'height' => 21,
-	],
-	'thwiki' => [ // T341407, T431094
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-th-temp25.svg',
-		'width' => 123,
-		'height' => 29,
+	'tgwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tg.svg',
+		'width' => 120,
+		'height' => 19,
 	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ti.svg',
@@ -6753,15 +6746,10 @@ return [
 		'width' => 119,
 		'height' => 16,
 	],
-	'tgwiki' => [ // T415307
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tg-temp25.svg',
-		'width' => 135,
-		'height' => 9,
-	],
-	'thwiki' => [ // T341407, T431094
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-th-temp25.svg',
-		'width' => 123,
-		'height' => 14,
+	'tgwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tg.svg',
+		'width' => 120,
+		'height' => 12,
 	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ti.svg',
@@ -7917,7 +7905,6 @@ return [
 	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
 	'tcywiki' => '/static/images/icons/tcywiki-10-alt.svg', // T434176
-	'thwiki' => '/static/images/icons/thwiki-temp25.svg',
 
 	// Wiktionary
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
