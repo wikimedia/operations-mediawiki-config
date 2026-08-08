@@ -4124,6 +4124,8 @@ return [
 		119 => 'Discussion_Racine', // T263525
 		120 => 'Convention', // Convention (policy) - T360989
 		121 => 'Discussion_Convention', // T360989
+		122 => 'Schème', // T415716
+		123 => 'Discussion_Schème', // T415716
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín', // Appendix
