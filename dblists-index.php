@@ -906,7 +906,7 @@ return [
 'tenwiki' => [ 'wikipedia', 'closed', 'small', 'specialcontribute', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul', 'abusefilter-disabled' ],
 'test2wiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient-test', 'group1-wikipedia', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'checkuser-suggested-investigations' ],
 'testcommonswiki' => [ 'special', 'footer-legal-contact-link-exclusions', 'small', 'wikibaserepo', 'wikidataclient-test', 'visualeditor-nondefault', 'group0', 'translate', 'sul', 'wikilove' ],
-'testwiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'medium', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'wikifunctionsclient', 'growthexperiments', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
+'testwiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'medium', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'wikifunctionsclient', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'testwikidatawiki' => [ 'special', 'medium', 'wikidata', 'wikibaserepo', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines', 'translate', 'growthexperiments', 'sul' ],
 'tetwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'tewiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul' ],
