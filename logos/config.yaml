@@ -737,19 +737,9 @@ Wikipedia:
         commons_tagline: 'File:Wikipedia-tagline-isv.svg'
         comment_tagline: T429935
     itwiki:
-        selected: itwiki-temp25
         commons: 'File:Wikipedia-logo-v2-it.svg'
         commons_tagline: 'File:Wikipedia-tagline-it.svg'
-        variants:
-            itwiki-temp25:
-                commons: 'File:Wikipedia-logo-v2-it-25-alt3.svg'
-                commons_icon: 'File:WP25 Lockup (cropped).svg'
-                commons_wordmark: 'File:WP25 Vector 2022 LOGO.svg'
-                commons_tagline: 'File:Wikipedia-tagline-it-25.svg'
-        comment: T414320
-        comment_2x: T414320
-        comment_wordmark: T414320
-        comment_tagline: 'T258552, T414320'
+        comment_tagline: T258552
     iuwiki:
         comment: T42285
         comment_2x: T150618

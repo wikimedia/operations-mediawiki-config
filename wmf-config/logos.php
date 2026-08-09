@@ -187,7 +187,7 @@ return [
 	'iowiki' => '/static/images/project-logos/iowiki.png', // T48589
 	'iswiki' => '/static/images/project-logos/iswiki.png', // T42285
 	'isvwiki' => '/static/images/project-logos/isvwiki.png', // T429935
-	'itwiki' => '/static/images/project-logos/itwiki-temp25.png', // T414320
+	'itwiki' => '/static/images/project-logos/itwiki.png',
 	'iuwiki' => '/static/images/project-logos/iuwiki.png', // T42285
 	'jamwiki' => '/static/images/project-logos/jamwiki.png', // T134017
 	'jawiki' => '/static/images/project-logos/jawiki.png',
@@ -1095,7 +1095,7 @@ return [
 	'iowiki' => '/static/images/project-logos/iowiki-2x.png', // T150618
 	'iswiki' => '/static/images/project-logos/iswiki-2x.png', // T150618
 	'isvwiki' => '/static/images/project-logos/isvwiki-2x.png', // T429935
-	'itwiki' => '/static/images/project-logos/itwiki-temp25-2x.png', // T414320
+	'itwiki' => '/static/images/project-logos/itwiki-2x.png',
 	'iuwiki' => '/static/images/project-logos/iuwiki-2x.png', // T150618
 	'jamwiki' => '/static/images/project-logos/jamwiki-2x.png', // T134017
 	'jawiki' => '/static/images/project-logos/jawiki-2x.png', // T150618
@@ -2165,11 +2165,6 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-isv.svg',
 		'width' => 120,
 		'height' => 24,
-	],
-	'itwiki' => [ // T414320
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-it-temp25.svg',
-		'width' => 140,
-		'height' => 22,
 	],
 	'iuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-iu.svg',
@@ -5916,10 +5911,10 @@ return [
 		'width' => 120,
 		'height' => 14,
 	],
-	'itwiki' => [ // T258552, T414320
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-it-temp25.svg',
-		'width' => 140,
-		'height' => 10,
+	'itwiki' => [ // T258552
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-it.svg',
+		'width' => 117,
+		'height' => 13,
 	],
 	'iuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-iu.svg',
@@ -7902,7 +7897,6 @@ return [
 
 	// Wikipedia
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
-	'itwiki' => '/static/images/icons/itwiki-temp25.svg',
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
 	'tcywiki' => '/static/images/icons/tcywiki-10-alt.svg', // T434176
 
