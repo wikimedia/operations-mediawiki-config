@@ -10127,10 +10127,6 @@ return [
 	'yiwiki' => [ 'en', 'he', 'de' ],
 ],
 
-'wgULSLanguageSelectorV2Enabled' => [
-	'default' => true,
-],
-
 'wgInterlanguageLinkCodeMap' => [
 	'default' => [
 		'als' => 'gsw', // T25215
