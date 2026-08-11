@@ -5761,7 +5761,7 @@ return [
 	'zhwiktionary' => false,
 ],
 
-'wmgCollectionPortletForLoggedInUsersOnly' => [
+'wgCollectionPortletForLoggedInUsersOnly' => [
 	'default' => false,
 ],
 
@@ -5775,7 +5775,7 @@ return [
 	'ruwiki' => true, // T340274
 ],
 
-'wmgCollectionArticleNamespaces' => [
+'wgCollectionArticleNamespaces' => [
 	'default' => [
 		NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT, NS_PROJECT_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
 		NS_HELP, NS_HELP_TALK, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111
@@ -5787,7 +5787,7 @@ return [
 	],
 ],
 
-'wmgCollectionPortletFormats' => [
+'wgCollectionPortletFormats' => [
 	'default' => [], // T224433
 	// The old PDF renderer choked on Indic languages.  The
 	// new renderer should render these fine (and the ODF

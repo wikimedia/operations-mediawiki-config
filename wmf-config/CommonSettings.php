@@ -2719,10 +2719,6 @@ if ( $wmgUseCollection ) {
 	if ( !$wmgUseElectronPdfService ) {
 		$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
 	}
-
-	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
-	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
-	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
 if ( $wmgUseElectronPdfService ) {
