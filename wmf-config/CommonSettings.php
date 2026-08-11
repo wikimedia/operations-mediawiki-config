@@ -1626,7 +1626,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'master',
 		'REL1_46',
 		'REL1_45',
-		'REL1_44',
 		'REL1_43',
 	];
 
@@ -4183,11 +4182,6 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 	$wgUserRequirementsPrivateConditions[] = 'oath.has_2fa'; // APCOND_OATH_HAS2FA
 
-	if ( $wmgOATHAuthRequire2FAForAll ) {
-		$wgRestrictedGroups['user'] = [ 'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ] ];
-		// TODO: Probably set $wgOATH2FARequiredGroupRemovalPages
-	}
-
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = $wmgRealm === 'labs' ? 'Wikimedia Beta' : 'Wikimedia';
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'centralauth' ];
@@ -4419,6 +4413,10 @@ if ( $wmgUseIPReputation ) {
 }
 
 if ( $wmgUseWikimediaAntiAbuse ) {
+	// Must be loaded after Echo (loaded above) so WikimediaAntiAbuse's
+	// GetPreferences handler can hide the personal-info notification row from
+	// users who cannot view the tag; that row only exists once Echo has built
+	// the preference matrix.
 	wfLoadExtension( 'WikimediaAntiAbuse' );
 	$wgWikimediaAntiAbuseCoPEModelConfig = [
 		'url' => 'https://inference.discovery.wmnet:30443/v1/models/cope-b-a4b:predict',
@@ -4702,7 +4700,11 @@ if ( $wmgUseGrowthExperiments ) {
 if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
+	// Configure the shared DB table so all wikis read and write to the same place.
 	$wgVirtualDomainsMapping['virtual-wikifunctions-usage'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+
+	// Configure the CentralAuth wiki to blame for RecentChanges edits, if no local account.
+	$wgWikiLambdaClientRepoSiteId = 'wikifunctionswiki';
 
 	if ( $wgWikiLambdaEnableRepoMode ) {
 		$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
@@ -4712,7 +4714,7 @@ if ( $wmgUseWikiLambda ) {
 
 	// Temporary config for the automatic Abstract Article generation script
 	$wgWikiLambdaAbstractWikiArticleStoreTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];
-	$wgWikiLambdaAbstractWikiArticleStoreLangs = [ 'en', 'fr', 'de', 'es' ];
+	$wgWikiLambdaAbstractWikiArticleStoreLangs = [ 'en', 'fr', 'de', 'es', 'dag', 'ml', 'ig', 'ha' ];
 
 	// Temporary config for the cross-wiki Abstract Article display controls
 	$wgWikiLambdaAbstractWikiAllowedTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];

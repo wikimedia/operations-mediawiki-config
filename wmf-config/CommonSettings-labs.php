@@ -20,6 +20,7 @@
 
 use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
+use MediaWiki\Title\Title;
 
 // safe guard
 if ( $wmgRealm == 'labs' ) {
@@ -552,5 +553,19 @@ if ( $wmgRealm == 'labs' ) {
 
 	// T99740 - test on Beta cluster before going live on prod wikis
 	$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
+
+	// T305571: Set content model for Web2Cit configuration pages as JSON
+	if ( $wmgEnableWeb2CitJsonContentModel ) {
+		$wgHooks['ContentHandlerDefaultModelFor'][] = static function ( Title $title, &$model ) {
+			if (
+				$title->getNamespace() === NS_MAIN &&
+				str_starts_with( $title->getText(), 'Web2Cit/data/' ) &&
+				str_ends_with( $title->getText(), '.json' )
+			) {
+				$model = CONTENT_MODEL_JSON;
+			}
+			return true;
+		};
+	}
 }
 // end safeguard

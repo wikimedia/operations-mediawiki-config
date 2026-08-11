@@ -1110,7 +1110,19 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
-		'wgReadingListBetaFeature' => [
+		// T434213 - disable ReadingLists beta feature in favor of
+		// general rollout to all logged-in users with $wgReadingListsEnabled.
+		'-wgReadingListBetaFeature' => [
+			'default' => false,
+		],
+
+		// T434213
+		'wgReadingListsEnabled' => [
+			'default' => true,
+		],
+
+		// T434027
+		'wgReadingListsCustomLists' => [
 			'default' => true,
 		],
 
@@ -2422,6 +2434,11 @@ function wmfGetOverrideSettings() {
 
 		'wgULSLanguageSelectorV2Enabled' => [
 			'default' => true
-		]
+		],
+
+		'wmgEnableWeb2CitJsonContentModel' => [
+			'default' => false,
+			'metawiki' => true, // T305571
+		],
 	];
 } # wmfGetOverrideSettings()

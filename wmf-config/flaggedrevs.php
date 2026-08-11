@@ -511,7 +511,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ukwiki' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 ];
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
+		$wgFlaggedRevsTags['accuracy']['levels'] = 1; // T434252
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 		// T414277
@@ -519,6 +519,8 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['autoreview']['movestable'] = true;
 		$wgGroupPermissions['editor']['movestable'] = true;
 		$wgGroupPermissions['autoconfirmed']['movestable'] = false;
+		# Remove reviewer group - T434252
+		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'plwikisource' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = NS_HELP;

@@ -3,7 +3,8 @@
 # Non-MediaWiki checkouts created by "scap prep"
 /static/hcaptcha/
 
-# Production files that are temporary or private
+# Production files that are temporary, generated, or private
+/deployment-info.json
 /private
 /scap/
 /wikiversions-*.php

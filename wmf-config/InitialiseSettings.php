@@ -7563,14 +7563,6 @@ return [
 	'default' => true,
 	'rtl' => false,
 	'wikisource' => false,
-	'zhwiki' => false,
-	'ruwiki' => false,
-	'kowiki' => false,
-	'idwiki' => false,
-	'ukwiki' => false,
-	'simplewiki' => false,
-	'viwiki' => false,
-	'jawiki' => false,
 	'enwiki' => false,
 ],
 
@@ -12651,7 +12643,10 @@ return [
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
-'wmgOATHAuthRequire2FAForAll' => [
+'wgOATHAuthRequire2FAForAll' => [
+	'default' => false,
+],
+'wgOATHAuth2FAForAllWarnings' => [
 	'default' => false,
 	'arbcom_cswiki' => true,
 	'arbcom_dewiki' => true,
@@ -12662,7 +12657,11 @@ return [
 	'arbcom_plwiki' => true,
 	'arbcom_ruwiki' => true,
 	'arbcom_zhwiki' => true,
+	'checkuserwiki' => true,
 	'conductwiki' => true,
+	'ombudsmenwiki' => true,
+	'stewardwiki' => true,
+	'u4cwiki' => true,
 ],
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
@@ -13094,6 +13093,17 @@ return [
 			'spec' => 'https://wikimedia.org/api/rest_v1/?spec',
 		],
 	],
+	'+wikipedia' => [
+		'wmf-rest/v1' => [
+			'info' => [
+				'title' => 'Wikimedia REST APIs',
+				'version' => '1.0.0',
+				'description' => "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n\nCaution: The REST Sandbox executes calls against the production database by default. To avoid unintended edits to live content, select the sandbox server (test.wikimedia.org) from the server dropdown before making POST, PUT, PATCH, or DELETE requests.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint's documentation may detail more specific usage limits.\n- Set a unique `User-Agent` or `Api-User-Agent` header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia's [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint's documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+			],
+			'base' => '/api/rest_v1',
+			'spec' => '/api/rest_v1/?spec',
+		],
+	],
 	'+testwiki' => [
 		'wmf-analytics-commons/v1' => [
 			'info' => [
@@ -13338,6 +13348,11 @@ return [
 			'spec' => 'https://www.wikidata.org/w/rest.php/wikibase/v1/openapi.json',
 		]
 	]
+],
+
+'wgRestLocalModuleTestBaseUrl' => [
+	'default' => null,
+	'wikipedia' => 'https://test.wikimedia.org/w/rest.php',
 ],
 
 'wgRestModuleOverrides' => [
