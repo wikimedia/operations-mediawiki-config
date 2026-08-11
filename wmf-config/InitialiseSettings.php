@@ -12643,7 +12643,7 @@ return [
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
-'wgOATHAuthRequire2FAForAll' => [
+'wgOATHAuthEnforce2FAForAll' => [
 	'default' => false,
 	'arbcom_cswiki' => true,
 	'arbcom_dewiki' => true,
