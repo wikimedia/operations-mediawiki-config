@@ -595,7 +595,7 @@ function wmfGetOverrideSettings() {
 			'wiktionary' => '.wiktionary.beta.wmcloud.org',
 		],
 
-		'-wmgCentralAuthAutoLoginWikis' => [
+		'-wgCentralAuthAutoLoginWikis' => [
 			'default' => [
 				'.wikipedia.beta.wmcloud.org' => 'enwiki',
 				'.wikibooks.beta.wmcloud.org' => 'enwikibooks',

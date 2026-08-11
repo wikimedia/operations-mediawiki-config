@@ -5528,7 +5528,7 @@ return [
 	'sul' => true, // Canonically true as SUL === CentralAuth
 ],
 
-'wmgCentralAuthLoginIcon' => [
+'wgCentralAuthLoginIcon' => [
 	'default' => false,
 	'wikipedia' => '/srv/mediawiki/static/images/sul/wikipedia.png',
 	'wikibooks' => '/srv/mediawiki/static/images/sul/wikibooks.png',
@@ -5572,7 +5572,7 @@ return [
 	'sourceswiki' => '.wikisource.org',
 ],
 
-'wmgCentralAuthAutoLoginWikis' => [
+'wgCentralAuthAutoLoginWikis' => [
 	'default' => [
 		'.wikipedia.org' => 'enwiki',
 		'.wikibooks.org' => 'enwikibooks',

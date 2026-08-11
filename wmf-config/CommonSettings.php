@@ -2363,10 +2363,8 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	// T402527: Use 'metawiki' as central wiki for SUL3
 	$wgCentralAuthCentralWiki = 'metawiki';
-	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
-	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 	$wgCentralAuthRestrictSharedDomain = true;
 
 	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,
