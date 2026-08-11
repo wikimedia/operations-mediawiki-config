@@ -292,6 +292,7 @@ class WmfConfig {
 			( require $configDir . '/ext-CirrusSearch.php' ) +
 			( require $configDir . '/ext-EventLogging.php' ) +
 			( require $configDir . '/ext-EventStreamConfig.php' ) +
+			( require $configDir . '/ext-FlaggedRevs.php' ) +
 			( require $configDir . '/ext-GrowthExperiments.php' ) +
 			( require $configDir . '/skin-Minerva.php' );
 

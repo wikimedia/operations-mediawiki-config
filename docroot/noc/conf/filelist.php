@@ -35,6 +35,7 @@ function wmfLoadRoutes() {
 		'wmf-config/ext-CirrusSearch.php',
 		'wmf-config/ext-EventLogging.php',
 		'wmf-config/ext-EventStreamConfig.php',
+		'wmf-config/ext-FlaggedRevs.php',
 		'wmf-config/ext-GrowthExperiments.php',
 		'wmf-config/ext-ORES.php',
 		'wmf-config/FeaturedFeedsWMF.php',
