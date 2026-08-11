@@ -8330,6 +8330,11 @@ return [
 	],
 ],
 
+'wgNativeImageLazyLoading' => [
+	'default' => false,
+	'group0' => true,
+],
+
 'wgMFFallbackEditor' => [
 	'default' => 'visual',
 	// T361134
