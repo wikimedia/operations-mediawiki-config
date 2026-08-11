@@ -9833,14 +9833,16 @@ return [
 
 'wgWikimediaAntiAbuseEnableModelChecks' => [
 	'default' => false,
-	'testwiki' => true, // T431292
-	'enwiki' => false, // T431292: planned to enable on 2026-07-27
+	// T431292
+	'testwiki' => true,
+	'enwiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [
 	'default' => false,
-	'testwiki' => true, // T431292
-	'enwiki' => false, // T431292: planned to enable on 2026-07-27
+	// T431292
+	'testwiki' => true,
+	'enwiki' => true,
 ],
 
 'wmgUseWikimediaEvents' => [

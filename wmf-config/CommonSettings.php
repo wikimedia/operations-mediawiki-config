@@ -4419,6 +4419,17 @@ if ( $wmgUseWikimediaAntiAbuse ) {
 		'host' => 'cope-b-a4b.llm.wikimedia.org',
 		'timeout' => 10,
 	];
+
+	// For now just allow pre-propulation of the entries on English Wikipedia without display
+	if ( $wgDBname === 'enwiki' ) {
+		$wgRestrictedTagViewRights = array_merge(
+			$wgRestrictedTagViewRights ?? [],
+			[
+				'mw-private-personal-info' => [],
+				'mw-private-personal-info-false-positive' => [],
+			]
+		);
+	}
 }
 
 // Temporary accounts
