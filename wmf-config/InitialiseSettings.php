@@ -2388,7 +2388,9 @@ return [
 		'WikiLambda' => 'warning',
 		'WikiLambdaCache' => 'info',
 		'WikiLambdaClient' => 'info',
+		'WikiLambdaOrchestrator' => 'info',
 		'WikiLambdaAbstract' => 'info',
+		'WikiLambdaAbstractClient' => 'info',
 		'WikimediaAntiAbuse' => 'info',
 		'Wikisource' => 'info',
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
