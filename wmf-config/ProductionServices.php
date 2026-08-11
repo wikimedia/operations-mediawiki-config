@@ -163,7 +163,7 @@ $common = [
 $services = [
 	'eqiad' => $common + [
 		// each DC has its own urldownloader for latency reasons
-		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
+		'urldownloader' => 'http://urldownloader.svc.eqiad.wmnet:8080',
 
 		// logs are mirrored from eqiad -> codfw by mwlog hosts
 		'udp2log' => '10.64.185.2:8420', # mwlog1003.eqiad.wmnet
@@ -232,7 +232,7 @@ $services = [
 		],
 	],
 	'codfw' => $common + [
-		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
+		'urldownloader' => 'http://urldownloader.svc.codfw.wmnet:8080',
 
 		// logs are mirrored from codfw -> eqiad by mwlog hosts
 		'udp2log' => '10.192.52.2:8420', # mwlog2003.codfw.wmnet
