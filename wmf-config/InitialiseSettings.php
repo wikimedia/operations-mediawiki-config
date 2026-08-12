@@ -12619,9 +12619,12 @@ return [
 'wgOATHAuth2FAForAllWarnings' => [
 	'default' => false,
 	'private' => true,
-	'collabwiki' => false,
-	'legalteamwiki' => false,
-	'officewiki' => false,
+],
+'wgOATHInitialRecoveryCodesValidityDays' => [
+	'default' => 30,
+	'collabwiki' => 21,
+	'legalteamwiki' => 21,
+	'officewiki' => 21,
 ],
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
