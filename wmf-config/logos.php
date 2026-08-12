@@ -355,6 +355,7 @@ return [
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
+	'thwiki' => '/static/images/project-logos/thwiki-temp25.png', // T341407, T431094
 	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
 	'tigwiki' => '/static/images/project-logos/tigwiki.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
@@ -1255,6 +1256,7 @@ return [
 	'tetwiki' => '/static/images/project-logos/tetwiki-2x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-2x.png', // T150618
+	'thwiki' => '/static/images/project-logos/thwiki-temp25-2x.png', // T150618
 	'tiwiki' => '/static/images/project-logos/tiwiki-2x.png', // T249451
 	'tigwiki' => '/static/images/project-logos/tigwiki-2x.png', // T381379
 	'tkwiki' => '/static/images/project-logos/tkwiki-2x.png', // T150618
@@ -2720,6 +2722,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tg.svg',
 		'width' => 120,
 		'height' => 19,
+	],
+	'thwiki' => [ // T341407, T431094
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-th-temp25.svg',
+		'width' => 123,
+		'height' => 29,
 	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ti.svg',
@@ -6746,6 +6753,11 @@ return [
 		'width' => 120,
 		'height' => 12,
 	],
+	'thwiki' => [ // T341407, T431094
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-th-temp25.svg',
+		'width' => 123,
+		'height' => 14,
+	],
 	'tiwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ti.svg',
 		'width' => 95,
@@ -7899,6 +7911,7 @@ return [
 	'enwiki' => '/static/images/icons/enwiki-25.svg', // T414271
 	'kkwiki' => '/static/images/icons/kkwiki-temp25.svg', // T414267
 	'tcywiki' => '/static/images/icons/tcywiki-10-alt.svg', // T434176
+	'thwiki' => '/static/images/icons/thwiki-temp25.svg',
 
 	// Wiktionary
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
