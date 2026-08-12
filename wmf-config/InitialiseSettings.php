@@ -12643,9 +12643,6 @@ return [
 'wgOATHAuthEnforce2FAForAll' => [
 	'default' => false,
 	'private' => true,
-	'collabwiki' => false,
-	'legalteamwiki' => false,
-	'officewiki' => false,
 ],
 'wgOATHAuth2FAForAllWarnings' => [
 	'default' => false,
