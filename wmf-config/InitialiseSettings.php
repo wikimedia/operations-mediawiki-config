@@ -2376,6 +2376,7 @@ return [
 		'WikiLambdaCache' => 'info',
 		'WikiLambdaClient' => 'info',
 		'WikiLambdaAbstract' => 'info',
+		'WikimediaAntiAbuse' => 'info',
 		'Wikisource' => 'info',
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'xff' => [ 'logstash' => false ],
