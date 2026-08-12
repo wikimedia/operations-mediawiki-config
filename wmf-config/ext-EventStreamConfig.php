@@ -3553,8 +3553,8 @@ return [
 				'eventgate' => [
 					'use_edge_uniques' => true,
 				],
-				'metrics_platform_client' => [
-					'provide_values' => [],
+				'test_kitchen' => [
+					'is_test_kitchen_stream' => true,
 				],
 			],
 			'consumers' => [
@@ -3579,6 +3579,9 @@ return [
 						'http.request_headers.x-ja4h' => 'x-ja4h',
 						'http.request_headers.x-is-browser' => 'x-is-browser',
 					],
+				],
+				'test_kitchen' => [
+					'is_test_kitchen_stream' => true,
 				],
 			],
 			'consumers' => [
