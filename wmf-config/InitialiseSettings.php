@@ -13332,18 +13332,20 @@ return [
 
 'wgRestModuleOverrides' => [
 	'default' => [
-		'site/v1' => [ 'mode' => 'discoverable' ],
-		'readinglists/v0' => [ 'mode' => 'discoverable' ],
-		'wikifunctions/v0' => [ 'mode' => 'discoverable' ],
+		'site/v1' => [ 'mode' => 'discoverable', 'availability' => 'discoverable' ],
+		'readinglists/v0' => [ 'mode' => 'discoverable', 'availability' => 'discoverable' ],
+		'wikifunctions/v0' => [ 'mode' => 'discoverable', 'availability' => 'discoverable' ],
+		'fragments/v0-internal' => [ 'mode' => 'hidden', 'availability' => 'hidden' ],
+
 	],
 	'+metawiki' => [
-		'readinglists/v0' => [ 'mode' => 'published' ],
+		'readinglists/v0' => [ 'mode' => 'published', 'availability' => 'published' ],
 	],
 	'+wikifunctionswiki' => [
-		'wikifunctions/v0' => [ 'mode' => 'published' ],
+		'wikifunctions/v0' => [ 'mode' => 'published', 'availability' => 'published' ],
 	],
 	'+wikidatawiki' => [
-		'wikibase/v1' => [ 'mode' => 'discoverable' ],
+		'wikibase/v1' => [ 'mode' => 'discoverable', 'availability' => 'discoverable' ],
 	]
 ],
 
