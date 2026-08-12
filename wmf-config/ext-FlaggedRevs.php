@@ -84,4 +84,31 @@ return [
 	'huwiki' => false,
 ],
 
+// DO NOT CHANGE the default without hard-coding the value into the relevant wikis first.
+'wgFlaggedRevsTags' => [
+	'default' => [ 'accuracy' => [ 'levels' => 2 ] ],
+	'bewiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'bnwiki' => [ 'status' => [ 'levels' => 1 ] ],
+	'bswiki' => [ 'status' => [ 'levels' => 1 ] ], // T158662
+	'cewiki' => [ 'accuracy' => [ 'levels' => 3 ] ],
+	'ckbwiki' => [ 'status' => [ 'levels' => 1 ] ],
+	'dewiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'dewiktionary' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'enwiki' => [ 'status' => [ 'levels' => 1 ] ],
+	'enwikibooks' => [ 'accuracy' => [ 'levels' => 1 ] ], // T428329
+	'eowiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'fawiki' => [ 'status' => [ 'levels' => 1 ] ],
+	'fiwiki' => [ 'accuracy' => [ 'levels' => 3 ] ],
+	'hewikisource' => [ 'accuracy' => [ 'levels' => 4 ] ],
+	'hiwiki' => [ 'status' => [ 'levels' => 1 ] ],
+	'iawiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'kawiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'plwiki' => [ 'accuracy' => [ 'levels' => 1 ] ], // T45617, T50043
+	'ptwiki' => [ 'status' => [ 'levels' => 1 ] ], // T56828
+	'ruwiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'test2wiki' => [ 'accuracy' => [ 'levels' => 1 ] ],
+	'ukwiki' => [ 'accuracy' => [ 'levels' => 1 ] ], // T434252
+	'vecwiki' => [ 'accuracy' => [ 'levels' => 3 ] ],
+],
+
 ];

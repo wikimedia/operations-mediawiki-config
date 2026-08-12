@@ -166,7 +166,7 @@ call_user_func( static function () {
 $wgHooks['MediaWikiServices'][] = static function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
 		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
-		$wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
+		$wgFlaggedRevsTagsRestrictions,
 		$wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
@@ -175,7 +175,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	///////////////////////////////////////
 
 	$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
-	$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 2 ] ];
 	$wgFlaggedRevsTagsRestrictions = [
 		'accuracy' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
@@ -199,15 +198,12 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgDefaultUserOptions['flaggedrevsviewdiffs'] = 1; // T220186
 	} elseif ( $wgDBname == 'bewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		# Remove reviewer group, T326012
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'bnwiki' ) { // T30717
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 
-		# We have only one tag with one level
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -227,16 +223,12 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		# Remove 'editor' group
 		unset( $wgGroupPermissions['editor'] );
 	} elseif ( $wgDBname == 'bswiki' ) { // T158662
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
-
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		# Remove reviewer group
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 		// T58408
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
-
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
 		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
@@ -245,8 +237,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'ckbwiki' ) {
 		# Namespaces
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
-		# We have only one tag with one level
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -267,16 +257,13 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'test2wiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'dewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'dewiktionary' ) {
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 		// T67316, T76657
 		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 104;
@@ -285,8 +272,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 	} elseif ( $wgDBname == 'enwiki' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
-		# We have only one tag with one level
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -307,18 +292,13 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'enwikibooks' ) {
 		// Limited to the main, Cookbook, and Wikijunior namespaces (T408110)
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, 102, 110 ];
-		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 1 ] ]; // T428329
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 		unset( $wgGroupPermissions['reviewer'] );
-	} elseif ( $wgDBname == 'eowiki' ) {
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'fawiki' ) {
 		# Namespaces
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
-		# We have only one tag with one level
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -347,7 +327,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 
-		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 3 ] ];
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
 		];
@@ -357,7 +336,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces[] = 108;
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsNamespaces[] = 112;
-		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 4 ] ];
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
 		];
@@ -367,8 +345,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces[] = NS_PROJECT;
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
-		# We have only one tag with one level
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -417,27 +393,21 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 		// # Remove 'autoreview' user group; T74055
 		unset( $wgGroupPermissions['autoreview'] );
-	} elseif ( $wgDBname == 'iawiki' ) {
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'idwiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autoreview', 'sysop' ];
 		unset( $wgGroupPermissions['editor'] ); // T419105
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 		$wgGroupPermissions['trusted']['autoreview'] = true;
 	} elseif ( $wgDBname == 'plwiki' ) {
 		// T45617, T50043
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 ];
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 	} elseif ( $wgDBname == 'plwiktionary' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 102, 828 ]; // T55373
 	} elseif ( $wgDBname == 'ptwiki' ) { // T56828
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, 102, 828 ];
-		# We have only one tag with one level
-		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -471,8 +441,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'ruwiki' ) {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
-
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
@@ -511,7 +479,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ukwiki' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 ];
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1; // T434252
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 		// T414277
@@ -531,7 +498,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['editor']['rollback'] = true;
 	} elseif ( $wgDBname == 'vecwiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
 		// T17478
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
