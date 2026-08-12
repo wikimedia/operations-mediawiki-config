@@ -9845,6 +9845,12 @@ return [
 	'enwiki' => true,
 ],
 
+'wgWikimediaAntiAbuseEnablePersonalInfoFlagNotifications' => [
+	'default' => false,
+	'testwiki' => true,
+	'enwiki' => true,
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721
