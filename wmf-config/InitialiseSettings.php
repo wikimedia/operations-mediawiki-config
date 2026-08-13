@@ -14385,6 +14385,12 @@ return [
 'wmgUseProdunto' => [
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
+	'hiwiki' => true,
+	'pawiki' => true,
+	'orwiki' => true,
+	'tewiki' => true,
+	'mlwiki' => true,
 ],
 
 'wgEnableWatchstarPopover' => [
