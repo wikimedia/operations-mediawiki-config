@@ -119,5 +119,10 @@ return [
 		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284',
 		'device-analytics' => null,
 		'page-analytics' => null,
+
+		// IP ranges that might be used as a client IP in a GitLab webhook post. For Produnto.
+		'gitlab-nets' => [
+			'208.80.152.0/22',
+		],
 	],
 ];

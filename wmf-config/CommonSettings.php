@@ -4994,6 +4994,22 @@ if ( $wmgUseReaderExperiments ) {
 	$wgReaderExperimentsShareHighlightEnabled = true;
 }
 
+if ( $wmgUseProdunto ) {
+	wfLoadExtension( 'Produnto' );
+	$wgVirtualDomainsMapping['virtual-produnto'] = [
+		'cluster' => 'extension1',
+		'db' => 'wikishared'
+	];
+	$wgProduntoServers = [
+		[
+			'type' => 'gitlab',
+			'url' => 'https://gitlab.wikimedia.org',
+			'projectPrefixes' => [ 'repos/lua' ],
+			'webhookIps' => $wmgLocalServices['gitlab-nets'],
+		]
+	];
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 	/**

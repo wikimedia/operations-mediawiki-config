@@ -14260,4 +14260,8 @@ return [
 	'jawiki' => true, // T392754
 ],
 
+'wmgUseProdunto' => [
+	'default' => false,
+],
+
 ];

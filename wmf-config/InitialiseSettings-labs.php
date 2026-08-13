@@ -2430,5 +2430,9 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'metawiki' => true, // T305571
 		],
+
+		'wmgUseProdunto' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
