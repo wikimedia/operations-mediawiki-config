@@ -3603,24 +3603,6 @@ return [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		// T401575: Stream to track Watchlist interactions
-		'mediawiki.product_metrics.WatchlistClickTracker' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_database',
-						'performer_name',
-						'performer_pageview_id',
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
-			],
-		],
 		// T397532 Stream for ReadingList web Experiment
 		'mediawiki.product_metrics.reading_list' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
