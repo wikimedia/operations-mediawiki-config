@@ -3614,26 +3614,6 @@ return [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		// T397532 Stream for ReadingList web Experiment
-		'mediawiki.product_metrics.reading_list' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_content_language',
-						'page_namespace_id',
-						'performer_edit_count_bucket',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_session_id',
-					],
-				],
-			],
-		],
 		// T410719: Offline analytics summarizing the Cite references on each page.
 		'mediawiki.wmde_page_summary' => [
 			'schema_title' => 'analytics/mediawiki/wmde_page_summary',
