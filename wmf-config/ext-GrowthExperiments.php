@@ -848,11 +848,6 @@ return [
 	'default' => [
 		'thankyoupage-2023' => [
 			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
 			'pattern' => '/^(typage|fundraising)-\w+-\w+-\d+$/',
 		],
 		// See T422169.
