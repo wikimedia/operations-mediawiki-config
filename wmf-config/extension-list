@@ -119,6 +119,7 @@ $IP/extensions/PersonalDashboard/extension.json
 $IP/extensions/Phonos/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/Popups/extension.json
+$IP/extensions/Produnto/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/PropertySuggester/extension.json
 $IP/extensions/QuickSurveys/extension.json
