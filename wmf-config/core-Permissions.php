@@ -4760,6 +4760,7 @@ return [
 			'autopatrolled',
 			'rollbacker',
 			'flood',
+			'event-organizer', // T434748
 		],
 		'sysop' => [ 'rollbacker' ],
 	],
@@ -6037,7 +6038,7 @@ return [
 		'sysop' => [ 'reviewer' ],
 	],
 	'+srwiki' => [
-		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled', 'flood' ],
+		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled', 'flood', 'event-organizer' ], // T434748
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikibooks' => [ // T209250
