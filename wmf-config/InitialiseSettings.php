@@ -14283,6 +14283,7 @@ return [
 
 'wmgUseProdunto' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 ];
