@@ -785,10 +785,6 @@ return [
 	'default' => true,
 ],
 
-'wgGEHomepageDefaultVariant' => [
-	'default' => 'control',
-],
-
 'wgGEMentorDashboardEnabledModules' => [
 	'default' => [
 		'mentee-overview' => true,

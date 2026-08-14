@@ -1358,9 +1358,6 @@ function wmfGetOverrideSettings() {
 		'wgGEImageRecommendationServiceUseTitles' => [
 			'default' => true,
 		],
-		'wgGEHomepageDefaultVariant' => [
-			'default' => 'control',
-		],
 		'wgGELinkRecommendationServiceTimeout' => [
 			'default' => 30,
 		],
