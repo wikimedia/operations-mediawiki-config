@@ -14239,6 +14239,7 @@ return [
 
 'wgRestrictUserPageEditing' => [
 	'default' => false,
+	'arwiki' => true, // T434878
 	'jawiki' => true, // T392754
 ],
 

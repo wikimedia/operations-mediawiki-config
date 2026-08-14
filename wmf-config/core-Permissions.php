@@ -191,6 +191,7 @@ return [
 			'reupload' => false,
 			'reupload-own' => false,
 			'reupload-shared' => false,
+			'editalluserpages' => true, // T434878
 		],
 		'uploader' => [
 			'upload' => true,
