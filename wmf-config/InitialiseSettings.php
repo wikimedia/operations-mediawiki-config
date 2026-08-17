@@ -8344,9 +8344,7 @@ return [
 ],
 
 'wgNativeImageLazyLoading' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 'wgMFFallbackEditor' => [
