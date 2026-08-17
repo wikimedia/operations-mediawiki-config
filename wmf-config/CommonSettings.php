@@ -644,6 +644,7 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) 
 };
 
 $wgEmergencyContact = 'noc@wikipedia.org';
+$wgRestTermsOfServiceUrl = 'https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use#12._API_Terms';
 
 # Default address gets rejected by some mail hosts.
 # This email is used for more than just sending password resets, also e.g. Echo notifications
@@ -2365,10 +2366,8 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginWiki = 'loginwiki';
 	// T402527: Use 'metawiki' as central wiki for SUL3
 	$wgCentralAuthCentralWiki = 'metawiki';
-	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 	$wgCentralAuthCookieDomain = $wmgCentralAuthCookieDomain;
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://{$wmgHostnames['auth']}/$dbname";
-	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 	$wgCentralAuthRestrictSharedDomain = true;
 
 	// T363695: When using the shared auth.wikimedia.org domain, ignore normal cookie domain settings,
@@ -2723,10 +2722,6 @@ if ( $wmgUseCollection ) {
 	if ( !$wmgUseElectronPdfService ) {
 		$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
 	}
-
-	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
-	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
-	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
 if ( $wmgUseElectronPdfService ) {
@@ -4818,26 +4813,6 @@ if ( $wmgUseCampaignEvents ) {
 	}
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
 }
-
-// T429090, T429244: lazily reject pre-fix parser-cache noreferrer/noopener entries
-// TODO: Remove on 2026-07-23
-$wgHooks['RejectParserCacheValue'][] = static function ( $parserOutput, $wikiPage, $parserOptions ) {
-	global $wgWMCNoReferrerDomains;
-
-	$fixDeploy = '20260622230000'; // deploy time, UTC (TS_MW)
-	if ( !$wgWMCNoReferrerDomains || $parserOutput->getCacheTime() >= $fixDeploy ) {
-		return true;
-	}
-
-	$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-	foreach ( $parserOutput->getExternalLinks() as $url => $unused ) {
-		if ( $urlUtils->matchesDomainList( strtolower( (string)$url ), $wgWMCNoReferrerDomains ) ) {
-			return false;
-		}
-	}
-
-	return true;
-};
 
 // T361643
 if ( $wmgUseAutoModerator ) {

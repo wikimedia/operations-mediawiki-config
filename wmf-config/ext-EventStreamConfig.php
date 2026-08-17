@@ -1719,43 +1719,6 @@ return [
 				],
 			],
 		],
-		'mediawiki.web_ui_scroll' => [
-			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-		],
-		'mediawiki.web_ui_scroll_migrated' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-				'metrics_platform_client' => [
-					// The following is derived from:
-					//
-					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webUIScroll.js#L29-L31
-					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webUIScroll.js#L33
-					// * https://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/master/modules/ext.wikimediaEvents/webCommon.js#L33-L38
-					'provide_values' => [
-						'performer_is_bot',
-						'mediawiki_database',
-						'mediawiki_skin',
-						'performer_session_id',
-						'page_id',
-						'performer_is_logged_in',
-					],
-				],
-			],
-		],
 		'mediawiki.ipinfo_interaction' => [
 			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3553,8 +3516,8 @@ return [
 				'eventgate' => [
 					'use_edge_uniques' => true,
 				],
-				'metrics_platform_client' => [
-					'provide_values' => [],
+				'test_kitchen' => [
+					'is_test_kitchen_stream' => true,
 				],
 			],
 			'consumers' => [
@@ -3579,6 +3542,9 @@ return [
 						'http.request_headers.x-ja4h' => 'x-ja4h',
 						'http.request_headers.x-is-browser' => 'x-is-browser',
 					],
+				],
+				'test_kitchen' => [
+					'is_test_kitchen_stream' => true,
 				],
 			],
 			'consumers' => [
@@ -3636,24 +3602,6 @@ return [
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
-		],
-		// T401575: Stream to track Watchlist interactions
-		'mediawiki.product_metrics.WatchlistClickTracker' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_database',
-						'performer_name',
-						'performer_pageview_id',
-					],
-				],
-			],
-			'sample' => [
-				'unit' => 'pageview',
-				'rate' => 1,
-			],
 		],
 		// T397532 Stream for ReadingList web Experiment
 		'mediawiki.product_metrics.reading_list' => [

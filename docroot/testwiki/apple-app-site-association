@@ -20,1172 +20,1172 @@
         ],
         "components" : [
           {
-            "\/" : "\/wiki\/Thank_You*",
+            "/" : "/wiki/Thank_You*",
             "comment" : "Exclude thank you pages",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Special:*",
+            "/" : "/wiki/Special:*",
             "comment" : "Exclude Special: pages",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Am%E1%BA%93li:*",
+            "/" : "/wiki/Am%E1%BA%93li:*",
             "comment" : "Exclude Special: pages on shi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Aptaca:*",
+            "/" : "/wiki/Aptaca:*",
             "comment" : "Exclude Special: pages on avk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Arbednek:*",
+            "/" : "/wiki/Arbednek:*",
             "comment" : "Exclude Special: pages on kw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Arbennek:*",
+            "/" : "/wiki/Arbennek:*",
             "comment" : "Exclude Special: pages on kw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Arbennig:*",
+            "/" : "/wiki/Arbennig:*",
             "comment" : "Exclude Special: pages on cy.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Arnawl%C4%B1:*",
+            "/" : "/wiki/Arnawl%C4%B1:*",
             "comment" : "Exclude Special: pages on kaa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Arna%C3%BD%C4%B1:*",
+            "/" : "/wiki/Arna%C3%BD%C4%B1:*",
             "comment" : "Exclude Special: pages on kaa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Astamiwa:*",
+            "/" : "/wiki/Astamiwa:*",
             "comment" : "Exclude Special: pages on jv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/A%CC%B1nyan_di:*",
+            "/" : "/wiki/A%CC%B1nyan_di:*",
             "comment" : "Exclude Special: pages on kaj.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Ba%C4%9Fse:*",
+            "/" : "/wiki/Ba%C4%9Fse:*",
             "comment" : "Exclude Special: pages on diq.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/B%C3%A3nde:*",
+            "/" : "/wiki/B%C3%A3nde:*",
             "comment" : "Exclude Special: pages on mos.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Dibar:*",
+            "/" : "/wiki/Dibar:*",
             "comment" : "Exclude Special: pages on br.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Di%C5%8B'gahim:*",
+            "/" : "/wiki/Di%C5%8B'gahim:*",
             "comment" : "Exclude Special: pages on dag.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Doaimmat:*",
+            "/" : "/wiki/Doaimmat:*",
             "comment" : "Exclude Special: pages on se.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/D%C4%95k-s%E1%B9%B3%CC%80:*",
+            "/" : "/wiki/D%C4%95k-s%E1%B9%B3%CC%80:*",
             "comment" : "Exclude Special: pages on cdo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Er_lheh:*",
+            "/" : "/wiki/Er_lheh:*",
             "comment" : "Exclude Special: pages on gv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Erenoam%C3%A1%C5%A1:*",
+            "/" : "/wiki/Erenoam%C3%A1%C5%A1:*",
             "comment" : "Exclude Special: pages on se.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Eri:*",
+            "/" : "/wiki/Eri:*",
             "comment" : "Exclude Special: pages on et.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Erikoine:*",
+            "/" : "/wiki/Erikoine:*",
             "comment" : "Exclude Special: pages on olo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Especial:*",
+            "/" : "/wiki/Especial:*",
             "comment" : "Exclude Special: pages on ay.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Espesial:*",
+            "/" : "/wiki/Espesial:*",
             "comment" : "Exclude Special: pages on ilo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Espesiat:*",
+            "/" : "/wiki/Espesiat:*",
             "comment" : "Exclude Special: pages on ch.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Espesi%C3%A1l:*",
+            "/" : "/wiki/Espesi%C3%A1l:*",
             "comment" : "Exclude Special: pages on tet.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Espesyal:*",
+            "/" : "/wiki/Espesyal:*",
             "comment" : "Exclude Special: pages on ceb.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Faphegileng:*",
+            "/" : "/wiki/Faphegileng:*",
             "comment" : "Exclude Special: pages on tn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Husus:*",
+            "/" : "/wiki/Husus:*",
             "comment" : "Exclude Special: pages on btm.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Ibidasanzwe:*",
+            "/" : "/wiki/Ibidasanzwe:*",
             "comment" : "Exclude Special: pages on rw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Ih%C3%BC_k%C3%A1r%C3%ADr%C3%AD:*",
+            "/" : "/wiki/Ih%C3%BC_k%C3%A1r%C3%ADr%C3%AD:*",
             "comment" : "Exclude Special: pages on ig.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Immikkut:*",
+            "/" : "/wiki/Immikkut:*",
             "comment" : "Exclude Special: pages on kl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Impotant:*",
+            "/" : "/wiki/Impotant:*",
             "comment" : "Exclude Special: pages on pcm.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Inmusamman:*",
+            "/" : "/wiki/Inmusamman:*",
             "comment" : "Exclude Special: pages on bol.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Ispetziale:*",
+            "/" : "/wiki/Ispetziale:*",
             "comment" : "Exclude Special: pages on sc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Istimewa:*",
+            "/" : "/wiki/Istimewa:*",
             "comment" : "Exclude Special: pages on bjn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Istimiwa:*",
+            "/" : "/wiki/Istimiwa:*",
             "comment" : "Exclude Special: pages on bjn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Istim%C3%A8wa:*",
+            "/" : "/wiki/Istim%C3%A8wa:*",
             "comment" : "Exclude Special: pages on bew.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Jagleel:*",
+            "/" : "/wiki/Jagleel:*",
             "comment" : "Exclude Special: pages on wo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Kerfiss%C3%AD%C3%B0a:*",
+            "/" : "/wiki/Kerfiss%C3%AD%C3%B0a:*",
             "comment" : "Exclude Special: pages on is.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Khas:*",
+            "/" : "/wiki/Khas:*",
             "comment" : "Exclude Special: pages on ms.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Khethekileko:*",
+            "/" : "/wiki/Khethekileko:*",
             "comment" : "Exclude Special: pages on nr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Kingal_nanaq:*",
+            "/" : "/wiki/Kingal_nanaq:*",
             "comment" : "Exclude Special: pages on trv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Kotakahi:*",
+            "/" : "/wiki/Kotakahi:*",
             "comment" : "Exclude Special: pages on atj.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Kusus:*",
+            "/" : "/wiki/Kusus:*",
             "comment" : "Exclude Special: pages on ban.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/K%C3%ABc%C3%ABweek:*",
+            "/" : "/wiki/K%C3%ABc%C3%ABweek:*",
             "comment" : "Exclude Special: pages on din.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Lelibalulekile:*",
+            "/" : "/wiki/Lelibalulekile:*",
             "comment" : "Exclude Special: pages on ss.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Maalum:*",
+            "/" : "/wiki/Maalum:*",
             "comment" : "Exclude Special: pages on sw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Maasus:*",
+            "/" : "/wiki/Maasus:*",
             "comment" : "Exclude Special: pages on gag.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Mahluko:*",
+            "/" : "/wiki/Mahluko:*",
             "comment" : "Exclude Special: pages on xh.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Mahsus:*",
+            "/" : "/wiki/Mahsus:*",
             "comment" : "Exclude Special: pages on crh.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Mallebbi:*",
+            "/" : "/wiki/Mallebbi:*",
             "comment" : "Exclude Special: pages on bug.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Marhasurungan:*",
+            "/" : "/wiki/Marhasurungan:*",
             "comment" : "Exclude Special: pages on bbc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Maxsus:*",
+            "/" : "/wiki/Maxsus:*",
             "comment" : "Exclude Special: pages on tt.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Mba'ech%C4%A9ch%C4%A9:*",
+            "/" : "/wiki/Mba'ech%C4%A9ch%C4%A9:*",
             "comment" : "Exclude Special: pages on gn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Mirunggan:*",
+            "/" : "/wiki/Mirunggan:*",
             "comment" : "Exclude Special: pages on jv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Musamman:*",
+            "/" : "/wiki/Musamman:*",
             "comment" : "Exclude Special: pages on ha.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Musanm%C3%A0n:*",
+            "/" : "/wiki/Musanm%C3%A0n:*",
             "comment" : "Exclude Special: pages on kai.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Natatangi:*",
+            "/" : "/wiki/Natatangi:*",
             "comment" : "Exclude Special: pages on tl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/N%C5%8Dncuahqu%C4%ABzqui:*",
+            "/" : "/wiki/N%C5%8Dncuahqu%C4%ABzqui:*",
             "comment" : "Exclude Special: pages on nah.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Papa_nui:*",
+            "/" : "/wiki/Papa_nui:*",
             "comment" : "Exclude Special: pages on haw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Patikos:*",
+            "/" : "/wiki/Patikos:*",
             "comment" : "Exclude Special: pages on vo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Pinaurog:*",
+            "/" : "/wiki/Pinaurog:*",
             "comment" : "Exclude Special: pages on war.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Poimbida:*",
+            "/" : "/wiki/Poimbida:*",
             "comment" : "Exclude Special: pages on dtp.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Posebno:*",
+            "/" : "/wiki/Posebno:*",
             "comment" : "Exclude Special: pages on sr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Schbezial:*",
+            "/" : "/wiki/Schbezial:*",
             "comment" : "Exclude Special: pages on pfl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Serstakt:*",
+            "/" : "/wiki/Serstakt:*",
             "comment" : "Exclude Special: pages on fo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Serstakur:*",
+            "/" : "/wiki/Serstakur:*",
             "comment" : "Exclude Special: pages on fo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Sevi%C5%A1kuo:*",
+            "/" : "/wiki/Sevi%C5%A1kuo:*",
             "comment" : "Exclude Special: pages on ltg.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Si_tohude:*",
+            "/" : "/wiki/Si_tohude:*",
             "comment" : "Exclude Special: pages on nia.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Sipeci%C3%A5s:*",
+            "/" : "/wiki/Sipeci%C3%A5s:*",
             "comment" : "Exclude Special: pages on wa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Sipesol:*",
+            "/" : "/wiki/Sipesol:*",
             "comment" : "Exclude Special: pages on tpi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Soronko:*",
+            "/" : "/wiki/Soronko:*",
             "comment" : "Exclude Special: pages on fat.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specala:*",
+            "/" : "/wiki/Specala:*",
             "comment" : "Exclude Special: pages on io.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speciaal:*",
+            "/" : "/wiki/Speciaal:*",
             "comment" : "Exclude Special: pages on li.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speciala:*",
+            "/" : "/wiki/Speciala:*",
             "comment" : "Exclude Special: pages on eo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speciala%C4%B5o:*",
+            "/" : "/wiki/Speciala%C4%B5o:*",
             "comment" : "Exclude Special: pages on eo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speciale:*",
+            "/" : "/wiki/Speciale:*",
             "comment" : "Exclude Special: pages on eml.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specialis:*",
+            "/" : "/wiki/Specialis:*",
             "comment" : "Exclude Special: pages on la.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specialne:*",
+            "/" : "/wiki/Specialne:*",
             "comment" : "Exclude Special: pages on dsb.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specialnje:*",
+            "/" : "/wiki/Specialnje:*",
             "comment" : "Exclude Special: pages on hsb.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specialus:*",
+            "/" : "/wiki/Specialus:*",
             "comment" : "Exclude Special: pages on bat-smg.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speciaol:*",
+            "/" : "/wiki/Speciaol:*",
             "comment" : "Exclude Special: pages on zea.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speciel:*",
+            "/" : "/wiki/Speciel:*",
             "comment" : "Exclude Special: pages on da.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specijalno:*",
+            "/" : "/wiki/Specijalno:*",
             "comment" : "Exclude Special: pages on sr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specioal:*",
+            "/" : "/wiki/Specioal:*",
             "comment" : "Exclude Special: pages on vls.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speci%C3%A0le:*",
+            "/" : "/wiki/Speci%C3%A0le:*",
             "comment" : "Exclude Special: pages on nap.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speci%C3%A1lis:*",
+            "/" : "/wiki/Speci%C3%A1lis:*",
             "comment" : "Exclude Special: pages on hu.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speci%C3%A1ln%C3%AD:*",
+            "/" : "/wiki/Speci%C3%A1ln%C3%AD:*",
             "comment" : "Exclude Special: pages on cs.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speci%C3%A2l:*",
+            "/" : "/wiki/Speci%C3%A2l:*",
             "comment" : "Exclude Special: pages on fur.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specjalna:*",
+            "/" : "/wiki/Specjalna:*",
             "comment" : "Exclude Special: pages on pl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Specjaln%C3%B4:*",
+            "/" : "/wiki/Specjaln%C3%B4:*",
             "comment" : "Exclude Special: pages on csb.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spec%C4%93los:*",
+            "/" : "/wiki/Spec%C4%93los:*",
             "comment" : "Exclude Special: pages on bat-smg.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Speisialta:*",
+            "/" : "/wiki/Speisialta:*",
             "comment" : "Exclude Special: pages on ga.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spesiaal:*",
+            "/" : "/wiki/Spesiaal:*",
             "comment" : "Exclude Special: pages on af.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spesial:*",
+            "/" : "/wiki/Spesial:*",
             "comment" : "Exclude Special: pages on nn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spesyal:*",
+            "/" : "/wiki/Spesyal:*",
             "comment" : "Exclude Special: pages on srn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spesyel:*",
+            "/" : "/wiki/Spesyel:*",
             "comment" : "Exclude Special: pages on iba.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spezial:*",
+            "/" : "/wiki/Spezial:*",
             "comment" : "Exclude Special: pages on pdc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spe%C3%A7a%C5%82e:*",
+            "/" : "/wiki/Spe%C3%A7a%C5%82e:*",
             "comment" : "Exclude Special: pages on vec.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spe%C3%A7iale:*",
+            "/" : "/wiki/Spe%C3%A7iale:*",
             "comment" : "Exclude Special: pages on lij.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spe%C4%8Bjali:*",
+            "/" : "/wiki/Spe%C4%8Bjali:*",
             "comment" : "Exclude Special: pages on mt.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Spiciali:*",
+            "/" : "/wiki/Spiciali:*",
             "comment" : "Exclude Special: pages on scn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Sp%C3%A8ci%C3%A2l:*",
+            "/" : "/wiki/Sp%C3%A8ci%C3%A2l:*",
             "comment" : "Exclude Special: pages on frp.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Sp%C3%A9cial:*",
+            "/" : "/wiki/Sp%C3%A9cial:*",
             "comment" : "Exclude Special: pages on ty.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Syndrig:*",
+            "/" : "/wiki/Syndrig:*",
             "comment" : "Exclude Special: pages on ang.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Szpecyjalna:*",
+            "/" : "/wiki/Szpecyjalna:*",
             "comment" : "Exclude Special: pages on szl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Taanas:*",
+            "/" : "/wiki/Taanas:*",
             "comment" : "Exclude Special: pages on knc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Tallituslehek%C3%BClg:*",
+            "/" : "/wiki/Tallituslehek%C3%BClg:*",
             "comment" : "Exclude Special: pages on fiu-vro.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Taybet:*",
+            "/" : "/wiki/Taybet:*",
             "comment" : "Exclude Special: pages on ku.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Tek-pia%CC%8Dt:*",
+            "/" : "/wiki/Tek-pia%CC%8Dt:*",
             "comment" : "Exclude Special: pages on zh-min-nan.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Toiminnot:*",
+            "/" : "/wiki/Toiminnot:*",
             "comment" : "Exclude Special: pages on fi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Tooimah:*",
+            "/" : "/wiki/Tooimah:*",
             "comment" : "Exclude Special: pages on smn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Uslig:*",
+            "/" : "/wiki/Uslig:*",
             "comment" : "Exclude Special: pages on kab.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Usus:*",
+            "/" : "/wiki/Usus:*",
             "comment" : "Exclude Special: pages on kge.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Von%E1%BB%8Dtaun:*",
+            "/" : "/wiki/Von%E1%BB%8Dtaun:*",
             "comment" : "Exclude Special: pages on guw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Vyisangije:*",
+            "/" : "/wiki/Vyisangije:*",
             "comment" : "Exclude Special: pages on rn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Wad%C3%AC:*",
+            "/" : "/wiki/Wad%C3%AC:*",
             "comment" : "Exclude Special: pages on kai.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Wat_khwo:*",
+            "/" : "/wiki/Wat_khwo:*",
             "comment" : "Exclude Special: pages on kcg.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Wey:*",
+            "/" : "/wiki/Wey:*",
             "comment" : "Exclude Special: pages on ppl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Wiki:*",
+            "/" : "/wiki/Wiki:*",
             "comment" : "Exclude Special: pages on fy.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Xususi:*",
+            "/" : "/wiki/Xususi:*",
             "comment" : "Exclude Special: pages on tly.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/X%C3%BCsusi:*",
+            "/" : "/wiki/X%C3%BCsusi:*",
             "comment" : "Exclude Special: pages on az.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/X%C4%B1susi:*",
+            "/" : "/wiki/X%C4%B1susi:*",
             "comment" : "Exclude Special: pages on diq.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/Zure:*",
+            "/" : "/wiki/Zure:*",
             "comment" : "Exclude Special: pages on gur.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/ilo:*",
+            "/" : "/wiki/ilo:*",
             "comment" : "Exclude Special: pages on tok.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/khaas:*",
+            "/" : "/wiki/khaas:*",
             "comment" : "Exclude Special: pages on hif.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/kin_iniptnaq:*",
+            "/" : "/wiki/kin_iniptnaq:*",
             "comment" : "Exclude Special: pages on tay.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/pinakisumaljiyan:*",
+            "/" : "/wiki/pinakisumaljiyan:*",
             "comment" : "Exclude Special: pages on pwn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/rirci:*",
+            "/" : "/wiki/rirci:*",
             "comment" : "Exclude Special: pages on jbo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/sazumaay:*",
+            "/" : "/wiki/sazumaay:*",
             "comment" : "Exclude Special: pages on szy.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%C3%88sp%C3%A9syal:*",
+            "/" : "/wiki/%C3%88sp%C3%A9syal:*",
             "comment" : "Exclude Special: pages on gcr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%C3%96zel:*",
+            "/" : "/wiki/%C3%96zel:*",
             "comment" : "Exclude Special: pages on gag.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%C3%9D%C3%B6rite:*",
+            "/" : "/wiki/%C3%9D%C3%B6rite:*",
             "comment" : "Exclude Special: pages on tk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%C4%90%E1%BA%B7c_bi%E1%BB%87t:*",
+            "/" : "/wiki/%C4%90%E1%BA%B7c_bi%E1%BB%87t:*",
             "comment" : "Exclude Special: pages on vi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%C5%A0peci%C3%A1lne:*",
+            "/" : "/wiki/%C5%A0peci%C3%A1lne:*",
             "comment" : "Exclude Special: pages on sk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%C6%89%C3%A9%C9%96ovo:*",
+            "/" : "/wiki/%C6%89%C3%A9%C9%96ovo:*",
             "comment" : "Exclude Special: pages on fon.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C:*",
+            "/" : "/wiki/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C:*",
             "comment" : "Exclude Special: pages on el.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C%CE%BD:*",
+            "/" : "/wiki/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C%CE%BD:*",
             "comment" : "Exclude Special: pages on pnt.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%90%D0%B4%D0%BC%D1%8B%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%B5:*",
+            "/" : "/wiki/%D0%90%D0%B4%D0%BC%D1%8B%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%B5:*",
             "comment" : "Exclude Special: pages on be.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%90%D0%BD%D0%B0%D0%BB%D0%BB%D0%B0%D0%B0%D1%85:*",
+            "/" : "/wiki/%D0%90%D0%BD%D0%B0%D0%BB%D0%BB%D0%B0%D0%B0%D1%85:*",
             "comment" : "Exclude Special: pages on sah.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%90%D1%80%D0%BD%D0%B0%D0%B9%D1%8B:*",
+            "/" : "/wiki/%D0%90%D1%80%D0%BD%D0%B0%D0%B9%D1%8B:*",
             "comment" : "Exclude Special: pages on kaa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%90%D2%A5%D1%8B%D0%BB%D1%83:*",
+            "/" : "/wiki/%D0%90%D2%A5%D1%8B%D0%BB%D1%83:*",
             "comment" : "Exclude Special: pages on alt.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%91%D0%B0%D1%88%D0%BA%D0%B0:*",
+            "/" : "/wiki/%D0%91%D0%B0%D1%88%D0%BA%D0%B0:*",
             "comment" : "Exclude Special: pages on mdf.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%91%D0%B0%D1%88%D0%BA%D0%B0_%D1%82%D0%B5%D0%B2%D0%B5%D0%BD%D1%8C:*",
+            "/" : "/wiki/%D0%91%D0%B0%D1%88%D0%BA%D0%B0_%D1%82%D0%B5%D0%B2%D0%B5%D0%BD%D1%8C:*",
             "comment" : "Exclude Special: pages on myv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%91%D0%B0%D1%88%D1%85%D0%BE:*",
+            "/" : "/wiki/%D0%91%D0%B0%D1%88%D1%85%D0%BE:*",
             "comment" : "Exclude Special: pages on ce.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%91%D0%B5%D0%BB%D1%85%D0%B0%D0%BD:*",
+            "/" : "/wiki/%D0%91%D0%B5%D0%BB%D1%85%D0%B0%D0%BD:*",
             "comment" : "Exclude Special: pages on ce.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%92%D0%B8%D0%B6%D0%B0:*",
+            "/" : "/wiki/%D0%92%D0%B8%D0%B6%D0%B0:*",
             "comment" : "Exclude Special: pages on tg.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%93%D3%80%D0%B8%D1%80%D1%81:*",
+            "/" : "/wiki/%D0%93%D3%80%D0%B8%D1%80%D1%81:*",
             "comment" : "Exclude Special: pages on ce.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%93%D3%8F%D1%83%D0%BB%D0%B0%D0%BA%D1%85%D0%B0:*",
+            "/" : "/wiki/%D0%93%D3%8F%D1%83%D0%BB%D0%B0%D0%BA%D1%85%D0%B0:*",
             "comment" : "Exclude Special: pages on inh.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9A%D1%8A%D1%83%D0%BB%D0%BB%D1%83%D0%BA%D1%8A:*",
+            "/" : "/wiki/%D0%9A%D1%8A%D1%83%D0%BB%D0%BB%D1%83%D0%BA%D1%8A:*",
             "comment" : "Exclude Special: pages on krc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9A%D3%A9%D0%B4%D0%BB%D1%85%D0%BD%C9%99:*",
+            "/" : "/wiki/%D0%9A%D3%A9%D0%B4%D0%BB%D1%85%D0%BD%C9%99:*",
             "comment" : "Exclude Special: pages on xal.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9A%D3%A9%D0%B4%D0%BB%D1%85%D0%BD%D3%99:*",
+            "/" : "/wiki/%D0%9A%D3%A9%D0%B4%D0%BB%D1%85%D0%BD%D3%99:*",
             "comment" : "Exclude Special: pages on xal.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9B%D3%B1%D0%BC%D1%8B%D0%BD_%D1%8B%D1%88%D1%82%D1%8B%D0%BC%D0%B5:*",
+            "/" : "/wiki/%D0%9B%D3%B1%D0%BC%D1%8B%D0%BD_%D1%8B%D1%88%D1%82%D1%8B%D0%BC%D0%B5:*",
             "comment" : "Exclude Special: pages on mhr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9C%D0%B0%D1%85%D1%81%D1%83%D1%81:*",
+            "/" : "/wiki/%D0%9C%D0%B0%D1%85%D1%81%D1%83%D1%81:*",
             "comment" : "Exclude Special: pages on ba.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9D%D0%B0%D1%80%D0%BE%D1%87%D1%8C%D0%BD%D0%B0:*",
+            "/" : "/wiki/%D0%9D%D0%B0%D1%80%D0%BE%D1%87%D1%8C%D0%BD%D0%B0:*",
             "comment" : "Exclude Special: pages on cu.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9E%D0%BA%D1%80%D0%B5%D0%BC%D0%B5:*",
+            "/" : "/wiki/%D0%9E%D0%BA%D1%80%D0%B5%D0%BC%D0%B5:*",
             "comment" : "Exclude Special: pages on rsk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9E%D1%82%D1%81%D0%B0%D1%81%D1%8F%D0%BD:*",
+            "/" : "/wiki/%D0%9E%D1%82%D1%81%D0%B0%D1%81%D1%8F%D0%BD:*",
             "comment" : "Exclude Special: pages on kv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9F%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C:*",
+            "/" : "/wiki/%D0%9F%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C:*",
             "comment" : "Exclude Special: pages on udm.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%9F%D0%BE%D1%81%D0%B5%D0%B1%D0%BD%D0%BE:*",
+            "/" : "/wiki/%D0%9F%D0%BE%D1%81%D0%B5%D0%B1%D0%BD%D0%BE:*",
             "comment" : "Exclude Special: pages on sr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%C3%A6%D1%80%D0%BC%D0%B0%D0%B3%D0%BE%D0%BD%D0%B4:*",
+            "/" : "/wiki/%D0%A1%C3%A6%D1%80%D0%BC%D0%B0%D0%B3%D0%BE%D0%BD%D0%B4:*",
             "comment" : "Exclude Special: pages on os.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:*",
+            "/" : "/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:*",
             "comment" : "Exclude Special: pages on ru.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%BD%D0%B8:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%BD%D0%B8:*",
             "comment" : "Exclude Special: pages on bg.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%B0:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%B0:*",
             "comment" : "Exclude Special: pages on mk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%B8:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%B8:*",
             "comment" : "Exclude Special: pages on mk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%BE:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%BE:*",
             "comment" : "Exclude Special: pages on sr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0:*",
             "comment" : "Exclude Special: pages on uk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D1%96:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D1%96:*",
             "comment" : "Exclude Special: pages on uk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D0%B5%D1%86%D3%B9%D0%BB%D3%B9%D1%88%D1%82%D3%93%D1%88:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D3%B9%D0%BB%D3%B9%D1%88%D1%82%D3%93%D1%88:*",
             "comment" : "Exclude Special: pages on mrj.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A1%D0%BF%D1%8D%D1%86%D1%8B%D1%8F%D0%BB%D1%8C%D0%BD%D1%8B%D1%8F:*",
+            "/" : "/wiki/%D0%A1%D0%BF%D1%8D%D1%86%D1%8B%D1%8F%D0%BB%D1%8C%D0%BD%D1%8B%D1%8F:*",
             "comment" : "Exclude Special: pages on be-x-old.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A2%D1%83%D1%81%D0%B3%D0%B0%D0%B9:*",
+            "/" : "/wiki/%D0%A2%D1%83%D1%81%D0%B3%D0%B0%D0%B9:*",
             "comment" : "Exclude Special: pages on mn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A2%D1%83%D1%81%D0%BA%D0%B0%D0%B9:*",
+            "/" : "/wiki/%D0%A2%D1%83%D1%81%D0%BA%D0%B0%D0%B9:*",
             "comment" : "Exclude Special: pages on tyv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A2%D1%83%D1%81%D1%85%D0%B0%D0%B9:*",
+            "/" : "/wiki/%D0%A2%D1%83%D1%81%D1%85%D0%B0%D0%B9:*",
             "comment" : "Exclude Special: pages on bxr.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A5%D1%8A%D1%83%D0%BB%D1%83%D1%85%D1%8A%D0%B0%D0%BB%D1%8A%D1%83%D0%BB%D0%B0%D0%B1:*",
+            "/" : "/wiki/%D0%A5%D1%8A%D1%83%D0%BB%D1%83%D1%85%D1%8A%D0%B0%D0%BB%D1%8A%D1%83%D0%BB%D0%B0%D0%B1:*",
             "comment" : "Exclude Special: pages on av.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%A6%D0%B0%D1%81%D1%82%D3%99%D0%B8:*",
+            "/" : "/wiki/%D0%A6%D0%B0%D1%81%D1%82%D3%99%D0%B8:*",
             "comment" : "Exclude Special: pages on ab.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%AF%D1%80%D2%99%D0%B0%D0%BC%D1%81%D1%8B:*",
+            "/" : "/wiki/%D0%AF%D1%80%D2%99%D0%B0%D0%BC%D1%81%D1%8B:*",
             "comment" : "Exclude Special: pages on ba.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D0%AF%D1%82%D0%B0%D1%80%D0%BB%C4%83:*",
+            "/" : "/wiki/%D0%AF%D1%82%D0%B0%D1%80%D0%BB%C4%83:*",
             "comment" : "Exclude Special: pages on cv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D5%8D%D5%BA%D5%A1%D5%BD%D5%A1%D6%80%D5%AF%D5%B8%D5%B2:*",
+            "/" : "/wiki/%D5%8D%D5%BA%D5%A1%D5%BD%D5%A1%D6%80%D5%AF%D5%B8%D5%B2:*",
             "comment" : "Exclude Special: pages on hy.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D7%91%D7%90%D6%B7%D7%96%D7%95%D7%A0%D7%93%D7%A2%D7%A8:*",
+            "/" : "/wiki/%D7%91%D7%90%D6%B7%D7%96%D7%95%D7%A0%D7%93%D7%A2%D7%A8:*",
             "comment" : "Exclude Special: pages on yi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D7%91%D7%90%D7%96%D7%95%D7%A0%D7%93%D7%A2%D7%A8:*",
+            "/" : "/wiki/%D7%91%D7%90%D7%96%D7%95%D7%A0%D7%93%D7%A2%D7%A8:*",
             "comment" : "Exclude Special: pages on yi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D7%9E%D7%99:*",
+            "/" : "/wiki/%D7%9E%D7%99:*",
             "comment" : "Exclude Special: pages on he.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D7%9E%D7%99%D7%95%D7%97%D7%93:*",
+            "/" : "/wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93:*",
             "comment" : "Exclude Special: pages on he.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D8%A6%D8%A7%D9%84%D8%A7%DA%BE%D9%89%D8%AF%DB%95:*",
+            "/" : "/wiki/%D8%A6%D8%A7%D9%84%D8%A7%DA%BE%D9%89%D8%AF%DB%95:*",
             "comment" : "Exclude Special: pages on ug.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D8%A7%D8%A4%D8%B2%D9%84:*",
+            "/" : "/wiki/%D8%A7%D8%A4%D8%B2%D9%84:*",
             "comment" : "Exclude Special: pages on azb.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D8%A7%D8%B1%D9%86%D8%A7%D9%8A%D9%89:*",
+            "/" : "/wiki/%D8%A7%D8%B1%D9%86%D8%A7%D9%8A%D9%89:*",
             "comment" : "Exclude Special: pages on kaa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D8%AA%D8%A7%DB%8C%D8%A8%DB%95%D8%AA:*",
+            "/" : "/wiki/%D8%AA%D8%A7%DB%8C%D8%A8%DB%95%D8%AA:*",
             "comment" : "Exclude Special: pages on ckb.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D8%AE%D8%A7%D8%B5:*",
+            "/" : "/wiki/%D8%AE%D8%A7%D8%B5:*",
             "comment" : "Exclude Special: pages on glk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D8%B4%D8%A7:*",
+            "/" : "/wiki/%D8%B4%D8%A7:*",
             "comment" : "Exclude Special: pages on mzn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%D9%88%DB%8C%DA%98%D9%87:*",
+            "/" : "/wiki/%D9%88%DB%8C%DA%98%D9%87:*",
             "comment" : "Exclude Special: pages on mzn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DA%81%D8%A7%D9%86%DA%AF%DA%93%DB%8C:*",
+            "/" : "/wiki/%DA%81%D8%A7%D9%86%DA%AF%DA%93%DB%8C:*",
             "comment" : "Exclude Special: pages on ps.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DA%81%EF%BA%8E%EF%BB%A7%DA%AB%DA%93%DB%8C:*",
+            "/" : "/wiki/%DA%81%EF%BA%8E%EF%BB%A7%DA%AB%DA%93%DB%8C:*",
             "comment" : "Exclude Special: pages on ps.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DA%A4%DB%8C%D8%AC%DB%95:*",
+            "/" : "/wiki/%DA%A4%DB%8C%D8%AC%DB%95:*",
             "comment" : "Exclude Special: pages on lrc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DC%95%DC%9D%DC%A0%DC%A2%DC%9D%DC%90:*",
+            "/" : "/wiki/%DC%95%DC%9D%DC%A0%DC%A2%DC%9D%DC%90:*",
             "comment" : "Exclude Special: pages on arc.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DE%80%DE%A7%DE%87%DE%B0%DE%9E%DE%A6:*",
+            "/" : "/wiki/%DE%80%DE%A7%DE%87%DE%B0%DE%9E%DE%A6:*",
             "comment" : "Exclude Special: pages on dv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DE%9A%DE%A7%DE%87%DE%B0%DE%90%DE%A6:*",
+            "/" : "/wiki/%DE%9A%DE%A7%DE%87%DE%B0%DE%90%DE%A6:*",
             "comment" : "Exclude Special: pages on dv.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%DF%9E%DF%99%DF%8D%DF%9E%DF%99%DF%8D%DF%A3%DF%8D%DF%B2:*",
+            "/" : "/wiki/%DF%9E%DF%99%DF%8D%DF%9E%DF%99%DF%8D%DF%A3%DF%8D%DF%B2:*",
             "comment" : "Exclude Special: pages on nqo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A4%AC%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
+            "/" : "/wiki/%E0%A4%AC%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
             "comment" : "Exclude Special: pages on dty.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A4%AC%E0%A4%BF%E0%A4%B8%E0%A5%87%E0%A4%B8:*",
+            "/" : "/wiki/%E0%A4%AC%E0%A4%BF%E0%A4%B8%E0%A5%87%E0%A4%B8:*",
             "comment" : "Exclude Special: pages on bh.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
+            "/" : "/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
             "comment" : "Exclude Special: pages on mag.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%E0%A4%83:*",
+            "/" : "/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%E0%A4%83:*",
             "comment" : "Exclude Special: pages on sa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%E0%A4%AE%E0%A5%8D:*",
+            "/" : "/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%E0%A4%AE%E0%A5%8D:*",
             "comment" : "Exclude Special: pages on sa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A4%B5%E0%A4%BF%E0%A4%B8%E0%A5%87%E0%A4%B8:*",
+            "/" : "/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B8%E0%A5%87%E0%A4%B8:*",
             "comment" : "Exclude Special: pages on pi.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%87%E0%A6%B7:*",
+            "/" : "/wiki/%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%87%E0%A6%B7:*",
             "comment" : "Exclude Special: pages on as.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A8%96%E0%A8%BC%E0%A8%BE%E0%A8%B8:*",
+            "/" : "/wiki/%E0%A8%96%E0%A8%BC%E0%A8%BE%E0%A8%B8:*",
             "comment" : "Exclude Special: pages on pa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%A8%96%E0%A8%BE%E0%A8%B8:*",
+            "/" : "/wiki/%E0%A8%96%E0%A8%BE%E0%A8%B8:*",
             "comment" : "Exclude Special: pages on pa.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%AA%B5%E0%AA%BF%E0%AA%B6%E0%AB%87%E0%AA%B7:*",
+            "/" : "/wiki/%E0%AA%B5%E0%AA%BF%E0%AA%B6%E0%AB%87%E0%AA%B7:*",
             "comment" : "Exclude Special: pages on gu.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%AC%AC%E0%AC%BF%E0%AC%B6%E0%AD%87%E0%AC%B7:*",
+            "/" : "/wiki/%E0%AC%AC%E0%AC%BF%E0%AC%B6%E0%AD%87%E0%AC%B7:*",
             "comment" : "Exclude Special: pages on or.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%AE%9A%E0%AE%BF%E0%AE%B1%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81:*",
+            "/" : "/wiki/%E0%AE%9A%E0%AE%BF%E0%AE%B1%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81:*",
             "comment" : "Exclude Special: pages on ta.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%B2%B5%E0%B2%BF%E0%B2%B8%E0%B3%87%E0%B2%B8%E0%B3%8A:*",
+            "/" : "/wiki/%E0%B2%B5%E0%B2%BF%E0%B2%B8%E0%B3%87%E0%B2%B8%E0%B3%8A:*",
             "comment" : "Exclude Special: pages on tcy.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B5%87:*",
+            "/" : "/wiki/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B5%87:*",
             "comment" : "Exclude Special: pages on ml.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B5%87%E0%B4%95%E0%B4%82:*",
+            "/" : "/wiki/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B5%87%E0%B4%95%E0%B4%82:*",
             "comment" : "Exclude Special: pages on ml.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9:*",
+            "/" : "/wiki/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9:*",
             "comment" : "Exclude Special: pages on th.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%BA%9E%E0%BA%B4%E0%BB%80%E0%BA%AA%E0%BA%94:*",
+            "/" : "/wiki/%E0%BA%9E%E0%BA%B4%E0%BB%80%E0%BA%AA%E0%BA%94:*",
             "comment" : "Exclude Special: pages on lo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E0%BD%91%E0%BD%98%E0%BD%B2%E0%BD%82%E0%BD%A6%E0%BC%8B%E0%BD%96%E0%BD%A6%E0%BD%A3%E0%BC%8D:*",
+            "/" : "/wiki/%E0%BD%91%E0%BD%98%E0%BD%B2%E0%BD%82%E0%BD%A6%E0%BC%8B%E0%BD%96%E0%BD%A6%E0%BD%A3%E0%BC%8D:*",
             "comment" : "Exclude Special: pages on bo.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%80%90%E1%80%B2%E1%80%B8%E1%80%9D%E1%80%AB%E1%80%B8:*",
+            "/" : "/wiki/%E1%80%90%E1%80%B2%E1%80%B8%E1%80%9D%E1%80%AB%E1%80%B8:*",
             "comment" : "Exclude Special: pages on blk.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%80%90%E1%81%9F%E1%80%B1%E1%80%84%E1%80%BA:*",
+            "/" : "/wiki/%E1%80%90%E1%81%9F%E1%80%B1%E1%80%84%E1%80%BA:*",
             "comment" : "Exclude Special: pages on mnw.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%80%A1%E1%80%91%E1%80%B0%E1%80%B8:*",
+            "/" : "/wiki/%E1%80%A1%E1%80%91%E1%80%B0%E1%80%B8:*",
             "comment" : "Exclude Special: pages on my.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%81%B6%E1%80%AD%E1%80%AF%E1%81%B5%E1%80%BA%E1%82%89%E1%80%90%E1%80%BD%E1%81%BC%E1%80%BA%E1%80%B8:*",
+            "/" : "/wiki/%E1%81%B6%E1%80%AD%E1%80%AF%E1%81%B5%E1%80%BA%E1%82%89%E1%80%90%E1%80%BD%E1%81%BC%E1%80%BA%E1%80%B8:*",
             "comment" : "Exclude Special: pages on shn.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%83%A1%E1%83%9E%E1%83%94%E1%83%AA%E1%83%98%E1%83%90%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%98:*",
+            "/" : "/wiki/%E1%83%A1%E1%83%9E%E1%83%94%E1%83%AA%E1%83%98%E1%83%90%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%98:*",
             "comment" : "Exclude Special: pages on xmf.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%88%8D%E1%8B%A9:*",
+            "/" : "/wiki/%E1%88%8D%E1%8B%A9:*",
             "comment" : "Exclude Special: pages on am.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%8D%8D%E1%88%89%E1%8B%AD:*",
+            "/" : "/wiki/%E1%8D%8D%E1%88%89%E1%8B%AD:*",
             "comment" : "Exclude Special: pages on ti.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%9E%96%E1%9E%B7%E1%9E%9F%E1%9F%81%E1%9E%9F:*",
+            "/" : "/wiki/%E1%9E%96%E1%9E%B7%E1%9E%9F%E1%9F%81%E1%9E%9F:*",
             "comment" : "Exclude Special: pages on km.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%A5%91%E1%A5%AA%E1%A5%90_%E1%A5%96%E1%A5%A9%E1%A5%A2%E1%A5%B0:*",
+            "/" : "/wiki/%E1%A5%91%E1%A5%AA%E1%A5%90_%E1%A5%96%E1%A5%A9%E1%A5%A2%E1%A5%B0:*",
             "comment" : "Exclude Special: pages on tdd.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%B1%9F%E1%B1%A5%E1%B1%9A%E1%B1%A0%E1%B1%9F%E1%B1%AD:*",
+            "/" : "/wiki/%E1%B1%9F%E1%B1%A5%E1%B1%9A%E1%B1%A0%E1%B1%9F%E1%B1%AD:*",
             "comment" : "Exclude Special: pages on sat.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E1%BB%8Cp%E1%BB%A5r%E1%BB%A5iche:*",
+            "/" : "/wiki/%E1%BB%8Cp%E1%BB%A5r%E1%BB%A5iche:*",
             "comment" : "Exclude Special: pages on ig.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E2%B4%B0%E2%B5%8E%E2%B5%A5%E2%B5%8D%E2%B5%89:*",
+            "/" : "/wiki/%E2%B4%B0%E2%B5%8E%E2%B5%A5%E2%B5%8D%E2%B5%89:*",
             "comment" : "Exclude Special: pages on zgh.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E7%89%B9%E5%88%A5:*",
+            "/" : "/wiki/%E7%89%B9%E5%88%A5:*",
             "comment" : "Exclude Special: pages on gan.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E7%89%B9%E5%88%AB:*",
+            "/" : "/wiki/%E7%89%B9%E5%88%AB:*",
             "comment" : "Exclude Special: pages on gan.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%E7%89%B9%E6%AE%8A:*",
+            "/" : "/wiki/%E7%89%B9%E6%AE%8A:*",
             "comment" : "Exclude Special: pages on hak.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%EA%A0%9B%EA%A0%A4%EA%A0%A1%EA%A0%A6%EA%A0%A1:*",
+            "/" : "/wiki/%EA%A0%9B%EA%A0%A4%EA%A0%A1%EA%A0%A6%EA%A0%A1:*",
             "comment" : "Exclude Special: pages on syl.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%EA%AF%91%EA%AF%88%EA%AF%9F%EA%AF%85%EA%AF%95:*",
+            "/" : "/wiki/%EA%AF%91%EA%AF%88%EA%AF%9F%EA%AF%85%EA%AF%95:*",
             "comment" : "Exclude Special: pages on mni.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%ED%8A%B9:*",
+            "/" : "/wiki/%ED%8A%B9:*",
             "comment" : "Exclude Special: pages on ko.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%ED%8A%B9%EC%88%98:*",
+            "/" : "/wiki/%ED%8A%B9%EC%88%98:*",
             "comment" : "Exclude Special: pages on ko.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/%ED%8A%B9%EC%88%98%EA%B8%B0%EB%8A%A5:*",
+            "/" : "/wiki/%ED%8A%B9%EC%88%98%EA%B8%B0%EB%8A%A5:*",
             "comment" : "Exclude Special: pages on ko.wikipedia.org",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/*",
+            "/" : "/wiki/*",
             "?" : {
               "veaction" : "edit"
             },
@@ -1193,13 +1193,13 @@
             "exclude" : true
           },
           {
-            "#" : "\/editor*",
-            "\/" : "\/wiki\/*",
+            "#" : "/editor*",
+            "/" : "/wiki/*",
             "comment" : "Exclude editor fragment",
             "exclude" : true
           },
           {
-            "\/" : "\/wiki\/*",
+            "/" : "/wiki/*",
             "comment" : "Match all other wiki pages"
           }
         ]

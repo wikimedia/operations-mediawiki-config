@@ -2376,6 +2376,7 @@ return [
 		'WikiLambdaCache' => 'info',
 		'WikiLambdaClient' => 'info',
 		'WikiLambdaAbstract' => 'info',
+		'WikimediaAntiAbuse' => 'info',
 		'Wikisource' => 'info',
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'xff' => [ 'logstash' => false ],
@@ -5528,7 +5529,7 @@ return [
 	'sul' => true, // Canonically true as SUL === CentralAuth
 ],
 
-'wmgCentralAuthLoginIcon' => [
+'wgCentralAuthLoginIcon' => [
 	'default' => false,
 	'wikipedia' => '/srv/mediawiki/static/images/sul/wikipedia.png',
 	'wikibooks' => '/srv/mediawiki/static/images/sul/wikibooks.png',
@@ -5572,7 +5573,7 @@ return [
 	'sourceswiki' => '.wikisource.org',
 ],
 
-'wmgCentralAuthAutoLoginWikis' => [
+'wgCentralAuthAutoLoginWikis' => [
 	'default' => [
 		'.wikipedia.org' => 'enwiki',
 		'.wikibooks.org' => 'enwikibooks',
@@ -5760,7 +5761,7 @@ return [
 	'zhwiktionary' => false,
 ],
 
-'wmgCollectionPortletForLoggedInUsersOnly' => [
+'wgCollectionPortletForLoggedInUsersOnly' => [
 	'default' => false,
 ],
 
@@ -5774,7 +5775,7 @@ return [
 	'ruwiki' => true, // T340274
 ],
 
-'wmgCollectionArticleNamespaces' => [
+'wgCollectionArticleNamespaces' => [
 	'default' => [
 		NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT, NS_PROJECT_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
 		NS_HELP, NS_HELP_TALK, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111
@@ -5786,7 +5787,7 @@ return [
 	],
 ],
 
-'wmgCollectionPortletFormats' => [
+'wgCollectionPortletFormats' => [
 	'default' => [], // T224433
 	// The old PDF renderer choked on Indic languages.  The
 	// new renderer should render these fine (and the ODF
@@ -5961,77 +5962,6 @@ return [
 	'default' => false,
 	'sul' => true,
 	'metawiki' => false,
-],
-
-'wmgUseFlaggedRevs' => [
-	'default' => false,
-	'flaggedrevs' => true,
-],
-
-'wgFlaggedRevsOverride' => [
-	'default' => true,
-	'alswiki' => false,
-	'bewiki' => false,
-	'bnwiki' => false,
-	'cewiki' => false,
-	'ckbwiki' => false,
-	'dewikiquote' => false,
-	'dewiktionary' => false,
-	'enwiki' => false,
-	'enwikibooks' => false,
-	'eowiki' => false,
-	'fawiki' => false,
-	'fiwiki' => false,
-	'hiwiki' => false,
-	'iawiki' => false,
-	'iswiktionary' => false,
-	'ptwiki' => false,
-	'ptwikibooks' => false,
-	'ruwiki' => false,
-	'ukwiki' => false,
-	'vecwiki' => false,
-],
-
-'wgFlaggedRevsProtection' => [
-	'default' => false,
-	'bnwiki' => true,
-	'ckbwiki' => true,
-	'enwiki' => true,
-	'fawiki' => true,
-	'hiwiki' => true,
-	'ptwiki' => true,
-	'idwiki' => true,
-],
-
-'wgSimpleFlaggedRevsUI' => [
-	'default' => true,
-	'enwikibooks' => false,
-	'fiwiki' => false,
-	'ptwikibooks' => false,
-	'ruwiki' => false,
-],
-
-'wgFlaggedRevsHandleIncludes' => [
-	// FR_INCLUDES_CURRENT = 0
-	'default' => 2,
-	'bnwiki' => 0,
-	'ckbwiki' => 0,
-	'enwiki' => 0,
-	'enwikibooks' => 0, // T410330
-	'fawiki' => 0,
-	'hiwiki' => 0,
-	'ptwiki' => 0,
-	'ruwikisource' => 0,
-],
-
-'wgFlaggedRevsAutoReview' => [
-	'default' => 3,
-	'hewikisource' => 1,
-],
-
-'wgFlaggedRevsLowProfile' => [
-	'default' => true,
-	'huwiki' => false,
 ],
 
 'wgMaximumMovedPages' => [
@@ -6215,10 +6145,8 @@ return [
 ],
 
 'wmgUseFooterLegalContactLink' => [
-	'default' => false,
-	'footer-legal-contact-link' => true,
-	'specieswiki' => true,
-	'wikiversity' => true,
+	'default' => true,
+	'footer-legal-contact-link-exclusions' => false,
 ],
 
 'wmgUseFooterCodeOfConductLink' => [
@@ -6697,6 +6625,7 @@ return [
 	'hewikivoyage' => true, // T222017
 	'zhwikivoyage' => true, // T230624
 	'dewikivoyage' => true, // T264305
+	'viwikivoyage' => true, // T405724
 ],
 
 'wgPopupsVirtualPageViews' => [
@@ -6719,6 +6648,7 @@ return [
 	'enwikivoyage' => '1',
 	'dewikivoyage' => '1',
 	'hewikivoyage' => '1',
+	'viwikivoyage' => '1',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
@@ -6772,6 +6702,7 @@ return [
 	'udmwiki' => 'popups',
 	'vecwiki' => 'Popup',
 	'viwiki' => 'navpop',
+	'viwikivoyage' => 'popups',
 	'wowiki' => 'Popups',
 	'yiwiki' => 'NavigationPopups',
 ],
@@ -8310,8 +8241,19 @@ return [
 ],
 
 'wgMFCustomSiteModules' => [
+	// IMPORTANT: Please do not change default or add additional override
+	// without creating a subtask of T248416 and associated evaluation.
+	// When enabling please ensure an interface admin from the project
+	// AND staff member are available at time of deployment.
+	//
+	// Enabling without sufficient due-dilegence could impact SEO, page views since
+	// this has potential to add significant render blocking resources to mobile
+	// page views with potential to impact first paint and Google Web Vitals.
 	'default' => true,
+	// T375540
 	'mediawikiwiki' => false,
+	// T375538
+	'enwiki' => false,
 ],
 
 // T169001
@@ -8399,6 +8341,10 @@ return [
 		'loggedin' => true,
 		'amc' => true,
 	],
+],
+
+'wgNativeImageLazyLoading' => [
+	'default' => true,
 ],
 
 'wgMFFallbackEditor' => [
@@ -9832,6 +9778,7 @@ return [
 	'itwikivoyage' => true, // T297054
 	'bnwikivoyage' => true, // T307904
 	'zhwikivoyage' => true, // T361427
+	'viwikivoyage' => true, // T405724
 ],
 
 // T223824
@@ -9890,14 +9837,22 @@ return [
 
 'wgWikimediaAntiAbuseEnableModelChecks' => [
 	'default' => false,
-	'testwiki' => true, // T431292
-	'enwiki' => false, // T431292: planned to enable on 2026-07-27
+	// T431292
+	'testwiki' => true,
+	'enwiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [
 	'default' => false,
-	'testwiki' => true, // T431292
-	'enwiki' => false, // T431292: planned to enable on 2026-07-27
+	// T431292
+	'testwiki' => true,
+	'enwiki' => true,
+],
+
+'wgWikimediaAntiAbuseEnablePersonalInfoFlagNotifications' => [
+	'default' => false,
+	'testwiki' => true,
+	'enwiki' => true,
 ],
 
 'wmgUseWikimediaEvents' => [
@@ -12643,10 +12598,7 @@ return [
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
-'wgOATHAuthRequire2FAForAll' => [
-	'default' => false,
-],
-'wgOATHAuth2FAForAllWarnings' => [
+'wgOATHAuthEnforce2FAForAll' => [
 	'default' => false,
 	'arbcom_cswiki' => true,
 	'arbcom_dewiki' => true,
@@ -12662,6 +12614,13 @@ return [
 	'ombudsmenwiki' => true,
 	'stewardwiki' => true,
 	'u4cwiki' => true,
+],
+'wgOATHAuth2FAForAllWarnings' => [
+	'default' => false,
+	'private' => true,
+	'collabwiki' => false,
+	'legalteamwiki' => false,
+	'officewiki' => false,
 ],
 'wgWebAuthnNewCredsDisabled' => [
 	'default' => false,
@@ -13077,7 +13036,7 @@ return [
 		'wmf-rest/v1' => [
 			'info' => [
 				'title' => 'Wikimedia REST APIs',
-				'description' => "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint's documentation may detail more specific usage limits.\n- Set a unique `User-Agent` or `Api-User-Agent` header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia's [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint's documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+				'description' => "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n",
 				'version' => '1.0.0',
 			],
 			'base' => '/api/rest_v1',
@@ -13086,7 +13045,7 @@ return [
 		'wmf-math/v1' => [
 			'info' => [
 				'title' => 'Math API',
-				'description' => "This API provides support for rendering mathematical formulae. It allows callers to convert various forms of math input into MathML + SVG or PNG outputs, which can be used across Wikimedia projects.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint's documentation may detail more specific usage limits.\n- Set a unique `User-Agent` or `Api-User-Agent` header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia's [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint's documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+				'description' => "This API provides support for rendering mathematical formulae. It allows callers to convert various forms of math input into MathML + SVG or PNG outputs, which can be used across Wikimedia projects.\n",
 				'version' => '1.0.0',
 			],
 			'base' => 'https://wikimedia.org/api/rest_v1',
@@ -13793,6 +13752,7 @@ return [
 	'wikipedia' => true, // T396784
 	'officewiki' => true, // T318592
 	'metawiki' => true, // T322745
+	'bdwikimedia' => true, // T424016
 	'brwikimedia' => true, // T376747
 	'cowikimedia' => true, // T431765
 	'uawikimedia' => true, // T376695

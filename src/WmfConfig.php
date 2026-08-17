@@ -52,7 +52,7 @@ class WmfConfig {
 		'closed',
 		'flow',
 		// T410164: Enable footer contact in tiers, starting with highest legal risk wikis, then progressively lower risk tiers.
-		'footer-legal-contact-link',
+		'footer-legal-contact-link-exclusions',
 		'flaggedrevs',
 		'small',
 		'specialcontribute',
@@ -292,6 +292,7 @@ class WmfConfig {
 			( require $configDir . '/ext-CirrusSearch.php' ) +
 			( require $configDir . '/ext-EventLogging.php' ) +
 			( require $configDir . '/ext-EventStreamConfig.php' ) +
+			( require $configDir . '/ext-FlaggedRevs.php' ) +
 			( require $configDir . '/ext-GrowthExperiments.php' ) +
 			( require $configDir . '/skin-Minerva.php' );
 

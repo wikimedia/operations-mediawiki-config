@@ -5396,6 +5396,10 @@ return [
 		118 => 'noindex,nofollow',
 		119 => 'noindex,nofollow',
 	],
+	'viwiki' => [ // T432311
+		NS_USER => 'noindex,nofollow',
+		NS_USER_TALK => 'noindex,nofollow',
+	],
 	'wikidatawiki' => [ // T181525
 		NS_USER => 'noindex,follow',
 		NS_USER_TALK => 'noindex,follow',
