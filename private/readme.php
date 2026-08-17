@@ -130,6 +130,9 @@ $wmgSwiftConfig['codfw'] = [
  */
 $wmgRedisPassword = null;
 
+// Credentials for new LockManager T366938
+$wmgRedisLockPassword = null;
+
 // FIXME: Is this still used?
 $wmgZeroPortalApiUserName = null;
 $wmgZeroPortalApiPassword = null;
