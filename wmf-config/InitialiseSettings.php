@@ -3998,6 +3998,11 @@ return [
 	'enwiki' => "damaging"
 ],
 
+'wgPersonalDashboardReviewChangesMlModel' => [
+	'default' => "revertrisklanguageagnostic",
+	'enwiki' => "damaging"
+],
+
 'wgPersonalDashboardBlueDot' => [
 	'default' => false,
 	'testwiki' => true,
