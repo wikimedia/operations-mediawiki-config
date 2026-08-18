@@ -195,6 +195,11 @@ $services = [
 			'rdb2' => '10.64.16.18:6382', # rdb1013 B6
 			'rdb3' => '10.64.0.9:6381',  # rdb1015 A4
 		],
+		'redis_default_lock' => [
+			'rdb1' => '10.64.0.65:6378', # rdb-lock1001 VM
+			'rdb2' => '10.64.16.45:6378', # rdb-lock1002 VM
+			'rdb3' => '10.64.32.7:6378', # rdb-lock1003 VM
+		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
 				'host' => 'localhost',
@@ -261,6 +266,11 @@ $services = [
 			'rdb1' => '10.192.57.4:6381',  # rdb2011 E3
 			'rdb2' => '10.192.57.4:6382',  # rdb2011 E3
 			'rdb3' => '10.192.13.25:6381', # rdb2013 B4
+		],
+		'redis_default_lock' => [
+			'rdb1' => '10.192.16.11:6378', # rdb-lock2001 VM
+			'rdb2' => '10.192.32.12:6378', # rdb-lock2002 VM
+			'rdb3' => '10.192.48.7:6378',  # rdb-lock2003 VM
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/

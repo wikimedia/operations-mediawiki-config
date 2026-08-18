@@ -3998,6 +3998,11 @@ return [
 	'enwiki' => "damaging"
 ],
 
+'wgPersonalDashboardReviewChangesMlModel' => [
+	'default' => "revertrisklanguageagnostic",
+	'enwiki' => "damaging"
+],
+
 'wgPersonalDashboardBlueDot' => [
 	'default' => false,
 	'testwiki' => true,
@@ -11657,8 +11662,9 @@ return [
 	'wikisource' => true,
 	'sourceswiki' => true,
 ],
-'wgWikisourceEnableOcr' => [
-	'default' => true,
+'wgWikisourceEnableBulkOcr' => [
+	'default' => false,
+	'pawikisource' => true, // T434648
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
@@ -12600,20 +12606,10 @@ return [
 ],
 'wgOATHAuthEnforce2FAForAll' => [
 	'default' => false,
-	'arbcom_cswiki' => true,
-	'arbcom_dewiki' => true,
-	'arbcom_enwiki' => true,
-	'arbcom_fiwiki' => true,
-	'arbcom_itwiki' => true,
-	'arbcom_nlwiki' => true,
-	'arbcom_plwiki' => true,
-	'arbcom_ruwiki' => true,
-	'arbcom_zhwiki' => true,
-	'checkuserwiki' => true,
-	'conductwiki' => true,
-	'ombudsmenwiki' => true,
-	'stewardwiki' => true,
-	'u4cwiki' => true,
+	'private' => true,
+	'collabwiki' => false,
+	'legalteamwiki' => false,
+	'officewiki' => false,
 ],
 'wgOATHAuth2FAForAllWarnings' => [
 	'default' => false,

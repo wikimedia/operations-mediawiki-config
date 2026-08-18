@@ -1895,9 +1895,6 @@ function wmfGetOverrideSettings() {
 		'wgWikisourceWikibaseEditionOfProperty' => [
 			'wikisource' => 'P253107'
 		],
-		'wgWikisourceEnableOcr' => [
-			'wikisource' => true,
-		],
 		'wgWikisourceEnableBulkOcr' => [
 			'wikisource' => true,
 		],
