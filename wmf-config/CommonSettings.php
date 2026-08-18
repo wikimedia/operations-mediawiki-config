@@ -412,7 +412,7 @@ if ( $wmgRealm === 'production' ) {
 	];
 
 	// Will be everywhere after deploys
-	if ( $wgDBname === 'testwiki' ) {
+	if ( in_array( $wgDBname, [ 'testwiki', 'frwiki', 'jawiki', 'ruwiki', 'labswiki' ] ) ) {
 		$wgDefaultLockManager = 'redisDefaultLockManager';
 	}
 }
