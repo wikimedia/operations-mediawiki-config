@@ -13382,7 +13382,6 @@ return [
 	'default' => false,
 	'wikidataclient-test' => true,
 	'testwikidatawiki' => false,
-	'cawiki' => true,
 ],
 
 'wmgWikibaseClientWellKnownReferencePropertyIds' => [
