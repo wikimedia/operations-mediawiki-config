@@ -368,7 +368,7 @@ return [
 'hawiki' => [ 'wikipedia', 'small', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'ores', 'sul' ],
 'hawiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'hawwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
-'hewiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
+'hewiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'group1-wikipedia', 'group1', 'cirrussearch-big-indices', 'rtl', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'hewikibooks' => [ 'math-legacy-mathoid', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'hewikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'hewikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'rtl', 'sul', 'wikilove' ],
