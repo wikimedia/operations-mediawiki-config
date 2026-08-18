@@ -412,9 +412,9 @@ if ( $wmgRealm === 'production' ) {
 	];
 
 	// Will be everywhere after deploys
-	//if ( $wgDBname === 'testwiki' ) {
-	//	$wgDefaultLockManager = 'redisDefaultLockManager';
-	//}
+	if ( $wgDBname === 'testwiki' ) {
+		$wgDefaultLockManager = 'redisDefaultLockManager';
+	}
 }
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
 if ( isset( $wmgProfiler ) ) {
