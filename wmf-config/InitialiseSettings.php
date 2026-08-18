@@ -11665,6 +11665,10 @@ return [
 'wgWikisourceEnableOcr' => [
 	'default' => true,
 ],
+'wgWikisourceEnableBulkOcr' => [
+	'default' => false,
+	'pawikisource' => true, // T434648
+],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
 	'default' => false,
