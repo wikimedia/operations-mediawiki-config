@@ -50,7 +50,7 @@ $wmgAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
 $wmgAllServices['unittest']['poolcounter'] = [ '127.0.0.1' ];
 
 ### LockManager Redis
-$wmgAllServices['unittest']['redis_lock'] = [
+$wmgAllServices['unittest']['redis_default_lock'] = [
 	'rdb1' => '127.0.0.1',
 	'rdb2' => '127.0.0.1',
 	'rdb3' => '127.0.0.1'

@@ -399,22 +399,21 @@ if ( $wmgRealm === 'production' ) {
 }
 
 // Main lock manager
-if ( $wmgRealm === 'production' ) {
-	$wgLockManagers[] = [
-		'name' => 'redisDefaultLockManager',
-		'class' => RedisLockManager::class,
-		'lockServers' => $wmgMasterServices['redis_default_lock'],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisLockPassword
-		],
-	];
+$wgLockManagers[] = [
+	'name' => 'redisDefaultLockManager',
+	'class' => RedisLockManager::class,
+	'lockServers' => $wmgMasterServices['redis_default_lock'],
+	'redisConfig' => [
+		'connectTimeout' => 2,
+		'readTimeout' => 2,
+		// TODO: Consolidate them into one variable:
+		'password' => ( $wmgRealm !== 'labs' ) ? $wmgRedisLockPassword : $wmgRedisPassword,
+	],
+];
 
-	// Will be everywhere after deploys
-	if ( in_array( $wgDBname, [ 'testwiki', 'frwiki', 'jawiki', 'ruwiki', 'labswiki' ] ) ) {
-		$wgDefaultLockManager = 'redisDefaultLockManager';
-	}
+// Will be everywhere after deploys
+if ( in_array( $wgDBname, [ 'testwiki', 'frwiki', 'jawiki', 'ruwiki', 'labswiki' ] ) ) {
+	$wgDefaultLockManager = 'redisDefaultLockManager';
 }
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
 if ( isset( $wmgProfiler ) ) {
