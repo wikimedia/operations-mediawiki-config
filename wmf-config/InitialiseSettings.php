@@ -13112,6 +13112,17 @@ return [
 			'spec' => 'https://wikimedia.org/api/rest_v1/?spec',
 		],
 	],
+	'+commonswiki' => [
+		'wmf-analytics-commons/v1' => [
+			'info' => [
+				'title' => 'Wikimedia Commons Impact Metrics API',
+				'description' => "Commons Impact Metrics provides analytical data on the impact of community\ncontributions to Wikimedia Commons, focused on contributions from galleries,\nlibraries, archives, and museums. Data provided by this API is available\nunder the [CC0 1.0 license](https://creativecommons.org/publicdomain/zero/1.0/).",
+				'version' => '1.0.0',
+			],
+			'base' => 'https://wikimedia.org/api/rest_v1/metrics',
+			'spec' => 'https://wikimedia.org/api/rest_v1/metrics/commons-analytics/api-spec.json',
+		],
+	],
 	'+wikipedia' => [
 		'wmf-rest/v1' => [
 			'info' => [
