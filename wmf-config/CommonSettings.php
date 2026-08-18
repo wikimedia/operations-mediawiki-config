@@ -3451,8 +3451,12 @@ if ( $wmgUseEcho ) {
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
-	// Define the cluster database, false to use main database
-	$wgEchoCluster = $wmgEchoCluster;
+	// Define the DB cluster
+	// Listed wikis should be on extension1, but started outside of it; stick with the current setting.
+	$wgEchoCluster = $wmgEchoCluster; // B&C, T380385, to be removed
+	if ( !in_array( $wgDBname, [ 'mediawikiwiki', 'metawiki', 'officewiki' ] ) ) {
+		$wgVirtualDomainsMapping['virtual-echo'] = [ 'cluster' => 'extension1', 'db' => false ];
+	}
 
 	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
 	// wikis.
@@ -3468,6 +3472,9 @@ if ( $wmgUseEcho ) {
 
 	// Enable tracking table only on SULed wikis
 	if ( $wmgUseCentralAuth ) {
+		$wgVirtualDomainsMapping['virtual-echo-shared'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+
+		// Old variables for B&C
 		$wgEchoSharedTrackingDB = 'wikishared';
 		// Explicitly set this to 'extension1', because some wikis have $wgEchoCluster set to false
 		$wgEchoSharedTrackingCluster = 'extension1';

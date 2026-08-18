@@ -8904,6 +8904,7 @@ return [
 ],
 
 // Use extension1 db for all wikis
+// To be removed once the virtual domain migration is finished (T380385)
 'wmgEchoCluster' => [
 	'default' => 'extension1',
 	// The following wikis should be using extension1 db but started with
