@@ -412,7 +412,7 @@ $wgLockManagers[] = [
 ];
 
 // Will be everywhere after deploys
-if ( in_array( $wgDBname, [ 'testwiki', 'frwiki', 'jawiki', 'ruwiki', 'labswiki' ] ) ) {
+if ( in_array( $wgDBname, [ 'testwiki', 'frwiki', 'jawiki', 'ruwiki', 'labswiki', 'wikidatawiki', 'commonswiki' ] ) ) {
 	$wgDefaultLockManager = 'redisDefaultLockManager';
 }
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
