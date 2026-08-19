@@ -12840,7 +12840,18 @@ return [
 // T420878
 'wgReadingListBetaFeature' => [
 	'default' => false,
+	'testwiki' => false,
 	'wikipedia' => true,
+],
+// T435258
+'wgReadingListsEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+'wgReadingListsCustomLists' => [
+	'default' => false,
+	// Test2 should be one step ahead of test
+	'test2wiki' => true,
 ],
 // T421776
 'wgReadingListsEnableBetaQuickSurvey' => [
