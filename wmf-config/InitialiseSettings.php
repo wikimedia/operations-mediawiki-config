@@ -1742,8 +1742,8 @@ return [
 ],
 
 'wmgThumbUrl' => [
-	'default' => null,
-	'private' => null,
+	'default' => false,
+	'private' => false,
 	'testwiki' => '//thumb.wikimedia.org/wikipedia/test/thumb',
 ],
 
