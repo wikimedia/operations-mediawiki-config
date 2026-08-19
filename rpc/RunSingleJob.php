@@ -39,6 +39,7 @@ if ( !isset( $event['database'] ) ) {
 	throw new Exception( 'Invalid event received! ' . json_encode( $event ) );
 }
 
+define( 'MW_ENTRY_POINT', 'RunSingleJob' );
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
