@@ -1745,6 +1745,7 @@ return [
 	'default' => false,
 	'private' => false,
 	'testwiki' => '//thumb.wikimedia.org/wikipedia/test/thumb',
+	'mediawikiwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 ],
 
 'wgUploadDirectory' => [
