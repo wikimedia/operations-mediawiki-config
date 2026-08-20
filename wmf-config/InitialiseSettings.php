@@ -1746,6 +1746,8 @@ return [
 	'private' => false,
 	'testwiki' => '//thumb.wikimedia.org/wikipedia/test/thumb',
 	'mediawikiwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
+	'cswiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
+	'fawiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 ],
 
 'wgUploadDirectory' => [
