@@ -2628,14 +2628,6 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// DEPRECATED: replaced by webrequest.dumps.v1 below. This stream will
-		// be removed once the producer has switched over to the new stream.
-		// https://phabricator.wikimedia.org/T425087
-		'webrequest.dumps.dev0' => [
-			'schema_title' => 'development/elastic/ecs',
-			'canary_events_enabled' => false,
-		],
-
 		// ECS-formatted access logs for dumps.wikimedia.org.
 		// Real events are produced directly to the kafka-logging clusters by
 		// rsyslog and mirrored to Kafka jumbo for ingestion. Canary events are
