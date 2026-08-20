@@ -2610,16 +2610,26 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// ECS-formatted access logs for dumps.wikimedia.org.
-		// Produced directly to the kafka-logging clusters by rsyslog (not via
-		// EventGate, so canary events are disabled) and mirrored to Kafka jumbo
-		// for ingestion. Inherits the default eqiad./codfw. topic_prefixes and the
-		// default analytics_hadoop_ingestion + analytics_hive_ingestion consumers.
-		// https://phabricator.wikimedia.org/T291645
+		// DEPRECATED: replaced by webrequest.dumps.v1 below. This stream will
+		// be removed once the producer has switched over to the new stream.
 		// https://phabricator.wikimedia.org/T425087
 		'webrequest.dumps.dev0' => [
 			'schema_title' => 'development/elastic/ecs',
 			'canary_events_enabled' => false,
+		],
+
+		// ECS-formatted access logs for dumps.wikimedia.org.
+		// Real events are produced directly to the kafka-logging clusters by
+		// rsyslog and mirrored to Kafka jumbo for ingestion. Canary events are
+		// produced through eventgate-analytics, but no real event data is.
+		// Inherits the default eqiad./codfw. topic_prefixes and the
+		// default analytics_hadoop_ingestion + analytics_hive_ingestion consumers.
+		// https://phabricator.wikimedia.org/T291645
+		// https://phabricator.wikimedia.org/T425087
+		'webrequest.dumps.v1' => [
+			'schema_title' => 'elastic/ecs',
+			'destination_event_service' => 'eventgate-analytics',
+			'canary_events_enabled' => true,
 		],
 
 		// The producer of webrequest_frontend_text is not using this stream
