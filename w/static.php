@@ -53,6 +53,7 @@ define( 'MW_ENTRY_POINT', 'static' );
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
+MediaWiki\Profiler\ProfilingContext::singleton()->init( 'wmf', MW_ENTRY_POINT );
 
 define( 'WMF_STATIC_1MIN', 60 );
 define( 'WMF_STATIC_1Y', 31536000 );
