@@ -12854,11 +12854,19 @@ return [
 	'default' => false,
 	'testwiki' => false,
 	'wikipedia' => true,
+	'zhwiki' => false,
+	'bnwiki' => false,
+	'cswiki' => false,
+	'viwiki' => false,
 ],
 // T435258
 'wgReadingListsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'zhwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
 ],
 'wgReadingListsCustomLists' => [
 	'default' => false,
