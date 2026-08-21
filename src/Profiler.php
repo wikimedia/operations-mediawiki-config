@@ -374,8 +374,8 @@ class Profiler {
 					continue;
 				}
 				$componentsInStack = [];
-				foreach ( explode( ';', $line ) as $fname ) {
-					$cname = self::excimerComponentFromMethod( $fname );
+				foreach ( explode( ';', $line ) as $frame ) {
+					$cname = self::excimerComponentFromFrame( $frame );
 					if ( $cname !== null ) {
 						$componentsInStack[$cname] = 1;
 					}
@@ -420,14 +420,16 @@ class Profiler {
 	}
 
 	/**
-	 * Get the component name from a class suitable for metrics
+	 * Get the component name from a stack frame, suitable for metrics
 	 *
-	 * @param string $fname Fully qualified caller name (e.g. from __METHOD__)
+	 * @param string $frame A stack frame containing the fully qualified caller name.
+	 * The final frame may additionally contain a trailing space followed by a number,
+	 * as documented in {@link \ExcimerLog::formatCollapsed()}
 	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
 	 */
-	private static function excimerComponentFromMethod( $fname ) {
+	private static function excimerComponentFromFrame( $frame ) {
 		$m = [];
-		if ( !preg_match( '/^([a-zA-Z0-9_\\\\]+)::[a-zA-Z0-9_]+$/', $fname, $m ) ) {
+		if ( !preg_match( '/^([a-zA-Z0-9_\\\\]+)::[a-zA-Z0-9_]+(?: \d+)?$/', $frame, $m ) ) {
 			return null;
 		}
 
