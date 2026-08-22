@@ -2509,7 +2509,8 @@ Wikiquote:
     arwikiquote:
         no_2x: true
         local_icon: true
-        local_wordmark: true
+        commons_wordmark: File:Wikiquote-wordmark-ar.svg
+        comment_wordmark: T435505
     aswikiquote:
         commons: File:Wikiquote-logo-as.svg
         commons_wordmark: File:Wikiquote-wordmark-as.svg

@@ -3518,10 +3518,10 @@ return [
 	],
 
 	// Wikiquote
-	'arwikiquote' => [
+	'arwikiquote' => [ // T435505
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ar.svg',
-		'width' => 146,
-		'height' => 44,
+		'width' => 133,
+		'height' => 40,
 	],
 	'aswikiquote' => [ // T353934
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-as.svg',
