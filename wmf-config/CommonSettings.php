@@ -2858,6 +2858,9 @@ if ( $wmgUseGlobalUsage ) {
 // T421914
 if ( $wgDBname === 'testcommonswiki' ) {
 	$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension1', 'db' => false ];
+	$wgRemoteVirtualDomainsMapping['testcommonswiki'] = [
+		'virtual-links' => [ 'cluster' => 'extension1', 'db' => 'testcommonswiki' ],
+	];
 	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension1', 'db' => false ];
 	$wgGlobalUsageSharedRepoWiki = 'testcommonswiki';
 }
