@@ -4001,6 +4001,7 @@ return [
 		],
 	],
 	'+enwikivoyage' => [
+		'*' => [ 'applychangetags' => true ],
 		'sysop' => [
 			'autopatrolled',
 			'templateeditor',
