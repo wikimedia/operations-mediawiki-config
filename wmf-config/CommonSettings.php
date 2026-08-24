@@ -2879,6 +2879,7 @@ wfLoadExtension( 'CodeMirror' );
 // CodeMirror instead of CodeEditor (T419332)
 $wgCodeMirrorEnabledModes['javascript'] = true;
 $wgCodeMirrorEnabledModes['json'] = true;
+$wgCodeMirrorEnabledModes['jsonc'] = true;
 $wgCodeMirrorEnabledModes['css'] = true;
 $wgCodeMirrorEnabledModes['lua'] = true;
 $wgCodeMirrorEnabledModes['vue'] = true;
