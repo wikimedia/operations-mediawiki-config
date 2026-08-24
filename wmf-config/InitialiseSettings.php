@@ -6863,6 +6863,11 @@ return [
 	'default' => 1000, // T371713: sample 1 in 1000 parses
 ],
 
+// T432760
+'wgUseParsoidLinksUpdate' => [
+	'default' => false,
+],
+
 // T333179
 'wmgUseParserMigration' => [
 	'default' => true,
