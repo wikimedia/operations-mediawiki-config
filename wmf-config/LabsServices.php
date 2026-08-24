@@ -70,7 +70,7 @@ return [
 
 		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
 
-		'irc' => [ 'irc.svc.deployment-prep.eqiad1.wikimedia.cloud' ],
+		'irc' => [],
 		'redis_default_lock' => [
 			'rdb1' => 'deployment-rdb01.deployment-prep.eqiad1.wikimedia.cloud',
 		],
