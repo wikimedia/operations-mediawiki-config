@@ -7524,6 +7524,12 @@ return [
 	'enwiki' => false,
 ],
 
+// T431544
+'wgCiteCitationTypeAutoNames' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 

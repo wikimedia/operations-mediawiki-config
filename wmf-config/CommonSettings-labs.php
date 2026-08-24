@@ -145,6 +145,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCiteBacklinkCommunityConfiguration = true;
 		// Temporary while developing feature, T385666
 		$wgCiteSubRefMergeInDevelopment = true;
+		// T431544
+		$wgCiteCitationTypeAutoNames = true;
 	}
 
 	// Labs override for GlobalCssJs
