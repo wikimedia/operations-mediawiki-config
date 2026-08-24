@@ -774,7 +774,7 @@ return [
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
-	'eswiki' => 70, // T285235
+	'eswiki' => 85, // T394867
 ],
 
 'wgGEMentorshipReassignMenteesBatchSize' => [
