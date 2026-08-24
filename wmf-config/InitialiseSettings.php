@@ -14142,6 +14142,10 @@ return [
 	// T423173
 	'itwiki' => true,
 	'plwiki' => true,
+	// T434653
+	'fawiki' => true,
+	'cswiki' => true,
+	'bnwiki' => true,
 ],
 
 // T403798
