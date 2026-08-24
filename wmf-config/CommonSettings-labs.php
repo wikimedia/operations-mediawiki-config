@@ -126,6 +126,9 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseCentralNotice ) {
+		$wgCentralNoticeProhibitedExperiments = [
+			'minimal-minerva-toolbar'
+		];
 		// Same as production CommonSettings.php, but adding *.wikimedia.beta.wmcloud.org
 		// for meta, upload, and commons in Beta Cluster.
 		$wgCentralNoticeContentSecurityPolicy =
