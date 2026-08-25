@@ -69,6 +69,7 @@ return [
 			'trackback' => false,
 			'upload' => false,
 			'movefile' => false,
+			'produnto-update' => false,
 		],
 		'steward' => [
 			'edit' => true,
@@ -523,6 +524,7 @@ return [
 			'block' => true,
 			'ipblock-exempt' => true,
 			'rollback' => true, // T67348
+			'produnto-update' => true,
 		], // T54578
 		'suppressredirect' => [ 'suppressredirect' => true ], // T69278
 		'patroller' => [ 'patrol' => true ], // T285221
@@ -907,6 +909,7 @@ return [
 			'upload' => true,
 			'patrol' => true, // T424445
 			'autopatrol' => true, // T424445
+			'produnto-update' => true,
 		],
 		'flood' => [ 'bot' => true ], // T426882
 	],
@@ -1005,6 +1008,7 @@ return [
 			'autopatrol' => true,
 			'editprotected' => true,
 			'suppressredirect' => true,
+			'produnto-update' => true,
 		], // T395293
 		'autopatrolled' => [ 'autopatrol' => true, ], // T57665
 	],
@@ -1058,10 +1062,12 @@ return [
 			'undelete' => true, // T71411
 			'extendedconfirmed' => true,
 			'deleterevision' => true, // T277358
+			'produnto-update' => true,
 		],
 		'templateeditor' => [
 			'editprotected' => true, // T74146
 			'tboverride' => true, // T74146
+			'produnto-update' => true,
 		],
 		'eliminator' => [
 			'block' => true, // T87558
@@ -1299,6 +1305,7 @@ return [
 			'skipcaptcha' => true,
 			'suppressredirect' => true,
 			'undelete' => true,
+			'produnto-update' => true,
 		],
 	],
 	'+gawiki' => [
@@ -1404,6 +1411,7 @@ return [
 		'templateeditor' => [
 			'templateeditor' => true,
 			'editprotected' => true,
+			'produnto-update' => true,
 		], // T120342
 		'autoconfirmed' => [ 'move' => false ] // T164239
 	],
@@ -1531,6 +1539,7 @@ return [
 			'editautopatrolprotected' => true, // T308917
 			'changetags' => true, // T331051
 			'abusefilter-bypass-blocked-external-domains' => true, // T355694
+			'produnto-update' => true,
 		],
 		'sysop' => [
 			'editautopatrolprotected' => true, // T308917
@@ -1628,6 +1637,7 @@ return [
 			'suppressredirect' => true,
 			'extendedconfirmed' => true, // T249820
 			'changetags' => true, // T344150
+			'produnto-update' => true,
 		],
 		'sysop' => [
 			'extendedconfirmed' => true, // T249820
@@ -1921,6 +1931,7 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
+			'produnto-update' => true,
 		],
 	],
 	'+mlwikisource' => [
@@ -1987,6 +1998,7 @@ return [
 		'templateeditor' => [
 			'templateeditor' => true,
 			'editprotected' => true,
+			'produnto-update' => true,
 		], // T195557
 		'flood' => [ 'bot' => true ], // T211181
 	],
@@ -2344,6 +2356,7 @@ return [
 			'noratelimit' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
+			'produnto-update' => true,
 
 		],
 		'filemover' => [ // T32984
@@ -2790,6 +2803,7 @@ return [
 			'editsemiprotected' => true, // T247672
 			'editsitejson' => true,
 			'noratelimit' => true, // T40690
+			'produnto-update' => true,
 		],
 		'translator' => [
 			'autoconfirmed' => true,
@@ -2881,7 +2895,8 @@ return [
 			'protect' => true,
 			'editprotected' => true, // T281274
 			'suppressredirect'  => true,
-			'deletedhistory' => true
+			'deletedhistory' => true,
+			'produnto-update' => true,
 		], // T184607
 		'accountcreator' => [
 			'tboverride-account' => true,
@@ -3080,6 +3095,7 @@ return [
 			'undelete' => true,
 			'unwatchedpages' => true,
 			'pagelang' => true, // T337760
+			'produnto-update' => true,
 		], // T74459
 		'user' => [
 			'changetags' => false, // T303682
@@ -3218,6 +3234,7 @@ return [
 		'translationadmin' => [
 			'editprotected' => true,
 			'extendedconfirmed' => true,
+			'produnto-update' => true,
 		], // T389729
 		'autoconfirmed' => [
 			'campaignevents-enable-registration' => true, // T397369
