@@ -99,6 +99,10 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 	$wmgPCServers = [];
 	$wmgMainStashServers = [];
 	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
+		// The section test-s4 is for DBAs to test dbctl
+		if ( $dbctlCluster === 'test-s4' ) {
+			continue;
+		}
 		// While parsercache sections are included in externalLoads, they are not
 		// accessed through LBFactoryMulti. Instead, populate to wmgPCServers for
 		// consumption by SqlBagOStuff.
