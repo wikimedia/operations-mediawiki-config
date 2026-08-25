@@ -6868,6 +6868,11 @@ return [
 	'default' => false,
 ],
 
+// T432760
+'wgUseParsoidMessages' => [
+	'default' => false,
+],
+
 // T333179
 'wmgUseParserMigration' => [
 	'default' => true,
