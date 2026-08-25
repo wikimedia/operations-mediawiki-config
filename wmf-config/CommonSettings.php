@@ -2866,10 +2866,10 @@ wfLoadExtension( 'TemplateStyles' );
 // allow protocol-relative URLs per T188760
 $wgTemplateStylesAllowedUrls = [
 	'audio' => [
-		'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/(?:(?:thumb/)?[a-f0-9]/[a-f0-9][a-f0-9]/(?\'filename\'[^/?#]*))?>',
+		'<^(?:https:)?//(?:upload|thumb)\\.wikimedia\\.org/wikipedia/commons/(?:(?:thumb/)?[a-f0-9]/[a-f0-9][a-f0-9]/(?\'filename\'[^/?#]*))?>',
 	],
 	'image' => [
-		'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/(?:(?:thumb/)?[a-f0-9]/[a-f0-9][a-f0-9]/(?\'filename\'[^/?#]*))?>',
+		'<^(?:https:)?//(?:upload|thumb)\\.wikimedia\\.org/wikipedia/commons/(?:(?:thumb/)?[a-f0-9]/[a-f0-9][a-f0-9]/(?\'filename\'[^/?#]*))?>',
 	],
 	'svg' => [
 		'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[a-f0-9]/[a-f0-9][a-f0-9]/(?\'filename\'[^/?#]*\\.svg)(?:[?#]|$)>',
