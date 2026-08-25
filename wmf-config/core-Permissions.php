@@ -911,6 +911,7 @@ return [
 		'flood' => [ 'bot' => true ], // T426882
 	],
 	'+enwikivoyage' => [
+		'*' => [ 'applychangetags' => true ], // T435907
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [
 			'patrol' => true,
@@ -4001,7 +4002,6 @@ return [
 		],
 	],
 	'+enwikivoyage' => [
-		'*' => [ 'applychangetags' => true ],
 		'sysop' => [
 			'autopatrolled',
 			'templateeditor',
