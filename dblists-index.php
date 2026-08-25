@@ -147,7 +147,7 @@ return [
 'bswikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
 'bswikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'sul' ],
 'bswikisource' => [ 'small', 'math-legacy-mathoid', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'parsoidrendered', 'sul' ],
-'bswiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
+'bswiktionary' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'btmwiki' => [ 'wikipedia', 'small', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'btmwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'bugwiki' => [ 'wikipedia', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
