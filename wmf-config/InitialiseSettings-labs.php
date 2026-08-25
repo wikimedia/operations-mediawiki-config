@@ -2430,5 +2430,10 @@ function wmfGetOverrideSettings() {
 		'wmgUseProdunto' => [
 			'default' => true,
 		],
+
+		// T433711 Intake URL for when overridden experiments send events on beta cluster
+		'wgTestKitchenOverriddenExperimentEventIntakeServiceUrl' => [
+			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
+		],
 	];
 } # wmfGetOverrideSettings()
