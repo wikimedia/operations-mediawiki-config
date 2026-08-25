@@ -14295,6 +14295,20 @@ return [
 	],
 ],
 
+'wgArticleGuidanceFeedbackTalkPage' => [
+	'default' => '',
+	'arwiki' => 'نقاش ويكيبيديا:إرشاد المقالة',
+	'bnwiki' => 'উইকিপিডিয়া আলোচনা:নিবন্ধ নির্দেশিকা',
+	'eswiki' => 'Wikipedia discusión:GuíadeArtículos',
+	'frwiki' => 'Discussion Projet:Aide à la rédaction d\'articles',
+	'itwiki' => 'Discussioni Wikipedia:Guida alla creazione delle voci',
+	'jawiki' => 'Wikipedia‐ノート:記事編集のガイド',
+	'plwiki' => 'Dyskusja Wikipedii:Pomoc redaktorska',
+	'ptwiki' => 'Wikipédia Discussão:OrientaçõesParaArtigos',
+	'simplewiki' => 'Wikipedia talk:Article Guidance',
+	'trwiki' => 'Vikipedi tartışma:MaddeYönergesi',
+],
+
 'wgRestrictUserPageEditing' => [
 	'default' => false,
 	'arwiki' => true, // T434878

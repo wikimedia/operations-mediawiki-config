@@ -2419,6 +2419,11 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		'wgArticleGuidanceFeedbackTalkPage' => [
+			'default' => '',
+			'enwiki' => 'Wikipedia talk:ArticleGuidance',
+		],
+
 		'wmgEnableWeb2CitJsonContentModel' => [
 			'default' => false,
 			'metawiki' => true, // T305571
