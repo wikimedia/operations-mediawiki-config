@@ -553,7 +553,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-log-private'] = true; // T386879
 		$wgGroupPermissions['abusefilter']['abusefilter-view-private'] = true; // T386879
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T386879
+		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true; // T435887
 		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T386879
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T435887
 		break;
 	case 'zhwikibooks':
 		$wgAbuseFilterActions['block'] = true; // T330026

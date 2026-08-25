@@ -6372,6 +6372,7 @@ return [
 		'abusefilter-helper' => [ 'abusefilter-helper' ], // T379500
 		'event-organizer' => [ 'event-organizer' ], // T376061
 		'abusefilter' => [ 'abusefilter' ], // T386879
+		'temporary-account-viewer' => [ 'temporary-account-viewer' ], // T435887
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289
