@@ -1767,6 +1767,24 @@ return [
 			'schema_title' => 'analytics/mediawiki/wikimedia_antiabuse/content_policy_score',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.wikimedia_antiabuse.abuse_review_interaction' => [
+			'schema_title' => 'analytics/mediawiki/wikimedia_antiabuse/abuse_review_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'performer_id',
+						'performer_groups',
+						'performer_name',
+						'performer_pageview_id',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_registration_dt',
+					],
+				],
+			],
+		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',

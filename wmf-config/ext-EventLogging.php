@@ -73,6 +73,7 @@ return [
 		'mediawiki.hcaptcha.edit',
 		'mediawiki.hcaptcha.risk_score',
 		'mediawiki.wikimedia_antiabuse.content_policy_score',
+		'mediawiki.wikimedia_antiabuse.abuse_review_interaction',
 		'mediawiki.editgrowthconfig',
 		'mediawiki.accountcreation_block',
 		'mediawiki.editattempt_block',
