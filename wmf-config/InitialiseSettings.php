@@ -1749,6 +1749,7 @@ return [
 	'cswiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 	'fawiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 	'dewiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
+	'eswiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 ],
 
 'wgUploadDirectory' => [
