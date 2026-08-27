@@ -162,6 +162,7 @@ $common = [
 	// IP ranges that might be used as a client IP in a GitLab webhook post. For Produnto.
 	'gitlab-nets' => [
 		'208.80.152.0/22',
+		'2620:0:860::/46',
 	],
 ];
 
