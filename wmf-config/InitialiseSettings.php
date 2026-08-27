@@ -1750,6 +1750,9 @@ return [
 	'fawiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 	'dewiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 	'eswiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
+	'ptwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
+	'zhwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
+	'jawiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 ],
 
 'wgUploadDirectory' => [
