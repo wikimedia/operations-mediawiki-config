@@ -4759,12 +4759,24 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSP ) {
 	];
 
 	// build CSP config
-	$cspConfig = [
-		'useNonces' => false,
-		'includeCORS' => false,
-		'default-src' => $wmgApprovedContentSecurityPolicyDomains,
-		'script-src' => $wmgApprovedContentSecurityPolicyDomains,
-	];
+	if ( $wmgSharedDomainPathPrefix !== '' ) {
+		// auth.wikimedia.org has restricted functionality and no user JS, so it can
+		// use a more restrictive policy than other wikis: no eval(), and no external
+		// resources besides the canonical domain (T419684).
+		$cspConfig = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'unsafeEval' => false,
+			'default-src' => true,
+		];
+	} else {
+		$cspConfig = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => $wmgApprovedContentSecurityPolicyDomains,
+			'script-src' => $wmgApprovedContentSecurityPolicyDomains,
+		];
+	}
 
 	if ( $wmgUseCSPReportOnly ) {
 		// $wgCSPReportOnlyHeader defaults to false, so setup an array for config
