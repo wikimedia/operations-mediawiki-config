@@ -9987,6 +9987,11 @@ return [
 	'wikivoyage' => [ 'wikipedia', 'dmoz', 'commons' ],
 ],
 
+'wgUseBanPalmLeafVariants' => [
+	'default' => false,
+	'wikisource' => true, // T436398
+],
+
 'wmgExtraLanguageNames' => [
 	'default' => [
 		'ak' => 'Akan', // T333765, T425256
