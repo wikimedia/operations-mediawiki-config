@@ -4643,10 +4643,10 @@ return [
 	'kowiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ APCOND_AGE_FROM_EDIT, 30 * 86400 ], // 30 days * seconds in a day
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T184675
+		], // T184675 (creation), T436449 (APCOND_AGE to AGE_FROM_EDIT)
 	],
 	'mznwiki' => [
 		'uploader' => [ '&',
