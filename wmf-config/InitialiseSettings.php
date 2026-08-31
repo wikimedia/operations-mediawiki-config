@@ -1742,17 +1742,14 @@ return [
 ],
 
 'wmgThumbUrl' => [
-	'default' => false,
+	'default' => '//thumb.wikimedia.org/$site/$lang/thumb',
 	'private' => false,
+	'enwiki' => false,
+	'commonswiki' => 'https://thumb.wikimedia.org/wikipedia/commons/thumb',
+	'testcommonswiki' => 'https://thumb.wikimedia.org/wikipedia/testcommons/thumb',
+	'labswiki' => '//thumb.wikimedia.org/wikipedia/labs/thumb',
+	'metawiki' => '//thumb.wikimedia.org/wikipedia/meta/thumb',
 	'testwiki' => '//thumb.wikimedia.org/wikipedia/test/thumb',
-	'mediawikiwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'cswiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'fawiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'dewiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'eswiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'ptwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'zhwiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
-	'jawiki' => '//thumb.wikimedia.org/$site/$lang/thumb',
 ],
 
 'wgUploadDirectory' => [
