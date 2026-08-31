@@ -25,6 +25,996 @@
             "exclude" : true
           },
           {
+            "/" : "/wiki/Main_Page",
+            "comment" : "Exclude main page",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%CE%A0%CF%8D%CE%BB%CE%B7%3A%CE%9A%CF%8D%CF%81%CE%B9%CE%B1",
+            "comment" : "Exclude main page on el.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%90%D0%B3%D1%8C%D0%B0%D0%BC%D0%BC%D1%83%D1%80_%D0%BB%D0%B0%D0%B6%D0%B8%D0%BD",
+            "comment" : "Exclude main page on lbe.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%91%D0%B0%D1%81%D1%82%D1%8B_%D0%B1%D0%B5%D1%82",
+            "comment" : "Exclude main page on kk.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%91%D0%B0%D1%88%D0%BA%D1%8B_%D0%B1%D0%B0%D1%80%D0%B0%D0%BA",
+            "comment" : "Exclude main page on ky.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%91%D0%B0%D1%88_%D0%B1%D0%B5%D1%82",
+            "comment" : "Exclude main page on krc.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%91%D0%B0%D1%88_%D0%B1%D0%B8%D1%82",
+            "comment" : "Exclude main page on tt.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%93%D0%B0%D0%BB%D0%BE%D1%9E%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%BD%D0%BA%D0%B0",
+            "comment" : "Exclude main page on be-tarask.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B0",
+            "comment" : "Exclude main page on sr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA",
+            "comment" : "Exclude main page on rsk.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D1%8C%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0",
+            "comment" : "Exclude main page on cu.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0",
+            "comment" : "Exclude main page on rue.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%98%D1%85%D0%B0%D0%B4%D0%BE%D1%83_%D0%B0%D0%B4%D0%B0%D2%9F%D1%8C%D0%B0",
+            "comment" : "Exclude main page on ab.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9A%D1%83%D1%82%D1%81%D0%BA%D0%BE%D0%BD_%D0%B1%D0%B0%D0%BC",
+            "comment" : "Exclude main page on udm.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9C%D0%B5%D0%B4%D1%88%D3%A7%D1%80_%D0%BB%D0%B8%D1%81%D1%82_%D0%B1%D0%BE%D0%BA",
+            "comment" : "Exclude main page on kv.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9D%D0%B0%D0%BF%D1%8D%D0%BA%D3%80%D1%83%D1%8D%D1%86%D3%80_%D0%BD%D1%8D%D1%85%D1%8A%D1%8B%D1%89%D1%85%D1%8C%D1%8D",
+            "comment" : "Exclude main page on kbd.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0",
+            "comment" : "Exclude main page on bg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9D%D1%8D%D0%BA%D3%80%D1%83%D0%B1%D0%B3%D1%8A%D0%BE_%D1%88%D1%8A%D1%85%D1%8C%D0%B0%D3%80",
+            "comment" : "Exclude main page on ady.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9D%D2%AF%D2%AF%D1%80_%D1%85%D1%83%D1%83%D0%B4%D0%B0%D1%81",
+            "comment" : "Exclude main page on mn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%9F%D0%BE%D0%BD%D0%B4%D3%A7%D1%82%D1%87%D0%B0%D0%BD_%D0%BB%D0%B8%D1%81%D1%82%D0%B1%D0%BE%D0%BA",
+            "comment" : "Exclude main page on koi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%A1%C3%A6%D0%B9%D1%80%D0%B0%D0%B3_%D1%84%D0%B0%D1%80%D1%81",
+            "comment" : "Exclude main page on os.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%A1%D0%B0%D2%B3%D0%B8%D1%84%D0%B0%D0%B8_%D0%B0%D1%81%D0%BB%D3%A3",
+            "comment" : "Exclude main page on tg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%A1%D2%AF%D1%80%D2%AF%D0%BD_%D1%81%D0%B8%D1%80%D1%8D%D0%B9",
+            "comment" : "Exclude main page on sah.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%A2%C4%95%D0%BF_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0",
+            "comment" : "Exclude main page on cv.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%A2%D3%A7%D1%81_%D0%B1%D3%B1%D0%BA",
+            "comment" : "Exclude main page on alt.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D0%A2%D3%B1%D2%A5_%D0%BB%D0%B0%D1%88%D1%82%D1%8B%D0%BA",
+            "comment" : "Exclude main page on mhr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D4%B3%D5%AC%D5%AD%D5%A1%D5%BE%D5%B8%D6%80_%D5%A7%D5%BB",
+            "comment" : "Exclude main page on hy.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D4%B3%D5%AC%D5%AD%D5%A1%D6%82%D5%B8%D6%80_%D4%B7%D5%BB",
+            "comment" : "Exclude main page on hyw.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D7%94%D7%95%D7%99%D7%A4%D7%98_%D7%96%D7%99%D7%99%D7%98",
+            "comment" : "Exclude main page on yi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D8%A9",
+            "comment" : "Exclude main page on ar.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D8%A7%D9%8E%DB%81%D9%8E%D9%85_%D8%B5%D9%8E%D9%81%DB%81%D9%95",
+            "comment" : "Exclude main page on ks.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D8%B5%D9%81%D8%AD%DB%82_%D8%A7%D9%88%D9%84",
+            "comment" : "Exclude main page on ur.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D9%84%D9%88%D9%85%DA%93%DB%8C_%D9%85%D8%AE",
+            "comment" : "Exclude main page on ps.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%D9%BE%DB%81%D9%84%D8%A7_%D9%BE%D8%B1%D8%AA",
+            "comment" : "Exclude main page on skr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%DA%AF%D8%AA%CB%87_%D9%88%D9%84%DA%AF",
+            "comment" : "Exclude main page on glk.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%DC%A6%DC%90%DC%AC%DC%90_%DC%AA%DC%9D%DC%AB%DC%9D%DC%AC%DC%90",
+            "comment" : "Exclude main page on arc.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE",
+            "comment" : "Exclude main page on awa.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%87%E0%A4%B2_%E0%A4%AA%E0%A4%BE%E0%A4%A8",
+            "comment" : "Exclude main page on gom.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE",
+            "comment" : "Exclude main page on mag.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE",
+            "comment" : "Exclude main page on bh.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF_%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0",
+            "comment" : "Exclude main page on anp.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AE%E0%A5%81%E0%A4%96_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE",
+            "comment" : "Exclude main page on mai.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE",
+            "comment" : "Exclude main page on bpy.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE",
+            "comment" : "Exclude main page on bn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%A6%AC%E0%A7%87%E0%A6%9F%E0%A7%81%E0%A6%AA%E0%A6%BE%E0%A6%A4",
+            "comment" : "Exclude main page on as.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%AC%AA%E0%AD%8D%E0%AC%B0%E0%AC%A7%E0%AC%BE%E0%AC%A8_%E0%AC%AA%E0%AD%83%E0%AC%B7%E0%AD%8D%E0%AC%A0%E0%AC%BE",
+            "comment" : "Exclude main page on or.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%AE%AE%E0%AF%81%E0%AE%A4%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D",
+            "comment" : "Exclude main page on ta.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%B0%AE%E0%B1%8A%E0%B0%A6%E0%B0%9F%E0%B0%BF_%E0%B0%AA%E0%B1%87%E0%B0%9C%E0%B1%80",
+            "comment" : "Exclude main page on te.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%B2%AE%E0%B3%81%E0%B2%96%E0%B3%8D%E0%B2%AF_%E0%B2%AA%E0%B3%81%E0%B2%9F",
+            "comment" : "Exclude main page on kn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A7%E0%B4%BE%E0%B4%A8_%E0%B4%A4%E0%B4%BE%E0%B5%BE",
+            "comment" : "Exclude main page on ml.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%B6%B8%E0%B7%94%E0%B6%BD%E0%B7%8A_%E0%B6%B4%E0%B7%92%E0%B6%A7%E0%B7%94%E0%B7%80",
+            "comment" : "Exclude main page on si.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81",
+            "comment" : "Exclude main page on th.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E0%BD%98%E0%BC%8B%E0%BD%A4%E0%BD%BC%E0%BD%82%E0%BC%8D",
+            "comment" : "Exclude main page on dz.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%80%99%E1%80%AF%E1%80%80%E1%80%BA%E1%80%9C%E1%80%AD%E1%80%80%E1%80%BA%E1%80%90%E1%80%99%E1%80%BA",
+            "comment" : "Exclude main page on mnw.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%80%A1%E1%80%93%E1%80%AD%E1%80%80%E1%80%9C%E1%80%AD%E1%80%90%E1%80%BA%E1%80%99%E1%80%B2%E1%80%B7%E1%80%84%E1%80%AB",
+            "comment" : "Exclude main page on blk.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%83%93%E1%83%A3%E1%83%93%E1%83%AE%E1%83%90%E1%83%A1%E1%83%B7%E1%83%9A%E1%83%90",
+            "comment" : "Exclude main page on xmf.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD",
+            "comment" : "Exclude main page on tig.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%8B%8B%E1%8A%93%E1%8B%8D_%E1%8C%88%E1%8C%BD",
+            "comment" : "Exclude main page on am.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%8E%A4%E1%8E%B5%E1%8E%AE%E1%8E%B5%E1%8F%8D%E1%8F%97",
+            "comment" : "Exclude main page on chr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%90%8A%E1%92%A5%E1%96%85",
+            "comment" : "Exclude main page on iu.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E1%A5%9E%E1%A5%A8%E1%A5%9D%E1%A5%B4_%E1%A5%98%E1%A5%A3%E1%A5%B2_%E1%A5%96%E1%A5%A5%E1%A5%B0",
+            "comment" : "Exclude main page on tdd.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E2%B5%9C%E2%B4%B0%E2%B5%99%E2%B5%8F%E2%B4%B0_%E2%B5%8F_%E2%B5%93%E2%B5%99%E2%B5%8F%E2%B5%93%E2%B4%B1%E2%B4%B3",
+            "comment" : "Exclude main page on zgh.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8",
+            "comment" : "Exclude main page on ja.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E5%B0%81%E9%9D%A2",
+            "comment" : "Exclude main page on wuu.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%E9%A0%AD%E7%89%88",
+            "comment" : "Exclude main page on zh-yue.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC%3A%EB%8C%80%EB%AC%B8",
+            "comment" : "Exclude main page on ko.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/A%CC%B1gba%CC%B1dang_Ka%CC%B1zzu",
+            "comment" : "Exclude main page on kaj.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/A%CC%B1tsak_Wat_Wu",
+            "comment" : "Exclude main page on kcg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/A_Gamp%C9%9Bl%C9%9B_zu",
+            "comment" : "Exclude main page on dga.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Accueul",
+            "comment" : "Exclude main page on pcd.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Alaman_Utamo",
+            "comment" : "Exclude main page on btm.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Anasayfa",
+            "comment" : "Exclude main page on tr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Apam_k%C3%ABd%C3%AFt",
+            "comment" : "Exclude main page on din.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ard-ghuillag",
+            "comment" : "Exclude main page on gv.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Axa_do_%C5%8Ag%C9%94",
+            "comment" : "Exclude main page on ee.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ba%C5%9F_yaprak",
+            "comment" : "Exclude main page on gag.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Babban_shafi",
+            "comment" : "Exclude main page on ha.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Bal%C3%A9-bal%C3%A9",
+            "comment" : "Exclude main page on bew.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Bas_bet",
+            "comment" : "Exclude main page on kaa.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Biquip%C3%A9dia%3AP%C3%A1igina_percipal",
+            "comment" : "Exclude main page on mwl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Bogga_Hore",
+            "comment" : "Exclude main page on so.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Cal%C4%ABxatl",
+            "comment" : "Exclude main page on nah.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Chefi_pagine",
+            "comment" : "Exclude main page on nov.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Degemer",
+            "comment" : "Exclude main page on br.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Destp%C3%AAk",
+            "comment" : "Exclude main page on ku.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ee'iyalaaya_a'la%C3%BClaas%C3%BC",
+            "comment" : "Exclude main page on guc.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/El_Primero_Pagina",
+            "comment" : "Exclude main page on cbk-zam.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Fanhaluman",
+            "comment" : "Exclude main page on ch.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Faqja_kryesore",
+            "comment" : "Exclude main page on sq.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Fors%C3%AD%C3%B0a",
+            "comment" : "Exclude main page on is.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Fran_pes",
+            "comment" : "Exclude main page on tpi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Fuula_Dura",
+            "comment" : "Exclude main page on om.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/G%C3%A4_nz%C3%B6n%C3%AE",
+            "comment" : "Exclude main page on sg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/G%C3%BCiquipedia%3APort%C3%A1",
+            "comment" : "Exclude main page on ext.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Glavna_stran",
+            "comment" : "Exclude main page on sl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Glavna_stranica",
+            "comment" : "Exclude main page on hr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/H%C5%82owna_strona",
+            "comment" : "Exclude main page on hsb.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hafan",
+            "comment" : "Exclude main page on cy.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hau_K%C4%81inga",
+            "comment" : "Exclude main page on mi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Haudsiede",
+            "comment" : "Exclude main page on stq.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hayani",
+            "comment" : "Exclude main page on ve.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Heafodtramet",
+            "comment" : "Exclude main page on ang.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hello_ja%C9%93%C9%93orgo",
+            "comment" : "Exclude main page on ff.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hlavn%C3%A1_str%C3%A1nka",
+            "comment" : "Exclude main page on sk.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hlavn%C3%AD_strana",
+            "comment" : "Exclude main page on cs.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Hoofdpagina",
+            "comment" : "Exclude main page on nl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Intrada",
+            "comment" : "Exclude main page on pms.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Iphepha_Elingundoqo",
+            "comment" : "Exclude main page on xh.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/It%C5%ABlau_Muamua",
+            "comment" : "Exclude main page on sm.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Jani_likulu",
+            "comment" : "Exclude main page on tum.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ka_papa_kinohi",
+            "comment" : "Exclude main page on haw.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Kaca_Utama",
+            "comment" : "Exclude main page on map-bms.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Kpataki_Kperegi",
+            "comment" : "Exclude main page on nup.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Kratafa_Tsitsir",
+            "comment" : "Exclude main page on fat.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/La_Primera_Hoja",
+            "comment" : "Exclude main page on lad.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Laman_Tatambaian",
+            "comment" : "Exclude main page on bjn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Lambar_Keterubah",
+            "comment" : "Exclude main page on iba.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Leqephe_la_pele",
+            "comment" : "Exclude main page on st.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Likhasi_Lelikhulu",
+            "comment" : "Exclude main page on ss.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Main_Pej",
+            "comment" : "Exclude main page on pcm.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Mien_Paij",
+            "comment" : "Exclude main page on pih.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Mien_Piej",
+            "comment" : "Exclude main page on jam.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Muk%C3%A2nda_ya_ngudi",
+            "comment" : "Exclude main page on kg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Mwanzo",
+            "comment" : "Exclude main page on sw.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Nambawan_Pej",
+            "comment" : "Exclude main page on bi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Nayriri_u%C3%B1stawi",
+            "comment" : "Exclude main page on ay.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ny%C9%9B_f%C9%94l%C9%94",
+            "comment" : "Exclude main page on bm.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ogb%C3%A1_ogbolo",
+            "comment" : "Exclude main page on igl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Olupapula_Olusooka",
+            "comment" : "Exclude main page on lg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Otitikowin",
+            "comment" : "Exclude main page on atj.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ovd%C3%A2sij%C4%91o",
+            "comment" : "Exclude main page on smn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/P%C3%A0ggina_principali",
+            "comment" : "Exclude main page on scn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/P%C3%A0gina_printzipale",
+            "comment" : "Exclude main page on sc.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/P%C3%A1gina_Prinsipal",
+            "comment" : "Exclude main page on pap.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/P%C3%A4lehtpol%E2%80%99",
+            "comment" : "Exclude main page on vep.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/P%C9%9Bgezure",
+            "comment" : "Exclude main page on gur.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/PP",
+            "comment" : "Exclude main page on eml.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pagina_maestra",
+            "comment" : "Exclude main page on co.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pagina_principala",
+            "comment" : "Exclude main page on lmo.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pagina_principale",
+            "comment" : "Exclude main page on it.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pagjine_princip%C3%A2l",
+            "comment" : "Exclude main page on fur.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pagrindinis_puslapis",
+            "comment" : "Exclude main page on lt.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pahila_Panna",
+            "comment" : "Exclude main page on hif.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Paj_Prensipal",
+            "comment" : "Exclude main page on gcr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Panginot_na_Pahina",
+            "comment" : "Exclude main page on bcl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Peji_In_Siri",
+            "comment" : "Exclude main page on bol.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Peji_Rekutanga",
+            "comment" : "Exclude main page on sn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pela_Seri",
+            "comment" : "Exclude main page on diq.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pogu_ni_Alaman",
+            "comment" : "Exclude main page on bbc.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Port%C3%A1la%3AOvdasiidu",
+            "comment" : "Exclude main page on se.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Portada",
+            "comment" : "Exclude main page on ca.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Portal%3AHuvudsida",
+            "comment" : "Exclude main page on sv.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Portalada",
+            "comment" : "Exclude main page on an.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Principal_p%C3%A1gine",
+            "comment" : "Exclude main page on ie.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Prz%C3%A9dn%C3%B4_starna",
+            "comment" : "Exclude main page on csb.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Przodni%C5%8F_zajta",
+            "comment" : "Exclude main page on szl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Pun_Bulung",
+            "comment" : "Exclude main page on pam.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Qhapaq_p'anqa",
+            "comment" : "Exclude main page on qu.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Ruwahan_patas",
+            "comment" : "Exclude main page on trv.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/S%C9%99rlovh%C9%99",
+            "comment" : "Exclude main page on tly.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Sa%E2%80%99ayayaw_pising_no_tyin-naw",
+            "comment" : "Exclude main page on ami.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Shafi_kura",
+            "comment" : "Exclude main page on kr.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Sol%C9%94%C9%A3u",
+            "comment" : "Exclude main page on dag.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Soraogo",
+            "comment" : "Exclude main page on mos.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Suoku_puslopa",
+            "comment" : "Exclude main page on ltg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/T%E2%80%99ringan_na_zzngayan",
+            "comment" : "Exclude main page on tay.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Tan%C3%A8yan",
+            "comment" : "Exclude main page on mad.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Tasna_Tamzwarut",
+            "comment" : "Exclude main page on shi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Trang_Ch%C3%ADnh",
+            "comment" : "Exclude main page on vi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Tsamba_Lalikulu",
+            "comment" : "Exclude main page on ny.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Tuisblad",
+            "comment" : "Exclude main page on af.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Umuna_a_Panid",
+            "comment" : "Exclude main page on ilo.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Unang_Panid",
+            "comment" : "Exclude main page on ceb.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Urupapuro_nyamukuru",
+            "comment" : "Exclude main page on rn.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Uwu",
+            "comment" : "Exclude main page on ann.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Veurblaad",
+            "comment" : "Exclude main page on li.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Vicipaedia%3APagina_prima",
+            "comment" : "Exclude main page on la.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Vikipeedia%3AEsileht",
+            "comment" : "Exclude main page on et.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/W%C3%A9m%C3%A1_Nuk%C9%94nt%C9%94n",
+            "comment" : "Exclude main page on fon.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Weda_Tangan",
+            "comment" : "Exclude main page on guw.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikip%C3%A9dia%3AP%C3%A1gina_principal",
+            "comment" : "Exclude main page on pt.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AEtusivu",
+            "comment" : "Exclude main page on fi.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AFandraisana",
+            "comment" : "Exclude main page on mg.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AH%C3%B6%C3%B6ftsiet",
+            "comment" : "Exclude main page on nds.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AHaubdsaid",
+            "comment" : "Exclude main page on pfl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AHauptseite",
+            "comment" : "Exclude main page on de.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AHoupsigk",
+            "comment" : "Exclude main page on ksh.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AHouptsyte",
+            "comment" : "Exclude main page on als.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AShafi_kura",
+            "comment" : "Exclude main page on knc.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipedia%3AStrona_g%C5%82%C3%B3wna",
+            "comment" : "Exclude main page on pl.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Wikipidiya%3AGarang",
+            "comment" : "Exclude main page on kge.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/X%C3%ABt_wu_nj%C3%ABkk",
+            "comment" : "Exclude main page on wo.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Xadola",
+            "comment" : "Exclude main page on avk.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Yiebdaeuz",
+            "comment" : "Exclude main page on za.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/Zug_lakir",
+            "comment" : "Exclude main page on kus.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/lipu_open",
+            "comment" : "Exclude main page on tok.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/saayaway_a_belih",
+            "comment" : "Exclude main page on szy.wikipedia.org",
+            "exclude" : true
+          },
+          {
+            "/" : "/wiki/uikipedi'as%3Aralju",
+            "comment" : "Exclude main page on jbo.wikipedia.org",
+            "exclude" : true
+          },
+          {
             "/" : "/wiki/Special:*",
             "comment" : "Exclude Special: pages",
             "exclude" : true
