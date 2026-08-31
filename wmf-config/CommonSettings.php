@@ -5011,6 +5011,7 @@ if ( $wmgUseProdunto ) {
 			'url' => 'https://gitlab.wikimedia.org',
 			'projectPrefixes' => [ 'repos/lua' ],
 			'webhookIps' => $wmgLocalServices['gitlab-nets'],
+			'proxy' => $wgCopyUploadProxy,
 		]
 	];
 }
