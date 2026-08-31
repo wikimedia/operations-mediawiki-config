@@ -3464,7 +3464,7 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		// (T386440) Instrument for the User Info Card
+		// (T386440, T435585) Instrument for the User Info Card
 		'mediawiki.product_metrics.user_info_card_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3472,6 +3472,8 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
+						'page_title',
+						'page_id',
 						'page_namespace',
 						'page_namespace_id',
 						'performer_session_id',
