@@ -1736,10 +1736,10 @@ return [
 			'producers' => [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
+						'http.request_headers.user-agent' => 'user-agent',
 					],
 				],
-			]
+			],
 		],
 		'mediawiki.hcaptcha.risk_score' => [
 			'schema_title' => 'analytics/mediawiki/hcaptcha/risk_score',
@@ -1747,10 +1747,10 @@ return [
 			'producers' => [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
+						'http.request_headers.user-agent' => 'user-agent',
 					],
 				],
-			]
+			],
 		],
 		'mediawiki.ip_reputation.score' => [
 			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
@@ -1766,13 +1766,6 @@ return [
 		'mediawiki.wikimedia_antiabuse.content_policy_score' => [
 			'schema_title' => 'analytics/mediawiki/wikimedia_antiabuse/content_policy_score',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
-					],
-				],
-			],
 		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
@@ -3220,11 +3213,6 @@ return [
 			'schema_title' => 'analytics/mediawiki/suggested_investigations/interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
-					],
-				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
