@@ -35,13 +35,13 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T435523: Lift IP cap for Mapudungun editathon on 2026-August-29
+// T436672: Lift IP cap for Mapudungun editathon on 2026-September-05
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-08-29T09:00 -04:00',
-	'to'     => '2026-08-29T14:00 -04:00',
-	'IP'     => [ '200.89.68.236', '200.89.73.136' ],
+	'from'   => '2026-09-05T09:00 -04:00',
+	'to'     => '2026-09-05T14:00 -04:00',
+	'IP'     => '186.67.219.171',
 	'dbname' => [ 'eswiki', 'incubatorwiki' ],
-	'value'  => 50,
+	'value'  => 30,
 	'tempaccountvalue' => 50,
 ];
 
