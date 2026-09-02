@@ -6800,9 +6800,7 @@ return [
 
 // T426775
 'wgMediaViewerMobileBeta' => [
-	'default' => false,
-	'testwiki' => true,
-	'wikipedia' => true,
+	'default' => true,
 ],
 
 // T426799
