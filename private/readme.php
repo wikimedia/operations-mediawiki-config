@@ -201,10 +201,6 @@ $wgWMEVectorPrefDiffSalt = null;
  */
 $wgShellboxSecretKey = null;
 
-// SimilarEditors plugin / similar-users service T308670
-$wgSimilarEditorsApiUser = null;
-$wgSimilarEditorsApiPassword = null;
-
 /**
  * API key for the [[m:Programs & Events Dashboard]].
  *
