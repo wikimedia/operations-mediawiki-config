@@ -4018,6 +4018,7 @@ return [
 			'flood', // T351250
 			'autopatrolled', // T413848
 			'patroller', // T413848
+			'confirmed', // T436651
 		],
 	],
 	'+enwikisource' => [
@@ -5533,6 +5534,7 @@ return [
 			'flood', // T351250
 			'autopatrolled', // T413848
 			'patroller', // T413848
+			'confirmed', // T436651
 		],
 	],
 	'+enwikivoyage' => [
