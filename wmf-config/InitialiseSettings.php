@@ -842,10 +842,11 @@ return [
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'wikifunctionswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'tawiki' => '//ta.wikipedia.org/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
 	'tewiki' => '//te.wikipedia.org/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
 	'thwiki' => '//th.wikipedia.org/wiki/วิกิพีเดีย:อัปโหลด',
+	'ukwiki' => '//uk.wikipedia.org/wiki/Вікіпедія:Майстер_завантаження_файлів', // T436712
+	'wikifunctionswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'zhwiki' => '//zh.wikipedia.org/wiki/Project:上传',
 	'zh_yuewiki' => '//zh-yue.wikipedia.org/wiki/Project:上載',
 ],
