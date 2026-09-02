@@ -14290,6 +14290,50 @@ return [
 	'trwiki' => [ 'Vikipedi:Madde_sihirbazı' ], // T426871
 ],
 
+// The keys below replace the wgArticleGuidanceExperiment* keys above. The old
+// code reads only the old keys and the new code reads only the new keys, so
+// both sets stay here until the train carries the new code to all wikis. This
+// keeps the experiment running until the default configuration takes over,
+// with no gap for editors. A follow-up patch removes the old keys. T434487
+
+// Article Guidance is the default workflow for junior editors on these wikis.
+// Everywhere else Special:NewArticle stays reachable, but no entry point
+// redirects to it. T434487
+'wgArticleGuidanceRedirectEnabled' => [
+	'default' => false,
+	// phase 0
+	'testwiki' => true,
+	// phase 1
+	'simplewiki' => true, // T434487
+	// phase 2
+	'trwiki' => true, // T434487
+],
+
+'wgArticleGuidanceRedirectJuniorEditorsOnly' => [
+	'default' => false,
+	// phase 1
+	'simplewiki' => true, // T434487
+	// phase 2
+	'trwiki' => true, // T434487
+],
+
+'wgArticleGuidanceRedirectRefererTitles' => [
+	'default' => [],
+	// phase 0
+	'testwiki' => [ 'Wikipedia:ArticleGuidance' ],
+],
+
+'wgArticleGuidanceRedirectEntryPointTitles' => [
+	'default' => [],
+	// phase 0
+	'testwiki' => [ 'Wikipedia:ArticleWizard' ],
+	// phase 1
+	'simplewiki' => [ 'Wikipedia:Article_wizard' ], // T426278
+	// phase 2
+	'ptwiki' => [ 'Wikipédia:Guia_de_criação_de_artigos' ], // T426871
+	'trwiki' => [ 'Vikipedi:Madde_sihirbazı' ], // T426871
+],
+
 'wgArticleGuidanceWikidataConnectEnabled' => [
 	'default' => true,
 ],
