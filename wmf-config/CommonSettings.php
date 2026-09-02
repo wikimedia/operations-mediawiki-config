@@ -3056,37 +3056,8 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid || $wmgUseCollection ) ) {
-	$wgVirtualRestConfig = [
-		'modules' => [],
-		'global' => [
-			'domain' => $wgCanonicalServer,
-			'timeout' => 360,
-			'forwardCookies' => false,
-			'HTTPProxy' => null,
-		]
-	];
-}
-
-if ( $wmgUseRestbaseVRS ) {
-	$wgVirtualRestConfig['modules']['restbase'] = [
-		'url' => $wmgLocalServices['restbase'],
-		'domain' => $wgCanonicalServer,
-		'forwardCookies' => false,
-		'parsoidCompat' => false
-	];
-}
-
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = $wmgLocalServices['parsoid'];
-
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => $wmgParsoidURL,
-		'prefix' => $wgDBname, // The wiki prefix to use; deprecated
-		'domain' => $wgCanonicalServer,
-		'forwardCookies' => $wmgParsoidForwardCookies,
-		'restbaseCompat' => false
-	];
 }
 
 if ( $wmgUseVisualEditor ) {
