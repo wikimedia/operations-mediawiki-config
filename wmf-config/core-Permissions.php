@@ -3108,15 +3108,14 @@ return [
 	],
 	'+wikifunctionswiki' => [
 		'*' => [
-			// Temporarily during early, limited deployment, logged-out users can't do this
+			// Logged-out users can't do this
 			'edit' => false,
 
 			// In emergencies, you can set the line below to false to prevent logged-out users from running functions
 			'wikilambda-execute' => true, // T349055
 		],
 		'user' => [
-			// Temporarily during early, limited deployment, re-grant to logged-in users the standard
-			// wikitext editing right that logged-out users can't do
+			// Re-grant to logged-in users the standard wikitext editing right that logged-out users can't do
 			'edit' => true,
 
 			// In emergencies, you can set the line below to false to prevent logged-in users from running functions
@@ -3134,6 +3133,30 @@ return [
 			"wikilambda-edit-generic-enum-item" => false,
 
 			"autopatrol" => true, // T344085
+		],
+		'functionmaintainer' => [
+			// Whilst Functioneers can't do this, Function maintainers can (and it's their principal right, T435637)
+			"wikilambda-create-type" => true,
+			"wikilambda-create-generic-enum" => true,
+			"wikilambda-edit-generic-enum-item" => true,
+
+			// Temporarily during early deployment, Function maintainers can't do these
+			"wikilambda-create-arbitrary-zid" => false,
+			"wikilambda-create-predefined" => false,
+
+			"wikilambda-edit-builtin-function" => false,
+
+			"wikilambda-create-boolean" => false,
+			"wikilambda-edit-boolean" => false,
+
+			"wikilambda-create-language" => false,
+			"wikilambda-edit-language" => false,
+
+			"wikilambda-create-programming" => false,
+			"wikilambda-edit-programming" => false,
+
+			"wikilambda-create-unit" => false,
+			"wikilambda-edit-unit" => false,
 		],
 		'sysop' => [
 			// Temporarily during early deployment, don't let sysops do major breaking changes
