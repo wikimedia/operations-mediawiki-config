@@ -3371,6 +3371,8 @@ return [
 		'staff',
 		'steward',
 		'sysadmin',
+		'wmf-antiabuse-restricted',
+		'wmf-legal',
 		'wmf-researcher'
 	],
 ],
@@ -4878,7 +4880,15 @@ return [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 			'demote' => true,
 		],
+		'wmf-antiabuse-restricted' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
 		'wmf-email-block-override' => [
+			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
+			'demote' => true,
+		],
+		'wmf-legal' => [
 			'memberConditions' => [ 'oath.has_2fa' /*APCOND_OATH_HAS2FA*/ ],
 			'demote' => true,
 		],
