@@ -2848,6 +2848,16 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 
 }
 
+// 1% of requests use x4 for querying commons' virtual-links
+if ( mt_rand( 1, 100 ) === 1 ) {
+	$wgRemoteVirtualDomainsMapping['commonswiki'] = [
+		'virtual-links' => [ 'cluster' => 'extension4', 'db' => 'commonswiki' ],
+	];
+	if ( $wgDBname === 'commonswiki' ) {
+		$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension4', 'db' => false ];
+	}
+}
+
 if ( $wmgUseGlobalUsage ) {
 	wfLoadExtension( 'GlobalUsage' );
 	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
