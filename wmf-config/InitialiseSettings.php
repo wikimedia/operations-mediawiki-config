@@ -4749,7 +4749,7 @@ return [
 	'viwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ APCOND_AGE_FROM_EDIT, 30 * 86400 ], // 30 days * seconds in a day, T437006
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
