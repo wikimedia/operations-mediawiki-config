@@ -4020,9 +4020,9 @@ return [
 		'width' => 120,
 		'height' => 23,
 	],
-	'thwikibooks' => [
+	'thwikibooks' => [ // T436426
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-th.svg',
-		'width' => 120,
+		'width' => 124,
 		'height' => 30,
 	],
 	'trwikibooks' => [
@@ -7624,10 +7624,10 @@ return [
 		'width' => 121,
 		'height' => 9,
 	],
-	'thwikibooks' => [
+	'thwikibooks' => [ // T436426
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-th.svg',
-		'width' => 115,
-		'height' => 18,
+		'width' => 124,
+		'height' => 15,
 	],
 	'trwikibooks' => [
 		'src' => '/static/images/mobile/copyright/wikibooks-tagline-tr.svg',
