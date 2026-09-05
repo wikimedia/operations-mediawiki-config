@@ -4375,6 +4375,16 @@ return [
 		'Mostlinkedtemplates' => 'monthly',
 		'Deadendpages', // T371662
 		'Lonelypages', // T371662
+
+		// Not compatible with commons split yet (T309738)
+		'Unusedtemplates',
+		'Unusedimages',
+		'Unusedcategories',
+		'Wantedfiles',
+		'DisambiguationPageLinks',
+		'Uncategorizedimages',
+		'Wantedcategories',
+		'GloballyWantedFiles',
 	],
 
 	// T421914
