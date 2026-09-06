@@ -1745,7 +1745,6 @@ return [
 'wmgThumbUrl' => [
 	'default' => '//thumb.wikimedia.org/$site/$lang/thumb',
 	'private' => false,
-	'enwiki' => false,
 	'commonswiki' => 'https://thumb.wikimedia.org/wikipedia/commons/thumb',
 	'testcommonswiki' => 'https://thumb.wikimedia.org/wikipedia/testcommons/thumb',
 	'labswiki' => '//thumb.wikimedia.org/wikipedia/labs/thumb',
