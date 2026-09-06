@@ -2848,14 +2848,12 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 
 }
 
-// 50% of requests use x4 for querying commons' virtual-links
-if ( mt_rand( 1, 2 ) === 1 ) {
-	$wgRemoteVirtualDomainsMapping['commonswiki'] = [
-		'virtual-links' => [ 'cluster' => 'extension4', 'db' => 'commonswiki' ],
-	];
-	if ( $wgDBname === 'commonswiki' ) {
-		$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension4', 'db' => false ];
-	}
+// T398709 - Link tables of commons live on a dedicated cluster (x4)
+$wgRemoteVirtualDomainsMapping['commonswiki'] = [
+	'virtual-links' => [ 'cluster' => 'extension4', 'db' => 'commonswiki' ],
+];
+if ( $wgDBname === 'commonswiki' ) {
+	$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension4', 'db' => false ];
 }
 
 if ( $wmgUseGlobalUsage ) {
