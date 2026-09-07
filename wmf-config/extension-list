@@ -94,6 +94,7 @@ $IP/extensions/MediaModeration/extension.json
 $IP/extensions/MediaSearch/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
+$IP/extensions/ModeratorToolkit/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MultiTitle/extension.json
 $IP/extensions/NavigationTiming/extension.json
