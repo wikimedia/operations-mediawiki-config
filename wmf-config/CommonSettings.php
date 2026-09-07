@@ -2858,7 +2858,7 @@ if ( $wgDBname === 'commonswiki' ) {
 
 if ( $wmgUseGlobalUsage ) {
 	wfLoadExtension( 'GlobalUsage' );
-	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
+	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension4', 'db' => 'commonswiki' ];
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
 }
