@@ -12049,6 +12049,7 @@ return [
 'wgSecurePollUseMediaWikiNamespace' => [
 	'default' => false,
 	'enwiki' => true, // T398080
+	'nlwiki' => true, // T434045
 	'zhwiki' => true, // T380020
 	'arbcom_zhwiki' => true, // T419309
 ],
@@ -12062,6 +12063,7 @@ return [
 	'zhwiki' => true, // T380020
 	'fawiki' => true, // T396347
 	'arbcom_zhwiki' => true, // T419309
+	'nlwiki' => true, // T434045
 ],
 
 'wgSecurePollEditOtherWikis' => [

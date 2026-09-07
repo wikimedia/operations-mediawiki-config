@@ -2018,6 +2018,9 @@ return [
 			'deletedtext' => true,
 			'browsearchive' => true,
 			'block' => true, // T326355
+			'securepoll-create-poll' => true, // T434045
+			'securepoll-edit-poll' => true, // T434045
+			'securepoll-view-voter-pii' => true, // T434045
 		],
 		'arbcom' => [
 			'deletedhistory' => true,
@@ -2032,6 +2035,10 @@ return [
 		'rollbacker' => [ 'rollback' => true ],
 		'sysop' => [ 'extendedconfirmed' => true ], // T329642
 		'user' => [ 'move-categorypages' => false ], // T161551
+		'electionclerk' => [
+			'securepoll-create-poll' => true, // T434045
+			'securepoll-edit-poll' => true, // T434045
+		],
 	],
 	'+nlwiktionary' => [
 		'user' => [ 'patrol' => true ],
@@ -4537,6 +4544,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter',
 			'arbcom',
+			'electionclerk', // T434045
 			'extendedconfirmed', // T329642
 			'rollbacker',
 			'vrt-agent', // T398216
@@ -5925,6 +5933,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter',
 			'arbcom',
+			'electionclerk', // T434045
 			'extendedconfirmed', // T329642
 			'rollbacker',
 			'vrt-agent', // T398216
