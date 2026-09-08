@@ -752,24 +752,7 @@ return [
 ],
 
 'wgGELinkRecommendationsRefreshByIteratingThroughAllTitles' => [
-	'default' => false,
-	'arzwiki' => true,
-	'cswiki' => true,
-	'cawiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'idwiki' => true,
-	'itwiki' => true,
-	'nlwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-	'srwiki' => true,
-	'shwiki' => true,
-	'viwiki' => true,
+	'default' => true,
 ],
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
