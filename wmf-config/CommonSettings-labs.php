@@ -571,5 +571,16 @@ if ( $wmgRealm == 'labs' ) {
 			return true;
 		};
 	}
+
+	// Do not use virtual domains for commonswikis link tables since they are not in an external cluster
+	unset( $wgRemoteVirtualDomainsMapping['commonswiki'] );
+	if ( $wgDBname === 'commonswiki' ) {
+		unset( $wgVirtualDomainsMapping['virtual-links'] );
+	}
+
+	// The globalimagelinks table is in the local commonswiki db instead of an external cluster
+	if ( $wmgUseGlobalUsage ) {
+		$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
+	}
 }
 // end safeguard
