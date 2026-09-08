@@ -14382,4 +14382,17 @@ return [
 	'default' => false,
 ],
 
+'wgWMCDiscordPreviewEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgWMCDiscord' => [
+	'testwiki' => [
+		'baseUrl' => 'https://test.wikipedia.org/rest.php/discord/v0-internal/discord-preview',
+		'wprov' => 'diim1',
+		'surveyCoverage' => 1,
+	]
+]
+
 ];
