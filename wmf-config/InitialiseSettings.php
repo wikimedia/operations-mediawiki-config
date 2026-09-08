@@ -12875,7 +12875,9 @@ return [
 'wgReadingListBetaFeature' => [
 	'default' => false,
 	'testwiki' => false,
+	'mediawikiwiki' => false,
 	'wikipedia' => true,
+	'wikitech' => false,
 	'arwiki' => false,
 	'bnwiki' => false,
 	'cswiki' => false,
@@ -12888,6 +12890,8 @@ return [
 'wgReadingListsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
+	'wikitech' => true,
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
