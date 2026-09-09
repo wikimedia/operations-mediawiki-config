@@ -9,7 +9,7 @@
 
 return [
 	'eqiad' => [
-		'udp2log' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud:8420',
+		'udp2log' => 'mwlog.svc.deployment-prep.eqiad1.wikimedia.cloud:8420',
 		'xenon' => 'arclamp.svc.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui-pdo' => 'mysql:host=deployment-db15.deployment-prep.eqiad1.wikimedia.cloud;dbname=xhgui',
 		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmcloud.org/excimer/',
