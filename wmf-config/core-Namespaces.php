@@ -5390,7 +5390,19 @@ return [
 		NS_USER => 'noindex,follow', // T122732
 	],
 	'ukwiki' => [
+		NS_TALK => 'noindex,follow', // T437409
 		NS_USER => 'noindex,follow', // T98926
+		NS_USER_TALK => 'noindex,follow', // T437409
+		NS_PROJECT_TALK => 'noindex,follow', // T437409
+		NS_FILE_TALK => 'noindex,follow', // T437409
+		NS_MEDIAWIKI_TALK => 'noindex,follow', // T437409
+		NS_TEMPLATE_TALK => 'noindex,follow', // T437409
+		NS_HELP_TALK => 'noindex,follow', // T437409
+		NS_CATEGORY_TALK => 'noindex,follow', // T437409
+		101 => 'noindex,follow', // T437409
+		711 => 'noindex,follow', // T437409
+		829 => 'noindex,follow', // T437409
+		1729 => 'noindex,follow', // T437409
 	],
 	'urwiki' => [
 		118 => 'noindex,nofollow',
