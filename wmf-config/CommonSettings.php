@@ -4720,6 +4720,10 @@ if ( $wmgUseWikiLambda ) {
 	// Temporary config for the cross-wiki Abstract Article display controls
 	$wgWikiLambdaAbstractWikiAllowedTopics = [ 'Q319', 'Q42', 'Q84', 'Q52', 'Q90' ];
 	$wgWikiLambdaAbstractWikiAllowedLangs = [ 'en', 'fr', 'de', 'es' ];
+
+	// (T432849) Temporary config for moving fragment storage from memcached to mainstash
+	$wgWikiLambdaClientFragmentStoreBackend = 'mainstash';
+	$wgWikiLambdaAWFragmentStoreBackend = 'memcached';
 }
 
 if ( $wmgUseWikistories ) {
