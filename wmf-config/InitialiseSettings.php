@@ -7839,19 +7839,19 @@ return [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // parsoid output should be generated and cached after every edit
+		'WarmParsoidParserCache' => false, // disable cache warming since parsoid for read is the default
 	],
 	'commonswiki' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 1.0, // only cache if parsing takes longer than n seconds
-		'WarmParsoidParserCache' => false, // disable cache warming for now
+		'WarmParsoidParserCache' => false, // disable cache warming
 	],
 	'wikidatawiki' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 1.0, // only cache if parsing takes longer than n seconds
-		'WarmParsoidParserCache' => false, // disable cache warming for now
+		'WarmParsoidParserCache' => false, // disable cache warming
 	],
 ],
 
