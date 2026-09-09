@@ -2852,7 +2852,10 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 $wgRemoteVirtualDomainsMapping['commonswiki'] = [
 	'virtual-links' => [ 'cluster' => 'extension4', 'db' => 'commonswiki' ],
 ];
-if ( $wgDBname === 'commonswiki' ) {
+$wgRemoteVirtualDomainsMapping['testcommonswiki'] = [
+	'virtual-links' => [ 'cluster' => 'extension4', 'db' => 'testcommonswiki' ],
+];
+if ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
 	$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension4', 'db' => false ];
 }
 
@@ -2861,16 +2864,6 @@ if ( $wmgUseGlobalUsage ) {
 	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension4', 'db' => 'commonswiki' ];
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
-}
-
-// T421914
-if ( $wgDBname === 'testcommonswiki' ) {
-	$wgVirtualDomainsMapping['virtual-links'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgRemoteVirtualDomainsMapping['testcommonswiki'] = [
-		'virtual-links' => [ 'cluster' => 'extension1', 'db' => 'testcommonswiki' ],
-	];
-	$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'cluster' => 'extension1', 'db' => false ];
-	$wgGlobalUsageSharedRepoWiki = 'testcommonswiki';
 }
 
 wfLoadExtension( 'TemplateStyles' );
