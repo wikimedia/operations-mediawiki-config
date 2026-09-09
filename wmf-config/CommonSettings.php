@@ -4726,7 +4726,7 @@ if ( $wmgUseWikiLambda ) {
 
 	// (T432849) Temporary config for moving fragment storage from memcached to mainstash
 	$wgWikiLambdaClientFragmentStoreBackend = 'mainstash';
-	$wgWikiLambdaAWFragmentStoreBackend = 'memcached';
+	$wgWikiLambdaAWFragmentStoreBackend = 'mainstash';
 }
 
 if ( $wmgUseWikistories ) {
