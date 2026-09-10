@@ -14387,4 +14387,18 @@ return [
 	'testwiki' => true, // T436955
 ],
 
+'wgWMCDiscordPreviewEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgWMCDiscord' => [
+	'default' => [],
+	'testwiki' => [
+		'baseUrl' => 'https://test.wikipedia.org/w/rest.php/discord/v0-internal/discord-preview',
+		'wprov' => 'diim1',
+		'surveyCoverage' => 1,
+	],
+],
+
 ];
