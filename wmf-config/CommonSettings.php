@@ -2914,8 +2914,6 @@ $wgTemplateStylesUseCodeMirror = true;
 // UploadWizard
 $wgUploadWizardUseCodeEditor = false;
 $wgUploadWizardUseCodeMirror = true;
-// New 2017 source editor integration
-$wgCodeMirrorVisualEditorCustomHighlight = true;
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
