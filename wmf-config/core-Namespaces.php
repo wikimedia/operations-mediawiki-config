@@ -54,6 +54,10 @@ return [
 	'+abstractwiki' => [
 		'Abstract' => NS_PROJECT,
 	],
+	'+afwiki' => [
+		'Draft' => 118,
+		'Draft_talk' => 119,
+	],
 	'+altwiki' => [
 		'ВП' => NS_PROJECT,
 	],
@@ -2716,6 +2720,8 @@ return [
 	'afwiki' => [
 		100 => 'Portaal',
 		101 => 'Portaalbespreking',
+		118 => 'Konsep', // Draft, T437576
+		119 => 'Konsepbespreking', // Draft talk, T437576
 	],
 	'alswiki' => [
 		100 => 'Portal',
@@ -5048,6 +5054,10 @@ return [
 # @} end of wgExtraNamespaces
 
 'wgNamespaceRobotPolicies' => [
+	'afwiki' => [
+		118 => 'noindex,follow', // Draft - T437576
+		119 => 'noindex,follow', // Draft Talk - T437576
+	],
 	'arwiki' => [
 		NS_USER => 'noindex,nofollow', // T371470
 		NS_USER_TALK => 'noindex,nofollow', // T371470

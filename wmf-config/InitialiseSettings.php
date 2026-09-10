@@ -7167,6 +7167,9 @@ return [
 	],
 
 	// Wikipedias
+	'+afwiki' => [
+		'Konsep' => true, // Draft - T437576
+	],
 	'+azwiki' => [
 		'Qaralama' => true, // Draft - T299332
 	],
