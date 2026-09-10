@@ -2916,15 +2916,6 @@ $wgUploadWizardUseCodeEditor = false;
 $wgUploadWizardUseCodeMirror = true;
 // New 2017 source editor integration
 $wgCodeMirrorVisualEditorCustomHighlight = true;
-// English Wikipedia: Enable CodeMirror by default for users created
-// after 2026-09-10 as well as logged out users (T288161)
-if ( $wgDBname === 'enwiki' ) {
-	$wgDefaultUserOptions['usecodemirror'] = 1;
-	$wgConditionalUserOptions['usecodemirror'] = [
-		[ 1, [ CUDCOND_AFTER, '20260910000000' ] ],
-		[ 0, [ CUDCOND_NAMED ] ],
-	];
-}
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
