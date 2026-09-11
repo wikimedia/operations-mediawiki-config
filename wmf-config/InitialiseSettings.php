@@ -5601,6 +5601,15 @@ return [
 	'wikimaniawiki' => '/srv/mediawiki/static/images/sul/wikimania.png',
 ],
 
+'wgMobileAppRedirectUrls' => [
+	'default' => false,
+	'wikipedia' => [
+		'android' => 'https://play.google.com/store/apps/details?id=org.wikipedia',
+		'ios' => 'https://apps.apple.com/app/wikipedia/id324715238',
+		'portal' => 'https://www.wikipedia.org',
+	],
+],
+
 'wmgCentralAuthCookieDomain' => [
 	// set cookies on current domain for wikis with an unsafe parent domain
 	'default' => '',
