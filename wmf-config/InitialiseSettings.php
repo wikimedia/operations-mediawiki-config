@@ -13395,7 +13395,7 @@ return [
 		'readinglists/v0' => [ 'availability' => 'discoverable' ],
 		'wikifunctions/v0' => [ 'availability' => 'discoverable' ],
 		'fragments/v0-internal' => [ 'availability' => 'hidden' ],
-
+		'content/v2-beta' => [ 'availability' => 'disabled' ],
 	],
 	'+metawiki' => [
 		'readinglists/v0' => [ 'availability' => 'published' ],
