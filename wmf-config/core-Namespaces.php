@@ -5347,6 +5347,8 @@ return [
 		119 => 'noindex,nofollow',
 	],
 	'tcywiki' => [
+		NS_USER => 'noindex,follow', // T437784
+		NS_USER_TALK => 'noindex,follow', // T437784
 		118 => 'noindex,nofollow', // draft, T409329
 		119 => 'noindex,nofollow', // draft_talk, T409329
 	],
