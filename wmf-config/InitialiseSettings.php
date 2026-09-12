@@ -11946,6 +11946,11 @@ return [
 	'zhwiki' => true, // T326387
 	'newiki' => true, // T328224
 ],
+'wgPageAssessmentsNamespace' => [
+	'default' => -1,
+	// Language Converter wikis should set this to the WikiProject namespace
+	'zhwiki' => 102, // 专题 T328012
+],
 
 'wmgUsePageImages' => [
 	'default' => true,
