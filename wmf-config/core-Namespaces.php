@@ -53,6 +53,8 @@ return [
 	],
 	'+abstractwiki' => [
 		'Abstract' => NS_PROJECT,
+		'AW' => NS_PROJECT, // T437772
+		'AWT' => NS_PROJECT_TALK, // T437772
 	],
 	'+afwiki' => [
 		'Draft' => 118,
