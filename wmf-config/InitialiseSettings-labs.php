@@ -2190,6 +2190,9 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],
+		'wgCampaignEventsEnableWorklistEventDiscoveryTracking' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
