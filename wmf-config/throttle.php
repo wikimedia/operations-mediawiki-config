@@ -35,13 +35,87 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-// T436672: Lift IP cap for Mapudungun editathon on 2026-September-05
+// T437609: Lift IP cap for edit-a-thon
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-09-05T09:00 -04:00',
-	'to'     => '2026-09-05T14:00 -04:00',
-	'IP'     => '186.67.219.171',
-	'dbname' => [ 'eswiki', 'incubatorwiki' ],
-	'value'  => 30,
+	'from'   => '2026-09-29T15:30 -03:00',
+	'to'     => '2026-09-29T18:30 -03:00',
+	'IP'     => '163.10.36.4',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-27T15:30 -03:00',
+	'to'     => '2026-10-27T18:30 -03:00',
+	'IP'     => '163.10.36.4',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-11-24T15:30 -03:00',
+	'to'     => '2026-11-24T18:30 -03:00',
+	'IP'     => '163.10.36.4',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+// T437594: Lift IP cap for edit-a-thon
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-09-28T09:30 -03:00',
+	'to'     => '2026-09-28T13:00 -03:00',
+	'IP'     => '163.10.250.98',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-05T09:30 -03:00',
+	'to'     => '2026-10-05T13:00 -03:00',
+	'IP'     => '163.10.250.98',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-19T09:30 -03:00',
+	'to'     => '2026-10-19T13:00 -03:00',
+	'IP'     => '163.10.250.98',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-26T09:30 -03:00',
+	'to'     => '2026-10-26T13:00 -03:00',
+	'IP'     => '163.10.250.98',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+// T437470: Lift IP cap for edit-a-thon
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-16T08:30 +0:00',
+	'to'     => '2026-10-16T18:30 +0:00',
+	'range'     => '195.89.33.208/28',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 60,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-16T08:30 +0:00',
+	'to'     => '2026-10-16T18:30 +0:00',
+	'range'     => '131.111.184.0/23',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 60,
 	'tempaccountvalue' => 50,
 ];
 
