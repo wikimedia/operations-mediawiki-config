@@ -751,10 +751,6 @@ return [
 	'testwiki' => 'simplewiki',
 ],
 
-'wgGELinkRecommendationsRefreshByIteratingThroughAllTitles' => [
-	'default' => true,
-],
-
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
 	'eswiki' => 85, // T394867
@@ -843,16 +839,6 @@ return [
 
 'wgGERestbaseUrl' => [
 	'default' => false,
-],
-
-'wgGELinkRecommendationMinimumTasksPerTopic' => [
-	'default' => 500,
-	'arzwiki' => 2000,
-	'eswiki' => 2000,
-	'fawiki' => 2000,
-	'frwiki' => 2000,
-	'idwiki' => 2000,
-	'ptwiki' => 2000,
 ],
 
 'wgWelcomeSurveyEnabled' => [
