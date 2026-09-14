@@ -2041,8 +2041,14 @@ if ( $wmgUseConfirmEdit ) {
 			]
 		);
 
-		// Remove default hcaptcha.com rules
-		$wgHCaptchaCSPRules = [];
+		// All hCaptcha traffic is proxied through Wikimedia (see $wgHCaptchaApiUrl
+		// above), so allow-list the proxy hosts rather than hcaptcha.com.
+		$wgHCaptchaCSPRules = [
+			'https://hcaptcha.wikimedia.org',
+			'https://assets-hcaptcha.wikimedia.org',
+			'https://imgs-hcaptcha.wikimedia.org',
+			'https://report-hcaptcha.wikimedia.org',
+		];
 
 		// Badlogin trigger should be triggered even on non-SUL wikis
 		// where we don't have any CAPTCHAs for edits or account creations
@@ -4769,12 +4775,36 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSP ) {
 	];
 
 	// build CSP config
-	$cspConfig = [
-		'useNonces' => false,
-		'includeCORS' => false,
-		'default-src' => $wmgApprovedContentSecurityPolicyDomains,
-		'script-src' => $wmgApprovedContentSecurityPolicyDomains,
-	];
+	if ( $wmgSharedDomainPathPrefix !== '' ) {
+		// auth.wikimedia.org has restricted functionality and no user JS, so it can use
+		// a much more restrictive policy than regular wikis: instead of the ~3K
+		// allow-list of domains that on-wiki scripts may use, only the canonical domain
+		// (via 'self' plus the ResourceLoader/upload paths ContentSecurityPolicy adds
+		// for us) and the handful of services the authentication flow talks to (T419684).
+		//
+		// This does not remove 'unsafe-eval': ResourceLoader's startup module needs
+		// new Function() for its browser compatibility check, and without it MediaWiki
+		// classifies every browser as Grade C and disables JavaScript entirely.
+		//
+		// The hCaptcha hosts are not listed here; ConfirmEdit adds them via
+		// $wgHCaptchaCSPRules when a CAPTCHA is actually rendered.
+		$cspConfig = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => [
+				// EventLogging and client-side error logging beacons
+				'https://intake-analytics.wikimedia.org',
+				'https://intake-logging.wikimedia.org',
+			],
+		];
+	} else {
+		$cspConfig = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => $wmgApprovedContentSecurityPolicyDomains,
+			'script-src' => $wmgApprovedContentSecurityPolicyDomains,
+		];
+	}
 
 	if ( $wmgUseCSPReportOnly ) {
 		// $wgCSPReportOnlyHeader defaults to false, so setup an array for config
