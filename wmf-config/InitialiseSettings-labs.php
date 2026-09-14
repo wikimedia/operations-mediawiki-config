@@ -2450,5 +2450,9 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true, // T431355
 		],
+
+		'-wmgUseModeratorToolkit' => [
+			'default' => false,
+		],
 	];
 } # wmfGetOverrideSettings()

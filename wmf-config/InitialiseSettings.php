@@ -14417,4 +14417,8 @@ return [
 	],
 ],
 
+'wmgUseModeratorToolkit' => [
+	'default' => false,
+],
+
 ];
