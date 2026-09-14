@@ -8079,6 +8079,48 @@ return [
 	'loginwiki' => true,
 ],
 
+'wgCheckUserSuggestedInvestigationsEnabledQueueViews' => [
+	'default' => [ 'sockpuppets', 'all' ]
+],
+
+'wgCheckUserSuggestedInvestigationsDefaultQueueView' => [
+	'default' => 'all',
+	'enwiki' => 'sockpuppets', // T437183
+],
+
+'wgCheckUserSuggestedInvestigationsQueueViews' => [
+	'default' => [
+		'all' => [
+			'filters' => [
+				'editAndBlockFilter' => 'edits-only',
+				'lastUpdated' => null,
+				'showCasesWithEditsOnSharedPages' => false,
+				'signal' => [],
+				'status' => [],
+			],
+			'msgKeys' => [
+				'defaultName' => 'checkuser-suggestedinvestigations-queue-view-all',
+				'editedName' => 'checkuser-suggestedinvestigations-queue-view-all-edited',
+				'filterDialogTitle' => 'checkuser-suggestedinvestigations-queue-view-all-filter-dialog-title',
+			]
+		],
+		'sockpuppets' => [
+			'filters' => [
+				'editAndBlockFilter' => 'edits-and-blocks',
+				'lastUpdated' => null,
+				'showCasesWithEditsOnSharedPages' => true,
+				'signal' => [ 'signal-3a', 'signal-4n', 'signal-6c' ],
+				'status' => [ 'open' ],
+			],
+			'msgKeys' => [
+				'defaultName' => 'checkuser-suggestedinvestigations-queue-view-sockpuppets',
+				'editedName' => 'checkuser-suggestedinvestigations-queue-view-sockpuppets-edited',
+				'filterDialogTitle' => 'checkuser-suggestedinvestigations-queue-view-sockpuppets-filter-dialog-title',
+			]
+		],
+	]
+],
+
 'wmgUseUserInfoCard' => [
 	// T405342
 	'default' => false,
