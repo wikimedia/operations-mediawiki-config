@@ -2914,6 +2914,16 @@ $wgTemplateStylesUseCodeMirror = true;
 // UploadWizard
 $wgUploadWizardUseCodeEditor = false;
 $wgUploadWizardUseCodeMirror = true;
+// Enable the new 2017 source editor integration globally (T432558)
+$wgCodeMirrorVisualEditorCustomHighlight = true;
+// English Wikipedia: Enable CodeMirror by default for users created
+// after 2026-09-14 as well as logged out users (T288161)
+if ( $wgDBname === 'enwiki' ) {
+	$wgConditionalUserOptions['usecodemirror'] = [
+		[ 1, [ CUDCOND_AFTER, '20260914000000' ] ],
+		[ 1, [ CUDCOND_ANON ] ],
+	];
+}
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
