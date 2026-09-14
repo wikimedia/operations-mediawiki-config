@@ -3556,7 +3556,12 @@ return [
 		106 => '稿', // Draft, T163655
 		107 => '酌稿', // Draft talk, T163655
 	],
-	'zh_min_nanwiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ],
+	'zh_min_nanwiki' => [
+		100 => 'Portal',
+		101 => 'Portal_talk',
+		148 => 'Hàn-jī', // T430731
+		149 => 'Hàn-jī_thó-lūn'
+	],
 	'zh_yuewiki' => [
 		# Override MediaWiki default namespace names for "yue".
 		NS_MEDIA => 'Media',
@@ -5681,6 +5686,7 @@ return [
 		100 => 1, // T308393, Portal
 		102 => 1, 106 => 1, 114 => 1, // T66127
 	],
+	'+zh_min_nanwiki' => [ 148 => 1 ], // T430731
 ],
 # @} end of wgNamespacesToBeSearchedDefault
 
