@@ -582,5 +582,10 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseGlobalUsage ) {
 		$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
 	}
+
+	// T431000
+	if ( $wmgUseModeratorToolkit ) {
+		wfLoadExtension( 'ModeratorToolkit' );
+	}
 }
 // end safeguard
