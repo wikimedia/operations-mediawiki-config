@@ -9,8 +9,10 @@
 
 $wgCdnServersNoPurge = [
 	'127.0.0.1',
-	// deployment-cache-text08
-	'172.16.3.164',
-	// deployment-cache-upload08
-	'172.16.3.146',
+	// deployment-cp-text09
+	'172.16.17.206',
+	'2a02:ec80:a000:1::411',
+	// deployment-cp-upload09
+	'172.16.19.48',
+	'2a02:ec80:a000:1::462',
 ];
