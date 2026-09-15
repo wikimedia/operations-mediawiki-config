@@ -8108,7 +8108,7 @@ return [
 			'filters' => [
 				'editAndBlockFilter' => 'edits-and-blocks',
 				'lastUpdated' => null,
-				'showCasesWithEditsOnSharedPages' => true,
+				'showCasesWithEditsOnSharedPages' => false,
 				'signal' => [ 'signal-3a', 'signal-4n', 'signal-6c' ],
 				'status' => [ 'open' ],
 			],
