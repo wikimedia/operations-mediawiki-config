@@ -184,8 +184,8 @@ $services = [
 		],
 
 		'poolcounter' => [
-			# (depooled, T435163) '10.64.0.150',  # poolcounter1006.eqiad.wmnet
-			'10.64.32.137', # poolcounter1007.eqiad.wmnet
+			'10.64.0.150',  # poolcounter1006.eqiad.wmnet
+			# (depooled, T435163) '10.64.32.137', # poolcounter1007.eqiad.wmnet
 		],
 
 		// LOOKING FOR parsercache-dbs? It no longer lives in the production
@@ -251,8 +251,8 @@ $services = [
 		],
 
 		'poolcounter' => [
-			# (depooled, T435163) '10.192.0.9',    # poolcounter2005.codfw.wmnet
-			'10.192.16.6',   # poolcounter2006.codfw.wmnet
+			'10.192.0.9',    # poolcounter2005.codfw.wmnet
+			# (depooled, T435163) '10.192.16.6',   # poolcounter2006.codfw.wmnet
 		],
 
 		// LOOKING FOR parsercache-dbs? It no longer lives in the production
