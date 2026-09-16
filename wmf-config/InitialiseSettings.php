@@ -14338,6 +14338,29 @@ return [
 	'plwiki' => true, // T432137
 ],
 
+// Switch for the whole user-facing feature. It has precedence over the more
+// specific settings below.
+//
+// This list keeps the feature on where it was already on when T433293 was
+// deployed. Before that task, the feature was available on each wiki that
+// loads the extension.
+//
+// Do not add wikis here. Communities enable the feature themselves in
+// Community Configuration, which overrides this value. Remove a wiki from
+// this list after its community sets the value on-wiki. T433293
+'wgArticleGuidanceEnabled' => [
+	'default' => false,
+	'arwiki' => true, // T426871
+	'bnwiki' => true, // T426871
+	'frwiki' => true, // T426871
+	'itwiki' => true, // T431540
+	'plwiki' => true, // T432137
+	'ptwiki' => true, // T426871
+	'simplewiki' => true, // T425351
+	'testwiki' => true, // T417200
+	'trwiki' => true, // T426871
+],
+
 // Article Guidance is the default workflow for junior editors on these wikis.
 // Everywhere else Special:NewArticle stays reachable, but no entry point
 // redirects to it. T434487
