@@ -7121,11 +7121,15 @@ return [
 // Whether the wikitext editor should be the default editor.
 'wmgVisualEditorIsSecondaryEditor' => [
 	'default' => false,
-	'enwiki' => true, // T132806
 	'eswiki' => true, // T62188
 	'frwiktionary' => true, // T169741
 	'hewiki' => true, // T54552
 	'zhwiki' => true, // T296269
+],
+
+'wgVisualEditorEnableSourceEducationPopup' => [
+	'default' => false,
+	'enwiki' => true
 ],
 
 'wgVisualEditorTabPosition' => [
