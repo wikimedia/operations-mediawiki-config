@@ -13934,6 +13934,10 @@ return [
 	'wikifunctionswiki' => false, // T409760
 ],
 
+'wgCampaignEventsEnableWorklistEventDiscoveryTracking' => [
+	'default' => true, // T434513
+],
+
 'wgCdnMatchParameterOrder' => [
 	'default' => false, // T314868
 ],
