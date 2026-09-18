@@ -8346,6 +8346,8 @@ return [
 	'mediawikiwiki' => false,
 	// T375538
 	'enwiki' => false,
+	// T403380
+	'dewiki' => false,
 ],
 
 // T169001
