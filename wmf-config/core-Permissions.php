@@ -260,6 +260,10 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'+arywiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T438421
+		'patroller' => [ 'patrol' => true ], // T438421
+	],
 	'+arzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T258100
 		'autopatrolled' => [ 'autopatrol' => true ], // T260761
@@ -3728,6 +3732,12 @@ return [
 			'rollbacker',
 		],
 	],
+	'+arywiki' => [
+		'sysop' => [
+			'autopatrolled', // T438421
+			'patroller', // T438421
+		],
+	],
 	'+arzwiki' => [
 		'sysop' => [
 			'rollbacker', // T258100
@@ -5243,6 +5253,12 @@ return [
 		'sysop' => [
 			'autopatrolled',
 			'rollbacker',
+		],
+	],
+	'+arywiki' => [
+		'sysop' => [
+			'autopatrolled', // T438421
+			'patroller', // T438421
 		],
 	],
 	'+arzwiki' => [
