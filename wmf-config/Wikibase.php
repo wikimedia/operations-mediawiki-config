@@ -79,7 +79,7 @@ if ( in_array( $wgDBname, $testWikidataClients ) || $wgDBname === 'testwikidataw
 
 // T424440
 if ( $wgDBname === 'mediawikiwiki' ) {
-	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1' ];
+	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1', 'db' => false ];
 }
 
 if ( $wmgUseWikibaseRepo ) {
