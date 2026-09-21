@@ -868,6 +868,10 @@ return [
 'wgGEAccountSetupExperimentStartRegistrationDate' => [
 	'default' => null,
 	'testwiki' => '2026-09-09T13:00:00',
+	'arwiki' => '2026-09-29T15:00:00',
+	'enwiki' => '2026-09-29T15:00:00',
+	'eswiki' => '2026-09-29T15:00:00',
+	'frwiki' => '2026-09-29T15:00:00',
 ],
 
 ];
