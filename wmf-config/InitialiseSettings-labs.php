@@ -2455,5 +2455,11 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true, // T431000
 		],
+
+		// T438463
+		'wmgSuppressOtherLanguageLinkUpdates' => [
+			'default' => false,
+			'dewiki' => true,
+		]
 	];
 } # wmfGetOverrideSettings()

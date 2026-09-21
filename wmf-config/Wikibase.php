@@ -435,6 +435,9 @@ if ( $wmgUseWikibaseClient ) {
 	// T397258
 	$wgWBClientSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
 	$wgWBRepoSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
+
+	// T438463
+	$wgWBClientSettings['suppressOtherLanguageLinkUpdates'] = $wmgSuppressOtherLanguageLinkUpdates;
 }
 
 unset( $wmgWBSharedCacheKey );

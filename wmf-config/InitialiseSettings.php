@@ -14443,4 +14443,9 @@ return [
 	'default' => false,
 ],
 
+'wmgSuppressOtherLanguageLinkUpdates' => [
+	'default' => false,
+	'testwiki' => true,
+]
+
 ];
