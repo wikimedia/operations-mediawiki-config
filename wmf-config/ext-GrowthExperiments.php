@@ -870,13 +870,4 @@ return [
 	'testwiki' => '2026-09-09T13:00:00',
 ],
 
-'wgGEHomepageReadingRecommendationsEnabled' => [
-	'default' => false,
-	// T437665
-	'testwiki' => true,
-	'test2wiki' => true,
-],
-'wgGEHomepageReadingRecommendationsFeaturedCategory' => [
-	'default' => 'Category:Featured articles',
-],
 ];
