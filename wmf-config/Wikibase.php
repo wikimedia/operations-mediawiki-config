@@ -77,6 +77,11 @@ if ( in_array( $wgDBname, $testWikidataClients ) || $wgDBname === 'testwikidataw
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki', 'cluster' => 'extension3' ];
 }
 
+// T424440
+if ( $wgDBname === 'mediawikiwiki' ) {
+	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1' ];
+}
+
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
 		// Disable Special:ItemDisambiguation on wikidata.org T195756, T271389
