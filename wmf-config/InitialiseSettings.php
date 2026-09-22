@@ -13843,6 +13843,7 @@ return [
 	'default' => false,
 	'abstractwiki' => true,
 	'testwiki' => true,
+	'mlwiki' => true,
 ],
 
 // Whether wikis can have abstract articles displayed on them
@@ -13850,6 +13851,7 @@ return [
 	'default' => false,
 	'abstractwiki' => false,
 	'testwiki' => true,
+	'mlwiki' => true,
 ],
 
 ### Wikistories-related configuration
