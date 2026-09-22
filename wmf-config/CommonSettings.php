@@ -5021,9 +5021,6 @@ if ( $wmgEnableSitemapApi ) {
 // ReaderExperiments (T406916, T406907)
 if ( $wmgUseReaderExperiments ) {
 	wfLoadExtension( 'ReaderExperiments' );
-
-	// To support baseline metrics for Share Highlight (T416945)
-	$wgReaderExperimentsShareHighlightEnabled = true;
 }
 
 if ( $wmgUseProdunto ) {
