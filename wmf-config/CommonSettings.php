@@ -4435,7 +4435,7 @@ if ( $wmgUseWikimediaAntiAbuse ) {
 	// the preference matrix.
 	wfLoadExtension( 'WikimediaAntiAbuse' );
 	$wgWikimediaAntiAbuseCoPEModelConfig = [
-		'url' => 'https://inference.discovery.wmnet:30443/v1/models/cope-b-a4b:predict',
+		'url' => 'https://inference.svc.eqiad.wmnet:30443/v1/models/cope-b-a4b:predict',
 		'host' => 'cope-b-a4b.llm.wikimedia.org',
 		'timeout' => 10,
 	];
