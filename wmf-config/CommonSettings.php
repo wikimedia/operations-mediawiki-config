@@ -5040,6 +5040,11 @@ if ( $wmgUseProdunto ) {
 	];
 }
 
+// T438334
+if ( $wmgUseModeratorToolkit ) {
+	wfLoadExtension( 'ModeratorToolkit' );
+}
+
 // phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends AbstractPreAuthenticationProvider {
 	/**
