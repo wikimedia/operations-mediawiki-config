@@ -14471,6 +14471,7 @@ return [
 
 'wmgUseModeratorToolkit' => [
 	'default' => false,
+	'testwiki' => true, // T438334
 ],
 
 'wmgSuppressOtherLanguageLinkUpdates' => [
