@@ -3107,6 +3107,12 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorSuggestionFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
 	$wgVisualEditorSuggestionFeedbackTitle = 'VisualEditor/Suggestion_Mode/Feedback';
 
+	if ( $wgDBname === 'ruwiki' ) {
+		// T426271
+		$wgVisualEditorTextMatchFeedbackAPIURL = 'https://ru.wikipedia.org/w/api.php';
+		$wgVisualEditorTextMatchFeedbackTitle = 'MediaWiki_talk:Editcheck-config.json';
+	}
+
 	// Citoid
 	wfLoadExtension( 'Citoid' );
 	$wgCitoidServiceUrl = "/api/rest_v1/data/citation";
