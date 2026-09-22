@@ -14293,6 +14293,14 @@ return [
 	'testwiki' => true,
 ],
 
+// Bypasses the Google-referrer guard and the CTA suppression flags,
+// so the preferred-sources notice can be reached in manual testing.
+// T436692
+'wgReaderExperimentsPreferredSourcesDebug' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 // T403798
 'wgEnableChangesListQueryPartitioning' => [
 	'default' => true,
