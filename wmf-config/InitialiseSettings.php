@@ -9935,6 +9935,8 @@ return [
 	// T431292
 	'testwiki' => true,
 	'enwiki' => true,
+	// T438867
+	'jawiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [
@@ -9942,12 +9944,16 @@ return [
 	// T431292
 	'testwiki' => true,
 	'enwiki' => true,
+	// T438867
+	'jawiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoFlagNotifications' => [
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+	// T438867
+	'jawiki' => true,
 ],
 
 'wmgUseWikimediaEvents' => [
