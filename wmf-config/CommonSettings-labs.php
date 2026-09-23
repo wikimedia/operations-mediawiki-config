@@ -20,6 +20,7 @@
 
 use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
+use MediaWiki\Extension\SiteMatrix\SiteMatrixLookup;
 use MediaWiki\Title\Title;
 
 // safe guard
@@ -587,5 +588,12 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseModeratorToolkit ) {
 		wfLoadExtension( 'ModeratorToolkit' );
 	}
+
+	// T432369
+	$wgSiteLookup = [
+		'class' => SiteMatrixLookup::class,
+		'services' => [ 'SiteMatrix' ],
+		'args' => [ $site ]
+	];
 }
 // end safeguard
