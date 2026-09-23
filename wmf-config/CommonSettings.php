@@ -365,7 +365,7 @@ $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 
 // The parsercache section-to-server mapping. Must be defined before calls to
 // wmfApplyEtcdDBConfig.
-$wmgPCServers = $wmgLocalServices['parsercache-dbs'];
+$wmgPCServers = [];
 
 // In production, read the database loadbalancer config and parsercache
 // section-to-server mapping from etcd.

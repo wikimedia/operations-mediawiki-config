@@ -57,8 +57,6 @@ return [
 		],
 		// We will not use analytics-web in beta
 		'analytics-web' => null,
-		// No parser cache DBs in beta yet
-		'parsercache-dbs' => [],
 		'urldownloader' => 'http://url-downloader.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'parsoid' => 'http://appservers.svc.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://mathoid.svc.deployment-prep.eqiad1.wikimedia.cloud:10044',

@@ -61,6 +61,11 @@ $common = [
 		'208.80.153.10',  # irc2003.wikimedia.org
 	],
 
+	// NOTE: Looking for parsercache-dbs? This is now maintained via Etcd.
+	// * Loaded via etcd.php (as $wmgPCServers)
+	// * Debug via https://noc.wikimedia.org/dbconfig/eqiad.json
+	// * Change via https://wikitech.wikimedia.org/wiki/dbctl
+
 	// Automatic dc-local discovery
 	'parsoid' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
@@ -188,11 +193,6 @@ $services = [
 			'10.64.32.137', # poolcounter1007.eqiad.wmnet
 		],
 
-		// LOOKING FOR parsercache-dbs? It no longer lives in the production
-		// PHP configs. Try https://noc.wikimedia.org/dbconfig/eqiad.json.
-		// For more info see also https://wikitech.wikimedia.org/wiki/dbctl.
-		'parsercache-dbs' => [],
-
 		// LockManager Redis eqiad
 		'redis_default_lock' => [
 			'rdb1' => '10.64.0.65:6378', # rdb-lock1001 VM
@@ -254,11 +254,6 @@ $services = [
 			'10.192.0.9',    # poolcounter2005.codfw.wmnet
 			'10.192.16.6',   # poolcounter2006.codfw.wmnet
 		],
-
-		// LOOKING FOR parsercache-dbs? It no longer lives in the production
-		// PHP configs. Try https://noc.wikimedia.org/dbconfig/codfw.json.
-		// For more info see also https://wikitech.wikimedia.org/wiki/dbctl.
-		'parsercache-dbs' => [],
 
 		// LockManager Redis codfw
 		'redis_default_lock' => [
