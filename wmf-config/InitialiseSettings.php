@@ -12978,6 +12978,12 @@ return [
 	'viwiki' => true,
 	'zhwiki' => true,
 ],
+'wgReadingListsMinervaCTA' => [
+	'default' => false,
+	// T435258
+	'testwiki' => true,
+	'test2wiki' => true,
+],
 'wgReadingListsCustomLists' => [
 	'default' => false,
 	// Test2 should be one step ahead of test
