@@ -70,7 +70,7 @@ return [
 
 		'irc' => [],
 		'redis_default_lock' => [
-			'rdb1' => 'deployment-rdb01.deployment-prep.eqiad1.wikimedia.cloud',
+			'rdb1' => 'deployment-rdb-lock01.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'etcd' => [
 			'host' => '_etcd._tcp.svc.deployment-prep.eqiad1.wikimedia.cloud',

@@ -406,8 +406,7 @@ $wgLockManagers[] = [
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'readTimeout' => 2,
-		// TODO: Consolidate them into one variable:
-		'password' => ( $wmgRealm !== 'labs' ) ? $wmgRedisLockPassword : $wmgRedisPassword,
+		'password' => $wmgRedisLockPassword,
 	],
 ];
 
