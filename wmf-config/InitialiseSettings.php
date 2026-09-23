@@ -9956,6 +9956,12 @@ return [
 	'jawiki' => true,
 ],
 
+'wgWikimediaAntiAbuseEnableVandalismTag' => [
+	'default' => false,
+	// T438860
+	'testwiki' => true,
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721

@@ -4433,6 +4433,8 @@ if ( $wmgUseWikimediaAntiAbuse ) {
 	// GetPreferences handler can hide the personal-info notification row from
 	// users who cannot view the tag; that row only exists once Echo has built
 	// the preference matrix.
+	// Must also be loaded after CentralAuth to allow the UserGetRights hook
+	// handler for CentralAuth to run first
 	wfLoadExtension( 'WikimediaAntiAbuse' );
 	$wgWikimediaAntiAbuseCoPEModelConfig = [
 		'url' => 'https://inference.svc.eqiad.wmnet:30443/v1/models/cope-b-a4b:predict',
