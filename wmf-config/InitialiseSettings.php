@@ -9960,6 +9960,8 @@ return [
 	'default' => false,
 	// T438860
 	'testwiki' => true,
+	// T439149
+	'enwiki' => true,
 ],
 
 'wmgUseWikimediaEvents' => [
