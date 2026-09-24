@@ -14280,6 +14280,11 @@ return [
 	'eswiki' => true,
 	'jawiki' => true,
 	'ptwiki' => true,
+	// T438072
+	'dewiki' => true,
+	'svwiki' => true,
+	// T436692
+	'testwiki' => true,
 ],
 
 // T403798
