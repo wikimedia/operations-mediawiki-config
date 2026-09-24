@@ -13006,6 +13006,19 @@ return [
 
 'wmgUseCSPReportOnly' => [
 	'default' => false,
+	// top 10 by active user, meta, mw.org
+	'enwiki' => true,
+	'wikidatawiki' => true,
+	'commonswiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'dewiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'ruwiki' => true,
+	'zhwiki' => true,
+	'metawiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 'wmgUseCSP' => [
@@ -13100,6 +13113,39 @@ return [
 	'donatewiki' => [
 		'*.wikimedia.org', // Needed to load some images
 	]
+],
+
+// Report-only CSP domains: Wikimedia, WMCS and localhost only.
+'wmgCSPReportOnlyDomains' => [
+	'default' => [
+		'*.wikimedia.org',
+		'*.wikipedia.org',
+		'*.wikinews.org',
+		'*.wiktionary.org',
+		'*.wikibooks.org',
+		'*.wikiversity.org',
+		'*.wikisource.org',
+		'wikisource.org',
+		'*.wikiquote.org',
+		'*.wikidata.org',
+		'*.wikifunctions.org',
+		'*.wikivoyage.org',
+		'*.mediawiki.org',
+		'mediawiki.org',
+		'wikimedia.org',
+		'*.wmflabs.org',
+		'*.wmcloud.org',
+		'*.toolforge.org',
+		'wss://*.toolforge.org',
+		'localhost',
+		'https://localhost:*',
+		'http://localhost:*',
+		'wss://localhost:*',
+		'ws://localhost:*',
+	],
+	'donatewiki' => [
+		'*.wikimedia.org',
+	],
 ],
 
 'wgSuspiciousIpExpiry' => [
