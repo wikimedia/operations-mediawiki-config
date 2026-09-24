@@ -15,7 +15,6 @@ return [
 'wgCirrusSearchClusterOverrides' => [
 	'default' => [
 		'semantic' => 'semanticsearch-test',
-		'more_like' => 'eqiad',
 	],
 ],
 
