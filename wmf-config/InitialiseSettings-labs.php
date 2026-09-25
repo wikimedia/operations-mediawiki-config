@@ -238,7 +238,7 @@ function wmfGetOverrideSettings() {
 		'wgEventLoggingServiceUri' => [
 			// Configured in profile::trafficserver::backend::mapping_rules
 			// in Horizon hiera prefixpuppet for deployment-cache-text.
-			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
+			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
 		],
 
 		// Historically, EventLogging would register Schemas and revisions it used
@@ -528,7 +528,7 @@ function wmfGetOverrideSettings() {
 		// Enable MediaWiki client side (browser) Javascript error logging.
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
-			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
+			'default' => 'https://intake-logging-beta.wmcloud.org/v1/events?hasty=true'
 		],
 
 		'wmgUseMobileFrontend' => [
@@ -2452,7 +2452,7 @@ function wmfGetOverrideSettings() {
 
 		// T433711 Intake URL for when overridden experiments send events on beta cluster
 		'wgTestKitchenOverriddenExperimentEventIntakeServiceUrl' => [
-			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
+			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
 		],
 
 		'-wgEnableWatchstarPopover' => [

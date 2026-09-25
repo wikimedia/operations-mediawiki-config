@@ -60,9 +60,9 @@ return [
 		'urldownloader' => 'http://url-downloader.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'parsoid' => 'http://appservers.svc.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://mathoid.svc.deployment-prep.eqiad1.wikimedia.cloud:10044',
-		'eventgate-analytics' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8192',
-		'eventgate-analytics-external' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8492',
-		'eventgate-main' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8292',
+		'eventgate-analytics' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8192',
+		'eventgate-analytics-external' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8492',
+		'eventgate-main' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8292',
 		'upload' => 'deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud',
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 
