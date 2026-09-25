@@ -2198,6 +2198,10 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableWorklistEventDiscoveryTracking' => [
 			'default' => true,
 		],
+		// T437353
+		'wgCampaignEventsEnableWorklistCardView' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
