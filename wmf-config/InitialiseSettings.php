@@ -14413,17 +14413,6 @@ return [
 	'testwiki' => [ 'Wikipedia:ArticleGuidance' ],
 ],
 
-'wgArticleGuidanceRedirectEntryPointTitles' => [
-	'default' => [],
-	// phase 0
-	'testwiki' => [ 'Wikipedia:ArticleWizard' ],
-	// phase 1
-	'simplewiki' => [ 'Wikipedia:Article_wizard' ], // T426278
-	// phase 2
-	'ptwiki' => [ 'Wikipédia:Guia_de_criação_de_artigos' ], // T426871
-	'trwiki' => [ 'Vikipedi:Madde_sihirbazı' ], // T426871
-],
-
 'wgArticleGuidanceWikidataConnectEnabled' => [
 	'default' => true,
 ],
