@@ -486,6 +486,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces[] = 106;
 	} elseif ( $wgDBname == 'ruwikisource' ) {
 		$wgFlaggedRevsNamespaces[] = NS_HELP;
+		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 104;
 		$wgFlaggedRevsNamespaces[] = 106;
 
