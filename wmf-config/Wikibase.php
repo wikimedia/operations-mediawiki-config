@@ -73,6 +73,7 @@ $testWikidataClients = WmfConfig::readDbListFile( 'wikidataclient-test' );
 // Set term store virtual domain
 if ( in_array( $wgDBname, $testWikidataClients ) || $wgDBname === 'testwikidatawiki' ) {
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'testwikidatawiki' ];
+	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1', 'db' => false ];
 } else {
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki', 'cluster' => 'extension3' ];
 }
