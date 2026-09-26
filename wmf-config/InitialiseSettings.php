@@ -3978,8 +3978,7 @@ return [
 # Set to false in case of emergency to disable Score with a nice
 # fallback message instead of breaking pages with error messages
 'wmgUseScoreShellbox' => [
-	// Emergency
-	'default' => false,
+	'default' => true,
 	# Do not enable on higher-security wikis
 	'private' => false,
 	'lockeddown' => false,
