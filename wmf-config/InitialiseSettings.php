@@ -12945,36 +12945,17 @@ return [
 	'metawiki' => true,
 	'testwiki' => true,
 ],
-// T420878
+// T434924
 'wgReadingListBetaFeature' => [
 	'default' => false,
-	'testwiki' => false,
-	'mediawikiwiki' => false,
-	'wikipedia' => true,
-	'wikitech' => false,
-	'arwiki' => false,
-	'bnwiki' => false,
-	'cswiki' => false,
-	'enwiki' => false,
-	'frwiki' => false,
-	'idwiki' => false,
-	'viwiki' => false,
-	'zhwiki' => false,
 ],
-// T435258
+// T435258, T434924
 'wgReadingListsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
+	'wikipedia' => true,
 	'wikitech' => true,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'enwiki' => true,
-	'frwiki' => true,
-	'idwiki' => true,
-	'viwiki' => true,
-	'zhwiki' => true,
 ],
 'wgReadingListsMinervaCTA' => [
 	'default' => false,
