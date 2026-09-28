@@ -4664,7 +4664,6 @@ if ( $wgDBname === 'foundationwiki' ) {
 	$wgHooks['BeforePageDisplay'][] = static function ( $out, $skin ) {
 		$resp = $out->getRequest()->response();
 		$cspHeader = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikifunctions.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src  *.wikimedia.org data: 'unsafe-inline' 'self'; report-uri /w/api.php?action=cspreport&format=none&reportonly=1&source=wmfwiki&";
-		$resp->header( "Content-Security-Policy-Report-Only: $cspHeader" );
 	};
 }
 
