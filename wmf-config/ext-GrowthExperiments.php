@@ -874,4 +874,11 @@ return [
 	'frwiki' => '2026-09-29T15:00:00',
 ],
 
+'wgGEHomepageReadingRecommendationsFeaturedCategory' => [
+	'default' => 'Category:Featured articles',
+	'arwiki' => 'تصنيف:مقالات مختارة',
+	'eswiki' => 'Categoría:Wikipedia:Artículos destacados',
+	'frwiki' => 'Catégorie:Article de qualité',
+],
+
 ];
