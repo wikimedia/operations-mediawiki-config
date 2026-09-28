@@ -181,7 +181,7 @@ return [
 'conductwiki' => [ 'special', 'private', 'footer-legal-contact-link-exclusions', 'small', 'group1', 'parsoidrendered' ],
 'cowiki' => [ 'wikipedia', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'cowikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul', 'abusefilter-disabled' ],
-'cowikimedia' => [ 'footer-legal-contact-link-exclusions', 'small', 'visualeditor-nondefault', 'group1', 'translate', 'sul' ],
+'cowikimedia' => [ 'footer-legal-contact-link-exclusions', 'small', 'visualeditor-nondefault', 'group1', 'sul' ],
 'cowikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'sul', 'abusefilter-disabled' ],
 'cowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'crhwiki' => [ 'wikipedia', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],

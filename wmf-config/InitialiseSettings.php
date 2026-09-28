@@ -8704,7 +8704,6 @@ return [
 'wmgUseTranslationNotifications' => [
 	'default' => false,
 	'testwiki' => true,
-	'cowikimedia' => true, // T386776
 	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
