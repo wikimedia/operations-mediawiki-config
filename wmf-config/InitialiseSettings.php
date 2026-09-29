@@ -8059,6 +8059,12 @@ return [
 	'default' => 1800,
 ],
 
+// T401808
+'wgCheckUserClientHintsInEditRequest' => [
+	'default' => false,
+	'group0' => true,
+],
+
 // T398681
 'wgCheckUserUserInfoCardFeatureVisible' => [
 	'default' => true,
