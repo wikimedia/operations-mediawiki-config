@@ -8248,6 +8248,24 @@ return [
 	'nlwiki' => [ NS_MAIN, NS_USER, ] // T242030
 ],
 
+// Return-to-app behavior
+// The key config that enables this behavior is wgMFReturnToAppScheme, which
+// needs a nonempty string. All other config controls what happens when
+// return-to-app is triggered via a `?returntoapp=1` query param.
+'wgMFReturnToAppScheme' => [
+	'default' => '',
+	'testwiki' => 'wikipedia'
+],
+'wgMFReturnToAppBannerIcons' => [
+	'default' => [
+		'android' => '/static/images/mobile-apps/android-drop-shadow.png',
+		'ios' => '/static/images/mobile-apps/ios-drop-shadow.png'
+	],
+],
+'wgMFReturnToAppBehavior' => [
+	'default' => 'banner'
+],
+
 // ----------- MobileFrontend end ----------
 
 'wmgEnableTextExtracts' => [
