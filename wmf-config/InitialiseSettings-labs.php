@@ -1121,11 +1121,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T435258
-		'wgReadingListsMinervaCTA' => [
-			'default' => true,
-		],
-
 		// T434027
 		'wgReadingListsCustomLists' => [
 			'default' => true,

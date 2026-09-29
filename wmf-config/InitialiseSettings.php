@@ -12993,9 +12993,17 @@ return [
 ],
 'wgReadingListsMinervaCTA' => [
 	'default' => false,
-	// T435258
-	'testwiki' => true,
-	'test2wiki' => true,
+	// T438779
+	'mediawikiwiki' => true,
+	'wikipedia' => true,
+	'wikitech' => true,
+],
+'wgReadingListsMinervaCTAShowDot' => [
+	'default' => false,
+	// T438779
+	'mediawikiwiki' => true,
+	'wikipedia' => true,
+	'wikitech' => true,
 ],
 'wgReadingListsCustomLists' => [
 	'default' => false,
