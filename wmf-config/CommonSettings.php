@@ -4804,7 +4804,6 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSP ) {
 				'https://intake-logging.wikimedia.org',
 			],
 		];
-		$cspReportOnlyConfig = $cspConfig;
 	} else {
 		$cspConfig = [
 			'useNonces' => false,
@@ -4812,25 +4811,11 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSP ) {
 			'default-src' => $wmgApprovedContentSecurityPolicyDomains,
 			'script-src' => $wmgApprovedContentSecurityPolicyDomains,
 		];
-		$cspReportOnlyConfig = [
-			'default-src' => $wmgCSPReportOnlyDomains,
-			'script-src' => $wmgCSPReportOnlyDomains,
-		] + $cspConfig;
 	}
 
 	if ( $wmgUseCSPReportOnly ) {
-		// core cannot config these directives (for now), append via hook
-		$cspReportOnlySources = "'self' " . implode( ' ', $wmgCSPReportOnlyDomains );
-		$cspReportOnlyConfig['wmfDirectives'] = [
-			"base-uri 'none'",
-			"form-action $cspReportOnlySources",
-			"frame-ancestors $cspReportOnlySources",
-			"script-src-attr 'none'",
-		];
-		$wgCSPReportOnlyHeader = $cspReportOnlyConfig;
-		$wgHooks['ContentSecurityPolicyDirectives'][] = static function ( &$directives, $policyConfig ) {
-			array_push( $directives, ...( $policyConfig['wmfDirectives'] ?? [] ) );
-		};
+		// $wgCSPReportOnlyHeader defaults to false, so setup an array for config
+		$wgCSPReportOnlyHeader = $cspConfig;
 	}
 
 	if ( $wmgUseCSP ) {
