@@ -1270,4 +1270,11 @@ return [
 		'use' => true,
 	],
 ],
+'wgCirrusSearchMustTrackTotalHits' => [
+	'default' => [
+		'default' => true,
+		// enable WAND optimisation for morelike (https://phabricator.wikimedia.org/P96536)
+		'more_like_only' => false,
+	]
+],
 ];
