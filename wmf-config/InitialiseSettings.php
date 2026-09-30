@@ -8066,9 +8066,7 @@ return [
 
 // T401808
 'wgCheckUserClientHintsInEditRequest' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 // T398681
