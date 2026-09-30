@@ -80,6 +80,7 @@ class WmfConfig {
 		'rtl',
 		'translate',
 		'wikifunctionsclient',
+		'abstractwikiclient',
 		'growthexperiments',
 		'parsoidrendered',
 		'ores',

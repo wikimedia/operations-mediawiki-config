@@ -13846,6 +13846,7 @@ return [
 	'default' => false,
 	'wikifunctionswiki' => true,
 	'wikifunctionsclient' => true,
+	'abstractwikiclient' => true,
 ],
 
 'wgWikiLambdaEnableRepoMode' => [
@@ -13882,16 +13883,13 @@ return [
 'wgWikiLambdaEnableAbstractClientMode' => [
 	'default' => false,
 	'abstractwiki' => true,
-	'testwiki' => true,
-	'mlwiki' => true,
+	'abstractwikiclient' => true,
 ],
 
 // Whether wikis can have abstract articles displayed on them
 'wgWikiLambdaEnableAbstractClientModeIntegration' => [
 	'default' => false,
-	'abstractwiki' => false,
-	'testwiki' => true,
-	'mlwiki' => true,
+	'abstractwikiclient' => true,
 ],
 
 ### Wikistories-related configuration
