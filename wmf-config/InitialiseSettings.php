@@ -6892,6 +6892,11 @@ return [
 	'default' => false,
 ],
 
+// T432760
+'wgSplitParsoidParserCache' => [
+	'default' => true,
+],
+
 // T333179
 'wmgUseParserMigration' => [
 	'default' => true,
