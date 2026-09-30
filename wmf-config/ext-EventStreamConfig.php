@@ -2228,6 +2228,25 @@ return [
 				],
 			],
 		],
+		// Produced by pageview-trending-relative Flink job.
+		// This uses a custom schema and cannot be automatically loaded by regex
+		'mediawiki.job.pageviewTrendingRelativeUpdate' => [
+			'schema_title' => 'mediawiki/job/pageview_trending_relative_update',
+			// This stream is not produced via EventGate, but an event service must still be set.
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'message_key_fields' => [
+				'wiki_id' => 'database',
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'mediawiki.centralnotice.campaign-change' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/change',
 			'destination_event_service' => 'eventgate-main',
