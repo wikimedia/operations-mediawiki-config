@@ -6636,9 +6636,6 @@ return [
 	'+ruwikivoyage' => [
 		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links
 	],
-	'+wikidata' => [
-		'wikibase-mobile-editing-ui', // [Wikidata Omega] 2025-11-12 – MEX / wbui2025
-	],
 	'+wikipedia' => [
 		'multimediaviewer-beta', // [Reader Growth] Image carousel beta opt-in (T426799, T429414)
 	],
@@ -6794,7 +6791,7 @@ return [
 
 'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
 	'testwikidatawiki' => true, // T407737 (T394704)
-	'wikidatawiki' => true, // T403015 (T394704)
+	'wikidatawiki' => false, // T437054
 ],
 
 // ------------ BetaFeatures end -----------
@@ -13629,6 +13626,7 @@ return [
 
 'wmgWikibaseTmpMobileEditingUI' => [
 	'default' => false,
+	'wikidatawiki' => true, // T437054
 ],
 
 // for wmgWikibaseTmpMobileEditingUIBetaFeature, see the BetaFeatures section above
