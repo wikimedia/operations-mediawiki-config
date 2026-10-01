@@ -8433,19 +8433,13 @@ return [
 	],
 ],
 
+// T363032
 'wgMFUseDesktopSpecialEditWatchlistPage' => [
 	'default' => [
-		'base' => false,
-		'loggedin' => false,
-		'amc' => true,
-	],
-	// T263633
-	'wikidatawiki' => [
 		'base' => true,
-		'beta' => true,
 		'loggedin' => true,
 		'amc' => true,
-	]
+	],
 ],
 
 'wgMFDisplayWikibaseDescriptions' => [
