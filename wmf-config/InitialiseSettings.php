@@ -9963,6 +9963,8 @@ return [
 	'enwiki' => true,
 	// T438867
 	'jawiki' => true,
+	// T439928
+	'dewiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [
@@ -9972,6 +9974,8 @@ return [
 	'enwiki' => true,
 	// T438867
 	'jawiki' => true,
+	// T439928
+	'dewiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoFlagNotifications' => [
@@ -9980,6 +9984,8 @@ return [
 	'enwiki' => true,
 	// T438867
 	'jawiki' => true,
+	// T439928
+	'dewiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnableVandalismTag' => [
