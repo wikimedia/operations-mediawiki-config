@@ -119,4 +119,23 @@ $wmgThrottlingExceptions[] = [
 	'tempaccountvalue' => 50,
 ];
 
+// T439991: Lift IP cap for edit-a-thon
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-15T20:00 -03:00',
+	'to'     => '2026-10-15T22:00 -03:00',
+	'IP'     => '163.10.15.251',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-10-29T20:00 -03:00',
+	'to'     => '2026-10-29T22:00 -03:00',
+	'IP'     => '163.10.15.251',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
+	'tempaccountvalue' => 50,
+];
+
 ## Add throttling definitions above.
