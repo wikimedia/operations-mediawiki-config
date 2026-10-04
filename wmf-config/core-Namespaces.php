@@ -1149,6 +1149,10 @@ return [
 		'Templat' => NS_TEMPLATE, // T382087
 		'Kategori' => NS_CATEGORY, // T382087
 	],
+	'+madwiktionary' => [
+		'Wikikamus' => NS_PROJECT, // T440137
+		'Pakanḍhâ\'ânna Wikikamus' => NS_PROJECT_TALK, // T440137
+	],
 	'+maiwiki' => [
 		'वि' => NS_PROJECT, // T125801
 		'वि_वा' => NS_PROJECT_TALK, // T125801
@@ -6202,7 +6206,7 @@ return [
 	'lvwiktionary' => 'Vikivārdnīca', // T170065
 	'madwiki' => 'Wikipèḍia',
 	'madwikisource' => 'Wikigherbhung', // T391767
-	'madwiktionary' => 'Wikikamus',
+	'madwiktionary' => 'Wikioca\'', // T440137
 	'magwiki' => 'विकिपीडिया', // T428279
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',

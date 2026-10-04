@@ -1479,7 +1479,7 @@ return [
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'maiwikimedia' => 'मैथिली विकिमिडियन्स',
 	'madwikisource' => 'Wikigherbhung', // T391767
-	'madwiktionary' => 'Wikikamus',
+	'madwiktionary' => 'Wikioca\'', // T440137
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'MediaWiki',
 	'metawiki' => 'Meta-Wiki',
