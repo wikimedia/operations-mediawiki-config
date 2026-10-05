@@ -121,7 +121,7 @@ $wgWBCSRescoreProfiles = [
 		'supported_namespaces' => 'all',
 		'rescore' => [
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'query_weight' => 1.0,
 				'rescore_query_weight' => 1.0,
@@ -138,7 +138,7 @@ $wgWBCSRescoreProfiles = [
 		'supported_namespaces' => 'all',
 		'rescore' => [
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'score_mode' => 'total',
 				'type' => 'function_score',
@@ -163,7 +163,7 @@ $wgWBCSRescoreProfiles = [
 		'supported_namespaces' => 'all',
 		'rescore' => [
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'score_mode' => 'total',
 				'type' => 'function_score',
@@ -188,7 +188,7 @@ $wgWBCSRescoreProfiles = [
 		'supported_namespaces' => 'all',
 		'rescore' => [
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'score_mode' => 'total',
 				'type' => 'function_score',
@@ -213,7 +213,7 @@ $wgWBCSRescoreProfiles = [
 		'supported_namespaces' => 'all',
 		'rescore' => [
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'score_mode' => 'total',
 				'type' => 'function_score',
@@ -249,7 +249,7 @@ $wgWBCSRescoreProfiles = [
 				// defaults: 'score_mode' => 'total'
 			],
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'query_weight' => 1.0,
 				'rescore_query_weight' => 2.0,
@@ -265,7 +265,7 @@ $wgWBCSRescoreProfiles = [
 		'supported_namespaces' => 'all',
 		'rescore' => [
 			[
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'query_weight' => 1.0,
 				'rescore_query_weight' => 1.0,
@@ -278,7 +278,7 @@ $wgWBCSRescoreProfiles = [
 			[
 				// Append another rescore window to rescore based on the language "attributes" of the entity.
 				// This will boost entities based on $wgWBCSLanguageSelectorStatementBoost
-				'window' => 8192,
+				'window' => 500,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'query_weight' => 1.0,
 				'rescore_query_weight' => 1.0,

@@ -46,7 +46,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 			'fallback_profile' => $wmgCirrusSearchMLRModelFallback,
 			'rescore' => [
 				[
-					'window' => 8192,
+					'window' => 500,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
 					'score_mode' => 'total',
@@ -54,7 +54,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'wsum_inclinks_pv'
 				],
 				[
-					'window' => 8192,
+					'window' => 500,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
 					'score_mode' => 'multiply',

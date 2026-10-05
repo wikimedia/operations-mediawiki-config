@@ -1277,4 +1277,7 @@ return [
 		'more_like_only' => false,
 	]
 ],
+'wgCirrusSearchFunctionRescoreWindowSize' => [
+	'default' => 500,
+],
 ];
