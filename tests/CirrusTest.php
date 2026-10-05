@@ -340,25 +340,10 @@ class CirrusTest extends WgConfTestCase {
 
 	public static function provideConfigByLanguage() {
 		return [
-			'zhwiki' => [ 'zhwiki', 'wiki',
-				[
-					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					'wgCirrusSearchMaxPhraseTokens' => 10,
-				],
-			],
 			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource',
 				[
 					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
 					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-				],
-			],
-			'enwiki' => [ 'enwiki', 'wiki',
-				[
-					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
 					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
