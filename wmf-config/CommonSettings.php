@@ -3111,6 +3111,20 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorSuggestionFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
 	$wgVisualEditorSuggestionFeedbackTitle = 'VisualEditor/Suggestion_Mode/Feedback';
 
+	// linked-artifacts is null in the beta cluster
+	if ( $wmgVisualEditorEditSuggestionCounts && $wmgLocalServices['linked-artifacts'] ) {
+		$wgVisualEditorEditSuggestionCounts = [
+			'enabled' => true,
+			'linked_artifact_url_template' => $wmgLocalServices['linked-artifacts'] .
+				'/revisions/v1/edit_suggestions_counts/{wiki_id}/{page_id}/{revision_id}',
+			// Above the 30s LAC lambda timeout, and below the 55s timeout of the
+			// linked-artifacts mesh listener
+			'linked_artifact_precompute_timeout' => 50,
+			'namespaces_enabled' => [ 0 ],
+			'page_sample_proportion' => 1.0,
+		];
+	}
+
 	if ( $wgDBname === 'ruwiki' ) {
 		// T426271
 		$wgVisualEditorTextMatchFeedbackAPIURL = 'https://ru.wikipedia.org/w/api.php';

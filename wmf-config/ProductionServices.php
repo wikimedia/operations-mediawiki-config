@@ -90,6 +90,7 @@ $common = [
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	'chart-renderer' => 'http://localhost:6039',
 	'page-analytics' => 'http://localhost:6073',
+	'linked-artifacts' => 'http://localhost:6074',
 	'device-analytics' => 'http://localhost:6032',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',

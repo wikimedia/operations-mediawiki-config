@@ -7553,6 +7553,12 @@ return [
 	'default' => false,
 ],
 
+// Precompute edit suggestion counts in the Linked Artifacts Cache after each edit (T432733)
+'wmgVisualEditorEditSuggestionCounts' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
 	'default' => false,
 	'wikipedia' => true, // T415320
