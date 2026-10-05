@@ -130,6 +130,19 @@ return [
 // Enable crossprocess search (side bar)
 'wgCirrusSearchEnableCrossProjectSearch' => [
 	'default' => false,
+	'wikipedia' => true, // Activated on all wikipedias
+
+	'frwikibooks' => true, // T251683
+	'frwiktionary' => true, // T250724
+	// italian wikis used to have the old sidebar on all sisterwikis
+	// use the one there too.
+	'itwiktionary' => true,
+	'itwikibooks' => true,
+	'itwikinews' => true,
+	'itwikiquote' => true,
+	'itwikisource' => true,
+	'itwikiversity' => true,
+	'itwikivoyage' => true,
 ],
 
 // Tune crossproject ordering
@@ -141,7 +154,9 @@ return [
 // Define list of projects to block from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
 'wgCirrusSearchCrossProjectSearchBlockList' => [
-	'default' => [ 'w', 'wikt', 'b', 'n', 'q', 's', 'src', 'v', 'voy' ],
+	'default' => [],
+	// Block wikinews and wikiversity T163463
+	'enwiki' => [ 'n', 'v' ],
 ],
 
 // Define overridden interwiki prefixes
@@ -702,6 +717,15 @@ return [
 //       see wgCirrusSearchFallbackProfile
 'wgCirrusSearchEnableAltLanguage' => [
 	'default' => false,
+	'dewiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'nlwiki' => true,
+	'ptwiki' => true,
+	'ruwiki' => true,
 ],
 
 'wgCirrusSearchTextcatLanguages' => [
