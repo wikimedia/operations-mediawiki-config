@@ -9,7 +9,8 @@ use CirrusSearch\LanguageDetector\TextCat;
 return [
 
 'wgCirrusSearchDefaultCluster' => [
-	'default' => 'dnsdisc',
+	'default' => 'eqiad',
+	'enwiki' => 'codfw',
 ],
 
 'wgCirrusSearchClusterOverrides' => [
