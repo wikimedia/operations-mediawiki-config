@@ -15,6 +15,7 @@ return [
 'wgCirrusSearchClusterOverrides' => [
 	'default' => [
 		'semantic' => 'semanticsearch-test',
+		'completion' => 'codfw'
 	],
 ],
 
