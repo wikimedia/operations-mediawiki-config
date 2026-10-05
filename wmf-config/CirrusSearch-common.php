@@ -62,7 +62,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'optional_chain'
 				],
 				[
-					'window' => 100,
+					'window' => $mlrModel['window'] ?? 1024,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 10000.0,
 					'score_mode' => 'total',
