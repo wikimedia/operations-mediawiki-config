@@ -2086,6 +2086,7 @@ return [
 	'itwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T308917
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
+	'ltwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T440216
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'mrwikisource' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T269067
 	'nlwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T329642
@@ -4640,7 +4641,7 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'interface-admin' ] ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T249820
+		], // T402755
 	],
 	'jawiki' => [
 		'extendedconfirmed' => [ '&',
@@ -4658,6 +4659,15 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		], // T184675 (creation), T436449 (APCOND_AGE to AGE_FROM_EDIT)
+	],
+	'ltwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE_FROM_EDIT, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'interface-admin' ] ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T440216
 	],
 	'mznwiki' => [
 		'uploader' => [ '&',

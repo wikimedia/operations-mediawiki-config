@@ -1747,6 +1747,7 @@ return [
 	],
 	'+ltwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T367993
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T440216
 	],
 	'+lvwiki' => [
 		'autopatrolled' => [
@@ -4440,7 +4441,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
+		'sysop' => [ 'abusefilter', 'rollbacker', 'extendedconfirmed' ], // T367993, T440216
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
@@ -5855,7 +5856,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
+		'sysop' => [ 'abusefilter', 'rollbacker', 'extendedconfirmed' ], // T367993, T440216
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
