@@ -2903,38 +2903,10 @@ $wgTemplateStylesAllowedUrls = [
 ];
 
 wfLoadExtension( 'CodeMirror' );
-// CodeMirror instead of CodeEditor (T419332)
-$wgCodeMirrorEnabledModes['javascript'] = true;
-$wgCodeMirrorEnabledModes['json'] = true;
-$wgCodeMirrorEnabledModes['jsonc'] = true;
-$wgCodeMirrorEnabledModes['css'] = true;
-$wgCodeMirrorEnabledModes['lua'] = true;
-$wgCodeMirrorEnabledModes['vue'] = true;
-$wgCodeEditorEnabledModes['javascript'] = false;
-$wgCodeEditorEnabledModes['json'] = false;
-$wgCodeEditorEnabledModes['css'] = false;
-$wgCodeEditorEnabledModes['lua'] = false;
-$wgCodeEditorEnabledModes['vue'] = false;
-// AbuseFilter
-$wgAbuseFilterUseCodeEditor = false;
-$wgAbuseFilterUseCodeMirror = true;
-// Gadgets
-$wgGadgetsDefinitionsUseCodeEditor = false;
-$wgGadgetsDefinitionsUseCodeMirror = true;
-// JsonConfig
-$wgJsonConfigUseCodeEditor = false;
-$wgJsonConfigUseCodeMirror = true;
-// Scribunto
-$wgScribuntoUseCodeEditor = false;
-$wgScribuntoUseCodeMirror = true;
-// TemplateStyles
-$wgTemplateStylesUseCodeEditor = false;
-$wgTemplateStylesUseCodeMirror = true;
-// UploadWizard
-$wgUploadWizardUseCodeEditor = false;
-$wgUploadWizardUseCodeMirror = true;
 // Enable the new 2017 source editor integration globally (T432558)
 $wgCodeMirrorVisualEditorCustomHighlight = true;
+// This makes CodeMirror-for-wikitext opt-in globally.
+$wgDefaultUserOptions['usecodemirror'] = false;
 // English Wikipedia: Enable CodeMirror by default for users created
 // after 2026-09-14 as well as logged out users (T288161)
 if ( $wgDBname === 'enwiki' ) {
@@ -2943,10 +2915,6 @@ if ( $wgDBname === 'enwiki' ) {
 		[ 1, [ CUDCOND_ANON ] ],
 		[ 0, [ CUDCOND_NAMED ] ],
 	];
-} else {
-	// 'usecodemirror' is enabled in the extension. Keep all other wikis disabled for now,
-	// until we have a consensus for enabling it on all wikis (T440077)
-	$wgDefaultUserOptions['usecodemirror'] = false;
 }
 
 // Must be loaded BEFORE VisualEditor, or things will break
