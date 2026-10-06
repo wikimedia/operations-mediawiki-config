@@ -14551,6 +14551,7 @@ return [
 'wmgUseModeratorToolkit' => [
 	'default' => false,
 	'testwiki' => true, // T438334
+	'enwiki' => true, // T437617
 	'idwiki' => true, // T437617
 	'simplewiki' => true, // T437617
 	'thwiki' => true, // T437617
