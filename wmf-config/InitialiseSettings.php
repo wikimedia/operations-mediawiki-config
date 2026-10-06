@@ -13518,6 +13518,9 @@ return [
 		'fragments/v0-internal' => [ 'availability' => 'hidden' ],
 		'content/v2-beta' => [ 'availability' => 'disabled' ],
 	],
+	'+testwiki' => [
+		'content/v2-beta' => [ 'availability' => 'published' ],
+	],
 	'+metawiki' => [
 		'readinglists/v0' => [ 'availability' => 'published' ],
 	],
