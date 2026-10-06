@@ -2932,6 +2932,10 @@ if ( $wgDBname === 'enwiki' ) {
 		[ 1, [ CUDCOND_AFTER, '20260914000000' ] ],
 		[ 1, [ CUDCOND_ANON ] ],
 	];
+} else {
+	// 'usecodemirror' is enabled in the extension. Keep all other wikis disabled for now,
+	// until we have a consensus for enabling it on all wikis (T440077)
+	$wgDefaultUserOptions['usecodemirror'] = false;
 }
 
 // Must be loaded BEFORE VisualEditor, or things will break
