@@ -13494,6 +13494,16 @@ return [
 	'default' => 'CirrusSearch'
 ],
 
+### REST API COnfiguration
+
+'wgRestPath' => [
+	// Additional pretty path for the REST API, like wgArticlePath is for pages.
+	// The "ugly" path $wgScriptPath/rest.php always works.
+	// See T433535.
+	'testwiki' => '/api',
+	'default' => false, // $wgScriptPath/rest.php
+],
+
 'wgRestAllowCrossOriginCookieAuth' => [
 	// FIXME: Is this still needed?
 	// This was added for api.wikimedia.org because the WikimediaApiPortalOAuth extension
