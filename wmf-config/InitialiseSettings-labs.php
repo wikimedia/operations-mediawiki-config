@@ -2454,6 +2454,11 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
 		],
 
+		// T437720 Intake URL for when instruments send events on beta cluster
+		'wgTestKitchenInstrumentEventIntakeServiceUrl' => [
+			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
+		],
+
 		'-wgEnableWatchstarPopover' => [
 			'default' => false,
 			'enwiki' => true, // T431355
