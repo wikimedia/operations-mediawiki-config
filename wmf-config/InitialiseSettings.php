@@ -14551,6 +14551,10 @@ return [
 'wmgUseModeratorToolkit' => [
 	'default' => false,
 	'testwiki' => true, // T438334
+	'idwiki' => true, // T437617
+	'simplewiki' => true, // T437617
+	'thwiki' => true, // T437617
+	'trwiki' => true, // T437617
 ],
 
 'wmgSuppressOtherLanguageLinkUpdates' => [
