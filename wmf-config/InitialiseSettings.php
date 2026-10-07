@@ -14542,6 +14542,11 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'group1' => true,
-]
+],
+
+'wgGEHomeEnabled' => [
+	'default' => false,
+	'test2wiki' => true
+],
 
 ];

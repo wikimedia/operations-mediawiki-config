@@ -1425,6 +1425,10 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
 		],
+		'wgGEHomeEnabled' => [
+			'default' => false,
+			'enwiki' => true
+		],
 		'wgGEAccountSetupExperimentStartRegistrationDate' => [
 			'default' => '2026-09-09T13:00:00',
 		],

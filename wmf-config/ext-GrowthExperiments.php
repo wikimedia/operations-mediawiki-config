@@ -865,6 +865,10 @@ return [
 	'testwiki' => 'hasrecommendation:tone>=0.8 lasteditdate:<now',
 ],
 
+'wgGEHomeEnabled' => [
+	'default' => false,
+],
+
 'wgGEAccountSetupExperimentStartRegistrationDate' => [
 	'default' => null,
 	'testwiki' => '2026-09-09T13:00:00',
