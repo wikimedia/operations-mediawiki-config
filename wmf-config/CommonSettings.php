@@ -4769,9 +4769,6 @@ if ( $wmgUseWikiLambda ) {
 	// (T432849) Temporary config for moving fragment storage from memcached to mainstash
 	$wgWikiLambdaClientFragmentStoreBackend = 'mainstash';
 	$wgWikiLambdaAWFragmentStoreBackend = 'mainstash';
-
-	// (T400015) Temporary config for switching from Ace to CodeMirror
-	$wgWikiLambdaUseCodeMirror = true;
 }
 
 if ( $wmgUseWikistories ) {
