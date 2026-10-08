@@ -10284,6 +10284,11 @@ return [
 	'yiwiki' => [ 'en', 'he', 'de' ],
 ],
 
+'wgULSLanguageSelectorV2SupportedSkins' => [
+	// T439707
+	'default' => [ 'minerva', 'vector-2022' ],
+],
+
 'wgInterlanguageLinkCodeMap' => [
 	'default' => [
 		'als' => 'gsw', // T25215
