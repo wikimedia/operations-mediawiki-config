@@ -501,26 +501,21 @@ if ( PHP_SAPI === 'cli' ) {
 }
 
 // Use Hadoop for QueryPages computation (T309738)
-$wmgExternalQuerySourcesBaseUrl = "{$wmgLocalServices['analytics-web']}/published/datasets/querypage";
-$wgExternalQuerySources = [
-	'Mostcategories' => [
-		'enabled' => false,
-		'url' => "{$wmgExternalQuerySourcesBaseUrl}/MostCategories/{$wgDBname}.json",
-		'timeout' => 10,
-	],
-	'Mostlinkedtemplates' => [
-		'enabled' => false,
-		'url' => "{$wmgExternalQuerySourcesBaseUrl}/MostTranscludedPages/{$wgDBname}.json",
-		'timeout' => 10,
-	],
-	'Unusedtemplates' => [
-		'enabled' => false,
-		'url' => "{$wmgExternalQuerySourcesBaseUrl}/UnusedTemplates/{$wgDBname}.json",
-		'timeout' => 10,
-	],
+// Maps each supported query page to the dataset published for it by the analytics pipeline.
+// To enable a query page on a wiki, add it to wmgExternalQuerySources in InitialiseSettings.php.
+$wmgExternalQuerySourceDatasets = [
+	'Mostcategories' => 'MostCategories',
+	'Mostlinkedtemplates' => 'MostTranscludedPages',
+	'Unusedtemplates' => 'UnusedTemplates',
 ];
-foreach ( $wmgExternalQuerySources as $source ) {
-	$wgExternalQuerySources[$source]['enabled'] = true;
+$wmgExternalQuerySourcesBaseUrl = "{$wmgLocalServices['analytics-web']}/published/datasets/querypage";
+$wgExternalQuerySources = [];
+foreach ( $wmgExternalQuerySources as $pageName ) {
+	$wgExternalQuerySources[$pageName] = [
+		'enabled' => true,
+		'url' => "{$wmgExternalQuerySourcesBaseUrl}/{$wmgExternalQuerySourceDatasets[$pageName]}/{$wgDBname}.json",
+		'timeout' => 10,
+	];
 }
 
 # ######################################################################
