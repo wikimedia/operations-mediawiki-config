@@ -4378,7 +4378,6 @@ return [
 		'Lonelypages', // T371662
 
 		// Not compatible with commons split yet (T309738)
-		'Unusedtemplates',
 		'Unusedimages',
 		'Unusedcategories',
 		'Wantedfiles',
@@ -4414,7 +4413,8 @@ return [
 	],
 	'commonswiki' => [
 		'Mostcategories',
-		'Mostlinkedtemplates'
+		'Mostlinkedtemplates',
+		'Unusedtemplates',
 	],
 	'enwiki' => [ 'Mostlinkedtemplates' ],
 	'frwiki' => [ 'Mostcategories' ],

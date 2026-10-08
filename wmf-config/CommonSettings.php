@@ -513,6 +513,11 @@ $wgExternalQuerySources = [
 		'url' => "{$wmgExternalQuerySourcesBaseUrl}/MostTranscludedPages/{$wgDBname}.json",
 		'timeout' => 10,
 	],
+	'Unusedtemplates' => [
+		'enabled' => false,
+		'url' => "{$wmgExternalQuerySourcesBaseUrl}/UnusedTemplates/{$wgDBname}.json",
+		'timeout' => 10,
+	],
 ];
 foreach ( $wmgExternalQuerySources as $source ) {
 	$wgExternalQuerySources[$source]['enabled'] = true;
