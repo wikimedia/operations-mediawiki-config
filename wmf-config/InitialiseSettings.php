@@ -14556,9 +14556,7 @@ return [
 ],
 
 'wmgSuppressOtherLanguageLinkUpdates' => [
-	'default' => false,
-	'testwiki' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 'wgGEHomeEnabled' => [
