@@ -277,6 +277,7 @@ return [
 	'nowiki' => '/static/images/project-logos/nowiki.png',
 	'nqowiki' => '/static/images/project-logos/nqowiki.png',
 	'nrmwiki' => '/static/images/project-logos/nrmwiki.png', // T51125
+	'nrwiki' => '/static/images/project-logos/nrwiki.png', // T440138
 	'nsowiki' => '/static/images/project-logos/nsowiki.png',
 	'nvwiki' => '/static/images/project-logos/nvwiki.png', // T42285
 	'nywiki' => '/static/images/project-logos/nywiki.png', // T211570
@@ -389,7 +390,7 @@ return [
 	'wowiki' => '/static/images/project-logos/wowiki.png', // T42285
 	'wuuwiki' => '/static/images/project-logos/wuuwiki.png', // T46974
 	'xalwiki' => '/static/images/project-logos/xalwiki.png', // T46974
-	'xhwiki' => '/static/images/project-logos/xhwiki.png',
+	'xhwiki' => '/static/images/project-logos/xhwiki.png', // T440139
 	'xmfwiki' => '/static/images/project-logos/xmfwiki.png',
 	'yiwiki' => '/static/images/project-logos/yiwiki.png',
 	'yowiki' => '/static/images/project-logos/yowiki.png',
@@ -1181,6 +1182,7 @@ return [
 	'nowiki' => '/static/images/project-logos/nowiki-2x.png', // T150618
 	'nqowiki' => '/static/images/project-logos/nqowiki-2x.png',
 	'nrmwiki' => '/static/images/project-logos/nrmwiki-2x.png', // T150618
+	'nrwiki' => '/static/images/project-logos/nrwiki-2x.png', // T440138
 	'nvwiki' => '/static/images/project-logos/nvwiki-2x.png', // T150618
 	'nywiki' => '/static/images/project-logos/nywiki-2x.png', // T211570
 	'ocwiki' => '/static/images/project-logos/ocwiki-2x.png', // T150618
@@ -1289,6 +1291,7 @@ return [
 	'wowiki' => '/static/images/project-logos/wowiki-2x.png', // T150618
 	'wuuwiki' => '/static/images/project-logos/wuuwiki-2x.png', // T150618
 	'xalwiki' => '/static/images/project-logos/xalwiki-2x.png', // T150618
+	'xhwiki' => '/static/images/project-logos/xhwiki-2x.png', // T440139
 	'xmfwiki' => '/static/images/project-logos/xmfwiki-2x.png', // T150618
 	'yiwiki' => '/static/images/project-logos/yiwiki-2x.png', // T150618
 	'yowiki' => '/static/images/project-logos/yowiki-2x.png', // T150618
@@ -6363,6 +6366,11 @@ return [
 		'width' => 120,
 		'height' => 15,
 	],
+	'nrwiki' => [ // T440138
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nr.svg',
+		'width' => 117,
+		'height' => 13,
+	],
 	'nsowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nso.svg',
 		'width' => 120,
@@ -6923,8 +6931,8 @@ return [
 		'width' => 101,
 		'height' => 12,
 	],
-	'xhwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-en.svg',
+	'xhwiki' => [ // T440139
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-xh.svg',
 		'width' => 117,
 		'height' => 13,
 	],

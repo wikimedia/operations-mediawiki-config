@@ -1175,6 +1175,12 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    nrwiki:
+        commons: 'File:Wikipedia-logo-v2-nr.svg'
+        comment: T440138
+        comment_2x: T440138
+        commons_tagline: 'File:Wikipedia-tagline-nr.svg'
+        comment_tagline: T440138
     nsowiki:
         no_2x: true
         local_tagline: true
@@ -1751,8 +1757,11 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     xhwiki:
-        no_2x: true
-        selected_tagline: enwiki
+        commons: 'File:Wikipedia-logo-v2-xh.svg'
+        comment: T440139
+        comment_2x: T440139
+        commons_tagline: 'File:Wikipedia-tagline-xh.svg'
+        comment_tagline: T440139
     xmfwiki:
         comment_2x: T150618
         local_tagline: true
