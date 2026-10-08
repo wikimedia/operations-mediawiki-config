@@ -7580,6 +7580,7 @@ return [
 'wgCiteCitationTypeAutoNames' => [
 	'default' => false,
 	'testwiki' => true,
+	'group0' => true, // T440357
 ],
 
 // T432544: default a <ref> without an explicit dir attribute to dir="auto", so
