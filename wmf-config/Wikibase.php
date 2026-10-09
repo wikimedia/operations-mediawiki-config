@@ -218,6 +218,7 @@ $wikibaseEntityUsageExtension1 = [
 	// s6 wikis
 	'frwiki',
 	'jawiki',
+	'ruwiki',
 ];
 if ( in_array( $wgDBname, $wikibaseEntityUsageExtension1 ) ) {
 	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1', 'db' => false ];
