@@ -314,7 +314,7 @@ return [
 'frwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'frwikinews' => [ 'closed', 'medium', 'wikidataclient', 'group0', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'frwikiquote' => [ 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'modern-mainpage', 'parsoidrendered', 'sul' ],
-'frwikisource' => [ 'flow', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'parsoidrendered', 'sul' ],
+'frwikisource' => [ 'flow', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'frwikiversity' => [ 'flow', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'frwikivoyage' => [ 'flow', 'medium', 'wikidataclient', 'group1', 'parsoidrendered', 'sul' ],
 'frwiktionary' => [ 'flow', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'translate', 'wikifunctionsclient', 'growthexperiments', 'parsoidrendered', 'sul' ],
