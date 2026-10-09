@@ -7550,10 +7550,12 @@ return [
 	'default' => false,
 ],
 
-// Precompute edit suggestion counts in the Linked Artifacts Cache after each edit (T432733)
+// Precompute edit suggestion counts in the Linked Artifacts Cache after each edit (T432733).
+// false: off. true: all pages. A number from 0 to 1: that proportion of pages (T433024).
 'wmgVisualEditorEditSuggestionCounts' => [
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => 0.01,
 ],
 
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [

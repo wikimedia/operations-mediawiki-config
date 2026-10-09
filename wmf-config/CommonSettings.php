@@ -3124,7 +3124,8 @@ if ( $wmgUseVisualEditor ) {
 			// linked-artifacts mesh listener
 			'linked_artifact_precompute_timeout' => 50,
 			'namespaces_enabled' => [ 0 ],
-			'page_sample_proportion' => 1.0,
+			'page_sample_proportion' => $wmgVisualEditorEditSuggestionCounts === true ?
+				1.0 : (float)$wmgVisualEditorEditSuggestionCounts,
 		];
 	}
 
