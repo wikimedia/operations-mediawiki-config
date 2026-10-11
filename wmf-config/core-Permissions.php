@@ -945,6 +945,10 @@ return [
 		'sysop' => [ 'templateeditor' => true ], // T148007
 		'templateeditor' => [ 'templateeditor' => true ], // T148007
 	],
+	'+eowiki' => [
+		'templateeditor' => [ 'templateeditor' => true ], // T440764
+		'sysop' => [ 'templateeditor' => true ], // T440764
+	],
 	'+eswiki' => [
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
 		'rollbacker' => [
@@ -4079,6 +4083,9 @@ return [
 			'extendedmover', // T212662
 		],
 	],
+	'+eowiki' => [
+		'sysop' => [ 'templateeditor' ], // T440764
+	],
 	'+eswiki' => [
 		'bureaucrat' => [
 			'abusefilter', // T262174
@@ -5584,6 +5591,9 @@ return [
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared', ],
+	],
+	'+eowiki' => [
+		'sysop' => [ 'templateeditor' ], // T440764
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor', 'botadmin', ], // T262174, T330470, T342484

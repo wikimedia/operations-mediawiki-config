@@ -2073,6 +2073,7 @@ return [
 	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
 	'enwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T414711
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
+	'eowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T440764
 	'eswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T330470
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
