@@ -2662,6 +2662,10 @@ if ( $wmgUseTestKitchen ) {
 wfLoadExtension( 'WikimediaCustomizations' );
 wfLoadExtension( 'WikimediaMessages' );
 
+if ( $wmgWMCIncludeContributorCounts && $wmgLocalServices['data-gateway'] ) {
+	$wgWMCContributorCountsEndpoint = $wmgLocalServices['data-gateway'] . '/public/linked_artifacts/editor_counts_per_page/{wiki_id}/{page_id}';
+}
+
 if ( $wmgUseCentralAuth ) {
 	// Assign REST gateway rate limit classes based on global groups.
 	// The WikimediaCustomization extension adds these to the JWT payload.

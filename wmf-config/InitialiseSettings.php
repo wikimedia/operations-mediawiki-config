@@ -14553,6 +14553,11 @@ return [
 	],
 ],
 
+'wmgWMCIncludeContributorCounts' => [
+	'default' => false,
+	'wikipedia' => true, // T429834
+],
+
 'wmgUseModeratorToolkit' => [
 	'default' => false,
 	'testwiki' => true, // T438334
