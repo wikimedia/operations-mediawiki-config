@@ -4384,7 +4384,6 @@ return [
 		'Wantedfiles',
 		'DisambiguationPageLinks',
 		'Uncategorizedimages',
-		'Wantedcategories',
 		'GloballyWantedFiles',
 	],
 
@@ -4398,7 +4397,6 @@ return [
 		'Unusedimages',
 		'Unusedcategories',
 		'Unusedtemplates',
-		'Wantedcategories',
 		'Wantedfiles',
 		'DisambiguationPageLinks',
 	],
