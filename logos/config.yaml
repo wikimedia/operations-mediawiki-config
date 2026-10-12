@@ -798,7 +798,14 @@ Wikipedia:
         commons_tagline: 'File:Wikipedia-tagline-kaj.svg'
         comment_tagline: T415038
     kawiki:
-        comment_2x: T150618
+        selected: kawiki-200000
+        variants:
+            kawiki-200000:
+                commons: 'File:Georgian_Wikipedia_200000th_article_logo-vector2010.svg'
+                commons_icon: 'File:Georgian_Wikipedia_200000th_article_logo.svg'
+        commons: 'File:Wikipedia-logo-v2-ka.svg'
+        comment_2x: T150618, T439994
+        comment_icon: T439994
         commons_wordmark: 'File:Wikipedia-wordmark-ka.svg'
         comment_wordmark: T267776
         commons_tagline: 'File:Wikipedia-tagline-ka.svg'
