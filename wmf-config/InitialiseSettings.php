@@ -14564,7 +14564,12 @@ return [
 
 'wgGEHomeEnabled' => [
 	'default' => false,
-	'test2wiki' => true
+	'test2wiki' => true,
+],
+
+// T440873
+'wgOAuth2ClientCredentialsOwnerAuthCutover' => [
+	'default' => '20261019000000',
 ],
 
 ];
