@@ -1462,6 +1462,10 @@ if ( $wmgUseSpamBlacklist ) {
 		],
 	];
 	$wgLogSpamBlacklistHits = true;
+
+	// Technically abuse filter config but until we completely move all functionalities of spam blacklist
+	// too abuse filter, we need to keep them here
+	$wgAbuseFilterGlobalBlockedExternalDomainsDB = 'metawiki';
 }
 
 wfLoadExtension( 'TitleBlacklist' );

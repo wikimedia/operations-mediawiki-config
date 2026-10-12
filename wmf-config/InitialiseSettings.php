@@ -6080,8 +6080,6 @@ return [
 ],
 'wgAbuseFilterEnableBlockedExternalDomain' => [
 	'default' => true,
-	// Meta holds the shared spam blacklist
-	'metawiki' => false,
 	// Wikibase doesn't work with the new system (T65632)
 	'wikidatawiki' => false,
 	'testwikidatawiki' => false,
