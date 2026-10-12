@@ -2370,7 +2370,8 @@ return [
 		'thumbnail' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
 		'timeline' => 'info', // T429654
-		'TitleBlacklist-cache' => 'debug', // For T85428
+		'TitleBlacklist' => 'info', // For T85428
+		'TitleBlacklist-cache' => 'debug', // TODO: Remove
 		'torblock' => 'debug',
 		'TranslationNotifications.Jobs' => 'debug',
 		'Translate.Jobs' => 'debug',

@@ -388,7 +388,7 @@ function wmfGetOverrideSettings() {
 				'throttler' => 'info',
 				'thumbnail' => 'debug',
 				'thumbnailaccess' => 'debug', // T106323
-				'TitleBlacklist-cache' => 'debug', // For T85428
+				'TitleBlacklist' => 'info', // For T85428
 				'torblock' => 'debug',
 				'TranslationNotifications.Jobs' => 'debug',
 				'Translate.Jobs' => 'debug',
