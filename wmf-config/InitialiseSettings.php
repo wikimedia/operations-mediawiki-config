@@ -7577,11 +7577,9 @@ return [
 	'enwiki' => false,
 ],
 
-// T431544
+// T440243
 'wgCiteCitationTypeAutoNames' => [
-	'default' => false,
-	'testwiki' => true,
-	'group0' => true, // T440357
+	'default' => true,
 ],
 
 // T432544: default a <ref> without an explicit dir attribute to dir="auto", so
