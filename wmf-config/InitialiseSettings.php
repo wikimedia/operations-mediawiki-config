@@ -8289,8 +8289,7 @@ return [
 // needs a nonempty string. All other config controls what happens when
 // return-to-app is triggered via a `?returntoapp=1` query param.
 'wgMFReturnToAppScheme' => [
-	'default' => '',
-	'testwiki' => 'wikipedia'
+	'default' => 'wikipedia'
 ],
 'wgMFReturnToAppBannerIcons' => [
 	'default' => [
