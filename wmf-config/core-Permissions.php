@@ -1693,6 +1693,9 @@ return [
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T184675
 		'sysop' => [ 'extendedconfirmed' => true, ], // T184675
 	],
+	'+krcwiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T440898
+	],
 	'+kswiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T286789
 		'uploader' => [ // T305320
@@ -4422,6 +4425,9 @@ return [
 			'extendedconfirmed', // T184675
 		],
 	],
+	'+krcwiki' => [
+		'sysop' => [ 'rollbacker' ], // T440898
+	],
 	'+kswiki' => [
 		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
 	],
@@ -5842,6 +5848,9 @@ return [
 	],
 	'+kowiki' => [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
+	],
+	'+krcwiki' => [
+		'sysop' => [ 'rollbacker' ], // T440898
 	],
 	'+kswiki' => [
 		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
