@@ -7553,7 +7553,7 @@ return [
 'wmgVisualEditorEditSuggestionCounts' => [
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => 0.05,
+	'enwiki' => 0.25,
 ],
 
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
