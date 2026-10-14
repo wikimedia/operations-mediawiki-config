@@ -157,6 +157,10 @@ return [
 	'+arwikiquote' => [
 		'وق' => NS_PROJECT, // T419828
 	],
+	'+arywiki' => [
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
+	],
 	'+arzwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -854,6 +858,10 @@ return [
 		'RK' => /* Reconstruction */ 118, // T373634
 		'Wiktionary_diskusija' => NS_PROJECT_TALK,
 	],
+	'+hywiki' => [
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
+	],
 	'+huwiki' => [
 		'Portál_vita' => 101,
 		'Draft' => 118, // T333083
@@ -892,6 +900,10 @@ return [
 		'Wikisumber' => NS_PROJECT, // T341173
 		'Pembicaraan_Wikisumber' => NS_PROJECT_TALK, // T341173
 	],
+	'+igwiki' => [
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
+	],
 	'+ilowiki' => [
 		'WT' => NS_PROJECT_TALK, // T40247
 	],
@@ -918,6 +930,8 @@ return [
 		'DP' => 103, // T101274
 		'DW' => NS_PROJECT_TALK, // T101274
 		'T' => NS_TEMPLATE, // T101274
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 	],
 	'+itwikibooks' => [
 		'Portale' => 100,
@@ -1625,6 +1639,8 @@ return [
 		'ПОР' => 100, // T346588
 		'RPOR' => 101, // T346588
 		'РПОР' => 101, // T346588
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 		'MD' => 828, // T346588
 		'МД' => 828, // T346588
 		'MOD' => 828, // T346588
@@ -1769,6 +1785,8 @@ return [
 	'+thwiki' => [
 		'H' => NS_HELP, // T70108
 		'WT' => NS_PROJECT_TALK, // T401287
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 	],
 	'+thwikibooks' => [
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
