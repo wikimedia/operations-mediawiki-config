@@ -2364,6 +2364,11 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
+		// T440832 temporary feature flag, beta only
+		'wmgWikibaseTmpHCaptchaIntegration' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
 		// T391064
 		'-wgTemplateDataEnableFeaturedTemplates' => [
 			'default' => false,
