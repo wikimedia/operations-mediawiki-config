@@ -851,17 +851,15 @@ return [
 		'import' => [ 'mergehistory' => true ], // T380753
 	],
 	'+enwikibooks' => [
-		'bot' => [ 'autopatrol' => false ], // T426992
-		'editor' => [
+		'autopatrolled' => [ 'autopatrol' => true, ], // T440519
+		'patroller' => [
+			'autopatrol' => true, // T440519
+			'patrol' => true, // T440519
 			'rollback' => true, // T426992
 			'suppressredirect' => true, // T268849
 		],
 		'flood' => [ 'bot' => true ],
-		'sysop' => [
-			'autopatrol' => false, // T426992
-			'patrol' => false, // T426992
-			'importupload' => true, // T278683
-		],
+		'sysop' => [ 'importupload' => true, ], // T278683
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
@@ -4030,9 +4028,11 @@ return [
 	'+enwikibooks' => [
 		'sysop' => [
 			'accountcreator', // T411828
+			'autopatrolled', // T440519
 			'confirmed', // T411828
 			'flood', // T285594
 			'import', // T278683
+			'patroller', // T440519
 			'transwiki',
 			'uploader',
 		],
@@ -5565,7 +5565,16 @@ return [
 		],
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood', 'accountcreator', 'confirmed' ], // T278683, T285594, T411828
+		'sysop' => [
+			'accountcreator', // T411828
+			'autopatrolled', // T440519
+			'confirmed', // T411828
+			'flood', // T285594
+			'import', // T278683
+			'patroller', // T440519
+			'transwiki',
+			'uploader',
+		],
 	],
 	'+enwikiquote' => [
 		'sysop' => [
