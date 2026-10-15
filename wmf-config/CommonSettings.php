@@ -2938,6 +2938,7 @@ if ( $wgDBname === 'enwiki' ) {
 	$wgConditionalUserOptions['usecodemirror'] = [
 		[ 1, [ CUDCOND_AFTER, '20260914000000' ] ],
 		[ 1, [ CUDCOND_ANON ] ],
+		[ 0, [ CUDCOND_NAMED ] ],
 	];
 } else {
 	// 'usecodemirror' is enabled in the extension. Keep all other wikis disabled for now,
