@@ -12852,10 +12852,6 @@ return [
 	'default' => false,
 	'private' => true,
 ],
-'wgOATHAuth2FAForAllWarnings' => [
-	'default' => false,
-	'private' => true,
-],
 'wgOATHInitialRecoveryCodesValidityDays' => [
 	'default' => 30,
 	'collabwiki' => 21,
