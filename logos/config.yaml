@@ -3587,6 +3587,12 @@ Wikivoyage:
         commons: 'File:Wikivoyage-logo-id-new.svg'
         commons_wordmark: 'File:Wikivoyage-wordmark-id.svg'
         comment_wordmark: 'T381080'
+    mlwikivoyage:
+        comment: T441173
+        comment_2x: T441173
+        commons: 'File:Wikivoyage-Logo-v3-ml.svg'
+        commons_wordmark: 'File:Wikivoyage-workmark-ml.svg'
+        comment_wordmark: 'T441173'
     plwikivoyage:
         local_wordmark: true
     pswikivoyage:

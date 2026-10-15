@@ -516,6 +516,7 @@ return [
 	'minwikiquote' => 'Asia/Jakarta', // T429943
 	'minwikisource' => 'Asia/Jakarta', // T408343
 	'minwiktionary' => 'Asia/Jakarta',
+	'mlwikivoyage' => 'Asia/Kolkata', // T441173
 	'mniwiki' => 'Asia/Kolkata',
 	'mniwiktionary' => 'Asia/Kolkata',
 	'mnwwiki' => 'Asia/Yangon',
@@ -1495,6 +1496,7 @@ return [
 	'mlwikibooks' => 'വിക്കിപാഠശാല',
 	'mlwikiquote' => 'വിക്കിചൊല്ലുകൾ',
 	'mlwikisource' => 'വിക്കിഗ്രന്ഥശാല',
+	'mlwikivoyage' => 'വിക്കിയാത്ര', // T441173
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',

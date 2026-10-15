@@ -6194,6 +6194,7 @@ return [
 	'mlwikibooks' => 'വിക്കിപാഠശാല',
 	'mlwikiquote' => 'വിക്കിചൊല്ലുകൾ',
 	'mlwikisource' => 'വിക്കിഗ്രന്ഥശാല',
+	'mlwikivoyage' => 'വിക്കിയാത്ര', // T441173
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
