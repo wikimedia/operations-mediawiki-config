@@ -246,7 +246,7 @@ return [
 'elwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
 'emlwiki' => [ 'wikipedia', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'enwiki' => [ 'wikipedia', 'flaggedrevs', 'math-legacy-mathoid', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
-'enwikibooks' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
+'enwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'enwikinews' => [ 'closed', 'flow', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'sul' ],
 'enwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices', 'parsoidrendered', 'sul' ],
 'enwikisource' => [ 'wikidataclient', 'visualeditor-nondefault', 'group1', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'parsoidrendered', 'sul' ],

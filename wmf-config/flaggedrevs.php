@@ -95,17 +95,6 @@ call_user_func( static function () {
 			'benchmarks' => 1,
 			'email' => false
 		];
-
-	} elseif ( $wgDBname == 'enwikibooks' ) {
-		$wgFlaggedRevsAutopromote = [
-			'days' => 30,
-			'edits' => 100,
-			'spacing' => 2,
-			'benchmarks' => 8,
-			'totalContentEdits' => 50,
-			'uniqueContentPages' => 10,
-			'editComments' => 50,
-		] + $wmgStandardAutoPromote;
 	} elseif ( $wgDBname == 'hewikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
@@ -304,14 +293,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgRemoveGroups['sysop'][] = 'reviewer';
 		# Remove 'editor' and 'autoreview' (T91934) user groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
-	} elseif ( $wgDBname == 'enwikibooks' ) {
-		// Limited to the main, Cookbook, and Wikijunior namespaces (T408110)
-		$wgFlaggedRevsNamespaces = [ NS_MAIN, 102, 110 ];
-		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 1 ] ]; // T428329
-
-		$wgGroupPermissions['sysop']['stablesettings'] = true;
-
-		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'eowiki' ) {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'fawiki' ) {

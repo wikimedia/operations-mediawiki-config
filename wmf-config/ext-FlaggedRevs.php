@@ -28,7 +28,6 @@ return [
 	'dewikiquote' => false,
 	'dewiktionary' => false,
 	'enwiki' => false,
-	'enwikibooks' => false,
 	'eowiki' => false,
 	'fawiki' => false,
 	'fiwiki' => false,
@@ -55,7 +54,6 @@ return [
 
 'wgSimpleFlaggedRevsUI' => [
 	'default' => true,
-	'enwikibooks' => false,
 	'fiwiki' => false,
 	'ptwikibooks' => false,
 	'ruwiki' => false,
@@ -67,7 +65,6 @@ return [
 	'bnwiki' => 0,
 	'ckbwiki' => 0,
 	'enwiki' => 0,
-	'enwikibooks' => 0, // T410330
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
