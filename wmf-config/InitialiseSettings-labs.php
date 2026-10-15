@@ -2369,6 +2369,11 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
+		// T440832 hCaptcha with the public integration test keys, see CommonSettings-labs.php
+		'wmgWikibaseHCaptchaTestKeys' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
 		// T391064
 		'-wgTemplateDataEnableFeaturedTemplates' => [
 			'default' => false,
