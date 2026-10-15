@@ -6897,6 +6897,11 @@ return [
 ],
 
 // T432760
+'wgUseParsoidParser' => [
+	'default' => false,
+],
+
+// T432760
 'wgUseParsoidLinksUpdate' => [
 	'default' => false,
 ],
