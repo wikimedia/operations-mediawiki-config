@@ -6758,11 +6758,6 @@ return [
 	'wikisource' => true,
 ],
 
-'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
-	'testwikidatawiki' => true, // T407737 (T394704)
-	'wikidatawiki' => false, // T437054
-],
-
 // ------------ BetaFeatures end -----------
 
 // -------------- Media Viewer configs --------------
@@ -13691,8 +13686,6 @@ return [
 	'default' => false,
 	'wikidatawiki' => true, // T437054
 ],
-
-// for wmgWikibaseTmpMobileEditingUIBetaFeature, see the BetaFeatures section above
 
 // T421850 - prototype displaying links to WikiProjects on Item pages
 'wmgWikibaseTmpWikiProjectsLinking' => [

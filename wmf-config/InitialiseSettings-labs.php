@@ -2336,10 +2336,6 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
-		// T403015 - no point in the beta feature if `wmgWikibaseTmpMobileEditingUI` is set.
-		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
-			'wikidatawiki' => false,
-		],
 		// T421850 - prototype displaying links to WikiProjects on Item pages
 		'wmgWikibaseTmpWikiProjectsLinking' => [
 			'wikidatawiki' => [
