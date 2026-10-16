@@ -14561,6 +14561,7 @@ return [
 
 'wmgSuppressOtherLanguageLinkUpdates' => [
 	'default' => true,
+	'cswikiversity' => false,
 ],
 
 'wgGEHomeEnabled' => [
