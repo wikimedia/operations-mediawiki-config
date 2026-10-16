@@ -5,29 +5,38 @@
 <title>Wikimedia Error</title>
 <style>
 * { margin: 0; padding: 0; }
-body { background: #fff; font: 15px/1.6 sans-serif; color: #333; }
-.content { margin: 7% auto 0; padding: 2em; max-width: 640px; }
-#logo { float: left; margin: 0 2em 2em 0; }
-a #logo { border: 0; }
-h1 { margin-top: 1em; font-size: 1.2em; }
-p { margin: 0.7em 0 1em 0; }
-a { color: #0645AD; text-decoration: none; }
+body { background: #fff; font: 14px/22px system-ui, -apple-system, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif; color: #202122; }
+.content { box-sizing: border-box; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; margin: 0 auto; padding: 32px; max-width: 640px; text-align: center; }
+#logo { display: block; max-width: 100%; height: auto; }
+a img { border: 0; }
+.text { display: flex; flex-direction: column; gap: 8px; }
+h1 { font-size: 18px; line-height: 28px; font-weight: bold; }
+a { color: #36c; text-decoration: none; }
 a:hover { text-decoration: underline; }
+.external { display: inline-flex; align-items: center; gap: 4px; }
+.external svg { width: 14px; height: 14px; fill: currentColor; }
 @media (prefers-color-scheme: dark) {
-  body { background: transparent; color: #ccc; }
-  a { color: #9e9eff; }
-  #logo { filter: invert(1) hue-rotate(180deg); }
-}
-@media (max-width: 420px) {
-  #logoContainer { display: block }
-  #logo { display: block; margin: 0 auto; float: none; }
-  .content { text-align: center; }
+  body { background: #101418; color: #eaecf0; }
+  a { color: #88a3e8; }
+  #wmfLogo { filter: invert(1) hue-rotate(180deg); }
 }
 </style>
 <meta name="color-scheme" content="light dark">
 <div class="content" role="main">
-<a id="logoContainer" href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
-<h1>Service Temporarily Unavailable</h1>
+<a id="logoContainer" href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/footer/wikimedia.svg" alt="Wikimedia" width="120" height="120"></a>
+<script>
+if ( /(^|\.)wikipedia\.org$/.test( location.hostname ) ) {
+	document.getElementById( 'logoContainer' ).innerHTML = '<picture>' +
+		'<source media="(max-width: 639px)" srcset="https://www.wikimedia.org/static/images/errorpages/baby-globe-phone-250px.png">' +
+		'<img id="logo" class="globe" src="https://www.wikimedia.org/static/images/errorpages/baby-globe-laptop-250px.png" alt="Wikipedia" width="120" height="120">' +
+		'</picture>';
+}
+</script>
+<div class="text">
+<h1>Service is temporarily unavailable.</h1>
 <p>Our servers are currently under maintenance or experiencing a technical problem. Please <a href="" title="Reload this page" onclick="location.reload(false); return false">try again</a> in a few&nbsp;minutes.</p>
+</div>
+<a class="external" href="https://www.wikimediastatus.net/">Wikimedia Status <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M17 17H3V3h5V1H3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-5h-2z"/><path d="M11 1l3.29 3.29-5.73 5.73 1.42 1.42 5.73-5.72L19 9V1z"/></svg></a>
+<a href="https://wikimediafoundation.org/"><img id="wmfLogo" src="https://www.wikimedia.org/static/images/wmf.png" srcset="https://www.wikimedia.org/static/images/wmf-2x.png 2x" alt="Wikimedia Foundation" width="86" height="86"></a>
 </div>
 </html>
