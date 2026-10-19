@@ -14788,8 +14788,7 @@ return [
 ],
 
 'wgEnableWatchstarPopover' => [
-	'default' => false,
-	'testwiki' => true, // T436955
+	'default' => true, // T417847
 ],
 
 'wgWMCDiscordPreviewEnabled' => [

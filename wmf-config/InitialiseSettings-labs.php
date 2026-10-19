@@ -2549,11 +2549,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
 		],
 
-		'-wgEnableWatchstarPopover' => [
-			'default' => false,
-			'enwiki' => true, // T431355
-		],
-
 		// T438463
 		'wmgSuppressOtherLanguageLinkUpdates' => [
 			'default' => false,
