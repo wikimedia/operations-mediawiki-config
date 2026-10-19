@@ -4010,6 +4010,7 @@ return [
 	'simplewiki' => true,
 	'thwiki' => true,
 	'enwiki' => true, // T418367
+	'test2wiki' => true,
 ],
 
 'wgPersonalDashboardRiskyArticleEditsMlModel' => [
