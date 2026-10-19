@@ -2476,6 +2476,12 @@ return [
 				],
 			],
 		],
+		// Thanks sent via the Thanks extension, produced by EventBus.
+		// https://phabricator.wikimedia.org/T441426
+		'mediawiki.user_thank.rc0' => [
+			'schema_title' => 'mediawiki/user/thank',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'resource_change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',

@@ -12717,7 +12717,10 @@ return [
 	'default' => [
 		// Override until user_change is released as v1
 		// https://phabricator.wikimedia.org/T423952
-		'mediawiki.user_change.v1' => 'mediawiki.user_change.dev0'
+		'mediawiki.user_change.v1' => 'mediawiki.user_change.dev0',
+		// Override until user_thank is released as v1
+		// https://phabricator.wikimedia.org/T441426
+		'mediawiki.user_thank.v1' => 'mediawiki.user_thank.rc0',
 	],
 	'private' => [
 		'mediawiki.page_change.v1' => 'mediawiki.page_change.private.v1',
