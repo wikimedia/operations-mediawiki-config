@@ -12708,6 +12708,32 @@ return [
 	'default' => 'eventgate-main'
 ],
 
+// Linked Artifacts Cache (LAC) prefetch. T436695
+// base_url is set in CommonSettings.php, from $wmgLocalServices.
+'wgEventBusLinkedArtifacts' => [
+	'default' => [
+		'enabled' => false,
+		'artifacts' => [],
+	],
+	'testwiki' => [
+		'enabled' => true,
+		'artifacts' => [
+			'revision_feature_counts' => [
+				'entity_kind' => 'revision',
+				'prefetch' => [
+					'events' => [ 'PageLatestRevisionChanged' ],
+					// Above the 10s LAC lambda timeout, and below the 55s timeout
+					// of the linked-artifacts mesh listener.
+					'timeout_ms' => 20000,
+				],
+				'page' => [
+					'namespaces' => [ NS_MAIN ],
+				],
+			],
+		],
+	],
+],
+
 'wgEventRelayerConfig' => [
 	'default' => [
 		'cdn-url-purges' => [

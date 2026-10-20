@@ -4669,6 +4669,15 @@ $wgJobTypeConf['default'] = [
 
 $wgEventBusEnableRunJobAPI = ClusterConfig::getInstance()->isAsync();
 
+// $wgEventBusLinkedArtifacts comes from InitialiseSettings.php.
+// LAC is reached through the linked-artifacts mesh listener.
+// linked-artifacts is null in the beta cluster: there is no LAC there.
+if ( $wmgLocalServices['linked-artifacts'] ) {
+	$wgEventBusLinkedArtifacts['base_url'] = $wmgLocalServices['linked-artifacts'];
+} else {
+	$wgEventBusLinkedArtifacts['enabled'] = false;
+}
+
 if ( $wmgUseKartographer && $wmgUseJsonConfig ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
