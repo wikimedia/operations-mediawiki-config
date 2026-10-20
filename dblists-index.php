@@ -372,7 +372,7 @@ return [
 'hewikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'hewikinews' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul' ],
 'hewikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'rtl', 'parsoidrendered', 'sul', 'wikilove' ],
-'hewikisource' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'rtl', 'parsoidrendered', 'sul', 'wikilove' ],
+'hewikisource' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices', 'rtl', 'sul', 'wikilove' ],
 'hewikivoyage' => [ 'medium', 'wikidataclient', 'group1', 'rtl', 'parsoidrendered', 'sul' ],
 'hewiktionary' => [ 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'wikifunctionsclient', 'parsoidrendered', 'sul', 'wikilove' ],
 'hifwiki' => [ 'wikipedia', 'specialcontribute', 'math-legacy-mathoid', 'medium', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
