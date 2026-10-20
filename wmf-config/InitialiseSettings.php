@@ -14564,6 +14564,14 @@ return [
 	],
 ],
 
+'wgArticleGuidanceReferenceRiskEnabled' => [
+	'default' => true,
+],
+
+'wgArticleGuidanceLiftWingReferenceRiskHostHeader' => [
+	'default' => 'reference-risk.revision-models.wikimedia.org',
+],
+
 'wgArticleGuidanceFeedbackTalkPage' => [
 	'default' => '',
 	'arwiki' => 'نقاش ويكيبيديا:إرشاد المقالة',

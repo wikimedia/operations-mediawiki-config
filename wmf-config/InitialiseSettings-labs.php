@@ -2430,6 +2430,11 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		// Beta Cluster cannot reach the internal LiftWing endpoint.
+		'wgArticleGuidanceReferenceRiskEnabled' => [
+			'default' => false,
+		],
+
 		'wgArticleGuidanceFeedbackTalkPage' => [
 			'default' => '',
 			'enwiki' => 'Wikipedia talk:ArticleGuidance',

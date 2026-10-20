@@ -2929,6 +2929,7 @@ if ( $wmgUseArticleCreationWorkflow ) {
 // ArticleGuidance (T423295, T417200)
 if ( $wmgUseArticleGuidance ) {
 	wfLoadExtension( 'ArticleGuidance' );
+	$wgArticleGuidanceLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/v1/models/';
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
