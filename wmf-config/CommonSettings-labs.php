@@ -396,6 +396,9 @@ if ( $wmgRealm == 'labs' ) {
 		$wgWikimediaCampaignEventsFluxxBaseUrl = 'https://wmf.preprod.fluxxlabs.com/api/rest/v2/';
 		$wgWikimediaCampaignEventsFluxxOauthUrl = 'https://wmf.preprod.fluxxlabs.com/oauth/token';
 		$wgWikimediaCampaignEventsSparqlEndpoint = 'https://query-main.wikidata.org/sparql';
+		$wgCampaignEventsArticleQualityEndpoint =
+			'https://api.wikimedia.org/service/lw/inference/v1/models/articlequality:predict';
+		$wgCampaignEventsArticleQualityHostHeader = null;
 		// Re-add rights removed in the production config
 		$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 		$wgGroupPermissions['user']['campaignevents-organize-events'] = true;

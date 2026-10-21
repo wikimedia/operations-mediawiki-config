@@ -4826,6 +4826,10 @@ if ( $wmgUseCampaignEvents ) {
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
 	// T440359 - the quality model only works for Wikipedia wikis
 	$wgCampaignEventsArticleQualitySupportedWikis = WmfConfig::readDbListFile( 'wikipedia' );
+	// T440360
+	$wgCampaignEventsArticleQualityEndpoint =
+		'https://inference.discovery.wmnet:30443/v1/models/articlequality:predict';
+	$wgCampaignEventsArticleQualityHostHeader = 'articlequality.article-models.wikimedia.org';
 }
 
 // T361643
