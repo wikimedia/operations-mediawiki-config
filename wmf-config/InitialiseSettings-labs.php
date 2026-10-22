@@ -200,6 +200,25 @@ function wmfGetOverrideSettings() {
 					]
 				],
 			],
+			'+wikipedia' => [
+				// Enable the tags change streams on beta wikipedias for tests.
+				// ext-EventStreamConfig.php disables them by default.
+				// https://phabricator.wikimedia.org/T434143
+				'mediawiki.revision_tags_change.dev0' => [
+					'producers' => [
+						'mediawiki_eventbus' => [
+							'enabled' => true,
+						],
+					],
+				],
+				'mediawiki.log_tags_change.dev0' => [
+					'producers' => [
+						'mediawiki_eventbus' => [
+							'enabled' => true,
+						],
+					],
+				],
+			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
 					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',

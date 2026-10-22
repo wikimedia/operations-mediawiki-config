@@ -2949,6 +2949,52 @@ return [
 			'destination_event_service' => 'eventgate-main',
 		],
 
+		// Status:
+		// 	2026-10 - in development
+		//
+		// mediawiki.revision_tags_change stream.
+		// The events do not contain private tags.
+		// https://phabricator.wikimedia.org/T434143
+		'mediawiki.revision_tags_change.dev0' => [
+			// TODO: bikeshed final location
+			'schema_title' => 'development/revision_tags_change',
+			'message_key_fields' => [
+				// NOTE: Use the same key as mediawiki.page_change.v1.
+				// Then consumers can join the two streams by page.
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-main',
+					// TODO: disabled until tested on beta
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Status:
+		// 	2026-10 - in development
+		//
+		// mediawiki.log_tags_change stream.
+		// The events do not contain private tags.
+		// https://phabricator.wikimedia.org/T434143
+		'mediawiki.log_tags_change.dev0' => [
+			// TODO: bikeshed final location
+			'schema_title' => 'development/log_tags_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'log_id' => 'log.log_id',
+			],
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-main',
+					// TODO: disabled until tested on beta
+					'enabled' => false,
+				],
+			],
+		],
+
 		/*
 		 * == WDQS Streaming Updater (Flink) output streams ==
 		 * Note that Flink does not produce these through eventgate,

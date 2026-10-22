@@ -12703,6 +12703,10 @@ return [
 		// Override until revision_html_feature_counts_change is released as v1
 		// https://phabricator.wikimedia.org/T436695
 		'mediawiki.revision_html_feature_counts_change.v1' => 'mediawiki.revision_html_feature_counts_change.dev0',
+		// Override until revision_tags_change and log_tags_change are released as v1
+		// https://phabricator.wikimedia.org/T434143
+		'mediawiki.revision_tags_change.v1' => 'mediawiki.revision_tags_change.dev0',
+		'mediawiki.log_tags_change.v1' => 'mediawiki.log_tags_change.dev0',
 	],
 	'private' => [
 		'mediawiki.page_change.v1' => 'mediawiki.page_change.private.v1',
