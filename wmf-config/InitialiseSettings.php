@@ -13037,11 +13037,6 @@ return [
 	// Test2 should be one step ahead of test
 	'test2wiki' => true,
 ],
-// T421776
-'wgReadingListsEnableBetaQuickSurvey' => [
-	'default' => false,
-	'wikipedia' => true,
-],
 // T422833, T420881
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 	'default' => null,

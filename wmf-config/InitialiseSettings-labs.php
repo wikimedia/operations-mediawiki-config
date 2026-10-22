@@ -1126,11 +1126,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// T422275
-		'wgReadingListsEnableBetaQuickSurvey' => [
-			'wikipedia' => true,
-		],
-
 		// T419163
 		'wgReadingListsBetaDefaultForNewAccountsAfter' => [
 			'default' => '20260313000000',
