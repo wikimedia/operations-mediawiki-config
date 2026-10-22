@@ -14614,12 +14614,12 @@ return [
 	'testwiki' => [
 		'baseUrl' => 'https://test.wikipedia.org/w/rest.php/discord/v0-internal/discord-preview',
 		'wprov' => 'diim1',
-		'surveyCoverage' => 1,
+		'surveyCoverage' => 0,
 	],
 	'enwiki' => [
 		'baseUrl' => 'https://en.wikipedia.org/w/rest.php/discord/v0-internal/discord-preview',
 		'wprov' => 'diim1',
-		'surveyCoverage' => 1,
+		'surveyCoverage' => 0,
 	],
 ],
 
