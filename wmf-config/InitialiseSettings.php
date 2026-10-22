@@ -2008,9 +2008,10 @@ return [
 	'cswiki' => 10, // T163207
 	'enwiki' => 10, // T16191
 	'enwikibooks' => 5, // T407080
-	'enwikisource' => 10, // T284627
-	'enwikivoyage' => 3, // T371186
 	'enwikiquote' => 10, // T432895
+	'enwikisource' => 10, // T284627
+	'enwikiversity' => 5, // T442057
+	'enwikivoyage' => 3, // T371186
 	'eswiki' => 50, // T15261
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
