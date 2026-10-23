@@ -14308,6 +14308,11 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCommunityRequestsWishSubmissionsEndDate' => [
+	'default' => null,
+	'metawiki' => '2026-11-09T17:00:00Z', // T442015
+],
+
 'wgCommunityRequestsStatuses' => [
 	'metawiki' => [
 		'under-review' => [
