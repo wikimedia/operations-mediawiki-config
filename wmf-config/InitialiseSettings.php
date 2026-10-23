@@ -13074,6 +13074,12 @@ return [
 	'wikipedia' => true,
 	'wikitech' => true,
 ],
+'wgReadingListsVectorCTA' => [
+	'default' => false,
+	// T441705
+	'testwiki' => true,
+	'test2wiki' => true,
+],
 'wgReadingListsMinervaCTA' => [
 	'default' => false,
 	// T438779
