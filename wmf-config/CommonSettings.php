@@ -244,7 +244,6 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	# STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST with the service IP.
 	$statsHost = $_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost';
 	$wgStatsTarget = "udp://$statsHost:9125";
-	$wgStatsdServer = $wmgLocalServices['statsd'];
 }
 
 $wgConf = new SiteConfiguration;
@@ -970,7 +969,6 @@ $wgUseCdn = true;
 if ( $wmgRealm === 'production' ) {
 	require __DIR__ . '/reverse-proxy.php';
 } elseif ( $wmgRealm === 'labs' ) {
-	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	require __DIR__ . '/reverse-proxy-labs.php';
 }
 

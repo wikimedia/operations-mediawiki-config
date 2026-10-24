@@ -46,9 +46,6 @@ $common = [
 	// pipelines in both data centers).
 	'xenon' => '10.64.16.88', # arclamp1001.eqiad.wmnet
 
-	// Statsd is not active-active.
-	'statsd' => '10.64.16.81', # statsd.eqiad.wmnet, now resolving to graphite1005.eqiad.wmnet
-
 	// Logstash is not active-active.
 	'logstash' => [
 		'10.2.2.36', # logstash.svc.eqiad.wmnet

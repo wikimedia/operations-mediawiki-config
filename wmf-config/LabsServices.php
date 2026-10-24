@@ -14,7 +14,6 @@ return [
 		'xhgui-pdo' => 'mysql:host=deployment-db15.deployment-prep.eqiad1.wikimedia.cloud;dbname=xhgui',
 		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmcloud.org/excimer/',
 		'excimer-ui-server' => 'https://webperf.svc.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
-		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
 			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',

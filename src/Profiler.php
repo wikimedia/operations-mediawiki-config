@@ -340,9 +340,6 @@ class Profiler {
 		}
 
 		if ( $error ) {
-			// statsd format (graphite)
-			self::sendMetric( "MediaWiki.arclamp_client_error.{$error}:1|c", $options['statsd-host'], 8125 );
-
 			// dogstatsd format (prometheus)
 			$normalizedError = self::normalizeTag( $error );
 			self::sendMetric(
@@ -376,13 +373,6 @@ class Profiler {
 			}
 			$componentsInStack = self::excimerComponentsFromLine( $line );
 
-			// statsd format (graphite)
-			self::sendMetric(
-				"MediaWiki.arclamp_samples.$handler.$verb:1|c",
-				$options['statsd-host'],
-				8125
-			);
-
 			// dogstatsd format (prometheus)
 			$normalizedHandler = self::normalizeTag( $handler );
 			$normalizedVerb = self::normalizeTag( $verb );
@@ -394,12 +384,6 @@ class Profiler {
 			);
 
 			foreach ( $componentsInStack as $cname => $_unused ) {
-				// statsd format (graphite)
-				self::sendMetric(
-					"MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c",
-					$options['statsd-host'],
-					8125
-				);
 				// dogstatsd format (prometheus)
 				$normalizedComponent = self::normalizeTag( $cname );
 				self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c|"

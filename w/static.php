@@ -299,7 +299,6 @@ function wmfStaticRespond() {
 
 		$responseMetric->setLabel( 'status', 'success' )
 			->setLabel( 'responseType', $responseType )
-			->copyToStatsdAt( "wmfstatic.success.$responseType" )
 			->increment();
 		return;
 	}
@@ -308,7 +307,6 @@ function wmfStaticRespond() {
 		wmfStaticShowError( 'Unknown file path', 404 );
 
 		$responseMetric->setLabel( 'status', 'notfound' )
-			->copyToStatsdAt( 'wmfstatic.notfound' )
 			->increment();
 		return;
 	}
@@ -317,7 +315,6 @@ function wmfStaticRespond() {
 	// but we don't (yet) have a matching file.
 	wmfStaticStreamFile( "$newestFoundDir/$uriPath", 'mismatch' );
 	$responseMetric->setLabel( 'status', 'mismatch' )
-		->copyToStatsdAt( 'wmfstatic.mismatch' )
 		->increment();
 }
 

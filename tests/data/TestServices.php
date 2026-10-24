@@ -13,7 +13,6 @@ $wmgAllServices = [];
 
 $wmgAllServices['unittest'] = [
 	'udp2log' => 'localhost:8420',
-	'statsd' => 'localhost',
 	'search-chi' => [ [ 'host' => 'localhost' ] ],
 	'search-psi' => [ [ 'host' => 'localhost' ] ],
 	'search-omega' => [ [ 'host' => 'localhost' ] ],
