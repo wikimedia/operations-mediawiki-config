@@ -56,6 +56,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\RCFeed\UDPRCFeedEngine;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
+use Wikimedia\IPUtils;
 use Wikimedia\MWConfig\ClusterConfig;
 use Wikimedia\MWConfig\DBRecordCache;
 use Wikimedia\MWConfig\ServiceConfig;
@@ -1823,20 +1824,24 @@ $wgExtensionFunctions[] = static function () {
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
-		// T129982
-		&& $_SERVER['HTTP_HOST'] !== 'mw-jobrunner.discovery.wmnet:4448'
+		// Skip mw-jobrunner (T129982) and mw-api-int (T288223),
+		// which would make up 80% of xff.log otherwise.
+		&& IPUtils::isPublic( $_SERVER['REMOTE_ADDR'] )
 	) {
-		$uri = ( ( $_SERVER['HTTPS'] ?? null ) ? 'https://' : 'http://' ) .
-			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$uri = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 		$logger = LoggerFactory::getInstance( 'xff' );
-		$logger->info( "{date}\t{uri}\t{xff}, {remoteaddr}\t{wpSave}",
+		$logger->info( "{date}\t{uri}\t{xff}, {remoteaddr}\t{TrustedXFF}",
 			[
 				'date' => gmdate( 'r' ),
 				'uri' => $uri,
 				'xff' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
 				'remoteaddr' => $_SERVER['REMOTE_ADDR'],
-				'wpSave' => ( $_REQUEST['wpSave'] ?? null ) ? 'save' : '',
+				// T288223: Track whether there are still cases where TrustedXFF kicks in to
+				// select an indirect external IP
+				'TrustedXFF' => (
+					IPUtils::canonicalize( $_SERVER['REMOTE_ADDR'] ) !== RequestContext::getMain()->getRequest()->getIP()
+				),
 			]
 		);
 	}
