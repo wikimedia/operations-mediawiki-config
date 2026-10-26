@@ -746,6 +746,13 @@ return [
 	'default' => true,
 ],
 
+// Keeps the last step of the linkrecommendation timeout chain: the service
+// stops processing at 29s, gunicorn kills the worker at 30s, and the
+// services_proxy envoy listener times out at 31s. T442468
+'wgGELinkRecommendationServiceTimeout' => [
+	'default' => 32,
+],
+
 'wgGELinkRecommendationServiceWikiIdMasquerade' => [
 	'default' => null,
 	'testwiki' => 'simplewiki',

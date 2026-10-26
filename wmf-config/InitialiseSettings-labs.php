@@ -1350,9 +1350,6 @@ function wmfGetOverrideSettings() {
 		'wgGEImageRecommendationServiceUseTitles' => [
 			'default' => true,
 		],
-		'wgGELinkRecommendationServiceTimeout' => [
-			'default' => 30,
-		],
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
 		],
