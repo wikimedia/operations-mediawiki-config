@@ -6972,6 +6972,7 @@ return [
 
 'wgParserMigrationEnableReportVisualBug' => [
 	'default' => true,
+	'wikipedia' => false,
 ],
 
 'wmgParserMigrationConsolidateFeedback' => [
