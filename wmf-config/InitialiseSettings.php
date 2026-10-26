@@ -14340,6 +14340,11 @@ return [
 	'testwiki' => true,
 ],
 
+'wgReaderExperimentsSemanticSearchEnabled' => [
+	'default' => false,
+	'enwiki' => true,
+],
+
 // Bypasses the Google-referrer guard and the CTA suppression flags,
 // so the preferred-sources notice can be reached in manual testing.
 // T436692
