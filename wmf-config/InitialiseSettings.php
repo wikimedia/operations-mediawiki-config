@@ -10018,6 +10018,12 @@ return [
 	'enwiki' => true,
 ],
 
+'wgWikimediaAntiAbuseVandalismTagInAlphaTest' => [
+	'default' => true,
+	// T442379
+	'enwiki' => false,
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721
