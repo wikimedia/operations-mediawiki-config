@@ -105,14 +105,13 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				'expected_realm' => 'production',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad", "codfw" ],
-				// graphite1005.eqiad.wmnet
-				'expected_statsd' => "10.64.16.81",
+				'expected_service' => 'http://urldownloader.svc.eqiad.wmnet:8080',
 			],
 			'labs' => [
 				'expected_realm' => 'labs',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad" ],
-				'expected_statsd' => 'prometheus-labmon.eqiad.wmnet',
+				'expected_service' => 'http://url-downloader.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 			],
 		];
 
@@ -129,6 +128,8 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				$this->assertSame( $expectations['expected_realm'], $sc->getRealm(), "cluster: $cluster, checking getRealm()" );
 				$this->assertSame( $expectations['expected_dc'], $sc->getDatacenter(), "cluster: $cluster, checking getDatacenter()" );
 				$this->assertSame( $expectations['expected_dcs'], $sc->getDatacenters(), "cluster: $cluster, checking getDatacenters()" );
+				// Use "urldownloader" as example of a service that differs by both realm and DC
+				$this->assertSame( $expectations['expected_service'], $sc->getLocalService( "urldownloader" ), "cluster: $cluster, checking getLocalService('urldownloader')" );
 			} finally {
 				// Cleanup
 				unlink( $GLOBALS['mockWmgClusterFile'] );
