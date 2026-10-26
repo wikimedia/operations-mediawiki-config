@@ -31,6 +31,9 @@ $wgAbuseFilterLogPrivateDetailsAccess = true;
 $wgGroupPermissions['checkuser']['abusefilter-privatedetails'] = true;
 $wgGroupPermissions['checkuser']['abusefilter-privatedetails-log'] = true;
 
+// T442464 - Allow those with CheckUser right to view private filters, even if they don't have the sysop right
+$wgGroupPermissions['checkuser']['abusefilter-view-private'] = true;
+
 // T369610 - AbuseFilter's extension.json gives the right to view protected vars logs to sysop
 // in order to support third-party wiki use cases. WMF wikis will prefer to give this right
 // to the `checkuser` group in order to maintain parity with other privileged logs.
@@ -70,7 +73,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
-		$wgGroupPermissions['checkuser']['abusefilter-view-private'] = true;
 		break;
 	case 'azbwiki': // T109755
 		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;

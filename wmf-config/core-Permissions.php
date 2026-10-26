@@ -807,7 +807,6 @@ return [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			'abusefilter-view-private' => true,
 			'securepoll-create-poll' => true, // T378287
 			'securepoll-edit-poll' => true, // T378287
 			'securepoll-view-voter-pii' => true, // T378287
