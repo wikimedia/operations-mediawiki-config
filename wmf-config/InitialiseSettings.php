@@ -14614,6 +14614,16 @@ return [
 	],
 ],
 
+// T439162
+'wgWMCShareCardLicenseIcons' => [
+	'default' => [],
+	'wikipedia' => [
+		[ 'src' => '/static/images/licenses/cc-cc.svg', 'alt' => 'CC' ],
+		[ 'src' => '/static/images/licenses/cc-by.svg', 'alt' => 'BY' ],
+		[ 'src' => '/static/images/licenses/cc-sa.svg', 'alt' => 'SA' ],
+	],
+],
+
 'wmgWMCIncludeContributorCounts' => [
 	'default' => false,
 	'wikipedia' => true, // T429834
