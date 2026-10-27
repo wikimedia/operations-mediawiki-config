@@ -194,12 +194,6 @@ return [
 			'reupload-shared' => false,
 			'editalluserpages' => true, // T434878
 		],
-		'uploader' => [
-			'upload' => true,
-			'reupload' => true,
-			'reupload-own' => true,
-			'reupload-shared' => true,
-		],
 		'reviewer' => [
 			'upload' => true,
 			'reupload' => true,
@@ -212,6 +206,10 @@ return [
 		'autoreview' => [
 			'autopatrol' => true, // T167071
 			'editautoreviewprotected' => true,
+			'upload' => true, // T442578
+			'reupload' => true, // T442578
+			'reupload-own' => true, // T442578
+			'reupload-shared' => true, // T442578
 		],
 		'bot' => [
 			'editautoreviewprotected' => true,
@@ -3711,7 +3709,6 @@ return [
 			'templateeditor', // T382784
 		],
 		'sysop' => [
-			'uploader',
 			'reviewer',
 			'confirmed',
 			'rollbacker',
@@ -5241,7 +5238,6 @@ return [
 			'templateeditor', // T382784
 		],
 		'sysop' => [
-			'uploader',
 			'reviewer',
 			'confirmed',
 			'rollbacker',
