@@ -9987,6 +9987,12 @@ return [
 	'jawiki' => true,
 	// T439928
 	'dewiki' => true,
+	// T442476
+	'hewiki' => true,
+	// T442204
+	'frwiki' => true,
+	'eswiki' => true,
+	'metawiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [
@@ -9998,6 +10004,10 @@ return [
 	'jawiki' => true,
 	// T439928
 	'dewiki' => true,
+	// T442204
+	'frwiki' => true,
+	'eswiki' => true,
+	'metawiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoFlagNotifications' => [
@@ -10008,6 +10018,10 @@ return [
 	'jawiki' => true,
 	// T439928
 	'dewiki' => true,
+	// T442204
+	'frwiki' => true,
+	'eswiki' => true,
+	'metawiki' => true,
 ],
 
 'wgWikimediaAntiAbuseEnableVandalismTag' => [
@@ -10016,6 +10030,13 @@ return [
 	'testwiki' => true,
 	// T439149
 	'enwiki' => true,
+	// T442476
+	'hewiki' => true,
+	// T442204
+	'frwiki' => true,
+	'eswiki' => true,
+	'metawiki' => true,
+	'jawiki' => true,
 ],
 
 'wgWikimediaAntiAbuseVandalismTagInAlphaTest' => [
