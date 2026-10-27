@@ -12739,14 +12739,15 @@ return [
 // base_url is set in CommonSettings.php, from $wmgLocalServices.
 'wgEventBusLinkedArtifacts' => [
 	'default' => [
-		// MW LinkedArtifacts integration is disabled by default for now.
 		'enabled' => false,
-		// Declare default artifact settings here.
+		'artifacts' => [],
+	],
+	'testwiki' => [
+		'enabled' => true,
 		'artifacts' => [
 			'revision_feature_counts' => [
 				'entity_kind' => 'revision',
 				'prefetch' => [
-					'enabled' => false,
 					'events' => [ 'PageLatestRevisionChanged' ],
 					// Above the 10s LAC lambda timeout, and below the 55s timeout
 					// of the linked-artifacts mesh listener.
@@ -12755,23 +12756,6 @@ return [
 				'page' => [
 					'namespaces' => [ NS_MAIN ],
 				],
-			],
-		],
-	],
-	// Per-wiki overrides for LinkedArtifacts.
-	'+testwiki' => [
-		'enabled' => true,
-		'artifacts' => [
-			'revision_feature_counts' => [
-				'prefetch' => [ 'enabled' => true ],
-			],
-		],
-	],
-	'+group1-wikipedia' => [
-		'enabled' => true,
-		'artifacts' => [
-			'revision_feature_counts' => [
-				'prefetch' => [ 'enabled' => true ],
 			],
 		],
 	],
