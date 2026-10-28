@@ -13091,9 +13091,8 @@ return [
 'wgReadingListsVector2022CTA' => [
 	'default' => false,
 	// T441705
-	'group1-wikipedia' => true,
 	'mediawikiwiki' => true,
-	'testwiki' => true,
+	'wikipedia' => true,
 	'wikitech' => true,
 ],
 'wgReadingListsMinervaCTA' => [
