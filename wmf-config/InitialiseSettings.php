@@ -7568,11 +7568,9 @@ return [
 ],
 
 // --------------- VisualEditor end ---------------
-// T414094
+// T440304
 'wgCiteSubReferencing' => [
 	'default' => true,
-	'rtl' => false,
-	'wikisource' => false,
 ],
 
 // T440243
