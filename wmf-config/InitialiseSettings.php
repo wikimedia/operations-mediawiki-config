@@ -14636,4 +14636,15 @@ return [
 	'default' => '20261019000000',
 ],
 
+// T393212
+'wgDeviceBoundSessions' => [
+	'default' => false,
+	'group0' => true,
+	'test2wiki' => true,
+],
+
+'wgDeviceBoundSessionsReportOnly' => [
+	'default' => true,
+],
+
 ];
