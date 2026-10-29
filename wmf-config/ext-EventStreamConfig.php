@@ -2932,6 +2932,23 @@ return [
 			'destination_event_service' => 'eventgate-main',
 		],
 
+		// Status:
+		// 	2026-10 - in development
+		//
+		// Changelog of the HTML rendering feature counts of revisions.
+		// Produced after MediaWiki prefetches the
+		// revision_feature_counts Linked Artifacts Cache (LAC) artifact of a revision.
+		// https://phabricator.wikimedia.org/T436695
+		'mediawiki.revision_html_feature_counts_change.dev0' => [
+			// TODO: this will be finalized at mediawiki/revision/rendering_feature_counts_change
+			'schema_title' => 'development/revision_rendering_feature_counts_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+		],
+
 		/*
 		 * == WDQS Streaming Updater (Flink) output streams ==
 		 * Note that Flink does not produce these through eventgate,
