@@ -874,6 +874,8 @@ return [
 
 'wgGEHomeEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 'wgGEAccountSetupExperimentStartRegistrationDate' => [
