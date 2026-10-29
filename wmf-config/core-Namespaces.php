@@ -148,6 +148,7 @@ return [
 		'وج' => NS_PROJECT
 	],
 	'arwiktionary' => [
+		'وق' => NS_PROJECT, // T442847
 		'Appendix' => 100, // T411819
 		'Appendix_talk' => 101, // T411819
 		'Thesaurus' => 110, // T411819
