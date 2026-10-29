@@ -2137,6 +2137,7 @@ return [
 	'+itwiki' => [ 'editautopatrolprotected' ], // T308917
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
+	'+ltwiki' => [ 'extendedconfirmed' ], // T440216
 	'+nlwiki' => [ 'extendedconfirmed' ], // T329642
 	'+nowiki' => [ 'edituserprotected' ], // T367943
 	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
