@@ -741,7 +741,7 @@ return [
 'pswikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'rtl', 'sul', 'abusefilter-disabled', 'checkuser-disabled' ],
 'pswikivoyage' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'rtl', 'parsoidrendered', 'sul' ],
 'pswiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'rtl', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'ptwiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove' ],
+'ptwiki' => [ 'wikipedia', 'flow', 'specialcontribute', 'math-legacy-mathoid', 'wikidataclient', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations' ],
 'ptwikibooks' => [ 'flow', 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'ptwikimedia' => [ 'footer-legal-contact-link-exclusions', 'small', 'visualeditor-nondefault', 'group1', 'sul' ],
 'ptwikinews' => [ 'closed', 'medium', 'wikidataclient', 'group0', 'mobile-anon-categories', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'sul', 'wikilove' ],

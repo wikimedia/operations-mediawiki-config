@@ -8115,6 +8115,7 @@ return [
 'wgCheckUserSuggestedInvestigationsHidden' => [
 	'default' => false,
 	'enwikivoyage' => true,
+	'ptwiki' => true,
 ],
 
 'wgCheckUserSuggestedInvestigationsUseGlobalContributionsLink' => [
