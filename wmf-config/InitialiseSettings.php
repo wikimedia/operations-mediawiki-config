@@ -7470,7 +7470,6 @@ return [
 'wgVisualEditorDisableForAnons' => [
 	'default' => false,
 
-	'enwiki' => true,
 	'eswiki' => true,
 	'zhwiki' => true, // T296269
 ],
