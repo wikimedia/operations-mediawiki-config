@@ -10062,6 +10062,11 @@ return [
 	'default' => true,
 ],
 
+'wgWatchUserPageOnAccountCreation' => [
+	'default' => true,
+	'loginwiki' => false, // T442779
+],
+
 'wgExtraInterlanguageLinkPrefixes' => [
 	'default' => [],
 	'wikisource' => [ 'mul' ],
