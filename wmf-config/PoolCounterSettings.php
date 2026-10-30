@@ -59,13 +59,6 @@ $wgPoolCounterConf = [
 		'workers' => 10,
 		'maxqueue' => 15,
 	],
-	// These should be very very fast
-	'CirrusSearch-NamespaceLookup' => [
-		'class' => 'PoolCounter_Client',
-		'timeout' => 5,
-		'workers' => 100,
-		'maxqueue' => 120,
-	],
 	// These are very expensive and incredibly common at more than 5M per hour
 	// before varnish caching. If the somehow the cache hit rate drops this
 	// protects the cluster
@@ -76,6 +69,13 @@ $wgPoolCounterConf = [
 		'timeout' => 5,
 		'workers' => 150,
 		'maxqueue' => 175,
+	],
+	// Search requests federated via the WDQS mwapi service (T442824)
+	'CirrusSearch-WDQS' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 5,
+		'maxqueue' => 10,
 	],
 	'FileRender' => [
 		'class' => 'PoolCounter_Client',
