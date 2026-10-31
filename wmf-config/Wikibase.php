@@ -80,6 +80,10 @@ if ( in_array( $wgDBname, $testWikidataClients ) || $wgDBname === 'testwikidataw
 
 // T424440
 $wikibaseEntityUsageExtension1 = [
+	// s1 wikis
+	'enwiki',
+
+	// s3 wikis
 	'mediawikiwiki',
 
 	// s5 wikis
