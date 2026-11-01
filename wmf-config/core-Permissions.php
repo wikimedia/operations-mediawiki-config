@@ -978,6 +978,7 @@ return [
 			'apihighlimits' => true, // T342484
 			'block' => true, // T342484
 			'blockemail' => true, // T342484
+			'protect' => true, // T443124
 		], // T342484
 	],
 	'+eswikibooks' => [
