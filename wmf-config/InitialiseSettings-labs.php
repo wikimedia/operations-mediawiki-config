@@ -427,7 +427,6 @@ function wmfGetOverrideSettings() {
 				'WikitechGerritBan' => 'debug',
 				'WikitechPhabBan' => 'debug',
 				'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
-				'xff' => [ 'logstash' => false ],
 				'XMP' => 'warning', // T89532
 
 				// Additional logging for labs
