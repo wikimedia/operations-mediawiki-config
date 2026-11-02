@@ -249,6 +249,15 @@ if ( $wmgUseWikibaseRepo ) {
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['edit'] = false;
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['create'] = false;
 			}
+			// T440832: With the Wikibase hCaptcha flag on (Beta only), Special:NewItem and
+			// Special:NewProperty render the widget, so stop exempting item/property creation.
+			// TODO(T443420): remove 'edit' once the classic UI and wbui2025 support hCaptcha.
+			if ( !empty( $wmgWikibaseTmpHCaptchaIntegration ) ) {
+				unset(
+					$wgCaptchaTriggersOnNamespace[NS_MAIN]['create'],
+					$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['create']
+				);
+			}
 			unset( $wmgWikibaseCaptchaExemptNamespaces, $wmgWikibaseCaptchaExemptNs );
 		}
 
