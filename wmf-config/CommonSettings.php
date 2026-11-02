@@ -4716,6 +4716,9 @@ if ( $wmgUseWikiLambda ) {
 		$wgWikiLambdaPersistBackendCache = true;
 	}
 
+	// Configure the shared DB table so all abstract client wikis log config centrally.
+	$wgVirtualDomainsMapping['virtual-abstractwiki'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+
 	// Temporary config for the automatic Abstract Article generation script
 	$wgWikiLambdaAbstractWikiArticleStoreTopics = [
 		'Q319', 'Q42', 'Q84', 'Q52', 'Q90', 'Q177978', 'Q842706', 'Q3087908', 'Q5424', 'Q49616', 'Q49613', 'Q12814'
