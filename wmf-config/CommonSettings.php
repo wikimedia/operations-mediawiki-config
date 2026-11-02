@@ -390,7 +390,7 @@ if ( $wmgRealm === 'production' ) {
 		$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 	}
 	// T360930
-	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 550;
+	$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 700;
 
 	// Dumps use their own set of databases
 	if ( ClusterConfig::getInstance()->isDumps() ) {
