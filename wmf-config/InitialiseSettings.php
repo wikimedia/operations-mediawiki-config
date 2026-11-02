@@ -12772,7 +12772,7 @@ return [
 			],
 		],
 	],
-	'+group1-wikipedia' => [
+	'+wikipedia' => [
 		'enabled' => true,
 		'artifacts' => [
 			'revision_feature_counts' => [
