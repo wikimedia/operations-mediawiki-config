@@ -4866,6 +4866,8 @@ if ( $wmgUseCampaignEvents ) {
 		};
 	}
 	$wgWikimediaCampaignEventsSparqlEndpoint = 'http://localhost:6041/sparql';
+	// T440359 - the quality model only works for Wikipedia wikis
+	$wgCampaignEventsArticleQualitySupportedWikis = WmfConfig::readDbListFile( 'wikipedia' );
 }
 
 // T361643
