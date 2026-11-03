@@ -1751,6 +1751,8 @@ return [
 	'+ltwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T367993
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T440216
+		'sysop' => [ 'extendedconfirmed' => true ], // T440216
+		'bot' => [ 'extendedconfirmed' => true ], // T440216
 	],
 	'+lvwiki' => [
 		'autopatrolled' => [
