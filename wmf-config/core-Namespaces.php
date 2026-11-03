@@ -1125,6 +1125,9 @@ return [
 	'+lbwiktionary' => [
 		'Wiktionary_Diskussioun' => NS_PROJECT_TALK,
 	],
+	'+liwiktionary' => [
+		'Appendix_talk' => 101,
+	],
 	'+lijwikisource' => [
 		'Author' => 102, // T257672
 		'Author_talk' => 103, // T257672
@@ -4243,6 +4246,10 @@ return [
 	'lbwiktionary' => [
 		100 => 'Annexen', // Appendix
 		101 => 'Annexen_Diskussioun',
+	],
+	'liwiktionary' => [
+		100 => 'Appendix', // T443269
+		101 => 'Euverlèk_appendix',
 	],
 	'lmowiktionary' => [
 		100 => 'Apendice', // Appendix
