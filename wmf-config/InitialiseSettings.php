@@ -7518,6 +7518,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => 0.5,
+	'jawiki' => 0.05,
 ],
 
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
