@@ -10012,6 +10012,30 @@ return [
 	'enwiki' => false,
 ],
 
+'wgWikimediaAntiAbuseEnableLinkSpamTag' => [
+	'default' => false,
+	// T443432
+	'testwiki' => true,
+	'enwiki' => true,
+	'hewiki' => true,
+	'frwiki' => true,
+	'eswiki' => true,
+	'metawiki' => true,
+	'jawiki' => true,
+],
+
+'wgWikimediaAntiAbuseExternalLinkContentPolicies' => [
+	'default' => [],
+	// T443432
+	'testwiki' => [ 'link-spam' ],
+	'enwiki' => [ 'link-spam' ],
+	'hewiki' => [ 'link-spam' ],
+	'frwiki' => [ 'link-spam' ],
+	'eswiki' => [ 'link-spam' ],
+	'metawiki' => [ 'link-spam' ],
+	'jawiki' => [ 'link-spam' ],
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true, // Cannot use 'sul' here because of closed carve out
 	'closed' => false, // T158721
