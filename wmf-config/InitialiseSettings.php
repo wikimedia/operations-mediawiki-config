@@ -7512,16 +7512,6 @@ return [
 	'default' => false,
 ],
 
-// Precompute edit suggestion counts in the Linked Artifacts Cache after each edit (T432733).
-// false: off. true: all pages. A number from 0 to 1: that proportion of pages (T433024).
-'wmgVisualEditorEditSuggestionCounts' => [
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => 0.5,
-	'jawiki' => 0.25,
-	'arwiki' => 0.05,
-],
-
 'wgVisualEditorEnableEditCheckSuggestionsBeta' => [
 	'default' => false,
 	'wikipedia' => true, // T415320
@@ -12751,6 +12741,20 @@ return [
 					'namespaces' => [ NS_MAIN ],
 				],
 			],
+			// Computed by editcheck-headless. T432733, T443442
+			'edit_suggestions_counts' => [
+				'entity_kind' => 'revision',
+				'prefetch' => [
+					'enabled' => false,
+					'events' => [ 'PageLatestRevisionChanged' ],
+					// Above the 30s LAC lambda timeout, and below the 55s timeout
+					// of the linked-artifacts mesh listener.
+					'timeout_ms' => 50000,
+				],
+				'page' => [
+					'namespaces' => [ NS_MAIN ],
+				],
+			],
 		],
 	],
 	// Per-wiki overrides for LinkedArtifacts.
@@ -12759,6 +12763,35 @@ return [
 		'artifacts' => [
 			'revision_feature_counts' => [
 				'prefetch' => [ 'enabled' => true ],
+			],
+			'edit_suggestions_counts' => [
+				'prefetch' => [ 'enabled' => true ],
+			],
+		],
+	],
+	'+enwiki' => [
+		'artifacts' => [
+			'edit_suggestions_counts' => [
+				'prefetch' => [ 'enabled' => true ],
+				// T433024
+				'page' => [ 'sample' => 0.5 ],
+			],
+		],
+	],
+	// T442767
+	'+jawiki' => [
+		'artifacts' => [
+			'edit_suggestions_counts' => [
+				'prefetch' => [ 'enabled' => true ],
+				'page' => [ 'sample' => 0.25 ],
+			],
+		],
+	],
+	'+arwiki' => [
+		'artifacts' => [
+			'edit_suggestions_counts' => [
+				'prefetch' => [ 'enabled' => true ],
+				'page' => [ 'sample' => 0.05 ],
 			],
 		],
 	],
