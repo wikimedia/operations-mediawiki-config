@@ -14479,20 +14479,7 @@ return [
 
 'wmgUseArticleGuidance' => [
 	'default' => false,
-	// phase 0
-	'testwiki' => true, // T417200
-	// phase 1
-	'simplewiki' => true, // T425351
-	// phase 2
-	'arwiki' => true, // T426871
-	'bnwiki' => true, // T426871
-	'frwiki' => true, // T426871
-	'ptwiki' => true, // T426871
-	'trwiki' => true, // T426871
-	// phase 3
-	'itwiki' => true, // T431540
-	// phab 4
-	'plwiki' => true, // T432137
+	'wikipedia' => true, // T442035
 ],
 
 // Switch for the whole user-facing feature. It has precedence over the more
