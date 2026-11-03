@@ -7,6 +7,9 @@
     "k8s-mwdebug-next-codfw",
     "k8s-mwdebug-next-eqiad",
     "k8s-mw-experimental-codfw",
-    "k8s-mw-experimental-eqiad"
+    "k8s-mw-experimental-eqiad",
+    "k8s-mw-pretrain",
+    "k8s-mw-pretrain-codfw",
+    "k8s-mw-pretrain-eqiad"
   ]
 }
