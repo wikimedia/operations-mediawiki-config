@@ -848,6 +848,7 @@ return [
 		'import' => [ 'mergehistory' => true ], // T380753
 	],
 	'+enwikibooks' => [
+		'*' => [ 'createpage' => false, ], // T443449
 		'autopatrolled' => [ 'autopatrol' => true, ], // T440519
 		'patroller' => [
 			'autopatrol' => true, // T440519
