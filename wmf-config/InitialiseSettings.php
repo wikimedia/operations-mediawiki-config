@@ -12745,9 +12745,9 @@ return [
 				'prefetch' => [
 					'enabled' => false,
 					'events' => [ 'PageLatestRevisionChanged' ],
-					// Above the 10s LAC lambda timeout, and below the 55s timeout
+					// Above the 20s LAC lambda timeout, and below the 55s timeout
 					// of the linked-artifacts mesh listener.
-					'timeout_ms' => 20000,
+					'timeout_ms' => 30000,
 				],
 				'page' => [
 					'namespaces' => [ NS_MAIN ],
