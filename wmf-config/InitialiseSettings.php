@@ -10372,9 +10372,9 @@ return [
 	// T439707
 	'default' => [ 'minerva', 'vector-2022' ],
 	// T439715: Timeless, first on testwiki and mediawiki.org
-	// T439718: MonoBook, first on testwiki and mediawiki.org
-	'+testwiki' => [ 'timeless', 'monobook' ],
-	'+mediawikiwiki' => [ 'timeless', 'monobook' ],
+	// T439718: MonoBook and Vector legacy, first on testwiki and mediawiki.org
+	'+testwiki' => [ 'timeless', 'monobook', 'vector' ],
+	'+mediawikiwiki' => [ 'timeless', 'monobook', 'vector' ],
 ],
 
 'wgInterlanguageLinkCodeMap' => [
