@@ -19,18 +19,6 @@ return [
 	'default' => 'production',
 ],
 
-'wgGEHelpPanelHelpDeskTitle' => [
-	'default' => '',
-],
-
-'wgGEHelpPanelViewMoreTitle' => [
-	'default' => '',
-],
-
-'wgGEHelpPanelLinks' => [
-	'default' => [],
-],
-
 'wgGEApiQueryGrowthTasksLookaheadSize' => [
 	'default' => 10,
 ],

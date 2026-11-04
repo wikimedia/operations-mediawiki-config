@@ -1421,9 +1421,6 @@ function wmfGetOverrideSettings() {
 		'wgGEAccountSetupExperimentStartRegistrationDate' => [
 			'default' => '2026-09-09T13:00:00',
 		],
-		'wgGEHomepageReadingRecommendationsEnabled' => [
-			'default' => true,
-		],
 		'wgGEHomepageReadingRecommendationsFeaturedCategory' => [
 			'default' => 'Category:Featured articles',
 		],
