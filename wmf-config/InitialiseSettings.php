@@ -14730,11 +14730,9 @@ return [
 	'default' => '20261019000000',
 ],
 
-// T393212
+// T393212 - DBSC
 'wgDeviceBoundSessions' => [
-	'default' => false,
-	'group0' => true,
-	'test2wiki' => true,
+	'default' => true,
 ],
 
 'wgDeviceBoundSessionsReportOnly' => [
