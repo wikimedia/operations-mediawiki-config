@@ -10373,6 +10373,9 @@ return [
 'wgULSLanguageSelectorV2SupportedSkins' => [
 	// T439707
 	'default' => [ 'minerva', 'vector-2022' ],
+	// T439715: Timeless, first on testwiki and mediawiki.org
+	'+testwiki' => [ 'timeless' ],
+	'+mediawikiwiki' => [ 'timeless' ],
 ],
 
 'wgInterlanguageLinkCodeMap' => [
