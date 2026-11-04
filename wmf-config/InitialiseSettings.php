@@ -12984,12 +12984,12 @@ return [
 	'default' => 'k8s-mwdebug',
 ],
 
-// Configure cookie-based enrollment in PHP 8.5 (T439955).
+// Configure cookie-based enrollment in PHP 8.5 (T441689).
 'wgWMENewPHPVersion' => [
 	'default' => '8.5',
 ],
 'wgWMENewPHPSamplingRate' => [
-	'default' => 0, // turned off
+	'default' => 100, // T441689: Enroll 1 in 100 sessions (1%)
 ],
 
 'wmgUsePageViewInfo' => [
