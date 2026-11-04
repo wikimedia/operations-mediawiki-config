@@ -1015,6 +1015,11 @@
             "exclude" : true
           },
           {
+            "/": "/wiki/Special:ReadingLists",
+            "?": { "limport": "*" },
+            "comment": "Open shared reading list import links in the app"
+          },
+          {
             "/" : "/wiki/Special:*",
             "comment" : "Exclude Special: pages",
             "exclude" : true
