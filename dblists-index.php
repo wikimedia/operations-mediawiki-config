@@ -662,7 +662,7 @@ return [
 'ngwikimedia' => [ 'fishbowl', 'footer-legal-contact-link-exclusions', 'small', 'group1' ],
 'niawiki' => [ 'wikipedia', 'small', 'specialcontribute', 'wikidataclient', 'commonsuploads', 'growthexperiments', 'parsoidrendered', 'sul' ],
 'niawiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'wikifunctionsclient', 'parsoidrendered', 'sul' ],
-'nlwiki' => [ 'wikipedia', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'automoderator-revertrisk-multilingual' ],
+'nlwiki' => [ 'wikipedia', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices', 'growthexperiments', 'parsoidrendered', 'ores', 'sul', 'wikilove', 'checkuser-suggested-investigations', 'automoderator-revertrisk-multilingual' ],
 'nlwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'sul' ],
 'nlwikimedia' => [ 'footer-legal-contact-link-exclusions', 'small', 'group1', 'sul' ],
 'nlwikinews' => [ 'closed', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines', 'sul' ],
