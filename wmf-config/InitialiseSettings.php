@@ -12988,7 +12988,7 @@ return [
 	'default' => '8.5',
 ],
 'wgWMENewPHPSamplingRate' => [
-	'default' => 100, // T441689: Enroll 1 in 100 sessions (1%)
+	'default' => 20, // T441689: Enroll 1 in 20 sessions (5%)
 ],
 
 'wmgUsePageViewInfo' => [
