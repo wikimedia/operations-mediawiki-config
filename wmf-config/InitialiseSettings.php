@@ -8075,7 +8075,6 @@ return [
 
 'wgCheckUserSuggestedInvestigationsHidden' => [
 	'default' => false,
-	'nlwiki' => true,
 	'ptwiki' => true,
 ],
 
