@@ -4417,6 +4417,7 @@ if ( $wmgUseWikimediaAntiAbuse ) {
 		'host' => 'cope-b-a4b.llm.wikimedia.org',
 		'timeout' => 10,
 	];
+	$wgVirtualDomainsMapping['virtual-wikimediaantiabuse'] = [ 'cluster' => 'extension1', 'db' => false ];
 }
 
 // Temporary accounts
