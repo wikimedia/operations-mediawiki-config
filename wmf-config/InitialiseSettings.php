@@ -13110,8 +13110,10 @@ return [
 ],
 'wgReadingListsCustomLists' => [
 	'default' => false,
-	// Test2 should be one step ahead of test
-	'test2wiki' => true,
+	// T441372 - Roll out custom lists to projects
+	'mediawikiwiki' => true,
+	'wikipedia' => true,
+	'wikitech' => true,
 ],
 // T422833, T420881
 'wgReadingListsBetaDefaultForNewAccountsAfter' => [
