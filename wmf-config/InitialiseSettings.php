@@ -7610,6 +7610,12 @@ return [
 	'officewiki' => true,
 ],
 
+// Image to use in Visual Editor Suggestion Mode welcome dialog
+'wgVisualEditorDiscoverabilityWelcomeImage' => [
+	'default' => false,
+	'wikipedia' => '/static/images/visualeditor/neutral-baby-globe.gif'
+],
+
 // --------------- VisualEditor end ---------------
 // T440304
 'wgCiteSubReferencing' => [
