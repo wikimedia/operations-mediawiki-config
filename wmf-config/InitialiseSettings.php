@@ -2508,6 +2508,12 @@ return [
 	'fawiki' => true,
 ],
 
+// T439162
+'wgPageShareSkinsEnabled' => [
+	'default' => [],
+	'wikipedia' => [ 'minerva' ],
+],
+
 // T366334
 'wgVectorFontSizeConfigurableOptions' => [
 	'default' => [
@@ -14655,6 +14661,12 @@ return [
 		'wprov' => 'diim1',
 		'surveyCoverage' => 0,
 	],
+],
+
+// T439162
+'wgWMCShareCardEnabled' => [
+	'default' => false,
+	'wikipedia' => true,
 ],
 
 // T439162
