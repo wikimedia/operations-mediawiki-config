@@ -13904,6 +13904,9 @@ return [
 	'sourceswiki' => true, // T406050
 	'specieswiki' => true, // T406583
 	'wikidata' => true, // T405830
+
+	// chapter wikis
+	'bdwikimedia' => true, // T444031
 ],
 
 'wgUseLegacyMediaStyles' => [
