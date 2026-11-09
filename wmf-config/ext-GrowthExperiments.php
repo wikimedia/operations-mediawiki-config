@@ -884,6 +884,16 @@ return [
 	'frwiki' => '2026-09-29T15:00:00',
 ],
 
+// Give the early onboarding treatment to all users who registered after
+// wgGEAccountSetupExperimentStartRegistrationDate. Do not read the A/B test assignment.
+'wgGEEarlyOnboardingScaled' => [
+	'default' => false,
+	'arwiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+],
+
 'wgGEHomepageReadingRecommendationsFeaturedCategory' => [
 	'default' => 'Category:Featured articles',
 	'arwiki' => 'تصنيف:مقالات مختارة',
