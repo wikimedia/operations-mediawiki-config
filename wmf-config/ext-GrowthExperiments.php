@@ -828,10 +828,6 @@ return [
 	],
 ],
 
-'wgGECampaignTopics' => [
-	'default' => []
-],
-
 'wgGERestbaseUrl' => [
 	'default' => false,
 ],
