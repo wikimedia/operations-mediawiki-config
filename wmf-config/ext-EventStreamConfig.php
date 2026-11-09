@@ -3612,6 +3612,12 @@ return [
 					'provide_values' => [],
 				],
 			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
+				],
+			],
 		],
 
 		// Web base stream configuration to support Test Kitchen's monotable.
