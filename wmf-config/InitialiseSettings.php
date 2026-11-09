@@ -10007,6 +10007,8 @@ return [
 	'default' => true,
 	// T442379
 	'enwiki' => false,
+	// T443815
+	'frwiki' => false,
 ],
 
 'wgWikimediaAntiAbuseEnableLinkSpamTag' => [
