@@ -1517,9 +1517,8 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnabledTranscodeSet['360p.vp9.webm'] = false;
 	$wgEnabledTranscodeSet['720p.vp9.webm'] = false;
 
-	if ( $wgDBname === 'testwiki' ) {
-		$wgEnabledTranscodeSet['3x1080p.vp9.mpd'] = true;
-	}
+	// Chunked videos
+	$wgEnabledTranscodeSet['3x1080p.vp9.mpd'] = true;
 
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
