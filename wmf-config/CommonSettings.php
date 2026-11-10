@@ -1669,6 +1669,7 @@ if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
 	$wgGlobalBlockingCentralWiki = 'metawiki';
+	$wgGlobalBlockingCentralWikiContentLanguage = 'en';
 
 	// Should contain all wikis where GlobalBlocking is not installed
 	// or $wmgApplyGlobalBlocks is false
