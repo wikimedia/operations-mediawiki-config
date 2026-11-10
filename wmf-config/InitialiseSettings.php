@@ -4018,6 +4018,15 @@ return [
 	'thwiki' => true,
 	'enwiki' => true, // T418367
 	'test2wiki' => true,
+	// T444355
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'ptwiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wgPersonalDashboardRiskyArticleEditsMlModel' => [
