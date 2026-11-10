@@ -1016,6 +1016,7 @@ function wmfGetOverrideSettings() {
 
 		'wmgUsePersonalDashboard' => [
 			'default' => true, // T444353
+			'lockeddown' => false,
 		],
 
 		// The LOWER the value, the MORE requests will be logged.
