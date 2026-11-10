@@ -866,6 +866,10 @@ return [
 	'test2wiki' => true,
 ],
 
+'wgGEHomeBetaFeatureEnabled' => [
+	'default' => false,
+],
+
 'wgGEAccountSetupExperimentStartRegistrationDate' => [
 	'default' => null,
 	'testwiki' => '2026-09-09T13:00:00',

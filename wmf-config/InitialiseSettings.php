@@ -6604,6 +6604,7 @@ return [
 		'readinglistsbeta', // [Reading] 2025-05-20 - Reading List feature
 		'visualeditor-editcheck-suggestions', // [Editing] 2026-02-10 - Visual Editor edit check suggestions mode,
 		'uls-rewrite', // [Language and Product Localization] 2026-03-17 - Universal language selector rewrite.
+		'growthexperiments-home-betafeature', // [Growth] 2026-11-10 - Special:Home
 	],
 	'+wikisource' => [
 		'uls-compact-links', // [LangEng] 2018-09-13 – Compact language links

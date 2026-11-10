@@ -1436,6 +1436,9 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true
 		],
+		'wgGEHomeBetaFeatureEnabled' => [
+			'default' => true,
+		],
 		'wgGEAccountSetupExperimentStartRegistrationDate' => [
 			'default' => '2026-09-09T13:00:00',
 		],
