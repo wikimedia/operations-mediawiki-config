@@ -12810,7 +12810,7 @@ return [
 			'edit_suggestions_counts' => [
 				'prefetch' => [ 'enabled' => true ],
 				// T433024
-				'page' => [ 'sample' => 0.5 ],
+				'page' => [ 'sample' => 1.0 ],
 			],
 		],
 	],
@@ -12819,7 +12819,7 @@ return [
 		'artifacts' => [
 			'edit_suggestions_counts' => [
 				'prefetch' => [ 'enabled' => true ],
-				'page' => [ 'sample' => 0.25 ],
+				'page' => [ 'sample' => 1.0 ],
 			],
 		],
 	],
@@ -12827,7 +12827,7 @@ return [
 		'artifacts' => [
 			'edit_suggestions_counts' => [
 				'prefetch' => [ 'enabled' => true ],
-				'page' => [ 'sample' => 0.05 ],
+				'page' => [ 'sample' => 1.0 ],
 			],
 		],
 	],
