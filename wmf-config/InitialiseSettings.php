@@ -8121,6 +8121,17 @@ return [
 	]
 ],
 
+// T234155
+'wgCheckUserAbuseFilterVariablesEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgCheckUserAbuseFilterEdgeHeaderVariablesEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseUserInfoCard' => [
 	// T405342
 	'default' => false,
