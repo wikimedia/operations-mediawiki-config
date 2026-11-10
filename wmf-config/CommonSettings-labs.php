@@ -409,11 +409,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
 	$wgCdnMatchParameterOrder = false;
 
-	// T412528
-	if ( $wmgUsePersonalDashboard ) {
-		wfLoadExtension( 'PersonalDashboard' );
-	}
-
 	// T364034
 	if ( $wmgUseAutoModerator ) {
 		$wgAutoModeratorLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/v1/models/';
@@ -579,11 +574,6 @@ if ( $wmgRealm == 'labs' ) {
 	// The globalimagelinks table is in the local commonswiki db instead of an external cluster
 	if ( $wmgUseGlobalUsage ) {
 		$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
-	}
-
-	// T431000
-	if ( $wmgUseModeratorToolkit ) {
-		wfLoadExtension( 'ModeratorToolkit' );
 	}
 
 	// T440832: hCaptcha with the public integration test keys.

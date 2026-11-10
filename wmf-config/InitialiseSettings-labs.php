@@ -1015,8 +1015,79 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wmgUsePersonalDashboard' => [
-			'default' => true, // T444353
+			// T444353
+			'default' => true,
 			'lockeddown' => false,
+
+			// T412528
+			'enwiki' => true,
+			'simplewiki' => true,
+		],
+
+		'-wgPersonalDashboardDeveloperSetup' => [
+			'default' => false,
+
+			// T441729
+			'enwiki' => true,
+		],
+
+		'-wgPersonalDashboardUserMenu' => [
+			'default' => false,
+
+			// T441729
+			'enwiki' => true,
+			'simplewiki' => true,
+			'testwiki' => true,
+			'test2wiki' => true,
+		],
+
+		'-wgPersonalDashboardMinimumEdits' => [
+			// T441729
+			'default' => 0,
+		],
+
+		'-wgPersonalDashboardMaximumEdits' => [
+			// T441729
+			'default' => 0,
+		],
+
+		'-wgPersonalDashboardBlueDot' => [
+			'default' => false,
+
+			// T441729
+			'enwiki' => true,
+			'simplewiki' => true,
+			'testwiki' => true,
+			'test2wiki' => true,
+		],
+
+		'-wgPersonalDashboardActiveDiscussionsPages' => [
+			'default' => [],
+
+			// T441729
+			'enwiki' => [
+				'Wikipedia:Help desk',
+				'Wikipedia:Village pump (technical)',
+				'Wikipedia:Village pump (policy)',
+				'Wikipedia:Village pump (proposals)',
+			],
+
+			// T420785
+			'simplewiki' => [
+				'Wikipedia:Simple talk',
+				'Wikipedia:Administrators\' noticeboard',
+			],
+		],
+
+		'-wgPersonalDashboardAllowOverride' => [
+			// T441729
+			'default' => true,
+		],
+
+		'wmgUseModeratorToolkit' => [
+			// T431000
+			'enwiki' => true,
+			'simplewiki' => true,
 		],
 
 		// The LOWER the value, the MORE requests will be logged.
@@ -2481,11 +2552,6 @@ function wmfGetOverrideSettings() {
 		'-wgEnableWatchstarPopover' => [
 			'default' => false,
 			'enwiki' => true, // T431355
-		],
-
-		'-wmgUseModeratorToolkit' => [
-			'default' => false,
-			'enwiki' => true, // T431000
 		],
 
 		// T438463

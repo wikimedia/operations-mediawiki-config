@@ -4932,8 +4932,6 @@ if ( $wmgUseSearchVue ) {
 // T403982
 if ( $wmgUsePersonalDashboard ) {
 	wfLoadExtension( 'PersonalDashboard' );
-	// T419950
-	$wgPersonalDashboardSurveyLink = 'https://wikimediafoundation.limesurvey.net/179424?lang=';
 }
 
 if ( $wmgUsePhonos ) {

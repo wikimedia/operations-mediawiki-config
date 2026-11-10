@@ -4017,14 +4017,20 @@ return [
 
 'wmgUsePersonalDashboard' => [
 	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
-	'testwiki' => true, // T403982
+
+	// T403982
+	'testwiki' => true,
+	'test2wiki' => true,
+
 	// T417665
 	'idwiki' => true,
-	'trwiki' => true,
 	'simplewiki' => true,
 	'thwiki' => true,
-	'enwiki' => true, // T418367
-	'test2wiki' => true,
+	'trwiki' => true,
+
+	// T418367
+	'enwiki' => true,
+
 	// T444355
 	'arwiki' => true,
 	'bnwiki' => true,
@@ -4036,87 +4042,144 @@ return [
 	'zhwiki' => true,
 ],
 
-'wgPersonalDashboardRiskyArticleEditsMlModel' => [
-	'default' => "revertrisklanguageagnostic",
-	'enwiki' => "damaging"
-],
+'wgPersonalDashboardDeveloperSetup' => [
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
 
-'wgPersonalDashboardReviewChangesMlModel' => [
-	'default' => "revertrisklanguageagnostic",
-	'enwiki' => "damaging"
-],
-
-'wgPersonalDashboardBlueDot' => [
-	'default' => false,
+	// T441729
 	'testwiki' => true,
-	// T418613
-	'idwiki' => true,
-	'trwiki' => true,
-	'simplewiki' => true,
-	'thwiki' => true,
-	// T421415
-	'enwiki' => true,
 ],
 
 'wgPersonalDashboardUserMenu' => [
-	'default' => false,
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+
+	// T417665
 	'testwiki' => true,
+	'test2wiki' => true,
+
 	// T418613
 	'idwiki' => true,
-	'trwiki' => true,
 	'simplewiki' => true,
 	'thwiki' => true,
+	'trwiki' => true,
+
 	// T421415
 	'enwiki' => true,
 ],
 
 'wgPersonalDashboardMinimumEdits' => [
-	'default' => 100,
-	'testwiki' => 10,
+	'default' => 100, // NOTE: do not modify without OK from Moderator Tools team
+
+	// T441729
+	'testwiki' => 0,
+	'test2wiki' => 0,
+
 	// T421415
 	'enwiki' => 100,
 ],
 
 'wgPersonalDashboardMaximumEdits' => [
-	'default' => 0,
-	'testwiki' => 25,
+	'default' => 0, // NOTE: do not modify without OK from Moderator Tools team
+
+	// T441729
+	'testwiki' => 0,
+	'test2wiki' => 0,
+
 	// T421415
 	'enwiki' => 500,
 ],
 
+'wgPersonalDashboardBlueDot' => [
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+
+	// T417665
+	'testwiki' => true,
+	'test2wiki' => true,
+
+	// T418613
+	'idwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
+	'trwiki' => true,
+
+	// T421415
+	'enwiki' => true,
+],
+
+'wgPersonalDashboardReviewChangesMlModel' => [
+	'default' => 'revertrisklanguageagnostic',
+
+	// T441729
+	'test2wiki' => 'damaging',
+
+	// T418367
+	'enwiki' => 'damaging',
+],
+
 'wgPersonalDashboardActiveDiscussionsPages' => [
 	'default' => [],
+
+	// T441729
+	'testwiki' => [
+		'Wikipedia:Requests/Help desk',
+		'Wikipedia:Village pump',
+	],
+	'test2wiki' => [
+		'Wikipedia:Village pump',
+	],
+
 	// T420785
-	'testwiki' => [ 'Wikipedia:Village Pump' ],
 	'idwiki' => [
 		'Wikipedia:Warung Kopi (Kebijakan)',
 		'Wikipedia:Warung Kopi (Usulan)',
 		'Wikipedia:Warung Kopi (Bahasa)',
-		'Wikipedia:Warung Kopi (Lain-lain)'
+		'Wikipedia:Warung Kopi (Lain-lain)',
+	],
+	'simplewiki' => [
+		'Wikipedia:Simple talk',
+		'Wikipedia:Administrators\' noticeboard',
+	],
+	'thwiki' => [
+		'วิกิพีเดีย:แผนกช่วยเหลือ',
+		'วิกิพีเดีย:สถานทูตวิกิมีเดีย',
+		'วิกิพีเดีย:แจ้งผู้ดูแลระบบ',
 	],
 	'trwiki' => [
 		'Vikipedi:Köy çeşmesi (ilginize)',
 		'Vikipedi:Köy çeşmesi (teklifler)',
 		'Vikipedi:Köy çeşmesi (politika)',
-		'Vikipedi:Danışma masası'
-	],
-	'simplewiki' => [
-		'Wikipedia:Simple talk',
-		'Wikipedia:Administrators\' noticeboard'
-	],
-	'thwiki' => [
-		'วิกิพีเดีย:แผนกช่วยเหลือ',
-		'วิกิพีเดีย:สถานทูตวิกิมีเดีย',
-		'วิกิพีเดีย:แจ้งผู้ดูแลระบบ'
+		'Vikipedi:Danışma masası',
 	],
 	'enwiki' => [
 		'Wikipedia:Help desk',
 		'Wikipedia:Village pump (miscellaneous)',
 		'Wikipedia:Village pump (technical)',
-		'Wikipedia:Village pump (idea_lab)',
+		'Wikipedia:Village pump (idea lab)',
 		'Wikipedia:Village pump (policy)',
-		'Wikipedia:Village pump (proposals)'
-	]
+		'Wikipedia:Village pump (proposals)',
+	],
+],
+
+'wgPersonalDashboardAllowOverride' => [
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+
+	// T441729
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
+'wmgUseModeratorToolkit' => [
+	'default' => false, // NOTE: do not enable without OK from Moderator Tools team
+
+	// T438334
+	'testwiki' => true,
+	'test2wiki' => true,
+
+	// T437617
+	'enwiki' => true,
+	'idwiki' => true,
+	'simplewiki' => true,
+	'thwiki' => true,
+	'trwiki' => true,
 ],
 
 'wmgUsePhonos' => [
@@ -14768,16 +14831,6 @@ return [
 'wmgWMCIncludeContributorCounts' => [
 	'default' => false,
 	'wikipedia' => true, // T429834
-],
-
-'wmgUseModeratorToolkit' => [
-	'default' => false,
-	'testwiki' => true, // T438334
-	'enwiki' => true, // T437617
-	'idwiki' => true, // T437617
-	'simplewiki' => true, // T437617
-	'thwiki' => true, // T437617
-	'trwiki' => true, // T437617
 ],
 
 'wmgSuppressOtherLanguageLinkUpdates' => [
