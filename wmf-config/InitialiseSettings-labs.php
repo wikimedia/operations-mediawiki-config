@@ -1014,9 +1014,8 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgUsePersonalDashboard' => [ // T412528
-			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
-			'enwiki' => true,
+		'wmgUsePersonalDashboard' => [
+			'default' => true, // T444353
 		],
 
 		// The LOWER the value, the MORE requests will be logged.
