@@ -8092,7 +8092,6 @@ return [
 
 'wgCheckUserSuggestedInvestigationsHidden' => [
 	'default' => false,
-	'ptwiki' => true,
 ],
 
 'wgCheckUserSuggestedInvestigationsUseGlobalContributionsLink' => [
