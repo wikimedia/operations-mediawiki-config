@@ -5099,6 +5099,13 @@ if (
 
 $wgLogRestrictions = array_merge( $wgLogRestrictions, $wmgLogRestrictions );
 
+// T431093
+$wgSiteLookup = [
+	'class' => SiteMatrixLookup::class,
+	'services' => [ 'SiteMatrix' ],
+	'args' => [ $site ]
+];
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
