@@ -1881,9 +1881,13 @@ Wiktionary:
     bgwiktionary:
         no_2x: true
     bjnwiktionary:
-        commons: 'File:Wiktionary-logo-v2-bjn.svg'
-        comment: T374898
-        comment_2x: T374898
+        commons: 'File:Wiktionary-logo-bjn.svg'
+        comment: T444085
+        comment_2x: T444085
+        commons_tagline: 'File:Wiktionary-tagline-bjn.svg'
+        comment_tagline: T444085
+        commons_wordmark: 'File:Wiktionary-wordmark-bjn.svg'
+        comment_wordmark: T444085
     blkwiktionary:
         commons: 'File:Wiktionary-logo-blk.svg'
         comment_2x: T344310

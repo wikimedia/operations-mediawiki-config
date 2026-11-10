@@ -415,7 +415,7 @@ return [
 	'bewiktionary' => '/static/images/project-logos/bewiktionary.png', // T45240
 	'bewwiktionary' => '/static/images/project-logos/bewwiktionary.png', // T402134
 	'bgwiktionary' => '/static/images/project-logos/bgwiktionary.png',
-	'bjnwiktionary' => '/static/images/project-logos/bjnwiktionary.png', // T374898
+	'bjnwiktionary' => '/static/images/project-logos/bjnwiktionary.png', // T444085
 	'blkwiktionary' => '/static/images/project-logos/blkwiktionary.png', // T344310
 	'bnwiktionary' => '/static/images/project-logos/bnwiktionary.png', // T45240
 	'brwiktionary' => '/static/images/project-logos/brwiktionary.png',
@@ -1313,7 +1313,7 @@ return [
 	'bclwiktionary' => '/static/images/project-logos/bclwiktionary-2x.png',
 	'bewiktionary' => '/static/images/project-logos/bewiktionary-2x.png', // T150618
 	'bewwiktionary' => '/static/images/project-logos/bewwiktionary-2x.png', // T402134
-	'bjnwiktionary' => '/static/images/project-logos/bjnwiktionary-2x.png', // T374898
+	'bjnwiktionary' => '/static/images/project-logos/bjnwiktionary-2x.png', // T444085
 	'blkwiktionary' => '/static/images/project-logos/blkwiktionary-2x.png', // T344310
 	'bnwiktionary' => '/static/images/project-logos/bnwiktionary-2x.png', // T150618
 	'bswiktionary' => '/static/images/project-logos/bswiktionary-2x.png', // T159542
@@ -2924,6 +2924,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-bew.svg',
 		'width' => 128,
 		'height' => 25,
+	],
+	'bjnwiktionary' => [ // T444085
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-bjn.svg',
+		'width' => 124,
+		'height' => 24,
 	],
 	'blkwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-blk.svg',
@@ -7019,6 +7024,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-bew.svg',
 		'width' => 112,
 		'height' => 15,
+	],
+	'bjnwiktionary' => [ // T444085
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-bjn.svg',
+		'width' => 120,
+		'height' => 16,
 	],
 	'bnwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-bn.svg',
