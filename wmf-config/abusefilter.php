@@ -413,6 +413,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		break;
+	case 'outreachwiki': // T444368
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgAbuseFilterActions['block'] = true;
+		break;
 	case 'plwiki':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;

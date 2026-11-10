@@ -2148,6 +2148,9 @@ return [
 	'+orwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'+outreachwiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T444368
+	],
 	'pawiki' => [
 		'patroller' => [ 'patrol' => true ], // T120369
 		'autopatrolled' => [ 'autopatrol' => true ], // T120369
@@ -4629,6 +4632,9 @@ return [
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
+	'+outreachwiki' => [
+		'sysop' => [ 'autopatrolled' ], // T444368
+	],
 	'+pawiki' => [
 		'sysop' => [
 			'patroller', // T120369
@@ -6007,6 +6013,7 @@ return [
 	],
 	'+outreachwiki' => [
 		'bureaucrat' => [ 'sysop' ],
+		'sysop' => [ 'autopatrolled' ], // T444368
 	],
 	'+pawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'transwiki' ], // T120369
