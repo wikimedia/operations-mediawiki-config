@@ -863,11 +863,20 @@ return [
 'wgGEHomeEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'test2wiki' => true,
 ],
 
 'wgGEHomeBetaFeatureEnabled' => [
 	'default' => false,
+	'test2wiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'ptwiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wgGEAccountSetupExperimentStartRegistrationDate' => [
