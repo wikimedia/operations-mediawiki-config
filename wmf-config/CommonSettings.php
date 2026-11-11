@@ -2246,29 +2246,6 @@ if ( $wmgUseConfirmEdit ) {
 						}
 					}
 				};
-
-				// CommunityRequests intake dispatches an inner action=edit via
-				// DerivativeRequest but does not yet render a captcha widget,
-				// so any triggered captcha is unsolvable. T426897
-				if ( $wmgUseCommunityRequests ) {
-					$wgHooks['ConfirmEditTriggersCaptcha'][] = static function ( $action, $title, &$result ) {
-						if ( !$title || !in_array( $action, [ 'edit', 'create' ], true ) ) {
-							return;
-						}
-						$config = MediaWikiServices::getInstance()->getMainConfig();
-						$titleText = $title->getPrefixedText();
-						$prefixes = [
-							$config->get( 'CommunityRequestsWishPagePrefix' ),
-							$config->get( 'CommunityRequestsFocusAreaPagePrefix' ),
-						];
-						foreach ( $prefixes as $prefix ) {
-							if ( $prefix !== '' && str_starts_with( $titleText, $prefix ) ) {
-								$result = false;
-								return;
-							}
-						}
-					};
-				}
 			}
 
 			// Enable hCaptcha for the UploadWizard publish phase.
