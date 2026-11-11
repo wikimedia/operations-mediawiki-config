@@ -3826,6 +3826,11 @@ return [
 'wmgEnableHCaptchaForBadLogin' => [
 	'default' => true,
 ],
+'wmgEnableHCaptchaForAllAPIEdits' => [
+	'default' => false,
+	// T444470
+	'testwiki' => true,
+],
 
 'wgSkipCaptchaMinimumEditCount' => [
 	'default' => 10,

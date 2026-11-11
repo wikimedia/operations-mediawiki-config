@@ -2119,12 +2119,15 @@ if ( $wmgUseConfirmEdit ) {
 
 			/**
 			 * If the main request is an API request that edits a page, returns whether
-			 * that interface supports hCaptcha and therefore should require a hCaptcha
-			 * token
+			 * a hCaptcha token should be required to make the edit.
 			 */
 			$doesEditApiInterfaceSupportHCaptcha = static function () use (
-				$wgHCaptchaEnabledInMobileFrontend
+				$wgHCaptchaEnabledInMobileFrontend,
+				$wmgEnableHCaptchaForAllAPIEdits
 			): bool {
+				if ( $wmgEnableHCaptchaForAllAPIEdits ) {
+					return true;
+				}
 				$request = RequestContext::getMain()->getRequest();
 				// $_REQUEST used intentionally as this is used in places where the
 				// main request will have had the action updated to 'edit'
