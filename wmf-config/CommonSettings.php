@@ -2120,12 +2120,19 @@ if ( $wmgUseConfirmEdit ) {
 			 */
 			$doesEditApiInterfaceSupportHCaptcha = static function () use (
 				$wgHCaptchaEnabledInMobileFrontend,
-				$wmgEnableHCaptchaForAllAPIEdits
+				$wmgEnableHCaptchaForAllAPIEdits,
+				$wgDBname
 			): bool {
-				if ( $wmgEnableHCaptchaForAllAPIEdits ) {
+				$request = RequestContext::getMain()->getRequest();
+				if (
+					$wmgEnableHCaptchaForAllAPIEdits &&
+					(
+						$wgDBname === 'testwiki' ||
+						strpos( $request->getHeader( 'User-Agent' ), "WikipediaApp/" ) !== 0
+					)
+				) {
 					return true;
 				}
-				$request = RequestContext::getMain()->getRequest();
 				// $_REQUEST used intentionally as this is used in places where the
 				// main request will have had the action updated to 'edit'
 				$action = $_REQUEST['action'] ?? '';

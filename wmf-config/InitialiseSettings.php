@@ -3830,6 +3830,8 @@ return [
 	'default' => false,
 	// T444470
 	'testwiki' => true,
+	// T444509
+	'frwiki' => true,
 ],
 
 'wgSkipCaptchaMinimumEditCount' => [
