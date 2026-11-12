@@ -20,6 +20,7 @@
 
 use MediaWiki\Content\FallbackContentHandler;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
+use MediaWiki\Extension\SiteMatrix\SiteMatrixLookup;
 use MediaWiki\Title\Title;
 
 // safe guard
@@ -594,5 +595,12 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCaptchaTriggers['edit'] = [ 'trigger' => true, 'class' => 'HCaptcha' ];
 		$wgCaptchaTriggers['create'] = [ 'trigger' => true, 'class' => 'HCaptcha' ];
 	}
+
+	// T432369
+	$wgSiteLookup = [
+		'class' => SiteMatrixLookup::class,
+		'services' => [ 'SiteMatrix' ],
+		'args' => [ $site ]
+	];
 }
 // end safeguard
