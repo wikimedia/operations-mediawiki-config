@@ -49,6 +49,7 @@ use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Extension\Notifications\Push\PushNotifier;
+use MediaWiki\Extension\SiteMatrix\SiteMatrixLookup;
 use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
@@ -5098,6 +5099,13 @@ if (
 }
 
 $wgLogRestrictions = array_merge( $wgLogRestrictions, $wmgLogRestrictions );
+
+// T431093
+$wgSiteLookup = [
+	'class' => SiteMatrixLookup::class,
+	'services' => [ 'SiteMatrix' ],
+	'args' => [ $site ]
+];
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
