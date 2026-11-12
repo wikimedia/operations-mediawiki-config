@@ -2450,7 +2450,7 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
-		// T440832 temporary feature flag, beta only
+		// T440832 temporary feature flag, beta, (testwikidatawiki is set in InitialiseSettings.php)
 		'wmgWikibaseTmpHCaptchaIntegration' => [
 			'default' => false,
 			'wikidatawiki' => true,

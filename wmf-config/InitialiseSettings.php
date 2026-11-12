@@ -3832,6 +3832,8 @@ return [
 	'testwiki' => true,
 	// T444509
 	'frwiki' => true,
+	// T440845
+	'testwikidatawiki' => true,
 ],
 
 'wgSkipCaptchaMinimumEditCount' => [
@@ -13896,6 +13898,11 @@ return [
 'wmgWikibaseTmpMobileEditingUI' => [
 	'default' => false,
 	'wikidatawiki' => true, // T437054
+],
+
+'wmgWikibaseTmpHCaptchaIntegration' => [
+	'default' => false,
+	'testwikidatawiki' => true, // T440845
 ],
 
 // T421850 - prototype displaying links to WikiProjects on Item pages

@@ -266,7 +266,7 @@ if ( $wmgUseWikibaseRepo ) {
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['edit'] = false;
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['create'] = false;
 			}
-			// T440832: With the Wikibase hCaptcha flag on (Beta only), Special:NewItem and
+			// T440832: With the Wikibase hCaptcha flag on (Beta and testwikidatawiki), Special:NewItem and
 			// Special:NewProperty render the widget, so stop exempting item/property creation.
 			// TODO(T443420): remove 'edit' once the classic UI and wbui2025 support hCaptcha.
 			if ( !empty( $wmgWikibaseTmpHCaptchaIntegration ) ) {
