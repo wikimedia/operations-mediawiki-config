@@ -8147,11 +8147,13 @@ return [
 'wgCheckUserAbuseFilterVariablesEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true,
 ],
 
 'wgCheckUserAbuseFilterEdgeHeaderVariablesEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true,
 ],
 
 'wmgUseUserInfoCard' => [
