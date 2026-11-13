@@ -55,4 +55,13 @@ $wmgThrottlingExceptions[] = [
 	'tempaccountvalue' => 30,
 ];
 
+// T444794: Lift IP cap for WikiIndaba 2026
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-11-13T12:00 +0:00',
+	'to'     => '2026-11-15T23:00 +0:00',
+	'IP'     => '102.213.114.202',
+	'value'  => 200,
+	'tempaccountvalue' => 200,
+];
+
 ## Add throttling definitions above.
