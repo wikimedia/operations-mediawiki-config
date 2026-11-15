@@ -63,7 +63,7 @@ return [
 		'eventgate-analytics-external' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8492',
 		'eventgate-main' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8292',
 		'upload' => 'ms-fe.svc.deployment-prep.eqiad1.wikimedia.cloud',
-		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
+		'cxserver' => 'http://cxserver.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 
 		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
 
