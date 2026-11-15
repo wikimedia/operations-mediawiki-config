@@ -83,6 +83,16 @@ $wikibaseEntityUsageExtension1 = [
 	// s1 wikis
 	'enwiki',
 
+	// s2 wikis
+	'bgwiki',
+	'bgwiktionary',
+	'cswiki',
+	'enwikiquote',
+	'enwiktionary',
+	'eowiki',
+	'fiwiki',
+	'idwiki',
+
 	// s3 wikis
 	'mediawikiwiki',
 
