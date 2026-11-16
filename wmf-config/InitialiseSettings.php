@@ -13424,9 +13424,15 @@ return [
 		'wss://localhost:*',
 		'ws://localhost:*',
 	],
+	'+dewiki' => [
+		'spenden.wikimedia.de', // T444786
+	],
 	'donatewiki' => [
 		'*.wikimedia.org',
 	],
+	'+enwiki' => [
+		'spenden.wikimedia.de', // T444786
+	]
 ],
 
 'wgSuspiciousIpExpiry' => [
