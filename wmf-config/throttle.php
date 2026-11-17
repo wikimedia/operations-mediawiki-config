@@ -45,23 +45,18 @@ $wmgThrottlingExceptions[] = [
 	'tempaccountvalue' => 50,
 ];
 
-// T437594: Lift IP cap for edit-a-thon
+// T445180: Lift IP cap for student workshop at Universiti Kebangsaan Malaysia
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-11-07T13:30 +0:00',
-	'to'     => '2026-11-07T16:30 +0:00',
-	'IP'     => '86.150.217.141',
-	'dbname' => [ 'enwiki' ],
-	'value'  => 30,
-	'tempaccountvalue' => 30,
-];
-
-// T444794: Lift IP cap for WikiIndaba 2026
-$wmgThrottlingExceptions[] = [
-	'from'   => '2026-11-13T12:00 +0:00',
-	'to'     => '2026-11-15T23:00 +0:00',
-	'IP'     => '102.213.114.202',
-	'value'  => 200,
-	'tempaccountvalue' => 200,
+	'from'   => '2026-11-18T01:00 +0:00',
+	'to'     => '2026-11-18T05:00 +0:00',
+	'range'  => [
+		'103.219.236.0/23',
+		'103.101.254.0/24',
+		'103.101.255.0/24'
+	],
+	'dbname' => [ 'enwiki', 'mswiki' ],
+	'value'  => 20,
+	'tempaccountvalue' => 20,
 ];
 
 ## Add throttling definitions above.
