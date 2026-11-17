@@ -266,12 +266,15 @@ if ( $wmgUseWikibaseRepo ) {
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['edit'] = false;
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['create'] = false;
 			}
-			// T440832: With the Wikibase hCaptcha flag on (Beta and testwikidatawiki), Special:NewItem and
-			// Special:NewProperty render the widget, so stop exempting item/property creation.
-			// TODO(T443420): remove 'edit' once the classic UI and wbui2025 support hCaptcha.
+			// T440832, T443420: With the Wikibase hCaptcha flag on (Beta and testwikidatawiki),
+			// Special:NewItem, Special:NewProperty, the Special:Set* pages, the classic entity UI,
+			// wbui2025 and termbox render the widget, so stop exempting item/property creation and
+			// edits. Lexeme and EntitySchema stay exempt.
 			if ( !empty( $wmgWikibaseTmpHCaptchaIntegration ) ) {
 				unset(
+					$wgCaptchaTriggersOnNamespace[NS_MAIN]['edit'],
 					$wgCaptchaTriggersOnNamespace[NS_MAIN]['create'],
+					$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['edit'],
 					$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['create']
 				);
 			}
