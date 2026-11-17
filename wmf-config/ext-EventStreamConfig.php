@@ -2442,6 +2442,13 @@ return [
 		],
 		// Thanks sent via the Thanks extension, produced by EventBus.
 		// https://phabricator.wikimedia.org/T441426
+		'mediawiki.user_thank.v1' => [
+			'schema_title' => 'mediawiki/user/thank',
+			'destination_event_service' => 'eventgate-main',
+		],
+		// DEPRECATED: replaced by mediawiki.user_thank.v1 above.
+		// This stream will be deleted after EventBus starts producing to v1.
+		// https://phabricator.wikimedia.org/T441426
 		'mediawiki.user_thank.rc0' => [
 			'schema_title' => 'mediawiki/user/thank',
 			'destination_event_service' => 'eventgate-main',

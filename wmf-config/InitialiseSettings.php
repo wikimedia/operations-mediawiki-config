@@ -12788,9 +12788,6 @@ return [
 		// Override until user_change is released as v1
 		// https://phabricator.wikimedia.org/T423952
 		'mediawiki.user_change.v1' => 'mediawiki.user_change.dev0',
-		// Override until user_thank is released as v1
-		// https://phabricator.wikimedia.org/T441426
-		'mediawiki.user_thank.v1' => 'mediawiki.user_thank.rc0',
 		// Override until revision_html_feature_counts_change is released as v1
 		// https://phabricator.wikimedia.org/T436695
 		'mediawiki.revision_html_feature_counts_change.v1' => 'mediawiki.revision_html_feature_counts_change.dev0',
