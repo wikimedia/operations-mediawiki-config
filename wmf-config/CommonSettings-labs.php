@@ -575,14 +575,5 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseGlobalUsage ) {
 		$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
 	}
-
-	// T440832: hCaptcha with the public integration test keys.
-	if ( $wmgUseConfirmEdit && $wmgWikibaseHCaptchaTestKeys ) {
-		wfLoadExtension( 'ConfirmEdit/hCaptcha' );
-		$wgHCaptchaSiteKey = '10000000-ffff-ffff-ffff-000000000001';
-		$wgHCaptchaSecretKey = '0x0000000000000000000000000000000000000000';
-		$wgCaptchaTriggers['edit'] = [ 'trigger' => true, 'class' => 'HCaptcha' ];
-		$wgCaptchaTriggers['create'] = [ 'trigger' => true, 'class' => 'HCaptcha' ];
-	}
 }
 // end safeguard
