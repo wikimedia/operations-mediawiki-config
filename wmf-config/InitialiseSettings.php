@@ -13913,6 +13913,7 @@ return [
 
 'wmgWikibaseTmpMobileEditingUI' => [
 	'default' => false,
+	'testwikidatawiki' => true, // T445295
 	'wikidatawiki' => true, // T437054
 ],
 
