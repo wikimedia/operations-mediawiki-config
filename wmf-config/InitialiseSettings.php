@@ -2342,6 +2342,7 @@ return [
 		'ParserOptions' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ],
 		'Parsoid' => 'warning',
 		'poolcounter' => 'info',
+		'post' => [ 'logstash' => false ],
 		'preferences' => 'info',
 		'purge' => 'debug',
 		'query' => 'debug',

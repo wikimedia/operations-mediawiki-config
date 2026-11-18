@@ -378,6 +378,7 @@ function wmfGetOverrideSettings() {
 				'ParserCache' => 'warning',
 				'Parsoid' => 'warning',
 				'poolcounter' => 'debug',
+				'post' => [ 'logstash' => false ],
 				'preferences' => 'info',
 				'purge' => 'debug',
 				'query' => 'debug',
