@@ -14857,4 +14857,10 @@ return [
 	'default' => true,
 ],
 
+// T123063
+'wgSiteMatrixSpecialPageLanguageLinks' => [
+	'default' => false,
+	'group0' => true,
+],
+
 ];
