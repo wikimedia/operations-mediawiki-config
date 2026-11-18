@@ -4906,6 +4906,8 @@ if ( $wmgUseCommunityRequests ) {
 			'cluster' => 'extension1',
 			'db' => false,
 		];
+
+		$wgDefaultUserOptions['usemachinetranslation'] = 1;
 	}
 }
 
