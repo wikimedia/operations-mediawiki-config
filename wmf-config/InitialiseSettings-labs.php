@@ -1018,10 +1018,6 @@ function wmfGetOverrideSettings() {
 			// T444353
 			'default' => true,
 			'lockeddown' => false,
-
-			// T412528
-			'enwiki' => true,
-			'simplewiki' => true,
 		],
 
 		'-wgPersonalDashboardDeveloperSetup' => [
@@ -1082,12 +1078,6 @@ function wmfGetOverrideSettings() {
 		'-wgPersonalDashboardAllowOverride' => [
 			// T441729
 			'default' => true,
-		],
-
-		'wmgUseModeratorToolkit' => [
-			// T431000
-			'enwiki' => true,
-			'simplewiki' => true,
 		],
 
 		// The LOWER the value, the MORE requests will be logged.

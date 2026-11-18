@@ -4182,6 +4182,16 @@ return [
 	'simplewiki' => true,
 	'thwiki' => true,
 	'trwiki' => true,
+
+	// T445385
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'ptwiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wmgUsePhonos' => [
