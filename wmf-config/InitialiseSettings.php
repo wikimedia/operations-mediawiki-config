@@ -13778,6 +13778,21 @@ return [
 	'wikipedia' => 'https://test.wikipedia.org/w/rest.php',
 ],
 
+'wgRestAudienceOverrides' => [
+	'default' => [
+		'public' => [ 'availability' => 'published' ],
+		'internal' => [ 'availability' => 'published' ],
+		'beta' => [ 'availability' => 'published' ],
+		'' => [ 'availability' => 'published' ],
+	],
+	'+testwiki' => [
+		'public' => [ 'availability' => 'published' ],
+		'internal' => [ 'availability' => 'published' ],
+		'beta' => [ 'availability' => 'published' ],
+		'' => [ 'availability' => 'published' ],
+	],
+],
+
 'wgRestModuleOverrides' => [
 	'default' => [
 		'site/v1' => [ 'availability' => 'discoverable' ],
