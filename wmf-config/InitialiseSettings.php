@@ -8217,9 +8217,8 @@ return [
 
 // T234155
 'wgCheckUserAbuseFilterVariablesEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => true,
+	'default' => true,
+	'metawiki' => false,
 ],
 
 'wgCheckUserAbuseFilterEdgeHeaderVariablesEnabled' => [
