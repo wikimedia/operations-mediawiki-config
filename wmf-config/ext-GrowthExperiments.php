@@ -859,19 +859,19 @@ return [
 'wgGEHomeEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'frwiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHomeBetaFeatureEnabled' => [
 	'default' => false,
 	'test2wiki' => true,
-	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
 	'enwiki' => true,
 	'eswiki' => true,
-	'frwiki' => true,
 	'ptwiki' => true,
-	'viwiki' => true,
 	'zhwiki' => true,
 ],
 
