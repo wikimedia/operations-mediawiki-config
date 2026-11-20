@@ -6900,23 +6900,6 @@ return [
 	'default' => false,
 ],
 
-// -------------- RESTBase start --------------
-
-// whether to configure RESTBase as a Virtual REST Service
-// in MW Core
-'wmgUseRestbaseVRS' => [
-	'default' => true,
-	'closed' => false, // T315383
-	'private' => false,
-	// For reasons lost to history RESTBase was never set up for these wikis: (T318325)
-	'hiwikimedia' => false,
-	'maiwikimedia' => false,
-	'romdwikimedia' => false,
-	'wbwikimedia' => false,
-],
-
-// -------------- RESTBase end --------------
-
 // -------------- Shared Parsoid start --------------
 
 'wmgUseParsoid' => [
