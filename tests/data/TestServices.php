@@ -42,9 +42,6 @@ $wmgAllServices['unittest']['logstash'] = [ '127.0.0.1' ];
 ### IRC
 $wmgAllServices['unittest']['irc'] = '127.0.0.1';
 
-### Restbase
-$wmgAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
-
 ### Poolcounter
 $wmgAllServices['unittest']['poolcounter'] = [ '127.0.0.1' ];
 

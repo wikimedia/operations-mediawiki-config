@@ -98,10 +98,7 @@ return [
 			'localhost',
 		],
 
-		### Restbase
-		'restbase' => 'http://deployment-restbase05.deployment-prep.eqiad1.wikimedia.cloud:7231',
-
-		### Rest Gateway. Same as Restbase for now, may change when we get true beta rest gateway
+		### Rest Gateway. Uses RESTBase for now, may change when we get true beta rest gateway
 		'rest-gateway' => 'http://deployment-restbase05.deployment-prep.eqiad1.wikimedia.cloud:7231',
 
 		### Poolcounter

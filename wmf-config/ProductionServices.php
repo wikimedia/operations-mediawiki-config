@@ -70,7 +70,6 @@ $common = [
 	'eventgate-analytics-external' => 'http://localhost:6013',
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
-	'restbase' => 'http://localhost:6011',
 	'rest-gateway' => 'http://localhost:6033',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
