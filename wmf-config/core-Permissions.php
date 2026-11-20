@@ -1527,6 +1527,9 @@ return [
 			'editautopatrolprotected' => true, // T308917
 		],
 		'mover' => [ // T102770
+			'autopatrol' => true, // T445622
+			'editautopatrolprotected' => true, // T445622
+			'patrol' => true, // T445622
 			'movefile' => true,
 			'move-subpages' => true,
 			'suppressredirect' => true
