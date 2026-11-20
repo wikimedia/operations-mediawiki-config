@@ -575,5 +575,12 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseGlobalUsage ) {
 		$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
 	}
+
+	if ( $wmgUseTimeline ) {
+		// No shellbox-timeline in beta: the renderer runs on the appserver, which has fonts-noto
+		$wgTimelineFonts = [
+			'default' => '/usr/share/fonts/truetype/noto/NotoSans-Regular',
+		];
+	}
 }
 // end safeguard
