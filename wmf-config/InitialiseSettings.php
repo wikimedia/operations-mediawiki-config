@@ -10018,19 +10018,7 @@ return [
 
 'wgWikimediaAntiAbuseEnableModelChecks' => [
 	'default' => false,
-	// T431292
-	'testwiki' => true,
-	'enwiki' => true,
-	// T438867
-	'jawiki' => true,
-	// T439928
-	'dewiki' => true,
-	// T442476
-	'hewiki' => true,
-	// T442204
-	'frwiki' => true,
-	'eswiki' => true,
-	'metawiki' => true,
+	'wikimediaantiabuse-abusereview' => true,
 ],
 
 'wgWikimediaAntiAbuseEnablePersonalInfoTag' => [

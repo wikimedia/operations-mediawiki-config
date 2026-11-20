@@ -89,6 +89,7 @@ class WmfConfig {
 		'automoderator-revertrisk-multilingual',
 		'abusefilter-disabled',
 		'checkuser-disabled',
+		'wikimediaantiabuse-abusereview',
 	];
 
 	/** @var string[] */
