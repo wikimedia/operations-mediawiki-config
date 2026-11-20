@@ -14291,6 +14291,10 @@ return [
 	'default' => true, // T434513
 ],
 
+'wgCampaignEventsEnableWorklistCardView' => [
+	'default' => true, // T445217
+],
+
 'wgCdnMatchParameterOrder' => [
 	'default' => false, // T314868
 ],
