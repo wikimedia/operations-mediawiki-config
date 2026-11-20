@@ -647,6 +647,20 @@ return [
 		], // T227420
 		'interface-admin' => [ 'editcontentmodel' => true, ], // T320752
 	],
+	'+cowikimedia' => [ // T445690
+		'autoconfirmed' => [
+			'campaignevents-enable-registration' => false,
+			'campaignevents-organize-events' => false,
+			'campaignevents-email-participants' => false,
+		],
+		'staff-wmco' => [
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
+			'campaignevents-email-participants' => true,
+			'campaignevents-generate-invitation-lists' => true,
+			'noratelimit' => true,
+		],
+	],
 	'+dawiki' => [
 		'patroller' => [
 			'patrol' => true,
@@ -3933,6 +3947,9 @@ return [
 		'image-reviewer' => [ 'image-reviewer' ],
 	],
 	'+cowikimedia' => [
+		'bureaucrat' => [
+			'staff-wmco', // T445690
+		],
 		'sysop' => [
 			'confirmed', // T300948
 			'accountcreator', // T300948
@@ -5474,6 +5491,7 @@ return [
 		'bureaucrat' => [
 			'bureaucrat', // T300779
 			'sysop', // T300779
+			'staff-wmco', // T445690
 		],
 	],
 	'+cswiki' => [
