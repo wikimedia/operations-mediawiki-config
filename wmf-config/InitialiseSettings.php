@@ -4376,6 +4376,7 @@ return [
 	'cawikibooks' => true, // T88208
 	'dewikibooks' => true,
 	'enwikibooks' => true,
+	'eowikibooks' => true, // T444080
 	'eswikibooks' => true, // T157513
 	'fawikibooks' => true, // T289381
 	'frwikibooks' => true, // T103263
