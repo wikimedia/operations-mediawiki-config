@@ -2294,6 +2294,18 @@ if ( $wmgUseConfirmEdit ) {
 				];
 			}
 		}
+
+		// Prevent the AbuseFilter CAPTCHA from appearing for edit API requests where the interface has no
+		// support for any CAPTCHAs
+		$wgHooks['ConfirmEditBeforeForceShowCaptcha'][] = static function ( $userIdentity, string $action ) {
+			if ( in_array( $action, [ 'edit', 'create' ] ) && ( defined( 'MW_API' ) || defined( 'MW_REST_API' ) ) ) {
+				$action = RequestContext::getMain()->getRequest()->getRawVal( 'action' );
+				if ( $action === 'wbsetclaim' ) {
+					return false;
+				}
+			}
+			return true;
+		};
 	}
 }
 
