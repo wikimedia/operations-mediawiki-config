@@ -2543,6 +2543,11 @@ function wmfGetOverrideSettings() {
 		'wmgSuppressOtherLanguageLinkUpdates' => [
 			'default' => false,
 			'dewiki' => true,
-		]
+		],
+
+		// T123063
+		'wgSiteMatrixSpecialPageLanguageLinks' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
