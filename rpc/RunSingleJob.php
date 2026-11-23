@@ -39,10 +39,12 @@ if ( !isset( $event['database'] ) ) {
 	throw new Exception( 'Invalid event received! ' . json_encode( $event ) );
 }
 
+define( 'MW_ENTRY_POINT', 'RunSingleJob' );
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php', $event['database'] );
+MediaWiki\Profiler\ProfilingContext::singleton()->init( 'wmf', MW_ENTRY_POINT );
 
 // fatals but not random I/O warnings
 error_reporting( E_ERROR );

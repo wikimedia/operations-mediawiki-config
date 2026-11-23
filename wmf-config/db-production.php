@@ -132,7 +132,7 @@ $wgLBFactoryConf = [
 	// no pt-heartbeat
 	'lagDetectionMethod' => 'Seconds_Behind_Master',
 	// bump threshold for circuit breaking
-	'loadMonitor' => [ 'class' => '\Wikimedia\Rdbms\LoadMonitor', 'maxConnCount' => 500 ],
+	'loadMonitor' => [ 'maxConnCount' => 700 ],
 ],
 
 'templateOverridesByCluster' => [

@@ -105,14 +105,13 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				'expected_realm' => 'production',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad", "codfw" ],
-				// graphite1005.eqiad.wmnet
-				'expected_statsd' => "10.64.16.81",
+				'expected_service' => 'http://urldownloader.svc.eqiad.wmnet:8080',
 			],
 			'labs' => [
 				'expected_realm' => 'labs',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad" ],
-				'expected_statsd' => 'prometheus-labmon.eqiad.wmnet',
+				'expected_service' => 'http://url-downloader.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 			],
 		];
 
@@ -129,7 +128,8 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				$this->assertSame( $expectations['expected_realm'], $sc->getRealm(), "cluster: $cluster, checking getRealm()" );
 				$this->assertSame( $expectations['expected_dc'], $sc->getDatacenter(), "cluster: $cluster, checking getDatacenter()" );
 				$this->assertSame( $expectations['expected_dcs'], $sc->getDatacenters(), "cluster: $cluster, checking getDatacenters()" );
-				$this->assertSame( $expectations['expected_statsd'], $sc->getLocalService( "statsd" ), "cluster: $cluster, checking getLocalService('statsd')" );
+				// Use "urldownloader" as example of a service that differs by both realm and DC
+				$this->assertSame( $expectations['expected_service'], $sc->getLocalService( "urldownloader" ), "cluster: $cluster, checking getLocalService('urldownloader')" );
 			} finally {
 				// Cleanup
 				unlink( $GLOBALS['mockWmgClusterFile'] );
@@ -150,11 +150,9 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 		//     0 => 'etcd'
 		//     1 => 'irc'
 		//     2 => 'poolcounter'
-		//     3 => 'statsd'
 		// ) is identical to Array &0 (
 		//     0 => 'etcd'
 		//     1 => 'poolcounter'
-		//     2 => 'statsd'
 		// ).
 		//
 		// assertEquals() outputs: Failed asserting that two arrays are equal.
@@ -162,9 +160,7 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 		//     0 => 'etcd'
 		// -   1 => 'irc'
 		// -   2 => 'poolcounter'
-		// -   3 => 'statsd'
 		// +   1 => 'poolcounter'
-		// +   2 => 'statsd'
 		//
 		// assertSameValues outputs: Failed asserting that two strings are identical.
 		// --- Expected | +++ Actual

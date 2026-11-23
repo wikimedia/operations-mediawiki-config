@@ -69,6 +69,7 @@ return [
 			'trackback' => false,
 			'upload' => false,
 			'movefile' => false,
+			'produnto-update' => false,
 		],
 		'steward' => [
 			'edit' => true,
@@ -191,12 +192,7 @@ return [
 			'reupload' => false,
 			'reupload-own' => false,
 			'reupload-shared' => false,
-		],
-		'uploader' => [
-			'upload' => true,
-			'reupload' => true,
-			'reupload-own' => true,
-			'reupload-shared' => true,
+			'editalluserpages' => true, // T434878
 		],
 		'reviewer' => [
 			'upload' => true,
@@ -210,6 +206,10 @@ return [
 		'autoreview' => [
 			'autopatrol' => true, // T167071
 			'editautoreviewprotected' => true,
+			'upload' => true, // T442578
+			'reupload' => true, // T442578
+			'reupload-own' => true, // T442578
+			'reupload-shared' => true, // T442578
 		],
 		'bot' => [
 			'editautoreviewprotected' => true,
@@ -257,6 +257,10 @@ return [
 	'+arwiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
+	],
+	'+arywiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T438421
+		'patroller' => [ 'patrol' => true ], // T438421
 	],
 	'+arzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T258100
@@ -522,6 +526,7 @@ return [
 			'block' => true,
 			'ipblock-exempt' => true,
 			'rollback' => true, // T67348
+			'produnto-update' => true,
 		], // T54578
 		'suppressredirect' => [ 'suppressredirect' => true ], // T69278
 		'patroller' => [ 'patrol' => true ], // T285221
@@ -800,7 +805,6 @@ return [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			'abusefilter-view-private' => true,
 			'securepoll-create-poll' => true, // T378287
 			'securepoll-edit-poll' => true, // T378287
 			'securepoll-view-voter-pii' => true, // T378287
@@ -844,17 +848,16 @@ return [
 		'import' => [ 'mergehistory' => true ], // T380753
 	],
 	'+enwikibooks' => [
-		'bot' => [ 'autopatrol' => false ], // T426992
-		'editor' => [
+		'*' => [ 'createpage' => false, ], // T443449
+		'autopatrolled' => [ 'autopatrol' => true, ], // T440519
+		'patroller' => [
+			'autopatrol' => true, // T440519
+			'patrol' => true, // T440519
 			'rollback' => true, // T426992
 			'suppressredirect' => true, // T268849
 		],
 		'flood' => [ 'bot' => true ],
-		'sysop' => [
-			'autopatrol' => false, // T426992
-			'patrol' => false, // T426992
-			'importupload' => true, // T278683
-		],
+		'sysop' => [ 'importupload' => true, ], // T278683
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
@@ -906,10 +909,12 @@ return [
 			'upload' => true,
 			'patrol' => true, // T424445
 			'autopatrol' => true, // T424445
+			'produnto-update' => true,
 		],
 		'flood' => [ 'bot' => true ], // T426882
 	],
 	'+enwikivoyage' => [
+		'*' => [ 'applychangetags' => true ], // T435907
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [
 			'patrol' => true,
@@ -935,6 +940,10 @@ return [
 		'rollbacker' => [ 'rollback' => true ],
 		'sysop' => [ 'templateeditor' => true ], // T148007
 		'templateeditor' => [ 'templateeditor' => true ], // T148007
+	],
+	'+eowiki' => [
+		'templateeditor' => [ 'templateeditor' => true ], // T440764
+		'sysop' => [ 'templateeditor' => true ], // T440764
 	],
 	'+eswiki' => [
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
@@ -970,6 +979,8 @@ return [
 			'apihighlimits' => true, // T342484
 			'block' => true, // T342484
 			'blockemail' => true, // T342484
+			'protect' => true, // T443124
+			'editprotected' => true, // T443272
 		], // T342484
 	],
 	'+eswikibooks' => [
@@ -1003,6 +1014,7 @@ return [
 			'autopatrol' => true,
 			'editprotected' => true,
 			'suppressredirect' => true,
+			'produnto-update' => true,
 		], // T395293
 		'autopatrolled' => [ 'autopatrol' => true, ], // T57665
 	],
@@ -1056,10 +1068,12 @@ return [
 			'undelete' => true, // T71411
 			'extendedconfirmed' => true,
 			'deleterevision' => true, // T277358
+			'produnto-update' => true,
 		],
 		'templateeditor' => [
 			'editprotected' => true, // T74146
 			'tboverride' => true, // T74146
+			'produnto-update' => true,
 		],
 		'eliminator' => [
 			'block' => true, // T87558
@@ -1297,6 +1311,7 @@ return [
 			'skipcaptcha' => true,
 			'suppressredirect' => true,
 			'undelete' => true,
+			'produnto-update' => true,
 		],
 	],
 	'+gawiki' => [
@@ -1402,6 +1417,7 @@ return [
 		'templateeditor' => [
 			'templateeditor' => true,
 			'editprotected' => true,
+			'produnto-update' => true,
 		], // T120342
 		'autoconfirmed' => [ 'move' => false ] // T164239
 	],
@@ -1529,6 +1545,7 @@ return [
 			'editautopatrolprotected' => true, // T308917
 			'changetags' => true, // T331051
 			'abusefilter-bypass-blocked-external-domains' => true, // T355694
+			'produnto-update' => true,
 		],
 		'sysop' => [
 			'editautopatrolprotected' => true, // T308917
@@ -1626,6 +1643,7 @@ return [
 			'suppressredirect' => true,
 			'extendedconfirmed' => true, // T249820
 			'changetags' => true, // T344150
+			'produnto-update' => true,
 		],
 		'sysop' => [
 			'extendedconfirmed' => true, // T249820
@@ -1672,6 +1690,9 @@ return [
 		'bot' => [ 'extendedconfirmed' => true, ], // T184675
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T184675
 		'sysop' => [ 'extendedconfirmed' => true, ], // T184675
+	],
+	'+krcwiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T440898
 	],
 	'+kswiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T286789
@@ -1731,6 +1752,9 @@ return [
 	],
 	'+ltwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T367993
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T440216
+		'sysop' => [ 'extendedconfirmed' => true ], // T440216
+		'bot' => [ 'extendedconfirmed' => true ], // T440216
 	],
 	'+lvwiki' => [
 		'autopatrolled' => [
@@ -1919,6 +1943,7 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
+			'produnto-update' => true,
 		],
 	],
 	'+mlwikisource' => [
@@ -1985,6 +2010,7 @@ return [
 		'templateeditor' => [
 			'templateeditor' => true,
 			'editprotected' => true,
+			'produnto-update' => true,
 		], // T195557
 		'flood' => [ 'bot' => true ], // T211181
 	],
@@ -2000,6 +2026,9 @@ return [
 			'deletedtext' => true,
 			'browsearchive' => true,
 			'block' => true, // T326355
+			'securepoll-create-poll' => true, // T434045
+			'securepoll-edit-poll' => true, // T434045
+			'securepoll-view-voter-pii' => true, // T434045
 		],
 		'arbcom' => [
 			'deletedhistory' => true,
@@ -2014,6 +2043,10 @@ return [
 		'rollbacker' => [ 'rollback' => true ],
 		'sysop' => [ 'extendedconfirmed' => true ], // T329642
 		'user' => [ 'move-categorypages' => false ], // T161551
+		'electionclerk' => [
+			'securepoll-create-poll' => true, // T434045
+			'securepoll-edit-poll' => true, // T434045
+		],
 	],
 	'+nlwiktionary' => [
 		'user' => [ 'patrol' => true ],
@@ -2114,6 +2147,9 @@ return [
 	],
 	'+orwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
+	],
+	'+outreachwiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T444368
 	],
 	'pawiki' => [
 		'patroller' => [ 'patrol' => true ], // T120369
@@ -2342,6 +2378,7 @@ return [
 			'noratelimit' => true,
 			'suppressredirect' => true,
 			'tboverride' => true,
+			'produnto-update' => true,
 
 		],
 		'filemover' => [ // T32984
@@ -2788,6 +2825,7 @@ return [
 			'editsemiprotected' => true, // T247672
 			'editsitejson' => true,
 			'noratelimit' => true, // T40690
+			'produnto-update' => true,
 		],
 		'translator' => [
 			'autoconfirmed' => true,
@@ -2879,7 +2917,8 @@ return [
 			'protect' => true,
 			'editprotected' => true, // T281274
 			'suppressredirect'  => true,
-			'deletedhistory' => true
+			'deletedhistory' => true,
+			'produnto-update' => true,
 		], // T184607
 		'accountcreator' => [
 			'tboverride-account' => true,
@@ -3078,6 +3117,7 @@ return [
 			'undelete' => true,
 			'unwatchedpages' => true,
 			'pagelang' => true, // T337760
+			'produnto-update' => true,
 		], // T74459
 		'user' => [
 			'changetags' => false, // T303682
@@ -3090,15 +3130,14 @@ return [
 	],
 	'+wikifunctionswiki' => [
 		'*' => [
-			// Temporarily during early, limited deployment, logged-out users can't do this
+			// Logged-out users can't do this
 			'edit' => false,
 
 			// In emergencies, you can set the line below to false to prevent logged-out users from running functions
 			'wikilambda-execute' => true, // T349055
 		],
 		'user' => [
-			// Temporarily during early, limited deployment, re-grant to logged-in users the standard
-			// wikitext editing right that logged-out users can't do
+			// Re-grant to logged-in users the standard wikitext editing right that logged-out users can't do
 			'edit' => true,
 
 			// In emergencies, you can set the line below to false to prevent logged-in users from running functions
@@ -3116,6 +3155,30 @@ return [
 			"wikilambda-edit-generic-enum-item" => false,
 
 			"autopatrol" => true, // T344085
+		],
+		'functionmaintainer' => [
+			// Whilst Functioneers can't do this, Function maintainers can (and it's their principal right, T435637)
+			"wikilambda-create-type" => true,
+			"wikilambda-create-generic-enum" => true,
+			"wikilambda-edit-generic-enum-item" => true,
+
+			// Temporarily during early deployment, Function maintainers can't do these
+			"wikilambda-create-arbitrary-zid" => false,
+			"wikilambda-create-predefined" => false,
+
+			"wikilambda-edit-builtin-function" => false,
+
+			"wikilambda-create-boolean" => false,
+			"wikilambda-edit-boolean" => false,
+
+			"wikilambda-create-language" => false,
+			"wikilambda-edit-language" => false,
+
+			"wikilambda-create-programming" => false,
+			"wikilambda-edit-programming" => false,
+
+			"wikilambda-create-unit" => false,
+			"wikilambda-edit-unit" => false,
 		],
 		'sysop' => [
 			// Temporarily during early deployment, don't let sysops do major breaking changes
@@ -3216,6 +3279,7 @@ return [
 		'translationadmin' => [
 			'editprotected' => true,
 			'extendedconfirmed' => true,
+			'produnto-update' => true,
 		], // T389729
 		'autoconfirmed' => [
 			'campaignevents-enable-registration' => true, // T397369
@@ -3653,7 +3717,6 @@ return [
 			'templateeditor', // T382784
 		],
 		'sysop' => [
-			'uploader',
 			'reviewer',
 			'confirmed',
 			'rollbacker',
@@ -3684,6 +3747,12 @@ return [
 		'sysop' => [
 			'autopatrolled',
 			'rollbacker',
+		],
+	],
+	'+arywiki' => [
+		'sysop' => [
+			'autopatrolled', // T438421
+			'patroller', // T438421
 		],
 	],
 	'+arzwiki' => [
@@ -3963,9 +4032,11 @@ return [
 	'+enwikibooks' => [
 		'sysop' => [
 			'accountcreator', // T411828
+			'autopatrolled', // T440519
 			'confirmed', // T411828
 			'flood', // T285594
 			'import', // T278683
+			'patroller', // T440519
 			'transwiki',
 			'uploader',
 		],
@@ -3976,6 +4047,7 @@ return [
 			'flood', // T351250
 			'autopatrolled', // T413848
 			'patroller', // T413848
+			'confirmed', // T436651
 		],
 	],
 	'+enwikisource' => [
@@ -4017,6 +4089,9 @@ return [
 			'templateeditor', // T148007
 			'extendedmover', // T212662
 		],
+	],
+	'+eowiki' => [
+		'sysop' => [ 'templateeditor' ], // T440764
 	],
 	'+eswiki' => [
 		'bureaucrat' => [
@@ -4354,6 +4429,9 @@ return [
 			'extendedconfirmed', // T184675
 		],
 	],
+	'+krcwiki' => [
+		'sysop' => [ 'rollbacker' ], // T440898
+	],
 	'+kswiki' => [
 		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
 	],
@@ -4380,7 +4458,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
+		'sysop' => [ 'abusefilter', 'rollbacker', 'extendedconfirmed' ], // T367993, T440216
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
@@ -4484,6 +4562,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter',
 			'arbcom',
+			'electionclerk', // T434045
 			'extendedconfirmed', // T329642
 			'rollbacker',
 			'vrt-agent', // T398216
@@ -4552,6 +4631,9 @@ return [
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
+	],
+	'+outreachwiki' => [
+		'sysop' => [ 'autopatrolled' ], // T444368
 	],
 	'+pawiki' => [
 		'sysop' => [
@@ -4760,6 +4842,7 @@ return [
 			'autopatrolled',
 			'rollbacker',
 			'flood',
+			'event-organizer', // T434748
 		],
 		'sysop' => [ 'rollbacker' ],
 	],
@@ -5166,7 +5249,6 @@ return [
 			'templateeditor', // T382784
 		],
 		'sysop' => [
-			'uploader',
 			'reviewer',
 			'confirmed',
 			'rollbacker',
@@ -5199,6 +5281,12 @@ return [
 		'sysop' => [
 			'autopatrolled',
 			'rollbacker',
+		],
+	],
+	'+arywiki' => [
+		'sysop' => [
+			'autopatrolled', // T438421
+			'patroller', // T438421
 		],
 	],
 	'+arzwiki' => [
@@ -5483,13 +5571,23 @@ return [
 		],
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood', 'accountcreator', 'confirmed' ], // T278683, T285594, T411828
+		'sysop' => [
+			'accountcreator', // T411828
+			'autopatrolled', // T440519
+			'confirmed', // T411828
+			'flood', // T285594
+			'import', // T278683
+			'patroller', // T440519
+			'transwiki',
+			'uploader',
+		],
 	],
 	'+enwikiquote' => [
 		'sysop' => [
 			'flood', // T351250
 			'autopatrolled', // T413848
 			'patroller', // T413848
+			'confirmed', // T436651
 		],
 	],
 	'+enwikivoyage' => [
@@ -5514,6 +5612,9 @@ return [
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared', ],
+	],
+	'+eowiki' => [
+		'sysop' => [ 'templateeditor' ], // T440764
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor', 'botadmin', ], // T262174, T330470, T342484
@@ -5763,6 +5864,9 @@ return [
 	'+kowiki' => [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
 	],
+	'+krcwiki' => [
+		'sysop' => [ 'rollbacker' ], // T440898
+	],
 	'+kswiki' => [
 		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
 	],
@@ -5786,7 +5890,7 @@ return [
 		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
-		'sysop' => [ 'abusefilter', 'rollbacker' ], // T367993
+		'sysop' => [ 'abusefilter', 'rollbacker', 'extendedconfirmed' ], // T367993, T440216
 	],
 	'+ltwiktionary' => [
 		'sysop' => [ 'abusefilter' ],
@@ -5864,6 +5968,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter',
 			'arbcom',
+			'electionclerk', // T434045
 			'extendedconfirmed', // T329642
 			'rollbacker',
 			'vrt-agent', // T398216
@@ -5908,6 +6013,7 @@ return [
 	],
 	'+outreachwiki' => [
 		'bureaucrat' => [ 'sysop' ],
+		'sysop' => [ 'autopatrolled' ], // T444368
 	],
 	'+pawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'transwiki' ], // T120369
@@ -6037,7 +6143,7 @@ return [
 		'sysop' => [ 'reviewer' ],
 	],
 	'+srwiki' => [
-		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled', 'flood' ],
+		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled', 'flood', 'event-organizer' ], // T434748
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikibooks' => [ // T209250
@@ -6369,6 +6475,7 @@ return [
 		'abusefilter-helper' => [ 'abusefilter-helper' ], // T379500
 		'event-organizer' => [ 'event-organizer' ], // T376061
 		'abusefilter' => [ 'abusefilter' ], // T386879
+		'temporary-account-viewer' => [ 'temporary-account-viewer' ], // T435887
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289

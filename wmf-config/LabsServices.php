@@ -9,12 +9,11 @@
 
 return [
 	'eqiad' => [
-		'udp2log' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud:8420',
-		'xenon' => 'deployment-mwlog02.deployment-prep.eqiad1.wikimedia.cloud',
+		'udp2log' => 'mwlog.svc.deployment-prep.eqiad1.wikimedia.cloud:8420',
+		'xenon' => 'arclamp.svc.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui-pdo' => 'mysql:host=deployment-db15.deployment-prep.eqiad1.wikimedia.cloud;dbname=xhgui',
 		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmcloud.org/excimer/',
-		'excimer-ui-server' => 'https://deployment-webperf21.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
-		'statsd' => 'prometheus-labmon.eqiad.wmnet',
+		'excimer-ui-server' => 'https://webperf.svc.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
 			'deployment-cirrussearch15.deployment-prep.eqiad1.wikimedia.cloud',
@@ -57,32 +56,27 @@ return [
 		],
 		// We will not use analytics-web in beta
 		'analytics-web' => null,
-		// No parser cache DBs in beta yet
-		'parsercache-dbs' => [],
 		'urldownloader' => 'http://url-downloader.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'parsoid' => 'http://appservers.svc.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
-		'mathoid' => 'http://deployment-docker-mathoid02.deployment-prep.eqiad1.wikimedia.cloud:10044',
-		'eventgate-analytics' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8192',
-		'eventgate-analytics-external' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8492',
-		'eventgate-main' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8292',
-		'upload' => 'deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud',
-		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
+		'mathoid' => 'http://mathoid.svc.deployment-prep.eqiad1.wikimedia.cloud:10044',
+		'eventgate-analytics' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8192',
+		'eventgate-analytics-external' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8492',
+		'eventgate-main' => 'http://deployment-eventgate05.deployment-prep.eqiad1.wikimedia.cloud:8292',
+		'upload' => 'ms-fe.svc.deployment-prep.eqiad1.wikimedia.cloud',
+		'cxserver' => 'http://cxserver.svc.deployment-prep.eqiad1.wikimedia.cloud:8080',
 
 		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
 
-		'irc' => [ 'irc.svc.deployment-prep.eqiad1.wikimedia.cloud' ],
-		'redis_lock' => [
-			'rdb1' => 'deployment-rdb01.deployment-prep.eqiad1.wikimedia.cloud',
-		],
+		'irc' => [],
 		'redis_default_lock' => [
-			'rdb1' => 'deployment-rdb01.deployment-prep.eqiad1.wikimedia.cloud',
+			'rdb1' => 'deployment-rdb-lock01.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'etcd' => [
 			'host' => '_etcd._tcp.svc.deployment-prep.eqiad1.wikimedia.cloud',
 			'protocol' => 'https',
 		],
-		'mediaSwiftAuth' => 'http://deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud/auth',
-		'mediaSwiftStore' => 'http://deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'https://ms-fe.svc.deployment-prep.eqiad1.wikimedia.cloud/auth',
+		'mediaSwiftStore' => 'https://ms-fe.svc.deployment-prep.eqiad1.wikimedia.cloud/v1/AUTH_mw',
 		'push-notifications' => 'http://push-notifications.svc.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
 		'data-gateway' => null,
@@ -104,10 +98,7 @@ return [
 			'localhost',
 		],
 
-		### Restbase
-		'restbase' => 'http://deployment-restbase05.deployment-prep.eqiad1.wikimedia.cloud:7231',
-
-		### Rest Gateway. Same as Restbase for now, may change when we get true beta rest gateway
+		### Rest Gateway. Uses RESTBase for now, may change when we get true beta rest gateway
 		'rest-gateway' => 'http://deployment-restbase05.deployment-prep.eqiad1.wikimedia.cloud:7231',
 
 		### Poolcounter
@@ -122,5 +113,13 @@ return [
 		'chart-renderer' => 'http://deployment-docker-charts01.deployment-prep.eqiad1.wikimedia.cloud:6284',
 		'device-analytics' => null,
 		'page-analytics' => null,
+		// No Linked Artifacts Cache in beta cluster
+		'linked-artifacts' => null,
+
+		// IP ranges that might be used as a client IP in a GitLab webhook post. For Produnto.
+		'gitlab-nets' => [
+			'208.80.152.0/22',
+			'2620:0:860::/46',
+		],
 	],
 ];

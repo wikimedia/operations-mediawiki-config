@@ -200,6 +200,25 @@ function wmfGetOverrideSettings() {
 					]
 				],
 			],
+			'+wikipedia' => [
+				// Enable the tags change streams on beta wikipedias for tests.
+				// ext-EventStreamConfig.php disables them by default.
+				// https://phabricator.wikimedia.org/T434143
+				'mediawiki.revision_tags_change.dev0' => [
+					'producers' => [
+						'mediawiki_eventbus' => [
+							'enabled' => true,
+						],
+					],
+				],
+				'mediawiki.log_tags_change.dev0' => [
+					'producers' => [
+						'mediawiki_eventbus' => [
+							'enabled' => true,
+						],
+					],
+				],
+			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
 					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
@@ -238,7 +257,7 @@ function wmfGetOverrideSettings() {
 		'wgEventLoggingServiceUri' => [
 			// Configured in profile::trafficserver::backend::mapping_rules
 			// in Horizon hiera prefixpuppet for deployment-cache-text.
-			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
+			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
 		],
 
 		// Historically, EventLogging would register Schemas and revisions it used
@@ -359,6 +378,7 @@ function wmfGetOverrideSettings() {
 				'ParserCache' => 'warning',
 				'Parsoid' => 'warning',
 				'poolcounter' => 'debug',
+				'post' => [ 'logstash' => false ],
 				'preferences' => 'info',
 				'purge' => 'debug',
 				'query' => 'debug',
@@ -388,7 +408,7 @@ function wmfGetOverrideSettings() {
 				'throttler' => 'info',
 				'thumbnail' => 'debug',
 				'thumbnailaccess' => 'debug', // T106323
-				'TitleBlacklist-cache' => 'debug', // For T85428
+				'TitleBlacklist' => 'info', // For T85428
 				'torblock' => 'debug',
 				'TranslationNotifications.Jobs' => 'debug',
 				'Translate.Jobs' => 'debug',
@@ -407,7 +427,6 @@ function wmfGetOverrideSettings() {
 				'WikitechGerritBan' => 'debug',
 				'WikitechPhabBan' => 'debug',
 				'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
-				'xff' => [ 'logstash' => false ],
 				'XMP' => 'warning', // T89532
 
 				// Additional logging for labs
@@ -528,7 +547,7 @@ function wmfGetOverrideSettings() {
 		// Enable MediaWiki client side (browser) Javascript error logging.
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
-			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
+			'default' => 'https://intake-logging-beta.wmcloud.org/v1/events?hasty=true'
 		],
 
 		'wmgUseMobileFrontend' => [
@@ -577,9 +596,6 @@ function wmfGetOverrideSettings() {
 		//
 		'wgDefaultSkin' => [
 			'default' => 'vector-2022',
-		],
-		'wgSkipSkins' => [
-			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
 		],
 
 		'-wmgCentralAuthCookieDomain' => [
@@ -998,9 +1014,70 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgUsePersonalDashboard' => [ // T412528
-			'default' => false, // NOTE: Do not enable without OK from Moderator Tools team.
+		'wmgUsePersonalDashboard' => [
+			// T444353
+			'default' => true,
+			'lockeddown' => false,
+		],
+
+		'-wgPersonalDashboardDeveloperSetup' => [
+			'default' => false,
+
+			// T441729
 			'enwiki' => true,
+		],
+
+		'-wgPersonalDashboardUserMenu' => [
+			'default' => false,
+
+			// T441729
+			'enwiki' => true,
+			'simplewiki' => true,
+			'testwiki' => true,
+			'test2wiki' => true,
+		],
+
+		'-wgPersonalDashboardMinimumEdits' => [
+			// T441729
+			'default' => 0,
+		],
+
+		'-wgPersonalDashboardMaximumEdits' => [
+			// T441729
+			'default' => 0,
+		],
+
+		'-wgPersonalDashboardBlueDot' => [
+			'default' => false,
+
+			// T441729
+			'enwiki' => true,
+			'simplewiki' => true,
+			'testwiki' => true,
+			'test2wiki' => true,
+		],
+
+		'-wgPersonalDashboardActiveDiscussionsPages' => [
+			'default' => [],
+
+			// T441729
+			'enwiki' => [
+				'Wikipedia:Help desk',
+				'Wikipedia:Village pump (technical)',
+				'Wikipedia:Village pump (policy)',
+				'Wikipedia:Village pump (proposals)',
+			],
+
+			// T420785
+			'simplewiki' => [
+				'Wikipedia:Simple talk',
+				'Wikipedia:Administrators\' noticeboard',
+			],
+		],
+
+		'-wgPersonalDashboardAllowOverride' => [
+			// T441729
+			'default' => true,
 		],
 
 		// The LOWER the value, the MORE requests will be logged.
@@ -1124,11 +1201,6 @@ function wmfGetOverrideSettings() {
 		// T434027
 		'wgReadingListsCustomLists' => [
 			'default' => true,
-		],
-
-		// T422275
-		'wgReadingListsEnableBetaQuickSurvey' => [
-			'wikipedia' => true,
 		],
 
 		// T419163
@@ -1358,12 +1430,6 @@ function wmfGetOverrideSettings() {
 		'wgGEImageRecommendationServiceUseTitles' => [
 			'default' => true,
 		],
-		'wgGEHomepageDefaultVariant' => [
-			'default' => 'control',
-		],
-		'wgGELinkRecommendationServiceTimeout' => [
-			'default' => 30,
-		],
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
 		],
@@ -1427,6 +1493,19 @@ function wmfGetOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
+		],
+		'wgGEHomeEnabled' => [
+			'default' => false,
+			'enwiki' => true
+		],
+		'wgGEHomeBetaFeatureEnabled' => [
+			'default' => true,
+		],
+		'wgGEAccountSetupExperimentStartRegistrationDate' => [
+			'default' => '2026-09-09T13:00:00',
+		],
+		'wgGEHomepageReadingRecommendationsFeaturedCategory' => [
+			'default' => 'Category:Featured articles',
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
@@ -1633,13 +1712,6 @@ function wmfGetOverrideSettings() {
 		// T232582
 		'wmgWikibaseClientDataBridgeEditTags' => [
 			'default' => [ 'Data Bridge' ],
-		],
-
-		// If set to "false": No alternate links will be added to desktop pages,
-		// and MobileFrontend won't add a canonical tag
-		// If set to "true": Alternate link will be added, MF will add a canonical tag
-		'wgMFNoindexPages' => [
-			'default' => true
 		],
 
 		// Needed by browser tests for Minerva otherwise those will fail
@@ -2191,8 +2263,11 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableEventInvitation' => [
 			'default' => true,
 		],
-		// T429507
-		'wgCampaignEventsEnableWorklists' => [
+		'wgCampaignEventsEnableWorklistEventDiscoveryTracking' => [
+			'default' => true,
+		],
+		// T437353
+		'wgCampaignEventsEnableWorklistCardView' => [
 			'default' => true,
 		],
 		// T314294
@@ -2341,10 +2416,6 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
-		// T403015 - no point in the beta feature if `wmgWikibaseTmpMobileEditingUI` is set.
-		'wmgWikibaseTmpMobileEditingUIBetaFeature' => [
-			'wikidatawiki' => false,
-		],
 		// T421850 - prototype displaying links to WikiProjects on Item pages
 		'wmgWikibaseTmpWikiProjectsLinking' => [
 			'wikidatawiki' => [
@@ -2429,13 +2500,44 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgULSLanguageSelectorV2Enabled' => [
-			'default' => true
+		// Beta Cluster cannot reach the internal LiftWing endpoint.
+		'wgArticleGuidanceReferenceRiskEnabled' => [
+			'default' => false,
+		],
+
+		'wgArticleGuidanceFeedbackTalkPage' => [
+			'default' => '',
+			'enwiki' => 'Wikipedia talk:ArticleGuidance',
 		],
 
 		'wmgEnableWeb2CitJsonContentModel' => [
 			'default' => false,
 			'metawiki' => true, // T305571
+		],
+
+		'wmgUseProdunto' => [
+			'default' => true,
+		],
+
+		// T433711 Intake URL for when overridden experiments send events on beta cluster
+		'wgTestKitchenOverriddenExperimentEventIntakeServiceUrl' => [
+			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
+		],
+
+		// T437720 Intake URL for when instruments send events on beta cluster
+		'wgTestKitchenInstrumentEventIntakeServiceUrl' => [
+			'default' => 'https://intake-analytics-beta.wmcloud.org/v1/events?hasty=true',
+		],
+
+		// T438463
+		'wmgSuppressOtherLanguageLinkUpdates' => [
+			'default' => false,
+			'dewiki' => true,
+		],
+
+		// T123063
+		'wgSiteMatrixSpecialPageLanguageLinks' => [
+			'default' => true,
 		],
 	];
 } # wmfGetOverrideSettings()

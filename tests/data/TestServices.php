@@ -13,7 +13,6 @@ $wmgAllServices = [];
 
 $wmgAllServices['unittest'] = [
 	'udp2log' => 'localhost:8420',
-	'statsd' => 'localhost',
 	'search-chi' => [ [ 'host' => 'localhost' ] ],
 	'search-psi' => [ [ 'host' => 'localhost' ] ],
 	'search-omega' => [ [ 'host' => 'localhost' ] ],
@@ -43,14 +42,11 @@ $wmgAllServices['unittest']['logstash'] = [ '127.0.0.1' ];
 ### IRC
 $wmgAllServices['unittest']['irc'] = '127.0.0.1';
 
-### Restbase
-$wmgAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
-
 ### Poolcounter
 $wmgAllServices['unittest']['poolcounter'] = [ '127.0.0.1' ];
 
 ### LockManager Redis
-$wmgAllServices['unittest']['redis_lock'] = [
+$wmgAllServices['unittest']['redis_default_lock'] = [
 	'rdb1' => '127.0.0.1',
 	'rdb2' => '127.0.0.1',
 	'rdb3' => '127.0.0.1'

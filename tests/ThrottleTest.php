@@ -91,10 +91,11 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 	public function testThrottlingExceptionsIPsValidAndPublic( $rule ) {
 		$toCheck = [];
 		if ( array_key_exists( 'IP', $rule ) ) {
-			$ip = $rule['IP'];
-			$this->assertTrue( IPUtils::isValid( $ip ),
-				"$ip must be a valid IP address" );
-			$toCheck[] = [ $ip, "IP address $ip" ];
+			foreach ( (array)$rule['IP'] as $ip ) {
+				$this->assertTrue( IPUtils::isValid( $ip ),
+					"$ip must be a valid IP address" );
+				$toCheck[] = [ $ip, "IP address $ip" ];
+			}
 		}
 		if ( array_key_exists( 'range', $rule ) ) {
 			foreach ( (array)$rule['range'] as $range ) {

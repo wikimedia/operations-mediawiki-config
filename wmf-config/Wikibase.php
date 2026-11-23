@@ -73,8 +73,172 @@ $testWikidataClients = WmfConfig::readDbListFile( 'wikidataclient-test' );
 // Set term store virtual domain
 if ( in_array( $wgDBname, $testWikidataClients ) || $wgDBname === 'testwikidatawiki' ) {
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'testwikidatawiki' ];
+	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1', 'db' => false ];
 } else {
 	$wgVirtualDomainsMapping['virtual-wikibase-terms'] = [ 'db' => 'wikidatawiki', 'cluster' => 'extension3' ];
+}
+
+// T424440
+$wikibaseEntityUsageExtension1 = [
+	// s1 wikis
+	'enwiki',
+
+	// s2 wikis
+	'bgwiki',
+	'bgwiktionary',
+	'cswiki',
+	'enwikiquote',
+	'enwiktionary',
+	'eowiki',
+	'fiwiki',
+	'idwiki',
+
+	// s3 wikis
+	'mediawikiwiki',
+
+	// s5 wikis
+	'abstractwiki',
+	'aewikimedia',
+	'altwiki',
+	'amiwiki',
+	'annwiki',
+	'anpwiki',
+	'arbcom_itwiki',
+	'arbcom_plwiki',
+	'arbcom_ruwiki',
+	'arbcom_zhwiki',
+	'aswikiquote',
+	'avkwiki',
+	'azwikimedia',
+	'banwikisource',
+	'bbcwiki',
+	'bclwikiquote',
+	'bclwikisource',
+	'bclwiktionary',
+	'bdrwiki',
+	'bewwiki',
+	'bewwiktionary',
+	'bjnwikiquote',
+	'bjnwiktionary',
+	'blkwiki',
+	'blkwiktionary',
+	'bnwikiquote',
+	'bolwiki',
+	'btmwiki',
+	'btmwiktionary',
+	'cebwiki',
+	'ckbwiktionary',
+	'conductwiki',
+	'cswikivoyage',
+	'dagwiki',
+	'dewiki',
+	'dgawiki',
+	'diqwiktionary',
+	'dtpwiki',
+	'enwikivoyage',
+	'eowikivoyage',
+	'fatwiki',
+	'fonwiki',
+	'gorwikiquote',
+	'gorwiktionary',
+	'gpewiki',
+	'gucwiki',
+	'gurwiki',
+	'guwwiki',
+	'guwwikinews',
+	'guwwikiquote',
+	'guwwiktionary',
+	'ibawiki',
+	'idwikivoyage',
+	'iglwiki',
+	'igwikiquote',
+	'igwiktionary',
+	'isvwiki',
+	'jawikivoyage',
+	'jvwikisource',
+	'kaawiktionary',
+	'kaiwiki',
+	'kajwiki',
+	'kawikisource',
+	'kbdwiktionary',
+	'kcgwiki',
+	'kcgwiktionary',
+	'kgewiki',
+	'kncwiki',
+	'kuswiki',
+	'lldwiki',
+	'lmowiktionary',
+	'madwiki',
+	'madwikisource',
+	'madwiktionary',
+	'magwiki',
+	'mgwiktionary',
+	'mhwiktionary',
+	'minwikibooks',
+	'minwikiquote',
+	'minwikisource',
+	'mniwiki',
+	'mniwiktionary',
+	'mnwwiktionary',
+	'moswiki',
+	'mswikiquote',
+	'mswikisource',
+	'muswiki',
+	'mywikisource',
+	'niawiki',
+	'niawiktionary',
+	'nrwiki',
+	'nupwiki',
+	'pcmwiki',
+	'pcmwikiquote',
+	'pplwiki',
+	'pwnwiki',
+	'rkiwiki',
+	'rskwiki',
+	'satwiktionary',
+	'shiwiki',
+	'shnwikibooks',
+	'shnwikinews',
+	'shnwikivoyage',
+	'shwiki',
+	'skrwiki',
+	'skrwiktionary',
+	'smnwiki',
+	'srwiki',
+	'suwikisource',
+	'sylwiki',
+	'sysop_plwiki',
+	'taywiki',
+	'tcywikisource',
+	'tcywiktionary',
+	'tddwiki',
+	'thankyouwiki',
+	'thwikimedia',
+	'tigwiki',
+	'tlwikiquote',
+	'tlwikisource',
+	'tlywiki',
+	'tokwiki',
+	'trvwiki',
+	'trwikivoyage',
+	'u4cwiki',
+	'urwikisource',
+	'vewikimedia',
+	'wawikisource',
+	'wikifunctionswiki',
+	'zghwiki',
+	'zghwiktionary',
+
+	// s6 wikis
+	'frwiki',
+	'jawiki',
+	'ruwiki',
+
+	// s8 wikis
+	'wikidatawiki'
+];
+if ( in_array( $wgDBname, $wikibaseEntityUsageExtension1 ) ) {
+	$wgVirtualDomainsMapping['virtual-wikibase-entityusage'] = [ 'cluster' => 'extension1', 'db' => false ];
 }
 
 if ( $wmgUseWikibaseRepo ) {
@@ -101,6 +265,18 @@ if ( $wmgUseWikibaseRepo ) {
 			foreach ( $wmgWikibaseCaptchaExemptNamespaces as $wmgWikibaseCaptchaExemptNs ) {
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['edit'] = false;
 				$wgCaptchaTriggersOnNamespace[$wmgWikibaseCaptchaExemptNs]['create'] = false;
+			}
+			// T440832, T443420: With the Wikibase hCaptcha flag on (Beta and testwikidatawiki),
+			// Special:NewItem, Special:NewProperty, the Special:Set* pages, the classic entity UI,
+			// wbui2025 and termbox render the widget, so stop exempting item/property creation and
+			// edits. Lexeme and EntitySchema stay exempt.
+			if ( !empty( $wmgWikibaseTmpHCaptchaIntegration ) ) {
+				unset(
+					$wgCaptchaTriggersOnNamespace[NS_MAIN]['edit'],
+					$wgCaptchaTriggersOnNamespace[NS_MAIN]['create'],
+					$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['edit'],
+					$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['create']
+				);
 			}
 			unset( $wmgWikibaseCaptchaExemptNamespaces, $wmgWikibaseCaptchaExemptNs );
 		}
@@ -279,14 +455,14 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['tmpMobileEditingUI'] = $wmgWikibaseTmpMobileEditingUI;
 	}
 
-	// Enable MEX / wbui2025 beta feature if set in config T407737 (T394704)
-	if ( isset( $wmgWikibaseTmpMobileEditingUIBetaFeature ) ) {
-		$wgWBRepoSettings['tmpEnableMobileEditingUIBetaFeature'] = $wmgWikibaseTmpMobileEditingUIBetaFeature;
-	}
-
 	// Temporary, T415516
 	if ( isset( $wmgWikibaseTmpGraphQL ) ) {
 		$wgWBRepoSettings['tmpEnableGraphQL'] = $wmgWikibaseTmpGraphQL;
+	}
+
+	// Temporary, T440832
+	if ( isset( $wmgWikibaseTmpHCaptchaIntegration ) ) {
+		$wgWBRepoSettings['tmpEnableHCaptchaIntegration'] = $wmgWikibaseTmpHCaptchaIntegration;
 	}
 
 	// T421850 prototype displaying links to WikiProjects on item pages
@@ -430,6 +606,9 @@ if ( $wmgUseWikibaseClient ) {
 	// T397258
 	$wgWBClientSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
 	$wgWBRepoSettings['enableWikidataIconsInClientWatchlist'] = $wmgEnableWikidataIconsInClientWatchlist;
+
+	// T438463
+	$wgWBClientSettings['suppressOtherLanguageLinkUpdates'] = $wmgSuppressOtherLanguageLinkUpdates;
 }
 
-unset( $wmgWBSharedCacheKey );
+unset( $wmgWBSharedCacheKey, $testWikidataClients, $wikibaseEntityUsageExtension1 );

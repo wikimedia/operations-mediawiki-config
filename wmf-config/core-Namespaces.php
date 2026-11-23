@@ -53,6 +53,12 @@ return [
 	],
 	'+abstractwiki' => [
 		'Abstract' => NS_PROJECT,
+		'AW' => NS_PROJECT, // T437772
+		'AWT' => NS_PROJECT_TALK, // T437772
+	],
+	'+afwiki' => [
+		'Draft' => 118,
+		'Draft_talk' => 119,
 	],
 	'+altwiki' => [
 		'ВП' => NS_PROJECT,
@@ -142,6 +148,7 @@ return [
 		'وج' => NS_PROJECT
 	],
 	'arwiktionary' => [
+		'وق' => NS_PROJECT, // T442847
 		'Appendix' => 100, // T411819
 		'Appendix_talk' => 101, // T411819
 		'Thesaurus' => 110, // T411819
@@ -149,6 +156,10 @@ return [
 	],
 	'+arwikiquote' => [
 		'وق' => NS_PROJECT, // T419828
+	],
+	'+arywiki' => [
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 	],
 	'+arzwiki' => [
 		'Portal' => 100,
@@ -847,6 +858,10 @@ return [
 		'RK' => /* Reconstruction */ 118, // T373634
 		'Wiktionary_diskusija' => NS_PROJECT_TALK,
 	],
+	'+hywiki' => [
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
+	],
 	'+huwiki' => [
 		'Portál_vita' => 101,
 		'Draft' => 118, // T333083
@@ -885,6 +900,10 @@ return [
 		'Wikisumber' => NS_PROJECT, // T341173
 		'Pembicaraan_Wikisumber' => NS_PROJECT_TALK, // T341173
 	],
+	'+igwiki' => [
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
+	],
 	'+ilowiki' => [
 		'WT' => NS_PROJECT_TALK, // T40247
 	],
@@ -911,6 +930,8 @@ return [
 		'DP' => 103, // T101274
 		'DW' => NS_PROJECT_TALK, // T101274
 		'T' => NS_TEMPLATE, // T101274
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 	],
 	'+itwikibooks' => [
 		'Portale' => 100,
@@ -1104,6 +1125,9 @@ return [
 	'+lbwiktionary' => [
 		'Wiktionary_Diskussioun' => NS_PROJECT_TALK,
 	],
+	'+liwiktionary' => [
+		'Appendix_talk' => 101,
+	],
 	'+lijwikisource' => [
 		'Author' => 102, // T257672
 		'Author_talk' => 103, // T257672
@@ -1124,6 +1148,10 @@ return [
 		'Berkas' => NS_FILE, // T382087
 		'Templat' => NS_TEMPLATE, // T382087
 		'Kategori' => NS_CATEGORY, // T382087
+	],
+	'+madwiktionary' => [
+		'Wikikamus' => NS_PROJECT, // T440137
+		'Pakanḍhâ\'ânna Wikikamus' => NS_PROJECT_TALK, // T440137
 	],
 	'+maiwiki' => [
 		'वि' => NS_PROJECT, // T125801
@@ -1502,6 +1530,7 @@ return [
 		'М' => 828, // T196719
 		'Author' => 102, // T395193
 		'Author_talk' => 103, // T395193
+		'А' => 102, // T439568
 
 	],
 	'ruwikiquote' => [
@@ -1617,6 +1646,8 @@ return [
 		'ПОР' => 100, // T346588
 		'RPOR' => 101, // T346588
 		'РПОР' => 101, // T346588
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 		'MD' => 828, // T346588
 		'МД' => 828, // T346588
 		'MOD' => 828, // T346588
@@ -1761,6 +1792,8 @@ return [
 	'+thwiki' => [
 		'H' => NS_HELP, // T70108
 		'WT' => NS_PROJECT_TALK, // T401287
+		'Draft' => 118, // T440179
+		'Draft_talk' => 119, // T440179
 	],
 	'+thwikibooks' => [
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
@@ -2716,6 +2749,8 @@ return [
 	'afwiki' => [
 		100 => 'Portaal',
 		101 => 'Portaalbespreking',
+		118 => 'Konsep', // Draft, T437576
+		119 => 'Konsepbespreking', // Draft talk, T437576
 	],
 	'alswiki' => [
 		100 => 'Portal',
@@ -3521,7 +3556,12 @@ return [
 		106 => '稿', // Draft, T163655
 		107 => '酌稿', // Draft talk, T163655
 	],
-	'zh_min_nanwiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ],
+	'zh_min_nanwiki' => [
+		100 => 'Portal',
+		101 => 'Portal_talk',
+		148 => 'Hàn-jī', // T430731
+		149 => 'Hàn-jī_thó-lūn'
+	],
 	'zh_yuewiki' => [
 		# Override MediaWiki default namespace names for "yue".
 		NS_MEDIA => 'Media',
@@ -4215,6 +4255,10 @@ return [
 	'lbwiktionary' => [
 		100 => 'Annexen', // Appendix
 		101 => 'Annexen_Diskussioun',
+	],
+	'liwiktionary' => [
+		100 => 'Appendix', // T443269
+		101 => 'Euverlèk_appendix',
 	],
 	'lmowiktionary' => [
 		100 => 'Apendice', // Appendix
@@ -5048,6 +5092,10 @@ return [
 # @} end of wgExtraNamespaces
 
 'wgNamespaceRobotPolicies' => [
+	'afwiki' => [
+		118 => 'noindex,follow', // Draft - T437576
+		119 => 'noindex,follow', // Draft Talk - T437576
+	],
 	'arwiki' => [
 		NS_USER => 'noindex,nofollow', // T371470
 		NS_USER_TALK => 'noindex,nofollow', // T371470
@@ -5390,7 +5438,19 @@ return [
 		NS_USER => 'noindex,follow', // T122732
 	],
 	'ukwiki' => [
+		NS_TALK => 'noindex,follow', // T437409
 		NS_USER => 'noindex,follow', // T98926
+		NS_USER_TALK => 'noindex,follow', // T437409
+		NS_PROJECT_TALK => 'noindex,follow', // T437409
+		NS_FILE_TALK => 'noindex,follow', // T437409
+		NS_MEDIAWIKI_TALK => 'noindex,follow', // T437409
+		NS_TEMPLATE_TALK => 'noindex,follow', // T437409
+		NS_HELP_TALK => 'noindex,follow', // T437409
+		NS_CATEGORY_TALK => 'noindex,follow', // T437409
+		101 => 'noindex,follow', // T437409
+		711 => 'noindex,follow', // T437409
+		829 => 'noindex,follow', // T437409
+		1729 => 'noindex,follow', // T437409
 	],
 	'urwiki' => [
 		118 => 'noindex,nofollow',
@@ -5626,6 +5686,7 @@ return [
 		100 => 1, // T308393, Portal
 		102 => 1, 106 => 1, 114 => 1, // T66127
 	],
+	'+zh_min_nanwiki' => [ 148 => 1 ], // T430731
 ],
 # @} end of wgNamespacesToBeSearchedDefault
 
@@ -6151,7 +6212,7 @@ return [
 	'lvwiktionary' => 'Vikivārdnīca', // T170065
 	'madwiki' => 'Wikipèḍia',
 	'madwikisource' => 'Wikigherbhung', // T391767
-	'madwiktionary' => 'Wikikamus',
+	'madwiktionary' => 'Wikioca\'', // T440137
 	'magwiki' => 'विकिपीडिया', // T428279
 	'maiwiki' => 'विकिपिडिया', // T74346
 	'mdfwiki' => 'Википедиесь',
@@ -6170,6 +6231,7 @@ return [
 	'mlwikibooks' => 'വിക്കിപാഠശാല',
 	'mlwikiquote' => 'വിക്കിചൊല്ലുകൾ',
 	'mlwikisource' => 'വിക്കിഗ്രന്ഥശാല',
+	'mlwikivoyage' => 'വിക്കിയാത്ര', // T441173
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',

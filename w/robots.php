@@ -5,7 +5,10 @@ require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Profiler\ProfilingContext;
 use MediaWiki\Title\Title;
+
+ProfilingContext::singleton()->init( 'wmf', MW_ENTRY_POINT );
 
 $page = MediaWikiServices::getInstance()
 	->getWikiPageFactory()

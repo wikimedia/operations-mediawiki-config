@@ -650,42 +650,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_TemplateDataApi' => [
-			'schema_title' => 'analytics/legacy/templatedataapi',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_TemplateDataEditor' => [
-			'schema_title' => 'analytics/legacy/templatedataeditor',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => 'user-agent',
-					],
-				],
-			],
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_TemplateWizard' => [
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
@@ -1736,10 +1700,10 @@ return [
 			'producers' => [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
+						'http.request_headers.user-agent' => 'user-agent',
 					],
 				],
-			]
+			],
 		],
 		'mediawiki.hcaptcha.risk_score' => [
 			'schema_title' => 'analytics/mediawiki/hcaptcha/risk_score',
@@ -1747,10 +1711,10 @@ return [
 			'producers' => [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
+						'http.request_headers.user-agent' => 'user-agent',
 					],
 				],
-			]
+			],
 		],
 		'mediawiki.ip_reputation.score' => [
 			'schema_title' => 'analytics/mediawiki/ip_reputation/score',
@@ -1759,6 +1723,28 @@ return [
 				'eventgate' => [
 					'enrich_fields_from_http_headers' => [
 						'http.request_headers.user-agent' => 'user-agent',
+					],
+				],
+			],
+		],
+		'mediawiki.wikimedia_antiabuse.content_policy_score' => [
+			'schema_title' => 'analytics/mediawiki/wikimedia_antiabuse/content_policy_score',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.wikimedia_antiabuse.abuse_review_interaction' => [
+			'schema_title' => 'analytics/mediawiki/wikimedia_antiabuse/abuse_review_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'provide_values' => [
+						'mediawiki_database',
+						'performer_id',
+						'performer_groups',
+						'performer_name',
+						'performer_pageview_id',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_registration_dt',
 					],
 				],
 			],
@@ -2206,6 +2192,25 @@ return [
 				],
 			],
 		],
+		// Produced by pageview-trending-relative Flink job.
+		// This uses a custom schema and cannot be automatically loaded by regex
+		'mediawiki.job.pageviewTrendingRelativeUpdate' => [
+			'schema_title' => 'mediawiki/job/pageview_trending_relative_update',
+			// This stream is not produced via EventGate, but an event service must still be set.
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => false,
+			'message_key_fields' => [
+				'wiki_id' => 'database',
+			],
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+				'analytics_hive_ingestion' => [
+					'enabled' => false,
+				],
+			],
+		],
 		'mediawiki.centralnotice.campaign-change' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/change',
 			'destination_event_service' => 'eventgate-main',
@@ -2435,6 +2440,12 @@ return [
 				],
 			],
 		],
+		// Thanks sent via the Thanks extension, produced by EventBus.
+		// https://phabricator.wikimedia.org/T441426
+		'mediawiki.user_thank.rc0' => [
+			'schema_title' => 'mediawiki/user/thank',
+			'destination_event_service' => 'eventgate-main',
+		],
 		'resource_change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
@@ -2607,15 +2618,17 @@ return [
 		],
 
 		// ECS-formatted access logs for dumps.wikimedia.org.
-		// Produced directly to the kafka-logging clusters by rsyslog (not via
-		// EventGate, so canary events are disabled) and mirrored to Kafka jumbo
-		// for ingestion. Inherits the default eqiad./codfw. topic_prefixes and the
+		// Real events are produced directly to the kafka-logging clusters by
+		// rsyslog and mirrored to Kafka jumbo for ingestion. Canary events are
+		// produced through eventgate-analytics, but no real event data is.
+		// Inherits the default eqiad./codfw. topic_prefixes and the
 		// default analytics_hadoop_ingestion + analytics_hive_ingestion consumers.
 		// https://phabricator.wikimedia.org/T291645
 		// https://phabricator.wikimedia.org/T425087
-		'webrequest.dumps.dev0' => [
-			'schema_title' => 'development/elastic/ecs',
-			'canary_events_enabled' => false,
+		'webrequest.dumps.v1' => [
+			'schema_title' => 'elastic/ecs',
+			'destination_event_service' => 'eventgate-analytics',
+			'canary_events_enabled' => true,
 		],
 
 		// The producer of webrequest_frontend_text is not using this stream
@@ -2881,6 +2894,69 @@ return [
 				'user_id' => 'user.user_id',
 			],
 			'destination_event_service' => 'eventgate-main',
+		],
+
+		// Status:
+		// 	2026-10 - in development
+		//
+		// Changelog of the HTML rendering feature counts of revisions.
+		// Produced after MediaWiki prefetches the
+		// revision_feature_counts Linked Artifacts Cache (LAC) artifact of a revision.
+		// https://phabricator.wikimedia.org/T436695
+		'mediawiki.revision_html_feature_counts_change.dev0' => [
+			// TODO: this will be finalized at mediawiki/revision/rendering_feature_counts_change
+			'schema_title' => 'development/revision_rendering_feature_counts_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+		],
+
+		// Status:
+		// 	2026-10 - in development
+		//
+		// mediawiki.revision_tags_change stream.
+		// The events do not contain private tags.
+		// https://phabricator.wikimedia.org/T434143
+		'mediawiki.revision_tags_change.dev0' => [
+			// TODO: bikeshed final location
+			'schema_title' => 'development/revision_tags_change',
+			'message_key_fields' => [
+				// NOTE: Use the same key as mediawiki.page_change.v1.
+				// Then consumers can join the two streams by page.
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-main',
+					// TODO: disabled until tested on beta
+					'enabled' => false,
+				],
+			],
+		],
+
+		// Status:
+		// 	2026-10 - in development
+		//
+		// mediawiki.log_tags_change stream.
+		// The events do not contain private tags.
+		// https://phabricator.wikimedia.org/T434143
+		'mediawiki.log_tags_change.dev0' => [
+			// TODO: bikeshed final location
+			'schema_title' => 'development/log_tags_change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'log_id' => 'log.log_id',
+			],
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'event_service_name' => 'eventgate-main',
+					// TODO: disabled until tested on beta
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
@@ -3209,11 +3285,6 @@ return [
 			'schema_title' => 'analytics/mediawiki/suggested_investigations/interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'producers' => [
-				'eventgate' => [
-					'enrich_fields_from_http_headers' => [
-						'http.request_headers.user-agent' => false,
-					],
-				],
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'mediawiki_database',
@@ -3465,7 +3536,7 @@ return [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		// (T386440) Instrument for the User Info Card
+		// (T386440, T435585) Instrument for the User Info Card
 		'mediawiki.product_metrics.user_info_card_interaction' => [
 			'schema_title' => 'analytics/product_metrics/web/base',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -3473,6 +3544,8 @@ return [
 				'metrics_platform_client' => [
 					'provide_values' => [
 						'agent_client_platform_family',
+						'page_title',
+						'page_id',
 						'page_namespace',
 						'page_namespace_id',
 						'performer_session_id',
@@ -3501,6 +3574,12 @@ return [
 				],
 				'metrics_platform_client' => [
 					'provide_values' => [],
+				],
+			],
+			'consumers' => [
+				'analytics_hive_ingestion' => [
+					'enabled' => true,
+					'spark_job_ingestion_scale' => 'medium',
 				],
 			],
 		],
@@ -3602,26 +3681,6 @@ return [
 		'analytics.haproxy_requestctl' => [
 			'schema_title' => 'analytics/haproxy_requestctl',
 			'destination_event_service' => 'eventgate-analytics',
-		],
-		// T397532 Stream for ReadingList web Experiment
-		'mediawiki.product_metrics.reading_list' => [
-			'schema_title' => 'analytics/product_metrics/web/base',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'provide_values' => [
-						'mediawiki_database',
-						'mediawiki_skin',
-						'page_content_language',
-						'page_namespace_id',
-						'performer_edit_count_bucket',
-						'performer_is_bot',
-						'performer_is_logged_in',
-						'performer_is_temp',
-						'performer_session_id',
-					],
-				],
-			],
 		],
 		// T410719: Offline analytics summarizing the Cite references on each page.
 		'mediawiki.wmde_page_summary' => [

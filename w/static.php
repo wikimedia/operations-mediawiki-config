@@ -53,6 +53,7 @@ define( 'MW_ENTRY_POINT', 'static' );
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
+MediaWiki\Profiler\ProfilingContext::singleton()->init( 'wmf', MW_ENTRY_POINT );
 
 define( 'WMF_STATIC_1MIN', 60 );
 define( 'WMF_STATIC_1Y', 31536000 );
@@ -298,7 +299,6 @@ function wmfStaticRespond() {
 
 		$responseMetric->setLabel( 'status', 'success' )
 			->setLabel( 'responseType', $responseType )
-			->copyToStatsdAt( "wmfstatic.success.$responseType" )
 			->increment();
 		return;
 	}
@@ -307,7 +307,6 @@ function wmfStaticRespond() {
 		wmfStaticShowError( 'Unknown file path', 404 );
 
 		$responseMetric->setLabel( 'status', 'notfound' )
-			->copyToStatsdAt( 'wmfstatic.notfound' )
 			->increment();
 		return;
 	}
@@ -316,7 +315,6 @@ function wmfStaticRespond() {
 	// but we don't (yet) have a matching file.
 	wmfStaticStreamFile( "$newestFoundDir/$uriPath", 'mismatch' );
 	$responseMetric->setLabel( 'status', 'mismatch' )
-		->copyToStatsdAt( 'wmfstatic.mismatch' )
 		->increment();
 }
 

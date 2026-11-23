@@ -57,7 +57,6 @@ class WmfConfig {
 		'small',
 		'specialcontribute',
 		'vector-2022-language-links',
-		'math-legacy-mathoid',
 		'medium',
 		'wikimania',
 		'wikidata',
@@ -80,6 +79,7 @@ class WmfConfig {
 		'rtl',
 		'translate',
 		'wikifunctionsclient',
+		'abstractwikiclient',
 		'growthexperiments',
 		'parsoidrendered',
 		'ores',
@@ -89,6 +89,7 @@ class WmfConfig {
 		'automoderator-revertrisk-multilingual',
 		'abusefilter-disabled',
 		'checkuser-disabled',
+		'wikimediaantiabuse-abusereview',
 	];
 
 	/** @var string[] */

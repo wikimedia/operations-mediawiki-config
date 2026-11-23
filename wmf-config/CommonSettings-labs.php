@@ -25,9 +25,6 @@ use MediaWiki\Title\Title;
 // safe guard
 if ( $wmgRealm == 'labs' ) {
 
-	// temporary workaround for T349944
-	$wgStatsdServer = false;
-
 	$wmgAddWikiNotify = false;
 
 	# Use a different address from the production one - T192686
@@ -57,7 +54,6 @@ if ( $wmgRealm == 'labs' ) {
 	if ( $wmgUseCentralAuth ) {
 		// Allows automatic account vanishing (for qualifying users)
 		$wgCentralAuthAutomaticVanishPerformer = 'AccountVanishRequests';
-		$wgCentralAuthRejectVanishUserNotification = 'AccountVanishRequests';
 
 		// Configuration for guidance given to blocked users when requesting vanishing
 		$wgCentralAuthBlockAppealWikidataIds = [ "Q13360396", "Q175291" ];
@@ -127,6 +123,10 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseCentralNotice ) {
+		$wgCentralNoticeProhibitedExperiments = [
+			[ 'name' => 'minimal-minerva-toolbar', 'bannerExperiment' => false ],
+			[ 'name' => 'preferred-sources-ab', 'bannerExperiment' => false ],
+		];
 		// Same as production CommonSettings.php, but adding *.wikimedia.beta.wmcloud.org
 		// for meta, upload, and commons in Beta Cluster.
 		$wgCentralNoticeContentSecurityPolicy =
@@ -143,6 +143,8 @@ if ( $wmgRealm == 'labs' ) {
 		$wgCiteBacklinkCommunityConfiguration = true;
 		// Temporary while developing feature, T385666
 		$wgCiteSubRefMergeInDevelopment = true;
+		// T431544
+		$wgCiteCitationTypeAutoNames = true;
 	}
 
 	// Labs override for GlobalCssJs
@@ -227,9 +229,6 @@ if ( $wmgRealm == 'labs' ) {
 	}
 
 	if ( $wmgUseMath ) {
-		$wgMathValidModes = [ 'source', 'mathml', 'native', 'mathjax' ];
-		$wgDefaultUserOptions[ 'math' ] = 'native';
-		$wgMathEnableFormulaLinks = true;
 		$wgMathWikibasePropertyIdHasPart = 'P253104';
 		$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 		$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
@@ -407,11 +406,6 @@ if ( $wmgRealm == 'labs' ) {
 	// Ignore parameter order when matching request URLs to CDN URLs (T314868)
 	$wgCdnMatchParameterOrder = false;
 
-	// T412528
-	if ( $wmgUsePersonalDashboard ) {
-		wfLoadExtension( 'PersonalDashboard' );
-	}
-
 	// T364034
 	if ( $wmgUseAutoModerator ) {
 		$wgAutoModeratorLiftWingBaseUrl = 'https://api.wikimedia.org/service/lw/inference/v1/models/';
@@ -566,6 +560,24 @@ if ( $wmgRealm == 'labs' ) {
 			}
 			return true;
 		};
+	}
+
+	// Do not use virtual domains for commonswikis link tables since they are not in an external cluster
+	unset( $wgRemoteVirtualDomainsMapping['commonswiki'] );
+	if ( $wgDBname === 'commonswiki' ) {
+		unset( $wgVirtualDomainsMapping['virtual-links'] );
+	}
+
+	// The globalimagelinks table is in the local commonswiki db instead of an external cluster
+	if ( $wmgUseGlobalUsage ) {
+		$wgVirtualDomainsMapping['virtual-globalusage'] = [ 'db' => 'commonswiki' ];
+	}
+
+	if ( $wmgUseTimeline ) {
+		// No shellbox-timeline in beta: the renderer runs on the appserver, which has fonts-noto
+		$wgTimelineFonts = [
+			'default' => '/usr/share/fonts/truetype/noto/NotoSans-Regular',
+		];
 	}
 }
 // end safeguard

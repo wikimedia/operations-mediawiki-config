@@ -94,6 +94,7 @@ $IP/extensions/MediaModeration/extension.json
 $IP/extensions/MediaSearch/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
+$IP/extensions/ModeratorToolkit/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MultiTitle/extension.json
 $IP/extensions/NavigationTiming/extension.json
@@ -119,6 +120,7 @@ $IP/extensions/PersonalDashboard/extension.json
 $IP/extensions/Phonos/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/Popups/extension.json
+$IP/extensions/Produnto/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/PropertySuggester/extension.json
 $IP/extensions/QuickSurveys/extension.json

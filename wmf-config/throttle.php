@@ -35,13 +35,28 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
+// T437609: Lift IP cap for edit-a-thon
 $wmgThrottlingExceptions[] = [
-	'from'   => '2026-07-30T17:30 +1:00',
-	'to'     => '2026-07-30T20:00 +1:00',
-	'IP'     => '89.36.114.94',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value'  => 100,
+	'from'   => '2026-11-24T15:30 -03:00',
+	'to'     => '2026-11-24T18:30 -03:00',
+	'IP'     => '163.10.36.4',
+	'dbname' => [ 'eswiki', 'commonswiki', 'wikidatawiki' ],
+	'value'  => 50,
 	'tempaccountvalue' => 50,
+];
+
+// T445180: Lift IP cap for student workshop at Universiti Kebangsaan Malaysia
+$wmgThrottlingExceptions[] = [
+	'from'   => '2026-11-18T01:00 +0:00',
+	'to'     => '2026-11-18T05:00 +0:00',
+	'range'  => [
+		'103.219.236.0/23',
+		'103.101.254.0/24',
+		'103.101.255.0/24'
+	],
+	'dbname' => [ 'enwiki', 'mswiki' ],
+	'value'  => 20,
+	'tempaccountvalue' => 20,
 ];
 
 ## Add throttling definitions above.

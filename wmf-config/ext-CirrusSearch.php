@@ -31,6 +31,17 @@ return [
 	'private' => [ 'eqiad', 'codfw' ],
 ],
 
+'wgCirrusSearchMetricClusterNames' => [
+	'default' => [
+		'production-search-eqiad' => 'eqiad',
+		'production-search-omega-eqiad' => 'eqiad',
+		'production-search-psi-eqiad' => 'eqiad',
+		'production-search-codfw' => 'codfw',
+		'production-search-omega-codfw' => 'codfw',
+		'production-search-psi-codfw' => 'codfw',
+	],
+],
+
 'wgCirrusSearchReplicaGroup' => [
 	'default' => [
 		'type' => 'roundrobin',
@@ -1269,5 +1280,12 @@ return [
 		'build' => true,
 		'use' => true,
 	],
+],
+'wgCirrusSearchMustTrackTotalHits' => [
+	'default' => [
+		'default' => true,
+		// enable WAND optimisation for morelike (https://phabricator.wikimedia.org/P96536)
+		'more_like_only' => false,
+	]
 ],
 ];

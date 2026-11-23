@@ -19,18 +19,6 @@ return [
 	'default' => 'production',
 ],
 
-'wgGEHelpPanelHelpDeskTitle' => [
-	'default' => '',
-],
-
-'wgGEHelpPanelViewMoreTitle' => [
-	'default' => '',
-],
-
-'wgGEHelpPanelLinks' => [
-	'default' => [],
-],
-
 'wgGEApiQueryGrowthTasksLookaheadSize' => [
 	'default' => 10,
 ],
@@ -746,35 +734,21 @@ return [
 	'default' => true,
 ],
 
+// Keeps the last step of the linkrecommendation timeout chain: the service
+// stops processing at 29s, gunicorn kills the worker at 30s, and the
+// services_proxy envoy listener times out at 31s. T442468
+'wgGELinkRecommendationServiceTimeout' => [
+	'default' => 32,
+],
+
 'wgGELinkRecommendationServiceWikiIdMasquerade' => [
 	'default' => null,
 	'testwiki' => 'simplewiki',
 ],
 
-'wgGELinkRecommendationsRefreshByIteratingThroughAllTitles' => [
-	'default' => false,
-	'arzwiki' => true,
-	'cswiki' => true,
-	'cawiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'idwiki' => true,
-	'itwiki' => true,
-	'nlwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-	'srwiki' => true,
-	'shwiki' => true,
-	'viwiki' => true,
-],
-
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
-	'eswiki' => 70, // T285235
+	'eswiki' => 85, // T394867
 ],
 
 'wgGEMentorshipReassignMenteesBatchSize' => [
@@ -783,10 +757,6 @@ return [
 
 'wgGEMentorshipCleanupEnabled' => [
 	'default' => true,
-],
-
-'wgGEHomepageDefaultVariant' => [
-	'default' => 'control',
 ],
 
 'wgGEMentorDashboardEnabledModules' => [
@@ -848,11 +818,6 @@ return [
 	'default' => [
 		'thankyoupage-2023' => [
 			'skipWelcomeSurvey' => true,
-			'signupPageTemplate' => 'hero',
-			'signupPageTemplateParameters' => [
-				'showBenefitsList' => 'desktop',
-				'messageKey' => 'thankyoupage',
-			],
 			'pattern' => '/^(typage|fundraising)-\w+-\w+-\d+$/',
 		],
 		// See T422169.
@@ -863,22 +828,8 @@ return [
 	],
 ],
 
-'wgGECampaignTopics' => [
-	'default' => []
-],
-
 'wgGERestbaseUrl' => [
 	'default' => false,
-],
-
-'wgGELinkRecommendationMinimumTasksPerTopic' => [
-	'default' => 500,
-	'arzwiki' => 2000,
-	'eswiki' => 2000,
-	'fawiki' => 2000,
-	'frwiki' => 2000,
-	'idwiki' => 2000,
-	'ptwiki' => 2000,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -903,6 +854,51 @@ return [
 	'default' => '',
 	// T407029
 	'testwiki' => 'hasrecommendation:tone>=0.8 lasteditdate:<now',
+],
+
+'wgGEHomeEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgGEHomeBetaFeatureEnabled' => [
+	'default' => false,
+	'test2wiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'ptwiki' => true,
+	'viwiki' => true,
+	'zhwiki' => true,
+],
+
+'wgGEAccountSetupExperimentStartRegistrationDate' => [
+	'default' => null,
+	'testwiki' => '2026-09-09T13:00:00',
+	'arwiki' => '2026-09-29T15:00:00',
+	'enwiki' => '2026-09-29T15:00:00',
+	'eswiki' => '2026-09-29T15:00:00',
+	'frwiki' => '2026-09-29T15:00:00',
+],
+
+// Give the early onboarding treatment to all users who registered after
+// wgGEAccountSetupExperimentStartRegistrationDate. Do not read the A/B test assignment.
+'wgGEEarlyOnboardingScaled' => [
+	'default' => false,
+	'arwiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+],
+
+'wgGEHomepageReadingRecommendationsFeaturedCategory' => [
+	'default' => 'Category:Featured articles',
+	'arwiki' => 'تصنيف:مقالات مختارة',
+	'eswiki' => 'Categoría:Wikipedia:Artículos destacados',
+	'frwiki' => 'Catégorie:Article de qualité',
 ],
 
 ];

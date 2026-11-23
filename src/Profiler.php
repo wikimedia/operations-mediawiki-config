@@ -303,7 +303,7 @@ class Profiler {
 				$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
 				foreach ( $logLines as $line ) {
 					if ( $line === '' ) {
-						// formatCollapsed() ends with a line break
+						// ExcimerLog::formatCollapsed() ends with a line break
 						continue;
 					}
 
@@ -340,9 +340,6 @@ class Profiler {
 		}
 
 		if ( $error ) {
-			// statsd format (graphite)
-			self::sendMetric( "MediaWiki.arclamp_client_error.{$error}:1|c", $options['statsd-host'], 8125 );
-
 			// dogstatsd format (prometheus)
 			$normalizedError = self::normalizeTag( $error );
 			self::sendMetric(
@@ -366,87 +363,75 @@ class Profiler {
 		$handler = class_exists( ProfilingContext::class )
 			? ProfilingContext::singleton()->getHandlerMetricPrefix()
 			: 'unknown';
+		if ( $verb === '' || $handler === 'unknown' ) {
+			return;
+		}
+		foreach ( $logLines as $line ) {
+			if ( $line === '' ) {
+				// ExcimerLog::formatCollapsed() ends with a line break
+				continue;
+			}
+			$componentsInStack = self::excimerComponentsFromLine( $line );
 
-		if ( $verb !== '' && $handler !== 'unknown' ) {
-			foreach ( $logLines as $line ) {
-				if ( $line === '' ) {
-					// $collapsed ends with a line break
-					continue;
-				}
-				$componentsInStack = [];
-				foreach ( explode( ';', $line ) as $fname ) {
-					$cname = self::excimerComponentFromMethod( $fname );
-					if ( $cname !== null ) {
-						$componentsInStack[$cname] = 1;
-					}
-				}
+			// dogstatsd format (prometheus)
+			$normalizedHandler = self::normalizeTag( $handler );
+			$normalizedVerb = self::normalizeTag( $verb );
+			self::sendMetric( "mediawiki_arclamp_samples_total:1|c|"
+				. "#handler:{$normalizedHandler}"
+				. ",verb:{$normalizedVerb}",
+				$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
+				9125
+			);
 
-				// statsd format (graphite)
-				self::sendMetric(
-					"MediaWiki.arclamp_samples.$handler.$verb:1|c",
-					$options['statsd-host'],
-					8125
-				);
-
+			foreach ( $componentsInStack as $cname => $_unused ) {
 				// dogstatsd format (prometheus)
-				$normalizedHandler = self::normalizeTag( $handler );
-				$normalizedVerb = self::normalizeTag( $verb );
-				self::sendMetric( "mediawiki_arclamp_samples_total:1|c|"
+				$normalizedComponent = self::normalizeTag( $cname );
+				self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c|"
 					. "#handler:{$normalizedHandler}"
-					. ",verb:{$normalizedVerb}",
+					. ",verb:{$normalizedVerb}"
+					. ",component:{$normalizedComponent}",
 					$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
 					9125
 				);
-
-				foreach ( $componentsInStack as $cname => $hit ) {
-					// statsd format (graphite)
-					self::sendMetric(
-						"MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c",
-						$options['statsd-host'],
-						8125
-					);
-					// dogstatsd format (prometheus)
-					$normalizedComponent = self::normalizeTag( $cname );
-					self::sendMetric( "mediawiki_arclamp_samples_by_component_total:1|c|"
-						. "#handler:{$normalizedHandler}"
-						. ",verb:{$normalizedVerb}"
-						. ",component:{$normalizedComponent}",
-						$_SERVER['STATSD_EXPORTER_PROMETHEUS_SERVICE_HOST'] ?? 'localhost',
-						9125
-					);
-				}
 			}
 		}
 	}
 
 	/**
-	 * Get the component name from a class suitable for metrics
+	 * Get the component names from a flushed line from Excimer, suitable for metrics
 	 *
-	 * @param string $fname Fully qualified caller name (e.g. from __METHOD__)
-	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
+	 * @param string $line A line consisting of semicolon-separated stack frames containing
+	 *  the fully qualified function name.
+	 *  The final frame may additionally contain a trailing space followed by a number,
+	 *  as documented in {@link \ExcimerLog::formatCollapsed()}
+	 * @return array<string,true> Map by metric name component (e.g. "core", "MySkin", "MyExtension")
 	 */
-	private static function excimerComponentFromMethod( $fname ) {
-		$m = [];
-		if ( !preg_match( '/^([a-zA-Z0-9_\\\\]+)::[a-zA-Z0-9_]+$/', $fname, $m ) ) {
-			return null;
+	private static function excimerComponentsFromLine( $line ) {
+		$componentsInStack = [];
+		foreach ( explode( ';', $line ) as $frame ) {
+			$m = [];
+			if ( !preg_match( '/^([a-zA-Z0-9_\\\\]+)::[a-zA-Z0-9_]+(?: \d+)?$/', $frame, $m ) ) {
+				continue;
+			}
+
+			// Determine the class file path
+			try {
+				$path = ( new ReflectionClass( $m[1] ) )->getFileName();
+				$component = self::excimerComponentFromPath( $path );
+			} catch ( ReflectionException $e ) {
+				$component = 'unknown';
+			}
+			$componentsInStack[$component] = true;
 		}
 
-		// Determine the class file path
-		try {
-			$path = ( new ReflectionClass( $m[1] ) )->getFileName();
-			$component = self::excimerComponentFromPath( $path );
-		} catch ( ReflectionException $e ) {
-			$component = 'unknown';
-		}
-
-		return $component;
+		return $componentsInStack;
 	}
 
 	/**
 	 * Get the component name from a class suitable for metrics
 	 *
 	 * @param string|false $path Fully qualified path name
-	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
+	 * @return string Metric name component (e.g. "core", "MySkin", "MyExtension")
 	 */
 	private static function excimerComponentFromPath( $path ) {
 		global $IP, $wgStyleDirectory, $wgExtensionDirectory;

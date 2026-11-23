@@ -46,9 +46,6 @@ $common = [
 	// pipelines in both data centers).
 	'xenon' => '10.64.16.88', # arclamp1001.eqiad.wmnet
 
-	// Statsd is not active-active.
-	'statsd' => '10.64.16.81', # statsd.eqiad.wmnet, now resolving to graphite1005.eqiad.wmnet
-
 	// Logstash is not active-active.
 	'logstash' => [
 		'10.2.2.36', # logstash.svc.eqiad.wmnet
@@ -61,6 +58,11 @@ $common = [
 		'208.80.153.10',  # irc2003.wikimedia.org
 	],
 
+	// NOTE: Looking for parsercache-dbs? This is now maintained via Etcd.
+	// * Loaded via etcd.php (as $wmgPCServers)
+	// * Debug via https://noc.wikimedia.org/dbconfig/eqiad.json
+	// * Change via https://wikitech.wikimedia.org/wiki/dbctl
+
 	// Automatic dc-local discovery
 	'parsoid' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
@@ -68,7 +70,6 @@ $common = [
 	'eventgate-analytics-external' => 'http://localhost:6013',
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
-	'restbase' => 'http://localhost:6011',
 	'rest-gateway' => 'http://localhost:6033',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
@@ -85,6 +86,7 @@ $common = [
 	'wikifunctions-orchestrator' => 'http://localhost:6034',
 	'chart-renderer' => 'http://localhost:6039',
 	'page-analytics' => 'http://localhost:6073',
+	'linked-artifacts' => 'http://localhost:6074',
 	'device-analytics' => 'http://localhost:6032',
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
@@ -158,12 +160,18 @@ $common = [
 			'port' => 6516,
 		]
 	],
+
+	// IP ranges that might be used as a client IP in a GitLab webhook post. For Produnto.
+	'gitlab-nets' => [
+		'208.80.152.0/22',
+		'2620:0:860::/46',
+	],
 ];
 
 $services = [
 	'eqiad' => $common + [
 		// each DC has its own urldownloader for latency reasons
-		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
+		'urldownloader' => 'http://urldownloader.svc.eqiad.wmnet:8080',
 
 		// logs are mirrored from eqiad -> codfw by mwlog hosts
 		'udp2log' => '10.64.185.2:8420', # mwlog1003.eqiad.wmnet
@@ -182,19 +190,7 @@ $services = [
 			'10.64.32.137', # poolcounter1007.eqiad.wmnet
 		],
 
-		// LOOKING FOR parsercache-dbs? It no longer lives in the production
-		// PHP configs. Try https://noc.wikimedia.org/dbconfig/eqiad.json.
-		// For more info see also https://wikitech.wikimedia.org/wiki/dbctl.
-		'parsercache-dbs' => [],
-
 		// LockManager Redis eqiad
-		// This was hosted on redis_sessions which was phased out (T267581)
-		// while now it is hosted on redis_misc (rdb* servers)
-		'redis_lock' => [
-			'rdb1' => '10.64.16.18:6381', # rdb1013 B6
-			'rdb2' => '10.64.16.18:6382', # rdb1013 B6
-			'rdb3' => '10.64.0.9:6381',  # rdb1015 A4
-		],
 		'redis_default_lock' => [
 			'rdb1' => '10.64.0.65:6378', # rdb-lock1001 VM
 			'rdb2' => '10.64.16.45:6378', # rdb-lock1002 VM
@@ -237,7 +233,7 @@ $services = [
 		],
 	],
 	'codfw' => $common + [
-		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
+		'urldownloader' => 'http://urldownloader.svc.codfw.wmnet:8080',
 
 		// logs are mirrored from codfw -> eqiad by mwlog hosts
 		'udp2log' => '10.192.52.2:8420', # mwlog2003.codfw.wmnet
@@ -256,17 +252,7 @@ $services = [
 			'10.192.16.6',   # poolcounter2006.codfw.wmnet
 		],
 
-		// LOOKING FOR parsercache-dbs? It no longer lives in the production
-		// PHP configs. Try https://noc.wikimedia.org/dbconfig/codfw.json.
-		// For more info see also https://wikitech.wikimedia.org/wiki/dbctl.
-		'parsercache-dbs' => [],
-
 		// LockManager Redis codfw
-		'redis_lock' => [
-			'rdb1' => '10.192.57.4:6381',  # rdb2011 E3
-			'rdb2' => '10.192.57.4:6382',  # rdb2011 E3
-			'rdb3' => '10.192.13.25:6381', # rdb2013 B4
-		],
 		'redis_default_lock' => [
 			'rdb1' => '10.192.16.11:6378', # rdb-lock2001 VM
 			'rdb2' => '10.192.32.12:6378', # rdb-lock2002 VM

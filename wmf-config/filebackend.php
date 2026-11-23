@@ -35,13 +35,13 @@ $wmgSwiftShardLocal = in_array( $wgDBname, $wmgSwiftBigWikis ) ? 2 : 0; // shard
 $wmgSwiftShardCommon = in_array( 'commonswiki', $wmgSwiftBigWikis ) ? 2 : 0; // shard levels
 
 if ( $wmgRealm === 'labs' ) {
-	$redisLockServers = [ 'rdb1' ];
 	$commonsUrl = "https://commons.wikimedia.beta.wmcloud.org";
 	$uploadUrl = '//upload.wikimedia.beta.wmcloud.org';
+	$thumbUrl = '//upload.wikimedia.beta.wmcloud.org';
 } else {
-	$redisLockServers = [ 'rdb1', 'rdb2', 'rdb3' ];
 	$commonsUrl = "https://commons.wikimedia.org";
 	$uploadUrl = "//upload.wikimedia.org";
+	$thumbUrl = "//thumb.wikimedia.org";
 }
 
 /* DC-specific Swift backend config */
@@ -51,7 +51,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'class' => SwiftFileBackend::class,
 		'name' => "local-swift-{$specificDC}",
 		'wikiId' => "{$site}-{$lang}",
-		'lockManager' => 'redisLockManager',
+		'lockManager' => 'redisDefaultLockManager',
 		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
 		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
@@ -88,7 +88,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'class' => SwiftFileBackend::class,
 		'name' => "shared-swift-{$specificDC}",
 		'wikiId' => "wikipedia-commons",
-		'lockManager' => 'redisLockManager',
+		'lockManager' => 'redisDefaultLockManager',
 		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
 		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
@@ -123,7 +123,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'class' => SwiftFileBackend::class,
 		'name' => "global-swift-{$specificDC}",
 		'wikiId' => "global-data",
-		'lockManager' => 'redisLockManager',
+		'lockManager' => 'redisDefaultLockManager',
 		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
 		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
@@ -149,7 +149,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'class' => SwiftFileBackend::class,
 		'name' => "shared-testwiki-swift-{$specificDC}",
 		'wikiId' => "wikipedia-test",
-		'lockManager' => 'redisLockManager',
+		'lockManager' => 'redisDefaultLockManager',
 		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
 		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
@@ -178,7 +178,7 @@ $localMultiWriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'local-multiwrite',
 	'wikiId' => "{$site}-{$lang}",
-	'lockManager' => 'redisLockManager',
+	'lockManager' => 'redisDefaultLockManager',
 	// DO NOT change the master backend unless it is fully trusted
 	'backends' => [
 		[ 'template' => "local-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
@@ -190,7 +190,7 @@ $sharedMultiwriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'shared-multiwrite',
 	'wikiId' => "wikipedia-commons",
-	'lockManager' => 'redisLockManager',
+	'lockManager' => 'redisDefaultLockManager',
 	// DO NOT change the master backend unless it is fully trusted
 	'backends' => [
 		[ 'template' => "shared-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
@@ -202,7 +202,7 @@ $globalMultiWriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'global-multiwrite',
 	'wikiId' => "global-data",
-	'lockManager' => 'redisLockManager',
+	'lockManager' => 'redisDefaultLockManager',
 	// DO NOT change the master backend unless it is fully trusted
 	'backends' => [
 		[ 'template' => "global-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
@@ -214,7 +214,7 @@ $sharedTestwikiMultiWriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'shared-testwiki-multiwrite',
 	'wikiId' => "wikipedia-test",
-	'lockManager' => 'redisLockManager',
+	'lockManager' => 'redisDefaultLockManager',
 	// DO NOT change the master backend unless it is fully trusted
 	'backends' => [
 		[ 'template' => "shared-testwiki-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
@@ -236,26 +236,12 @@ $wgFileBackends[] = $sharedTestwikiMultiWriteFileBackend;
 
 /* end multiwrite backend config */
 
-// Lock manager config must use the master datacenter
-$wgLockManagers[] = [
-	'name' => 'redisLockManager',
-	'class' => RedisLockManager::class,
-	'lockServers' => $wmgMasterServices['redis_lock'],
-	'srvsByBucket' => [
-		0 => $redisLockServers
-	],
-	'redisConfig' => [
-		'connectTimeout' => 2,
-		'readTimeout' => 2,
-		'password' => $wmgRedisPassword
-	],
-];
-
 $wgLocalFileRepo = [
 	'class' => LocalRepo::class,
 	'name' => 'local',
 	'backend' => 'local-multiwrite',
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'thumbUrl' => $wmgThumbUrl ?: null,
 	'scriptDirUrl' => $wgScriptPath,
 	'hashLevels' => 2,
 	'disableLocalTransform' => ClusterConfig::getInstance()->isK8s(),
@@ -282,6 +268,7 @@ if ( $wgDBname === 'test2wiki' ) {
 		'name' => 'testwikirepo',
 		'backend' => 'shared-testwiki-multiwrite',
 		'url' => "{$uploadUrl}/wikipedia/test",
+		'thumbUrl' => "{$thumbUrl}/wikipedia/test/thumb",
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
@@ -311,6 +298,7 @@ if ( $wgDBname != 'commonswiki' ) {
 		'name' => 'shared',
 		'backend' => 'shared-multiwrite',
 		'url' => "{$uploadUrl}/wikipedia/commons",
+		'thumbUrl' => "{$thumbUrl}/wikipedia/commons/thumb",
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
