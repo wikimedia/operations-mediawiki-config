@@ -8205,9 +8205,8 @@ return [
 ],
 
 'wgCheckUserAbuseFilterEdgeHeaderVariablesEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => true,
+	'default' => true,
+	'metawiki' => false,
 ],
 
 'wmgUseUserInfoCard' => [
