@@ -59,9 +59,6 @@ $wgLBFactoryConf = [
 	'max lag'            => 6,
 	'useGTIDs'           => true,
 	'lagDetectionMethod' => 'pt-heartbeat',
-	'variables'          => [
-		'innodb_lock_wait_timeout' => 15
-	],
 ],
 
 'templateOverridesBySection' => [
@@ -121,7 +118,8 @@ $wgLBFactoryConf = [
 'externalLoads' => [],
 
 'masterTemplateOverrides' => [
-	'ssl' => $wmgDatacenter !== $wmgMasterDatacenter
+	'ssl' => $wmgDatacenter !== $wmgMasterDatacenter,
+	'variables' => [ 'innodb_lock_wait_timeout' => 15 ],
 ],
 
 'shuffleSharding' => true,
