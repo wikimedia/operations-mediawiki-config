@@ -2270,6 +2270,10 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableWorklistCardView' => [
 			'default' => true,
 		],
+		// T445624
+		'wgCampaignEventsEnableReadingListsCardElements' => [
+			'default' => true,
+		],
 		// T314294
 		'-wmgUsePhonos' => [
 			'default' => true, // T336763
