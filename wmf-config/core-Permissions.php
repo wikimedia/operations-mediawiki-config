@@ -2734,6 +2734,7 @@ return [
 			'editcontentmodel' => true, // T217499
 		],
 		'sysop' => [
+			'deferredblock' => true, // T444113
 			'deleterevision' => true,
 			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
@@ -3465,6 +3466,7 @@ return [
 			'importupload' => false,
 			'suppressredirect' => true, // http://meta.wikimedia.org/w/index.php?title=Wikimedia_Forum&oldid=1371655#Gives_sysops_to_.22suppressredirect.22_right
 			'noratelimit' => true,
+			'deferredblock' => false, // T444113
 			'deleterevision' => true,
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
