@@ -3173,9 +3173,9 @@ return [
 			'user' => [ 8, 60 ],
 		],
 		'edit' => [
-			// 8 ed./min per each non-autoconfirmed, or group thereof from same IP
-			'ip' => [ 8, 60 ],
-			'newbie' => [ 8, 60 ],
+			// 5 ed./min per each non-autoconfirmed, or group thereof from same IP, T445638
+			'ip' => [ 5, 60 ],
+			'newbie' => [ 5, 60 ],
 			'user' => [ 90, 60 ],
 		],
 		'badcaptcha' => [ // Bug T92376
