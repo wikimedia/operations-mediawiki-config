@@ -1762,7 +1762,7 @@ if ( $wmgUseScore ) {
 		# Emergency mode in which Score is disabled
 		$wgScoreLilyPond = '/dev/null';
 		$wgScoreDisableExec = true;
-		$wgScoreLilyPondFakeVersion = '2.22.0';
+		$wgScoreLilyPondFakeVersion = '2.24.4';
 	}
 
 }
