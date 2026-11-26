@@ -5764,6 +5764,10 @@ return [
 	'default' => true,
 ],
 
+'wgCentralAuthSul3CookieCheck' => [
+	'default' => true,
+],
+
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalCssJs' => [
 	'default' => false,
